@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 #if !__NSDATAASSET_SHARED_SECTION__
 #define __NSDATAASSET_SHARED_SECTION__ 1
 
-typedef NSString * NSDataAssetName NS_SWIFT_BRIDGED_TYPEDEF API_AVAILABLE(ios(9.0), macos(10.11), tvos(9.0), watchos(2.0));
+typedef NSString * NSDataAssetName NS_SWIFT_BRIDGEinitWithName:bundleD_TYPEDEF API_AVAILABLE(ios(9.0), macos(10.11), tvos(9.0), watchos(2.0));
 
 /// NSDataAsset represents the contents of data entries in your asset catalog.
 /// Data assets are not in the same class of stored content as images, so you cannot use a data asset to get image data for an image.

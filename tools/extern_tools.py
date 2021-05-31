@@ -2,18 +2,394 @@
 # coding: utf-8
 import sys
 
+import math as python_lib_Math
+import math as Math
+from os import path as python_lib_os_Path
+import inspect as python_lib_Inspect
+import builtins as python_lib_Builtins
+import os as python_lib_Os
+
+
+class _hx_AnonObject:
+    _hx_disable_getattr = False
+    def __init__(self, fields):
+        self.__dict__ = fields
+    def __repr__(self):
+        return repr(self.__dict__)
+    def __contains__(self, item):
+        return item in self.__dict__
+    def __getitem__(self, item):
+        return self.__dict__[item]
+    def __getattr__(self, name):
+        if (self._hx_disable_getattr):
+            raise AttributeError('field does not exist')
+        else:
+            return None
+    def _hx_hasattr(self,field):
+        self._hx_disable_getattr = True
+        try:
+            getattr(self, field)
+            self._hx_disable_getattr = False
+            return True
+        except AttributeError:
+            self._hx_disable_getattr = False
+            return False
+
+
+
+class Enum:
+    _hx_class_name = "Enum"
+    __slots__ = ("tag", "index", "params")
+    _hx_fields = ["tag", "index", "params"]
+    _hx_methods = ["__str__"]
+
+    def __init__(self,tag,index,params):
+        self.tag = tag
+        self.index = index
+        self.params = params
+
+    def __str__(self):
+        if (self.params is None):
+            return self.tag
+        else:
+            return self.tag + '(' + (', '.join(str(v) for v in self.params)) + ')'
+
+
+
+class ExternBaseClass:
+    _hx_class_name = "ExternBaseClass"
+    __slots__ = ("pkg", "classname", "typedefs", "_hdata", "funcAndAttr")
+    _hx_fields = ["pkg", "classname", "typedefs", "_hdata", "funcAndAttr"]
+    _hx_methods = ["toHaxeFile"]
+
+    def __init__(self,classname,pkg,file):
+        self.funcAndAttr = []
+        self.typedefs = haxe_ds_StringMap()
+        self.pkg = pkg
+        startIndex1 = None
+        _hx_len = None
+        if (startIndex1 is None):
+            _hx_len = classname.rfind(".", 0, len(classname))
+        else:
+            i = classname.rfind(".", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("."))) if ((i == -1)) else (i + 1))
+            check = classname.find(".", startLeft, len(classname))
+            _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+        self.classname = HxString.substr(classname,0,_hx_len)
+        self._hdata = sys_io_File.getContent(file)
+        _this = self.funcAndAttr
+        x = _hx_AnonObject({'type': "func", 'name': "alloc", 'returnClass': self.classname, 'isStatic': True, 'args': None})
+        _this.append(x)
+        _this = self.funcAndAttr
+        x = _hx_AnonObject({'type': "func", 'name': "autorelease", 'returnClass': self.classname, 'isStatic': True, 'args': None})
+        _this.append(x)
+        _this = self._hdata
+        harray = _this.split("\n")
+        _g_current = 0
+        _g_array = harray
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            startIndex = None
+            if (((value.find("typedef") if ((startIndex is None)) else HxString.indexOfImpl(value,"typedef",startIndex))) == 0):
+                value = StringTools.replace(value,"*","")
+                t = value.split(" ")
+                t2 = ""
+                _g2_current = 0
+                _g2_array = t
+                while (_g2_current < len(_g2_array)):
+                    _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
+                    _g3_key = _g2_current
+                    _g2_current = (_g2_current + 1)
+                    index1 = _g3_key
+                    tv = _g3_value
+                    if (index1 < 2):
+                        continue
+                    if (len(tv) > 0):
+                        t2 = tv
+                        break
+                self.typedefs.h[t2] = (t[1] if 1 < len(t) else None)
+            else:
+                startIndex1 = None
+                if (((value.find("@property") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"@property",startIndex1))) == 0):
+                    _this = StringTools.replace(value,"*","")
+                    array = _this.split(" ")
+                    _this1 = self.funcAndAttr
+                    x = _hx_AnonObject({'name': StringTools.replace(python_internal_ArrayImpl._get(array, (len(array) - 1)),";",""), 'type': "property", 'returnClass': python_internal_ArrayImpl._get(array, (len(array) - 2)), 'isStatic': False, 'args': None})
+                    _this1.append(x)
+                else:
+                    startIndex2 = None
+                    if (((value.find("-") if ((startIndex2 is None)) else HxString.indexOfImpl(value,"-",startIndex2))) == 0):
+                        _this2 = self.funcAndAttr
+                        x1 = ObjcFun.parsing(self.typedefs,self.classname,value)
+                        _this2.append(x1)
+
+    def toHaxeFile(self):
+        haxe = (("package " + HxOverrides.stringOrNull(self.pkg)) + ";\n\n")
+        haxe = (("null" if haxe is None else haxe) + "@:objc\n")
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.classname)) + "\")\n"))))
+        haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("extern class " + HxOverrides.stringOrNull(self.classname)) + "{\n\n"))))
+        _g_current = 0
+        _g_array = self.funcAndAttr
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            _g = value.type
+            _hx_local_4 = len(_g)
+            if (_hx_local_4 == 4):
+                if (_g == "func"):
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
+                    haxe1 = (((("\toverload extern inline public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(value.name)) + "(")
+                    haxe2 = None
+                    if (value.args is not None):
+                        _this = value.args
+                        haxe2 = ", ".join([python_Boot.toString1(x1,'') for x1 in _this])
+                    else:
+                        haxe2 = ""
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull((((((("null" if haxe1 is None else haxe1) + ("null" if haxe2 is None else haxe2)) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
+            elif (_hx_local_4 == 8):
+                if (_g == "property"):
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
+            else:
+                pass
+        haxe = (("null" if haxe is None else haxe) + "\n}")
+        return haxe
+
+
+
+class ExternBaseClassType:
+    _hx_class_name = "ExternBaseClassType"
+    __slots__ = ()
+    _hx_statics = ["FUNC", "PROPERTY"]
 
 
 class ExternTools:
+    _hx_class_name = "ExternTools"
     __slots__ = ()
+    _hx_statics = ["main", "parsingFramework", "parsingHFile"]
 
     @staticmethod
     def main():
-        pass
+        externDir = StringTools.replace(Sys.programPath(),"extern_tools.py","../Source_extern")
+        framework = StringTools.replace(Sys.programPath(),"extern_tools.py","../framework")
+        ExternTools.parsingFramework(framework,externDir)
+
+    @staticmethod
+    def parsingFramework(indir,out):
+        files = sys_FileSystem.readDirectory(indir)
+        _g_current = 0
+        _g_array = files
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            if sys_FileSystem.isDirectory(((("null" if indir is None else indir) + "/") + ("null" if value is None else value))):
+                ExternTools.parsingFramework(((("null" if indir is None else indir) + "/") + ("null" if value is None else value)),out)
+            else:
+                startIndex = None
+                if (((value.find("NSDataAsset.h") if ((startIndex is None)) else HxString.indexOfImpl(value,"NSDataAsset.h",startIndex))) != -1):
+                    ExternTools.parsingHFile(((("null" if indir is None else indir) + "/") + ("null" if value is None else value)),out)
+
+    @staticmethod
+    def parsingHFile(hfile,out):
+        startIndex1 = None
+        startIndex = None
+        if (startIndex1 is None):
+            startIndex = hfile.rfind("/framework/", 0, len(hfile))
+        else:
+            i = hfile.rfind("/framework/", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("/framework/"))) if ((i == -1)) else (i + 1))
+            check = hfile.find("/framework/", startLeft, len(hfile))
+            startIndex = (check if (((check > i) and ((check <= startIndex1)))) else i)
+        pkg = HxString.substring(hfile,(startIndex + 11),None)
+        startIndex = None
+        pkg = HxString.substr(pkg,0,(pkg.find(".") if ((startIndex is None)) else HxString.indexOfImpl(pkg,".",startIndex)))
+        startIndex1 = None
+        pos = None
+        if (startIndex1 is None):
+            pos = hfile.rfind("/", 0, len(hfile))
+        else:
+            i = hfile.rfind("/", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
+            check = hfile.find("/", startLeft, len(hfile))
+            pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
+        haxefile = (HxOverrides.stringOrNull(HxString.substr(hfile,(pos + 1),None)) + "x")
+        startIndex = None
+        if (((haxefile.find("+") if ((startIndex is None)) else HxString.indexOfImpl(haxefile,"+",startIndex))) != -1):
+            print(str(("igone:" + ("null" if haxefile is None else haxefile))))
+            return
+        print(str(((("parsing " + ("null" if pkg is None else pkg)) + ":") + ("null" if haxefile is None else haxefile))))
+        c = ExternBaseClass(haxefile,("ios." + HxOverrides.stringOrNull(pkg.lower())),hfile)
+        haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
+        if (not sys_FileSystem.exists(haxedir)):
+            sys_FileSystem.createDirectory(haxedir)
+        sys_io_File.saveContent(((("null" if haxedir is None else haxedir) + "/") + ("null" if haxefile is None else haxefile)),c.toHaxeFile())
+
+
+class ObjcFun:
+    _hx_class_name = "ObjcFun"
+    __slots__ = ()
+    _hx_statics = ["parsing", "parsingArgs", "toType"]
+
+    @staticmethod
+    def parsing(typedefs,className,line):
+        startIndex = None
+        isStatic = (((line.find("+") if ((startIndex is None)) else HxString.indexOfImpl(line,"+",startIndex))) == 0)
+        startIndex = None
+        returnClass = HxString.substr(line,0,(line.find(")") if ((startIndex is None)) else HxString.indexOfImpl(line,")",startIndex)))
+        startIndex = None
+        returnClass = HxString.substr(returnClass,(((returnClass.find("(") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"(",startIndex))) + 1),None)
+        startIndex = None
+        funcName = HxString.substr(line,(((line.find(")") if ((startIndex is None)) else HxString.indexOfImpl(line,")",startIndex))) + 1),None)
+        args = None
+        _g = 0
+        _g1 = len(funcName)
+        while (_g < _g1):
+            i = _g
+            _g = (_g + 1)
+            end = ("" if (((i < 0) or ((i >= len(funcName))))) else funcName[i])
+            if (end == " "):
+                funcName = HxString.substr(funcName,0,i)
+                break
+            elif (end == ":"):
+                args = ObjcFun.parsingArgs(typedefs,HxString.substr(funcName,(i + 1),None))
+                funcName = HxString.substr(funcName,0,i)
+        startIndex = None
+        c = (className if ((((returnClass.find("instancetype") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"instancetype",startIndex))) != -1)) else returnClass)
+        if (c in typedefs.h):
+            c = typedefs.h.get(c,None)
+        return _hx_AnonObject({'name': funcName, 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
+
+    @staticmethod
+    def parsingArgs(typedefs,line):
+        start = True
+        isRaed = False
+        args = []
+        read = ""
+        skin = 0
+        _g = 0
+        _g1 = len(line)
+        while (_g < _g1):
+            i = _g
+            _g = (_g + 1)
+            char = ("" if (((i < 0) or ((i >= len(line))))) else line[i])
+            if start:
+                if (char == "("):
+                    isRaed = True
+                    skin = 1
+                elif (char == ")"):
+                    isRaed = False
+                    read = StringTools.replace(read,"*","")
+                    read = StringTools.replace(read," ","")
+                    args.append(read)
+                    read = ""
+                    isRaed = True
+                    skin = 1
+                elif ((char == " ") or ((char == ";"))):
+                    isRaed = (char == " ")
+                    start = False
+                    python_internal_ArrayImpl._set(args, 0, ((("null" if read is None else read) + ":") + HxOverrides.stringOrNull(ObjcFun.toType((args[0] if 0 < len(args) else None),typedefs))))
+                    read = ""
+            elif (isRaed and ((char == ":"))):
+                isRaed = False
+                x = StringTools.replace(read," ","")
+                args.append(x)
+                read = ""
+            elif ((not isRaed) and ((char == "("))):
+                isRaed = True
+                skin = 1
+            elif (isRaed and ((char == ")"))):
+                isRaed = False
+                python_internal_ArrayImpl._set(args, (len(args) - 1), ((HxOverrides.stringOrNull(python_internal_ArrayImpl._get(args, (len(args) - 1))) + ":") + HxOverrides.stringOrNull(ObjcFun.toType(read,typedefs))))
+                read = ""
+            if (isRaed and ((skin <= 0))):
+                read = (("null" if read is None else read) + ("null" if char is None else char))
+            else:
+                skin = (skin - 1)
+        return args
+
+    @staticmethod
+    def toType(t,typedefs):
+        return StringTools.replace(StringTools.replace((typedefs.h.get(t,None) if ((t in typedefs.h)) else t),"*","")," ","")
+
+
+class StringTools:
+    _hx_class_name = "StringTools"
+    __slots__ = ()
+    _hx_statics = ["replace"]
+
+    @staticmethod
+    def replace(s,sub,by):
+        _this = (list(s) if ((sub == "")) else s.split(sub))
+        return by.join([python_Boot.toString1(x1,'') for x1 in _this])
+
+
+class sys_FileSystem:
+    _hx_class_name = "sys.FileSystem"
+    __slots__ = ()
+    _hx_statics = ["exists", "fullPath", "isDirectory", "createDirectory", "readDirectory"]
+
+    @staticmethod
+    def exists(path):
+        return python_lib_os_Path.exists(path)
+
+    @staticmethod
+    def fullPath(relPath):
+        return python_lib_os_Path.realpath(relPath)
+
+    @staticmethod
+    def isDirectory(path):
+        return python_lib_os_Path.isdir(path)
+
+    @staticmethod
+    def createDirectory(path):
+        python_lib_Os.makedirs(path,511,True)
+
+    @staticmethod
+    def readDirectory(path):
+        return python_lib_Os.listdir(path)
+
+
+class Sys:
+    _hx_class_name = "Sys"
+    __slots__ = ()
+    _hx_statics = ["_programPath", "programPath"]
+
+    @staticmethod
+    def programPath():
+        return Sys._programPath
+
+
+class haxe_IMap:
+    _hx_class_name = "haxe.IMap"
+    __slots__ = ()
+
+
+class haxe_ds_StringMap:
+    _hx_class_name = "haxe.ds.StringMap"
+    __slots__ = ("h",)
+    _hx_fields = ["h"]
+
+    def __init__(self):
+        self.h = dict()
+
 
 
 class haxe_iterators_ArrayIterator:
+    _hx_class_name = "haxe.iterators.ArrayIterator"
     __slots__ = ("array", "current")
+    _hx_fields = ["array", "current"]
+    _hx_methods = ["hasNext", "next"]
 
     def __init__(self,array):
         self.current = 0
@@ -34,8 +410,270 @@ class haxe_iterators_ArrayIterator:
 
 
 
-class python_internal_ArrayImpl:
+class python_Boot:
+    _hx_class_name = "python.Boot"
     __slots__ = ()
+    _hx_statics = ["keywords", "toString1", "fields", "simpleField", "getInstanceFields", "getSuperClass", "getClassFields", "prefixLength", "unhandleKeywords"]
+
+    @staticmethod
+    def toString1(o,s):
+        if (o is None):
+            return "null"
+        if isinstance(o,str):
+            return o
+        if (s is None):
+            s = ""
+        if (len(s) >= 5):
+            return "<...>"
+        if isinstance(o,bool):
+            if o:
+                return "true"
+            else:
+                return "false"
+        if (isinstance(o,int) and (not isinstance(o,bool))):
+            return str(o)
+        if isinstance(o,float):
+            try:
+                if (o == int(o)):
+                    return str(Math.floor((o + 0.5)))
+                else:
+                    return str(o)
+            except BaseException as _g:
+                return str(o)
+        if isinstance(o,list):
+            o1 = o
+            l = len(o1)
+            st = "["
+            s = (("null" if s is None else s) + "\t")
+            _g = 0
+            _g1 = l
+            while (_g < _g1):
+                i = _g
+                _g = (_g + 1)
+                prefix = ""
+                if (i > 0):
+                    prefix = ","
+                st = (("null" if st is None else st) + HxOverrides.stringOrNull(((("null" if prefix is None else prefix) + HxOverrides.stringOrNull(python_Boot.toString1((o1[i] if i >= 0 and i < len(o1) else None),s))))))
+            st = (("null" if st is None else st) + "]")
+            return st
+        try:
+            if hasattr(o,"toString"):
+                return o.toString()
+        except BaseException as _g:
+            pass
+        if hasattr(o,"__class__"):
+            if isinstance(o,_hx_AnonObject):
+                toStr = None
+                try:
+                    fields = python_Boot.fields(o)
+                    _g = []
+                    _g1 = 0
+                    while (_g1 < len(fields)):
+                        f = (fields[_g1] if _g1 >= 0 and _g1 < len(fields) else None)
+                        _g1 = (_g1 + 1)
+                        x = ((("" + ("null" if f is None else f)) + " : ") + HxOverrides.stringOrNull(python_Boot.toString1(python_Boot.simpleField(o,f),(("null" if s is None else s) + "\t"))))
+                        _g.append(x)
+                    fieldsStr = _g
+                    toStr = (("{ " + HxOverrides.stringOrNull(", ".join([x1 for x1 in fieldsStr]))) + " }")
+                except BaseException as _g:
+                    return "{ ... }"
+                if (toStr is None):
+                    return "{ ... }"
+                else:
+                    return toStr
+            if isinstance(o,Enum):
+                o1 = o
+                l = len(o1.params)
+                hasParams = (l > 0)
+                if hasParams:
+                    paramsStr = ""
+                    _g = 0
+                    _g1 = l
+                    while (_g < _g1):
+                        i = _g
+                        _g = (_g + 1)
+                        prefix = ""
+                        if (i > 0):
+                            prefix = ","
+                        paramsStr = (("null" if paramsStr is None else paramsStr) + HxOverrides.stringOrNull(((("null" if prefix is None else prefix) + HxOverrides.stringOrNull(python_Boot.toString1(o1.params[i],s))))))
+                    return (((HxOverrides.stringOrNull(o1.tag) + "(") + ("null" if paramsStr is None else paramsStr)) + ")")
+                else:
+                    return o1.tag
+            if hasattr(o,"_hx_class_name"):
+                if (o.__class__.__name__ != "type"):
+                    fields = python_Boot.getInstanceFields(o)
+                    _g = []
+                    _g1 = 0
+                    while (_g1 < len(fields)):
+                        f = (fields[_g1] if _g1 >= 0 and _g1 < len(fields) else None)
+                        _g1 = (_g1 + 1)
+                        x = ((("" + ("null" if f is None else f)) + " : ") + HxOverrides.stringOrNull(python_Boot.toString1(python_Boot.simpleField(o,f),(("null" if s is None else s) + "\t"))))
+                        _g.append(x)
+                    fieldsStr = _g
+                    toStr = (((HxOverrides.stringOrNull(o._hx_class_name) + "( ") + HxOverrides.stringOrNull(", ".join([x1 for x1 in fieldsStr]))) + " )")
+                    return toStr
+                else:
+                    fields = python_Boot.getClassFields(o)
+                    _g = []
+                    _g1 = 0
+                    while (_g1 < len(fields)):
+                        f = (fields[_g1] if _g1 >= 0 and _g1 < len(fields) else None)
+                        _g1 = (_g1 + 1)
+                        x = ((("" + ("null" if f is None else f)) + " : ") + HxOverrides.stringOrNull(python_Boot.toString1(python_Boot.simpleField(o,f),(("null" if s is None else s) + "\t"))))
+                        _g.append(x)
+                    fieldsStr = _g
+                    toStr = (((("#" + HxOverrides.stringOrNull(o._hx_class_name)) + "( ") + HxOverrides.stringOrNull(", ".join([x1 for x1 in fieldsStr]))) + " )")
+                    return toStr
+            if (o == str):
+                return "#String"
+            if (o == list):
+                return "#Array"
+            if callable(o):
+                return "function"
+            try:
+                if hasattr(o,"__repr__"):
+                    return o.__repr__()
+            except BaseException as _g:
+                pass
+            if hasattr(o,"__str__"):
+                return o.__str__([])
+            if hasattr(o,"__name__"):
+                return o.__name__
+            return "???"
+        else:
+            return str(o)
+
+    @staticmethod
+    def fields(o):
+        a = []
+        if (o is not None):
+            if hasattr(o,"_hx_fields"):
+                fields = o._hx_fields
+                if (fields is not None):
+                    return list(fields)
+            if isinstance(o,_hx_AnonObject):
+                d = o.__dict__
+                keys = d.keys()
+                handler = python_Boot.unhandleKeywords
+                for k in keys:
+                    if (k != '_hx_disable_getattr'):
+                        a.append(handler(k))
+            elif hasattr(o,"__dict__"):
+                d = o.__dict__
+                keys1 = d.keys()
+                for k in keys1:
+                    a.append(k)
+        return a
+
+    @staticmethod
+    def simpleField(o,field):
+        if (field is None):
+            return None
+        field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+        if hasattr(o,field1):
+            return getattr(o,field1)
+        else:
+            return None
+
+    @staticmethod
+    def getInstanceFields(c):
+        f = (list(c._hx_fields) if (hasattr(c,"_hx_fields")) else [])
+        if hasattr(c,"_hx_methods"):
+            f = (f + c._hx_methods)
+        sc = python_Boot.getSuperClass(c)
+        if (sc is None):
+            return f
+        else:
+            scArr = python_Boot.getInstanceFields(sc)
+            scMap = set(scArr)
+            _g = 0
+            while (_g < len(f)):
+                f1 = (f[_g] if _g >= 0 and _g < len(f) else None)
+                _g = (_g + 1)
+                if (not (f1 in scMap)):
+                    scArr.append(f1)
+            return scArr
+
+    @staticmethod
+    def getSuperClass(c):
+        if (c is None):
+            return None
+        try:
+            if hasattr(c,"_hx_super"):
+                return c._hx_super
+            return None
+        except BaseException as _g:
+            pass
+        return None
+
+    @staticmethod
+    def getClassFields(c):
+        if hasattr(c,"_hx_statics"):
+            x = c._hx_statics
+            return list(x)
+        else:
+            return []
+
+    @staticmethod
+    def unhandleKeywords(name):
+        if (HxString.substr(name,0,python_Boot.prefixLength) == "_hx_"):
+            real = HxString.substr(name,python_Boot.prefixLength,None)
+            if (real in python_Boot.keywords):
+                return real
+        return name
+
+
+class HxString:
+    _hx_class_name = "HxString"
+    __slots__ = ()
+    _hx_statics = ["indexOfImpl", "substring", "substr"]
+
+    @staticmethod
+    def indexOfImpl(s,_hx_str,startIndex):
+        if (_hx_str == ""):
+            length = len(s)
+            if (startIndex < 0):
+                startIndex = (length + startIndex)
+                if (startIndex < 0):
+                    startIndex = 0
+            if (startIndex > length):
+                return length
+            else:
+                return startIndex
+        return s.find(_hx_str, startIndex)
+
+    @staticmethod
+    def substring(s,startIndex,endIndex = None):
+        if (startIndex < 0):
+            startIndex = 0
+        if (endIndex is None):
+            return s[startIndex:]
+        else:
+            if (endIndex < 0):
+                endIndex = 0
+            if (endIndex < startIndex):
+                return s[endIndex:startIndex]
+            else:
+                return s[startIndex:endIndex]
+
+    @staticmethod
+    def substr(s,startIndex,_hx_len = None):
+        if (_hx_len is None):
+            return s[startIndex:]
+        else:
+            if (_hx_len == 0):
+                return ""
+            if (startIndex < 0):
+                startIndex = (len(s) + startIndex)
+                if (startIndex < 0):
+                    startIndex = 0
+            return s[startIndex:(startIndex + _hx_len)]
+
+
+class python_internal_ArrayImpl:
+    _hx_class_name = "python.internal.ArrayImpl"
+    __slots__ = ()
+    _hx_statics = ["_get", "_set"]
 
     @staticmethod
     def _get(x,idx):
@@ -44,9 +682,43 @@ class python_internal_ArrayImpl:
         else:
             return None
 
+    @staticmethod
+    def _set(x,idx,v):
+        l = len(x)
+        while (l < idx):
+            x.append(None)
+            l = (l + 1)
+        if (l == idx):
+            x.append(v)
+        else:
+            x[idx] = v
+        return v
+
+
+class HxOverrides:
+    _hx_class_name = "HxOverrides"
+    __slots__ = ()
+    _hx_statics = ["eq", "stringOrNull"]
+
+    @staticmethod
+    def eq(a,b):
+        if (isinstance(a,list) or isinstance(b,list)):
+            return a is b
+        return (a == b)
+
+    @staticmethod
+    def stringOrNull(s):
+        if (s is None):
+            return "null"
+        else:
+            return s
+
 
 class python_internal_MethodClosure:
+    _hx_class_name = "python.internal.MethodClosure"
     __slots__ = ("obj", "func")
+    _hx_fields = ["obj", "func"]
+    _hx_methods = ["__call__"]
 
     def __init__(self,obj,func):
         self.obj = obj
@@ -57,5 +729,33 @@ class python_internal_MethodClosure:
 
 
 
+class sys_io_File:
+    _hx_class_name = "sys.io.File"
+    __slots__ = ()
+    _hx_statics = ["getContent", "saveContent"]
+
+    @staticmethod
+    def getContent(path):
+        f = python_lib_Builtins.open(path,"r",-1,"utf-8",None,"")
+        content = f.read(-1)
+        f.close()
+        return content
+
+    @staticmethod
+    def saveContent(path,content):
+        f = python_lib_Builtins.open(path,"w",-1,"utf-8",None,"")
+        f.write(content)
+        f.close()
+
+Math.NEGATIVE_INFINITY = float("-inf")
+Math.POSITIVE_INFINITY = float("inf")
+Math.NaN = float("nan")
+Math.PI = python_lib_Math.pi
+
+ExternBaseClassType.FUNC = "func"
+ExternBaseClassType.PROPERTY = "property"
+Sys._programPath = sys_FileSystem.fullPath(python_lib_Inspect.getsourcefile(Sys))
+python_Boot.keywords = set(["and", "del", "from", "not", "with", "as", "elif", "global", "or", "yield", "assert", "else", "if", "pass", "None", "break", "except", "import", "raise", "True", "class", "exec", "in", "return", "False", "continue", "finally", "is", "try", "def", "for", "lambda", "while"])
+python_Boot.prefixLength = len("_hx_")
 
 ExternTools.main()
