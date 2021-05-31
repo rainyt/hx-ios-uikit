@@ -91,10 +91,6 @@ class ExternBaseClass {
 			}
 		}
 
-		// if (extendClassName != null && extendClassName == "NSObject") {
-		// 	extendClassName = null;
-		// 	protocols = null;
-		// }
 		if (pclassName == "") {
 			className = null;
 			return;

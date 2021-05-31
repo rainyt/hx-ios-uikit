@@ -31,5 +31,8 @@ implements cpp.objc.Protocol<UIBarPositioning>
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	@:native("barPosition")
+	public var barPosition:UIBarPosition;
+
 
 }

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIViewConfigurationState")
 @:include("UIKit/UIKit.h")
@@ -30,6 +31,18 @@ implements cpp.objc.Protocol<UIConfigurationState>
 
 	@:native("focused")
 	public var focused:Bool;
+
+	@:native("customStateForKey")
+	overload public function customStateForKey(key:NSString):Dynamic;
+
+	@:native("setCustomState:forKey")
+	overload public function setCustomState_forKey(customState:Dynamic, forKey:NSString):Void;
+
+	@:native("objectForKeyedSubscript")
+	overload public function objectForKeyedSubscript(key:NSString):Dynamic;
+
+	@:native("setObject:forKeyedSubscript")
+	overload public function setObject_forKeyedSubscript(obj:Dynamic, forKeyedSubscript:NSString):Void;
 
 
 }

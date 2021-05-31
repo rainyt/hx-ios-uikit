@@ -26,5 +26,14 @@ implements cpp.objc.Protocol<UITimingCurveProvider>
 	@:native("initWithDampingRatio")
 	overload public function initWithDampingRatio(ratio:Float):UISpringTimingParameters;
 
+	@:native("timingCurveType")
+	public var timingCurveType:UITimingCurveType;
+
+	@:native("cubicTimingParameters")
+	public var cubicTimingParameters:UICubicTimingParameters;
+
+	@:native("springTimingParameters")
+	public var springTimingParameters:UISpringTimingParameters;
+
 
 }

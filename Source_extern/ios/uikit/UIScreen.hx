@@ -81,5 +81,11 @@ implements cpp.objc.Protocol<UITraitEnvironment>
 	@:native("snapshotViewAfterScreenUpdates")
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
+	@:native("traitCollection")
+	public var traitCollection:UITraitCollection;
+
+	@:native("traitCollectionDidChange")
+	overload public function traitCollectionDidChange(previousTraitCollection:UITraitCollection):Void;
+
 
 }

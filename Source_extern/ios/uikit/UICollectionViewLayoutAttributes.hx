@@ -58,5 +58,11 @@ implements cpp.objc.Protocol<UIDynamicItem>
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
 	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
+	@:native("collisionBoundsType")
+	public var collisionBoundsType:UIDynamicItemCollisionBoundsType;
+
+	@:native("collisionBoundingPath")
+	public var collisionBoundingPath:UIBezierPath;
+
 
 }

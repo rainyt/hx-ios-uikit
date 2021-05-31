@@ -202,5 +202,20 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	@:native("allowsMultipleSelectionDuringEditing")
 	public var allowsMultipleSelectionDuringEditing:Bool;
 
+	@:native("presentationSectionIndexForDataSourceSectionIndex")
+	overload public function presentationSectionIndexForDataSourceSectionIndex(dataSourceSectionIndex:Int):Int;
+
+	@:native("dataSourceSectionIndexForPresentationSectionIndex")
+	overload public function dataSourceSectionIndexForPresentationSectionIndex(presentationSectionIndex:Int):Int;
+
+	@:native("presentationIndexPathForDataSourceIndexPath")
+	overload public function presentationIndexPathForDataSourceIndexPath(dataSourceIndexPath:Dynamic):Dynamic;
+
+	@:native("dataSourceIndexPathForPresentationIndexPath")
+	overload public function dataSourceIndexPathForPresentationIndexPath(presentationIndexPath:Dynamic):Dynamic;
+
+	@:native("performUsingPresentationValues")
+	overload public function performUsingPresentationValues(actionsToTranslate:Dynamic):Void;
+
 
 }

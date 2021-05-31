@@ -34,5 +34,17 @@ implements cpp.objc.Protocol<UITextInputDelegate>
 	@:native("requestSupplementaryLexiconWithCompletion")
 	overload public function requestSupplementaryLexiconWithCompletion(completionHandler:Dynamic):Void;
 
+	@:native("selectionWillChange")
+	overload public function selectionWillChange(textInput:Dynamic):Void;
+
+	@:native("selectionDidChange")
+	overload public function selectionDidChange(textInput:Dynamic):Void;
+
+	@:native("textWillChange")
+	overload public function textWillChange(textInput:Dynamic):Void;
+
+	@:native("textDidChange")
+	overload public function textDidChange(textInput:Dynamic):Void;
+
 
 }

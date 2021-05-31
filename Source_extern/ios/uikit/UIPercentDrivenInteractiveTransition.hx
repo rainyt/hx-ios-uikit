@@ -37,5 +37,8 @@ implements cpp.objc.Protocol<UIViewControllerInteractiveTransitioning>
 	@:native("finishInteractiveTransition")
 	overload public function finishInteractiveTransition():Void;
 
+	@:native("startInteractiveTransition")
+	overload public function startInteractiveTransition(transitionContext:Dynamic):Void;
+
 
 }

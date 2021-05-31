@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.CGSize;
 @:objc
 @:native("UIPresentationController")
 @:include("UIKit/UIKit.h")
@@ -65,6 +66,30 @@ implements cpp.objc.Protocol<UIContentContainer>
 
 	@:native("dismissalTransitionDidEnd")
 	overload public function dismissalTransitionDidEnd(completed:Bool):Void;
+
+	@:native("traitCollection")
+	public var traitCollection:UITraitCollection;
+
+	@:native("traitCollectionDidChange")
+	overload public function traitCollectionDidChange(previousTraitCollection:UITraitCollection):Void;
+
+	@:native("preferredContentSize")
+	public var preferredContentSize:CGSize;
+
+	@:native("preferredContentSizeDidChangeForChildContentContainer")
+	overload public function preferredContentSizeDidChangeForChildContentContainer(container:Dynamic):Void;
+
+	@:native("systemLayoutFittingSizeDidChangeForChildContentContainer")
+	overload public function systemLayoutFittingSizeDidChangeForChildContentContainer(container:Dynamic):Void;
+
+	@:native("sizeForChildContentContainer:withParentContainerSize")
+	overload public function sizeForChildContentContainer_withParentContainerSize(container:Dynamic, withParentContainerSize:CGSize):CGSize;
+
+	@:native("viewWillTransitionToSize:withTransitionCoordinator")
+	overload public function viewWillTransitionToSize_withTransitionCoordinator(size:CGSize, withTransitionCoordinator:Dynamic):Void;
+
+	@:native("willTransitionToTraitCollection:withTransitionCoordinator")
+	overload public function willTransitionToTraitCollection_withTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
 
 
 }

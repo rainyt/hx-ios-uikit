@@ -76,5 +76,11 @@ implements cpp.objc.Protocol<UIContentConfiguration>
 	@:native("textToSecondaryTextVerticalPadding")
 	public var textToSecondaryTextVerticalPadding:Float;
 
+	@:native("makeContentView")
+	overload public function makeContentView():Dynamic;
+
+	@:native("updatedConfigurationForState")
+	overload public function updatedConfigurationForState(state:Dynamic):UIContentConfiguration;
+
 
 }

@@ -491,6 +491,18 @@ class ExternTools:
             _g1_key = key
             key1 = _g1_key
             value = _g1_value
+            if (value.protocols is not None):
+                _g2_current = 0
+                _g2_array = value.protocols
+                while (_g2_current < len(_g2_array)):
+                    _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
+                    _g3_key = _g2_current
+                    _g2_current = (_g2_current + 1)
+                    index = _g3_key
+                    protocolName = _g3_value
+                    t = ExternTools.protocol.h.get(protocolName,None)
+                    if (t is not None):
+                        value.putClass(t)
             sys_io_File.saveContent(value.saveFile,value.toHaxeFile())
         _hx_map = ExternTools.protocol
         _g_map = _hx_map

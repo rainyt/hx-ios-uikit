@@ -16,5 +16,17 @@ implements cpp.objc.Protocol<UIViewControllerAnimatedTransitioning>
 	@:native("targetView")
 	public var targetView:UIView;
 
+	@:native("transitionDuration")
+	overload public function transitionDuration(transitionContext:Dynamic):Dynamic;
+
+	@:native("animateTransition")
+	overload public function animateTransition(transitionContext:Dynamic):Void;
+
+	@:native("interruptibleAnimatorForTransition")
+	overload public function interruptibleAnimatorForTransition(transitionContext:Dynamic):Dynamic;
+
+	@:native("animationEnded")
+	overload public function animationEnded(transitionCompleted:Bool):Void;
+
 
 }

@@ -29,5 +29,14 @@ implements cpp.objc.Protocol<UITimingCurveProvider>
 	@:native("initWithControlPoint1:controlPoint2")
 	overload public function initWithControlPoint1_controlPoint2(point1:CGPoint, controlPoint2:CGPoint):UICubicTimingParameters;
 
+	@:native("timingCurveType")
+	public var timingCurveType:UITimingCurveType;
+
+	@:native("cubicTimingParameters")
+	public var cubicTimingParameters:UICubicTimingParameters;
+
+	@:native("springTimingParameters")
+	public var springTimingParameters:UISpringTimingParameters;
+
 
 }

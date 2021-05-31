@@ -52,5 +52,8 @@ implements cpp.objc.Protocol<UIBarPositioning>
 	@:native("titleVerticalPositionAdjustmentForBarMetrics")
 	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Float;
 
+	@:native("barPosition")
+	public var barPosition:UIBarPosition;
+
 
 }
