@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.objc.CGPoint;
+import ios.objc.CGPoint;
+import ios.objc.CGSize;
 @:objc
 @:native("UISubclassingHooks")
 @:include("UIKit/UIKit.h")

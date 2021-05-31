@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGSize;
 @:objc
 @:native("UIPickerView")
 @:include("UIKit/UIKit.h")

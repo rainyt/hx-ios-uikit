@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.objc.CGPoint;
+import ios.objc.CGSize;
+import ios.objc.CGPoint;
 @:objc
 @:native("UICollectionViewLayoutInvalidationContext")
 @:include("UIKit/UIKit.h")

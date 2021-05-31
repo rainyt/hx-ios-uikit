@@ -1,6 +1,8 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.CGSize;
+import ios.objc.CGRect;
 @:objc
 @:native("UILabel")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGPoint;
+import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIPreviewTarget")
 @:include("UIKit/UIKit.h")

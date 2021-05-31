@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
+import ios.objc.CGPoint;
+import ios.objc.CGSize;
+import ios.objc.CGRect;
+import ios.objc.CGAffineTransform;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewLayoutAttributes")

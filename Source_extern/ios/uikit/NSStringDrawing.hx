@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGSize;
 @:objc
 @:native("NSStringDrawing")
 @:include("UIKit/UIKit.h")

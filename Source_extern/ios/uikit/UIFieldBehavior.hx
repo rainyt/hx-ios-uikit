@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGPoint;
+import ios.objc.CGVector;
 @:objc
 @:native("UIFieldBehavior")
 @:include("UIKit/UIKit.h")

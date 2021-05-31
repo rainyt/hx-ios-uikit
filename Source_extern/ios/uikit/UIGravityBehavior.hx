@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGVector;
 @:objc
 @:native("UIGravityBehavior")
 @:include("UIKit/UIKit.h")

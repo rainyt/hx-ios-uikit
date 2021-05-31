@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGPoint;
 @:objc
 @:native("NSCollectionLayoutAnchor")
 @:include("UIKit/UIKit.h")

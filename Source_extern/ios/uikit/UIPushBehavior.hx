@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGVector;
 @:objc
 @:native("UIPushBehavior")
 @:include("UIKit/UIKit.h")

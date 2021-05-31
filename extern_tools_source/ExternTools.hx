@@ -4,8 +4,10 @@ import sys.io.File;
 import sys.FileSystem;
 
 class ExternTools {
+	public static var externDir:String;
+
 	static function main() {
-		var externDir = StringTools.replace(Sys.programPath(), "extern_tools.py", "../Source_extern");
+		externDir = StringTools.replace(Sys.programPath(), "extern_tools.py", "../Source_extern");
 		var framework = StringTools.replace(Sys.programPath(), "extern_tools.py", "../framework");
 		parsingFramework(framework, externDir);
 	}

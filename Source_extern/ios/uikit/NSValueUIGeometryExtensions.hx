@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.objc.CGPoint;
+import ios.objc.CGVector;
+import ios.objc.CGSize;
+import ios.objc.CGRect;
+import ios.objc.CGAffineTransform;
 @:objc
 @:native("NSValueUIGeometryExtensions")
 @:include("UIKit/UIKit.h")

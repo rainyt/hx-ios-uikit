@@ -310,13 +310,14 @@ class ExternHFile:
 class ExternTools:
     _hx_class_name = "ExternTools"
     __slots__ = ()
-    _hx_statics = ["main", "parsingFramework", "parsingHFile"]
+    _hx_statics = ["externDir", "main", "parsingFramework", "parsingHFile"]
+    externDir = None
 
     @staticmethod
     def main():
-        externDir = StringTools.replace(Sys.programPath(),"extern_tools.py","../Source_extern")
+        ExternTools.externDir = StringTools.replace(Sys.programPath(),"extern_tools.py","../Source_extern")
         framework = StringTools.replace(Sys.programPath(),"extern_tools.py","../framework")
-        ExternTools.parsingFramework(framework,externDir)
+        ExternTools.parsingFramework(framework,ExternTools.externDir)
 
     @staticmethod
     def parsingFramework(indir,out):
@@ -720,6 +721,9 @@ class ObjcImport:
                 return "cpp.objc.NSData"
         else:
             pass
+        print(str((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/objc/") + ("null" if _hx_type is None else _hx_type)) + ".hx")))
+        if sys_FileSystem.exists((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/objc/") + ("null" if _hx_type is None else _hx_type)) + ".hx")):
+            return ("ios.objc." + ("null" if _hx_type is None else _hx_type))
         return None
 
 

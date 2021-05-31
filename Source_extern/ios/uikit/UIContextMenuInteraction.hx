@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGPoint;
 @:objc
 @:native("UIContextMenuInteraction")
 @:include("UIKit/UIKit.h")

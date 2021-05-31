@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGSize;
+import ios.objc.CGRect;
 @:objc
 @:native("UIPrintPaper")
 @:include("UIKit/UIKit.h")

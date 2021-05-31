@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIImagePickerController")
 @:include("UIKit/UIKit.h")

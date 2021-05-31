@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGPoint;
+import ios.objc.CGPoint;
 @:objc
 @:native("UIPanGestureRecognizer")
 @:include("UIKit/UIKit.h")

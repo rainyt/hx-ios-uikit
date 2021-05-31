@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.CGSize;
 @:objc
 @:native("UISegmentedControl")
 @:include("UIKit/UIKit.h")

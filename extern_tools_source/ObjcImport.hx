@@ -1,3 +1,5 @@
+import sys.FileSystem;
+
 class ObjcImport {
 	public static function toImport(type:String):String {
 		if (type == null)
@@ -21,7 +23,9 @@ class ObjcImport {
 				return "ios.objc.NSBundle";
 		}
 		// 本地查找
-
+		// trace(ExternTools.externDir + "/ios/objc/" + type + ".hx");
+		if (FileSystem.exists(ExternTools.externDir + "/ios/objc/" + type + ".hx"))
+			return "ios.objc." + type;
 		return null;
 	}
 }

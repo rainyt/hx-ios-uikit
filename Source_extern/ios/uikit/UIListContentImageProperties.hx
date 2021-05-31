@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGSize;
+import ios.objc.CGSize;
 @:objc
 @:native("UIListContentImageProperties")
 @:include("UIKit/UIKit.h")

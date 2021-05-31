@@ -3,6 +3,8 @@ package ios.uikit;
 import cpp.objc.NSString;
 import cpp.objc.NSString;
 import cpp.objc.NSString;
+import ios.objc.CGRect;
+import ios.objc.CGRect;
 @:objc
 @:native("UIAccessibilityElement")
 @:include("UIKit/UIKit.h")

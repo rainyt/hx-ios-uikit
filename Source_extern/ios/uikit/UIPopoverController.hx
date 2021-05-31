@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGSize;
 @:objc
 @:native("UIPopoverController")
 @:include("UIKit/UIKit.h")

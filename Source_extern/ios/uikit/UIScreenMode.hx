@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGSize;
 @:objc
 @:native("UIScreenMode")
 @:include("UIKit/UIKit.h")
