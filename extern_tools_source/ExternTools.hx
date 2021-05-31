@@ -31,7 +31,7 @@ class ExternTools {
 			trace("igone:" + haxefile);
 			return;
 		}
-		trace("parsing " + pkg + ":" + haxefile);
+		// trace("parsing " + pkg + ":" + haxefile);
 		var classpkg = "ios." + pkg.toLowerCase();
 		// var c = new ExternBaseClass(haxefile, "ios." + pkg.toLowerCase(), hfile);
 		var c = new ExternHFile(hfile);

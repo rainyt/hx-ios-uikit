@@ -28,7 +28,7 @@ class ExternBaseClass {
 		var harray = _hdata.split("\n");
 		var pclassName = harray[0];
 		pclassName = pclassName.substr(pclassName.indexOf("@interface") + 10);
-		if (pclassName.indexOf("(") != -1 && pclassName.indexOf("()") == -1) {
+		if (pclassName.indexOf("(") != -1) {
 			// 继承关系
 			pclassName = pclassName.substr(pclassName.lastIndexOf("(") + 1);
 			pclassName = pclassName.substr(0, pclassName.lastIndexOf(")"));
@@ -41,9 +41,14 @@ class ExternBaseClass {
 			}
 			pclassName = pclassName.substr(0, pclassName.indexOf(" "));
 		}
-		trace("pclassname2", pclassName);
+		// trace("pclassname2", pclassName);
+		// if(pclassName == "UIViewController"){
+		// 	trace("---------------------------\n",_hdata);
+		// }
 		if (pclassName == "") {
-			throw "错误解析：" + _hdata;
+			className = null;
+			// throw "错误解析：" + _hdata;
+			return;
 		}
 		this.className = StringTools.replace(pclassName, " ", "");
 		funcAndAttr.push({

@@ -22,7 +22,7 @@ class ExternTypedefClass {
 			// 解析类关系
 			var cContent = value.substr(value.indexOf("(") + 1);
 			cContent = cContent.substr(0, cContent.indexOf(")"));
-			trace(cContent);
+			// trace(cContent);
 			cContent = StringTools.replace(cContent, " ", "");
 			var carr = cContent.split(",");
 			className = carr[1];

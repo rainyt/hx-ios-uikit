@@ -72,7 +72,8 @@ class ExternHFile {
 		var t = new ExternBaseClass(data, this);
 		// if(t.className == "UIAlertAction")
 		// trace("类定义：" + t.className,data,t.toHaxeFile("test"));
-		classdefs.set(t.className, t);
+		if(t.className != null)
+            classdefs.set(t.className, t);
 	}
 
 	public function defTypedef(data:String):Void {
