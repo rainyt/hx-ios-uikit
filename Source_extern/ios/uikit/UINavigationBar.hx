@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UINavigationBar")
 @:include("UIKit/UIKit.h")
-extern class UINavigationBar{
-
-	@:native("alloc")
-	overload public static function alloc():UINavigationBar;
-
-	@:native("autorelease")
-	overload public static function autorelease():UINavigationBar;
+extern class UINavigationBar extends UIView{
 
 	@:native("barStyle")
 	public var barStyle:UIBarStyle;
@@ -37,9 +31,6 @@ extern class UINavigationBar{
 
 	@:native("prefersLargeTitles")
 	public var prefersLargeTitles:Bool;
-
-	@:native("tintColor")
-	public var tintColor:UIColor;
 
 	@:native("setBackgroundImage:forBarPosition:barMetrics")
 	overload public function setBackgroundImage_forBarPosition_barMetrics(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics):Void;

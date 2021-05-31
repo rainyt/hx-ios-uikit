@@ -75,7 +75,15 @@ class ExternBaseClass {
 			}
 		}
 
-		if (extendClassName != null && (extendClassName.indexOf("<") != -1 || extendClassName == "NSObject"))
+		if (extendClassName != null) {
+			trace("extendClassName = ", extendClassName);
+			if (extendClassName.indexOf("<") != -1) {
+				// 拥有协议
+				extendClassName = extendClassName.substr(0, extendClassName.indexOf("<"));
+			} else {}
+		}
+
+		if (extendClassName != null && extendClassName == "NSObject")
 			extendClassName = null;
 		if (pclassName == "") {
 			className = null;

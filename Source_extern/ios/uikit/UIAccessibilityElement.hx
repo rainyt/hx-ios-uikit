@@ -5,13 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIAccessibilityElement")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityElement{
-
-	@:native("alloc")
-	overload public static function alloc():UIAccessibilityElement;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAccessibilityElement;
+extern class UIAccessibilityElement extends UIResponder{
 
 	@:native("initWithAccessibilityContainer")
 	overload public function initWithAccessibilityContainer(container:Dynamic):UIAccessibilityElement;

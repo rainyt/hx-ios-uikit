@@ -5,13 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UILabel")
 @:include("UIKit/UIKit.h")
-extern class UILabel{
-
-	@:native("alloc")
-	overload public static function alloc():UILabel;
-
-	@:native("autorelease")
-	overload public static function autorelease():UILabel;
+extern class UILabel extends UIView{
 
 	@:native("font")
 	public var font:UIFont;
@@ -36,9 +30,6 @@ extern class UILabel{
 
 	@:native("highlighted")
 	public var highlighted:Bool;
-
-	@:native("userInteractionEnabled")
-	public var userInteractionEnabled:Bool;
 
 	@:native("enabled")
 	public var enabled:Bool;

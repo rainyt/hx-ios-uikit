@@ -6,19 +6,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UISegmentedControl")
 @:include("UIKit/UIKit.h")
-extern class UISegmentedControl{
-
-	@:native("alloc")
-	overload public static function alloc():UISegmentedControl;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISegmentedControl;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UISegmentedControl;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UISegmentedControl;
+extern class UISegmentedControl extends UIControl{
 
 	@:native("initWithItems")
 	overload public function initWithItems(items:Dynamic):UISegmentedControl;

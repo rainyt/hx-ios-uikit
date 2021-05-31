@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIWebView")
 @:include("UIKit/UIKit.h")
-extern class UIWebView{
-
-	@:native("alloc")
-	overload public static function alloc():UIWebView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIWebView;
+extern class UIWebView extends UIView{
 
 	@:native("delegate")
 	public var delegate:Dynamic;

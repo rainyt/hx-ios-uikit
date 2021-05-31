@@ -4,22 +4,10 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITableViewController")
 @:include("UIKit/UIKit.h")
-extern class UITableViewController{
-
-	@:native("alloc")
-	overload public static function alloc():UITableViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableViewController;
+extern class UITableViewController extends UIViewController{
 
 	@:native("initWithStyle")
 	overload public function initWithStyle(style:UITableViewStyle):UITableViewController;
-
-	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UITableViewController;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITableViewController;
 
 	@:native("tableView")
 	public var tableView:UITableView;

@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIToolbar")
 @:include("UIKit/UIKit.h")
-extern class UIToolbar{
-
-	@:native("alloc")
-	overload public static function alloc():UIToolbar;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIToolbar;
+extern class UIToolbar extends UIView{
 
 	@:native("barStyle")
 	public var barStyle:UIBarStyle;
@@ -19,9 +13,6 @@ extern class UIToolbar{
 
 	@:native("setItems:animated")
 	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
-
-	@:native("tintColor")
-	public var tintColor:UIColor;
 
 	@:native("setBackgroundImage:forToolbarPosition:barMetrics")
 	overload public function setBackgroundImage_forToolbarPosition_barMetrics(backgroundImage:UIImage, forToolbarPosition:UIBarPosition, barMetrics:UIBarMetrics):Void;

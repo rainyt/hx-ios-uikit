@@ -4,16 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UITextView")
 @:include("UIKit/UIKit.h")
-extern class UITextView{
-
-	@:native("alloc")
-	overload public static function alloc():UITextView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextView;
-
-	@:native("delegate")
-	public var delegate:Dynamic;
+extern class UITextView extends UIScrollView{
 
 	@:native("font")
 	public var font:UIFont;
@@ -53,9 +44,6 @@ extern class UITextView{
 
 	@:native("initWithFrame:textContainer")
 	overload public function initWithFrame_textContainer(frame:CGRect, textContainer:NSTextContainer):UITextView;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITextView;
 
 	@:native("textContainer")
 	public var textContainer:NSTextContainer;

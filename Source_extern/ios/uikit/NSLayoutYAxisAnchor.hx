@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSLayoutYAxisAnchor")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutYAxisAnchor{
+extern class NSLayoutYAxisAnchor extends NSLayoutAnchor{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutYAxisAnchor;

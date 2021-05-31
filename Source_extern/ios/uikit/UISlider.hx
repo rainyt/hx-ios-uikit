@@ -4,13 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UISlider")
 @:include("UIKit/UIKit.h")
-extern class UISlider{
-
-	@:native("alloc")
-	overload public static function alloc():UISlider;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISlider;
+extern class UISlider extends UIControl{
 
 	@:native("value")
 	public var value:Dynamic;

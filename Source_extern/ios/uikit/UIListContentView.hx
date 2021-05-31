@@ -4,22 +4,10 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIListContentView")
 @:include("UIKit/UIKit.h")
-extern class UIListContentView{
-
-	@:native("alloc")
-	overload public static function alloc():UIListContentView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIListContentView;
+extern class UIListContentView extends UIView{
 
 	@:native("initWithConfiguration")
 	overload public function initWithConfiguration(configuration:UIListContentConfiguration):UIListContentView;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIListContentView;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIListContentView;
 
 	@:native("init")
 	overload public function init():UIListContentView;

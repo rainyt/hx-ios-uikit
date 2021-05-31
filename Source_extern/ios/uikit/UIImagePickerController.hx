@@ -4,13 +4,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIImagePickerController")
 @:include("UIKit/UIKit.h")
-extern class UIImagePickerController{
-
-	@:native("alloc")
-	overload public static function alloc():UIImagePickerController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImagePickerController;
+extern class UIImagePickerController extends UINavigationController{
 
 	@:native("isSourceTypeAvailable")
 	overload public static function isSourceTypeAvailable(sourceType:UIImagePickerControllerSourceType):Bool;
@@ -26,9 +20,6 @@ extern class UIImagePickerController{
 
 	@:native("availableCaptureModesForCameraDevice")
 	overload public static function availableCaptureModesForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice):Dynamic;
-
-	@:native("delegate")
-	public var delegate:Dynamic;
 
 	@:native("sourceType")
 	public var sourceType:UIImagePickerControllerSourceType;

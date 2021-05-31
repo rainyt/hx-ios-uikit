@@ -9,6 +9,7 @@ import inspect as python_lib_Inspect
 import sys as python_lib_Sys
 import traceback as python_lib_Traceback
 import builtins as python_lib_Builtins
+import functools as python_lib_Functools
 import os as python_lib_Os
 
 
@@ -116,14 +117,15 @@ class ExternBaseClass:
                 self.extendClassName = HxString.substr(_this,(pos + 1),None)
                 self.extendClassName = StringTools.replace(self.extendClassName," ","")
                 self.extendClassName = StringTools.replace(self.extendClassName,"{","")
-        tmp = None
         if (self.extendClassName is not None):
+            haxe_Log.trace("extendClassName = ",_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 79, 'className': "ExternBaseClass", 'methodName': "new", 'customParams': [self.extendClassName]}))
             _this = self.extendClassName
             startIndex = None
-            tmp = ((((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) != -1) or ((self.extendClassName == "NSObject")))
-        else:
-            tmp = False
-        if tmp:
+            if (((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) != -1):
+                _this = self.extendClassName
+                startIndex = None
+                self.extendClassName = HxString.substr(self.extendClassName,0,(_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex)))
+        if ((self.extendClassName is not None) and ((self.extendClassName == "NSObject"))):
             self.extendClassName = None
         if (pclassName == ""):
             self.className = None
@@ -528,7 +530,7 @@ class ExternTools:
         haxefile = (HxOverrides.stringOrNull(HxString.substr(hfile,(pos + 1),None)) + "x")
         startIndex = None
         if (((haxefile.find("+") if ((startIndex is None)) else HxString.indexOfImpl(haxefile,"+",startIndex))) != -1):
-            print(str(("igone:" + ("null" if haxefile is None else haxefile))))
+            haxe_Log.trace(("igone:" + ("null" if haxefile is None else haxefile)),_hx_AnonObject({'fileName': "extern_tools_source/ExternTools.hx", 'lineNumber': 56, 'className': "ExternTools", 'methodName': "parsingHFile"}))
             return
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
@@ -1099,6 +1101,16 @@ class ObjcType:
         return t
 
 
+class Reflect:
+    _hx_class_name = "Reflect"
+    __slots__ = ()
+    _hx_statics = ["field"]
+
+    @staticmethod
+    def field(o,field):
+        return python_Boot.field(o,field)
+
+
 class Std:
     _hx_class_name = "Std"
     __slots__ = ()
@@ -1245,7 +1257,31 @@ class sys_FileSystem:
 class Sys:
     _hx_class_name = "Sys"
     __slots__ = ()
-    _hx_statics = ["_programPath", "programPath"]
+    _hx_statics = ["systemName", "_programPath", "programPath"]
+
+    @staticmethod
+    def systemName():
+        _g = python_lib_Sys.platform
+        x = _g
+        if x.startswith("linux"):
+            return "Linux"
+        else:
+            _g1 = _g
+            _hx_local_0 = len(_g1)
+            if (_hx_local_0 == 5):
+                if (_g1 == "win32"):
+                    return "Windows"
+                else:
+                    raise haxe_Exception.thrown("not supported platform")
+            elif (_hx_local_0 == 6):
+                if (_g1 == "cygwin"):
+                    return "Windows"
+                elif (_g1 == "darwin"):
+                    return "Mac"
+                else:
+                    raise haxe_Exception.thrown("not supported platform")
+            else:
+                raise haxe_Exception.thrown("not supported platform")
 
     @staticmethod
     def programPath():
@@ -1312,6 +1348,33 @@ class haxe_Exception(Exception):
             e._hx___skipStack = (e._hx___skipStack + 1)
             return e
 
+
+
+class haxe_Log:
+    _hx_class_name = "haxe.Log"
+    __slots__ = ()
+    _hx_statics = ["formatOutput", "trace"]
+
+    @staticmethod
+    def formatOutput(v,infos):
+        _hx_str = Std.string(v)
+        if (infos is None):
+            return _hx_str
+        pstr = ((HxOverrides.stringOrNull(infos.fileName) + ":") + Std.string(infos.lineNumber))
+        if (Reflect.field(infos,"customParams") is not None):
+            _g = 0
+            _g1 = Reflect.field(infos,"customParams")
+            while (_g < len(_g1)):
+                v = (_g1[_g] if _g >= 0 and _g < len(_g1) else None)
+                _g = (_g + 1)
+                _hx_str = (("null" if _hx_str is None else _hx_str) + ((", " + Std.string(v))))
+        return ((("null" if pstr is None else pstr) + ": ") + ("null" if _hx_str is None else _hx_str))
+
+    @staticmethod
+    def trace(v,infos = None):
+        _hx_str = haxe_Log.formatOutput(v,infos)
+        str1 = Std.string(_hx_str)
+        python_Lib.printString((("" + ("null" if str1 is None else str1)) + HxOverrides.stringOrNull(python_Lib.lineEnd)))
 
 
 class haxe_NativeStackTrace:
@@ -1397,10 +1460,35 @@ class haxe_iterators_ArrayIterator:
 
 
 
+class haxe_iterators_ArrayKeyValueIterator:
+    _hx_class_name = "haxe.iterators.ArrayKeyValueIterator"
+    __slots__ = ("current", "array")
+    _hx_fields = ["current", "array"]
+    _hx_methods = ["hasNext", "next"]
+
+    def __init__(self,array):
+        self.current = 0
+        self.array = array
+
+    def hasNext(self):
+        return (self.current < len(self.array))
+
+    def next(self):
+        def _hx_local_3():
+            def _hx_local_2():
+                _hx_local_0 = self
+                _hx_local_1 = _hx_local_0.current
+                _hx_local_0.current = (_hx_local_1 + 1)
+                return _hx_local_1
+            return _hx_AnonObject({'value': python_internal_ArrayImpl._get(self.array, self.current), 'key': _hx_local_2()})
+        return _hx_local_3()
+
+
+
 class python_Boot:
     _hx_class_name = "python.Boot"
     __slots__ = ()
-    _hx_statics = ["keywords", "toString1", "fields", "simpleField", "getInstanceFields", "getSuperClass", "getClassFields", "prefixLength", "unhandleKeywords"]
+    _hx_statics = ["keywords", "toString1", "fields", "simpleField", "field", "getInstanceFields", "getSuperClass", "getClassFields", "prefixLength", "unhandleKeywords"]
 
     @staticmethod
     def toString1(o,s):
@@ -1563,6 +1651,206 @@ class python_Boot:
             return None
 
     @staticmethod
+    def field(o,field):
+        if (field is None):
+            return None
+        if isinstance(o,str):
+            field1 = field
+            _hx_local_0 = len(field1)
+            if (_hx_local_0 == 10):
+                if (field1 == "charCodeAt"):
+                    return python_internal_MethodClosure(o,HxString.charCodeAt)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 11):
+                if (field1 == "lastIndexOf"):
+                    return python_internal_MethodClosure(o,HxString.lastIndexOf)
+                elif (field1 == "toLowerCase"):
+                    return python_internal_MethodClosure(o,HxString.toLowerCase)
+                elif (field1 == "toUpperCase"):
+                    return python_internal_MethodClosure(o,HxString.toUpperCase)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 9):
+                if (field1 == "substring"):
+                    return python_internal_MethodClosure(o,HxString.substring)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 5):
+                if (field1 == "split"):
+                    return python_internal_MethodClosure(o,HxString.split)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 7):
+                if (field1 == "indexOf"):
+                    return python_internal_MethodClosure(o,HxString.indexOf)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 8):
+                if (field1 == "toString"):
+                    return python_internal_MethodClosure(o,HxString.toString)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 6):
+                if (field1 == "charAt"):
+                    return python_internal_MethodClosure(o,HxString.charAt)
+                elif (field1 == "length"):
+                    return len(o)
+                elif (field1 == "substr"):
+                    return python_internal_MethodClosure(o,HxString.substr)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            else:
+                field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                if hasattr(o,field1):
+                    return getattr(o,field1)
+                else:
+                    return None
+        elif isinstance(o,list):
+            field1 = field
+            _hx_local_1 = len(field1)
+            if (_hx_local_1 == 11):
+                if (field1 == "lastIndexOf"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.lastIndexOf)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 4):
+                if (field1 == "copy"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.copy)
+                elif (field1 == "join"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.join)
+                elif (field1 == "push"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.push)
+                elif (field1 == "sort"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.sort)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 5):
+                if (field1 == "shift"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.shift)
+                elif (field1 == "slice"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.slice)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 7):
+                if (field1 == "indexOf"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.indexOf)
+                elif (field1 == "reverse"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.reverse)
+                elif (field1 == "unshift"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.unshift)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 3):
+                if (field1 == "map"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.map)
+                elif (field1 == "pop"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.pop)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 8):
+                if (field1 == "contains"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.contains)
+                elif (field1 == "iterator"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.iterator)
+                elif (field1 == "toString"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.toString)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 16):
+                if (field1 == "keyValueIterator"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.keyValueIterator)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 6):
+                if (field1 == "concat"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.concat)
+                elif (field1 == "filter"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.filter)
+                elif (field1 == "insert"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.insert)
+                elif (field1 == "length"):
+                    return len(o)
+                elif (field1 == "remove"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.remove)
+                elif (field1 == "splice"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.splice)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            else:
+                field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                if hasattr(o,field1):
+                    return getattr(o,field1)
+                else:
+                    return None
+        else:
+            field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+            if hasattr(o,field1):
+                return getattr(o,field1)
+            else:
+                return None
+
+    @staticmethod
     def getInstanceFields(c):
         f = (list(c._hx_fields) if (hasattr(c,"_hx_fields")) else [])
         if hasattr(c,"_hx_methods"):
@@ -1647,7 +1935,66 @@ class python_HaxeIterator:
 class HxString:
     _hx_class_name = "HxString"
     __slots__ = ()
-    _hx_statics = ["indexOfImpl", "substring", "substr"]
+    _hx_statics = ["split", "charCodeAt", "charAt", "lastIndexOf", "toUpperCase", "toLowerCase", "indexOf", "indexOfImpl", "toString", "substring", "substr"]
+
+    @staticmethod
+    def split(s,d):
+        if (d == ""):
+            return list(s)
+        else:
+            return s.split(d)
+
+    @staticmethod
+    def charCodeAt(s,index):
+        if ((((s is None) or ((len(s) == 0))) or ((index < 0))) or ((index >= len(s)))):
+            return None
+        else:
+            return ord(s[index])
+
+    @staticmethod
+    def charAt(s,index):
+        if ((index < 0) or ((index >= len(s)))):
+            return ""
+        else:
+            return s[index]
+
+    @staticmethod
+    def lastIndexOf(s,_hx_str,startIndex = None):
+        if (startIndex is None):
+            return s.rfind(_hx_str, 0, len(s))
+        elif (_hx_str == ""):
+            length = len(s)
+            if (startIndex < 0):
+                startIndex = (length + startIndex)
+                if (startIndex < 0):
+                    startIndex = 0
+            if (startIndex > length):
+                return length
+            else:
+                return startIndex
+        else:
+            i = s.rfind(_hx_str, 0, (startIndex + 1))
+            startLeft = (max(0,((startIndex + 1) - len(_hx_str))) if ((i == -1)) else (i + 1))
+            check = s.find(_hx_str, startLeft, len(s))
+            if ((check > i) and ((check <= startIndex))):
+                return check
+            else:
+                return i
+
+    @staticmethod
+    def toUpperCase(s):
+        return s.upper()
+
+    @staticmethod
+    def toLowerCase(s):
+        return s.lower()
+
+    @staticmethod
+    def indexOf(s,_hx_str,startIndex = None):
+        if (startIndex is None):
+            return s.find(_hx_str)
+        else:
+            return HxString.indexOfImpl(s,_hx_str,startIndex)
 
     @staticmethod
     def indexOfImpl(s,_hx_str,startIndex):
@@ -1662,6 +2009,10 @@ class HxString:
             else:
                 return startIndex
         return s.find(_hx_str, startIndex)
+
+    @staticmethod
+    def toString(s):
+        return s
 
     @staticmethod
     def substring(s,startIndex,endIndex = None):
@@ -1691,10 +2042,40 @@ class HxString:
             return s[startIndex:(startIndex + _hx_len)]
 
 
+class python_Lib:
+    _hx_class_name = "python.Lib"
+    __slots__ = ()
+    _hx_statics = ["lineEnd", "printString"]
+
+    @staticmethod
+    def printString(_hx_str):
+        encoding = "utf-8"
+        if (encoding is None):
+            encoding = "utf-8"
+        python_lib_Sys.stdout.buffer.write(_hx_str.encode(encoding, "strict"))
+        python_lib_Sys.stdout.flush()
+
+
 class python_internal_ArrayImpl:
     _hx_class_name = "python.internal.ArrayImpl"
     __slots__ = ()
-    _hx_statics = ["indexOf", "_get", "_set"]
+    _hx_statics = ["concat", "copy", "iterator", "keyValueIterator", "indexOf", "lastIndexOf", "join", "toString", "pop", "push", "unshift", "remove", "contains", "shift", "slice", "sort", "splice", "map", "filter", "insert", "reverse", "_get", "_set"]
+
+    @staticmethod
+    def concat(a1,a2):
+        return (a1 + a2)
+
+    @staticmethod
+    def copy(x):
+        return list(x)
+
+    @staticmethod
+    def iterator(x):
+        return python_HaxeIterator(x.__iter__())
+
+    @staticmethod
+    def keyValueIterator(x):
+        return haxe_iterators_ArrayKeyValueIterator(x)
 
     @staticmethod
     def indexOf(a,x,fromIndex = None):
@@ -1710,6 +2091,97 @@ class python_internal_ArrayImpl:
             if HxOverrides.eq(a[i],x):
                 return i
         return -1
+
+    @staticmethod
+    def lastIndexOf(a,x,fromIndex = None):
+        _hx_len = len(a)
+        l = (_hx_len if ((fromIndex is None)) else (((_hx_len + fromIndex) + 1) if ((fromIndex < 0)) else (fromIndex + 1)))
+        if (l > _hx_len):
+            l = _hx_len
+        while True:
+            l = (l - 1)
+            tmp = l
+            if (not ((tmp > -1))):
+                break
+            if HxOverrides.eq(a[l],x):
+                return l
+        return -1
+
+    @staticmethod
+    def join(x,sep):
+        return sep.join([python_Boot.toString1(x1,'') for x1 in x])
+
+    @staticmethod
+    def toString(x):
+        return (("[" + HxOverrides.stringOrNull(",".join([python_Boot.toString1(x1,'') for x1 in x]))) + "]")
+
+    @staticmethod
+    def pop(x):
+        if (len(x) == 0):
+            return None
+        else:
+            return x.pop()
+
+    @staticmethod
+    def push(x,e):
+        x.append(e)
+        return len(x)
+
+    @staticmethod
+    def unshift(x,e):
+        x.insert(0, e)
+
+    @staticmethod
+    def remove(x,e):
+        try:
+            x.remove(e)
+            return True
+        except BaseException as _g:
+            return False
+
+    @staticmethod
+    def contains(x,e):
+        return (e in x)
+
+    @staticmethod
+    def shift(x):
+        if (len(x) == 0):
+            return None
+        return x.pop(0)
+
+    @staticmethod
+    def slice(x,pos,end = None):
+        return x[pos:end]
+
+    @staticmethod
+    def sort(x,f):
+        x.sort(key= python_lib_Functools.cmp_to_key(f))
+
+    @staticmethod
+    def splice(x,pos,_hx_len):
+        if (pos < 0):
+            pos = (len(x) + pos)
+        if (pos < 0):
+            pos = 0
+        res = x[pos:(pos + _hx_len)]
+        del x[pos:(pos + _hx_len)]
+        return res
+
+    @staticmethod
+    def map(x,f):
+        return list(map(f,x))
+
+    @staticmethod
+    def filter(x,f):
+        return list(filter(f,x))
+
+    @staticmethod
+    def insert(a,pos,x):
+        a.insert(pos, x)
+
+    @staticmethod
+    def reverse(a):
+        a.reverse()
 
     @staticmethod
     def _get(x,idx):
@@ -1795,5 +2267,6 @@ ExternTools.protocol = haxe_ds_StringMap()
 Sys._programPath = sys_FileSystem.fullPath(python_lib_Inspect.getsourcefile(Sys))
 python_Boot.keywords = set(["and", "del", "from", "not", "with", "as", "elif", "global", "or", "yield", "assert", "else", "if", "pass", "None", "break", "except", "import", "raise", "True", "class", "exec", "in", "return", "False", "continue", "finally", "is", "try", "def", "for", "lambda", "while"])
 python_Boot.prefixLength = len("_hx_")
+python_Lib.lineEnd = ("\r\n" if ((Sys.systemName() == "Windows")) else "\n")
 
 ExternTools.main()

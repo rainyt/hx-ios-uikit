@@ -4,19 +4,10 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITableViewCell")
 @:include("UIKit/UIKit.h")
-extern class UITableViewCell{
-
-	@:native("alloc")
-	overload public static function alloc():UITableViewCell;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableViewCell;
+extern class UITableViewCell extends UIView{
 
 	@:native("initWithStyle:reuseIdentifier")
 	overload public function initWithStyle_reuseIdentifier(style:UITableViewCellStyle, reuseIdentifier:NSString):UITableViewCell;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITableViewCell;
 
 	@:native("configurationState")
 	public var configurationState:UICellConfigurationState;

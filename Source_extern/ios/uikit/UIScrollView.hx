@@ -6,13 +6,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIScrollView")
 @:include("UIKit/UIKit.h")
-extern class UIScrollView{
-
-	@:native("alloc")
-	overload public static function alloc():UIScrollView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIScrollView;
+extern class UIScrollView extends UIView{
 
 	@:native("contentOffset")
 	public var contentOffset:CGPoint;

@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")
-extern class UIDatePicker{
-
-	@:native("alloc")
-	overload public static function alloc():UIDatePicker;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDatePicker;
+extern class UIDatePicker extends UIControl{
 
 	@:native("datePickerMode")
 	public var datePickerMode:UIDatePickerMode;

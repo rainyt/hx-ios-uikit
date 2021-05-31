@@ -4,19 +4,10 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentBrowserViewController{
-
-	@:native("alloc")
-	overload public static function alloc():UIDocumentBrowserViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDocumentBrowserViewController;
+extern class UIDocumentBrowserViewController extends UIViewController{
 
 	@:native("initForOpeningContentTypes")
 	overload public function initForOpeningContentTypes(contentTypes:Dynamic):UIDocumentBrowserViewController;
-
-	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibName:NSString, bundle:NSBundle):UIDocumentBrowserViewController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIActivityItemProvider")
 @:include("UIKit/UIKit.h")
-extern class UIActivityItemProvider{
+extern class UIActivityItemProvider extends NSOperation{
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemProvider;

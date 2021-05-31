@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIInputViewController")
 @:include("UIKit/UIKit.h")
-extern class UIInputViewController{
-
-	@:native("alloc")
-	overload public static function alloc():UIInputViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIInputViewController;
+extern class UIInputViewController extends UIViewController{
 
 	@:native("inputView")
 	public var inputView:UIInputView;

@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITabBarController")
 @:include("UIKit/UIKit.h")
-extern class UITabBarController{
-
-	@:native("alloc")
-	overload public static function alloc():UITabBarController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITabBarController;
+extern class UITabBarController extends UIViewController{
 
 	@:native("setViewControllers:animated")
 	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;

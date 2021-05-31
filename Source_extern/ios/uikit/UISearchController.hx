@@ -4,22 +4,10 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISearchController")
 @:include("UIKit/UIKit.h")
-extern class UISearchController{
-
-	@:native("alloc")
-	overload public static function alloc():UISearchController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISearchController;
+extern class UISearchController extends UIViewController{
 
 	@:native("initWithSearchResultsController")
 	overload public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
-
-	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UISearchController;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UISearchController;
 
 	@:native("searchResultsUpdater")
 	public var searchResultsUpdater:Dynamic;

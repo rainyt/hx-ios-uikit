@@ -6,28 +6,16 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITableView")
 @:include("UIKit/UIKit.h")
-extern class UITableView{
-
-	@:native("alloc")
-	overload public static function alloc():UITableView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableView;
+extern class UITableView extends UIScrollView{
 
 	@:native("initWithFrame:style")
 	overload public function initWithFrame_style(frame:CGRect, style:UITableViewStyle):UITableView;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITableView;
 
 	@:native("style")
 	public var style:UITableViewStyle;
 
 	@:native("dataSource")
 	public var dataSource:Dynamic;
-
-	@:native("delegate")
-	public var delegate:Dynamic;
 
 	@:native("prefetchDataSource")
 	public var prefetchDataSource:Dynamic;

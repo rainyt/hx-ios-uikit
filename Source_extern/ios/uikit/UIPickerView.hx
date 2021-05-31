@@ -4,13 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIPickerView")
 @:include("UIKit/UIKit.h")
-extern class UIPickerView{
-
-	@:native("alloc")
-	overload public static function alloc():UIPickerView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPickerView;
+extern class UIPickerView extends UIView{
 
 	@:native("dataSource")
 	public var dataSource:Dynamic;

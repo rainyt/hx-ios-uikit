@@ -4,19 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIProgressView")
 @:include("UIKit/UIKit.h")
-extern class UIProgressView{
-
-	@:native("alloc")
-	overload public static function alloc():UIProgressView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIProgressView;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIProgressView;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIProgressView;
+extern class UIProgressView extends UIView{
 
 	@:native("initWithProgressViewStyle")
 	overload public function initWithProgressViewStyle(style:UIProgressViewStyle):UIProgressView;

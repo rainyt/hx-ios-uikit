@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSLayoutDimension")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutDimension{
+extern class NSLayoutDimension extends NSLayoutAnchor{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutDimension;

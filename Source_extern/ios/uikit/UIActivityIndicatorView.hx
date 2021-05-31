@@ -4,22 +4,10 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIActivityIndicatorView")
 @:include("UIKit/UIKit.h")
-extern class UIActivityIndicatorView{
-
-	@:native("alloc")
-	overload public static function alloc():UIActivityIndicatorView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIActivityIndicatorView;
+extern class UIActivityIndicatorView extends UIView{
 
 	@:native("initWithActivityIndicatorStyle")
 	overload public function initWithActivityIndicatorStyle(style:UIActivityIndicatorViewStyle):UIActivityIndicatorView;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIActivityIndicatorView;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIActivityIndicatorView;
 
 	@:native("activityIndicatorViewStyle")
 	public var activityIndicatorViewStyle:UIActivityIndicatorViewStyle;

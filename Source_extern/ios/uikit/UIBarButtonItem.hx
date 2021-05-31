@@ -4,19 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIBarButtonItem")
 @:include("UIKit/UIKit.h")
-extern class UIBarButtonItem{
-
-	@:native("alloc")
-	overload public static function alloc():UIBarButtonItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIBarButtonItem;
-
-	@:native("init")
-	overload public function init():UIBarButtonItem;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIBarButtonItem;
+extern class UIBarButtonItem extends UIBarItem{
 
 	@:native("initWithImage:style:target:action")
 	overload public function initWithImage_style_target_action(image:UIImage, style:UIBarButtonItemStyle, target:Dynamic, action:String):UIBarButtonItem;

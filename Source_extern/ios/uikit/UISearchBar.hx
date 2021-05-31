@@ -4,22 +4,10 @@ import ios.objc.CGRect;
 @:objc
 @:native("UISearchBar")
 @:include("UIKit/UIKit.h")
-extern class UISearchBar{
-
-	@:native("alloc")
-	overload public static function alloc():UISearchBar;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISearchBar;
+extern class UISearchBar extends UIView{
 
 	@:native("init")
 	overload public function init():UISearchBar;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UISearchBar;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UISearchBar;
 
 	@:native("barStyle")
 	public var barStyle:UIBarStyle;
@@ -47,9 +35,6 @@ extern class UISearchBar{
 
 	@:native("inputAssistantItem")
 	public var inputAssistantItem:UITextInputAssistantItem;
-
-	@:native("tintColor")
-	public var tintColor:UIColor;
 
 	@:native(" UI_APPEARANCE_SELECTOR")
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;

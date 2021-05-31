@@ -6,25 +6,13 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UICollectionView")
 @:include("UIKit/UIKit.h")
-extern class UICollectionView{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionView;
+extern class UICollectionView extends UIScrollView{
 
 	@:native("initWithFrame:collectionViewLayout")
 	overload public function initWithFrame_collectionViewLayout(frame:CGRect, collectionViewLayout:UICollectionViewLayout):UICollectionView;
 
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICollectionView;
-
 	@:native("collectionViewLayout")
 	public var collectionViewLayout:UICollectionViewLayout;
-
-	@:native("delegate")
-	public var delegate:Dynamic;
 
 	@:native("dataSource")
 	public var dataSource:Dynamic;

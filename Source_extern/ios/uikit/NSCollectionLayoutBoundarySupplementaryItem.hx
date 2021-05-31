@@ -5,22 +5,13 @@ import ios.objc.CGPoint;
 @:objc
 @:native("NSCollectionLayoutBoundarySupplementaryItem")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutBoundarySupplementaryItem{
-
-	@:native("alloc")
-	overload public static function alloc():NSCollectionLayoutBoundarySupplementaryItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSCollectionLayoutBoundarySupplementaryItem;
+extern class NSCollectionLayoutBoundarySupplementaryItem extends NSCollectionLayoutSupplementaryItem{
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment")
 	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment):NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset")
 	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment_absoluteOffset(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment, absoluteOffset:CGPoint):NSCollectionLayoutBoundarySupplementaryItem;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("extendsBoundary")
 	public var extendsBoundary:Bool;

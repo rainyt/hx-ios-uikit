@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")
-extern class NSTextStorage{
-
-	@:native("alloc")
-	overload public static function alloc():NSTextStorage;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSTextStorage;
+extern class NSTextStorage extends NSMutableAttributedString{
 
 	@:native("addLayoutManager")
 	overload public function addLayoutManager(aLayoutManager:NSLayoutManager):Void;
