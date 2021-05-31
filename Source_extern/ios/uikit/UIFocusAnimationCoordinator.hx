@@ -15,13 +15,13 @@ extern class UIFocusAnimationCoordinator{
 	public var duration:NSTimeInterval;
 
 	@:native("addCoordinatedAnimations")
-	overload extern inline public function addCoordinatedAnimations(nullable:null):void;
+	overload extern inline public function addCoordinatedAnimations(nullable:null:void(^:void:nullablevoid(^:void):void;
 
 	@:native("addCoordinatedFocusingAnimations")
-	overload extern inline public function addCoordinatedFocusingAnimations(void:null):void;
+	overload extern inline public function addCoordinatedFocusingAnimations(void:null:(^_Nullable:id<UIFocusAnimationContext>animationContext:void(^_Nullable:void:ios(11.0:11.0):void;
 
 	@:native("addCoordinatedUnfocusingAnimations")
-	overload extern inline public function addCoordinatedUnfocusingAnimations(void:null):void;
+	overload extern inline public function addCoordinatedUnfocusingAnimations(void:null:(^_Nullable:id<UIFocusAnimationContext>animationContext:void(^_Nullable:void:ios(11.0:11.0):void;
 
 
 }

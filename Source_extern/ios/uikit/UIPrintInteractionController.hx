@@ -50,47 +50,47 @@ extern class UIPrintInteractionController{
 	@:native("range")
 	public var range:page;
 
-	@:native("presentAnimated")
-	overload extern inline public function presentAnimated(animated:BOOL):BOOL;
+	@:native("presentAnimated:completionHandler")
+	overload extern inline public function presentAnimated(animated:BOOL, completionHandler:nullableUIPrintInteractionCompletionHandler):BOOL;
 
-	@:native("presentFromRect")
-	overload extern inline public function presentFromRect(rect:CGRect):BOOL;
+	@:native("presentFromRect:inView")
+	overload extern inline public function presentFromRect(rect:CGRect, inView:UIView:BOOL:nullableUIPrintInteractionCompletionHandler):BOOL;
 
 	@:native("presentFromBarButtonItem")
-	overload extern inline public function presentFromBarButtonItem(UIBarButtonItem:null):BOOL;
+	overload extern inline public function presentFromBarButtonItem(UIBarButtonItem:null::BOOL:nullableUIPrintInteractionCompletionHandler):BOOL;
 
 	@:native("printToPrinter")
-	overload extern inline public function printToPrinter(UIPrinter:null):BOOL;
+	overload extern inline public function printToPrinter(UIPrinter:null::nullableUIPrintInteractionCompletionHandler):BOOL;
 
 	@:native("dismissAnimated")
 	overload extern inline public function dismissAnimated(animated:BOOL):void;
 
 	@:native("printInteractionControllerParentViewController")
-	overload extern inline public function printInteractionControllerParentViewController(UIPrintInteractionController:null): UIViewController * _Nullable ;
+	overload extern inline public function printInteractionControllerParentViewController(UIPrintInteractionController:null:): UIViewController * _Nullable ;
 
 	@:native("printInteractionController")
-	overload extern inline public function printInteractionController(UIPrintInteractionController:null):UIPrintPaper *;
+	overload extern inline public function printInteractionController(UIPrintInteractionController:null::NSArray<UIPrintPaper>):UIPrintPaper *;
 
 	@:native("printInteractionControllerWillPresentPrinterOptions")
-	overload extern inline public function printInteractionControllerWillPresentPrinterOptions(UIPrintInteractionController:null):void;
+	overload extern inline public function printInteractionControllerWillPresentPrinterOptions(UIPrintInteractionController:null:):void;
 
 	@:native("printInteractionControllerDidPresentPrinterOptions")
-	overload extern inline public function printInteractionControllerDidPresentPrinterOptions(UIPrintInteractionController:null):void;
+	overload extern inline public function printInteractionControllerDidPresentPrinterOptions(UIPrintInteractionController:null:):void;
 
 	@:native("printInteractionControllerWillDismissPrinterOptions")
-	overload extern inline public function printInteractionControllerWillDismissPrinterOptions(UIPrintInteractionController:null):void;
+	overload extern inline public function printInteractionControllerWillDismissPrinterOptions(UIPrintInteractionController:null:):void;
 
 	@:native("printInteractionControllerDidDismissPrinterOptions")
-	overload extern inline public function printInteractionControllerDidDismissPrinterOptions(UIPrintInteractionController:null):void;
+	overload extern inline public function printInteractionControllerDidDismissPrinterOptions(UIPrintInteractionController:null:):void;
 
 	@:native("printInteractionControllerWillStartJob")
-	overload extern inline public function printInteractionControllerWillStartJob(UIPrintInteractionController:null):void;
+	overload extern inline public function printInteractionControllerWillStartJob(UIPrintInteractionController:null:):void;
 
 	@:native("printInteractionControllerDidFinishJob")
-	overload extern inline public function printInteractionControllerDidFinishJob(UIPrintInteractionController:null):void;
+	overload extern inline public function printInteractionControllerDidFinishJob(UIPrintInteractionController:null:):void;
 
 	@:native("printInteractionController")
-	overload extern inline public function printInteractionController(UIPrintInteractionController:null):CGFloat;
+	overload extern inline public function printInteractionController(UIPrintInteractionController:null::UIPrintPaper:ios(7.0):CGFloat;
 
 	@:native("")
 	overload extern inline public function ():UIPrinterCutterBehavior;

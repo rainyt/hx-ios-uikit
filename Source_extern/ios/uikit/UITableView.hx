@@ -30,160 +30,160 @@ extern class UITableView{
 	public var nextFocusedIndexPath:NSIndexPath;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UITableViewCell:NSIndexPath):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UIView:NSInteger:ios(6.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UIView:NSInteger:ios(6.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UITableViewCell:NSIndexPath:ios(6.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UIView:NSInteger:ios(6.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UIView:NSInteger:ios(6.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):CGFloat;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):CGFloat;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):CGFloat;
+	overload extern inline public function tableView(UITableView:null::NSInteger):CGFloat;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):CGFloat;
+	overload extern inline public function tableView(UITableView:null::NSInteger):CGFloat;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):CGFloat;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(7.0):CGFloat;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):CGFloat;
+	overload extern inline public function tableView(UITableView:null::NSInteger:ios(7.0):CGFloat;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):CGFloat;
+	overload extern inline public function tableView(UITableView:null::NSInteger:ios(7.0):CGFloat;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UIView *;
+	overload extern inline public function tableView(UITableView:null::NSInteger):nullable UIView *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UIView *;
+	overload extern inline public function tableView(UITableView:null::NSInteger):nullable UIView *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):UITableViewCellAccessoryType;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:"",ios(2.0,3.0:tvos):UITableViewCellAccessoryType;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(6.0):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(6.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(6.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable NSIndexPath *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):nullable NSIndexPath *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable NSIndexPath *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(3.0):nullable NSIndexPath *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(3.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):UITableViewCellEditingStyle;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):UITableViewCellEditingStyle;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable NSString *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(3.0:tvos):nullable NSString *;
+
+	@:native("tableView:"tableView")
+	overload extern inline public function tableView(UITableView:null::NSIndexPath, "tableView:8.0,13.0:tvos):nullable NSArray<UITableViewRowAction *> *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable NSArray<UITableViewRowAction *> *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(11.0:tvos):nullable UISwipeActionsConfiguration *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UISwipeActionsConfiguration *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(11.0:tvos):nullable UISwipeActionsConfiguration *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UISwipeActionsConfiguration *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:tvos):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::nullableNSIndexPath:tvos):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:NSIndexPath):NSIndexPath *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):NSIndexPath *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):NSInteger;
+
+	@:native("tableView:"tableView")
+	overload extern inline public function tableView(UITableView:null::NSIndexPath, "tableView:5.0,13.0):BOOL;
+
+	@:native("tableView:"tableView")
+	overload extern inline public function tableView(UITableView:null::SEL:NSIndexPath:nullableid, "tableView:5.0,13.0):BOOL;
+
+	@:native("tableView:"tableView")
+	overload extern inline public function tableView(UITableView:null::SEL:NSIndexPath:nullableid, "tableView:5.0,13.0):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):NSInteger;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(9.0):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::UITableViewFocusUpdateContext:ios(9.0):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
-
-	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
-
-	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
-
-	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
-
-	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UITableViewFocusUpdateContext:UIFocusAnimationCoordinator:ios(9.0):void;
 
 	@:native("indexPathForPreferredFocusedViewInTableView")
-	overload extern inline public function indexPathForPreferredFocusedViewInTableView(UITableView:null):nullable NSIndexPath *;
+	overload extern inline public function indexPathForPreferredFocusedViewInTableView(UITableView:null::ios(9.0):nullable NSIndexPath *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:id<UISpringLoadedInteractionContext>:ios(11.0:tvos,watchos):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(13.0:tvos,watchos):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:ios(13.0:tvos,watchos):void;
 
 	@:native("tableViewDidEndMultipleSelectionInteraction")
-	overload extern inline public function tableViewDidEndMultipleSelectionInteraction(UITableView:null):void;
+	overload extern inline public function tableViewDidEndMultipleSelectionInteraction(UITableView:null::ios(13.0:tvos,watchos):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UIContextMenuConfiguration *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:CGPoint:ios(13.0:watchos,tvos):nullable UIContextMenuConfiguration *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UITargetedPreview *;
+	overload extern inline public function tableView(UITableView:null::UIContextMenuConfiguration:ios(13.0:watchos,tvos):nullable UITargetedPreview *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UITargetedPreview *;
+	overload extern inline public function tableView(UITableView:null::UIContextMenuConfiguration:ios(13.0:watchos,tvos):nullable UITargetedPreview *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UIContextMenuConfiguration:id<UIContextMenuInteractionCommitAnimating>:ios(13.0:watchos,tvos):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UIContextMenuConfiguration:nullableid<UIContextMenuInteractionAnimating>:ios(14.0:watchos,tvos):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UIContextMenuConfiguration:nullableid<UIContextMenuInteractionAnimating>:ios(14.0:watchos,tvos):void;
 
-	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UITableView;
+	@:native("initWithFrame:style")
+	overload extern inline public function initWithFrame(frame:CGRect, style:UITableViewStyle):UITableView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UITableView;
+	overload extern inline public function initWithCoder(NSCoder:null:):UITableView;
 
 	@:native("style")
 	public var style:UITableViewStyle;
@@ -249,19 +249,19 @@ extern class UITableView{
 	overload extern inline public function rectForFooterInSection(section:NSInteger):CGRect;
 
 	@:native("rectForRowAtIndexPath")
-	overload extern inline public function rectForRowAtIndexPath(NSIndexPath:null):CGRect;
+	overload extern inline public function rectForRowAtIndexPath(NSIndexPath:null:):CGRect;
 
 	@:native("indexPathForRowAtPoint")
 	overload extern inline public function indexPathForRowAtPoint(point:CGPoint):nullable NSIndexPath *;
 
 	@:native("indexPathForCell")
-	overload extern inline public function indexPathForCell(UITableViewCell:null):nullable NSIndexPath *;
+	overload extern inline public function indexPathForCell(UITableViewCell:null:):nullable NSIndexPath *;
 
 	@:native("indexPathsForRowsInRect")
 	overload extern inline public function indexPathsForRowsInRect(rect:CGRect):nullable NSArray<NSIndexPath *> *;
 
 	@:native("cellForRowAtIndexPath")
-	overload extern inline public function cellForRowAtIndexPath(NSIndexPath:null):nullable __kindof UITableViewCell *;
+	overload extern inline public function cellForRowAtIndexPath(NSIndexPath:null:):nullable __kindof UITableViewCell *;
 
 	@:native("visibleCells")
 	public var visibleCells:>;
@@ -270,19 +270,19 @@ extern class UITableView{
 	public var indexPathsForVisibleRows:>;
 
 	@:native("headerViewForSection")
-	overload extern inline public function headerViewForSection(section:NSInteger):nullable UITableViewHeaderFooterView *;
+	overload extern inline public function headerViewForSection(section:NSInteger:API_AVAILABLE(ios(6.0):nullable UITableViewHeaderFooterView *;
 
 	@:native("footerViewForSection")
-	overload extern inline public function footerViewForSection(section:NSInteger):nullable UITableViewHeaderFooterView *;
+	overload extern inline public function footerViewForSection(section:NSInteger:API_AVAILABLE(ios(6.0):nullable UITableViewHeaderFooterView *;
 
 	@:native("scrollToRowAtIndexPath")
-	overload extern inline public function scrollToRowAtIndexPath(NSIndexPath:null):void;
+	overload extern inline public function scrollToRowAtIndexPath(NSIndexPath:null::UITableViewScrollPosition:BOOL):void;
 
-	@:native("scrollToNearestSelectedRowAtScrollPosition")
-	overload extern inline public function scrollToNearestSelectedRowAtScrollPosition(scrollPosition:UITableViewScrollPosition):void;
+	@:native("scrollToNearestSelectedRowAtScrollPosition:animated")
+	overload extern inline public function scrollToNearestSelectedRowAtScrollPosition(scrollPosition:UITableViewScrollPosition, animated:BOOL):void;
 
 	@:native("performBatchUpdates")
-	overload extern inline public function performBatchUpdates(void:null):void;
+	overload extern inline public function performBatchUpdates(void:null:(NS_NOESCAPE^_Nullable:void:void(^_Nullable:BOOLfinished:ios(11.0:11.0):void;
 
 	@:native("beginUpdates;")
 	overload extern inline public function beginUpdates;():void;
@@ -291,28 +291,28 @@ extern class UITableView{
 	overload extern inline public function endUpdates;():void;
 
 	@:native("insertSections")
-	overload extern inline public function insertSections(NSIndexSet:null):void;
+	overload extern inline public function insertSections(NSIndexSet:null::UITableViewRowAnimation):void;
 
 	@:native("deleteSections")
-	overload extern inline public function deleteSections(NSIndexSet:null):void;
+	overload extern inline public function deleteSections(NSIndexSet:null::UITableViewRowAnimation):void;
 
 	@:native("reloadSections")
-	overload extern inline public function reloadSections(NSIndexSet:null):void;
+	overload extern inline public function reloadSections(NSIndexSet:null::UITableViewRowAnimation:ios(3.0):void;
 
-	@:native("moveSection")
-	overload extern inline public function moveSection(section:NSInteger):void;
+	@:native("moveSection:toSection")
+	overload extern inline public function moveSection(section:NSInteger, toSection:NSInteger:ios(5.0):void;
 
 	@:native("insertRowsAtIndexPaths")
-	overload extern inline public function insertRowsAtIndexPaths(NSArray<NSIndexPath:null):void;
+	overload extern inline public function insertRowsAtIndexPaths(NSArray<NSIndexPath:null:>:UITableViewRowAnimation):void;
 
 	@:native("deleteRowsAtIndexPaths")
-	overload extern inline public function deleteRowsAtIndexPaths(NSArray<NSIndexPath:null):void;
+	overload extern inline public function deleteRowsAtIndexPaths(NSArray<NSIndexPath:null:>:UITableViewRowAnimation):void;
 
 	@:native("reloadRowsAtIndexPaths")
-	overload extern inline public function reloadRowsAtIndexPaths(NSArray<NSIndexPath:null):void;
+	overload extern inline public function reloadRowsAtIndexPaths(NSArray<NSIndexPath:null:>:UITableViewRowAnimation:ios(3.0):void;
 
 	@:native("moveRowAtIndexPath")
-	overload extern inline public function moveRowAtIndexPath(NSIndexPath:null):void;
+	overload extern inline public function moveRowAtIndexPath(NSIndexPath:null::NSIndexPath:ios(5.0):void;
 
 	@:native("tvos(11.0))")
 	public var tvos(11.0)):API_AVAILABLE(ios(11.0),;
@@ -326,8 +326,8 @@ extern class UITableView{
 	@:native("animated.")
 	public var animated.:not;
 
-	@:native("setEditing")
-	overload extern inline public function setEditing(editing:BOOL):void;
+	@:native("setEditing:animated")
+	overload extern inline public function setEditing(editing:BOOL, animated:BOOL):void;
 
 	@:native("mode")
 	public var mode:editing;
@@ -348,10 +348,10 @@ extern class UITableView{
 	public var selection.:the;
 
 	@:native("selectRowAtIndexPath")
-	overload extern inline public function selectRowAtIndexPath(nullable:null):void;
+	overload extern inline public function selectRowAtIndexPath(nullable:null:NSIndexPath:BOOL:UITableViewScrollPosition):void;
 
 	@:native("deselectRowAtIndexPath")
-	overload extern inline public function deselectRowAtIndexPath(NSIndexPath:null):void;
+	overload extern inline public function deselectRowAtIndexPath(NSIndexPath:null::BOOL):void;
 
 	@:native("0")
 	public var 0:is;
@@ -387,25 +387,25 @@ extern class UITableView{
 	public var footer:section;
 
 	@:native("dequeueReusableCellWithIdentifier")
-	overload extern inline public function dequeueReusableCellWithIdentifier(NSString:null):nullable __kindof UITableViewCell *;
+	overload extern inline public function dequeueReusableCellWithIdentifier(NSString:null:):nullable __kindof UITableViewCell *;
 
 	@:native("dequeueReusableCellWithIdentifier")
-	overload extern inline public function dequeueReusableCellWithIdentifier(NSString:null):__kindof UITableViewCell *;
+	overload extern inline public function dequeueReusableCellWithIdentifier(NSString:null::NSIndexPath:ios(6.0):__kindof UITableViewCell *;
 
 	@:native("dequeueReusableHeaderFooterViewWithIdentifier")
-	overload extern inline public function dequeueReusableHeaderFooterViewWithIdentifier(NSString:null):nullable __kindof UITableViewHeaderFooterView *;
+	overload extern inline public function dequeueReusableHeaderFooterViewWithIdentifier(NSString:null::ios(6.0):nullable __kindof UITableViewHeaderFooterView *;
 
 	@:native("registerNib")
-	overload extern inline public function registerNib(nullable:null):void;
+	overload extern inline public function registerNib(nullable:null:UINib:NSString:ios(5.0):void;
 
 	@:native("registerClass")
-	overload extern inline public function registerClass(nullable:null):void;
+	overload extern inline public function registerClass(nullable:null:Class:NSString:ios(6.0):void;
 
 	@:native("registerNib")
-	overload extern inline public function registerNib(nullable:null):void;
+	overload extern inline public function registerNib(nullable:null:UINib:NSString:ios(6.0):void;
 
 	@:native("registerClass")
-	overload extern inline public function registerClass(nullable:null):void;
+	overload extern inline public function registerClass(nullable:null:Class:NSString:ios(6.0):void;
 
 	@:native("used.")
 	public var used.:is;
@@ -423,88 +423,88 @@ extern class UITableView{
 	public var watchos):API_UNAVAILABLE(tvos,;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):NSInteger;
+	overload extern inline public function tableView(UITableView:null::NSInteger):NSInteger;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):UITableViewCell *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):UITableViewCell *;
 
 	@:native("numberOfSectionsInTableView")
-	overload extern inline public function numberOfSectionsInTableView(UITableView:null):NSInteger;
+	overload extern inline public function numberOfSectionsInTableView(UITableView:null:):NSInteger;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable NSString *;
+	overload extern inline public function tableView(UITableView:null::NSInteger:UILabel):nullable NSString *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable NSString *;
+	overload extern inline public function tableView(UITableView:null::NSInteger):nullable NSString *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):BOOL;
 
 	@:native("sectionIndexTitlesForTableView")
-	overload extern inline public function sectionIndexTitlesForTableView(UITableView:null):nullable NSArray<NSString *> *;
+	overload extern inline public function sectionIndexTitlesForTableView(UITableView:null::e.g."ABCD...Z#"):nullable NSArray<NSString *> *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):NSInteger;
+	overload extern inline public function tableView(UITableView:null::NSString:NSInteger:e.g."B",1):NSInteger;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::UITableViewCellEditingStyle:NSIndexPath):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath:NSIndexPath):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSArray<NSIndexPath>):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::NSArray<NSIndexPath>):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):NSArray<UIDragItem *> *;
+	overload extern inline public function tableView(UITableView:null::id<UIDragSession>:NSIndexPath):NSArray<UIDragItem *> *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):NSArray<UIDragItem *> *;
+	overload extern inline public function tableView(UITableView:null::id<UIDragSession>:NSIndexPath:CGPoint):NSArray<UIDragItem *> *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UIDragPreviewParameters *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):nullable UIDragPreviewParameters *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::id<UIDragSession>):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::id<UIDragSession>):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::id<UIDragSession>):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::id<UIDragSession>):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::id<UITableViewDropCoordinator>):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):BOOL;
+	overload extern inline public function tableView(UITableView:null::id<UIDropSession>):BOOL;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::id<UIDropSession>):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):UITableViewDropProposal *;
+	overload extern inline public function tableView(UITableView:null::id<UIDropSession>:nullableNSIndexPath):UITableViewDropProposal *;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::id<UIDropSession>):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):void;
+	overload extern inline public function tableView(UITableView:null::id<UIDropSession>):void;
 
 	@:native("tableView")
-	overload extern inline public function tableView(UITableView:null):nullable UIDragPreviewParameters *;
+	overload extern inline public function tableView(UITableView:null::NSIndexPath):nullable UIDragPreviewParameters *;
 
-	@:native("initWithDropOperation")
-	overload extern inline public function initWithDropOperation(operation:UIDropOperation):UITableView;
+	@:native("initWithDropOperation:intent")
+	overload extern inline public function initWithDropOperation(operation:UIDropOperation, intent:UITableViewDropIntent):UITableView;
 
 	@:native("intent")
 	public var intent:UITableViewDropIntent;
@@ -522,19 +522,19 @@ extern class UITableView{
 	public var session:id<UIDropSession>;
 
 	@:native("dropItem")
-	overload extern inline public function dropItem(UIDragItem:null):id<UITableViewDropPlaceholderContext>;
+	overload extern inline public function dropItem(UIDragItem:null::UITableViewDropPlaceholder):id<UITableViewDropPlaceholderContext>;
 
 	@:native("dropItem")
-	overload extern inline public function dropItem(UIDragItem:null):id<UIDragAnimating>;
+	overload extern inline public function dropItem(UIDragItem:null::NSIndexPath):id<UIDragAnimating>;
 
 	@:native("dropItem")
-	overload extern inline public function dropItem(UIDragItem:null):id<UIDragAnimating>;
+	overload extern inline public function dropItem(UIDragItem:null::NSIndexPath:CGRect):id<UIDragAnimating>;
 
 	@:native("dropItem")
-	overload extern inline public function dropItem(UIDragItem:null):id<UIDragAnimating>;
+	overload extern inline public function dropItem(UIDragItem:null::UIDragPreviewTarget):id<UIDragAnimating>;
 
 	@:native("initWithInsertionIndexPath")
-	overload extern inline public function initWithInsertionIndexPath(NSIndexPath:null):UITableView;
+	overload extern inline public function initWithInsertionIndexPath(NSIndexPath:null::NSString:CGFloat):UITableView;
 
 	@:native("init")
 	overload extern inline public function init():UITableView;
@@ -558,7 +558,7 @@ extern class UITableView{
 	public var dragItem:UIDragItem;
 
 	@:native("commitInsertionWithDataSourceUpdates")
-	overload extern inline public function commitInsertionWithDataSourceUpdates(voidNS_NOESCAPE:null):BOOL;
+	overload extern inline public function commitInsertionWithDataSourceUpdates(voidNS_NOESCAPE:null:^:NSIndexPathinsertionIndexPath):BOOL;
 
 	@:native("deletePlaceholder;")
 	overload extern inline public function deletePlaceholder;():BOOL;

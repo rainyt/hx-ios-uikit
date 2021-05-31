@@ -21,7 +21,7 @@ extern class UIAlertController{
 	public var enabled:BOOL;
 
 	@:native("addAction")
-	overload extern inline public function addAction(UIAlertAction:null):void;
+	overload extern inline public function addAction(UIAlertAction:null:):void;
 
 	@:native("actions")
 	public var actions:>;
@@ -30,7 +30,7 @@ extern class UIAlertController{
 	public var API_AVAILABLE(ios(9.0)):preferredAction;
 
 	@:native("addTextFieldWithConfigurationHandler")
-	overload extern inline public function addTextFieldWithConfigurationHandler(void:null):void;
+	overload extern inline public function addTextFieldWithConfigurationHandler(void:null:(^__nullable:UITextFieldtextField):void;
 
 	@:native("textFields")
 	public var textFields:>;

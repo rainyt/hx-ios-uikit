@@ -15,7 +15,7 @@ extern class UISearchContainerViewController{
 	public var searchController:UISearchController;
 
 	@:native("initWithSearchController")
-	overload extern inline public function initWithSearchController(UISearchController:null):UISearchContainerViewController;
+	overload extern inline public function initWithSearchController(UISearchController:null:):UISearchContainerViewController;
 
 
 }

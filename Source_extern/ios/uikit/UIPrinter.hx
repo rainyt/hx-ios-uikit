@@ -33,7 +33,7 @@ extern class UIPrinter{
 	public var supportsDuplex:BOOL;
 
 	@:native("contactPrinter")
-	overload extern inline public function contactPrinter(void^:null):void;
+	overload extern inline public function contactPrinter(void^:null:__nullable:BOOLavailable):void;
 
 
 }

@@ -36,16 +36,16 @@ extern class UIPrintFormatter{
 	public var calculated://;
 
 	@:native("rectForPageAtIndex")
-	overload extern inline public function rectForPageAtIndex(pageIndex:NSInteger):CGRect;
+	overload extern inline public function rectForPageAtIndex(pageIndex:NSInteger:API_UNAVAILABLE(tvos):CGRect;
 
-	@:native("drawInRect")
-	overload extern inline public function drawInRect(rect:CGRect):void;
+	@:native("drawInRect:forPageAtIndex")
+	overload extern inline public function drawInRect(rect:CGRect, forPageAtIndex:NSInteger:tvos):void;
 
 	@:native("initWithText")
-	overload extern inline public function initWithText(NSString:null):UIPrintFormatter;
+	overload extern inline public function initWithText(NSString:null:):UIPrintFormatter;
 
 	@:native("initWithAttributedText")
-	overload extern inline public function initWithAttributedText(NSAttributedString:null):UIPrintFormatter;
+	overload extern inline public function initWithAttributedText(NSAttributedString:null::ios(7.0):UIPrintFormatter;
 
 	@:native("started")
 	public var started:drawing;
@@ -63,7 +63,7 @@ extern class UIPrintFormatter{
 	public var textAlignment:NSTextAlignment;
 
 	@:native("initWithMarkupText")
-	overload extern inline public function initWithMarkupText(NSString:null):UIPrintFormatter;
+	overload extern inline public function initWithMarkupText(NSString:null:):UIPrintFormatter;
 
 	@:native("started")
 	public var started:drawing;
@@ -74,8 +74,8 @@ extern class UIPrintFormatter{
 	@:native("viewPrintFormatter")
 	overload extern inline public function viewPrintFormatter():UIViewPrintFormatter *;
 
-	@:native("drawRect")
-	overload extern inline public function drawRect(rect:CGRect):void;
+	@:native("drawRect:forViewPrintFormatter")
+	overload extern inline public function drawRect(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter:tvos):void;
 
 
 }

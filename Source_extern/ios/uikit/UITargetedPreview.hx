@@ -12,10 +12,10 @@ extern class UITargetedPreview{
 	overload extern inline public static function autorelease():UITargetedPreview;
 
 	@:native("initWithContainer")
-	overload extern inline public function initWithContainer(UIView:null):UITargetedPreview;
+	overload extern inline public function initWithContainer(UIView:null::CGPoint:CGAffineTransform):UITargetedPreview;
 
 	@:native("initWithContainer")
-	overload extern inline public function initWithContainer(UIView:null):UITargetedPreview;
+	overload extern inline public function initWithContainer(UIView:null::CGPoint):UITargetedPreview;
 
 	@:native("init")
 	overload extern inline public function init():UITargetedPreview;
@@ -30,13 +30,13 @@ extern class UITargetedPreview{
 	public var transform:CGAffineTransform;
 
 	@:native("initWithView")
-	overload extern inline public function initWithView(UIView:null):UITargetedPreview;
+	overload extern inline public function initWithView(UIView:null::__kindofUIPreviewParameters:__kindofUIPreviewTarget):UITargetedPreview;
 
 	@:native("initWithView")
-	overload extern inline public function initWithView(UIView:null):UITargetedPreview;
+	overload extern inline public function initWithView(UIView:null::__kindofUIPreviewParameters):UITargetedPreview;
 
 	@:native("initWithView")
-	overload extern inline public function initWithView(UIView:null):UITargetedPreview;
+	overload extern inline public function initWithView(UIView:null:):UITargetedPreview;
 
 	@:native("init")
 	overload extern inline public function init():UITargetedPreview;
@@ -54,7 +54,7 @@ extern class UITargetedPreview{
 	public var size:CGSize;
 
 	@:native("retargetedPreviewWithTarget")
-	overload extern inline public function retargetedPreviewWithTarget(__kindof:null):__kindof UITargetedPreview *;
+	overload extern inline public function retargetedPreviewWithTarget(__kindof:null:UIPreviewTarget):__kindof UITargetedPreview *;
 
 
 }

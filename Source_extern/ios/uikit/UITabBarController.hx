@@ -15,7 +15,7 @@ extern class UITabBarController{
 	public var viewControllers:>;
 
 	@:native("setViewControllers")
-	overload extern inline public function setViewControllers(NSArray<__kindof:null):void;
+	overload extern inline public function setViewControllers(NSArray<__kindof:null:UIViewController>__nullable:BOOL):void;
 
 	@:native("exists.")
 	public var exists.:it;
@@ -36,31 +36,31 @@ extern class UITabBarController{
 	public var delegate:id<UITabBarControllerDelegate>;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null):BOOL;
+	overload extern inline public function tabBarController(UITabBarController:null::UIViewController:ios(3.0):BOOL;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null):void;
+	overload extern inline public function tabBarController(UITabBarController:null::UIViewController):void;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null):void;
+	overload extern inline public function tabBarController(UITabBarController:null::NSArray<__kindofUIViewController>:ios(3.0:tvos):void;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null):void;
+	overload extern inline public function tabBarController(UITabBarController:null::NSArray<__kindofUIViewController>:BOOL:ios(3.0:tvos):void;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null):void;
+	overload extern inline public function tabBarController(UITabBarController:null::NSArray<__kindofUIViewController>:BOOL:tvos):void;
 
 	@:native("tabBarControllerSupportedInterfaceOrientations")
-	overload extern inline public function tabBarControllerSupportedInterfaceOrientations(UITabBarController:null):UIInterfaceOrientationMask;
+	overload extern inline public function tabBarControllerSupportedInterfaceOrientations(UITabBarController:null::ios(7.0:tvos):UIInterfaceOrientationMask;
 
 	@:native("tabBarControllerPreferredInterfaceOrientationForPresentation")
-	overload extern inline public function tabBarControllerPreferredInterfaceOrientationForPresentation(UITabBarController:null):UIInterfaceOrientation;
+	overload extern inline public function tabBarControllerPreferredInterfaceOrientationForPresentation(UITabBarController:null::ios(7.0:tvos):UIInterfaceOrientation;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null):nullable id <UIViewControllerInteractiveTransitioning>;
+	overload extern inline public function tabBarController(UITabBarController:null:):nullable id <UIViewControllerInteractiveTransitioning>;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null):nullable id <UIViewControllerAnimatedTransitioning>;
+	overload extern inline public function tabBarController(UITabBarController:null:):nullable id <UIViewControllerAnimatedTransitioning>;
 
 	@:native("explicitly.")
 	public var explicitly.:set;

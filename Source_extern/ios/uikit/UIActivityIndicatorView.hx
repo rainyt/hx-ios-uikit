@@ -18,7 +18,7 @@ extern class UIActivityIndicatorView{
 	overload extern inline public function initWithFrame(frame:CGRect):UIActivityIndicatorView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIActivityIndicatorView;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIActivityIndicatorView;
 
 	@:native("UIActivityIndicatorViewStyleMedium")
 	public var UIActivityIndicatorViewStyleMedium:is;

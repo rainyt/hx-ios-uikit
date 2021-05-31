@@ -24,7 +24,7 @@ extern class UIScreenshotService{
 	public var screenshotService:UIScreenshotService;
 
 	@:native("screenshotService")
-	overload extern inline public function screenshotService(UIScreenshotService:null):void;
+	overload extern inline public function screenshotService(UIScreenshotService:null::void(^:NSData_NullablePDFData,NSIntegerindexOfCurrentPage,CGRectrectInCurrentPage):void;
 
 
 }

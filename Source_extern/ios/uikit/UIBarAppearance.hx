@@ -21,10 +21,10 @@ extern class UIBarAppearance{
 	public var idiom:UIUserInterfaceIdiom;
 
 	@:native("initWithBarAppearance")
-	overload extern inline public function initWithBarAppearance(UIBarAppearance:null):UIBarAppearance;
+	overload extern inline public function initWithBarAppearance(UIBarAppearance:null:):UIBarAppearance;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIBarAppearance;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIBarAppearance;
 
 	@:native("copy;")
 	overload extern inline public function copy;():UIBarAppearance;

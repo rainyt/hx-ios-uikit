@@ -12,37 +12,37 @@ extern class UITextView{
 	overload extern inline public static function autorelease():UITextView;
 
 	@:native("textViewShouldBeginEditing")
-	overload extern inline public function textViewShouldBeginEditing(UITextView:null):BOOL;
+	overload extern inline public function textViewShouldBeginEditing(UITextView:null:):BOOL;
 
 	@:native("textViewShouldEndEditing")
-	overload extern inline public function textViewShouldEndEditing(UITextView:null):BOOL;
+	overload extern inline public function textViewShouldEndEditing(UITextView:null:):BOOL;
 
 	@:native("textViewDidBeginEditing")
-	overload extern inline public function textViewDidBeginEditing(UITextView:null):void;
+	overload extern inline public function textViewDidBeginEditing(UITextView:null:):void;
 
 	@:native("textViewDidEndEditing")
-	overload extern inline public function textViewDidEndEditing(UITextView:null):void;
+	overload extern inline public function textViewDidEndEditing(UITextView:null:):void;
 
 	@:native("textView")
-	overload extern inline public function textView(UITextView:null):BOOL;
+	overload extern inline public function textView(UITextView:null::NSRange:NSString):BOOL;
 
 	@:native("textViewDidChange")
-	overload extern inline public function textViewDidChange(UITextView:null):void;
+	overload extern inline public function textViewDidChange(UITextView:null:):void;
 
 	@:native("textViewDidChangeSelection")
-	overload extern inline public function textViewDidChangeSelection(UITextView:null):void;
+	overload extern inline public function textViewDidChangeSelection(UITextView:null:):void;
 
 	@:native("textView")
-	overload extern inline public function textView(UITextView:null):BOOL;
+	overload extern inline public function textView(UITextView:null::NSURL:NSRange:UITextItemInteraction:ios(10.0):BOOL;
 
 	@:native("textView")
-	overload extern inline public function textView(UITextView:null):BOOL;
+	overload extern inline public function textView(UITextView:null::NSTextAttachment:NSRange:UITextItemInteraction:ios(10.0):BOOL;
 
-	@:native("textView")
-	overload extern inline public function textView(UITextView:null):BOOL;
+	@:native("textView:"textView")
+	overload extern inline public function textView(UITextView:null::NSURL:NSRange, "textView:7.0,10.0):BOOL;
 
-	@:native("textView")
-	overload extern inline public function textView(UITextView:null):BOOL;
+	@:native("textView:"textView")
+	overload extern inline public function textView(UITextView:null::NSTextAttachment:NSRange, "textView:7.0,10.0):BOOL;
 
 	@:native("delegate")
 	public var delegate:id<UITextViewDelegate>;
@@ -92,11 +92,11 @@ extern class UITextView{
 	@:native("NO.")
 	public var NO.:to;
 
-	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UITextView;
+	@:native("initWithFrame:textContainer")
+	overload extern inline public function initWithFrame(frame:CGRect, textContainer:nullableNSTextContainer:ios(7.0):UITextView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UITextView;
+	overload extern inline public function initWithCoder(NSCoder:null:):UITextView;
 
 	@:native("API_AVAILABLE(ios(7.0))")
 	public var API_AVAILABLE(ios(7.0)):textContainer;

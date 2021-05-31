@@ -56,11 +56,14 @@ class Enum:
 
 
 
+class Class: pass
+
+
 class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
     __slots__ = ("pkg", "classname", "typedefs", "_hdata", "funcAndAttr")
     _hx_fields = ["pkg", "classname", "typedefs", "_hdata", "funcAndAttr"]
-    _hx_methods = ["toHaxeFile"]
+    _hx_methods = ["toHaxeFile", "toFuncName"]
 
     def __init__(self,classname,pkg,file):
         self.funcAndAttr = []
@@ -146,7 +149,7 @@ class ExternBaseClass:
             if (_hx_local_4 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
-                    haxe1 = (((("\toverload extern inline public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(value.name)) + "(")
+                    haxe1 = (((("\toverload extern inline public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(")
                     haxe2 = None
                     if (value.args is not None):
                         _this = value.args
@@ -162,6 +165,21 @@ class ExternBaseClass:
                 pass
         haxe = (("null" if haxe is None else haxe) + "\n}")
         return haxe
+
+    def toFuncName(self,_hx_str):
+        startIndex = None
+        if (((_hx_str.find(":") if ((startIndex is None)) else HxString.indexOfImpl(_hx_str,":",startIndex))) != -1):
+            startIndex1 = None
+            _hx_len = None
+            if (startIndex1 is None):
+                _hx_len = _hx_str.rfind(":", 0, len(_hx_str))
+            else:
+                i = _hx_str.rfind(":", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len(":"))) if ((i == -1)) else (i + 1))
+                check = _hx_str.find(":", startLeft, len(_hx_str))
+                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            return HxString.substr(_hx_str,0,_hx_len)
+        return _hx_str
 
 
 
@@ -197,7 +215,7 @@ class ExternTools:
                 ExternTools.parsingFramework(((("null" if indir is None else indir) + "/") + ("null" if value is None else value)),out)
             else:
                 startIndex = None
-                if (((value.find("NSDataAsset.h") if ((startIndex is None)) else HxString.indexOfImpl(value,"NSDataAsset.h",startIndex))) != -1):
+                if (((value.find(".h") if ((startIndex is None)) else HxString.indexOfImpl(value,".h",startIndex))) != -1):
                     ExternTools.parsingHFile(((("null" if indir is None else indir) + "/") + ("null" if value is None else value)),out)
 
     @staticmethod
@@ -239,7 +257,7 @@ class ExternTools:
 class ObjcFun:
     _hx_class_name = "ObjcFun"
     __slots__ = ()
-    _hx_statics = ["parsing", "parsingArgs", "toType"]
+    _hx_statics = ["parsing", "parsingFuncName", "parsingArgs", "toType"]
 
     @staticmethod
     def parsing(typedefs,className,line):
@@ -268,7 +286,32 @@ class ObjcFun:
         c = (className if ((((returnClass.find("instancetype") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"instancetype",startIndex))) != -1)) else returnClass)
         if (c in typedefs.h):
             c = typedefs.h.get(c,None)
-        return _hx_AnonObject({'name': funcName, 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
+        return _hx_AnonObject({'name': ObjcFun.parsingFuncName(funcName,args), 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
+
+    @staticmethod
+    def parsingFuncName(funcName,args):
+        if (args is None):
+            return funcName
+        _g_current = 0
+        _g_array = args
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            if (index == 0):
+                continue
+            def _hx_local_1():
+                _hx_local_0 = value
+                if (Std.isOfType(_hx_local_0,str) or ((_hx_local_0 is None))):
+                    _hx_local_0
+                else:
+                    raise "Class cast error"
+                return _hx_local_0
+            _this = _hx_local_1()
+            funcName = (("null" if funcName is None else funcName) + HxOverrides.stringOrNull(((":" + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(_this.split(":"), 0))))))
+        return funcName
 
     @staticmethod
     def parsingArgs(typedefs,line):
@@ -320,7 +363,115 @@ class ObjcFun:
 
     @staticmethod
     def toType(t,typedefs):
+        if (t is None):
+            return t
         return StringTools.replace(StringTools.replace((typedefs.h.get(t,None) if ((t in typedefs.h)) else t),"*","")," ","")
+
+
+class Std:
+    _hx_class_name = "Std"
+    __slots__ = ()
+    _hx_statics = ["is", "isOfType"]
+
+    @staticmethod
+    def _hx_is(v,t):
+        return Std.isOfType(v,t)
+
+    @staticmethod
+    def isOfType(v,t):
+        if ((v is None) and ((t is None))):
+            return False
+        if (t is None):
+            return False
+        if (t == Dynamic):
+            return (v is not None)
+        isBool = isinstance(v,bool)
+        if ((t == Bool) and isBool):
+            return True
+        if ((((not isBool) and (not (t == Bool))) and (t == Int)) and isinstance(v,int)):
+            return True
+        vIsFloat = isinstance(v,float)
+        tmp = None
+        tmp1 = None
+        if (((not isBool) and vIsFloat) and (t == Int)):
+            f = v
+            tmp1 = (((f != Math.POSITIVE_INFINITY) and ((f != Math.NEGATIVE_INFINITY))) and (not python_lib_Math.isnan(f)))
+        else:
+            tmp1 = False
+        if tmp1:
+            tmp1 = None
+            try:
+                tmp1 = int(v)
+            except BaseException as _g:
+                tmp1 = None
+            tmp = (v == tmp1)
+        else:
+            tmp = False
+        if ((tmp and ((v <= 2147483647))) and ((v >= -2147483648))):
+            return True
+        if (((not isBool) and (t == Float)) and isinstance(v,(float, int))):
+            return True
+        if (t == str):
+            return isinstance(v,str)
+        isEnumType = (t == Enum)
+        if ((isEnumType and python_lib_Inspect.isclass(v)) and hasattr(v,"_hx_constructs")):
+            return True
+        if isEnumType:
+            return False
+        isClassType = (t == Class)
+        if ((((isClassType and (not isinstance(v,Enum))) and python_lib_Inspect.isclass(v)) and hasattr(v,"_hx_class_name")) and (not hasattr(v,"_hx_constructs"))):
+            return True
+        if isClassType:
+            return False
+        tmp = None
+        try:
+            tmp = isinstance(v,t)
+        except BaseException as _g:
+            tmp = False
+        if tmp:
+            return True
+        if python_lib_Inspect.isclass(t):
+            cls = t
+            loop = None
+            def _hx_local_1(intf):
+                f = (intf._hx_interfaces if (hasattr(intf,"_hx_interfaces")) else [])
+                if (f is not None):
+                    _g = 0
+                    while (_g < len(f)):
+                        i = (f[_g] if _g >= 0 and _g < len(f) else None)
+                        _g = (_g + 1)
+                        if (i == cls):
+                            return True
+                        else:
+                            l = loop(i)
+                            if l:
+                                return True
+                    return False
+                else:
+                    return False
+            loop = _hx_local_1
+            currentClass = v.__class__
+            result = False
+            while (currentClass is not None):
+                if loop(currentClass):
+                    result = True
+                    break
+                currentClass = python_Boot.getSuperClass(currentClass)
+            return result
+        else:
+            return False
+
+
+class Float: pass
+
+
+class Int: pass
+
+
+class Bool: pass
+
+
+class Dynamic: pass
 
 
 class StringTools:
@@ -379,6 +530,7 @@ class haxe_ds_StringMap:
     _hx_class_name = "haxe.ds.StringMap"
     __slots__ = ("h",)
     _hx_fields = ["h"]
+    _hx_interfaces = [haxe_IMap]
 
     def __init__(self):
         self.h = dict()

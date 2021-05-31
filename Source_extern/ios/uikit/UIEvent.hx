@@ -30,19 +30,19 @@ extern class UIEvent{
 	public var allTouches:>;
 
 	@:native("touchesForWindow")
-	overload extern inline public function touchesForWindow(UIWindow:null):nullable NSSet <UITouch *> *;
+	overload extern inline public function touchesForWindow(UIWindow:null:):nullable NSSet <UITouch *> *;
 
 	@:native("touchesForView")
-	overload extern inline public function touchesForView(UIView:null):nullable NSSet <UITouch *> *;
+	overload extern inline public function touchesForView(UIView:null:):nullable NSSet <UITouch *> *;
 
 	@:native("touchesForGestureRecognizer")
-	overload extern inline public function touchesForGestureRecognizer(UIGestureRecognizer:null):nullable NSSet <UITouch *> *;
+	overload extern inline public function touchesForGestureRecognizer(UIGestureRecognizer:null::ios(3.2):nullable NSSet <UITouch *> *;
 
 	@:native("coalescedTouchesForTouch")
-	overload extern inline public function coalescedTouchesForTouch(UITouch:null):nullable NSArray <UITouch *> *;
+	overload extern inline public function coalescedTouchesForTouch(UITouch:null::ios(9.0):nullable NSArray <UITouch *> *;
 
 	@:native("predictedTouchesForTouch")
-	overload extern inline public function predictedTouchesForTouch(UITouch:null):nullable NSArray <UITouch *> *;
+	overload extern inline public function predictedTouchesForTouch(UITouch:null::ios(9.0):nullable NSArray <UITouch *> *;
 
 
 }

@@ -21,25 +21,25 @@ extern class UIUserNotificationSettings{
 	overload extern inline public function init():UIUserNotificationSettings;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIUserNotificationSettings;
+	overload extern inline public function initWithCoder(NSCoder:null::tvos):UIUserNotificationSettings;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):identifier;
 
 	@:native("actionsForContext")
-	overload extern inline public function actionsForContext(context:UIUserNotificationActionContext):nullable NSArray<UIUserNotificationAction *> *;
+	overload extern inline public function actionsForContext(context:UIUserNotificationActionContext:API_UNAVAILABLE(tvos):nullable NSArray<UIUserNotificationAction *> *;
 
 	@:native("identifier")
 	public var identifier:NSString;
 
 	@:native("setActions")
-	overload extern inline public function setActions(nullable:null):void;
+	overload extern inline public function setActions(nullable:null:NSArray<UIUserNotificationAction>:UIUserNotificationActionContext):void;
 
 	@:native("init")
 	overload extern inline public function init():UIUserNotificationSettings;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIUserNotificationSettings;
+	overload extern inline public function initWithCoder(NSCoder:null::tvos):UIUserNotificationSettings;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):identifier;

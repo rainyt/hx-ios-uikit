@@ -12,7 +12,7 @@ extern class UIAlertView{
 	overload extern inline public static function autorelease():UIAlertView;
 
 	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(nullable:null):UIAlertView;
+	overload extern inline public function initWithTitle(nullable:null:NSString:nullableNSString:nullableid/<UIAlertViewDelegate>/:nullableNSString:nullableNSString:"UseUIAlertControllerinstead."):UIAlertView;
 
 	@:native("initWithFrame")
 	overload extern inline public function initWithFrame(frame:CGRect):id;
@@ -30,7 +30,7 @@ extern class UIAlertView{
 	public var text:explanation;
 
 	@:native("addButtonWithTitle")
-	overload extern inline public function addButtonWithTitle(nullable:null):NSInteger;
+	overload extern inline public function addButtonWithTitle(nullable:null:NSString):NSInteger;
 
 	@:native("buttonTitleAtIndex")
 	overload extern inline public function buttonTitleAtIndex(buttonIndex:NSInteger):nullable NSString *;
@@ -50,35 +50,35 @@ extern class UIAlertView{
 	@:native("show;")
 	overload extern inline public function show;():void;
 
-	@:native("dismissWithClickedButtonIndex")
-	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger):void;
+	@:native("dismissWithClickedButtonIndex:animated")
+	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:BOOL):void;
 
 	@:native("API_AVAILABLE(ios(5.0))")
 	public var API_AVAILABLE(ios(5.0)):alertViewStyle;
 
 	@:native("textFieldAtIndex")
-	overload extern inline public function textFieldAtIndex(textFieldIndex:NSInteger):nullable UITextField *;
+	overload extern inline public function textFieldAtIndex(textFieldIndex:NSInteger:API_AVAILABLE(ios(5.0):nullable UITextField *;
 
 	@:native("alertView")
-	overload extern inline public function alertView(UIAlertView:null):void;
+	overload extern inline public function alertView(UIAlertView:null::NSInteger:"UseUIAlertControllerinstead.",ios(2.0,9.0):void;
 
 	@:native("alertViewCancel")
-	overload extern inline public function alertViewCancel(UIAlertView:null):void;
+	overload extern inline public function alertViewCancel(UIAlertView:null::"UseUIAlertControllerinstead.",ios(2.0,9.0):void;
 
 	@:native("willPresentAlertView")
-	overload extern inline public function willPresentAlertView(UIAlertView:null):void;
+	overload extern inline public function willPresentAlertView(UIAlertView:null::"UseUIAlertControllerinstead.",ios(2.0,9.0):void;
 
 	@:native("didPresentAlertView")
-	overload extern inline public function didPresentAlertView(UIAlertView:null):void;
+	overload extern inline public function didPresentAlertView(UIAlertView:null::"UseUIAlertControllerinstead.",ios(2.0,9.0):void;
 
 	@:native("alertView")
-	overload extern inline public function alertView(UIAlertView:null):void;
+	overload extern inline public function alertView(UIAlertView:null::NSInteger:"UseUIAlertControllerinstead.",ios(2.0,9.0):void;
 
 	@:native("alertView")
-	overload extern inline public function alertView(UIAlertView:null):void;
+	overload extern inline public function alertView(UIAlertView:null::NSInteger:"UseUIAlertControllerinstead.",ios(2.0,9.0):void;
 
 	@:native("alertViewShouldEnableFirstOtherButton")
-	overload extern inline public function alertViewShouldEnableFirstOtherButton(UIAlertView:null):BOOL;
+	overload extern inline public function alertViewShouldEnableFirstOtherButton(UIAlertView:null::"UseUIAlertControllerinstead.",ios(2.0,9.0):BOOL;
 
 
 }

@@ -33,25 +33,25 @@ extern class UIPrintPageRenderer{
 	overload extern inline public function printFormattersForPageAtIndex(pageIndex:NSInteger):nullable NSArray<UIPrintFormatter *> *;
 
 	@:native("addPrintFormatter")
-	overload extern inline public function addPrintFormatter(UIPrintFormatter:null):void;
+	overload extern inline public function addPrintFormatter(UIPrintFormatter:null::NSInteger):void;
 
 	@:native("prepareForDrawingPages")
 	overload extern inline public function prepareForDrawingPages(range:NSRange):void;
 
-	@:native("drawPageAtIndex")
-	overload extern inline public function drawPageAtIndex(pageIndex:NSInteger):void;
+	@:native("drawPageAtIndex:inRect")
+	overload extern inline public function drawPageAtIndex(pageIndex:NSInteger, inRect:CGRect):void;
 
 	@:native("drawPrintFormatter")
-	overload extern inline public function drawPrintFormatter(UIPrintFormatter:null):void;
+	overload extern inline public function drawPrintFormatter(UIPrintFormatter:null::NSInteger):void;
 
-	@:native("drawHeaderForPageAtIndex")
-	overload extern inline public function drawHeaderForPageAtIndex(pageIndex:NSInteger):void;
+	@:native("drawHeaderForPageAtIndex:inRect")
+	overload extern inline public function drawHeaderForPageAtIndex(pageIndex:NSInteger, inRect:CGRect):void;
 
-	@:native("drawContentForPageAtIndex")
-	overload extern inline public function drawContentForPageAtIndex(pageIndex:NSInteger):void;
+	@:native("drawContentForPageAtIndex:inRect")
+	overload extern inline public function drawContentForPageAtIndex(pageIndex:NSInteger, inRect:CGRect):void;
 
-	@:native("drawFooterForPageAtIndex")
-	overload extern inline public function drawFooterForPageAtIndex(pageIndex:NSInteger):void;
+	@:native("drawFooterForPageAtIndex:inRect")
+	overload extern inline public function drawFooterForPageAtIndex(pageIndex:NSInteger, inRect:CGRect):void;
 
 
 }

@@ -21,7 +21,7 @@ extern class UIToolbar{
 	public var UIBarStyleBlackTranslucent:to;
 
 	@:native("setItems")
-	overload extern inline public function setItems(nullable:null):void;
+	overload extern inline public function setItems(nullable:null:NSArray<UIBarButtonItem>:BOOL):void;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
@@ -30,16 +30,16 @@ extern class UIToolbar{
 	public var nil:is;
 
 	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null):void;
+	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIBarPosition:UIBarMetrics:ios(5.0):void;
 
-	@:native("backgroundImageForToolbarPosition")
-	overload extern inline public function backgroundImageForToolbarPosition(topOrBottom:UIBarPosition):nullable UIImage *;
+	@:native("backgroundImageForToolbarPosition:barMetrics")
+	overload extern inline public function backgroundImageForToolbarPosition(topOrBottom:UIBarPosition, barMetrics:UIBarMetrics:ios(5.0):nullable UIImage *;
 
 	@:native("setShadowImage")
-	overload extern inline public function setShadowImage(nullable:null):void;
+	overload extern inline public function setShadowImage(nullable:null:UIImage:UIBarPosition:ios(6.0):void;
 
 	@:native("shadowImageForToolbarPosition")
-	overload extern inline public function shadowImageForToolbarPosition(topOrBottom:UIBarPosition):nullable UIImage *;
+	overload extern inline public function shadowImageForToolbarPosition(topOrBottom:UIBarPosition:API_AVAILABLE(ios(6.0):nullable UIImage *;
 
 	@:native("API_AVAILABLE(ios(13.0))")
 	public var API_AVAILABLE(ios(13.0)):UI_APPEARANCE_SELECTOR;

@@ -12,7 +12,7 @@ extern class UIStoryboardSegue{
 	overload extern inline public static function autorelease():UIStoryboardSegue;
 
 	@:native("initWithIdentifier")
-	overload extern inline public function initWithIdentifier(nullable:null):UIStoryboardSegue;
+	overload extern inline public function initWithIdentifier(nullable:null:NSString:UIViewController:UIViewController):UIStoryboardSegue;
 
 	@:native("init")
 	overload extern inline public function init():UIStoryboardSegue;

@@ -12,16 +12,16 @@ extern class UITextChecker{
 	overload extern inline public static function autorelease():UITextChecker;
 
 	@:native("rangeOfMisspelledWordInString")
-	overload extern inline public function rangeOfMisspelledWordInString(NSString:null):NSRange;
+	overload extern inline public function rangeOfMisspelledWordInString(NSString:null::NSRange:NSInteger:BOOL:NSString):NSRange;
 
-	@:native("guessesForWordRange")
-	overload extern inline public function guessesForWordRange(range:NSRange):nullable NSArray<NSString *> *;
+	@:native("guessesForWordRange:inString")
+	overload extern inline public function guessesForWordRange(range:NSRange, inString:NSString:NSString):nullable NSArray<NSString *> *;
 
-	@:native("completionsForPartialWordRange")
-	overload extern inline public function completionsForPartialWordRange(range:NSRange):nullable NSArray<NSString *> *;
+	@:native("completionsForPartialWordRange:inString")
+	overload extern inline public function completionsForPartialWordRange(range:NSRange, inString:NSString:NSString):nullable NSArray<NSString *> *;
 
 	@:native("ignoreWord")
-	overload extern inline public function ignoreWord(NSString:null):void;
+	overload extern inline public function ignoreWord(NSString:null:):void;
 
 	@:native("ignoredWords")
 	public var ignoredWords:>;

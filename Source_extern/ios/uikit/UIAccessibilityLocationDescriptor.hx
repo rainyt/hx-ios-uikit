@@ -15,13 +15,13 @@ extern class UIAccessibilityLocationDescriptor{
 	overload extern inline public function init():UIAccessibilityLocationDescriptor;
 
 	@:native("initWithName")
-	overload extern inline public function initWithName(NSString:null):UIAccessibilityLocationDescriptor;
+	overload extern inline public function initWithName(NSString:null::UIView):UIAccessibilityLocationDescriptor;
 
 	@:native("initWithName")
-	overload extern inline public function initWithName(NSString:null):UIAccessibilityLocationDescriptor;
+	overload extern inline public function initWithName(NSString:null::CGPoint:UIView):UIAccessibilityLocationDescriptor;
 
 	@:native("initWithAttributedName")
-	overload extern inline public function initWithAttributedName(NSAttributedString:null):UIAccessibilityLocationDescriptor;
+	overload extern inline public function initWithAttributedName(NSAttributedString:null::CGPoint:UIView):UIAccessibilityLocationDescriptor;
 
 	@:native("view")
 	public var view:UIView;

@@ -12,7 +12,7 @@ extern class UINibLoading{
 	overload extern inline public static function autorelease():UINibLoading;
 
 	@:native("loadNibNamed")
-	overload extern inline public function loadNibNamed(NSString:null):nullable NSArray *;
+	overload extern inline public function loadNibNamed(NSString:null::nullableid:nullableNSDictionary<UINibOptionsKey,id>):nullable NSArray *;
 
 	@:native("awakeFromNib")
 	overload extern inline public function awakeFromNib():void;

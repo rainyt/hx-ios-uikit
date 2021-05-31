@@ -12,16 +12,16 @@ extern class UIAttachmentBehavior{
 	overload extern inline public static function autorelease():UIAttachmentBehavior;
 
 	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null):UIAttachmentBehavior;
+	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:CGPoint):UIAttachmentBehavior;
 
 	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null):UIAttachmentBehavior;
+	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:UIOffset:CGPoint):UIAttachmentBehavior;
 
 	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null):UIAttachmentBehavior;
+	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:id<UIDynamicItem>):UIAttachmentBehavior;
 
 	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null):UIAttachmentBehavior;
+	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:UIOffset:id<UIDynamicItem>:UIOffset):UIAttachmentBehavior;
 
 	@:native("items")
 	public var items:<UIDynamicItem>>;

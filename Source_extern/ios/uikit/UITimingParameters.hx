@@ -24,13 +24,13 @@ extern class UITimingParameters{
 	overload extern inline public function init():UITimingParameters;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UITimingParameters;
+	overload extern inline public function initWithCoder(NSCoder:null:):UITimingParameters;
 
 	@:native("initWithAnimationCurve")
 	overload extern inline public function initWithAnimationCurve(curve:UIViewAnimationCurve):UITimingParameters;
 
-	@:native("initWithControlPoint1")
-	overload extern inline public function initWithControlPoint1(point1:CGPoint):UITimingParameters;
+	@:native("initWithControlPoint1:controlPoint2")
+	overload extern inline public function initWithControlPoint1(point1:CGPoint, controlPoint2:CGPoint):UITimingParameters;
 
 	@:native("initialVelocity")
 	public var initialVelocity:CGVector;
@@ -39,13 +39,13 @@ extern class UITimingParameters{
 	overload extern inline public function init():UITimingParameters;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UITimingParameters;
+	overload extern inline public function initWithCoder(NSCoder:null:):UITimingParameters;
 
-	@:native("initWithDampingRatio")
-	overload extern inline public function initWithDampingRatio(ratio:CGFloat):UITimingParameters;
+	@:native("initWithDampingRatio:initialVelocity")
+	overload extern inline public function initWithDampingRatio(ratio:CGFloat, initialVelocity:CGVector):UITimingParameters;
 
-	@:native("initWithMass")
-	overload extern inline public function initWithMass(mass:CGFloat):UITimingParameters;
+	@:native("initWithMass:stiffness")
+	overload extern inline public function initWithMass(mass:CGFloat, stiffness:CGFloat:CGFloat:CGVector):UITimingParameters;
 
 	@:native("initWithDampingRatio")
 	overload extern inline public function initWithDampingRatio(ratio:CGFloat):UITimingParameters;

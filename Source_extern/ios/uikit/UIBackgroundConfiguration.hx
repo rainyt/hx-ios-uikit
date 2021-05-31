@@ -36,7 +36,7 @@ extern class UIBackgroundConfiguration{
 	public var backgroundColorTransformer:UIConfigurationColorTransformer;
 
 	@:native("resolvedBackgroundColorForTintColor")
-	overload extern inline public function resolvedBackgroundColorForTintColor(UIColor:null):UIColor *;
+	overload extern inline public function resolvedBackgroundColorForTintColor(UIColor:null:):UIColor *;
 
 	@:native("visualEffect")
 	public var visualEffect:UIVisualEffect;
@@ -48,7 +48,7 @@ extern class UIBackgroundConfiguration{
 	public var strokeColorTransformer:UIConfigurationColorTransformer;
 
 	@:native("resolvedStrokeColorForTintColor")
-	overload extern inline public function resolvedStrokeColorForTintColor(UIColor:null):UIColor *;
+	overload extern inline public function resolvedStrokeColorForTintColor(UIColor:null:):UIColor *;
 
 	@:native("strokeWidth")
 	public var strokeWidth:CGFloat;

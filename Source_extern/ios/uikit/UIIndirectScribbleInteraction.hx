@@ -24,22 +24,22 @@ extern class UIIndirectScribbleInteraction{
 	public var handlingWriting:BOOL;
 
 	@:native("indirectScribbleInteraction")
-	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null):void;
+	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null::CGRect:void(^:NSArray<UIScribbleElementIdentifier>elements):void;
 
 	@:native("indirectScribbleInteraction")
-	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null):BOOL;
+	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null::UIScribbleElementIdentifier):BOOL;
 
 	@:native("indirectScribbleInteraction")
-	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null):CGRect;
+	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null::UIScribbleElementIdentifier):CGRect;
 
 	@:native("indirectScribbleInteraction")
-	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null):BOOL;
+	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null::UIScribbleElementIdentifier):BOOL;
 
 	@:native("indirectScribbleInteraction")
-	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null):void;
+	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null::UIScribbleElementIdentifier):void;
 
 	@:native("indirectScribbleInteraction")
-	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null):void;
+	overload extern inline public function indirectScribbleInteraction(UIIndirectScribbleInteraction:null::UIScribbleElementIdentifier):void;
 
 
 }

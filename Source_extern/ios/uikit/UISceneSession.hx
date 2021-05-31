@@ -12,7 +12,7 @@ extern class UISceneSession{
 	overload extern inline public static function autorelease():UISceneSession;
 
 	@:native("initWithName")
-	overload extern inline public function initWithName(nullable:null):UISceneSession;
+	overload extern inline public function initWithName(nullable:null:NSString:UISceneSessionRole):UISceneSession;
 
 	@:native("name")
 	public var name:NSString;

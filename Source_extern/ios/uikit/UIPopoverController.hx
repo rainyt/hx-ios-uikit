@@ -12,7 +12,7 @@ extern class UIPopoverController{
 	overload extern inline public static function autorelease():UIPopoverController;
 
 	@:native("initWithContentViewController")
-	overload extern inline public function initWithContentViewController(UIViewController:null):UIPopoverController;
+	overload extern inline public function initWithContentViewController(UIViewController:null:):UIPopoverController;
 
 	@:native("delegate")
 	public var delegate:<UIPopoverControllerDelegate>;
@@ -21,13 +21,13 @@ extern class UIPopoverController{
 	public var contentViewController:UIViewController;
 
 	@:native("setContentViewController")
-	overload extern inline public function setContentViewController(UIViewController:null):void;
+	overload extern inline public function setContentViewController(UIViewController:null::BOOL):void;
 
 	@:native("popoverContentSize")
 	public var popoverContentSize:CGSize;
 
-	@:native("setPopoverContentSize")
-	overload extern inline public function setPopoverContentSize(size:CGSize):void;
+	@:native("setPopoverContentSize:animated")
+	overload extern inline public function setPopoverContentSize(size:CGSize, animated:BOOL):void;
 
 	@:native("popoverVisible")
 	public var popoverVisible:BOOL;
@@ -38,11 +38,11 @@ extern class UIPopoverController{
 	@:native("passthroughViews")
 	public var passthroughViews:>;
 
-	@:native("presentPopoverFromRect")
-	overload extern inline public function presentPopoverFromRect(rect:CGRect):void;
+	@:native("presentPopoverFromRect:inView")
+	overload extern inline public function presentPopoverFromRect(rect:CGRect, inView:UIView:UIPopoverArrowDirection:BOOL):void;
 
 	@:native("presentPopoverFromBarButtonItem")
-	overload extern inline public function presentPopoverFromBarButtonItem(UIBarButtonItem:null):void;
+	overload extern inline public function presentPopoverFromBarButtonItem(UIBarButtonItem:null::UIPopoverArrowDirection:BOOL):void;
 
 	@:native("dismissPopoverAnimated")
 	overload extern inline public function dismissPopoverAnimated(animated:BOOL):void;
@@ -57,13 +57,13 @@ extern class UIPopoverController{
 	public var API_AVAILABLE(ios(5.0)):popoverBackgroundViewClass;
 
 	@:native("popoverControllerShouldDismissPopover")
-	overload extern inline public function popoverControllerShouldDismissPopover(UIPopoverController:null):BOOL;
+	overload extern inline public function popoverControllerShouldDismissPopover(UIPopoverController:null::"",ios(3.2,9.0):BOOL;
 
 	@:native("popoverControllerDidDismissPopover")
-	overload extern inline public function popoverControllerDidDismissPopover(UIPopoverController:null):void;
+	overload extern inline public function popoverControllerDidDismissPopover(UIPopoverController:null::"",ios(3.2,9.0):void;
 
 	@:native("popoverController")
-	overload extern inline public function popoverController(UIPopoverController:null):void;
+	overload extern inline public function popoverController(UIPopoverController:null::inoutCGRect:inoutUIView__nonnull__nonnull:"",ios(7.0,9.0):void;
 
 
 }

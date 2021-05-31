@@ -65,8 +65,8 @@ extern class UILabel{
 	@:native("lineBreakStrategy")
 	public var lineBreakStrategy:NSLineBreakStrategy;
 
-	@:native("textRectForBounds")
-	overload extern inline public function textRectForBounds(bounds:CGRect):CGRect;
+	@:native("textRectForBounds:limitedToNumberOfLines")
+	overload extern inline public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:NSInteger):CGRect;
 
 	@:native("drawTextInRect")
 	overload extern inline public function drawTextInRect(rect:CGRect):void;

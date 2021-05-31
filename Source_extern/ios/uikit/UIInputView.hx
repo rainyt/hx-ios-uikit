@@ -17,11 +17,11 @@ extern class UIInputView{
 	@:native("NO")
 	public var NO:to;
 
-	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UIInputView;
+	@:native("initWithFrame:inputViewStyle")
+	overload extern inline public function initWithFrame(frame:CGRect, inputViewStyle:UIInputViewStyle):UIInputView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIInputView;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIInputView;
 
 
 }

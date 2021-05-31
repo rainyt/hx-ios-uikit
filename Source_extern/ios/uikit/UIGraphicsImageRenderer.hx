@@ -29,20 +29,20 @@ extern class UIGraphicsImageRenderer{
 	@:native("initWithSize")
 	overload extern inline public function initWithSize(size:CGSize):UIGraphicsImageRenderer;
 
-	@:native("initWithSize")
-	overload extern inline public function initWithSize(size:CGSize):UIGraphicsImageRenderer;
+	@:native("initWithSize:format")
+	overload extern inline public function initWithSize(size:CGSize, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
-	@:native("initWithBounds")
-	overload extern inline public function initWithBounds(bounds:CGRect):UIGraphicsImageRenderer;
+	@:native("initWithBounds:format")
+	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("imageWithActions")
-	overload extern inline public function imageWithActions(NS_NOESCAPE:null):UIImage *;
+	overload extern inline public function imageWithActions(NS_NOESCAPE:null:UIGraphicsImageDrawingActions):UIImage *;
 
 	@:native("PNGDataWithActions")
-	overload extern inline public function PNGDataWithActions(NS_NOESCAPE:null):NSData *;
+	overload extern inline public function PNGDataWithActions(NS_NOESCAPE:null:UIGraphicsImageDrawingActions):NSData *;
 
-	@:native("JPEGDataWithCompressionQuality")
-	overload extern inline public function JPEGDataWithCompressionQuality(compressionQuality:CGFloat):NSData *;
+	@:native("JPEGDataWithCompressionQuality:actions")
+	overload extern inline public function JPEGDataWithCompressionQuality(compressionQuality:CGFloat, actions:NS_NOESCAPEUIGraphicsImageDrawingActions):NSData *;
 
 
 }

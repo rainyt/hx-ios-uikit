@@ -15,25 +15,25 @@ extern class UIImageAsset{
 	overload extern inline public function init():UIImageAsset;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIImageAsset;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIImageAsset;
 
 	@:native("imageWithConfiguration")
-	overload extern inline public function imageWithConfiguration(UIImageConfiguration:null):UIImage *;
+	overload extern inline public function imageWithConfiguration(UIImageConfiguration:null:):UIImage *;
 
 	@:native("registerImage")
-	overload extern inline public function registerImage(UIImage:null):void;
+	overload extern inline public function registerImage(UIImage:null::UIImageConfiguration):void;
 
 	@:native("unregisterImageWithConfiguration")
-	overload extern inline public function unregisterImageWithConfiguration(UIImageConfiguration:null):void;
+	overload extern inline public function unregisterImageWithConfiguration(UIImageConfiguration:null:):void;
 
 	@:native("imageWithTraitCollection")
-	overload extern inline public function imageWithTraitCollection(UITraitCollection:null):UIImage *;
+	overload extern inline public function imageWithTraitCollection(UITraitCollection:null:):UIImage *;
 
 	@:native("registerImage")
-	overload extern inline public function registerImage(UIImage:null):void;
+	overload extern inline public function registerImage(UIImage:null::UITraitCollection:suchasforceTouchCapability):void;
 
 	@:native("unregisterImageWithTraitCollection")
-	overload extern inline public function unregisterImageWithTraitCollection(UITraitCollection:null):void;
+	overload extern inline public function unregisterImageWithTraitCollection(UITraitCollection:null:):void;
 
 
 }

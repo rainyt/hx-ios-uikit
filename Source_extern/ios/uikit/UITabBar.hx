@@ -21,13 +21,13 @@ extern class UITabBar{
 	public var nil:is;
 
 	@:native("setItems")
-	overload extern inline public function setItems(nullable:null):void;
+	overload extern inline public function setItems(nullable:null:NSArray<UITabBarItem>:BOOL):void;
 
 	@:native("beginCustomizingItems")
-	overload extern inline public function beginCustomizingItems(NSArray<UITabBarItem:null):void;
+	overload extern inline public function beginCustomizingItems(NSArray<UITabBarItem:null:>:tvos):void;
 
 	@:native("endCustomizingAnimated")
-	overload extern inline public function endCustomizingAnimated(animated:BOOL):BOOL;
+	overload extern inline public function endCustomizingAnimated(animated:BOOL:API_UNAVAILABLE(tvos):BOOL;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):customizing;
@@ -78,19 +78,19 @@ extern class UITabBar{
 	public var watchos):API_UNAVAILABLE(ios,;
 
 	@:native("tabBar")
-	overload extern inline public function tabBar(UITabBar:null):void;
+	overload extern inline public function tabBar(UITabBar:null::UITabBarItem:butnotprogramatically):void;
 
 	@:native("tabBar")
-	overload extern inline public function tabBar(UITabBar:null):void;
+	overload extern inline public function tabBar(UITabBar:null::NSArray<UITabBarItem>:tvos):void;
 
 	@:native("tabBar")
-	overload extern inline public function tabBar(UITabBar:null):void;
+	overload extern inline public function tabBar(UITabBar:null::NSArray<UITabBarItem>:tvos):void;
 
 	@:native("tabBar")
-	overload extern inline public function tabBar(UITabBar:null):void;
+	overload extern inline public function tabBar(UITabBar:null::NSArray<UITabBarItem>:BOOL:tvos):void;
 
 	@:native("tabBar")
-	overload extern inline public function tabBar(UITabBar:null):void;
+	overload extern inline public function tabBar(UITabBar:null::NSArray<UITabBarItem>:BOOL:tvos):void;
 
 
 }

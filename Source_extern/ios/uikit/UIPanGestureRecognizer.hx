@@ -18,13 +18,13 @@ extern class UIPanGestureRecognizer{
 	public var down:be;
 
 	@:native("translationInView")
-	overload extern inline public function translationInView(nullable:null):CGPoint;
+	overload extern inline public function translationInView(nullable:null:UIView):CGPoint;
 
-	@:native("setTranslation")
-	overload extern inline public function setTranslation(translation:CGPoint):void;
+	@:native("setTranslation:inView")
+	overload extern inline public function setTranslation(translation:CGPoint, inView:nullableUIView):void;
 
 	@:native("velocityInView")
-	overload extern inline public function velocityInView(nullable:null):CGPoint;
+	overload extern inline public function velocityInView(nullable:null:UIView):CGPoint;
 
 	@:native("watchos)")
 	public var watchos):API_UNAVAILABLE(tvos,;

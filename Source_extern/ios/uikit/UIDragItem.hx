@@ -12,7 +12,7 @@ extern class UIDragItem{
 	overload extern inline public static function autorelease():UIDragItem;
 
 	@:native("initWithItemProvider")
-	overload extern inline public function initWithItemProvider(NSItemProvider:null):UIDragItem;
+	overload extern inline public function initWithItemProvider(NSItemProvider:null:):UIDragItem;
 
 	@:native("init")
 	overload extern inline public function init():UIDragItem;

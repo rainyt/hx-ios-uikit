@@ -23,12 +23,23 @@ class ObjcFun {
 		if (typedefs.exists(c))
 			c = typedefs.get(c);
 		return {
-			name: funcName,
+			name: parsingFuncName(funcName, args),
 			type: ExternBaseClassType.FUNC,
 			returnClass: c,
 			isStatic: isStatic,
 			args: args
 		};
+	}
+
+	public static function parsingFuncName(funcName:String, args:Array<Dynamic>):String {
+		if (args == null)
+			return funcName;
+		for (index => value in args) {
+			if (index == 0)
+				continue;
+			funcName += ":" + cast(value, String).split(":")[0];
+		}
+		return funcName;
 	}
 
 	public static function parsingArgs(typedefs:Map<String, String>, line:String):Array<Dynamic> {
@@ -85,6 +96,8 @@ class ObjcFun {
 	}
 
 	public static function toType(t:String, typedefs:Map<String, String>):String {
+		if (t == null)
+			return t;
 		return StringTools.replace(StringTools.replace(typedefs.exists(t) ? typedefs.get(t) : t, "*", ""), " ", "");
 	}
 }

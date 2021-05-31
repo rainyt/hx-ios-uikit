@@ -39,16 +39,16 @@ extern class UITouch{
 	public var API_AVAILABLE(ios(3.2)):gestureRecognizers;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(nullable:null):CGPoint;
+	overload extern inline public function locationInView(nullable:null:UIView):CGPoint;
 
 	@:native("previousLocationInView")
-	overload extern inline public function previousLocationInView(nullable:null):CGPoint;
+	overload extern inline public function previousLocationInView(nullable:null:UIView):CGPoint;
 
 	@:native("preciseLocationInView")
-	overload extern inline public function preciseLocationInView(nullable:null):CGPoint;
+	overload extern inline public function preciseLocationInView(nullable:null:UIView:ios(9.1):CGPoint;
 
 	@:native("precisePreviousLocationInView")
-	overload extern inline public function precisePreviousLocationInView(nullable:null):CGPoint;
+	overload extern inline public function precisePreviousLocationInView(nullable:null:UIView:ios(9.1):CGPoint;
 
 	@:native("API_AVAILABLE(ios(9.0))")
 	public var API_AVAILABLE(ios(9.0)):force;
@@ -57,10 +57,10 @@ extern class UITouch{
 	public var API_AVAILABLE(ios(9.0)):maximumPossibleForce;
 
 	@:native("azimuthAngleInView")
-	overload extern inline public function azimuthAngleInView(nullable:null):CGFloat;
+	overload extern inline public function azimuthAngleInView(nullable:null:UIView:ios(9.1):CGFloat;
 
 	@:native("azimuthUnitVectorInView")
-	overload extern inline public function azimuthUnitVectorInView(nullable:null):CGVector;
+	overload extern inline public function azimuthUnitVectorInView(nullable:null:UIView:ios(9.1):CGVector;
 
 	@:native("API_AVAILABLE(ios(9.1))")
 	public var API_AVAILABLE(ios(9.1)):altitudeAngle;

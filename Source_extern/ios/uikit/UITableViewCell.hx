@@ -11,11 +11,11 @@ extern class UITableViewCell{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UITableViewCell;
 
-	@:native("initWithStyle")
-	overload extern inline public function initWithStyle(style:UITableViewCellStyle):UITableViewCell;
+	@:native("initWithStyle:reuseIdentifier")
+	overload extern inline public function initWithStyle(style:UITableViewCellStyle, reuseIdentifier:nullableNSString:ios(3.0):UITableViewCell;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UITableViewCell;
+	overload extern inline public function initWithCoder(NSCoder:null:):UITableViewCell;
 
 	@:native("watchos(7.0))")
 	public var watchos(7.0)):tvos(14.0),;
@@ -24,7 +24,7 @@ extern class UITableViewCell{
 	overload extern inline public function setNeedsUpdateConfiguration():void;
 
 	@:native("updateConfigurationUsingState")
-	overload extern inline public function updateConfigurationUsingState(UICellConfigurationState:null):void;
+	overload extern inline public function updateConfigurationUsingState(UICellConfigurationState:null::ios(14.0:14.0:7.0):void;
 
 	@:native("defaultContentConfiguration")
 	overload extern inline public function defaultContentConfiguration():UIListContentConfiguration *;
@@ -77,11 +77,11 @@ extern class UITableViewCell{
 	@:native("NO")
 	public var NO:is;
 
-	@:native("setSelected")
-	overload extern inline public function setSelected(selected:BOOL):void;
+	@:native("setSelected:animated")
+	overload extern inline public function setSelected(selected:BOOL, animated:BOOL):void;
 
-	@:native("setHighlighted")
-	overload extern inline public function setHighlighted(highlighted:BOOL):void;
+	@:native("setHighlighted:animated")
+	overload extern inline public function setHighlighted(highlighted:BOOL, animated:BOOL):void;
 
 	@:native("accordingly.")
 	public var accordingly.:appearance;
@@ -116,8 +116,8 @@ extern class UITableViewCell{
 	@:native("animated.")
 	public var animated.:for;
 
-	@:native("setEditing")
-	overload extern inline public function setEditing(editing:BOOL):void;
+	@:native("setEditing:animated")
+	overload extern inline public function setEditing(editing:BOOL, animated:BOOL):void;
 
 	@:native("button")
 	public var button:"Delete";
@@ -126,19 +126,19 @@ extern class UITableViewCell{
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(9.0));
 
 	@:native("willTransitionToState")
-	overload extern inline public function willTransitionToState(state:UITableViewCellStateMask):void;
+	overload extern inline public function willTransitionToState(state:UITableViewCellStateMask:API_AVAILABLE(ios(3.0):void;
 
 	@:native("didTransitionToState")
-	overload extern inline public function didTransitionToState(state:UITableViewCellStateMask):void;
+	overload extern inline public function didTransitionToState(state:UITableViewCellStateMask:API_AVAILABLE(ios(3.0):void;
 
 	@:native("dragStateDidChange")
-	overload extern inline public function dragStateDidChange(dragState:UITableViewCellDragState):void;
+	overload extern inline public function dragStateDidChange(dragState:UITableViewCellDragState:API_AVAILABLE(ios(11.0:tvos,watchos):void;
 
 	@:native("watchos)")
 	public var watchos):API_UNAVAILABLE(tvos,;
 
-	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):id;
+	@:native("initWithFrame:reuseIdentifier")
+	overload extern inline public function initWithFrame(frame:CGRect, reuseIdentifier:nullableNSString:"",ios(2.0,3.0:tvos):id;
 
 	@:native("nil")
 	public var nil:is;

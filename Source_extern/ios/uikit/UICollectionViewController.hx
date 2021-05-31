@@ -12,13 +12,13 @@ extern class UICollectionViewController{
 	overload extern inline public static function autorelease():UICollectionViewController;
 
 	@:native("initWithCollectionViewLayout")
-	overload extern inline public function initWithCollectionViewLayout(UICollectionViewLayout:null):UICollectionViewController;
+	overload extern inline public function initWithCollectionViewLayout(UICollectionViewLayout:null:):UICollectionViewController;
 
 	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null):UICollectionViewController;
+	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UICollectionViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UICollectionViewController;
+	overload extern inline public function initWithCoder(NSCoder:null:):UICollectionViewController;
 
 	@:native("collectionView")
 	public var collectionView:UICollectionView;

@@ -24,10 +24,10 @@ extern class UIActivity{
 	public var value:non-nil;
 
 	@:native("canPerformWithActivityItems")
-	overload extern inline public function canPerformWithActivityItems(NSArray:null):BOOL;
+	overload extern inline public function canPerformWithActivityItems(NSArray:null:):BOOL;
 
 	@:native("prepareWithActivityItems")
-	overload extern inline public function prepareWithActivityItems(NSArray:null):void;
+	overload extern inline public function prepareWithActivityItems(NSArray:null:):void;
 
 	@:native("nil")
 	public var nil:returns;

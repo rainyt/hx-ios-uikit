@@ -53,16 +53,15 @@ class ExternBaseClass {
 			if (value.indexOf("typedef") == 0) {
 				value = StringTools.replace(value, "*", "");
 				var t = value.split(" ");
-                var t2 = "";
-                for (index => tv in t) {
-                    if(index < 2)
-                        continue;
-                    if(tv.length > 0)
-                    {
-                        t2 = tv;
-                        break;
-                    }
-                }
+				var t2 = "";
+				for (index => tv in t) {
+					if (index < 2)
+						continue;
+					if (tv.length > 0) {
+						t2 = tv;
+						break;
+					}
+				}
 				typedefs.set(t2, t[1]);
 			} else if (value.indexOf("@property") == 0) {
 				// 属性解析
@@ -76,7 +75,7 @@ class ExternBaseClass {
 				});
 			} else if (value.indexOf("-") == 0) {
 				// 对象方法
-				funcAndAttr.push(ObjcFun.parsing(typedefs,this.classname, value));
+				funcAndAttr.push(ObjcFun.parsing(typedefs, this.classname, value));
 			}
 		}
 	}
@@ -95,7 +94,7 @@ class ExternBaseClass {
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
-					haxe += "\toverload extern inline public" + (value.isStatic ? " static" : "") + " function " + value.name + "("
+					haxe += "\toverload extern inline public" + (value.isStatic ? " static" : "") + " function " + toFuncName(value.name) + "("
 						+ (value.args != null ? value.args.join(", ") : "") + "):" + value.returnClass + ";\n\n";
 				case ExternBaseClassType.PROPERTY:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
@@ -104,6 +103,12 @@ class ExternBaseClass {
 		}
 		haxe += "\n}";
 		return haxe;
+	}
+
+	public function toFuncName(str:String):String {
+		if (str.indexOf(":") != -1)
+			return str.substr(0, str.lastIndexOf(":"));
+		return str;
 	}
 }
 

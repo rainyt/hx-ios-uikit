@@ -18,22 +18,22 @@ extern class UICollectionViewFlowLayout{
 	public var itself:of;
 
 	@:native("collectionView")
-	overload extern inline public function collectionView(UICollectionView:null):CGSize;
+	overload extern inline public function collectionView(UICollectionView:null::UICollectionViewLayout:NSIndexPath):CGSize;
 
 	@:native("collectionView")
-	overload extern inline public function collectionView(UICollectionView:null):UIEdgeInsets;
+	overload extern inline public function collectionView(UICollectionView:null::UICollectionViewLayout:NSInteger):UIEdgeInsets;
 
 	@:native("collectionView")
-	overload extern inline public function collectionView(UICollectionView:null):CGFloat;
+	overload extern inline public function collectionView(UICollectionView:null::UICollectionViewLayout:NSInteger):CGFloat;
 
 	@:native("collectionView")
-	overload extern inline public function collectionView(UICollectionView:null):CGFloat;
+	overload extern inline public function collectionView(UICollectionView:null::UICollectionViewLayout:NSInteger):CGFloat;
 
 	@:native("collectionView")
-	overload extern inline public function collectionView(UICollectionView:null):CGSize;
+	overload extern inline public function collectionView(UICollectionView:null::UICollectionViewLayout:NSInteger):CGSize;
 
 	@:native("collectionView")
-	overload extern inline public function collectionView(UICollectionView:null):CGSize;
+	overload extern inline public function collectionView(UICollectionView:null::UICollectionViewLayout:NSInteger):CGSize;
 
 	@:native("minimumLineSpacing")
 	public var minimumLineSpacing:CGFloat;

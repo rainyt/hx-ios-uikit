@@ -39,7 +39,7 @@ extern class UIDatePicker{
 	public var 30:is;
 
 	@:native("setDate")
-	overload extern inline public function setDate(NSDate:null):void;
+	overload extern inline public function setDate(NSDate:null::BOOL):void;
 
 	@:native("watchos)")
 	public var watchos):API_UNAVAILABLE(tvos,;

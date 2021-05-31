@@ -42,7 +42,7 @@ extern class UITabBarAppearance{
 	overload extern inline public function initWithStyle(style:UITabBarItemAppearanceStyle):UITabBarAppearance;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UITabBarAppearance;
+	overload extern inline public function initWithCoder(NSCoder:null:):UITabBarAppearance;
 
 	@:native("copy;")
 	overload extern inline public function copy;():UITabBarAppearance;

@@ -15,16 +15,16 @@ extern class UIMotionEffect{
 	overload extern inline public function init():UIMotionEffect;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIMotionEffect;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIMotionEffect;
 
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
 	overload extern inline public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:UIOffset):nullable NSDictionary<NSString *, id> *;
 
 	@:native("initWithKeyPath")
-	overload extern inline public function initWithKeyPath(NSString:null):UIMotionEffect;
+	overload extern inline public function initWithKeyPath(NSString:null::UIInterpolatingMotionEffectType):UIMotionEffect;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIMotionEffect;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIMotionEffect;
 
 	@:native("keyPath")
 	public var keyPath:NSString;

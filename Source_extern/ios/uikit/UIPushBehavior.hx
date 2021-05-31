@@ -12,22 +12,22 @@ extern class UIPushBehavior{
 	overload extern inline public static function autorelease():UIPushBehavior;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(NSArray<id:null):UIPushBehavior;
+	overload extern inline public function initWithItems(NSArray<id:null:<UIDynamicItem>>:UIPushBehaviorMode):UIPushBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(id:null):void;
+	overload extern inline public function addItem(id:null:<UIDynamicItem>):void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(id:null):void;
+	overload extern inline public function removeItem(id:null:<UIDynamicItem>):void;
 
 	@:native("items")
 	public var items:<UIDynamicItem>>;
 
 	@:native("targetOffsetFromCenterForItem")
-	overload extern inline public function targetOffsetFromCenterForItem(id:null):UIOffset;
+	overload extern inline public function targetOffsetFromCenterForItem(id:null:<UIDynamicItem>):UIOffset;
 
-	@:native("setTargetOffsetFromCenter")
-	overload extern inline public function setTargetOffsetFromCenter(o:UIOffset):void;
+	@:native("setTargetOffsetFromCenter:forItem")
+	overload extern inline public function setTargetOffsetFromCenter(o:UIOffset, forItem:id<UIDynamicItem>):void;
 
 	@:native("mode")
 	public var mode:UIPushBehaviorMode;
@@ -44,8 +44,8 @@ extern class UIPushBehavior{
 	@:native("pushDirection")
 	public var pushDirection:CGVector;
 
-	@:native("setAngle")
-	overload extern inline public function setAngle(angle:CGFloat):void;
+	@:native("setAngle:magnitude")
+	overload extern inline public function setAngle(angle:CGFloat, magnitude:CGFloat):void;
 
 
 }

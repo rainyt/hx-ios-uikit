@@ -24,13 +24,13 @@ extern class UIRegion{
 	overload extern inline public function inverseRegion;():UIRegion;
 
 	@:native("regionByUnionWithRegion")
-	overload extern inline public function regionByUnionWithRegion(UIRegion:null):UIRegion;
+	overload extern inline public function regionByUnionWithRegion(UIRegion:null:):UIRegion;
 
 	@:native("regionByDifferenceFromRegion")
-	overload extern inline public function regionByDifferenceFromRegion(UIRegion:null):UIRegion;
+	overload extern inline public function regionByDifferenceFromRegion(UIRegion:null:):UIRegion;
 
 	@:native("regionByIntersectionWithRegion")
-	overload extern inline public function regionByIntersectionWithRegion(UIRegion:null):UIRegion;
+	overload extern inline public function regionByIntersectionWithRegion(UIRegion:null:):UIRegion;
 
 	@:native("containsPoint")
 	overload extern inline public function containsPoint(point:CGPoint):BOOL;

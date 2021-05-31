@@ -15,10 +15,10 @@ extern class NSTextStorage{
 	public var layoutManagers:>;
 
 	@:native("addLayoutManager")
-	overload extern inline public function addLayoutManager(NSLayoutManager:null):void;
+	overload extern inline public function addLayoutManager(NSLayoutManager:null:):void;
 
 	@:native("removeLayoutManager")
-	overload extern inline public function removeLayoutManager(NSLayoutManager:null):void;
+	overload extern inline public function removeLayoutManager(NSLayoutManager:null:):void;
 
 	@:native("editedMask")
 	public var editedMask:NSTextStorageEditActions;
@@ -32,8 +32,8 @@ extern class NSTextStorage{
 	@:native("delegate")
 	public var delegate:<NSTextStorageDelegate>;
 
-	@:native("edited")
-	overload extern inline public function edited(editedMask:NSTextStorageEditActions):void;
+	@:native("edited:range")
+	overload extern inline public function edited(editedMask:NSTextStorageEditActions, range:NSRange:NSInteger):void;
 
 	@:native("processEditing;")
 	overload extern inline public function processEditing;():void;
@@ -48,10 +48,10 @@ extern class NSTextStorage{
 	overload extern inline public function ensureAttributesAreFixedInRange(range:NSRange):void;
 
 	@:native("textStorage")
-	overload extern inline public function textStorage(NSTextStorage:null):void;
+	overload extern inline public function textStorage(NSTextStorage:null::NSTextStorageEditActions:NSRange:NSInteger:macos(10.11:7.0):void;
 
 	@:native("textStorage")
-	overload extern inline public function textStorage(NSTextStorage:null):void;
+	overload extern inline public function textStorage(NSTextStorage:null::NSTextStorageEditActions:NSRange:NSInteger:macos(10.11:7.0):void;
 
 
 }

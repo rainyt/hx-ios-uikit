@@ -21,28 +21,28 @@ extern class UITextDropping{
 	public var textDropActive:BOOL;
 
 	@:native("textDroppableView")
-	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null):UITextDropEditability;
+	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null::id<UITextDropRequest>):UITextDropEditability;
 
 	@:native("textDroppableView")
-	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null):UITextDropProposal*;
+	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null::id<UITextDropRequest>):UITextDropProposal*;
 
 	@:native("textDroppableView")
-	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null):void;
+	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null::id<UITextDropRequest>):void;
 
 	@:native("textDroppableView")
-	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null):nullable UITargetedDragPreview *;
+	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null::UITargetedDragPreview):nullable UITargetedDragPreview *;
 
 	@:native("textDroppableView")
-	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null):void;
+	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null::id<UIDropSession>):void;
 
 	@:native("textDroppableView")
-	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null):void;
+	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null::id<UIDropSession>):void;
 
 	@:native("textDroppableView")
-	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null):void;
+	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null::id<UIDropSession>):void;
 
 	@:native("textDroppableView")
-	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null):void;
+	overload extern inline public function textDroppableView(UIView<UITextDroppable>:null::id<UIDropSession>):void;
 
 	@:native("dropPosition")
 	public var dropPosition:UITextPosition;

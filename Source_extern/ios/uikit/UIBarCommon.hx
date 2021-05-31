@@ -15,7 +15,7 @@ extern class UIBarCommon{
 	public var barPosition:UIBarPosition;
 
 	@:native("positionForBar")
-	overload extern inline public function positionForBar(id:null):UIBarPosition;
+	overload extern inline public function positionForBar(id:null:<UIBarPositioning>):UIBarPosition;
 
 
 }

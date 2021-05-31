@@ -12,19 +12,19 @@ extern class UIGestureRecognizer{
 	overload extern inline public static function autorelease():UIGestureRecognizer;
 
 	@:native("initWithTarget")
-	overload extern inline public function initWithTarget(nullable:null):UIGestureRecognizer;
+	overload extern inline public function initWithTarget(nullable:null:id:nullableSEL):UIGestureRecognizer;
 
 	@:native("init;")
 	overload extern inline public function init;():UIGestureRecognizer;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIGestureRecognizer;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIGestureRecognizer;
 
-	@:native("addTarget")
-	overload extern inline public function addTarget(target:id):void;
+	@:native("addTarget:action")
+	overload extern inline public function addTarget(target:id, action:SEL):void;
 
 	@:native("removeTarget")
-	overload extern inline public function removeTarget(nullable:null):void;
+	overload extern inline public function removeTarget(nullable:null:id:nullableSEL):void;
 
 	@:native("recognizer")
 	public var recognizer:gesture;
@@ -57,16 +57,16 @@ extern class UIGestureRecognizer{
 	public var YES:to;
 
 	@:native("requireGestureRecognizerToFail")
-	overload extern inline public function requireGestureRecognizerToFail(UIGestureRecognizer:null):void;
+	overload extern inline public function requireGestureRecognizerToFail(UIGestureRecognizer:null:):void;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(nullable:null):CGPoint;
+	overload extern inline public function locationInView(nullable:null:UIView):CGPoint;
 
 	@:native("queried")
 	public var queried:be;
 
-	@:native("locationOfTouch")
-	overload extern inline public function locationOfTouch(touchIndex:NSUInteger):CGPoint;
+	@:native("locationOfTouch:inView")
+	overload extern inline public function locationOfTouch(touchIndex:NSUInteger, inView:nullableUIView):CGPoint;
 
 	@:native("logging")
 	public var logging:in;
@@ -78,25 +78,25 @@ extern class UIGestureRecognizer{
 	public var watchos):API_UNAVAILABLE(tvos,;
 
 	@:native("gestureRecognizerShouldBegin")
-	overload extern inline public function gestureRecognizerShouldBegin(UIGestureRecognizer:null):BOOL;
+	overload extern inline public function gestureRecognizerShouldBegin(UIGestureRecognizer:null:):BOOL;
 
 	@:native("gestureRecognizer")
-	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null):BOOL;
+	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null::UIGestureRecognizer):BOOL;
 
 	@:native("gestureRecognizer")
-	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null):BOOL;
+	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null::UIGestureRecognizer:ios(7.0):BOOL;
 
 	@:native("gestureRecognizer")
-	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null):BOOL;
+	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null::UIGestureRecognizer:ios(7.0):BOOL;
 
 	@:native("gestureRecognizer")
-	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null):BOOL;
+	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null::UITouch):BOOL;
 
 	@:native("gestureRecognizer")
-	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null):BOOL;
+	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null::UIPress):BOOL;
 
 	@:native("gestureRecognizer")
-	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null):BOOL;
+	overload extern inline public function gestureRecognizer(UIGestureRecognizer:null::UIEvent:ios(13.4:13.4:watchos):BOOL;
 
 
 }

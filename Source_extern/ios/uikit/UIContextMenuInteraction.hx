@@ -24,10 +24,10 @@ extern class UIContextMenuInteraction{
 	overload extern inline public function init():UIContextMenuInteraction;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(nullable:null):CGPoint;
+	overload extern inline public function locationInView(nullable:null:UIView):CGPoint;
 
 	@:native("updateVisibleMenuWithBlock")
-	overload extern inline public function updateVisibleMenuWithBlock(UIMenu:null):void;
+	overload extern inline public function updateVisibleMenuWithBlock(UIMenu:null:(NS_NOESCAPE^:UIMenuvisibleMenu:ios(14.0):void;
 
 	@:native("dismissMenu;")
 	overload extern inline public function dismissMenu;():void;
@@ -36,31 +36,31 @@ extern class UIContextMenuInteraction{
 	public var previewViewController:UIViewController;
 
 	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null):void;
+	overload extern inline public function addAnimations(void:null:(^:void):void;
 
 	@:native("addCompletion")
-	overload extern inline public function addCompletion(void:null):void;
+	overload extern inline public function addCompletion(void:null:(^:void):void;
 
 	@:native("preferredCommitStyle")
 	public var preferredCommitStyle:UIContextMenuInteractionCommitStyle;
 
 	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null):nullable UIContextMenuConfiguration *;
+	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::CGPoint):nullable UIContextMenuConfiguration *;
 
 	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null):nullable UITargetedPreview *;
+	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration):nullable UITargetedPreview *;
 
 	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null):nullable UITargetedPreview *;
+	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration):nullable UITargetedPreview *;
 
 	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null):void;
+	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:id<UIContextMenuInteractionCommitAnimating>):void;
 
 	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null):void;
+	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:nullableid<UIContextMenuInteractionAnimating>):void;
 
 	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null):void;
+	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:nullableid<UIContextMenuInteractionAnimating>):void;
 
 
 }

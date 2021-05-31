@@ -24,13 +24,13 @@ extern class UIVideoEditorController{
 	public var UIImagePickerControllerQualityTypeMedium:is;
 
 	@:native("videoEditorController")
-	overload extern inline public function videoEditorController(UIVideoEditorController:null):void;
+	overload extern inline public function videoEditorController(UIVideoEditorController:null::NSString):void;
 
 	@:native("videoEditorController")
-	overload extern inline public function videoEditorController(UIVideoEditorController:null):void;
+	overload extern inline public function videoEditorController(UIVideoEditorController:null::NSError):void;
 
 	@:native("videoEditorControllerDidCancel")
-	overload extern inline public function videoEditorControllerDidCancel(UIVideoEditorController:null):void;
+	overload extern inline public function videoEditorControllerDidCancel(UIVideoEditorController:null:):void;
 
 
 }

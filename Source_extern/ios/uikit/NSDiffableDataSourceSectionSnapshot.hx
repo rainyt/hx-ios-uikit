@@ -17,14 +17,14 @@ extern class NSDiffableDataSourceSectionSnapshot{
 	@:native("appendItems")
 	overload extern inline public function appendItems(items:NSArray<ItemIdentifierType>):void;
 
-	@:native("appendItems")
-	overload extern inline public function appendItems(items:NSArray<ItemIdentifierType>):void;
+	@:native("appendItems:intoParentItem")
+	overload extern inline public function appendItems(items:NSArray<ItemIdentifierType>, intoParentItem:nullableItemIdentifierType):void;
 
-	@:native("insertItems")
-	overload extern inline public function insertItems(items:NSArray<ItemIdentifierType>):void;
+	@:native("insertItems:beforeItem")
+	overload extern inline public function insertItems(items:NSArray<ItemIdentifierType>, beforeItem:ItemIdentifierType):void;
 
-	@:native("insertItems")
-	overload extern inline public function insertItems(items:NSArray<ItemIdentifierType>):void;
+	@:native("insertItems:afterItem")
+	overload extern inline public function insertItems(items:NSArray<ItemIdentifierType>, afterItem:ItemIdentifierType):void;
 
 	@:native("deleteItems")
 	overload extern inline public function deleteItems(items:NSArray<ItemIdentifierType>):void;
@@ -38,14 +38,14 @@ extern class NSDiffableDataSourceSectionSnapshot{
 	@:native("collapseItems")
 	overload extern inline public function collapseItems(items:NSArray<ItemIdentifierType>):void;
 
-	@:native("replaceChildrenOfParentItem")
-	overload extern inline public function replaceChildrenOfParentItem(parentItem:ItemIdentifierType):void;
+	@:native("replaceChildrenOfParentItem:withSnapshot")
+	overload extern inline public function replaceChildrenOfParentItem(parentItem:ItemIdentifierType, withSnapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>):void;
 
-	@:native("insertSnapshot")
-	overload extern inline public function insertSnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>):void;
+	@:native("insertSnapshot:beforeItem")
+	overload extern inline public function insertSnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, beforeItem:ItemIdentifierType):void;
 
-	@:native("insertSnapshot")
-	overload extern inline public function insertSnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>):ItemIdentifierType;
+	@:native("insertSnapshot:afterItem")
+	overload extern inline public function insertSnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, afterItem:ItemIdentifierType):ItemIdentifierType;
 
 	@:native("isExpanded")
 	overload extern inline public function isExpanded(item:ItemIdentifierType):BOOL;
@@ -74,8 +74,8 @@ extern class NSDiffableDataSourceSectionSnapshot{
 	@:native("snapshotOfParentItem")
 	overload extern inline public function snapshotOfParentItem(parentItem:ItemIdentifierType):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
 
-	@:native("snapshotOfParentItem")
-	overload extern inline public function snapshotOfParentItem(parentItem:ItemIdentifierType):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
+	@:native("snapshotOfParentItem:includingParentItem")
+	overload extern inline public function snapshotOfParentItem(parentItem:ItemIdentifierType, includingParentItem:BOOL):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
 
 	@:native("items")
 	public var items:NSArray<ItemIdentifierType>;

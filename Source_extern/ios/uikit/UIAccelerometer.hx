@@ -30,7 +30,7 @@ extern class UIAccelerometer{
 	public var delegate:id<UIAccelerometerDelegate>;
 
 	@:native("accelerometer")
-	overload extern inline public function accelerometer(UIAccelerometer:null):void;
+	overload extern inline public function accelerometer(UIAccelerometer:null::UIAcceleration:"",ios(2.0,5.0:tvos):void;
 
 
 }

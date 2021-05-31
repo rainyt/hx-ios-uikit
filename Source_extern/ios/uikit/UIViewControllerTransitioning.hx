@@ -45,22 +45,22 @@ extern class UIViewControllerTransitioning{
 	overload extern inline public function viewControllerForKey(key:UITransitionContextViewControllerKey):nullable __kindof UIViewController *;
 
 	@:native("viewForKey")
-	overload extern inline public function viewForKey(key:UITransitionContextViewKey):nullable __kindof UIView *;
+	overload extern inline public function viewForKey(key:UITransitionContextViewKey:API_AVAILABLE(ios(8.0):nullable __kindof UIView *;
 
 	@:native("API_AVAILABLE(ios(8.0))")
 	public var API_AVAILABLE(ios(8.0)):targetTransform;
 
 	@:native("initialFrameForViewController")
-	overload extern inline public function initialFrameForViewController(UIViewController:null):CGRect;
+	overload extern inline public function initialFrameForViewController(UIViewController:null:):CGRect;
 
 	@:native("finalFrameForViewController")
-	overload extern inline public function finalFrameForViewController(UIViewController:null):CGRect;
+	overload extern inline public function finalFrameForViewController(UIViewController:null:):CGRect;
 
 	@:native("transitionDuration")
-	overload extern inline public function transitionDuration(nullable:null):NSTimeInterval;
+	overload extern inline public function transitionDuration(nullable:null:id<UIViewControllerContextTransitioning>):NSTimeInterval;
 
 	@:native("animateTransition")
-	overload extern inline public function animateTransition(id:null):void;
+	overload extern inline public function animateTransition(id:null:<UIViewControllerContextTransitioning>):void;
 
 	@:native("")
 	overload extern inline public function ():id <UIViewImplicitlyAnimating>;
@@ -69,7 +69,7 @@ extern class UIViewControllerTransitioning{
 	overload extern inline public function animationEnded(:BOOL):void;
 
 	@:native("startInteractiveTransition")
-	overload extern inline public function startInteractiveTransition(id:null):void;
+	overload extern inline public function startInteractiveTransition(id:null:<UIViewControllerContextTransitioning>):void;
 
 	@:native("completionSpeed")
 	public var completionSpeed:CGFloat;
@@ -81,19 +81,19 @@ extern class UIViewControllerTransitioning{
 	public var API_AVAILABLE(ios(10.0)):wantsInteractiveStart;
 
 	@:native("animationControllerForPresentedController")
-	overload extern inline public function animationControllerForPresentedController(UIViewController:null):nullable id <UIViewControllerAnimatedTransitioning>;
+	overload extern inline public function animationControllerForPresentedController(UIViewController:null::UIViewController:UIViewController):nullable id <UIViewControllerAnimatedTransitioning>;
 
 	@:native("animationControllerForDismissedController")
-	overload extern inline public function animationControllerForDismissedController(UIViewController:null):nullable id <UIViewControllerAnimatedTransitioning>;
+	overload extern inline public function animationControllerForDismissedController(UIViewController:null:):nullable id <UIViewControllerAnimatedTransitioning>;
 
 	@:native("interactionControllerForPresentation")
-	overload extern inline public function interactionControllerForPresentation(id:null):nullable id <UIViewControllerInteractiveTransitioning>;
+	overload extern inline public function interactionControllerForPresentation(id:null:<UIViewControllerAnimatedTransitioning>):nullable id <UIViewControllerInteractiveTransitioning>;
 
 	@:native("interactionControllerForDismissal")
-	overload extern inline public function interactionControllerForDismissal(id:null):nullable id <UIViewControllerInteractiveTransitioning>;
+	overload extern inline public function interactionControllerForDismissal(id:null:<UIViewControllerAnimatedTransitioning>):nullable id <UIViewControllerInteractiveTransitioning>;
 
 	@:native("presentationControllerForPresentedViewController")
-	overload extern inline public function presentationControllerForPresentedViewController(UIViewController:null):nullable UIPresentationController *;
+	overload extern inline public function presentationControllerForPresentedViewController(UIViewController:null::nullableUIViewController:UIViewController:ios(8.0):nullable UIPresentationController *;
 
 	@:native("duration")
 	public var duration:CGFloat;

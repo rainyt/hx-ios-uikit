@@ -18,22 +18,22 @@ extern class UIPointerInteraction{
 	public var enabled:BOOL;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(nullable:null):UIPointerInteraction;
+	overload extern inline public function initWithDelegate(nullable:null:id<UIPointerInteractionDelegate>):UIPointerInteraction;
 
 	@:native("invalidate;")
 	overload extern inline public function invalidate;():void;
 
 	@:native("pointerInteraction")
-	overload extern inline public function pointerInteraction(UIPointerInteraction:null):nullable UIPointerRegion *;
+	overload extern inline public function pointerInteraction(UIPointerInteraction:null::UIPointerRegionRequest:UIPointerRegion):nullable UIPointerRegion *;
 
 	@:native("pointerInteraction")
-	overload extern inline public function pointerInteraction(UIPointerInteraction:null):nullable UIPointerStyle *;
+	overload extern inline public function pointerInteraction(UIPointerInteraction:null::UIPointerRegion):nullable UIPointerStyle *;
 
 	@:native("pointerInteraction")
-	overload extern inline public function pointerInteraction(UIPointerInteraction:null):void;
+	overload extern inline public function pointerInteraction(UIPointerInteraction:null::UIPointerRegion:id<UIPointerInteractionAnimating>):void;
 
-	@:native("pointerInteraction")
-	overload extern inline public function pointerInteraction(UIPointerInteraction:null):void;
+	@:native("pointerInteraction:pointerInteraction(_")
+	overload extern inline public function pointerInteraction(UIPointerInteraction:null::UIPointerRegion:id<UIPointerInteractionAnimating>, pointerInteraction(_):void;
 
 	@:native("location")
 	public var location:CGPoint;
@@ -42,10 +42,10 @@ extern class UIPointerInteraction{
 	public var modifiers:UIKeyModifierFlags;
 
 	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null):void;
+	overload extern inline public function addAnimations(void:null:(^:void):void;
 
 	@:native("addCompletion")
-	overload extern inline public function addCompletion(void:null):void;
+	overload extern inline public function addCompletion(void:null:(^:BOOLfinished):void;
 
 
 }

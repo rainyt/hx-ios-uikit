@@ -23,14 +23,14 @@ extern class UIGraphicsRenderer{
 	@:native("fillRect")
 	overload extern inline public function fillRect(rect:CGRect):void;
 
-	@:native("fillRect")
-	overload extern inline public function fillRect(rect:CGRect):void;
+	@:native("fillRect:blendMode")
+	overload extern inline public function fillRect(rect:CGRect, blendMode:CGBlendMode):void;
 
 	@:native("strokeRect")
 	overload extern inline public function strokeRect(rect:CGRect):void;
 
-	@:native("strokeRect")
-	overload extern inline public function strokeRect(rect:CGRect):void;
+	@:native("strokeRect:blendMode")
+	overload extern inline public function strokeRect(rect:CGRect, blendMode:CGBlendMode):void;
 
 	@:native("clipToRect")
 	overload extern inline public function clipToRect(rect:CGRect):void;
@@ -38,8 +38,8 @@ extern class UIGraphicsRenderer{
 	@:native("initWithBounds")
 	overload extern inline public function initWithBounds(bounds:CGRect):UIGraphicsRenderer;
 
-	@:native("initWithBounds")
-	overload extern inline public function initWithBounds(bounds:CGRect):UIGraphicsRenderer;
+	@:native("initWithBounds:format")
+	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsRendererFormat):UIGraphicsRenderer;
 
 	@:native("copy.")
 	public var copy.:by;

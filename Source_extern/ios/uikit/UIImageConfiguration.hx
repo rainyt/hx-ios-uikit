@@ -18,10 +18,10 @@ extern class UIImageConfiguration{
 	public var traitCollection:UITraitCollection;
 
 	@:native("configurationWithTraitCollection")
-	overload extern inline public function configurationWithTraitCollection(nullable:null):UIImageConfiguration;
+	overload extern inline public function configurationWithTraitCollection(nullable:null:UITraitCollection):UIImageConfiguration;
 
 	@:native("configurationByApplyingConfiguration")
-	overload extern inline public function configurationByApplyingConfiguration(nullable:null):UIImageConfiguration;
+	overload extern inline public function configurationByApplyingConfiguration(nullable:null:UIImageConfiguration):UIImageConfiguration;
 
 
 }

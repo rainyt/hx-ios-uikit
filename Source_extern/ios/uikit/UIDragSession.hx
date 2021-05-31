@@ -15,7 +15,7 @@ extern class UIDragSession{
 	public var items:>;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(UIView:null):CGPoint;
+	overload extern inline public function locationInView(UIView:null:):CGPoint;
 
 	@:native("allowsMoveOperation")
 	public var allowsMoveOperation:BOOL;
@@ -24,7 +24,7 @@ extern class UIDragSession{
 	public var restrictedToDraggingApplication:BOOL;
 
 	@:native("hasItemsConformingToTypeIdentifiers")
-	overload extern inline public function hasItemsConformingToTypeIdentifiers(NSArray<NSString:null):BOOL;
+	overload extern inline public function hasItemsConformingToTypeIdentifiers(NSArray<NSString:null:>):BOOL;
 
 	@:native("canLoadObjectsOfClass")
 	overload extern inline public function canLoadObjectsOfClass(aClass:Class<NSItemProviderReading>):BOOL;
@@ -38,8 +38,8 @@ extern class UIDragSession{
 	@:native("progressIndicatorStyle")
 	public var progressIndicatorStyle:UIDropSessionProgressIndicatorStyle;
 
-	@:native("loadObjectsOfClass")
-	overload extern inline public function loadObjectsOfClass(aClass:Class<NSItemProviderReading>):NSProgress *;
+	@:native("loadObjectsOfClass:completion")
+	overload extern inline public function loadObjectsOfClass(aClass:Class<NSItemProviderReading>, completion:void(^:NSArray<__kindofid<NSItemProviderReading>>objects):NSProgress *;
 
 
 }

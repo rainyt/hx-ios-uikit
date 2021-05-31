@@ -39,10 +39,10 @@ extern class UIPageControl{
 	public var API_AVAILABLE(ios(14.0)):preferredIndicatorImage;
 
 	@:native("indicatorImageForPage")
-	overload extern inline public function indicatorImageForPage(page:NSInteger):nullable UIImage *;
+	overload extern inline public function indicatorImageForPage(page:NSInteger:API_AVAILABLE(ios(14.0):nullable UIImage *;
 
 	@:native("setIndicatorImage")
-	overload extern inline public function setIndicatorImage(nullable:null):void;
+	overload extern inline public function setIndicatorImage(nullable:null:UIImage:NSInteger:ios(14.0):void;
 
 	@:native("sizeForNumberOfPages")
 	overload extern inline public function sizeForNumberOfPages(pageCount:NSInteger):CGSize;

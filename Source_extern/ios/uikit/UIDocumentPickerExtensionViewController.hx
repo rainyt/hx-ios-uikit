@@ -12,7 +12,7 @@ extern class UIDocumentPickerExtensionViewController{
 	overload extern inline public static function autorelease():UIDocumentPickerExtensionViewController;
 
 	@:native("dismissGrantingAccessToURL")
-	overload extern inline public function dismissGrantingAccessToURL(nullable:null):void;
+	overload extern inline public function dismissGrantingAccessToURL(nullable:null:NSURL):void;
 
 	@:native("prepareForPresentationInMode")
 	overload extern inline public function prepareForPresentationInMode(mode:UIDocumentPickerMode):void;

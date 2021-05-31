@@ -12,28 +12,28 @@ extern class UIAccessibilityCustomAction{
 	overload extern inline public static function autorelease():UIAccessibilityCustomAction;
 
 	@:native("initWithName")
-	overload extern inline public function initWithName(NSString:null):UIAccessibilityCustomAction;
+	overload extern inline public function initWithName(NSString:null::nullableid:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName")
-	overload extern inline public function initWithAttributedName(NSAttributedString:null):UIAccessibilityCustomAction;
+	overload extern inline public function initWithAttributedName(NSAttributedString:null::nullableid:SEL:ios(11.0:11.0):UIAccessibilityCustomAction;
 
 	@:native("initWithName")
-	overload extern inline public function initWithName(NSString:null):UIAccessibilityCustomAction;
+	overload extern inline public function initWithName(NSString:null::nullableUIImage:nullableid:SEL:ios(14.0:14.0):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName")
-	overload extern inline public function initWithAttributedName(NSAttributedString:null):UIAccessibilityCustomAction;
+	overload extern inline public function initWithAttributedName(NSAttributedString:null::nullableUIImage:nullableid:SEL:ios(14.0:14.0):UIAccessibilityCustomAction;
 
 	@:native("initWithName")
-	overload extern inline public function initWithName(NSString:null):UIAccessibilityCustomAction;
+	overload extern inline public function initWithName(NSString:null::UIAccessibilityCustomActionHandler:ios(13.0:13.0):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName")
-	overload extern inline public function initWithAttributedName(NSAttributedString:null):UIAccessibilityCustomAction;
+	overload extern inline public function initWithAttributedName(NSAttributedString:null::UIAccessibilityCustomActionHandler:ios(13.0:13.0):UIAccessibilityCustomAction;
 
 	@:native("initWithName")
-	overload extern inline public function initWithName(NSString:null):UIAccessibilityCustomAction;
+	overload extern inline public function initWithName(NSString:null::nullableUIImage:UIAccessibilityCustomActionHandler:ios(14.0:14.0):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName")
-	overload extern inline public function initWithAttributedName(NSAttributedString:null):UIAccessibilityCustomAction;
+	overload extern inline public function initWithAttributedName(NSAttributedString:null::nullableUIImage:UIAccessibilityCustomActionHandler:ios(14.0:14.0):UIAccessibilityCustomAction;
 
 	@:native("name")
 	public var name:NSString;

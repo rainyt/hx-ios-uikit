@@ -21,7 +21,7 @@ extern class UINavigationBar{
 	public var UIBarStyleBlackTranslucent:to;
 
 	@:native("pushNavigationItem")
-	overload extern inline public function pushNavigationItem(UINavigationItem:null):void;
+	overload extern inline public function pushNavigationItem(UINavigationItem:null::BOOL):void;
 
 	@:native("popNavigationItemAnimated")
 	overload extern inline public function popNavigationItemAnimated(animated:BOOL):nullable UINavigationItem *;
@@ -36,7 +36,7 @@ extern class UINavigationBar{
 	public var items:>;
 
 	@:native("setItems")
-	overload extern inline public function setItems(nullable:null):void;
+	overload extern inline public function setItems(nullable:null:NSArray<UINavigationItem>:BOOL):void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(11.0));
@@ -48,16 +48,16 @@ extern class UINavigationBar{
 	public var nil:is;
 
 	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null):void;
+	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIBarPosition:UIBarMetrics:ios(7.0):void;
 
-	@:native("backgroundImageForBarPosition")
-	overload extern inline public function backgroundImageForBarPosition(barPosition:UIBarPosition):nullable UIImage *;
+	@:native("backgroundImageForBarPosition:barMetrics")
+	overload extern inline public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics:ios(7.0):nullable UIImage *;
 
 	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null):void;
+	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIBarMetrics:ios(5.0):void;
 
 	@:native("backgroundImageForBarMetrics")
-	overload extern inline public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics):nullable UIImage *;
+	overload extern inline public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics:API_AVAILABLE(ios(5.0):nullable UIImage *;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(6.0));
@@ -68,11 +68,11 @@ extern class UINavigationBar{
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(11.0));
 
-	@:native("setTitleVerticalPositionAdjustment")
-	overload extern inline public function setTitleVerticalPositionAdjustment(adjustment:CGFloat):void;
+	@:native("setTitleVerticalPositionAdjustment:forBarMetrics")
+	overload extern inline public function setTitleVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics:ios(5.0):void;
 
 	@:native("titleVerticalPositionAdjustmentForBarMetrics")
-	overload extern inline public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):CGFloat;
+	overload extern inline public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics:API_AVAILABLE(ios(5.0):CGFloat;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):UI_APPEARANCE_SELECTOR;
@@ -90,16 +90,16 @@ extern class UINavigationBar{
 	public var API_AVAILABLE(ios(13.0)):UI_APPEARANCE_SELECTOR;
 
 	@:native("navigationBar")
-	overload extern inline public function navigationBar(UINavigationBar:null):BOOL;
+	overload extern inline public function navigationBar(UINavigationBar:null::UINavigationItem):BOOL;
 
 	@:native("navigationBar")
-	overload extern inline public function navigationBar(UINavigationBar:null):void;
+	overload extern inline public function navigationBar(UINavigationBar:null::UINavigationItem):void;
 
 	@:native("navigationBar")
-	overload extern inline public function navigationBar(UINavigationBar:null):BOOL;
+	overload extern inline public function navigationBar(UINavigationBar:null::UINavigationItem):BOOL;
 
 	@:native("navigationBar")
-	overload extern inline public function navigationBar(UINavigationBar:null):void;
+	overload extern inline public function navigationBar(UINavigationBar:null::UINavigationItem):void;
 
 
 }

@@ -15,7 +15,7 @@ extern class UIFontDescriptor{
 	overload extern inline public function init;():UIFontDescriptor;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIFontDescriptor;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIFontDescriptor;
 
 	@:native("postscriptName")
 	public var postscriptName:NSString;
@@ -30,37 +30,37 @@ extern class UIFontDescriptor{
 	public var symbolicTraits:UIFontDescriptorSymbolicTraits;
 
 	@:native("objectForKey")
-	overload extern inline public function objectForKey(anAttribute:UIFontDescriptorAttributeName):nullable id;
+	overload extern inline public function objectForKey(anAttribute:NSString):nullable id;
 
 	@:native("fontAttributes")
 	public var fontAttributes:id>;
 
 	@:native("matchingFontDescriptorsWithMandatoryKeys")
-	overload extern inline public function matchingFontDescriptorsWithMandatoryKeys(nullable:null):NSArray<UIFontDescriptor *> *;
+	overload extern inline public function matchingFontDescriptorsWithMandatoryKeys(nullable:null:NSSet<UIFontDescriptorAttributeName>):NSArray<UIFontDescriptor *> *;
 
 	@:native("initWithFontAttributes")
-	overload extern inline public function initWithFontAttributes(NSDictionary<UIFontDescriptorAttributeName,:null):UIFontDescriptor;
+	overload extern inline public function initWithFontAttributes(NSDictionary<UIFontDescriptorAttributeName,:null:id>):UIFontDescriptor;
 
 	@:native("fontDescriptorByAddingAttributes")
-	overload extern inline public function fontDescriptorByAddingAttributes(NSDictionary<UIFontDescriptorAttributeName,:null):UIFontDescriptor *;
+	overload extern inline public function fontDescriptorByAddingAttributes(NSDictionary<UIFontDescriptorAttributeName,:null:id>):UIFontDescriptor *;
 
 	@:native("fontDescriptorWithSize")
 	overload extern inline public function fontDescriptorWithSize(newPointSize:CGFloat):UIFontDescriptor *;
 
 	@:native("fontDescriptorWithMatrix")
-	overload extern inline public function fontDescriptorWithMatrix(matrix:CGAffineTransform):UIFontDescriptor *;
+	overload extern inline public function fontDescriptorWithMatrix(matrix:CGAffineTransform:API_UNAVAILABLE(macCatalyst):UIFontDescriptor *;
 
 	@:native("fontDescriptorWithFace")
-	overload extern inline public function fontDescriptorWithFace(NSString:null):UIFontDescriptor *;
+	overload extern inline public function fontDescriptorWithFace(NSString:null:):UIFontDescriptor *;
 
 	@:native("fontDescriptorWithFamily")
-	overload extern inline public function fontDescriptorWithFamily(NSString:null):UIFontDescriptor *;
+	overload extern inline public function fontDescriptorWithFamily(NSString:null:):UIFontDescriptor *;
 
 	@:native("fontDescriptorWithSymbolicTraits")
 	overload extern inline public function fontDescriptorWithSymbolicTraits(symbolicTraits:UIFontDescriptorSymbolicTraits):nullable UIFontDescriptor *;
 
 	@:native("fontDescriptorWithDesign")
-	overload extern inline public function fontDescriptorWithDesign(design:UIFontDescriptorSystemDesign):nullable UIFontDescriptor *;
+	overload extern inline public function fontDescriptorWithDesign(design:NSString:API_AVAILABLE(ios(13.0:5.2:13.0):nullable UIFontDescriptor *;
 
 
 }

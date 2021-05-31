@@ -21,13 +21,13 @@ extern class UIAccessibilityCustomRotor{
 	public var searchDirection:UIAccessibilityCustomRotorDirection;
 
 	@:native("initWithName")
-	overload extern inline public function initWithName(NSString:null):UIAccessibilityCustomRotor;
+	overload extern inline public function initWithName(NSString:null::UIAccessibilityCustomRotorSearch):UIAccessibilityCustomRotor;
 
 	@:native("initWithAttributedName")
-	overload extern inline public function initWithAttributedName(NSAttributedString:null):UIAccessibilityCustomRotor;
+	overload extern inline public function initWithAttributedName(NSAttributedString:null::UIAccessibilityCustomRotorSearch:ios(11.0:11.0):UIAccessibilityCustomRotor;
 
-	@:native("initWithSystemType")
-	overload extern inline public function initWithSystemType(type:UIAccessibilityCustomSystemRotorType):UIAccessibilityCustomRotor;
+	@:native("initWithSystemType:itemSearchBlock")
+	overload extern inline public function initWithSystemType(type:UIAccessibilityCustomSystemRotorType, itemSearchBlock:UIAccessibilityCustomRotorSearch:ios(11.0):UIAccessibilityCustomRotor;
 
 	@:native("name")
 	public var name:NSString;
@@ -41,8 +41,8 @@ extern class UIAccessibilityCustomRotor{
 	@:native("API_AVAILABLE(ios(11.0))")
 	public var API_AVAILABLE(ios(11.0)):systemRotorType;
 
-	@:native("initWithTargetElement")
-	overload extern inline public function initWithTargetElement(targetElement:id<NSObject>):UIAccessibilityCustomRotor;
+	@:native("initWithTargetElement:targetRange")
+	overload extern inline public function initWithTargetElement(targetElement:id<NSObject>, targetRange:nullableUITextRange):UIAccessibilityCustomRotor;
 
 	@:native("targetElement")
 	public var targetElement:id<NSObject>;

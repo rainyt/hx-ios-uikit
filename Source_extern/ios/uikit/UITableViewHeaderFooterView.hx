@@ -12,10 +12,10 @@ extern class UITableViewHeaderFooterView{
 	overload extern inline public static function autorelease():UITableViewHeaderFooterView;
 
 	@:native("initWithReuseIdentifier")
-	overload extern inline public function initWithReuseIdentifier(nullable:null):UITableViewHeaderFooterView;
+	overload extern inline public function initWithReuseIdentifier(nullable:null:NSString):UITableViewHeaderFooterView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UITableViewHeaderFooterView;
+	overload extern inline public function initWithCoder(NSCoder:null:):UITableViewHeaderFooterView;
 
 	@:native("watchos(7.0))")
 	public var watchos(7.0)):tvos(14.0),;
@@ -24,7 +24,7 @@ extern class UITableViewHeaderFooterView{
 	overload extern inline public function setNeedsUpdateConfiguration():void;
 
 	@:native("updateConfigurationUsingState")
-	overload extern inline public function updateConfigurationUsingState(UIViewConfigurationState:null):void;
+	overload extern inline public function updateConfigurationUsingState(UIViewConfigurationState:null::ios(14.0:14.0:7.0):void;
 
 	@:native("defaultContentConfiguration")
 	overload extern inline public function defaultContentConfiguration():UIListContentConfiguration *;

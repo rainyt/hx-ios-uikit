@@ -15,10 +15,10 @@ extern class UISpringLoadedInteraction{
 	overload extern inline public function init():UISpringLoadedInteraction;
 
 	@:native("initWithInteractionBehavior")
-	overload extern inline public function initWithInteractionBehavior(nullable:null):UISpringLoadedInteraction;
+	overload extern inline public function initWithInteractionBehavior(nullable:null:id<UISpringLoadedInteractionBehavior>:nullableid<UISpringLoadedInteractionEffect>:void(^:UISpringLoadedInteractioninteraction,id<UISpringLoadedInteractionContext>context):UISpringLoadedInteraction;
 
 	@:native("initWithActivationHandler")
-	overload extern inline public function initWithActivationHandler(UISpringLoadedInteraction:void^):UISpringLoadedInteraction;
+	overload extern inline public function initWithActivationHandler(UISpringLoadedInteraction:void^:interaction,id<UISpringLoadedInteractionContext>context):UISpringLoadedInteraction;
 
 	@:native("interactionBehavior")
 	public var interactionBehavior:id<UISpringLoadedInteractionBehavior>;
@@ -27,13 +27,13 @@ extern class UISpringLoadedInteraction{
 	public var interactionEffect:id<UISpringLoadedInteractionEffect>;
 
 	@:native("shouldAllowInteraction")
-	overload extern inline public function shouldAllowInteraction(UISpringLoadedInteraction:null):BOOL;
+	overload extern inline public function shouldAllowInteraction(UISpringLoadedInteraction:null::id<UISpringLoadedInteractionContext>):BOOL;
 
 	@:native("interactionDidFinish")
-	overload extern inline public function interactionDidFinish(UISpringLoadedInteraction:null):void;
+	overload extern inline public function interactionDidFinish(UISpringLoadedInteraction:null:):void;
 
 	@:native("interaction")
-	overload extern inline public function interaction(UISpringLoadedInteraction:null):void;
+	overload extern inline public function interaction(UISpringLoadedInteraction:null::id<UISpringLoadedInteractionContext>):void;
 
 	@:native("state")
 	public var state:UISpringLoadedInteractionEffectState;
@@ -45,7 +45,7 @@ extern class UISpringLoadedInteraction{
 	public var targetItem:id;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(nullable:null):CGPoint;
+	overload extern inline public function locationInView(nullable:null:UIView):CGPoint;
 
 
 }

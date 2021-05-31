@@ -12,7 +12,7 @@ extern class UINib{
 	overload extern inline public static function autorelease():UINib;
 
 	@:native("instantiateWithOwner")
-	overload extern inline public function instantiateWithOwner(nullable:null):NSArray *;
+	overload extern inline public function instantiateWithOwner(nullable:null:id:nullableNSDictionary<UINibOptionsKey,id>):NSArray *;
 
 
 }

@@ -18,13 +18,13 @@ extern class UIWebView{
 	public var API_AVAILABLE(ios(5.0)):scrollView;
 
 	@:native("loadRequest")
-	overload extern inline public function loadRequest(NSURLRequest:null):void;
+	overload extern inline public function loadRequest(NSURLRequest:null:):void;
 
 	@:native("loadHTMLString")
-	overload extern inline public function loadHTMLString(NSString:null):void;
+	overload extern inline public function loadHTMLString(NSString:null::nullableNSURL):void;
 
 	@:native("loadData")
-	overload extern inline public function loadData(NSData:null):void;
+	overload extern inline public function loadData(NSData:null::NSString:NSString:NSURL):void;
 
 	@:native("request")
 	public var request:NSURLRequest;
@@ -51,7 +51,7 @@ extern class UIWebView{
 	public var loading:BOOL;
 
 	@:native("stringByEvaluatingJavaScriptFromString")
-	overload extern inline public function stringByEvaluatingJavaScriptFromString(NSString:null):nullable NSString *;
+	overload extern inline public function stringByEvaluatingJavaScriptFromString(NSString:null:):nullable NSString *;
 
 	@:native("scalesPageToFit")
 	public var scalesPageToFit:BOOL;
@@ -99,16 +99,16 @@ extern class UIWebView{
 	public var NO:is;
 
 	@:native("webView")
-	overload extern inline public function webView(UIWebView:null):BOOL;
+	overload extern inline public function webView(UIWebView:null::NSURLRequest:UIWebViewNavigationType:"Nolongersupported.",ios(2.0,12.0):BOOL;
 
 	@:native("webViewDidStartLoad")
-	overload extern inline public function webViewDidStartLoad(UIWebView:null):void;
+	overload extern inline public function webViewDidStartLoad(UIWebView:null::"Nolongersupported.",ios(2.0,12.0):void;
 
 	@:native("webViewDidFinishLoad")
-	overload extern inline public function webViewDidFinishLoad(UIWebView:null):void;
+	overload extern inline public function webViewDidFinishLoad(UIWebView:null::"Nolongersupported.",ios(2.0,12.0):void;
 
 	@:native("webView")
-	overload extern inline public function webView(UIWebView:null):void;
+	overload extern inline public function webView(UIWebView:null::NSError:"Nolongersupported.",ios(2.0,12.0):void;
 
 
 }

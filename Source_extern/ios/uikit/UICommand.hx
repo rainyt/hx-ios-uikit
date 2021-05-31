@@ -24,7 +24,7 @@ extern class UICommand{
 	overload extern inline public function init():UICommand;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UICommand;
+	overload extern inline public function initWithCoder(NSCoder:null:):UICommand;
 
 	@:native("title")
 	public var title:NSString;
@@ -54,7 +54,7 @@ extern class UICommand{
 	overload extern inline public function init():UICommand;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UICommand;
+	overload extern inline public function initWithCoder(NSCoder:null:):UICommand;
 
 
 }

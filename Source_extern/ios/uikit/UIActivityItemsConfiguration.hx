@@ -30,10 +30,10 @@ extern class UIActivityItemsConfiguration{
 	public var (^applicationActivitiesProvider)(void):>;
 
 	@:native("initWithObjects")
-	overload extern inline public function initWithObjects(NSArray<id<NSItemProviderWriting>:null):UIActivityItemsConfiguration;
+	overload extern inline public function initWithObjects(NSArray<id<NSItemProviderWriting>:null:>):UIActivityItemsConfiguration;
 
 	@:native("initWithItemProviders")
-	overload extern inline public function initWithItemProviders(NSArray<NSItemProvider:null):UIActivityItemsConfiguration;
+	overload extern inline public function initWithItemProviders(NSArray<NSItemProvider:null:>):UIActivityItemsConfiguration;
 
 	@:native("init")
 	overload extern inline public function init():UIActivityItemsConfiguration;

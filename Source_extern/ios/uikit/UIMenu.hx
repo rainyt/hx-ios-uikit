@@ -21,13 +21,13 @@ extern class UIMenu{
 	public var children:>;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIMenu;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIMenu;
 
 	@:native("init")
 	overload extern inline public function init():UIMenu;
 
 	@:native("menuByReplacingChildren")
-	overload extern inline public function menuByReplacingChildren(NSArray<UIMenuElement:null):UIMenu *;
+	overload extern inline public function menuByReplacingChildren(NSArray<UIMenuElement:null:>):UIMenu *;
 
 
 }

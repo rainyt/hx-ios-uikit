@@ -33,13 +33,13 @@ extern class UIWindowScene{
 	public var window:UIWindow;
 
 	@:native("windowScene")
-	overload extern inline public function windowScene(UIWindowScene:null):void;
+	overload extern inline public function windowScene(UIWindowScene:null::id<UICoordinateSpace>:UIInterfaceOrientation:UITraitCollection:tvos):void;
 
 	@:native("windowScene")
-	overload extern inline public function windowScene(UIWindowScene:null):void;
+	overload extern inline public function windowScene(UIWindowScene:null::UIApplicationShortcutItem:void(^:BOOLsucceeded:tvos):void;
 
 	@:native("windowScene")
-	overload extern inline public function windowScene(UIWindowScene:null):void;
+	overload extern inline public function windowScene(UIWindowScene:null::CKShareMetadata):void;
 
 	@:native("windowDismissalAnimation")
 	public var windowDismissalAnimation:UIWindowSceneDismissalAnimation;

@@ -15,22 +15,22 @@ extern class UIStackView{
 	overload extern inline public function initWithFrame(frame:CGRect):UIStackView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIStackView;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIStackView;
 
 	@:native("initWithArrangedSubviews")
-	overload extern inline public function initWithArrangedSubviews(NSArray<__kindof:null):UIStackView;
+	overload extern inline public function initWithArrangedSubviews(NSArray<__kindof:null:UIView>):UIStackView;
 
 	@:native("arrangedSubviews")
 	public var arrangedSubviews:>;
 
 	@:native("addArrangedSubview")
-	overload extern inline public function addArrangedSubview(UIView:null):void;
+	overload extern inline public function addArrangedSubview(UIView:null:):void;
 
 	@:native("removeArrangedSubview")
-	overload extern inline public function removeArrangedSubview(UIView:null):void;
+	overload extern inline public function removeArrangedSubview(UIView:null:):void;
 
 	@:native("insertArrangedSubview")
-	overload extern inline public function insertArrangedSubview(UIView:null):void;
+	overload extern inline public function insertArrangedSubview(UIView:null::NSUInteger):void;
 
 	@:native("axis")
 	public var axis:UILayoutConstraintAxis;
@@ -44,11 +44,11 @@ extern class UIStackView{
 	@:native("spacing")
 	public var spacing:CGFloat;
 
-	@:native("setCustomSpacing")
-	overload extern inline public function setCustomSpacing(spacing:CGFloat):void;
+	@:native("setCustomSpacing:afterView")
+	overload extern inline public function setCustomSpacing(spacing:CGFloat, afterView:UIView:ios(11.0:11.0):void;
 
 	@:native("customSpacingAfterView")
-	overload extern inline public function customSpacingAfterView(UIView:null):CGFloat;
+	overload extern inline public function customSpacingAfterView(UIView:null::ios(11.0:11.0):CGFloat;
 
 	@:native("baselineRelativeArrangement")
 	public var baselineRelativeArrangement:BOOL;

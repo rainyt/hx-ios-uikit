@@ -24,19 +24,19 @@ extern class UITextDragging{
 	public var textDragOptions:UITextDragOptions;
 
 	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null):NSArray<UIDragItem *> *;
+	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::id<UITextDragRequest>):NSArray<UIDragItem *> *;
 
 	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null):nullable UITargetedDragPreview *;
+	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::UIDragItem:id<UIDragSession>):nullable UITargetedDragPreview *;
 
 	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null):void;
+	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::id<UIDragAnimating>:id<UIDragSession>):void;
 
 	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null):void;
+	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::id<UIDragSession>):void;
 
 	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null):void;
+	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::id<UIDragSession>:UIDropOperation):void;
 
 	@:native("dragRange")
 	public var dragRange:UITextRange;

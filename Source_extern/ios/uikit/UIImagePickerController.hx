@@ -66,13 +66,13 @@ extern class UIImagePickerController{
 	public var :UIImagePickerControllerCameraFlashModeAuto.;
 
 	@:native("imagePickerController")
-	overload extern inline public function imagePickerController(UIImagePickerController:null):void;
+	overload extern inline public function imagePickerController(UIImagePickerController:null::UIImage:nullableNSDictionary<UIImagePickerControllerInfoKey,id>:"",ios(2.0,3.0):void;
 
 	@:native("imagePickerController")
-	overload extern inline public function imagePickerController(UIImagePickerController:null):void;
+	overload extern inline public function imagePickerController(UIImagePickerController:null::NSDictionary<UIImagePickerControllerInfoKey,id>):void;
 
 	@:native("imagePickerControllerDidCancel")
-	overload extern inline public function imagePickerControllerDidCancel(UIImagePickerController:null):void;
+	overload extern inline public function imagePickerControllerDidCancel(UIImagePickerController:null:):void;
 
 
 }

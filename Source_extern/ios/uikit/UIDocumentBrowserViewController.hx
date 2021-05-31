@@ -11,14 +11,14 @@ extern class UIDocumentBrowserViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDocumentBrowserViewController;
 
-	@:native("initForOpeningFilesWithContentTypes")
-	overload extern inline public function initForOpeningFilesWithContentTypes(nullable:null):UIDocumentBrowserViewController;
+	@:native("initForOpeningFilesWithContentTypes:"useinitForOpeningContentTypes")
+	overload extern inline public function initForOpeningFilesWithContentTypes(nullable:null:NSArray<NSString>, "useinitForOpeningContentTypes:11.0,14.0):UIDocumentBrowserViewController;
 
-	@:native("initForOpeningContentTypes")
-	overload extern inline public function initForOpeningContentTypes(nullable:null):UIDocumentBrowserViewController;
+	@:native("initForOpeningContentTypes:init(forOpening")
+	overload extern inline public function initForOpeningContentTypes(nullable:null:NSArray<UTType>, init(forOpening:ios(14.0):UIDocumentBrowserViewController;
 
 	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null):UIDocumentBrowserViewController;
+	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UIDocumentBrowserViewController;
 
 	@:native("delegate")
 	public var delegate:<UIDocumentBrowserViewControllerDelegate>;
@@ -48,16 +48,16 @@ extern class UIDocumentBrowserViewController{
 	public var additionalTrailingNavigationBarButtonItems:>;
 
 	@:native("revealDocumentAtURL")
-	overload extern inline public function revealDocumentAtURL(NSURL:null):void;
+	overload extern inline public function revealDocumentAtURL(NSURL:null::BOOL:nullablevoid(^:NSURL_NullablerevealedDocumentURL,NSError_Nullableerror):void;
 
 	@:native("importDocumentAtURL")
-	overload extern inline public function importDocumentAtURL(NSURL:null):void;
+	overload extern inline public function importDocumentAtURL(NSURL:null::NSURL:UIDocumentBrowserImportMode:void(^:NSURL_Nullable,NSError_Nullable):void;
 
-	@:native("transitionControllerForDocumentAtURL")
-	overload extern inline public function transitionControllerForDocumentAtURL(NSURL:null):UIDocumentBrowserTransitionController *;
+	@:native("transitionControllerForDocumentAtURL:transitionController(forDocumentAt")
+	overload extern inline public function transitionControllerForDocumentAtURL(NSURL:null::ios(12.0, transitionController(forDocumentAt):UIDocumentBrowserTransitionController *;
 
-	@:native("transitionControllerForDocumentURL")
-	overload extern inline public function transitionControllerForDocumentURL(NSURL:null):UIDocumentBrowserTransitionController *;
+	@:native("transitionControllerForDocumentURL:"transitionControllerForDocumentAtURL")
+	overload extern inline public function transitionControllerForDocumentURL(NSURL:null:, "transitionControllerForDocumentAtURL:11.0,12.0):UIDocumentBrowserTransitionController *;
 
 	@:native("customActions")
 	public var customActions:>;
@@ -71,26 +71,26 @@ extern class UIDocumentBrowserViewController{
 	@:native("API_AVAILABLE(ios(13.0))")
 	public var API_AVAILABLE(ios(13.0)):defaultDocumentAspectRatio;
 
-	@:native("documentBrowser")
-	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null):void;
+	@:native("documentBrowser:"documentBrowser")
+	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null::NSArray<NSURL>, "documentBrowser:11.0,12.0):void;
 
 	@:native("documentBrowser")
-	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null):void;
+	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null::NSArray<NSURL>:ios(12.0):void;
 
 	@:native("documentBrowser")
-	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null):void;
+	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null::void(^:NSURL_NullableurlToImport,UIDocumentBrowserImportModeimportMode):void;
 
 	@:native("documentBrowser")
-	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null):void;
+	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null::NSURL:NSURL):void;
 
 	@:native("documentBrowser")
-	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null):void;
+	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null::NSURL:NSError_Nullable):void;
 
 	@:native("documentBrowser")
-	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null):NSArray<__kindof UIActivity *> *;
+	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null::NSArray<NSURL>):NSArray<__kindof UIActivity *> *;
 
 	@:native("documentBrowser")
-	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null):void;
+	overload extern inline public function documentBrowser(UIDocumentBrowserViewController:null::UIActivityViewController):void;
 
 	@:native("init")
 	overload extern inline public function init():UIDocumentBrowserViewController;

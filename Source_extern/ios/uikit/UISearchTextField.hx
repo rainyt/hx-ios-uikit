@@ -15,7 +15,7 @@ extern class UISearchTextField{
 	public var tokens:>;
 
 	@:native("insertToken")
-	overload extern inline public function insertToken(UISearchToken:null):void;
+	overload extern inline public function insertToken(UISearchToken:null::NSInteger):void;
 
 	@:native("removeTokenAtIndex")
 	overload extern inline public function removeTokenAtIndex(tokenIndex:NSInteger):void;
@@ -24,13 +24,13 @@ extern class UISearchTextField{
 	overload extern inline public function positionOfTokenAtIndex(tokenIndex:NSInteger):UITextPosition *;
 
 	@:native("tokensInRange")
-	overload extern inline public function tokensInRange(UITextRange:null):NSArray<UISearchToken *> *;
+	overload extern inline public function tokensInRange(UITextRange:null:):NSArray<UISearchToken *> *;
 
 	@:native("textualRange")
 	public var textualRange:UITextRange;
 
 	@:native("replaceTextualPortionOfRange")
-	overload extern inline public function replaceTextualPortionOfRange(UITextRange:null):void;
+	overload extern inline public function replaceTextualPortionOfRange(UITextRange:null::UISearchToken:NSUInteger):void;
 
 	@:native("tokenBackgroundColor")
 	public var tokenBackgroundColor:UIColor;
@@ -48,10 +48,10 @@ extern class UISearchTextField{
 	public var representedObject:id;
 
 	@:native("searchTextField")
-	overload extern inline public function searchTextField(UISearchTextField:null):NSItemProvider *;
+	overload extern inline public function searchTextField(UISearchTextField:null::UISearchToken):NSItemProvider *;
 
 	@:native("setSearchTokenResult")
-	overload extern inline public function setSearchTokenResult(UISearchToken:null):void;
+	overload extern inline public function setSearchTokenResult(UISearchToken:null:):void;
 
 
 }

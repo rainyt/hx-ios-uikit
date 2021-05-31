@@ -39,10 +39,10 @@ extern class UISwitch{
 	overload extern inline public function initWithFrame(frame:CGRect):UISwitch;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UISwitch;
+	overload extern inline public function initWithCoder(NSCoder:null:):UISwitch;
 
-	@:native("setOn")
-	overload extern inline public function setOn(on:BOOL):void;
+	@:native("setOn:animated")
+	overload extern inline public function setOn(on:BOOL, animated:BOOL):void;
 
 
 }

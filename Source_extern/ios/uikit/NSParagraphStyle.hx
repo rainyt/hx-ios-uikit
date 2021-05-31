@@ -11,8 +11,8 @@ extern class NSParagraphStyle{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():NSParagraphStyle;
 
-	@:native("initWithTextAlignment")
-	overload extern inline public function initWithTextAlignment(alignment:NSTextAlignment):NSParagraphStyle;
+	@:native("initWithTextAlignment:location")
+	overload extern inline public function initWithTextAlignment(alignment:NSTextAlignment, location:CGFloat:NSDictionary<NSTextTabOptionKey,id>):NSParagraphStyle;
 
 	@:native("language.")
 	public var language.:preferred;
@@ -129,13 +129,13 @@ extern class NSParagraphStyle{
 	public var ios(9.0)):API_AVAILABLE(macos(10.11),;
 
 	@:native("addTabStop")
-	overload extern inline public function addTabStop(NSTextTab:null):void;
+	overload extern inline public function addTabStop(NSTextTab:null::macos(10.0:9.0):void;
 
 	@:native("removeTabStop")
-	overload extern inline public function removeTabStop(NSTextTab:null):void;
+	overload extern inline public function removeTabStop(NSTextTab:null::macos(10.0:9.0):void;
 
 	@:native("setParagraphStyle")
-	overload extern inline public function setParagraphStyle(NSParagraphStyle:null):void;
+	overload extern inline public function setParagraphStyle(NSParagraphStyle:null::macos(10.0:9.0):void;
 
 
 }

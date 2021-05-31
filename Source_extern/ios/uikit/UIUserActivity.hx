@@ -12,7 +12,7 @@ extern class UIUserActivity{
 	overload extern inline public static function autorelease():UIUserActivity;
 
 	@:native("restoreUserActivityState")
-	overload extern inline public function restoreUserActivityState(NSUserActivity:null):void;
+	overload extern inline public function restoreUserActivityState(NSUserActivity:null:):void;
 
 
 }

@@ -30,7 +30,7 @@ extern class UIInputViewController{
 	overload extern inline public function adjustTextPositionByCharacterOffset(offset:NSInteger):void;
 
 	@:native("setMarkedText")
-	overload extern inline public function setMarkedText(NSString:null):void;
+	overload extern inline public function setMarkedText(NSString:null::NSRange:ios(13.0):void;
 
 	@:native("unmarkText")
 	overload extern inline public function unmarkText():void;
@@ -60,10 +60,10 @@ extern class UIInputViewController{
 	overload extern inline public function advanceToNextInputMode;():void;
 
 	@:native("handleInputModeListFromView")
-	overload extern inline public function handleInputModeListFromView(nonnull:null):void;
+	overload extern inline public function handleInputModeListFromView(nonnull:null:UIView:nonnullUIEvent:ios(10.0):void;
 
 	@:native("requestSupplementaryLexiconWithCompletion")
-	overload extern inline public function requestSupplementaryLexiconWithCompletion(void:null):void;
+	overload extern inline public function requestSupplementaryLexiconWithCompletion(void:null:(^:UILexicon):void;
 
 
 }

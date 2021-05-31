@@ -33,28 +33,28 @@ extern class UIStepper{
 	public var 0:than;
 
 	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null):void;
+	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIControlState:ios(6.0):void;
 
 	@:native("backgroundImageForState")
-	overload extern inline public function backgroundImageForState(state:UIControlState):nullable UIImage*;
+	overload extern inline public function backgroundImageForState(state:UIControlState:API_AVAILABLE(ios(6.0):nullable UIImage*;
 
 	@:native("setDividerImage")
-	overload extern inline public function setDividerImage(nullable:null):void;
+	overload extern inline public function setDividerImage(nullable:null:UIImage:UIControlState:UIControlState:ios(6.0):void;
 
-	@:native("dividerImageForLeftSegmentState")
-	overload extern inline public function dividerImageForLeftSegmentState(state:UIControlState):nullable UIImage*;
+	@:native("dividerImageForLeftSegmentState:rightSegmentState")
+	overload extern inline public function dividerImageForLeftSegmentState(state:UIControlState, rightSegmentState:UIControlState:ios(6.0):nullable UIImage*;
 
 	@:native("setIncrementImage")
-	overload extern inline public function setIncrementImage(nullable:null):void;
+	overload extern inline public function setIncrementImage(nullable:null:UIImage:UIControlState:ios(6.0):void;
 
 	@:native("incrementImageForState")
-	overload extern inline public function incrementImageForState(state:UIControlState):nullable UIImage *;
+	overload extern inline public function incrementImageForState(state:UIControlState:API_AVAILABLE(ios(6.0):nullable UIImage *;
 
 	@:native("setDecrementImage")
-	overload extern inline public function setDecrementImage(nullable:null):void;
+	overload extern inline public function setDecrementImage(nullable:null:UIImage:UIControlState:ios(6.0):void;
 
 	@:native("decrementImageForState")
-	overload extern inline public function decrementImageForState(state:UIControlState):nullable UIImage *;
+	overload extern inline public function decrementImageForState(state:UIControlState:API_AVAILABLE(ios(6.0):nullable UIImage *;
 
 
 }

@@ -12,7 +12,7 @@ extern class UIWindow{
 	overload extern inline public static function autorelease():UIWindow;
 
 	@:native("initWithWindowScene")
-	overload extern inline public function initWithWindowScene(UIWindowScene:null):UIWindow;
+	overload extern inline public function initWithWindowScene(UIWindowScene:null::ios(13.0):UIWindow;
 
 	@:native("API_AVAILABLE(ios(13.0))")
 	public var API_AVAILABLE(ios(13.0)):windowScene;
@@ -23,8 +23,8 @@ extern class UIWindow{
 	@:native("code")
 	public var code:performance-sensitive;
 
-	@:native("setScreen")
-	overload extern inline public function setScreen(UIScreen:null):void;
+	@:native("setScreen:"setWindowScene")
+	overload extern inline public function setScreen(UIScreen:null:, "setWindowScene:3.2,13.0):void;
 
 	@:native("0.0")
 	public var 0.0:=;
@@ -48,19 +48,19 @@ extern class UIWindow{
 	public var nil:is;
 
 	@:native("sendEvent")
-	overload extern inline public function sendEvent(UIEvent:null):void;
+	overload extern inline public function sendEvent(UIEvent:null:):void;
 
-	@:native("convertPoint")
-	overload extern inline public function convertPoint(point:CGPoint):CGPoint;
+	@:native("convertPoint:toWindow")
+	overload extern inline public function convertPoint(point:CGPoint, toWindow:nullableUIWindow):CGPoint;
 
-	@:native("convertPoint")
-	overload extern inline public function convertPoint(point:CGPoint):CGPoint;
+	@:native("convertPoint:fromWindow")
+	overload extern inline public function convertPoint(point:CGPoint, fromWindow:nullableUIWindow):CGPoint;
 
-	@:native("convertRect")
-	overload extern inline public function convertRect(rect:CGRect):CGRect;
+	@:native("convertRect:toWindow")
+	overload extern inline public function convertRect(rect:CGRect, toWindow:nullableUIWindow):CGRect;
 
-	@:native("convertRect")
-	overload extern inline public function convertRect(rect:CGRect):CGRect;
+	@:native("convertRect:fromWindow")
+	overload extern inline public function convertRect(rect:CGRect, fromWindow:nullableUIWindow):CGRect;
 
 
 }

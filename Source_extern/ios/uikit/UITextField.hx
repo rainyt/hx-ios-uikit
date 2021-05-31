@@ -117,34 +117,34 @@ extern class UITextField{
 	public var NO.:to;
 
 	@:native("endEditing")
-	overload extern inline public function endEditing(force:BOOL):BOOL;
+	overload extern inline public function endEditing(force:BOOL:optionallyforce):BOOL;
 
 	@:native("textFieldShouldBeginEditing")
-	overload extern inline public function textFieldShouldBeginEditing(UITextField:null):BOOL;
+	overload extern inline public function textFieldShouldBeginEditing(UITextField:null:):BOOL;
 
 	@:native("textFieldDidBeginEditing")
-	overload extern inline public function textFieldDidBeginEditing(UITextField:null):void;
+	overload extern inline public function textFieldDidBeginEditing(UITextField:null:):void;
 
 	@:native("textFieldShouldEndEditing")
-	overload extern inline public function textFieldShouldEndEditing(UITextField:null):BOOL;
+	overload extern inline public function textFieldShouldEndEditing(UITextField:null:):BOOL;
 
 	@:native("textFieldDidEndEditing")
-	overload extern inline public function textFieldDidEndEditing(UITextField:null):void;
+	overload extern inline public function textFieldDidEndEditing(UITextField:null::e.g.viewremovedfromwindow):void;
 
 	@:native("textFieldDidEndEditing")
-	overload extern inline public function textFieldDidEndEditing(UITextField:null):void;
+	overload extern inline public function textFieldDidEndEditing(UITextField:null::UITextFieldDidEndEditingReason:ios(10.0):void;
 
 	@:native("textField")
-	overload extern inline public function textField(UITextField:null):BOOL;
+	overload extern inline public function textField(UITextField:null::NSRange:NSString):BOOL;
 
 	@:native("textFieldDidChangeSelection")
-	overload extern inline public function textFieldDidChangeSelection(UITextField:null):void;
+	overload extern inline public function textFieldDidChangeSelection(UITextField:null::ios(13.0:13.0):void;
 
 	@:native("textFieldShouldClear")
-	overload extern inline public function textFieldShouldClear(UITextField:null):BOOL;
+	overload extern inline public function textFieldShouldClear(UITextField:null::nonotifications):BOOL;
 
 	@:native("textFieldShouldReturn")
-	overload extern inline public function textFieldShouldReturn(UITextField:null):BOOL;
+	overload extern inline public function textFieldShouldReturn(UITextField:null:):BOOL;
 
 
 }

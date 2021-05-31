@@ -11,11 +11,11 @@ extern class UITextDragPreviewRenderer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UITextDragPreviewRenderer;
 
-	@:native("initWithLayoutManager")
-	overload extern inline public function initWithLayoutManager(layoutManager:NSLayoutManager):UITextDragPreviewRenderer;
+	@:native("initWithLayoutManager:range")
+	overload extern inline public function initWithLayoutManager(layoutManager:NSLayoutManager, range:NSRange):UITextDragPreviewRenderer;
 
-	@:native("initWithLayoutManager")
-	overload extern inline public function initWithLayoutManager(layoutManager:NSLayoutManager):UITextDragPreviewRenderer;
+	@:native("initWithLayoutManager:range")
+	overload extern inline public function initWithLayoutManager(layoutManager:NSLayoutManager, range:NSRange:BOOL):UITextDragPreviewRenderer;
 
 	@:native("init")
 	overload extern inline public function init():UITextDragPreviewRenderer;
@@ -36,7 +36,7 @@ extern class UITextDragPreviewRenderer{
 	public var lastLineRect:CGRect;
 
 	@:native("adjustFirstLineRect")
-	overload extern inline public function adjustFirstLineRect(inout:null):void;
+	overload extern inline public function adjustFirstLineRect(inout:null:CGRect:inoutCGRect:inoutCGRect:CGPoint):void;
 
 
 }

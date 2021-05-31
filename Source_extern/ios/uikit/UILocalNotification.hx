@@ -15,7 +15,7 @@ extern class UILocalNotification{
 	overload extern inline public function init():UILocalNotification;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UILocalNotification;
+	overload extern inline public function initWithCoder(NSCoder:null:):UILocalNotification;
 
 	@:native("fireDate")
 	public var fireDate:NSDate;

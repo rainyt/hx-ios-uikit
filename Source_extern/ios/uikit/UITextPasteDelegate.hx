@@ -11,17 +11,17 @@ extern class UITextPasteDelegate{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UITextPasteDelegate;
 
-	@:native("textPasteConfigurationSupporting")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>):void;
+	@:native("textPasteConfigurationSupporting:transformPasteItem")
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, transformPasteItem:id<UITextPasteItem>):void;
 
-	@:native("textPasteConfigurationSupporting")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>):NSAttributedString *;
+	@:native("textPasteConfigurationSupporting:combineItemAttributedStrings")
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, combineItemAttributedStrings:NSArray<NSAttributedString>:UITextRange):NSAttributedString *;
 
-	@:native("textPasteConfigurationSupporting")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>):UITextRange*;
+	@:native("textPasteConfigurationSupporting:performPasteOfAttributedString")
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, performPasteOfAttributedString:NSAttributedString:UITextRange):UITextRange*;
 
-	@:native("textPasteConfigurationSupporting")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>):BOOL;
+	@:native("textPasteConfigurationSupporting:shouldAnimatePasteOfAttributedString")
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, shouldAnimatePasteOfAttributedString:NSAttributedString:UITextRange):BOOL;
 
 	@:native("itemProvider")
 	public var itemProvider:NSItemProvider;

@@ -15,25 +15,25 @@ extern class UIViewController{
 	public var API_AVAILABLE(ios(8.0)):preferredContentSize;
 
 	@:native("preferredContentSizeDidChangeForChildContentContainer")
-	overload extern inline public function preferredContentSizeDidChangeForChildContentContainer(id:null):void;
+	overload extern inline public function preferredContentSizeDidChangeForChildContentContainer(id:null:<UIContentContainer>:ios(8.0):void;
 
 	@:native("systemLayoutFittingSizeDidChangeForChildContentContainer")
-	overload extern inline public function systemLayoutFittingSizeDidChangeForChildContentContainer(id:null):void;
+	overload extern inline public function systemLayoutFittingSizeDidChangeForChildContentContainer(id:null:<UIContentContainer>:ios(8.0):void;
 
 	@:native("sizeForChildContentContainer")
-	overload extern inline public function sizeForChildContentContainer(id:null):CGSize;
+	overload extern inline public function sizeForChildContentContainer(id:null:<UIContentContainer>:CGSize:ios(8.0):CGSize;
 
-	@:native("viewWillTransitionToSize")
-	overload extern inline public function viewWillTransitionToSize(size:CGSize):void;
+	@:native("viewWillTransitionToSize:withTransitionCoordinator")
+	overload extern inline public function viewWillTransitionToSize(size:CGSize, withTransitionCoordinator:id<UIViewControllerTransitionCoordinator>:ios(8.0):void;
 
 	@:native("willTransitionToTraitCollection")
-	overload extern inline public function willTransitionToTraitCollection(UITraitCollection:null):void;
+	overload extern inline public function willTransitionToTraitCollection(UITraitCollection:null::id<UIViewControllerTransitionCoordinator>:ios(8.0):void;
 
 	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null):UIViewController;
+	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UIViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIViewController;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIViewController;
 
 	@:native("getter.")
 	public var getter.:or;
@@ -69,34 +69,34 @@ extern class UIViewController{
 	public var API_AVAILABLE(ios(5.0)):storyboard;
 
 	@:native("performSegueWithIdentifier")
-	overload extern inline public function performSegueWithIdentifier(NSString:null):void;
+	overload extern inline public function performSegueWithIdentifier(NSString:null::nullableid:ios(5.0):void;
 
 	@:native("shouldPerformSegueWithIdentifier")
-	overload extern inline public function shouldPerformSegueWithIdentifier(NSString:null):BOOL;
+	overload extern inline public function shouldPerformSegueWithIdentifier(NSString:null::nullableid:ios(6.0):BOOL;
 
 	@:native("prepareForSegue")
-	overload extern inline public function prepareForSegue(UIStoryboardSegue:null):void;
+	overload extern inline public function prepareForSegue(UIStoryboardSegue:null::nullableid:ios(5.0):void;
 
-	@:native("canPerformUnwindSegueAction")
-	overload extern inline public function canPerformUnwindSegueAction(action:SEL):BOOL;
+	@:native("canPerformUnwindSegueAction:fromViewController")
+	overload extern inline public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController:nullableid:ios(13.0:13.0):BOOL;
 
-	@:native("canPerformUnwindSegueAction")
-	overload extern inline public function canPerformUnwindSegueAction(action:SEL):BOOL;
+	@:native("canPerformUnwindSegueAction:fromViewController:"canPerformUnwindSegueAction")
+	overload extern inline public function canPerformUnwindSegueAction:fromViewController(action:SEL, fromViewController:UIViewController:id, "canPerformUnwindSegueAction:6.0,13.0:9.0,13.0):BOOL;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload extern inline public function allowedChildViewControllersForUnwindingFromSource(UIStoryboardUnwindSegueSource:null):NSArray<UIViewController *> *;
+	overload extern inline public function allowedChildViewControllersForUnwindingFromSource(UIStoryboardUnwindSegueSource:null::ios(9.0):NSArray<UIViewController *> *;
 
 	@:native("childViewControllerContainingSegueSource")
-	overload extern inline public function childViewControllerContainingSegueSource(UIStoryboardUnwindSegueSource:null):nullable UIViewController *;
+	overload extern inline public function childViewControllerContainingSegueSource(UIStoryboardUnwindSegueSource:null::ios(9.0):nullable UIViewController *;
 
-	@:native("viewControllerForUnwindSegueAction")
-	overload extern inline public function viewControllerForUnwindSegueAction(action:SEL):nullable UIViewController *;
+	@:native("viewControllerForUnwindSegueAction:fromViewController")
+	overload extern inline public function viewControllerForUnwindSegueAction(action:SEL, fromViewController:UIViewController:nullableid:"",ios(6.0,9.0):nullable UIViewController *;
 
 	@:native("unwindForSegue")
-	overload extern inline public function unwindForSegue(UIStoryboardSegue:null):void;
+	overload extern inline public function unwindForSegue(UIStoryboardSegue:null::UIViewController:ios(9.0):void;
 
 	@:native("segueForUnwindingToViewController")
-	overload extern inline public function segueForUnwindingToViewController(UIViewController:null):nullable UIStoryboardSegue *;
+	overload extern inline public function segueForUnwindingToViewController(UIViewController:null::UIViewController:nullableNSString:"",ios(6.0,9.0):nullable UIStoryboardSegue *;
 
 	@:native("viewWillAppear")
 	overload extern inline public function viewWillAppear(animated:BOOL):void;
@@ -156,16 +156,16 @@ extern class UIViewController{
 	public var API_AVAILABLE(ios(5.0)):movingFromParentViewController;
 
 	@:native("presentViewController")
-	overload extern inline public function presentViewController(UIViewController:null):void;
+	overload extern inline public function presentViewController(UIViewController:null::BOOL:void(^__nullable:void:ios(5.0):void;
 
 	@:native("dismissViewControllerAnimated")
-	overload extern inline public function dismissViewControllerAnimated(:null):void;
+	overload extern inline public function dismissViewControllerAnimated(:null:(BOOL:void(^__nullable:void:ios(5.0):void;
 
 	@:native("presentModalViewController")
-	overload extern inline public function presentModalViewController(UIViewController:null):void;
+	overload extern inline public function presentModalViewController(UIViewController:null::BOOL:"",ios(2.0,6.0:tvos):void;
 
 	@:native("dismissModalViewControllerAnimated")
-	overload extern inline public function dismissModalViewControllerAnimated(animated:BOOL):void;
+	overload extern inline public function dismissModalViewControllerAnimated(animated:BOOL:API_DEPRECATED("",ios(2.0,6.0:tvos):void;
 
 	@:native("API_AVAILABLE(ios(3.0))")
 	public var API_AVAILABLE(ios(3.0)):modalTransitionStyle;
@@ -206,14 +206,14 @@ extern class UIViewController{
 	@:native("setNeedsStatusBarAppearanceUpdate")
 	overload extern inline public function setNeedsStatusBarAppearanceUpdate():void;
 
-	@:native("targetViewControllerForAction")
-	overload extern inline public function targetViewControllerForAction(action:SEL):nullable UIViewController *;
+	@:native("targetViewControllerForAction:sender")
+	overload extern inline public function targetViewControllerForAction(action:SEL, sender:nullableid:ios(8.0):nullable UIViewController *;
 
 	@:native("showViewController")
-	overload extern inline public function showViewController(UIViewController:null):void;
+	overload extern inline public function showViewController(UIViewController:null::nullableid:ios(8.0):void;
 
 	@:native("showDetailViewController")
-	overload extern inline public function showDetailViewController(UIViewController:null):void;
+	overload extern inline public function showDetailViewController(UIViewController:null::nullableid:ios(8.0):void;
 
 	@:native("UIUserInterfaceStyleUnspecified")
 	public var UIUserInterfaceStyleUnspecified:to;
@@ -225,7 +225,7 @@ extern class UIViewController{
 	public var UIUserInterfaceStyleUnspecified:to;
 
 	@:native("shouldAutorotateToInterfaceOrientation")
-	overload extern inline public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):BOOL;
+	overload extern inline public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation:API_DEPRECATED("",ios(2.0,6.0:tvos):BOOL;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(6.0));
@@ -245,29 +245,29 @@ extern class UIViewController{
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):8.0));
 
-	@:native("willRotateToInterfaceOrientation")
-	overload extern inline public function willRotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):void;
+	@:native("willRotateToInterfaceOrientation:duration:"ImplementviewWillTransitionToSize")
+	overload extern inline public function willRotateToInterfaceOrientation:duration(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, "ImplementviewWillTransitionToSize:2.0,8.0:tvos):void;
 
 	@:native("didRotateFromInterfaceOrientation")
-	overload extern inline public function didRotateFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation):void;
+	overload extern inline public function didRotateFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation:API_DEPRECATED("",ios(2.0,8.0:tvos):void;
 
-	@:native("willAnimateRotationToInterfaceOrientation")
-	overload extern inline public function willAnimateRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):void;
+	@:native("willAnimateRotationToInterfaceOrientation:duration:"ImplementviewWillTransitionToSize")
+	overload extern inline public function willAnimateRotationToInterfaceOrientation:duration(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, "ImplementviewWillTransitionToSize:3.0,8.0:tvos):void;
 
-	@:native("willAnimateFirstHalfOfRotationToInterfaceOrientation")
-	overload extern inline public function willAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):void;
+	@:native("willAnimateFirstHalfOfRotationToInterfaceOrientation:duration")
+	overload extern inline public function willAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval:"",ios(2.0,5.0:tvos):void;
 
 	@:native("didAnimateFirstHalfOfRotationToInterfaceOrientation")
-	overload extern inline public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):void;
+	overload extern inline public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation:API_DEPRECATED("",ios(2.0,5.0:tvos):void;
 
-	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation")
-	overload extern inline public function willAnimateSecondHalfOfRotationFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation):void;
+	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration")
+	overload extern inline public function willAnimateSecondHalfOfRotationFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval:"",ios(2.0,5.0:tvos):void;
 
 	@:native("editing")
 	public var editing:BOOL;
 
-	@:native("setEditing")
-	overload extern inline public function setEditing(editing:BOOL):void;
+	@:native("setEditing:animated")
+	overload extern inline public function setEditing(editing:BOOL, animated:BOOL):void;
 
 	@:native("animation.")
 	public var animation.:with;
@@ -279,16 +279,16 @@ extern class UIViewController{
 	public var API_AVAILABLE(ios(5.0)):childViewControllers;
 
 	@:native("addChildViewController")
-	overload extern inline public function addChildViewController(UIViewController:null):void;
+	overload extern inline public function addChildViewController(UIViewController:null::ios(5.0):void;
 
 	@:native("removeFromParentViewController")
 	overload extern inline public function removeFromParentViewController():void;
 
 	@:native("transitionFromViewController")
-	overload extern inline public function transitionFromViewController(UIViewController:null):void;
+	overload extern inline public function transitionFromViewController(UIViewController:null::UIViewController:NSTimeInterval:UIViewAnimationOptions:void(^__nullable:void:void(^__nullable:BOOLfinished:ios(5.0):void;
 
-	@:native("beginAppearanceTransition")
-	overload extern inline public function beginAppearanceTransition(isAppearing:BOOL):void;
+	@:native("beginAppearanceTransition:animated")
+	overload extern inline public function beginAppearanceTransition(isAppearing:BOOL, animated:BOOL:__MAC_NA,__IPHONE_5_0):void;
 
 	@:native("endAppearanceTransition")
 	overload extern inline public function endAppearanceTransition():void;
@@ -300,10 +300,10 @@ extern class UIViewController{
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(7.0));
 
 	@:native("setOverrideTraitCollection")
-	overload extern inline public function setOverrideTraitCollection(nullable:null):void;
+	overload extern inline public function setOverrideTraitCollection(nullable:null:UITraitCollection:UIViewController:ios(8.0):void;
 
 	@:native("overrideTraitCollectionForChildViewController")
-	overload extern inline public function overrideTraitCollectionForChildViewController(UIViewController:null):nullable UITraitCollection *;
+	overload extern inline public function overrideTraitCollectionForChildViewController(UIViewController:null::ios(8.0):nullable UITraitCollection *;
 
 	@:native("watchos)")
 	public var watchos):API_UNAVAILABLE(ios,;
@@ -318,10 +318,10 @@ extern class UIViewController{
 	public var API_AVAILABLE(ios(6.0)):shouldAutomaticallyForwardAppearanceMethods;
 
 	@:native("willMoveToParentViewController")
-	overload extern inline public function willMoveToParentViewController(nullable:null):void;
+	overload extern inline public function willMoveToParentViewController(nullable:null:UIViewController:ios(5.0):void;
 
 	@:native("didMoveToParentViewController")
-	overload extern inline public function didMoveToParentViewController(nullable:null):void;
+	overload extern inline public function didMoveToParentViewController(nullable:null:UIViewController:ios(5.0):void;
 
 	@:native("API_AVAILABLE(ios(6.0))")
 	public var API_AVAILABLE(ios(6.0)):restorationIdentifier;
@@ -366,10 +366,10 @@ extern class UIViewController{
 	overload extern inline public function viewSafeAreaInsetsDidChange():void;
 
 	@:native("addKeyCommand")
-	overload extern inline public function addKeyCommand(UIKeyCommand:null):void;
+	overload extern inline public function addKeyCommand(UIKeyCommand:null::ios(9.0):void;
 
 	@:native("removeKeyCommand")
-	overload extern inline public function removeKeyCommand(UIKeyCommand:null):void;
+	overload extern inline public function removeKeyCommand(UIKeyCommand:null::ios(9.0):void;
 
 	@:native("tvos(13.0))")
 	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;
@@ -399,16 +399,16 @@ extern class UIViewController{
 	public var 13.0)):ios(9.0,;
 
 	@:native("previewingContext")
-	overload extern inline public function previewingContext(id:null):nullable UIViewController *;
+	overload extern inline public function previewingContext(id:null:<UIViewControllerPreviewing>:CGPoint:"UIContextMenuInteraction",ios(9.0,13.0):nullable UIViewController *;
 
 	@:native("previewingContext")
-	overload extern inline public function previewingContext(id:null):void;
+	overload extern inline public function previewingContext(id:null:<UIViewControllerPreviewing>:UIViewController:"UIContextMenuInteraction",ios(9.0,13.0):void;
 
-	@:native("registerForPreviewingWithDelegate")
-	overload extern inline public function registerForPreviewingWithDelegate(delegate:id<UIViewControllerPreviewingDelegate>):id <UIViewControllerPreviewing>;
+	@:native("registerForPreviewingWithDelegate:sourceView")
+	overload extern inline public function registerForPreviewingWithDelegate(delegate:id<UIViewControllerPreviewingDelegate>, sourceView:UIView:"UIContextMenuInteraction",ios(9.0,13.0):id <UIViewControllerPreviewing>;
 
 	@:native("unregisterForPreviewingWithContext")
-	overload extern inline public function unregisterForPreviewingWithContext(id:null):void;
+	overload extern inline public function unregisterForPreviewingWithContext(id:null:<UIViewControllerPreviewing>:"UIContextMenuInteraction",ios(9.0,13.0):void;
 
 	@:native("tvos)")
 	public var tvos):API_UNAVAILABLE(watchos,;

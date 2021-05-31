@@ -15,7 +15,7 @@ extern class UIKeyCommand{
 	overload extern inline public function init():UIKeyCommand;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIKeyCommand;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIKeyCommand;
 
 	@:native("API_AVAILABLE(ios(13.0))")
 	public var API_AVAILABLE(ios(13.0)):title;

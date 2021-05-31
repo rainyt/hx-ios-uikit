@@ -38,17 +38,17 @@ extern class UISlider{
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
 
-	@:native("setValue")
-	overload extern inline public function setValue(value:float):void;
+	@:native("setValue:animated")
+	overload extern inline public function setValue(value:float, animated:BOOL:i.e.durationdependsondistance):void;
 
 	@:native("setThumbImage")
-	overload extern inline public function setThumbImage(nullable:null):void;
+	overload extern inline public function setThumbImage(nullable:null:UIImage:UIControlState):void;
 
 	@:native("setMinimumTrackImage")
-	overload extern inline public function setMinimumTrackImage(nullable:null):void;
+	overload extern inline public function setMinimumTrackImage(nullable:null:UIImage:UIControlState):void;
 
 	@:native("setMaximumTrackImage")
-	overload extern inline public function setMaximumTrackImage(nullable:null):void;
+	overload extern inline public function setMaximumTrackImage(nullable:null:UIImage:UIControlState):void;
 
 	@:native("thumbImageForState")
 	overload extern inline public function thumbImageForState(state:UIControlState):nullable UIImage *;
@@ -77,8 +77,8 @@ extern class UISlider{
 	@:native("trackRectForBounds")
 	overload extern inline public function trackRectForBounds(bounds:CGRect):CGRect;
 
-	@:native("thumbRectForBounds")
-	overload extern inline public function thumbRectForBounds(bounds:CGRect):CGRect;
+	@:native("thumbRectForBounds:trackRect")
+	overload extern inline public function thumbRectForBounds(bounds:CGRect, trackRect:CGRect:float):CGRect;
 
 
 }

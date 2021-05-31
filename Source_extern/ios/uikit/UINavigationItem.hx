@@ -12,10 +12,10 @@ extern class UINavigationItem{
 	overload extern inline public static function autorelease():UINavigationItem;
 
 	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(NSString:null):UINavigationItem;
+	overload extern inline public function initWithTitle(NSString:null:):UINavigationItem;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UINavigationItem;
+	overload extern inline public function initWithCoder(NSCoder:null:):UINavigationItem;
 
 	@:native("title")
 	public var title:NSString;
@@ -35,8 +35,8 @@ extern class UINavigationItem{
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):hidesBackButton;
 
-	@:native("setHidesBackButton")
-	overload extern inline public function setHidesBackButton(hidesBackButton:BOOL):void;
+	@:native("setHidesBackButton:animated")
+	overload extern inline public function setHidesBackButton(hidesBackButton:BOOL, animated:BOOL:tvos):void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(14.0));
@@ -48,10 +48,10 @@ extern class UINavigationItem{
 	public var API_AVAILABLE(ios(5.0)):rightBarButtonItems;
 
 	@:native("setLeftBarButtonItems")
-	overload extern inline public function setLeftBarButtonItems(nullable:null):void;
+	overload extern inline public function setLeftBarButtonItems(nullable:null:NSArray<UIBarButtonItem>:BOOL:ios(5.0):void;
 
 	@:native("setRightBarButtonItems")
-	overload extern inline public function setRightBarButtonItems(nullable:null):void;
+	overload extern inline public function setRightBarButtonItems(nullable:null:NSArray<UIBarButtonItem>:BOOL:ios(5.0):void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(5.0));
@@ -63,10 +63,10 @@ extern class UINavigationItem{
 	public var rightBarButtonItem:UIBarButtonItem;
 
 	@:native("setLeftBarButtonItem")
-	overload extern inline public function setLeftBarButtonItem(nullable:null):void;
+	overload extern inline public function setLeftBarButtonItem(nullable:null:UIBarButtonItem:BOOL):void;
 
 	@:native("setRightBarButtonItem")
-	overload extern inline public function setRightBarButtonItem(nullable:null):void;
+	overload extern inline public function setRightBarButtonItem(nullable:null:UIBarButtonItem:BOOL):void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(11.0));

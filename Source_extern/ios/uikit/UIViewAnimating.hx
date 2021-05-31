@@ -39,16 +39,16 @@ extern class UIViewAnimating{
 	overload extern inline public function finishAnimationAtPosition(finalPosition:UIViewAnimatingPosition):void;
 
 	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null):void;
+	overload extern inline public function addAnimations(void:null:(^:void:CGFloat):void;
 
 	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null):void;
+	overload extern inline public function addAnimations(void:null:(^:void):void;
 
 	@:native("addCompletion")
-	overload extern inline public function addCompletion(void:null):void;
+	overload extern inline public function addCompletion(void:null:(^:UIViewAnimatingPositionfinalPosition):void;
 
 	@:native("continueAnimationWithTimingParameters")
-	overload extern inline public function continueAnimationWithTimingParameters(nullable:null):void;
+	overload extern inline public function continueAnimationWithTimingParameters(nullable:null:id<UITimingCurveProvider>:CGFloat):void;
 
 
 }

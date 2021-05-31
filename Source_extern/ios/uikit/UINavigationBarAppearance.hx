@@ -36,7 +36,7 @@ extern class UINavigationBarAppearance{
 	public var backIndicatorTransitionMaskImage:UIImage;
 
 	@:native("setBackIndicatorImage")
-	overload extern inline public function setBackIndicatorImage(nullable:null):void;
+	overload extern inline public function setBackIndicatorImage(nullable:null:UIImage:nullableUIImage):void;
 
 
 }

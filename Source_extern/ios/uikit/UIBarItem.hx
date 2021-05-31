@@ -15,7 +15,7 @@ extern class UIBarItem{
 	overload extern inline public function init():UIBarItem;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIBarItem;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIBarItem;
 
 	@:native("YES")
 	public var YES:is;
@@ -45,10 +45,10 @@ extern class UIBarItem{
 	public var 0:is;
 
 	@:native("setTitleTextAttributes")
-	overload extern inline public function setTitleTextAttributes(nullable:null):void;
+	overload extern inline public function setTitleTextAttributes(nullable:null:NSDictionary<NSAttributedStringKey,id>:UIControlState:ios(5.0):void;
 
 	@:native("titleTextAttributesForState")
-	overload extern inline public function titleTextAttributesForState(state:UIControlState):nullable NSDictionary<NSAttributedStringKey,id> *;
+	overload extern inline public function titleTextAttributesForState(state:UIControlState:API_AVAILABLE(ios(5.0):nullable NSDictionary<NSAttributedStringKey,id> *;
 
 
 }

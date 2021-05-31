@@ -15,10 +15,10 @@ extern class UIFieldBehavior{
 	overload extern inline public function init():UIFieldBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(id:null):void;
+	overload extern inline public function addItem(id:null:<UIDynamicItem>):void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(id:null):void;
+	overload extern inline public function removeItem(id:null:<UIDynamicItem>):void;
 
 	@:native("items")
 	public var items:<UIDynamicItem>>;

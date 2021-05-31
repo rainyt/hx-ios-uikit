@@ -12,13 +12,13 @@ extern class UITextInteraction{
 	overload extern inline public static function autorelease():UITextInteraction;
 
 	@:native("interactionShouldBegin")
-	overload extern inline public function interactionShouldBegin(UITextInteraction:null):BOOL;
+	overload extern inline public function interactionShouldBegin(UITextInteraction:null::CGPoint):BOOL;
 
 	@:native("interactionWillBegin")
-	overload extern inline public function interactionWillBegin(UITextInteraction:null):void;
+	overload extern inline public function interactionWillBegin(UITextInteraction:null:):void;
 
 	@:native("interactionDidEnd")
-	overload extern inline public function interactionDidEnd(UITextInteraction:null):void;
+	overload extern inline public function interactionDidEnd(UITextInteraction:null:):void;
 
 	@:native("delegate")
 	public var delegate:<UITextInteractionDelegate>;

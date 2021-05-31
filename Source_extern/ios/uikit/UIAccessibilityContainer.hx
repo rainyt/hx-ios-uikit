@@ -32,8 +32,8 @@ extern class UIAccessibilityContainer{
 	@:native("accessibilityColumnRange;")
 	overload extern inline public function accessibilityColumnRange;():NSRange;
 
-	@:native("accessibilityDataTableCellElementForRow")
-	overload extern inline public function accessibilityDataTableCellElementForRow(row:NSUInteger):nullable id<UIAccessibilityContainerDataTableCell>;
+	@:native("accessibilityDataTableCellElementForRow:column")
+	overload extern inline public function accessibilityDataTableCellElementForRow(row:NSUInteger, column:NSUInteger):nullable id<UIAccessibilityContainerDataTableCell>;
 
 	@:native("accessibilityRowCount;")
 	overload extern inline public function accessibilityRowCount;():NSUInteger;

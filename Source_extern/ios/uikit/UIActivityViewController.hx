@@ -15,13 +15,13 @@ extern class UIActivityViewController{
 	overload extern inline public function init():UIActivityViewController;
 
 	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null):UIActivityViewController;
+	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UIActivityViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIActivityViewController;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIActivityViewController;
 
 	@:native("initWithActivityItems")
-	overload extern inline public function initWithActivityItems(NSArray:null):UIActivityViewController;
+	overload extern inline public function initWithActivityItems(NSArray:null::nullableNSArray<__kindofUIActivity>):UIActivityViewController;
 
 	@:native("dismissed")
 	public var dismissed:is;
@@ -33,7 +33,7 @@ extern class UIActivityViewController{
 	public var displayed:be;
 
 	@:native("initWithActivityItemsConfiguration")
-	overload extern inline public function initWithActivityItemsConfiguration(activityItemsConfiguration:id<UIActivityItemsConfigurationReading>):UIActivityViewController;
+	overload extern inline public function initWithActivityItemsConfiguration(activityItemsConfiguration:id<UIActivityItemsConfigurationReading>:API_AVAILABLE(ios(14.0:tvos,watchos):UIActivityViewController;
 
 
 }

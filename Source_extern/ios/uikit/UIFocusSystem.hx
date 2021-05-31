@@ -18,7 +18,7 @@ extern class UIFocusSystem{
 	overload extern inline public function init():UIFocusSystem;
 
 	@:native("requestFocusUpdateToEnvironment")
-	overload extern inline public function requestFocusUpdateToEnvironment(environment:id<UIFocusEnvironment>):void;
+	overload extern inline public function requestFocusUpdateToEnvironment(environment:id<UIFocusEnvironment>:API_AVAILABLE(tvos(12.0:12.0):void;
 
 	@:native("updateFocusIfNeeded")
 	overload extern inline public function updateFocusIfNeeded():void;

@@ -20,26 +20,26 @@ extern class UIGraphicsPDFRenderer{
 	@:native("beginPage;")
 	overload extern inline public function beginPage;():void;
 
-	@:native("beginPageWithBounds")
-	overload extern inline public function beginPageWithBounds(bounds:CGRect):void;
+	@:native("beginPageWithBounds:pageInfo")
+	overload extern inline public function beginPageWithBounds(bounds:CGRect, pageInfo:NSDictionary<NSString,id>):void;
 
 	@:native("setURL")
-	overload extern inline public function setURL(NSURL:null):void;
+	overload extern inline public function setURL(NSURL:null::CGRect):void;
 
 	@:native("addDestinationWithName")
-	overload extern inline public function addDestinationWithName(NSString:null):void;
+	overload extern inline public function addDestinationWithName(NSString:null::CGPoint):void;
 
 	@:native("setDestinationWithName")
-	overload extern inline public function setDestinationWithName(NSString:null):void;
+	overload extern inline public function setDestinationWithName(NSString:null::CGRect):void;
 
-	@:native("initWithBounds")
-	overload extern inline public function initWithBounds(bounds:CGRect):UIGraphicsPDFRenderer;
+	@:native("initWithBounds:format")
+	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
 
 	@:native("writePDFToURL")
-	overload extern inline public function writePDFToURL(NSURL:null):BOOL;
+	overload extern inline public function writePDFToURL(NSURL:null::NS_NOESCAPEUIGraphicsPDFDrawingActions:NSError):BOOL;
 
 	@:native("PDFDataWithActions")
-	overload extern inline public function PDFDataWithActions(NS_NOESCAPE:null):NSData *;
+	overload extern inline public function PDFDataWithActions(NS_NOESCAPE:null:UIGraphicsPDFDrawingActions):NSData *;
 
 
 }

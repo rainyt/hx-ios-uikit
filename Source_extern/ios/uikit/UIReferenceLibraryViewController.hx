@@ -12,13 +12,13 @@ extern class UIReferenceLibraryViewController{
 	overload extern inline public static function autorelease():UIReferenceLibraryViewController;
 
 	@:native("initWithTerm")
-	overload extern inline public function initWithTerm(NSString:null):UIReferenceLibraryViewController;
+	overload extern inline public function initWithTerm(NSString:null:):UIReferenceLibraryViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIReferenceLibraryViewController;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIReferenceLibraryViewController;
 
 	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null):UIReferenceLibraryViewController;
+	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UIReferenceLibraryViewController;
 
 	@:native("init")
 	overload extern inline public function init():UIReferenceLibraryViewController;

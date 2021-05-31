@@ -15,10 +15,10 @@ extern class UIApplicationShortcutItem{
 	overload extern inline public function init():UIApplicationShortcutItem;
 
 	@:native("initWithType")
-	overload extern inline public function initWithType(NSString:null):UIApplicationShortcutItem;
+	overload extern inline public function initWithType(NSString:null::NSString:nullableNSString:nullableUIApplicationShortcutIcon:nullableNSDictionary<NSString,id<NSSecureCoding>>):UIApplicationShortcutItem;
 
 	@:native("initWithType")
-	overload extern inline public function initWithType(NSString:null):UIApplicationShortcutItem;
+	overload extern inline public function initWithType(NSString:null::NSString):UIApplicationShortcutItem;
 
 	@:native("type")
 	public var type:NSString;

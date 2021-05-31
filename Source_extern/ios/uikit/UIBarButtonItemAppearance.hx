@@ -33,7 +33,7 @@ extern class UIBarButtonItemAppearance{
 	overload extern inline public function initWithStyle(style:UIBarButtonItemStyle):UIBarButtonItemAppearance;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIBarButtonItemAppearance;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIBarButtonItemAppearance;
 
 	@:native("copy;")
 	overload extern inline public function copy;():UIBarButtonItemAppearance;

@@ -15,10 +15,10 @@ extern class UIButton{
 	overload extern inline public function initWithFrame(frame:CGRect):UIButton;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UIButton;
+	overload extern inline public function initWithCoder(NSCoder:null:):UIButton;
 
-	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UIButton;
+	@:native("initWithFrame:primaryAction")
+	overload extern inline public function initWithFrame(frame:CGRect, primaryAction:nullableUIAction:ios(14.0):UIButton;
 
 	@:native("buttons.")
 	public var buttons.:custom;
@@ -60,25 +60,25 @@ extern class UIButton{
 	public var tvos):API_UNAVAILABLE(watchos,;
 
 	@:native("setTitle")
-	overload extern inline public function setTitle(nullable:null):void;
+	overload extern inline public function setTitle(nullable:null:NSString:UIControlState):void;
 
 	@:native("setTitleColor")
-	overload extern inline public function setTitleColor(nullable:null):void;
+	overload extern inline public function setTitleColor(nullable:null:UIColor:UIControlState):void;
 
 	@:native("setTitleShadowColor")
-	overload extern inline public function setTitleShadowColor(nullable:null):void;
+	overload extern inline public function setTitleShadowColor(nullable:null:UIColor:UIControlState):void;
 
 	@:native("setImage")
-	overload extern inline public function setImage(nullable:null):void;
+	overload extern inline public function setImage(nullable:null:UIImage:UIControlState):void;
 
 	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null):void;
+	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIControlState):void;
 
 	@:native("setPreferredSymbolConfiguration")
-	overload extern inline public function setPreferredSymbolConfiguration(nullable:null):void;
+	overload extern inline public function setPreferredSymbolConfiguration(nullable:null:UIImageSymbolConfiguration:UIControlState:ios(13.0:13.0:6.0):void;
 
 	@:native("setAttributedTitle")
-	overload extern inline public function setAttributedTitle(nullable:null):void;
+	overload extern inline public function setAttributedTitle(nullable:null:NSAttributedString:UIControlState:ios(6.0):void;
 
 	@:native("titleForState")
 	overload extern inline public function titleForState(state:UIControlState):nullable NSString *;
@@ -96,10 +96,10 @@ extern class UIButton{
 	overload extern inline public function backgroundImageForState(state:UIControlState):nullable UIImage *;
 
 	@:native("preferredSymbolConfigurationForImageInState")
-	overload extern inline public function preferredSymbolConfigurationForImageInState(state:UIControlState):nullable UIImageSymbolConfiguration *;
+	overload extern inline public function preferredSymbolConfigurationForImageInState(state:UIControlState:API_AVAILABLE(ios(13.0:13.0:6.0):nullable UIImageSymbolConfiguration *;
 
 	@:native("attributedTitleForState")
-	overload extern inline public function attributedTitleForState(state:UIControlState):nullable NSAttributedString *;
+	overload extern inline public function attributedTitleForState(state:UIControlState:API_AVAILABLE(ios(6.0):nullable NSAttributedString *;
 
 	@:native("nil")
 	public var nil:return;

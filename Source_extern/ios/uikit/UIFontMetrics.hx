@@ -21,22 +21,22 @@ extern class UIFontMetrics{
 	overload extern inline public function initForTextStyle(textStyle:UIFontTextStyle):UIFontMetrics;
 
 	@:native("scaledFontForFont")
-	overload extern inline public function scaledFontForFont(UIFont:null):UIFont *;
+	overload extern inline public function scaledFontForFont(UIFont:null:):UIFont *;
 
 	@:native("scaledFontForFont")
-	overload extern inline public function scaledFontForFont(UIFont:null):UIFont *;
+	overload extern inline public function scaledFontForFont(UIFont:null::CGFloat):UIFont *;
 
 	@:native("scaledFontForFont")
-	overload extern inline public function scaledFontForFont(UIFont:null):UIFont *;
+	overload extern inline public function scaledFontForFont(UIFont:null::nullableUITraitCollection:watchos):UIFont *;
 
 	@:native("scaledFontForFont")
-	overload extern inline public function scaledFontForFont(UIFont:null):UIFont *;
+	overload extern inline public function scaledFontForFont(UIFont:null::CGFloat:nullableUITraitCollection:watchos):UIFont *;
 
 	@:native("scaledValueForValue")
 	overload extern inline public function scaledValueForValue(value:CGFloat):CGFloat;
 
-	@:native("scaledValueForValue")
-	overload extern inline public function scaledValueForValue(value:CGFloat):CGFloat;
+	@:native("scaledValueForValue:compatibleWithTraitCollection")
+	overload extern inline public function scaledValueForValue(value:CGFloat, compatibleWithTraitCollection:nullableUITraitCollection:watchos):CGFloat;
 
 
 }

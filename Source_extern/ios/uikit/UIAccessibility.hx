@@ -96,7 +96,7 @@ extern class UIAccessibility{
 	overload extern inline public function accessibilityDecrement():void;
 
 	@:native("accessibilityScroll")
-	overload extern inline public function accessibilityScroll(direction:UIAccessibilityScrollDirection):BOOL;
+	overload extern inline public function accessibilityScroll(direction:UIAccessibilityScrollDirection:API_AVAILABLE(ios(4.2):BOOL;
 
 	@:native("accessibilityPerformEscape")
 	overload extern inline public function accessibilityPerformEscape():BOOL;
@@ -108,19 +108,19 @@ extern class UIAccessibility{
 	public var API_AVAILABLE(ios(8.0)):accessibilityCustomActions;
 
 	@:native("accessibilityLineNumberForPoint")
-	overload extern inline public function accessibilityLineNumberForPoint(point:CGPoint):NSInteger;
+	overload extern inline public function accessibilityLineNumberForPoint(point:CGPoint:API_AVAILABLE(ios(5.0):NSInteger;
 
 	@:native("accessibilityContentForLineNumber")
-	overload extern inline public function accessibilityContentForLineNumber(lineNumber:NSInteger):nullable NSString *;
+	overload extern inline public function accessibilityContentForLineNumber(lineNumber:NSInteger:API_AVAILABLE(ios(5.0):nullable NSString *;
 
 	@:native("accessibilityFrameForLineNumber")
-	overload extern inline public function accessibilityFrameForLineNumber(lineNumber:NSInteger):CGRect;
+	overload extern inline public function accessibilityFrameForLineNumber(lineNumber:NSInteger:API_AVAILABLE(ios(5.0):CGRect;
 
 	@:native("accessibilityPageContent")
 	overload extern inline public function accessibilityPageContent():nullable NSString *;
 
 	@:native("accessibilityAttributedContentForLineNumber")
-	overload extern inline public function accessibilityAttributedContentForLineNumber(lineNumber:NSInteger):nullable NSAttributedString *;
+	overload extern inline public function accessibilityAttributedContentForLineNumber(lineNumber:NSInteger:API_AVAILABLE(ios(11.0:11.0):nullable NSAttributedString *;
 
 	@:native("accessibilityAttributedPageContent")
 	overload extern inline public function accessibilityAttributedPageContent():nullable NSAttributedString *;

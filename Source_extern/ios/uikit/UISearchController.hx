@@ -12,34 +12,34 @@ extern class UISearchController{
 	overload extern inline public static function autorelease():UISearchController;
 
 	@:native("willPresentSearchController")
-	overload extern inline public function willPresentSearchController(UISearchController:null):void;
+	overload extern inline public function willPresentSearchController(UISearchController:null:):void;
 
 	@:native("didPresentSearchController")
-	overload extern inline public function didPresentSearchController(UISearchController:null):void;
+	overload extern inline public function didPresentSearchController(UISearchController:null:):void;
 
 	@:native("willDismissSearchController")
-	overload extern inline public function willDismissSearchController(UISearchController:null):void;
+	overload extern inline public function willDismissSearchController(UISearchController:null:):void;
 
 	@:native("didDismissSearchController")
-	overload extern inline public function didDismissSearchController(UISearchController:null):void;
+	overload extern inline public function didDismissSearchController(UISearchController:null:):void;
 
 	@:native("presentSearchController")
-	overload extern inline public function presentSearchController(UISearchController:null):void;
+	overload extern inline public function presentSearchController(UISearchController:null:):void;
 
 	@:native("updateSearchResultsForSearchController")
-	overload extern inline public function updateSearchResultsForSearchController(UISearchController:null):void;
+	overload extern inline public function updateSearchResultsForSearchController(UISearchController:null:):void;
 
 	@:native("updateSearchResultsForSearchController")
-	overload extern inline public function updateSearchResultsForSearchController(nonnull:null):void;
+	overload extern inline public function updateSearchResultsForSearchController(nonnull:null:UISearchController:nonnullid<UISearchSuggestion>:tvos(14.0:ios,watchos):void;
 
 	@:native("initWithSearchResultsController")
-	overload extern inline public function initWithSearchResultsController(nullable:null):UISearchController;
+	overload extern inline public function initWithSearchResultsController(nullable:null:UIViewController):UISearchController;
 
 	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null):UISearchController;
+	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UISearchController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null):UISearchController;
+	overload extern inline public function initWithCoder(NSCoder:null:):UISearchController;
 
 	@:native("searchResultsUpdater")
 	public var searchResultsUpdater:<UISearchResultsUpdating>;

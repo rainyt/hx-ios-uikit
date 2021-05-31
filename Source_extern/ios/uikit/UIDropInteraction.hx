@@ -39,31 +39,31 @@ extern class UIDropInteraction{
 	public var prefersFullSizePreview:BOOL;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):BOOL;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):BOOL;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):void;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):UIDropProposal *;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):UIDropProposal *;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):void;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):void;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):void;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):void;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):nullable UITargetedDragPreview *;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::UIDragItem:UITargetedDragPreview):nullable UITargetedDragPreview *;
 
 	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null):void;
+	overload extern inline public function dropInteraction(UIDropInteraction:null::UIDragItem:id<UIDragAnimating>):void;
 
 
 }

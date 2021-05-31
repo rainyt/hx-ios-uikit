@@ -12,7 +12,7 @@ extern class UISearchDisplayController{
 	overload extern inline public static function autorelease():UISearchDisplayController;
 
 	@:native("initWithSearchBar")
-	overload extern inline public function initWithSearchBar(UISearchBar:null):UISearchDisplayController;
+	overload extern inline public function initWithSearchBar(UISearchBar:null::UIViewController):UISearchDisplayController;
 
 	@:native("delegate")
 	public var delegate:id<UISearchDisplayDelegate>;
@@ -20,8 +20,8 @@ extern class UISearchDisplayController{
 	@:native("NO")
 	public var NO:is;
 
-	@:native("setActive")
-	overload extern inline public function setActive(visible:BOOL):void;
+	@:native("setActive:animated")
+	overload extern inline public function setActive(visible:BOOL, animated:BOOL):void;
 
 	@:native("searchBar")
 	public var searchBar:;
@@ -60,28 +60,28 @@ extern class UISearchDisplayController{
 	overload extern inline public function ():void;
 
 	@:native("searchDisplayController")
-	overload extern inline public function searchDisplayController(UISearchDisplayController:null):void;
+	overload extern inline public function searchDisplayController(UISearchDisplayController:null::UITableView:"",ios(3.0,8.0):void;
 
 	@:native("searchDisplayController")
-	overload extern inline public function searchDisplayController(UISearchDisplayController:null):void;
+	overload extern inline public function searchDisplayController(UISearchDisplayController:null::UITableView:"",ios(3.0,8.0):void;
 
 	@:native("searchDisplayController")
-	overload extern inline public function searchDisplayController(UISearchDisplayController:null):void;
+	overload extern inline public function searchDisplayController(UISearchDisplayController:null::UITableView:"",ios(3.0,8.0):void;
 
 	@:native("searchDisplayController")
-	overload extern inline public function searchDisplayController(UISearchDisplayController:null):void;
+	overload extern inline public function searchDisplayController(UISearchDisplayController:null::UITableView:"",ios(3.0,8.0):void;
 
 	@:native("searchDisplayController")
-	overload extern inline public function searchDisplayController(UISearchDisplayController:null):void;
+	overload extern inline public function searchDisplayController(UISearchDisplayController:null::UITableView:"",ios(3.0,8.0):void;
 
 	@:native("searchDisplayController")
-	overload extern inline public function searchDisplayController(UISearchDisplayController:null):void;
+	overload extern inline public function searchDisplayController(UISearchDisplayController:null::UITableView:"",ios(3.0,8.0):void;
 
 	@:native("searchDisplayController")
-	overload extern inline public function searchDisplayController(UISearchDisplayController:null):BOOL;
+	overload extern inline public function searchDisplayController(UISearchDisplayController:null::nullableNSString:"",ios(3.0,8.0):BOOL;
 
 	@:native("searchDisplayController")
-	overload extern inline public function searchDisplayController(UISearchDisplayController:null):BOOL;
+	overload extern inline public function searchDisplayController(UISearchDisplayController:null::NSInteger:"",ios(3.0,8.0):BOOL;
 
 
 }

@@ -27,13 +27,13 @@ extern class UIFocus{
 	overload extern inline public function updateFocusIfNeeded;():void;
 
 	@:native("shouldUpdateFocusInContext")
-	overload extern inline public function shouldUpdateFocusInContext(UIFocusUpdateContext:null):BOOL;
+	overload extern inline public function shouldUpdateFocusInContext(UIFocusUpdateContext:null:):BOOL;
 
 	@:native("didUpdateFocusInContext")
-	overload extern inline public function didUpdateFocusInContext(UIFocusUpdateContext:null):void;
+	overload extern inline public function didUpdateFocusInContext(UIFocusUpdateContext:null::UIFocusAnimationCoordinator):void;
 
 	@:native("soundIdentifierForFocusUpdateInContext")
-	overload extern inline public function soundIdentifierForFocusUpdateInContext(UIFocusUpdateContext:null):nullable UIFocusSoundIdentifier;
+	overload extern inline public function soundIdentifierForFocusUpdateInContext(UIFocusUpdateContext:null::tvos(11.0:ios,watchos):nullable UIFocusSoundIdentifier;
 
 	@:native("10.0))")
 	public var 10.0)):ios(9.0,;
@@ -45,7 +45,7 @@ extern class UIFocus{
 	public var ios(12.0)):API_AVAILABLE(tvos(12.0),;
 
 	@:native("didHintFocusMovement")
-	overload extern inline public function didHintFocusMovement(UIFocusMovementHint:null):void;
+	overload extern inline public function didHintFocusMovement(UIFocusMovementHint:null::ios(12.0):void;
 
 	@:native("coordinateSpace")
 	public var coordinateSpace:id<UICoordinateSpace>;

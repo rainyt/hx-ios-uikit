@@ -12,7 +12,7 @@ extern class UIGraphicsRendererSubclass{
 	overload extern inline public static function autorelease():UIGraphicsRendererSubclass;
 
 	@:native("runDrawingActions")
-	overload extern inline public function runDrawingActions(NS_NOESCAPE:null):BOOL;
+	overload extern inline public function runDrawingActions(NS_NOESCAPE:null:UIGraphicsDrawingActions:nullableNS_NOESCAPEUIGraphicsDrawingActions:NSError:ios(10.0):BOOL;
 
 
 }
