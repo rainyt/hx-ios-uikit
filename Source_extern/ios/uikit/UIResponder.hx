@@ -87,20 +87,8 @@ extern class UIResponder{
 	@:native("editingInteractionConfiguration")
 	public var editingInteractionConfiguration:UIEditingInteractionConfiguration;
 
-	@:native("alloc")
-	overload public static function alloc():UIResponder;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIResponder;
-
 	@:native("keyCommands")
 	public var keyCommands:Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():UIResponder;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIResponder;
 
 	@:native("inputView")
 	public var inputView:UIView;
@@ -129,12 +117,6 @@ extern class UIResponder{
 	@:native("reloadInputViews")
 	overload public function reloadInputViews():Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIResponder;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIResponder;
-
 	@:native("userActivity")
 	public var userActivity:NSUserActivity;
 
@@ -143,12 +125,6 @@ extern class UIResponder{
 
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIResponder;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIResponder;
 
 
 }

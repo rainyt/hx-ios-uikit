@@ -24,11 +24,5 @@ extern class UIAlertAction{
 	@:native("enabled")
 	public var enabled:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UIAlertAction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAlertAction;
-
 
 }

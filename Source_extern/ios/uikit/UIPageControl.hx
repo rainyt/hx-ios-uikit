@@ -48,8 +48,5 @@ extern class UIPageControl extends UIControl{
 	@:native("defersCurrentPageDisplay")
 	public var defersCurrentPageDisplay:Bool;
 
-	@:native("updateCurrentPageDisplay")
-	overload public function updateCurrentPageDisplay():Void;
-
 
 }

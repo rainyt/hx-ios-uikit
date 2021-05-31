@@ -18,15 +18,6 @@ extern class UIMenuController{
 	@:native("menuVisible")
 	public var menuVisible:Bool;
 
-	@:native("setMenuVisible")
-	overload public function setMenuVisible(menuVisible:Bool):Void;
-
-	@:native("setMenuVisible:animated")
-	overload public function setMenuVisible_animated(menuVisible:Bool, animated:Bool):Void;
-
-	@:native("setTargetRect:inView")
-	overload public function setTargetRect_inView(targetRect:CGRect, inView:UIView):Void;
-
 	@:native("showMenuFromView:rect")
 	overload public function showMenuFromView_rect(targetView:UIView, rect:CGRect):Void;
 

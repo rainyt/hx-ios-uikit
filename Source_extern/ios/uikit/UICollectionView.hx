@@ -212,11 +212,5 @@ extern class UICollectionView{
 	@:native("allowsMultipleSelectionDuringEditing")
 	public var allowsMultipleSelectionDuringEditing:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UICollectionView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionView;
-
 
 }

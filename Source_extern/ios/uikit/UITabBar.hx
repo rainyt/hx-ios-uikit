@@ -44,11 +44,5 @@ extern class UITabBar extends UIView{
 	@:native("trailingAccessoryView")
 	public var trailingAccessoryView:UIView;
 
-	@:native("alloc")
-	overload public static function alloc():UITabBar;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITabBar;
-
 
 }

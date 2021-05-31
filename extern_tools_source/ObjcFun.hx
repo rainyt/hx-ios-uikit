@@ -3,6 +3,10 @@ import ExternBaseClass.ExternBaseClassType;
 
 class ObjcFun {
 	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClassFunProperty {
+		if(line.indexOf("API_DEPRECATED") != -1){
+			//意味着该API已经被弃用
+			return null;
+		}
 		line = line.substr(0, line.lastIndexOf(";") + 1);
 		var isStatic = line.indexOf("+") == 0;
 		var returnClass = line.substr(0, line.indexOf(")"));

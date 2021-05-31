@@ -14,12 +14,6 @@ extern class UIScene{
 	@:native("pointerLockState")
 	public var pointerLockState:UIPointerLockState;
 
-	@:native("alloc")
-	overload public static function alloc():UIScene;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIScene;
-
 	@:native("init")
 	overload public function init():UIScene;
 

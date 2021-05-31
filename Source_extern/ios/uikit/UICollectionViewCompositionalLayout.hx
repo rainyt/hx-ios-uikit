@@ -14,12 +14,6 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("layoutWithListConfiguration")
 	overload public static function layoutWithListConfiguration(configuration:UICollectionLayoutListConfiguration):UICollectionViewCompositionalLayout;
 
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewCompositionalLayout;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewCompositionalLayout;
-
 	@:native("initWithSection")
 	overload public function initWithSection(section:NSCollectionLayoutSection):UICollectionViewCompositionalLayout;
 

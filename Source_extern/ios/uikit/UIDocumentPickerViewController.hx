@@ -11,9 +11,6 @@ extern class UIDocumentPickerViewController extends UIViewController{
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentPickerViewController;
 
-	@:native("initWithDocumentTypes:inMode")
-	overload public function initWithDocumentTypes_inMode(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode):UIDocumentPickerViewController;
-
 	@:native("initForOpeningContentTypes:asCopy")
 	overload public function initForOpeningContentTypes_asCopy(contentTypes:Dynamic, asCopy:Bool):UIDocumentPickerViewController;
 
@@ -22,12 +19,6 @@ extern class UIDocumentPickerViewController extends UIViewController{
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIDocumentPickerViewController;
-
-	@:native("initWithURL:inMode")
-	overload public function initWithURL_inMode(url:Dynamic, inMode:UIDocumentPickerMode):UIDocumentPickerViewController;
-
-	@:native("initWithURLs:inMode")
-	overload public function initWithURLs_inMode(urls:Dynamic, inMode:UIDocumentPickerMode):UIDocumentPickerViewController;
 
 	@:native("initForExportingURLs:asCopy")
 	overload public function initForExportingURLs_asCopy(urls:Dynamic, asCopy:Bool):UIDocumentPickerViewController;

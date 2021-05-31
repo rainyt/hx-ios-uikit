@@ -51,12 +51,6 @@ extern class NSObject{
 	@:native("accessibilityTextualContext")
 	public var accessibilityTextualContext:Dynamic;
 
-	@:native("alloc")
-	overload public static function alloc():NSObject;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSObject;
-
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 
@@ -68,12 +62,6 @@ extern class NSObject{
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
 	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():NSObject;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSObject;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;
@@ -96,26 +84,8 @@ extern class NSObject{
 	@:native("accessibilityCustomActions")
 	public var accessibilityCustomActions:Dynamic;
 
-	@:native("alloc")
-	overload public static function alloc():NSObject;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSObject;
-
-	@:native("alloc")
-	overload public static function alloc():NSObject;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSObject;
-
 	@:native("accessibilityCustomRotors")
 	public var accessibilityCustomRotors:Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():NSObject;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSObject;
 
 	@:native("accessibilityElementCount")
 	overload public function accessibilityElementCount():Int;
@@ -131,12 +101,6 @@ extern class NSObject{
 
 	@:native("accessibilityContainerType")
 	public var accessibilityContainerType:UIAccessibilityContainerType;
-
-	@:native("alloc")
-	overload public static function alloc():NSObject;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSObject;
 
 	@:native("awakeFromNib")
 	overload public function awakeFromNib():Void;

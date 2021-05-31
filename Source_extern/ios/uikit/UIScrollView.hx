@@ -80,9 +80,6 @@ extern class UIScrollView{
 	@:native("scrollIndicatorInsets")
 	public var scrollIndicatorInsets:Dynamic;
 
-	@:native("scrollIndicatorInsets")
-	overload public function scrollIndicatorInsets():Dynamic;
-
 	@:native("decelerationRate")
 	public var decelerationRate:Float;
 

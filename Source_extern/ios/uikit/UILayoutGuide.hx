@@ -48,12 +48,6 @@ extern class UILayoutGuide{
 	@:native("centerYAnchor")
 	public var centerYAnchor:NSLayoutYAxisAnchor;
 
-	@:native("alloc")
-	overload public static function alloc():UILayoutGuide;
-
-	@:native("autorelease")
-	overload public static function autorelease():UILayoutGuide;
-
 	@:native("constraintsAffectingLayoutForAxis")
 	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 

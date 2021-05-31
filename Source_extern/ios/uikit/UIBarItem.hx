@@ -47,11 +47,5 @@ extern class UIBarItem{
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
 
-	@:native("alloc")
-	overload public static function alloc():UIBarItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIBarItem;
-
 
 }

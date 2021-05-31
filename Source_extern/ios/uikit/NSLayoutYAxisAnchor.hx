@@ -14,12 +14,6 @@ extern class NSLayoutYAxisAnchor{
 	@:native("anchorWithOffsetToAnchor")
 	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutYAxisAnchor):NSLayoutDimension;
 
-	@:native("alloc")
-	overload public static function alloc():NSLayoutYAxisAnchor;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSLayoutYAxisAnchor;
-
 	@:native("constraintEqualToSystemSpacingBelowAnchor:multiplier:__attribute__((warn_unused_result)")
 	overload public function constraintEqualToSystemSpacingBelowAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutYAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint;
 

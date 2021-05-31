@@ -19,20 +19,8 @@ extern class UIViewController{
 	@:native("contentSizeForViewInPopover")
 	public var contentSizeForViewInPopover:CGSize;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("transitionCoordinator")
 	public var transitionCoordinator:Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
@@ -51,12 +39,6 @@ extern class UIViewController{
 
 	@:native("viewIfLoaded")
 	public var viewIfLoaded:UIView;
-
-	@:native("viewWillUnload")
-	overload public function viewWillUnload():Void;
-
-	@:native("viewDidUnload")
-	overload public function viewDidUnload():Void;
 
 	@:native("viewDidLoad")
 	overload public function viewDidLoad():Void;
@@ -82,23 +64,14 @@ extern class UIViewController{
 	@:native("canPerformUnwindSegueAction:fromViewController:sender")
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
-	@:native("canPerformUnwindSegueAction:fromViewController:withSender")
-	overload public function canPerformUnwindSegueAction_fromViewController_withSender(action:String, fromViewController:UIViewController, withSender:Dynamic):Bool;
-
 	@:native("allowedChildViewControllersForUnwindingFromSource")
 	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
 
-	@:native("viewControllerForUnwindSegueAction:fromViewController:withSender")
-	overload public function viewControllerForUnwindSegueAction_fromViewController_withSender(action:String, fromViewController:UIViewController, withSender:Dynamic):UIViewController;
-
 	@:native("unwindForSegue:towardsViewController")
 	overload public function unwindForSegue_towardsViewController(unwindSegue:UIStoryboardSegue, towardsViewController:UIViewController):Void;
-
-	@:native("segueForUnwindingToViewController:fromViewController:identifier")
-	overload public function segueForUnwindingToViewController_fromViewController_identifier(toViewController:UIViewController, fromViewController:UIViewController, identifier:NSString):UIStoryboardSegue;
 
 	@:native("viewWillAppear")
 	overload public function viewWillAppear(animated:Bool):Void;
@@ -160,12 +133,6 @@ extern class UIViewController{
 	@:native("dismissViewControllerAnimated:completion")
 	overload public function dismissViewControllerAnimated_completion(flag:Dynamic, completion:Dynamic):Void;
 
-	@:native("presentModalViewController:animated")
-	overload public function presentModalViewController_animated(modalViewController:UIViewController, animated:Bool):Void;
-
-	@:native("dismissModalViewControllerAnimated")
-	overload public function dismissModalViewControllerAnimated(animated:Bool):Void;
-
 	@:native("modalTransitionStyle")
 	public var modalTransitionStyle:UIModalTransitionStyle;
 
@@ -223,17 +190,8 @@ extern class UIViewController{
 	@:native("overrideUserInterfaceStyle")
 	public var overrideUserInterfaceStyle:UIUserInterfaceStyle;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("attemptRotationToDeviceOrientation")
 	overload public static function attemptRotationToDeviceOrientation():Void;
-
-	@:native("shouldAutorotateToInterfaceOrientation")
-	overload public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):Bool;
 
 	@:native("shouldAutorotate")
 	public var shouldAutorotate:Bool;
@@ -244,38 +202,8 @@ extern class UIViewController{
 	@:native("preferredInterfaceOrientationForPresentation")
 	public var preferredInterfaceOrientationForPresentation:UIInterfaceOrientation;
 
-	@:native("rotatingHeaderView")
-	overload public function rotatingHeaderView():UIView;
-
-	@:native("rotatingFooterView")
-	overload public function rotatingFooterView():UIView;
-
 	@:native("interfaceOrientation")
 	public var interfaceOrientation:UIInterfaceOrientation;
-
-	@:native("willRotateToInterfaceOrientation:duration")
-	overload public function willRotateToInterfaceOrientation_duration(toInterfaceOrientation:UIInterfaceOrientation, duration:Dynamic):Void;
-
-	@:native("didRotateFromInterfaceOrientation")
-	overload public function didRotateFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation):Void;
-
-	@:native("willAnimateRotationToInterfaceOrientation:duration")
-	overload public function willAnimateRotationToInterfaceOrientation_duration(toInterfaceOrientation:UIInterfaceOrientation, duration:Dynamic):Void;
-
-	@:native("willAnimateFirstHalfOfRotationToInterfaceOrientation:duration")
-	overload public function willAnimateFirstHalfOfRotationToInterfaceOrientation_duration(toInterfaceOrientation:UIInterfaceOrientation, duration:Dynamic):Void;
-
-	@:native("didAnimateFirstHalfOfRotationToInterfaceOrientation")
-	overload public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):Void;
-
-	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration")
-	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation_duration(fromInterfaceOrientation:UIInterfaceOrientation, duration:Dynamic):Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("editing")
 	public var editing:Bool;
@@ -286,20 +214,8 @@ extern class UIViewController{
 	@:native("editButtonItem")
 	public var editButtonItem:UIBarButtonItem;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("searchDisplayController")
 	public var searchDisplayController:UISearchDisplayController;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("childViewControllers")
 	public var childViewControllers:Dynamic;
@@ -334,18 +250,6 @@ extern class UIViewController{
 	@:native("childViewControllerForUserInterfaceStyle")
 	public var childViewControllerForUserInterfaceStyle:UIViewController;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
-	@:native("automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers")
-	overload public function automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers():Bool;
-
-	@:native("shouldAutomaticallyForwardRotationMethods")
-	overload public function shouldAutomaticallyForwardRotationMethods():Bool;
-
 	@:native("shouldAutomaticallyForwardAppearanceMethods")
 	public var shouldAutomaticallyForwardAppearanceMethods:Bool;
 
@@ -354,12 +258,6 @@ extern class UIViewController{
 
 	@:native("didMoveToParentViewController")
 	overload public function didMoveToParentViewController(parent:UIViewController):Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("restorationClass")
 	public var restorationClass:Dynamic;
@@ -373,29 +271,11 @@ extern class UIViewController{
 	@:native("applicationFinishedRestoringState")
 	overload public function applicationFinishedRestoringState():Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("updateViewConstraints")
 	overload public function updateViewConstraints():Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("transitioningDelegate")
 	public var transitioningDelegate:Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("topLayoutGuide")
 	public var topLayoutGuide:Dynamic;
@@ -418,41 +298,17 @@ extern class UIViewController{
 	@:native("viewSafeAreaInsetsDidChange")
 	overload public function viewSafeAreaInsetsDidChange():Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("addKeyCommand")
 	overload public function addKeyCommand(keyCommand:UIKeyCommand):Void;
 
 	@:native("removeKeyCommand")
 	overload public function removeKeyCommand(keyCommand:UIKeyCommand):Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("performsActionsWhilePresentingModally")
 	public var performsActionsWhilePresentingModally:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("extensionContext")
 	public var extensionContext:Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("presentationController")
 	public var presentationController:UIPresentationController;
@@ -463,24 +319,6 @@ extern class UIViewController{
 	@:native("modalInPresentation")
 	public var modalInPresentation:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
-	@:native("registerForPreviewingWithDelegate:sourceView")
-	overload public function registerForPreviewingWithDelegate_sourceView(delegate:Dynamic, sourceView:UIView):Dynamic;
-
-	@:native("unregisterForPreviewingWithContext")
-	overload public function unregisterForPreviewingWithContext(previewing:Dynamic):Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("childViewControllerForScreenEdgesDeferringSystemGestures")
 	public var childViewControllerForScreenEdgesDeferringSystemGestures:UIViewController;
 
@@ -489,12 +327,6 @@ extern class UIViewController{
 
 	@:native("setNeedsUpdateOfScreenEdgesDeferringSystemGestures")
 	overload public function setNeedsUpdateOfScreenEdgesDeferringSystemGestures():Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("childViewControllerForHomeIndicatorAutoHidden")
 	public var childViewControllerForHomeIndicatorAutoHidden:UIViewController;
@@ -505,12 +337,6 @@ extern class UIViewController{
 	@:native("setNeedsUpdateOfHomeIndicatorAutoHidden")
 	overload public function setNeedsUpdateOfHomeIndicatorAutoHidden():Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("childViewControllerForPointerLock")
 	public var childViewControllerForPointerLock:UIViewController;
 
@@ -520,20 +346,8 @@ extern class UIViewController{
 	@:native("setNeedsUpdateOfPrefersPointerLocked")
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("previewActionItems")
 	public var previewActionItems:Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("navigationItem")
 	public var navigationItem:UINavigationItem;
@@ -544,23 +358,11 @@ extern class UIViewController{
 	@:native("navigationController")
 	public var navigationController:UINavigationController;
 
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
-
 	@:native("toolbarItems")
 	public var toolbarItems:Dynamic;
 
 	@:native("setToolbarItems:animated")
 	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("splitViewController")
 	public var splitViewController:UISplitViewController;
@@ -570,12 +372,6 @@ extern class UIViewController{
 
 	@:native("separateSecondaryViewControllerForSplitViewController")
 	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):UIViewController;
-
-	@:native("alloc")
-	overload public static function alloc():UIViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewController;
 
 	@:native("tabBarItem")
 	public var tabBarItem:UITabBarItem;

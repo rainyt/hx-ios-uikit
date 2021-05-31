@@ -30,15 +30,6 @@ extern class UITabBarItem extends UIBarItem{
 	@:native("selectedImage")
 	public var selectedImage:UIImage;
 
-	@:native("setFinishedSelectedImage:withFinishedUnselectedImage")
-	overload public function setFinishedSelectedImage_withFinishedUnselectedImage(selectedImage:UIImage, withFinishedUnselectedImage:UIImage):Void;
-
-	@:native("finishedSelectedImage")
-	overload public function finishedSelectedImage():UIImage;
-
-	@:native("finishedUnselectedImage")
-	overload public function finishedUnselectedImage():UIImage;
-
 	@:native(" UI_APPEARANCE_SELECTOR")
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
@@ -47,12 +38,6 @@ extern class UITabBarItem extends UIBarItem{
 
 	@:native("badgeTextAttributesForState")
 	overload public function badgeTextAttributesForState(state:UIControlState):Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():UITabBarItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITabBarItem;
 
 
 }

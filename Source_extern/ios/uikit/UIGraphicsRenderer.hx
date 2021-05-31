@@ -24,12 +24,6 @@ extern class UIGraphicsRenderer{
 	@:native("allowsImageOutput")
 	public var allowsImageOutput:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UIGraphicsRenderer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIGraphicsRenderer;
-
 	@:native("rendererContextClass")
 	overload public static function rendererContextClass():Dynamic;
 

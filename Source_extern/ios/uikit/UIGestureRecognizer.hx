@@ -66,12 +66,6 @@ extern class UIGestureRecognizer{
 	@:native("pressesCancelled:withEvent")
 	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIGestureRecognizer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIGestureRecognizer;
-
 	@:native("initWithTarget:action")
 	overload public function initWithTarget_action(target:Dynamic, action:String):UIGestureRecognizer;
 
@@ -86,9 +80,6 @@ extern class UIGestureRecognizer{
 
 	@:native("removeTarget:action")
 	overload public function removeTarget_action(target:Dynamic, action:String):Void;
-
-	@:native("state")
-	public var state:UIGestureRecognizerState;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

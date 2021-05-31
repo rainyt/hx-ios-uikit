@@ -114,18 +114,6 @@ extern class UIBarButtonItem{
 	@:native("backButtonBackgroundVerticalPositionAdjustmentForBarMetrics")
 	overload public function backButtonBackgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Float;
 
-	@:native("alloc")
-	overload public static function alloc():UIBarButtonItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIBarButtonItem;
-
-	@:native("alloc")
-	overload public static function alloc():UIBarButtonItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIBarButtonItem;
-
 	@:native("buttonGroup")
 	public var buttonGroup:UIBarButtonItemGroup;
 

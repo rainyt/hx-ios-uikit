@@ -122,11 +122,5 @@ extern class UISegmentedControl{
 	@:native("contentPositionAdjustmentForSegmentType:barMetrics")
 	overload public function contentPositionAdjustmentForSegmentType_barMetrics(leftCenterRightOrAlone:UISegmentedControlSegment, barMetrics:UIBarMetrics):Dynamic;
 
-	@:native("alloc")
-	overload public static function alloc():UISegmentedControl;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISegmentedControl;
-
 
 }

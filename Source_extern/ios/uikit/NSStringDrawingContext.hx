@@ -21,12 +21,6 @@ extern class NSStringDrawingContext{
 	@:native("totalBounds")
 	public var totalBounds:CGRect;
 
-	@:native("alloc")
-	overload public static function alloc():NSStringDrawingContext;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSStringDrawingContext;
-
 	@:native("minimumTrackingAdjustment")
 	public var minimumTrackingAdjustment:Float;
 

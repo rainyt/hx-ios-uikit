@@ -99,11 +99,5 @@ extern class UITextField{
 	@:native("clearsOnInsertion")
 	public var clearsOnInsertion:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UITextField;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextField;
-
 
 }

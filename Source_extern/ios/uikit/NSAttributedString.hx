@@ -26,35 +26,8 @@ extern class NSAttributedString{
 	@:native("fileWrapperFromRange:documentAttributes:error")
 	overload public function fileWrapperFromRange_documentAttributes_error(range:Dynamic, documentAttributes:Dynamic, error:Dynamic):Dynamic;
 
-	@:native("alloc")
-	overload public static function alloc():NSAttributedString;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSAttributedString;
-
 	@:native("containsAttachmentsInRange")
 	overload public function containsAttachmentsInRange(range:Dynamic):Bool;
-
-	@:native("alloc")
-	overload public static function alloc():NSAttributedString;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSAttributedString;
-
-	@:native("alloc")
-	overload public static function alloc():NSAttributedString;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSAttributedString;
-
-	@:native("initWithFileURL:options:documentAttributes:error")
-	overload public function initWithFileURL_options_documentAttributes_error(url:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):NSAttributedString;
-
-	@:native("alloc")
-	overload public static function alloc():NSAttributedString;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSAttributedString;
 
 	@:native("size")
 	overload public function size():CGSize;
@@ -65,23 +38,11 @@ extern class NSAttributedString{
 	@:native("drawInRect")
 	overload public function drawInRect(rect:CGRect):Void;
 
-	@:native("alloc")
-	overload public static function alloc():NSAttributedString;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSAttributedString;
-
 	@:native("drawWithRect:options:context")
 	overload public function drawWithRect_options_context(rect:CGRect, options:NSStringDrawingOptions, context:NSStringDrawingContext):Void;
 
 	@:native("boundingRectWithSize:options:context")
 	overload public function boundingRectWithSize_options_context(size:CGSize, options:NSStringDrawingOptions, context:NSStringDrawingContext):CGRect;
-
-	@:native("alloc")
-	overload public static function alloc():NSAttributedString;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSAttributedString;
 
 	@:native("attributedStringWithAttachment")
 	overload public static function attributedStringWithAttachment(attachment:NSTextAttachment):NSAttributedString;

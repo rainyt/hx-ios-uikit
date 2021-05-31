@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.CGRect;
 @:objc
 @:native("UITableViewCell")
 @:include("UIKit/UIKit.h")
@@ -126,15 +125,6 @@ extern class UITableViewCell{
 
 	@:native("userInteractionEnabledWhileDragging")
 	public var userInteractionEnabledWhileDragging:Bool;
-
-	@:native("alloc")
-	overload public static function alloc():UITableViewCell;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableViewCell;
-
-	@:native("initWithFrame:reuseIdentifier")
-	overload public function initWithFrame_reuseIdentifier(frame:CGRect, reuseIdentifier:NSString):Dynamic;
 
 	@:native("font")
 	public var font:UIFont;

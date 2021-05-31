@@ -261,23 +261,11 @@ extern class NSLayoutManager{
 	@:native("strikethroughGlyphRange:strikethroughType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin")
 	overload public function strikethroughGlyphRange_strikethroughType_lineFragmentRect_lineFragmentGlyphRange_containerOrigin(glyphRange:Dynamic, strikethroughType:NSUnderlineStyle, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
 
-	@:native("alloc")
-	overload public static function alloc():NSLayoutManager;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSLayoutManager;
-
 	@:native("glyphAtIndex:isValidIndex")
 	overload public function glyphAtIndex_isValidIndex(glyphIndex:Int, isValidIndex:Bool):Dynamic;
 
 	@:native("glyphAtIndex")
 	overload public function glyphAtIndex(glyphIndex:Int):Dynamic;
-
-	@:native("null")
-	public var null:null;
-
-	@:native("showCGGlyphs:positions:count:font:matrix:attributes:inContext")
-	overload public function showCGGlyphs_positions_count_font_matrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Int, font:UIFont, matrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
 
 
 }

@@ -12,9 +12,6 @@ extern class UIDocumentBrowserViewController{
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentBrowserViewController;
 
-	@:native("initForOpeningFilesWithContentTypes")
-	overload public function initForOpeningFilesWithContentTypes(allowedContentTypes:Dynamic):UIDocumentBrowserViewController;
-
 	@:native("initForOpeningContentTypes")
 	overload public function initForOpeningContentTypes(contentTypes:Dynamic):UIDocumentBrowserViewController;
 
@@ -47,9 +44,6 @@ extern class UIDocumentBrowserViewController{
 
 	@:native("transitionControllerForDocumentAtURL")
 	overload public function transitionControllerForDocumentAtURL(documentURL:Dynamic):UIDocumentBrowserTransitionController;
-
-	@:native("transitionControllerForDocumentURL")
-	overload public function transitionControllerForDocumentURL(documentURL:Dynamic):UIDocumentBrowserTransitionController;
 
 	@:native("browserUserInterfaceStyle")
 	public var browserUserInterfaceStyle:UIDocumentBrowserUserInterfaceStyle;

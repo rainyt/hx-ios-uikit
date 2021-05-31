@@ -30,9 +30,6 @@ extern class UIPasteboard{
 	@:native("persistent")
 	public var persistent:Bool;
 
-	@:native("setPersistent")
-	overload public function setPersistent(persistent:Bool):Void;
-
 	@:native("changeCount")
 	public var changeCount:Int;
 

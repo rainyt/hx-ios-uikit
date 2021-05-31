@@ -65,7 +65,7 @@ class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
     __slots__ = ("pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys")
     _hx_fields = ["pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys"]
-    _hx_methods = ["putClass", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
+    _hx_methods = ["putClass", "hasFuncOrAttr", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
 
     def __init__(self,_hdata,hextern,defcall):
         self._hdata = None
@@ -164,7 +164,30 @@ class ExternBaseClass:
                         _this1.append(func)
 
     def putClass(self,t):
-        self.funcAndAttr = (self.funcAndAttr + t.funcAndAttr)
+        _g_current = 0
+        _g_array = t.funcAndAttr
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            if (not self.hasFuncOrAttr(value)):
+                _this = self.funcAndAttr
+                _this.append(value)
+
+    def hasFuncOrAttr(self,t):
+        _g_current = 0
+        _g_array = self.funcAndAttr
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            if ((value.type == t.type) and ((value.name == t.name))):
+                return True
+        return False
 
     def toHaxeFile(self):
         haxe = (("package " + HxOverrides.stringOrNull(self.pkg)) + ";\n\n")
@@ -591,6 +614,9 @@ class ObjcFun:
 
     @staticmethod
     def parsing(typedefs,className,line):
+        startIndex = None
+        if (((line.find("API_DEPRECATED") if ((startIndex is None)) else HxString.indexOfImpl(line,"API_DEPRECATED",startIndex))) != -1):
+            return None
         startIndex1 = None
         _hx_len = None
         if (startIndex1 is None):

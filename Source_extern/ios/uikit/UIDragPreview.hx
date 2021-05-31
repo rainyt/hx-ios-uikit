@@ -23,12 +23,6 @@ extern class UIDragPreview{
 	@:native("view")
 	public var view:UIView;
 
-	@:native("alloc")
-	overload public static function alloc():UIDragPreview;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDragPreview;
-
 	@:native("previewForURL")
 	overload public static function previewForURL(url:Dynamic):UIDragPreview;
 

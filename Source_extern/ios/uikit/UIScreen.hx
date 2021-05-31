@@ -82,12 +82,6 @@ extern class UIScreen{
 	@:native("applicationFrame")
 	public var applicationFrame:CGRect;
 
-	@:native("alloc")
-	overload public static function alloc():UIScreen;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIScreen;
-
 	@:native("snapshotViewAfterScreenUpdates")
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 

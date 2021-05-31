@@ -19,20 +19,11 @@ extern class UIApplication extends UIResponder{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("beginIgnoringInteractionEvents")
-	overload public function beginIgnoringInteractionEvents():Void;
-
-	@:native("endIgnoringInteractionEvents")
-	overload public function endIgnoringInteractionEvents():Void;
-
 	@:native("ignoringInteractionEvents")
 	public var ignoringInteractionEvents:Bool;
 
 	@:native("idleTimerDisabled")
 	public var idleTimerDisabled:Bool;
-
-	@:native("openURL")
-	overload public function openURL(url:Dynamic):Bool;
 
 	@:native("canOpenURL")
 	overload public function canOpenURL(url:Dynamic):Bool;
@@ -94,9 +85,6 @@ extern class UIApplication extends UIResponder{
 	@:native("endBackgroundTask")
 	overload public function endBackgroundTask(identifier:Int):Void;
 
-	@:native("setMinimumBackgroundFetchInterval")
-	overload public function setMinimumBackgroundFetchInterval(minimumBackgroundFetchInterval:Dynamic):Void;
-
 	@:native("backgroundRefreshStatus")
 	public var backgroundRefreshStatus:UIBackgroundRefreshStatus;
 
@@ -127,12 +115,6 @@ extern class UIApplication extends UIResponder{
 	@:native("requestSceneSessionRefresh")
 	overload public function requestSceneSessionRefresh(sceneSession:UISceneSession):Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
-
 	@:native("registerForRemoteNotifications")
 	overload public function registerForRemoteNotifications():Void;
 
@@ -142,74 +124,14 @@ extern class UIApplication extends UIResponder{
 	@:native("registeredForRemoteNotifications")
 	public var registeredForRemoteNotifications:Bool;
 
-	@:native("registerForRemoteNotificationTypes")
-	overload public function registerForRemoteNotificationTypes(types:UIRemoteNotificationType):Void;
-
-	@:native("enabledRemoteNotificationTypes")
-	overload public function enabledRemoteNotificationTypes():UIRemoteNotificationType;
-
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
-
-	@:native("presentLocalNotificationNow")
-	overload public function presentLocalNotificationNow(notification:UILocalNotification):Void;
-
-	@:native("scheduleLocalNotification")
-	overload public function scheduleLocalNotification(notification:UILocalNotification):Void;
-
-	@:native("cancelLocalNotification")
-	overload public function cancelLocalNotification(notification:UILocalNotification):Void;
-
-	@:native("cancelAllLocalNotifications")
-	overload public function cancelAllLocalNotifications():Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
-
-	@:native("registerUserNotificationSettings")
-	overload public function registerUserNotificationSettings(notificationSettings:UIUserNotificationSettings):Void;
-
 	@:native("currentUserNotificationSettings")
 	public var currentUserNotificationSettings:UIUserNotificationSettings;
-
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
 
 	@:native("beginReceivingRemoteControlEvents")
 	overload public function beginReceivingRemoteControlEvents():Void;
 
 	@:native("endReceivingRemoteControlEvents")
 	overload public function endReceivingRemoteControlEvents():Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
-
-	@:native("setNewsstandIconImage")
-	overload public function setNewsstandIconImage(image:UIImage):Void;
-
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
-
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
 
 	@:native("supportsAlternateIcons")
 	public var supportsAlternateIcons:Bool;
@@ -219,12 +141,6 @@ extern class UIApplication extends UIResponder{
 
 	@:native("alternateIconName")
 	public var alternateIconName:NSString;
-
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
 
 	@:native("extendStateRestoration")
 	overload public function extendStateRestoration():Void;
@@ -238,41 +154,8 @@ extern class UIApplication extends UIResponder{
 	@:native("registerObjectForStateRestoration:restorationIdentifier")
 	overload public static function registerObjectForStateRestoration_restorationIdentifier(object:Dynamic, restorationIdentifier:NSString):Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
-
 	@:native("proximitySensingEnabled")
 	public var proximitySensingEnabled:Bool;
-
-	@:native("setStatusBarHidden:animated")
-	overload public function setStatusBarHidden_animated(hidden:Bool, animated:Bool):Void;
-
-	@:native("statusBarOrientation")
-	public var statusBarOrientation:UIInterfaceOrientation;
-
-	@:native("setStatusBarOrientation:animated")
-	overload public function setStatusBarOrientation_animated(interfaceOrientation:UIInterfaceOrientation, animated:Bool):Void;
-
-	@:native("statusBarStyle")
-	public var statusBarStyle:UIStatusBarStyle;
-
-	@:native("setStatusBarStyle:animated")
-	overload public function setStatusBarStyle_animated(statusBarStyle:UIStatusBarStyle, animated:Bool):Void;
-
-	@:native("statusBarHidden")
-	public var statusBarHidden:Bool;
-
-	@:native("setStatusBarHidden:withAnimation")
-	overload public function setStatusBarHidden_withAnimation(hidden:Bool, withAnimation:UIStatusBarAnimation):Void;
-
-	@:native("setKeepAliveTimeout:handler")
-	overload public function setKeepAliveTimeout_handler(timeout:Dynamic, handler:Dynamic):Bool;
-
-	@:native("clearKeepAliveTimeout")
-	overload public function clearKeepAliveTimeout():Void;
 
 
 }

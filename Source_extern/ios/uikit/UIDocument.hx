@@ -96,12 +96,6 @@ extern class UIDocument{
 	@:native("revertToContentsOfURL:completionHandler")
 	overload public function revertToContentsOfURL_completionHandler(url:Dynamic, completionHandler:Dynamic):Void;
 
-	@:native("alloc")
-	overload public static function alloc():UIDocument;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDocument;
-
 	@:native("userActivity")
 	public var userActivity:NSUserActivity;
 

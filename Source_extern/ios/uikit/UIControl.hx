@@ -109,12 +109,6 @@ extern class UIControl extends UIView{
 	@:native("menuAttachmentPointForConfiguration")
 	overload public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration):CGPoint;
 
-	@:native("alloc")
-	overload public static function alloc():UIControl;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIControl;
-
 	@:native("contextMenuInteraction:configurationForMenuAtLocation")
 	overload public function contextMenuInteraction_configurationForMenuAtLocation(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):UIContextMenuConfiguration;
 

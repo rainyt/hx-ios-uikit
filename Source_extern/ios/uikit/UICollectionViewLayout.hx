@@ -36,12 +36,6 @@ extern class UICollectionViewLayout{
 	@:native("registerNib:forDecorationViewOfKind")
 	overload public function registerNib_forDecorationViewOfKind(nib:UINib, forDecorationViewOfKind:NSString):Void;
 
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewLayout;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewLayout;
-
 	@:native("layoutAttributesClass")
 	overload public static function layoutAttributesClass():Dynamic;
 
@@ -89,12 +83,6 @@ extern class UICollectionViewLayout{
 
 	@:native("flipsHorizontallyInOppositeLayoutDirection")
 	public var flipsHorizontallyInOppositeLayoutDirection:Bool;
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewLayout;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewLayout;
 
 	@:native("prepareForCollectionViewUpdates")
 	overload public function prepareForCollectionViewUpdates(updateItems:Dynamic):Void;
@@ -146,12 +134,6 @@ extern class UICollectionViewLayout{
 
 	@:native("indexPathsToInsertForDecorationViewOfKind")
 	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewLayout;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewLayout;
 
 	@:native("targetIndexPathForInteractivelyMovingItem:withPosition")
 	overload public function targetIndexPathForInteractivelyMovingItem_withPosition(previousIndexPath:Dynamic, withPosition:CGPoint):Dynamic;

@@ -42,8 +42,5 @@ extern class UIKeyCommand extends UICommand{
 	@:native("keyCommandWithInput:modifierFlags:action")
 	overload public static function keyCommandWithInput_modifierFlags_action(input:NSString, modifierFlags:UIKeyModifierFlags, action:String):UIKeyCommand;
 
-	@:native("keyCommandWithInput:modifierFlags:action:discoverabilityTitle")
-	overload public static function keyCommandWithInput_modifierFlags_action_discoverabilityTitle(input:NSString, modifierFlags:UIKeyModifierFlags, action:String, discoverabilityTitle:NSString):UIKeyCommand;
-
 
 }

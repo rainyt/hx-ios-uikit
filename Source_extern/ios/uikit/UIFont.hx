@@ -30,12 +30,6 @@ extern class UIFont{
 	@:native("systemMinimumFontSize")
 	overload public static function systemMinimumFontSize():Float;
 
-	@:native("alloc")
-	overload public static function alloc():UIFont;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIFont;
-
 	@:native("preferredFontForTextStyle")
 	overload public static function preferredFontForTextStyle(style:Dynamic):UIFont;
 

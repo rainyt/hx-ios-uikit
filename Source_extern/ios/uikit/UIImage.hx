@@ -193,12 +193,6 @@ extern class UIImage{
 	@:native("imageWithTintColor:renderingMode")
 	overload public function imageWithTintColor_renderingMode(color:UIColor, renderingMode:UIImageRenderingMode):UIImage;
 
-	@:native("alloc")
-	overload public static function alloc():UIImage;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImage;
-
 	@:native("actionsImage")
 	overload public static function actionsImage():UIImage;
 
@@ -214,18 +208,6 @@ extern class UIImage{
 	@:native("strokedCheckmarkImage")
 	overload public static function strokedCheckmarkImage():UIImage;
 
-	@:native("alloc")
-	overload public static function alloc():UIImage;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImage;
-
-	@:native("alloc")
-	overload public static function alloc():UIImage;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImage;
-
 	@:native("stretchableImageWithLeftCapWidth:topCapHeight")
 	overload public function stretchableImageWithLeftCapWidth_topCapHeight(leftCapWidth:Int, topCapHeight:Int):UIImage;
 
@@ -234,12 +216,6 @@ extern class UIImage{
 
 	@:native("topCapHeight")
 	public var topCapHeight:Int;
-
-	@:native("alloc")
-	overload public static function alloc():UIImage;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImage;
 
 
 }

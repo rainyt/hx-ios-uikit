@@ -54,11 +54,5 @@ extern class NSLayoutConstraint{
 	@:native("deactivateConstraints")
 	overload public static function deactivateConstraints(constraints:Dynamic):Void;
 
-	@:native("alloc")
-	overload public static function alloc():NSLayoutConstraint;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSLayoutConstraint;
-
 
 }

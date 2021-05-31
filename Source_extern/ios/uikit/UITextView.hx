@@ -72,11 +72,5 @@ extern class UITextView{
 	@:native("usesStandardTextScaling")
 	public var usesStandardTextScaling:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UITextView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextView;
-
 
 }

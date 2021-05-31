@@ -14,12 +14,6 @@ extern class NSCollectionLayoutSection{
 	@:native("sectionWithListConfiguration:layoutEnvironment")
 	overload public static function sectionWithListConfiguration_layoutEnvironment(configuration:UICollectionLayoutListConfiguration, layoutEnvironment:Dynamic):NSCollectionLayoutSection;
 
-	@:native("alloc")
-	overload public static function alloc():NSCollectionLayoutSection;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSCollectionLayoutSection;
-
 	@:native("sectionWithGroup")
 	overload public static function sectionWithGroup(group:NSCollectionLayoutGroup):NSCollectionLayoutSection;
 

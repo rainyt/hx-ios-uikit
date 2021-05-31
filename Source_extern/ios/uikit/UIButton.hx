@@ -14,12 +14,6 @@ extern class UIButton{
 	@:native("autorelease")
 	overload public static function autorelease():UIButton;
 
-	@:native("alloc")
-	overload public static function alloc():UIButton;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIButton;
-
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIButton;
 
@@ -155,12 +149,6 @@ extern class UIButton{
 	@:native("imageRectForContentRect")
 	overload public function imageRectForContentRect(contentRect:CGRect):CGRect;
 
-	@:native("alloc")
-	overload public static function alloc():UIButton;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIButton;
-
 	@:native("font")
 	public var font:UIFont;
 
@@ -169,12 +157,6 @@ extern class UIButton{
 
 	@:native("titleShadowOffset")
 	public var titleShadowOffset:CGSize;
-
-	@:native("alloc")
-	overload public static function alloc():UIButton;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIButton;
 
 
 }

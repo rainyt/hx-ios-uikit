@@ -62,11 +62,5 @@ extern class UIImageView extends UIView{
 	@:native("masksFocusEffectToContents")
 	public var masksFocusEffectToContents:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UIImageView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImageView;
-
 
 }

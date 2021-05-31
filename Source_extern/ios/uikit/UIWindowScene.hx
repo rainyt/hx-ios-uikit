@@ -14,12 +14,6 @@ extern class UIWindowScene{
 	@:native("screenshotService")
 	public var screenshotService:UIScreenshotService;
 
-	@:native("alloc")
-	overload public static function alloc():UIWindowScene;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIWindowScene;
-
 	@:native("screen")
 	public var screen:UIScreen;
 
@@ -37,12 +31,6 @@ extern class UIWindowScene{
 
 	@:native("windows")
 	public var windows:Dynamic;
-
-	@:native("alloc")
-	overload public static function alloc():UIWindowScene;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIWindowScene;
 
 	@:native("statusBarManager")
 	public var statusBarManager:UIStatusBarManager;

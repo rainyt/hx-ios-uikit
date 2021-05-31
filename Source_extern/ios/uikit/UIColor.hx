@@ -129,29 +129,11 @@ extern class UIColor{
 	@:native("CIColor")
 	public var CIColor:CIColor;
 
-	@:native("alloc")
-	overload public static function alloc():UIColor;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIColor;
-
-	@:native("alloc")
-	overload public static function alloc():UIColor;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIColor;
-
 	@:native("colorNamed")
 	overload public static function colorNamed(name:NSString):UIColor;
 
 	@:native("colorNamed:inBundle:compatibleWithTraitCollection")
 	overload public static function colorNamed_inBundle_compatibleWithTraitCollection(name:NSString, inBundle:NSBundle, compatibleWithTraitCollection:UITraitCollection):UIColor;
-
-	@:native("alloc")
-	overload public static function alloc():UIColor;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIColor;
 
 	@:native("colorWithDynamicProvider")
 	overload public static function colorWithDynamicProvider(dynamicProvider:Dynamic):UIColor;
@@ -161,12 +143,6 @@ extern class UIColor{
 
 	@:native("resolvedColorWithTraitCollection")
 	overload public function resolvedColorWithTraitCollection(traitCollection:UITraitCollection):UIColor;
-
-	@:native("alloc")
-	overload public static function alloc():UIColor;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIColor;
 
 	@:native("systemRedColor")
 	overload public static function systemRedColor():UIColor;
@@ -284,12 +260,6 @@ extern class UIColor{
 
 	@:native("underPageBackgroundColor")
 	overload public static function underPageBackgroundColor():UIColor;
-
-	@:native("alloc")
-	overload public static function alloc():UIColor;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIColor;
 
 	@:native("accessibilityName")
 	public var accessibilityName:NSString;

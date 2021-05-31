@@ -245,11 +245,5 @@ extern class UITableView{
 	@:native("hasActiveDrop")
 	public var hasActiveDrop:Bool;
 
-	@:native("alloc")
-	overload public static function alloc():UITableView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableView;
-
 
 }

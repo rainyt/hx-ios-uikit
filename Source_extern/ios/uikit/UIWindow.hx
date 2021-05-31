@@ -25,9 +25,6 @@ extern class UIWindow extends UIView{
 	@:native("screen")
 	public var screen:UIScreen;
 
-	@:native("setScreen")
-	overload public function setScreen(screen:UIScreen):Void;
-
 	@:native("windowLevel")
 	public var windowLevel:Float;
 

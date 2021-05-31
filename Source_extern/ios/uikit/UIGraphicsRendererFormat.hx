@@ -12,9 +12,6 @@ extern class UIGraphicsRendererFormat{
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsRendererFormat;
 
-	@:native("defaultFormat")
-	overload public static function defaultFormat():UIGraphicsRendererFormat;
-
 	@:native("preferredFormat")
 	overload public static function preferredFormat():UIGraphicsRendererFormat;
 

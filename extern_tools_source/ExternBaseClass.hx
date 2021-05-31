@@ -109,7 +109,18 @@ class ExternBaseClass {
 	}
 
 	public function putClass(t:ExternBaseClass):Void {
-		funcAndAttr = funcAndAttr.concat(t.funcAndAttr);
+		for (index => value in t.funcAndAttr) {
+			if (!hasFuncOrAttr(value))
+				funcAndAttr.push(value);
+		}
+	}
+
+	public function hasFuncOrAttr(t:ExternBaseClassFunProperty):Bool {
+		for (index => value in funcAndAttr) {
+			if (value.type == t.type && value.name == t.name)
+				return true;
+		}
+		return false;
 	}
 
 	/**
