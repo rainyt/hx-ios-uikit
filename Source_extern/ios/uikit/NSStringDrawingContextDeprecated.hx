@@ -13,11 +13,11 @@ extern class NSStringDrawingContextDeprecated{
 	@:native("autorelease")
 	overload public static function autorelease():NSStringDrawingContextDeprecated;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:Dynamic;
+	@:native("minimumTrackingAdjustment")
+	public var minimumTrackingAdjustment:CGFloat;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:Dynamic;
+	@:native("actualTrackingAdjustment")
+	public var actualTrackingAdjustment:CGFloat;
 
 
 }

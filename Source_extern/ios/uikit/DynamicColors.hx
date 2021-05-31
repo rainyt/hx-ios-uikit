@@ -13,14 +13,14 @@ extern class DynamicColors{
 	@:native("autorelease")
 	overload public static function autorelease():DynamicColors;
 
-	@:native("colorWithDynamicProvider:API_AVAILABLE(ios(13.0), tvos(13.0)")
-	overload public static function colorWithDynamicProvider(dynamicProvider:Dynamic, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UIColor;
+	@:native("colorWithDynamicProvider")
+	overload public static function colorWithDynamicProvider(dynamicProvider:Dynamic):UIColor;
 
-	@:native("initWithDynamicProvider:API_AVAILABLE(ios(13.0), tvos(13.0)")
-	overload public function initWithDynamicProvider(dynamicProvider:Dynamic, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UIColor;
+	@:native("initWithDynamicProvider")
+	overload public function initWithDynamicProvider(dynamicProvider:Dynamic):UIColor;
 
-	@:native("resolvedColorWithTraitCollection:API_AVAILABLE(ios(13.0), tvos(13.0)")
-	overload public function resolvedColorWithTraitCollection(traitCollection:UITraitCollection, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UIColor;
+	@:native("resolvedColorWithTraitCollection")
+	overload public function resolvedColorWithTraitCollection(traitCollection:UITraitCollection):UIColor;
 
 
 }

@@ -106,8 +106,8 @@ extern class UIControl{
 	@:native("showsMenuAsPrimaryAction")
 	public var showsMenuAsPrimaryAction:Bool;
 
-	@:native("menuAttachmentPointForConfiguration:API_AVAILABLE(ios(14.0)")
-	overload public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration, API_AVAILABLE(ios(14.0):Dynamic):CGPoint;
+	@:native("menuAttachmentPointForConfiguration")
+	overload public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration):CGPoint;
 
 
 }

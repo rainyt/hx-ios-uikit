@@ -13,8 +13,8 @@ extern class AdditionalStyles{
 	@:native("autorelease")
 	overload public static function autorelease():AdditionalStyles;
 
-	@:native("effectForBlurEffect:style:API_AVAILABLE(ios(13.0)")
-	overload public static function effectForBlurEffect(blurEffect:UIBlurEffect, style:UIVibrancyEffectStyle, API_AVAILABLE(ios(13.0):Dynamic):UIVibrancyEffect;
+	@:native("effectForBlurEffect:style")
+	overload public static function effectForBlurEffect(blurEffect:UIBlurEffect, style:UIVibrancyEffectStyle):UIVibrancyEffect;
 
 
 }

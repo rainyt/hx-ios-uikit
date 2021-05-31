@@ -13,8 +13,8 @@ extern class UIActivityItemsConfiguration{
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityItemsConfiguration;
 
-	@:native("initWithActivityItemsConfiguration:API_AVAILABLE(ios(14.0)")
-	overload public function initWithActivityItemsConfiguration(activityItemsConfiguration:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIActivityItemsConfiguration;
+	@:native("initWithActivityItemsConfiguration")
+	overload public function initWithActivityItemsConfiguration(activityItemsConfiguration:Dynamic):UIActivityItemsConfiguration;
 
 
 }

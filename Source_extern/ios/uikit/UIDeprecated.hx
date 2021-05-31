@@ -13,44 +13,44 @@ extern class UIDeprecated{
 	@:native("autorelease")
 	overload public static function autorelease():UIDeprecated;
 
-	@:native("initWithFrame:reuseIdentifier:API_DEPRECATED("", ios(2.0, 3.0)")
-	overload public function initWithFrame(frame:CGRect, reuseIdentifier:NSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):Dynamic;
+	@:native("initWithFrame:reuseIdentifier")
+	overload public function initWithFrame(frame:CGRect, reuseIdentifier:NSString):Dynamic;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("text")
+	public var text:NSString;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("font")
+	public var font:UIFont;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("textAlignment")
+	public var textAlignment:NSTextAlignment;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("lineBreakMode")
+	public var lineBreakMode:NSLineBreakMode;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("textColor")
+	public var textColor:UIColor;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("selectedTextColor")
+	public var selectedTextColor:UIColor;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("image")
+	public var image:UIImage;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("selectedImage")
+	public var selectedImage:UIImage;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("hidesAccessoryWhenEditing")
+	public var hidesAccessoryWhenEditing:Bool;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("target")
+	public var target:Dynamic;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("editAction")
+	public var editAction:SEL;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("accessoryAction")
+	public var accessoryAction:SEL;
 
 
 }

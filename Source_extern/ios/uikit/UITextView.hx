@@ -61,8 +61,8 @@ extern class UITextView{
 	@:native("clearsOnInsertion")
 	public var clearsOnInsertion:Bool;
 
-	@:native("initWithFrame:textContainer:API_AVAILABLE(ios(7.0)")
-	overload public function initWithFrame(frame:CGRect, textContainer:NSTextContainer, API_AVAILABLE(ios(7.0):NS_DESIGNATED_INITIALIZER):UITextView;
+	@:native("initWithFrame:textContainer")
+	overload public function initWithFrame(frame:CGRect, textContainer:NSTextContainer):UITextView;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UITextView;

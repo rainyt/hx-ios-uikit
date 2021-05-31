@@ -43,8 +43,8 @@ extern class UITabBar{
 	@:native("unselectedItemTintColor")
 	public var unselectedItemTintColor:UIColor;
 
-	@:native("ios(5.0,")
-	public var ios(5.0,:Dynamic;
+	@:native("selectedImageTintColor")
+	public var selectedImageTintColor:UIColor;
 
 	@:native("backgroundImage")
 	public var backgroundImage:UIImage;

@@ -31,8 +31,8 @@ extern class UIDocumentBrowserViewController{
 	@:native("allowsPickingMultipleItems")
 	public var allowsPickingMultipleItems:Bool;
 
-	@:native("ios(11.0,")
-	public var ios(11.0,:supported",;
+	@:native("supported",")
+	public var supported",:longer;
 
 	@:native("instead",")
 	public var instead",:contentTypesForRecentDocuments;
@@ -55,8 +55,8 @@ extern class UIDocumentBrowserViewController{
 	@:native("importDocumentAtURL:nextToDocumentAtURL:mode:completionHandler")
 	overload public function importDocumentAtURL(documentURL:NSURL, nextToDocumentAtURL:NSURL, mode:UIDocumentBrowserImportMode, completionHandler:Dynamic):Void;
 
-	@:native("transitionControllerForDocumentAtURL:API_AVAILABLE(ios(12.0)")
-	overload public function transitionControllerForDocumentAtURL(documentURL:NSURL, API_AVAILABLE(ios(12.0):Dynamic):UIDocumentBrowserTransitionController;
+	@:native("transitionControllerForDocumentAtURL")
+	overload public function transitionControllerForDocumentAtURL(documentURL:NSURL):UIDocumentBrowserTransitionController;
 
 	@:native("transitionControllerForDocumentURL")
 	overload public function transitionControllerForDocumentURL(documentURL:NSURL):UIDocumentBrowserTransitionController;

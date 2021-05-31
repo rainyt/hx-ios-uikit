@@ -13,32 +13,32 @@ extern class UIApplicationDeprecated{
 	@:native("autorelease")
 	overload public static function autorelease():UIApplicationDeprecated;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("proximitySensingEnabled")
+	public var proximitySensingEnabled:Bool;
 
-	@:native("setStatusBarHidden:animated:API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(2.0, 3.2)")
-	overload public function setStatusBarHidden(hidden:Bool, animated:Bool, API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(2.0, 3.2):Dynamic):Void;
+	@:native("setStatusBarHidden:animated")
+	overload public function setStatusBarHidden(hidden:Bool, animated:Bool):Void;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:later",;
+	@:native("later",")
+	public var later",:and;
 
-	@:native("setStatusBarOrientation:animated:API_DEPRECATED("Explicit setting of the status bar orientation is more limited in iOS 6.0 and later", ios(2.0, 9.0)")
-	overload public function setStatusBarOrientation(interfaceOrientation:UIInterfaceOrientation, animated:Bool, API_DEPRECATED("Explicit setting of the status bar orientation is more limited in iOS 6.0 and later", ios(2.0, 9.0):Dynamic):Void;
+	@:native("setStatusBarOrientation:animated")
+	overload public function setStatusBarOrientation(interfaceOrientation:UIInterfaceOrientation, animated:Bool):Void;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:preferredStatusBarStyle]",;
+	@:native("preferredStatusBarStyle]",")
+	public var preferredStatusBarStyle]",:-[UIViewController;
 
-	@:native("setStatusBarStyle:animated:API_DEPRECATED("Use -[UIViewController preferredStatusBarStyle]", ios(2.0, 9.0)")
-	overload public function setStatusBarStyle(statusBarStyle:UIStatusBarStyle, animated:Bool, API_DEPRECATED("Use -[UIViewController preferredStatusBarStyle]", ios(2.0, 9.0):Dynamic):Void;
+	@:native("setStatusBarStyle:animated")
+	overload public function setStatusBarStyle(statusBarStyle:UIStatusBarStyle, animated:Bool):Void;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("prefersStatusBarHidden]",")
+	public var prefersStatusBarHidden]",:-[UIViewController;
 
-	@:native("setStatusBarHidden:withAnimation:API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(3.2, 9.0)")
-	overload public function setStatusBarHidden(hidden:Bool, withAnimation:UIStatusBarAnimation, API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(3.2, 9.0):Dynamic):Void;
+	@:native("setStatusBarHidden:withAnimation")
+	overload public function setStatusBarHidden(hidden:Bool, withAnimation:UIStatusBarAnimation):Void;
 
-	@:native("setKeepAliveTimeout:handler:API_DEPRECATED("Please use PushKit for VoIP applications instead of calling this method", ios(4.0, 9.0)")
-	overload public function setKeepAliveTimeout(timeout:NSTimeInterval, handler:Dynamic, API_DEPRECATED("Please use PushKit for VoIP applications instead of calling this method", ios(4.0, 9.0):Dynamic):Bool;
+	@:native("setKeepAliveTimeout:handler")
+	overload public function setKeepAliveTimeout(timeout:NSTimeInterval, handler:Dynamic):Bool;
 
 	@:native("clearKeepAliveTimeout")
 	overload public function clearKeepAliveTimeout():Void;

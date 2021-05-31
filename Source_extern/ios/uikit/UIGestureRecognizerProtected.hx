@@ -37,8 +37,8 @@ extern class UIGestureRecognizerProtected{
 	@:native("shouldBeRequiredToFailByGestureRecognizer")
 	overload public function shouldBeRequiredToFailByGestureRecognizer(otherGestureRecognizer:UIGestureRecognizer):Bool;
 
-	@:native("shouldReceiveEvent:API_AVAILABLE(ios(13.4), tvos(13.4)")
-	overload public function shouldReceiveEvent(event:UIEvent, API_AVAILABLE(ios(13.4), tvos(13.4):Dynamic):Bool;
+	@:native("shouldReceiveEvent")
+	overload public function shouldReceiveEvent(event:UIEvent):Bool;
 
 	@:native("touchesBegan:withEvent")
 	overload public function touchesBegan(touches:Dynamic, withEvent:UIEvent):Void;

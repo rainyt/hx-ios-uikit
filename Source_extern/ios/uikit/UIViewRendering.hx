@@ -43,8 +43,8 @@ extern class UIViewRendering{
 	@:native("contentMode")
 	public var contentMode:UIViewContentMode;
 
-	@:native("ios(3.0,")
-	public var ios(3.0,:Dynamic;
+	@:native("contentStretch")
+	public var contentStretch:CGRect;
 
 	@:native("maskView")
 	public var maskView:UIView;

@@ -25,8 +25,8 @@ extern class UIActivityViewController{
 	@:native("initWithActivityItems:applicationActivities")
 	overload public function initWithActivityItems(activityItems:NSArray, applicationActivities:Dynamic):UIActivityViewController;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:Dynamic;
+	@:native("completionHandler")
+	public var completionHandler:UIActivityViewControllerCompletionHandler;
 
 	@:native("completionWithItemsHandler")
 	public var completionWithItemsHandler:UIActivityViewControllerCompletionWithItemsHandler;

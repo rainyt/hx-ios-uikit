@@ -46,11 +46,11 @@ extern class UIBarItem{
 	@:native("tag")
 	public var tag:NSInteger;
 
-	@:native("setTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setTitleTextAttributes:forState")
+	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState):Void;
 
-	@:native("titleTextAttributesForState:API_AVAILABLE(ios(5.0)")
-	overload public function titleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Dynamic;
+	@:native("titleTextAttributesForState")
+	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
 
 
 }

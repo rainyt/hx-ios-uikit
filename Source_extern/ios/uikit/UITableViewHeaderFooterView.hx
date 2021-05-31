@@ -40,11 +40,11 @@ extern class UITableViewHeaderFooterView{
 	@:native("contentView")
 	public var contentView:UIView;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:release.",;
+	@:native("release.",")
+	public var release.",:future;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:release.",;
+	@:native("release.",")
+	public var release.",:future;
 
 	@:native("backgroundConfiguration")
 	public var backgroundConfiguration:UIBackgroundConfiguration;

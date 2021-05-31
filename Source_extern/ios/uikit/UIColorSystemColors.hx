@@ -118,17 +118,17 @@ extern class UIColorSystemColors{
 	@:native("darkTextColor")
 	public var darkTextColor:UIColor;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("groupTableViewBackgroundColor")
+	public var groupTableViewBackgroundColor:UIColor;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("viewFlipsideBackgroundColor")
+	public var viewFlipsideBackgroundColor:UIColor;
 
-	@:native("ios(3.2,")
-	public var ios(3.2,:Dynamic;
+	@:native("scrollViewTexturedBackgroundColor")
+	public var scrollViewTexturedBackgroundColor:UIColor;
 
-	@:native("ios(5.0,")
-	public var ios(5.0,:Dynamic;
+	@:native("underPageBackgroundColor")
+	public var underPageBackgroundColor:UIColor;
 
 
 }

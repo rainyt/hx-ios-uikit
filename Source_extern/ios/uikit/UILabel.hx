@@ -79,11 +79,11 @@ extern class UILabel{
 	@:native("enablesMarqueeWhenAncestorFocused")
 	public var enablesMarqueeWhenAncestorFocused:Bool;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("minimumFontSize")
+	public var minimumFontSize:CGFloat;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:Dynamic;
+	@:native("adjustsLetterSpacingToFitWidth")
+	public var adjustsLetterSpacingToFitWidth:Bool;
 
 
 }

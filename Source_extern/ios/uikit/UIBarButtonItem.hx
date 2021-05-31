@@ -79,50 +79,50 @@ extern class UIBarButtonItem{
 	@:native("menu")
 	public var menu:UIMenu;
 
-	@:native("setBackgroundImage:forState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackgroundImage:forState:barMetrics")
+	overload public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics):Void;
 
-	@:native("backgroundImageForState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function backgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("backgroundImageForState:barMetrics")
+	overload public function backgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics):UIImage;
 
-	@:native("setBackgroundImage:forState:style:barMetrics:API_AVAILABLE(ios(6.0)")
-	overload public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, style:UIBarButtonItemStyle, barMetrics:UIBarMetrics, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackgroundImage:forState:style:barMetrics")
+	overload public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, style:UIBarButtonItemStyle, barMetrics:UIBarMetrics):Void;
 
-	@:native("backgroundImageForState:style:barMetrics:API_AVAILABLE(ios(6.0)")
-	overload public function backgroundImageForState(state:UIControlState, style:UIBarButtonItemStyle, barMetrics:UIBarMetrics, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("backgroundImageForState:style:barMetrics")
+	overload public function backgroundImageForState(state:UIControlState, style:UIBarButtonItemStyle, barMetrics:UIBarMetrics):UIImage;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
 
-	@:native("setBackgroundVerticalPositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackgroundVerticalPositionAdjustment:forBarMetrics")
+	overload public function setBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics):Void;
 
-	@:native("backgroundVerticalPositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function backgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):CGFloat;
+	@:native("backgroundVerticalPositionAdjustmentForBarMetrics")
+	overload public function backgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):CGFloat;
 
-	@:native("setTitlePositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setTitlePositionAdjustment(adjustment:UIOffset, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setTitlePositionAdjustment:forBarMetrics")
+	overload public function setTitlePositionAdjustment(adjustment:UIOffset, forBarMetrics:UIBarMetrics):Void;
 
-	@:native("titlePositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function titlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIOffset;
+	@:native("titlePositionAdjustmentForBarMetrics")
+	overload public function titlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):UIOffset;
 
-	@:native("setBackButtonBackgroundImage:forState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setBackButtonBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackButtonBackgroundImage:forState:barMetrics")
+	overload public function setBackButtonBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics):Void;
 
-	@:native("backButtonBackgroundImageForState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function backButtonBackgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("backButtonBackgroundImageForState:barMetrics")
+	overload public function backButtonBackgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics):UIImage;
 
-	@:native("setBackButtonTitlePositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setBackButtonTitlePositionAdjustment(adjustment:UIOffset, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackButtonTitlePositionAdjustment:forBarMetrics")
+	overload public function setBackButtonTitlePositionAdjustment(adjustment:UIOffset, forBarMetrics:UIBarMetrics):Void;
 
-	@:native("backButtonTitlePositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function backButtonTitlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIOffset;
+	@:native("backButtonTitlePositionAdjustmentForBarMetrics")
+	overload public function backButtonTitlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):UIOffset;
 
-	@:native("setBackButtonBackgroundVerticalPositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setBackButtonBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackButtonBackgroundVerticalPositionAdjustment:forBarMetrics")
+	overload public function setBackButtonBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics):Void;
 
-	@:native("backButtonBackgroundVerticalPositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function backButtonBackgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):CGFloat;
+	@:native("backButtonBackgroundVerticalPositionAdjustmentForBarMetrics")
+	overload public function backButtonBackgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):CGFloat;
 
 
 }

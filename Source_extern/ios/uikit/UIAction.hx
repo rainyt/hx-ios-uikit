@@ -34,8 +34,8 @@ extern class UIAction{
 	@:native("sender")
 	public var sender:Dynamic;
 
-	@:native("actionWithHandler:API_AVAILABLE(ios(14.0)")
-	overload public static function actionWithHandler(handler:UIActionHandler, API_AVAILABLE(ios(14.0):Dynamic):UIAction;
+	@:native("actionWithHandler")
+	overload public static function actionWithHandler(handler:UIActionHandler):UIAction;
 
 	@:native("")
 	overload public function ():;

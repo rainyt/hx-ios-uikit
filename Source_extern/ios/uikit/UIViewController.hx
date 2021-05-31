@@ -109,8 +109,8 @@ extern class UIViewController{
 	@:native("parentViewController")
 	public var parentViewController:UIViewController;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("modalViewController")
+	public var modalViewController:UIViewController;
 
 	@:native("presentedViewController")
 	public var presentedViewController:UIViewController;
@@ -145,11 +145,11 @@ extern class UIViewController{
 	@:native("dismissViewControllerAnimated:completion")
 	overload public function dismissViewControllerAnimated(flag:Dynamic, completion:Dynamic):Void;
 
-	@:native("presentModalViewController:animated:API_DEPRECATED("", ios(2.0, 6.0)")
-	overload public function presentModalViewController(modalViewController:UIViewController, animated:Bool, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Void;
+	@:native("presentModalViewController:animated")
+	overload public function presentModalViewController(modalViewController:UIViewController, animated:Bool):Void;
 
-	@:native("dismissModalViewControllerAnimated:API_DEPRECATED("", ios(2.0, 6.0)")
-	overload public function dismissModalViewControllerAnimated(animated:Bool, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Void;
+	@:native("dismissModalViewControllerAnimated")
+	overload public function dismissModalViewControllerAnimated(animated:Bool):Void;
 
 	@:native("modalTransitionStyle")
 	public var modalTransitionStyle:UIModalTransitionStyle;
@@ -163,8 +163,8 @@ extern class UIViewController{
 	@:native("disablesAutomaticKeyboardDismissal")
 	public var disablesAutomaticKeyboardDismissal:Bool;
 
-	@:native("ios(3.0,")
-	public var ios(3.0,:Dynamic;
+	@:native("wantsFullScreenLayout")
+	public var wantsFullScreenLayout:Bool;
 
 	@:native("edgesForExtendedLayout")
 	public var edgesForExtendedLayout:UIRectEdge;

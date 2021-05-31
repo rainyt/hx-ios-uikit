@@ -64,6 +64,13 @@ class ObjcProperty {
 			else
 				skip--;
 		}
+		for (index => value in p) {
+			if (value.indexOf("API_") != -1) {
+				trace(p);
+				break;
+			}
+		}
+		p = p.filter((f)->f.indexOf("API_") == -1 && f.indexOf("ios(") == -1);
 		return ({
 			name: p[p.length - 1],
 			type: ExternBaseClassType.PROPERTY,

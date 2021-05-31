@@ -13,11 +13,11 @@ extern class URLPreviews{
 	@:native("autorelease")
 	overload public static function autorelease():URLPreviews;
 
-	@:native("previewForURL:target:API_AVAILABLE(ios(11.0)")
-	overload public static function previewForURL(url:NSURL, target:UIDragPreviewTarget, API_AVAILABLE(ios(11.0):Dynamic):URLPreviews;
+	@:native("previewForURL:target")
+	overload public static function previewForURL(url:NSURL, target:UIDragPreviewTarget):URLPreviews;
 
-	@:native("previewForURL:title:target:API_AVAILABLE(ios(11.0)")
-	overload public static function previewForURL(url:NSURL, title:NSString_Nullable, target:UIDragPreviewTarget, API_AVAILABLE(ios(11.0):Dynamic):URLPreviews;
+	@:native("previewForURL:title:target")
+	overload public static function previewForURL(url:NSURL, title:NSString_Nullable, target:UIDragPreviewTarget):URLPreviews;
 
 
 }

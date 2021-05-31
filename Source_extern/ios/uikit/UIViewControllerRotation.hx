@@ -16,8 +16,8 @@ extern class UIViewControllerRotation{
 	@:native("attemptRotationToDeviceOrientation")
 	overload public static function attemptRotationToDeviceOrientation():Void;
 
-	@:native("shouldAutorotateToInterfaceOrientation:API_DEPRECATED("", ios(2.0, 6.0)")
-	overload public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Bool;
+	@:native("shouldAutorotateToInterfaceOrientation")
+	overload public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):Bool;
 
 	@:native("shouldAutorotate")
 	public var shouldAutorotate:Bool;
@@ -34,26 +34,26 @@ extern class UIViewControllerRotation{
 	@:native("rotatingFooterView")
 	overload public function rotatingFooterView():UIView;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("interfaceOrientation")
+	public var interfaceOrientation:UIInterfaceOrientation;
 
-	@:native("willRotateToInterfaceOrientation:duration:API_DEPRECATED("Implement viewWillTransitionToSize")
-	overload public function willRotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("Implement viewWillTransitionToSize:withTransitionCoordinator: instead", ios(2.0, 8.0):Dynamic):Void;
+	@:native("willRotateToInterfaceOrientation:duration")
+	overload public function willRotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval):Void;
 
-	@:native("didRotateFromInterfaceOrientation:API_DEPRECATED("", ios(2.0, 8.0)")
-	overload public function didRotateFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 8.0):Dynamic):Void;
+	@:native("didRotateFromInterfaceOrientation")
+	overload public function didRotateFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation):Void;
 
-	@:native("willAnimateRotationToInterfaceOrientation:duration:API_DEPRECATED("Implement viewWillTransitionToSize")
-	overload public function willAnimateRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("Implement viewWillTransitionToSize:withTransitionCoordinator: instead", ios(3.0, 8.0):Dynamic):Void;
+	@:native("willAnimateRotationToInterfaceOrientation:duration")
+	overload public function willAnimateRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval):Void;
 
-	@:native("willAnimateFirstHalfOfRotationToInterfaceOrientation:duration:API_DEPRECATED("", ios(2.0, 5.0)")
-	overload public function willAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("", ios(2.0, 5.0):Dynamic):Void;
+	@:native("willAnimateFirstHalfOfRotationToInterfaceOrientation:duration")
+	overload public function willAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval):Void;
 
-	@:native("didAnimateFirstHalfOfRotationToInterfaceOrientation:API_DEPRECATED("", ios(2.0, 5.0)")
-	overload public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 5.0):Dynamic):Void;
+	@:native("didAnimateFirstHalfOfRotationToInterfaceOrientation")
+	overload public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):Void;
 
-	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration:API_DEPRECATED("", ios(2.0, 5.0)")
-	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("", ios(2.0, 5.0):Dynamic):Void;
+	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration")
+	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval):Void;
 
 
 }

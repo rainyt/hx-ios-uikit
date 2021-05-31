@@ -85,8 +85,8 @@ extern class UIScreen{
 	@:native("supportsFocus")
 	public var supportsFocus:Bool;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("applicationFrame")
+	public var applicationFrame:CGRect;
 
 
 }

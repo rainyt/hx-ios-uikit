@@ -657,6 +657,14 @@ class ObjcFun:
                 ret = ""
             else:
                 ret = (("null" if ret is None else ret) + ("null" if value is None else value))
+        def _hx_local_8(f):
+            startIndex = None
+            if (((f.find("API_") if ((startIndex is None)) else HxString.indexOfImpl(f,"API_",startIndex))) == -1):
+                startIndex = None
+                return (((f.find("ios(") if ((startIndex is None)) else HxString.indexOfImpl(f,"ios(",startIndex))) == -1)
+            else:
+                return False
+        retargs = list(filter(_hx_local_8,retargs))
         return retargs
 
 
@@ -768,6 +776,26 @@ class ObjcProperty:
                 read = (("null" if read is None else read) + ("null" if char is None else char))
             else:
                 skip = (skip - 1)
+        _g4_current = 0
+        _g4_array = p
+        while (_g4_current < len(_g4_array)):
+            _g5_value = (_g4_array[_g4_current] if _g4_current >= 0 and _g4_current < len(_g4_array) else None)
+            _g5_key = _g4_current
+            _g4_current = (_g4_current + 1)
+            index = _g5_key
+            value = _g5_value
+            startIndex = None
+            if (((value.find("API_") if ((startIndex is None)) else HxString.indexOfImpl(value,"API_",startIndex))) != -1):
+                print(str(p))
+                break
+        def _hx_local_7(f):
+            startIndex = None
+            if (((f.find("API_") if ((startIndex is None)) else HxString.indexOfImpl(f,"API_",startIndex))) == -1):
+                startIndex = None
+                return (((f.find("ios(") if ((startIndex is None)) else HxString.indexOfImpl(f,"ios(",startIndex))) == -1)
+            else:
+                return False
+        p = list(filter(_hx_local_7,p))
         return _hx_AnonObject({'name': python_internal_ArrayImpl._get(p, (len(p) - 1)), 'type': "property", 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': False, 'args': None})
 
 

@@ -122,6 +122,8 @@ class ObjcFun {
 				ret += value;
 			}
 		}
+		retargs = retargs.filter((f) -> f.indexOf("API_") == -1 && f.indexOf("ios(") == -1);
+
 		// trace(args.length, args, retargs);
 		return retargs;
 	}

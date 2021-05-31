@@ -16,8 +16,8 @@ extern class UINavigationControllerContextualToolbarItems{
 	@:native("toolbarItems")
 	public var toolbarItems:Dynamic;
 
-	@:native("setToolbarItems:animated:API_AVAILABLE(ios(3.0)")
-	overload public function setToolbarItems(toolbarItems:Dynamic, animated:Bool, API_AVAILABLE(ios(3.0):Dynamic):Void;
+	@:native("setToolbarItems:animated")
+	overload public function setToolbarItems(toolbarItems:Dynamic, animated:Bool):Void;
 
 
 }

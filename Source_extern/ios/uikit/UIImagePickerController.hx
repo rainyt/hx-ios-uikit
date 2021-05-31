@@ -40,11 +40,11 @@ extern class UIImagePickerController{
 	@:native("allowsEditing")
 	public var allowsEditing:Bool;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("allowsImageEditing")
+	public var allowsImageEditing:Bool;
 
-	@:native("ios(11.0,")
-	public var ios(11.0,:PHPicker.",;
+	@:native("PHPicker.",")
+	public var PHPicker.",:use;
 
 	@:native("videoMaximumDuration")
 	public var videoMaximumDuration:NSTimeInterval;
@@ -52,8 +52,8 @@ extern class UIImagePickerController{
 	@:native("videoQuality")
 	public var videoQuality:UIImagePickerControllerQualityType;
 
-	@:native("ios(11.0,")
-	public var ios(11.0,:PHPicker.",;
+	@:native("PHPicker.",")
+	public var PHPicker.",:use;
 
 	@:native("showsCameraControls")
 	public var showsCameraControls:Bool;

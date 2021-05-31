@@ -34,8 +34,8 @@ extern class UIPrintInteractionController{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("ios(4.2,")
-	public var ios(4.2,:shown.",;
+	@:native("shown.",")
+	public var shown.",:always;
 
 	@:native("showsNumberOfCopies")
 	public var showsNumberOfCopies:Bool;

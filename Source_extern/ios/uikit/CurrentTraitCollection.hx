@@ -16,8 +16,8 @@ extern class CurrentTraitCollection{
 	@:native("currentTraitCollection")
 	public var currentTraitCollection:UITraitCollection;
 
-	@:native("performAsCurrentTraitCollection:API_AVAILABLE(ios(13.0), tvos(13.0)")
-	overload public function performAsCurrentTraitCollection(actions:Dynamic, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):Void;
+	@:native("performAsCurrentTraitCollection")
+	overload public function performAsCurrentTraitCollection(actions:Dynamic):Void;
 
 
 }

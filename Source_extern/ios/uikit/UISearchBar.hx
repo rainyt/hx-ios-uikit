@@ -52,8 +52,8 @@ extern class UISearchBar{
 	@:native("searchResultsButtonSelected")
 	public var searchResultsButtonSelected:Bool;
 
-	@:native("setShowsCancelButton:animated:API_AVAILABLE(ios(3.0)")
-	overload public function setShowsCancelButton(showsCancelButton:Bool, animated:Bool, API_AVAILABLE(ios(3.0):Dynamic):Void;
+	@:native("setShowsCancelButton:animated")
+	overload public function setShowsCancelButton(showsCancelButton:Bool, animated:Bool):Void;
 
 	@:native("inputAssistantItem")
 	public var inputAssistantItem:UITextInputAssistantItem;
@@ -91,41 +91,41 @@ extern class UISearchBar{
 	@:native("scopeBarBackgroundImage")
 	public var scopeBarBackgroundImage:UIImage;
 
-	@:native("setBackgroundImage:forBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
-	overload public function setBackgroundImage(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackgroundImage:forBarPosition:barMetrics")
+	overload public function setBackgroundImage(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics):Void;
 
-	@:native("backgroundImageForBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
-	overload public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("backgroundImageForBarPosition:barMetrics")
+	overload public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics):UIImage;
 
-	@:native("setSearchFieldBackgroundImage:forState:API_AVAILABLE(ios(5.0)")
-	overload public function setSearchFieldBackgroundImage(backgroundImage:UIImage, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setSearchFieldBackgroundImage:forState")
+	overload public function setSearchFieldBackgroundImage(backgroundImage:UIImage, forState:UIControlState):Void;
 
-	@:native("searchFieldBackgroundImageForState:API_AVAILABLE(ios(5.0)")
-	overload public function searchFieldBackgroundImageForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("searchFieldBackgroundImageForState")
+	overload public function searchFieldBackgroundImageForState(state:UIControlState):UIImage;
 
-	@:native("setImage:forSearchBarIcon:state:API_AVAILABLE(ios(5.0)")
-	overload public function setImage(iconImage:UIImage, forSearchBarIcon:UISearchBarIcon, state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setImage:forSearchBarIcon:state")
+	overload public function setImage(iconImage:UIImage, forSearchBarIcon:UISearchBarIcon, state:UIControlState):Void;
 
-	@:native("imageForSearchBarIcon:state:API_AVAILABLE(ios(5.0)")
-	overload public function imageForSearchBarIcon(icon:UISearchBarIcon, state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("imageForSearchBarIcon:state")
+	overload public function imageForSearchBarIcon(icon:UISearchBarIcon, state:UIControlState):UIImage;
 
-	@:native("setScopeBarButtonBackgroundImage:forState:API_AVAILABLE(ios(5.0)")
-	overload public function setScopeBarButtonBackgroundImage(backgroundImage:UIImage, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setScopeBarButtonBackgroundImage:forState")
+	overload public function setScopeBarButtonBackgroundImage(backgroundImage:UIImage, forState:UIControlState):Void;
 
-	@:native("scopeBarButtonBackgroundImageForState:API_AVAILABLE(ios(5.0)")
-	overload public function scopeBarButtonBackgroundImageForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("scopeBarButtonBackgroundImageForState")
+	overload public function scopeBarButtonBackgroundImageForState(state:UIControlState):UIImage;
 
-	@:native("setScopeBarButtonDividerImage:forLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(5.0)")
-	overload public function setScopeBarButtonDividerImage(dividerImage:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setScopeBarButtonDividerImage:forLeftSegmentState:rightSegmentState")
+	overload public function setScopeBarButtonDividerImage(dividerImage:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState):Void;
 
-	@:native("scopeBarButtonDividerImageForLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(5.0)")
-	overload public function scopeBarButtonDividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("scopeBarButtonDividerImageForLeftSegmentState:rightSegmentState")
+	overload public function scopeBarButtonDividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState):UIImage;
 
-	@:native("setScopeBarButtonTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload public function setScopeBarButtonTitleTextAttributes(attributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setScopeBarButtonTitleTextAttributes:forState")
+	overload public function setScopeBarButtonTitleTextAttributes(attributes:Dynamic, forState:UIControlState):Void;
 
-	@:native("scopeBarButtonTitleTextAttributesForState:API_AVAILABLE(ios(5.0)")
-	overload public function scopeBarButtonTitleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Dynamic;
+	@:native("scopeBarButtonTitleTextAttributesForState")
+	overload public function scopeBarButtonTitleTextAttributesForState(state:UIControlState):Dynamic;
 
 	@:native("searchFieldBackgroundPositionAdjustment")
 	public var searchFieldBackgroundPositionAdjustment:UIOffset;
@@ -133,11 +133,11 @@ extern class UISearchBar{
 	@:native("searchTextPositionAdjustment")
 	public var searchTextPositionAdjustment:UIOffset;
 
-	@:native("setPositionAdjustment:forSearchBarIcon:API_AVAILABLE(ios(5.0)")
-	overload public function setPositionAdjustment(adjustment:UIOffset, forSearchBarIcon:UISearchBarIcon, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setPositionAdjustment:forSearchBarIcon")
+	overload public function setPositionAdjustment(adjustment:UIOffset, forSearchBarIcon:UISearchBarIcon):Void;
 
-	@:native("positionAdjustmentForSearchBarIcon:API_AVAILABLE(ios(5.0)")
-	overload public function positionAdjustmentForSearchBarIcon(icon:UISearchBarIcon, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIOffset;
+	@:native("positionAdjustmentForSearchBarIcon")
+	overload public function positionAdjustmentForSearchBarIcon(icon:UISearchBarIcon):UIOffset;
 
 
 }

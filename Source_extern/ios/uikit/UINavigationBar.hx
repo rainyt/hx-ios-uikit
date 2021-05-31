@@ -49,17 +49,17 @@ extern class UINavigationBar{
 	@:native("barTintColor")
 	public var barTintColor:UIColor;
 
-	@:native("setBackgroundImage:forBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
-	overload public function setBackgroundImage(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackgroundImage:forBarPosition:barMetrics")
+	overload public function setBackgroundImage(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics):Void;
 
-	@:native("backgroundImageForBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
-	overload public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("backgroundImageForBarPosition:barMetrics")
+	overload public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics):UIImage;
 
-	@:native("setBackgroundImage:forBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setBackgroundImage(backgroundImage:UIImage, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackgroundImage:forBarMetrics")
+	overload public function setBackgroundImage(backgroundImage:UIImage, forBarMetrics:UIBarMetrics):Void;
 
-	@:native("backgroundImageForBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("backgroundImageForBarMetrics")
+	overload public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics):UIImage;
 
 	@:native("shadowImage")
 	public var shadowImage:UIImage;
@@ -70,11 +70,11 @@ extern class UINavigationBar{
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:largeTitleTextAttributes;
 
-	@:native("setTitleVerticalPositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setTitleVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setTitleVerticalPositionAdjustment:forBarMetrics")
+	overload public function setTitleVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics):Void;
 
-	@:native("titleVerticalPositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):CGFloat;
+	@:native("titleVerticalPositionAdjustmentForBarMetrics")
+	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):CGFloat;
 
 	@:native("backIndicatorImage")
 	public var backIndicatorImage:UIImage;

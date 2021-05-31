@@ -34,8 +34,8 @@ extern class UIFocusSystem{
 	@:native("environment:containsEnvironment")
 	overload public static function environment(environment:Dynamic, containsEnvironment:Dynamic):Bool;
 
-	@:native("registerURL:forSoundIdentifier:API_AVAILABLE(tvos(11.0)")
-	overload public static function registerURL(soundFileURL:NSURL, forSoundIdentifier:UIFocusSoundIdentifier, API_AVAILABLE(tvos(11.0):Dynamic):Void;
+	@:native("registerURL:forSoundIdentifier")
+	overload public static function registerURL(soundFileURL:NSURL, forSoundIdentifier:UIFocusSoundIdentifier):Void;
 
 
 }

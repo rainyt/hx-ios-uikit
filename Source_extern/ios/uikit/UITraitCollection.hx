@@ -31,8 +31,8 @@ extern class UITraitCollection{
 	@:native("userInterfaceIdiom")
 	public var userInterfaceIdiom:UIUserInterfaceIdiom;
 
-	@:native("traitCollectionWithUserInterfaceStyle:API_AVAILABLE(tvos(10.0)")
-	overload public static function traitCollectionWithUserInterfaceStyle(userInterfaceStyle:UIUserInterfaceStyle, API_AVAILABLE(tvos(10.0):Dynamic):UITraitCollection;
+	@:native("traitCollectionWithUserInterfaceStyle")
+	overload public static function traitCollectionWithUserInterfaceStyle(userInterfaceStyle:UIUserInterfaceStyle):UITraitCollection;
 
 	@:native("userInterfaceStyle")
 	public var userInterfaceStyle:UIUserInterfaceStyle;
@@ -79,14 +79,14 @@ extern class UITraitCollection{
 	@:native("displayGamut")
 	public var displayGamut:UIDisplayGamut;
 
-	@:native("traitCollectionWithAccessibilityContrast:API_AVAILABLE(ios(13.0), tvos(13.0)")
-	overload public static function traitCollectionWithAccessibilityContrast(accessibilityContrast:UIAccessibilityContrast, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UITraitCollection;
+	@:native("traitCollectionWithAccessibilityContrast")
+	overload public static function traitCollectionWithAccessibilityContrast(accessibilityContrast:UIAccessibilityContrast):UITraitCollection;
 
 	@:native("accessibilityContrast")
 	public var accessibilityContrast:UIAccessibilityContrast;
 
-	@:native("traitCollectionWithUserInterfaceLevel:API_AVAILABLE(ios(13.0)")
-	overload public static function traitCollectionWithUserInterfaceLevel(userInterfaceLevel:UIUserInterfaceLevel, API_AVAILABLE(ios(13.0):Dynamic):UITraitCollection;
+	@:native("traitCollectionWithUserInterfaceLevel")
+	overload public static function traitCollectionWithUserInterfaceLevel(userInterfaceLevel:UIUserInterfaceLevel):UITraitCollection;
 
 	@:native("userInterfaceLevel")
 	public var userInterfaceLevel:UIUserInterfaceLevel;

@@ -40,14 +40,14 @@ extern class UIPasteboard{
 	@:native("itemProviders")
 	public var itemProviders:Dynamic;
 
-	@:native("setItemProviders:localOnly:expirationDate:API_AVAILABLE(ios(11.0)")
-	overload public function setItemProviders(itemProviders:Dynamic, localOnly:Bool, expirationDate:NSDate_Nullable, API_AVAILABLE(ios(11.0):Dynamic):Void;
+	@:native("setItemProviders:localOnly:expirationDate")
+	overload public function setItemProviders(itemProviders:Dynamic, localOnly:Bool, expirationDate:NSDate_Nullable):Void;
 
-	@:native("setObjects:API_AVAILABLE(ios(11.0)")
-	overload public function setObjects(objects:Dynamic, API_AVAILABLE(ios(11.0):Dynamic):Void;
+	@:native("setObjects")
+	overload public function setObjects(objects:Dynamic):Void;
 
-	@:native("setObjects:localOnly:expirationDate:API_AVAILABLE(ios(11.0)")
-	overload public function setObjects(objects:Dynamic, localOnly:Bool, expirationDate:NSDate_Nullable, API_AVAILABLE(ios(11.0):Dynamic):Void;
+	@:native("setObjects:localOnly:expirationDate")
+	overload public function setObjects(objects:Dynamic, localOnly:Bool, expirationDate:NSDate_Nullable):Void;
 
 	@:native("pasteboardTypes")
 	public var pasteboardTypes:Dynamic;

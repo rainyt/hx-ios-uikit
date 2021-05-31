@@ -13,8 +13,8 @@ extern class UINewsstand{
 	@:native("autorelease")
 	overload public static function autorelease():UINewsstand;
 
-	@:native("setNewsstandIconImage:API_DEPRECATED("Newsstand apps now behave like normal apps on SpringBoard", ios(5.0, 9.0)")
-	overload public function setNewsstandIconImage(image:UIImage, API_DEPRECATED("Newsstand apps now behave like normal apps on SpringBoard", ios(5.0, 9.0):Dynamic):Void;
+	@:native("setNewsstandIconImage")
+	overload public function setNewsstandIconImage(image:UIImage):Void;
 
 
 }

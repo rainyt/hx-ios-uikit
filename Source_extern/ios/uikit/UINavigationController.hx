@@ -61,8 +61,8 @@ extern class UINavigationController{
 	@:native("toolbarHidden")
 	public var toolbarHidden:Bool;
 
-	@:native("setToolbarHidden:animated:API_AVAILABLE(ios(3.0)")
-	overload public function setToolbarHidden(hidden:Bool, animated:Bool, API_AVAILABLE(ios(3.0):Dynamic):Void;
+	@:native("setToolbarHidden:animated")
+	overload public function setToolbarHidden(hidden:Bool, animated:Bool):Void;
 
 	@:native("toolbar")
 	public var toolbar:UIToolbar;

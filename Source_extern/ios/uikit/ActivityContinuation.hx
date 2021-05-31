@@ -16,11 +16,11 @@ extern class ActivityContinuation{
 	@:native("userActivity")
 	public var userActivity:NSUserActivity;
 
-	@:native("updateUserActivityState:API_AVAILABLE(ios(8.0)")
-	overload public function updateUserActivityState(userActivity:NSUserActivity, API_AVAILABLE(ios(8.0):Dynamic):Void;
+	@:native("updateUserActivityState")
+	overload public function updateUserActivityState(userActivity:NSUserActivity):Void;
 
-	@:native("restoreUserActivityState:API_AVAILABLE(ios(8.0)")
-	overload public function restoreUserActivityState(userActivity:NSUserActivity, API_AVAILABLE(ios(8.0):Dynamic):Void;
+	@:native("restoreUserActivityState")
+	overload public function restoreUserActivityState(userActivity:NSUserActivity):Void;
 
 
 }

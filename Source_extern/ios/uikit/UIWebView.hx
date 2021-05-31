@@ -58,8 +58,8 @@ extern class UIWebView{
 	@:native("scalesPageToFit")
 	public var scalesPageToFit:Bool;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
+	@:native("detectsPhoneNumbers")
+	public var detectsPhoneNumbers:Bool;
 
 	@:native("dataDetectorTypes")
 	public var dataDetectorTypes:UIDataDetectorTypes;

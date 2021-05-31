@@ -37,8 +37,8 @@ extern class UICollectionViewCell{
 	@:native("highlighted")
 	public var highlighted:Bool;
 
-	@:native("dragStateDidChange:API_AVAILABLE(ios(11.0)")
-	overload public function dragStateDidChange(dragState:UICollectionViewCellDragState, API_AVAILABLE(ios(11.0):Dynamic):Void;
+	@:native("dragStateDidChange")
+	overload public function dragStateDidChange(dragState:UICollectionViewCellDragState):Void;
 
 	@:native("backgroundConfiguration")
 	public var backgroundConfiguration:UIBackgroundConfiguration;

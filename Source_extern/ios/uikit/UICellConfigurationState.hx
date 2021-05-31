@@ -25,11 +25,11 @@ extern class UICellConfigurationState{
 	@:native("reordering")
 	public var reordering:Bool;
 
-	@:native("API_UNAVAILABLE(tvos,")
-	public var API_UNAVAILABLE(tvos,:cellDragState;
+	@:native("cellDragState")
+	public var cellDragState:UICellConfigurationDragState;
 
-	@:native("API_UNAVAILABLE(tvos,")
-	public var API_UNAVAILABLE(tvos,:cellDropState;
+	@:native("cellDropState")
+	public var cellDropState:UICellConfigurationDropState;
 
 
 }

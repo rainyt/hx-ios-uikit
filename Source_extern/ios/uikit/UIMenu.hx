@@ -22,8 +22,8 @@ extern class UIMenu{
 	@:native("children")
 	public var children:Dynamic;
 
-	@:native("menuWithChildren:API_AVAILABLE(ios(14.0)")
-	overload public static function menuWithChildren(children:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIMenu;
+	@:native("menuWithChildren")
+	overload public static function menuWithChildren(children:Dynamic):UIMenu;
 
 	@:native("")
 	overload public function ():;

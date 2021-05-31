@@ -37,8 +37,8 @@ extern class UISegmentedControl{
 	@:native("segmentIndexForActionIdentifier")
 	overload public function segmentIndexForActionIdentifier(actionIdentifier:UIActionIdentifier):NSInteger;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:effect",;
+	@:native("effect",")
+	public var effect",:any;
 
 	@:native("momentary")
 	public var momentary:Bool;
@@ -97,29 +97,29 @@ extern class UISegmentedControl{
 	@:native("selectedSegmentTintColor")
 	public var selectedSegmentTintColor:UIColor;
 
-	@:native("setBackgroundImage:forState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setBackgroundImage:forState:barMetrics")
+	overload public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics):Void;
 
-	@:native("backgroundImageForState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function backgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
+	@:native("backgroundImageForState:barMetrics")
+	overload public function backgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics):UIImage;
 
-	@:native("setDividerImage:forLeftSegmentState:rightSegmentState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setDividerImage(dividerImage:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setDividerImage:forLeftSegmentState:rightSegmentState:barMetrics")
+	overload public function setDividerImage(dividerImage:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics):Void;
 
 	@:native("dividerImageForLeftSegmentState:rightSegmentState:barMetrics:")
 	overload public function dividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics, :Dynamic):UIImage;
 
-	@:native("setTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setTitleTextAttributes:forState")
+	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState):Void;
 
-	@:native("titleTextAttributesForState:API_AVAILABLE(ios(5.0)")
-	overload public function titleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Dynamic;
+	@:native("titleTextAttributesForState")
+	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
 
-	@:native("setContentPositionAdjustment:forSegmentType:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function setContentPositionAdjustment(adjustment:UIOffset, forSegmentType:UISegmentedControlSegment, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	@:native("setContentPositionAdjustment:forSegmentType:barMetrics")
+	overload public function setContentPositionAdjustment(adjustment:UIOffset, forSegmentType:UISegmentedControlSegment, barMetrics:UIBarMetrics):Void;
 
-	@:native("contentPositionAdjustmentForSegmentType:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function contentPositionAdjustmentForSegmentType(leftCenterRightOrAlone:UISegmentedControlSegment, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIOffset;
+	@:native("contentPositionAdjustmentForSegmentType:barMetrics")
+	overload public function contentPositionAdjustmentForSegmentType(leftCenterRightOrAlone:UISegmentedControlSegment, barMetrics:UIBarMetrics):UIOffset;
 
 
 }

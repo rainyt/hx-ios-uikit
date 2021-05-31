@@ -13,8 +13,8 @@ extern class NSDeprecatedKitAdditions{
 	@:native("autorelease")
 	overload public static function autorelease():NSDeprecatedKitAdditions;
 
-	@:native("readFromFileURL:options:documentAttributes:error:API_DEPRECATED_WITH_REPLACEMENT("readFromURL")
-	overload public function readFromFileURL(url:NSURL, options:NSDictionary, documentAttributes:NSDictionary____nullable, error:NSError, API_DEPRECATED_WITH_REPLACEMENT("readFromURL:options:documentAttributes:error:", ios(7.0, 9.0):Dynamic):Bool;
+	@:native("readFromFileURL:options:documentAttributes:error")
+	overload public function readFromFileURL(url:NSURL, options:NSDictionary, documentAttributes:NSDictionary____nullable, error:NSError):Bool;
 
 
 }

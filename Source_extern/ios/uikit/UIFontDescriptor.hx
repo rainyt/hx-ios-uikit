@@ -52,8 +52,8 @@ extern class UIFontDescriptor{
 	@:native("preferredFontDescriptorWithTextStyle")
 	overload public static function preferredFontDescriptorWithTextStyle(style:NSString):UIFontDescriptor;
 
-	@:native("preferredFontDescriptorWithTextStyle:compatibleWithTraitCollection:API_AVAILABLE(ios(10.0)")
-	overload public static function preferredFontDescriptorWithTextStyle(style:NSString, compatibleWithTraitCollection:UITraitCollection, API_AVAILABLE(ios(10.0):Dynamic):UIFontDescriptor;
+	@:native("preferredFontDescriptorWithTextStyle:compatibleWithTraitCollection")
+	overload public static function preferredFontDescriptorWithTextStyle(style:NSString, compatibleWithTraitCollection:UITraitCollection):UIFontDescriptor;
 
 	@:native("initWithFontAttributes")
 	overload public function initWithFontAttributes(attributes:Dynamic):UIFontDescriptor;

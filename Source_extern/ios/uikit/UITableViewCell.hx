@@ -13,8 +13,8 @@ extern class UITableViewCell{
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewCell;
 
-	@:native("initWithStyle:reuseIdentifier:API_AVAILABLE(ios(3.0)")
-	overload public function initWithStyle(style:UITableViewCellStyle, reuseIdentifier:NSString, API_AVAILABLE(ios(3.0):NS_DESIGNATED_INITIALIZER):UITableViewCell;
+	@:native("initWithStyle:reuseIdentifier")
+	overload public function initWithStyle(style:UITableViewCellStyle, reuseIdentifier:NSString):UITableViewCell;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UITableViewCell;
@@ -40,14 +40,14 @@ extern class UITableViewCell{
 	@:native("contentView")
 	public var contentView:UIView;
 
-	@:native("ios(3.0,")
-	public var ios(3.0,:release.",;
+	@:native("release.",")
+	public var release.",:future;
 
-	@:native("ios(3.0,")
-	public var ios(3.0,:release.",;
+	@:native("release.",")
+	public var release.",:future;
 
-	@:native("ios(3.0,")
-	public var ios(3.0,:release.",;
+	@:native("release.",")
+	public var release.",:future;
 
 	@:native("backgroundConfiguration")
 	public var backgroundConfiguration:UIBackgroundConfiguration;
@@ -133,8 +133,8 @@ extern class UITableViewCell{
 	@:native("didTransitionToState")
 	overload public function didTransitionToState(state:UITableViewCellStateMask):Void;
 
-	@:native("dragStateDidChange:API_AVAILABLE(ios(11.0)")
-	overload public function dragStateDidChange(dragState:UITableViewCellDragState, API_AVAILABLE(ios(11.0):Dynamic):Void;
+	@:native("dragStateDidChange")
+	overload public function dragStateDidChange(dragState:UITableViewCellDragState):Void;
 
 	@:native("userInteractionEnabledWhileDragging")
 	public var userInteractionEnabledWhileDragging:Bool;

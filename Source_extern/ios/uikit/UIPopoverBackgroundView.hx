@@ -19,8 +19,8 @@ extern class UIPopoverBackgroundView{
 	@:native("arrowDirection")
 	public var arrowDirection:UIPopoverArrowDirection;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:supported",;
+	@:native("supported",")
+	public var supported",:longer;
 
 
 }
