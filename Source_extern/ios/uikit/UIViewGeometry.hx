@@ -8,7 +8,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIViewGeometry")
 @:include("UIKit/UIKit.h")
-extern class UIViewGeometry{
+extern class UIViewGeometry extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewGeometry;

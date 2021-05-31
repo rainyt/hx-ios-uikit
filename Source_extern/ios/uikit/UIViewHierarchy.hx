@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewHierarchy")
 @:include("UIKit/UIKit.h")
-extern class UIViewHierarchy{
+extern class UIViewHierarchy extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewHierarchy;
@@ -13,9 +13,6 @@ extern class UIViewHierarchy{
 
 	@:native("superview")
 	public var superview:UIView;
-
-	@:native("subviews")
-	public var subviews:Dynamic;
 
 	@:native("window")
 	public var window:Dynamic;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSMutableParagraphStyle")
 @:include("UIKit/UIKit.h")
-extern class NSMutableParagraphStyle{
+extern class NSMutableParagraphStyle extends NSParagraphStyle{
 
 	@:native("alloc")
 	overload public static function alloc():NSMutableParagraphStyle;
@@ -49,9 +49,6 @@ extern class NSMutableParagraphStyle{
 
 	@:native("hyphenationFactor")
 	public var hyphenationFactor:Dynamic;
-
-	@:native("tabStops")
-	public var tabStops:Dynamic;
 
 	@:native("defaultTabInterval")
 	public var defaultTabInterval:Float;

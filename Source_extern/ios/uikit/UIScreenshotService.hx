@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIScreenshotService")
 @:include("UIKit/UIKit.h")
-extern class UIScreenshotService{
+extern class UIScreenshotService extends UIWindowScene{
 
 	@:native("alloc")
 	overload public static function alloc():UIScreenshotService;

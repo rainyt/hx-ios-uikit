@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIGestureRecognizerProtected")
 @:include("UIKit/UIKit.h")
-extern class UIGestureRecognizerProtected{
+extern class UIGestureRecognizerProtected extends UIGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UIGestureRecognizerProtected;

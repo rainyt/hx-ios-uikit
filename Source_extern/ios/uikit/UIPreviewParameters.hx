@@ -17,14 +17,5 @@ extern class UIPreviewParameters{
 	@:native("initWithTextLineRects")
 	overload public function initWithTextLineRects(textLineRects:Dynamic):UIPreviewParameters;
 
-	@:native("visiblePath")
-	public var visiblePath:Dynamic;
-
-	@:native("shadowPath")
-	public var shadowPath:Dynamic;
-
-	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
-
 
 }

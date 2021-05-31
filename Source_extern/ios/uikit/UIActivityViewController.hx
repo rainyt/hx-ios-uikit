@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIActivityViewController")
 @:include("UIKit/UIKit.h")
-extern class UIActivityViewController{
+extern class UIActivityViewController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityViewController;
@@ -23,15 +23,6 @@ extern class UIActivityViewController{
 
 	@:native("initWithActivityItems:applicationActivities")
 	overload public function initWithActivityItems_applicationActivities(activityItems:Dynamic, applicationActivities:Dynamic):UIActivityViewController;
-
-	@:native("completionHandler")
-	public var completionHandler:Dynamic;
-
-	@:native("completionWithItemsHandler")
-	public var completionWithItemsHandler:Dynamic;
-
-	@:native("excludedActivityTypes")
-	public var excludedActivityTypes:Dynamic;
 
 
 }

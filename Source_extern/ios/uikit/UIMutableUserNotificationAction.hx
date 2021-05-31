@@ -1,11 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
-import cpp.objc.NSDictionary;
 @:objc
 @:native("UIMutableUserNotificationAction")
 @:include("UIKit/UIKit.h")
-extern class UIMutableUserNotificationAction{
+extern class UIMutableUserNotificationAction extends UIUserNotificationAction{
 
 	@:native("alloc")
 	overload public static function alloc():UIMutableUserNotificationAction;
@@ -13,17 +11,8 @@ extern class UIMutableUserNotificationAction{
 	@:native("autorelease")
 	overload public static function autorelease():UIMutableUserNotificationAction;
 
-	@:native("identifier")
-	public var identifier:NSString;
-
-	@:native("title")
-	public var title:NSString;
-
 	@:native("behavior")
 	public var behavior:Dynamic;
-
-	@:native("parameters")
-	public var parameters:NSDictionary;
 
 	@:native("activationMode")
 	public var activationMode:Dynamic;

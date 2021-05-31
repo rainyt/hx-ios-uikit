@@ -33,9 +33,6 @@ extern class UITargetedPreview{
 	@:native("view")
 	public var view:Dynamic;
 
-	@:native("parameters")
-	public var parameters:Dynamic;
-
 	@:native("size")
 	public var size:CGSize;
 

@@ -6,7 +6,7 @@ import cpp.objc.NSData;
 @:objc
 @:native("UIGraphicsImageRenderer")
 @:include("UIKit/UIKit.h")
-extern class UIGraphicsImageRenderer{
+extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsImageRenderer;

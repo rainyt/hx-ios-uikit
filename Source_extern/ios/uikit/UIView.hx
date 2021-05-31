@@ -2,7 +2,6 @@ package ios.uikit;
 
 import ios.objc.CGRect;
 import ios.objc.CALayer;
-import cpp.objc.NSString;
 @:objc
 @:native("UIView")
 @:include("UIKit/UIKit.h")
@@ -37,9 +36,6 @@ extern class UIView{
 
 	@:native("focused")
 	public var focused:Bool;
-
-	@:native("focusGroupIdentifier")
-	public var focusGroupIdentifier:NSString;
 
 	@:native("semanticContentAttribute")
 	public var semanticContentAttribute:Dynamic;

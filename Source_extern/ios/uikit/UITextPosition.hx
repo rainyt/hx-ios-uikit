@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextPosition")
 @:include("UIKit/UIKit.h")
-extern class UITextPosition{
+extern class UITextPosition extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITextPosition;

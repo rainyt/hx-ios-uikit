@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UINotificationFeedbackGenerator")
 @:include("UIKit/UIKit.h")
-extern class UINotificationFeedbackGenerator{
+extern class UINotificationFeedbackGenerator extends UIFeedbackGenerator{
 
 	@:native("alloc")
 	overload public static function alloc():UINotificationFeedbackGenerator;

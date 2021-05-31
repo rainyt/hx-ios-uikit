@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentMenuViewController")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentMenuViewController{
+extern class UIDocumentMenuViewController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentMenuViewController;

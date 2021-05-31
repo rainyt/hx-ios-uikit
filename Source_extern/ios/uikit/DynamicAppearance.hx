@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("DynamicAppearance")
 @:include("UIKit/UIKit.h")
-extern class DynamicAppearance{
+extern class DynamicAppearance extends UITraitCollection{
 
 	@:native("alloc")
 	overload public static function alloc():DynamicAppearance;

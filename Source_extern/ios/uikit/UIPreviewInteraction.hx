@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIPreviewInteraction")
 @:include("UIKit/UIKit.h")
-extern class UIPreviewInteraction{
+extern class UIPreviewInteraction extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIPreviewInteraction;

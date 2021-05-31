@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICellAccessoryCustomView")
 @:include("UIKit/UIKit.h")
-extern class UICellAccessoryCustomView{
+extern class UICellAccessoryCustomView extends UICellAccessory{
 
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryCustomView;
@@ -22,9 +22,6 @@ extern class UICellAccessoryCustomView{
 
 	@:native("maintainsFixedSize")
 	public var maintainsFixedSize:Bool;
-
-	@:native("position")
-	public var position:Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UICellAccessoryCustomView;

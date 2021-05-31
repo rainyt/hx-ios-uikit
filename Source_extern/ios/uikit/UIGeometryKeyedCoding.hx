@@ -9,7 +9,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIGeometryKeyedCoding")
 @:include("UIKit/UIKit.h")
-extern class UIGeometryKeyedCoding{
+extern class UIGeometryKeyedCoding extends NSCoder{
 
 	@:native("alloc")
 	overload public static function alloc():UIGeometryKeyedCoding;

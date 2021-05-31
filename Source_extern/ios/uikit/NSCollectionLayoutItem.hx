@@ -26,9 +26,6 @@ extern class NSCollectionLayoutItem{
 	@:native("contentInsets")
 	public var contentInsets:Dynamic;
 
-	@:native("edgeSpacing")
-	public var edgeSpacing:Dynamic;
-
 	@:native("layoutSize")
 	public var layoutSize:Dynamic;
 

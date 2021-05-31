@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UISnapshotting")
 @:include("UIKit/UIKit.h")
-extern class UISnapshotting{
+extern class UISnapshotting extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UISnapshotting;

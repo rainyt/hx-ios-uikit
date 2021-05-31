@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UISnapBehavior")
 @:include("UIKit/UIKit.h")
-extern class UISnapBehavior{
+extern class UISnapBehavior extends UIDynamicBehavior{
 
 	@:native("alloc")
 	overload public static function alloc():UISnapBehavior;

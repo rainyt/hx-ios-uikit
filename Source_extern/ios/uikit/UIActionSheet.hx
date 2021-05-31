@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIActionSheet")
 @:include("UIKit/UIKit.h")
-extern class UIActionSheet{
+extern class UIActionSheet extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIActionSheet;
@@ -18,9 +18,6 @@ extern class UIActionSheet{
 
 	@:native("delegate")
 	public var delegate:Dynamic;
-
-	@:native("title")
-	public var title:NSString;
 
 	@:native("actionSheetStyle")
 	public var actionSheetStyle:Dynamic;

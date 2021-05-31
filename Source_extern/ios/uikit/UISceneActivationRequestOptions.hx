@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISceneActivationRequestOptions")
 @:include("UIKit/UIKit.h")
-extern class UISceneActivationRequestOptions{
+extern class UISceneActivationRequestOptions extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneActivationRequestOptions;

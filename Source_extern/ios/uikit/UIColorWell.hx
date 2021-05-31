@@ -1,19 +1,15 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIColorWell")
 @:include("UIKit/UIKit.h")
-extern class UIColorWell{
+extern class UIColorWell extends UIControl{
 
 	@:native("alloc")
 	overload public static function alloc():UIColorWell;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIColorWell;
-
-	@:native("title")
-	public var title:NSString;
 
 	@:native("supportsAlpha")
 	public var supportsAlpha:Bool;

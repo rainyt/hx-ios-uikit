@@ -59,20 +59,11 @@ extern class UIBackgroundConfiguration{
 	@:native("backgroundColor")
 	public var backgroundColor:Dynamic;
 
-	@:native("backgroundColorTransformer")
-	public var backgroundColorTransformer:Dynamic;
-
 	@:native("resolvedBackgroundColorForTintColor")
 	overload public function resolvedBackgroundColorForTintColor(tintColor:Dynamic):Dynamic;
 
-	@:native("visualEffect")
-	public var visualEffect:Dynamic;
-
 	@:native("strokeColor")
 	public var strokeColor:Dynamic;
-
-	@:native("strokeColorTransformer")
-	public var strokeColorTransformer:Dynamic;
 
 	@:native("resolvedStrokeColorForTintColor")
 	overload public function resolvedStrokeColorForTintColor(tintColor:Dynamic):Dynamic;

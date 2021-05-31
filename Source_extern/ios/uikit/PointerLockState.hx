@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("PointerLockState")
 @:include("UIKit/UIKit.h")
-extern class PointerLockState{
+extern class PointerLockState extends UIScene{
 
 	@:native("alloc")
 	overload public static function alloc():PointerLockState;

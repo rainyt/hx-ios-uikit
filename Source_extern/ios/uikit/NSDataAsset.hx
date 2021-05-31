@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import cpp.objc.NSData;
 @:objc
 @:native("NSDataAsset")
 @:include("UIKit/UIKit.h")
@@ -21,15 +20,6 @@ extern class NSDataAsset{
 
 	@:native("initWithName:bundle")
 	overload public function initWithName_bundle(name:NSString, bundle:Dynamic):NSDataAsset;
-
-	@:native("name")
-	public var name:NSString;
-
-	@:native("data")
-	public var data:NSData;
-
-	@:native("typeIdentifier")
-	public var typeIdentifier:NSString;
 
 
 }

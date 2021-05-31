@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIRemoteControlEvents")
 @:include("UIKit/UIKit.h")
-extern class UIRemoteControlEvents{
+extern class UIRemoteControlEvents extends UIApplication{
 
 	@:native("alloc")
 	overload public static function alloc():UIRemoteControlEvents;

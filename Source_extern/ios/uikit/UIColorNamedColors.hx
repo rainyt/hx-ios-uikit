@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIColorNamedColors")
 @:include("UIKit/UIKit.h")
-extern class UIColorNamedColors{
+extern class UIColorNamedColors extends UIColor{
 
 	@:native("alloc")
 	overload public static function alloc():UIColorNamedColors;

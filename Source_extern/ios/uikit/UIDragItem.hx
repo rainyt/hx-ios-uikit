@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDragItem")
 @:include("UIKit/UIKit.h")
-extern class UIDragItem{
+extern class UIDragItem extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIDragItem;
@@ -25,9 +25,6 @@ extern class UIDragItem{
 
 	@:native("localObject")
 	public var localObject:Dynamic;
-
-	@:native("void")
-	public var void:Dynamic;
 
 
 }

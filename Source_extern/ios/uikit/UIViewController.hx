@@ -43,9 +43,6 @@ extern class UIViewController{
 	@:native("viewLoaded")
 	public var viewLoaded:Bool;
 
-	@:native("nibName")
-	public var nibName:NSString;
-
 	@:native("nibBundle")
 	public var nibBundle:Dynamic;
 
@@ -99,9 +96,6 @@ extern class UIViewController{
 
 	@:native("viewDidLayoutSubviews")
 	overload public function viewDidLayoutSubviews():Void;
-
-	@:native("title")
-	public var title:NSString;
 
 	@:native("didReceiveMemoryWarning")
 	overload public function didReceiveMemoryWarning():Void;

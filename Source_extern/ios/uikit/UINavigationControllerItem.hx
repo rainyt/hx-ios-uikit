@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UINavigationControllerItem")
 @:include("UIKit/UIKit.h")
-extern class UINavigationControllerItem{
+extern class UINavigationControllerItem extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UINavigationControllerItem;

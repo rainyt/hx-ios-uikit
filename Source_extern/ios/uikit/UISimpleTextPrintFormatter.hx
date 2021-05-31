@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISimpleTextPrintFormatter")
 @:include("UIKit/UIKit.h")
-extern class UISimpleTextPrintFormatter{
+extern class UISimpleTextPrintFormatter extends UIPrintFormatter{{
 
 	@:native("alloc")
 	overload public static function alloc():UISimpleTextPrintFormatter;
@@ -17,12 +17,6 @@ extern class UISimpleTextPrintFormatter{
 
 	@:native("initWithAttributedText")
 	overload public function initWithAttributedText(attributedText:Dynamic):UISimpleTextPrintFormatter;
-
-	@:native("text")
-	public var text:NSString;
-
-	@:native("attributedText")
-	public var attributedText:Dynamic;
 
 	@:native("font")
 	public var font:Dynamic;

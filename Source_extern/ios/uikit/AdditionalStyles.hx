@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("AdditionalStyles")
 @:include("UIKit/UIKit.h")
-extern class AdditionalStyles{
+extern class AdditionalStyles extends UIVibrancyEffect{
 
 	@:native("alloc")
 	overload public static function alloc():AdditionalStyles;

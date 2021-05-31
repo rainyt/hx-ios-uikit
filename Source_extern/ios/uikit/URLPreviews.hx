@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("URLPreviews")
 @:include("UIKit/UIKit.h")
-extern class URLPreviews{
+extern class URLPreviews extends UITargetedDragPreview{
 
 	@:native("alloc")
 	overload public static function alloc():URLPreviews;

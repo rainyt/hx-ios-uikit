@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIConstraintBasedLayoutFittingSize")
 @:include("UIKit/UIKit.h")
-extern class UIConstraintBasedLayoutFittingSize{
+extern class UIConstraintBasedLayoutFittingSize extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIConstraintBasedLayoutFittingSize;

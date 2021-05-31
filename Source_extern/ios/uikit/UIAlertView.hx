@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIAlertView")
 @:include("UIKit/UIKit.h")
-extern class UIAlertView{
+extern class UIAlertView extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIAlertView;
@@ -24,12 +24,6 @@ extern class UIAlertView{
 
 	@:native("delegate")
 	public var delegate:Dynamic;
-
-	@:native("title")
-	public var title:NSString;
-
-	@:native("message")
-	public var message:NSString;
 
 	@:native("addButtonWithTitle")
 	overload public function addButtonWithTitle(title:NSString):Int;

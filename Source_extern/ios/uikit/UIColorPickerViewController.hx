@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIColorPickerViewController")
 @:include("UIKit/UIKit.h")
-extern class UIColorPickerViewController{
+extern class UIColorPickerViewController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIColorPickerViewController;

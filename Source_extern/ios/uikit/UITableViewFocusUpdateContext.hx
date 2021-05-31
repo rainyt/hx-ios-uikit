@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITableViewFocusUpdateContext")
 @:include("UIKit/UIKit.h")
-extern class UITableViewFocusUpdateContext{
+extern class UITableViewFocusUpdateContext extends UIFocusUpdateContext{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewFocusUpdateContext;

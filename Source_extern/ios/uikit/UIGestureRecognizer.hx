@@ -1,11 +1,10 @@
 package ios.uikit;
 
 import ios.objc.CGPoint;
-import cpp.objc.NSString;
 @:objc
 @:native("UIGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UIGestureRecognizer{
+extern class UIGestureRecognizer extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIGestureRecognizer;
@@ -49,12 +48,6 @@ extern class UIGestureRecognizer{
 	@:native("delaysTouchesEnded")
 	public var delaysTouchesEnded:Bool;
 
-	@:native("allowedTouchTypes")
-	public var allowedTouchTypes:Dynamic;
-
-	@:native("allowedPressTypes")
-	public var allowedPressTypes:Dynamic;
-
 	@:native("requiresExclusiveTouchType")
 	public var requiresExclusiveTouchType:Bool;
 
@@ -69,9 +62,6 @@ extern class UIGestureRecognizer{
 
 	@:native("locationOfTouch:inView")
 	overload public function locationOfTouch_inView(touchIndex:Int, inView:Dynamic):CGPoint;
-
-	@:native("name")
-	public var name:NSString;
 
 	@:native("modifierFlags")
 	public var modifierFlags:Dynamic;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("DeprecatedAnimations")
 @:include("UIKit/UIKit.h")
-extern class DeprecatedAnimations{
+extern class DeprecatedAnimations extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():DeprecatedAnimations;

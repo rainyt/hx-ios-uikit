@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewControllerRotation")
 @:include("UIKit/UIKit.h")
-extern class UIViewControllerRotation{
+extern class UIViewControllerRotation extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerRotation;

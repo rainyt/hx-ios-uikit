@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIStoryboard")
 @:include("UIKit/UIKit.h")
-extern class UIStoryboard{
+extern class UIStoryboard extends NSObject{{
 
 	@:native("alloc")
 	overload public static function alloc():UIStoryboard;

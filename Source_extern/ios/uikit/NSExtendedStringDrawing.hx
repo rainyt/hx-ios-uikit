@@ -5,7 +5,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("NSExtendedStringDrawing")
 @:include("UIKit/UIKit.h")
-extern class NSExtendedStringDrawing{
+extern class NSExtendedStringDrawing extends NSAttributedString{
 
 	@:native("alloc")
 	overload public static function alloc():NSExtendedStringDrawing;

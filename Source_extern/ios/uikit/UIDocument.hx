@@ -20,15 +20,6 @@ extern class UIDocument{
 	@:native("fileURL")
 	public var fileURL:Dynamic;
 
-	@:native("localizedName")
-	public var localizedName:NSString;
-
-	@:native("fileType")
-	public var fileType:NSString;
-
-	@:native("fileModificationDate")
-	public var fileModificationDate:Dynamic;
-
 	@:native("documentState")
 	public var documentState:Dynamic;
 

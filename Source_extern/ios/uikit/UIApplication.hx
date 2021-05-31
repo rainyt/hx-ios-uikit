@@ -5,7 +5,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIApplication")
 @:include("UIKit/UIKit.h")
-extern class UIApplication{
+extern class UIApplication extends UIResponder{
 
 	@:native("alloc")
 	overload public static function alloc():UIApplication;

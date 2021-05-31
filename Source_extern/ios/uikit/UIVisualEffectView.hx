@@ -14,9 +14,6 @@ extern class UIVisualEffectView{
 	@:native("contentView")
 	public var contentView:Dynamic;
 
-	@:native("effect")
-	public var effect:Dynamic;
-
 	@:native("initWithEffect")
 	overload public function initWithEffect(effect:Dynamic):UIVisualEffectView;
 

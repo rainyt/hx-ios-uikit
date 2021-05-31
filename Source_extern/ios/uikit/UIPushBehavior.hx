@@ -4,7 +4,7 @@ import ios.objc.CGVector;
 @:objc
 @:native("UIPushBehavior")
 @:include("UIKit/UIKit.h")
-extern class UIPushBehavior{
+extern class UIPushBehavior extends UIDynamicBehavior{
 
 	@:native("alloc")
 	overload public static function alloc():UIPushBehavior;
@@ -20,9 +20,6 @@ extern class UIPushBehavior{
 
 	@:native("removeItem")
 	overload public function removeItem(item:Dynamic):Void;
-
-	@:native("items")
-	public var items:Dynamic;
 
 	@:native("targetOffsetFromCenterForItem")
 	overload public function targetOffsetFromCenterForItem(item:Dynamic):Dynamic;

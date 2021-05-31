@@ -8,7 +8,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("NSValueUIGeometryExtensions")
 @:include("UIKit/UIKit.h")
-extern class NSValueUIGeometryExtensions{
+extern class NSValueUIGeometryExtensions extends NSValue{
 
 	@:native("alloc")
 	overload public static function alloc():NSValueUIGeometryExtensions;

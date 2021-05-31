@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewControllerEditing")
 @:include("UIKit/UIKit.h")
-extern class UIViewControllerEditing{
+extern class UIViewControllerEditing extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerEditing;

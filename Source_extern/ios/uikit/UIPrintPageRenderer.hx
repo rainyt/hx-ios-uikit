@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrintPageRenderer")
 @:include("UIKit/UIKit.h")
-extern class UIPrintPageRenderer{
+extern class UIPrintPageRenderer extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrintPageRenderer;
@@ -26,9 +26,6 @@ extern class UIPrintPageRenderer{
 
 	@:native("numberOfPages")
 	public var numberOfPages:Int;
-
-	@:native("printFormatters")
-	public var printFormatters:Dynamic;
 
 	@:native("printFormattersForPageAtIndex")
 	overload public function printFormattersForPageAtIndex(pageIndex:Int):Dynamic;

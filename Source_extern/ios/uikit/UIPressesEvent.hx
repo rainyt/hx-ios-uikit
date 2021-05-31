@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPressesEvent")
 @:include("UIKit/UIKit.h")
-extern class UIPressesEvent{
+extern class UIPressesEvent extends UIEvent{
 
 	@:native("alloc")
 	overload public static function alloc():UIPressesEvent;

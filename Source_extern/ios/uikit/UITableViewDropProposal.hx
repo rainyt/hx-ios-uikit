@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITableViewDropProposal")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDropProposal{
+extern class UITableViewDropProposal extends UIDropProposal{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropProposal;

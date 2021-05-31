@@ -6,7 +6,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIStringDrawing")
 @:include("UIKit/UIKit.h")
-extern class UIStringDrawing{
+extern class UIStringDrawing extends NSString{
 
 	@:native("alloc")
 	overload public static function alloc():UIStringDrawing;

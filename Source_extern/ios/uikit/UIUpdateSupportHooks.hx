@@ -5,7 +5,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIUpdateSupportHooks")
 @:include("UIKit/UIKit.h")
-extern class UIUpdateSupportHooks{
+extern class UIUpdateSupportHooks extends UICollectionViewLayout{
 
 	@:native("alloc")
 	overload public static function alloc():UIUpdateSupportHooks;

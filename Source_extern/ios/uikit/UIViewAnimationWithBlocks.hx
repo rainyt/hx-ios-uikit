@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewAnimationWithBlocks")
 @:include("UIKit/UIKit.h")
-extern class UIViewAnimationWithBlocks{
+extern class UIViewAnimationWithBlocks extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewAnimationWithBlocks;

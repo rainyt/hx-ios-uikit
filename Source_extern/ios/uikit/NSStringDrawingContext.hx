@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("NSStringDrawingContext")
 @:include("UIKit/UIKit.h")
-extern class NSStringDrawingContext{
+extern class NSStringDrawingContext extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():NSStringDrawingContext;

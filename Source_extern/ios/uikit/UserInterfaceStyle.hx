@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UserInterfaceStyle")
 @:include("UIKit/UIKit.h")
-extern class UserInterfaceStyle{
+extern class UserInterfaceStyle extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UserInterfaceStyle;

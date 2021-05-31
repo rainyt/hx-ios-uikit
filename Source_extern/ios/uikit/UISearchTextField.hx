@@ -3,16 +3,13 @@ package ios.uikit;
 @:objc
 @:native("UISearchTextField")
 @:include("UIKit/UIKit.h")
-extern class UISearchTextField{
+extern class UISearchTextField extends UITextField{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchTextField;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISearchTextField;
-
-	@:native("tokens")
-	public var tokens:Dynamic;
 
 	@:native("insertToken:atIndex")
 	overload public function insertToken_atIndex(token:Dynamic, atIndex:Int):Void;

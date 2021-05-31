@@ -1,19 +1,15 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIStateRestoration")
 @:include("UIKit/UIKit.h")
-extern class UIStateRestoration{
+extern class UIStateRestoration extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIStateRestoration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIStateRestoration;
-
-	@:native("restorationIdentifier")
-	public var restorationIdentifier:NSString;
 
 	@:native("encodeRestorableStateWithCoder")
 	overload public function encodeRestorableStateWithCoder(coder:Dynamic):Void;

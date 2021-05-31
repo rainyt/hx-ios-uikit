@@ -5,7 +5,7 @@ import ios.objc.CGVector;
 @:objc
 @:native("UIAttachmentBehavior")
 @:include("UIKit/UIKit.h")
-extern class UIAttachmentBehavior{
+extern class UIAttachmentBehavior extends UIDynamicBehavior{
 
 	@:native("alloc")
 	overload public static function alloc():UIAttachmentBehavior;
@@ -39,9 +39,6 @@ extern class UIAttachmentBehavior{
 
 	@:native("pinAttachmentWithItem:attachedToItem:attachmentAnchor")
 	overload public static function pinAttachmentWithItem_attachedToItem_attachmentAnchor(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint):UIAttachmentBehavior;
-
-	@:native("items")
-	public var items:Dynamic;
 
 	@:native("attachedBehaviorType")
 	public var attachedBehaviorType:Dynamic;

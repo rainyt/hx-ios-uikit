@@ -28,9 +28,6 @@ extern class NSTextContainer{
 	@:native("size")
 	public var size:CGSize;
 
-	@:native("exclusionPaths")
-	public var exclusionPaths:Dynamic;
-
 	@:native("lineBreakMode")
 	public var lineBreakMode:Dynamic;
 

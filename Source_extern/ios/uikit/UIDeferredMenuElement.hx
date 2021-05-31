@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDeferredMenuElement")
 @:include("UIKit/UIKit.h")
-extern class UIDeferredMenuElement{
+extern class UIDeferredMenuElement extends UIMenuElement{
 
 	@:native("alloc")
 	overload public static function alloc():UIDeferredMenuElement;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIRefreshControl")
 @:include("UIKit/UIKit.h")
-extern class UIRefreshControl{
+extern class UIRefreshControl extends UIControl{
 
 	@:native("alloc")
 	overload public static function alloc():UIRefreshControl;

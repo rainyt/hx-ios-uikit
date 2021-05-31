@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIRotationGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UIRotationGestureRecognizer{
+extern class UIRotationGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UIRotationGestureRecognizer;

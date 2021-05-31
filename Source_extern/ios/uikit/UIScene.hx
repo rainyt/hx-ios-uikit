@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIScene")
 @:include("UIKit/UIKit.h")
-extern class UIScene{
+extern class UIScene extends UIResponder{
 
 	@:native("alloc")
 	overload public static function alloc():UIScene;
@@ -32,9 +31,6 @@ extern class UIScene{
 
 	@:native("openURL:options:completionHandler")
 	overload public function openURL_options_completionHandler(url:Dynamic, options:Dynamic, completionHandler:Dynamic):Void;
-
-	@:native("title")
-	public var title:NSString;
 
 	@:native("activationConditions")
 	public var activationConditions:Dynamic;

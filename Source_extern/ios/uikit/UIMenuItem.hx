@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIMenuItem")
 @:include("UIKit/UIKit.h")
-extern class UIMenuItem{
+extern class UIMenuItem extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIMenuItem;
@@ -14,9 +14,6 @@ extern class UIMenuItem{
 
 	@:native("initWithTitle:action")
 	overload public function initWithTitle_action(title:NSString, action:String):UIMenuItem;
-
-	@:native("title")
-	public var title:NSString;
 
 	@:native("action")
 	public var action:String;

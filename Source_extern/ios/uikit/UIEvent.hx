@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIEvent")
 @:include("UIKit/UIKit.h")
-extern class UIEvent{
+extern class UIEvent extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIEvent;

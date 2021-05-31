@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentPickerExtensionViewController")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentPickerExtensionViewController{
+extern class UIDocumentPickerExtensionViewController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentPickerExtensionViewController;
@@ -20,18 +19,6 @@ extern class UIDocumentPickerExtensionViewController{
 
 	@:native("documentPickerMode")
 	public var documentPickerMode:Dynamic;
-
-	@:native("originalURL")
-	public var originalURL:Dynamic;
-
-	@:native("validTypes")
-	public var validTypes:Dynamic;
-
-	@:native("providerIdentifier")
-	public var providerIdentifier:NSString;
-
-	@:native("documentStorageURL")
-	public var documentStorageURL:Dynamic;
 
 
 }

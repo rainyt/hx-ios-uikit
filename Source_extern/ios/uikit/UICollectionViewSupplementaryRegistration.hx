@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewSupplementaryRegistration")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewSupplementaryRegistration{
+extern class UICollectionViewSupplementaryRegistration extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewSupplementaryRegistration;

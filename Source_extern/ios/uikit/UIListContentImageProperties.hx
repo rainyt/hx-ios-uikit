@@ -12,14 +12,8 @@ extern class UIListContentImageProperties{
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentImageProperties;
 
-	@:native("preferredSymbolConfiguration")
-	public var preferredSymbolConfiguration:Dynamic;
-
 	@:native("tintColor")
 	public var tintColor:Dynamic;
-
-	@:native("tintColorTransformer")
-	public var tintColorTransformer:Dynamic;
 
 	@:native("resolvedTintColorForTintColor")
 	overload public function resolvedTintColorForTintColor(tintColor:Dynamic):Dynamic;

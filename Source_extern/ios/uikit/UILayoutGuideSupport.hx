@@ -3,16 +3,13 @@ package ios.uikit;
 @:objc
 @:native("UILayoutGuideSupport")
 @:include("UIKit/UIKit.h")
-extern class UILayoutGuideSupport{
+extern class UILayoutGuideSupport extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UILayoutGuideSupport;
 
 	@:native("autorelease")
 	overload public static function autorelease():UILayoutGuideSupport;
-
-	@:native("layoutGuides")
-	public var layoutGuides:Dynamic;
 
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:Dynamic):Void;

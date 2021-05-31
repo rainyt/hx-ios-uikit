@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICellAccessoryInsert")
 @:include("UIKit/UIKit.h")
-extern class UICellAccessoryInsert{
+extern class UICellAccessoryInsert extends UICellAccessory{
 
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryInsert;
@@ -13,9 +13,6 @@ extern class UICellAccessoryInsert{
 
 	@:native("backgroundColor")
 	public var backgroundColor:Dynamic;
-
-	@:native("void")
-	public var void:Dynamic;
 
 
 }

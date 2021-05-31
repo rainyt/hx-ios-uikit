@@ -38,20 +38,11 @@ extern class UIBarAppearance{
 	@:native("configureWithTransparentBackground")
 	overload public function configureWithTransparentBackground():Void;
 
-	@:native("backgroundEffect")
-	public var backgroundEffect:Dynamic;
-
-	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
-
 	@:native("backgroundImage")
 	public var backgroundImage:Dynamic;
 
 	@:native("backgroundImageContentMode")
 	public var backgroundImageContentMode:Dynamic;
-
-	@:native("shadowColor")
-	public var shadowColor:Dynamic;
 
 	@:native("shadowImage")
 	public var shadowImage:Dynamic;

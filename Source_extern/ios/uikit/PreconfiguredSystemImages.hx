@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("PreconfiguredSystemImages")
 @:include("UIKit/UIKit.h")
-extern class PreconfiguredSystemImages{
+extern class PreconfiguredSystemImages extends UIImage{
 
 	@:native("alloc")
 	overload public static function alloc():PreconfiguredSystemImages;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAccessibilityCustomRotorItemResult")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityCustomRotorItemResult{
+extern class UIAccessibilityCustomRotorItemResult extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityCustomRotorItemResult;

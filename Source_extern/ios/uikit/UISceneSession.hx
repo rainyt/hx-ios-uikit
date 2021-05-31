@@ -24,17 +24,11 @@ extern class UISceneSession{
 	@:native("role")
 	public var role:Dynamic;
 
-	@:native("configuration")
-	public var configuration:UISceneConfiguration;
-
 	@:native("persistentIdentifier")
 	public var persistentIdentifier:NSString;
 
 	@:native("stateRestorationActivity")
 	public var stateRestorationActivity:Dynamic;
-
-	@:native("userInfo")
-	public var userInfo:Dynamic;
 
 
 }

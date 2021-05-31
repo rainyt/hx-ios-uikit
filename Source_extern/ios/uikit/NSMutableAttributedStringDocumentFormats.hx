@@ -5,7 +5,7 @@ import cpp.objc.NSData;
 @:objc
 @:native("NSMutableAttributedStringDocumentFormats")
 @:include("UIKit/UIKit.h")
-extern class NSMutableAttributedStringDocumentFormats{
+extern class NSMutableAttributedStringDocumentFormats extends NSMutableAttributedString{
 
 	@:native("alloc")
 	overload public static function alloc():NSMutableAttributedStringDocumentFormats;

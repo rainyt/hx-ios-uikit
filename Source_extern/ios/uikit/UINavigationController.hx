@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UINavigationController")
 @:include("UIKit/UIKit.h")
-extern class UINavigationController{
+extern class UINavigationController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UINavigationController;
@@ -41,9 +41,6 @@ extern class UINavigationController{
 
 	@:native("visibleViewController")
 	public var visibleViewController:Dynamic;
-
-	@:native("viewControllers")
-	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:animated")
 	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;

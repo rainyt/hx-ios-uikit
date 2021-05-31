@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("ImageConfiguration")
 @:include("UIKit/UIKit.h")
-extern class ImageConfiguration{
+extern class ImageConfiguration extends UITraitCollection{
 
 	@:native("alloc")
 	overload public static function alloc():ImageConfiguration;

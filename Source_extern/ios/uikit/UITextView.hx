@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc
 @:native("UITextView")
@@ -15,9 +14,6 @@ extern class UITextView{
 
 	@:native("delegate")
 	public var delegate:Dynamic;
-
-	@:native("text")
-	public var text:NSString;
 
 	@:native("font")
 	public var font:Dynamic;
@@ -42,12 +38,6 @@ extern class UITextView{
 
 	@:native("allowsEditingTextAttributes")
 	public var allowsEditingTextAttributes:Bool;
-
-	@:native("attributedText")
-	public var attributedText:Dynamic;
-
-	@:native("typingAttributes")
-	public var typingAttributes:Dynamic;
 
 	@:native("scrollRangeToVisible")
 	overload public function scrollRangeToVisible(range:Dynamic):Void;
@@ -78,9 +68,6 @@ extern class UITextView{
 
 	@:native("textStorage")
 	public var textStorage:Dynamic;
-
-	@:native("linkTextAttributes")
-	public var linkTextAttributes:Dynamic;
 
 	@:native("usesStandardTextScaling")
 	public var usesStandardTextScaling:Bool;

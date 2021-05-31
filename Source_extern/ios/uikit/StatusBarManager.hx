@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("StatusBarManager")
 @:include("UIKit/UIKit.h")
-extern class StatusBarManager{
+extern class StatusBarManager extends UIWindowScene{
 
 	@:native("alloc")
 	overload public static function alloc():StatusBarManager;

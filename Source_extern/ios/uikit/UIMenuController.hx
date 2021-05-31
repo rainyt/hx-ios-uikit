@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIMenuController")
 @:include("UIKit/UIKit.h")
-extern class UIMenuController{
+extern class UIMenuController extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIMenuController;
@@ -38,9 +38,6 @@ extern class UIMenuController{
 
 	@:native("arrowDirection")
 	public var arrowDirection:Dynamic;
-
-	@:native("menuItems")
-	public var menuItems:Dynamic;
 
 	@:native("update")
 	overload public function update():Void;

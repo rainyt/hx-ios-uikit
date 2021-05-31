@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import cpp.objc.NSString;
 @:objc
 @:native("UILayoutGuide")
 @:include("UIKit/UIKit.h")
@@ -18,9 +17,6 @@ extern class UILayoutGuide{
 
 	@:native("owningView")
 	public var owningView:Dynamic;
-
-	@:native("identifier")
-	public var identifier:NSString;
 
 	@:native("leadingAnchor")
 	public var leadingAnchor:Dynamic;

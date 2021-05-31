@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPointerLockSupport")
 @:include("UIKit/UIKit.h")
-extern class UIPointerLockSupport{
+extern class UIPointerLockSupport extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerLockSupport;

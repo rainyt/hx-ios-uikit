@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIPanGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UIPanGestureRecognizer{
+extern class UIPanGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UIPanGestureRecognizer;

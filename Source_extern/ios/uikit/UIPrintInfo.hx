@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSDictionary;
-import cpp.objc.NSString;
 @:objc
 @:native("UIPrintInfo")
 @:include("UIKit/UIKit.h")
@@ -21,12 +20,6 @@ extern class UIPrintInfo{
 
 	@:native("printInfoWithDictionary")
 	overload public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo;
-
-	@:native("printerID")
-	public var printerID:NSString;
-
-	@:native("jobName")
-	public var jobName:NSString;
 
 	@:native("outputType")
 	public var outputType:Dynamic;

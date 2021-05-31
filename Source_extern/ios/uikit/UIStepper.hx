@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIStepper")
 @:include("UIKit/UIKit.h")
-extern class UIStepper{
+extern class UIStepper extends UIControl{
 
 	@:native("alloc")
 	overload public static function alloc():UIStepper;

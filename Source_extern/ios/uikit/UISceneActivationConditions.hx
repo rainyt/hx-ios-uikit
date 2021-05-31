@@ -1,19 +1,15 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UISceneActivationConditions")
 @:include("UIKit/UIKit.h")
-extern class UISceneActivationConditions{
+extern class UISceneActivationConditions extends NSUserActivity{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneActivationConditions;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISceneActivationConditions;
-
-	@:native("targetContentIdentifier")
-	public var targetContentIdentifier:NSString;
 
 
 }

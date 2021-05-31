@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrintInteractionController")
 @:include("UIKit/UIKit.h")
-extern class UIPrintInteractionController{
+extern class UIPrintInteractionController extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrintInteractionController;
@@ -51,12 +51,6 @@ extern class UIPrintInteractionController{
 
 	@:native("printFormatter")
 	public var printFormatter:Dynamic;
-
-	@:native("printingItem")
-	public var printingItem:Dynamic;
-
-	@:native("printingItems")
-	public var printingItems:Dynamic;
 
 	@:native("presentAnimated:completionHandler")
 	overload public function presentAnimated_completionHandler(animated:Bool, completionHandler:Dynamic):Bool;

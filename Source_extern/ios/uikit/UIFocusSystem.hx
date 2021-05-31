@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFocusSystem")
 @:include("UIKit/UIKit.h")
-extern class UIFocusSystem{
+extern class UIFocusSystem extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIFocusSystem;

@@ -7,7 +7,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UISubclassingHooks")
 @:include("UIKit/UIKit.h")
-extern class UISubclassingHooks{
+extern class UISubclassingHooks extends UICollectionViewLayout{
 
 	@:native("alloc")
 	overload public static function alloc():UISubclassingHooks;

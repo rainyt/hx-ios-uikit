@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIAlternateApplicationIcons")
 @:include("UIKit/UIKit.h")
-extern class UIAlternateApplicationIcons{
+extern class UIAlternateApplicationIcons extends UIApplication{
 
 	@:native("alloc")
 	overload public static function alloc():UIAlternateApplicationIcons;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UINewsstand")
 @:include("UIKit/UIKit.h")
-extern class UINewsstand{
+extern class UINewsstand extends UIApplication{
 
 	@:native("alloc")
 	overload public static function alloc():UINewsstand;

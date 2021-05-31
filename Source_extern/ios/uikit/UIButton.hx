@@ -67,12 +67,6 @@ extern class UIButton{
 	@:native("pointerInteractionEnabled")
 	public var pointerInteractionEnabled:Bool;
 
-	@:native("pointerStyleProvider")
-	public var pointerStyleProvider:Dynamic;
-
-	@:native("menu")
-	public var menu:Dynamic;
-
 	@:native("setTitle:forState")
 	overload public function setTitle_forState(title:NSString, forState:Dynamic):Void;
 

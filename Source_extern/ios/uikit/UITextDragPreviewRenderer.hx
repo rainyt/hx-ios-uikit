@@ -5,7 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UITextDragPreviewRenderer")
 @:include("UIKit/UIKit.h")
-extern class UITextDragPreviewRenderer{
+extern class UITextDragPreviewRenderer extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDragPreviewRenderer;

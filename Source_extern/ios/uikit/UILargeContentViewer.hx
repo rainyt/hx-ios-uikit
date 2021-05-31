@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UILargeContentViewer")
 @:include("UIKit/UIKit.h")
-extern class UILargeContentViewer{
+extern class UILargeContentViewer extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UILargeContentViewer;
@@ -14,9 +13,6 @@ extern class UILargeContentViewer{
 
 	@:native("showsLargeContentViewer")
 	public var showsLargeContentViewer:Bool;
-
-	@:native("largeContentTitle")
-	public var largeContentTitle:NSString;
 
 	@:native("largeContentImage")
 	public var largeContentImage:Dynamic;

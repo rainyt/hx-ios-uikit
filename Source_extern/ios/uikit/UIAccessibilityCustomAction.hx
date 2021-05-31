@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIAccessibilityCustomAction")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityCustomAction{
+extern class UIAccessibilityCustomAction extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityCustomAction;
@@ -36,23 +36,14 @@ extern class UIAccessibilityCustomAction{
 	@:native("initWithAttributedName:image:actionHandler")
 	overload public function initWithAttributedName_image_actionHandler(attributedName:Dynamic, image:Dynamic, actionHandler:Dynamic):UIAccessibilityCustomAction;
 
-	@:native("name")
-	public var name:NSString;
-
 	@:native("image")
 	public var image:Dynamic;
-
-	@:native("attributedName")
-	public var attributedName:Dynamic;
 
 	@:native("target")
 	public var target:Dynamic;
 
 	@:native("selector")
 	public var selector:String;
-
-	@:native("actionHandler")
-	public var actionHandler:Dynamic;
 
 
 }

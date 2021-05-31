@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIImagePickerController")
@@ -34,9 +33,6 @@ extern class UIImagePickerController{
 	@:native("sourceType")
 	public var sourceType:Dynamic;
 
-	@:native("mediaTypes")
-	public var mediaTypes:Dynamic;
-
 	@:native("allowsEditing")
 	public var allowsEditing:Bool;
 
@@ -51,9 +47,6 @@ extern class UIImagePickerController{
 
 	@:native("videoQuality")
 	public var videoQuality:Dynamic;
-
-	@:native("videoExportPreset")
-	public var videoExportPreset:NSString;
 
 	@:native("showsCameraControls")
 	public var showsCameraControls:Bool;

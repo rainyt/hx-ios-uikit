@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextPlaceholder")
 @:include("UIKit/UIKit.h")
-extern class UITextPlaceholder{
+extern class UITextPlaceholder extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITextPlaceholder;

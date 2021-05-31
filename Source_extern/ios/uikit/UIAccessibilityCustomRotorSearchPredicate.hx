@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAccessibilityCustomRotorSearchPredicate")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityCustomRotorSearchPredicate{
+extern class UIAccessibilityCustomRotorSearchPredicate extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityCustomRotorSearchPredicate;

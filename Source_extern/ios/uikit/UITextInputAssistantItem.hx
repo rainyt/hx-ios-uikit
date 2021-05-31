@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextInputAssistantItem")
 @:include("UIKit/UIKit.h")
-extern class UITextInputAssistantItem{
+extern class UITextInputAssistantItem extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputAssistantItem;
@@ -13,12 +13,6 @@ extern class UITextInputAssistantItem{
 
 	@:native("allowsHidingShortcuts")
 	public var allowsHidingShortcuts:Bool;
-
-	@:native("leadingBarButtonGroups")
-	public var leadingBarButtonGroups:Dynamic;
-
-	@:native("trailingBarButtonGroups")
-	public var trailingBarButtonGroups:Dynamic;
 
 
 }

@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIWindow")
 @:include("UIKit/UIKit.h")
-extern class UIWindow{
+extern class UIWindow extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIWindow;

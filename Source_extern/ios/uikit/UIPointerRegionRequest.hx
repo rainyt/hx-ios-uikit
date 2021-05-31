@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIPointerRegionRequest")
 @:include("UIKit/UIKit.h")
-extern class UIPointerRegionRequest{
+extern class UIPointerRegionRequest extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerRegionRequest;

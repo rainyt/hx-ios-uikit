@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIInterpolatingMotionEffect")
 @:include("UIKit/UIKit.h")
-extern class UIInterpolatingMotionEffect{
+extern class UIInterpolatingMotionEffect extends UIMotionEffect{
 
 	@:native("alloc")
 	overload public static function alloc():UIInterpolatingMotionEffect;

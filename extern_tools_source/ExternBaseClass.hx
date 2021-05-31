@@ -11,6 +11,11 @@ class ExternBaseClass {
 	public var className:String;
 
 	/**
+	 * 继承类名
+	 */
+	public var extendClassName:String;
+
+	/**
 	 * 已导入的Import
 	 */
 	private var _imported:Array<String> = [];
@@ -31,6 +36,9 @@ class ExternBaseClass {
 		pclassName = pclassName.substr(pclassName.indexOf("@interface") + 10);
 		if (pclassName.indexOf("(") != -1) {
 			// 继承关系
+			extendClassName = pclassName;
+			extendClassName = extendClassName.substr(0, extendClassName.indexOf("("));
+			extendClassName = StringTools.replace(extendClassName, " ", "");
 			pclassName = pclassName.substr(pclassName.lastIndexOf("(") + 1);
 			pclassName = pclassName.substr(0, pclassName.lastIndexOf(")"));
 		} else {
@@ -41,7 +49,15 @@ class ExternBaseClass {
 				}
 			}
 			pclassName = pclassName.substr(0, pclassName.indexOf(" "));
+			if (harray[0].indexOf(":") != -1) {
+				extendClassName = harray[0];
+				extendClassName = extendClassName.substr(extendClassName.lastIndexOf(":") + 1);
+				extendClassName = StringTools.replace(extendClassName, " ", "");
+			}
 		}
+
+		if (extendClassName != null && extendClassName.indexOf("<") != -1)
+			extendClassName = null;
 		// trace("pclassname2", pclassName);
 		// if(pclassName == "UIViewController"){
 		// 	trace("---------------------------\n",_hdata);
@@ -70,7 +86,9 @@ class ExternBaseClass {
 		for (index => value in harray) {
 			if (value.indexOf("@property") == 0) {
 				// 属性解析
-				funcAndAttr.push(ObjcProperty.parsing(hextern.typedefs, this.className, value));
+				var property = ObjcProperty.parsing(hextern.typedefs, this.className, value);
+				if (property != null)
+					funcAndAttr.push(property);
 			} else if (value.indexOf("-") == 0 || value.indexOf("+") == 0) {
 				// 对象方法
 				funcAndAttr.push(ObjcFun.parsing(hextern.typedefs, this.className, value));
@@ -108,7 +126,7 @@ class ExternBaseClass {
 		haxe += "@:objc\n";
 		haxe += "@:native(\"" + className + "\")\n";
 		haxe += "@:include(\"UIKit/UIKit.h\")\n";
-		haxe += "extern class " + className + "{\n\n";
+		haxe += "extern class " + className + (extendClassName != null ? " extends " + extendClassName : "") + "{\n\n";
 		for (index => value in funcAndAttr) {
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:

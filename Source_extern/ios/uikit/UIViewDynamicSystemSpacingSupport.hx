@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewDynamicSystemSpacingSupport")
 @:include("UIKit/UIKit.h")
-extern class UIViewDynamicSystemSpacingSupport{
+extern class UIViewDynamicSystemSpacingSupport extends NSLayoutYAxisAnchor{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewDynamicSystemSpacingSupport;

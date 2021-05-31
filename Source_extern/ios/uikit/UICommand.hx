@@ -1,25 +1,15 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UICommand")
 @:include("UIKit/UIKit.h")
-extern class UICommand{
+extern class UICommand extends UIMenuElement{
 
 	@:native("alloc")
 	overload public static function alloc():UICommand;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICommand;
-
-	@:native("title")
-	public var title:NSString;
-
-	@:native("image")
-	public var image:Dynamic;
-
-	@:native("discoverabilityTitle")
-	public var discoverabilityTitle:NSString;
 
 	@:native("action")
 	public var action:String;

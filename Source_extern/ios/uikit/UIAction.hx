@@ -4,22 +4,13 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIAction")
 @:include("UIKit/UIKit.h")
-extern class UIAction{
+extern class UIAction extends UIMenuElement{
 
 	@:native("alloc")
 	overload public static function alloc():UIAction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIAction;
-
-	@:native("title")
-	public var title:NSString;
-
-	@:native("image")
-	public var image:Dynamic;
-
-	@:native("discoverabilityTitle")
-	public var discoverabilityTitle:NSString;
 
 	@:native("identifier")
 	public var identifier:NSString;

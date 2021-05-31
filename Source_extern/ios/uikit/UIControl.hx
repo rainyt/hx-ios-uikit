@@ -5,7 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIControl")
 @:include("UIKit/UIKit.h")
-extern class UIControl{
+extern class UIControl extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIControl;

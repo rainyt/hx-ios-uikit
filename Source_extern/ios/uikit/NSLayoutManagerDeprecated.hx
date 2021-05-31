@@ -4,7 +4,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("NSLayoutManagerDeprecated")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutManagerDeprecated{
+extern class NSLayoutManagerDeprecated extends NSLayoutManager{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutManagerDeprecated;

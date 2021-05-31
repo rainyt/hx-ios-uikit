@@ -17,12 +17,6 @@ extern class NSTextAttachment{
 	@:native("initWithData:ofType:NS_DESIGNATED_INITIALIZER")
 	overload public function initWithData_ofType_NS_DESIGNATED_INITIALIZER(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
 
-	@:native("contents")
-	public var contents:NSData;
-
-	@:native("fileType")
-	public var fileType:NSString;
-
 	@:native("image")
 	public var image:Dynamic;
 

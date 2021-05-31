@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIAccessibilityCustomRotor")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityCustomRotor{
+extern class UIAccessibilityCustomRotor extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityCustomRotor;
@@ -20,15 +20,6 @@ extern class UIAccessibilityCustomRotor{
 
 	@:native("initWithSystemType:itemSearchBlock")
 	overload public function initWithSystemType_itemSearchBlock(type:Dynamic, itemSearchBlock:Dynamic):UIAccessibilityCustomRotor;
-
-	@:native("name")
-	public var name:NSString;
-
-	@:native("attributedName")
-	public var attributedName:Dynamic;
-
-	@:native("itemSearchBlock")
-	public var itemSearchBlock:Dynamic;
 
 	@:native("systemRotorType")
 	public var systemRotorType:Dynamic;

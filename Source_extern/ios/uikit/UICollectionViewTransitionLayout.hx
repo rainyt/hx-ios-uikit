@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewTransitionLayout")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewTransitionLayout{
+extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewTransitionLayout;

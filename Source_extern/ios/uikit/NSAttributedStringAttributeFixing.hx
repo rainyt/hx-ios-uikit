@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSAttributedStringAttributeFixing")
 @:include("UIKit/UIKit.h")
-extern class NSAttributedStringAttributeFixing{
+extern class NSAttributedStringAttributeFixing extends NSMutableAttributedString{
 
 	@:native("alloc")
 	overload public static function alloc():NSAttributedStringAttributeFixing;

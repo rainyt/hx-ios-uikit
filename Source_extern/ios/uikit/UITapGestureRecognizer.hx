@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITapGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UITapGestureRecognizer{
+extern class UITapGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UITapGestureRecognizer;

@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIButtonDeprecated")
 @:include("UIKit/UIKit.h")
-extern class UIButtonDeprecated{
+extern class UIButtonDeprecated extends UIButton{
 
 	@:native("alloc")
 	overload public static function alloc():UIButtonDeprecated;

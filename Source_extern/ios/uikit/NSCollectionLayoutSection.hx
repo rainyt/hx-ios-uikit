@@ -32,17 +32,8 @@ extern class NSCollectionLayoutSection{
 	@:native("orthogonalScrollingBehavior")
 	public var orthogonalScrollingBehavior:Dynamic;
 
-	@:native("boundarySupplementaryItems")
-	public var boundarySupplementaryItems:Dynamic;
-
 	@:native("supplementariesFollowContentInsets")
 	public var supplementariesFollowContentInsets:Bool;
-
-	@:native("visibleItemsInvalidationHandler")
-	public var visibleItemsInvalidationHandler:Dynamic;
-
-	@:native("decorationItems")
-	public var decorationItems:Dynamic;
 
 
 }

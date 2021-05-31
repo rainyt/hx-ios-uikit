@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIActivity")
 @:include("UIKit/UIKit.h")
-extern class UIActivity{
+extern class UIActivity extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIActivity;

@@ -11,9 +11,6 @@ extern class NSTextStorage{
 	@:native("autorelease")
 	overload public static function autorelease():NSTextStorage;
 
-	@:native("layoutManagers")
-	public var layoutManagers:Dynamic;
-
 	@:native("addLayoutManager")
 	overload public function addLayoutManager(aLayoutManager:Dynamic):Void;
 

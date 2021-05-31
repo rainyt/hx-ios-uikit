@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIReorderingSupportHooks")
 @:include("UIKit/UIKit.h")
-extern class UIReorderingSupportHooks{
+extern class UIReorderingSupportHooks extends UICollectionViewLayout{
 
 	@:native("alloc")
 	overload public static function alloc():UIReorderingSupportHooks;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIMarkupTextPrintFormatter")
 @:include("UIKit/UIKit.h")
-extern class UIMarkupTextPrintFormatter{
+extern class UIMarkupTextPrintFormatter extends UIPrintFormatter{{
 
 	@:native("alloc")
 	overload public static function alloc():UIMarkupTextPrintFormatter;
@@ -14,9 +14,6 @@ extern class UIMarkupTextPrintFormatter{
 
 	@:native("initWithMarkupText")
 	overload public function initWithMarkupText(markupText:NSString):UIMarkupTextPrintFormatter;
-
-	@:native("markupText")
-	public var markupText:NSString;
 
 
 }

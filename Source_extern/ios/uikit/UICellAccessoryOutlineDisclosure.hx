@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICellAccessoryOutlineDisclosure")
 @:include("UIKit/UIKit.h")
-extern class UICellAccessoryOutlineDisclosure{
+extern class UICellAccessoryOutlineDisclosure extends UICellAccessory{
 
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryOutlineDisclosure;
@@ -13,9 +13,6 @@ extern class UICellAccessoryOutlineDisclosure{
 
 	@:native("style")
 	public var style:Dynamic;
-
-	@:native("void")
-	public var void:Dynamic;
 
 
 }

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICellConfigurationState")
 @:include("UIKit/UIKit.h")
-extern class UICellConfigurationState{
+extern class UICellConfigurationState extends UIViewConfigurationState{
 
 	@:native("alloc")
 	overload public static function alloc():UICellConfigurationState;

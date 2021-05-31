@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSItemProvider")
 @:include("UIKit/UIKit.h")
-extern class NSItemProvider{
+extern class NSItemProvider extends UIImage{
 
 	@:native("alloc")
 	overload public static function alloc():NSItemProvider;

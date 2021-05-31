@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIKitAdditions")
 @:include("UIKit/UIKit.h")
-extern class UIKitAdditions{
+extern class UIKitAdditions extends CIImage{
 
 	@:native("alloc")
 	overload public static function alloc():UIKitAdditions;

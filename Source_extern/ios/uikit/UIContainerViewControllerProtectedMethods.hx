@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIContainerViewControllerProtectedMethods")
 @:include("UIKit/UIKit.h")
-extern class UIContainerViewControllerProtectedMethods{
+extern class UIContainerViewControllerProtectedMethods extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIContainerViewControllerProtectedMethods;

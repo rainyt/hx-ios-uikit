@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIImageSymbolConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIImageSymbolConfiguration{
+extern class UIImageSymbolConfiguration extends UIImageConfiguration{
 
 	@:native("alloc")
 	overload public static function alloc():UIImageSymbolConfiguration;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewCellRegistration")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewCellRegistration{
+extern class UICollectionViewCellRegistration extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewCellRegistration;

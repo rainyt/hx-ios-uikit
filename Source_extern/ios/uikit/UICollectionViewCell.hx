@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewCell")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewCell{
+extern class UICollectionViewCell extends UICollectionReusableView{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewCell;
@@ -20,9 +20,6 @@ extern class UICollectionViewCell{
 	@:native("updateConfigurationUsingState")
 	overload public function updateConfigurationUsingState(state:Dynamic):Void;
 
-	@:native("contentConfiguration")
-	public var contentConfiguration:Dynamic;
-
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
@@ -37,9 +34,6 @@ extern class UICollectionViewCell{
 
 	@:native("dragStateDidChange")
 	overload public function dragStateDidChange(dragState:Dynamic):Void;
-
-	@:native("backgroundConfiguration")
-	public var backgroundConfiguration:Dynamic;
 
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;

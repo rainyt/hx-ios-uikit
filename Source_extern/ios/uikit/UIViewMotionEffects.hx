@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewMotionEffects")
 @:include("UIKit/UIKit.h")
-extern class UIViewMotionEffects{
+extern class UIViewMotionEffects extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewMotionEffects;
@@ -16,9 +16,6 @@ extern class UIViewMotionEffects{
 
 	@:native("removeMotionEffect")
 	overload public function removeMotionEffect(effect:Dynamic):Void;
-
-	@:native("motionEffects")
-	public var motionEffects:Dynamic;
 
 
 }

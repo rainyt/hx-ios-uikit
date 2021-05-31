@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("ActivityContinuation")
 @:include("UIKit/UIKit.h")
-extern class ActivityContinuation{
+extern class ActivityContinuation extends UIDocument{
 
 	@:native("alloc")
 	overload public static function alloc():ActivityContinuation;

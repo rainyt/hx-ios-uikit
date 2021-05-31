@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UISearchDisplayController")
 @:include("UIKit/UIKit.h")
-extern class UISearchDisplayController{
+extern class UISearchDisplayController extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchDisplayController;
@@ -38,9 +37,6 @@ extern class UISearchDisplayController{
 
 	@:native("searchResultsDelegate")
 	public var searchResultsDelegate:Dynamic;
-
-	@:native("searchResultsTitle")
-	public var searchResultsTitle:NSString;
 
 	@:native("displaysSearchBarInNavigationBar")
 	public var displaysSearchBarInNavigationBar:Bool;

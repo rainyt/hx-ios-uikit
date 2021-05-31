@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIConstraintBasedLayoutInstallingConstraints")
 @:include("UIKit/UIKit.h")
-extern class UIConstraintBasedLayoutInstallingConstraints{
+extern class UIConstraintBasedLayoutInstallingConstraints extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIConstraintBasedLayoutInstallingConstraints;

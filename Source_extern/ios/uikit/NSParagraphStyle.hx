@@ -12,9 +12,6 @@ extern class NSParagraphStyle{
 	@:native("autorelease")
 	overload public static function autorelease():NSParagraphStyle;
 
-	@:native("defaultParagraphStyle")
-	overload public static function defaultParagraphStyle():NSParagraphStyle;
-
 	@:native("defaultWritingDirectionForLanguage")
 	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):Dynamic;
 
@@ -56,9 +53,6 @@ extern class NSParagraphStyle{
 
 	@:native("hyphenationFactor")
 	public var hyphenationFactor:Dynamic;
-
-	@:native("tabStops")
-	public var tabStops:Dynamic;
 
 	@:native("defaultTabInterval")
 	public var defaultTabInterval:Float;

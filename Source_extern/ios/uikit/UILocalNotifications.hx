@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UILocalNotifications")
 @:include("UIKit/UIKit.h")
-extern class UILocalNotifications{
+extern class UILocalNotifications extends UIApplication{
 
 	@:native("alloc")
 	overload public static function alloc():UILocalNotifications;
@@ -22,9 +22,6 @@ extern class UILocalNotifications{
 
 	@:native("cancelAllLocalNotifications")
 	overload public function cancelAllLocalNotifications():Void;
-
-	@:native("scheduledLocalNotifications")
-	public var scheduledLocalNotifications:Dynamic;
 
 
 }

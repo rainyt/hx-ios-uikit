@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UICollisionBehavior")
 @:include("UIKit/UIKit.h")
-extern class UICollisionBehavior{
+extern class UICollisionBehavior extends UIDynamicBehavior{
 
 	@:native("alloc")
 	overload public static function alloc():UICollisionBehavior;
@@ -20,9 +20,6 @@ extern class UICollisionBehavior{
 
 	@:native("removeItem")
 	overload public function removeItem(item:Dynamic):Void;
-
-	@:native("items")
-	public var items:Dynamic;
 
 	@:native("collisionMode")
 	public var collisionMode:Dynamic;
@@ -44,9 +41,6 @@ extern class UICollisionBehavior{
 
 	@:native("removeBoundaryWithIdentifier")
 	overload public function removeBoundaryWithIdentifier(identifier:Dynamic):Void;
-
-	@:native("boundaryIdentifiers")
-	public var boundaryIdentifiers:Dynamic;
 
 	@:native("removeAllBoundaries")
 	overload public function removeAllBoundaries():Void;

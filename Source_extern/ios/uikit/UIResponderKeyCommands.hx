@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIResponderKeyCommands")
 @:include("UIKit/UIKit.h")
-extern class UIResponderKeyCommands{
+extern class UIResponderKeyCommands extends UIResponder{
 
 	@:native("alloc")
 	overload public static function alloc():UIResponderKeyCommands;

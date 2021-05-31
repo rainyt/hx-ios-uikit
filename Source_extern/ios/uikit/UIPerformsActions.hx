@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPerformsActions")
 @:include("UIKit/UIKit.h")
-extern class UIPerformsActions{
+extern class UIPerformsActions extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIPerformsActions;

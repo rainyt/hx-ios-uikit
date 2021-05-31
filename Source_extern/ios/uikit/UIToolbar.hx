@@ -14,9 +14,6 @@ extern class UIToolbar{
 	@:native("barStyle")
 	public var barStyle:Dynamic;
 
-	@:native("items")
-	public var items:Dynamic;
-
 	@:native("translucent")
 	public var translucent:Bool;
 
@@ -40,12 +37,6 @@ extern class UIToolbar{
 
 	@:native("shadowImageForToolbarPosition")
 	overload public function shadowImageForToolbarPosition(topOrBottom:Dynamic):Dynamic;
-
-	@:native("standardAppearance")
-	public var standardAppearance:Dynamic;
-
-	@:native("compactAppearance")
-	public var compactAppearance:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewKeyframeAnimations")
 @:include("UIKit/UIKit.h")
-extern class UIViewKeyframeAnimations{
+extern class UIViewKeyframeAnimations extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewKeyframeAnimations;

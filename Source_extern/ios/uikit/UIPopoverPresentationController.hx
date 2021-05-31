@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPopoverPresentationController")
 @:include("UIKit/UIKit.h")
-extern class UIPopoverPresentationController{
+extern class UIPopoverPresentationController extends UIPresentationController{
 
 	@:native("alloc")
 	overload public static function alloc():UIPopoverPresentationController;
@@ -32,12 +32,6 @@ extern class UIPopoverPresentationController{
 
 	@:native("arrowDirection")
 	public var arrowDirection:Dynamic;
-
-	@:native("passthroughViews")
-	public var passthroughViews:Dynamic;
-
-	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
 
 	@:native("popoverLayoutMargins")
 	public var popoverLayoutMargins:Dynamic;

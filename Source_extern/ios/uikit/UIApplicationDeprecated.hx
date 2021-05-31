@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIApplicationDeprecated")
 @:include("UIKit/UIKit.h")
-extern class UIApplicationDeprecated{
+extern class UIApplicationDeprecated extends UIApplication{
 
 	@:native("alloc")
 	overload public static function alloc():UIApplicationDeprecated;

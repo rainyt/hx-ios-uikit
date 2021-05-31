@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICloudSharingController")
 @:include("UIKit/UIKit.h")
-extern class UICloudSharingController{
+extern class UICloudSharingController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UICloudSharingController;

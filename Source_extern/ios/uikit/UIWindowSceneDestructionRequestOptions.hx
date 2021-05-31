@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIWindowSceneDestructionRequestOptions")
 @:include("UIKit/UIKit.h")
-extern class UIWindowSceneDestructionRequestOptions{
+extern class UIWindowSceneDestructionRequestOptions extends UISceneDestructionRequestOptions{
 
 	@:native("alloc")
 	overload public static function alloc():UIWindowSceneDestructionRequestOptions;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UINavigationControllerContextualToolbarItems")
 @:include("UIKit/UIKit.h")
-extern class UINavigationControllerContextualToolbarItems{
+extern class UINavigationControllerContextualToolbarItems extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UINavigationControllerContextualToolbarItems;

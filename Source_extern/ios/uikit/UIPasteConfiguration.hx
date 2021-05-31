@@ -11,9 +11,6 @@ extern class UIPasteConfiguration{
 	@:native("autorelease")
 	overload public static function autorelease():UIPasteConfiguration;
 
-	@:native("acceptableTypeIdentifiers")
-	public var acceptableTypeIdentifiers:Dynamic;
-
 	@:native("init")
 	overload public function init():UIPasteConfiguration;
 

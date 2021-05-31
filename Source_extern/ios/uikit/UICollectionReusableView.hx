@@ -1,19 +1,15 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UICollectionReusableView")
 @:include("UIKit/UIKit.h")
-extern class UICollectionReusableView{
+extern class UICollectionReusableView extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionReusableView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionReusableView;
-
-	@:native("reuseIdentifier")
-	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;

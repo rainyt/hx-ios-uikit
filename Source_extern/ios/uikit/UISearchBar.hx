@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import cpp.objc.NSString;
 @:objc
 @:native("UISearchBar")
 @:include("UIKit/UIKit.h")
@@ -27,15 +26,6 @@ extern class UISearchBar{
 
 	@:native("delegate")
 	public var delegate:Dynamic;
-
-	@:native("text")
-	public var text:NSString;
-
-	@:native("prompt")
-	public var prompt:NSString;
-
-	@:native("placeholder")
-	public var placeholder:NSString;
 
 	@:native("showsBookmarkButton")
 	public var showsBookmarkButton:Bool;
@@ -69,9 +59,6 @@ extern class UISearchBar{
 
 	@:native("translucent")
 	public var translucent:Bool;
-
-	@:native("scopeButtonTitles")
-	public var scopeButtonTitles:Dynamic;
 
 	@:native("selectedScopeButtonIndex")
 	public var selectedScopeButtonIndex:Int;

@@ -5,7 +5,7 @@ import cpp.objc.NSError;
 @:objc
 @:native("NSDeprecatedKitAdditions")
 @:include("UIKit/UIKit.h")
-extern class NSDeprecatedKitAdditions{
+extern class NSDeprecatedKitAdditions extends NSMutableAttributedString{
 
 	@:native("alloc")
 	overload public static function alloc():NSDeprecatedKitAdditions;

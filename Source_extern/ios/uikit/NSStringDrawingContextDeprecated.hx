@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSStringDrawingContextDeprecated")
 @:include("UIKit/UIKit.h")
-extern class NSStringDrawingContextDeprecated{
+extern class NSStringDrawingContextDeprecated extends NSStringDrawingContext{
 
 	@:native("alloc")
 	overload public static function alloc():NSStringDrawingContextDeprecated;

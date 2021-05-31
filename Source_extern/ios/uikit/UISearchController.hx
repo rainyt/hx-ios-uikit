@@ -57,9 +57,6 @@ extern class UISearchController{
 	@:native("automaticallyShowsScopeBar")
 	public var automaticallyShowsScopeBar:Bool;
 
-	@:native("searchSuggestions")
-	public var searchSuggestions:Dynamic;
-
 	@:native("searchControllerObservedScrollView")
 	public var searchControllerObservedScrollView:Dynamic;
 

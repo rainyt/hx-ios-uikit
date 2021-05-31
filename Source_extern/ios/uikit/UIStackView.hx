@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIStackView")
 @:include("UIKit/UIKit.h")
-extern class UIStackView{
+extern class UIStackView extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIStackView;
@@ -20,9 +20,6 @@ extern class UIStackView{
 
 	@:native("initWithArrangedSubviews")
 	overload public function initWithArrangedSubviews(views:Dynamic):UIStackView;
-
-	@:native("arrangedSubviews")
-	public var arrangedSubviews:Dynamic;
 
 	@:native("addArrangedSubview")
 	overload public function addArrangedSubview(view:Dynamic):Void;

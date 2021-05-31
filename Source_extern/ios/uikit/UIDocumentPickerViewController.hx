@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDocumentPickerViewController")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentPickerViewController{
+extern class UIDocumentPickerViewController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentPickerViewController;
@@ -46,9 +46,6 @@ extern class UIDocumentPickerViewController{
 
 	@:native("shouldShowFileExtensions")
 	public var shouldShowFileExtensions:Bool;
-
-	@:native("directoryURL")
-	public var directoryURL:Dynamic;
 
 
 }

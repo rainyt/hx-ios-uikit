@@ -37,9 +37,6 @@ extern class UIPopoverController{
 	@:native("popoverArrowDirection")
 	public var popoverArrowDirection:Dynamic;
 
-	@:native("passthroughViews")
-	public var passthroughViews:Dynamic;
-
 	@:native("presentPopoverFromRect:inView:permittedArrowDirections:animated")
 	overload public function presentPopoverFromRect_inView_permittedArrowDirections_animated(rect:CGRect, inView:Dynamic, permittedArrowDirections:Dynamic, animated:Bool):Void;
 
@@ -48,9 +45,6 @@ extern class UIPopoverController{
 
 	@:native("dismissPopoverAnimated")
 	overload public function dismissPopoverAnimated(animated:Bool):Void;
-
-	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
 
 	@:native("popoverLayoutMargins")
 	public var popoverLayoutMargins:Dynamic;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentBrowserAction")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentBrowserAction{
+extern class UIDocumentBrowserAction extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserAction;
@@ -29,9 +29,6 @@ extern class UIDocumentBrowserAction{
 
 	@:native("image")
 	public var image:Dynamic;
-
-	@:native("supportedContentTypes")
-	public var supportedContentTypes:Dynamic;
 
 	@:native("supportsMultipleItems")
 	public var supportsMultipleItems:Bool;

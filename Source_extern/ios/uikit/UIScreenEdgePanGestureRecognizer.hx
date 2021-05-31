@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIScreenEdgePanGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UIScreenEdgePanGestureRecognizer{
+extern class UIScreenEdgePanGestureRecognizer extends UIPanGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UIScreenEdgePanGestureRecognizer;

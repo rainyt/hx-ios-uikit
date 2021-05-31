@@ -26,8 +26,5 @@ extern class UIDragPreview{
 	@:native("view")
 	public var view:Dynamic;
 
-	@:native("parameters")
-	public var parameters:Dynamic;
-
 
 }

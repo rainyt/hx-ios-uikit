@@ -4,7 +4,7 @@ import cpp.objc.NSError;
 @:objc
 @:native("UIGraphicsRendererProtected")
 @:include("UIKit/UIKit.h")
-extern class UIGraphicsRendererProtected{
+extern class UIGraphicsRendererProtected extends UIGraphicsRenderer{
 
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsRendererProtected;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIFontPickerViewController")
 @:include("UIKit/UIKit.h")
-extern class UIFontPickerViewController{
+extern class UIFontPickerViewController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIFontPickerViewController;
@@ -14,9 +14,6 @@ extern class UIFontPickerViewController{
 
 	@:native("initWithConfiguration")
 	overload public function initWithConfiguration(configuration:Dynamic):UIFontPickerViewController;
-
-	@:native("configuration")
-	public var configuration:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

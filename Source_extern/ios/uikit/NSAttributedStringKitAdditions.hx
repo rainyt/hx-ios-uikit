@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSAttributedStringKitAdditions")
 @:include("UIKit/UIKit.h")
-extern class NSAttributedStringKitAdditions{
+extern class NSAttributedStringKitAdditions extends NSAttributedString{
 
 	@:native("alloc")
 	overload public static function alloc():NSAttributedStringKitAdditions;

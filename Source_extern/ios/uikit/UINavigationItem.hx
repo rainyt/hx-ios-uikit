@@ -18,20 +18,11 @@ extern class UINavigationItem{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UINavigationItem;
 
-	@:native("title")
-	public var title:NSString;
-
 	@:native("titleView")
 	public var titleView:Dynamic;
 
-	@:native("prompt")
-	public var prompt:NSString;
-
 	@:native("backBarButtonItem")
 	public var backBarButtonItem:Dynamic;
-
-	@:native("backButtonTitle")
-	public var backButtonTitle:NSString;
 
 	@:native("hidesBackButton")
 	public var hidesBackButton:Bool;
@@ -41,12 +32,6 @@ extern class UINavigationItem{
 
 	@:native("backButtonDisplayMode")
 	public var backButtonDisplayMode:Dynamic;
-
-	@:native("leftBarButtonItems")
-	public var leftBarButtonItems:Dynamic;
-
-	@:native("rightBarButtonItems")
-	public var rightBarButtonItems:Dynamic;
 
 	@:native("setLeftBarButtonItems:animated")
 	overload public function setLeftBarButtonItems_animated(items:Dynamic, animated:Bool):Void;
@@ -77,15 +62,6 @@ extern class UINavigationItem{
 
 	@:native("hidesSearchBarWhenScrolling")
 	public var hidesSearchBarWhenScrolling:Bool;
-
-	@:native("standardAppearance")
-	public var standardAppearance:Dynamic;
-
-	@:native("compactAppearance")
-	public var compactAppearance:Dynamic;
-
-	@:native("scrollEdgeAppearance")
-	public var scrollEdgeAppearance:Dynamic;
 
 
 }

@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIViewRendering")
 @:include("UIKit/UIKit.h")
-extern class UIViewRendering{
+extern class UIViewRendering extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewRendering;
@@ -23,9 +23,6 @@ extern class UIViewRendering{
 
 	@:native("clipsToBounds")
 	public var clipsToBounds:Bool;
-
-	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
 
 	@:native("alpha")
 	public var alpha:Float;

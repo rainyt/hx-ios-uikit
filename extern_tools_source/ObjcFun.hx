@@ -31,9 +31,7 @@ class ObjcFun {
 			}
 		}
 		var c = returnClass.indexOf("instancetype") != -1 ? className : returnClass;
-		trace("c-1", c);
 		c = ObjcType.toType(c, typedefs);
-		trace("c-2", c);
 		return {
 			name: parsingFuncName(funcName, args),
 			type: ExternBaseClassType.FUNC,

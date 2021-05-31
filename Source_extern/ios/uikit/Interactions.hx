@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("Interactions")
 @:include("UIKit/UIKit.h")
-extern class Interactions{
+extern class Interactions extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():Interactions;
@@ -16,9 +16,6 @@ extern class Interactions{
 
 	@:native("removeInteraction")
 	overload public function removeInteraction(interaction:Dynamic):Void;
-
-	@:native("interactions")
-	public var interactions:Dynamic;
 
 
 }

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIConstraintBasedLayoutDebugging")
 @:include("UIKit/UIKit.h")
-extern class UIConstraintBasedLayoutDebugging{
+extern class UIConstraintBasedLayoutDebugging extends UILayoutGuide{
 
 	@:native("alloc")
 	overload public static function alloc():UIConstraintBasedLayoutDebugging;

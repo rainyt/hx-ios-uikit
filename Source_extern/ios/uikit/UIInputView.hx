@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIInputView")
 @:include("UIKit/UIKit.h")
-extern class UIInputView{
+extern class UIInputView extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIInputView;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIGraphicsImageRendererContext")
 @:include("UIKit/UIKit.h")
-extern class UIGraphicsImageRendererContext{
+extern class UIGraphicsImageRendererContext extends UIGraphicsRendererContext{
 
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsImageRendererContext;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSAttributedString_ItemProvider")
 @:include("UIKit/UIKit.h")
-extern class NSAttributedString_ItemProvider{
+extern class NSAttributedString_ItemProvider extends NSAttributedString{
 
 	@:native("alloc")
 	overload public static function alloc():NSAttributedString_ItemProvider;

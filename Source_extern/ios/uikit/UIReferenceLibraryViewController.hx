@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIReferenceLibraryViewController")
 @:include("UIKit/UIKit.h")
-extern class UIReferenceLibraryViewController{
+extern class UIReferenceLibraryViewController extends UIViewController{}{
 
 	@:native("alloc")
 	overload public static function alloc():UIReferenceLibraryViewController;

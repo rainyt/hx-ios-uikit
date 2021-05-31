@@ -60,9 +60,6 @@ extern class UIBarButtonItem{
 	@:native("width")
 	public var width:Float;
 
-	@:native("possibleTitles")
-	public var possibleTitles:Dynamic;
-
 	@:native("customView")
 	public var customView:Dynamic;
 
@@ -71,12 +68,6 @@ extern class UIBarButtonItem{
 
 	@:native("target")
 	public var target:Dynamic;
-
-	@:native("primaryAction")
-	public var primaryAction:Dynamic;
-
-	@:native("menu")
-	public var menu:Dynamic;
 
 	@:native("setBackgroundImage:forState:barMetrics")
 	overload public function setBackgroundImage_forState_barMetrics(backgroundImage:Dynamic, forState:Dynamic, barMetrics:Dynamic):Void;

@@ -5,7 +5,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDeprecated")
 @:include("UIKit/UIKit.h")
-extern class UIDeprecated{
+extern class UIDeprecated extends UITableViewCell{
 
 	@:native("alloc")
 	overload public static function alloc():UIDeprecated;
@@ -15,9 +15,6 @@ extern class UIDeprecated{
 
 	@:native("initWithFrame:reuseIdentifier")
 	overload public function initWithFrame_reuseIdentifier(frame:CGRect, reuseIdentifier:NSString):Dynamic;
-
-	@:native("text")
-	public var text:NSString;
 
 	@:native("font")
 	public var font:Dynamic;

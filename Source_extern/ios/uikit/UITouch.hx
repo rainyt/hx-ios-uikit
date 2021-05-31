@@ -5,7 +5,7 @@ import ios.objc.CGVector;
 @:objc
 @:native("UITouch")
 @:include("UIKit/UIKit.h")
-extern class UITouch{
+extern class UITouch extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITouch;
@@ -36,9 +36,6 @@ extern class UITouch{
 
 	@:native("view")
 	public var view:Dynamic;
-
-	@:native("gestureRecognizers")
-	public var gestureRecognizers:Dynamic;
 
 	@:native("locationInView")
 	overload public function locationInView(view:Dynamic):CGPoint;

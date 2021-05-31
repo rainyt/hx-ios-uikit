@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISwipeGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UISwipeGestureRecognizer{
+extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UISwipeGestureRecognizer;

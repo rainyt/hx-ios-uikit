@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAcceleration")
 @:include("UIKit/UIKit.h")
-extern class UIAcceleration{
+extern class UIAcceleration extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIAcceleration;

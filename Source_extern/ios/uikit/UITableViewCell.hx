@@ -30,9 +30,6 @@ extern class UITableViewCell{
 	@:native("defaultContentConfiguration")
 	overload public function defaultContentConfiguration():Dynamic;
 
-	@:native("contentConfiguration")
-	public var contentConfiguration:Dynamic;
-
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
@@ -48,9 +45,6 @@ extern class UITableViewCell{
 	@:native("detailTextLabel")
 	public var detailTextLabel:Dynamic;
 
-	@:native("backgroundConfiguration")
-	public var backgroundConfiguration:Dynamic;
-
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
@@ -62,9 +56,6 @@ extern class UITableViewCell{
 
 	@:native("multipleSelectionBackgroundView")
 	public var multipleSelectionBackgroundView:Dynamic;
-
-	@:native("reuseIdentifier")
-	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;

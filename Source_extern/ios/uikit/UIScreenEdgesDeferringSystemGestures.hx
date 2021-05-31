@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIScreenEdgesDeferringSystemGestures")
 @:include("UIKit/UIKit.h")
-extern class UIScreenEdgesDeferringSystemGestures{
+extern class UIScreenEdgesDeferringSystemGestures extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIScreenEdgesDeferringSystemGestures;

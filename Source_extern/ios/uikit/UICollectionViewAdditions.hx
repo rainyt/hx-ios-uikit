@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewAdditions")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewAdditions{
+extern class UICollectionViewAdditions extends UIDynamicAnimator{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewAdditions;

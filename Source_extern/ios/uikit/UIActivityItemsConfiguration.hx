@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIActivityItemsConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIActivityItemsConfiguration{
+extern class UIActivityItemsConfiguration extends UIActivityViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemsConfiguration;

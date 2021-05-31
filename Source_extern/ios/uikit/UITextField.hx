@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextField")
 @:include("UIKit/UIKit.h")
-extern class UITextField{
+extern class UITextField extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UITextField;

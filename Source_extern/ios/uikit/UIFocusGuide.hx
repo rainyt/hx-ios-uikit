@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFocusGuide")
 @:include("UIKit/UIKit.h")
-extern class UIFocusGuide{
+extern class UIFocusGuide extends UILayoutGuide{
 
 	@:native("alloc")
 	overload public static function alloc():UIFocusGuide;
@@ -13,9 +13,6 @@ extern class UIFocusGuide{
 
 	@:native("enabled")
 	public var enabled:Bool;
-
-	@:native("preferredFocusEnvironments")
-	public var preferredFocusEnvironments:Dynamic;
 
 	@:native("preferredFocusedView")
 	public var preferredFocusedView:Dynamic;

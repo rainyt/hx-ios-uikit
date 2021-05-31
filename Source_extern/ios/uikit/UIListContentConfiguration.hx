@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")
@@ -60,20 +59,8 @@ extern class UIListContentConfiguration{
 	@:native("imageProperties")
 	public var imageProperties:Dynamic;
 
-	@:native("text")
-	public var text:NSString;
-
-	@:native("attributedText")
-	public var attributedText:Dynamic;
-
 	@:native("textProperties")
 	public var textProperties:Dynamic;
-
-	@:native("secondaryText")
-	public var secondaryText:NSString;
-
-	@:native("secondaryAttributedText")
-	public var secondaryAttributedText:Dynamic;
 
 	@:native("secondaryTextProperties")
 	public var secondaryTextProperties:Dynamic;

@@ -33,12 +33,6 @@ extern class NSCollectionLayoutGroup{
 	@:native("new")
 	overload public static function new():NSCollectionLayoutGroup;
 
-	@:native("supplementaryItems")
-	public var supplementaryItems:Dynamic;
-
-	@:native("interItemSpacing")
-	public var interItemSpacing:Dynamic;
-
 	@:native("subitems")
 	public var subitems:Dynamic;
 

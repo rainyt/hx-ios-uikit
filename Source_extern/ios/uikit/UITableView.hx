@@ -206,9 +206,6 @@ extern class UITableView{
 	@:native("separatorColor")
 	public var separatorColor:Dynamic;
 
-	@:native("separatorEffect")
-	public var separatorEffect:Dynamic;
-
 	@:native("cellLayoutMarginsFollowReadableWidth")
 	public var cellLayoutMarginsFollowReadableWidth:Bool;
 

@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIBarItem")
 @:include("UIKit/UIKit.h")
@@ -20,9 +19,6 @@ extern class UIBarItem{
 
 	@:native("enabled")
 	public var enabled:Bool;
-
-	@:native("title")
-	public var title:NSString;
 
 	@:native("image")
 	public var image:Dynamic;

@@ -3,25 +3,13 @@ package ios.uikit;
 @:objc
 @:native("UITabBarAppearance")
 @:include("UIKit/UIKit.h")
-extern class UITabBarAppearance{
+extern class UITabBarAppearance extends UIBarAppearance{
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarAppearance;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarAppearance;
-
-	@:native("stackedLayoutAppearance")
-	public var stackedLayoutAppearance:UITabBarItemAppearance;
-
-	@:native("inlineLayoutAppearance")
-	public var inlineLayoutAppearance:UITabBarItemAppearance;
-
-	@:native("compactInlineLayoutAppearance")
-	public var compactInlineLayoutAppearance:UITabBarItemAppearance;
-
-	@:native("selectionIndicatorTintColor")
-	public var selectionIndicatorTintColor:Dynamic;
 
 	@:native("selectionIndicatorImage")
 	public var selectionIndicatorImage:Dynamic;

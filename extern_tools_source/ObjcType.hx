@@ -23,7 +23,7 @@ class ObjcType {
 		if (t == "NSUInteger" || t == "NSInteger")
 			return "Int";
 
-		if (typedefs.exists(t)) {
+		if (typedefs != null && typedefs.exists(t)) {
 			var def = typedefs.get(t);
 			if (!def.createHaxeFile)
 				return def.className == def.parentClassName ? def.className : ObjcType.toType(def.parentClassName, typedefs);

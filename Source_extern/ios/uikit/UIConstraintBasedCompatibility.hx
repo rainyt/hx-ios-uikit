@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIConstraintBasedCompatibility")
 @:include("UIKit/UIKit.h")
-extern class UIConstraintBasedCompatibility{
+extern class UIConstraintBasedCompatibility extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIConstraintBasedCompatibility;

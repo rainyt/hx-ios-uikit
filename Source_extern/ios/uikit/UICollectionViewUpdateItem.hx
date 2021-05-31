@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewUpdateItem")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewUpdateItem{
+extern class UICollectionViewUpdateItem extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewUpdateItem;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITabBarItem")
 @:include("UIKit/UIKit.h")
-extern class UITabBarItem{
+extern class UITabBarItem extends UIBarItem{
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarItem;
@@ -30,9 +30,6 @@ extern class UITabBarItem{
 	@:native("selectedImage")
 	public var selectedImage:Dynamic;
 
-	@:native("badgeValue")
-	public var badgeValue:NSString;
-
 	@:native("setFinishedSelectedImage:withFinishedUnselectedImage")
 	overload public function setFinishedSelectedImage_withFinishedUnselectedImage(selectedImage:Dynamic, withFinishedUnselectedImage:Dynamic):Void;
 
@@ -45,17 +42,11 @@ extern class UITabBarItem{
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:Dynamic;
 
-	@:native("badgeColor")
-	public var badgeColor:Dynamic;
-
 	@:native("setBadgeTextAttributes:forState")
 	overload public function setBadgeTextAttributes_forState(textAttributes:Dynamic, forState:Dynamic):Void;
 
 	@:native("badgeTextAttributesForState")
 	overload public function badgeTextAttributesForState(state:Dynamic):Dynamic;
-
-	@:native("standardAppearance")
-	public var standardAppearance:Dynamic;
 
 
 }

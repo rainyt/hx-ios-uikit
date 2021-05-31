@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIWindowScene")
 @:include("UIKit/UIKit.h")
-extern class UIWindowScene{
+extern class UIWindowScene extends UIScene{
 
 	@:native("alloc")
 	overload public static function alloc():UIWindowScene;

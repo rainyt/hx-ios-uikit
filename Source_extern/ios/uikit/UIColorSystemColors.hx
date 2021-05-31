@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIColorSystemColors")
 @:include("UIKit/UIKit.h")
-extern class UIColorSystemColors{
+extern class UIColorSystemColors extends UIColor{
 
 	@:native("alloc")
 	overload public static function alloc():UIColorSystemColors;

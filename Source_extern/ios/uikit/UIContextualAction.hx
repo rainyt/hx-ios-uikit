@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIContextualAction")
 @:include("UIKit/UIKit.h")
-extern class UIContextualAction{
+extern class UIContextualAction extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIContextualAction;
@@ -17,18 +17,6 @@ extern class UIContextualAction{
 
 	@:native("style")
 	public var style:Dynamic;
-
-	@:native("handler")
-	public var handler:Dynamic;
-
-	@:native("title")
-	public var title:NSString;
-
-	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
-
-	@:native("image")
-	public var image:Dynamic;
 
 
 }

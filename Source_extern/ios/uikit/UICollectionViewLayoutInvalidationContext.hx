@@ -6,7 +6,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewLayoutInvalidationContext")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewLayoutInvalidationContext{
+extern class UICollectionViewLayoutInvalidationContext extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayoutInvalidationContext;
@@ -43,12 +43,6 @@ extern class UICollectionViewLayoutInvalidationContext{
 
 	@:native("contentSizeAdjustment")
 	public var contentSizeAdjustment:CGSize;
-
-	@:native("previousIndexPathsForInteractivelyMovingItems")
-	public var previousIndexPathsForInteractivelyMovingItems:Dynamic;
-
-	@:native("targetIndexPathsForInteractivelyMovingItems")
-	public var targetIndexPathsForInteractivelyMovingItems:Dynamic;
 
 	@:native("interactiveMovementTarget")
 	public var interactiveMovementTarget:CGPoint;

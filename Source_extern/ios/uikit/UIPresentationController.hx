@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPresentationController")
 @:include("UIKit/UIKit.h")
-extern class UIPresentationController{
+extern class UIPresentationController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIPresentationController;

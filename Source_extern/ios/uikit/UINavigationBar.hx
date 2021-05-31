@@ -32,9 +32,6 @@ extern class UINavigationBar{
 	@:native("backItem")
 	public var backItem:Dynamic;
 
-	@:native("items")
-	public var items:Dynamic;
-
 	@:native("setItems:animated")
 	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
 
@@ -62,12 +59,6 @@ extern class UINavigationBar{
 	@:native("shadowImage")
 	public var shadowImage:Dynamic;
 
-	@:native("titleTextAttributes")
-	public var titleTextAttributes:Dynamic;
-
-	@:native("largeTitleTextAttributes")
-	public var largeTitleTextAttributes:Dynamic;
-
 	@:native("setTitleVerticalPositionAdjustment:forBarMetrics")
 	overload public function setTitleVerticalPositionAdjustment_forBarMetrics(adjustment:Float, forBarMetrics:Dynamic):Void;
 
@@ -79,15 +70,6 @@ extern class UINavigationBar{
 
 	@:native("backIndicatorTransitionMaskImage")
 	public var backIndicatorTransitionMaskImage:Dynamic;
-
-	@:native("standardAppearance")
-	public var standardAppearance:Dynamic;
-
-	@:native("compactAppearance")
-	public var compactAppearance:Dynamic;
-
-	@:native("scrollEdgeAppearance")
-	public var scrollEdgeAppearance:Dynamic;
 
 
 }

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPointerHoverEffect")
 @:include("UIKit/UIKit.h")
-extern class UIPointerHoverEffect{
+extern class UIPointerHoverEffect extends UIPointerEffect{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerHoverEffect;

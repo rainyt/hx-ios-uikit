@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewFlowLayoutInvalidationContext")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewFlowLayoutInvalidationContext{
+extern class UICollectionViewFlowLayoutInvalidationContext extends UICollectionViewLayoutInvalidationContext{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewFlowLayoutInvalidationContext;

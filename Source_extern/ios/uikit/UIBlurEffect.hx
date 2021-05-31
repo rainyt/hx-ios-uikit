@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIBlurEffect")
 @:include("UIKit/UIKit.h")
-extern class UIBlurEffect{
+extern class UIBlurEffect extends UIVisualEffect{
 
 	@:native("alloc")
 	overload public static function alloc():UIBlurEffect;

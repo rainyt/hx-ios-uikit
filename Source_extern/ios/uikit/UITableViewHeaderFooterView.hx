@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITableViewHeaderFooterView")
 @:include("UIKit/UIKit.h")
-extern class UITableViewHeaderFooterView{
+extern class UITableViewHeaderFooterView extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewHeaderFooterView;
@@ -30,9 +30,6 @@ extern class UITableViewHeaderFooterView{
 	@:native("defaultContentConfiguration")
 	overload public function defaultContentConfiguration():Dynamic;
 
-	@:native("contentConfiguration")
-	public var contentConfiguration:Dynamic;
-
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
@@ -45,17 +42,11 @@ extern class UITableViewHeaderFooterView{
 	@:native("detailTextLabel")
 	public var detailTextLabel:Dynamic;
 
-	@:native("backgroundConfiguration")
-	public var backgroundConfiguration:Dynamic;
-
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
 	@:native("backgroundView")
 	public var backgroundView:Dynamic;
-
-	@:native("reuseIdentifier")
-	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewControllerPreviewingRegistration")
 @:include("UIKit/UIKit.h")
-extern class UIViewControllerPreviewingRegistration{
+extern class UIViewControllerPreviewingRegistration extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerPreviewingRegistration;

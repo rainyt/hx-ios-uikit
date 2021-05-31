@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewListCell")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewListCell{
+extern class UICollectionViewListCell extends UICollectionViewCell{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewListCell;
@@ -22,9 +22,6 @@ extern class UICollectionViewListCell{
 
 	@:native("indentsAccessories")
 	public var indentsAccessories:Bool;
-
-	@:native("accessories")
-	public var accessories:Dynamic;
 
 	@:native("separatorLayoutGuide")
 	public var separatorLayoutGuide:Dynamic;

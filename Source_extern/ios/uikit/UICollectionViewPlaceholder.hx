@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewPlaceholder")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewPlaceholder{
+extern class UICollectionViewPlaceholder extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewPlaceholder;
@@ -20,9 +20,6 @@ extern class UICollectionViewPlaceholder{
 
 	@:native("new")
 	overload public static function new():UICollectionViewPlaceholder;
-
-	@:native("__kindof UICollectionViewCell ")
-	public var __kindof UICollectionViewCell :Dynamic;
 
 
 }

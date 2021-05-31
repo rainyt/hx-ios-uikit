@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICellAccessoryMultiselect")
 @:include("UIKit/UIKit.h")
-extern class UICellAccessoryMultiselect{
+extern class UICellAccessoryMultiselect extends UICellAccessory{
 
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryMultiselect;

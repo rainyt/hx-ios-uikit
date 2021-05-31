@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIResponderInputViewAdditions")
 @:include("UIKit/UIKit.h")
-extern class UIResponderInputViewAdditions{
+extern class UIResponderInputViewAdditions extends UIResponder{
 
 	@:native("alloc")
 	overload public static function alloc():UIResponderInputViewAdditions;

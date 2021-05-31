@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIVideoEditorController")
 @:include("UIKit/UIKit.h")
-extern class UIVideoEditorController{
+extern class UIVideoEditorController extends UINavigationController{
 
 	@:native("alloc")
 	overload public static function alloc():UIVideoEditorController;
@@ -17,9 +17,6 @@ extern class UIVideoEditorController{
 
 	@:native("delegate")
 	public var delegate:Dynamic;
-
-	@:native("videoPath")
-	public var videoPath:NSString;
 
 	@:native("videoMaximumDuration")
 	public var videoMaximumDuration:Dynamic;

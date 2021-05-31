@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISceneConnectionOptions")
 @:include("UIKit/UIKit.h")
-extern class UISceneConnectionOptions{
+extern class UISceneConnectionOptions extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneConnectionOptions;
@@ -18,17 +18,11 @@ extern class UISceneConnectionOptions{
 	@:native("init")
 	overload public function init():UISceneConnectionOptions;
 
-	@:native("URLContexts")
-	public var URLContexts:Dynamic;
-
 	@:native("sourceApplication")
 	public var sourceApplication:NSString;
 
 	@:native("handoffUserActivityType")
 	public var handoffUserActivityType:NSString;
-
-	@:native("userActivities")
-	public var userActivities:Dynamic;
 
 	@:native("notificationResponse")
 	public var notificationResponse:Dynamic;

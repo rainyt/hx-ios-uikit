@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewFocusUpdateContext")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewFocusUpdateContext{
+extern class UICollectionViewFocusUpdateContext extends UIFocusUpdateContext{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewFocusUpdateContext;

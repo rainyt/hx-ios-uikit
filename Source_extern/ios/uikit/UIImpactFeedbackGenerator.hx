@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIImpactFeedbackGenerator")
 @:include("UIKit/UIKit.h")
-extern class UIImpactFeedbackGenerator{
+extern class UIImpactFeedbackGenerator extends UIFeedbackGenerator{
 
 	@:native("alloc")
 	overload public static function alloc():UIImpactFeedbackGenerator;

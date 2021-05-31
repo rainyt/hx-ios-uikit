@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UINSItemProvider")
 @:include("UIKit/UIKit.h")
-extern class UINSItemProvider{
+extern class UINSItemProvider extends UIColor{
 
 	@:native("alloc")
 	overload public static function alloc():UINSItemProvider;

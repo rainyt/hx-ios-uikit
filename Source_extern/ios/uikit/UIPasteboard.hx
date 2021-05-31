@@ -5,7 +5,7 @@ import cpp.objc.NSData;
 @:objc
 @:native("UIPasteboard")
 @:include("UIKit/UIKit.h")
-extern class UIPasteboard{
+extern class UIPasteboard extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIPasteboard;
@@ -36,9 +36,6 @@ extern class UIPasteboard{
 
 	@:native("changeCount")
 	public var changeCount:Int;
-
-	@:native("itemProviders")
-	public var itemProviders:Dynamic;
 
 	@:native("setItemProviders:localOnly:expirationDate")
 	overload public function setItemProviders_localOnly_expirationDate(itemProviders:Dynamic, localOnly:Bool, expirationDate:Dynamic):Void;
@@ -85,38 +82,11 @@ extern class UIPasteboard{
 	@:native("dataForPasteboardType:inItemSet")
 	overload public function dataForPasteboardType_inItemSet(pasteboardType:NSString, inItemSet:Dynamic):Dynamic;
 
-	@:native("items")
-	public var items:Dynamic;
-
 	@:native("addItems")
 	overload public function addItems(items:Dynamic):Void;
 
 	@:native("setItems:options")
 	overload public function setItems_options(items:Dynamic, options:Dynamic):Void;
-
-	@:native("string")
-	public var string:NSString;
-
-	@:native("strings")
-	public var strings:Dynamic;
-
-	@:native("URL")
-	public var URL:Dynamic;
-
-	@:native("URLs")
-	public var URLs:Dynamic;
-
-	@:native("image")
-	public var image:Dynamic;
-
-	@:native("images")
-	public var images:Dynamic;
-
-	@:native("color")
-	public var color:Dynamic;
-
-	@:native("colors")
-	public var colors:Dynamic;
 
 	@:native("hasStrings")
 	public var hasStrings:Bool;

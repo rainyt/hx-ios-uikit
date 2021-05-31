@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIImageView")
 @:include("UIKit/UIKit.h")
-extern class UIImageView{
+extern class UIImageView extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIImageView;
@@ -31,12 +31,6 @@ extern class UIImageView{
 
 	@:native("highlighted")
 	public var highlighted:Bool;
-
-	@:native("animationImages")
-	public var animationImages:Dynamic;
-
-	@:native("highlightedAnimationImages")
-	public var highlightedAnimationImages:Dynamic;
 
 	@:native("animationDuration")
 	public var animationDuration:Dynamic;

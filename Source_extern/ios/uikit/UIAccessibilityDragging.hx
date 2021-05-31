@@ -3,19 +3,13 @@ package ios.uikit;
 @:objc
 @:native("UIAccessibilityDragging")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityDragging{
+extern class UIAccessibilityDragging extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityDragging;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityDragging;
-
-	@:native("accessibilityDragSourceDescriptors")
-	public var accessibilityDragSourceDescriptors:Dynamic;
-
-	@:native("accessibilityDropPointDescriptors")
-	public var accessibilityDropPointDescriptors:Dynamic;
 
 
 }

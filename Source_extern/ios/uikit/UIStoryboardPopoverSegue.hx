@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIStoryboardPopoverSegue")
 @:include("UIKit/UIKit.h")
-extern class UIStoryboardPopoverSegue{
+extern class UIStoryboardPopoverSegue extends UIStoryboardSegue{{
 
 	@:native("alloc")
 	overload public static function alloc():UIStoryboardPopoverSegue;

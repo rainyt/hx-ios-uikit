@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewCompositionalLayout")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewCompositionalLayout{
+extern class UICollectionViewCompositionalLayout extends UICollectionViewLayout{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewCompositionalLayout;
@@ -28,9 +28,6 @@ extern class UICollectionViewCompositionalLayout{
 
 	@:native("new")
 	overload public static function new():UICollectionViewCompositionalLayout;
-
-	@:native("configuration")
-	public var configuration:UICollectionViewCompositionalLayoutConfiguration;
 
 
 }

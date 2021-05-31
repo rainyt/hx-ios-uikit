@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPageViewController")
 @:include("UIKit/UIKit.h")
-extern class UIPageViewController{
+extern class UIPageViewController extends UIViewController{{
 
 	@:native("alloc")
 	overload public static function alloc():UIPageViewController;

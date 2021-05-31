@@ -5,7 +5,7 @@ import ios.objc.CGVector;
 @:objc
 @:native("UIFieldBehavior")
 @:include("UIKit/UIKit.h")
-extern class UIFieldBehavior{
+extern class UIFieldBehavior extends UIDynamicBehavior{
 
 	@:native("alloc")
 	overload public static function alloc():UIFieldBehavior;
@@ -21,9 +21,6 @@ extern class UIFieldBehavior{
 
 	@:native("removeItem")
 	overload public function removeItem(item:Dynamic):Void;
-
-	@:native("items")
-	public var items:Dynamic;
 
 	@:native("position")
 	public var position:CGPoint;

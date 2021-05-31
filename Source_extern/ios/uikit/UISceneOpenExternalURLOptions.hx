@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISceneOpenExternalURLOptions")
 @:include("UIKit/UIKit.h")
-extern class UISceneOpenExternalURLOptions{
+extern class UISceneOpenExternalURLOptions extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneOpenExternalURLOptions;

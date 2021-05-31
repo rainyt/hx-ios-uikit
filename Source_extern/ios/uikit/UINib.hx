@@ -5,7 +5,7 @@ import cpp.objc.NSData;
 @:objc
 @:native("UINib")
 @:include("UIKit/UIKit.h")
-extern class UINib{
+extern class UINib extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UINib;

@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrintPaper")
 @:include("UIKit/UIKit.h")
-extern class UIPrintPaper{
+extern class UIPrintPaper extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrintPaper;

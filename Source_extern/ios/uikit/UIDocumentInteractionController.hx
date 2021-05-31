@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc
 @:native("UIDocumentInteractionController")
@@ -21,12 +20,6 @@ extern class UIDocumentInteractionController{
 
 	@:native("URL")
 	public var URL:Dynamic;
-
-	@:native("UTI")
-	public var UTI:NSString;
-
-	@:native("name")
-	public var name:NSString;
 
 	@:native("icons")
 	public var icons:Dynamic;

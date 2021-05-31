@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIStoryboardSegue")
 @:include("UIKit/UIKit.h")
-extern class UIStoryboardSegue{
+extern class UIStoryboardSegue extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIStoryboardSegue;
@@ -20,9 +20,6 @@ extern class UIStoryboardSegue{
 
 	@:native("init")
 	overload public function init():UIStoryboardSegue;
-
-	@:native("identifier")
-	public var identifier:NSString;
 
 	@:native("sourceViewController")
 	public var sourceViewController:Dynamic;

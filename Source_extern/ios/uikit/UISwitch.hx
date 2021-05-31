@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc
 @:native("UISwitch")
@@ -24,9 +23,6 @@ extern class UISwitch{
 
 	@:native("offImage")
 	public var offImage:Dynamic;
-
-	@:native("title")
-	public var title:NSString;
 
 	@:native("style")
 	public var style:Dynamic;

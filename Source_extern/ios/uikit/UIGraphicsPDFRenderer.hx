@@ -6,7 +6,7 @@ import cpp.objc.NSData;
 @:objc
 @:native("UIGraphicsPDFRenderer")
 @:include("UIKit/UIKit.h")
-extern class UIGraphicsPDFRenderer{
+extern class UIGraphicsPDFRenderer extends UIGraphicsRenderer{
 
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsPDFRenderer;

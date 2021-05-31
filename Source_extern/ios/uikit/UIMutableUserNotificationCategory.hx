@@ -1,19 +1,15 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIMutableUserNotificationCategory")
 @:include("UIKit/UIKit.h")
-extern class UIMutableUserNotificationCategory{
+extern class UIMutableUserNotificationCategory extends UIUserNotificationCategory{
 
 	@:native("alloc")
 	overload public static function alloc():UIMutableUserNotificationCategory;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIMutableUserNotificationCategory;
-
-	@:native("identifier")
-	public var identifier:NSString;
 
 	@:native("setActions:forContext")
 	overload public function setActions_forContext(actions:Dynamic, forContext:Dynamic):Void;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSLayoutConstraint")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutConstraint{
+extern class NSLayoutConstraint extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutConstraint;
@@ -38,12 +38,6 @@ extern class NSLayoutConstraint{
 
 	@:native("secondAttribute")
 	public var secondAttribute:Dynamic;
-
-	@:native("firstAnchor")
-	public var firstAnchor:Dynamic;
-
-	@:native("secondAnchor")
-	public var secondAnchor:Dynamic;
 
 	@:native("relation")
 	public var relation:Dynamic;

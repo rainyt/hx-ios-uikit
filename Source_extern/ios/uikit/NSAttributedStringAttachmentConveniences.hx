@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSAttributedStringAttachmentConveniences")
 @:include("UIKit/UIKit.h")
-extern class NSAttributedStringAttachmentConveniences{
+extern class NSAttributedStringAttachmentConveniences extends NSAttributedString{
 
 	@:native("alloc")
 	overload public static function alloc():NSAttributedStringAttachmentConveniences;

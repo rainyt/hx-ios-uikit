@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextChecker")
 @:include("UIKit/UIKit.h")
-extern class UITextChecker{
+extern class UITextChecker extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITextChecker;

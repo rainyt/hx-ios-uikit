@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIInputViewController")
 @:include("UIKit/UIKit.h")
@@ -17,9 +16,6 @@ extern class UIInputViewController{
 
 	@:native("textDocumentProxy")
 	public var textDocumentProxy:Dynamic;
-
-	@:native("primaryLanguage")
-	public var primaryLanguage:NSString;
 
 	@:native("hasDictationKey")
 	public var hasDictationKey:Bool;

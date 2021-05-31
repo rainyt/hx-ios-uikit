@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFontMetrics")
 @:include("UIKit/UIKit.h")
-extern class UIFontMetrics{
+extern class UIFontMetrics extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIFontMetrics;

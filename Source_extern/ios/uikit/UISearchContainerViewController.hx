@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISearchContainerViewController")
 @:include("UIKit/UIKit.h")
-extern class UISearchContainerViewController{
+extern class UISearchContainerViewController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchContainerViewController;

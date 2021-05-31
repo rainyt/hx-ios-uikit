@@ -6,7 +6,7 @@ import cpp.objc.NSError;
 @:objc
 @:native("UIManagedDocument")
 @:include("UIKit/UIKit.h")
-extern class UIManagedDocument{
+extern class UIManagedDocument extends UIDocument{
 
 	@:native("alloc")
 	overload public static function alloc():UIManagedDocument;
@@ -22,12 +22,6 @@ extern class UIManagedDocument{
 
 	@:native("managedObjectModel")
 	public var managedObjectModel:Dynamic;
-
-	@:native("persistentStoreOptions")
-	public var persistentStoreOptions:NSDictionary;
-
-	@:native("modelConfiguration")
-	public var modelConfiguration:NSString;
 
 	@:native("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error")
 	overload public function configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error(storeURL:Dynamic, ofType:NSString, modelConfiguration:NSString, storeOptions:NSDictionary, error:NSError):Bool;

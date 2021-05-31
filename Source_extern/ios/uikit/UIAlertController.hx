@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIAlertController")
 @:include("UIKit/UIKit.h")
-extern class UIAlertController{
+extern class UIAlertController extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIAlertController;
@@ -29,12 +29,6 @@ extern class UIAlertController{
 
 	@:native("textFields")
 	public var textFields:Dynamic;
-
-	@:native("title")
-	public var title:NSString;
-
-	@:native("message")
-	public var message:NSString;
 
 	@:native("preferredStyle")
 	public var preferredStyle:Dynamic;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISearchDisplayControllerSupport")
 @:include("UIKit/UIKit.h")
-extern class UISearchDisplayControllerSupport{
+extern class UISearchDisplayControllerSupport extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchDisplayControllerSupport;

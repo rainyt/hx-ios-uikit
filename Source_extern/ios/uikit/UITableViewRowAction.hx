@@ -18,14 +18,5 @@ extern class UITableViewRowAction{
 	@:native("style")
 	public var style:Dynamic;
 
-	@:native("title")
-	public var title:NSString;
-
-	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
-
-	@:native("backgroundEffect")
-	public var backgroundEffect:Dynamic;
-
 
 }

@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIDynamicItemBehavior")
 @:include("UIKit/UIKit.h")
-extern class UIDynamicItemBehavior{
+extern class UIDynamicItemBehavior extends UIDynamicBehavior{
 
 	@:native("alloc")
 	overload public static function alloc():UIDynamicItemBehavior;
@@ -20,9 +20,6 @@ extern class UIDynamicItemBehavior{
 
 	@:native("removeItem")
 	overload public function removeItem(item:Dynamic):Void;
-
-	@:native("items")
-	public var items:Dynamic;
 
 	@:native("elasticity")
 	public var elasticity:Float;

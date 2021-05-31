@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICellAccessoryReorder")
 @:include("UIKit/UIKit.h")
-extern class UICellAccessoryReorder{
+extern class UICellAccessoryReorder extends UICellAccessory{
 
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryReorder;

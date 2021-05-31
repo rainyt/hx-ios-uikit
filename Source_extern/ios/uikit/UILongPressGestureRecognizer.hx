@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UILongPressGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UILongPressGestureRecognizer{
+extern class UILongPressGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UILongPressGestureRecognizer;

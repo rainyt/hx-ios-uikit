@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextRange")
 @:include("UIKit/UIKit.h")
-extern class UITextRange{
+extern class UITextRange extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITextRange;

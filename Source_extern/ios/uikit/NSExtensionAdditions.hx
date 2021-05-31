@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSExtensionAdditions")
 @:include("UIKit/UIKit.h")
-extern class NSExtensionAdditions{
+extern class NSExtensionAdditions extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():NSExtensionAdditions;

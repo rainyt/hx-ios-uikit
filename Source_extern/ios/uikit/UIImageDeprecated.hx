@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIImageDeprecated")
 @:include("UIKit/UIKit.h")
-extern class UIImageDeprecated{
+extern class UIImageDeprecated extends UIImage{
 
 	@:native("alloc")
 	overload public static function alloc():UIImageDeprecated;

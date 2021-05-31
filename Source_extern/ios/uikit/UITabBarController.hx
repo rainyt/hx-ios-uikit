@@ -11,9 +11,6 @@ extern class UITabBarController{
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarController;
 
-	@:native("viewControllers")
-	public var viewControllers:Dynamic;
-
 	@:native("setViewControllers:animated")
 	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;
 
@@ -25,9 +22,6 @@ extern class UITabBarController{
 
 	@:native("moreNavigationController")
 	public var moreNavigationController:Dynamic;
-
-	@:native("customizableViewControllers")
-	public var customizableViewControllers:Dynamic;
 
 	@:native("tabBar")
 	public var tabBar:Dynamic;

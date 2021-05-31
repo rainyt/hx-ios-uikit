@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIPageControl")
 @:include("UIKit/UIKit.h")
-extern class UIPageControl{
+extern class UIPageControl extends UIControl{
 
 	@:native("alloc")
 	overload public static function alloc():UIPageControl;

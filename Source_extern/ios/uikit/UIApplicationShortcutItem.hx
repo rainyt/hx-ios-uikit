@@ -21,23 +21,5 @@ extern class UIApplicationShortcutItem{
 	@:native("initWithType:localizedTitle")
 	overload public function initWithType_localizedTitle(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
 
-	@:native("type")
-	public var type:NSString;
-
-	@:native("localizedTitle")
-	public var localizedTitle:NSString;
-
-	@:native("localizedSubtitle")
-	public var localizedSubtitle:NSString;
-
-	@:native("icon")
-	public var icon:UIApplicationShortcutIcon;
-
-	@:native("userInfo")
-	public var userInfo:Dynamic;
-
-	@:native("targetContentIdentifier")
-	public var targetContentIdentifier:Dynamic;
-
 
 }

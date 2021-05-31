@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIUserNotificationSettings")
 @:include("UIKit/UIKit.h")
-extern class UIUserNotificationSettings{
+extern class UIUserNotificationSettings extends UIApplication{
 
 	@:native("alloc")
 	overload public static function alloc():UIUserNotificationSettings;

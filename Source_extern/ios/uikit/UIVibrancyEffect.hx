@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIVibrancyEffect")
 @:include("UIKit/UIKit.h")
-extern class UIVibrancyEffect{
+extern class UIVibrancyEffect extends UIVisualEffect{
 
 	@:native("alloc")
 	overload public static function alloc():UIVibrancyEffect;

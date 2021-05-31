@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFontSystemFonts")
 @:include("UIKit/UIKit.h")
-extern class UIFontSystemFonts{
+extern class UIFontSystemFonts extends UIFont{
 
 	@:native("alloc")
 	overload public static function alloc():UIFontSystemFonts;

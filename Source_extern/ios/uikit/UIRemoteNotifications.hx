@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIRemoteNotifications")
 @:include("UIKit/UIKit.h")
-extern class UIRemoteNotifications{
+extern class UIRemoteNotifications extends UIApplication{
 
 	@:native("alloc")
 	overload public static function alloc():UIRemoteNotifications;

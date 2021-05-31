@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIContainerViewControllerCallbacks")
 @:include("UIKit/UIKit.h")
-extern class UIContainerViewControllerCallbacks{
+extern class UIContainerViewControllerCallbacks extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIContainerViewControllerCallbacks;

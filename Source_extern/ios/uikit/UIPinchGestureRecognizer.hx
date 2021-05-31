@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPinchGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UIPinchGestureRecognizer{
+extern class UIPinchGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UIPinchGestureRecognizer;

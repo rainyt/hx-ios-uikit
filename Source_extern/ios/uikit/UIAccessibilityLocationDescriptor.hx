@@ -5,7 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIAccessibilityLocationDescriptor")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityLocationDescriptor{
+extern class UIAccessibilityLocationDescriptor extends NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityLocationDescriptor;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIHomeIndicatorAutoHidden")
 @:include("UIKit/UIKit.h")
-extern class UIHomeIndicatorAutoHidden{
+extern class UIHomeIndicatorAutoHidden extends UIViewController{
 
 	@:native("alloc")
 	overload public static function alloc():UIHomeIndicatorAutoHidden;

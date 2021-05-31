@@ -5,7 +5,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIConstraintBasedLayoutLayering")
 @:include("UIKit/UIKit.h")
-extern class UIConstraintBasedLayoutLayering{
+extern class UIConstraintBasedLayoutLayering extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UIConstraintBasedLayoutLayering;

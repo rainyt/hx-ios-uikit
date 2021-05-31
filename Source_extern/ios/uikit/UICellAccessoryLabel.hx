@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICellAccessoryLabel")
 @:include("UIKit/UIKit.h")
-extern class UICellAccessoryLabel{
+extern class UICellAccessoryLabel extends UICellAccessory{
 
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryLabel;
@@ -14,9 +14,6 @@ extern class UICellAccessoryLabel{
 
 	@:native("initWithText")
 	overload public function initWithText(text:NSString):UICellAccessoryLabel;
-
-	@:native("text")
-	public var text:NSString;
 
 	@:native("font")
 	public var font:Dynamic;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITabBar")
 @:include("UIKit/UIKit.h")
-extern class UITabBar{
+extern class UITabBar extends UIView{
 
 	@:native("alloc")
 	overload public static function alloc():UITabBar;
@@ -13,9 +13,6 @@ extern class UITabBar{
 
 	@:native("delegate")
 	public var delegate:Dynamic;
-
-	@:native("items")
-	public var items:Dynamic;
 
 	@:native("selectedItem")
 	public var selectedItem:Dynamic;
@@ -37,9 +34,6 @@ extern class UITabBar{
 
 	@:native("barTintColor")
 	public var barTintColor:Dynamic;
-
-	@:native("unselectedItemTintColor")
-	public var unselectedItemTintColor:Dynamic;
 
 	@:native("selectedImageTintColor")
 	public var selectedImageTintColor:Dynamic;
@@ -67,9 +61,6 @@ extern class UITabBar{
 
 	@:native("translucent")
 	public var translucent:Bool;
-
-	@:native("standardAppearance")
-	public var standardAppearance:Dynamic;
 
 	@:native("leadingAccessoryView")
 	public var leadingAccessoryView:Dynamic;

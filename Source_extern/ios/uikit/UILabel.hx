@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
 @:objc
@@ -13,9 +12,6 @@ extern class UILabel{
 
 	@:native("autorelease")
 	overload public static function autorelease():UILabel;
-
-	@:native("text")
-	public var text:NSString;
 
 	@:native("font")
 	public var font:Dynamic;
@@ -34,9 +30,6 @@ extern class UILabel{
 
 	@:native("lineBreakMode")
 	public var lineBreakMode:Dynamic;
-
-	@:native("attributedText")
-	public var attributedText:Dynamic;
 
 	@:native("highlightedTextColor")
 	public var highlightedTextColor:Dynamic;
