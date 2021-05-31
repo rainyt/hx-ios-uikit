@@ -19,8 +19,8 @@ extern class UISwipeActionsConfiguration{
 	@:native("actions")
 	public var actions:Dynamic;
 
-	@:native("first")
-	public var first:the;
+	@:native("performsFirstActionWithFullSwipe")
+	public var performsFirstActionWithFullSwipe:Bool;
 
 
 }

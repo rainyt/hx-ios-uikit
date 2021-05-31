@@ -19,8 +19,8 @@ extern class UIPointerStyle{
 	@:native("styleWithShape:constrainedAxes")
 	overload public static function styleWithShape(shape:UIPointerShape, constrainedAxes:UIAxis):UIPointerStyle;
 
-	@:native("hiddenPointerStyle;")
-	overload public static function hiddenPointerStyle;():UIPointerStyle;
+	@:native("hiddenPointerStyle")
+	overload public static function hiddenPointerStyle():UIPointerStyle;
 
 	@:native("init")
 	overload public function init():UIPointerStyle;

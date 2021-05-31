@@ -13,20 +13,20 @@ extern class UIBackgroundConfiguration{
 	@:native("autorelease")
 	overload public static function autorelease():UIBackgroundConfiguration;
 
-	@:native("clearConfiguration;")
-	overload public static function clearConfiguration;():UIBackgroundConfiguration;
+	@:native("clearConfiguration")
+	overload public static function clearConfiguration():UIBackgroundConfiguration;
 
-	@:native("listPlainCellConfiguration;")
-	overload public static function listPlainCellConfiguration;():UIBackgroundConfiguration;
+	@:native("listPlainCellConfiguration")
+	overload public static function listPlainCellConfiguration():UIBackgroundConfiguration;
 
-	@:native("listPlainHeaderFooterConfiguration;")
-	overload public static function listPlainHeaderFooterConfiguration;():UIBackgroundConfiguration;
+	@:native("listPlainHeaderFooterConfiguration")
+	overload public static function listPlainHeaderFooterConfiguration():UIBackgroundConfiguration;
 
-	@:native("listGroupedCellConfiguration;")
-	overload public static function listGroupedCellConfiguration;():UIBackgroundConfiguration;
+	@:native("listGroupedCellConfiguration")
+	overload public static function listGroupedCellConfiguration():UIBackgroundConfiguration;
 
-	@:native("listGroupedHeaderFooterConfiguration;")
-	overload public static function listGroupedHeaderFooterConfiguration;():UIBackgroundConfiguration;
+	@:native("listGroupedHeaderFooterConfiguration")
+	overload public static function listGroupedHeaderFooterConfiguration():UIBackgroundConfiguration;
 
 	@:native("listSidebarHeaderConfiguration")
 	overload public static function listSidebarHeaderConfiguration():UIBackgroundConfiguration;

@@ -22,20 +22,20 @@ extern class UIActivityIndicatorView{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIActivityIndicatorView;
 
-	@:native("is")
-	public var is:default;
+	@:native("activityIndicatorViewStyle")
+	public var activityIndicatorViewStyle:UIActivityIndicatorViewStyle;
 
-	@:native("to")
-	public var to:set;
+	@:native("hidesWhenStopped")
+	public var hidesWhenStopped:Bool;
 
 	@:native("color")
 	public var color:UIColor;
 
-	@:native("startAnimating;")
-	overload public function startAnimating;():Void;
+	@:native("startAnimating")
+	overload public function startAnimating():Void;
 
-	@:native("stopAnimating;")
-	overload public function stopAnimating;():Void;
+	@:native("stopAnimating")
+	overload public function stopAnimating():Void;
 
 	@:native("animating")
 	public var animating:Bool;

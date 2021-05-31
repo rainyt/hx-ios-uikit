@@ -25,20 +25,20 @@ extern class UIDynamicItemBehavior{
 	@:native("items")
 	public var items:Dynamic;
 
-	@:native("0")
-	public var 0:between;
+	@:native("elasticity")
+	public var elasticity:CGFloat;
 
-	@:native("each")
-	public var each:along;
+	@:native("friction")
+	public var friction:CGFloat;
 
-	@:native("by")
-	public var by:1;
+	@:native("density")
+	public var density:CGFloat;
 
-	@:native("velocity")
-	public var velocity:no;
+	@:native("resistance")
+	public var resistance:CGFloat;
 
-	@:native("velocity")
-	public var velocity:angular;
+	@:native("angularResistance")
+	public var angularResistance:CGFloat;
 
 	@:native("charge")
 	public var charge:CGFloat;
@@ -46,8 +46,8 @@ extern class UIDynamicItemBehavior{
 	@:native("anchored")
 	public var anchored:Bool;
 
-	@:native("never")
-	public var never:to;
+	@:native("allowsRotation")
+	public var allowsRotation:Bool;
 
 	@:native("addLinearVelocity:forItem")
 	overload public function addLinearVelocity(velocity:CGPoint, forItem:Dynamic):Void;

@@ -16,11 +16,11 @@ extern class UIScreen{
 	@:native("screens")
 	public var screens:Dynamic;
 
-	@:native("internal")
-	public var internal:device's;
+	@:native("mainScreen")
+	public var mainScreen:UIScreen;
 
-	@:native("in")
-	public var in:screen;
+	@:native("bounds")
+	public var bounds:CGRect;
 
 	@:native("scale")
 	public var scale:CGFloat;
@@ -62,16 +62,16 @@ extern class UIScreen{
 	public var fixedCoordinateSpace:Dynamic;
 
 	@:native("nativeBounds")
-	public var nativeBounds:;
+	public var nativeBounds:CGRect;
 
-	@:native("")
-	public var :nativeScale;
+	@:native("nativeScale")
+	public var nativeScale:CGFloat;
 
 	@:native("displayLinkWithTarget:selector")
 	overload public function displayLinkWithTarget(target:id, selector:SEL):nullable CADisplayLink *;
 
-	@:native("")
-	public var :maximumFramesPerSecond;
+	@:native("maximumFramesPerSecond")
+	public var maximumFramesPerSecond:NSInteger;
 
 	@:native("calibratedLatency")
 	public var calibratedLatency:CFTimeInterval;

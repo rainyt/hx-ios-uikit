@@ -31,8 +31,8 @@ extern class UITabBarItem{
 	@:native("selectedImage")
 	public var selectedImage:UIImage;
 
-	@:native("is")
-	public var is:default;
+	@:native("badgeValue")
+	public var badgeValue:NSString;
 
 	@:native("setFinishedSelectedImage:withFinishedUnselectedImage:API_DEPRECATED("Use initWithTitle")
 	overload public function setFinishedSelectedImage(selectedImage:UIImage, withFinishedUnselectedImage:UIImage, API_DEPRECATED("Use initWithTitle:image:selectedImage: or the image and selectedImage properties along with UIImageRenderingModeAlwaysOriginal", ios(5.0, 7.0):Dynamic):Void;

@@ -16,14 +16,14 @@ extern class UIUpdateSupportHooks{
 	@:native("prepareForCollectionViewUpdates")
 	overload public function prepareForCollectionViewUpdates(updateItems:Dynamic):Void;
 
-	@:native("finalizeCollectionViewUpdates;")
-	overload public function finalizeCollectionViewUpdates;():Void;
+	@:native("finalizeCollectionViewUpdates")
+	overload public function finalizeCollectionViewUpdates():Void;
 
 	@:native("prepareForAnimatedBoundsChange://:calls:when:bounds:changed:an:block:displaying:in")
 	overload public function prepareForAnimatedBoundsChange(oldBounds:CGRect, //:UICollectionView, calls:this, when:its, bounds:have, changed:inside, an:animation, block:before, displaying:cells, in:its):Void;
 
-	@:native("finalizeAnimatedBoundsChange;")
-	overload public function finalizeAnimatedBoundsChange;():Void;
+	@:native("finalizeAnimatedBoundsChange")
+	overload public function finalizeAnimatedBoundsChange():Void;
 
 	@:native("prepareForTransitionToLayout")
 	overload public function prepareForTransitionToLayout(newLayout:UICollectionViewLayout):Void;

@@ -6,12 +6,21 @@ class ObjcFun {
 		var returnClass = line.substr(0, line.indexOf(")"));
 		returnClass = returnClass.substr(returnClass.indexOf("(") + 1);
 		var funcName = line.substr(line.indexOf(")") + 1);
+		for (i in 0...funcName.length) {
+			var char = funcName.charAt(i);
+			if (char != " ") {
+				funcName = funcName.substr(i);
+				break;
+			}
+		}
 		var args:Array<Dynamic> = null;
 		for (i in 0...funcName.length) {
 			var end = funcName.charAt(i);
 			if (end == " ") {
 				// 无参数
 				funcName = funcName.substr(0, i);
+				if(funcName == "")
+					throw "line="+line;
 				break;
 			} else if (end == ":") {
 				// 带参数
@@ -24,6 +33,8 @@ class ObjcFun {
 			c = typedefs.get(c).parentClassName;
 		if (c == "void")
 			c = "Void";
+		if (funcName == "")
+			trace(line);
 		return {
 			name: parsingFuncName(funcName, args),
 			type: ExternBaseClassType.FUNC,
@@ -34,6 +45,7 @@ class ObjcFun {
 	}
 
 	public static function parsingFuncName(funcName:String, args:Array<Dynamic>):String {
+		funcName = StringTools.replace(funcName, ";", "");
 		if (args == null)
 			return funcName;
 		for (index => value in args) {

@@ -37,14 +37,14 @@ extern class UINavigationController{
 	@:native("popToRootViewControllerAnimated://:until:only:single:controller:on:stack.:the")
 	overload public function popToRootViewControllerAnimated(animated:Bool, //:Pops, until:there's, only:a, single:view, controller:left, on:the, stack.:Returns, the:popped):nullable NSArray<__kindof UIViewController *> *;
 
-	@:native("the")
-	public var the:on;
+	@:native("topViewController")
+	public var topViewController:UIViewController;
 
-	@:native("view")
-	public var view:top;
+	@:native("visibleViewController")
+	public var visibleViewController:UIViewController;
 
-	@:native("controller")
-	public var controller:view;
+	@:native("viewControllers")
+	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:animated:API_AVAILABLE(ios(3.0):If:is:then:a:or:depending:whether:new:view:was:in")
 	overload public function setViewControllers(viewControllers:Dynamic, animated:Bool, API_AVAILABLE(ios(3.0)://, If:animated, is:YES,, then:simulate, a:push, or:pop, depending:on, whether:the, new:top, view:controller, was:previously, in:the):Void;
@@ -55,8 +55,8 @@ extern class UINavigationController{
 	@:native("setNavigationBarHidden:animated://:or:the:bar.:animated,:will:vertically")
 	overload public function setNavigationBarHidden(hidden:Bool, animated:Bool, //:Hide, or:show, the:navigation, bar.:If, animated,:it, will:transition, vertically:using):Void;
 
-	@:native("not")
-	public var not:is;
+	@:native("navigationBar")
+	public var navigationBar:UINavigationBar;
 
 	@:native("toolbarHidden")
 	public var toolbarHidden:Bool;

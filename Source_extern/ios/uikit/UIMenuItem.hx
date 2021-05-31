@@ -20,7 +20,7 @@ extern class UIMenuItem{
 	public var title:NSString;
 
 	@:native("action")
-	public var action:;
+	public var action:SEL;
 
 
 }

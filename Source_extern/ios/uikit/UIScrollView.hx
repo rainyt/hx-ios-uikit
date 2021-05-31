@@ -13,14 +13,14 @@ extern class UIScrollView{
 	@:native("autorelease")
 	overload public static function autorelease():UIScrollView;
 
-	@:native("default")
-	public var default://;
+	@:native("contentOffset")
+	public var contentOffset:CGPoint;
 
-	@:native("default")
-	public var default://;
+	@:native("contentSize")
+	public var contentSize:CGSize;
 
-	@:native("around")
-	public var around:area;
+	@:native("contentInset")
+	public var contentInset:UIEdgeInsets;
 
 	@:native("adjustedContentInset")
 	public var adjustedContentInset:UIEdgeInsets;
@@ -40,44 +40,44 @@ extern class UIScrollView{
 	@:native("frameLayoutGuide")
 	public var frameLayoutGuide:UILayoutGuide;
 
-	@:native("weak")
-	public var weak:nil.;
+	@:native("delegate")
+	public var delegate:Dynamic;
 
-	@:native("while")
-	public var while:scrolling;
+	@:native("directionalLockEnabled")
+	public var directionalLockEnabled:Bool;
 
-	@:native("back")
-	public var back:and;
+	@:native("bounces")
+	public var bounces:Bool;
 
-	@:native("drag")
-	public var drag:allow;
+	@:native("alwaysBounceVertical")
+	public var alwaysBounceVertical:Bool;
 
-	@:native("drag")
-	public var drag:allow;
+	@:native("alwaysBounceHorizontal")
+	public var alwaysBounceHorizontal:Bool;
 
 	@:native("pagingEnabled")
-	public var pagingEnabled:;
+	public var pagingEnabled:Bool;
 
-	@:native("dragging")
-	public var dragging:any;
+	@:native("scrollEnabled")
+	public var scrollEnabled:Bool;
 
-	@:native("after")
-	public var after:out;
+	@:native("showsVerticalScrollIndicator")
+	public var showsVerticalScrollIndicator:Bool;
 
-	@:native("after")
-	public var after:out;
+	@:native("showsHorizontalScrollIndicator")
+	public var showsHorizontalScrollIndicator:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("indicatorStyle")
+	public var indicatorStyle:UIScrollViewIndicatorStyle;
 
 	@:native("verticalScrollIndicatorInsets")
-	public var verticalScrollIndicatorInsets:;
+	public var verticalScrollIndicatorInsets:UIEdgeInsets;
 
 	@:native("horizontalScrollIndicatorInsets")
-	public var horizontalScrollIndicatorInsets:;
+	public var horizontalScrollIndicatorInsets:UIEdgeInsets;
 
-	@:native("getter")
-	public var getter:this;
+	@:native("scrollIndicatorInsets")
+	public var scrollIndicatorInsets:UIEdgeInsets;
 
 	@:native("scrollIndicatorInsets")
 	overload public function scrollIndicatorInsets():UIEdgeInsets;
@@ -94,23 +94,23 @@ extern class UIScrollView{
 	@:native("scrollRectToVisible:animated::::://:so:is:visible:nothing:rect")
 	overload public function scrollRectToVisible(rect:CGRect, animated:Bool, :, :, :, :, //:scroll, so:rect, is:just, visible:Dynamic, nothing:if, rect:completely):Void;
 
-	@:native("flashScrollIndicators;")
-	overload public function flashScrollIndicators;():Void;
+	@:native("flashScrollIndicators")
+	overload public function flashScrollIndicators():Void;
 
-	@:native("started")
-	public var started:have;
+	@:native("tracking")
+	public var tracking:Bool;
 
-	@:native("initiate")
-	public var initiate:to;
+	@:native("dragging")
+	public var dragging:Bool;
 
-	@:native("(touch")
-	public var (touch:dragging;
+	@:native("decelerating")
+	public var decelerating:Bool;
 
-	@:native("on")
-	public var on:effect;
+	@:native("delaysContentTouches")
+	public var delaysContentTouches:Bool;
 
-	@:native("on")
-	public var on:effect;
+	@:native("canCancelContentTouches")
+	public var canCancelContentTouches:Bool;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
 	overload public function touchesShouldBegin(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):BOOL;
@@ -118,11 +118,11 @@ extern class UIScrollView{
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:UIView):BOOL;
 
-	@:native("is")
-	public var is:default;
+	@:native("minimumZoomScale")
+	public var minimumZoomScale:CGFloat;
 
-	@:native("be")
-	public var be:must;
+	@:native("maximumZoomScale")
+	public var maximumZoomScale:CGFloat;
 
 	@:native("zoomScale")
 	public var zoomScale:CGFloat;
@@ -133,17 +133,17 @@ extern class UIScrollView{
 	@:native("zoomToRect:animated")
 	overload public function zoomToRect(rect:CGRect, animated:Bool):Void;
 
-	@:native("gesture")
-	public var gesture:at;
+	@:native("bouncesZoom")
+	public var bouncesZoom:Bool;
 
-	@:native("zoom")
-	public var zoom:in;
+	@:native("zooming")
+	public var zooming:Bool;
 
-	@:native("min/max")
-	public var min/max:the;
+	@:native("zoomBouncing")
+	public var zoomBouncing:Bool;
 
 	@:native("scrollsToTop")
-	public var scrollsToTop:;
+	public var scrollsToTop:Bool;
 
 	@:native("panGestureRecognizer")
 	public var panGestureRecognizer:UIPanGestureRecognizer;

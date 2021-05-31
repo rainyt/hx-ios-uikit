@@ -16,14 +16,14 @@ extern class UIActivity{
 	@:native("activityCategory")
 	public var activityCategory:UIActivityCategory;
 
-	@:native("completion")
-	public var completion:to;
+	@:native("activityType")
+	public var activityType:NSString;
 
-	@:native("non-nil")
-	public var non-nil:return;
+	@:native("activityTitle")
+	public var activityTitle:NSString;
 
-	@:native("non-nil")
-	public var non-nil:return;
+	@:native("activityImage")
+	public var activityImage:UIImage;
 
 	@:native("canPerformWithActivityItems:://:this:return:of:based:items.")
 	overload public function canPerformWithActivityItems(activityItems:NSArray, :, //:override, this:to, return:availability, of:activity, based:on, items.:default):BOOL;
@@ -31,11 +31,11 @@ extern class UIActivity{
 	@:native("prepareWithActivityItems::::override:extract:and:up:HI.")
 	overload public function prepareWithActivityItems(activityItems:NSArray, :, :, ://, override:to, extract:items, and:set, up:your, HI.:default):Void;
 
-	@:native("returns")
-	public var returns:default;
+	@:native("activityViewController")
+	public var activityViewController:UIViewController;
 
-	@:native("performActivity;")
-	overload public function performActivity;():Void;
+	@:native("performActivity")
+	overload public function performActivity():Void;
 
 	@:native("activityDidFinish:://:must:this:activity")
 	overload public function activityDidFinish(completed:Bool, :, //:activity, must:call, this:when, activity:is):Void;

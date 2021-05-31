@@ -22,8 +22,8 @@ extern class UIPointerInteraction{
 	@:native("initWithDelegate")
 	overload public function initWithDelegate(delegate:Dynamic):UIPointerInteraction;
 
-	@:native("invalidate;")
-	overload public function invalidate;():Void;
+	@:native("invalidate")
+	overload public function invalidate():Void;
 
 
 }

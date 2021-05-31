@@ -70,14 +70,14 @@ extern class UITableViewCell{
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;
 
-	@:native("is")
-	public var is:default;
+	@:native("selectionStyle")
+	public var selectionStyle:UITableViewCellSelectionStyle;
 
-	@:native("image,")
-	public var image,:Dynamic;
+	@:native("selected")
+	public var selected:Bool;
 
-	@:native("image,")
-	public var image,:Dynamic;
+	@:native("highlighted")
+	public var highlighted:Bool;
 
 	@:native("setSelected:animated::::::::::://:between:and")
 	overload public function setSelected(selected:Bool, animated:Bool, :, :, :, :, :, :, :, :, :, :, //:animate, between:regular, and:selected):Void;
@@ -85,47 +85,47 @@ extern class UITableViewCell{
 	@:native("setHighlighted:animated:::::::://:between:and")
 	overload public function setHighlighted(highlighted:Bool, animated:Bool, :, :, :, :, :, :, :, //:animate, between:regular, and:highlighted):Void;
 
-	@:native("appearance")
-	public var appearance:their;
+	@:native("editingStyle")
+	public var editingStyle:UITableViewCellEditingStyle;
 
-	@:native("is")
-	public var is:default;
+	@:native("showsReorderControl")
+	public var showsReorderControl:Bool;
 
-	@:native("level")
-	public var level:indentation;
+	@:native("shouldIndentWhileEditing")
+	public var shouldIndentWhileEditing:Bool;
 
-	@:native("standard")
-	public var standard:set;
+	@:native("accessoryType")
+	public var accessoryType:UITableViewCellAccessoryType;
 
-	@:native("accessory")
-	public var accessory:calls;
+	@:native("accessoryView")
+	public var accessoryView:UIView;
 
-	@:native("standard")
-	public var standard:set;
+	@:native("editingAccessoryType")
+	public var editingAccessoryType:UITableViewCellAccessoryType;
 
-	@:native("accessory")
-	public var accessory:calls;
+	@:native("editingAccessoryView")
+	public var editingAccessoryView:UIView;
 
-	@:native("is")
-	public var is:default;
+	@:native("indentationLevel")
+	public var indentationLevel:NSInteger;
 
-	@:native("is")
-	public var is:default;
+	@:native("indentationWidth")
+	public var indentationWidth:CGFloat;
 
 	@:native("separatorInset")
-	public var separatorInset:;
+	public var separatorInset:UIEdgeInsets;
 
-	@:native("&")
-	public var &:Dynamic;
+	@:native("editing")
+	public var editing:Bool;
 
 	@:native("setEditing:animated")
 	overload public function setEditing(editing:Bool, animated:Bool):Void;
 
-	@:native(""Delete"")
-	public var "Delete":showing;
+	@:native("showingDeleteConfirmation")
+	public var showingDeleteConfirmation:Bool;
 
 	@:native("focusStyle")
-	public var focusStyle:;
+	public var focusStyle:UITableViewCellFocusStyle;
 
 	@:native("willTransitionToState")
 	overload public function willTransitionToState(state:UITableViewCellStateMask):Void;

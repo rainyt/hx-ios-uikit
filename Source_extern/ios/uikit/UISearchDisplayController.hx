@@ -19,29 +19,29 @@ extern class UISearchDisplayController{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("is")
-	public var is:animated;
+	@:native("active")
+	public var active:Bool;
 
 	@:native("setActive:animated:::://:the:controller")
 	overload public function setActive(visible:Bool, animated:Bool, :, :, :, //:animate, the:view, controller:for):Void;
 
 	@:native("searchBar")
-	public var searchBar:;
+	public var searchBar:UISearchBar;
 
-	@:native("a")
-	public var a:Dynamic;
+	@:native("searchContentsController")
+	public var searchContentsController:UIViewController;
 
-	@:native("if")
-	public var if:create;
+	@:native("searchResultsTableView")
+	public var searchResultsTableView:UITableView;
 
-	@:native("can")
-	public var can:delegate;
+	@:native("searchResultsDataSource")
+	public var searchResultsDataSource:Dynamic;
 
-	@:native("can")
-	public var can:delegate;
+	@:native("searchResultsDelegate")
+	public var searchResultsDelegate:Dynamic;
 
 	@:native("searchResultsTitle")
-	public var searchResultsTitle:;
+	public var searchResultsTitle:NSString;
 
 	@:native("displaysSearchBarInNavigationBar")
 	public var displaysSearchBarInNavigationBar:Bool;

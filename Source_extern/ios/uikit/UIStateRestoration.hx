@@ -16,11 +16,11 @@ extern class UIStateRestoration{
 	@:native("restorationIdentifier")
 	public var restorationIdentifier:NSString;
 
-	@:native("")
-	overload public function ():Void;
+	@:native("encodeRestorableStateWithCoder")
+	overload public function encodeRestorableStateWithCoder(coder:NSCoder):Void;
 
-	@:native("")
-	overload public function ():Void;
+	@:native("decodeRestorableStateWithCoder")
+	overload public function decodeRestorableStateWithCoder(coder:NSCoder):Void;
 
 
 }

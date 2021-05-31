@@ -13,8 +13,8 @@ extern class UIBarButtonItemAppearance{
 	@:native("autorelease")
 	overload public static function autorelease():UIBarButtonItemAppearance;
 
-	@:native("init;")
-	overload public function init;():UIBarButtonItemAppearance;
+	@:native("init")
+	overload public function init():UIBarButtonItemAppearance;
 
 	@:native("initWithStyle")
 	overload public function initWithStyle(style:UIBarButtonItemStyle):UIBarButtonItemAppearance;
@@ -22,8 +22,8 @@ extern class UIBarButtonItemAppearance{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIBarButtonItemAppearance;
 
-	@:native("copy;")
-	overload public function copy;():UIBarButtonItemAppearance;
+	@:native("copy")
+	overload public function copy():UIBarButtonItemAppearance;
 
 	@:native("configureWithDefaultForStyle")
 	overload public function configureWithDefaultForStyle(style:UIBarButtonItemStyle):Void;

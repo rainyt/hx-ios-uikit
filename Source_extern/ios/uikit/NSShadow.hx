@@ -19,14 +19,14 @@ extern class NSShadow{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):NSShadow;
 
-	@:native("original")
-	public var original:the;
+	@:native("shadowOffset")
+	public var shadowOffset:CGSize;
 
-	@:native("space")
-	public var space:user;
+	@:native("shadowBlurRadius")
+	public var shadowBlurRadius:CGFloat;
 
-	@:native("of")
-	public var of:value;
+	@:native("shadowColor")
+	public var shadowColor:id;
 
 
 }

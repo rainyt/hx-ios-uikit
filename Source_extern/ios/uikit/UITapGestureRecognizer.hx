@@ -13,11 +13,11 @@ extern class UITapGestureRecognizer{
 	@:native("autorelease")
 	overload public static function autorelease():UITapGestureRecognizer;
 
-	@:native("to")
-	public var to:required;
+	@:native("numberOfTapsRequired")
+	public var numberOfTapsRequired:NSUInteger;
 
 	@:native("numberOfTouchesRequired")
-	public var numberOfTouchesRequired:;
+	public var numberOfTouchesRequired:NSUInteger;
 
 	@:native("buttonMaskRequired")
 	public var buttonMaskRequired:UIEventButtonMask;

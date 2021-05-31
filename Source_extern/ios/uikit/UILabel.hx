@@ -13,50 +13,50 @@ extern class UILabel{
 	@:native("autorelease")
 	overload public static function autorelease():UILabel;
 
-	@:native("is")
-	public var is:default;
+	@:native("text")
+	public var text:NSString;
 
-	@:native("17")
-	public var 17:font;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:font;
 
-	@:native("is")
-	public var is:default;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:textColor;
 
-	@:native("(no")
-	public var (no:nil;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:shadowColor;
 
-	@:native("CGSizeMake(0,")
-	public var CGSizeMake(0,:is;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:shadowOffset;
 
-	@:native("was")
-	public var was:default;
+	@:native("textAlignment")
+	public var textAlignment:NSTextAlignment;
 
-	@:native("of")
-	public var of:lines;
+	@:native("lineBreakMode")
+	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("attributedText")
 	public var attributedText:NSAttributedString;
 
-	@:native("is")
-	public var is:default;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:highlightedTextColor;
 
-	@:native("is")
-	public var is:default;
+	@:native("highlighted")
+	public var highlighted:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("userInteractionEnabled")
+	public var userInteractionEnabled:Bool;
 
-	@:native("is")
-	public var is:label;
+	@:native("enabled")
+	public var enabled:Bool;
 
 	@:native("numberOfLines")
 	public var numberOfLines:NSInteger;
 
-	@:native("is")
-	public var is:default;
+	@:native("adjustsFontSizeToFitWidth")
+	public var adjustsFontSizeToFitWidth:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("baselineAdjustment")
+	public var baselineAdjustment:UIBaselineAdjustment;
 
 	@:native("minimumScaleFactor")
 	public var minimumScaleFactor:CGFloat;

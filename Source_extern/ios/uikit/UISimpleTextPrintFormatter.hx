@@ -19,17 +19,17 @@ extern class UISimpleTextPrintFormatter{
 	@:native("initWithAttributedText")
 	overload public function initWithAttributedText(attributedText:NSAttributedString):UISimpleTextPrintFormatter;
 
-	@:native("drawing")
-	public var drawing:once;
+	@:native("text")
+	public var text:NSString;
 
 	@:native("attributedText")
 	public var attributedText:NSAttributedString;
 
 	@:native("font")
-	public var font:;
+	public var font:UIFont;
 
 	@:native("color")
-	public var color:;
+	public var color:UIColor;
 
 	@:native("textAlignment")
 	public var textAlignment:NSTextAlignment;

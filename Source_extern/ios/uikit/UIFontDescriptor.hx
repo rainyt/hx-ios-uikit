@@ -13,8 +13,8 @@ extern class UIFontDescriptor{
 	@:native("autorelease")
 	overload public static function autorelease():UIFontDescriptor;
 
-	@:native("init;")
-	overload public function init;():UIFontDescriptor;
+	@:native("init")
+	overload public function init():UIFontDescriptor;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIFontDescriptor;
@@ -23,7 +23,7 @@ extern class UIFontDescriptor{
 	public var postscriptName:NSString;
 
 	@:native("pointSize")
-	public var pointSize:;
+	public var pointSize:CGFloat;
 
 	@:native("matrix")
 	public var matrix:CGAffineTransform;

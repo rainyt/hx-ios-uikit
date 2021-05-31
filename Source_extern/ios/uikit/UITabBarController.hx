@@ -19,8 +19,8 @@ extern class UITabBarController{
 	@:native("setViewControllers:animated")
 	overload public function setViewControllers(viewControllers:Dynamic, animated:Bool):Void;
 
-	@:native("it")
-	public var it:if;
+	@:native("selectedViewController")
+	public var selectedViewController:UIViewController;
 
 	@:native("selectedIndex")
 	public var selectedIndex:NSUInteger;

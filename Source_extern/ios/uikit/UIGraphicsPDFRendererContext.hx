@@ -16,8 +16,8 @@ extern class UIGraphicsPDFRendererContext{
 	@:native("pdfContextBounds")
 	public var pdfContextBounds:CGRect;
 
-	@:native("beginPage;")
-	overload public function beginPage;():Void;
+	@:native("beginPage")
+	overload public function beginPage():Void;
 
 	@:native("beginPageWithBounds:pageInfo")
 	overload public function beginPageWithBounds(bounds:CGRect, pageInfo:Dynamic):Void;

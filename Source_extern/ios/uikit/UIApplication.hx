@@ -28,8 +28,8 @@ extern class UIApplication{
 	@:native("ios(2.0,")
 	public var ios(2.0,:instead",;
 
-	@:native("is")
-	public var is:default;
+	@:native("idleTimerDisabled")
+	public var idleTimerDisabled:Bool;
 
 	@:native("openURL:API_DEPRECATED_WITH_REPLACEMENT("openURL")
 	overload public function openURL(url:NSURL, API_DEPRECATED_WITH_REPLACEMENT("openURL:options:completionHandler:", ios(2.0, 10.0):Dynamic):BOOL;
@@ -47,7 +47,7 @@ extern class UIApplication{
 	public var ios(2.0,:scenes",;
 
 	@:native("windows")
-	public var windows:;
+	public var windows:Dynamic;
 
 	@:native("sendAction:to:from:forEvent")
 	overload public function sendAction(action:SEL, to:id, from:id, forEvent:UIEvent):BOOL;
@@ -73,8 +73,8 @@ extern class UIApplication{
 	@:native("statusBarFrame")
 	public var statusBarFrame:CGRect;
 
-	@:native("icon")
-	public var icon:the;
+	@:native("applicationIconBadgeNumber")
+	public var applicationIconBadgeNumber:NSInteger;
 
 	@:native("applicationSupportsShakeToEdit")
 	public var applicationSupportsShakeToEdit:Bool;

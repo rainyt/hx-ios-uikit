@@ -13,11 +13,11 @@ extern class UILocalizedIndexedCollation{
 	@:native("autorelease")
 	overload public static function autorelease():UILocalizedIndexedCollation;
 
-	@:native("currentCollation;")
-	overload public static function currentCollation;():UILocalizedIndexedCollation;
+	@:native("currentCollation")
+	overload public static function currentCollation():UILocalizedIndexedCollation;
 
 	@:native("sectionTitles")
-	public var sectionTitles:;
+	public var sectionTitles:Dynamic;
 
 	@:native("sectionIndexTitles")
 	public var sectionIndexTitles:Dynamic;

@@ -28,23 +28,23 @@ extern class UIWindow{
 	@:native("setScreen")
 	overload public function setScreen(screen:UIScreen):Void;
 
-	@:native("=")
-	public var =:default;
+	@:native("windowLevel")
+	public var windowLevel:CGFloat;
 
 	@:native("keyWindow")
 	public var keyWindow:Bool;
 
-	@:native("becomeKeyWindow;")
-	overload public function becomeKeyWindow;():Void;
+	@:native("becomeKeyWindow")
+	overload public function becomeKeyWindow():Void;
 
-	@:native("resignKeyWindow;")
-	overload public function resignKeyWindow;():Void;
+	@:native("resignKeyWindow")
+	overload public function resignKeyWindow():Void;
 
-	@:native("makeKeyWindow;")
-	overload public function makeKeyWindow;():Void;
+	@:native("makeKeyWindow")
+	overload public function makeKeyWindow():Void;
 
-	@:native("makeKeyAndVisible;")
-	overload public function makeKeyAndVisible;():Void;
+	@:native("makeKeyAndVisible")
+	overload public function makeKeyAndVisible():Void;
 
 	@:native("rootViewController")
 	public var rootViewController:UIViewController;

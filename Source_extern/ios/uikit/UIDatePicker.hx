@@ -13,32 +13,32 @@ extern class UIDatePicker{
 	@:native("autorelease")
 	overload public static function autorelease():UIDatePicker;
 
-	@:native("is")
-	public var is:default;
+	@:native("datePickerMode")
+	public var datePickerMode:UIDatePickerMode;
 
-	@:native("to")
-	public var to:returns;
+	@:native("locale")
+	public var locale:NSLocale;
 
-	@:native("to")
-	public var to:returns;
+	@:native("calendar")
+	public var calendar:NSCalendar;
 
-	@:native("from")
-	public var from:zone;
+	@:native("timeZone")
+	public var timeZone:NSTimeZone;
 
-	@:native("at")
-	public var at:starts;
+	@:native("date")
+	public var date:NSDate;
 
-	@:native("min")
-	public var min:When;
+	@:native("minimumDate")
+	public var minimumDate:NSDate;
 
-	@:native("is")
-	public var is:default;
+	@:native("maximumDate")
+	public var maximumDate:NSDate;
 
-	@:native("(86,399")
-	public var (86,399:23:59;
+	@:native("countDownDuration")
+	public var countDownDuration:NSTimeInterval;
 
-	@:native("is")
-	public var is:max;
+	@:native("minuteInterval")
+	public var minuteInterval:NSInteger;
 
 	@:native("setDate:animated://:animated:YES,:the:of:to:the")
 	overload public function setDate(date:NSDate, animated:Bool, //:if, animated:is, YES,:animate, the:wheels, of:time, to:display, the:new):Void;

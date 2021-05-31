@@ -16,8 +16,8 @@ extern class UIToolbar{
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:barStyle;
 
-	@:native("in")
-	public var in:shown;
+	@:native("items")
+	public var items:Dynamic;
 
 	@:native("translucent")
 	public var translucent:Bool;

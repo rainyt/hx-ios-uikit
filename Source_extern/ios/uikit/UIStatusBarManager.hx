@@ -25,8 +25,8 @@ extern class UIStatusBarManager{
 	@:native("statusBarHidden")
 	public var statusBarHidden:Bool;
 
-	@:native("is")
-	public var is:bar;
+	@:native("statusBarFrame")
+	public var statusBarFrame:CGRect;
 
 
 }

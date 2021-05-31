@@ -13,11 +13,11 @@ extern class UIScreenMode{
 	@:native("autorelease")
 	overload public static function autorelease():UIScreenMode;
 
-	@:native("in")
-	public var in:height;
+	@:native("size")
+	public var size:CGSize;
 
-	@:native("as")
-	public var as:defined;
+	@:native("pixelAspectRatio")
+	public var pixelAspectRatio:CGFloat;
 
 
 }

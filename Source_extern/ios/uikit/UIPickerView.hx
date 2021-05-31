@@ -13,11 +13,11 @@ extern class UIPickerView{
 	@:native("autorelease")
 	overload public static function autorelease():UIPickerView;
 
-	@:native("weak")
-	public var weak:nil.;
+	@:native("dataSource")
+	public var dataSource:Dynamic;
 
-	@:native("weak")
-	public var weak:nil.;
+	@:native("delegate")
+	public var delegate:Dynamic;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:later.",;
@@ -34,8 +34,8 @@ extern class UIPickerView{
 	@:native("viewForRow:forComponent")
 	overload public function viewForRow(row:NSInteger, forComponent:NSInteger):nullable UIView *;
 
-	@:native("reloadAllComponents;")
-	overload public function reloadAllComponents;():Void;
+	@:native("reloadAllComponents")
+	overload public function reloadAllComponents():Void;
 
 	@:native("reloadComponent")
 	overload public function reloadComponent(component:NSInteger):Void;

@@ -13,11 +13,11 @@ extern class UITabBarControllerItem{
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarControllerItem;
 
-	@:native("set")
-	public var set:not;
+	@:native("tabBarItem")
+	public var tabBarItem:UITabBarItem;
 
-	@:native("nil")
-	public var nil:Returns;
+	@:native("tabBarController")
+	public var tabBarController:UITabBarController;
 
 	@:native("tabBarObservedScrollView")
 	public var tabBarObservedScrollView:UIScrollView;

@@ -16,8 +16,8 @@ extern class UIGestureRecognizer{
 	@:native("initWithTarget:action:NS_DESIGNATED_INITIALIZER")
 	overload public function initWithTarget(target:id, action:SEL, NS_DESIGNATED_INITIALIZER://):UIGestureRecognizer;
 
-	@:native("init;")
-	overload public function init;():UIGestureRecognizer;
+	@:native("init")
+	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIGestureRecognizer;
@@ -28,26 +28,26 @@ extern class UIGestureRecognizer{
 	@:native("removeTarget:action://:the:target/action:passing:for:matches:targets,:the")
 	overload public function removeTarget(target:id, action:SEL, //:remove, the:specified, target/action:pair., passing:nil, for:target, matches:all, targets,:and, the:same):Void;
 
-	@:native("gesture")
-	public var gesture:the;
+	@:native("state")
+	public var state:UIGestureRecognizerState;
 
-	@:native("recognizer's")
-	public var recognizer's:gesture;
+	@:native("delegate")
+	public var delegate:Dynamic;
 
-	@:native("a")
-	public var a:recognizing;
+	@:native("enabled")
+	public var enabled:Bool;
 
-	@:native("addGestureRecognizer:")
-	public var addGestureRecognizer::the;
+	@:native("view")
+	public var view:UIView;
 
-	@:native("is")
-	public var is:method;
+	@:native("cancelsTouchesInView")
+	public var cancelsTouchesInView:Bool;
 
-	@:native("this")
-	public var this:of;
+	@:native("delaysTouchesBegan")
+	public var delaysTouchesBegan:Bool;
 
-	@:native("is")
-	public var is:gesture;
+	@:native("delaysTouchesEnded")
+	public var delaysTouchesEnded:Bool;
 
 	@:native("allowedTouchTypes")
 	public var allowedTouchTypes:Dynamic;
@@ -64,8 +64,8 @@ extern class UIGestureRecognizer{
 	@:native("locationInView:::::::::::::::::a:single-point:for:gesture.:the:of")
 	overload public function locationInView(view:UIView, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, a:generic, single-point:location, for:the, gesture.:usually, the:centroid, of:the):CGPoint;
 
-	@:native("be")
-	public var be:can;
+	@:native("numberOfTouches")
+	public var numberOfTouches:NSUInteger;
 
 	@:native("locationOfTouch:inView://:location:a")
 	overload public function locationOfTouch(touchIndex:NSUInteger, inView:UIView, //:the, location:of, a:particular):CGPoint;

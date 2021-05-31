@@ -22,8 +22,8 @@ extern class UICollectionViewLayout{
 	@:native("collectionView")
 	public var collectionView:UICollectionView;
 
-	@:native("invalidateLayout;")
-	overload public function invalidateLayout;():Void;
+	@:native("invalidateLayout")
+	overload public function invalidateLayout():Void;
 
 	@:native("invalidateLayoutWithContext")
 	overload public function invalidateLayoutWithContext(context:UICollectionViewLayoutInvalidationContext):Void;

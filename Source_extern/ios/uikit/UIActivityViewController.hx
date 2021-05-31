@@ -31,8 +31,8 @@ extern class UIActivityViewController{
 	@:native("completionWithItemsHandler")
 	public var completionWithItemsHandler:UIActivityViewControllerCompletionWithItemsHandler;
 
-	@:native("be")
-	public var be:not;
+	@:native("excludedActivityTypes")
+	public var excludedActivityTypes:Dynamic;
 
 
 }

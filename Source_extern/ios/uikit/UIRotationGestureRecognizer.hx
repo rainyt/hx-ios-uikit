@@ -13,11 +13,11 @@ extern class UIRotationGestureRecognizer{
 	@:native("autorelease")
 	overload public static function autorelease():UIRotationGestureRecognizer;
 
-	@:native("in")
-	public var in:rotation;
+	@:native("rotation")
+	public var rotation:CGFloat;
 
-	@:native("in")
-	public var in:pinch;
+	@:native("velocity")
+	public var velocity:CGFloat;
 
 
 }

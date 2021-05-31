@@ -49,8 +49,8 @@ extern class UICollectionView{
 	@:native("reorderingCadence")
 	public var reorderingCadence:UICollectionViewReorderingCadence;
 
-	@:native("supplementary")
-	public var supplementary:and;
+	@:native("backgroundView")
+	public var backgroundView:UIView;
 
 	@:native("registerClass:forCellWithReuseIdentifier")
 	overload public function registerClass(cellClass:Class, forCellWithReuseIdentifier:NSString):Void;
@@ -76,14 +76,14 @@ extern class UICollectionView{
 	@:native("dequeueConfiguredReusableSupplementaryViewWithRegistration:forIndexPath")
 	overload public function dequeueConfiguredReusableSupplementaryViewWithRegistration(registration:UICollectionViewSupplementaryRegistration, forIndexPath:NSIndexPath):__kindof UICollectionReusableView *;
 
-	@:native("is")
-	public var is:default;
+	@:native("allowsSelection")
+	public var allowsSelection:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("allowsMultipleSelection")
+	public var allowsMultipleSelection:Bool;
 
-	@:native("index")
-	public var index:selected;
+	@:native("indexPathsForSelectedItems")
+	public var indexPathsForSelectedItems:Dynamic;
 
 	@:native("selectItemAtIndexPath:animated:scrollPosition")
 	overload public function selectItemAtIndexPath(indexPath:NSIndexPath, animated:Bool, scrollPosition:UICollectionViewScrollPosition):Void;
@@ -94,8 +94,8 @@ extern class UICollectionView{
 	@:native("hasUncommittedUpdates")
 	public var hasUncommittedUpdates:Bool;
 
-	@:native("reloadData;")
-	overload public function reloadData;():Void;
+	@:native("reloadData")
+	overload public function reloadData():Void;
 
 	@:native("setCollectionViewLayout:animated://:from:layout")
 	overload public function setCollectionViewLayout(layout:UICollectionViewLayout, animated:Bool, //:transition, from:one, layout:to):Void;

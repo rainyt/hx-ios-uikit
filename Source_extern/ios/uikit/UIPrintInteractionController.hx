@@ -13,11 +13,11 @@ extern class UIPrintInteractionController{
 	@:native("autorelease")
 	overload public static function autorelease():UIPrintInteractionController;
 
-	@:native("unsupported")
-	public var unsupported:for;
+	@:native("printingAvailable")
+	public var printingAvailable:Bool;
 
-	@:native("can")
-	public var can:we;
+	@:native("printableUTIs")
+	public var printableUTIs:Dynamic;
 
 	@:native("canPrintURL")
 	overload public static function canPrintURL(url:NSURL):BOOL;
@@ -28,35 +28,35 @@ extern class UIPrintInteractionController{
 	@:native("sharedPrintController")
 	public var sharedPrintController:UIPrintInteractionController;
 
-	@:native("is")
-	public var is:default;
+	@:native("printInfo")
+	public var printInfo:UIPrintInfo;
 
-	@:native("is")
-	public var is:default;
+	@:native("delegate")
+	public var delegate:Dynamic;
 
 	@:native("ios(4.2,")
 	public var ios(4.2,:shown.",;
 
 	@:native("showsNumberOfCopies")
-	public var showsNumberOfCopies:;
+	public var showsNumberOfCopies:Bool;
 
 	@:native("showsPaperSelectionForLoadedPapers")
-	public var showsPaperSelectionForLoadedPapers:;
+	public var showsPaperSelectionForLoadedPapers:Bool;
 
-	@:native("printer")
-	public var printer:after;
+	@:native("printPaper")
+	public var printPaper:UIPrintPaper;
 
-	@:native("each")
-	public var each:render;
+	@:native("printPageRenderer")
+	public var printPageRenderer:UIPrintPageRenderer;
 
-	@:native("the")
-	public var the:fill;
+	@:native("printFormatter")
+	public var printFormatter:UIPrintFormatter;
 
-	@:native("NSURL,")
-	public var NSURL,:NSData,;
+	@:native("printingItem")
+	public var printingItem:id;
 
-	@:native("page")
-	public var page:support;
+	@:native("printingItems")
+	public var printingItems:NSArray;
 
 	@:native("presentAnimated:completionHandler::::::::::::::::::::::::")
 	overload public function presentAnimated(animated:Bool, completionHandler:UIPrintInteractionCompletionHandler, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://):BOOL;

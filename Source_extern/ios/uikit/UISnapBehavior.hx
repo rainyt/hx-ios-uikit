@@ -19,8 +19,8 @@ extern class UISnapBehavior{
 	@:native("snapPoint")
 	public var snapPoint:CGPoint;
 
-	@:native("least")
-	public var least:the;
+	@:native("damping")
+	public var damping:CGFloat;
 
 
 }

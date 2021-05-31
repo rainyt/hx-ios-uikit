@@ -13,14 +13,14 @@ extern class UITextInputMode{
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputMode;
 
-	@:native("as")
-	public var as:such;
+	@:native("primaryLanguage")
+	public var primaryLanguage:NSString;
 
 	@:native("currentInputMode")
 	overload public static function currentInputMode():nullable UITextInputMode *;
 
-	@:native("input")
-	public var input:active;
+	@:native("activeInputModes")
+	public var activeInputModes:Dynamic;
 
 
 }

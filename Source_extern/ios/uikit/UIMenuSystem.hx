@@ -25,11 +25,11 @@ extern class UIMenuSystem{
 	@:native("init")
 	overload public function init():UIMenuSystem;
 
-	@:native("setNeedsRebuild;")
-	overload public function setNeedsRebuild;():Void;
+	@:native("setNeedsRebuild")
+	overload public function setNeedsRebuild():Void;
 
-	@:native("setNeedsRevalidate;")
-	overload public function setNeedsRevalidate;():Void;
+	@:native("setNeedsRevalidate")
+	overload public function setNeedsRevalidate():Void;
 
 
 }

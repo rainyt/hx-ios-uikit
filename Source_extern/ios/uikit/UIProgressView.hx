@@ -22,23 +22,23 @@ extern class UIProgressView{
 	@:native("initWithProgressViewStyle://:the:height:to")
 	overload public function initWithProgressViewStyle(style:UIProgressViewStyle, //:sets, the:view, height:according, to:the):UIProgressView;
 
-	@:native("is")
-	public var is:default;
+	@:native("progressViewStyle")
+	public var progressViewStyle:UIProgressViewStyle;
 
-	@:native("are")
-	public var are:outside;
+	@:native("progress")
+	public var progress:float;
 
-	@:native("")
-	public var :progressTintColor;
+	@:native("progressTintColor")
+	public var progressTintColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("trackTintColor")
+	public var trackTintColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("progressImage")
+	public var progressImage:UIImage;
 
-	@:native("")
-	public var :;
+	@:native("trackImage")
+	public var trackImage:UIImage;
 
 	@:native("setProgress:animated")
 	overload public function setProgress(progress:float, animated:Bool):Void;

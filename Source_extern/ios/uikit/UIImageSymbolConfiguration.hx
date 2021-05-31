@@ -43,17 +43,17 @@ extern class UIImageSymbolConfiguration{
 	@:native("configurationWithFont:scale://:for:Type.:UIFontMetrics:get:adjustment:a")
 	overload public static function configurationWithFont(font:UIFont, scale:UIImageSymbolScale, //:Adjusts, for:Dynamic, Type.:Use, UIFontMetrics:to, get:automatic, adjustment:with, a:custom):UIImageSymbolConfiguration;
 
-	@:native("configurationWithoutTextStyle;")
-	overload public function configurationWithoutTextStyle;():UIImageSymbolConfiguration;
+	@:native("configurationWithoutTextStyle")
+	overload public function configurationWithoutTextStyle():UIImageSymbolConfiguration;
 
-	@:native("configurationWithoutScale;")
-	overload public function configurationWithoutScale;():UIImageSymbolConfiguration;
+	@:native("configurationWithoutScale")
+	overload public function configurationWithoutScale():UIImageSymbolConfiguration;
 
-	@:native("configurationWithoutWeight;")
-	overload public function configurationWithoutWeight;():UIImageSymbolConfiguration;
+	@:native("configurationWithoutWeight")
+	overload public function configurationWithoutWeight():UIImageSymbolConfiguration;
 
-	@:native("configurationWithoutPointSizeAndWeight;")
-	overload public function configurationWithoutPointSizeAndWeight;():UIImageSymbolConfiguration;
+	@:native("configurationWithoutPointSizeAndWeight")
+	overload public function configurationWithoutPointSizeAndWeight():UIImageSymbolConfiguration;
 
 	@:native("isEqualToConfiguration")
 	overload public function isEqualToConfiguration(otherConfiguration:UIImageSymbolConfiguration):BOOL;

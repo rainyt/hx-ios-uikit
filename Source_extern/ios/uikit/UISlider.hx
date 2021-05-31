@@ -13,23 +13,23 @@ extern class UISlider{
 	@:native("autorelease")
 	overload public static function autorelease():UISlider;
 
-	@:native("to")
-	public var to:pinned;
+	@:native("value")
+	public var value:float;
 
-	@:native("min")
-	public var min:new;
+	@:native("minimumValue")
+	public var minimumValue:float;
 
-	@:native("max")
-	public var max:new;
+	@:native("maximumValue")
+	public var maximumValue:float;
 
-	@:native("speaker")
-	public var speaker:Dynamic;
+	@:native("minimumValueImage")
+	public var minimumValueImage:UIImage;
 
-	@:native("speaker")
-	public var speaker:Dynamic;
+	@:native("maximumValueImage")
+	public var maximumValueImage:UIImage;
 
-	@:native("=")
-	public var =:default;
+	@:native("continuous")
+	public var continuous:Bool;
 
 	@:native("minimumTrackTintColor")
 	public var minimumTrackTintColor:UIColor;

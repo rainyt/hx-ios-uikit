@@ -29,7 +29,7 @@ extern class UIDragItem{
 	public var localObject:id;
 
 	@:native("_Nullable")
-	public var _Nullable:;
+	public var _Nullable:UIDragPreview;
 
 
 }

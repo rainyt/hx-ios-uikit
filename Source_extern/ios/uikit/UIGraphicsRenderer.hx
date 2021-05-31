@@ -19,11 +19,11 @@ extern class UIGraphicsRenderer{
 	@:native("initWithBounds:format")
 	overload public function initWithBounds(bounds:CGRect, format:UIGraphicsRendererFormat):UIGraphicsRenderer;
 
-	@:native("by")
-	public var by:returned;
+	@:native("format")
+	public var format:UIGraphicsRendererFormat;
 
-	@:native("generate")
-	public var generate:to;
+	@:native("allowsImageOutput")
+	public var allowsImageOutput:Bool;
 
 
 }

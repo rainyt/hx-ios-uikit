@@ -19,23 +19,23 @@ extern class UIBarItem{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIBarItem;
 
-	@:native("is")
-	public var is:default;
+	@:native("enabled")
+	public var enabled:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("title")
+	public var title:NSString;
 
-	@:native("is")
-	public var is:default;
+	@:native("image")
+	public var image:UIImage;
 
 	@:native("landscapeImagePhone")
-	public var landscapeImagePhone:;
+	public var landscapeImagePhone:UIImage;
 
 	@:native("largeContentSizeImage")
-	public var largeContentSizeImage:;
+	public var largeContentSizeImage:UIImage;
 
-	@:native("is")
-	public var is:default;
+	@:native("imageInsets")
+	public var imageInsets:UIEdgeInsets;
 
 	@:native("landscapeImagePhoneInsets")
 	public var landscapeImagePhoneInsets:UIEdgeInsets;
@@ -43,8 +43,8 @@ extern class UIBarItem{
 	@:native("largeContentSizeImageInsets")
 	public var largeContentSizeImageInsets:UIEdgeInsets;
 
-	@:native("is")
-	public var is:default;
+	@:native("tag")
+	public var tag:NSInteger;
 
 	@:native("setTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
 	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;

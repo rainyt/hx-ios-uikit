@@ -22,8 +22,8 @@ extern class UIActionSheet{
 	@:native("title")
 	public var title:NSString;
 
-	@:native("is")
-	public var is:alert;
+	@:native("actionSheetStyle")
+	public var actionSheetStyle:UIActionSheetStyle;
 
 	@:native("addButtonWithTitle:::returns:of")
 	overload public function addButtonWithTitle(title:NSString, :, ://, returns:index, of:button.):NSInteger;
@@ -34,14 +34,14 @@ extern class UIActionSheet{
 	@:native("numberOfButtons")
 	public var numberOfButtons:NSInteger;
 
-	@:native("is")
-	public var is:default;
+	@:native("cancelButtonIndex")
+	public var cancelButtonIndex:NSInteger;
 
-	@:native("destructive")
-	public var destructive:sets;
+	@:native("destructiveButtonIndex")
+	public var destructiveButtonIndex:NSInteger;
 
-	@:native("not")
-	public var not:initWithTitle:...;
+	@:native("firstOtherButtonIndex")
+	public var firstOtherButtonIndex:NSInteger;
 
 	@:native("visible")
 	public var visible:Bool;

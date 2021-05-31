@@ -22,8 +22,8 @@ extern class UIPageViewController{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("be")
-	public var be:will;
+	@:native("dataSource")
+	public var dataSource:Dynamic;
 
 	@:native("transitionStyle")
 	public var transitionStyle:UIPageViewControllerTransitionStyle;
@@ -31,11 +31,11 @@ extern class UIPageViewController{
 	@:native("navigationOrientation")
 	public var navigationOrientation:UIPageViewControllerNavigationOrientation;
 
-	@:native("otherwise")
-	public var otherwise:'UIPageViewControllerSpineLocationMin',;
+	@:native("spineLocation")
+	public var spineLocation:UIPageViewControllerSpineLocation;
 
-	@:native("is")
-	public var is:Default;
+	@:native("doubleSided")
+	public var doubleSided:Bool;
 
 	@:native("gestureRecognizers")
 	public var gestureRecognizers:Dynamic;

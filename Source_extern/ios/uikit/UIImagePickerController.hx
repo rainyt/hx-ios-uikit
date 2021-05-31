@@ -31,14 +31,14 @@ extern class UIImagePickerController{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("is")
-	public var is:value;
+	@:native("sourceType")
+	public var sourceType:UIImagePickerControllerSourceType;
 
 	@:native("mediaTypes")
-	public var mediaTypes:;
+	public var mediaTypes:Dynamic;
 
 	@:native("allowsEditing")
-	public var allowsEditing:;
+	public var allowsEditing:Bool;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:Dynamic;
@@ -47,22 +47,22 @@ extern class UIImagePickerController{
 	public var ios(11.0,:PHPicker.",;
 
 	@:native("videoMaximumDuration")
-	public var videoMaximumDuration:;
+	public var videoMaximumDuration:NSTimeInterval;
 
 	@:native("videoQuality")
-	public var videoQuality:;
+	public var videoQuality:UIImagePickerControllerQualityType;
 
 	@:native("ios(11.0,")
 	public var ios(11.0,:PHPicker.",;
 
 	@:native("showsCameraControls")
-	public var showsCameraControls:;
+	public var showsCameraControls:Bool;
 
-	@:native("")
-	public var :cameraOverlayView;
+	@:native("cameraOverlayView")
+	public var cameraOverlayView:UIView;
 
 	@:native("cameraViewTransform")
-	public var cameraViewTransform:;
+	public var cameraViewTransform:CGAffineTransform;
 
 	@:native("takePicture")
 	overload public function takePicture():Void;
@@ -76,11 +76,11 @@ extern class UIImagePickerController{
 	@:native("cameraCaptureMode")
 	public var cameraCaptureMode:UIImagePickerControllerCameraCaptureMode;
 
-	@:native("")
-	public var :;
+	@:native("cameraDevice")
+	public var cameraDevice:UIImagePickerControllerCameraDevice;
 
-	@:native("")
-	public var :;
+	@:native("cameraFlashMode")
+	public var cameraFlashMode:UIImagePickerControllerCameraFlashMode;
 
 
 }

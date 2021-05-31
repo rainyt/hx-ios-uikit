@@ -16,8 +16,8 @@ extern class UIFontPickerViewControllerConfiguration{
 	@:native("includeFaces")
 	public var includeFaces:Bool;
 
-	@:native("of")
-	public var of:instead;
+	@:native("displayUsingSystemFont")
+	public var displayUsingSystemFont:Bool;
 
 	@:native("filteredTraits")
 	public var filteredTraits:UIFontDescriptorSymbolicTraits;

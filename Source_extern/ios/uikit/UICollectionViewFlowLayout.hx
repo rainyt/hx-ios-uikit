@@ -25,8 +25,8 @@ extern class UICollectionViewFlowLayout{
 	@:native("estimatedItemSize")
 	public var estimatedItemSize:CGSize;
 
-	@:native("is")
-	public var is:default;
+	@:native("scrollDirection")
+	public var scrollDirection:UICollectionViewScrollDirection;
 
 	@:native("headerReferenceSize")
 	public var headerReferenceSize:CGSize;

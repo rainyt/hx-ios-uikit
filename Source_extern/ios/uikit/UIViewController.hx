@@ -19,11 +19,11 @@ extern class UIViewController{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIViewController;
 
-	@:native("or")
-	public var or:setter;
+	@:native("view")
+	public var view:UIView;
 
-	@:native("loadView;")
-	overload public function loadView;():Void;
+	@:native("loadView")
+	overload public function loadView():Void;
 
 	@:native("loadViewIfNeeded")
 	overload public function loadViewIfNeeded():Void;
@@ -37,17 +37,17 @@ extern class UIViewController{
 	@:native("viewDidUnload")
 	overload public function viewDidUnload():Void;
 
-	@:native("viewDidLoad;")
-	overload public function viewDidLoad;():Void;
+	@:native("viewDidLoad")
+	overload public function viewDidLoad():Void;
 
 	@:native("viewLoaded")
 	public var viewLoaded:Bool;
 
-	@:native("the")
-	public var the:instantiate;
+	@:native("nibName")
+	public var nibName:NSString;
 
-	@:native("the")
-	public var the:load;
+	@:native("nibBundle")
+	public var nibBundle:NSBundle;
 
 	@:native("storyboard")
 	public var storyboard:UIStoryboard;
@@ -100,11 +100,11 @@ extern class UIViewController{
 	@:native("viewDidLayoutSubviews")
 	overload public function viewDidLayoutSubviews():Void;
 
-	@:native("parent")
-	public var parent:a;
+	@:native("title")
+	public var title:NSString;
 
-	@:native("didReceiveMemoryWarning;")
-	overload public function didReceiveMemoryWarning;():Void;
+	@:native("didReceiveMemoryWarning")
+	overload public function didReceiveMemoryWarning():Void;
 
 	@:native("parentViewController")
 	public var parentViewController:UIViewController;
@@ -112,8 +112,8 @@ extern class UIViewController{
 	@:native("ios(2.0,")
 	public var ios(2.0,:Dynamic;
 
-	@:native("")
-	public var :presentedViewController;
+	@:native("presentedViewController")
+	public var presentedViewController:UIViewController;
 
 	@:native("presentingViewController")
 	public var presentingViewController:UIViewController;

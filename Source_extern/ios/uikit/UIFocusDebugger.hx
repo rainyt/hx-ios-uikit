@@ -13,11 +13,11 @@ extern class UIFocusDebugger{
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusDebugger;
 
-	@:native("help;")
-	overload public static function help;():id<UIFocusDebuggerOutput>;
+	@:native("help")
+	overload public static function help():id<UIFocusDebuggerOutput>;
 
-	@:native("status;")
-	overload public static function status;():id<UIFocusDebuggerOutput>;
+	@:native("status")
+	overload public static function status():id<UIFocusDebuggerOutput>;
 
 	@:native("checkFocusabilityForItem")
 	overload public static function checkFocusabilityForItem(item:Dynamic):id<UIFocusDebuggerOutput>;

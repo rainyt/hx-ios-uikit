@@ -13,8 +13,8 @@ extern class UIGestureRecognizerProtected{
 	@:native("autorelease")
 	overload public static function autorelease():UIGestureRecognizerProtected;
 
-	@:native("by")
-	public var by:read;
+	@:native("state")
+	public var state:UIGestureRecognizerState;
 
 	@:native("ignoreTouch:forEvent://:a:isn't:of:gesture:can:passed:this:to:ignored.:touches:be:on:view:if")
 	overload public function ignoreTouch(touch:UITouch, forEvent:UIEvent, //:if, a:touch, isn't:part, of:this, gesture:it, can:be, passed:to, this:method, to:be, ignored.:ignored, touches:won't, be:cancelled, on:the, view:even, if:cancelsTouchesInView):Void;
@@ -22,8 +22,8 @@ extern class UIGestureRecognizerProtected{
 	@:native("ignorePress:forEvent")
 	overload public function ignorePress(button:UIPress, forEvent:UIPressesEvent):Void;
 
-	@:native("reset;")
-	overload public function reset;():Void;
+	@:native("reset")
+	overload public function reset():Void;
 
 	@:native("canPreventGestureRecognizer")
 	overload public function canPreventGestureRecognizer(preventedGestureRecognizer:UIGestureRecognizer):BOOL;

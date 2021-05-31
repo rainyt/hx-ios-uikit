@@ -13,14 +13,14 @@ extern class UINavigationControllerItem{
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationControllerItem;
 
-	@:native("navigation")
-	public var navigation:its;
+	@:native("navigationItem")
+	public var navigationItem:UINavigationItem;
 
 	@:native("hidesBottomBarWhenPushed")
 	public var hidesBottomBarWhenPushed:Bool;
 
-	@:native("return")
-	public var return:controller,;
+	@:native("navigationController")
+	public var navigationController:UINavigationController;
 
 
 }

@@ -22,32 +22,32 @@ extern class UIControl{
 	@:native("initWithFrame:primaryAction")
 	overload public function initWithFrame(frame:CGRect, primaryAction:UIAction):UIControl;
 
-	@:native("draw")
-	public var draw:may;
+	@:native("enabled")
+	public var enabled:Bool;
 
-	@:native("by")
-	public var by:or;
+	@:native("selected")
+	public var selected:Bool;
 
-	@:native("on")
-	public var on:cleared;
+	@:native("highlighted")
+	public var highlighted:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("contentVerticalAlignment")
+	public var contentVerticalAlignment:UIControlContentVerticalAlignment;
 
-	@:native("is")
-	public var is:default;
+	@:native("contentHorizontalAlignment")
+	public var contentHorizontalAlignment:UIControlContentHorizontalAlignment;
 
-	@:native("or")
-	public var or:'leading';
+	@:native("effectiveContentHorizontalAlignment")
+	public var effectiveContentHorizontalAlignment:UIControlContentHorizontalAlignment;
 
-	@:native("(e.g.")
-	public var (e.g.:state;
+	@:native("state")
+	public var state:UIControlState;
 
 	@:native("tracking")
 	public var tracking:Bool;
 
-	@:native("tracking")
-	public var tracking:during;
+	@:native("touchInside")
+	public var touchInside:Bool;
 
 	@:native("beginTrackingWithTouch:withEvent")
 	overload public function beginTrackingWithTouch(touch:UITouch, withEvent:UIEvent):BOOL;
@@ -76,11 +76,11 @@ extern class UIControl{
 	@:native("removeActionForIdentifier:forControlEvents")
 	overload public function removeActionForIdentifier(actionIdentifier:UIActionIdentifier, forControlEvents:UIControlEvents):Void;
 
-	@:native("nil")
-	public var nil:one;
+	@:native("allTargets")
+	public var allTargets:NSSet;
 
-	@:native("one")
-	public var one:least;
+	@:native("allControlEvents")
+	public var allControlEvents:UIControlEvents;
 
 	@:native("actionsForTarget:forControlEvent:::single:returns:of:selector:returns")
 	overload public function actionsForTarget(target:id, forControlEvent:UIControlEvents, :, ://, single:event., returns:NSArray, of:NSString, selector:names., returns:nil):nullable NSArray<NSString *> *;

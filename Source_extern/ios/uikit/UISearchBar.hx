@@ -23,31 +23,31 @@ extern class UISearchBar{
 	overload public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UISearchBar;
 
 	@:native("barStyle")
-	public var barStyle:;
+	public var barStyle:UIBarStyle;
 
-	@:native("is")
-	public var is:default;
+	@:native("delegate")
+	public var delegate:Dynamic;
 
-	@:native("search")
-	public var search:current/starting;
+	@:native("text")
+	public var text:NSString;
 
-	@:native("is")
-	public var is:default;
+	@:native("prompt")
+	public var prompt:NSString;
 
-	@:native("is")
-	public var is:default;
+	@:native("placeholder")
+	public var placeholder:NSString;
 
 	@:native("showsBookmarkButton")
-	public var showsBookmarkButton:;
+	public var showsBookmarkButton:Bool;
 
 	@:native("searchTextField")
 	public var searchTextField:UISearchTextField;
 
 	@:native("showsCancelButton")
-	public var showsCancelButton:;
+	public var showsCancelButton:Bool;
 
 	@:native("showsSearchResultsButton")
-	public var showsSearchResultsButton:;
+	public var showsSearchResultsButton:Bool;
 
 	@:native("searchResultsButtonSelected")
 	public var searchResultsButtonSelected:Bool;
@@ -70,14 +70,14 @@ extern class UISearchBar{
 	@:native("translucent")
 	public var translucent:Bool;
 
-	@:native("")
-	public var :;
+	@:native("scopeButtonTitles")
+	public var scopeButtonTitles:Dynamic;
 
 	@:native("selectedScopeButtonIndex")
-	public var selectedScopeButtonIndex:;
+	public var selectedScopeButtonIndex:NSInteger;
 
-	@:native("")
-	public var :;
+	@:native("showsScopeBar")
+	public var showsScopeBar:Bool;
 
 	@:native("setShowsScopeBar:animated")
 	overload public function setShowsScopeBar(show:Bool, animated:Bool):Void;

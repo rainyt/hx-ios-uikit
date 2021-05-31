@@ -13,8 +13,8 @@ extern class UIAccessibilityContainer{
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityContainer;
 
-	@:native("accessibilityElementCount;")
-	overload public function accessibilityElementCount;():NSInteger;
+	@:native("accessibilityElementCount")
+	overload public function accessibilityElementCount():NSInteger;
 
 	@:native("accessibilityElementAtIndex")
 	overload public function accessibilityElementAtIndex(index:NSInteger):nullable id;

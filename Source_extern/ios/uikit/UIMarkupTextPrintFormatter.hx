@@ -16,8 +16,8 @@ extern class UIMarkupTextPrintFormatter{
 	@:native("initWithMarkupText")
 	overload public function initWithMarkupText(markupText:NSString):UIMarkupTextPrintFormatter;
 
-	@:native("drawing")
-	public var drawing:once;
+	@:native("markupText")
+	public var markupText:NSString;
 
 
 }

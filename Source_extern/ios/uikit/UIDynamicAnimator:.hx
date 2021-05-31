@@ -22,8 +22,8 @@ extern class UIDynamicAnimator:{
 	@:native("removeBehavior")
 	overload public function removeBehavior(behavior:UIDynamicBehavior):Void;
 
-	@:native("removeAllBehaviors;")
-	overload public function removeAllBehaviors;():Void;
+	@:native("removeAllBehaviors")
+	overload public function removeAllBehaviors():Void;
 
 	@:native("referenceView")
 	public var referenceView:UIView;

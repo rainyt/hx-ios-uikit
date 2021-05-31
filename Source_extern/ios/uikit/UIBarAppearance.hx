@@ -13,8 +13,8 @@ extern class UIBarAppearance{
 	@:native("autorelease")
 	overload public static function autorelease():UIBarAppearance;
 
-	@:native("init;")
-	overload public function init;():UIBarAppearance;
+	@:native("init")
+	overload public function init():UIBarAppearance;
 
 	@:native("initWithIdiom")
 	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIBarAppearance;
@@ -28,17 +28,17 @@ extern class UIBarAppearance{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIBarAppearance;
 
-	@:native("copy;")
-	overload public function copy;():UIBarAppearance;
+	@:native("copy")
+	overload public function copy():UIBarAppearance;
 
-	@:native("configureWithDefaultBackground;")
-	overload public function configureWithDefaultBackground;():Void;
+	@:native("configureWithDefaultBackground")
+	overload public function configureWithDefaultBackground():Void;
 
-	@:native("configureWithOpaqueBackground;")
-	overload public function configureWithOpaqueBackground;():Void;
+	@:native("configureWithOpaqueBackground")
+	overload public function configureWithOpaqueBackground():Void;
 
-	@:native("configureWithTransparentBackground;")
-	overload public function configureWithTransparentBackground;():Void;
+	@:native("configureWithTransparentBackground")
+	overload public function configureWithTransparentBackground():Void;
 
 	@:native("backgroundEffect")
 	public var backgroundEffect:UIBlurEffect;

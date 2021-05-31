@@ -13,26 +13,26 @@ extern class UIListContentConfiguration{
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentConfiguration;
 
-	@:native("cellConfiguration;")
-	overload public static function cellConfiguration;():UIListContentConfiguration;
+	@:native("cellConfiguration")
+	overload public static function cellConfiguration():UIListContentConfiguration;
 
-	@:native("subtitleCellConfiguration;")
-	overload public static function subtitleCellConfiguration;():UIListContentConfiguration;
+	@:native("subtitleCellConfiguration")
+	overload public static function subtitleCellConfiguration():UIListContentConfiguration;
 
-	@:native("valueCellConfiguration;")
-	overload public static function valueCellConfiguration;():UIListContentConfiguration;
+	@:native("valueCellConfiguration")
+	overload public static function valueCellConfiguration():UIListContentConfiguration;
 
-	@:native("plainHeaderConfiguration;")
-	overload public static function plainHeaderConfiguration;():UIListContentConfiguration;
+	@:native("plainHeaderConfiguration")
+	overload public static function plainHeaderConfiguration():UIListContentConfiguration;
 
-	@:native("plainFooterConfiguration;")
-	overload public static function plainFooterConfiguration;():UIListContentConfiguration;
+	@:native("plainFooterConfiguration")
+	overload public static function plainFooterConfiguration():UIListContentConfiguration;
 
-	@:native("groupedHeaderConfiguration;")
-	overload public static function groupedHeaderConfiguration;():UIListContentConfiguration;
+	@:native("groupedHeaderConfiguration")
+	overload public static function groupedHeaderConfiguration():UIListContentConfiguration;
 
-	@:native("groupedFooterConfiguration;")
-	overload public static function groupedFooterConfiguration;():UIListContentConfiguration;
+	@:native("groupedFooterConfiguration")
+	overload public static function groupedFooterConfiguration():UIListContentConfiguration;
 
 	@:native("sidebarCellConfiguration")
 	overload public static function sidebarCellConfiguration():UIListContentConfiguration;

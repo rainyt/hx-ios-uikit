@@ -31,8 +31,8 @@ extern class UIStoryboardSegue{
 	@:native("destinationViewController")
 	public var destinationViewController:UIViewController;
 
-	@:native("perform;")
-	overload public function perform;():Void;
+	@:native("perform")
+	overload public function perform():Void;
 
 
 }

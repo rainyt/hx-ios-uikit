@@ -19,8 +19,8 @@ extern class UIPasteboard{
 	@:native("pasteboardWithName:create")
 	overload public static function pasteboardWithName(pasteboardName:NSString, create:Bool):nullable UIPasteboard *;
 
-	@:native("pasteboardWithUniqueName;")
-	overload public static function pasteboardWithUniqueName;():UIPasteboard *;
+	@:native("pasteboardWithUniqueName")
+	overload public static function pasteboardWithUniqueName():UIPasteboard *;
 
 	@:native("name")
 	public var name:NSString;
@@ -50,7 +50,7 @@ extern class UIPasteboard{
 	overload public function setObjects(objects:Dynamic, localOnly:Bool, expirationDate:NSDate_Nullable, API_AVAILABLE(ios(11.0):Dynamic):Void;
 
 	@:native("pasteboardTypes")
-	public var pasteboardTypes:;
+	public var pasteboardTypes:Dynamic;
 
 	@:native("containsPasteboardTypes")
 	overload public function containsPasteboardTypes(pasteboardTypes:Dynamic):BOOL;

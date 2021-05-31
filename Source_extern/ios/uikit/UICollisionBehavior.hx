@@ -49,8 +49,8 @@ extern class UICollisionBehavior{
 	@:native("boundaryIdentifiers")
 	public var boundaryIdentifiers:Dynamic;
 
-	@:native("removeAllBoundaries;")
-	overload public function removeAllBoundaries;():Void;
+	@:native("removeAllBoundaries")
+	overload public function removeAllBoundaries():Void;
 
 	@:native("collisionDelegate")
 	public var collisionDelegate:Dynamic;

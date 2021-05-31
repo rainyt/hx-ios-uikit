@@ -145,11 +145,11 @@ extern class NSLayoutManager{
 	@:native("getFirstUnlaidCharacterIndex:glyphIndex")
 	overload public function getFirstUnlaidCharacterIndex(charIndex:NSUInteger, glyphIndex:NSUInteger):Void;
 
-	@:native("firstUnlaidCharacterIndex;")
-	overload public function firstUnlaidCharacterIndex;():NSUInteger;
+	@:native("firstUnlaidCharacterIndex")
+	overload public function firstUnlaidCharacterIndex():NSUInteger;
 
-	@:native("firstUnlaidGlyphIndex;")
-	overload public function firstUnlaidGlyphIndex;():NSUInteger;
+	@:native("firstUnlaidGlyphIndex")
+	overload public function firstUnlaidGlyphIndex():NSUInteger;
 
 	@:native("textContainerForGlyphAtIndex:effectiveRange")
 	overload public function textContainerForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer):nullable NSTextContainer *;

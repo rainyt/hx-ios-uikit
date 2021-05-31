@@ -4,6 +4,25 @@ class ObjcProperty {
 	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClass.ExternBaseClassFunProperty {
 		line = StringTools.replace(line, "@property ", "");
 		line = StringTools.replace(line, "*", "");
+		// 移除注释
+		if (line.indexOf("//") != -1) {
+			line = line.substr(0, line.lastIndexOf("//"));
+		}
+		var newline = "";
+		var lastchat = "";
+		// 调整空格，去除连续空格
+		for (i in 0...line.length) {
+			var chat = line.charAt(i);
+			if (chat == " ") {
+				if (lastchat != " ")
+					newline += chat;
+			} else {
+				newline += chat;
+			}
+			lastchat = chat;
+		}
+		line = newline;
+
 		var isRead = false;
 		var read = "";
 		var skip = 0;

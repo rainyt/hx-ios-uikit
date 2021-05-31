@@ -37,14 +37,14 @@ extern class UITableView{
 	@:native("dropDelegate")
 	public var dropDelegate:Dynamic;
 
-	@:native("is")
-	public var is:default;
+	@:native("rowHeight")
+	public var rowHeight:CGFloat;
 
-	@:native("is")
-	public var is:default;
+	@:native("sectionHeaderHeight")
+	public var sectionHeaderHeight:CGFloat;
 
-	@:native("is")
-	public var is:default;
+	@:native("sectionFooterHeight")
+	public var sectionFooterHeight:CGFloat;
 
 	@:native("estimatedRowHeight")
 	public var estimatedRowHeight:CGFloat;
@@ -118,11 +118,11 @@ extern class UITableView{
 	@:native("performBatchUpdates:completion")
 	overload public function performBatchUpdates(updates:Dynamic, completion:Dynamic):Void;
 
-	@:native("beginUpdates;")
-	overload public function beginUpdates;():Void;
+	@:native("beginUpdates")
+	overload public function beginUpdates():Void;
 
-	@:native("endUpdates;")
-	overload public function endUpdates;():Void;
+	@:native("endUpdates")
+	overload public function endUpdates():Void;
 
 	@:native("insertSections:withRowAnimation")
 	overload public function insertSections(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
@@ -151,14 +151,14 @@ extern class UITableView{
 	@:native("hasUncommittedUpdates")
 	public var hasUncommittedUpdates:Bool;
 
-	@:native("reloadData;")
-	overload public function reloadData;():Void;
+	@:native("reloadData")
+	overload public function reloadData():Void;
 
 	@:native("reloadSectionIndexTitles")
 	overload public function reloadSectionIndexTitles():Void;
 
-	@:native("not")
-	public var not:is;
+	@:native("editing")
+	public var editing:Bool;
 
 	@:native("setEditing:animated")
 	overload public function setEditing(editing:Bool, animated:Bool):Void;
@@ -166,8 +166,8 @@ extern class UITableView{
 	@:native("allowsSelection")
 	public var allowsSelection:Bool;
 
-	@:native("editing")
-	public var editing:in;
+	@:native("allowsSelectionDuringEditing")
+	public var allowsSelectionDuringEditing:Bool;
 
 	@:native("allowsMultipleSelection")
 	public var allowsMultipleSelection:Bool;
@@ -175,8 +175,8 @@ extern class UITableView{
 	@:native("allowsMultipleSelectionDuringEditing")
 	public var allowsMultipleSelectionDuringEditing:Bool;
 
-	@:native("of")
-	public var of:row;
+	@:native("indexPathForSelectedRow")
+	public var indexPathForSelectedRow:NSIndexPath;
 
 	@:native("indexPathsForSelectedRows")
 	public var indexPathsForSelectedRows:Dynamic;
@@ -187,8 +187,8 @@ extern class UITableView{
 	@:native("deselectRowAtIndexPath:animated")
 	overload public function deselectRowAtIndexPath(indexPath:NSIndexPath, animated:Bool):Void;
 
-	@:native("is")
-	public var is:default;
+	@:native("sectionIndexMinimumDisplayRowCount")
+	public var sectionIndexMinimumDisplayRowCount:NSInteger;
 
 	@:native("sectionIndexColor")
 	public var sectionIndexColor:UIColor;
@@ -214,11 +214,11 @@ extern class UITableView{
 	@:native("insetsContentViewsToSafeArea")
 	public var insetsContentViewsToSafeArea:Bool;
 
-	@:native("section")
-	public var section:with;
+	@:native("tableHeaderView")
+	public var tableHeaderView:UIView;
 
-	@:native("section")
-	public var section:with;
+	@:native("tableFooterView")
+	public var tableFooterView:UIView;
 
 	@:native("dequeueReusableCellWithIdentifier::Used:the:to:an:allocated:in:of:a")
 	overload public function dequeueReusableCellWithIdentifier(identifier:NSString, ://, Used:by, the:delegate, to:acquire, an:already, allocated:cell,, in:lieu, of:allocating, a:new):nullable __kindof UITableViewCell *;

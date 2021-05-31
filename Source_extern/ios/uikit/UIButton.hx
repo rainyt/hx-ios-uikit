@@ -34,29 +34,29 @@ extern class UIButton{
 	@:native("buttonWithType:primaryAction")
 	overload public static function buttonWithType(buttonType:UIButtonType, primaryAction:UIAction):UIButton;
 
-	@:native("custom")
-	public var custom:for;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:contentEdgeInsets;
 
-	@:native("is")
-	public var is:default;
+	@:native("titleEdgeInsets")
+	public var titleEdgeInsets:UIEdgeInsets;
 
-	@:native("emboss")
-	public var emboss:and;
+	@:native("reversesTitleShadowWhenHighlighted")
+	public var reversesTitleShadowWhenHighlighted:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("imageEdgeInsets")
+	public var imageEdgeInsets:UIEdgeInsets;
 
-	@:native("when")
-	public var when:darker;
+	@:native("adjustsImageWhenHighlighted")
+	public var adjustsImageWhenHighlighted:Bool;
 
-	@:native("when")
-	public var when:lighter;
+	@:native("adjustsImageWhenDisabled")
+	public var adjustsImageWhenDisabled:Bool;
 
 	@:native("showsTouchWhenHighlighted")
-	public var showsTouchWhenHighlighted:;
+	public var showsTouchWhenHighlighted:Bool;
 
 	@:native("tintColor")
-	public var tintColor:;
+	public var tintColor:UIColor;
 
 	@:native("buttonType")
 	public var buttonType:UIButtonType;
@@ -115,20 +115,20 @@ extern class UIButton{
 	@:native("attributedTitleForState")
 	overload public function attributedTitleForState(state:UIControlState):nullable NSAttributedString *;
 
-	@:native("return")
-	public var return:can;
+	@:native("currentTitle")
+	public var currentTitle:NSString;
 
-	@:native("is")
-	public var is:default;
+	@:native("currentTitleColor")
+	public var currentTitleColor:UIColor;
 
-	@:native("//")
-	public var //:;
+	@:native("currentTitleShadowColor")
+	public var currentTitleShadowColor:UIColor;
 
-	@:native("return")
-	public var return:can;
+	@:native("currentImage")
+	public var currentImage:UIImage;
 
-	@:native("return")
-	public var return:can;
+	@:native("currentBackgroundImage")
+	public var currentBackgroundImage:UIImage;
 
 	@:native("currentPreferredSymbolConfiguration")
 	public var currentPreferredSymbolConfiguration:UIImageSymbolConfiguration;
@@ -137,10 +137,10 @@ extern class UIButton{
 	public var currentAttributedTitle:NSAttributedString;
 
 	@:native("titleLabel")
-	public var titleLabel:;
+	public var titleLabel:UILabel;
 
-	@:native("")
-	public var :imageView;
+	@:native("imageView")
+	public var imageView:UIImageView;
 
 	@:native("backgroundRectForBounds")
 	overload public function backgroundRectForBounds(bounds:CGRect):CGRect;

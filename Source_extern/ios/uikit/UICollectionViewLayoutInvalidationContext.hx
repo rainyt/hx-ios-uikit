@@ -13,11 +13,11 @@ extern class UICollectionViewLayoutInvalidationContext{
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewLayoutInvalidationContext;
 
-	@:native("sent")
-	public var sent:is;
+	@:native("invalidateEverything")
+	public var invalidateEverything:Bool;
 
-	@:native("or")
-	public var or:inserted;
+	@:native("invalidateDataSourceCounts")
+	public var invalidateDataSourceCounts:Bool;
 
 	@:native("invalidateItemsAtIndexPaths")
 	overload public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;

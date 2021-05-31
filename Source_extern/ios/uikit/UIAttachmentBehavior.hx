@@ -52,11 +52,11 @@ extern class UIAttachmentBehavior{
 	@:native("length")
 	public var length:CGFloat;
 
-	@:native("critical")
-	public var critical:1:;
+	@:native("damping")
+	public var damping:CGFloat;
 
-	@:native("in")
-	public var in://;
+	@:native("frequency")
+	public var frequency:CGFloat;
 
 	@:native("frictionTorque")
 	public var frictionTorque:CGFloat;

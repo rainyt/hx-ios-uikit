@@ -13,20 +13,20 @@ extern class UIPrintPageRenderer{
 	@:native("autorelease")
 	overload public static function autorelease():UIPrintPageRenderer;
 
-	@:native("from")
-	public var from:contentRect;
+	@:native("headerHeight")
+	public var headerHeight:CGFloat;
 
-	@:native("from")
-	public var from:contentRect;
+	@:native("footerHeight")
+	public var footerHeight:CGFloat;
 
-	@:native("is")
-	public var is:origin;
+	@:native("paperRect")
+	public var paperRect:CGRect;
 
-	@:native("paper")
-	public var paper:inside;
+	@:native("printableRect")
+	public var printableRect:CGRect;
 
-	@:native("or")
-	public var or:formatters;
+	@:native("numberOfPages")
+	public var numberOfPages:NSInteger;
 
 	@:native("printFormatters")
 	public var printFormatters:Dynamic;

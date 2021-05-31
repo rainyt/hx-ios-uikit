@@ -14,16 +14,16 @@ extern class UIViewHierarchy{
 	overload public static function autorelease():UIViewHierarchy;
 
 	@:native("superview")
-	public var superview:;
+	public var superview:UIView;
 
 	@:native("subviews")
 	public var subviews:Dynamic;
 
 	@:native("window")
-	public var window:;
+	public var window:UIWindow;
 
-	@:native("removeFromSuperview;")
-	overload public function removeFromSuperview;():Void;
+	@:native("removeFromSuperview")
+	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
 	overload public function insertSubview(view:UIView, atIndex:NSInteger):Void;
@@ -55,14 +55,14 @@ extern class UIViewHierarchy{
 	@:native("willMoveToSuperview")
 	overload public function willMoveToSuperview(newSuperview:UIView):Void;
 
-	@:native("didMoveToSuperview;")
-	overload public function didMoveToSuperview;():Void;
+	@:native("didMoveToSuperview")
+	overload public function didMoveToSuperview():Void;
 
 	@:native("willMoveToWindow")
 	overload public function willMoveToWindow(newWindow:UIWindow):Void;
 
-	@:native("didMoveToWindow;")
-	overload public function didMoveToWindow;():Void;
+	@:native("didMoveToWindow")
+	overload public function didMoveToWindow():Void;
 
 	@:native("isDescendantOfView::returns")
 	overload public function isDescendantOfView(view:UIView, ://, returns:YES):BOOL;
@@ -70,14 +70,14 @@ extern class UIViewHierarchy{
 	@:native("viewWithTag://:search.")
 	overload public function viewWithTag(tag:NSInteger, //:recursive, search.:includes):nullable __kindof UIView *;
 
-	@:native("setNeedsLayout;")
-	overload public function setNeedsLayout;():Void;
+	@:native("setNeedsLayout")
+	overload public function setNeedsLayout():Void;
 
-	@:native("layoutIfNeeded;")
-	overload public function layoutIfNeeded;():Void;
+	@:native("layoutIfNeeded")
+	overload public function layoutIfNeeded():Void;
 
-	@:native("layoutSubviews;")
-	overload public function layoutSubviews;():Void;
+	@:native("layoutSubviews")
+	overload public function layoutSubviews():Void;
 
 	@:native("layoutMargins")
 	public var layoutMargins:UIEdgeInsets;
@@ -103,8 +103,8 @@ extern class UIViewHierarchy{
 	@:native("layoutMarginsGuide")
 	public var layoutMarginsGuide:UILayoutGuide;
 
-	@:native("")
-	public var :readableContentGuide;
+	@:native("readableContentGuide")
+	public var readableContentGuide:UILayoutGuide;
 
 	@:native("safeAreaLayoutGuide")
 	public var safeAreaLayoutGuide:UILayoutGuide;

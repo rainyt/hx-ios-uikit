@@ -68,7 +68,7 @@ extern class UIDocumentBrowserViewController{
 	public var browserUserInterfaceStyle:UIDocumentBrowserUserInterfaceStyle;
 
 	@:native("localizedCreateDocumentActionTitle")
-	public var localizedCreateDocumentActionTitle:;
+	public var localizedCreateDocumentActionTitle:NSString;
 
 	@:native("defaultDocumentAspectRatio")
 	public var defaultDocumentAspectRatio:CGFloat;

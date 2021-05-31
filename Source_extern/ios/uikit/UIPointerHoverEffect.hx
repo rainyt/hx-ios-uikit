@@ -13,14 +13,14 @@ extern class UIPointerHoverEffect{
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerHoverEffect;
 
-	@:native("to")
-	public var to:Defaults;
+	@:native("preferredTintMode")
+	public var preferredTintMode:UIPointerEffectTintMode;
 
-	@:native("to")
-	public var to:Defaults;
+	@:native("prefersShadow")
+	public var prefersShadow:Bool;
 
-	@:native("to")
-	public var to:Defaults;
+	@:native("prefersScaledContent")
+	public var prefersScaledContent:Bool;
 
 
 }

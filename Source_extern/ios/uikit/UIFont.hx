@@ -53,25 +53,25 @@ extern class UIFont{
 	public var fontName:NSString;
 
 	@:native("pointSize")
-	public var pointSize:;
+	public var pointSize:CGFloat;
 
 	@:native("ascender")
-	public var ascender:;
+	public var ascender:CGFloat;
 
 	@:native("descender")
-	public var descender:;
+	public var descender:CGFloat;
 
 	@:native("capHeight")
-	public var capHeight:;
+	public var capHeight:CGFloat;
 
 	@:native("xHeight")
-	public var xHeight:;
+	public var xHeight:CGFloat;
 
 	@:native("lineHeight")
-	public var lineHeight:;
+	public var lineHeight:CGFloat;
 
 	@:native("leading")
-	public var leading:;
+	public var leading:CGFloat;
 
 	@:native("fontWithSize")
 	overload public function fontWithSize(fontSize:CGFloat):UIFont *;

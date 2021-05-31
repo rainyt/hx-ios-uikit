@@ -13,14 +13,14 @@ extern class UISubclassingHooks{
 	@:native("autorelease")
 	overload public static function autorelease():UISubclassingHooks;
 
-	@:native("of")
-	public var of:instances;
+	@:native("layoutAttributesClass")
+	public var layoutAttributesClass:Class;
 
 	@:native("invalidationContextClass")
 	public var invalidationContextClass:Class;
 
-	@:native("prepareLayout;")
-	overload public function prepareLayout;():Void;
+	@:native("prepareLayout")
+	overload public function prepareLayout():Void;
 
 	@:native("layoutAttributesForElementsInRect://:an:layout:instances:all:views:the")
 	overload public function layoutAttributesForElementsInRect(rect:CGRect, //:return, an:array, layout:attributes, instances:for, all:the, views:in, the:given):nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *;
@@ -52,14 +52,14 @@ extern class UISubclassingHooks{
 	@:native("targetContentOffsetForProposedContentOffset:API_AVAILABLE(ios(7.0):a:can:the:offset:be:during:or")
 	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint, API_AVAILABLE(ios(7.0)://, a:layout, can:return, the:content, offset:to, be:applied, during:transition, or:update):CGPoint;
 
-	@:native("facilitate")
-	public var facilitate:to;
+	@:native("collectionViewContentSize")
+	public var collectionViewContentSize:CGSize;
 
-	@:native("the")
-	public var the:of;
+	@:native("developmentLayoutDirection")
+	public var developmentLayoutDirection:UIUserInterfaceLayoutDirection;
 
-	@:native("if")
-	public var if:horizontally;
+	@:native("flipsHorizontallyInOppositeLayoutDirection")
+	public var flipsHorizontallyInOppositeLayoutDirection:Bool;
 
 
 }

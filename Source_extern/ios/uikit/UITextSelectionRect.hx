@@ -19,14 +19,14 @@ extern class UITextSelectionRect{
 	@:native("writingDirection")
 	public var writingDirection:NSWritingDirection;
 
-	@:native("the")
-	public var the:of;
+	@:native("containsStart")
+	public var containsStart:Bool;
 
-	@:native("the")
-	public var the:of;
+	@:native("containsEnd")
+	public var containsEnd:Bool;
 
-	@:native("oriented")
-	public var oriented:vertically;
+	@:native("isVertical")
+	public var isVertical:Bool;
 
 
 }

@@ -55,59 +55,59 @@ extern class UIColor{
 	@:native("initWithCIColor")
 	overload public function initWithCIColor(ciColor:CIColor):UIColor *;
 
-	@:native("0.0")
-	public var 0.0://;
+	@:native("blackColor")
+	public var blackColor:UIColor;
 
-	@:native("0.333")
-	public var 0.333://;
+	@:native("darkGrayColor")
+	public var darkGrayColor:UIColor;
 
-	@:native("0.667")
-	public var 0.667://;
+	@:native("lightGrayColor")
+	public var lightGrayColor:UIColor;
 
-	@:native("1.0")
-	public var 1.0://;
+	@:native("whiteColor")
+	public var whiteColor:UIColor;
 
-	@:native("0.5")
-	public var 0.5://;
+	@:native("grayColor")
+	public var grayColor:UIColor;
 
-	@:native("0.0")
-	public var 0.0:0.0,;
+	@:native("redColor")
+	public var redColor:UIColor;
 
-	@:native("0.0")
-	public var 0.0:1.0,;
+	@:native("greenColor")
+	public var greenColor:UIColor;
 
-	@:native("1.0")
-	public var 1.0:0.0,;
+	@:native("blueColor")
+	public var blueColor:UIColor;
 
-	@:native("1.0")
-	public var 1.0:1.0,;
+	@:native("cyanColor")
+	public var cyanColor:UIColor;
 
-	@:native("0.0")
-	public var 0.0:1.0,;
+	@:native("yellowColor")
+	public var yellowColor:UIColor;
 
-	@:native("1.0")
-	public var 1.0:0.0,;
+	@:native("magentaColor")
+	public var magentaColor:UIColor;
 
-	@:native("0.0")
-	public var 0.0:0.5,;
+	@:native("orangeColor")
+	public var orangeColor:UIColor;
 
-	@:native("0.5")
-	public var 0.5:0.0,;
+	@:native("purpleColor")
+	public var purpleColor:UIColor;
 
-	@:native("0.2")
-	public var 0.2:0.4,;
+	@:native("brownColor")
+	public var brownColor:UIColor;
 
-	@:native("0.0")
-	public var 0.0:white,;
+	@:native("clearColor")
+	public var clearColor:UIColor;
 
-	@:native("set;")
-	overload public function set;():Void;
+	@:native("set")
+	overload public function set():Void;
 
-	@:native("setFill;")
-	overload public function setFill;():Void;
+	@:native("setFill")
+	overload public function setFill():Void;
 
-	@:native("setStroke;")
-	overload public function setStroke;():Void;
+	@:native("setStroke")
+	overload public function setStroke():Void;
 
 	@:native("getWhite:alpha")
 	overload public function getWhite(white:CGFloat, alpha:CGFloat):BOOL;
@@ -128,7 +128,7 @@ extern class UIColor{
 	overload public function CGColor():CGColorRef;
 
 	@:native("CIColor")
-	public var CIColor:;
+	public var CIColor:CIColor;
 
 
 }

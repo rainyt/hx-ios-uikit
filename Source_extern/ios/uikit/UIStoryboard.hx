@@ -16,8 +16,8 @@ extern class UIStoryboard{
 	@:native("storyboardWithName:bundle")
 	overload public static function storyboardWithName(name:NSString, bundle:NSBundle):UIStoryboard *;
 
-	@:native("instantiateInitialViewController;")
-	overload public function instantiateInitialViewController;():nullable __kindof UIViewController *;
+	@:native("instantiateInitialViewController")
+	overload public function instantiateInitialViewController():nullable __kindof UIViewController *;
 
 	@:native("instantiateInitialViewControllerWithCreator")
 	overload public function instantiateInitialViewControllerWithCreator(block:NS_NOESCAPEUIStoryboardViewControllerCreator):nullable __kindof UIViewController *;

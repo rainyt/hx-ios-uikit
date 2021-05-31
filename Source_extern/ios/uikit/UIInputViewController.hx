@@ -31,11 +31,11 @@ extern class UIInputViewController{
 	@:native("needsInputModeSwitchKey")
 	public var needsInputModeSwitchKey:Bool;
 
-	@:native("dismissKeyboard;")
-	overload public function dismissKeyboard;():Void;
+	@:native("dismissKeyboard")
+	overload public function dismissKeyboard():Void;
 
-	@:native("advanceToNextInputMode;")
-	overload public function advanceToNextInputMode;():Void;
+	@:native("advanceToNextInputMode")
+	overload public function advanceToNextInputMode():Void;
 
 	@:native("handleInputModeListFromView:withEvent")
 	overload public function handleInputModeListFromView(view:nonnullUIView, withEvent:nonnullUIEvent):Void;

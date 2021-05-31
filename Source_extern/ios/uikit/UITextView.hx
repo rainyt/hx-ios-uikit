@@ -25,8 +25,8 @@ extern class UITextView{
 	@:native("textColor")
 	public var textColor:UIColor;
 
-	@:native("is")
-	public var is:default;
+	@:native("textAlignment")
+	public var textAlignment:NSTextAlignment;
 
 	@:native("selectedRange")
 	public var selectedRange:NSRange;
@@ -52,8 +52,8 @@ extern class UITextView{
 	@:native("scrollRangeToVisible")
 	overload public function scrollRangeToVisible(range:NSRange):Void;
 
-	@:native("")
-	public var :;
+	@:native("inputView")
+	public var inputView:UIView;
 
 	@:native("inputAccessoryView")
 	public var inputAccessoryView:UIView;

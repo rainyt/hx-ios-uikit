@@ -31,17 +31,17 @@ extern class UIWebView{
 	@:native("request")
 	public var request:NSURLRequest;
 
-	@:native("reload;")
-	overload public function reload;():Void;
+	@:native("reload")
+	overload public function reload():Void;
 
-	@:native("stopLoading;")
-	overload public function stopLoading;():Void;
+	@:native("stopLoading")
+	overload public function stopLoading():Void;
 
-	@:native("goBack;")
-	overload public function goBack;():Void;
+	@:native("goBack")
+	overload public function goBack():Void;
 
-	@:native("goForward;")
-	overload public function goForward;():Void;
+	@:native("goForward")
+	overload public function goForward():Void;
 
 	@:native("canGoBack")
 	public var canGoBack:Bool;

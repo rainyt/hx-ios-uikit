@@ -28,8 +28,8 @@ extern class UIPreviewInteraction{
 	@:native("locationInCoordinateSpace://:the:location:the:that")
 	overload public function locationInCoordinateSpace(coordinateSpace:Dynamic, //:returns, the:current, location:of, the:touch, that:started):CGPoint;
 
-	@:native("cancelInteraction;")
-	overload public function cancelInteraction;():Void;
+	@:native("cancelInteraction")
+	overload public function cancelInteraction():Void;
 
 
 }

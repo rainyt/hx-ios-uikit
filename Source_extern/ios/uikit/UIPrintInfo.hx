@@ -16,26 +16,26 @@ extern class UIPrintInfo{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIPrintInfo;
 
-	@:native("printInfo;")
-	overload public static function printInfo;():UIPrintInfo *;
+	@:native("printInfo")
+	overload public static function printInfo():UIPrintInfo *;
 
 	@:native("printInfoWithDictionary")
 	overload public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo *;
 
-	@:native("selects")
-	public var selects:user;
+	@:native("printerID")
+	public var printerID:NSString;
 
-	@:native("application")
-	public var application:is;
+	@:native("jobName")
+	public var jobName:NSString;
 
-	@:native("is")
-	public var is:default;
+	@:native("outputType")
+	public var outputType:UIPrintInfoOutputType;
 
-	@:native("is")
-	public var is:default;
+	@:native("orientation")
+	public var orientation:UIPrintInfoOrientation;
 
-	@:native("for")
-	public var for:edge;
+	@:native("duplex")
+	public var duplex:UIPrintInfoDuplex;
 
 	@:native("dictionaryRepresentation")
 	public var dictionaryRepresentation:NSDictionary;

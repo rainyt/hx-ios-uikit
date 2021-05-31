@@ -55,8 +55,8 @@ extern class UIStackView{
 	@:native("baselineRelativeArrangement")
 	public var baselineRelativeArrangement:Bool;
 
-	@:native("")
-	public var :;
+	@:native("layoutMarginsRelativeArrangement")
+	public var layoutMarginsRelativeArrangement:Bool;
 
 
 }

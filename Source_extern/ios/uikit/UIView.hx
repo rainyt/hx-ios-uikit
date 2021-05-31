@@ -13,8 +13,8 @@ extern class UIView{
 	@:native("autorelease")
 	overload public static function autorelease():UIView;
 
-	@:native("the")
-	public var the:for;
+	@:native("layerClass")
+	public var layerClass:Class;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIView;
@@ -22,14 +22,14 @@ extern class UIView{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIView;
 
-	@:native("(touch,")
-	public var (touch,:events;
+	@:native("userInteractionEnabled")
+	public var userInteractionEnabled:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("tag")
+	public var tag:NSInteger;
 
-	@:native("layer's")
-	public var layer's:is;
+	@:native("layer")
+	public var layer:CALayer;
 
 	@:native("canBecomeFocused")
 	public var canBecomeFocused:Bool;

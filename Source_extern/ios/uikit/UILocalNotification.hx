@@ -25,8 +25,8 @@ extern class UILocalNotification{
 	@:native("timeZone")
 	public var timeZone:NSTimeZone;
 
-	@:native("don't")
-	public var don't:means;
+	@:native("repeatInterval")
+	public var repeatInterval:NSCalendarUnit;
 
 	@:native("repeatCalendar")
 	public var repeatCalendar:NSCalendar;
@@ -37,29 +37,29 @@ extern class UILocalNotification{
 	@:native("regionTriggersOnce")
 	public var regionTriggersOnce:Bool;
 
-	@:native("an")
-	public var an:show;
+	@:native("alertBody")
+	public var alertBody:NSString;
 
-	@:native("launching")
-	public var launching:hide;
+	@:native("hasAction")
+	public var hasAction:Bool;
 
-	@:native("of")
-	public var of:place;
+	@:native("alertAction")
+	public var alertAction:NSString;
 
-	@:native("image")
-	public var image:launch;
+	@:native("alertLaunchImage")
+	public var alertLaunchImage:NSString;
 
 	@:native("alertTitle")
 	public var alertTitle:NSString;
 
-	@:native("or")
-	public var or:play;
+	@:native("soundName")
+	public var soundName:NSString;
 
-	@:native("to")
-	public var to:defaults;
+	@:native("applicationIconBadgeNumber")
+	public var applicationIconBadgeNumber:NSInteger;
 
-	@:native("list")
-	public var list:non-property;
+	@:native("userInfo")
+	public var userInfo:NSDictionary;
 
 	@:native("category")
 	public var category:NSString;

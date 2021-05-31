@@ -37,8 +37,8 @@ extern class NSTextStorage{
 	@:native("edited:range:changeInLength")
 	overload public function edited(editedMask:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
 
-	@:native("processEditing;")
-	overload public function processEditing;():Void;
+	@:native("processEditing")
+	overload public function processEditing():Void;
 
 	@:native("fixesAttributesLazily")
 	public var fixesAttributesLazily:Bool;

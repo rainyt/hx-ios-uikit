@@ -16,8 +16,8 @@ extern class UISceneActivationRequestOptions{
 	@:native("requestingScene")
 	public var requestingScene:UIScene;
 
-	@:native("")
-	public var :collectionJoinBehavior;
+	@:native("collectionJoinBehavior")
+	public var collectionJoinBehavior:UISceneCollectionJoinBehavior;
 
 
 }

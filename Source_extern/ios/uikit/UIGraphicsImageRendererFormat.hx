@@ -13,11 +13,11 @@ extern class UIGraphicsImageRendererFormat{
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsImageRendererFormat;
 
-	@:native("current")
-	public var current:screen's;
+	@:native("scale")
+	public var scale:CGFloat;
 
-	@:native("to")
-	public var to:this;
+	@:native("opaque")
+	public var opaque:Bool;
 
 	@:native("ios(10.0,")
 	public var ios(10.0,:instead",;

@@ -22,8 +22,8 @@ extern class UIRegion{
 	@:native("initWithSize")
 	overload public function initWithSize(size:CGSize):UIRegion;
 
-	@:native("inverseRegion;")
-	overload public function inverseRegion;():UIRegion;
+	@:native("inverseRegion")
+	overload public function inverseRegion():UIRegion;
 
 	@:native("regionByUnionWithRegion")
 	overload public function regionByUnionWithRegion(region:UIRegion):UIRegion;

@@ -28,8 +28,8 @@ extern class UITraitCollection{
 	@:native("traitCollectionWithUserInterfaceIdiom")
 	overload public static function traitCollectionWithUserInterfaceIdiom(idiom:UIUserInterfaceIdiom):UITraitCollection *;
 
-	@:native("unspecified:")
-	public var unspecified:://;
+	@:native("userInterfaceIdiom")
+	public var userInterfaceIdiom:UIUserInterfaceIdiom;
 
 	@:native("traitCollectionWithUserInterfaceStyle:API_AVAILABLE(tvos(10.0)")
 	overload public static function traitCollectionWithUserInterfaceStyle(userInterfaceStyle:UIUserInterfaceStyle, API_AVAILABLE(tvos(10.0):Dynamic):UITraitCollection *;
@@ -46,20 +46,20 @@ extern class UITraitCollection{
 	@:native("traitCollectionWithDisplayScale")
 	overload public static function traitCollectionWithDisplayScale(scale:CGFloat):UITraitCollection *;
 
-	@:native("unspecified:")
-	public var unspecified:://;
+	@:native("displayScale")
+	public var displayScale:CGFloat;
 
 	@:native("traitCollectionWithHorizontalSizeClass")
 	overload public static function traitCollectionWithHorizontalSizeClass(horizontalSizeClass:UIUserInterfaceSizeClass):UITraitCollection *;
 
-	@:native("unspecified:")
-	public var unspecified:://;
+	@:native("horizontalSizeClass")
+	public var horizontalSizeClass:UIUserInterfaceSizeClass;
 
 	@:native("traitCollectionWithVerticalSizeClass")
 	overload public static function traitCollectionWithVerticalSizeClass(verticalSizeClass:UIUserInterfaceSizeClass):UITraitCollection *;
 
-	@:native("unspecified:")
-	public var unspecified:://;
+	@:native("verticalSizeClass")
+	public var verticalSizeClass:UIUserInterfaceSizeClass;
 
 	@:native("traitCollectionWithForceTouchCapability")
 	overload public static function traitCollectionWithForceTouchCapability(capability:UIForceTouchCapability):UITraitCollection *;

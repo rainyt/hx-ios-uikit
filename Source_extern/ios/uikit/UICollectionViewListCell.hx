@@ -13,8 +13,8 @@ extern class UICollectionViewListCell{
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewListCell;
 
-	@:native("defaultContentConfiguration;")
-	overload public function defaultContentConfiguration;():UIListContentConfiguration *;
+	@:native("defaultContentConfiguration")
+	overload public function defaultContentConfiguration():UIListContentConfiguration *;
 
 	@:native("indentationLevel")
 	public var indentationLevel:NSInteger;

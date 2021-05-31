@@ -43,8 +43,8 @@ extern class NSCollectionLayoutGroup{
 	@:native("subitems")
 	public var subitems:Dynamic;
 
-	@:native("visualDescription;")
-	overload public function visualDescription;():NSString*;
+	@:native("visualDescription")
+	overload public function visualDescription():NSString*;
 
 
 }

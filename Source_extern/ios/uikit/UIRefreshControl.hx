@@ -13,8 +13,8 @@ extern class UIRefreshControl{
 	@:native("autorelease")
 	overload public static function autorelease():UIRefreshControl;
 
-	@:native("init;")
-	overload public function init;():UIRefreshControl;
+	@:native("init")
+	overload public function init():UIRefreshControl;
 
 	@:native("refreshing")
 	public var refreshing:Bool;

@@ -13,14 +13,14 @@ extern class UITabBar{
 	@:native("autorelease")
 	overload public static function autorelease():UITabBar;
 
-	@:native("is")
-	public var is:default;
+	@:native("delegate")
+	public var delegate:Dynamic;
 
-	@:native("in")
-	public var in:shown;
+	@:native("items")
+	public var items:Dynamic;
 
-	@:native("is")
-	public var is:default;
+	@:native("selectedItem")
+	public var selectedItem:UITabBarItem;
 
 	@:native("setItems:animated:://:fade:or:or:and")
 	overload public function setItems(items:Dynamic, animated:Bool, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;

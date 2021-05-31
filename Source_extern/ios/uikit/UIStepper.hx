@@ -13,26 +13,26 @@ extern class UIStepper{
 	@:native("autorelease")
 	overload public static function autorelease():UIStepper;
 
-	@:native("=")
-	public var =:default;
+	@:native("continuous")
+	public var continuous:Bool;
 
-	@:native("=")
-	public var =:default;
+	@:native("autorepeat")
+	public var autorepeat:Bool;
 
-	@:native("=")
-	public var =:default;
+	@:native("wraps")
+	public var wraps:Bool;
 
-	@:native("to")
-	public var to:clamped;
+	@:native("value")
+	public var value:double;
 
-	@:native("than")
-	public var than:less;
+	@:native("minimumValue")
+	public var minimumValue:double;
 
-	@:native("than")
-	public var than:greater;
+	@:native("maximumValue")
+	public var maximumValue:double;
 
-	@:native("than")
-	public var than:greater;
+	@:native("stepValue")
+	public var stepValue:double;
 
 	@:native("setBackgroundImage:forState:API_AVAILABLE(ios(6.0)")
 	overload public function setBackgroundImage(image:UIImage, forState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;

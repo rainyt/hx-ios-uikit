@@ -14,13 +14,13 @@ extern class UIEvent{
 	overload public static function autorelease():UIEvent;
 
 	@:native("type")
-	public var type:;
+	public var type:UIEventType;
 
 	@:native("subtype")
-	public var subtype:;
+	public var subtype:UIEventSubtype;
 
 	@:native("timestamp")
-	public var timestamp:;
+	public var timestamp:NSTimeInterval;
 
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;

@@ -13,11 +13,11 @@ extern class UICollectionViewFlowLayoutInvalidationContext{
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewFlowLayoutInvalidationContext;
 
-	@:native("information")
-	public var information:size;
+	@:native("invalidateFlowLayoutDelegateMetrics")
+	public var invalidateFlowLayoutDelegateMetrics:Bool;
 
-	@:native("of")
-	public var of:piece;
+	@:native("invalidateFlowLayoutAttributes")
+	public var invalidateFlowLayoutAttributes:Bool;
 
 
 }

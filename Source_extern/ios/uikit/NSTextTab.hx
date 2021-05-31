@@ -19,14 +19,14 @@ extern class NSTextTab{
 	@:native("initWithTextAlignment:location:options:NS_DESIGNATED_INITIALIZER:Initializes:text:with:text:location,:options.:The:alignment:used:determine:position:text:the")
 	overload public function initWithTextAlignment(alignment:NSTextAlignment, location:CGFloat, options:Dynamic, NS_DESIGNATED_INITIALIZER://, Initializes:a, text:tab, with:the, text:alignment,, location,:and, options.:, The:text, alignment:is, used:to, determine:the, position:of, text:inside, the:tab):NSTextTab;
 
-	@:native("preferred")
-	public var preferred:user's;
+	@:native("alignment")
+	public var alignment:NSTextAlignment;
 
-	@:native("coordinate")
-	public var coordinate:rect;
+	@:native("location")
+	public var location:CGFloat;
 
-	@:native("configuration")
-	public var configuration:Optional;
+	@:native("options")
+	public var options:Dynamic;
 
 
 }

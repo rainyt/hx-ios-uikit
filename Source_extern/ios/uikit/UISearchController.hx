@@ -37,8 +37,8 @@ extern class UISearchController{
 	@:native("obscuresBackgroundDuringPresentation")
 	public var obscuresBackgroundDuringPresentation:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("hidesNavigationBarDuringPresentation")
+	public var hidesNavigationBarDuringPresentation:Bool;
 
 	@:native("searchResultsController")
 	public var searchResultsController:UIViewController;

@@ -16,23 +16,23 @@ extern class UIDocumentInteractionController{
 	@:native("interactionControllerWithURL://:file:determine:assumes")
 	overload public static function interactionControllerWithURL(url:NSURL, //:use, file:to, determine:UTI., assumes:file):UIDocumentInteractionController *;
 
-	@:native("is")
-	public var is:default;
+	@:native("delegate")
+	public var delegate:Dynamic;
 
-	@:native("and")
-	public var and:icon;
+	@:native("URL")
+	public var URL:NSURL;
 
-	@:native("determined")
-	public var determined:be;
+	@:native("UTI")
+	public var UTI:NSString;
 
-	@:native("determined")
-	public var determined:be;
+	@:native("name")
+	public var name:NSString;
 
-	@:native("to")
-	public var to:smallest;
+	@:native("icons")
+	public var icons:Dynamic;
 
-	@:native("plist")
-	public var plist:a;
+	@:native("annotation")
+	public var annotation:id;
 
 	@:native("presentOptionsMenuFromRect:inView:animated")
 	overload public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;

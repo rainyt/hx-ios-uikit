@@ -13,8 +13,8 @@ extern class UISplitViewController{
 	@:native("autorelease")
 	overload public static function autorelease():UISplitViewController;
 
-	@:native("nil")
-	public var nil:Returns;
+	@:native("splitViewController")
+	public var splitViewController:UISplitViewController;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

@@ -14,16 +14,16 @@ extern class UITouch{
 	overload public static function autorelease():UITouch;
 
 	@:native("timestamp")
-	public var timestamp:;
+	public var timestamp:NSTimeInterval;
 
 	@:native("phase")
-	public var phase:;
+	public var phase:UITouchPhase;
 
-	@:native("of")
-	public var of:amount;
+	@:native("tapCount")
+	public var tapCount:NSUInteger;
 
 	@:native("type")
-	public var type:;
+	public var type:UITouchType;
 
 	@:native("majorRadius")
 	public var majorRadius:CGFloat;
@@ -32,10 +32,10 @@ extern class UITouch{
 	public var majorRadiusTolerance:CGFloat;
 
 	@:native("window")
-	public var window:;
+	public var window:UIWindow;
 
 	@:native("view")
-	public var view:;
+	public var view:UIView;
 
 	@:native("gestureRecognizers")
 	public var gestureRecognizers:Dynamic;

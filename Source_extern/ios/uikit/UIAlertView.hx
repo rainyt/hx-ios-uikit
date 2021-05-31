@@ -19,8 +19,8 @@ extern class UIAlertView{
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):id;
 
-	@:native("")
-	overload public function ():UIAlertView;
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):UIAlertView;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -28,8 +28,8 @@ extern class UIAlertView{
 	@:native("title")
 	public var title:NSString;
 
-	@:native("explanation")
-	public var explanation:secondary;
+	@:native("message")
+	public var message:NSString;
 
 	@:native("addButtonWithTitle:::returns:of")
 	overload public function addButtonWithTitle(title:NSString, :, ://, returns:index, of:button.):NSInteger;
@@ -40,17 +40,17 @@ extern class UIAlertView{
 	@:native("numberOfButtons")
 	public var numberOfButtons:NSInteger;
 
-	@:native("is")
-	public var is:default;
+	@:native("cancelButtonIndex")
+	public var cancelButtonIndex:NSInteger;
 
-	@:native("not")
-	public var not:initWithTitle:...;
+	@:native("firstOtherButtonIndex")
+	public var firstOtherButtonIndex:NSInteger;
 
 	@:native("visible")
 	public var visible:Bool;
 
-	@:native("show;")
-	overload public function show;():Void;
+	@:native("show")
+	overload public function show():Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
 	overload public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;

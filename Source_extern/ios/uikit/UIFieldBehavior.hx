@@ -49,11 +49,11 @@ extern class UIFieldBehavior{
 	@:native("animationSpeed")
 	public var animationSpeed:CGFloat;
 
-	@:native("dragField;")
-	overload public static function dragField;():UIFieldBehavior;
+	@:native("dragField")
+	overload public static function dragField():UIFieldBehavior;
 
-	@:native("vortexField;")
-	overload public static function vortexField;():UIFieldBehavior;
+	@:native("vortexField")
+	overload public static function vortexField():UIFieldBehavior;
 
 	@:native("radialGravityFieldWithPosition")
 	overload public static function radialGravityFieldWithPosition(position:CGPoint):UIFieldBehavior;
@@ -70,14 +70,14 @@ extern class UIFieldBehavior{
 	@:native("turbulenceFieldWithSmoothness:animationSpeed")
 	overload public static function turbulenceFieldWithSmoothness(smoothness:CGFloat, animationSpeed:CGFloat):UIFieldBehavior;
 
-	@:native("springField;")
-	overload public static function springField;():UIFieldBehavior;
+	@:native("springField")
+	overload public static function springField():UIFieldBehavior;
 
-	@:native("electricField;")
-	overload public static function electricField;():UIFieldBehavior;
+	@:native("electricField")
+	overload public static function electricField():UIFieldBehavior;
 
-	@:native("magneticField;")
-	overload public static function magneticField;():UIFieldBehavior;
+	@:native("magneticField")
+	overload public static function magneticField():UIFieldBehavior;
 
 	@:native("fieldWithEvaluationBlock")
 	overload public static function fieldWithEvaluationBlock(block:Dynamic):UIFieldBehavior;

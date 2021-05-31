@@ -37,11 +37,11 @@ extern class UIPercentDrivenInteractiveTransition{
 	@:native("updateInteractiveTransition")
 	overload public function updateInteractiveTransition(percentComplete:CGFloat):Void;
 
-	@:native("cancelInteractiveTransition;")
-	overload public function cancelInteractiveTransition;():Void;
+	@:native("cancelInteractiveTransition")
+	overload public function cancelInteractiveTransition():Void;
 
-	@:native("finishInteractiveTransition;")
-	overload public function finishInteractiveTransition;():Void;
+	@:native("finishInteractiveTransition")
+	overload public function finishInteractiveTransition():Void;
 
 
 }

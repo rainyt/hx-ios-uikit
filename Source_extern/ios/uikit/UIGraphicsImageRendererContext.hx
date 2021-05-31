@@ -13,8 +13,8 @@ extern class UIGraphicsImageRendererContext{
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsImageRendererContext;
 
-	@:native("renderer's")
-	public var renderer's:the;
+	@:native("currentImage")
+	public var currentImage:UIImage;
 
 
 }

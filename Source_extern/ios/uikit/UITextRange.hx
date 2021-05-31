@@ -13,8 +13,8 @@ extern class UITextRange{
 	@:native("autorelease")
 	overload public static function autorelease():UITextRange;
 
-	@:native("is")
-	public var is:range;
+	@:native("empty")
+	public var empty:Bool;
 
 	@:native("start")
 	public var start:UITextPosition;

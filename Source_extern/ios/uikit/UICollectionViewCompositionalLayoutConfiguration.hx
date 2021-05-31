@@ -13,11 +13,11 @@ extern class UICollectionViewCompositionalLayoutConfiguration{
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewCompositionalLayoutConfiguration;
 
-	@:native("is")
-	public var is:default;
+	@:native("scrollDirection")
+	public var scrollDirection:UICollectionViewScrollDirection;
 
-	@:native("is")
-	public var is:default;
+	@:native("interSectionSpacing")
+	public var interSectionSpacing:CGFloat;
 
 	@:native("boundarySupplementaryItems")
 	public var boundarySupplementaryItems:Dynamic;

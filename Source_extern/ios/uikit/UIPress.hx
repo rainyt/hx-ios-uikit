@@ -14,19 +14,19 @@ extern class UIPress{
 	overload public static function autorelease():UIPress;
 
 	@:native("timestamp")
-	public var timestamp:;
+	public var timestamp:NSTimeInterval;
 
 	@:native("phase")
-	public var phase:;
+	public var phase:UIPressPhase;
 
 	@:native("type")
-	public var type:;
+	public var type:UIPressType;
 
 	@:native("window")
-	public var window:;
+	public var window:UIWindow;
 
 	@:native("responder")
-	public var responder:;
+	public var responder:UIResponder;
 
 	@:native("gestureRecognizers")
 	public var gestureRecognizers:Dynamic;

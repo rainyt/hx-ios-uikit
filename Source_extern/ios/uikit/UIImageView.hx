@@ -19,8 +19,8 @@ extern class UIImageView{
 	@:native("initWithImage:highlightedImage")
 	overload public function initWithImage(image:UIImage, highlightedImage:UIImage):UIImageView;
 
-	@:native("is")
-	public var is:default;
+	@:native("image")
+	public var image:UIImage;
 
 	@:native("highlightedImage")
 	public var highlightedImage:UIImage;
@@ -28,32 +28,32 @@ extern class UIImageView{
 	@:native("preferredSymbolConfiguration")
 	public var preferredSymbolConfiguration:UIImageSymbolConfiguration;
 
-	@:native("is")
-	public var is:default;
+	@:native("userInteractionEnabled")
+	public var userInteractionEnabled:Bool;
 
 	@:native("highlighted")
 	public var highlighted:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("animationImages")
+	public var animationImages:Dynamic;
 
 	@:native("highlightedAnimationImages")
 	public var highlightedAnimationImages:Dynamic;
 
-	@:native("30")
-	public var 30:Dynamic;
+	@:native("animationDuration")
+	public var animationDuration:NSTimeInterval;
 
-	@:native("is")
-	public var is:Dynamic;
+	@:native("animationRepeatCount")
+	public var animationRepeatCount:NSInteger;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
 
-	@:native("startAnimating;")
-	overload public function startAnimating;():Void;
+	@:native("startAnimating")
+	overload public function startAnimating():Void;
 
-	@:native("stopAnimating;")
-	overload public function stopAnimating;():Void;
+	@:native("stopAnimating")
+	overload public function stopAnimating():Void;
 
 	@:native("animating")
 	public var animating:Bool;

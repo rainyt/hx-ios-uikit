@@ -13,8 +13,8 @@ extern class UIBezierPath{
 	@:native("autorelease")
 	overload public static function autorelease():UIBezierPath;
 
-	@:native("bezierPath;")
-	overload public static function bezierPath;():UIBezierPath;
+	@:native("bezierPath")
+	overload public static function bezierPath():UIBezierPath;
 
 	@:native("bezierPathWithRect")
 	overload public static function bezierPathWithRect(rect:CGRect):UIBezierPath;
@@ -61,11 +61,11 @@ extern class UIBezierPath{
 	@:native("addArcWithCenter:radius:startAngle:endAngle:clockwise")
 	overload public function addArcWithCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, clockwise:Bool):Void;
 
-	@:native("closePath;")
-	overload public function closePath;():Void;
+	@:native("closePath")
+	overload public function closePath():Void;
 
-	@:native("removeAllPoints;")
-	overload public function removeAllPoints;():Void;
+	@:native("removeAllPoints")
+	overload public function removeAllPoints():Void;
 
 	@:native("appendPath")
 	overload public function appendPath(bezierPath:UIBezierPath):Void;
@@ -97,14 +97,14 @@ extern class UIBezierPath{
 	@:native("lineJoinStyle")
 	public var lineJoinStyle:CGLineJoin;
 
-	@:native("is")
-	public var is:lineJoinStyle;
+	@:native("miterLimit")
+	public var miterLimit:CGFloat;
 
 	@:native("flatness")
 	public var flatness:CGFloat;
 
-	@:native("hit")
-	public var hit:and;
+	@:native("usesEvenOddFillRule")
+	public var usesEvenOddFillRule:Bool;
 
 	@:native("setLineDash:count:phase")
 	overload public function setLineDash(pattern:constCGFloat, count:NSInteger, phase:CGFloat):Void;
@@ -112,11 +112,11 @@ extern class UIBezierPath{
 	@:native("getLineDash:count:phase")
 	overload public function getLineDash(pattern:CGFloat, count:NSInteger, phase:CGFloat):Void;
 
-	@:native("fill;")
-	overload public function fill;():Void;
+	@:native("fill")
+	overload public function fill():Void;
 
-	@:native("stroke;")
-	overload public function stroke;():Void;
+	@:native("stroke")
+	overload public function stroke():Void;
 
 	@:native("fillWithBlendMode:alpha")
 	overload public function fillWithBlendMode(blendMode:CGBlendMode, alpha:CGFloat):Void;
@@ -124,8 +124,8 @@ extern class UIBezierPath{
 	@:native("strokeWithBlendMode:alpha")
 	overload public function strokeWithBlendMode(blendMode:CGBlendMode, alpha:CGFloat):Void;
 
-	@:native("addClip;")
-	overload public function addClip;():Void;
+	@:native("addClip")
+	overload public function addClip():Void;
 
 
 }

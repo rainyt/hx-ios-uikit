@@ -22,8 +22,8 @@ extern class UIListContentTextProperties{
 	@:native("colorTransformer")
 	public var colorTransformer:UIConfigurationColorTransformer;
 
-	@:native("resolvedColor;")
-	overload public function resolvedColor;():UIColor *;
+	@:native("resolvedColor")
+	overload public function resolvedColor():UIColor *;
 
 	@:native("alignment")
 	public var alignment:UIListContentTextAlignment;

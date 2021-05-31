@@ -28,8 +28,8 @@ extern class UICollectionViewCell{
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
-	@:native("cell's")
-	public var cell's:the;
+	@:native("contentView")
+	public var contentView:UIView;
 
 	@:native("selected")
 	public var selected:Bool;

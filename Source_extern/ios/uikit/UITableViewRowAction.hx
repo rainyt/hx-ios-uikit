@@ -22,8 +22,8 @@ extern class UITableViewRowAction{
 	@:native("title")
 	public var title:NSString;
 
-	@:native("on")
-	public var on:dependent;
+	@:native("backgroundColor")
+	public var backgroundColor:UIColor;
 
 	@:native("backgroundEffect")
 	public var backgroundEffect:UIVisualEffect;

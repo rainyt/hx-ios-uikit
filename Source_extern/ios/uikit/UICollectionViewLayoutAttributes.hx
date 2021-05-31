@@ -34,11 +34,11 @@ extern class UICollectionViewLayoutAttributes{
 	@:native("alpha")
 	public var alpha:CGFloat;
 
-	@:native("is")
-	public var is:default;
+	@:native("zIndex")
+	public var zIndex:NSInteger;
 
-	@:native("is")
-	public var is:attribute;
+	@:native("hidden")
+	public var hidden:Bool;
 
 	@:native("indexPath")
 	public var indexPath:NSIndexPath;
@@ -46,8 +46,8 @@ extern class UICollectionViewLayoutAttributes{
 	@:native("representedElementCategory")
 	public var representedElementCategory:UICollectionElementCategory;
 
-	@:native("is")
-	public var is:representedElementCategory;
+	@:native("representedElementKind")
+	public var representedElementKind:NSString;
 
 	@:native("layoutAttributesForCellWithIndexPath")
 	overload public static function layoutAttributesForCellWithIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;

@@ -13,11 +13,11 @@ extern class UICollectionViewUpdateItem{
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewUpdateItem;
 
-	@:native("for")
-	public var for:nil;
+	@:native("indexPathBeforeUpdate")
+	public var indexPathBeforeUpdate:NSIndexPath;
 
-	@:native("for")
-	public var for:nil;
+	@:native("indexPathAfterUpdate")
+	public var indexPathAfterUpdate:NSIndexPath;
 
 	@:native("updateAction")
 	public var updateAction:UICollectionUpdateAction;

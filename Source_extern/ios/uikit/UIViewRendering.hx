@@ -16,38 +16,38 @@ extern class UIViewRendering{
 	@:native("drawRect")
 	overload public function drawRect(rect:CGRect):Void;
 
-	@:native("setNeedsDisplay;")
-	overload public function setNeedsDisplay;():Void;
+	@:native("setNeedsDisplay")
+	overload public function setNeedsDisplay():Void;
 
 	@:native("setNeedsDisplayInRect")
 	overload public function setNeedsDisplayInRect(rect:CGRect):Void;
 
-	@:native("is")
-	public var is:Default;
+	@:native("clipsToBounds")
+	public var clipsToBounds:Bool;
 
-	@:native("UIView")
-	public var UIView:custom;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:backgroundColor;
 
-	@:native("is")
-	public var is:default;
+	@:native("alpha")
+	public var alpha:CGFloat;
 
-	@:native("non-zeroed")
-	public var non-zeroed:have;
+	@:native("opaque")
+	public var opaque:Bool;
 
-	@:native("transparent")
-	public var transparent:with;
+	@:native("clearsContextBeforeDrawing")
+	public var clearsContextBeforeDrawing:Bool;
 
-	@:native("check")
-	public var check:doesn't;
+	@:native("hidden")
+	public var hidden:Bool;
 
-	@:native("is")
-	public var is:default;
+	@:native("contentMode")
+	public var contentMode:UIViewContentMode;
 
 	@:native("ios(3.0,")
 	public var ios(3.0,:Dynamic;
 
 	@:native("maskView")
-	public var maskView:;
+	public var maskView:UIView;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;

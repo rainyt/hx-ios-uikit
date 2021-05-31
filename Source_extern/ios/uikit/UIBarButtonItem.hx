@@ -55,23 +55,23 @@ extern class UIBarButtonItem{
 	@:native("flexibleSpaceItem")
 	overload public static function flexibleSpaceItem():UIBarButtonItem;
 
-	@:native("is")
-	public var is:default;
+	@:native("style")
+	public var style:UIBarButtonItemStyle;
 
-	@:native("is")
-	public var is:default;
+	@:native("width")
+	public var width:CGFloat;
 
-	@:native("is")
-	public var is:default;
+	@:native("possibleTitles")
+	public var possibleTitles:Dynamic;
 
-	@:native("is")
-	public var is:default;
+	@:native("customView")
+	public var customView:UIView;
 
-	@:native("is")
-	public var is:default;
+	@:native("action")
+	public var action:SEL;
 
-	@:native("is")
-	public var is:default;
+	@:native("target")
+	public var target:id;
 
 	@:native("primaryAction")
 	public var primaryAction:UIAction;

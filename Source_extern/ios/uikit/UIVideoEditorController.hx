@@ -20,13 +20,13 @@ extern class UIVideoEditorController{
 	public var delegate:Dynamic;
 
 	@:native("videoPath")
-	public var videoPath:;
+	public var videoPath:NSString;
 
-	@:native("maximum")
-	public var maximum:no;
+	@:native("videoMaximumDuration")
+	public var videoMaximumDuration:NSTimeInterval;
 
-	@:native("is")
-	public var is:value;
+	@:native("videoQuality")
+	public var videoQuality:UIImagePickerControllerQualityType;
 
 
 }

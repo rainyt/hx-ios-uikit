@@ -20,13 +20,13 @@ extern class UIActivityItemProvider{
 	overload public function initWithPlaceholderItem(placeholderItem:id, NS_DESIGNATED_INITIALIZER:, :, :, :, :, :, :, ://, placeHolder:is, the:return, value:for):UIActivityItemProvider;
 
 	@:native("placeholderItem")
-	public var placeholderItem:;
+	public var placeholderItem:id;
 
-	@:native("to")
-	public var to:data;
+	@:native("activityType")
+	public var activityType:UIActivityType;
 
-	@:native("extra")
-	public var extra:return;
+	@:native("item")
+	public var item:id;
 
 
 }

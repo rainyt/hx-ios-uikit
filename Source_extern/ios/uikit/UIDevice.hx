@@ -16,26 +16,26 @@ extern class UIDevice{
 	@:native("currentDevice")
 	public var currentDevice:UIDevice;
 
-	@:native(""My")
-	public var "My:e.g.;
+	@:native("name")
+	public var name:NSString;
 
-	@:native("@"iPod")
-	public var @"iPod:@"iPhone",;
+	@:native("model")
+	public var model:NSString;
 
-	@:native("of")
-	public var of:version;
+	@:native("localizedModel")
+	public var localizedModel:NSString;
 
-	@:native("e.g.")
-	public var e.g.://;
+	@:native("systemName")
+	public var systemName:NSString;
 
-	@:native("e.g.")
-	public var e.g.://;
+	@:native("systemVersion")
+	public var systemVersion:NSString;
 
 	@:native("orientation")
 	public var orientation:UIDeviceOrientation;
 
 	@:native("identifierForVendor")
-	public var identifierForVendor:;
+	public var identifierForVendor:NSUUID;
 
 	@:native("generatesDeviceOrientationNotifications")
 	public var generatesDeviceOrientationNotifications:Bool;
@@ -50,10 +50,10 @@ extern class UIDevice{
 	public var batteryMonitoringEnabled:Bool;
 
 	@:native("batteryState")
-	public var batteryState:;
+	public var batteryState:UIDeviceBatteryState;
 
 	@:native("batteryLevel")
-	public var batteryLevel:;
+	public var batteryLevel:float;
 
 	@:native("proximityMonitoringEnabled")
 	public var proximityMonitoringEnabled:Bool;

@@ -13,104 +13,104 @@ extern class UIColorSystemColors{
 	@:native("autorelease")
 	overload public static function autorelease():UIColorSystemColors;
 
-	@:native("")
-	public var :;
+	@:native("systemRedColor")
+	public var systemRedColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemGreenColor")
+	public var systemGreenColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemBlueColor")
+	public var systemBlueColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemOrangeColor")
+	public var systemOrangeColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemYellowColor")
+	public var systemYellowColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemPinkColor")
+	public var systemPinkColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemPurpleColor")
+	public var systemPurpleColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemTealColor")
+	public var systemTealColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemIndigoColor")
+	public var systemIndigoColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemGrayColor")
+	public var systemGrayColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemGray2Color")
+	public var systemGray2Color:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemGray3Color")
+	public var systemGray3Color:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemGray4Color")
+	public var systemGray4Color:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemGray5Color")
+	public var systemGray5Color:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemGray6Color")
+	public var systemGray6Color:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("labelColor")
+	public var labelColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("secondaryLabelColor")
+	public var secondaryLabelColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("tertiaryLabelColor")
+	public var tertiaryLabelColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("quaternaryLabelColor")
+	public var quaternaryLabelColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("linkColor")
+	public var linkColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("placeholderTextColor")
+	public var placeholderTextColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("separatorColor")
+	public var separatorColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("opaqueSeparatorColor")
+	public var opaqueSeparatorColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemBackgroundColor")
+	public var systemBackgroundColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("secondarySystemBackgroundColor")
+	public var secondarySystemBackgroundColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("tertiarySystemBackgroundColor")
+	public var tertiarySystemBackgroundColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemGroupedBackgroundColor")
+	public var systemGroupedBackgroundColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("secondarySystemGroupedBackgroundColor")
+	public var secondarySystemGroupedBackgroundColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("tertiarySystemGroupedBackgroundColor")
+	public var tertiarySystemGroupedBackgroundColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("systemFillColor")
+	public var systemFillColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("secondarySystemFillColor")
+	public var secondarySystemFillColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("tertiarySystemFillColor")
+	public var tertiarySystemFillColor:UIColor;
 
-	@:native("")
-	public var :;
+	@:native("quaternarySystemFillColor")
+	public var quaternarySystemFillColor:UIColor;
 
 	@:native("lightTextColor")
 	public var lightTextColor:UIColor;

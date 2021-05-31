@@ -13,35 +13,35 @@ extern class NSParagraphStyle{
 	@:native("autorelease")
 	overload public static function autorelease():NSParagraphStyle;
 
-	@:native("alloc]")
-	public var alloc]:[[NSParagraphStyle;
+	@:native("defaultParagraphStyle")
+	public var defaultParagraphStyle:NSParagraphStyle;
 
 	@:native("defaultWritingDirectionForLanguage::languageName:in:lang")
 	overload public static function defaultWritingDirectionForLanguage(languageName:NSString, ://, languageName:is, in:ISO, lang:region):NSWritingDirection;
 
-	@:native("same")
-	public var same:the;
+	@:native("lineSpacing")
+	public var lineSpacing:CGFloat;
 
-	@:native("if")
-	public var if:paragraphSpacingBefore,;
+	@:native("paragraphSpacing")
+	public var paragraphSpacing:CGFloat;
 
 	@:native("alignment")
 	public var alignment:NSTextAlignment;
 
-	@:native("of")
-	public var of:edge;
+	@:native("headIndent")
+	public var headIndent:CGFloat;
 
-	@:native("other")
-	public var other:from;
+	@:native("tailIndent")
+	public var tailIndent:CGFloat;
 
-	@:native("text")
-	public var text:for;
+	@:native("firstLineHeadIndent")
+	public var firstLineHeadIndent:CGFloat;
 
-	@:native("this")
-	public var this:after;
+	@:native("minimumLineHeight")
+	public var minimumLineHeight:CGFloat;
 
-	@:native("no")
-	public var no:implies;
+	@:native("maximumLineHeight")
+	public var maximumLineHeight:CGFloat;
 
 	@:native("lineBreakMode")
 	public var lineBreakMode:NSLineBreakMode;
@@ -49,11 +49,11 @@ extern class NSParagraphStyle{
 	@:native("baseWritingDirection")
 	public var baseWritingDirection:NSWritingDirection;
 
-	@:native("(if")
-	public var (if:factor;
+	@:native("lineHeightMultiple")
+	public var lineHeightMultiple:CGFloat;
 
-	@:native("if")
-	public var if:paragraphSpacing,;
+	@:native("paragraphSpacingBefore")
+	public var paragraphSpacingBefore:CGFloat;
 
 	@:native("hyphenationFactor")
 	public var hyphenationFactor:float;

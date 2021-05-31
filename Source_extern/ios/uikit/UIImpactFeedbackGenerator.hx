@@ -16,8 +16,8 @@ extern class UIImpactFeedbackGenerator{
 	@:native("initWithStyle")
 	overload public function initWithStyle(style:UIImpactFeedbackStyle):UIImpactFeedbackGenerator;
 
-	@:native("impactOccurred;")
-	overload public function impactOccurred;():Void;
+	@:native("impactOccurred")
+	overload public function impactOccurred():Void;
 
 	@:native("impactOccurredWithIntensity")
 	overload public function impactOccurredWithIntensity(intensity:CGFloat):Void;

@@ -40,8 +40,8 @@ extern class UISegmentedControl{
 	@:native("ios(2.0,")
 	public var ios(2.0,:effect",;
 
-	@:native("is")
-	public var is:default;
+	@:native("momentary")
+	public var momentary:Bool;
 
 	@:native("numberOfSegments")
 	public var numberOfSegments:NSUInteger;
@@ -58,8 +58,8 @@ extern class UISegmentedControl{
 	@:native("removeSegmentAtIndex:animated")
 	overload public function removeSegmentAtIndex(segment:NSUInteger, animated:Bool):Void;
 
-	@:native("removeAllSegments;")
-	overload public function removeAllSegments;():Void;
+	@:native("removeAllSegments")
+	overload public function removeAllSegments():Void;
 
 	@:native("setTitle:forSegmentAtIndex::::can:have:or:not:must:0..#segments:1:default")
 	overload public function setTitle(title:NSString, forSegmentAtIndex:NSUInteger, :, :, ://, can:only, have:image, or:title,, not:both., must:be, 0..#segments:-, 1:Dynamic, default:is):Void;

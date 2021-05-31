@@ -522,6 +522,15 @@ class ObjcFun:
         returnClass = HxString.substr(returnClass,(((returnClass.find("(") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"(",startIndex))) + 1),None)
         startIndex = None
         funcName = HxString.substr(line,(((line.find(")") if ((startIndex is None)) else HxString.indexOfImpl(line,")",startIndex))) + 1),None)
+        _g = 0
+        _g1 = len(funcName)
+        while (_g < _g1):
+            i = _g
+            _g = (_g + 1)
+            char = ("" if (((i < 0) or ((i >= len(funcName))))) else funcName[i])
+            if (char != " "):
+                funcName = HxString.substr(funcName,i,None)
+                break
         args = None
         _g = 0
         _g1 = len(funcName)
@@ -531,6 +540,8 @@ class ObjcFun:
             end = ("" if (((i < 0) or ((i >= len(funcName))))) else funcName[i])
             if (end == " "):
                 funcName = HxString.substr(funcName,0,i)
+                if (funcName == ""):
+                    raise haxe_Exception.thrown(("line=" + ("null" if line is None else line)))
                 break
             elif (end == ":"):
                 args = ObjcFun.parsingArgs(typedefs,HxString.substr(funcName,(i + 1),None))
@@ -541,10 +552,13 @@ class ObjcFun:
             c = typedefs.h.get(c,None).parentClassName
         if (c == "void"):
             c = "Void"
+        if (funcName == ""):
+            print(str(line))
         return _hx_AnonObject({'name': ObjcFun.parsingFuncName(funcName,args), 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
 
     @staticmethod
     def parsingFuncName(funcName,args):
+        funcName = StringTools.replace(funcName,";","")
         if (args is None):
             return funcName
         _g_current = 0
@@ -681,6 +695,33 @@ class ObjcProperty:
     def parsing(typedefs,className,line):
         line = StringTools.replace(line,"@property ","")
         line = StringTools.replace(line,"*","")
+        startIndex = None
+        if (((line.find("//") if ((startIndex is None)) else HxString.indexOfImpl(line,"//",startIndex))) != -1):
+            startIndex1 = None
+            _hx_len = None
+            if (startIndex1 is None):
+                _hx_len = line.rfind("//", 0, len(line))
+            else:
+                i = line.rfind("//", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("//"))) if ((i == -1)) else (i + 1))
+                check = line.find("//", startLeft, len(line))
+                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            line = HxString.substr(line,0,_hx_len)
+        newline = ""
+        lastchat = ""
+        _g = 0
+        _g1 = len(line)
+        while (_g < _g1):
+            i = _g
+            _g = (_g + 1)
+            chat = ("" if (((i < 0) or ((i >= len(line))))) else line[i])
+            if (chat == " "):
+                if (lastchat != " "):
+                    newline = (("null" if newline is None else newline) + ("null" if chat is None else chat))
+            else:
+                newline = (("null" if newline is None else newline) + ("null" if chat is None else chat))
+            lastchat = chat
+        line = newline
         isRead = False
         read = ""
         skip = 0
@@ -912,10 +953,10 @@ class haxe_IMap:
 
 class haxe_Exception(Exception):
     _hx_class_name = "haxe.Exception"
-    __slots__ = ("_hx___nativeStack", "_hx___nativeException", "_hx___previousException")
-    _hx_fields = ["__nativeStack", "__nativeException", "__previousException"]
-    _hx_methods = ["unwrap"]
-    _hx_statics = ["caught"]
+    __slots__ = ("_hx___nativeStack", "_hx___skipStack", "_hx___nativeException", "_hx___previousException")
+    _hx_fields = ["__nativeStack", "__skipStack", "__nativeException", "__previousException"]
+    _hx_methods = ["unwrap", "get_native"]
+    _hx_statics = ["caught", "thrown"]
     _hx_interfaces = []
     _hx_super = Exception
 
@@ -924,6 +965,7 @@ class haxe_Exception(Exception):
         self._hx___previousException = None
         self._hx___nativeException = None
         self._hx___nativeStack = None
+        self._hx___skipStack = 0
         super().__init__(message)
         self._hx___previousException = previous
         if ((native is not None) and Std.isOfType(native,BaseException)):
@@ -940,6 +982,9 @@ class haxe_Exception(Exception):
     def unwrap(self):
         return self._hx___nativeException
 
+    def get_native(self):
+        return self._hx___nativeException
+
     @staticmethod
     def caught(value):
         if Std.isOfType(value,haxe_Exception):
@@ -948,6 +993,17 @@ class haxe_Exception(Exception):
             return haxe_Exception(str(value),None,value)
         else:
             return haxe_ValueException(value,None,value)
+
+    @staticmethod
+    def thrown(value):
+        if Std.isOfType(value,haxe_Exception):
+            return value.get_native()
+        elif Std.isOfType(value,BaseException):
+            return value
+        else:
+            e = haxe_ValueException(value)
+            e._hx___skipStack = (e._hx___skipStack + 1)
+            return e
 
 
 

@@ -22,8 +22,8 @@ extern class NSCollectionLayoutDecorationItem{
 	@:native("new")
 	overload public static function new():NSCollectionLayoutDecorationItem;
 
-	@:native("to")
-	public var to:promoted;
+	@:native("zIndex")
+	public var zIndex:NSInteger;
 
 	@:native("elementKind")
 	public var elementKind:NSString;

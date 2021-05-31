@@ -34,8 +34,8 @@ extern class UIContextMenuInteraction{
 	@:native("updateVisibleMenuWithBlock")
 	overload public function updateVisibleMenuWithBlock(block:Dynamic):Void;
 
-	@:native("dismissMenu;")
-	overload public function dismissMenu;():Void;
+	@:native("dismissMenu")
+	overload public function dismissMenu():Void;
 
 
 }

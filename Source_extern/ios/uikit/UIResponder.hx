@@ -16,17 +16,17 @@ extern class UIResponder{
 	@:native("nextResponder")
 	public var nextResponder:UIResponder;
 
-	@:native("is")
-	public var is:default;
+	@:native("canBecomeFirstResponder")
+	public var canBecomeFirstResponder:Bool;
 
-	@:native("becomeFirstResponder;")
-	overload public function becomeFirstResponder;():BOOL;
+	@:native("becomeFirstResponder")
+	overload public function becomeFirstResponder():BOOL;
 
-	@:native("is")
-	public var is:default;
+	@:native("canResignFirstResponder")
+	public var canResignFirstResponder:Bool;
 
-	@:native("resignFirstResponder;")
-	overload public function resignFirstResponder;():BOOL;
+	@:native("resignFirstResponder")
+	overload public function resignFirstResponder():BOOL;
 
 	@:native("isFirstResponder")
 	public var isFirstResponder:Bool;

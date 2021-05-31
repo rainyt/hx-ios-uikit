@@ -16,8 +16,8 @@ extern class UIMenuController{
 	@:native("sharedMenuController")
 	public var sharedMenuController:UIMenuController;
 
-	@:native("is")
-	public var is:default;
+	@:native("menuVisible")
+	public var menuVisible:Bool;
 
 	@:native("setMenuVisible")
 	overload public function setMenuVisible(menuVisible:Bool):Void;
@@ -43,8 +43,8 @@ extern class UIMenuController{
 	@:native("menuItems")
 	public var menuItems:Dynamic;
 
-	@:native("update;	")
-	overload public function update;	():Void;
+	@:native("update	")
+	overload public function update	():Void;
 
 	@:native("menuFrame")
 	public var menuFrame:CGRect;
