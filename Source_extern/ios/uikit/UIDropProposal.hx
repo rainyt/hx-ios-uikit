@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDropProposal")
 @:include("UIKit/UIKit.h")
-extern class UIDropProposal{
+extern class UIDropProposal extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIDropProposal;

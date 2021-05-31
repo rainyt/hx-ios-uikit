@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIUserNotificationAction")
 @:include("UIKit/UIKit.h")
-extern class UIUserNotificationAction{
+extern class UIUserNotificationAction extends NSObject<NSCopying,NSMutableCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIUserNotificationAction;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISceneConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UISceneConfiguration{
+extern class UISceneConfiguration extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneConfiguration;

@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIListContentImageProperties")
 @:include("UIKit/UIKit.h")
-extern class UIListContentImageProperties{
+extern class UIListContentImageProperties extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIListContentImageProperties;

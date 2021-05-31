@@ -5,7 +5,7 @@ import ios.objc.CADisplayLink;
 @:objc
 @:native("UIScreen")
 @:include("UIKit/UIKit.h")
-extern class UIScreen{
+extern class UIScreen extends NSObject<UITraitEnvironment>{
 
 	@:native("alloc")
 	overload public static function alloc():UIScreen;

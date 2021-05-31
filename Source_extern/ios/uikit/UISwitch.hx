@@ -4,7 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UISwitch")
 @:include("UIKit/UIKit.h")
-extern class UISwitch extends UIControl{
+extern class UISwitch extends UIControl
+{
 
 	@:native(" UI_APPEARANCE_SELECTOR")
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;

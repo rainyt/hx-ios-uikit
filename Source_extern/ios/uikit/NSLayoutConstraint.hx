@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSLayoutConstraint")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutConstraint{
-
-	@:native("alloc")
-	overload public static function alloc():NSLayoutConstraint;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSLayoutConstraint;
+extern class NSLayoutConstraint extends NSObject{
 
 	@:native("constraintsWithVisualFormat:options:metrics:views")
 	overload public static function constraintsWithVisualFormat_options_metrics_views(format:NSString, options:NSLayoutFormatOptions, metrics:Dynamic, views:Dynamic):Dynamic;

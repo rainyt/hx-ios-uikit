@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSTextTab")
 @:include("UIKit/UIKit.h")
-extern class NSTextTab{
+extern class NSTextTab extends NSObject<NSCopying,NSCoding,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():NSTextTab;

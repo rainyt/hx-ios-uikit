@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIDocumentInteractionController")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentInteractionController{
+extern class UIDocumentInteractionController extends NSObject<UIActionSheetDelegate>{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentInteractionController;

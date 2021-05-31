@@ -5,13 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrintPaper")
 @:include("UIKit/UIKit.h")
-extern class UIPrintPaper{
-
-	@:native("alloc")
-	overload public static function alloc():UIPrintPaper;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPrintPaper;
+extern class UIPrintPaper extends NSObject{
 
 	@:native("bestPaperForPageSize:withPapersFromArray")
 	overload public static function bestPaperForPageSize_withPapersFromArray(contentSize:CGSize, withPapersFromArray:Dynamic):UIPrintPaper;

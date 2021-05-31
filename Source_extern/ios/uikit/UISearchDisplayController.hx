@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISearchDisplayController")
 @:include("UIKit/UIKit.h")
-extern class UISearchDisplayController{
-
-	@:native("alloc")
-	overload public static function alloc():UISearchDisplayController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISearchDisplayController;
+extern class UISearchDisplayController extends NSObject{
 
 	@:native("initWithSearchBar:contentsController")
 	overload public function initWithSearchBar_contentsController(searchBar:UISearchBar, contentsController:UIViewController):UISearchDisplayController;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISceneActivationConditions")
 @:include("UIKit/UIKit.h")
-extern class UISceneActivationConditions{
+extern class UISceneActivationConditions extends NSObject<NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneActivationConditions;

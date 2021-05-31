@@ -5,7 +5,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIPreviewTarget")
 @:include("UIKit/UIKit.h")
-extern class UIPreviewTarget{
+extern class UIPreviewTarget extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPreviewTarget;

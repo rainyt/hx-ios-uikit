@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIContextMenuInteraction")
 @:include("UIKit/UIKit.h")
-extern class UIContextMenuInteraction{
+extern class UIContextMenuInteraction extends NSObject<UIInteraction>{
 
 	@:native("alloc")
 	overload public static function alloc():UIContextMenuInteraction;

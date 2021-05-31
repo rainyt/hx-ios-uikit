@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("NSCollectionLayoutAnchor")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutAnchor{
+extern class NSCollectionLayoutAnchor extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutAnchor;

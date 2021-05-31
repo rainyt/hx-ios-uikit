@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>")
 @:include("UIKit/UIKit.h")
-extern class NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>{
+extern class NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType> extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>;

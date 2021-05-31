@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextChecker")
 @:include("UIKit/UIKit.h")
-extern class UITextChecker{
-
-	@:native("alloc")
-	overload public static function alloc():UITextChecker;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextChecker;
+extern class UITextChecker extends NSObject{
 
 	@:native("rangeOfMisspelledWordInString:range:startingAt:wrap:language")
 	overload public function rangeOfMisspelledWordInString_range_startingAt_wrap_language(stringToCheck:NSString, range:Dynamic, startingAt:Int, wrap:Bool, language:NSString):Dynamic;

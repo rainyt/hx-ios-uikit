@@ -4,7 +4,9 @@ import ios.objc.CGRect;
 @:objc
 @:native("UITextField")
 @:include("UIKit/UIKit.h")
-extern class UITextField extends UIControl{
+extern class UITextField extends UIControl
+implements cpp.objc.Protocol<UITextInput>
+{
 
 	@:native("textColor")
 	public var textColor:UIColor;

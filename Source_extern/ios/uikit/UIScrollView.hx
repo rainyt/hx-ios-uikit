@@ -6,7 +6,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIScrollView")
 @:include("UIKit/UIKit.h")
-extern class UIScrollView extends UIView{
+extern class UIScrollView extends UIView
+{
 
 	@:native("contentOffset")
 	public var contentOffset:CGPoint;

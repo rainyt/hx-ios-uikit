@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewCompositionalLayoutConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewCompositionalLayoutConfiguration{
+extern class UICollectionViewCompositionalLayoutConfiguration extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewCompositionalLayoutConfiguration;

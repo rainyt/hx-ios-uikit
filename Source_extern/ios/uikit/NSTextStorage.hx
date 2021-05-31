@@ -3,7 +3,8 @@ package ios.uikit;
 @:objc
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")
-extern class NSTextStorage extends NSMutableAttributedString{
+extern class NSTextStorage extends NSMutableAttributedString
+{
 
 	@:native("addLayoutManager")
 	overload public function addLayoutManager(aLayoutManager:NSLayoutManager):Void;

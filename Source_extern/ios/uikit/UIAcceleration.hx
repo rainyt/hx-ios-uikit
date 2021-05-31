@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAcceleration")
 @:include("UIKit/UIKit.h")
-extern class UIAcceleration{
-
-	@:native("alloc")
-	overload public static function alloc():UIAcceleration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAcceleration;
+extern class UIAcceleration extends NSObject{
 
 	@:native("timestamp")
 	public var timestamp:Dynamic;

@@ -3,7 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")
-extern class UIDatePicker extends UIControl{
+extern class UIDatePicker extends UIControl
+{
 
 	@:native("datePickerMode")
 	public var datePickerMode:UIDatePickerMode;

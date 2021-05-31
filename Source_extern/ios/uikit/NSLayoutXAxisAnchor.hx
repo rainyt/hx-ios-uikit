@@ -3,7 +3,8 @@ package ios.uikit;
 @:objc
 @:native("NSLayoutXAxisAnchor")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutXAxisAnchor extends NSLayoutAnchor{
+extern class NSLayoutXAxisAnchor extends NSLayoutAnchor
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutXAxisAnchor;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewConfigurationState")
 @:include("UIKit/UIKit.h")
-extern class UIViewConfigurationState{
+extern class UIViewConfigurationState extends NSObject<UIConfigurationState>{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewConfigurationState;

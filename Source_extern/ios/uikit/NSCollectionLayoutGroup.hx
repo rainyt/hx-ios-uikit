@@ -4,7 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSCollectionLayoutGroup")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem{
+extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
+{
 
 	@:native("horizontalGroupWithLayoutSize:subitem:count")
 	overload public static function horizontalGroupWithLayoutSize_subitem_count(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;

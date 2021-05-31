@@ -5,7 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIRegion")
 @:include("UIKit/UIKit.h")
-extern class UIRegion{
+extern class UIRegion extends NSObject<NSCopying,NSCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIRegion;

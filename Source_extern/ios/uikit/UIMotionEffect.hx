@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIMotionEffect")
 @:include("UIKit/UIKit.h")
-extern class UIMotionEffect{
+extern class UIMotionEffect extends NSObject<NSCopying,NSCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIMotionEffect;

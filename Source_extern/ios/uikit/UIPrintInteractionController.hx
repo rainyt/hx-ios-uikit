@@ -4,13 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrintInteractionController")
 @:include("UIKit/UIKit.h")
-extern class UIPrintInteractionController{
-
-	@:native("alloc")
-	overload public static function alloc():UIPrintInteractionController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPrintInteractionController;
+extern class UIPrintInteractionController extends NSObject{
 
 	@:native("printingAvailable")
 	overload public static function printingAvailable():Bool;

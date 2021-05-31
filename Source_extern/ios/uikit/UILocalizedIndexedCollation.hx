@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UILocalizedIndexedCollation")
 @:include("UIKit/UIKit.h")
-extern class UILocalizedIndexedCollation{
-
-	@:native("alloc")
-	overload public static function alloc():UILocalizedIndexedCollation;
-
-	@:native("autorelease")
-	overload public static function autorelease():UILocalizedIndexedCollation;
+extern class UILocalizedIndexedCollation extends NSObject{
 
 	@:native("currentCollation")
 	overload public static function currentCollation():UILocalizedIndexedCollation;

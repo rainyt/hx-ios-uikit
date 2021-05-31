@@ -4,13 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UITextSelectionRect")
 @:include("UIKit/UIKit.h")
-extern class UITextSelectionRect{
-
-	@:native("alloc")
-	overload public static function alloc():UITextSelectionRect;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextSelectionRect;
+extern class UITextSelectionRect extends NSObject{
 
 	@:native("rect")
 	public var rect:CGRect;

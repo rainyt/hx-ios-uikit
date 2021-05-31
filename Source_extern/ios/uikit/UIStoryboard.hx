@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIStoryboard")
 @:include("UIKit/UIKit.h")
-extern class UIStoryboard{
-
-	@:native("alloc")
-	overload public static function alloc():UIStoryboard;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIStoryboard;
+extern class UIStoryboard extends NSObject{
 
 	@:native("storyboardWithName:bundle")
 	overload public static function storyboardWithName_bundle(name:NSString, bundle:NSBundle):UIStoryboard;

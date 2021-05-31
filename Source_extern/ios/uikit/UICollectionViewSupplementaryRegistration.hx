@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewSupplementaryRegistration")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewSupplementaryRegistration{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewSupplementaryRegistration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewSupplementaryRegistration;
+extern class UICollectionViewSupplementaryRegistration extends NSObject{
 
 	@:native("registrationWithSupplementaryClass:elementKind")
 	overload public static function registrationWithSupplementaryClass_elementKind(supplementaryClass:Dynamic, elementKind:NSString):UICollectionViewSupplementaryRegistration;

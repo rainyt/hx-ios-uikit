@@ -4,13 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIStatusBarManager")
 @:include("UIKit/UIKit.h")
-extern class UIStatusBarManager{
-
-	@:native("alloc")
-	overload public static function alloc():UIStatusBarManager;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIStatusBarManager;
+extern class UIStatusBarManager extends NSObject{
 
 	@:native("init")
 	overload public function init():UIStatusBarManager;

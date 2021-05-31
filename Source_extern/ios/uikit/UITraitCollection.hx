@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITraitCollection")
 @:include("UIKit/UIKit.h")
-extern class UITraitCollection{
+extern class UITraitCollection extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UITraitCollection;

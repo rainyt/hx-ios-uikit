@@ -5,7 +5,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UILabel")
 @:include("UIKit/UIKit.h")
-extern class UILabel extends UIView{
+extern class UILabel extends UIView
+{
 
 	@:native("font")
 	public var font:UIFont;

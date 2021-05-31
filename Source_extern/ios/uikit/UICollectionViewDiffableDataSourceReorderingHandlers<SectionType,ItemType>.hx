@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewDiffableDataSourceReorderingHandlers<SectionType,ItemType>")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDiffableDataSourceReorderingHandlers<SectionType,ItemType>{
+extern class UICollectionViewDiffableDataSourceReorderingHandlers<SectionType,ItemType> extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDiffableDataSourceReorderingHandlers<SectionType,ItemType>;

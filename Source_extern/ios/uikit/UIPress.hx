@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPress")
 @:include("UIKit/UIKit.h")
-extern class UIPress{
-
-	@:native("alloc")
-	overload public static function alloc():UIPress;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPress;
+extern class UIPress extends NSObject{
 
 	@:native("timestamp")
 	public var timestamp:Dynamic;

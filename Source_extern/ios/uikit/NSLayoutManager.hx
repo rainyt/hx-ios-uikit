@@ -7,7 +7,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("NSLayoutManager")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutManager{
+extern class NSLayoutManager extends NSObject<NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutManager;

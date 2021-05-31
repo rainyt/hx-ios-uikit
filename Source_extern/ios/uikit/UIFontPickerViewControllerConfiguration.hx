@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFontPickerViewControllerConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIFontPickerViewControllerConfiguration{
+extern class UIFontPickerViewControllerConfiguration extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIFontPickerViewControllerConfiguration;

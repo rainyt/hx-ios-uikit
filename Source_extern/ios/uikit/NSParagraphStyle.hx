@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSParagraphStyle")
 @:include("UIKit/UIKit.h")
-extern class NSParagraphStyle{
+extern class NSParagraphStyle extends NSObject<NSCopying,NSMutableCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():NSParagraphStyle;

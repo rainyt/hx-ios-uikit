@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentBrowserAction")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentBrowserAction{
-
-	@:native("alloc")
-	overload public static function alloc():UIDocumentBrowserAction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDocumentBrowserAction;
+extern class UIDocumentBrowserAction extends NSObject{
 
 	@:native("init")
 	overload public function init():UIDocumentBrowserAction;

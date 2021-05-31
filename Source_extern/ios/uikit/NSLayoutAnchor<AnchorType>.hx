@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSLayoutAnchor<AnchorType>")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutAnchor<AnchorType>{
-
-	@:native("alloc")
-	overload public static function alloc():NSLayoutAnchor<AnchorType>;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSLayoutAnchor<AnchorType>;
+extern class NSLayoutAnchor<AnchorType> extends NSObject{
 
 	@:native("constraintEqualToAnchor")
 	overload public function constraintEqualToAnchor(anchor:Dynamic):NSLayoutConstraint;

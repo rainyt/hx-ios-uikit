@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("NSTextContainer")
 @:include("UIKit/UIKit.h")
-extern class NSTextContainer{
+extern class NSTextContainer extends NSObject<NSSecureCoding,NSTextLayoutOrientationProvider>{
 
 	@:native("alloc")
 	overload public static function alloc():NSTextContainer;

@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPrinter")
 @:include("UIKit/UIKit.h")
-extern class UIPrinter{
-
-	@:native("alloc")
-	overload public static function alloc():UIPrinter;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPrinter;
+extern class UIPrinter extends NSObject{
 
 	@:native("printerWithURL")
 	overload public static function printerWithURL(url:Dynamic):UIPrinter;

@@ -31,6 +31,11 @@ class ExternBaseClass {
 	public var extendClassName:String;
 
 	/**
+	 * 协议
+	 */
+	public var protocols:Array<String> = null;
+
+	/**
 	 * 已导入的Import
 	 */
 	private var _imported:Array<String> = [];
@@ -75,16 +80,21 @@ class ExternBaseClass {
 			}
 		}
 
-		if (extendClassName != null) {
-			trace("extendClassName = ", extendClassName);
+		if (extendClassName != null && extendClassName.indexOf("NSObject") == -1) {
 			if (extendClassName.indexOf("<") != -1) {
+				// 解析协议
+				var ps = extendClassName.substr(extendClassName.indexOf("<") + 1);
+				ps = ps.substr(0, ps.indexOf(">"));
+				protocols = ps.split(",");
 				// 拥有协议
 				extendClassName = extendClassName.substr(0, extendClassName.indexOf("<"));
-			} else {}
+			}
 		}
 
-		if (extendClassName != null && extendClassName == "NSObject")
-			extendClassName = null;
+		// if (extendClassName != null && extendClassName == "NSObject") {
+		// 	extendClassName = null;
+		// 	protocols = null;
+		// }
 		if (pclassName == "") {
 			className = null;
 			return;
@@ -191,8 +201,18 @@ class ExternBaseClass {
 			+ (isProtocol ? "interface" : "class")
 			+ " "
 			+ className
-			+ (extendClassName != null ? " extends " + extendClassName : "")
-			+ "{\n\n";
+			+ (extendClassName != null ? " extends " + extendClassName : "");
+		if (protocols != null) {
+			haxe += "\n";
+			for (index => value in protocols) {
+				var t = ExternTools.protocol.get(value);
+				if (t != null) {
+					// implements cpp.objc.Protocol<UITextInput>
+					haxe += "implements cpp.objc.Protocol<" + t.className + ">\n";
+				}
+			}
+		}
+		haxe += "{\n\n";
 		for (index => value in funcAndAttr) {
 			if (hasFuncExtendsOrAttr(value))
 				continue;

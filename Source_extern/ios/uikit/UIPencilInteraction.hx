@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPencilInteraction")
 @:include("UIKit/UIKit.h")
-extern class UIPencilInteraction{
+extern class UIPencilInteraction extends NSObject<UIInteraction>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPencilInteraction;

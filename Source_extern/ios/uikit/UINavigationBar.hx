@@ -3,7 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UINavigationBar")
 @:include("UIKit/UIKit.h")
-extern class UINavigationBar extends UIView{
+extern class UINavigationBar extends UIView
+implements cpp.objc.Protocol<UIBarPositioning>
+{
 
 	@:native("barStyle")
 	public var barStyle:UIBarStyle;

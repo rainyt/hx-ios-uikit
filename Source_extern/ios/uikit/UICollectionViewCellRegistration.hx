@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewCellRegistration")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewCellRegistration{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewCellRegistration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewCellRegistration;
+extern class UICollectionViewCellRegistration extends NSObject{
 
 	@:native("registrationWithCellClass:configurationHandler")
 	overload public static function registrationWithCellClass_configurationHandler(cellClass:Dynamic, configurationHandler:Dynamic):UICollectionViewCellRegistration;

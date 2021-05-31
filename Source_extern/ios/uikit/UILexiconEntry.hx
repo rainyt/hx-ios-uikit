@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UILexiconEntry")
 @:include("UIKit/UIKit.h")
-extern class UILexiconEntry{
+extern class UILexiconEntry extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UILexiconEntry;

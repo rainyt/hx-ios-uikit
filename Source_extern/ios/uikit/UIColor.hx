@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIColor")
 @:include("UIKit/UIKit.h")
-extern class UIColor{
+extern class UIColor extends NSObject<NSSecureCoding,NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIColor;

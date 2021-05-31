@@ -5,13 +5,7 @@ import ios.objc.CGBlendMode;
 @:objc
 @:native("UIGraphicsRendererContext")
 @:include("UIKit/UIKit.h")
-extern class UIGraphicsRendererContext{
-
-	@:native("alloc")
-	overload public static function alloc():UIGraphicsRendererContext;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIGraphicsRendererContext;
+extern class UIGraphicsRendererContext extends NSObject{
 
 	@:native("CGContext")
 	public var CGContext:Dynamic;

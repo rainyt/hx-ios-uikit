@@ -4,13 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrintPageRenderer")
 @:include("UIKit/UIKit.h")
-extern class UIPrintPageRenderer{
-
-	@:native("alloc")
-	overload public static function alloc():UIPrintPageRenderer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPrintPageRenderer;
+extern class UIPrintPageRenderer extends NSObject{
 
 	@:native("headerHeight")
 	public var headerHeight:Float;

@@ -4,7 +4,9 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIListContentView")
 @:include("UIKit/UIKit.h")
-extern class UIListContentView extends UIView{
+extern class UIListContentView extends UIView
+implements cpp.objc.Protocol<UIContentView>
+{
 
 	@:native("initWithConfiguration")
 	overload public function initWithConfiguration(configuration:UIListContentConfiguration):UIListContentView;

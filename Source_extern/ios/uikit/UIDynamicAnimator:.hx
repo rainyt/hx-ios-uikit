@@ -4,13 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIDynamicAnimator:")
 @:include("UIKit/UIKit.h")
-extern class UIDynamicAnimator:{
-
-	@:native("alloc")
-	overload public static function alloc():UIDynamicAnimator:;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDynamicAnimator:;
+extern class UIDynamicAnimator: extends NSObject{
 
 	@:native("initWithReferenceView")
 	overload public function initWithReferenceView(view:UIView):UIDynamicAnimator:;

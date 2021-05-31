@@ -3,7 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UIInputViewController")
 @:include("UIKit/UIKit.h")
-extern class UIInputViewController extends UIViewController{
+extern class UIInputViewController extends UIViewController
+implements cpp.objc.Protocol<UITextInputDelegate>
+{
 
 	@:native("inputView")
 	public var inputView:UIInputView;

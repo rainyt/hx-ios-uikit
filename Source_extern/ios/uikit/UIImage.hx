@@ -8,7 +8,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIImage")
 @:include("UIKit/UIKit.h")
-extern class UIImage{
+extern class UIImage extends NSObject<NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIImage;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICommandAlternate")
 @:include("UIKit/UIKit.h")
-extern class UICommandAlternate{
+extern class UICommandAlternate extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UICommandAlternate;

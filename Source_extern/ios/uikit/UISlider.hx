@@ -4,7 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UISlider")
 @:include("UIKit/UIKit.h")
-extern class UISlider extends UIControl{
+extern class UISlider extends UIControl
+{
 
 	@:native("value")
 	public var value:Dynamic;

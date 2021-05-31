@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIUserNotificationCategory")
 @:include("UIKit/UIKit.h")
-extern class UIUserNotificationCategory{
+extern class UIUserNotificationCategory extends NSObject<NSCopying,NSMutableCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIUserNotificationCategory;

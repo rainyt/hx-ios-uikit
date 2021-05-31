@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIApplicationShortcutIcon")
 @:include("UIKit/UIKit.h")
-extern class UIApplicationShortcutIcon{
+extern class UIApplicationShortcutIcon extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIApplicationShortcutIcon;

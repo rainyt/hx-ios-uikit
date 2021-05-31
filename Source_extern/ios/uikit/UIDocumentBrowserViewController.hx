@@ -4,7 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentBrowserViewController extends UIViewController{
+extern class UIDocumentBrowserViewController extends UIViewController
+{
 
 	@:native("initForOpeningContentTypes")
 	overload public function initForOpeningContentTypes(contentTypes:Dynamic):UIDocumentBrowserViewController;

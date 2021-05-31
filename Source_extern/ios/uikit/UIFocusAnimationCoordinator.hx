@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFocusAnimationCoordinator")
 @:include("UIKit/UIKit.h")
-extern class UIFocusAnimationCoordinator{
-
-	@:native("alloc")
-	overload public static function alloc():UIFocusAnimationCoordinator;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIFocusAnimationCoordinator;
+extern class UIFocusAnimationCoordinator extends NSObject{
 
 	@:native("addCoordinatedAnimations:completion")
 	overload public function addCoordinatedAnimations_completion(animations:Dynamic, completion:Dynamic):Void;

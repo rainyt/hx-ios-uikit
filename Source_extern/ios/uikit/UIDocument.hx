@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDocument")
 @:include("UIKit/UIKit.h")
-extern class UIDocument{
+extern class UIDocument extends NSObject<NSFilePresenter,NSProgressReporting>{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocument;

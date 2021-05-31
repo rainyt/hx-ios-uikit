@@ -4,13 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("NSStringDrawingContext")
 @:include("UIKit/UIKit.h")
-extern class NSStringDrawingContext{
-
-	@:native("alloc")
-	overload public static function alloc():NSStringDrawingContext;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSStringDrawingContext;
+extern class NSStringDrawingContext extends NSObject{
 
 	@:native("minimumScaleFactor")
 	public var minimumScaleFactor:Float;

@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAccelerometer")
 @:include("UIKit/UIKit.h")
-extern class UIAccelerometer{
-
-	@:native("alloc")
-	overload public static function alloc():UIAccelerometer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAccelerometer;
+extern class UIAccelerometer extends NSObject{
 
 	@:native("sharedAccelerometer")
 	overload public static function sharedAccelerometer():UIAccelerometer;

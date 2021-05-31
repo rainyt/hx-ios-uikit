@@ -3,7 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UITabBarController")
 @:include("UIKit/UIKit.h")
-extern class UITabBarController extends UIViewController{
+extern class UITabBarController extends UIViewController
+{
 
 	@:native("setViewControllers:animated")
 	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;

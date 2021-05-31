@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewPlaceholder")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewPlaceholder{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewPlaceholder;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewPlaceholder;
+extern class UICollectionViewPlaceholder extends NSObject{
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier")
 	overload public function initWithInsertionIndexPath_reuseIdentifier(insertionIndexPath:Dynamic, reuseIdentifier:NSString):UICollectionViewPlaceholder;

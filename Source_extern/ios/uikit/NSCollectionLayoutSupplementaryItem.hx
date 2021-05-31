@@ -4,7 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSCollectionLayoutSupplementaryItem")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutSupplementaryItem extends NSCollectionLayoutItem{
+extern class NSCollectionLayoutSupplementaryItem extends NSCollectionLayoutItem
+{
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor")
 	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIBarButtonItemGroup")
 @:include("UIKit/UIKit.h")
-extern class UIBarButtonItemGroup{
+extern class UIBarButtonItemGroup extends NSObject<NSCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItemGroup;

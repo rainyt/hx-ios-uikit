@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIKey")
 @:include("UIKit/UIKit.h")
-extern class UIKey{
+extern class UIKey extends NSObject<NSCopying,NSCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIKey;

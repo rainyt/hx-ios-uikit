@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")
-extern class UISceneSession{
+extern class UISceneSession extends NSObject<NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneSession;

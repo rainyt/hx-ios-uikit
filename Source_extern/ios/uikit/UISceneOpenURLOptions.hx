@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISceneOpenURLOptions")
 @:include("UIKit/UIKit.h")
-extern class UISceneOpenURLOptions{
-
-	@:native("alloc")
-	overload public static function alloc():UISceneOpenURLOptions;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISceneOpenURLOptions;
+extern class UISceneOpenURLOptions extends NSObject{
 
 	@:native("init")
 	overload public function init():UISceneOpenURLOptions;

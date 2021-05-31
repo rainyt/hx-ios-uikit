@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIApplicationShortcutItem")
 @:include("UIKit/UIKit.h")
-extern class UIApplicationShortcutItem{
+extern class UIApplicationShortcutItem extends NSObject<NSCopying,NSMutableCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIApplicationShortcutItem;

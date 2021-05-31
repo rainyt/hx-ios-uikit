@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>{
+extern class UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType> extends NSObject<UITableViewDataSource>{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>;

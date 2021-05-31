@@ -4,7 +4,10 @@ import ios.objc.CGRect;
 @:objc
 @:native("UISearchBar")
 @:include("UIKit/UIKit.h")
-extern class UISearchBar extends UIView{
+extern class UISearchBar extends UIView
+implements cpp.objc.Protocol<UIBarPositioning>
+implements cpp.objc.Protocol<UITextInputTraits>
+{
 
 	@:native("init")
 	overload public function init():UISearchBar;

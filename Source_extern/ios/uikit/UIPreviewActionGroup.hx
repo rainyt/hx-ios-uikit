@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIPreviewActionGroup")
 @:include("UIKit/UIKit.h")
-extern class UIPreviewActionGroup{
+extern class UIPreviewActionGroup extends NSObject<NSCopying,UIPreviewActionItem>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPreviewActionGroup;

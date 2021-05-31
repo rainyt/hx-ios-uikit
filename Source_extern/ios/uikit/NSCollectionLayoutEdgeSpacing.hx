@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSCollectionLayoutEdgeSpacing")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutEdgeSpacing{
+extern class NSCollectionLayoutEdgeSpacing extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutEdgeSpacing;

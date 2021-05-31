@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UILargeContentViewerInteraction")
 @:include("UIKit/UIKit.h")
-extern class UILargeContentViewerInteraction{
+extern class UILargeContentViewerInteraction extends NSObject<UIInteraction>{
 
 	@:native("alloc")
 	overload public static function alloc():UILargeContentViewerInteraction;

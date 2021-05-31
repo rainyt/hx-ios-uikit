@@ -4,7 +4,10 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISearchController")
 @:include("UIKit/UIKit.h")
-extern class UISearchController extends UIViewController{
+extern class UISearchController extends UIViewController
+implements cpp.objc.Protocol<UIViewControllerTransitioningDelegate>
+implements cpp.objc.Protocol<UIViewControllerAnimatedTransitioning>
+{
 
 	@:native("initWithSearchResultsController")
 	overload public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITableViewRowAction")
 @:include("UIKit/UIKit.h")
-extern class UITableViewRowAction{
+extern class UITableViewRowAction extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewRowAction;

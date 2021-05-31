@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICellAccessory")
 @:include("UIKit/UIKit.h")
-extern class UICellAccessory{
+extern class UICellAccessory extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UICellAccessory;

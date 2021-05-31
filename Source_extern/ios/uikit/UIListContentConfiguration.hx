@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIListContentConfiguration{
+extern class UIListContentConfiguration extends NSObject<UIContentConfiguration,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIListContentConfiguration;

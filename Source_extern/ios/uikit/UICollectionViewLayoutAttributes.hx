@@ -9,7 +9,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewLayoutAttributes")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewLayoutAttributes{
+extern class UICollectionViewLayoutAttributes extends NSObject<NSCopying,UIDynamicItem>{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayoutAttributes;

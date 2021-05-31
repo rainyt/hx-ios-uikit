@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISearchToken")
 @:include("UIKit/UIKit.h")
-extern class UISearchToken{
-
-	@:native("alloc")
-	overload public static function alloc():UISearchToken;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISearchToken;
+extern class UISearchToken extends NSObject{
 
 	@:native("init")
 	overload public function init():UISearchToken;

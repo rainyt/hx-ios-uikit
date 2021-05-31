@@ -3,7 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UITextDropProposal")
 @:include("UIKit/UIKit.h")
-extern class UITextDropProposal extends UIDropProposal{
+extern class UITextDropProposal extends UIDropProposal
+{
 
 	@:native("dropAction")
 	public var dropAction:UITextDropAction;

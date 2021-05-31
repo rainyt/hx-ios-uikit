@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIPasteboard")
 @:include("UIKit/UIKit.h")
-extern class UIPasteboard{
-
-	@:native("alloc")
-	overload public static function alloc():UIPasteboard;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPasteboard;
+extern class UIPasteboard extends NSObject{
 
 	@:native("generalPasteboard")
 	overload public static function generalPasteboard():UIPasteboard;

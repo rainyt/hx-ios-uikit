@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIBarAppearance")
 @:include("UIKit/UIKit.h")
-extern class UIBarAppearance{
+extern class UIBarAppearance extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIBarAppearance;

@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPresentationController")
 @:include("UIKit/UIKit.h")
-extern class UIPresentationController{
+extern class UIPresentationController extends NSObject<UIAppearanceContainer,UITraitEnvironment,UIContentContainer,UIFocusEnvironment>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPresentationController;

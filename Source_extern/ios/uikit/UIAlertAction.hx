@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIAlertAction")
 @:include("UIKit/UIKit.h")
-extern class UIAlertAction{
+extern class UIAlertAction extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIAlertAction;

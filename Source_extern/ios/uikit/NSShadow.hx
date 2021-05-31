@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("NSShadow")
 @:include("UIKit/UIKit.h")
-extern class NSShadow{
+extern class NSShadow extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():NSShadow;

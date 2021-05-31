@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIGraphicsRendererFormat")
 @:include("UIKit/UIKit.h")
-extern class UIGraphicsRendererFormat{
+extern class UIGraphicsRendererFormat extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsRendererFormat;

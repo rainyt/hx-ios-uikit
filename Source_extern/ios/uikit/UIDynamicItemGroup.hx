@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDynamicItemGroup")
 @:include("UIKit/UIKit.h")
-extern class UIDynamicItemGroup{
+extern class UIDynamicItemGroup extends NSObject<UIDynamicItem>{
 
 	@:native("alloc")
 	overload public static function alloc():UIDynamicItemGroup;

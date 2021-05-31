@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFontMetrics")
 @:include("UIKit/UIKit.h")
-extern class UIFontMetrics{
-
-	@:native("alloc")
-	overload public static function alloc():UIFontMetrics;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIFontMetrics;
+extern class UIFontMetrics extends NSObject{
 
 	@:native("defaultMetrics")
 	overload public static function defaultMetrics():UIFontMetrics;

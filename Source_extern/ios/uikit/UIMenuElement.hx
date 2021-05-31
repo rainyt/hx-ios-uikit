@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIMenuElement")
 @:include("UIKit/UIKit.h")
-extern class UIMenuElement{
+extern class UIMenuElement extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIMenuElement;

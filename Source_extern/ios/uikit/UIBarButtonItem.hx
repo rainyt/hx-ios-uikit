@@ -4,7 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIBarButtonItem")
 @:include("UIKit/UIKit.h")
-extern class UIBarButtonItem extends UIBarItem{
+extern class UIBarButtonItem extends UIBarItem
+{
 
 	@:native("initWithImage:style:target:action")
 	overload public function initWithImage_style_target_action(image:UIImage, style:UIBarButtonItemStyle, target:Dynamic, action:String):UIBarButtonItem;

@@ -4,7 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIProgressView")
 @:include("UIKit/UIKit.h")
-extern class UIProgressView extends UIView{
+extern class UIProgressView extends UIView
+{
 
 	@:native("initWithProgressViewStyle")
 	overload public function initWithProgressViewStyle(style:UIProgressViewStyle):UIProgressView;

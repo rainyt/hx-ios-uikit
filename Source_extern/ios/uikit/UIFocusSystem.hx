@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFocusSystem")
 @:include("UIKit/UIKit.h")
-extern class UIFocusSystem{
-
-	@:native("alloc")
-	overload public static function alloc():UIFocusSystem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIFocusSystem;
+extern class UIFocusSystem extends NSObject{
 
 	@:native("focusedItem")
 	public var focusedItem:Dynamic;

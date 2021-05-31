@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextRange")
 @:include("UIKit/UIKit.h")
-extern class UITextRange{
-
-	@:native("alloc")
-	overload public static function alloc():UITextRange;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextRange;
+extern class UITextRange extends NSObject{
 
 	@:native("empty")
 	public var empty:Bool;

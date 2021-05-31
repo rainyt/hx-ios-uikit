@@ -6,7 +6,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITableView")
 @:include("UIKit/UIKit.h")
-extern class UITableView extends UIScrollView{
+extern class UITableView extends UIScrollView
+implements cpp.objc.Protocol<UIDataSourceTranslating>
+{
 
 	@:native("initWithFrame:style")
 	overload public function initWithFrame_style(frame:CGRect, style:UITableViewStyle):UITableView;

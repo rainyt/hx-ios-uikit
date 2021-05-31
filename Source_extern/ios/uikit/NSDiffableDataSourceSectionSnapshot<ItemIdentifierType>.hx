@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>")
 @:include("UIKit/UIKit.h")
-extern class NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>{
+extern class NSDiffableDataSourceSectionSnapshot<ItemIdentifierType> extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>;

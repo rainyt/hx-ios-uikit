@@ -6,7 +6,9 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UICollectionView")
 @:include("UIKit/UIKit.h")
-extern class UICollectionView extends UIScrollView{
+extern class UICollectionView extends UIScrollView
+implements cpp.objc.Protocol<UIDataSourceTranslating>
+{
 
 	@:native("initWithFrame:collectionViewLayout")
 	overload public function initWithFrame_collectionViewLayout(frame:CGRect, collectionViewLayout:UICollectionViewLayout):UICollectionView;

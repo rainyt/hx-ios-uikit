@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFocusUpdateContext")
 @:include("UIKit/UIKit.h")
-extern class UIFocusUpdateContext{
-
-	@:native("alloc")
-	overload public static function alloc():UIFocusUpdateContext;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIFocusUpdateContext;
+extern class UIFocusUpdateContext extends NSObject{
 
 	@:native("previouslyFocusedItem")
 	public var previouslyFocusedItem:Dynamic;

@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UINib")
 @:include("UIKit/UIKit.h")
-extern class UINib{
-
-	@:native("alloc")
-	overload public static function alloc():UINib;
-
-	@:native("autorelease")
-	overload public static function autorelease():UINib;
+extern class UINib extends NSObject{
 
 	@:native("nibWithNibName:bundle")
 	overload public static function nibWithNibName_bundle(name:NSString, bundle:NSBundle):UINib;

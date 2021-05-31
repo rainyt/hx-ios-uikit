@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDevice")
 @:include("UIKit/UIKit.h")
-extern class UIDevice{
-
-	@:native("alloc")
-	overload public static function alloc():UIDevice;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDevice;
+extern class UIDevice extends NSObject{
 
 	@:native("currentDevice")
 	overload public static function currentDevice():UIDevice;

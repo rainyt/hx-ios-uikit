@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIResponder")
 @:include("UIKit/UIKit.h")
-extern class UIResponder{
+extern class UIResponder extends NSObject<UIResponderStandardEditActions>{
 
 	@:native("alloc")
 	overload public static function alloc():UIResponder;

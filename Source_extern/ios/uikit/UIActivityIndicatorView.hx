@@ -4,7 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIActivityIndicatorView")
 @:include("UIKit/UIKit.h")
-extern class UIActivityIndicatorView extends UIView{
+extern class UIActivityIndicatorView extends UIView
+{
 
 	@:native("initWithActivityIndicatorStyle")
 	overload public function initWithActivityIndicatorStyle(style:UIActivityIndicatorViewStyle):UIActivityIndicatorView;

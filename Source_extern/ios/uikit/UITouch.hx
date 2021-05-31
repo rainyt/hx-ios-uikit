@@ -5,13 +5,7 @@ import ios.objc.CGVector;
 @:objc
 @:native("UITouch")
 @:include("UIKit/UIKit.h")
-extern class UITouch{
-
-	@:native("alloc")
-	overload public static function alloc():UITouch;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITouch;
+extern class UITouch extends NSObject{
 
 	@:native("timestamp")
 	public var timestamp:Dynamic;

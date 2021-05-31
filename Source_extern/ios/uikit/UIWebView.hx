@@ -4,7 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIWebView")
 @:include("UIKit/UIKit.h")
-extern class UIWebView extends UIView{
+extern class UIWebView extends UIView
+{
 
 	@:native("delegate")
 	public var delegate:Dynamic;

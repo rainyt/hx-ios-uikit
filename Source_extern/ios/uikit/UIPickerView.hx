@@ -4,7 +4,8 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIPickerView")
 @:include("UIKit/UIKit.h")
-extern class UIPickerView extends UIView{
+extern class UIPickerView extends UIView
+{
 
 	@:native("dataSource")
 	public var dataSource:Dynamic;

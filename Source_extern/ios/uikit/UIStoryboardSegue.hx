@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIStoryboardSegue")
 @:include("UIKit/UIKit.h")
-extern class UIStoryboardSegue{
-
-	@:native("alloc")
-	overload public static function alloc():UIStoryboardSegue;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIStoryboardSegue;
+extern class UIStoryboardSegue extends NSObject{
 
 	@:native("segueWithIdentifier:source:destination:performHandler")
 	overload public static function segueWithIdentifier_source_destination_performHandler(identifier:NSString, source:UIViewController, destination:UIViewController, performHandler:Dynamic):UIStoryboardSegue;

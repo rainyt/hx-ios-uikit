@@ -4,13 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIScreenMode")
 @:include("UIKit/UIKit.h")
-extern class UIScreenMode{
-
-	@:native("alloc")
-	overload public static function alloc():UIScreenMode;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIScreenMode;
+extern class UIScreenMode extends NSObject{
 
 	@:native("size")
 	public var size:CGSize;

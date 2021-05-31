@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPercentDrivenInteractiveTransition")
 @:include("UIKit/UIKit.h")
-extern class UIPercentDrivenInteractiveTransition{
+extern class UIPercentDrivenInteractiveTransition extends NSObject<UIViewControllerInteractiveTransitioning>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPercentDrivenInteractiveTransition;

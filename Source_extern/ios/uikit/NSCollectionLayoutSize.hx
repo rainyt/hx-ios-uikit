@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSCollectionLayoutSize")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutSize{
+extern class NSCollectionLayoutSize extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutSize;

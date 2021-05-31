@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPopoverController")
 @:include("UIKit/UIKit.h")
-extern class UIPopoverController{
+extern class UIPopoverController extends NSObject<UIAppearanceContainer>}{
 
 	@:native("alloc")
 	overload public static function alloc():UIPopoverController;

@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("NSCollectionLayoutGroupCustomItem")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutGroupCustomItem{
+extern class NSCollectionLayoutGroupCustomItem extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutGroupCustomItem;

@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIStoryboardUnwindSegueSource")
 @:include("UIKit/UIKit.h")
-extern class UIStoryboardUnwindSegueSource{
-
-	@:native("alloc")
-	overload public static function alloc():UIStoryboardUnwindSegueSource;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIStoryboardUnwindSegueSource;
+extern class UIStoryboardUnwindSegueSource extends NSObject{
 
 	@:native("init")
 	overload public function init():UIStoryboardUnwindSegueSource;

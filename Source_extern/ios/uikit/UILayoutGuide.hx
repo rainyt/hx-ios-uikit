@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UILayoutGuide")
 @:include("UIKit/UIKit.h")
-extern class UILayoutGuide{
+extern class UILayoutGuide extends NSObject<NSCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UILayoutGuide;

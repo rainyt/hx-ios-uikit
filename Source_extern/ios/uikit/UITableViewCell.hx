@@ -4,7 +4,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITableViewCell")
 @:include("UIKit/UIKit.h")
-extern class UITableViewCell extends UIView{
+extern class UITableViewCell extends UIView
+implements cpp.objc.Protocol<UIGestureRecognizerDelegate>
+{
 
 	@:native("initWithStyle:reuseIdentifier")
 	overload public function initWithStyle_reuseIdentifier(style:UITableViewCellStyle, reuseIdentifier:NSString):UITableViewCell;

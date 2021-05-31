@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISwipeActionsConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UISwipeActionsConfiguration{
-
-	@:native("alloc")
-	overload public static function alloc():UISwipeActionsConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISwipeActionsConfiguration;
+extern class UISwipeActionsConfiguration extends NSObject{
 
 	@:native("configurationWithActions")
 	overload public static function configurationWithActions(actions:Dynamic):UISwipeActionsConfiguration;

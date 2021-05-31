@@ -4,13 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrinterPickerController")
 @:include("UIKit/UIKit.h")
-extern class UIPrinterPickerController{
-
-	@:native("alloc")
-	overload public static function alloc():UIPrinterPickerController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPrinterPickerController;
+extern class UIPrinterPickerController extends NSObject{
 
 	@:native("printerPickerControllerWithInitiallySelectedPrinter")
 	overload public static function printerPickerControllerWithInitiallySelectedPrinter(printer:UIPrinter):UIPrinterPickerController;

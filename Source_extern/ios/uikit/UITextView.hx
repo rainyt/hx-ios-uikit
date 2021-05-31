@@ -4,7 +4,9 @@ import ios.objc.CGRect;
 @:objc
 @:native("UITextView")
 @:include("UIKit/UIKit.h")
-extern class UITextView extends UIScrollView{
+extern class UITextView extends UIScrollView
+implements cpp.objc.Protocol<UITextInput>
+{
 
 	@:native("font")
 	public var font:UIFont;

@@ -4,7 +4,7 @@ import ios.objc.CGVector;
 @:objc
 @:native("UISpringTimingParameters")
 @:include("UIKit/UIKit.h")
-extern class UISpringTimingParameters{
+extern class UISpringTimingParameters extends NSObject<UITimingCurveProvider>{
 
 	@:native("alloc")
 	overload public static function alloc():UISpringTimingParameters;

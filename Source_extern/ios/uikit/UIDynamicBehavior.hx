@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDynamicBehavior")
 @:include("UIKit/UIKit.h")
-extern class UIDynamicBehavior{
-
-	@:native("alloc")
-	overload public static function alloc():UIDynamicBehavior;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDynamicBehavior;
+extern class UIDynamicBehavior extends NSObject{
 
 	@:native("addChildBehavior")
 	overload public function addChildBehavior(behavior:UIDynamicBehavior):Void;

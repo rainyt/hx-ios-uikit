@@ -3,7 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UIToolbar")
 @:include("UIKit/UIKit.h")
-extern class UIToolbar extends UIView{
+extern class UIToolbar extends UIView
+implements cpp.objc.Protocol<UIBarPositioning>
+{
 
 	@:native("barStyle")
 	public var barStyle:UIBarStyle;

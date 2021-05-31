@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UILexicon")
 @:include("UIKit/UIKit.h")
-extern class UILexicon{
+extern class UILexicon extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UILexicon;

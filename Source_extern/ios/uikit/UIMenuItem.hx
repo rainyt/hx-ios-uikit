@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIMenuItem")
 @:include("UIKit/UIKit.h")
-extern class UIMenuItem{
-
-	@:native("alloc")
-	overload public static function alloc():UIMenuItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIMenuItem;
+extern class UIMenuItem extends NSObject{
 
 	@:native("initWithTitle:action")
 	overload public function initWithTitle_action(title:NSString, action:String):UIMenuItem;

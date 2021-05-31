@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIActivity")
 @:include("UIKit/UIKit.h")
-extern class UIActivity{
-
-	@:native("alloc")
-	overload public static function alloc():UIActivity;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIActivity;
+extern class UIActivity extends NSObject{
 
 	@:native("activityCategory")
 	overload public static function activityCategory():UIActivityCategory;

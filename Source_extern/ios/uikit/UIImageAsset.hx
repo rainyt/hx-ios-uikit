@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIImageAsset")
 @:include("UIKit/UIKit.h")
-extern class UIImageAsset{
+extern class UIImageAsset extends NSObject<NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIImageAsset;

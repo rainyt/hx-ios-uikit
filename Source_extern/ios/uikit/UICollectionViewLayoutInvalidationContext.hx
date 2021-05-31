@@ -6,13 +6,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewLayoutInvalidationContext")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewLayoutInvalidationContext{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewLayoutInvalidationContext;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewLayoutInvalidationContext;
+extern class UICollectionViewLayoutInvalidationContext extends NSObject{
 
 	@:native("invalidateEverything")
 	public var invalidateEverything:Bool;

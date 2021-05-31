@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIMenuSystem")
 @:include("UIKit/UIKit.h")
-extern class UIMenuSystem{
-
-	@:native("alloc")
-	overload public static function alloc():UIMenuSystem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIMenuSystem;
+extern class UIMenuSystem extends NSObject{
 
 	@:native("mainSystem")
 	overload public static function mainSystem():UIMenuSystem;

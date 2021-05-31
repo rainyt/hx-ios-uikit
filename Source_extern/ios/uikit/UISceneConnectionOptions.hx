@@ -4,13 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISceneConnectionOptions")
 @:include("UIKit/UIKit.h")
-extern class UISceneConnectionOptions{
-
-	@:native("alloc")
-	overload public static function alloc():UISceneConnectionOptions;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISceneConnectionOptions;
+extern class UISceneConnectionOptions extends NSObject{
 
 	@:native("init")
 	overload public function init():UISceneConnectionOptions;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPasteConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIPasteConfiguration{
+extern class UIPasteConfiguration extends NSObject<NSSecureCoding,NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPasteConfiguration;

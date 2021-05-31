@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIBarButtonItemAppearance")
 @:include("UIKit/UIKit.h")
-extern class UIBarButtonItemAppearance{
+extern class UIBarButtonItemAppearance extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItemAppearance;

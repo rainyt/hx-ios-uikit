@@ -4,7 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSCollectionLayoutDecorationItem")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutDecorationItem extends NSCollectionLayoutItem{
+extern class NSCollectionLayoutDecorationItem extends NSCollectionLayoutItem
+{
 
 	@:native("backgroundDecorationItemWithElementKind")
 	overload public static function backgroundDecorationItemWithElementKind(elementKind:NSString):NSCollectionLayoutDecorationItem;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPointerStyle")
 @:include("UIKit/UIKit.h")
-extern class UIPointerStyle{
+extern class UIPointerStyle extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerStyle;

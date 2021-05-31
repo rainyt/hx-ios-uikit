@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPrintInfo")
 @:include("UIKit/UIKit.h")
-extern class UIPrintInfo{
+extern class UIPrintInfo extends NSObject<NSCopying,NSCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrintInfo;

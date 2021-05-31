@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSDataAsset")
 @:include("UIKit/UIKit.h")
-extern class NSDataAsset{
+extern class NSDataAsset extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():NSDataAsset;

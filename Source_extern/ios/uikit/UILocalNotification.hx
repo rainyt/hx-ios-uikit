@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UILocalNotification")
 @:include("UIKit/UIKit.h")
-extern class UILocalNotification{
+extern class UILocalNotification extends NSObject<NSCopying,NSCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UILocalNotification;

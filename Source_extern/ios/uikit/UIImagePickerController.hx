@@ -4,7 +4,8 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIImagePickerController")
 @:include("UIKit/UIKit.h")
-extern class UIImagePickerController extends UINavigationController{
+extern class UIImagePickerController extends UINavigationController
+{
 
 	@:native("isSourceTypeAvailable")
 	overload public static function isSourceTypeAvailable(sourceType:UIImagePickerControllerSourceType):Bool;

@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFocusDebugger")
 @:include("UIKit/UIKit.h")
-extern class UIFocusDebugger{
-
-	@:native("alloc")
-	overload public static function alloc():UIFocusDebugger;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIFocusDebugger;
+extern class UIFocusDebugger extends NSObject{
 
 	@:native("help")
 	overload public static function help():Dynamic;

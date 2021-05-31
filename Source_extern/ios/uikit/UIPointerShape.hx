@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPointerShape")
 @:include("UIKit/UIKit.h")
-extern class UIPointerShape{
+extern class UIPointerShape extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerShape;

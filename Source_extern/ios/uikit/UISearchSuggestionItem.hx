@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISearchSuggestionItem")
 @:include("UIKit/UIKit.h")
-extern class UISearchSuggestionItem{
+extern class UISearchSuggestionItem extends NSObject<UISearchSuggestion>{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchSuggestionItem;

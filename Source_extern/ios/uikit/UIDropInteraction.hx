@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDropInteraction")
 @:include("UIKit/UIKit.h")
-extern class UIDropInteraction{
+extern class UIDropInteraction extends NSObject<UIInteraction>{
 
 	@:native("alloc")
 	overload public static function alloc():UIDropInteraction;

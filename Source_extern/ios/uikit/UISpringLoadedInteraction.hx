@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISpringLoadedInteraction")
 @:include("UIKit/UIKit.h")
-extern class UISpringLoadedInteraction{
+extern class UISpringLoadedInteraction extends NSObject<UIInteraction>{
 
 	@:native("alloc")
 	overload public static function alloc():UISpringLoadedInteraction;

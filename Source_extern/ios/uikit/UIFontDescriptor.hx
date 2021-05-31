@@ -5,7 +5,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIFontDescriptor")
 @:include("UIKit/UIKit.h")
-extern class UIFontDescriptor{
+extern class UIFontDescriptor extends NSObject<NSCopying,NSSecureCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UIFontDescriptor;

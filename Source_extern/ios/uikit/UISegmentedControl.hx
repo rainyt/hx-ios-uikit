@@ -6,7 +6,8 @@ import ios.objc.CGSize;
 @:objc
 @:native("UISegmentedControl")
 @:include("UIKit/UIKit.h")
-extern class UISegmentedControl extends UIControl{
+extern class UISegmentedControl extends UIControl
+{
 
 	@:native("initWithItems")
 	overload public function initWithItems(items:Dynamic):UISegmentedControl;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPointerEffect")
 @:include("UIKit/UIKit.h")
-extern class UIPointerEffect{
+extern class UIPointerEffect extends NSObject<NSCopying>{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerEffect;

@@ -5,13 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UITextDragPreviewRenderer")
 @:include("UIKit/UIKit.h")
-extern class UITextDragPreviewRenderer{
-
-	@:native("alloc")
-	overload public static function alloc():UITextDragPreviewRenderer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextDragPreviewRenderer;
+extern class UITextDragPreviewRenderer extends NSObject{
 
 	@:native("initWithLayoutManager:range")
 	overload public function initWithLayoutManager_range(layoutManager:NSLayoutManager, range:Dynamic):UITextDragPreviewRenderer;

@@ -5,7 +5,9 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIAccessibilityElement")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityElement extends UIResponder{
+extern class UIAccessibilityElement extends UIResponder
+implements cpp.objc.Protocol<UIAccessibilityIdentification>
+{
 
 	@:native("initWithAccessibilityContainer")
 	overload public function initWithAccessibilityContainer(container:Dynamic):UIAccessibilityElement;

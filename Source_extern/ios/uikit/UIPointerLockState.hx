@@ -3,13 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPointerLockState")
 @:include("UIKit/UIKit.h")
-extern class UIPointerLockState{
-
-	@:native("alloc")
-	overload public static function alloc():UIPointerLockState;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPointerLockState;
+extern class UIPointerLockState extends NSObject{
 
 	@:native("init")
 	overload public function init():UIPointerLockState;

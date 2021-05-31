@@ -4,7 +4,10 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewController")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewController extends UIViewController{
+extern class UICollectionViewController extends UIViewController
+implements cpp.objc.Protocol<UICollectionViewDelegate>
+implements cpp.objc.Protocol<UICollectionViewDataSource>
+{
 
 	@:native("initWithCollectionViewLayout")
 	overload public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UICollectionViewController;

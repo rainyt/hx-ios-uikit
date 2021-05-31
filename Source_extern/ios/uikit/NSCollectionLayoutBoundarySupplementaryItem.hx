@@ -5,7 +5,8 @@ import ios.objc.CGPoint;
 @:objc
 @:native("NSCollectionLayoutBoundarySupplementaryItem")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutBoundarySupplementaryItem extends NSCollectionLayoutSupplementaryItem{
+extern class NSCollectionLayoutBoundarySupplementaryItem extends NSCollectionLayoutSupplementaryItem
+{
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment")
 	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment):NSCollectionLayoutBoundarySupplementaryItem;

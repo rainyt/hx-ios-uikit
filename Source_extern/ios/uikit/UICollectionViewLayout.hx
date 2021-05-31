@@ -7,7 +7,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewLayout")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewLayout{
+extern class UICollectionViewLayout extends NSObject<NSCoding>{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayout;

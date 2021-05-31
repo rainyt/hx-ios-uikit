@@ -4,13 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UISceneSizeRestrictions")
 @:include("UIKit/UIKit.h")
-extern class UISceneSizeRestrictions{
-
-	@:native("alloc")
-	overload public static function alloc():UISceneSizeRestrictions;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISceneSizeRestrictions;
+extern class UISceneSizeRestrictions extends NSObject{
 
 	@:native("init")
 	overload public function init():UISceneSizeRestrictions;
