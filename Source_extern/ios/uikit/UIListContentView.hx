@@ -8,25 +8,25 @@ import cpp.objc.NSData;
 extern class UIListContentView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIListContentView;
+	overload public static function alloc():UIListContentView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIListContentView;
+	overload public static function autorelease():UIListContentView;
 
 	@:native("initWithConfiguration")
-	overload extern inline public function initWithConfiguration(configuration:UIListContentConfiguration):UIListContentView;
+	overload public function initWithConfiguration(configuration:UIListContentConfiguration):UIListContentView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIListContentView;
+	overload public function initWithCoder(coder:NSCoder):UIListContentView;
 
 	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UIListContentView;
+	overload public function initWithFrame(frame:CGRect):UIListContentView;
 
 	@:native("init")
-	overload extern inline public function init():UIListContentView;
+	overload public function init():UIListContentView;
 
 	@:native("new")
-	overload extern inline public static function new():UIListContentView;
+	overload public static function new():UIListContentView;
 
 	@:native("configuration")
 	public var configuration:UIListContentConfiguration;

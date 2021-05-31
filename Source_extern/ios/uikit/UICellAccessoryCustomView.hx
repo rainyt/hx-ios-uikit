@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UICellAccessoryCustomView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessoryCustomView;
+	overload public static function alloc():UICellAccessoryCustomView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessoryCustomView;
+	overload public static function autorelease():UICellAccessoryCustomView;
 
 	@:native("initWithCustomView:placement")
-	overload extern inline public function initWithCustomView(customView:UIView, placement:UICellAccessoryPlacement):UICellAccessoryCustomView;
+	overload public function initWithCustomView(customView:UIView, placement:UICellAccessoryPlacement):UICellAccessoryCustomView;
 
 	@:native("customView")
 	public var customView:UIView;
@@ -29,13 +29,13 @@ extern class UICellAccessoryCustomView{
 	public var position:UICellAccessoryPosition;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UICellAccessoryCustomView;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessoryCustomView;
 
 	@:native("init")
-	overload extern inline public function init():UICellAccessoryCustomView;
+	overload public function init():UICellAccessoryCustomView;
 
 	@:native("new")
-	overload extern inline public static function new():UICellAccessoryCustomView;
+	overload public static function new():UICellAccessoryCustomView;
 
 
 }

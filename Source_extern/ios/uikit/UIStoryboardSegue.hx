@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIStoryboardSegue{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIStoryboardSegue;
+	overload public static function alloc():UIStoryboardSegue;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIStoryboardSegue;
+	overload public static function autorelease():UIStoryboardSegue;
 
 	@:native("segueWithIdentifier:source:destination:performHandler")
-	overload extern inline public static function segueWithIdentifier(identifier:NSString, source:UIViewController, destination:UIViewController, performHandler:Dynamic):UIStoryboardSegue;
+	overload public static function segueWithIdentifier(identifier:NSString, source:UIViewController, destination:UIViewController, performHandler:Dynamic):UIStoryboardSegue;
 
 	@:native("initWithIdentifier:source:destination")
-	overload extern inline public function initWithIdentifier(identifier:NSString, source:UIViewController, destination:UIViewController):UIStoryboardSegue;
+	overload public function initWithIdentifier(identifier:NSString, source:UIViewController, destination:UIViewController):UIStoryboardSegue;
 
 	@:native("init")
-	overload extern inline public function init():UIStoryboardSegue;
+	overload public function init():UIStoryboardSegue;
 
 	@:native("identifier")
 	public var identifier:NSString;
@@ -32,7 +32,7 @@ extern class UIStoryboardSegue{
 	public var destinationViewController:UIViewController;
 
 	@:native("perform;")
-	overload extern inline public function perform;():Void;
+	overload public function perform;():Void;
 
 
 }

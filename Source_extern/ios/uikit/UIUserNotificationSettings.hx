@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIUserNotificationSettings{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIUserNotificationSettings;
+	overload public static function alloc():UIUserNotificationSettings;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIUserNotificationSettings;
+	overload public static function autorelease():UIUserNotificationSettings;
 
 	@:native("settingsForTypes")
-	overload extern inline public static function settingsForTypes():UIUserNotificationSettings;
+	overload public static function settingsForTypes():UIUserNotificationSettings;
 
 	@:native("types")
 	public var types:UIUserNotificationType;

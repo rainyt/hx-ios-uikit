@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICellAccessoryDisclosureIndicator{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessoryDisclosureIndicator;
+	overload public static function alloc():UICellAccessoryDisclosureIndicator;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessoryDisclosureIndicator;
+	overload public static function autorelease():UICellAccessoryDisclosureIndicator;
 
 
 }

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIAcceleration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIAcceleration;
+	overload public static function alloc():UIAcceleration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIAcceleration;
+	overload public static function autorelease():UIAcceleration;
 
 	@:native("timestamp")
 	public var timestamp:NSTimeInterval;

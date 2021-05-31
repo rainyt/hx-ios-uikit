@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewFlowLayoutInvalidationContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewFlowLayoutInvalidationContext;
+	overload public static function alloc():UICollectionViewFlowLayoutInvalidationContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewFlowLayoutInvalidationContext;
+	overload public static function autorelease():UICollectionViewFlowLayoutInvalidationContext;
 
 	@:native("information")
 	public var information:size;

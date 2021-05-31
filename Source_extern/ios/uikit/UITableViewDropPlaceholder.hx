@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITableViewDropPlaceholder{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITableViewDropPlaceholder;
+	overload public static function alloc():UITableViewDropPlaceholder;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITableViewDropPlaceholder;
+	overload public static function autorelease():UITableViewDropPlaceholder;
 
 	@:native("_Nullable")
 	public var _Nullable:;

@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UISearchContainerViewController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISearchContainerViewController;
+	overload public static function alloc():UISearchContainerViewController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISearchContainerViewController;
+	overload public static function autorelease():UISearchContainerViewController;
 
 	@:native("searchController")
 	public var searchController:UISearchController;
 
 	@:native("initWithSearchController")
-	overload extern inline public function initWithSearchController(searchController:UISearchController):UISearchContainerViewController;
+	overload public function initWithSearchController(searchController:UISearchController):UISearchContainerViewController;
 
 
 }

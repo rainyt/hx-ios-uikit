@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIGravityBehavior{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIGravityBehavior;
+	overload public static function alloc():UIGravityBehavior;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIGravityBehavior;
+	overload public static function autorelease():UIGravityBehavior;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(items:Dynamic):UIGravityBehavior;
+	overload public function initWithItems(items:Dynamic):UIGravityBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(item:Dynamic):Void;
+	overload public function addItem(item:Dynamic):Void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(item:Dynamic):Void;
+	overload public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
 	public var items:Dynamic;
@@ -35,7 +35,7 @@ extern class UIGravityBehavior{
 	public var magnitude:CGFloat;
 
 	@:native("setAngle:magnitude")
-	overload extern inline public function setAngle(angle:CGFloat, magnitude:CGFloat):Void;
+	overload public function setAngle(angle:CGFloat, magnitude:CGFloat):Void;
 
 
 }

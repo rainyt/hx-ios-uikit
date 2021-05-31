@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIDocumentBrowserTransitionController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDocumentBrowserTransitionController;
+	overload public static function alloc():UIDocumentBrowserTransitionController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDocumentBrowserTransitionController;
+	overload public static function autorelease():UIDocumentBrowserTransitionController;
 
 	@:native("init")
-	overload extern inline public function init():UIDocumentBrowserTransitionController;
+	overload public function init():UIDocumentBrowserTransitionController;
 
 	@:native("loadingProgress")
 	public var loadingProgress:NSProgress;

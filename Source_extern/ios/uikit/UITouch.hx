@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITouch{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITouch;
+	overload public static function alloc():UITouch;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITouch;
+	overload public static function autorelease():UITouch;
 
 	@:native("timestamp")
 	public var timestamp:;
@@ -41,16 +41,16 @@ extern class UITouch{
 	public var gestureRecognizers:Dynamic;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(view:UIView):CGPoint;
+	overload public function locationInView(view:UIView):CGPoint;
 
 	@:native("previousLocationInView")
-	overload extern inline public function previousLocationInView(view:UIView):CGPoint;
+	overload public function previousLocationInView(view:UIView):CGPoint;
 
 	@:native("preciseLocationInView")
-	overload extern inline public function preciseLocationInView(view:UIView):CGPoint;
+	overload public function preciseLocationInView(view:UIView):CGPoint;
 
 	@:native("precisePreviousLocationInView")
-	overload extern inline public function precisePreviousLocationInView(view:UIView):CGPoint;
+	overload public function precisePreviousLocationInView(view:UIView):CGPoint;
 
 	@:native("force")
 	public var force:CGFloat;
@@ -59,10 +59,10 @@ extern class UITouch{
 	public var maximumPossibleForce:CGFloat;
 
 	@:native("azimuthAngleInView")
-	overload extern inline public function azimuthAngleInView(view:UIView):CGFloat;
+	overload public function azimuthAngleInView(view:UIView):CGFloat;
 
 	@:native("azimuthUnitVectorInView")
-	overload extern inline public function azimuthUnitVectorInView(view:UIView):CGVector;
+	overload public function azimuthUnitVectorInView(view:UIView):CGVector;
 
 	@:native("altitudeAngle")
 	public var altitudeAngle:CGFloat;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITableViewFocusUpdateContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITableViewFocusUpdateContext;
+	overload public static function alloc():UITableViewFocusUpdateContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITableViewFocusUpdateContext;
+	overload public static function autorelease():UITableViewFocusUpdateContext;
 
 	@:native("previouslyFocusedIndexPath")
 	public var previouslyFocusedIndexPath:NSIndexPath;

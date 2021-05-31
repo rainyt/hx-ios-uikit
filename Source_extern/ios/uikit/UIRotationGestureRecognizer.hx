@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIRotationGestureRecognizer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIRotationGestureRecognizer;
+	overload public static function alloc():UIRotationGestureRecognizer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIRotationGestureRecognizer;
+	overload public static function autorelease():UIRotationGestureRecognizer;
 
 	@:native("in")
 	public var in:rotation;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICommandAlternate{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICommandAlternate;
+	overload public static function alloc():UICommandAlternate;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICommandAlternate;
+	overload public static function autorelease():UICommandAlternate;
 
 	@:native("title")
 	public var title:NSString;
@@ -23,16 +23,16 @@ extern class UICommandAlternate{
 	public var modifierFlags:UIKeyModifierFlags;
 
 	@:native("alternateWithTitle")
-	overload extern inline public static function alternateWithTitle():UICommandAlternate;
+	overload public static function alternateWithTitle():UICommandAlternate;
 
 	@:native("new")
-	overload extern inline public static function new():UICommandAlternate;
+	overload public static function new():UICommandAlternate;
 
 	@:native("init")
-	overload extern inline public function init():UICommandAlternate;
+	overload public function init():UICommandAlternate;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UICommandAlternate;
+	overload public function initWithCoder(coder:NSCoder):UICommandAlternate;
 
 
 }

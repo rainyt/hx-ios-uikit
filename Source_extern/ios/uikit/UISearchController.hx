@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UISearchController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISearchController;
+	overload public static function alloc():UISearchController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISearchController;
+	overload public static function autorelease():UISearchController;
 
 	@:native("initWithSearchResultsController")
-	overload extern inline public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
+	overload public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UISearchController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UISearchController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UISearchController;
+	overload public function initWithCoder(coder:NSCoder):UISearchController;
 
 	@:native("searchResultsUpdater")
 	public var searchResultsUpdater:Dynamic;

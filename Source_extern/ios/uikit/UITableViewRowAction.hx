@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UITableViewRowAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITableViewRowAction;
+	overload public static function alloc():UITableViewRowAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITableViewRowAction;
+	overload public static function autorelease():UITableViewRowAction;
 
 	@:native("rowActionWithStyle:title:handler")
-	overload extern inline public static function rowActionWithStyle(style:UITableViewRowActionStyle, title:NSString, handler:Dynamic):UITableViewRowAction;
+	overload public static function rowActionWithStyle(style:UITableViewRowActionStyle, title:NSString, handler:Dynamic):UITableViewRowAction;
 
 	@:native("style")
 	public var style:UITableViewRowActionStyle;

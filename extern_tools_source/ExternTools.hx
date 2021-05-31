@@ -50,12 +50,5 @@ class ExternTools {
 				if (value.createHaxeFile)
 					File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile(classpkg));
 		}
-
-		// File.saveContent(haxedir + "/" + haxefile, c.toHaxeFile());
-		// for (key => value in c.typedefs) {
-		// 	if (value.createHaxeFile) {
-		// 		File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile("ios." + pkg.toLowerCase()));
-		// 	}
-		// }
 	}
 }

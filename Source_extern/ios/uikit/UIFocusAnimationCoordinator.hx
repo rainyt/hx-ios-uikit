@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIFocusAnimationCoordinator{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIFocusAnimationCoordinator;
+	overload public static function alloc():UIFocusAnimationCoordinator;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIFocusAnimationCoordinator;
+	overload public static function autorelease():UIFocusAnimationCoordinator;
 
 	@:native("addCoordinatedAnimations:completion")
-	overload extern inline public function addCoordinatedAnimations(animations:Dynamic, completion:Dynamic):Void;
+	overload public function addCoordinatedAnimations(animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addCoordinatedFocusingAnimations:completion")
-	overload extern inline public function addCoordinatedFocusingAnimations(animations:Dynamic, completion:Dynamic):Void;
+	overload public function addCoordinatedFocusingAnimations(animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addCoordinatedUnfocusingAnimations:completion")
-	overload extern inline public function addCoordinatedUnfocusingAnimations(animations:Dynamic, completion:Dynamic):Void;
+	overload public function addCoordinatedUnfocusingAnimations(animations:Dynamic, completion:Dynamic):Void;
 
 
 }

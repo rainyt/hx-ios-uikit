@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIInputView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIInputView;
+	overload public static function alloc():UIInputView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIInputView;
+	overload public static function autorelease():UIInputView;
 
 	@:native("inputViewStyle")
 	public var inputViewStyle:UIInputViewStyle;
@@ -20,10 +20,10 @@ extern class UIInputView{
 	public var allowsSelfSizing:Bool;
 
 	@:native("initWithFrame:inputViewStyle")
-	overload extern inline public function initWithFrame(frame:CGRect, inputViewStyle:UIInputViewStyle):UIInputView;
+	overload public function initWithFrame(frame:CGRect, inputViewStyle:UIInputViewStyle):UIInputView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIInputView;
+	overload public function initWithCoder(coder:NSCoder):UIInputView;
 
 
 }

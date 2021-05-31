@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIUserNotificationAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIUserNotificationAction;
+	overload public static function alloc():UIUserNotificationAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIUserNotificationAction;
+	overload public static function autorelease():UIUserNotificationAction;
 
 	@:native("init")
-	overload extern inline public function init():UIUserNotificationAction;
+	overload public function init():UIUserNotificationAction;
 
 	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationAction;
+	overload public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationAction;
 
 	@:native("identifier")
 	public var identifier:NSString;

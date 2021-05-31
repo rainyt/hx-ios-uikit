@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIVibrancyEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIVibrancyEffect;
+	overload public static function alloc():UIVibrancyEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIVibrancyEffect;
+	overload public static function autorelease():UIVibrancyEffect;
 
 	@:native("effectForBlurEffect:style:API_AVAILABLE(ios(13.0)")
-	overload extern inline public static function effectForBlurEffect(blurEffect:UIBlurEffect, style:UIVibrancyEffectStyle, API_AVAILABLE(ios(13.0):Dynamic):UIVibrancyEffect *;
+	overload public static function effectForBlurEffect(blurEffect:UIBlurEffect, style:UIVibrancyEffectStyle, API_AVAILABLE(ios(13.0):Dynamic):UIVibrancyEffect *;
 
 
 }

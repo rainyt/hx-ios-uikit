@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIBarItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIBarItem;
+	overload public static function alloc():UIBarItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIBarItem;
+	overload public static function autorelease():UIBarItem;
 
 
 }

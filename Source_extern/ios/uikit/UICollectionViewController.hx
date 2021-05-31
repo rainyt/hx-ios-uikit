@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UICollectionViewController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewController;
+	overload public static function alloc():UICollectionViewController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewController;
+	overload public static function autorelease():UICollectionViewController;
 
 	@:native("initWithCollectionViewLayout")
-	overload extern inline public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UICollectionViewController;
+	overload public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UICollectionViewController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UICollectionViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UICollectionViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UICollectionViewController;
+	overload public function initWithCoder(coder:NSCoder):UICollectionViewController;
 
 	@:native("collectionView")
 	public var collectionView:UICollectionView;

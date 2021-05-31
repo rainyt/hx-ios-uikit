@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITextView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextView;
+	overload public static function alloc():UITextView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextView;
+	overload public static function autorelease():UITextView;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -50,7 +50,7 @@ extern class UITextView{
 	public var typingAttributes:Dynamic;
 
 	@:native("scrollRangeToVisible")
-	overload extern inline public function scrollRangeToVisible(range:NSRange):Void;
+	overload public function scrollRangeToVisible(range:NSRange):Void;
 
 	@:native("")
 	public var :;
@@ -62,10 +62,10 @@ extern class UITextView{
 	public var clearsOnInsertion:Bool;
 
 	@:native("initWithFrame:textContainer:API_AVAILABLE(ios(7.0)")
-	overload extern inline public function initWithFrame(frame:CGRect, textContainer:NSTextContainer, API_AVAILABLE(ios(7.0):NS_DESIGNATED_INITIALIZER):UITextView;
+	overload public function initWithFrame(frame:CGRect, textContainer:NSTextContainer, API_AVAILABLE(ios(7.0):NS_DESIGNATED_INITIALIZER):UITextView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UITextView;
+	overload public function initWithCoder(coder:NSCoder):UITextView;
 
 	@:native("textContainer")
 	public var textContainer:NSTextContainer;

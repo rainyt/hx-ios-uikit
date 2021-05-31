@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITraitCollection{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITraitCollection;
+	overload public static function alloc():UITraitCollection;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITraitCollection;
+	overload public static function autorelease():UITraitCollection;
 
 	@:native("imageConfiguration")
 	public var imageConfiguration:UIImageConfiguration;

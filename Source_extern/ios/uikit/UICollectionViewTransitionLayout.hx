@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewTransitionLayout{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewTransitionLayout;
+	overload public static function alloc():UICollectionViewTransitionLayout;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewTransitionLayout;
+	overload public static function autorelease():UICollectionViewTransitionLayout;
 
 	@:native("transitionProgress")
 	public var transitionProgress:CGFloat;
@@ -23,19 +23,19 @@ extern class UICollectionViewTransitionLayout{
 	public var nextLayout:UICollectionViewLayout;
 
 	@:native("initWithCurrentLayout:nextLayout")
-	overload extern inline public function initWithCurrentLayout(currentLayout:UICollectionViewLayout, nextLayout:UICollectionViewLayout):UICollectionViewTransitionLayout;
+	overload public function initWithCurrentLayout(currentLayout:UICollectionViewLayout, nextLayout:UICollectionViewLayout):UICollectionViewTransitionLayout;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UICollectionViewTransitionLayout;
+	overload public function initWithCoder(coder:NSCoder):UICollectionViewTransitionLayout;
 
 	@:native("init")
-	overload extern inline public function init():UICollectionViewTransitionLayout;
+	overload public function init():UICollectionViewTransitionLayout;
 
 	@:native("updateValue:forAnimatedKey")
-	overload extern inline public function updateValue(value:CGFloat, forAnimatedKey:NSString):Void;
+	overload public function updateValue(value:CGFloat, forAnimatedKey:NSString):Void;
 
 	@:native("valueForAnimatedKey")
-	overload extern inline public function valueForAnimatedKey(key:NSString):CGFloat;
+	overload public function valueForAnimatedKey(key:NSString):CGFloat;
 
 
 }

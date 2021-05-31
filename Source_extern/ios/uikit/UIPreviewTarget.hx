@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UIPreviewTarget{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPreviewTarget;
+	overload public static function alloc():UIPreviewTarget;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPreviewTarget;
+	overload public static function autorelease():UIPreviewTarget;
 
 	@:native("initWithContainer:center:transform")
-	overload extern inline public function initWithContainer(container:UIView, center:CGPoint, transform:CGAffineTransform):UIPreviewTarget;
+	overload public function initWithContainer(container:UIView, center:CGPoint, transform:CGAffineTransform):UIPreviewTarget;
 
 	@:native("initWithContainer:center")
-	overload extern inline public function initWithContainer(container:UIView, center:CGPoint):UIPreviewTarget;
+	overload public function initWithContainer(container:UIView, center:CGPoint):UIPreviewTarget;
 
 	@:native("init")
-	overload extern inline public function init():UIPreviewTarget;
+	overload public function init():UIPreviewTarget;
 
 	@:native("new")
-	overload extern inline public static function new():UIPreviewTarget;
+	overload public static function new():UIPreviewTarget;
 
 	@:native("container")
 	public var container:UIView;

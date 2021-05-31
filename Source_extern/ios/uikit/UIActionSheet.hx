@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIActionSheet{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIActionSheet;
+	overload public static function alloc():UIActionSheet;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIActionSheet;
+	overload public static function autorelease():UIActionSheet;
 
 	@:native("initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:...")
-	overload extern inline public function initWithTitle(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:NS_REQUIRES_NIL_TERMINATION):UIActionSheet;
+	overload public function initWithTitle(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:NS_REQUIRES_NIL_TERMINATION):UIActionSheet;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -26,10 +26,10 @@ extern class UIActionSheet{
 	public var is:alert;
 
 	@:native("addButtonWithTitle:::returns:of")
-	overload extern inline public function addButtonWithTitle(title:NSString, :, ://, returns:index, of:button.):NSInteger;
+	overload public function addButtonWithTitle(title:NSString, :, ://, returns:index, of:button.):NSInteger;
 
 	@:native("buttonTitleAtIndex")
-	overload extern inline public function buttonTitleAtIndex(buttonIndex:NSInteger):nullable NSString *;
+	overload public function buttonTitleAtIndex(buttonIndex:NSInteger):nullable NSString *;
 
 	@:native("numberOfButtons")
 	public var numberOfButtons:NSInteger;
@@ -47,22 +47,22 @@ extern class UIActionSheet{
 	public var visible:Bool;
 
 	@:native("showFromToolbar")
-	overload extern inline public function showFromToolbar(view:UIToolbar):Void;
+	overload public function showFromToolbar(view:UIToolbar):Void;
 
 	@:native("showFromTabBar")
-	overload extern inline public function showFromTabBar(view:UITabBar):Void;
+	overload public function showFromTabBar(view:UITabBar):Void;
 
 	@:native("showFromBarButtonItem:animated")
-	overload extern inline public function showFromBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function showFromBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
 
 	@:native("showFromRect:inView:animated")
-	overload extern inline public function showFromRect(rect:CGRect, inView:UIView, animated:Bool):Void;
+	overload public function showFromRect(rect:CGRect, inView:UIView, animated:Bool):Void;
 
 	@:native("showInView")
-	overload extern inline public function showInView(view:UIView):Void;
+	overload public function showInView(view:UIView):Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;
+	overload public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;
 
 
 }

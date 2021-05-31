@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UIViewConfigurationState{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIViewConfigurationState;
+	overload public static function alloc():UIViewConfigurationState;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIViewConfigurationState;
+	overload public static function autorelease():UIViewConfigurationState;
 
 	@:native("initWithTraitCollection")
-	overload extern inline public function initWithTraitCollection(traitCollection:UITraitCollection):UIViewConfigurationState;
+	overload public function initWithTraitCollection(traitCollection:UITraitCollection):UIViewConfigurationState;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIViewConfigurationState;
+	overload public function initWithCoder(coder:NSCoder):UIViewConfigurationState;
 
 	@:native("init")
-	overload extern inline public function init():UIViewConfigurationState;
+	overload public function init():UIViewConfigurationState;
 
 	@:native("new")
-	overload extern inline public static function new():UIViewConfigurationState;
+	overload public static function new():UIViewConfigurationState;
 
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;

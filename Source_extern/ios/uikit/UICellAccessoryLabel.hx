@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UICellAccessoryLabel{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessoryLabel;
+	overload public static function alloc():UICellAccessoryLabel;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessoryLabel;
+	overload public static function autorelease():UICellAccessoryLabel;
 
 	@:native("initWithText")
-	overload extern inline public function initWithText(text:NSString):UICellAccessoryLabel;
+	overload public function initWithText(text:NSString):UICellAccessoryLabel;
 
 	@:native("text")
 	public var text:NSString;
@@ -26,13 +26,13 @@ extern class UICellAccessoryLabel{
 	public var adjustsFontForContentSizeCategory:Bool;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UICellAccessoryLabel;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessoryLabel;
 
 	@:native("init")
-	overload extern inline public function init():UICellAccessoryLabel;
+	overload public function init():UICellAccessoryLabel;
 
 	@:native("new")
-	overload extern inline public static function new():UICellAccessoryLabel;
+	overload public static function new():UICellAccessoryLabel;
 
 
 }

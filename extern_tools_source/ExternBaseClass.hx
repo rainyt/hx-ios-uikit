@@ -82,7 +82,8 @@ class ExternBaseClass {
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
-					haxe += "\toverload extern inline public" + (value.isStatic ? " static" : "") + " function " + toFuncName(value.name) + "("
+					// No need `extern inline`?
+					haxe += "\toverload public" + (value.isStatic ? " static" : "") + " function " + toFuncName(value.name) + "("
 						+ (value.args != null ? value.args.join(", ") : "") + "):" + value.returnClass + ";\n\n";
 				case ExternBaseClassType.PROPERTY:
 					haxe += "\t@:native(\"" + value.name + "\")\n";

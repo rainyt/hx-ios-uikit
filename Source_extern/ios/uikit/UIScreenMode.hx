@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIScreenMode{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIScreenMode;
+	overload public static function alloc():UIScreenMode;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIScreenMode;
+	overload public static function autorelease():UIScreenMode;
 
 	@:native("in")
 	public var in:height;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIFocusMovementHint:{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIFocusMovementHint:;
+	overload public static function alloc():UIFocusMovementHint:;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIFocusMovementHint:;
+	overload public static function autorelease():UIFocusMovementHint:;
 
 	@:native("movementDirection")
 	public var movementDirection:CGVector;
@@ -29,10 +29,10 @@ extern class UIFocusMovementHint:{
 	public var interactionTransform:CATransform3D;
 
 	@:native("init")
-	overload extern inline public function init():UIFocusMovementHint:;
+	overload public function init():UIFocusMovementHint:;
 
 	@:native("new")
-	overload extern inline public static function new():UIFocusMovementHint:;
+	overload public static function new():UIFocusMovementHint:;
 
 
 }

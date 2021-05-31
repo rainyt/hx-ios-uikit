@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UIPointerEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPointerEffect;
+	overload public static function alloc():UIPointerEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPointerEffect;
+	overload public static function autorelease():UIPointerEffect;
 
 	@:native("preview")
 	public var preview:UITargetedPreview;
 
 	@:native("effectWithPreview")
-	overload extern inline public static function effectWithPreview(preview:UITargetedPreview):UIPointerEffect;
+	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerEffect;
 
 	@:native("init")
-	overload extern inline public function init():UIPointerEffect;
+	overload public function init():UIPointerEffect;
 
 	@:native("new")
-	overload extern inline public static function new():UIPointerEffect;
+	overload public static function new():UIPointerEffect;
 
 
 }

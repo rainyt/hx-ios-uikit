@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIResponder{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIResponder;
+	overload public static function alloc():UIResponder;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIResponder;
+	overload public static function autorelease():UIResponder;
 
 	@:native("userActivity")
 	public var userActivity:NSUserActivity;
 
 	@:native("updateUserActivityState")
-	overload extern inline public function updateUserActivityState(activity:NSUserActivity):Void;
+	overload public function updateUserActivityState(activity:NSUserActivity):Void;
 
 	@:native("restoreUserActivityState")
-	overload extern inline public function restoreUserActivityState(activity:NSUserActivity):Void;
+	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
 
 }

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIListContentImageProperties{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIListContentImageProperties;
+	overload public static function alloc():UIListContentImageProperties;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIListContentImageProperties;
+	overload public static function autorelease():UIListContentImageProperties;
 
 	@:native("preferredSymbolConfiguration")
 	public var preferredSymbolConfiguration:UIImageSymbolConfiguration;
@@ -23,7 +23,7 @@ extern class UIListContentImageProperties{
 	public var tintColorTransformer:UIConfigurationColorTransformer;
 
 	@:native("resolvedTintColorForTintColor")
-	overload extern inline public function resolvedTintColorForTintColor(tintColor:UIColor):UIColor *;
+	overload public function resolvedTintColorForTintColor(tintColor:UIColor):UIColor *;
 
 	@:native("cornerRadius")
 	public var cornerRadius:CGFloat;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICellAccessoryDelete{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessoryDelete;
+	overload public static function alloc():UICellAccessoryDelete;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessoryDelete;
+	overload public static function autorelease():UICellAccessoryDelete;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;

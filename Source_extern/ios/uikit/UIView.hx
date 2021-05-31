@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIView;
+	overload public static function alloc():UIView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIView;
+	overload public static function autorelease():UIView;
 
 
 }

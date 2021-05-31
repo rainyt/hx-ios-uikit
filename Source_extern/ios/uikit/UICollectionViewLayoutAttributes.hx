@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewLayoutAttributes{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewLayoutAttributes;
+	overload public static function alloc():UICollectionViewLayoutAttributes;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewLayoutAttributes;
+	overload public static function autorelease():UICollectionViewLayoutAttributes;
 
 	@:native("frame")
 	public var frame:CGRect;
@@ -50,13 +50,13 @@ extern class UICollectionViewLayoutAttributes{
 	public var is:representedElementCategory;
 
 	@:native("layoutAttributesForCellWithIndexPath")
-	overload extern inline public static function layoutAttributesForCellWithIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForCellWithIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:withIndexPath")
-	overload extern inline public static function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
-	overload extern inline public static function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 
 }

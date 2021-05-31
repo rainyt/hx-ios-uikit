@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UITextInputStringTokenizer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextInputStringTokenizer;
+	overload public static function alloc():UITextInputStringTokenizer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextInputStringTokenizer;
+	overload public static function autorelease():UITextInputStringTokenizer;
 
 	@:native("initWithTextInput")
-	overload extern inline public function initWithTextInput(textInput:Dynamic):UITextInputStringTokenizer;
+	overload public function initWithTextInput(textInput:Dynamic):UITextInputStringTokenizer;
 
 
 }

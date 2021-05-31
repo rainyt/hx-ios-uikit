@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIDragPreview{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDragPreview;
+	overload public static function alloc():UIDragPreview;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDragPreview;
+	overload public static function autorelease():UIDragPreview;
 
 	@:native("previewForURL:API_AVAILABLE(ios(11.0)")
-	overload extern inline public static function previewForURL(url:NSURL, API_AVAILABLE(ios(11.0):Dynamic):UIDragPreview;
+	overload public static function previewForURL(url:NSURL, API_AVAILABLE(ios(11.0):Dynamic):UIDragPreview;
 
 	@:native("previewForURL:title:API_AVAILABLE(ios(11.0)")
-	overload extern inline public static function previewForURL(url:NSURL, title:NSString_Nullable, API_AVAILABLE(ios(11.0):Dynamic):UIDragPreview;
+	overload public static function previewForURL(url:NSURL, title:NSString_Nullable, API_AVAILABLE(ios(11.0):Dynamic):UIDragPreview;
 
 
 }

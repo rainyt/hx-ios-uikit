@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class NSLayoutConstraint{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSLayoutConstraint;
+	overload public static function alloc():NSLayoutConstraint;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSLayoutConstraint;
+	overload public static function autorelease():NSLayoutConstraint;
 
 	@:native("identifier")
 	public var identifier:NSString;

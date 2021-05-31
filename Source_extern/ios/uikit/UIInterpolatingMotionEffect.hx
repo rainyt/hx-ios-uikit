@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIInterpolatingMotionEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIInterpolatingMotionEffect;
+	overload public static function alloc():UIInterpolatingMotionEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIInterpolatingMotionEffect;
+	overload public static function autorelease():UIInterpolatingMotionEffect;
 
 	@:native("initWithKeyPath:type")
-	overload extern inline public function initWithKeyPath(keyPath:NSString, type:UIInterpolatingMotionEffectType):UIInterpolatingMotionEffect;
+	overload public function initWithKeyPath(keyPath:NSString, type:UIInterpolatingMotionEffectType):UIInterpolatingMotionEffect;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIInterpolatingMotionEffect;
+	overload public function initWithCoder(coder:NSCoder):UIInterpolatingMotionEffect;
 
 	@:native("keyPath")
 	public var keyPath:NSString;

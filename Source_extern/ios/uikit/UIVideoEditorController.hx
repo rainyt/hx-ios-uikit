@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIVideoEditorController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIVideoEditorController;
+	overload public static function alloc():UIVideoEditorController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIVideoEditorController;
+	overload public static function autorelease():UIVideoEditorController;
 
 	@:native("canEditVideoAtPath")
-	overload extern inline public static function canEditVideoAtPath(videoPath:NSString):BOOL;
+	overload public static function canEditVideoAtPath(videoPath:NSString):BOOL;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

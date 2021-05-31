@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UISceneOpenURLOptions{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISceneOpenURLOptions;
+	overload public static function alloc():UISceneOpenURLOptions;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISceneOpenURLOptions;
+	overload public static function autorelease():UISceneOpenURLOptions;
 
 	@:native("new")
-	overload extern inline public static function new():UISceneOpenURLOptions;
+	overload public static function new():UISceneOpenURLOptions;
 
 	@:native("init")
-	overload extern inline public function init():UISceneOpenURLOptions;
+	overload public function init():UISceneOpenURLOptions;
 
 	@:native("sourceApplication")
 	public var sourceApplication:NSString;

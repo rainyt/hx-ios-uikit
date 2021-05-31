@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UISceneSession{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISceneSession;
+	overload public static function alloc():UISceneSession;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISceneSession;
+	overload public static function autorelease():UISceneSession;
 
 	@:native("new")
-	overload extern inline public static function new():UISceneSession;
+	overload public static function new():UISceneSession;
 
 	@:native("init")
-	overload extern inline public function init():UISceneSession;
+	overload public function init():UISceneSession;
 
 	@:native("scene")
 	public var scene:UIScene;

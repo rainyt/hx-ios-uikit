@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPageControl{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPageControl;
+	overload public static function alloc():UIPageControl;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPageControl;
+	overload public static function autorelease():UIPageControl;
 
 	@:native("numberOfPages")
 	public var numberOfPages:NSInteger;
@@ -41,19 +41,19 @@ extern class UIPageControl{
 	public var preferredIndicatorImage:UIImage;
 
 	@:native("indicatorImageForPage")
-	overload extern inline public function indicatorImageForPage(page:NSInteger):nullable UIImage *;
+	overload public function indicatorImageForPage(page:NSInteger):nullable UIImage *;
 
 	@:native("setIndicatorImage:forPage")
-	overload extern inline public function setIndicatorImage(image:UIImage, forPage:NSInteger):Void;
+	overload public function setIndicatorImage(image:UIImage, forPage:NSInteger):Void;
 
 	@:native("sizeForNumberOfPages")
-	overload extern inline public function sizeForNumberOfPages(pageCount:NSInteger):CGSize;
+	overload public function sizeForNumberOfPages(pageCount:NSInteger):CGSize;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:mode.",;
 
 	@:native("updateCurrentPageDisplay")
-	overload extern inline public function updateCurrentPageDisplay():Void;
+	overload public function updateCurrentPageDisplay():Void;
 
 
 }

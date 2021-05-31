@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIAction;
+	overload public static function alloc():UIAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIAction;
+	overload public static function autorelease():UIAction;
 
 	@:native("title")
 	public var title:NSString;
@@ -35,16 +35,16 @@ extern class UIAction{
 	public var sender:id;
 
 	@:native("actionWithHandler:API_AVAILABLE(ios(14.0)")
-	overload extern inline public static function actionWithHandler(handler:UIActionHandler, API_AVAILABLE(ios(14.0):Dynamic):UIAction;
+	overload public static function actionWithHandler(handler:UIActionHandler, API_AVAILABLE(ios(14.0):Dynamic):UIAction;
 
 	@:native("actionWithTitle")
-	overload extern inline public static function actionWithTitle():UIAction;
+	overload public static function actionWithTitle():UIAction;
 
 	@:native("init")
-	overload extern inline public function init():UIAction;
+	overload public function init():UIAction;
 
 	@:native("new")
-	overload extern inline public static function new():UIAction;
+	overload public static function new():UIAction;
 
 
 }

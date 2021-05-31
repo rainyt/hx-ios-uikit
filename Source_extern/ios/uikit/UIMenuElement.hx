@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIMenuElement{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMenuElement;
+	overload public static function alloc():UIMenuElement;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMenuElement;
+	overload public static function autorelease():UIMenuElement;
 
 
 }

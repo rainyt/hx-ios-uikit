@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIColorPickerViewController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIColorPickerViewController;
+	overload public static function alloc():UIColorPickerViewController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIColorPickerViewController;
+	overload public static function autorelease():UIColorPickerViewController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -23,10 +23,10 @@ extern class UIColorPickerViewController{
 	public var supportsAlpha:Bool;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIColorPickerViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIColorPickerViewController;
 
 	@:native("init")
-	overload extern inline public function init():UIColorPickerViewController;
+	overload public function init():UIColorPickerViewController;
 
 
 }

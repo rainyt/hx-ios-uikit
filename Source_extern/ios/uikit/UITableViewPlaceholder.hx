@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UITableViewPlaceholder{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITableViewPlaceholder;
+	overload public static function alloc():UITableViewPlaceholder;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITableViewPlaceholder;
+	overload public static function autorelease():UITableViewPlaceholder;
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier:rowHeight")
-	overload extern inline public function initWithInsertionIndexPath(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString, rowHeight:CGFloat):UITableViewPlaceholder;
+	overload public function initWithInsertionIndexPath(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString, rowHeight:CGFloat):UITableViewPlaceholder;
 
 	@:native("init")
-	overload extern inline public function init():UITableViewPlaceholder;
+	overload public function init():UITableViewPlaceholder;
 
 	@:native("new")
-	overload extern inline public static function new():UITableViewPlaceholder;
+	overload public static function new():UITableViewPlaceholder;
 
 	@:native("nonatomic, nullable, copy")
 	public var nonatomic, nullable, copy:null;

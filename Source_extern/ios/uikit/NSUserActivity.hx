@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class NSUserActivity{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSUserActivity;
+	overload public static function alloc():NSUserActivity;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSUserActivity;
+	overload public static function autorelease():NSUserActivity;
 
 	@:native("targetContentIdentifier")
 	public var targetContentIdentifier:NSString;

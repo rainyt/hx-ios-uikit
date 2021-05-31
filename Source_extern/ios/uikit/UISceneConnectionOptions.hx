@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UISceneConnectionOptions{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISceneConnectionOptions;
+	overload public static function alloc():UISceneConnectionOptions;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISceneConnectionOptions;
+	overload public static function autorelease():UISceneConnectionOptions;
 
 	@:native("new")
-	overload extern inline public static function new():UISceneConnectionOptions;
+	overload public static function new():UISceneConnectionOptions;
 
 	@:native("init")
-	overload extern inline public function init():UISceneConnectionOptions;
+	overload public function init():UISceneConnectionOptions;
 
 	@:native("URLContexts")
 	public var URLContexts:Dynamic;

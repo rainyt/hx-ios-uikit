@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UIUserNotificationCategory{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIUserNotificationCategory;
+	overload public static function alloc():UIUserNotificationCategory;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIUserNotificationCategory;
+	overload public static function autorelease():UIUserNotificationCategory;
 
 	@:native("init")
-	overload extern inline public function init():UIUserNotificationCategory;
+	overload public function init():UIUserNotificationCategory;
 
 	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationCategory;
+	overload public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationCategory;
 
 	@:native("identifier")
 	public var identifier:NSString;
 
 	@:native("actionsForContext")
-	overload extern inline public function actionsForContext(context:UIUserNotificationActionContext):nullable NSArray<UIUserNotificationAction *> *;
+	overload public function actionsForContext(context:UIUserNotificationActionContext):nullable NSArray<UIUserNotificationAction *> *;
 
 
 }

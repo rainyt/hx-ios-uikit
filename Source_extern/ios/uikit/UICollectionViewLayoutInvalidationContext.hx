@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewLayoutInvalidationContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewLayoutInvalidationContext;
+	overload public static function alloc():UICollectionViewLayoutInvalidationContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewLayoutInvalidationContext;
+	overload public static function autorelease():UICollectionViewLayoutInvalidationContext;
 
 	@:native("sent")
 	public var sent:is;
@@ -20,13 +20,13 @@ extern class UICollectionViewLayoutInvalidationContext{
 	public var or:inserted;
 
 	@:native("invalidateItemsAtIndexPaths")
-	overload extern inline public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;
+	overload public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;
 
 	@:native("invalidateSupplementaryElementsOfKind:atIndexPaths")
-	overload extern inline public function invalidateSupplementaryElementsOfKind(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateSupplementaryElementsOfKind(elementKind:NSString, atIndexPaths:Dynamic):Void;
 
 	@:native("invalidateDecorationElementsOfKind:atIndexPaths")
-	overload extern inline public function invalidateDecorationElementsOfKind(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateDecorationElementsOfKind(elementKind:NSString, atIndexPaths:Dynamic):Void;
 
 	@:native("invalidatedItemIndexPaths")
 	public var invalidatedItemIndexPaths:Dynamic;

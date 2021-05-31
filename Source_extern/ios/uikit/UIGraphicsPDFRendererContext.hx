@@ -8,28 +8,28 @@ import cpp.objc.NSData;
 extern class UIGraphicsPDFRendererContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIGraphicsPDFRendererContext;
+	overload public static function alloc():UIGraphicsPDFRendererContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIGraphicsPDFRendererContext;
+	overload public static function autorelease():UIGraphicsPDFRendererContext;
 
 	@:native("pdfContextBounds")
 	public var pdfContextBounds:CGRect;
 
 	@:native("beginPage;")
-	overload extern inline public function beginPage;():Void;
+	overload public function beginPage;():Void;
 
 	@:native("beginPageWithBounds:pageInfo")
-	overload extern inline public function beginPageWithBounds(bounds:CGRect, pageInfo:Dynamic):Void;
+	overload public function beginPageWithBounds(bounds:CGRect, pageInfo:Dynamic):Void;
 
 	@:native("setURL:forRect")
-	overload extern inline public function setURL(url:NSURL, forRect:CGRect):Void;
+	overload public function setURL(url:NSURL, forRect:CGRect):Void;
 
 	@:native("addDestinationWithName:atPoint")
-	overload extern inline public function addDestinationWithName(name:NSString, atPoint:CGPoint):Void;
+	overload public function addDestinationWithName(name:NSString, atPoint:CGPoint):Void;
 
 	@:native("setDestinationWithName:forRect")
-	overload extern inline public function setDestinationWithName(name:NSString, forRect:CGRect):Void;
+	overload public function setDestinationWithName(name:NSString, forRect:CGRect):Void;
 
 
 }

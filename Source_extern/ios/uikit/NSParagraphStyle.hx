@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class NSParagraphStyle{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSParagraphStyle;
+	overload public static function alloc():NSParagraphStyle;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSParagraphStyle;
+	overload public static function autorelease():NSParagraphStyle;
 
 	@:native("alloc]")
 	public var alloc]:[[NSParagraphStyle;
 
 	@:native("defaultWritingDirectionForLanguage::languageName:in:lang")
-	overload extern inline public static function defaultWritingDirectionForLanguage(languageName:NSString, ://, languageName:is, in:ISO, lang:region):NSWritingDirection;
+	overload public static function defaultWritingDirectionForLanguage(languageName:NSString, ://, languageName:is, in:ISO, lang:region):NSWritingDirection;
 
 	@:native("same")
 	public var same:the;

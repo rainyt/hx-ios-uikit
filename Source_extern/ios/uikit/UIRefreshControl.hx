@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIRefreshControl{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIRefreshControl;
+	overload public static function alloc():UIRefreshControl;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIRefreshControl;
+	overload public static function autorelease():UIRefreshControl;
 
 	@:native("init;")
-	overload extern inline public function init;():UIRefreshControl;
+	overload public function init;():UIRefreshControl;
 
 	@:native("refreshing")
 	public var refreshing:Bool;
@@ -26,10 +26,10 @@ extern class UIRefreshControl{
 	public var UI_APPEARANCE_SELECTOR:attributedTitle;
 
 	@:native("beginRefreshing")
-	overload extern inline public function beginRefreshing():Void;
+	overload public function beginRefreshing():Void;
 
 	@:native("endRefreshing")
-	overload extern inline public function endRefreshing():Void;
+	overload public function endRefreshing():Void;
 
 
 }

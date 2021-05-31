@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIContextMenuInteraction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIContextMenuInteraction;
+	overload public static function alloc():UIContextMenuInteraction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIContextMenuInteraction;
+	overload public static function autorelease():UIContextMenuInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -20,22 +20,22 @@ extern class UIContextMenuInteraction{
 	public var menuAppearance:UIContextMenuInteractionAppearance;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:Dynamic):UIContextMenuInteraction;
+	overload public function initWithDelegate(delegate:Dynamic):UIContextMenuInteraction;
 
 	@:native("init")
-	overload extern inline public function init():UIContextMenuInteraction;
+	overload public function init():UIContextMenuInteraction;
 
 	@:native("new")
-	overload extern inline public static function new():UIContextMenuInteraction;
+	overload public static function new():UIContextMenuInteraction;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(view:UIView):CGPoint;
+	overload public function locationInView(view:UIView):CGPoint;
 
 	@:native("updateVisibleMenuWithBlock")
-	overload extern inline public function updateVisibleMenuWithBlock(block:Dynamic):Void;
+	overload public function updateVisibleMenuWithBlock(block:Dynamic):Void;
 
 	@:native("dismissMenu;")
-	overload extern inline public function dismissMenu;():Void;
+	overload public function dismissMenu;():Void;
 
 
 }

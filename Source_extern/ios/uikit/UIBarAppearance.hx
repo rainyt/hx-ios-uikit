@@ -8,37 +8,37 @@ import cpp.objc.NSData;
 extern class UIBarAppearance{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIBarAppearance;
+	overload public static function alloc():UIBarAppearance;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIBarAppearance;
+	overload public static function autorelease():UIBarAppearance;
 
 	@:native("init;")
-	overload extern inline public function init;():UIBarAppearance;
+	overload public function init;():UIBarAppearance;
 
 	@:native("initWithIdiom")
-	overload extern inline public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIBarAppearance;
+	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIBarAppearance;
 
 	@:native("idiom")
 	public var idiom:UIUserInterfaceIdiom;
 
 	@:native("initWithBarAppearance")
-	overload extern inline public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
+	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIBarAppearance;
+	overload public function initWithCoder(coder:NSCoder):UIBarAppearance;
 
 	@:native("copy;")
-	overload extern inline public function copy;():UIBarAppearance;
+	overload public function copy;():UIBarAppearance;
 
 	@:native("configureWithDefaultBackground;")
-	overload extern inline public function configureWithDefaultBackground;():Void;
+	overload public function configureWithDefaultBackground;():Void;
 
 	@:native("configureWithOpaqueBackground;")
-	overload extern inline public function configureWithOpaqueBackground;():Void;
+	overload public function configureWithOpaqueBackground;():Void;
 
 	@:native("configureWithTransparentBackground;")
-	overload extern inline public function configureWithTransparentBackground;():Void;
+	overload public function configureWithTransparentBackground;():Void;
 
 	@:native("backgroundEffect")
 	public var backgroundEffect:UIBlurEffect;

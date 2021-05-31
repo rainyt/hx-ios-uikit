@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class NSTextContainer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSTextContainer;
+	overload public static function alloc():NSTextContainer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSTextContainer;
+	overload public static function autorelease():NSTextContainer;
 
 	@:native("initWithSize:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initWithSize(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextContainer;
+	overload public function initWithSize(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextContainer;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):NSTextContainer;
+	overload public function initWithCoder(coder:NSCoder):NSTextContainer;
 
 	@:native("layoutManager")
 	public var layoutManager:NSLayoutManager;
 
 	@:native("replaceLayoutManager")
-	overload extern inline public function replaceLayoutManager(newLayoutManager:NSLayoutManager):Void;
+	overload public function replaceLayoutManager(newLayoutManager:NSLayoutManager):Void;
 
 	@:native("size")
 	public var size:CGSize;
@@ -41,7 +41,7 @@ extern class NSTextContainer{
 	public var maximumNumberOfLines:NSUInteger;
 
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
-	overload extern inline public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
+	overload public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
 
 	@:native("simpleRectangularTextContainer")
 	public var simpleRectangularTextContainer:Bool;

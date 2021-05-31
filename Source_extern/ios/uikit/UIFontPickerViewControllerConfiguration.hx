@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIFontPickerViewControllerConfiguration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIFontPickerViewControllerConfiguration;
+	overload public static function alloc():UIFontPickerViewControllerConfiguration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIFontPickerViewControllerConfiguration;
+	overload public static function autorelease():UIFontPickerViewControllerConfiguration;
 
 	@:native("includeFaces")
 	public var includeFaces:Bool;
@@ -26,7 +26,7 @@ extern class UIFontPickerViewControllerConfiguration{
 	public var filteredLanguagesPredicate:NSPredicate;
 
 	@:native("filterPredicateForFilteredLanguages")
-	overload extern inline public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):nullable NSPredicate *;
+	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):nullable NSPredicate *;
 
 
 }

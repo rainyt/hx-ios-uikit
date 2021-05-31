@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIMutableUserNotificationCategory{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMutableUserNotificationCategory;
+	overload public static function alloc():UIMutableUserNotificationCategory;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMutableUserNotificationCategory;
+	overload public static function autorelease():UIMutableUserNotificationCategory;
 
 	@:native("identifier")
 	public var identifier:NSString;
 
 	@:native("setActions:forContext")
-	overload extern inline public function setActions(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
+	overload public function setActions(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
 
 
 }

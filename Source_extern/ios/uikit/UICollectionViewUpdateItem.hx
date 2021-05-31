@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewUpdateItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewUpdateItem;
+	overload public static function alloc():UICollectionViewUpdateItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewUpdateItem;
+	overload public static function autorelease():UICollectionViewUpdateItem;
 
 	@:native("for")
 	public var for:nil;

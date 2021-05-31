@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutSize{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutSize;
+	overload public static function alloc():NSCollectionLayoutSize;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutSize;
+	overload public static function autorelease():NSCollectionLayoutSize;
 
 	@:native("sizeWithWidthDimension:heightDimension")
-	overload extern inline public static function sizeWithWidthDimension(width:NSCollectionLayoutDimension, heightDimension:NSCollectionLayoutDimension):NSCollectionLayoutSize;
+	overload public static function sizeWithWidthDimension(width:NSCollectionLayoutDimension, heightDimension:NSCollectionLayoutDimension):NSCollectionLayoutSize;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutSize;
+	overload public function init():NSCollectionLayoutSize;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutSize;
+	overload public static function new():NSCollectionLayoutSize;
 
 	@:native("widthDimension")
 	public var widthDimension:NSCollectionLayoutDimension;

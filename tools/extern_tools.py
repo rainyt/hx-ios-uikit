@@ -142,7 +142,7 @@ class ExternBaseClass:
             if (_hx_local_6 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
-                    haxe1 = (((("\toverload extern inline public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(")
+                    haxe1 = (((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(")
                     haxe2 = None
                     if (value.args is not None):
                         _this = value.args
@@ -270,12 +270,10 @@ class ExternHFile:
 
     def defClass(self,data):
         t = ExternBaseClass(data,self)
-        haxe_Log.trace(("类定义：" + HxOverrides.stringOrNull(t.className)),_hx_AnonObject({'fileName': "extern_tools_source/ExternHFile.hx", 'lineNumber': 73, 'className': "ExternHFile", 'methodName': "defClass"}))
         self.classdefs.h[t.className] = t
 
     def defTypedef(self,data):
         t = ExternTypedefClass(data)
-        haxe_Log.trace("Typedef定义：",_hx_AnonObject({'fileName': "extern_tools_source/ExternHFile.hx", 'lineNumber': 79, 'className': "ExternHFile", 'methodName': "defTypedef", 'customParams': [t.className, t.parentClassName]}))
         self.typedefs.h[t.className] = t
 
 

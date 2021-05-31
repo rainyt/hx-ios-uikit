@@ -8,25 +8,25 @@ import cpp.objc.NSData;
 extern class UIBarButtonItemAppearance{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIBarButtonItemAppearance;
+	overload public static function alloc():UIBarButtonItemAppearance;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIBarButtonItemAppearance;
+	overload public static function autorelease():UIBarButtonItemAppearance;
 
 	@:native("init;")
-	overload extern inline public function init;():UIBarButtonItemAppearance;
+	overload public function init;():UIBarButtonItemAppearance;
 
 	@:native("initWithStyle")
-	overload extern inline public function initWithStyle(style:UIBarButtonItemStyle):UIBarButtonItemAppearance;
+	overload public function initWithStyle(style:UIBarButtonItemStyle):UIBarButtonItemAppearance;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIBarButtonItemAppearance;
+	overload public function initWithCoder(coder:NSCoder):UIBarButtonItemAppearance;
 
 	@:native("copy;")
-	overload extern inline public function copy;():UIBarButtonItemAppearance;
+	overload public function copy;():UIBarButtonItemAppearance;
 
 	@:native("configureWithDefaultForStyle")
-	overload extern inline public function configureWithDefaultForStyle(style:UIBarButtonItemStyle):Void;
+	overload public function configureWithDefaultForStyle(style:UIBarButtonItemStyle):Void;
 
 	@:native("normal")
 	public var normal:UIBarButtonItemStateAppearance;

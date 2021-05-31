@@ -8,52 +8,52 @@ import cpp.objc.NSData;
 extern class UIListContentConfiguration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIListContentConfiguration;
+	overload public static function alloc():UIListContentConfiguration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIListContentConfiguration;
+	overload public static function autorelease():UIListContentConfiguration;
 
 	@:native("cellConfiguration;")
-	overload extern inline public static function cellConfiguration;():UIListContentConfiguration;
+	overload public static function cellConfiguration;():UIListContentConfiguration;
 
 	@:native("subtitleCellConfiguration;")
-	overload extern inline public static function subtitleCellConfiguration;():UIListContentConfiguration;
+	overload public static function subtitleCellConfiguration;():UIListContentConfiguration;
 
 	@:native("valueCellConfiguration;")
-	overload extern inline public static function valueCellConfiguration;():UIListContentConfiguration;
+	overload public static function valueCellConfiguration;():UIListContentConfiguration;
 
 	@:native("plainHeaderConfiguration;")
-	overload extern inline public static function plainHeaderConfiguration;():UIListContentConfiguration;
+	overload public static function plainHeaderConfiguration;():UIListContentConfiguration;
 
 	@:native("plainFooterConfiguration;")
-	overload extern inline public static function plainFooterConfiguration;():UIListContentConfiguration;
+	overload public static function plainFooterConfiguration;():UIListContentConfiguration;
 
 	@:native("groupedHeaderConfiguration;")
-	overload extern inline public static function groupedHeaderConfiguration;():UIListContentConfiguration;
+	overload public static function groupedHeaderConfiguration;():UIListContentConfiguration;
 
 	@:native("groupedFooterConfiguration;")
-	overload extern inline public static function groupedFooterConfiguration;():UIListContentConfiguration;
+	overload public static function groupedFooterConfiguration;():UIListContentConfiguration;
 
 	@:native("sidebarCellConfiguration")
-	overload extern inline public static function sidebarCellConfiguration():UIListContentConfiguration;
+	overload public static function sidebarCellConfiguration():UIListContentConfiguration;
 
 	@:native("sidebarSubtitleCellConfiguration")
-	overload extern inline public static function sidebarSubtitleCellConfiguration():UIListContentConfiguration;
+	overload public static function sidebarSubtitleCellConfiguration():UIListContentConfiguration;
 
 	@:native("accompaniedSidebarCellConfiguration")
-	overload extern inline public static function accompaniedSidebarCellConfiguration():UIListContentConfiguration;
+	overload public static function accompaniedSidebarCellConfiguration():UIListContentConfiguration;
 
 	@:native("accompaniedSidebarSubtitleCellConfiguration")
-	overload extern inline public static function accompaniedSidebarSubtitleCellConfiguration():UIListContentConfiguration;
+	overload public static function accompaniedSidebarSubtitleCellConfiguration():UIListContentConfiguration;
 
 	@:native("sidebarHeaderConfiguration")
-	overload extern inline public static function sidebarHeaderConfiguration():UIListContentConfiguration;
+	overload public static function sidebarHeaderConfiguration():UIListContentConfiguration;
 
 	@:native("new")
-	overload extern inline public static function new():UIListContentConfiguration;
+	overload public static function new():UIListContentConfiguration;
 
 	@:native("init")
-	overload extern inline public function init():UIListContentConfiguration;
+	overload public function init():UIListContentConfiguration;
 
 	@:native("image")
 	public var image:UIImage;

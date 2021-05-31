@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIMutableUserNotificationAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMutableUserNotificationAction;
+	overload public static function alloc():UIMutableUserNotificationAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMutableUserNotificationAction;
+	overload public static function autorelease():UIMutableUserNotificationAction;
 
 	@:native("identifier")
 	public var identifier:NSString;

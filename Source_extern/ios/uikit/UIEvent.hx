@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIEvent{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIEvent;
+	overload public static function alloc():UIEvent;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIEvent;
+	overload public static function autorelease():UIEvent;
 
 	@:native("type")
 	public var type:;
@@ -32,19 +32,19 @@ extern class UIEvent{
 	public var allTouches:Dynamic;
 
 	@:native("touchesForWindow")
-	overload extern inline public function touchesForWindow(window:UIWindow):nullable NSSet <UITouch *> *;
+	overload public function touchesForWindow(window:UIWindow):nullable NSSet <UITouch *> *;
 
 	@:native("touchesForView")
-	overload extern inline public function touchesForView(view:UIView):nullable NSSet <UITouch *> *;
+	overload public function touchesForView(view:UIView):nullable NSSet <UITouch *> *;
 
 	@:native("touchesForGestureRecognizer")
-	overload extern inline public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):nullable NSSet <UITouch *> *;
+	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):nullable NSSet <UITouch *> *;
 
 	@:native("coalescedTouchesForTouch")
-	overload extern inline public function coalescedTouchesForTouch(touch:UITouch):nullable NSArray <UITouch *> *;
+	overload public function coalescedTouchesForTouch(touch:UITouch):nullable NSArray <UITouch *> *;
 
 	@:native("predictedTouchesForTouch")
-	overload extern inline public function predictedTouchesForTouch(touch:UITouch):nullable NSArray <UITouch *> *;
+	overload public function predictedTouchesForTouch(touch:UITouch):nullable NSArray <UITouch *> *;
 
 
 }

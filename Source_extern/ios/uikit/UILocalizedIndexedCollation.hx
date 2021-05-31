@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UILocalizedIndexedCollation{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UILocalizedIndexedCollation;
+	overload public static function alloc():UILocalizedIndexedCollation;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UILocalizedIndexedCollation;
+	overload public static function autorelease():UILocalizedIndexedCollation;
 
 	@:native("currentCollation;")
-	overload extern inline public static function currentCollation;():UILocalizedIndexedCollation;
+	overload public static function currentCollation;():UILocalizedIndexedCollation;
 
 	@:native("sectionTitles")
 	public var sectionTitles:;
@@ -23,13 +23,13 @@ extern class UILocalizedIndexedCollation{
 	public var sectionIndexTitles:Dynamic;
 
 	@:native("sectionForSectionIndexTitleAtIndex")
-	overload extern inline public function sectionForSectionIndexTitleAtIndex(indexTitleIndex:NSInteger):NSInteger;
+	overload public function sectionForSectionIndexTitleAtIndex(indexTitleIndex:NSInteger):NSInteger;
 
 	@:native("sectionForObject:collationStringSelector")
-	overload extern inline public function sectionForObject(object:id, collationStringSelector:SEL):NSInteger;
+	overload public function sectionForObject(object:id, collationStringSelector:SEL):NSInteger;
 
 	@:native("sortedArrayFromArray:collationStringSelector")
-	overload extern inline public function sortedArrayFromArray(array:NSArray, collationStringSelector:SEL):NSArray *;
+	overload public function sortedArrayFromArray(array:NSArray, collationStringSelector:SEL):NSArray *;
 
 
 }

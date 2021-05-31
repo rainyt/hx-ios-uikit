@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIGraphicsImageRendererFormat{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIGraphicsImageRendererFormat;
+	overload public static function alloc():UIGraphicsImageRendererFormat;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIGraphicsImageRendererFormat;
+	overload public static function autorelease():UIGraphicsImageRendererFormat;
 
 	@:native("current")
 	public var current:screen's;
@@ -26,7 +26,7 @@ extern class UIGraphicsImageRendererFormat{
 	public var preferredRange:UIGraphicsImageRendererFormatRange;
 
 	@:native("formatForTraitCollection")
-	overload extern inline public static function formatForTraitCollection(traitCollection:UITraitCollection):UIGraphicsImageRendererFormat;
+	overload public static function formatForTraitCollection(traitCollection:UITraitCollection):UIGraphicsImageRendererFormat;
 
 
 }

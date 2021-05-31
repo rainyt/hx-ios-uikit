@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIStoryboardUnwindSegueSource{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIStoryboardUnwindSegueSource;
+	overload public static function alloc():UIStoryboardUnwindSegueSource;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIStoryboardUnwindSegueSource;
+	overload public static function autorelease():UIStoryboardUnwindSegueSource;
 
 	@:native("init")
-	overload extern inline public function init():UIStoryboardUnwindSegueSource;
+	overload public function init():UIStoryboardUnwindSegueSource;
 
 	@:native("sourceViewController")
 	public var sourceViewController:UIViewController;

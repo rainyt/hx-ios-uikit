@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIColorWell{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIColorWell;
+	overload public static function alloc():UIColorWell;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIColorWell;
+	overload public static function autorelease():UIColorWell;
 
 	@:native("title")
 	public var title:NSString;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewFlowLayout{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewFlowLayout;
+	overload public static function alloc():UICollectionViewFlowLayout;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewFlowLayout;
+	overload public static function autorelease():UICollectionViewFlowLayout;
 
 	@:native("minimumLineSpacing")
 	public var minimumLineSpacing:CGFloat;

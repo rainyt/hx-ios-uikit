@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class NSMutableAttributedString{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSMutableAttributedString;
+	overload public static function alloc():NSMutableAttributedString;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSMutableAttributedString;
+	overload public static function autorelease():NSMutableAttributedString;
 
 	@:native("readFromFileURL:options:documentAttributes:error:API_DEPRECATED_WITH_REPLACEMENT("readFromURL")
-	overload extern inline public function readFromFileURL(url:NSURL, options:NSDictionary, documentAttributes:NSDictionary____nullable, error:NSError, API_DEPRECATED_WITH_REPLACEMENT("readFromURL:options:documentAttributes:error:", ios(7.0, 9.0):Dynamic):BOOL;
+	overload public function readFromFileURL(url:NSURL, options:NSDictionary, documentAttributes:NSDictionary____nullable, error:NSError, API_DEPRECATED_WITH_REPLACEMENT("readFromURL:options:documentAttributes:error:", ios(7.0, 9.0):Dynamic):BOOL;
 
 
 }

@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIActivityItemProvider{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIActivityItemProvider;
+	overload public static function alloc():UIActivityItemProvider;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIActivityItemProvider;
+	overload public static function autorelease():UIActivityItemProvider;
 
 	@:native("init")
-	overload extern inline public function init():UIActivityItemProvider;
+	overload public function init():UIActivityItemProvider;
 
 	@:native("initWithPlaceholderItem:NS_DESIGNATED_INITIALIZER::::::::placeHolder:the:value")
-	overload extern inline public function initWithPlaceholderItem(placeholderItem:id, NS_DESIGNATED_INITIALIZER:, :, :, :, :, :, :, ://, placeHolder:is, the:return, value:for):UIActivityItemProvider;
+	overload public function initWithPlaceholderItem(placeholderItem:id, NS_DESIGNATED_INITIALIZER:, :, :, :, :, :, :, ://, placeHolder:is, the:return, value:for):UIActivityItemProvider;
 
 	@:native("placeholderItem")
 	public var placeholderItem:;

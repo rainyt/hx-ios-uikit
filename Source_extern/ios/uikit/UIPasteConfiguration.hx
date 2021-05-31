@@ -8,28 +8,28 @@ import cpp.objc.NSData;
 extern class UIPasteConfiguration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPasteConfiguration;
+	overload public static function alloc():UIPasteConfiguration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPasteConfiguration;
+	overload public static function autorelease():UIPasteConfiguration;
 
 	@:native("acceptableTypeIdentifiers")
 	public var acceptableTypeIdentifiers:Dynamic;
 
 	@:native("init")
-	overload extern inline public function init():UIPasteConfiguration;
+	overload public function init():UIPasteConfiguration;
 
 	@:native("initWithAcceptableTypeIdentifiers")
-	overload extern inline public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):UIPasteConfiguration;
+	overload public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):UIPasteConfiguration;
 
 	@:native("addAcceptableTypeIdentifiers")
-	overload extern inline public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):Void;
+	overload public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):Void;
 
 	@:native("initWithTypeIdentifiersForAcceptingClass")
-	overload extern inline public function initWithTypeIdentifiersForAcceptingClass(aClass:Dynamic):UIPasteConfiguration;
+	overload public function initWithTypeIdentifiersForAcceptingClass(aClass:Dynamic):UIPasteConfiguration;
 
 	@:native("addTypeIdentifiersForAcceptingClass")
-	overload extern inline public function addTypeIdentifiersForAcceptingClass(aClass:Dynamic):Void;
+	overload public function addTypeIdentifiersForAcceptingClass(aClass:Dynamic):Void;
 
 
 }

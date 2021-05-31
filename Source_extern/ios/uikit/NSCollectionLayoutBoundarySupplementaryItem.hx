@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutBoundarySupplementaryItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function alloc():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function autorelease():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment")
-	overload extern inline public static function boundarySupplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment):NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function boundarySupplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment):NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset")
-	overload extern inline public static function boundarySupplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment, absoluteOffset:CGPoint):NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function boundarySupplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment, absoluteOffset:CGPoint):NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutBoundarySupplementaryItem;
+	overload public function init():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function new():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("extendsBoundary")
 	public var extendsBoundary:Bool;

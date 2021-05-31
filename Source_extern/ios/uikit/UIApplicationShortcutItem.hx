@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIApplicationShortcutItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIApplicationShortcutItem;
+	overload public static function alloc():UIApplicationShortcutItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIApplicationShortcutItem;
+	overload public static function autorelease():UIApplicationShortcutItem;
 
 	@:native("init")
-	overload extern inline public function init():UIApplicationShortcutItem;
+	overload public function init():UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle:localizedSubtitle:icon:userInfo")
-	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:Dynamic):UIApplicationShortcutItem;
+	overload public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:Dynamic):UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle")
-	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
+	overload public function initWithType(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
 
 	@:native("type")
 	public var type:NSString;

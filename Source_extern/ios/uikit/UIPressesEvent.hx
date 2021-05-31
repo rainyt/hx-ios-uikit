@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIPressesEvent{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPressesEvent;
+	overload public static function alloc():UIPressesEvent;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPressesEvent;
+	overload public static function autorelease():UIPressesEvent;
 
 	@:native("allPresses")
 	public var allPresses:Dynamic;
 
 	@:native("pressesForGestureRecognizer")
-	overload extern inline public function pressesForGestureRecognizer(gesture:UIGestureRecognizer):NSSet <UIPress *> *;
+	overload public function pressesForGestureRecognizer(gesture:UIGestureRecognizer):NSSet <UIPress *> *;
 
 
 }

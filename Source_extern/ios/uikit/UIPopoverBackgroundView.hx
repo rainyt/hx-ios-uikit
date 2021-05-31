@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPopoverBackgroundView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPopoverBackgroundView;
+	overload public static function alloc():UIPopoverBackgroundView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPopoverBackgroundView;
+	overload public static function autorelease():UIPopoverBackgroundView;
 
 	@:native("arrowOffset")
 	public var arrowOffset:CGFloat;

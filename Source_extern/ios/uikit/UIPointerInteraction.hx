@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPointerInteraction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPointerInteraction;
+	overload public static function alloc():UIPointerInteraction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPointerInteraction;
+	overload public static function autorelease():UIPointerInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -20,10 +20,10 @@ extern class UIPointerInteraction{
 	public var enabled:Bool;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:Dynamic):UIPointerInteraction;
+	overload public function initWithDelegate(delegate:Dynamic):UIPointerInteraction;
 
 	@:native("invalidate;")
-	overload extern inline public function invalidate;():Void;
+	overload public function invalidate;():Void;
 
 
 }

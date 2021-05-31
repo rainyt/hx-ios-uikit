@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPercentDrivenInteractiveTransition{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPercentDrivenInteractiveTransition;
+	overload public static function alloc():UIPercentDrivenInteractiveTransition;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPercentDrivenInteractiveTransition;
+	overload public static function autorelease():UIPercentDrivenInteractiveTransition;
 
 	@:native("duration")
 	public var duration:CGFloat;
@@ -32,16 +32,16 @@ extern class UIPercentDrivenInteractiveTransition{
 	public var wantsInteractiveStart:Bool;
 
 	@:native("pauseInteractiveTransition")
-	overload extern inline public function pauseInteractiveTransition():Void;
+	overload public function pauseInteractiveTransition():Void;
 
 	@:native("updateInteractiveTransition")
-	overload extern inline public function updateInteractiveTransition(percentComplete:CGFloat):Void;
+	overload public function updateInteractiveTransition(percentComplete:CGFloat):Void;
 
 	@:native("cancelInteractiveTransition;")
-	overload extern inline public function cancelInteractiveTransition;():Void;
+	overload public function cancelInteractiveTransition;():Void;
 
 	@:native("finishInteractiveTransition;")
-	overload extern inline public function finishInteractiveTransition;():Void;
+	overload public function finishInteractiveTransition;():Void;
 
 
 }

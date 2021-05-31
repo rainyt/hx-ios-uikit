@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICellAccessoryReorder{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessoryReorder;
+	overload public static function alloc():UICellAccessoryReorder;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessoryReorder;
+	overload public static function autorelease():UICellAccessoryReorder;
 
 	@:native("showsVerticalSeparator")
 	public var showsVerticalSeparator:Bool;

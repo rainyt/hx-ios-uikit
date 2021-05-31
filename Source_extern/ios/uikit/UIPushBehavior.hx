@@ -8,28 +8,28 @@ import cpp.objc.NSData;
 extern class UIPushBehavior{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPushBehavior;
+	overload public static function alloc():UIPushBehavior;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPushBehavior;
+	overload public static function autorelease():UIPushBehavior;
 
 	@:native("initWithItems:mode")
-	overload extern inline public function initWithItems(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
+	overload public function initWithItems(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(item:Dynamic):Void;
+	overload public function addItem(item:Dynamic):Void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(item:Dynamic):Void;
+	overload public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
 	public var items:Dynamic;
 
 	@:native("targetOffsetFromCenterForItem")
-	overload extern inline public function targetOffsetFromCenterForItem(item:Dynamic):UIOffset;
+	overload public function targetOffsetFromCenterForItem(item:Dynamic):UIOffset;
 
 	@:native("setTargetOffsetFromCenter:forItem")
-	overload extern inline public function setTargetOffsetFromCenter(o:UIOffset, forItem:Dynamic):Void;
+	overload public function setTargetOffsetFromCenter(o:UIOffset, forItem:Dynamic):Void;
 
 	@:native("mode")
 	public var mode:UIPushBehaviorMode;
@@ -47,7 +47,7 @@ extern class UIPushBehavior{
 	public var pushDirection:CGVector;
 
 	@:native("setAngle:magnitude")
-	overload extern inline public function setAngle(angle:CGFloat, magnitude:CGFloat):Void;
+	overload public function setAngle(angle:CGFloat, magnitude:CGFloat):Void;
 
 
 }

@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UITargetedDragPreview{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITargetedDragPreview;
+	overload public static function alloc():UITargetedDragPreview;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITargetedDragPreview;
+	overload public static function autorelease():UITargetedDragPreview;
 
 	@:native("retargetedPreviewWithTarget")
-	overload extern inline public function retargetedPreviewWithTarget(newTarget:UIDragPreviewTarget):UITargetedDragPreview *;
+	overload public function retargetedPreviewWithTarget(newTarget:UIDragPreviewTarget):UITargetedDragPreview *;
 
 
 }

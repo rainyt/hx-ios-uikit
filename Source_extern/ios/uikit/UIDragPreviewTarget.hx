@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIDragPreviewTarget{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDragPreviewTarget;
+	overload public static function alloc():UIDragPreviewTarget;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDragPreviewTarget;
+	overload public static function autorelease():UIDragPreviewTarget;
 
 
 }

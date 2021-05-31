@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UITextField{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextField;
+	overload public static function alloc():UITextField;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextField;
+	overload public static function autorelease():UITextField;
 
 	@:native("endEditing:::use:make:view:any:that:the:responder")
-	overload extern inline public function endEditing(force:Bool, :, ://, use:to, make:the, view:or, any:subview, that:is, the:first, responder:resign):BOOL;
+	overload public function endEditing(force:Bool, :, ://, use:to, make:the, view:or, any:subview, that:is, the:first, responder:resign):BOOL;
 
 
 }

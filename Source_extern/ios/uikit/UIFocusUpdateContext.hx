@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIFocusUpdateContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIFocusUpdateContext;
+	overload public static function alloc():UIFocusUpdateContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIFocusUpdateContext;
+	overload public static function autorelease():UIFocusUpdateContext;
 
 	@:native("previouslyFocusedItem")
 	public var previouslyFocusedItem:Dynamic;

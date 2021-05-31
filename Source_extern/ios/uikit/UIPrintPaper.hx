@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIPrintPaper{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPrintPaper;
+	overload public static function alloc():UIPrintPaper;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPrintPaper;
+	overload public static function autorelease():UIPrintPaper;
 
 	@:native("bestPaperForPageSize:withPapersFromArray://:use:delegate.")
-	overload extern inline public static function bestPaperForPageSize(contentSize:CGSize, withPapersFromArray:Dynamic, //:for, use:by, delegate.:pass):UIPrintPaper *;
+	overload public static function bestPaperForPageSize(contentSize:CGSize, withPapersFromArray:Dynamic, //:for, use:by, delegate.:pass):UIPrintPaper *;
 
 	@:native("paperSize")
 	public var paperSize:CGSize;

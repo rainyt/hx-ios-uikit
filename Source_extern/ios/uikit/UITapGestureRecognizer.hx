@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITapGestureRecognizer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITapGestureRecognizer;
+	overload public static function alloc():UITapGestureRecognizer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITapGestureRecognizer;
+	overload public static function autorelease():UITapGestureRecognizer;
 
 	@:native("to")
 	public var to:required;

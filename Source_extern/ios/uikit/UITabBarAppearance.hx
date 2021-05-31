@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITabBarAppearance{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITabBarAppearance;
+	overload public static function alloc():UITabBarAppearance;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITabBarAppearance;
+	overload public static function autorelease():UITabBarAppearance;
 
 	@:native("stackedLayoutAppearance")
 	public var stackedLayoutAppearance:UITabBarItemAppearance;

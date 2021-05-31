@@ -8,31 +8,31 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutGroup{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutGroup;
+	overload public static function alloc():NSCollectionLayoutGroup;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutGroup;
+	overload public static function autorelease():NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitem:count")
-	overload extern inline public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):NSCollectionLayoutGroup;
+	overload public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitems")
-	overload extern inline public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
+	overload public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitem:count")
-	overload extern inline public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):NSCollectionLayoutGroup;
+	overload public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitems")
-	overload extern inline public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
+	overload public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("customGroupWithLayoutSize:itemProvider")
-	overload extern inline public static function customGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, itemProvider:NSCollectionLayoutGroupCustomItemProvider):NSCollectionLayoutGroup;
+	overload public static function customGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, itemProvider:NSCollectionLayoutGroupCustomItemProvider):NSCollectionLayoutGroup;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutGroup;
+	overload public function init():NSCollectionLayoutGroup;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutGroup;
+	overload public static function new():NSCollectionLayoutGroup;
 
 	@:native("supplementaryItems")
 	public var supplementaryItems:Dynamic;
@@ -44,7 +44,7 @@ extern class NSCollectionLayoutGroup{
 	public var subitems:Dynamic;
 
 	@:native("visualDescription;")
-	overload extern inline public function visualDescription;():NSString*;
+	overload public function visualDescription;():NSString*;
 
 
 }

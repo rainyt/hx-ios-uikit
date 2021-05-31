@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIBlurEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIBlurEffect;
+	overload public static function alloc():UIBlurEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIBlurEffect;
+	overload public static function autorelease():UIBlurEffect;
 
 	@:native("effectWithStyle")
-	overload extern inline public static function effectWithStyle(style:UIBlurEffectStyle):UIBlurEffect *;
+	overload public static function effectWithStyle(style:UIBlurEffectStyle):UIBlurEffect *;
 
 
 }

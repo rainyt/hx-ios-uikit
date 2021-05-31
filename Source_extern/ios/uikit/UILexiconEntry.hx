@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UILexiconEntry{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UILexiconEntry;
+	overload public static function alloc():UILexiconEntry;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UILexiconEntry;
+	overload public static function autorelease():UILexiconEntry;
 
 	@:native("documentText")
 	public var documentText:NSString;

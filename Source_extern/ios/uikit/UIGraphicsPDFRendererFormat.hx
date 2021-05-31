@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIGraphicsPDFRendererFormat{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIGraphicsPDFRendererFormat;
+	overload public static function alloc():UIGraphicsPDFRendererFormat;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIGraphicsPDFRendererFormat;
+	overload public static function autorelease():UIGraphicsPDFRendererFormat;
 
 	@:native("documentInfo")
 	public var documentInfo:Dynamic;

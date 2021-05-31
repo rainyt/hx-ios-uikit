@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewCompositionalLayoutConfiguration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewCompositionalLayoutConfiguration;
+	overload public static function alloc():UICollectionViewCompositionalLayoutConfiguration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewCompositionalLayoutConfiguration;
+	overload public static function autorelease():UICollectionViewCompositionalLayoutConfiguration;
 
 	@:native("is")
 	public var is:default;

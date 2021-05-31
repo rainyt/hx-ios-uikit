@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIMutableApplicationShortcutItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMutableApplicationShortcutItem;
+	overload public static function alloc():UIMutableApplicationShortcutItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMutableApplicationShortcutItem;
+	overload public static function autorelease():UIMutableApplicationShortcutItem;
 
 	@:native("type")
 	public var type:NSString;

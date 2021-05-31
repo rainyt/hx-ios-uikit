@@ -8,34 +8,34 @@ import cpp.objc.NSData;
 extern class NSValue{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSValue;
+	overload public static function alloc():NSValue;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSValue;
+	overload public static function autorelease():NSValue;
 
 	@:native("valueWithCGPoint")
-	overload extern inline public static function valueWithCGPoint(point:CGPoint):NSValue *;
+	overload public static function valueWithCGPoint(point:CGPoint):NSValue *;
 
 	@:native("valueWithCGVector")
-	overload extern inline public static function valueWithCGVector(vector:CGVector):NSValue *;
+	overload public static function valueWithCGVector(vector:CGVector):NSValue *;
 
 	@:native("valueWithCGSize")
-	overload extern inline public static function valueWithCGSize(size:CGSize):NSValue *;
+	overload public static function valueWithCGSize(size:CGSize):NSValue *;
 
 	@:native("valueWithCGRect")
-	overload extern inline public static function valueWithCGRect(rect:CGRect):NSValue *;
+	overload public static function valueWithCGRect(rect:CGRect):NSValue *;
 
 	@:native("valueWithCGAffineTransform")
-	overload extern inline public static function valueWithCGAffineTransform(transform:CGAffineTransform):NSValue *;
+	overload public static function valueWithCGAffineTransform(transform:CGAffineTransform):NSValue *;
 
 	@:native("valueWithUIEdgeInsets")
-	overload extern inline public static function valueWithUIEdgeInsets(insets:UIEdgeInsets):NSValue *;
+	overload public static function valueWithUIEdgeInsets(insets:UIEdgeInsets):NSValue *;
 
 	@:native("valueWithDirectionalEdgeInsets")
-	overload extern inline public static function valueWithDirectionalEdgeInsets(insets:NSDirectionalEdgeInsets):NSValue *;
+	overload public static function valueWithDirectionalEdgeInsets(insets:NSDirectionalEdgeInsets):NSValue *;
 
 	@:native("valueWithUIOffset")
-	overload extern inline public static function valueWithUIOffset(insets:UIOffset):NSValue *;
+	overload public static function valueWithUIOffset(insets:UIOffset):NSValue *;
 
 	@:native("CGPointValue")
 	public var CGPointValue:CGPoint;

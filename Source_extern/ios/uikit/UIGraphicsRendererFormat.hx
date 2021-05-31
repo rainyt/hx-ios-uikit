@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIGraphicsRendererFormat{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIGraphicsRendererFormat;
+	overload public static function alloc():UIGraphicsRendererFormat;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIGraphicsRendererFormat;
+	overload public static function autorelease():UIGraphicsRendererFormat;
 
 	@:native("defaultFormat")
-	overload extern inline public static function defaultFormat():UIGraphicsRendererFormat;
+	overload public static function defaultFormat():UIGraphicsRendererFormat;
 
 	@:native("preferredFormat")
-	overload extern inline public static function preferredFormat():UIGraphicsRendererFormat;
+	overload public static function preferredFormat():UIGraphicsRendererFormat;
 
 	@:native("bounds")
 	public var bounds:CGRect;

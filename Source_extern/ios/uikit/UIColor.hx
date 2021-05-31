@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIColor{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIColor;
+	overload public static function alloc():UIColor;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIColor;
+	overload public static function autorelease():UIColor;
 
 	@:native("accessibilityName")
 	public var accessibilityName:NSString;

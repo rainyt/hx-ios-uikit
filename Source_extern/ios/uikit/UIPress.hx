@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPress{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPress;
+	overload public static function alloc():UIPress;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPress;
+	overload public static function autorelease():UIPress;
 
 	@:native("timestamp")
 	public var timestamp:;

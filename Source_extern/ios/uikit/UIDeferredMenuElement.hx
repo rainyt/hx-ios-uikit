@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIDeferredMenuElement{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDeferredMenuElement;
+	overload public static function alloc():UIDeferredMenuElement;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDeferredMenuElement;
+	overload public static function autorelease():UIDeferredMenuElement;
 
 	@:native("elementWithProvider")
-	overload extern inline public static function elementWithProvider(elementProvider:Dynamic):UIDeferredMenuElement;
+	overload public static function elementWithProvider(elementProvider:Dynamic):UIDeferredMenuElement;
 
 
 }

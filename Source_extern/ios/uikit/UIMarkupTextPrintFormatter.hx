@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIMarkupTextPrintFormatter{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMarkupTextPrintFormatter;
+	overload public static function alloc():UIMarkupTextPrintFormatter;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMarkupTextPrintFormatter;
+	overload public static function autorelease():UIMarkupTextPrintFormatter;
 
 	@:native("initWithMarkupText")
-	overload extern inline public function initWithMarkupText(markupText:NSString):UIMarkupTextPrintFormatter;
+	overload public function initWithMarkupText(markupText:NSString):UIMarkupTextPrintFormatter;
 
 	@:native("drawing")
 	public var drawing:once;

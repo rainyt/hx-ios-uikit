@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPointerLiftEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPointerLiftEffect;
+	overload public static function alloc():UIPointerLiftEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPointerLiftEffect;
+	overload public static function autorelease():UIPointerLiftEffect;
 
 
 }

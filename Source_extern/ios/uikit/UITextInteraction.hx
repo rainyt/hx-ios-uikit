@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITextInteraction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextInteraction;
+	overload public static function alloc():UITextInteraction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextInteraction;
+	overload public static function autorelease():UITextInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -26,7 +26,7 @@ extern class UITextInteraction{
 	public var gesturesForFailureRequirements:Dynamic;
 
 	@:native("textInteractionForMode")
-	overload extern inline public static function textInteractionForMode(mode:UITextInteractionMode):UITextInteraction;
+	overload public static function textInteractionForMode(mode:UITextInteractionMode):UITextInteraction;
 
 
 }

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICellAccessoryMultiselect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessoryMultiselect;
+	overload public static function alloc():UICellAccessoryMultiselect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessoryMultiselect;
+	overload public static function autorelease():UICellAccessoryMultiselect;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;

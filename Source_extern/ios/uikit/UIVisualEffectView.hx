@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIVisualEffectView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIVisualEffectView;
+	overload public static function alloc():UIVisualEffectView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIVisualEffectView;
+	overload public static function autorelease():UIVisualEffectView;
 
 	@:native("view")
 	public var view:this;
@@ -20,10 +20,10 @@ extern class UIVisualEffectView{
 	public var effect:UIVisualEffect;
 
 	@:native("initWithEffect")
-	overload extern inline public function initWithEffect(effect:UIVisualEffect):UIVisualEffectView;
+	overload public function initWithEffect(effect:UIVisualEffect):UIVisualEffectView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIVisualEffectView;
+	overload public function initWithCoder(coder:NSCoder):UIVisualEffectView;
 
 
 }

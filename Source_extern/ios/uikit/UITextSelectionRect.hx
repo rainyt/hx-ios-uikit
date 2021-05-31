@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITextSelectionRect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextSelectionRect;
+	overload public static function alloc():UITextSelectionRect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextSelectionRect;
+	overload public static function autorelease():UITextSelectionRect;
 
 	@:native("rect")
 	public var rect:CGRect;

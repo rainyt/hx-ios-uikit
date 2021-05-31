@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class NSStringDrawingContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSStringDrawingContext;
+	overload public static function alloc():NSStringDrawingContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSStringDrawingContext;
+	overload public static function autorelease():NSStringDrawingContext;
 
 	@:native("ios(6.0,")
 	public var ios(6.0,:Dynamic;

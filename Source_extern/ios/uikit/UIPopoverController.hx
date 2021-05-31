@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIPopoverController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPopoverController;
+	overload public static function alloc():UIPopoverController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPopoverController;
+	overload public static function autorelease():UIPopoverController;
 
 	@:native("initWithContentViewController")
-	overload extern inline public function initWithContentViewController(viewController:UIViewController):UIPopoverController;
+	overload public function initWithContentViewController(viewController:UIViewController):UIPopoverController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -23,13 +23,13 @@ extern class UIPopoverController{
 	public var contentViewController:UIViewController;
 
 	@:native("setContentViewController:animated")
-	overload extern inline public function setContentViewController(viewController:UIViewController, animated:Bool):Void;
+	overload public function setContentViewController(viewController:UIViewController, animated:Bool):Void;
 
 	@:native("popoverContentSize")
 	public var popoverContentSize:CGSize;
 
 	@:native("setPopoverContentSize:animated")
-	overload extern inline public function setPopoverContentSize(size:CGSize, animated:Bool):Void;
+	overload public function setPopoverContentSize(size:CGSize, animated:Bool):Void;
 
 	@:native("popoverVisible")
 	public var popoverVisible:Bool;
@@ -41,13 +41,13 @@ extern class UIPopoverController{
 	public var passthroughViews:Dynamic;
 
 	@:native("presentPopoverFromRect:inView:permittedArrowDirections:animated")
-	overload extern inline public function presentPopoverFromRect(rect:CGRect, inView:UIView, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
+	overload public function presentPopoverFromRect(rect:CGRect, inView:UIView, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
 
 	@:native("presentPopoverFromBarButtonItem:permittedArrowDirections:animated")
-	overload extern inline public function presentPopoverFromBarButtonItem(item:UIBarButtonItem, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
+	overload public function presentPopoverFromBarButtonItem(item:UIBarButtonItem, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
 
 	@:native("dismissPopoverAnimated")
-	overload extern inline public function dismissPopoverAnimated(animated:Bool):Void;
+	overload public function dismissPopoverAnimated(animated:Bool):Void;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;

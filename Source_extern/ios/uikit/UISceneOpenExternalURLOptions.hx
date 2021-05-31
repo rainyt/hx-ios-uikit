@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UISceneOpenExternalURLOptions{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISceneOpenExternalURLOptions;
+	overload public static function alloc():UISceneOpenExternalURLOptions;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISceneOpenExternalURLOptions;
+	overload public static function autorelease():UISceneOpenExternalURLOptions;
 
 	@:native("universalLinksOnly")
 	public var universalLinksOnly:Bool;

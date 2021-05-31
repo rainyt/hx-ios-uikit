@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIPrintInfo{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPrintInfo;
+	overload public static function alloc():UIPrintInfo;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPrintInfo;
+	overload public static function autorelease():UIPrintInfo;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIPrintInfo;
+	overload public function initWithCoder(coder:NSCoder):UIPrintInfo;
 
 	@:native("printInfo;")
-	overload extern inline public static function printInfo;():UIPrintInfo *;
+	overload public static function printInfo;():UIPrintInfo *;
 
 	@:native("printInfoWithDictionary")
-	overload extern inline public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo *;
+	overload public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo *;
 
 	@:native("selects")
 	public var selects:user;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPencilInteraction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPencilInteraction;
+	overload public static function alloc():UIPencilInteraction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPencilInteraction;
+	overload public static function autorelease():UIPencilInteraction;
 
 	@:native("preferredTapAction")
 	public var preferredTapAction:UIPencilPreferredAction;

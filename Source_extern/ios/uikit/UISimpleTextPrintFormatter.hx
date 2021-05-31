@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UISimpleTextPrintFormatter{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISimpleTextPrintFormatter;
+	overload public static function alloc():UISimpleTextPrintFormatter;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISimpleTextPrintFormatter;
+	overload public static function autorelease():UISimpleTextPrintFormatter;
 
 	@:native("initWithText")
-	overload extern inline public function initWithText(text:NSString):UISimpleTextPrintFormatter;
+	overload public function initWithText(text:NSString):UISimpleTextPrintFormatter;
 
 	@:native("initWithAttributedText")
-	overload extern inline public function initWithAttributedText(attributedText:NSAttributedString):UISimpleTextPrintFormatter;
+	overload public function initWithAttributedText(attributedText:NSAttributedString):UISimpleTextPrintFormatter;
 
 	@:native("drawing")
 	public var drawing:once;

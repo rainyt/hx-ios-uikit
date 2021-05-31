@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UILongPressGestureRecognizer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UILongPressGestureRecognizer;
+	overload public static function alloc():UILongPressGestureRecognizer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UILongPressGestureRecognizer;
+	overload public static function autorelease():UILongPressGestureRecognizer;
 
 	@:native("be")
 	public var be:to;

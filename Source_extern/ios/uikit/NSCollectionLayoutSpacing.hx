@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutSpacing{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutSpacing;
+	overload public static function alloc():NSCollectionLayoutSpacing;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutSpacing;
+	overload public static function autorelease():NSCollectionLayoutSpacing;
 
 	@:native("flexibleSpacing:")
-	overload extern inline public static function flexibleSpacing(flexibleSpacing:CGFloat, ://):NSCollectionLayoutSpacing;
+	overload public static function flexibleSpacing(flexibleSpacing:CGFloat, ://):NSCollectionLayoutSpacing;
 
 	@:native("fixedSpacing::::")
-	overload extern inline public static function fixedSpacing(fixedSpacing:CGFloat, :, :, :, ://):NSCollectionLayoutSpacing;
+	overload public static function fixedSpacing(fixedSpacing:CGFloat, :, :, :, ://):NSCollectionLayoutSpacing;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutSpacing;
+	overload public function init():NSCollectionLayoutSpacing;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutSpacing;
+	overload public static function new():NSCollectionLayoutSpacing;
 
 	@:native("spacing")
 	public var spacing:CGFloat;

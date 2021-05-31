@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIAccessibilityCustomRotorSearchPredicate{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIAccessibilityCustomRotorSearchPredicate;
+	overload public static function alloc():UIAccessibilityCustomRotorSearchPredicate;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIAccessibilityCustomRotorSearchPredicate;
+	overload public static function autorelease():UIAccessibilityCustomRotorSearchPredicate;
 
 	@:native("currentItem")
 	public var currentItem:UIAccessibilityCustomRotorItemResult;

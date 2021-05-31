@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIAlertController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIAlertController;
+	overload public static function alloc():UIAlertController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIAlertController;
+	overload public static function autorelease():UIAlertController;
 
 	@:native("alertControllerWithTitle:message:preferredStyle")
-	overload extern inline public static function alertControllerWithTitle(title:NSString, message:NSString, preferredStyle:UIAlertControllerStyle):UIAlertController;
+	overload public static function alertControllerWithTitle(title:NSString, message:NSString, preferredStyle:UIAlertControllerStyle):UIAlertController;
 
 	@:native("addAction")
-	overload extern inline public function addAction(action:UIAlertAction):Void;
+	overload public function addAction(action:UIAlertAction):Void;
 
 	@:native("actions")
 	public var actions:Dynamic;
@@ -26,7 +26,7 @@ extern class UIAlertController{
 	public var preferredAction:UIAlertAction;
 
 	@:native("addTextFieldWithConfigurationHandler")
-	overload extern inline public function addTextFieldWithConfigurationHandler(configurationHandler:Dynamic):Void;
+	overload public function addTextFieldWithConfigurationHandler(configurationHandler:Dynamic):Void;
 
 	@:native("textFields")
 	public var textFields:Dynamic;

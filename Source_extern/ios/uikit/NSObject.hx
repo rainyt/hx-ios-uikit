@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class NSObject{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSObject;
+	overload public static function alloc():NSObject;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSObject;
+	overload public static function autorelease():NSObject;
 
 	@:native("accessibilityElementCount;")
-	overload extern inline public function accessibilityElementCount;():NSInteger;
+	overload public function accessibilityElementCount;():NSInteger;
 
 	@:native("accessibilityElementAtIndex")
-	overload extern inline public function accessibilityElementAtIndex(index:NSInteger):nullable id;
+	overload public function accessibilityElementAtIndex(index:NSInteger):nullable id;
 
 	@:native("indexOfAccessibilityElement")
-	overload extern inline public function indexOfAccessibilityElement(element:id):NSInteger;
+	overload public function indexOfAccessibilityElement(element:id):NSInteger;
 
 	@:native("accessibilityElements")
 	public var accessibilityElements:NSArray;

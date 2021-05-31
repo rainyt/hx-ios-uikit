@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITextPosition{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextPosition;
+	overload public static function alloc():UITextPosition;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextPosition;
+	overload public static function autorelease():UITextPosition;
 
 
 }

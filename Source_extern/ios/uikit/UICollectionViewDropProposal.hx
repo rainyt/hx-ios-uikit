@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UICollectionViewDropProposal{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewDropProposal;
+	overload public static function alloc():UICollectionViewDropProposal;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewDropProposal;
+	overload public static function autorelease():UICollectionViewDropProposal;
 
 	@:native("initWithDropOperation:intent")
-	overload extern inline public function initWithDropOperation(operation:UIDropOperation, intent:UICollectionViewDropIntent):UICollectionViewDropProposal;
+	overload public function initWithDropOperation(operation:UIDropOperation, intent:UICollectionViewDropIntent):UICollectionViewDropProposal;
 
 	@:native("intent")
 	public var intent:UICollectionViewDropIntent;

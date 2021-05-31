@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UISceneActivationConditions{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISceneActivationConditions;
+	overload public static function alloc():UISceneActivationConditions;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISceneActivationConditions;
+	overload public static function autorelease():UISceneActivationConditions;
 
 	@:native("init")
-	overload extern inline public function init():UISceneActivationConditions;
+	overload public function init():UISceneActivationConditions;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(aDecoder:NSCoder):UISceneActivationConditions;
+	overload public function initWithCoder(aDecoder:NSCoder):UISceneActivationConditions;
 
 	@:native("[NSPredicate")
 	public var [NSPredicate:is;

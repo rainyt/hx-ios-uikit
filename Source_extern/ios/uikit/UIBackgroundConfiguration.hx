@@ -8,43 +8,43 @@ import cpp.objc.NSData;
 extern class UIBackgroundConfiguration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIBackgroundConfiguration;
+	overload public static function alloc():UIBackgroundConfiguration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIBackgroundConfiguration;
+	overload public static function autorelease():UIBackgroundConfiguration;
 
 	@:native("clearConfiguration;")
-	overload extern inline public static function clearConfiguration;():UIBackgroundConfiguration;
+	overload public static function clearConfiguration;():UIBackgroundConfiguration;
 
 	@:native("listPlainCellConfiguration;")
-	overload extern inline public static function listPlainCellConfiguration;():UIBackgroundConfiguration;
+	overload public static function listPlainCellConfiguration;():UIBackgroundConfiguration;
 
 	@:native("listPlainHeaderFooterConfiguration;")
-	overload extern inline public static function listPlainHeaderFooterConfiguration;():UIBackgroundConfiguration;
+	overload public static function listPlainHeaderFooterConfiguration;():UIBackgroundConfiguration;
 
 	@:native("listGroupedCellConfiguration;")
-	overload extern inline public static function listGroupedCellConfiguration;():UIBackgroundConfiguration;
+	overload public static function listGroupedCellConfiguration;():UIBackgroundConfiguration;
 
 	@:native("listGroupedHeaderFooterConfiguration;")
-	overload extern inline public static function listGroupedHeaderFooterConfiguration;():UIBackgroundConfiguration;
+	overload public static function listGroupedHeaderFooterConfiguration;():UIBackgroundConfiguration;
 
 	@:native("listSidebarHeaderConfiguration")
-	overload extern inline public static function listSidebarHeaderConfiguration():UIBackgroundConfiguration;
+	overload public static function listSidebarHeaderConfiguration():UIBackgroundConfiguration;
 
 	@:native("listSidebarCellConfiguration")
-	overload extern inline public static function listSidebarCellConfiguration():UIBackgroundConfiguration;
+	overload public static function listSidebarCellConfiguration():UIBackgroundConfiguration;
 
 	@:native("listAccompaniedSidebarCellConfiguration")
-	overload extern inline public static function listAccompaniedSidebarCellConfiguration():UIBackgroundConfiguration;
+	overload public static function listAccompaniedSidebarCellConfiguration():UIBackgroundConfiguration;
 
 	@:native("new")
-	overload extern inline public static function new():UIBackgroundConfiguration;
+	overload public static function new():UIBackgroundConfiguration;
 
 	@:native("init")
-	overload extern inline public function init():UIBackgroundConfiguration;
+	overload public function init():UIBackgroundConfiguration;
 
 	@:native("updatedConfigurationForState")
-	overload extern inline public function updatedConfigurationForState(state:Dynamic):UIBackgroundConfiguration;
+	overload public function updatedConfigurationForState(state:Dynamic):UIBackgroundConfiguration;
 
 	@:native("customView")
 	public var customView:UIView;
@@ -65,7 +65,7 @@ extern class UIBackgroundConfiguration{
 	public var backgroundColorTransformer:UIConfigurationColorTransformer;
 
 	@:native("resolvedBackgroundColorForTintColor")
-	overload extern inline public function resolvedBackgroundColorForTintColor(tintColor:UIColor):UIColor *;
+	overload public function resolvedBackgroundColorForTintColor(tintColor:UIColor):UIColor *;
 
 	@:native("visualEffect")
 	public var visualEffect:UIVisualEffect;
@@ -77,7 +77,7 @@ extern class UIBackgroundConfiguration{
 	public var strokeColorTransformer:UIConfigurationColorTransformer;
 
 	@:native("resolvedStrokeColorForTintColor")
-	overload extern inline public function resolvedStrokeColorForTintColor(tintColor:UIColor):UIColor *;
+	overload public function resolvedStrokeColorForTintColor(tintColor:UIColor):UIColor *;
 
 	@:native("strokeWidth")
 	public var strokeWidth:CGFloat;

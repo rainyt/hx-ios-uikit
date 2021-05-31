@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIFeedbackGenerator{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIFeedbackGenerator;
+	overload public static function alloc():UIFeedbackGenerator;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIFeedbackGenerator;
+	overload public static function autorelease():UIFeedbackGenerator;
 
 	@:native("prepare;")
-	overload extern inline public function prepare;():Void;
+	overload public function prepare;():Void;
 
 
 }

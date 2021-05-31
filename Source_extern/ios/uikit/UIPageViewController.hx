@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIPageViewController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPageViewController;
+	overload public static function alloc():UIPageViewController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPageViewController;
+	overload public static function autorelease():UIPageViewController;
 
 	@:native("initWithTransitionStyle:navigationOrientation:options")
-	overload extern inline public function initWithTransitionStyle(style:UIPageViewControllerTransitionStyle, navigationOrientation:UIPageViewControllerNavigationOrientation, options:Dynamic):UIPageViewController;
+	overload public function initWithTransitionStyle(style:UIPageViewControllerTransitionStyle, navigationOrientation:UIPageViewControllerNavigationOrientation, options:Dynamic):UIPageViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIPageViewController;
+	overload public function initWithCoder(coder:NSCoder):UIPageViewController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -44,7 +44,7 @@ extern class UIPageViewController{
 	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:direction:animated:completion")
-	overload extern inline public function setViewControllers(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
+	overload public function setViewControllers(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
 
 
 }

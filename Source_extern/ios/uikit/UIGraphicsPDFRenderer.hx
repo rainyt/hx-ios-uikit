@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIGraphicsPDFRenderer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIGraphicsPDFRenderer;
+	overload public static function alloc():UIGraphicsPDFRenderer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIGraphicsPDFRenderer;
+	overload public static function autorelease():UIGraphicsPDFRenderer;
 
 	@:native("initWithBounds:format")
-	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
+	overload public function initWithBounds(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
 
 	@:native("writePDFToURL:withActions:error")
-	overload extern inline public function writePDFToURL(url:NSURL, withActions:NS_NOESCAPEUIGraphicsPDFDrawingActions, error:NSError):BOOL;
+	overload public function writePDFToURL(url:NSURL, withActions:NS_NOESCAPEUIGraphicsPDFDrawingActions, error:NSError):BOOL;
 
 	@:native("PDFDataWithActions")
-	overload extern inline public function PDFDataWithActions(actions:NS_NOESCAPEUIGraphicsPDFDrawingActions):NSData *;
+	overload public function PDFDataWithActions(actions:NS_NOESCAPEUIGraphicsPDFDrawingActions):NSData *;
 
 
 }

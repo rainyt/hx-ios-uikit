@@ -8,28 +8,28 @@ import cpp.objc.NSData;
 extern class UITableViewHeaderFooterView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITableViewHeaderFooterView;
+	overload public static function alloc():UITableViewHeaderFooterView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITableViewHeaderFooterView;
+	overload public static function autorelease():UITableViewHeaderFooterView;
 
 	@:native("initWithReuseIdentifier")
-	overload extern inline public function initWithReuseIdentifier(reuseIdentifier:NSString):UITableViewHeaderFooterView;
+	overload public function initWithReuseIdentifier(reuseIdentifier:NSString):UITableViewHeaderFooterView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UITableViewHeaderFooterView;
+	overload public function initWithCoder(coder:NSCoder):UITableViewHeaderFooterView;
 
 	@:native("configurationState")
 	public var configurationState:UIViewConfigurationState;
 
 	@:native("setNeedsUpdateConfiguration")
-	overload extern inline public function setNeedsUpdateConfiguration():Void;
+	overload public function setNeedsUpdateConfiguration():Void;
 
 	@:native("updateConfigurationUsingState")
-	overload extern inline public function updateConfigurationUsingState(state:UIViewConfigurationState):Void;
+	overload public function updateConfigurationUsingState(state:UIViewConfigurationState):Void;
 
 	@:native("defaultContentConfiguration")
-	overload extern inline public function defaultContentConfiguration():UIListContentConfiguration *;
+	overload public function defaultContentConfiguration():UIListContentConfiguration *;
 
 	@:native("contentConfiguration")
 	public var contentConfiguration:Dynamic;
@@ -59,7 +59,7 @@ extern class UITableViewHeaderFooterView{
 	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
-	overload extern inline public function prepareForReuse():Void;
+	overload public function prepareForReuse():Void;
 
 
 }

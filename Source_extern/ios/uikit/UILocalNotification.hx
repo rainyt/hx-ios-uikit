@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UILocalNotification{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UILocalNotification;
+	overload public static function alloc():UILocalNotification;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UILocalNotification;
+	overload public static function autorelease():UILocalNotification;
 
 	@:native("init")
-	overload extern inline public function init():UILocalNotification;
+	overload public function init():UILocalNotification;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UILocalNotification;
+	overload public function initWithCoder(coder:NSCoder):UILocalNotification;
 
 	@:native("fireDate")
 	public var fireDate:NSDate;

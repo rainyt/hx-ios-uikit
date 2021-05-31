@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UICollectionViewSupplementaryRegistration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewSupplementaryRegistration;
+	overload public static function alloc():UICollectionViewSupplementaryRegistration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewSupplementaryRegistration;
+	overload public static function autorelease():UICollectionViewSupplementaryRegistration;
 
 	@:native("registrationWithSupplementaryClass:elementKind:")
-	overload extern inline public static function registrationWithSupplementaryClass(supplementaryClass:Class, elementKind:NSString, :configurationHandler):UICollectionViewSupplementaryRegistration;
+	overload public static function registrationWithSupplementaryClass(supplementaryClass:Class, elementKind:NSString, :configurationHandler):UICollectionViewSupplementaryRegistration;
 
 	@:native("registrationWithSupplementaryNib:elementKind:configurationHandler")
-	overload extern inline public static function registrationWithSupplementaryNib(supplementaryNib:UINib, elementKind:NSString, configurationHandler:UICollectionViewSupplementaryRegistrationConfigurationHandler):UICollectionViewSupplementaryRegistration;
+	overload public static function registrationWithSupplementaryNib(supplementaryNib:UINib, elementKind:NSString, configurationHandler:UICollectionViewSupplementaryRegistrationConfigurationHandler):UICollectionViewSupplementaryRegistration;
 
 	@:native("supplementaryClass")
 	public var supplementaryClass:Class;

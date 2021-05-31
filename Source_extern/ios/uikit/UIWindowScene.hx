@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIWindowScene{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIWindowScene;
+	overload public static function alloc():UIWindowScene;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIWindowScene;
+	overload public static function autorelease():UIWindowScene;
 
 	@:native("statusBarManager")
 	public var statusBarManager:UIStatusBarManager;

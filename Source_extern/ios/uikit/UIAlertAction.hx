@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIAlertAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIAlertAction;
+	overload public static function alloc():UIAlertAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIAlertAction;
+	overload public static function autorelease():UIAlertAction;
 
 
 }

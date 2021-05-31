@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UITabBarController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITabBarController;
+	overload public static function alloc():UITabBarController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITabBarController;
+	overload public static function autorelease():UITabBarController;
 
 	@:native("viewControllers")
 	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:animated")
-	overload extern inline public function setViewControllers(viewControllers:Dynamic, animated:Bool):Void;
+	overload public function setViewControllers(viewControllers:Dynamic, animated:Bool):Void;
 
 	@:native("it")
 	public var it:if;

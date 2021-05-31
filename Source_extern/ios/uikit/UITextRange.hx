@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITextRange{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextRange;
+	overload public static function alloc():UITextRange;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextRange;
+	overload public static function autorelease():UITextRange;
 
 	@:native("is")
 	public var is:range;

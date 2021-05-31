@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UISpringLoadedInteraction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISpringLoadedInteraction;
+	overload public static function alloc():UISpringLoadedInteraction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISpringLoadedInteraction;
+	overload public static function autorelease():UISpringLoadedInteraction;
 
 	@:native("new")
-	overload extern inline public static function new():UISpringLoadedInteraction;
+	overload public static function new():UISpringLoadedInteraction;
 
 	@:native("init")
-	overload extern inline public function init():UISpringLoadedInteraction;
+	overload public function init():UISpringLoadedInteraction;
 
 	@:native("initWithInteractionBehavior:interactionEffect:activationHandler")
-	overload extern inline public function initWithInteractionBehavior(interactionBehavior:Dynamic, interactionEffect:Dynamic, activationHandler:Dynamic):UISpringLoadedInteraction;
+	overload public function initWithInteractionBehavior(interactionBehavior:Dynamic, interactionEffect:Dynamic, activationHandler:Dynamic):UISpringLoadedInteraction;
 
 	@:native("initWithActivationHandler")
-	overload extern inline public function initWithActivationHandler(handler:Dynamic):UISpringLoadedInteraction;
+	overload public function initWithActivationHandler(handler:Dynamic):UISpringLoadedInteraction;
 
 	@:native("interactionBehavior")
 	public var interactionBehavior:Dynamic;

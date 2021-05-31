@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UINib{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UINib;
+	overload public static function alloc():UINib;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UINib;
+	overload public static function autorelease():UINib;
 
 	@:native("nibWithNibName:bundle")
-	overload extern inline public static function nibWithNibName(name:NSString, bundle:NSBundle):UINib *;
+	overload public static function nibWithNibName(name:NSString, bundle:NSBundle):UINib *;
 
 	@:native("nibWithData:bundle")
-	overload extern inline public static function nibWithData(data:NSData, bundle:NSBundle):UINib *;
+	overload public static function nibWithData(data:NSData, bundle:NSBundle):UINib *;
 
 	@:native("instantiateWithOwner:options")
-	overload extern inline public function instantiateWithOwner(ownerOrNil:id, options:Dynamic):NSArray *;
+	overload public function instantiateWithOwner(ownerOrNil:id, options:Dynamic):NSArray *;
 
 
 }

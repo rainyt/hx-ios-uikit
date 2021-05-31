@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIFocusGuide{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIFocusGuide;
+	overload public static function alloc():UIFocusGuide;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIFocusGuide;
+	overload public static function autorelease():UIFocusGuide;
 
 	@:native("enabled")
 	public var enabled:Bool;

@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIScribbleInteraction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIScribbleInteraction;
+	overload public static function alloc():UIScribbleInteraction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIScribbleInteraction;
+	overload public static function autorelease():UIScribbleInteraction;
 
 	@:native("init")
-	overload extern inline public function init():UIScribbleInteraction;
+	overload public function init():UIScribbleInteraction;
 
 	@:native("new")
-	overload extern inline public static function new():UIScribbleInteraction;
+	overload public static function new():UIScribbleInteraction;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:Dynamic):UIScribbleInteraction;
+	overload public function initWithDelegate(delegate:Dynamic):UIScribbleInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

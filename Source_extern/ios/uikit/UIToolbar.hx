@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIToolbar{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIToolbar;
+	overload public static function alloc():UIToolbar;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIToolbar;
+	overload public static function autorelease():UIToolbar;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:barStyle;
@@ -23,7 +23,7 @@ extern class UIToolbar{
 	public var translucent:Bool;
 
 	@:native("setItems:animated:://:fade:or:or:and")
-	overload extern inline public function setItems(items:Dynamic, animated:Bool, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
+	overload public function setItems(items:Dynamic, animated:Bool, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
@@ -32,16 +32,16 @@ extern class UIToolbar{
 	public var barTintColor:UIColor;
 
 	@:native("setBackgroundImage:forToolbarPosition:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forToolbarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload public function setBackgroundImage(backgroundImage:UIImage, forToolbarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("backgroundImageForToolbarPosition:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function backgroundImageForToolbarPosition(topOrBottom:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
+	overload public function backgroundImageForToolbarPosition(topOrBottom:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setShadowImage:forToolbarPosition:API_AVAILABLE(ios(6.0)")
-	overload extern inline public function setShadowImage(shadowImage:UIImage, forToolbarPosition:UIBarPosition, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
+	overload public function setShadowImage(shadowImage:UIImage, forToolbarPosition:UIBarPosition, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("shadowImageForToolbarPosition:API_AVAILABLE(ios(6.0)")
-	overload extern inline public function shadowImageForToolbarPosition(topOrBottom:UIBarPosition, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
+	overload public function shadowImageForToolbarPosition(topOrBottom:UIBarPosition, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:standardAppearance;

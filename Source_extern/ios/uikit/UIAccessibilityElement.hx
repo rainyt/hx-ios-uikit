@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIAccessibilityElement{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIAccessibilityElement;
+	overload public static function alloc():UIAccessibilityElement;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIAccessibilityElement;
+	overload public static function autorelease():UIAccessibilityElement;
 
 	@:native("initWithAccessibilityContainer")
-	overload extern inline public function initWithAccessibilityContainer(container:id):UIAccessibilityElement;
+	overload public function initWithAccessibilityContainer(container:id):UIAccessibilityElement;
 
 	@:native("accessibilityContainer")
 	public var accessibilityContainer:id;

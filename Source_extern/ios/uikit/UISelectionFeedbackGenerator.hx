@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UISelectionFeedbackGenerator{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISelectionFeedbackGenerator;
+	overload public static function alloc():UISelectionFeedbackGenerator;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISelectionFeedbackGenerator;
+	overload public static function autorelease():UISelectionFeedbackGenerator;
 
 	@:native("selectionChanged;")
-	overload extern inline public function selectionChanged;():Void;
+	overload public function selectionChanged;():Void;
 
 
 }

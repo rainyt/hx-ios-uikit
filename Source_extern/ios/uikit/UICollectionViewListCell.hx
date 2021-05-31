@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UICollectionViewListCell{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewListCell;
+	overload public static function alloc():UICollectionViewListCell;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewListCell;
+	overload public static function autorelease():UICollectionViewListCell;
 
 	@:native("defaultContentConfiguration;")
-	overload extern inline public function defaultContentConfiguration;():UIListContentConfiguration *;
+	overload public function defaultContentConfiguration;():UIListContentConfiguration *;
 
 	@:native("indentationLevel")
 	public var indentationLevel:NSInteger;

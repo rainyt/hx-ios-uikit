@@ -8,25 +8,25 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutAnchor{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutAnchor;
+	overload public static function alloc():NSCollectionLayoutAnchor;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutAnchor;
+	overload public static function autorelease():NSCollectionLayoutAnchor;
 
 	@:native("layoutAnchorWithEdges")
-	overload extern inline public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge):NSCollectionLayoutAnchor;
+	overload public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge):NSCollectionLayoutAnchor;
 
 	@:native("layoutAnchorWithEdges:absoluteOffset")
-	overload extern inline public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge, absoluteOffset:CGPoint):NSCollectionLayoutAnchor;
+	overload public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge, absoluteOffset:CGPoint):NSCollectionLayoutAnchor;
 
 	@:native("layoutAnchorWithEdges:fractionalOffset")
-	overload extern inline public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge, fractionalOffset:CGPoint):NSCollectionLayoutAnchor;
+	overload public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge, fractionalOffset:CGPoint):NSCollectionLayoutAnchor;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutAnchor;
+	overload public function init():NSCollectionLayoutAnchor;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutAnchor;
+	overload public static function new():NSCollectionLayoutAnchor;
 
 	@:native("edges")
 	public var edges:NSDirectionalRectEdge;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIMenu{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMenu;
+	overload public static function alloc():UIMenu;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMenu;
+	overload public static function autorelease():UIMenu;
 
 	@:native("identifier")
 	public var identifier:NSString;
@@ -23,25 +23,25 @@ extern class UIMenu{
 	public var children:Dynamic;
 
 	@:native("menuWithChildren:API_AVAILABLE(ios(14.0)")
-	overload extern inline public static function menuWithChildren(children:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIMenu *;
+	overload public static function menuWithChildren(children:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIMenu *;
 
 	@:native("menuWithTitle")
-	overload extern inline public static function menuWithTitle():UIMenu *;
+	overload public static function menuWithTitle():UIMenu *;
 
 	@:native("menuWithTitle")
-	overload extern inline public static function menuWithTitle():UIMenu *;
+	overload public static function menuWithTitle():UIMenu *;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIMenu;
+	overload public function initWithCoder(coder:NSCoder):UIMenu;
 
 	@:native("init")
-	overload extern inline public function init():UIMenu;
+	overload public function init():UIMenu;
 
 	@:native("new")
-	overload extern inline public static function new():UIMenu;
+	overload public static function new():UIMenu;
 
 	@:native("menuByReplacingChildren")
-	overload extern inline public function menuByReplacingChildren(newChildren:Dynamic):UIMenu *;
+	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu *;
 
 
 }

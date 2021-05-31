@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPinchGestureRecognizer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPinchGestureRecognizer;
+	overload public static function alloc():UIPinchGestureRecognizer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPinchGestureRecognizer;
+	overload public static function autorelease():UIPinchGestureRecognizer;
 
 	@:native("screen")
 	public var screen:in;

@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIContextualAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIContextualAction;
+	overload public static function alloc():UIContextualAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIContextualAction;
+	overload public static function autorelease():UIContextualAction;
 
 	@:native("contextualActionWithStyle:title:handler")
-	overload extern inline public static function contextualActionWithStyle(style:UIContextualActionStyle, title:NSString, handler:UIContextualActionHandler):UIContextualAction;
+	overload public static function contextualActionWithStyle(style:UIContextualActionStyle, title:NSString, handler:UIContextualActionHandler):UIContextualAction;
 
 	@:native("style")
 	public var style:UIContextualActionStyle;

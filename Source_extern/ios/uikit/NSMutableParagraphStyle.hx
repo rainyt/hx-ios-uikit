@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class NSMutableParagraphStyle{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSMutableParagraphStyle;
+	overload public static function alloc():NSMutableParagraphStyle;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSMutableParagraphStyle;
+	overload public static function autorelease():NSMutableParagraphStyle;
 
 	@:native("lineSpacing")
 	public var lineSpacing:CGFloat;
@@ -65,13 +65,13 @@ extern class NSMutableParagraphStyle{
 	public var lineBreakStrategy:NSLineBreakStrategy;
 
 	@:native("addTabStop")
-	overload extern inline public function addTabStop(anObject:NSTextTab):Void;
+	overload public function addTabStop(anObject:NSTextTab):Void;
 
 	@:native("removeTabStop")
-	overload extern inline public function removeTabStop(anObject:NSTextTab):Void;
+	overload public function removeTabStop(anObject:NSTextTab):Void;
 
 	@:native("setParagraphStyle")
-	overload extern inline public function setParagraphStyle(obj:NSParagraphStyle):Void;
+	overload public function setParagraphStyle(obj:NSParagraphStyle):Void;
 
 
 }

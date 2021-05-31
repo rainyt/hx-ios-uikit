@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIAccelerometer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIAccelerometer;
+	overload public static function alloc():UIAccelerometer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIAccelerometer;
+	overload public static function autorelease():UIAccelerometer;
 
 	@:native("sharedAccelerometer;")
-	overload extern inline public static function sharedAccelerometer;():UIAccelerometer *;
+	overload public static function sharedAccelerometer;():UIAccelerometer *;
 
 	@:native("minimum")
 	public var minimum:a;

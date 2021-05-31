@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIApplicationShortcutIcon{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIApplicationShortcutIcon;
+	overload public static function alloc():UIApplicationShortcutIcon;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIApplicationShortcutIcon;
+	overload public static function autorelease():UIApplicationShortcutIcon;
 
 	@:native("iconWithType")
-	overload extern inline public static function iconWithType(type:UIApplicationShortcutIconType):UIApplicationShortcutIcon;
+	overload public static function iconWithType(type:UIApplicationShortcutIconType):UIApplicationShortcutIcon;
 
 	@:native("iconWithTemplateImageName")
-	overload extern inline public static function iconWithTemplateImageName(templateImageName:NSString):UIApplicationShortcutIcon;
+	overload public static function iconWithTemplateImageName(templateImageName:NSString):UIApplicationShortcutIcon;
 
 	@:native("iconWithSystemImageName")
-	overload extern inline public static function iconWithSystemImageName(systemImageName:NSString):UIApplicationShortcutIcon;
+	overload public static function iconWithSystemImageName(systemImageName:NSString):UIApplicationShortcutIcon;
 
 
 }

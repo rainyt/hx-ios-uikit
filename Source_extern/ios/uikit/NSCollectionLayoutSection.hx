@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutSection{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutSection;
+	overload public static function alloc():NSCollectionLayoutSection;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutSection;
+	overload public static function autorelease():NSCollectionLayoutSection;
 
 	@:native("sectionWithGroup")
-	overload extern inline public static function sectionWithGroup(group:NSCollectionLayoutGroup):NSCollectionLayoutSection;
+	overload public static function sectionWithGroup(group:NSCollectionLayoutGroup):NSCollectionLayoutSection;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutSection;
+	overload public function init():NSCollectionLayoutSection;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutSection;
+	overload public static function new():NSCollectionLayoutSection;
 
 	@:native("contentInsets")
 	public var contentInsets:NSDirectionalEdgeInsets;

@@ -8,28 +8,28 @@ import cpp.objc.NSData;
 extern class UISpringTimingParameters{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISpringTimingParameters;
+	overload public static function alloc():UISpringTimingParameters;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISpringTimingParameters;
+	overload public static function autorelease():UISpringTimingParameters;
 
 	@:native("initialVelocity")
 	public var initialVelocity:CGVector;
 
 	@:native("init")
-	overload extern inline public function init():UISpringTimingParameters;
+	overload public function init():UISpringTimingParameters;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UISpringTimingParameters;
+	overload public function initWithCoder(coder:NSCoder):UISpringTimingParameters;
 
 	@:native("initWithDampingRatio:initialVelocity")
-	overload extern inline public function initWithDampingRatio(ratio:CGFloat, initialVelocity:CGVector):UISpringTimingParameters;
+	overload public function initWithDampingRatio(ratio:CGFloat, initialVelocity:CGVector):UISpringTimingParameters;
 
 	@:native("initWithMass:stiffness:damping:initialVelocity")
-	overload extern inline public function initWithMass(mass:CGFloat, stiffness:CGFloat, damping:CGFloat, initialVelocity:CGVector):UISpringTimingParameters;
+	overload public function initWithMass(mass:CGFloat, stiffness:CGFloat, damping:CGFloat, initialVelocity:CGVector):UISpringTimingParameters;
 
 	@:native("initWithDampingRatio")
-	overload extern inline public function initWithDampingRatio(ratio:CGFloat):UISpringTimingParameters;
+	overload public function initWithDampingRatio(ratio:CGFloat):UISpringTimingParameters;
 
 
 }

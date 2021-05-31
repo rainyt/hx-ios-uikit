@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIScreenshotService{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIScreenshotService;
+	overload public static function alloc():UIScreenshotService;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIScreenshotService;
+	overload public static function autorelease():UIScreenshotService;
 
 	@:native("init")
-	overload extern inline public function init():UIScreenshotService;
+	overload public function init():UIScreenshotService;
 
 	@:native("new")
-	overload extern inline public static function new():UIScreenshotService;
+	overload public static function new():UIScreenshotService;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

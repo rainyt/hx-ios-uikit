@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIWebView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIWebView;
+	overload public static function alloc():UIWebView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIWebView;
+	overload public static function autorelease():UIWebView;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -20,28 +20,28 @@ extern class UIWebView{
 	public var scrollView:UIScrollView;
 
 	@:native("loadRequest")
-	overload extern inline public function loadRequest(request:NSURLRequest):Void;
+	overload public function loadRequest(request:NSURLRequest):Void;
 
 	@:native("loadHTMLString:baseURL")
-	overload extern inline public function loadHTMLString(string:NSString, baseURL:NSURL):Void;
+	overload public function loadHTMLString(string:NSString, baseURL:NSURL):Void;
 
 	@:native("loadData:MIMEType:textEncodingName:baseURL")
-	overload extern inline public function loadData(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:NSURL):Void;
+	overload public function loadData(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:NSURL):Void;
 
 	@:native("request")
 	public var request:NSURLRequest;
 
 	@:native("reload;")
-	overload extern inline public function reload;():Void;
+	overload public function reload;():Void;
 
 	@:native("stopLoading;")
-	overload extern inline public function stopLoading;():Void;
+	overload public function stopLoading;():Void;
 
 	@:native("goBack;")
-	overload extern inline public function goBack;():Void;
+	overload public function goBack;():Void;
 
 	@:native("goForward;")
-	overload extern inline public function goForward;():Void;
+	overload public function goForward;():Void;
 
 	@:native("canGoBack")
 	public var canGoBack:Bool;
@@ -53,7 +53,7 @@ extern class UIWebView{
 	public var loading:Bool;
 
 	@:native("stringByEvaluatingJavaScriptFromString")
-	overload extern inline public function stringByEvaluatingJavaScriptFromString(script:NSString):nullable NSString *;
+	overload public function stringByEvaluatingJavaScriptFromString(script:NSString):nullable NSString *;
 
 	@:native("scalesPageToFit")
 	public var scalesPageToFit:Bool;

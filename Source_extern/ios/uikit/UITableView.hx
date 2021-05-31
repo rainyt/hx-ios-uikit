@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UITableView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITableView;
+	overload public static function alloc():UITableView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITableView;
+	overload public static function autorelease():UITableView;
 
 	@:native("initWithFrame:style:NS_DESIGNATED_INITIALIZER:must:style:creation.:calls")
-	overload extern inline public function initWithFrame(frame:CGRect, style:UITableViewStyle, NS_DESIGNATED_INITIALIZER://, must:specify, style:at, creation.:-initWithFrame, calls:this):UITableView;
+	overload public function initWithFrame(frame:CGRect, style:UITableViewStyle, NS_DESIGNATED_INITIALIZER://, must:specify, style:at, creation.:-initWithFrame, calls:this):UITableView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UITableView;
+	overload public function initWithCoder(coder:NSCoder):UITableView;
 
 	@:native("style")
 	public var style:UITableViewStyle;
@@ -71,31 +71,31 @@ extern class UITableView{
 	public var numberOfSections:NSInteger;
 
 	@:native("numberOfRowsInSection")
-	overload extern inline public function numberOfRowsInSection(section:NSInteger):NSInteger;
+	overload public function numberOfRowsInSection(section:NSInteger):NSInteger;
 
 	@:native("rectForSection:::::::::::::::::::includes:footer")
-	overload extern inline public function rectForSection(section:NSInteger, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, includes:header,, footer:and):CGRect;
+	overload public function rectForSection(section:NSInteger, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, includes:header,, footer:and):CGRect;
 
 	@:native("rectForHeaderInSection")
-	overload extern inline public function rectForHeaderInSection(section:NSInteger):CGRect;
+	overload public function rectForHeaderInSection(section:NSInteger):CGRect;
 
 	@:native("rectForFooterInSection")
-	overload extern inline public function rectForFooterInSection(section:NSInteger):CGRect;
+	overload public function rectForFooterInSection(section:NSInteger):CGRect;
 
 	@:native("rectForRowAtIndexPath")
-	overload extern inline public function rectForRowAtIndexPath(indexPath:NSIndexPath):CGRect;
+	overload public function rectForRowAtIndexPath(indexPath:NSIndexPath):CGRect;
 
 	@:native("indexPathForRowAtPoint::::::::::::://:nil:point:outside:any:in")
-	overload extern inline public function indexPathForRowAtPoint(point:CGPoint, :, :, :, :, :, :, :, :, :, :, :, :, //:returns, nil:if, point:is, outside:of, any:row, in:the):nullable NSIndexPath *;
+	overload public function indexPathForRowAtPoint(point:CGPoint, :, :, :, :, :, :, :, :, :, :, :, :, //:returns, nil:if, point:is, outside:of, any:row, in:the):nullable NSIndexPath *;
 
 	@:native("indexPathForCell::::::::::::returns:if:is")
-	overload extern inline public function indexPathForCell(cell:UITableViewCell, :, :, :, :, :, :, :, :, :, :, ://, returns:nil, if:cell, is:not):nullable NSIndexPath *;
+	overload public function indexPathForCell(cell:UITableViewCell, :, :, :, :, :, :, :, :, :, :, ://, returns:nil, if:cell, is:not):nullable NSIndexPath *;
 
 	@:native("indexPathsForRowsInRect::::::::::::::::returns:if")
-	overload extern inline public function indexPathsForRowsInRect(rect:CGRect, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, returns:nil, if:rect):nullable NSArray<NSIndexPath *> *;
+	overload public function indexPathsForRowsInRect(rect:CGRect, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, returns:nil, if:rect):nullable NSArray<NSIndexPath *> *;
 
 	@:native("cellForRowAtIndexPath:://:nil:cell:not:or:path:out")
-	overload extern inline public function cellForRowAtIndexPath(indexPath:NSIndexPath, :, //:returns, nil:if, cell:is, not:visible, or:index, path:is, out:of):nullable __kindof UITableViewCell *;
+	overload public function cellForRowAtIndexPath(indexPath:NSIndexPath, :, //:returns, nil:if, cell:is, not:visible, or:index, path:is, out:of):nullable __kindof UITableViewCell *;
 
 	@:native("visibleCells")
 	public var visibleCells:Dynamic;
@@ -104,64 +104,64 @@ extern class UITableView{
 	public var indexPathsForVisibleRows:Dynamic;
 
 	@:native("headerViewForSection")
-	overload extern inline public function headerViewForSection(section:NSInteger):nullable UITableViewHeaderFooterView *;
+	overload public function headerViewForSection(section:NSInteger):nullable UITableViewHeaderFooterView *;
 
 	@:native("footerViewForSection")
-	overload extern inline public function footerViewForSection(section:NSInteger):nullable UITableViewHeaderFooterView *;
+	overload public function footerViewForSection(section:NSInteger):nullable UITableViewHeaderFooterView *;
 
 	@:native("scrollToRowAtIndexPath:atScrollPosition:animated")
-	overload extern inline public function scrollToRowAtIndexPath(indexPath:NSIndexPath, atScrollPosition:UITableViewScrollPosition, animated:Bool):Void;
+	overload public function scrollToRowAtIndexPath(indexPath:NSIndexPath, atScrollPosition:UITableViewScrollPosition, animated:Bool):Void;
 
 	@:native("scrollToNearestSelectedRowAtScrollPosition:animated")
-	overload extern inline public function scrollToNearestSelectedRowAtScrollPosition(scrollPosition:UITableViewScrollPosition, animated:Bool):Void;
+	overload public function scrollToNearestSelectedRowAtScrollPosition(scrollPosition:UITableViewScrollPosition, animated:Bool):Void;
 
 	@:native("performBatchUpdates:completion")
-	overload extern inline public function performBatchUpdates(updates:Dynamic, completion:Dynamic):Void;
+	overload public function performBatchUpdates(updates:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginUpdates;")
-	overload extern inline public function beginUpdates;():Void;
+	overload public function beginUpdates;():Void;
 
 	@:native("endUpdates;")
-	overload extern inline public function endUpdates;():Void;
+	overload public function endUpdates;():Void;
 
 	@:native("insertSections:withRowAnimation")
-	overload extern inline public function insertSections(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function insertSections(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("deleteSections:withRowAnimation")
-	overload extern inline public function deleteSections(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function deleteSections(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("reloadSections:withRowAnimation")
-	overload extern inline public function reloadSections(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function reloadSections(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveSection:toSection")
-	overload extern inline public function moveSection(section:NSInteger, toSection:NSInteger):Void;
+	overload public function moveSection(section:NSInteger, toSection:NSInteger):Void;
 
 	@:native("insertRowsAtIndexPaths:withRowAnimation")
-	overload extern inline public function insertRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function insertRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("deleteRowsAtIndexPaths:withRowAnimation")
-	overload extern inline public function deleteRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function deleteRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("reloadRowsAtIndexPaths:withRowAnimation")
-	overload extern inline public function reloadRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function reloadRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveRowAtIndexPath:toIndexPath")
-	overload extern inline public function moveRowAtIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
+	overload public function moveRowAtIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("hasUncommittedUpdates")
 	public var hasUncommittedUpdates:Bool;
 
 	@:native("reloadData;")
-	overload extern inline public function reloadData;():Void;
+	overload public function reloadData;():Void;
 
 	@:native("reloadSectionIndexTitles")
-	overload extern inline public function reloadSectionIndexTitles():Void;
+	overload public function reloadSectionIndexTitles():Void;
 
 	@:native("not")
 	public var not:is;
 
 	@:native("setEditing:animated")
-	overload extern inline public function setEditing(editing:Bool, animated:Bool):Void;
+	overload public function setEditing(editing:Bool, animated:Bool):Void;
 
 	@:native("allowsSelection")
 	public var allowsSelection:Bool;
@@ -182,10 +182,10 @@ extern class UITableView{
 	public var indexPathsForSelectedRows:Dynamic;
 
 	@:native("selectRowAtIndexPath:animated:scrollPosition")
-	overload extern inline public function selectRowAtIndexPath(indexPath:NSIndexPath, animated:Bool, scrollPosition:UITableViewScrollPosition):Void;
+	overload public function selectRowAtIndexPath(indexPath:NSIndexPath, animated:Bool, scrollPosition:UITableViewScrollPosition):Void;
 
 	@:native("deselectRowAtIndexPath:animated")
-	overload extern inline public function deselectRowAtIndexPath(indexPath:NSIndexPath, animated:Bool):Void;
+	overload public function deselectRowAtIndexPath(indexPath:NSIndexPath, animated:Bool):Void;
 
 	@:native("is")
 	public var is:default;
@@ -221,25 +221,25 @@ extern class UITableView{
 	public var section:with;
 
 	@:native("dequeueReusableCellWithIdentifier::Used:the:to:an:allocated:in:of:a")
-	overload extern inline public function dequeueReusableCellWithIdentifier(identifier:NSString, ://, Used:by, the:delegate, to:acquire, an:already, allocated:cell,, in:lieu, of:allocating, a:new):nullable __kindof UITableViewCell *;
+	overload public function dequeueReusableCellWithIdentifier(identifier:NSString, ://, Used:by, the:delegate, to:acquire, an:already, allocated:cell,, in:lieu, of:allocating, a:new):nullable __kindof UITableViewCell *;
 
 	@:native("dequeueReusableCellWithIdentifier:forIndexPath:API_AVAILABLE(ios(6.0):newer:method:a:is:and:properly,:identifier")
-	overload extern inline public function dequeueReusableCellWithIdentifier(identifier:NSString, forIndexPath:NSIndexPath, API_AVAILABLE(ios(6.0)://, newer:dequeue, method:guarantees, a:cell, is:returned, and:resized, properly,:assuming, identifier:is):__kindof UITableViewCell *;
+	overload public function dequeueReusableCellWithIdentifier(identifier:NSString, forIndexPath:NSIndexPath, API_AVAILABLE(ios(6.0)://, newer:dequeue, method:guarantees, a:cell, is:returned, and:resized, properly,:assuming, identifier:is):__kindof UITableViewCell *;
 
 	@:native("dequeueReusableHeaderFooterViewWithIdentifier:API_AVAILABLE(ios(6.0)://:dequeueReusableCellWithIdentifier")
-	overload extern inline public function dequeueReusableHeaderFooterViewWithIdentifier(identifier:NSString, API_AVAILABLE(ios(6.0):, //:like, dequeueReusableCellWithIdentifier:but):nullable __kindof UITableViewHeaderFooterView *;
+	overload public function dequeueReusableHeaderFooterViewWithIdentifier(identifier:NSString, API_AVAILABLE(ios(6.0):, //:like, dequeueReusableCellWithIdentifier:but):nullable __kindof UITableViewHeaderFooterView *;
 
 	@:native("registerNib:forCellReuseIdentifier")
-	overload extern inline public function registerNib(nib:UINib, forCellReuseIdentifier:NSString):Void;
+	overload public function registerNib(nib:UINib, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forCellReuseIdentifier")
-	overload extern inline public function registerClass(cellClass:Class, forCellReuseIdentifier:NSString):Void;
+	overload public function registerClass(cellClass:Class, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forHeaderFooterViewReuseIdentifier")
-	overload extern inline public function registerNib(nib:UINib, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload public function registerNib(nib:UINib, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forHeaderFooterViewReuseIdentifier")
-	overload extern inline public function registerClass(aClass:Class, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload public function registerClass(aClass:Class, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("remembersLastFocusedIndexPath")
 	public var remembersLastFocusedIndexPath:Bool;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIStoryboardPopoverSegue{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIStoryboardPopoverSegue;
+	overload public static function alloc():UIStoryboardPopoverSegue;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIStoryboardPopoverSegue;
+	overload public static function autorelease():UIStoryboardPopoverSegue;
 
 	@:native("popoverController")
 	public var popoverController:UIPopoverController;

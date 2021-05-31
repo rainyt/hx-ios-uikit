@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIGraphicsImageRendererContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIGraphicsImageRendererContext;
+	overload public static function alloc():UIGraphicsImageRendererContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIGraphicsImageRendererContext;
+	overload public static function autorelease():UIGraphicsImageRendererContext;
 
 	@:native("renderer's")
 	public var renderer's:the;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewDropPlaceholder{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewDropPlaceholder;
+	overload public static function alloc():UICollectionViewDropPlaceholder;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewDropPlaceholder;
+	overload public static function autorelease():UICollectionViewDropPlaceholder;
 
 	@:native("_Nullable")
 	public var _Nullable:;

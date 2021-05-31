@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITabBar{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITabBar;
+	overload public static function alloc():UITabBar;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITabBar;
+	overload public static function autorelease():UITabBar;
 
 	@:native("is")
 	public var is:default;
@@ -23,13 +23,13 @@ extern class UITabBar{
 	public var is:default;
 
 	@:native("setItems:animated:://:fade:or:or:and")
-	overload extern inline public function setItems(items:Dynamic, animated:Bool, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
+	overload public function setItems(items:Dynamic, animated:Bool, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
 
 	@:native("beginCustomizingItems:API_UNAVAILABLE(tvos::list:items:can:reordered.:animates:sheet:visible:not:are")
-	overload extern inline public function beginCustomizingItems(items:Dynamic, API_UNAVAILABLE(tvos:, ://, list:all, items:that, can:be, reordered.:always, animates:a, sheet:up., visible:items, not:listed, are:fixed):Void;
+	overload public function beginCustomizingItems(items:Dynamic, API_UNAVAILABLE(tvos:, ://, list:all, items:that, can:be, reordered.:always, animates:a, sheet:up., visible:items, not:listed, are:fixed):Void;
 
 	@:native("endCustomizingAnimated:API_UNAVAILABLE(tvos:://:customization:normally:should:the:do:check:of:to:new:returns:if")
-	overload extern inline public function endCustomizingAnimated(animated:Bool, API_UNAVAILABLE(tvos:, :, //:hide, customization:sheet., normally:you, should:let, the:user, do:it., check:list, of:items, to:see, new:layout., returns:YES, if:layout):BOOL;
+	overload public function endCustomizingAnimated(animated:Bool, API_UNAVAILABLE(tvos:, :, //:hide, customization:sheet., normally:you, should:let, the:user, do:it., check:list, of:items, to:see, new:layout., returns:YES, if:layout):BOOL;
 
 	@:native("customizing")
 	public var customizing:Bool;

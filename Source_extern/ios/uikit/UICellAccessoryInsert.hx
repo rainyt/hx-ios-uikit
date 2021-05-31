@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICellAccessoryInsert{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessoryInsert;
+	overload public static function alloc():UICellAccessoryInsert;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessoryInsert;
+	overload public static function autorelease():UICellAccessoryInsert;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;

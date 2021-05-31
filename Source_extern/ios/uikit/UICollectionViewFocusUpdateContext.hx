@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICollectionViewFocusUpdateContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewFocusUpdateContext;
+	overload public static function alloc():UICollectionViewFocusUpdateContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewFocusUpdateContext;
+	overload public static function autorelease():UICollectionViewFocusUpdateContext;
 
 	@:native("previouslyFocusedIndexPath")
 	public var previouslyFocusedIndexPath:NSIndexPath;

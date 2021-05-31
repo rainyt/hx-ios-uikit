@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIFontPickerViewController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIFontPickerViewController;
+	overload public static function alloc():UIFontPickerViewController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIFontPickerViewController;
+	overload public static function autorelease():UIFontPickerViewController;
 
 	@:native("initWithConfiguration")
-	overload extern inline public function initWithConfiguration(configuration:UIFontPickerViewControllerConfiguration):UIFontPickerViewController;
+	overload public function initWithConfiguration(configuration:UIFontPickerViewControllerConfiguration):UIFontPickerViewController;
 
 	@:native("configuration")
 	public var configuration:UIFontPickerViewControllerConfiguration;
@@ -26,7 +26,7 @@ extern class UIFontPickerViewController{
 	public var selectedFontDescriptor:UIFontDescriptor;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIFontPickerViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIFontPickerViewController;
 
 
 }

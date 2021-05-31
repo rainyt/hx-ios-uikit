@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class NSAttributedString{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSAttributedString;
+	overload public static function alloc():NSAttributedString;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSAttributedString;
+	overload public static function autorelease():NSAttributedString;
 
 	@:native("attributedStringWithAttachment")
-	overload extern inline public static function attributedStringWithAttachment(attachment:NSTextAttachment):NSAttributedString *;
+	overload public static function attributedStringWithAttachment(attachment:NSTextAttachment):NSAttributedString *;
 
 
 }

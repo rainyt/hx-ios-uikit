@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITextDropProposal{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextDropProposal;
+	overload public static function alloc():UITextDropProposal;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextDropProposal;
+	overload public static function autorelease():UITextDropProposal;
 
 	@:native("dropAction")
 	public var dropAction:UITextDropAction;

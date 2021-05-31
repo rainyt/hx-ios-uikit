@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutEdgeSpacing{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutEdgeSpacing;
+	overload public static function alloc():NSCollectionLayoutEdgeSpacing;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutEdgeSpacing;
+	overload public static function autorelease():NSCollectionLayoutEdgeSpacing;
 
 	@:native("spacingForLeading")
-	overload extern inline public static function spacingForLeading():NSCollectionLayoutEdgeSpacing;
+	overload public static function spacingForLeading():NSCollectionLayoutEdgeSpacing;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutEdgeSpacing;
+	overload public function init():NSCollectionLayoutEdgeSpacing;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutEdgeSpacing;
+	overload public static function new():NSCollectionLayoutEdgeSpacing;
 
 	@:native("leading")
 	public var leading:NSCollectionLayoutSpacing;

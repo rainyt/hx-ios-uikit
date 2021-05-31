@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UITextInputPasswordRules{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextInputPasswordRules;
+	overload public static function alloc():UITextInputPasswordRules;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextInputPasswordRules;
+	overload public static function autorelease():UITextInputPasswordRules;
 
 	@:native("passwordRulesDescriptor")
 	public var passwordRulesDescriptor:NSString;
 
 	@:native("init")
-	overload extern inline public function init():UITextInputPasswordRules;
+	overload public function init():UITextInputPasswordRules;
 
 	@:native("new")
-	overload extern inline public static function new():UITextInputPasswordRules;
+	overload public static function new():UITextInputPasswordRules;
 
 	@:native("passwordRulesWithDescriptor")
-	overload extern inline public static function passwordRulesWithDescriptor(passwordRulesDescriptor:NSString):UITextInputPasswordRules;
+	overload public static function passwordRulesWithDescriptor(passwordRulesDescriptor:NSString):UITextInputPasswordRules;
 
 
 }

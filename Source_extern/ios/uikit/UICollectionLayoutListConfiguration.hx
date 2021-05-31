@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UICollectionLayoutListConfiguration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionLayoutListConfiguration;
+	overload public static function alloc():UICollectionLayoutListConfiguration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionLayoutListConfiguration;
+	overload public static function autorelease():UICollectionLayoutListConfiguration;
 
 	@:native("new")
-	overload extern inline public static function new():UICollectionLayoutListConfiguration;
+	overload public static function new():UICollectionLayoutListConfiguration;
 
 	@:native("init")
-	overload extern inline public function init():UICollectionLayoutListConfiguration;
+	overload public function init():UICollectionLayoutListConfiguration;
 
 	@:native("initWithAppearance")
-	overload extern inline public function initWithAppearance(appearance:UICollectionLayoutListAppearance):UICollectionLayoutListConfiguration;
+	overload public function initWithAppearance(appearance:UICollectionLayoutListAppearance):UICollectionLayoutListConfiguration;
 
 	@:native("appearance")
 	public var appearance:UICollectionLayoutListAppearance;

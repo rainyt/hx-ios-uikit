@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIMenuController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMenuController;
+	overload public static function alloc():UIMenuController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMenuController;
+	overload public static function autorelease():UIMenuController;
 
 	@:native("sharedMenuController")
 	public var sharedMenuController:UIMenuController;
@@ -20,22 +20,22 @@ extern class UIMenuController{
 	public var is:default;
 
 	@:native("setMenuVisible")
-	overload extern inline public function setMenuVisible(menuVisible:Bool):Void;
+	overload public function setMenuVisible(menuVisible:Bool):Void;
 
 	@:native("setMenuVisible:animated")
-	overload extern inline public function setMenuVisible(menuVisible:Bool, animated:Bool):Void;
+	overload public function setMenuVisible(menuVisible:Bool, animated:Bool):Void;
 
 	@:native("setTargetRect:inView")
-	overload extern inline public function setTargetRect(targetRect:CGRect, inView:UIView):Void;
+	overload public function setTargetRect(targetRect:CGRect, inView:UIView):Void;
 
 	@:native("showMenuFromView:rect")
-	overload extern inline public function showMenuFromView(targetView:UIView, rect:CGRect):Void;
+	overload public function showMenuFromView(targetView:UIView, rect:CGRect):Void;
 
 	@:native("hideMenuFromView")
-	overload extern inline public function hideMenuFromView(targetView:UIView):Void;
+	overload public function hideMenuFromView(targetView:UIView):Void;
 
 	@:native("hideMenu")
-	overload extern inline public function hideMenu():Void;
+	overload public function hideMenu():Void;
 
 	@:native("arrowDirection")
 	public var arrowDirection:UIMenuControllerArrowDirection;
@@ -44,7 +44,7 @@ extern class UIMenuController{
 	public var menuItems:Dynamic;
 
 	@:native("update;	")
-	overload extern inline public function update;	():Void;
+	overload public function update;	():Void;
 
 	@:native("menuFrame")
 	public var menuFrame:CGRect;

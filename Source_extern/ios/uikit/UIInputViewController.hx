@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIInputViewController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIInputViewController;
+	overload public static function alloc():UIInputViewController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIInputViewController;
+	overload public static function autorelease():UIInputViewController;
 
 	@:native("inputView")
 	public var inputView:UIInputView;
@@ -32,16 +32,16 @@ extern class UIInputViewController{
 	public var needsInputModeSwitchKey:Bool;
 
 	@:native("dismissKeyboard;")
-	overload extern inline public function dismissKeyboard;():Void;
+	overload public function dismissKeyboard;():Void;
 
 	@:native("advanceToNextInputMode;")
-	overload extern inline public function advanceToNextInputMode;():Void;
+	overload public function advanceToNextInputMode;():Void;
 
 	@:native("handleInputModeListFromView:withEvent")
-	overload extern inline public function handleInputModeListFromView(view:nonnullUIView, withEvent:nonnullUIEvent):Void;
+	overload public function handleInputModeListFromView(view:nonnullUIView, withEvent:nonnullUIEvent):Void;
 
 	@:native("requestSupplementaryLexiconWithCompletion")
-	overload extern inline public function requestSupplementaryLexiconWithCompletion(completionHandler:Dynamic):Void;
+	overload public function requestSupplementaryLexiconWithCompletion(completionHandler:Dynamic):Void;
 
 
 }

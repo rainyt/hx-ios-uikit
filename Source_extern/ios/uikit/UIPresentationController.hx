@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPresentationController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPresentationController;
+	overload public static function alloc():UIPresentationController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPresentationController;
+	overload public static function autorelease():UIPresentationController;
 
 	@:native("presentingViewController")
 	public var presentingViewController:UIViewController;
@@ -29,22 +29,22 @@ extern class UIPresentationController{
 	public var delegate:Dynamic;
 
 	@:native("initWithPresentedViewController:presentingViewController")
-	overload extern inline public function initWithPresentedViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPresentationController;
+	overload public function initWithPresentedViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPresentationController;
 
 	@:native("init")
-	overload extern inline public function init():UIPresentationController;
+	overload public function init():UIPresentationController;
 
 	@:native("adaptivePresentationStyle")
 	public var adaptivePresentationStyle:UIModalPresentationStyle;
 
 	@:native("adaptivePresentationStyleForTraitCollection")
-	overload extern inline public function adaptivePresentationStyleForTraitCollection(traitCollection:UITraitCollection):UIModalPresentationStyle;
+	overload public function adaptivePresentationStyleForTraitCollection(traitCollection:UITraitCollection):UIModalPresentationStyle;
 
 	@:native("containerViewWillLayoutSubviews;")
-	overload extern inline public function containerViewWillLayoutSubviews;():Void;
+	overload public function containerViewWillLayoutSubviews;():Void;
 
 	@:native("containerViewDidLayoutSubviews;")
-	overload extern inline public function containerViewDidLayoutSubviews;():Void;
+	overload public function containerViewDidLayoutSubviews;():Void;
 
 	@:native("presentedView")
 	public var presentedView:UIView;
@@ -59,16 +59,16 @@ extern class UIPresentationController{
 	public var shouldRemovePresentersView:Bool;
 
 	@:native("presentationTransitionWillBegin;")
-	overload extern inline public function presentationTransitionWillBegin;():Void;
+	overload public function presentationTransitionWillBegin;():Void;
 
 	@:native("presentationTransitionDidEnd")
-	overload extern inline public function presentationTransitionDidEnd(completed:Bool):Void;
+	overload public function presentationTransitionDidEnd(completed:Bool):Void;
 
 	@:native("dismissalTransitionWillBegin;")
-	overload extern inline public function dismissalTransitionWillBegin;():Void;
+	overload public function dismissalTransitionWillBegin;():Void;
 
 	@:native("dismissalTransitionDidEnd")
-	overload extern inline public function dismissalTransitionDidEnd(completed:Bool):Void;
+	overload public function dismissalTransitionDidEnd(completed:Bool):Void;
 
 	@:native("overrideTraitCollection")
 	public var overrideTraitCollection:UITraitCollection;

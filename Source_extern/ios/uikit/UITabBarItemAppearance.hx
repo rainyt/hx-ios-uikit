@@ -8,25 +8,25 @@ import cpp.objc.NSData;
 extern class UITabBarItemAppearance{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITabBarItemAppearance;
+	overload public static function alloc():UITabBarItemAppearance;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITabBarItemAppearance;
+	overload public static function autorelease():UITabBarItemAppearance;
 
 	@:native("init;")
-	overload extern inline public function init;():UITabBarItemAppearance;
+	overload public function init;():UITabBarItemAppearance;
 
 	@:native("initWithStyle")
-	overload extern inline public function initWithStyle(style:UITabBarItemAppearanceStyle):UITabBarItemAppearance;
+	overload public function initWithStyle(style:UITabBarItemAppearanceStyle):UITabBarItemAppearance;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UITabBarItemAppearance;
+	overload public function initWithCoder(coder:NSCoder):UITabBarItemAppearance;
 
 	@:native("copy;")
-	overload extern inline public function copy;():UITabBarItemAppearance;
+	overload public function copy;():UITabBarItemAppearance;
 
 	@:native("configureWithDefaultForStyle")
-	overload extern inline public function configureWithDefaultForStyle(style:UITabBarItemAppearanceStyle):Void;
+	overload public function configureWithDefaultForStyle(style:UITabBarItemAppearanceStyle):Void;
 
 	@:native("normal")
 	public var normal:UITabBarItemStateAppearance;

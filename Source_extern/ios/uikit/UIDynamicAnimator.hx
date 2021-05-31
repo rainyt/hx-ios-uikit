@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UIDynamicAnimator{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDynamicAnimator;
+	overload public static function alloc():UIDynamicAnimator;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDynamicAnimator;
+	overload public static function autorelease():UIDynamicAnimator;
 
 	@:native("initWithCollectionViewLayout")
-	overload extern inline public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UIDynamicAnimator;
+	overload public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UIDynamicAnimator;
 
 	@:native("layoutAttributesForCellAtIndexPath")
-	overload extern inline public function layoutAttributesForCellAtIndexPath(indexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForCellAtIndexPath(indexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload extern inline public function layoutAttributesForSupplementaryViewOfKind(kind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForSupplementaryViewOfKind(kind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload extern inline public function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
 
 
 }

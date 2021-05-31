@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIWindowSceneDestructionRequestOptions{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIWindowSceneDestructionRequestOptions;
+	overload public static function alloc():UIWindowSceneDestructionRequestOptions;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIWindowSceneDestructionRequestOptions;
+	overload public static function autorelease():UIWindowSceneDestructionRequestOptions;
 
 	@:native("windowDismissalAnimation")
 	public var windowDismissalAnimation:UIWindowSceneDismissalAnimation;

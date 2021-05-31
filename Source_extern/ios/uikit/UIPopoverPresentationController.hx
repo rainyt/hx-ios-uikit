@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPopoverPresentationController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPopoverPresentationController;
+	overload public static function alloc():UIPopoverPresentationController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPopoverPresentationController;
+	overload public static function autorelease():UIPopoverPresentationController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

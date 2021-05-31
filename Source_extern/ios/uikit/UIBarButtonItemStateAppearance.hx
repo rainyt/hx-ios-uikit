@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIBarButtonItemStateAppearance{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIBarButtonItemStateAppearance;
+	overload public static function alloc():UIBarButtonItemStateAppearance;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIBarButtonItemStateAppearance;
+	overload public static function autorelease():UIBarButtonItemStateAppearance;
 
 	@:native("init")
-	overload extern inline public function init():UIBarButtonItemStateAppearance;
+	overload public function init():UIBarButtonItemStateAppearance;
 
 	@:native("new")
-	overload extern inline public static function new():UIBarButtonItemStateAppearance;
+	overload public static function new():UIBarButtonItemStateAppearance;
 
 	@:native("titleTextAttributes")
 	public var titleTextAttributes:Dynamic;

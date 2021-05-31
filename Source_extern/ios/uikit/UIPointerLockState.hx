@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIPointerLockState{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPointerLockState;
+	overload public static function alloc():UIPointerLockState;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPointerLockState;
+	overload public static function autorelease():UIPointerLockState;
 
 	@:native("init")
-	overload extern inline public function init():UIPointerLockState;
+	overload public function init():UIPointerLockState;
 
 	@:native("new")
-	overload extern inline public static function new():UIPointerLockState;
+	overload public static function new():UIPointerLockState;
 
 	@:native("locked")
 	public var locked:Bool;

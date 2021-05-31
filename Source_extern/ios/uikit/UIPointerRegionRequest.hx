@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPointerRegionRequest{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPointerRegionRequest;
+	overload public static function alloc():UIPointerRegionRequest;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPointerRegionRequest;
+	overload public static function autorelease():UIPointerRegionRequest;
 
 	@:native("location")
 	public var location:CGPoint;

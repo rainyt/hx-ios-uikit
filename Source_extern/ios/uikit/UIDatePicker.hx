@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIDatePicker{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDatePicker;
+	overload public static function alloc():UIDatePicker;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDatePicker;
+	overload public static function autorelease():UIDatePicker;
 
 	@:native("is")
 	public var is:default;
@@ -41,7 +41,7 @@ extern class UIDatePicker{
 	public var is:max;
 
 	@:native("setDate:animated://:animated:YES,:the:of:to:the")
-	overload extern inline public function setDate(date:NSDate, animated:Bool, //:if, animated:is, YES,:animate, the:wheels, of:time, to:display, the:new):Void;
+	overload public function setDate(date:NSDate, animated:Bool, //:if, animated:is, YES,:animate, the:wheels, of:time, to:display, the:new):Void;
 
 	@:native("preferredDatePickerStyle")
 	public var preferredDatePickerStyle:UIDatePickerStyle;

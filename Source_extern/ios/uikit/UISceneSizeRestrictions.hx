@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UISceneSizeRestrictions{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISceneSizeRestrictions;
+	overload public static function alloc():UISceneSizeRestrictions;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISceneSizeRestrictions;
+	overload public static function autorelease():UISceneSizeRestrictions;
 
 	@:native("init")
-	overload extern inline public function init():UISceneSizeRestrictions;
+	overload public function init():UISceneSizeRestrictions;
 
 	@:native("new")
-	overload extern inline public static function new():UISceneSizeRestrictions;
+	overload public static function new():UISceneSizeRestrictions;
 
 	@:native("minimumSize")
 	public var minimumSize:CGSize;

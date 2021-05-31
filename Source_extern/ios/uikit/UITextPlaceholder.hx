@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITextPlaceholder{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextPlaceholder;
+	overload public static function alloc():UITextPlaceholder;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextPlaceholder;
+	overload public static function autorelease():UITextPlaceholder;
 
 	@:native("rects")
 	public var rects:Dynamic;

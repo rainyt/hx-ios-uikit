@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIListContentTextProperties{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIListContentTextProperties;
+	overload public static function alloc():UIListContentTextProperties;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIListContentTextProperties;
+	overload public static function autorelease():UIListContentTextProperties;
 
 	@:native("font")
 	public var font:UIFont;
@@ -23,7 +23,7 @@ extern class UIListContentTextProperties{
 	public var colorTransformer:UIConfigurationColorTransformer;
 
 	@:native("resolvedColor;")
-	overload extern inline public function resolvedColor;():UIColor *;
+	overload public function resolvedColor;():UIColor *;
 
 	@:native("alignment")
 	public var alignment:UIListContentTextAlignment;

@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICellAccessory{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessory;
+	overload public static function alloc():UICellAccessory;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessory;
+	overload public static function autorelease():UICellAccessory;
 
 	@:native("displayedState")
 	public var displayedState:UICellAccessoryDisplayedState;
@@ -26,10 +26,10 @@ extern class UICellAccessory{
 	public var tintColor:UIColor;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UICellAccessory;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessory;
 
 	@:native("init")
-	overload extern inline public function init():UICellAccessory;
+	overload public function init():UICellAccessory;
 
 
 }

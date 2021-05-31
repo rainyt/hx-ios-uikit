@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIActivityItemsConfiguration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIActivityItemsConfiguration;
+	overload public static function alloc():UIActivityItemsConfiguration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIActivityItemsConfiguration;
+	overload public static function autorelease():UIActivityItemsConfiguration;
 
 	@:native("app")
 	public var app:the;
@@ -32,22 +32,22 @@ extern class UIActivityItemsConfiguration{
 	public var NSArray<UIActivity >:nonatomic,strong,nullable;
 
 	@:native("activityItemsConfigurationWithObjects://:data")
-	overload extern inline public static function activityItemsConfigurationWithObjects(objects:Dynamic, //:Provide, data:up):UIActivityItemsConfiguration;
+	overload public static function activityItemsConfigurationWithObjects(objects:Dynamic, //:Provide, data:up):UIActivityItemsConfiguration;
 
 	@:native("activityItemsConfigurationWithItemProviders://")
-	overload extern inline public static function activityItemsConfigurationWithItemProviders(itemProviders:Dynamic, //:Provide):UIActivityItemsConfiguration;
+	overload public static function activityItemsConfigurationWithItemProviders(itemProviders:Dynamic, //:Provide):UIActivityItemsConfiguration;
 
 	@:native("initWithObjects:NS_DESIGNATED_INITIALIZER:Provide")
-	overload extern inline public function initWithObjects(objects:Dynamic, NS_DESIGNATED_INITIALIZER://, Provide:data):UIActivityItemsConfiguration;
+	overload public function initWithObjects(objects:Dynamic, NS_DESIGNATED_INITIALIZER://, Provide:data):UIActivityItemsConfiguration;
 
 	@:native("initWithItemProviders:NS_DESIGNATED_INITIALIZER:Provide")
-	overload extern inline public function initWithItemProviders(itemProviders:Dynamic, NS_DESIGNATED_INITIALIZER://, Provide:promised):UIActivityItemsConfiguration;
+	overload public function initWithItemProviders(itemProviders:Dynamic, NS_DESIGNATED_INITIALIZER://, Provide:promised):UIActivityItemsConfiguration;
 
 	@:native("init")
-	overload extern inline public function init():UIActivityItemsConfiguration;
+	overload public function init():UIActivityItemsConfiguration;
 
 	@:native("new")
-	overload extern inline public static function new():UIActivityItemsConfiguration;
+	overload public static function new():UIActivityItemsConfiguration;
 
 
 }

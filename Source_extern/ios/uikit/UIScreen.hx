@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIScreen{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIScreen;
+	overload public static function alloc():UIScreen;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIScreen;
+	overload public static function autorelease():UIScreen;
 
 	@:native("snapshotViewAfterScreenUpdates")
-	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView *;
+	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView *;
 
 
 }

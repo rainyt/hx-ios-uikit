@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIDocumentBrowserAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDocumentBrowserAction;
+	overload public static function alloc():UIDocumentBrowserAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDocumentBrowserAction;
+	overload public static function autorelease():UIDocumentBrowserAction;
 
 	@:native("init")
-	overload extern inline public function init():UIDocumentBrowserAction;
+	overload public function init():UIDocumentBrowserAction;
 
 	@:native("initWithIdentifier:localizedTitle:availability:handler")
-	overload extern inline public function initWithIdentifier(identifier:NSString, localizedTitle:NSString, availability:UIDocumentBrowserActionAvailability, handler:Dynamic):UIDocumentBrowserAction;
+	overload public function initWithIdentifier(identifier:NSString, localizedTitle:NSString, availability:UIDocumentBrowserActionAvailability, handler:Dynamic):UIDocumentBrowserAction;
 
 	@:native("identifier")
 	public var identifier:NSString;

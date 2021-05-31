@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UINavigationBarAppearance{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UINavigationBarAppearance;
+	overload public static function alloc():UINavigationBarAppearance;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UINavigationBarAppearance;
+	overload public static function autorelease():UINavigationBarAppearance;
 
 	@:native("titleTextAttributes")
 	public var titleTextAttributes:Dynamic;
@@ -38,7 +38,7 @@ extern class UINavigationBarAppearance{
 	public var backIndicatorTransitionMaskImage:UIImage;
 
 	@:native("setBackIndicatorImage:transitionMaskImage")
-	overload extern inline public function setBackIndicatorImage(backIndicatorImage:UIImage, transitionMaskImage:UIImage):Void;
+	overload public function setBackIndicatorImage(backIndicatorImage:UIImage, transitionMaskImage:UIImage):Void;
 
 
 }

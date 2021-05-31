@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UISearchDisplayController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISearchDisplayController;
+	overload public static function alloc():UISearchDisplayController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISearchDisplayController;
+	overload public static function autorelease():UISearchDisplayController;
 
 	@:native("initWithSearchBar:contentsController")
-	overload extern inline public function initWithSearchBar(searchBar:UISearchBar, contentsController:UIViewController):UISearchDisplayController;
+	overload public function initWithSearchBar(searchBar:UISearchBar, contentsController:UIViewController):UISearchDisplayController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -23,7 +23,7 @@ extern class UISearchDisplayController{
 	public var is:animated;
 
 	@:native("setActive:animated:::://:the:controller")
-	overload extern inline public function setActive(visible:Bool, animated:Bool, :, :, :, //:animate, the:view, controller:for):Void;
+	overload public function setActive(visible:Bool, animated:Bool, :, :, :, //:animate, the:view, controller:for):Void;
 
 	@:native("searchBar")
 	public var searchBar:;

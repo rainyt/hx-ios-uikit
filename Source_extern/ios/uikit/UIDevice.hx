@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIDevice{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDevice;
+	overload public static function alloc():UIDevice;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDevice;
+	overload public static function autorelease():UIDevice;
 
 	@:native("currentDevice")
 	public var currentDevice:UIDevice;
@@ -41,10 +41,10 @@ extern class UIDevice{
 	public var generatesDeviceOrientationNotifications:Bool;
 
 	@:native("beginGeneratingDeviceOrientationNotifications")
-	overload extern inline public function beginGeneratingDeviceOrientationNotifications():Void;
+	overload public function beginGeneratingDeviceOrientationNotifications():Void;
 
 	@:native("endGeneratingDeviceOrientationNotifications")
-	overload extern inline public function endGeneratingDeviceOrientationNotifications():Void;
+	overload public function endGeneratingDeviceOrientationNotifications():Void;
 
 	@:native("batteryMonitoringEnabled")
 	public var batteryMonitoringEnabled:Bool;
@@ -68,7 +68,7 @@ extern class UIDevice{
 	public var userInterfaceIdiom:UIUserInterfaceIdiom;
 
 	@:native("playInputClick")
-	overload extern inline public function playInputClick():Void;
+	overload public function playInputClick():Void;
 
 
 }

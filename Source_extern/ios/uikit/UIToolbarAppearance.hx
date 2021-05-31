@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIToolbarAppearance{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIToolbarAppearance;
+	overload public static function alloc():UIToolbarAppearance;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIToolbarAppearance;
+	overload public static function autorelease():UIToolbarAppearance;
 
 	@:native("buttonAppearance")
 	public var buttonAppearance:UIBarButtonItemAppearance;

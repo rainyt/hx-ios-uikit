@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UICloudSharingController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICloudSharingController;
+	overload public static function alloc():UICloudSharingController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICloudSharingController;
+	overload public static function autorelease():UICloudSharingController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UICloudSharingController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UICloudSharingController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UICloudSharingController;
+	overload public function initWithCoder(coder:NSCoder):UICloudSharingController;
 
 	@:native("initWithPreparationHandler")
-	overload extern inline public function initWithPreparationHandler(preparationHandler:Dynamic):UICloudSharingController;
+	overload public function initWithPreparationHandler(preparationHandler:Dynamic):UICloudSharingController;
 
 	@:native("initWithShare:container")
-	overload extern inline public function initWithShare(share:CKShare, container:CKContainer):UICloudSharingController;
+	overload public function initWithShare(share:CKShare, container:CKContainer):UICloudSharingController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -35,7 +35,7 @@ extern class UICloudSharingController{
 	public var availablePermissions:UICloudSharingPermissionOptions;
 
 	@:native("activityItemSource;")
-	overload extern inline public function activityItemSource;():id <UIActivityItemSource>;
+	overload public function activityItemSource;():id <UIActivityItemSource>;
 
 
 }

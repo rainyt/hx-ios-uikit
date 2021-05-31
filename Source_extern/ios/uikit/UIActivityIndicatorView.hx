@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIActivityIndicatorView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIActivityIndicatorView;
+	overload public static function alloc():UIActivityIndicatorView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIActivityIndicatorView;
+	overload public static function autorelease():UIActivityIndicatorView;
 
 	@:native("initWithActivityIndicatorStyle:NS_DESIGNATED_INITIALIZER:sizes:view:to")
-	overload extern inline public function initWithActivityIndicatorStyle(style:UIActivityIndicatorViewStyle, NS_DESIGNATED_INITIALIZER://, sizes:the, view:according, to:the):UIActivityIndicatorView;
+	overload public function initWithActivityIndicatorStyle(style:UIActivityIndicatorViewStyle, NS_DESIGNATED_INITIALIZER://, sizes:the, view:according, to:the):UIActivityIndicatorView;
 
 	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UIActivityIndicatorView;
+	overload public function initWithFrame(frame:CGRect):UIActivityIndicatorView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIActivityIndicatorView;
+	overload public function initWithCoder(coder:NSCoder):UIActivityIndicatorView;
 
 	@:native("is")
 	public var is:default;
@@ -32,10 +32,10 @@ extern class UIActivityIndicatorView{
 	public var color:UIColor;
 
 	@:native("startAnimating;")
-	overload extern inline public function startAnimating;():Void;
+	overload public function startAnimating;():Void;
 
 	@:native("stopAnimating;")
-	overload extern inline public function stopAnimating;():Void;
+	overload public function stopAnimating;():Void;
 
 	@:native("animating")
 	public var animating:Bool;

@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UISplitViewController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISplitViewController;
+	overload public static function alloc():UISplitViewController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISplitViewController;
+	overload public static function autorelease():UISplitViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UISplitViewController;
+	overload public function initWithCoder(coder:NSCoder):UISplitViewController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UISplitViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UISplitViewController;
 
 	@:native("initWithStyle:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initWithStyle(style:UISplitViewControllerStyle, NS_DESIGNATED_INITIALIZER:Dynamic):UISplitViewController;
+	overload public function initWithStyle(style:UISplitViewControllerStyle, NS_DESIGNATED_INITIALIZER:Dynamic):UISplitViewController;
 
 	@:native("style")
 	public var style:UISplitViewControllerStyle;
@@ -38,19 +38,19 @@ extern class UISplitViewController{
 	public var splitBehavior:UISplitViewControllerSplitBehavior;
 
 	@:native("setViewController:forColumn:API_AVAILABLE(ios(14.0):If:vc:not:UINavigationController,:will:created,")
-	overload extern inline public function setViewController(vc:UIViewController, forColumn:UISplitViewControllerColumn, API_AVAILABLE(ios(14.0)://, If:the, vc:is, not:a, UINavigationController,:one, will:be, created,:except):Void;
+	overload public function setViewController(vc:UIViewController, forColumn:UISplitViewControllerColumn, API_AVAILABLE(ios(14.0)://, If:the, vc:is, not:a, UINavigationController,:one, will:be, created,:except):Void;
 
 	@:native("viewControllerForColumn")
-	overload extern inline public function viewControllerForColumn(column:UISplitViewControllerColumn):nullable __kindof UIViewController *;
+	overload public function viewControllerForColumn(column:UISplitViewControllerColumn):nullable __kindof UIViewController *;
 
 	@:native("-hideColumn:do:accept")
-	overload extern inline public function -hideColumn(-showColumn:and, do:not, accept:the):-hideColumn: and -showColumn: do not accept the Compact colum;
+	overload public function -hideColumn(-showColumn:and, do:not, accept:the):-hideColumn: and -showColumn: do not accept the Compact colum;
 
 	@:native("hideColumn")
-	overload extern inline public function hideColumn(column:UISplitViewControllerColumn):Void;
+	overload public function hideColumn(column:UISplitViewControllerColumn):Void;
 
 	@:native("showColumn")
-	overload extern inline public function showColumn(column:UISplitViewControllerColumn):Void;
+	overload public function showColumn(column:UISplitViewControllerColumn):Void;
 
 	@:native("column-style")
 	public var column-style:for;
@@ -104,10 +104,10 @@ extern class UISplitViewController{
 	public var primaryEdge:UISplitViewControllerPrimaryEdge;
 
 	@:native("showViewController:sender")
-	overload extern inline public function showViewController(vc:UIViewController, sender:id):Void;
+	overload public function showViewController(vc:UIViewController, sender:id):Void;
 
 	@:native("showDetailViewController:sender")
-	overload extern inline public function showDetailViewController(vc:UIViewController, sender:id):Void;
+	overload public function showDetailViewController(vc:UIViewController, sender:id):Void;
 
 	@:native("primaryBackgroundStyle")
 	public var primaryBackgroundStyle:UISplitViewControllerBackgroundStyle;

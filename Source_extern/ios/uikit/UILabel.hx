@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UILabel{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UILabel;
+	overload public static function alloc():UILabel;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UILabel;
+	overload public static function autorelease():UILabel;
 
 	@:native("is")
 	public var is:default;
@@ -68,10 +68,10 @@ extern class UILabel{
 	public var lineBreakStrategy:NSLineBreakStrategy;
 
 	@:native("textRectForBounds:limitedToNumberOfLines")
-	overload extern inline public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:NSInteger):CGRect;
+	overload public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:NSInteger):CGRect;
 
 	@:native("drawTextInRect")
-	overload extern inline public function drawTextInRect(rect:CGRect):Void;
+	overload public function drawTextInRect(rect:CGRect):Void;
 
 	@:native("preferredMaxLayoutWidth")
 	public var preferredMaxLayoutWidth:CGFloat;

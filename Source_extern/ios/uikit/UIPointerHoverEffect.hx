@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPointerHoverEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPointerHoverEffect;
+	overload public static function alloc():UIPointerHoverEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPointerHoverEffect;
+	overload public static function autorelease():UIPointerHoverEffect;
 
 	@:native("to")
 	public var to:Defaults;

@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIPrinter{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPrinter;
+	overload public static function alloc():UIPrinter;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPrinter;
+	overload public static function autorelease():UIPrinter;
 
 	@:native("printerWithURL")
-	overload extern inline public static function printerWithURL(url:NSURL):UIPrinter *;
+	overload public static function printerWithURL(url:NSURL):UIPrinter *;
 
 	@:native("URL")
 	public var URL:NSURL;
@@ -38,7 +38,7 @@ extern class UIPrinter{
 	public var supportsDuplex:Bool;
 
 	@:native("contactPrinter")
-	overload extern inline public function contactPrinter(completionHandler:Dynamic):Void;
+	overload public function contactPrinter(completionHandler:Dynamic):Void;
 
 
 }

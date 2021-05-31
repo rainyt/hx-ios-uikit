@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIPreviewActionGroup{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPreviewActionGroup;
+	overload public static function alloc():UIPreviewActionGroup;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPreviewActionGroup;
+	overload public static function autorelease():UIPreviewActionGroup;
 
 	@:native("actionGroupWithTitle:style:actions")
-	overload extern inline public static function actionGroupWithTitle(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
+	overload public static function actionGroupWithTitle(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
 
 
 }

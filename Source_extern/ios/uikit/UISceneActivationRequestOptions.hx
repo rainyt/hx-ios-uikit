@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UISceneActivationRequestOptions{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UISceneActivationRequestOptions;
+	overload public static function alloc():UISceneActivationRequestOptions;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UISceneActivationRequestOptions;
+	overload public static function autorelease():UISceneActivationRequestOptions;
 
 	@:native("requestingScene")
 	public var requestingScene:UIScene;

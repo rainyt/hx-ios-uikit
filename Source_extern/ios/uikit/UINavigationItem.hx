@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UINavigationItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UINavigationItem;
+	overload public static function alloc():UINavigationItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UINavigationItem;
+	overload public static function autorelease():UINavigationItem;
 
 	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(title:NSString):UINavigationItem;
+	overload public function initWithTitle(title:NSString):UINavigationItem;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UINavigationItem;
+	overload public function initWithCoder(coder:NSCoder):UINavigationItem;
 
 	@:native("title")
 	public var title:NSString;
@@ -38,7 +38,7 @@ extern class UINavigationItem{
 	public var hidesBackButton:Bool;
 
 	@:native("setHidesBackButton:animated")
-	overload extern inline public function setHidesBackButton(hidesBackButton:Bool, animated:Bool):Void;
+	overload public function setHidesBackButton(hidesBackButton:Bool, animated:Bool):Void;
 
 	@:native("backButtonDisplayMode")
 	public var backButtonDisplayMode:UINavigationItemBackButtonDisplayMode;
@@ -50,10 +50,10 @@ extern class UINavigationItem{
 	public var rightBarButtonItems:Dynamic;
 
 	@:native("setLeftBarButtonItems:animated")
-	overload extern inline public function setLeftBarButtonItems(items:Dynamic, animated:Bool):Void;
+	overload public function setLeftBarButtonItems(items:Dynamic, animated:Bool):Void;
 
 	@:native("setRightBarButtonItems:animated")
-	overload extern inline public function setRightBarButtonItems(items:Dynamic, animated:Bool):Void;
+	overload public function setRightBarButtonItems(items:Dynamic, animated:Bool):Void;
 
 	@:native("leftItemsSupplementBackButton")
 	public var leftItemsSupplementBackButton:Bool;
@@ -65,10 +65,10 @@ extern class UINavigationItem{
 	public var rightBarButtonItem:UIBarButtonItem;
 
 	@:native("setLeftBarButtonItem:animated")
-	overload extern inline public function setLeftBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function setLeftBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
 
 	@:native("setRightBarButtonItem:animated")
-	overload extern inline public function setRightBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function setRightBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
 
 	@:native("largeTitleDisplayMode")
 	public var largeTitleDisplayMode:UINavigationItemLargeTitleDisplayMode;

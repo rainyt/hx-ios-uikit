@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIPreviewParameters{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPreviewParameters;
+	overload public static function alloc():UIPreviewParameters;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPreviewParameters;
+	overload public static function autorelease():UIPreviewParameters;
 
 	@:native("init")
-	overload extern inline public function init():UIPreviewParameters;
+	overload public function init():UIPreviewParameters;
 
 	@:native("initWithTextLineRects")
-	overload extern inline public function initWithTextLineRects(textLineRects:Dynamic):UIPreviewParameters;
+	overload public function initWithTextLineRects(textLineRects:Dynamic):UIPreviewParameters;
 
 	@:native("visiblePath")
 	public var visiblePath:UIBezierPath;

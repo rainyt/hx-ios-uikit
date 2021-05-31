@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class UIApplication{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIApplication;
+	overload public static function alloc():UIApplication;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIApplication;
+	overload public static function autorelease():UIApplication;
 
 	@:native("extendStateRestoration")
-	overload extern inline public function extendStateRestoration():Void;
+	overload public function extendStateRestoration():Void;
 
 	@:native("completeStateRestoration")
-	overload extern inline public function completeStateRestoration():Void;
+	overload public function completeStateRestoration():Void;
 
 	@:native("ignoreSnapshotOnNextApplicationLaunch")
-	overload extern inline public function ignoreSnapshotOnNextApplicationLaunch():Void;
+	overload public function ignoreSnapshotOnNextApplicationLaunch():Void;
 
 	@:native("registerObjectForStateRestoration:restorationIdentifier")
-	overload extern inline public static function registerObjectForStateRestoration(object:Dynamic, restorationIdentifier:NSString):Void;
+	overload public static function registerObjectForStateRestoration(object:Dynamic, restorationIdentifier:NSString):Void;
 
 
 }

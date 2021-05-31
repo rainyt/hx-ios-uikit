@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIOpenURLContext{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIOpenURLContext;
+	overload public static function alloc():UIOpenURLContext;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIOpenURLContext;
+	overload public static function autorelease():UIOpenURLContext;
 
 	@:native("new")
-	overload extern inline public static function new():UIOpenURLContext;
+	overload public static function new():UIOpenURLContext;
 
 	@:native("init")
-	overload extern inline public function init():UIOpenURLContext;
+	overload public function init():UIOpenURLContext;
 
 	@:native("URL")
 	public var URL:NSURL;

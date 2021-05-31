@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIKey{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIKey;
+	overload public static function alloc():UIKey;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIKey;
+	overload public static function autorelease():UIKey;
 
 	@:native("characters")
 	public var characters:NSString;

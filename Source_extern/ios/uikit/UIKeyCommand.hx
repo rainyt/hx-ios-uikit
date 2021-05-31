@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIKeyCommand{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIKeyCommand;
+	overload public static function alloc():UIKeyCommand;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIKeyCommand;
+	overload public static function autorelease():UIKeyCommand;
 
 	@:native("init")
-	overload extern inline public function init():UIKeyCommand;
+	overload public function init():UIKeyCommand;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIKeyCommand;
+	overload public function initWithCoder(coder:NSCoder):UIKeyCommand;
 
 	@:native("title")
 	public var title:NSString;
@@ -50,22 +50,22 @@ extern class UIKeyCommand{
 	public var alternates:Dynamic;
 
 	@:native("commandWithTitle")
-	overload extern inline public static function commandWithTitle():UIKeyCommand;
+	overload public static function commandWithTitle():UIKeyCommand;
 
 	@:native("commandWithTitle")
-	overload extern inline public static function commandWithTitle():UIKeyCommand;
+	overload public static function commandWithTitle():UIKeyCommand;
 
 	@:native("keyCommandWithInput:modifierFlags:action")
-	overload extern inline public static function keyCommandWithInput(input:NSString, modifierFlags:UIKeyModifierFlags, action:SEL):UIKeyCommand;
+	overload public static function keyCommandWithInput(input:NSString, modifierFlags:UIKeyModifierFlags, action:SEL):UIKeyCommand;
 
 	@:native("keyCommandWithInput:modifierFlags:action:discoverabilityTitle")
-	overload extern inline public static function keyCommandWithInput(input:NSString, modifierFlags:UIKeyModifierFlags, action:SEL, discoverabilityTitle:NSString):UIKeyCommand;
+	overload public static function keyCommandWithInput(input:NSString, modifierFlags:UIKeyModifierFlags, action:SEL, discoverabilityTitle:NSString):UIKeyCommand;
 
 	@:native("commandWithTitle")
-	overload extern inline public static function commandWithTitle():UIKeyCommand;
+	overload public static function commandWithTitle():UIKeyCommand;
 
 	@:native("commandWithTitle")
-	overload extern inline public static function commandWithTitle():UIKeyCommand;
+	overload public static function commandWithTitle():UIKeyCommand;
 
 
 }

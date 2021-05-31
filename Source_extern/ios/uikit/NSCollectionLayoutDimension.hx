@@ -8,28 +8,28 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutDimension{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutDimension;
+	overload public static function alloc():NSCollectionLayoutDimension;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutDimension;
+	overload public static function autorelease():NSCollectionLayoutDimension;
 
 	@:native("fractionalWidthDimension")
-	overload extern inline public static function fractionalWidthDimension(fractionalWidth:CGFloat):NSCollectionLayoutDimension;
+	overload public static function fractionalWidthDimension(fractionalWidth:CGFloat):NSCollectionLayoutDimension;
 
 	@:native("fractionalHeightDimension")
-	overload extern inline public static function fractionalHeightDimension(fractionalHeight:CGFloat):NSCollectionLayoutDimension;
+	overload public static function fractionalHeightDimension(fractionalHeight:CGFloat):NSCollectionLayoutDimension;
 
 	@:native("absoluteDimension")
-	overload extern inline public static function absoluteDimension(absoluteDimension:CGFloat):NSCollectionLayoutDimension;
+	overload public static function absoluteDimension(absoluteDimension:CGFloat):NSCollectionLayoutDimension;
 
 	@:native("estimatedDimension")
-	overload extern inline public static function estimatedDimension(estimatedDimension:CGFloat):NSCollectionLayoutDimension;
+	overload public static function estimatedDimension(estimatedDimension:CGFloat):NSCollectionLayoutDimension;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutDimension;
+	overload public function init():NSCollectionLayoutDimension;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutDimension;
+	overload public static function new():NSCollectionLayoutDimension;
 
 	@:native("isFractionalWidth")
 	public var isFractionalWidth:Bool;

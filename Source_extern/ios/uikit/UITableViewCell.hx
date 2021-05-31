@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UITableViewCell{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITableViewCell;
+	overload public static function alloc():UITableViewCell;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITableViewCell;
+	overload public static function autorelease():UITableViewCell;
 
 	@:native("initWithFrame:reuseIdentifier:API_DEPRECATED("", ios(2.0, 3.0)")
-	overload extern inline public function initWithFrame(frame:CGRect, reuseIdentifier:NSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):id;
+	overload public function initWithFrame(frame:CGRect, reuseIdentifier:NSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):id;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:Dynamic;

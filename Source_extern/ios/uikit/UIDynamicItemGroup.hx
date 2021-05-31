@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIDynamicItemGroup{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDynamicItemGroup;
+	overload public static function alloc():UIDynamicItemGroup;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDynamicItemGroup;
+	overload public static function autorelease():UIDynamicItemGroup;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(items:Dynamic):UIDynamicItemGroup;
+	overload public function initWithItems(items:Dynamic):UIDynamicItemGroup;
 
 	@:native("items")
 	public var items:Dynamic;

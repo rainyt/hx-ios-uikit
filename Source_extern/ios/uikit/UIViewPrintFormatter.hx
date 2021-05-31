@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIViewPrintFormatter{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIViewPrintFormatter;
+	overload public static function alloc():UIViewPrintFormatter;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIViewPrintFormatter;
+	overload public static function autorelease():UIViewPrintFormatter;
 
 	@:native("view")
 	public var view:UIView;

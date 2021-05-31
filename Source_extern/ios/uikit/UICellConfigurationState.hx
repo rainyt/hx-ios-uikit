@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICellConfigurationState{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellConfigurationState;
+	overload public static function alloc():UICellConfigurationState;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellConfigurationState;
+	overload public static function autorelease():UICellConfigurationState;
 
 	@:native("editing")
 	public var editing:Bool;

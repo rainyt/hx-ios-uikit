@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIProgressView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIProgressView;
+	overload public static function alloc():UIProgressView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIProgressView;
+	overload public static function autorelease():UIProgressView;
 
 	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UIProgressView;
+	overload public function initWithFrame(frame:CGRect):UIProgressView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIProgressView;
+	overload public function initWithCoder(coder:NSCoder):UIProgressView;
 
 	@:native("initWithProgressViewStyle://:the:height:to")
-	overload extern inline public function initWithProgressViewStyle(style:UIProgressViewStyle, //:sets, the:view, height:according, to:the):UIProgressView;
+	overload public function initWithProgressViewStyle(style:UIProgressViewStyle, //:sets, the:view, height:according, to:the):UIProgressView;
 
 	@:native("is")
 	public var is:default;
@@ -41,7 +41,7 @@ extern class UIProgressView{
 	public var :;
 
 	@:native("setProgress:animated")
-	overload extern inline public function setProgress(progress:float, animated:Bool):Void;
+	overload public function setProgress(progress:float, animated:Bool):Void;
 
 	@:native("observedProgress")
 	public var observedProgress:NSProgress;

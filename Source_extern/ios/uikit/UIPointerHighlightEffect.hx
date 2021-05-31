@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIPointerHighlightEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPointerHighlightEffect;
+	overload public static function alloc():UIPointerHighlightEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPointerHighlightEffect;
+	overload public static function autorelease():UIPointerHighlightEffect;
 
 
 }

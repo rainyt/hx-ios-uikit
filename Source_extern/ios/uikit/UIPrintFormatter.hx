@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIPrintFormatter{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPrintFormatter;
+	overload public static function alloc():UIPrintFormatter;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPrintFormatter;
+	overload public static function autorelease():UIPrintFormatter;
 
 	@:native("printPageRenderer")
 	public var printPageRenderer:UIPrintPageRenderer;
 
 	@:native("removeFromPrintPageRenderer")
-	overload extern inline public function removeFromPrintPageRenderer():Void;
+	overload public function removeFromPrintPageRenderer():Void;
 
 	@:native("maximumContentHeight")
 	public var maximumContentHeight:;
@@ -38,10 +38,10 @@ extern class UIPrintFormatter{
 	public var pageCount:NSInteger;
 
 	@:native("rectForPageAtIndex:API_UNAVAILABLE(tvos:::::::::::returns:rect:index")
-	overload extern inline public function rectForPageAtIndex(pageIndex:NSInteger, API_UNAVAILABLE(tvos:, :, :, :, :, :, :, :, :, :, ://, returns:empty, rect:if, index:out):CGRect;
+	overload public function rectForPageAtIndex(pageIndex:NSInteger, API_UNAVAILABLE(tvos:, :, :, :, :, :, :, :, :, :, ://, returns:empty, rect:if, index:out):CGRect;
 
 	@:native("drawInRect:forPageAtIndex:API_UNAVAILABLE(tvos::override:to")
-	overload extern inline public function drawInRect(rect:CGRect, forPageAtIndex:NSInteger, API_UNAVAILABLE(tvos:, ://, override:point, to:add):Void;
+	overload public function drawInRect(rect:CGRect, forPageAtIndex:NSInteger, API_UNAVAILABLE(tvos:, ://, override:point, to:add):Void;
 
 
 }

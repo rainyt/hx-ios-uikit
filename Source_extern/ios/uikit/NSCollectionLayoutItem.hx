@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutItem;
+	overload public static function alloc():NSCollectionLayoutItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutItem;
+	overload public static function autorelease():NSCollectionLayoutItem;
 
 	@:native("itemWithLayoutSize")
-	overload extern inline public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutItem;
+	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutItem;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload extern inline public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutItem;
+	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutItem;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutItem;
+	overload public function init():NSCollectionLayoutItem;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutItem;
+	overload public static function new():NSCollectionLayoutItem;
 
 	@:native("contentInsets")
 	public var contentInsets:NSDirectionalEdgeInsets;

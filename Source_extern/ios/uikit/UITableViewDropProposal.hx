@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UITableViewDropProposal{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITableViewDropProposal;
+	overload public static function alloc():UITableViewDropProposal;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITableViewDropProposal;
+	overload public static function autorelease():UITableViewDropProposal;
 
 	@:native("initWithDropOperation:intent")
-	overload extern inline public function initWithDropOperation(operation:UIDropOperation, intent:UITableViewDropIntent):UITableViewDropProposal;
+	overload public function initWithDropOperation(operation:UIDropOperation, intent:UITableViewDropIntent):UITableViewDropProposal;
 
 	@:native("intent")
 	public var intent:UITableViewDropIntent;

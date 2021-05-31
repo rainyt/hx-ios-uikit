@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIMenuSystem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMenuSystem;
+	overload public static function alloc():UIMenuSystem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMenuSystem;
+	overload public static function autorelease():UIMenuSystem;
 
 	@:native("mainSystem")
 	public var mainSystem:UIMenuSystem;
@@ -20,16 +20,16 @@ extern class UIMenuSystem{
 	public var contextSystem:UIMenuSystem;
 
 	@:native("new")
-	overload extern inline public static function new():UIMenuSystem;
+	overload public static function new():UIMenuSystem;
 
 	@:native("init")
-	overload extern inline public function init():UIMenuSystem;
+	overload public function init():UIMenuSystem;
 
 	@:native("setNeedsRebuild;")
-	overload extern inline public function setNeedsRebuild;():Void;
+	overload public function setNeedsRebuild;():Void;
 
 	@:native("setNeedsRevalidate;")
-	overload extern inline public function setNeedsRevalidate;():Void;
+	overload public function setNeedsRevalidate;():Void;
 
 
 }

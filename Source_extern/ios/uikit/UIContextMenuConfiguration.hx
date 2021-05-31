@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIContextMenuConfiguration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIContextMenuConfiguration;
+	overload public static function alloc():UIContextMenuConfiguration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIContextMenuConfiguration;
+	overload public static function autorelease():UIContextMenuConfiguration;
 
 	@:native("identifier")
 	public var identifier:Dynamic;
 
 	@:native("configurationWithIdentifier")
-	overload extern inline public static function configurationWithIdentifier():UIContextMenuConfiguration;
+	overload public static function configurationWithIdentifier():UIContextMenuConfiguration;
 
 
 }

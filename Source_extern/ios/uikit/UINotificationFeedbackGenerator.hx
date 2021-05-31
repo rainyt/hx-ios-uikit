@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UINotificationFeedbackGenerator{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UINotificationFeedbackGenerator;
+	overload public static function alloc():UINotificationFeedbackGenerator;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UINotificationFeedbackGenerator;
+	overload public static function autorelease():UINotificationFeedbackGenerator;
 
 	@:native("notificationOccurred")
-	overload extern inline public function notificationOccurred(notificationType:UINotificationFeedbackType):Void;
+	overload public function notificationOccurred(notificationType:UINotificationFeedbackType):Void;
 
 
 }

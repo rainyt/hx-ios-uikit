@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIDragInteraction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDragInteraction;
+	overload public static function alloc():UIDragInteraction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDragInteraction;
+	overload public static function autorelease():UIDragInteraction;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:Dynamic):UIDragInteraction;
+	overload public function initWithDelegate(delegate:Dynamic):UIDragInteraction;
 
 	@:native("init")
-	overload extern inline public function init():UIDragInteraction;
+	overload public function init():UIDragInteraction;
 
 	@:native("new")
-	overload extern inline public static function new():UIDragInteraction;
+	overload public static function new():UIDragInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

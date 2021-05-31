@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIDropProposal{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDropProposal;
+	overload public static function alloc():UIDropProposal;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDropProposal;
+	overload public static function autorelease():UIDropProposal;
 
 	@:native("initWithDropOperation")
-	overload extern inline public function initWithDropOperation(operation:UIDropOperation):UIDropProposal;
+	overload public function initWithDropOperation(operation:UIDropOperation):UIDropProposal;
 
 	@:native("init")
-	overload extern inline public function init():UIDropProposal;
+	overload public function init():UIDropProposal;
 
 	@:native("new")
-	overload extern inline public static function new():UIDropProposal;
+	overload public static function new():UIDropProposal;
 
 	@:native("operation")
 	public var operation:UIDropOperation;

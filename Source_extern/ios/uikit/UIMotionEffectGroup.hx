@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIMotionEffectGroup{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMotionEffectGroup;
+	overload public static function alloc():UIMotionEffectGroup;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMotionEffectGroup;
+	overload public static function autorelease():UIMotionEffectGroup;
 
 	@:native("motionEffects")
 	public var motionEffects:Dynamic;

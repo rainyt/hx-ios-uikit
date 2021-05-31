@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIDocumentInteractionController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIDocumentInteractionController;
+	overload public static function alloc():UIDocumentInteractionController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIDocumentInteractionController;
+	overload public static function autorelease():UIDocumentInteractionController;
 
 	@:native("interactionControllerWithURL://:file:determine:assumes")
-	overload extern inline public static function interactionControllerWithURL(url:NSURL, //:use, file:to, determine:UTI., assumes:file):UIDocumentInteractionController *;
+	overload public static function interactionControllerWithURL(url:NSURL, //:use, file:to, determine:UTI., assumes:file):UIDocumentInteractionController *;
 
 	@:native("is")
 	public var is:default;
@@ -35,25 +35,25 @@ extern class UIDocumentInteractionController{
 	public var plist:a;
 
 	@:native("presentOptionsMenuFromRect:inView:animated")
-	overload extern inline public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;
+	overload public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;
 
 	@:native("presentOptionsMenuFromBarButtonItem:animated")
-	overload extern inline public function presentOptionsMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):BOOL;
+	overload public function presentOptionsMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):BOOL;
 
 	@:native("presentPreviewAnimated")
-	overload extern inline public function presentPreviewAnimated(animated:Bool):BOOL;
+	overload public function presentPreviewAnimated(animated:Bool):BOOL;
 
 	@:native("presentOpenInMenuFromRect:inView:animated")
-	overload extern inline public function presentOpenInMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;
+	overload public function presentOpenInMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;
 
 	@:native("presentOpenInMenuFromBarButtonItem:animated")
-	overload extern inline public function presentOpenInMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):BOOL;
+	overload public function presentOpenInMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):BOOL;
 
 	@:native("dismissPreviewAnimated")
-	overload extern inline public function dismissPreviewAnimated(animated:Bool):Void;
+	overload public function dismissPreviewAnimated(animated:Bool):Void;
 
 	@:native("dismissMenuAnimated")
-	overload extern inline public function dismissMenuAnimated(animated:Bool):Void;
+	overload public function dismissMenuAnimated(animated:Bool):Void;
 
 	@:native("gestureRecognizers")
 	public var gestureRecognizers:Dynamic;

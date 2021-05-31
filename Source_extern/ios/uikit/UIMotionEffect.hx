@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class UIMotionEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIMotionEffect;
+	overload public static function alloc():UIMotionEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIMotionEffect;
+	overload public static function autorelease():UIMotionEffect;
 
 	@:native("init")
-	overload extern inline public function init():UIMotionEffect;
+	overload public function init():UIMotionEffect;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIMotionEffect;
+	overload public function initWithCoder(coder:NSCoder):UIMotionEffect;
 
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
-	overload extern inline public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:UIOffset):nullable NSDictionary<NSString *, id> *;
+	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:UIOffset):nullable NSDictionary<NSString *, id> *;
 
 
 }

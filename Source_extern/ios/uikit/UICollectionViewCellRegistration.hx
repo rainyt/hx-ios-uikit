@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UICollectionViewCellRegistration{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICollectionViewCellRegistration;
+	overload public static function alloc():UICollectionViewCellRegistration;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICollectionViewCellRegistration;
+	overload public static function autorelease():UICollectionViewCellRegistration;
 
 	@:native("registrationWithCellClass:configurationHandler")
-	overload extern inline public static function registrationWithCellClass(cellClass:Class, configurationHandler:UICollectionViewCellRegistrationConfigurationHandler):UICollectionViewCellRegistration;
+	overload public static function registrationWithCellClass(cellClass:Class, configurationHandler:UICollectionViewCellRegistrationConfigurationHandler):UICollectionViewCellRegistration;
 
 	@:native("registrationWithCellNib:configurationHandler")
-	overload extern inline public static function registrationWithCellNib(cellNib:UINib, configurationHandler:UICollectionViewCellRegistrationConfigurationHandler):UICollectionViewCellRegistration;
+	overload public static function registrationWithCellNib(cellNib:UINib, configurationHandler:UICollectionViewCellRegistrationConfigurationHandler):UICollectionViewCellRegistration;
 
 	@:native("cellClass")
 	public var cellClass:Class;

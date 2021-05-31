@@ -8,22 +8,22 @@ import cpp.objc.NSData;
 extern class NSCollectionLayoutGroupCustomItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSCollectionLayoutGroupCustomItem;
+	overload public static function alloc():NSCollectionLayoutGroupCustomItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSCollectionLayoutGroupCustomItem;
+	overload public static function autorelease():NSCollectionLayoutGroupCustomItem;
 
 	@:native("customItemWithFrame")
-	overload extern inline public static function customItemWithFrame(frame:CGRect):NSCollectionLayoutGroupCustomItem;
+	overload public static function customItemWithFrame(frame:CGRect):NSCollectionLayoutGroupCustomItem;
 
 	@:native("customItemWithFrame:zIndex")
-	overload extern inline public static function customItemWithFrame(frame:CGRect, zIndex:NSInteger):NSCollectionLayoutGroupCustomItem;
+	overload public static function customItemWithFrame(frame:CGRect, zIndex:NSInteger):NSCollectionLayoutGroupCustomItem;
 
 	@:native("init")
-	overload extern inline public function init():NSCollectionLayoutGroupCustomItem;
+	overload public function init():NSCollectionLayoutGroupCustomItem;
 
 	@:native("new")
-	overload extern inline public static function new():NSCollectionLayoutGroupCustomItem;
+	overload public static function new():NSCollectionLayoutGroupCustomItem;
 
 	@:native("frame")
 	public var frame:CGRect;

@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UITabBarItemStateAppearance{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITabBarItemStateAppearance;
+	overload public static function alloc():UITabBarItemStateAppearance;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITabBarItemStateAppearance;
+	overload public static function autorelease():UITabBarItemStateAppearance;
 
 	@:native("init")
-	overload extern inline public function init():UITabBarItemStateAppearance;
+	overload public function init():UITabBarItemStateAppearance;
 
 	@:native("new")
-	overload extern inline public static function new():UITabBarItemStateAppearance;
+	overload public static function new():UITabBarItemStateAppearance;
 
 	@:native("titleTextAttributes")
 	public var titleTextAttributes:Dynamic;

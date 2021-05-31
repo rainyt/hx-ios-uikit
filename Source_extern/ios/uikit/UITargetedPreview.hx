@@ -8,25 +8,25 @@ import cpp.objc.NSData;
 extern class UITargetedPreview{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITargetedPreview;
+	overload public static function alloc():UITargetedPreview;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITargetedPreview;
+	overload public static function autorelease():UITargetedPreview;
 
 	@:native("initWithView:parameters:target")
-	overload extern inline public function initWithView(view:UIView, parameters:__kindofUIPreviewParameters, target:__kindofUIPreviewTarget):UITargetedPreview;
+	overload public function initWithView(view:UIView, parameters:__kindofUIPreviewParameters, target:__kindofUIPreviewTarget):UITargetedPreview;
 
 	@:native("initWithView:parameters")
-	overload extern inline public function initWithView(view:UIView, parameters:__kindofUIPreviewParameters):UITargetedPreview;
+	overload public function initWithView(view:UIView, parameters:__kindofUIPreviewParameters):UITargetedPreview;
 
 	@:native("initWithView")
-	overload extern inline public function initWithView(view:UIView):UITargetedPreview;
+	overload public function initWithView(view:UIView):UITargetedPreview;
 
 	@:native("init")
-	overload extern inline public function init():UITargetedPreview;
+	overload public function init():UITargetedPreview;
 
 	@:native("new")
-	overload extern inline public static function new():UITargetedPreview;
+	overload public static function new():UITargetedPreview;
 
 	@:native("target")
 	public var target:UIPreviewTarget;
@@ -41,7 +41,7 @@ extern class UITargetedPreview{
 	public var size:CGSize;
 
 	@:native("retargetedPreviewWithTarget")
-	overload extern inline public function retargetedPreviewWithTarget(newTarget:__kindofUIPreviewTarget):__kindof UITargetedPreview *;
+	overload public function retargetedPreviewWithTarget(newTarget:__kindofUIPreviewTarget):__kindof UITargetedPreview *;
 
 
 }

@@ -8,28 +8,28 @@ import cpp.objc.NSData;
 extern class UIPreviewInteraction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPreviewInteraction;
+	overload public static function alloc():UIPreviewInteraction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPreviewInteraction;
+	overload public static function autorelease():UIPreviewInteraction;
 
 	@:native("initWithView")
-	overload extern inline public function initWithView(view:UIView):UIPreviewInteraction;
+	overload public function initWithView(view:UIView):UIPreviewInteraction;
 
 	@:native("view")
 	public var view:UIView;
 
 	@:native("init")
-	overload extern inline public function init():UIPreviewInteraction;
+	overload public function init():UIPreviewInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("locationInCoordinateSpace://:the:location:the:that")
-	overload extern inline public function locationInCoordinateSpace(coordinateSpace:Dynamic, //:returns, the:current, location:of, the:touch, that:started):CGPoint;
+	overload public function locationInCoordinateSpace(coordinateSpace:Dynamic, //:returns, the:current, location:of, the:touch, that:started):CGPoint;
 
 	@:native("cancelInteraction;")
-	overload extern inline public function cancelInteraction;():Void;
+	overload public function cancelInteraction;():Void;
 
 
 }

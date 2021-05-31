@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UITextInputAssistantItem{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UITextInputAssistantItem;
+	overload public static function alloc():UITextInputAssistantItem;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextInputAssistantItem;
+	overload public static function autorelease():UITextInputAssistantItem;
 
 	@:native("allowsHidingShortcuts")
 	public var allowsHidingShortcuts:Bool;

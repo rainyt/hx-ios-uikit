@@ -8,34 +8,34 @@ import cpp.objc.NSData;
 extern class UIAccessibilityCustomAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIAccessibilityCustomAction;
+	overload public static function alloc():UIAccessibilityCustomAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIAccessibilityCustomAction;
+	overload public static function autorelease():UIAccessibilityCustomAction;
 
 	@:native("initWithName:target:selector")
-	overload extern inline public function initWithName(name:NSString, target:id, selector:SEL):UIAccessibilityCustomAction;
+	overload public function initWithName(name:NSString, target:id, selector:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName:target:selector")
-	overload extern inline public function initWithAttributedName(attributedName:NSAttributedString, target:id, selector:SEL):UIAccessibilityCustomAction;
+	overload public function initWithAttributedName(attributedName:NSAttributedString, target:id, selector:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithName:image:target:selector")
-	overload extern inline public function initWithName(name:NSString, image:UIImage, target:id, selector:SEL):UIAccessibilityCustomAction;
+	overload public function initWithName(name:NSString, image:UIImage, target:id, selector:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName:image:target:selector")
-	overload extern inline public function initWithAttributedName(attributedName:NSAttributedString, image:UIImage, target:id, selector:SEL):UIAccessibilityCustomAction;
+	overload public function initWithAttributedName(attributedName:NSAttributedString, image:UIImage, target:id, selector:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithName:actionHandler")
-	overload extern inline public function initWithName(name:NSString, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
+	overload public function initWithName(name:NSString, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName:actionHandler")
-	overload extern inline public function initWithAttributedName(attributedName:NSAttributedString, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
+	overload public function initWithAttributedName(attributedName:NSAttributedString, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
 
 	@:native("initWithName:image:actionHandler")
-	overload extern inline public function initWithName(name:NSString, image:UIImage, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
+	overload public function initWithName(name:NSString, image:UIImage, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName:image:actionHandler")
-	overload extern inline public function initWithAttributedName(attributedName:NSAttributedString, image:UIImage, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
+	overload public function initWithAttributedName(attributedName:NSAttributedString, image:UIImage, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
 
 	@:native("name")
 	public var name:NSString;

@@ -8,13 +8,13 @@ import cpp.objc.NSData;
 extern class UIActivityViewController{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIActivityViewController;
+	overload public static function alloc():UIActivityViewController;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIActivityViewController;
+	overload public static function autorelease():UIActivityViewController;
 
 	@:native("initWithActivityItemsConfiguration:API_AVAILABLE(ios(14.0)")
-	overload extern inline public function initWithActivityItemsConfiguration(activityItemsConfiguration:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIActivityViewController;
+	overload public function initWithActivityItemsConfiguration(activityItemsConfiguration:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIActivityViewController;
 
 
 }

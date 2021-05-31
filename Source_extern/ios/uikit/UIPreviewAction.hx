@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIPreviewAction{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIPreviewAction;
+	overload public static function alloc():UIPreviewAction;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIPreviewAction;
+	overload public static function autorelease():UIPreviewAction;
 
 	@:native("void")
 	public var void:nonatomic,copy,readonly;
 
 	@:native("actionWithTitle:style:handler")
-	overload extern inline public static function actionWithTitle(title:NSString, style:UIPreviewActionStyle, handler:Dynamic):UIPreviewAction;
+	overload public static function actionWithTitle(title:NSString, style:UIPreviewActionStyle, handler:Dynamic):UIPreviewAction;
 
 
 }

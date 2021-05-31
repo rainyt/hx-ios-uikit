@@ -8,19 +8,19 @@ import cpp.objc.NSData;
 extern class NSTextAttachment{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():NSTextAttachment;
+	overload public static function alloc():NSTextAttachment;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():NSTextAttachment;
+	overload public static function autorelease():NSTextAttachment;
 
 	@:native("imageForBounds:textContainer:characterIndex:")
-	overload extern inline public function imageForBounds(imageBounds:CGRect, textContainer:NSTextContainer, characterIndex:NSUInteger, :Dynamic):nullable UIImage *;
+	overload public function imageForBounds(imageBounds:CGRect, textContainer:NSTextContainer, characterIndex:NSUInteger, :Dynamic):nullable UIImage *;
 
 	@:native("attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex")
-	overload extern inline public function attachmentBoundsForTextContainer(textContainer:NSTextContainer, proposedLineFragment:CGRect, glyphPosition:CGPoint, characterIndex:NSUInteger):CGRect;
+	overload public function attachmentBoundsForTextContainer(textContainer:NSTextContainer, proposedLineFragment:CGRect, glyphPosition:CGPoint, characterIndex:NSUInteger):CGRect;
 
 	@:native("initWithData:ofType:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initWithData(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
+	overload public function initWithData(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
 
 	@:native("contents")
 	public var contents:NSData;

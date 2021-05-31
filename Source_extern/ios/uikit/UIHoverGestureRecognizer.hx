@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIHoverGestureRecognizer{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIHoverGestureRecognizer;
+	overload public static function alloc():UIHoverGestureRecognizer;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIHoverGestureRecognizer;
+	overload public static function autorelease():UIHoverGestureRecognizer;
 
 
 }

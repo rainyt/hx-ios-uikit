@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIScrollView{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIScrollView;
+	overload public static function alloc():UIScrollView;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIScrollView;
+	overload public static function autorelease():UIScrollView;
 
 	@:native("default")
 	public var default://;
@@ -26,7 +26,7 @@ extern class UIScrollView{
 	public var adjustedContentInset:UIEdgeInsets;
 
 	@:native("adjustedContentInsetDidChange")
-	overload extern inline public function adjustedContentInsetDidChange():Void;
+	overload public function adjustedContentInsetDidChange():Void;
 
 	@:native("contentInsetAdjustmentBehavior")
 	public var contentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentBehavior;
@@ -80,7 +80,7 @@ extern class UIScrollView{
 	public var getter:this;
 
 	@:native("scrollIndicatorInsets")
-	overload extern inline public function scrollIndicatorInsets():UIEdgeInsets;
+	overload public function scrollIndicatorInsets():UIEdgeInsets;
 
 	@:native("decelerationRate")
 	public var decelerationRate:CGFloat;
@@ -89,13 +89,13 @@ extern class UIScrollView{
 	public var indexDisplayMode:UIScrollViewIndexDisplayMode;
 
 	@:native("setContentOffset:animated::animate:constant:to")
-	overload extern inline public function setContentOffset(contentOffset:CGPoint, animated:Bool, ://, animate:at, constant:velocity, to:new):Void;
+	overload public function setContentOffset(contentOffset:CGPoint, animated:Bool, ://, animate:at, constant:velocity, to:new):Void;
 
 	@:native("scrollRectToVisible:animated::::://:so:is:visible:nothing:rect")
-	overload extern inline public function scrollRectToVisible(rect:CGRect, animated:Bool, :, :, :, :, //:scroll, so:rect, is:just, visible:Dynamic, nothing:if, rect:completely):Void;
+	overload public function scrollRectToVisible(rect:CGRect, animated:Bool, :, :, :, :, //:scroll, so:rect, is:just, visible:Dynamic, nothing:if, rect:completely):Void;
 
 	@:native("flashScrollIndicators;")
-	overload extern inline public function flashScrollIndicators;():Void;
+	overload public function flashScrollIndicators;():Void;
 
 	@:native("started")
 	public var started:have;
@@ -113,10 +113,10 @@ extern class UIScrollView{
 	public var on:effect;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload extern inline public function touchesShouldBegin(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):BOOL;
+	overload public function touchesShouldBegin(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):BOOL;
 
 	@:native("touchesShouldCancelInContentView")
-	overload extern inline public function touchesShouldCancelInContentView(view:UIView):BOOL;
+	overload public function touchesShouldCancelInContentView(view:UIView):BOOL;
 
 	@:native("is")
 	public var is:default;
@@ -128,10 +128,10 @@ extern class UIScrollView{
 	public var zoomScale:CGFloat;
 
 	@:native("setZoomScale:animated")
-	overload extern inline public function setZoomScale(scale:CGFloat, animated:Bool):Void;
+	overload public function setZoomScale(scale:CGFloat, animated:Bool):Void;
 
 	@:native("zoomToRect:animated")
-	overload extern inline public function zoomToRect(rect:CGRect, animated:Bool):Void;
+	overload public function zoomToRect(rect:CGRect, animated:Bool):Void;
 
 	@:native("gesture")
 	public var gesture:at;

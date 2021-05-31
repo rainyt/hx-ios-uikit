@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UIVisualEffect{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIVisualEffect;
+	overload public static function alloc():UIVisualEffect;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIVisualEffect;
+	overload public static function autorelease():UIVisualEffect;
 
 
 }

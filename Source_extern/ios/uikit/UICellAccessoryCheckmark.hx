@@ -8,10 +8,10 @@ import cpp.objc.NSData;
 extern class UICellAccessoryCheckmark{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UICellAccessoryCheckmark;
+	overload public static function alloc():UICellAccessoryCheckmark;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UICellAccessoryCheckmark;
+	overload public static function autorelease():UICellAccessoryCheckmark;
 
 
 }

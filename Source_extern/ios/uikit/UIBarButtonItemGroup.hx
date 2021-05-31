@@ -8,16 +8,16 @@ import cpp.objc.NSData;
 extern class UIBarButtonItemGroup{
 
 	@:native("alloc")
-	overload extern inline public static function alloc():UIBarButtonItemGroup;
+	overload public static function alloc():UIBarButtonItemGroup;
 
 	@:native("autorelease")
-	overload extern inline public static function autorelease():UIBarButtonItemGroup;
+	overload public static function autorelease():UIBarButtonItemGroup;
 
 	@:native("initWithBarButtonItems:representativeItem")
-	overload extern inline public function initWithBarButtonItems(barButtonItems:Dynamic, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
+	overload public function initWithBarButtonItems(barButtonItems:Dynamic, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIBarButtonItemGroup;
+	overload public function initWithCoder(coder:NSCoder):UIBarButtonItemGroup;
 
 	@:native("barButtonItems")
 	public var barButtonItems:Dynamic;
