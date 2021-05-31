@@ -884,19 +884,23 @@ class ObjcType:
             tmp = True
         if tmp:
             return "Dynamic"
-        t = StringTools.replace(t,"nullable ","")
-        t = StringTools.replace(t,"__kindof ","")
-        if (t in typedefs.h):
-            _hx_def = typedefs.h.get(t,None)
-            if (not _hx_def.createHaxeFile):
-                return _hx_def.parentClassName
+        t = StringTools.replace(t,"nullable","")
+        t = StringTools.replace(t,"__kindof","")
         t = StringTools.replace(t,"*","")
         t = StringTools.replace(t," ","")
         if (t == "CGFloat"):
             return "Float"
+        if (t == "NSUInteger"):
+            return "Int"
+        if (t in typedefs.h):
+            _hx_def = typedefs.h.get(t,None)
+            if (not _hx_def.createHaxeFile):
+                return _hx_def.parentClassName
         i = ObjcImport.toImport(t)
         if (i is None):
             return "Dynamic"
+        if (t == "__kindof"):
+            raise haxe_Exception.thrown("???")
         return t
 
 

@@ -30,7 +30,7 @@ extern class UISearchTextField{
 	public var textualRange:Dynamic;
 
 	@:native("replaceTextualPortionOfRange:withToken:atIndex")
-	overload public function replaceTextualPortionOfRange_withToken_atIndex(textRange:Dynamic, withToken:Dynamic, atIndex:Dynamic):Void;
+	overload public function replaceTextualPortionOfRange_withToken_atIndex(textRange:Dynamic, withToken:Dynamic, atIndex:Int):Void;
 
 	@:native("tokenBackgroundColor")
 	public var tokenBackgroundColor:Dynamic;

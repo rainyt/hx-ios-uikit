@@ -65,10 +65,10 @@ extern class UIGestureRecognizer{
 	overload public function locationInView(view:Dynamic):CGPoint;
 
 	@:native("numberOfTouches")
-	public var numberOfTouches:Dynamic;
+	public var numberOfTouches:Int;
 
 	@:native("locationOfTouch:inView")
-	overload public function locationOfTouch_inView(touchIndex:Dynamic, inView:Dynamic):CGPoint;
+	overload public function locationOfTouch_inView(touchIndex:Int, inView:Dynamic):CGPoint;
 
 	@:native("name")
 	public var name:NSString;

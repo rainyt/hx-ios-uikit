@@ -20,7 +20,7 @@ extern class UITouch{
 	public var phase:Dynamic;
 
 	@:native("tapCount")
-	public var tapCount:Dynamic;
+	public var tapCount:Int;
 
 	@:native("type")
 	public var type:Dynamic;

@@ -21,7 +21,7 @@ extern class UITabBarController{
 	public var selectedViewController:Dynamic;
 
 	@:native("selectedIndex")
-	public var selectedIndex:Dynamic;
+	public var selectedIndex:Int;
 
 	@:native("moreNavigationController")
 	public var moreNavigationController:Dynamic;

@@ -13,10 +13,10 @@ extern class UIPanGestureRecognizer{
 	overload public static function autorelease():UIPanGestureRecognizer;
 
 	@:native("minimumNumberOfTouches")
-	public var minimumNumberOfTouches:Dynamic;
+	public var minimumNumberOfTouches:Int;
 
 	@:native("maximumNumberOfTouches")
-	public var maximumNumberOfTouches:Dynamic;
+	public var maximumNumberOfTouches:Int;
 
 	@:native("translationInView")
 	overload public function translationInView(view:Dynamic):CGPoint;

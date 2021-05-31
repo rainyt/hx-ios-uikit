@@ -92,7 +92,7 @@ extern class UIWebView{
 	public var gapBetweenPages:Float;
 
 	@:native("pageCount")
-	public var pageCount:Dynamic;
+	public var pageCount:Int;
 
 	@:native("allowsPictureInPictureMediaPlayback")
 	public var allowsPictureInPictureMediaPlayback:Bool;

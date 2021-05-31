@@ -16,16 +16,16 @@ extern class UIStoryboard{
 	overload public static function storyboardWithName_bundle(name:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("instantiateInitialViewController")
-	overload public function instantiateInitialViewController():Dynamic;
+	overload public function instantiateInitialViewController():__kindof;
 
 	@:native("instantiateInitialViewControllerWithCreator")
-	overload public function instantiateInitialViewControllerWithCreator(block:Dynamic):Dynamic;
+	overload public function instantiateInitialViewControllerWithCreator(block:Dynamic):__kindof;
 
 	@:native("instantiateViewControllerWithIdentifier")
-	overload public function instantiateViewControllerWithIdentifier(identifier:NSString):Dynamic;
+	overload public function instantiateViewControllerWithIdentifier(identifier:NSString):__kindof;
 
 	@:native("instantiateViewControllerWithIdentifier:creator")
-	overload public function instantiateViewControllerWithIdentifier_creator(identifier:NSString, creator:Dynamic):Dynamic;
+	overload public function instantiateViewControllerWithIdentifier_creator(identifier:NSString, creator:Dynamic):__kindof;
 
 
 }

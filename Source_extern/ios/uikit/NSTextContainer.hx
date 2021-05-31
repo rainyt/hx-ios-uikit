@@ -38,10 +38,10 @@ extern class NSTextContainer{
 	public var lineFragmentPadding:Float;
 
 	@:native("maximumNumberOfLines")
-	public var maximumNumberOfLines:Dynamic;
+	public var maximumNumberOfLines:Int;
 
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
-	overload public function lineFragmentRectForProposedRect_atIndex_writingDirection_remainingRect(proposedRect:CGRect, atIndex:Dynamic, writingDirection:Dynamic, remainingRect:CGRect):CGRect;
+	overload public function lineFragmentRectForProposedRect_atIndex_writingDirection_remainingRect(proposedRect:CGRect, atIndex:Int, writingDirection:Dynamic, remainingRect:CGRect):CGRect;
 
 	@:native("simpleRectangularTextContainer")
 	public var simpleRectangularTextContainer:Bool;

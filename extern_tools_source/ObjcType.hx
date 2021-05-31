@@ -10,18 +10,22 @@ class ObjcType {
 			return "Void";
 		if (t.indexOf("(") != -1 || t.indexOf("<") != -1 || t.indexOf("id") != -1)
 			return "Dynamic";
-		t = StringTools.replace(t, "nullable ", "");
-		t = StringTools.replace(t, "__kindof ", "");
-		if (typedefs.exists(t)) {
-			var def = typedefs.get(t);
-			if (!def.createHaxeFile)
-				return def.parentClassName;
-		}
+		t = StringTools.replace(t, "nullable", "");
+		t = StringTools.replace(t, "__kindof", "");
 		t = StringTools.replace(t, "*", "");
 		t = StringTools.replace(t, " ", "");
 
 		if (t == "CGFloat")
 			return "Float";
+
+		if (t == "NSUInteger")
+			return "Int";
+
+		if (typedefs.exists(t)) {
+			var def = typedefs.get(t);
+			if (!def.createHaxeFile)
+				return def.parentClassName;
+		}
 
 		var i = ObjcImport.toImport(t);
 		if (i == null)

@@ -31,7 +31,7 @@ extern class UIStackView{
 	overload public function removeArrangedSubview(view:Dynamic):Void;
 
 	@:native("insertArrangedSubview:atIndex")
-	overload public function insertArrangedSubview_atIndex(view:Dynamic, atIndex:Dynamic):Void;
+	overload public function insertArrangedSubview_atIndex(view:Dynamic, atIndex:Int):Void;
 
 	@:native("axis")
 	public var axis:Dynamic;

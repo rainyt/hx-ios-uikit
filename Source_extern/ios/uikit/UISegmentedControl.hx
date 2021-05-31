@@ -27,13 +27,13 @@ extern class UISegmentedControl{
 	overload public function initWithFrame_actions(frame:CGRect, actions:Dynamic):Dynamic;
 
 	@:native("insertSegmentWithAction:atIndex:animated")
-	overload public function insertSegmentWithAction_atIndex_animated(action:Dynamic, atIndex:Dynamic, animated:Bool):Void;
+	overload public function insertSegmentWithAction_atIndex_animated(action:Dynamic, atIndex:Int, animated:Bool):Void;
 
 	@:native("setAction:forSegmentAtIndex")
-	overload public function setAction_forSegmentAtIndex(action:Dynamic, forSegmentAtIndex:Dynamic):Void;
+	overload public function setAction_forSegmentAtIndex(action:Dynamic, forSegmentAtIndex:Int):Void;
 
 	@:native("actionForSegmentAtIndex")
-	overload public function actionForSegmentAtIndex(segment:Dynamic):Dynamic;
+	overload public function actionForSegmentAtIndex(segment:Int):Dynamic;
 
 	@:native("segmentIndexForActionIdentifier")
 	overload public function segmentIndexForActionIdentifier(actionIdentifier:Dynamic):Dynamic;
@@ -45,52 +45,52 @@ extern class UISegmentedControl{
 	public var momentary:Bool;
 
 	@:native("numberOfSegments")
-	public var numberOfSegments:Dynamic;
+	public var numberOfSegments:Int;
 
 	@:native("apportionsSegmentWidthsByContent")
 	public var apportionsSegmentWidthsByContent:Bool;
 
 	@:native("insertSegmentWithTitle:atIndex:animated")
-	overload public function insertSegmentWithTitle_atIndex_animated(title:NSString, atIndex:Dynamic, animated:Bool):Void;
+	overload public function insertSegmentWithTitle_atIndex_animated(title:NSString, atIndex:Int, animated:Bool):Void;
 
 	@:native("insertSegmentWithImage:NSUInteger")
 	overload public function insertSegmentWithImage_NSUInteger(image:Dynamic, NSUInteger:Dynamic):Void;
 
 	@:native("removeSegmentAtIndex:animated")
-	overload public function removeSegmentAtIndex_animated(segment:Dynamic, animated:Bool):Void;
+	overload public function removeSegmentAtIndex_animated(segment:Int, animated:Bool):Void;
 
 	@:native("removeAllSegments")
 	overload public function removeAllSegments():Void;
 
 	@:native("setTitle:forSegmentAtIndex")
-	overload public function setTitle_forSegmentAtIndex(title:NSString, forSegmentAtIndex:Dynamic):Void;
+	overload public function setTitle_forSegmentAtIndex(title:NSString, forSegmentAtIndex:Int):Void;
 
 	@:native("titleForSegmentAtIndex")
-	overload public function titleForSegmentAtIndex(segment:Dynamic):NSString;
+	overload public function titleForSegmentAtIndex(segment:Int):NSString;
 
 	@:native("setImage:forSegmentAtIndex")
-	overload public function setImage_forSegmentAtIndex(image:Dynamic, forSegmentAtIndex:Dynamic):Void;
+	overload public function setImage_forSegmentAtIndex(image:Dynamic, forSegmentAtIndex:Int):Void;
 
 	@:native("imageForSegmentAtIndex")
-	overload public function imageForSegmentAtIndex(segment:Dynamic):Dynamic;
+	overload public function imageForSegmentAtIndex(segment:Int):Dynamic;
 
 	@:native("setWidth:forSegmentAtIndex")
-	overload public function setWidth_forSegmentAtIndex(width:Float, forSegmentAtIndex:Dynamic):Void;
+	overload public function setWidth_forSegmentAtIndex(width:Float, forSegmentAtIndex:Int):Void;
 
 	@:native("widthForSegmentAtIndex")
-	overload public function widthForSegmentAtIndex(segment:Dynamic):Float;
+	overload public function widthForSegmentAtIndex(segment:Int):Float;
 
 	@:native("setContentOffset:forSegmentAtIndex")
-	overload public function setContentOffset_forSegmentAtIndex(offset:CGSize, forSegmentAtIndex:Dynamic):Void;
+	overload public function setContentOffset_forSegmentAtIndex(offset:CGSize, forSegmentAtIndex:Int):Void;
 
 	@:native("contentOffsetForSegmentAtIndex")
-	overload public function contentOffsetForSegmentAtIndex(segment:Dynamic):CGSize;
+	overload public function contentOffsetForSegmentAtIndex(segment:Int):CGSize;
 
 	@:native("setEnabled:forSegmentAtIndex")
-	overload public function setEnabled_forSegmentAtIndex(enabled:Bool, forSegmentAtIndex:Dynamic):Void;
+	overload public function setEnabled_forSegmentAtIndex(enabled:Bool, forSegmentAtIndex:Int):Void;
 
 	@:native("isEnabledForSegmentAtIndex")
-	overload public function isEnabledForSegmentAtIndex(segment:Dynamic):Bool;
+	overload public function isEnabledForSegmentAtIndex(segment:Int):Bool;
 
 	@:native("selectedSegmentIndex")
 	public var selectedSegmentIndex:Dynamic;
