@@ -1,8 +1,7 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 import cpp.objc.NSData;
-import ios.objc.NSBundle;
+import cpp.objc.NSData;
 @:objc
 @:native("UIGraphicsImageRenderer")
 @:include("UIKit/UIKit.h")

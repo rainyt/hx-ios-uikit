@@ -1,8 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
-import cpp.objc.NSData;
-import ios.objc.NSBundle;
 @:objc
 @:native("UIPrintPaper")
 @:include("UIKit/UIKit.h")

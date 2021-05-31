@@ -1,9 +1,8 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import cpp.objc.NSData;
 import ios.objc.NSBundle;
-import ios.objc.CGSize;
+import cpp.objc.NSString;
 @:objc
 @:native("UIViewController")
 @:include("UIKit/UIKit.h")

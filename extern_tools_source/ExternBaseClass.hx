@@ -10,11 +10,6 @@ class ExternBaseClass {
 	public var className:String;
 
 	/**
-	 * Import引入
-	 */
-	public var imports:Array<String> = [];
-
-	/**
 	 * H的文件
 	 */
 	private var _hdata:String;
@@ -83,9 +78,19 @@ class ExternBaseClass {
 	public function toHaxeFile(pkg:String):String {
 		var haxe = "package " + pkg + ";\n\n";
 		// 统一引入
-		haxe += "import " + ObjcImport.toImport("NSString") + ";\n";
-		haxe += "import " + ObjcImport.toImport("NSData") + ";\n";
-		haxe += "import " + ObjcImport.toImport("NSBundle") + ";\n";
+		// haxe += "import " + ObjcImport.toImport("NSString") + ";\n";
+		// haxe += "import " + ObjcImport.toImport("NSData") + ";\n";
+		// haxe += "import " + ObjcImport.toImport("NSBundle") + ";\n";
+
+		for (index => value in funcAndAttr) {
+			var c = ObjcImport.toImport(value.type);
+			if (c != null)
+				haxe += "import " + c + ";\n";
+			var c2 = ObjcImport.toImport(value.returnClass);
+			if (c2 != null)
+				haxe += "import " + c2 + ";\n";
+		}
+
 		haxe += "@:objc\n";
 		haxe += "@:native(\"" + className + "\")\n";
 		haxe += "@:include(\"UIKit/UIKit.h\")\n";

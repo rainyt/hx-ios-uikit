@@ -1,5 +1,7 @@
 class ObjcImport {
 	public static function toImport(type:String):String {
+		if (type == null)
+			return null;
 		switch (type) {
 			case "NSString":
 				return "cpp.objc.NSString";
@@ -18,6 +20,8 @@ class ObjcImport {
 			case "NSBundle":
 				return "ios.objc.NSBundle";
 		}
+		// 本地查找
+
 		return null;
 	}
 }

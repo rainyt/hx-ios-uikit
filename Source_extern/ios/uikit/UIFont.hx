@@ -1,8 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import cpp.objc.NSData;
-import ios.objc.NSBundle;
+import cpp.objc.NSString;
 @:objc
 @:native("UIFont")
 @:include("UIKit/UIKit.h")

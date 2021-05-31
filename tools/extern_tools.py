@@ -63,14 +63,13 @@ class Class: pass
 
 class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
-    __slots__ = ("className", "imports", "_hdata", "funcAndAttr")
-    _hx_fields = ["className", "imports", "_hdata", "funcAndAttr"]
+    __slots__ = ("className", "_hdata", "funcAndAttr")
+    _hx_fields = ["className", "_hdata", "funcAndAttr"]
     _hx_methods = ["toHaxeFile", "toFuncName"]
 
     def __init__(self,_hdata,hextern):
         self._hdata = None
         self.funcAndAttr = []
-        self.imports = []
         harray = _hdata.split("\n")
         pclassName = (harray[0] if 0 < len(harray) else None)
         startIndex = None
@@ -146,9 +145,20 @@ class ExternBaseClass:
 
     def toHaxeFile(self,pkg):
         haxe = (("package " + ("null" if pkg is None else pkg)) + ";\n\n")
-        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSString"))) + ";\n"))))
-        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSData"))) + ";\n"))))
-        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSBundle"))) + ";\n"))))
+        _g_current = 0
+        _g_array = self.funcAndAttr
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            c = ObjcImport.toImport(value.type)
+            if (c is not None):
+                haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c is None else c)) + ";\n"))))
+            c2 = ObjcImport.toImport(value.returnClass)
+            if (c2 is not None):
+                haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c2 is None else c2)) + ";\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
@@ -162,8 +172,8 @@ class ExternBaseClass:
             index = _g1_key
             value = _g1_value
             _g = value.type
-            _hx_local_7 = len(_g)
-            if (_hx_local_7 == 4):
+            _hx_local_6 = len(_g)
+            if (_hx_local_6 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe1 = (((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(")
@@ -174,7 +184,7 @@ class ExternBaseClass:
                     else:
                         haxe2 = ""
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull((((((("null" if haxe1 is None else haxe1) + ("null" if haxe2 is None else haxe2)) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
-            elif (_hx_local_7 == 8):
+            elif (_hx_local_6 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
@@ -683,6 +693,8 @@ class ObjcImport:
 
     @staticmethod
     def toImport(_hx_type):
+        if (_hx_type is None):
+            return None
         type1 = _hx_type
         _hx_local_0 = len(type1)
         if (_hx_local_0 == 9):
