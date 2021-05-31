@@ -18,10 +18,10 @@ extern class UIGraphicsPDFRenderer{
 	overload public function initWithBounds(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
 
 	@:native("writePDFToURL:withActions:error")
-	overload public function writePDFToURL(url:NSURL, withActions:NS_NOESCAPEUIGraphicsPDFDrawingActions, error:NSError):Bool;
+	overload public function writePDFToURL(url:NSURL, withActions:UIGraphicsPDFDrawingActions, error:NSError):Bool;
 
 	@:native("PDFDataWithActions")
-	overload public function PDFDataWithActions(actions:NS_NOESCAPEUIGraphicsPDFDrawingActions):NSData;
+	overload public function PDFDataWithActions(actions:UIGraphicsPDFDrawingActions):NSData;
 
 
 }

@@ -22,10 +22,10 @@ extern class DeprecatedAnimations{
 	overload public static function setAnimationDelegate(delegate:Dynamic, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
 
 	@:native("setAnimationWillStartSelector::::::::::::::::::::::::::")
-	overload public static function setAnimationWillStartSelector(selector:SEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+	overload public static function setAnimationWillStartSelector(selector:String, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
 
 	@:native("setAnimationDidStopSelector:::::::::::::::::::::::::::")
-	overload public static function setAnimationDidStopSelector(selector:SEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+	overload public static function setAnimationDidStopSelector(selector:String, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
 
 	@:native("setAnimationDuration:::::::::::::::::::::::::::::")
 	overload public static function setAnimationDuration(duration:NSTimeInterval, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;

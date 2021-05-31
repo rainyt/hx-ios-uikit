@@ -32,19 +32,19 @@ extern class UIAlertView{
 	public var message:NSString;
 
 	@:native("addButtonWithTitle")
-	overload public function addButtonWithTitle(title:NSString):NSInteger;
+	overload public function addButtonWithTitle(title:NSString):Int;
 
 	@:native("buttonTitleAtIndex")
-	overload public function buttonTitleAtIndex(buttonIndex:NSInteger):NSString;
+	overload public function buttonTitleAtIndex(buttonIndex:Int):NSString;
 
 	@:native("numberOfButtons")
-	public var numberOfButtons:NSInteger;
+	public var numberOfButtons:Int;
 
 	@:native("cancelButtonIndex")
-	public var cancelButtonIndex:NSInteger;
+	public var cancelButtonIndex:Int;
 
 	@:native("firstOtherButtonIndex")
-	public var firstOtherButtonIndex:NSInteger;
+	public var firstOtherButtonIndex:Int;
 
 	@:native("visible")
 	public var visible:Bool;
@@ -53,13 +53,13 @@ extern class UIAlertView{
 	overload public function show():Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;
+	overload public function dismissWithClickedButtonIndex(buttonIndex:Int, animated:Bool):Void;
 
 	@:native("alertViewStyle")
 	public var alertViewStyle:UIAlertViewStyle;
 
 	@:native("textFieldAtIndex")
-	overload public function textFieldAtIndex(textFieldIndex:NSInteger):UITextField;
+	overload public function textFieldAtIndex(textFieldIndex:Int):UITextField;
 
 
 }

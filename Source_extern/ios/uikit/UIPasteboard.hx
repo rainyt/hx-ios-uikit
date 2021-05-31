@@ -35,7 +35,7 @@ extern class UIPasteboard{
 	overload public function setPersistent(persistent:Bool):Void;
 
 	@:native("changeCount")
-	public var changeCount:NSInteger;
+	public var changeCount:Int;
 
 	@:native("itemProviders")
 	public var itemProviders:Dynamic;
@@ -68,7 +68,7 @@ extern class UIPasteboard{
 	overload public function setData(data:NSData, forPasteboardType:NSString):Void;
 
 	@:native("numberOfItems")
-	public var numberOfItems:NSInteger;
+	public var numberOfItems:Int;
 
 	@:native("pasteboardTypesForItemSet")
 	overload public function pasteboardTypesForItemSet(itemSet:NSIndexSet):Dynamic;

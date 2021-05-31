@@ -36,7 +36,7 @@ extern class UISegmentedControl{
 	overload public function actionForSegmentAtIndex(segment:NSUInteger):UIAction;
 
 	@:native("segmentIndexForActionIdentifier")
-	overload public function segmentIndexForActionIdentifier(actionIdentifier:UIActionIdentifier):NSInteger;
+	overload public function segmentIndexForActionIdentifier(actionIdentifier:UIActionIdentifier):Int;
 
 	@:native("segmentedControlStyle")
 	public var segmentedControlStyle:UISegmentedControlStyle;
@@ -93,7 +93,7 @@ extern class UISegmentedControl{
 	overload public function isEnabledForSegmentAtIndex(segment:NSUInteger):Bool;
 
 	@:native("selectedSegmentIndex")
-	public var selectedSegmentIndex:NSInteger;
+	public var selectedSegmentIndex:Int;
 
 	@:native("selectedSegmentTintColor")
 	public var selectedSegmentTintColor:UIColor;

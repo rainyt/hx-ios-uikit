@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGVector;
+import ios.objc.CATransform3D;
 @:objc
 @:native("UIFocusMovementHint:")
 @:include("UIKit/UIKit.h")

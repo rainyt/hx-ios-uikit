@@ -65,7 +65,7 @@ extern class UIControl{
 	overload public function addTarget(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeTarget:action:forControlEvents")
-	overload public function removeTarget(target:Dynamic, action:SEL, forControlEvents:UIControlEvents):Void;
+	overload public function removeTarget(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("addAction:forControlEvents")
 	overload public function addAction(action:UIAction, forControlEvents:UIControlEvents):Void;

@@ -69,19 +69,19 @@ extern class UITableView{
 	public var contextMenuInteraction:UIContextMenuInteraction;
 
 	@:native("numberOfSections")
-	public var numberOfSections:NSInteger;
+	public var numberOfSections:Int;
 
 	@:native("numberOfRowsInSection")
-	overload public function numberOfRowsInSection(section:NSInteger):NSInteger;
+	overload public function numberOfRowsInSection(section:Int):Int;
 
 	@:native("rectForSection")
-	overload public function rectForSection(section:NSInteger):CGRect;
+	overload public function rectForSection(section:Int):CGRect;
 
 	@:native("rectForHeaderInSection")
-	overload public function rectForHeaderInSection(section:NSInteger):CGRect;
+	overload public function rectForHeaderInSection(section:Int):CGRect;
 
 	@:native("rectForFooterInSection")
-	overload public function rectForFooterInSection(section:NSInteger):CGRect;
+	overload public function rectForFooterInSection(section:Int):CGRect;
 
 	@:native("rectForRowAtIndexPath")
 	overload public function rectForRowAtIndexPath(indexPath:NSIndexPath):CGRect;
@@ -105,10 +105,10 @@ extern class UITableView{
 	public var indexPathsForVisibleRows:Dynamic;
 
 	@:native("headerViewForSection")
-	overload public function headerViewForSection(section:NSInteger):UITableViewHeaderFooterView;
+	overload public function headerViewForSection(section:Int):UITableViewHeaderFooterView;
 
 	@:native("footerViewForSection")
-	overload public function footerViewForSection(section:NSInteger):UITableViewHeaderFooterView;
+	overload public function footerViewForSection(section:Int):UITableViewHeaderFooterView;
 
 	@:native("scrollToRowAtIndexPath:atScrollPosition:animated")
 	overload public function scrollToRowAtIndexPath(indexPath:NSIndexPath, atScrollPosition:UITableViewScrollPosition, animated:Bool):Void;
@@ -135,7 +135,7 @@ extern class UITableView{
 	overload public function reloadSections(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveSection:toSection")
-	overload public function moveSection(section:NSInteger, toSection:NSInteger):Void;
+	overload public function moveSection(section:Int, toSection:Int):Void;
 
 	@:native("insertRowsAtIndexPaths:withRowAnimation")
 	overload public function insertRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
@@ -189,7 +189,7 @@ extern class UITableView{
 	overload public function deselectRowAtIndexPath(indexPath:NSIndexPath, animated:Bool):Void;
 
 	@:native("sectionIndexMinimumDisplayRowCount")
-	public var sectionIndexMinimumDisplayRowCount:NSInteger;
+	public var sectionIndexMinimumDisplayRowCount:Int;
 
 	@:native("sectionIndexColor")
 	public var sectionIndexColor:UIColor;
@@ -234,13 +234,13 @@ extern class UITableView{
 	overload public function registerNib(nib:UINib, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forCellReuseIdentifier")
-	overload public function registerClass(cellClass:Class, forCellReuseIdentifier:NSString):Void;
+	overload public function registerClass(cellClass:Dynamic, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forHeaderFooterViewReuseIdentifier")
 	overload public function registerNib(nib:UINib, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forHeaderFooterViewReuseIdentifier")
-	overload public function registerClass(aClass:Class, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload public function registerClass(aClass:Dynamic, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("remembersLastFocusedIndexPath")
 	public var remembersLastFocusedIndexPath:Bool;

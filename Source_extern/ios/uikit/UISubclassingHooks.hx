@@ -16,10 +16,10 @@ extern class UISubclassingHooks{
 	overload public static function autorelease():UISubclassingHooks;
 
 	@:native("layoutAttributesClass")
-	public var layoutAttributesClass:Class;
+	public var layoutAttributesClass:Dynamic;
 
 	@:native("invalidationContextClass")
-	public var invalidationContextClass:Class;
+	public var invalidationContextClass:Dynamic;
 
 	@:native("prepareLayout")
 	overload public function prepareLayout():Void;

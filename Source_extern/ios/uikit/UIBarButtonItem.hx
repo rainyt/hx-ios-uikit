@@ -19,16 +19,16 @@ extern class UIBarButtonItem{
 	overload public function initWithCoder(coder:NSCoder):UIBarButtonItem;
 
 	@:native("initWithImage:style:target:action")
-	overload public function initWithImage(image:UIImage, style:UIBarButtonItemStyle, target:Dynamic, action:SEL):UIBarButtonItem;
+	overload public function initWithImage(image:UIImage, style:UIBarButtonItemStyle, target:Dynamic, action:String):UIBarButtonItem;
 
 	@:native("initWithImage:landscapeImagePhone:style:target:action")
-	overload public function initWithImage(image:UIImage, landscapeImagePhone:UIImage, style:UIBarButtonItemStyle, target:Dynamic, action:SEL):UIBarButtonItem;
+	overload public function initWithImage(image:UIImage, landscapeImagePhone:UIImage, style:UIBarButtonItemStyle, target:Dynamic, action:String):UIBarButtonItem;
 
 	@:native("initWithTitle:style:target:action")
-	overload public function initWithTitle(title:NSString, style:UIBarButtonItemStyle, target:Dynamic, action:SEL):UIBarButtonItem;
+	overload public function initWithTitle(title:NSString, style:UIBarButtonItemStyle, target:Dynamic, action:String):UIBarButtonItem;
 
 	@:native("initWithBarButtonSystemItem:target:action")
-	overload public function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, target:Dynamic, action:SEL):UIBarButtonItem;
+	overload public function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, target:Dynamic, action:String):UIBarButtonItem;
 
 	@:native("initWithCustomView")
 	overload public function initWithCustomView(customView:UIView):UIBarButtonItem;

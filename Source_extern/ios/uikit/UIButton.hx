@@ -26,7 +26,7 @@ extern class UIButton{
 	overload public static function buttonWithType(buttonType:UIButtonType):UIButton;
 
 	@:native("systemButtonWithImage:target:action")
-	overload public static function systemButtonWithImage(image:UIImage, target:Dynamic, action:SEL):UIButton;
+	overload public static function systemButtonWithImage(image:UIImage, target:Dynamic, action:String):UIButton;
 
 	@:native("systemButtonWithPrimaryAction")
 	overload public static function systemButtonWithPrimaryAction(primaryAction:UIAction):UIButton;

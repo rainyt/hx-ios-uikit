@@ -13,7 +13,7 @@ extern class NSLayoutManagerDeprecated{
 	overload public static function autorelease():NSLayoutManagerDeprecated;
 
 	@:native("glyphAtIndex:isValidIndex")
-	overload public function glyphAtIndex(glyphIndex:NSUInteger, isValidIndex:BOOL):CGGlyph;
+	overload public function glyphAtIndex(glyphIndex:NSUInteger, isValidIndex:Bool):CGGlyph;
 
 	@:native("glyphAtIndex")
 	overload public function glyphAtIndex(glyphIndex:NSUInteger):CGGlyph;

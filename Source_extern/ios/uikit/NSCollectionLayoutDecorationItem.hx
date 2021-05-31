@@ -22,7 +22,7 @@ extern class NSCollectionLayoutDecorationItem{
 	overload public static function new():NSCollectionLayoutDecorationItem;
 
 	@:native("zIndex")
-	public var zIndex:NSInteger;
+	public var zIndex:Int;
 
 	@:native("elementKind")
 	public var elementKind:NSString;

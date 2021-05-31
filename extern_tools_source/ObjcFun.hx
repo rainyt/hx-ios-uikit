@@ -129,7 +129,7 @@ class ObjcFun {
 			var a = value.split(":");
 			r.push({
 				name: a[0],
-				type: a[1]
+				type: ObjcType.toType(a[1], typedefs)
 			});
 		}
 		return r;

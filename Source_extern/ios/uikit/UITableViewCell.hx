@@ -106,7 +106,7 @@ extern class UITableViewCell{
 	public var editingAccessoryView:UIView;
 
 	@:native("indentationLevel")
-	public var indentationLevel:NSInteger;
+	public var indentationLevel:Int;
 
 	@:native("indentationWidth")
 	public var indentationWidth:CGFloat;

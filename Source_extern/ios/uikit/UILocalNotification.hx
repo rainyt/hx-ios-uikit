@@ -56,7 +56,7 @@ extern class UILocalNotification{
 	public var soundName:NSString;
 
 	@:native("applicationIconBadgeNumber")
-	public var applicationIconBadgeNumber:NSInteger;
+	public var applicationIconBadgeNumber:Int;
 
 	@:native("userInfo")
 	public var userInfo:NSDictionary;

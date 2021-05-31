@@ -30,7 +30,7 @@ extern class UIListContentTextProperties{
 	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("numberOfLines")
-	public var numberOfLines:NSInteger;
+	public var numberOfLines:Int;
 
 	@:native("adjustsFontSizeToFitWidth")
 	public var adjustsFontSizeToFitWidth:Bool;

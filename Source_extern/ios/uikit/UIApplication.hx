@@ -74,7 +74,7 @@ extern class UIApplication{
 	public var statusBarFrame:CGRect;
 
 	@:native("applicationIconBadgeNumber")
-	public var applicationIconBadgeNumber:NSInteger;
+	public var applicationIconBadgeNumber:Int;
 
 	@:native("applicationSupportsShakeToEdit")
 	public var applicationSupportsShakeToEdit:Bool;

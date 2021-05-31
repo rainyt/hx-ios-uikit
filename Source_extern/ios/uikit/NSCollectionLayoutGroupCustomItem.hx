@@ -16,7 +16,7 @@ extern class NSCollectionLayoutGroupCustomItem{
 	overload public static function customItemWithFrame(frame:CGRect):NSCollectionLayoutGroupCustomItem;
 
 	@:native("customItemWithFrame:zIndex")
-	overload public static function customItemWithFrame(frame:CGRect, zIndex:NSInteger):NSCollectionLayoutGroupCustomItem;
+	overload public static function customItemWithFrame(frame:CGRect, zIndex:Int):NSCollectionLayoutGroupCustomItem;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutGroupCustomItem;
@@ -28,7 +28,7 @@ extern class NSCollectionLayoutGroupCustomItem{
 	public var frame:CGRect;
 
 	@:native("zIndex")
-	public var zIndex:NSInteger;
+	public var zIndex:Int;
 
 
 }

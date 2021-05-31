@@ -43,7 +43,7 @@ extern class UIBarItem{
 	public var largeContentSizeImageInsets:UIEdgeInsets;
 
 	@:native("tag")
-	public var tag:NSInteger;
+	public var tag:Int;
 
 	@:native("setTitleTextAttributes:forState")
 	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState):Void;

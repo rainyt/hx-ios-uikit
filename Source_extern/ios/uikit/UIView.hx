@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.CALayer;
 import cpp.objc.NSString;
 @:objc
 @:native("UIView")
@@ -14,7 +15,7 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("layerClass")
-	public var layerClass:Class;
+	public var layerClass:Dynamic;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIView;
@@ -26,7 +27,7 @@ extern class UIView{
 	public var userInteractionEnabled:Bool;
 
 	@:native("tag")
-	public var tag:NSInteger;
+	public var tag:Int;
 
 	@:native("layer")
 	public var layer:CALayer;

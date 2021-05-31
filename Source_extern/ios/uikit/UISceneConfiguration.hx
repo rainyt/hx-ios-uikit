@@ -25,10 +25,10 @@ extern class UISceneConfiguration{
 	public var role:UISceneSessionRole;
 
 	@:native("sceneClass")
-	public var sceneClass:Class;
+	public var sceneClass:Dynamic;
 
 	@:native("delegateClass")
-	public var delegateClass:Class;
+	public var delegateClass:Dynamic;
 
 	@:native("storyboard")
 	public var storyboard:UIStoryboard;

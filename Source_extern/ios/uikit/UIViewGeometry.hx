@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
+import ios.objc.CATransform3D;
 import ios.objc.CGSize;
 @:objc
 @:native("UIViewGeometry")

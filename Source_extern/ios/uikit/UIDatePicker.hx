@@ -36,7 +36,7 @@ extern class UIDatePicker{
 	public var countDownDuration:NSTimeInterval;
 
 	@:native("minuteInterval")
-	public var minuteInterval:NSInteger;
+	public var minuteInterval:Int;
 
 	@:native("setDate:animated")
 	overload public function setDate(date:NSDate, animated:Bool):Void;

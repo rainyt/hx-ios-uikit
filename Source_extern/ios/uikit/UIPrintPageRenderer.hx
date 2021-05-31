@@ -25,34 +25,34 @@ extern class UIPrintPageRenderer{
 	public var printableRect:CGRect;
 
 	@:native("numberOfPages")
-	public var numberOfPages:NSInteger;
+	public var numberOfPages:Int;
 
 	@:native("printFormatters")
 	public var printFormatters:Dynamic;
 
 	@:native("printFormattersForPageAtIndex")
-	overload public function printFormattersForPageAtIndex(pageIndex:NSInteger):Dynamic;
+	overload public function printFormattersForPageAtIndex(pageIndex:Int):Dynamic;
 
 	@:native("addPrintFormatter:startingAtPageAtIndex")
-	overload public function addPrintFormatter(formatter:UIPrintFormatter, startingAtPageAtIndex:NSInteger):Void;
+	overload public function addPrintFormatter(formatter:UIPrintFormatter, startingAtPageAtIndex:Int):Void;
 
 	@:native("prepareForDrawingPages")
 	overload public function prepareForDrawingPages(range:NSRange):Void;
 
 	@:native("drawPageAtIndex:inRect")
-	overload public function drawPageAtIndex(pageIndex:NSInteger, inRect:CGRect):Void;
+	overload public function drawPageAtIndex(pageIndex:Int, inRect:CGRect):Void;
 
 	@:native("drawPrintFormatter:forPageAtIndex")
-	overload public function drawPrintFormatter(printFormatter:UIPrintFormatter, forPageAtIndex:NSInteger):Void;
+	overload public function drawPrintFormatter(printFormatter:UIPrintFormatter, forPageAtIndex:Int):Void;
 
 	@:native("drawHeaderForPageAtIndex:")
-	overload public function drawHeaderForPageAtIndex(pageIndex:NSInteger, :inRect):Void;
+	overload public function drawHeaderForPageAtIndex(pageIndex:Int, :inRect):Void;
 
 	@:native("drawContentForPageAtIndex:inRect")
-	overload public function drawContentForPageAtIndex(pageIndex:NSInteger, inRect:CGRect):Void;
+	overload public function drawContentForPageAtIndex(pageIndex:Int, inRect:CGRect):Void;
 
 	@:native("drawFooterForPageAtIndex:")
-	overload public function drawFooterForPageAtIndex(pageIndex:NSInteger, :inRect):Void;
+	overload public function drawFooterForPageAtIndex(pageIndex:Int, :inRect):Void;
 
 
 }

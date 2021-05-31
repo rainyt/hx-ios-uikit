@@ -24,13 +24,13 @@ extern class UIGraphicsImageRenderer{
 	overload public function initWithBounds(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("imageWithActions")
-	overload public function imageWithActions(actions:NS_NOESCAPEUIGraphicsImageDrawingActions):UIImage;
+	overload public function imageWithActions(actions:UIGraphicsImageDrawingActions):UIImage;
 
 	@:native("PNGDataWithActions")
-	overload public function PNGDataWithActions(actions:NS_NOESCAPEUIGraphicsImageDrawingActions):NSData;
+	overload public function PNGDataWithActions(actions:UIGraphicsImageDrawingActions):NSData;
 
 	@:native("JPEGDataWithCompressionQuality:actions")
-	overload public function JPEGDataWithCompressionQuality(compressionQuality:CGFloat, actions:NS_NOESCAPEUIGraphicsImageDrawingActions):NSData;
+	overload public function JPEGDataWithCompressionQuality(compressionQuality:CGFloat, actions:UIGraphicsImageDrawingActions):NSData;
 
 
 }

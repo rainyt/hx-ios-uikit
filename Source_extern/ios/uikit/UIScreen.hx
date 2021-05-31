@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.CADisplayLink;
 @:objc
 @:native("UIScreen")
 @:include("UIKit/UIKit.h")
@@ -70,7 +71,7 @@ extern class UIScreen{
 	overload public function displayLinkWithTarget(target:Dynamic, selector:String):CADisplayLink;
 
 	@:native("maximumFramesPerSecond")
-	public var maximumFramesPerSecond:NSInteger;
+	public var maximumFramesPerSecond:Int;
 
 	@:native("calibratedLatency")
 	public var calibratedLatency:CFTimeInterval;

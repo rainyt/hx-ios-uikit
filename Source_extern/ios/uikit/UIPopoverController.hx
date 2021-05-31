@@ -56,7 +56,7 @@ extern class UIPopoverController{
 	public var popoverLayoutMargins:UIEdgeInsets;
 
 	@:native("popoverBackgroundViewClass")
-	public var popoverBackgroundViewClass:Class;
+	public var popoverBackgroundViewClass:Dynamic;
 
 
 }
