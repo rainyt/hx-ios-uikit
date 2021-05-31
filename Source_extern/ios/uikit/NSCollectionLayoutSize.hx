@@ -2,6 +2,7 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import cpp.objc.NSData;
+import ios.objc.NSBundle;
 @:objc
 @:native("NSCollectionLayoutSize")
 @:include("UIKit/UIKit.h")

@@ -85,6 +85,7 @@ class ExternBaseClass {
 		// 统一引入
 		haxe += "import " + ObjcImport.toImport("NSString") + ";\n";
 		haxe += "import " + ObjcImport.toImport("NSData") + ";\n";
+		haxe += "import " + ObjcImport.toImport("NSBundle") + ";\n";
 		haxe += "@:objc\n";
 		haxe += "@:native(\"" + className + "\")\n";
 		haxe += "@:include(\"UIKit/UIKit.h\")\n";

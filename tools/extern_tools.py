@@ -148,6 +148,7 @@ class ExternBaseClass:
         haxe = (("package " + ("null" if pkg is None else pkg)) + ";\n\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSString"))) + ";\n"))))
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSData"))) + ";\n"))))
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSBundle"))) + ";\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
@@ -161,8 +162,8 @@ class ExternBaseClass:
             index = _g1_key
             value = _g1_value
             _g = value.type
-            _hx_local_6 = len(_g)
-            if (_hx_local_6 == 4):
+            _hx_local_7 = len(_g)
+            if (_hx_local_7 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe1 = (((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(")
@@ -173,7 +174,7 @@ class ExternBaseClass:
                     else:
                         haxe2 = ""
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull((((((("null" if haxe1 is None else haxe1) + ("null" if haxe2 is None else haxe2)) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
-            elif (_hx_local_6 == 8):
+            elif (_hx_local_7 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
@@ -684,7 +685,9 @@ class ObjcImport:
             if (type1 == "NSError"):
                 return "cpp.objc.NSError"
         elif (_hx_local_0 == 8):
-            if (type1 == "NSObject"):
+            if (type1 == "NSBundle"):
+                return "ios.objc.NSBundle"
+            elif (type1 == "NSObject"):
                 return "cpp.objc.NSObject"
             elif (type1 == "NSString"):
                 return "cpp.objc.NSString"

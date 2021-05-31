@@ -15,6 +15,8 @@ class ObjcImport {
 				return "cpp.objc.ObjcBlock";
 			case "Protocol":
 				return "cpp.objc.Protocol";
+			case "NSBundle":
+				return "ios.objc.NSBundle";
 		}
 		return null;
 	}
