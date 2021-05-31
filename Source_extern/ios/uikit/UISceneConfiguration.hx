@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UISceneConfiguration")
 @:include("UIKit/UIKit.h")
@@ -12,13 +13,13 @@ extern class UISceneConfiguration{
 	overload public static function autorelease():UISceneConfiguration;
 
 	@:native("configurationWithName:sessionRole")
-	overload public static function configurationWithName_sessionRole(name:Dynamic, sessionRole:Dynamic):UISceneConfiguration;
+	overload public static function configurationWithName_sessionRole(name:NSString, sessionRole:Dynamic):UISceneConfiguration;
 
 	@:native("initWithName:sessionRole")
-	overload public function initWithName_sessionRole(name:Dynamic, sessionRole:Dynamic):UISceneConfiguration;
+	overload public function initWithName_sessionRole(name:NSString, sessionRole:Dynamic):UISceneConfiguration;
 
 	@:native("name")
-	public var name:Dynamic;
+	public var name:NSString;
 
 	@:native("role")
 	public var role:Dynamic;
@@ -30,7 +31,7 @@ extern class UISceneConfiguration{
 	public var delegateClass:Dynamic;
 
 	@:native("storyboard")
-	public var storyboard:Dynamic;
+	public var storyboard:UIStoryboard;
 
 
 }

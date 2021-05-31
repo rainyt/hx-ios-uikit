@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UITextChecker")
 @:include("UIKit/UIKit.h")
@@ -12,28 +13,28 @@ extern class UITextChecker{
 	overload public static function autorelease():UITextChecker;
 
 	@:native("rangeOfMisspelledWordInString:range:startingAt:wrap:language")
-	overload public function rangeOfMisspelledWordInString_range_startingAt_wrap_language(stringToCheck:Dynamic, range:Dynamic, startingAt:Int, wrap:Bool, language:Dynamic):Dynamic;
+	overload public function rangeOfMisspelledWordInString_range_startingAt_wrap_language(stringToCheck:NSString, range:Dynamic, startingAt:Int, wrap:Bool, language:NSString):Dynamic;
 
 	@:native("guessesForWordRange:inString:language")
-	overload public function guessesForWordRange_inString_language(range:Dynamic, inString:Dynamic, language:Dynamic):Dynamic;
+	overload public function guessesForWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):Dynamic;
 
 	@:native("completionsForPartialWordRange:inString:language")
-	overload public function completionsForPartialWordRange_inString_language(range:Dynamic, inString:Dynamic, language:Dynamic):Dynamic;
+	overload public function completionsForPartialWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):Dynamic;
 
 	@:native("ignoreWord")
-	overload public function ignoreWord(wordToIgnore:Dynamic):Void;
+	overload public function ignoreWord(wordToIgnore:NSString):Void;
 
 	@:native("ignoredWords")
 	public var ignoredWords:Dynamic;
 
 	@:native("learnWord")
-	overload public static function learnWord(word:Dynamic):Void;
+	overload public static function learnWord(word:NSString):Void;
 
 	@:native("hasLearnedWord")
-	overload public static function hasLearnedWord(word:Dynamic):Bool;
+	overload public static function hasLearnedWord(word:NSString):Bool;
 
 	@:native("unlearnWord")
-	overload public static function unlearnWord(word:Dynamic):Void;
+	overload public static function unlearnWord(word:NSString):Void;
 
 	@:native("availableLanguages")
 	overload public static function availableLanguages():Dynamic;

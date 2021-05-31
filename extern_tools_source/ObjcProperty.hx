@@ -2,7 +2,12 @@ import ExternBaseClass.ExternBaseClassType;
 
 class ObjcProperty {
 	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClassFunProperty {
-		line = StringTools.replace(line, "@property ", "");
+		// line = line.indexOf("(") != -1 ? StringTools.replace(line, "@property ", "") : StringTools.replace(line, "@property", "");
+		if (line.indexOf("(") != -1) {
+			line = line.substr(line.indexOf("("));
+		} else {
+			line = StringTools.replace(line, "@property", "");
+		}
 		line = StringTools.replace(line, "*", "");
 		// 移除注释
 		if (line.indexOf("//") != -1) {
@@ -13,7 +18,7 @@ class ObjcProperty {
 		var isClass = property.indexOf("class") != -1;
 		var isCopy = property.indexOf("copy") != -1;
 		// 如果是copy，则直接重写 这是否合理？？
-		if(isCopy)
+		if (isCopy)
 			return null;
 		var newline = "";
 		var lastchat = "";
@@ -42,7 +47,7 @@ class ObjcProperty {
 					isRead = true;
 					skip = 1;
 					kend = 1;
-				} else if (char == " " || char != "(") {
+				} else if (char == " ") {
 					isRead = true;
 					skip = char != "(" ? 0 : 1;
 				}
@@ -71,8 +76,8 @@ class ObjcProperty {
 			else
 				skip--;
 		}
-		trace("过滤前",p);
-		p = p.filter((f) -> f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("API_") == -1 && f.indexOf("ios(") == -1 && f != "UI_APPEARANCE_SELECTOR");
+		p = p.filter((f) -> f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("API_") == -1 && f.indexOf("ios(") == -1
+			&& f != "UI_APPEARANCE_SELECTOR");
 		trace(p);
 		return ({
 			name: p[p.length - 1],

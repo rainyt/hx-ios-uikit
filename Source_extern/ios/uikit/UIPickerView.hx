@@ -31,7 +31,7 @@ extern class UIPickerView{
 	overload public function rowSizeForComponent(component:Int):CGSize;
 
 	@:native("viewForRow:forComponent")
-	overload public function viewForRow_forComponent(row:Int, forComponent:Int):Dynamic;
+	overload public function viewForRow_forComponent(row:Int, forComponent:Int):UIView;
 
 	@:native("reloadAllComponents")
 	overload public function reloadAllComponents():Void;

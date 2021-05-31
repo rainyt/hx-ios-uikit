@@ -28,7 +28,7 @@ extern class UIPrintInteractionController{
 	overload public static function sharedPrintController():UIPrintInteractionController;
 
 	@:native("printInfo")
-	public var printInfo:Dynamic;
+	public var printInfo:UIPrintInfo;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -43,25 +43,25 @@ extern class UIPrintInteractionController{
 	public var showsPaperSelectionForLoadedPapers:Bool;
 
 	@:native("printPaper")
-	public var printPaper:Dynamic;
+	public var printPaper:UIPrintPaper;
 
 	@:native("printPageRenderer")
-	public var printPageRenderer:Dynamic;
+	public var printPageRenderer:UIPrintPageRenderer;
 
 	@:native("printFormatter")
-	public var printFormatter:Dynamic;
+	public var printFormatter:UIPrintFormatter;
 
 	@:native("presentAnimated:completionHandler")
 	overload public function presentAnimated_completionHandler(animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("presentFromRect:inView:animated:completionHandler")
-	overload public function presentFromRect_inView_animated_completionHandler(rect:CGRect, inView:Dynamic, animated:Bool, completionHandler:Dynamic):Bool;
+	overload public function presentFromRect_inView_animated_completionHandler(rect:CGRect, inView:UIView, animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("presentFromBarButtonItem:animated:completionHandler")
-	overload public function presentFromBarButtonItem_animated_completionHandler(item:Dynamic, animated:Bool, completionHandler:Dynamic):Bool;
+	overload public function presentFromBarButtonItem_animated_completionHandler(item:UIBarButtonItem, animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("printToPrinter:completionHandler")
-	overload public function printToPrinter_completionHandler(printer:Dynamic, completionHandler:Dynamic):Bool;
+	overload public function printToPrinter_completionHandler(printer:UIPrinter, completionHandler:Dynamic):Bool;
 
 	@:native("dismissAnimated")
 	overload public function dismissAnimated(animated:Bool):Void;

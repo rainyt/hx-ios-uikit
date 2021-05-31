@@ -12,7 +12,7 @@ extern class UIPrintInfo{
 	overload public static function autorelease():UIPrintInfo;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIPrintInfo;
+	overload public function initWithCoder(coder:NSCoder):UIPrintInfo;
 
 	@:native("printInfo")
 	overload public static function printInfo():UIPrintInfo;
@@ -21,13 +21,13 @@ extern class UIPrintInfo{
 	overload public static function printInfoWithDictionary(dictionary:Dynamic):UIPrintInfo;
 
 	@:native("outputType")
-	public var outputType:Dynamic;
+	public var outputType:UIPrintInfoOutputType;
 
 	@:native("orientation")
-	public var orientation:Dynamic;
+	public var orientation:UIPrintInfoOrientation;
 
 	@:native("duplex")
-	public var duplex:Dynamic;
+	public var duplex:UIPrintInfoDuplex;
 
 	@:native("dictionaryRepresentation")
 	public var dictionaryRepresentation:Dynamic;

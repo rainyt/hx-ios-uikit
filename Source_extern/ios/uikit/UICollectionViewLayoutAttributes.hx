@@ -5,6 +5,7 @@ import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CATransform3D;
 import ios.objc.CGAffineTransform;
+import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewLayoutAttributes")
 @:include("UIKit/UIKit.h")
@@ -47,19 +48,19 @@ extern class UICollectionViewLayoutAttributes{
 	public var indexPath:Dynamic;
 
 	@:native("representedElementCategory")
-	public var representedElementCategory:Dynamic;
+	public var representedElementCategory:UICollectionElementCategory;
 
 	@:native("representedElementKind")
-	public var representedElementKind:Dynamic;
+	public var representedElementKind:NSString;
 
 	@:native("layoutAttributesForCellWithIndexPath")
 	overload public static function layoutAttributesForCellWithIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForSupplementaryViewOfKind_withIndexPath(elementKind:Dynamic, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForSupplementaryViewOfKind_withIndexPath(elementKind:NSString, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:Dynamic, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 
 }

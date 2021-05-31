@@ -12,7 +12,7 @@ extern class UICollectionViewDiffableDataSource<SectionIdentifierType,ItemIdenti
 	overload public static function autorelease():UICollectionViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>;
 
 	@:native("initWithCollectionView:cellProvider")
-	overload public function initWithCollectionView_cellProvider(collectionView:Dynamic, cellProvider:Dynamic):Dynamic;
+	overload public function initWithCollectionView_cellProvider(collectionView:UICollectionView, cellProvider:Dynamic):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

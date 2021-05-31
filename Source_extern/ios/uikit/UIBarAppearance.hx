@@ -24,7 +24,7 @@ extern class UIBarAppearance{
 	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIBarAppearance;
+	overload public function initWithCoder(coder:NSCoder):UIBarAppearance;
 
 	@:native("copy")
 	overload public function copy():UIBarAppearance;
@@ -39,13 +39,13 @@ extern class UIBarAppearance{
 	overload public function configureWithTransparentBackground():Void;
 
 	@:native("backgroundImage")
-	public var backgroundImage:Dynamic;
+	public var backgroundImage:UIImage;
 
 	@:native("backgroundImageContentMode")
-	public var backgroundImageContentMode:Dynamic;
+	public var backgroundImageContentMode:UIViewContentMode;
 
 	@:native("shadowImage")
-	public var shadowImage:Dynamic;
+	public var shadowImage:UIImage;
 
 
 }

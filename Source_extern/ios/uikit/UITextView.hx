@@ -16,10 +16,10 @@ extern class UITextView{
 	public var delegate:Dynamic;
 
 	@:native("font")
-	public var font:Dynamic;
+	public var font:UIFont;
 
 	@:native("textColor")
-	public var textColor:Dynamic;
+	public var textColor:UIColor;
 
 	@:native("textAlignment")
 	public var textAlignment:NSTextAlignment;
@@ -43,31 +43,31 @@ extern class UITextView{
 	overload public function scrollRangeToVisible(range:Dynamic):Void;
 
 	@:native("inputView")
-	public var inputView:Dynamic;
+	public var inputView:UIView;
 
 	@:native("inputAccessoryView")
-	public var inputAccessoryView:Dynamic;
+	public var inputAccessoryView:UIView;
 
 	@:native("clearsOnInsertion")
 	public var clearsOnInsertion:Bool;
 
 	@:native("initWithFrame:textContainer")
-	overload public function initWithFrame_textContainer(frame:CGRect, textContainer:Dynamic):UITextView;
+	overload public function initWithFrame_textContainer(frame:CGRect, textContainer:NSTextContainer):UITextView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UITextView;
+	overload public function initWithCoder(coder:NSCoder):UITextView;
 
 	@:native("textContainer")
-	public var textContainer:Dynamic;
+	public var textContainer:NSTextContainer;
 
 	@:native("textContainerInset")
 	public var textContainerInset:Dynamic;
 
 	@:native("layoutManager")
-	public var layoutManager:Dynamic;
+	public var layoutManager:NSLayoutManager;
 
 	@:native("textStorage")
-	public var textStorage:Dynamic;
+	public var textStorage:NSTextStorage;
 
 	@:native("usesStandardTextScaling")
 	public var usesStandardTextScaling:Bool;

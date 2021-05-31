@@ -12,7 +12,7 @@ extern class UICollectionViewListCell extends UICollectionViewCell{
 	overload public static function autorelease():UICollectionViewListCell;
 
 	@:native("defaultContentConfiguration")
-	overload public function defaultContentConfiguration():Dynamic;
+	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
 	@:native("indentationLevel")
 	public var indentationLevel:Int;

@@ -51,19 +51,19 @@ extern class UIListContentConfiguration{
 	overload public function init():UIListContentConfiguration;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("imageProperties")
-	public var imageProperties:Dynamic;
+	public var imageProperties:UIListContentImageProperties;
 
 	@:native("textProperties")
-	public var textProperties:Dynamic;
+	public var textProperties:UIListContentTextProperties;
 
 	@:native("secondaryTextProperties")
-	public var secondaryTextProperties:Dynamic;
+	public var secondaryTextProperties:UIListContentTextProperties;
 
 	@:native("axesPreservingSuperviewLayoutMargins")
-	public var axesPreservingSuperviewLayoutMargins:Dynamic;
+	public var axesPreservingSuperviewLayoutMargins:UIAxis;
 
 	@:native("directionalLayoutMargins")
 	public var directionalLayoutMargins:Dynamic;

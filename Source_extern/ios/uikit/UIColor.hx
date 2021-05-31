@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIColor")
 @:include("UIKit/UIKit.h")
@@ -27,10 +28,10 @@ extern class UIColor{
 	overload public static function colorWithCGColor(cgColor:Dynamic):UIColor;
 
 	@:native("colorWithPatternImage")
-	overload public static function colorWithPatternImage(image:Dynamic):UIColor;
+	overload public static function colorWithPatternImage(image:UIImage):UIColor;
 
 	@:native("colorWithCIColor")
-	overload public static function colorWithCIColor(ciColor:Dynamic):UIColor;
+	overload public static function colorWithCIColor(ciColor:CIColor):UIColor;
 
 	@:native("initWithWhite:alpha")
 	overload public function initWithWhite_alpha(white:Float, alpha:Float):UIColor;
@@ -48,10 +49,10 @@ extern class UIColor{
 	overload public function initWithCGColor(cgColor:Dynamic):UIColor;
 
 	@:native("initWithPatternImage")
-	overload public function initWithPatternImage(image:Dynamic):UIColor;
+	overload public function initWithPatternImage(image:UIImage):UIColor;
 
 	@:native("initWithCIColor")
-	overload public function initWithCIColor(ciColor:Dynamic):UIColor;
+	overload public function initWithCIColor(ciColor:CIColor):UIColor;
 
 	@:native("blackColor")
 	overload public static function blackColor():UIColor;
@@ -126,7 +127,7 @@ extern class UIColor{
 	overload public function CGColor():Dynamic;
 
 	@:native("CIColor")
-	public var CIColor:Dynamic;
+	public var CIColor:CIColor;
 
 	@:native("alloc")
 	overload public static function alloc():UIColor;
@@ -141,10 +142,10 @@ extern class UIColor{
 	overload public static function autorelease():UIColor;
 
 	@:native("colorNamed")
-	overload public static function colorNamed(name:Dynamic):UIColor;
+	overload public static function colorNamed(name:NSString):UIColor;
 
 	@:native("colorNamed:inBundle:compatibleWithTraitCollection")
-	overload public static function colorNamed_inBundle_compatibleWithTraitCollection(name:Dynamic, inBundle:Dynamic, compatibleWithTraitCollection:Dynamic):UIColor;
+	overload public static function colorNamed_inBundle_compatibleWithTraitCollection(name:NSString, inBundle:NSBundle, compatibleWithTraitCollection:UITraitCollection):UIColor;
 
 	@:native("alloc")
 	overload public static function alloc():UIColor;
@@ -159,7 +160,7 @@ extern class UIColor{
 	overload public function initWithDynamicProvider(dynamicProvider:Dynamic):UIColor;
 
 	@:native("resolvedColorWithTraitCollection")
-	overload public function resolvedColorWithTraitCollection(traitCollection:Dynamic):UIColor;
+	overload public function resolvedColorWithTraitCollection(traitCollection:UITraitCollection):UIColor;
 
 	@:native("alloc")
 	overload public static function alloc():UIColor;
@@ -291,7 +292,7 @@ extern class UIColor{
 	overload public static function autorelease():UIColor;
 
 	@:native("accessibilityName")
-	public var accessibilityName:Dynamic;
+	public var accessibilityName:NSString;
 
 
 }

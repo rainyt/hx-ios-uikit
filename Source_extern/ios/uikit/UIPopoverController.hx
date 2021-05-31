@@ -14,16 +14,16 @@ extern class UIPopoverController{
 	overload public static function autorelease():UIPopoverController;
 
 	@:native("initWithContentViewController")
-	overload public function initWithContentViewController(viewController:Dynamic):UIPopoverController;
+	overload public function initWithContentViewController(viewController:UIViewController):UIPopoverController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("contentViewController")
-	public var contentViewController:Dynamic;
+	public var contentViewController:UIViewController;
 
 	@:native("setContentViewController:animated")
-	overload public function setContentViewController_animated(viewController:Dynamic, animated:Bool):Void;
+	overload public function setContentViewController_animated(viewController:UIViewController, animated:Bool):Void;
 
 	@:native("popoverContentSize")
 	public var popoverContentSize:CGSize;
@@ -38,10 +38,10 @@ extern class UIPopoverController{
 	public var popoverArrowDirection:UIPopoverArrowDirection;
 
 	@:native("presentPopoverFromRect:inView:permittedArrowDirections:animated")
-	overload public function presentPopoverFromRect_inView_permittedArrowDirections_animated(rect:CGRect, inView:Dynamic, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
+	overload public function presentPopoverFromRect_inView_permittedArrowDirections_animated(rect:CGRect, inView:UIView, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
 
 	@:native("presentPopoverFromBarButtonItem:permittedArrowDirections:animated")
-	overload public function presentPopoverFromBarButtonItem_permittedArrowDirections_animated(item:Dynamic, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
+	overload public function presentPopoverFromBarButtonItem_permittedArrowDirections_animated(item:UIBarButtonItem, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
 
 	@:native("dismissPopoverAnimated")
 	overload public function dismissPopoverAnimated(animated:Bool):Void;

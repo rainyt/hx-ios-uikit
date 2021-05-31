@@ -15,7 +15,7 @@ extern class UILocalNotification{
 	overload public function init():UILocalNotification;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UILocalNotification;
+	overload public function initWithCoder(coder:NSCoder):UILocalNotification;
 
 	@:native("repeatInterval")
 	public var repeatInterval:Dynamic;

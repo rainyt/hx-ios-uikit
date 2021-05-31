@@ -15,19 +15,19 @@ extern class UIBarItem{
 	overload public function init():UIBarItem;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIBarItem;
+	overload public function initWithCoder(coder:NSCoder):UIBarItem;
 
 	@:native("enabled")
 	public var enabled:Bool;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("landscapeImagePhone")
-	public var landscapeImagePhone:Dynamic;
+	public var landscapeImagePhone:UIImage;
 
 	@:native("largeContentSizeImage")
-	public var largeContentSizeImage:Dynamic;
+	public var largeContentSizeImage:UIImage;
 
 	@:native("imageInsets")
 	public var imageInsets:Dynamic;

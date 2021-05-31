@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIDevice")
 @:include("UIKit/UIKit.h")
@@ -15,22 +16,22 @@ extern class UIDevice{
 	overload public static function currentDevice():UIDevice;
 
 	@:native("name")
-	public var name:Dynamic;
+	public var name:NSString;
 
 	@:native("model")
-	public var model:Dynamic;
+	public var model:NSString;
 
 	@:native("localizedModel")
-	public var localizedModel:Dynamic;
+	public var localizedModel:NSString;
 
 	@:native("systemName")
-	public var systemName:Dynamic;
+	public var systemName:NSString;
 
 	@:native("systemVersion")
-	public var systemVersion:Dynamic;
+	public var systemVersion:NSString;
 
 	@:native("orientation")
-	public var orientation:Dynamic;
+	public var orientation:UIDeviceOrientation;
 
 	@:native("identifierForVendor")
 	public var identifierForVendor:Dynamic;
@@ -48,7 +49,7 @@ extern class UIDevice{
 	public var batteryMonitoringEnabled:Bool;
 
 	@:native("batteryState")
-	public var batteryState:Dynamic;
+	public var batteryState:UIDeviceBatteryState;
 
 	@:native("batteryLevel")
 	public var batteryLevel:Dynamic;
@@ -63,7 +64,7 @@ extern class UIDevice{
 	public var multitaskingSupported:Bool;
 
 	@:native("userInterfaceIdiom")
-	public var userInterfaceIdiom:Dynamic;
+	public var userInterfaceIdiom:UIUserInterfaceIdiom;
 
 	@:native("playInputClick")
 	overload public function playInputClick():Void;

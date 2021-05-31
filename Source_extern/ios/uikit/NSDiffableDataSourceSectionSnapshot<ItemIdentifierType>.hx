@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>")
 @:include("UIKit/UIKit.h")
@@ -87,7 +88,7 @@ extern class NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>{
 	public var visibleItems:Dynamic;
 
 	@:native("visualDescription")
-	overload public function visualDescription():Dynamic;
+	overload public function visualDescription():NSString;
 
 
 }

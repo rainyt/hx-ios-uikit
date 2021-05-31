@@ -16,7 +16,7 @@ extern class UIContextMenuInteraction{
 	public var delegate:Dynamic;
 
 	@:native("menuAppearance")
-	public var menuAppearance:Dynamic;
+	public var menuAppearance:UIContextMenuInteractionAppearance;
 
 	@:native("initWithDelegate")
 	overload public function initWithDelegate(delegate:Dynamic):UIContextMenuInteraction;
@@ -25,7 +25,7 @@ extern class UIContextMenuInteraction{
 	overload public function init():UIContextMenuInteraction;
 
 	@:native("locationInView")
-	overload public function locationInView(view:Dynamic):CGPoint;
+	overload public function locationInView(view:UIView):CGPoint;
 
 	@:native("updateVisibleMenuWithBlock")
 	overload public function updateVisibleMenuWithBlock(block:Dynamic):Void;

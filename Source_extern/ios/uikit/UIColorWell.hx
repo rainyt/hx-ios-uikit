@@ -15,7 +15,7 @@ extern class UIColorWell extends UIControl{
 	public var supportsAlpha:Bool;
 
 	@:native("selectedColor")
-	public var selectedColor:Dynamic;
+	public var selectedColor:UIColor;
 
 
 }

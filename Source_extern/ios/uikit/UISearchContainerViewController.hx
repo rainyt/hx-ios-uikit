@@ -12,10 +12,10 @@ extern class UISearchContainerViewController extends UIViewController{
 	overload public static function autorelease():UISearchContainerViewController;
 
 	@:native("searchController")
-	public var searchController:Dynamic;
+	public var searchController:UISearchController;
 
 	@:native("initWithSearchController")
-	overload public function initWithSearchController(searchController:Dynamic):UISearchContainerViewController;
+	overload public function initWithSearchController(searchController:UISearchController):UISearchContainerViewController;
 
 
 }

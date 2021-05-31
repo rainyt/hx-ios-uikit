@@ -15,7 +15,7 @@ extern class UIOpenURLContext{
 	overload public function init():UIOpenURLContext;
 
 	@:native("options")
-	public var options:Dynamic;
+	public var options:UISceneOpenURLOptions;
 
 
 }

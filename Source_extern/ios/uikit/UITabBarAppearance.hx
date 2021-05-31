@@ -12,10 +12,10 @@ extern class UITabBarAppearance extends UIBarAppearance{
 	overload public static function autorelease():UITabBarAppearance;
 
 	@:native("selectionIndicatorImage")
-	public var selectionIndicatorImage:Dynamic;
+	public var selectionIndicatorImage:UIImage;
 
 	@:native("stackedItemPositioning")
-	public var stackedItemPositioning:Dynamic;
+	public var stackedItemPositioning:UITabBarItemPositioning;
 
 	@:native("stackedItemWidth")
 	public var stackedItemWidth:Float;

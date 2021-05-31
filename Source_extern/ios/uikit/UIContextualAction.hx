@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIContextualAction")
 @:include("UIKit/UIKit.h")
@@ -12,10 +13,10 @@ extern class UIContextualAction{
 	overload public static function autorelease():UIContextualAction;
 
 	@:native("contextualActionWithStyle:title:handler")
-	overload public static function contextualActionWithStyle_title_handler(style:Dynamic, title:Dynamic, handler:Dynamic):UIContextualAction;
+	overload public static function contextualActionWithStyle_title_handler(style:UIContextualActionStyle, title:NSString, handler:Dynamic):UIContextualAction;
 
 	@:native("style")
-	public var style:Dynamic;
+	public var style:UIContextualActionStyle;
 
 
 }

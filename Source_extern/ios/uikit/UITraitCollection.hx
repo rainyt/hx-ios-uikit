@@ -15,7 +15,7 @@ extern class UITraitCollection{
 	overload public function init():UITraitCollection;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UITraitCollection;
+	overload public function initWithCoder(coder:NSCoder):UITraitCollection;
 
 	@:native("containsTraitsInCollection")
 	overload public function containsTraitsInCollection(trait:UITraitCollection):Bool;
@@ -126,7 +126,7 @@ extern class UITraitCollection{
 	overload public static function autorelease():UITraitCollection;
 
 	@:native("imageConfiguration")
-	public var imageConfiguration:Dynamic;
+	public var imageConfiguration:UIImageConfiguration;
 
 
 }

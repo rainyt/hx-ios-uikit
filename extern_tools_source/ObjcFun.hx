@@ -122,7 +122,8 @@ class ObjcFun {
 				ret += value;
 			}
 		}
-		retargs = retargs.filter((f) -> f.indexOf("API_") == -1 && f.indexOf("ios(") == -1);
+		retargs = retargs.filter((f) -> f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("API_") == -1 && f.indexOf("ios(") == -1
+			&& f != "UI_APPEARANCE_SELECTOR");
 		var r:Array<ExternBaseClassFunPropertyArgs> = [];
 		for (index => value in retargs) {
 			var a = value.split(":");

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc
 @:native("UITableViewCell")
@@ -13,55 +14,55 @@ extern class UITableViewCell{
 	overload public static function autorelease():UITableViewCell;
 
 	@:native("initWithStyle:reuseIdentifier")
-	overload public function initWithStyle_reuseIdentifier(style:Dynamic, reuseIdentifier:Dynamic):UITableViewCell;
+	overload public function initWithStyle_reuseIdentifier(style:UITableViewCellStyle, reuseIdentifier:NSString):UITableViewCell;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UITableViewCell;
+	overload public function initWithCoder(coder:NSCoder):UITableViewCell;
 
 	@:native("configurationState")
-	public var configurationState:Dynamic;
+	public var configurationState:UICellConfigurationState;
 
 	@:native("setNeedsUpdateConfiguration")
 	overload public function setNeedsUpdateConfiguration():Void;
 
 	@:native("updateConfigurationUsingState")
-	overload public function updateConfigurationUsingState(state:Dynamic):Void;
+	overload public function updateConfigurationUsingState(state:UICellConfigurationState):Void;
 
 	@:native("defaultContentConfiguration")
-	overload public function defaultContentConfiguration():Dynamic;
+	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
 	@:native("contentView")
-	public var contentView:Dynamic;
+	public var contentView:UIView;
 
 	@:native("imageView")
-	public var imageView:Dynamic;
+	public var imageView:UIImageView;
 
 	@:native("textLabel")
-	public var textLabel:Dynamic;
+	public var textLabel:UILabel;
 
 	@:native("detailTextLabel")
-	public var detailTextLabel:Dynamic;
+	public var detailTextLabel:UILabel;
 
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
 	@:native("backgroundView")
-	public var backgroundView:Dynamic;
+	public var backgroundView:UIView;
 
 	@:native("selectedBackgroundView")
-	public var selectedBackgroundView:Dynamic;
+	public var selectedBackgroundView:UIView;
 
 	@:native("multipleSelectionBackgroundView")
-	public var multipleSelectionBackgroundView:Dynamic;
+	public var multipleSelectionBackgroundView:UIView;
 
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;
 
 	@:native("selectionStyle")
-	public var selectionStyle:Dynamic;
+	public var selectionStyle:UITableViewCellSelectionStyle;
 
 	@:native("selected")
 	public var selected:Bool;
@@ -76,7 +77,7 @@ extern class UITableViewCell{
 	overload public function setHighlighted_animated(highlighted:Bool, animated:Bool):Void;
 
 	@:native("editingStyle")
-	public var editingStyle:Dynamic;
+	public var editingStyle:UITableViewCellEditingStyle;
 
 	@:native("showsReorderControl")
 	public var showsReorderControl:Bool;
@@ -85,16 +86,16 @@ extern class UITableViewCell{
 	public var shouldIndentWhileEditing:Bool;
 
 	@:native("accessoryType")
-	public var accessoryType:Dynamic;
+	public var accessoryType:UITableViewCellAccessoryType;
 
 	@:native("accessoryView")
-	public var accessoryView:Dynamic;
+	public var accessoryView:UIView;
 
 	@:native("editingAccessoryType")
-	public var editingAccessoryType:Dynamic;
+	public var editingAccessoryType:UITableViewCellAccessoryType;
 
 	@:native("editingAccessoryView")
-	public var editingAccessoryView:Dynamic;
+	public var editingAccessoryView:UIView;
 
 	@:native("indentationLevel")
 	public var indentationLevel:Int;
@@ -102,8 +103,8 @@ extern class UITableViewCell{
 	@:native("indentationWidth")
 	public var indentationWidth:Float;
 
-	@:native("separatorInset")
-	public var separatorInset:Dynamic;
+	@:native(" UI_APPEARANCE_SELECTOR")
+	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
 	@:native("editing")
 	public var editing:Bool;
@@ -114,17 +115,14 @@ extern class UITableViewCell{
 	@:native("showingDeleteConfirmation")
 	public var showingDeleteConfirmation:Bool;
 
-	@:native("focusStyle")
-	public var focusStyle:Dynamic;
-
 	@:native("willTransitionToState")
-	overload public function willTransitionToState(state:Dynamic):Void;
+	overload public function willTransitionToState(state:UITableViewCellStateMask):Void;
 
 	@:native("didTransitionToState")
-	overload public function didTransitionToState(state:Dynamic):Void;
+	overload public function didTransitionToState(state:UITableViewCellStateMask):Void;
 
 	@:native("dragStateDidChange")
-	overload public function dragStateDidChange(dragState:Dynamic):Void;
+	overload public function dragStateDidChange(dragState:UITableViewCellDragState):Void;
 
 	@:native("userInteractionEnabledWhileDragging")
 	public var userInteractionEnabledWhileDragging:Bool;
@@ -136,10 +134,10 @@ extern class UITableViewCell{
 	overload public static function autorelease():UITableViewCell;
 
 	@:native("initWithFrame:reuseIdentifier")
-	overload public function initWithFrame_reuseIdentifier(frame:CGRect, reuseIdentifier:Dynamic):Dynamic;
+	overload public function initWithFrame_reuseIdentifier(frame:CGRect, reuseIdentifier:NSString):Dynamic;
 
 	@:native("font")
-	public var font:Dynamic;
+	public var font:UIFont;
 
 	@:native("textAlignment")
 	public var textAlignment:NSTextAlignment;
@@ -148,16 +146,16 @@ extern class UITableViewCell{
 	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("textColor")
-	public var textColor:Dynamic;
+	public var textColor:UIColor;
 
 	@:native("selectedTextColor")
-	public var selectedTextColor:Dynamic;
+	public var selectedTextColor:UIColor;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("selectedImage")
-	public var selectedImage:Dynamic;
+	public var selectedImage:UIImage;
 
 	@:native("hidesAccessoryWhenEditing")
 	public var hidesAccessoryWhenEditing:Bool;

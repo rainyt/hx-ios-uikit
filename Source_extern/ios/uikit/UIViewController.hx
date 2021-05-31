@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGSize;
+import cpp.objc.NSString;
 @:objc
 @:native("UIViewController")
 @:include("UIKit/UIKit.h")
@@ -34,13 +35,13 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:Dynamic, bundle:Dynamic):UIViewController;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIViewController;
+	overload public function initWithCoder(coder:NSCoder):UIViewController;
 
 	@:native("view")
-	public var view:Dynamic;
+	public var view:UIView;
 
 	@:native("loadView")
 	overload public function loadView():Void;
@@ -49,7 +50,7 @@ extern class UIViewController{
 	overload public function loadViewIfNeeded():Void;
 
 	@:native("viewIfLoaded")
-	public var viewIfLoaded:Dynamic;
+	public var viewIfLoaded:UIView;
 
 	@:native("viewWillUnload")
 	overload public function viewWillUnload():Void;
@@ -64,19 +65,19 @@ extern class UIViewController{
 	public var viewLoaded:Bool;
 
 	@:native("nibBundle")
-	public var nibBundle:Dynamic;
+	public var nibBundle:NSBundle;
 
 	@:native("storyboard")
-	public var storyboard:Dynamic;
+	public var storyboard:UIStoryboard;
 
 	@:native("performSegueWithIdentifier:sender")
-	overload public function performSegueWithIdentifier_sender(identifier:Dynamic, sender:Dynamic):Void;
+	overload public function performSegueWithIdentifier_sender(identifier:NSString, sender:Dynamic):Void;
 
 	@:native("shouldPerformSegueWithIdentifier:sender")
-	overload public function shouldPerformSegueWithIdentifier_sender(identifier:Dynamic, sender:Dynamic):Bool;
+	overload public function shouldPerformSegueWithIdentifier_sender(identifier:NSString, sender:Dynamic):Bool;
 
 	@:native("prepareForSegue:sender")
-	overload public function prepareForSegue_sender(segue:Dynamic, sender:Dynamic):Void;
+	overload public function prepareForSegue_sender(segue:UIStoryboardSegue, sender:Dynamic):Void;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:sender")
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
@@ -85,19 +86,19 @@ extern class UIViewController{
 	overload public function canPerformUnwindSegueAction_fromViewController_withSender(action:String, fromViewController:UIViewController, withSender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:Dynamic):Dynamic;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
-	overload public function childViewControllerContainingSegueSource(source:Dynamic):UIViewController;
+	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
 
 	@:native("viewControllerForUnwindSegueAction:fromViewController:withSender")
 	overload public function viewControllerForUnwindSegueAction_fromViewController_withSender(action:String, fromViewController:UIViewController, withSender:Dynamic):UIViewController;
 
 	@:native("unwindForSegue:towardsViewController")
-	overload public function unwindForSegue_towardsViewController(unwindSegue:Dynamic, towardsViewController:UIViewController):Void;
+	overload public function unwindForSegue_towardsViewController(unwindSegue:UIStoryboardSegue, towardsViewController:UIViewController):Void;
 
 	@:native("segueForUnwindingToViewController:fromViewController:identifier")
-	overload public function segueForUnwindingToViewController_fromViewController_identifier(toViewController:UIViewController, fromViewController:UIViewController, identifier:Dynamic):Dynamic;
+	overload public function segueForUnwindingToViewController_fromViewController_identifier(toViewController:UIViewController, fromViewController:UIViewController, identifier:NSString):UIStoryboardSegue;
 
 	@:native("viewWillAppear")
 	overload public function viewWillAppear(animated:Bool):Void;
@@ -166,10 +167,10 @@ extern class UIViewController{
 	overload public function dismissModalViewControllerAnimated(animated:Bool):Void;
 
 	@:native("modalTransitionStyle")
-	public var modalTransitionStyle:Dynamic;
+	public var modalTransitionStyle:UIModalTransitionStyle;
 
 	@:native("modalPresentationStyle")
-	public var modalPresentationStyle:Dynamic;
+	public var modalPresentationStyle:UIModalPresentationStyle;
 
 	@:native("modalPresentationCapturesStatusBarAppearance")
 	public var modalPresentationCapturesStatusBarAppearance:Bool;
@@ -181,7 +182,7 @@ extern class UIViewController{
 	public var wantsFullScreenLayout:Bool;
 
 	@:native("edgesForExtendedLayout")
-	public var edgesForExtendedLayout:Dynamic;
+	public var edgesForExtendedLayout:UIRectEdge;
 
 	@:native("extendedLayoutIncludesOpaqueBars")
 	public var extendedLayoutIncludesOpaqueBars:Bool;
@@ -193,13 +194,13 @@ extern class UIViewController{
 	public var preferredContentSize:CGSize;
 
 	@:native("preferredStatusBarStyle")
-	public var preferredStatusBarStyle:Dynamic;
+	public var preferredStatusBarStyle:UIStatusBarStyle;
 
 	@:native("prefersStatusBarHidden")
 	public var prefersStatusBarHidden:Bool;
 
 	@:native("preferredStatusBarUpdateAnimation")
-	public var preferredStatusBarUpdateAnimation:Dynamic;
+	public var preferredStatusBarUpdateAnimation:UIStatusBarAnimation;
 
 	@:native("setNeedsStatusBarAppearanceUpdate")
 	overload public function setNeedsStatusBarAppearanceUpdate():Void;
@@ -232,43 +233,43 @@ extern class UIViewController{
 	overload public static function attemptRotationToDeviceOrientation():Void;
 
 	@:native("shouldAutorotateToInterfaceOrientation")
-	overload public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:Dynamic):Bool;
+	overload public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):Bool;
 
 	@:native("shouldAutorotate")
 	public var shouldAutorotate:Bool;
 
 	@:native("supportedInterfaceOrientations")
-	public var supportedInterfaceOrientations:Dynamic;
+	public var supportedInterfaceOrientations:UIInterfaceOrientationMask;
 
 	@:native("preferredInterfaceOrientationForPresentation")
-	public var preferredInterfaceOrientationForPresentation:Dynamic;
+	public var preferredInterfaceOrientationForPresentation:UIInterfaceOrientation;
 
 	@:native("rotatingHeaderView")
-	overload public function rotatingHeaderView():Dynamic;
+	overload public function rotatingHeaderView():UIView;
 
 	@:native("rotatingFooterView")
-	overload public function rotatingFooterView():Dynamic;
+	overload public function rotatingFooterView():UIView;
 
 	@:native("interfaceOrientation")
-	public var interfaceOrientation:Dynamic;
+	public var interfaceOrientation:UIInterfaceOrientation;
 
 	@:native("willRotateToInterfaceOrientation:duration")
-	overload public function willRotateToInterfaceOrientation_duration(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
+	overload public function willRotateToInterfaceOrientation_duration(toInterfaceOrientation:UIInterfaceOrientation, duration:Dynamic):Void;
 
 	@:native("didRotateFromInterfaceOrientation")
-	overload public function didRotateFromInterfaceOrientation(fromInterfaceOrientation:Dynamic):Void;
+	overload public function didRotateFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation):Void;
 
 	@:native("willAnimateRotationToInterfaceOrientation:duration")
-	overload public function willAnimateRotationToInterfaceOrientation_duration(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
+	overload public function willAnimateRotationToInterfaceOrientation_duration(toInterfaceOrientation:UIInterfaceOrientation, duration:Dynamic):Void;
 
 	@:native("willAnimateFirstHalfOfRotationToInterfaceOrientation:duration")
-	overload public function willAnimateFirstHalfOfRotationToInterfaceOrientation_duration(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
+	overload public function willAnimateFirstHalfOfRotationToInterfaceOrientation_duration(toInterfaceOrientation:UIInterfaceOrientation, duration:Dynamic):Void;
 
 	@:native("didAnimateFirstHalfOfRotationToInterfaceOrientation")
-	overload public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:Dynamic):Void;
+	overload public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation):Void;
 
 	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration")
-	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation_duration(fromInterfaceOrientation:Dynamic, duration:Dynamic):Void;
+	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation_duration(fromInterfaceOrientation:UIInterfaceOrientation, duration:Dynamic):Void;
 
 	@:native("alloc")
 	overload public static function alloc():UIViewController;
@@ -283,7 +284,7 @@ extern class UIViewController{
 	overload public function setEditing_animated(editing:Bool, animated:Bool):Void;
 
 	@:native("editButtonItem")
-	public var editButtonItem:Dynamic;
+	public var editButtonItem:UIBarButtonItem;
 
 	@:native("alloc")
 	overload public static function alloc():UIViewController;
@@ -292,7 +293,7 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("searchDisplayController")
-	public var searchDisplayController:Dynamic;
+	public var searchDisplayController:UISearchDisplayController;
 
 	@:native("alloc")
 	overload public static function alloc():UIViewController;
@@ -310,7 +311,7 @@ extern class UIViewController{
 	overload public function removeFromParentViewController():Void;
 
 	@:native("transitionFromViewController:toViewController:duration:options:animations:completion")
-	overload public function transitionFromViewController_toViewController_duration_options_animations_completion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public function transitionFromViewController_toViewController_duration_options_animations_completion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginAppearanceTransition:animated")
 	overload public function beginAppearanceTransition_animated(isAppearing:Bool, animated:Bool):Void;
@@ -325,10 +326,10 @@ extern class UIViewController{
 	public var childViewControllerForStatusBarHidden:UIViewController;
 
 	@:native("setOverrideTraitCollection:forChildViewController")
-	overload public function setOverrideTraitCollection_forChildViewController(collection:Dynamic, forChildViewController:UIViewController):Void;
+	overload public function setOverrideTraitCollection_forChildViewController(collection:UITraitCollection, forChildViewController:UIViewController):Void;
 
 	@:native("overrideTraitCollectionForChildViewController")
-	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):Dynamic;
+	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):UITraitCollection;
 
 	@:native("childViewControllerForUserInterfaceStyle")
 	public var childViewControllerForUserInterfaceStyle:UIViewController;
@@ -364,10 +365,10 @@ extern class UIViewController{
 	public var restorationClass:Dynamic;
 
 	@:native("encodeRestorableStateWithCoder")
-	overload public function encodeRestorableStateWithCoder(coder:Dynamic):Void;
+	overload public function encodeRestorableStateWithCoder(coder:NSCoder):Void;
 
 	@:native("decodeRestorableStateWithCoder")
-	overload public function decodeRestorableStateWithCoder(coder:Dynamic):Void;
+	overload public function decodeRestorableStateWithCoder(coder:NSCoder):Void;
 
 	@:native("applicationFinishedRestoringState")
 	overload public function applicationFinishedRestoringState():Void;
@@ -424,10 +425,10 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("addKeyCommand")
-	overload public function addKeyCommand(keyCommand:Dynamic):Void;
+	overload public function addKeyCommand(keyCommand:UIKeyCommand):Void;
 
 	@:native("removeKeyCommand")
-	overload public function removeKeyCommand(keyCommand:Dynamic):Void;
+	overload public function removeKeyCommand(keyCommand:UIKeyCommand):Void;
 
 	@:native("alloc")
 	overload public static function alloc():UIViewController;
@@ -454,10 +455,10 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("presentationController")
-	public var presentationController:Dynamic;
+	public var presentationController:UIPresentationController;
 
 	@:native("popoverPresentationController")
-	public var popoverPresentationController:Dynamic;
+	public var popoverPresentationController:UIPopoverPresentationController;
 
 	@:native("modalInPresentation")
 	public var modalInPresentation:Bool;
@@ -469,7 +470,7 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("registerForPreviewingWithDelegate:sourceView")
-	overload public function registerForPreviewingWithDelegate_sourceView(delegate:Dynamic, sourceView:Dynamic):Dynamic;
+	overload public function registerForPreviewingWithDelegate_sourceView(delegate:Dynamic, sourceView:UIView):Dynamic;
 
 	@:native("unregisterForPreviewingWithContext")
 	overload public function unregisterForPreviewingWithContext(previewing:Dynamic):Void;
@@ -484,7 +485,7 @@ extern class UIViewController{
 	public var childViewControllerForScreenEdgesDeferringSystemGestures:UIViewController;
 
 	@:native("preferredScreenEdgesDeferringSystemGestures")
-	public var preferredScreenEdgesDeferringSystemGestures:Dynamic;
+	public var preferredScreenEdgesDeferringSystemGestures:UIRectEdge;
 
 	@:native("setNeedsUpdateOfScreenEdgesDeferringSystemGestures")
 	overload public function setNeedsUpdateOfScreenEdgesDeferringSystemGestures():Void;
@@ -535,7 +536,7 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("navigationItem")
-	public var navigationItem:Dynamic;
+	public var navigationItem:UINavigationItem;
 
 	@:native("hidesBottomBarWhenPushed")
 	public var hidesBottomBarWhenPushed:Bool;
@@ -577,13 +578,13 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("tabBarItem")
-	public var tabBarItem:Dynamic;
+	public var tabBarItem:UITabBarItem;
 
 	@:native("tabBarController")
 	public var tabBarController:UITabBarController;
 
 	@:native("tabBarObservedScrollView")
-	public var tabBarObservedScrollView:Dynamic;
+	public var tabBarObservedScrollView:UIScrollView;
 
 
 }

@@ -13,23 +13,23 @@ extern class NSTextContainer{
 	@:native("autorelease")
 	overload public static function autorelease():NSTextContainer;
 
-	@:native("initWithSize:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithSize_NS_DESIGNATED_INITIALIZER(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextContainer;
+	@:native("initWithSize")
+	overload public function initWithSize(size:CGSize):NSTextContainer;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):NSTextContainer;
+	overload public function initWithCoder(coder:NSCoder):NSTextContainer;
 
 	@:native("layoutManager")
-	public var layoutManager:Dynamic;
+	public var layoutManager:NSLayoutManager;
 
 	@:native("replaceLayoutManager")
-	overload public function replaceLayoutManager(newLayoutManager:Dynamic):Void;
+	overload public function replaceLayoutManager(newLayoutManager:NSLayoutManager):Void;
 
 	@:native("size")
 	public var size:CGSize;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:Dynamic;
+	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("lineFragmentPadding")
 	public var lineFragmentPadding:Float;
@@ -38,7 +38,7 @@ extern class NSTextContainer{
 	public var maximumNumberOfLines:Int;
 
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
-	overload public function lineFragmentRectForProposedRect_atIndex_writingDirection_remainingRect(proposedRect:CGRect, atIndex:Int, writingDirection:Dynamic, remainingRect:CGRect):CGRect;
+	overload public function lineFragmentRectForProposedRect_atIndex_writingDirection_remainingRect(proposedRect:CGRect, atIndex:Int, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
 
 	@:native("simpleRectangularTextContainer")
 	public var simpleRectangularTextContainer:Bool;

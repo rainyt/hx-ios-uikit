@@ -12,7 +12,7 @@ extern class NSLayoutXAxisAnchor{
 	overload public static function autorelease():NSLayoutXAxisAnchor;
 
 	@:native("anchorWithOffsetToAnchor")
-	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutXAxisAnchor):Dynamic;
+	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutXAxisAnchor):NSLayoutDimension;
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutXAxisAnchor;
@@ -21,13 +21,13 @@ extern class NSLayoutXAxisAnchor{
 	overload public static function autorelease():NSLayoutXAxisAnchor;
 
 	@:native("constraintEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):Dynamic;
+	overload public function constraintEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint;
 
 	@:native("constraintGreaterThanOrEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintGreaterThanOrEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):Dynamic;
+	overload public function constraintGreaterThanOrEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint;
 
 	@:native("constraintLessThanOrEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintLessThanOrEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):Dynamic;
+	overload public function constraintLessThanOrEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint;
 
 
 }

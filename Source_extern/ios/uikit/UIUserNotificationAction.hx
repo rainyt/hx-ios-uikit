@@ -14,14 +14,14 @@ extern class UIUserNotificationAction{
 	@:native("init")
 	overload public function init():UIUserNotificationAction;
 
-	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithCoder_NS_DESIGNATED_INITIALIZER(coder:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationAction;
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):UIUserNotificationAction;
 
 	@:native("behavior")
-	public var behavior:Dynamic;
+	public var behavior:UIUserNotificationActionBehavior;
 
 	@:native("activationMode")
-	public var activationMode:Dynamic;
+	public var activationMode:UIUserNotificationActivationMode;
 
 	@:native("authenticationRequired")
 	public var authenticationRequired:Bool;

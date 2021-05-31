@@ -13,16 +13,16 @@ extern class UITextField{
 	overload public static function autorelease():UITextField;
 
 	@:native("textColor")
-	public var textColor:Dynamic;
+	public var textColor:UIColor;
 
 	@:native("font")
-	public var font:Dynamic;
+	public var font:UIFont;
 
 	@:native("textAlignment")
-	public var textAlignment:Dynamic;
+	public var textAlignment:NSTextAlignment;
 
 	@:native("borderStyle")
-	public var borderStyle:Dynamic;
+	public var borderStyle:UITextBorderStyle;
 
 	@:native("clearsOnBeginEditing")
 	public var clearsOnBeginEditing:Bool;
@@ -37,10 +37,10 @@ extern class UITextField{
 	public var delegate:Dynamic;
 
 	@:native("background")
-	public var background:Dynamic;
+	public var background:UIImage;
 
 	@:native("disabledBackground")
-	public var disabledBackground:Dynamic;
+	public var disabledBackground:UIImage;
 
 	@:native("editing")
 	public var editing:Bool;
@@ -49,19 +49,19 @@ extern class UITextField{
 	public var allowsEditingTextAttributes:Bool;
 
 	@:native("clearButtonMode")
-	public var clearButtonMode:Dynamic;
+	public var clearButtonMode:UITextFieldViewMode;
 
 	@:native("leftView")
-	public var leftView:Dynamic;
+	public var leftView:UIView;
 
 	@:native("leftViewMode")
-	public var leftViewMode:Dynamic;
+	public var leftViewMode:UITextFieldViewMode;
 
 	@:native("rightView")
-	public var rightView:Dynamic;
+	public var rightView:UIView;
 
 	@:native("rightViewMode")
-	public var rightViewMode:Dynamic;
+	public var rightViewMode:UITextFieldViewMode;
 
 	@:native("borderRectForBounds")
 	overload public function borderRectForBounds(bounds:CGRect):CGRect;
@@ -91,10 +91,10 @@ extern class UITextField{
 	overload public function drawPlaceholderInRect(rect:CGRect):Void;
 
 	@:native("inputView")
-	public var inputView:Dynamic;
+	public var inputView:UIView;
 
 	@:native("inputAccessoryView")
-	public var inputAccessoryView:Dynamic;
+	public var inputAccessoryView:UIView;
 
 	@:native("clearsOnInsertion")
 	public var clearsOnInsertion:Bool;

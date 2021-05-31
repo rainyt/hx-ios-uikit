@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UITextInputMode")
 @:include("UIKit/UIKit.h")
@@ -12,7 +13,7 @@ extern class UITextInputMode{
 	overload public static function autorelease():UITextInputMode;
 
 	@:native("primaryLanguage")
-	public var primaryLanguage:Dynamic;
+	public var primaryLanguage:NSString;
 
 	@:native("currentInputMode")
 	overload public static function currentInputMode():UITextInputMode;

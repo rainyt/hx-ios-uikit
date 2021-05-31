@@ -17,10 +17,10 @@ extern class UIControl extends UIView{
 	overload public function initWithFrame(frame:CGRect):UIControl;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIControl;
+	overload public function initWithCoder(coder:NSCoder):UIControl;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:Dynamic):UIControl;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;
 
 	@:native("enabled")
 	public var enabled:Bool;
@@ -32,16 +32,16 @@ extern class UIControl extends UIView{
 	public var highlighted:Bool;
 
 	@:native("contentVerticalAlignment")
-	public var contentVerticalAlignment:Dynamic;
+	public var contentVerticalAlignment:UIControlContentVerticalAlignment;
 
 	@:native("contentHorizontalAlignment")
-	public var contentHorizontalAlignment:Dynamic;
+	public var contentHorizontalAlignment:UIControlContentHorizontalAlignment;
 
 	@:native("effectiveContentHorizontalAlignment")
-	public var effectiveContentHorizontalAlignment:Dynamic;
+	public var effectiveContentHorizontalAlignment:UIControlContentHorizontalAlignment;
 
 	@:native("state")
-	public var state:Dynamic;
+	public var state:UIControlState;
 
 	@:native("tracking")
 	public var tracking:Bool;
@@ -50,55 +50,55 @@ extern class UIControl extends UIView{
 	public var touchInside:Bool;
 
 	@:native("beginTrackingWithTouch:withEvent")
-	overload public function beginTrackingWithTouch_withEvent(touch:Dynamic, withEvent:Dynamic):Bool;
+	overload public function beginTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;
 
 	@:native("continueTrackingWithTouch:withEvent")
-	overload public function continueTrackingWithTouch_withEvent(touch:Dynamic, withEvent:Dynamic):Bool;
+	overload public function continueTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;
 
 	@:native("endTrackingWithTouch:withEvent")
-	overload public function endTrackingWithTouch_withEvent(touch:Dynamic, withEvent:Dynamic):Void;
+	overload public function endTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Void;
 
 	@:native("cancelTrackingWithEvent")
-	overload public function cancelTrackingWithEvent(event:Dynamic):Void;
+	overload public function cancelTrackingWithEvent(event:UIEvent):Void;
 
 	@:native("addTarget:action:forControlEvents")
-	overload public function addTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:Dynamic):Void;
+	overload public function addTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeTarget:action:forControlEvents")
-	overload public function removeTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:Dynamic):Void;
+	overload public function removeTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("addAction:forControlEvents")
-	overload public function addAction_forControlEvents(action:Dynamic, forControlEvents:Dynamic):Void;
+	overload public function addAction_forControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeAction:forControlEvents")
-	overload public function removeAction_forControlEvents(action:Dynamic, forControlEvents:Dynamic):Void;
+	overload public function removeAction_forControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeActionForIdentifier:forControlEvents")
-	overload public function removeActionForIdentifier_forControlEvents(actionIdentifier:Dynamic, forControlEvents:Dynamic):Void;
+	overload public function removeActionForIdentifier_forControlEvents(actionIdentifier:Dynamic, forControlEvents:UIControlEvents):Void;
 
 	@:native("allTargets")
 	public var allTargets:Dynamic;
 
 	@:native("allControlEvents")
-	public var allControlEvents:Dynamic;
+	public var allControlEvents:UIControlEvents;
 
 	@:native("actionsForTarget:forControlEvent")
-	overload public function actionsForTarget_forControlEvent(target:Dynamic, forControlEvent:Dynamic):Dynamic;
+	overload public function actionsForTarget_forControlEvent(target:Dynamic, forControlEvent:UIControlEvents):Dynamic;
 
 	@:native("enumerateEventHandlers")
 	overload public function enumerateEventHandlers(iterator:Dynamic):Void;
 
 	@:native("sendAction:to:forEvent")
-	overload public function sendAction_to_forEvent(action:String, to:Dynamic, forEvent:Dynamic):Void;
+	overload public function sendAction_to_forEvent(action:String, to:Dynamic, forEvent:UIEvent):Void;
 
 	@:native("sendAction")
-	overload public function sendAction(action:Dynamic):Void;
+	overload public function sendAction(action:UIAction):Void;
 
 	@:native("sendActionsForControlEvents")
-	overload public function sendActionsForControlEvents(controlEvents:Dynamic):Void;
+	overload public function sendActionsForControlEvents(controlEvents:UIControlEvents):Void;
 
 	@:native("contextMenuInteraction")
-	public var contextMenuInteraction:Dynamic;
+	public var contextMenuInteraction:UIContextMenuInteraction;
 
 	@:native("contextMenuInteractionEnabled")
 	public var contextMenuInteractionEnabled:Bool;
@@ -107,7 +107,7 @@ extern class UIControl extends UIView{
 	public var showsMenuAsPrimaryAction:Bool;
 
 	@:native("menuAttachmentPointForConfiguration")
-	overload public function menuAttachmentPointForConfiguration(configuration:Dynamic):CGPoint;
+	overload public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration):CGPoint;
 
 	@:native("alloc")
 	overload public static function alloc():UIControl;
@@ -116,22 +116,22 @@ extern class UIControl extends UIView{
 	overload public static function autorelease():UIControl;
 
 	@:native("contextMenuInteraction:configurationForMenuAtLocation")
-	overload public function contextMenuInteraction_configurationForMenuAtLocation(interaction:Dynamic, configurationForMenuAtLocation:CGPoint):Dynamic;
+	overload public function contextMenuInteraction_configurationForMenuAtLocation(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):UIContextMenuConfiguration;
 
 	@:native("contextMenuInteraction:previewForHighlightingMenuWithConfiguration")
-	overload public function contextMenuInteraction_previewForHighlightingMenuWithConfiguration(interaction:Dynamic, previewForHighlightingMenuWithConfiguration:Dynamic):Dynamic;
+	overload public function contextMenuInteraction_previewForHighlightingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
 	@:native("contextMenuInteraction:previewForDismissingMenuWithConfiguration")
-	overload public function contextMenuInteraction_previewForDismissingMenuWithConfiguration(interaction:Dynamic, previewForDismissingMenuWithConfiguration:Dynamic):Dynamic;
+	overload public function contextMenuInteraction_previewForDismissingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
-	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator:NS_REQUIRES_SUPER")
-	overload public function contextMenuInteraction_willDisplayMenuForConfiguration_animator_NS_REQUIRES_SUPER(interaction:Dynamic, willDisplayMenuForConfiguration:Dynamic, animator:Dynamic, NS_REQUIRES_SUPER:Dynamic):Void;
+	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator")
+	overload public function contextMenuInteraction_willDisplayMenuForConfiguration_animator(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
-	@:native("contextMenuInteraction:willEndForConfiguration:animator:NS_REQUIRES_SUPER")
-	overload public function contextMenuInteraction_willEndForConfiguration_animator_NS_REQUIRES_SUPER(interaction:Dynamic, willEndForConfiguration:Dynamic, animator:Dynamic, NS_REQUIRES_SUPER:Dynamic):Void;
+	@:native("contextMenuInteraction:willEndForConfiguration:animator")
+	overload public function contextMenuInteraction_willEndForConfiguration_animator(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator")
-	overload public function contextMenuInteraction_willPerformPreviewActionForMenuWithConfiguration_animator(interaction:Dynamic, willPerformPreviewActionForMenuWithConfiguration:Dynamic, animator:Dynamic):Void;
+	overload public function contextMenuInteraction_willPerformPreviewActionForMenuWithConfiguration_animator(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 
 }

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIMenuElement")
 @:include("UIKit/UIKit.h")
@@ -12,13 +13,13 @@ extern class UIMenuElement{
 	overload public static function autorelease():UIMenuElement;
 
 	@:native("title")
-	public var title:Dynamic;
+	public var title:NSString;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIMenuElement;
+	overload public function initWithCoder(coder:NSCoder):UIMenuElement;
 
 	@:native("init")
 	overload public function init():UIMenuElement;

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIAlertController")
 @:include("UIKit/UIKit.h")
@@ -12,7 +13,7 @@ extern class UIAlertController extends UIViewController{
 	overload public static function autorelease():UIAlertController;
 
 	@:native("alertControllerWithTitle:message:preferredStyle")
-	overload public static function alertControllerWithTitle_message_preferredStyle(title:Dynamic, message:Dynamic, preferredStyle:Dynamic):UIAlertController;
+	overload public static function alertControllerWithTitle_message_preferredStyle(title:NSString, message:NSString, preferredStyle:UIAlertControllerStyle):UIAlertController;
 
 	@:native("addAction")
 	overload public function addAction(action:UIAlertAction):Void;
@@ -30,7 +31,7 @@ extern class UIAlertController extends UIViewController{
 	public var textFields:Dynamic;
 
 	@:native("preferredStyle")
-	public var preferredStyle:Dynamic;
+	public var preferredStyle:UIAlertControllerStyle;
 
 	@:native("alloc")
 	overload public static function alloc():UIAlertController;

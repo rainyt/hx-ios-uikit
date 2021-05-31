@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIWebView")
 @:include("UIKit/UIKit.h")
@@ -15,16 +16,16 @@ extern class UIWebView{
 	public var delegate:Dynamic;
 
 	@:native("scrollView")
-	public var scrollView:Dynamic;
+	public var scrollView:UIScrollView;
 
 	@:native("loadRequest")
 	overload public function loadRequest(request:Dynamic):Void;
 
 	@:native("loadHTMLString:baseURL")
-	overload public function loadHTMLString_baseURL(string:Dynamic, baseURL:Dynamic):Void;
+	overload public function loadHTMLString_baseURL(string:NSString, baseURL:Dynamic):Void;
 
 	@:native("loadData:MIMEType:textEncodingName:baseURL")
-	overload public function loadData_MIMEType_textEncodingName_baseURL(data:Dynamic, MIMEType:Dynamic, textEncodingName:Dynamic, baseURL:Dynamic):Void;
+	overload public function loadData_MIMEType_textEncodingName_baseURL(data:Dynamic, MIMEType:NSString, textEncodingName:NSString, baseURL:Dynamic):Void;
 
 	@:native("request")
 	public var request:Dynamic;
@@ -51,7 +52,7 @@ extern class UIWebView{
 	public var loading:Bool;
 
 	@:native("stringByEvaluatingJavaScriptFromString")
-	overload public function stringByEvaluatingJavaScriptFromString(script:Dynamic):Dynamic;
+	overload public function stringByEvaluatingJavaScriptFromString(script:NSString):NSString;
 
 	@:native("scalesPageToFit")
 	public var scalesPageToFit:Bool;
@@ -60,7 +61,7 @@ extern class UIWebView{
 	public var detectsPhoneNumbers:Bool;
 
 	@:native("dataDetectorTypes")
-	public var dataDetectorTypes:Dynamic;
+	public var dataDetectorTypes:UIDataDetectorTypes;
 
 	@:native("allowsInlineMediaPlayback")
 	public var allowsInlineMediaPlayback:Bool;
@@ -78,10 +79,10 @@ extern class UIWebView{
 	public var keyboardDisplayRequiresUserAction:Bool;
 
 	@:native("paginationMode")
-	public var paginationMode:Dynamic;
+	public var paginationMode:UIWebPaginationMode;
 
 	@:native("paginationBreakingMode")
-	public var paginationBreakingMode:Dynamic;
+	public var paginationBreakingMode:UIWebPaginationBreakingMode;
 
 	@:native("pageLength")
 	public var pageLength:Float;

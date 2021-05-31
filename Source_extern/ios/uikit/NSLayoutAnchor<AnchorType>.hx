@@ -12,22 +12,22 @@ extern class NSLayoutAnchor<AnchorType>{
 	overload public static function autorelease():NSLayoutAnchor<AnchorType>;
 
 	@:native("constraintEqualToAnchor")
-	overload public function constraintEqualToAnchor(anchor:Dynamic):Dynamic;
+	overload public function constraintEqualToAnchor(anchor:Dynamic):NSLayoutConstraint;
 
 	@:native("constraintGreaterThanOrEqualToAnchor")
-	overload public function constraintGreaterThanOrEqualToAnchor(anchor:Dynamic):Dynamic;
+	overload public function constraintGreaterThanOrEqualToAnchor(anchor:Dynamic):NSLayoutConstraint;
 
 	@:native("constraintLessThanOrEqualToAnchor")
-	overload public function constraintLessThanOrEqualToAnchor(anchor:Dynamic):Dynamic;
+	overload public function constraintLessThanOrEqualToAnchor(anchor:Dynamic):NSLayoutConstraint;
 
 	@:native("constraintEqualToAnchor:constant")
-	overload public function constraintEqualToAnchor_constant(anchor:Dynamic, constant:Float):Dynamic;
+	overload public function constraintEqualToAnchor_constant(anchor:Dynamic, constant:Float):NSLayoutConstraint;
 
 	@:native("constraintGreaterThanOrEqualToAnchor:constant")
-	overload public function constraintGreaterThanOrEqualToAnchor_constant(anchor:Dynamic, constant:Float):Dynamic;
+	overload public function constraintGreaterThanOrEqualToAnchor_constant(anchor:Dynamic, constant:Float):NSLayoutConstraint;
 
 	@:native("constraintLessThanOrEqualToAnchor:constant")
-	overload public function constraintLessThanOrEqualToAnchor_constant(anchor:Dynamic, constant:Float):Dynamic;
+	overload public function constraintLessThanOrEqualToAnchor_constant(anchor:Dynamic, constant:Float):NSLayoutConstraint;
 
 	@:native("item")
 	public var item:Dynamic;

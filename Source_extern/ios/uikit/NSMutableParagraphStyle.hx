@@ -18,7 +18,7 @@ extern class NSMutableParagraphStyle extends NSParagraphStyle{
 	public var paragraphSpacing:Float;
 
 	@:native("alignment")
-	public var alignment:Dynamic;
+	public var alignment:NSTextAlignment;
 
 	@:native("firstLineHeadIndent")
 	public var firstLineHeadIndent:Float;
@@ -30,7 +30,7 @@ extern class NSMutableParagraphStyle extends NSParagraphStyle{
 	public var tailIndent:Float;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:Dynamic;
+	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("minimumLineHeight")
 	public var minimumLineHeight:Float;
@@ -39,7 +39,7 @@ extern class NSMutableParagraphStyle extends NSParagraphStyle{
 	public var maximumLineHeight:Float;
 
 	@:native("baseWritingDirection")
-	public var baseWritingDirection:Dynamic;
+	public var baseWritingDirection:NSWritingDirection;
 
 	@:native("lineHeightMultiple")
 	public var lineHeightMultiple:Float;
@@ -57,7 +57,7 @@ extern class NSMutableParagraphStyle extends NSParagraphStyle{
 	public var allowsDefaultTighteningForTruncation:Bool;
 
 	@:native("lineBreakStrategy")
-	public var lineBreakStrategy:Dynamic;
+	public var lineBreakStrategy:NSLineBreakStrategy;
 
 	@:native("addTabStop")
 	overload public function addTabStop(anObject:NSTextTab):Void;

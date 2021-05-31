@@ -15,7 +15,7 @@ extern class UISceneActivationConditions{
 	overload public function init():UISceneActivationConditions;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:Dynamic):UISceneActivationConditions;
+	overload public function initWithCoder(aDecoder:NSCoder):UISceneActivationConditions;
 
 
 }

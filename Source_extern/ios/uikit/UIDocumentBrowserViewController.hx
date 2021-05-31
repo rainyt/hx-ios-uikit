@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")
@@ -11,14 +12,14 @@ extern class UIDocumentBrowserViewController{
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentBrowserViewController;
 
-	@:native("initForOpeningFilesWithContentTypes:NS_DESIGNATED_INITIALIZER")
-	overload public function initForOpeningFilesWithContentTypes_NS_DESIGNATED_INITIALIZER(allowedContentTypes:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentBrowserViewController;
+	@:native("initForOpeningFilesWithContentTypes")
+	overload public function initForOpeningFilesWithContentTypes(allowedContentTypes:Dynamic):UIDocumentBrowserViewController;
 
-	@:native("initForOpeningContentTypes:NS_DESIGNATED_INITIALIZER")
-	overload public function initForOpeningContentTypes_NS_DESIGNATED_INITIALIZER(contentTypes:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentBrowserViewController;
+	@:native("initForOpeningContentTypes")
+	overload public function initForOpeningContentTypes(contentTypes:Dynamic):UIDocumentBrowserViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibName:Dynamic, bundle:Dynamic):UIDocumentBrowserViewController;
+	overload public function initWithNibName_bundle(nibName:NSString, bundle:NSBundle):UIDocumentBrowserViewController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -42,16 +43,16 @@ extern class UIDocumentBrowserViewController{
 	overload public function revealDocumentAtURL_importIfNeeded_completion(url:Dynamic, importIfNeeded:Bool, completion:Dynamic):Void;
 
 	@:native("importDocumentAtURL:nextToDocumentAtURL:mode:completionHandler")
-	overload public function importDocumentAtURL_nextToDocumentAtURL_mode_completionHandler(documentURL:Dynamic, nextToDocumentAtURL:Dynamic, mode:Dynamic, completionHandler:Dynamic):Void;
+	overload public function importDocumentAtURL_nextToDocumentAtURL_mode_completionHandler(documentURL:Dynamic, nextToDocumentAtURL:Dynamic, mode:UIDocumentBrowserImportMode, completionHandler:Dynamic):Void;
 
 	@:native("transitionControllerForDocumentAtURL")
-	overload public function transitionControllerForDocumentAtURL(documentURL:Dynamic):Dynamic;
+	overload public function transitionControllerForDocumentAtURL(documentURL:Dynamic):UIDocumentBrowserTransitionController;
 
 	@:native("transitionControllerForDocumentURL")
-	overload public function transitionControllerForDocumentURL(documentURL:Dynamic):Dynamic;
+	overload public function transitionControllerForDocumentURL(documentURL:Dynamic):UIDocumentBrowserTransitionController;
 
 	@:native("browserUserInterfaceStyle")
-	public var browserUserInterfaceStyle:Dynamic;
+	public var browserUserInterfaceStyle:UIDocumentBrowserUserInterfaceStyle;
 
 	@:native("defaultDocumentAspectRatio")
 	public var defaultDocumentAspectRatio:Float;

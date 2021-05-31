@@ -12,7 +12,7 @@ extern class UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierT
 	overload public static function autorelease():UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>;
 
 	@:native("initWithTableView:cellProvider")
-	overload public function initWithTableView_cellProvider(tableView:Dynamic, cellProvider:Dynamic):Dynamic;
+	overload public function initWithTableView_cellProvider(tableView:UITableView, cellProvider:Dynamic):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;
@@ -33,7 +33,7 @@ extern class UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierT
 	overload public function indexPathForItemIdentifier(identifier:Dynamic):Dynamic;
 
 	@:native("defaultRowAnimation")
-	public var defaultRowAnimation:Dynamic;
+	public var defaultRowAnimation:UITableViewRowAnimation;
 
 
 }

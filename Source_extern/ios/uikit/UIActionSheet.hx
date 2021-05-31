@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc
 @:native("UIActionSheet")
@@ -13,19 +14,19 @@ extern class UIActionSheet extends UIView{
 	overload public static function autorelease():UIActionSheet;
 
 	@:native("initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:...")
-	overload public function initWithTitle_delegate_cancelButtonTitle_destructiveButtonTitle_otherButtonTitles_...(title:Dynamic, delegate:Dynamic, cancelButtonTitle:Dynamic, destructiveButtonTitle:Dynamic, otherButtonTitles:Dynamic, ...:Dynamic):UIActionSheet;
+	overload public function initWithTitle_delegate_cancelButtonTitle_destructiveButtonTitle_otherButtonTitles_...(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):UIActionSheet;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("actionSheetStyle")
-	public var actionSheetStyle:Dynamic;
+	public var actionSheetStyle:UIActionSheetStyle;
 
 	@:native("addButtonWithTitle")
-	overload public function addButtonWithTitle(title:Dynamic):Int;
+	overload public function addButtonWithTitle(title:NSString):Int;
 
 	@:native("buttonTitleAtIndex")
-	overload public function buttonTitleAtIndex(buttonIndex:Int):Dynamic;
+	overload public function buttonTitleAtIndex(buttonIndex:Int):NSString;
 
 	@:native("numberOfButtons")
 	public var numberOfButtons:Int;
@@ -43,19 +44,19 @@ extern class UIActionSheet extends UIView{
 	public var visible:Bool;
 
 	@:native("showFromToolbar")
-	overload public function showFromToolbar(view:Dynamic):Void;
+	overload public function showFromToolbar(view:UIToolbar):Void;
 
 	@:native("showFromTabBar")
-	overload public function showFromTabBar(view:Dynamic):Void;
+	overload public function showFromTabBar(view:UITabBar):Void;
 
 	@:native("showFromBarButtonItem:animated")
-	overload public function showFromBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
+	overload public function showFromBarButtonItem_animated(item:UIBarButtonItem, animated:Bool):Void;
 
 	@:native("showFromRect:inView:animated")
-	overload public function showFromRect_inView_animated(rect:CGRect, inView:Dynamic, animated:Bool):Void;
+	overload public function showFromRect_inView_animated(rect:CGRect, inView:UIView, animated:Bool):Void;
 
 	@:native("showInView")
-	overload public function showInView(view:Dynamic):Void;
+	overload public function showInView(view:UIView):Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
 	overload public function dismissWithClickedButtonIndex_animated(buttonIndex:Int, animated:Bool):Void;

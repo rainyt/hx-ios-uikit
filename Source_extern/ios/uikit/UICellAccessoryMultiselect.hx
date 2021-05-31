@@ -12,7 +12,7 @@ extern class UICellAccessoryMultiselect extends UICellAccessory{
 	overload public static function autorelease():UICellAccessoryMultiselect;
 
 	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
+	public var backgroundColor:UIColor;
 
 
 }

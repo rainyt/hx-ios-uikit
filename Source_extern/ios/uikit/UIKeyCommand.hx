@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIKeyCommand")
 @:include("UIKit/UIKit.h")
@@ -15,34 +16,34 @@ extern class UIKeyCommand extends UICommand{
 	overload public function init():UIKeyCommand;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIKeyCommand;
+	overload public function initWithCoder(coder:NSCoder):UIKeyCommand;
 
 	@:native("action")
 	public var action:String;
 
 	@:native("input")
-	public var input:Dynamic;
+	public var input:NSString;
 
 	@:native("modifierFlags")
-	public var modifierFlags:Dynamic;
+	public var modifierFlags:UIKeyModifierFlags;
 
 	@:native("propertyList")
 	public var propertyList:Dynamic;
 
 	@:native("attributes")
-	public var attributes:Dynamic;
+	public var attributes:UIMenuElementAttributes;
 
 	@:native("state")
-	public var state:Dynamic;
+	public var state:UIMenuElementState;
 
 	@:native("alternates")
 	public var alternates:Dynamic;
 
 	@:native("keyCommandWithInput:modifierFlags:action")
-	overload public static function keyCommandWithInput_modifierFlags_action(input:Dynamic, modifierFlags:Dynamic, action:String):UIKeyCommand;
+	overload public static function keyCommandWithInput_modifierFlags_action(input:NSString, modifierFlags:UIKeyModifierFlags, action:String):UIKeyCommand;
 
 	@:native("keyCommandWithInput:modifierFlags:action:discoverabilityTitle")
-	overload public static function keyCommandWithInput_modifierFlags_action_discoverabilityTitle(input:Dynamic, modifierFlags:Dynamic, action:String, discoverabilityTitle:Dynamic):UIKeyCommand;
+	overload public static function keyCommandWithInput_modifierFlags_action_discoverabilityTitle(input:NSString, modifierFlags:UIKeyModifierFlags, action:String, discoverabilityTitle:NSString):UIKeyCommand;
 
 
 }

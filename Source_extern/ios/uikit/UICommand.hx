@@ -30,7 +30,7 @@ extern class UICommand extends UIMenuElement{
 	overload public function init():UICommand;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UICommand;
+	overload public function initWithCoder(coder:NSCoder):UICommand;
 
 
 }

@@ -18,7 +18,7 @@ extern class UICollectionViewUpdateItem{
 	public var indexPathAfterUpdate:Dynamic;
 
 	@:native("updateAction")
-	public var updateAction:Dynamic;
+	public var updateAction:UICollectionUpdateAction;
 
 
 }

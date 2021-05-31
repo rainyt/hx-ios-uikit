@@ -6,6 +6,7 @@ import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
 import ios.objc.CATransform3D;
 import ios.objc.CGSize;
+import cpp.objc.NSString;
 @:objc
 @:native("UIView")
 @:include("UIKit/UIKit.h")
@@ -42,7 +43,7 @@ extern class UIView{
 	public var showsLargeContentViewer:Bool;
 
 	@:native("largeContentImage")
-	public var largeContentImage:Dynamic;
+	public var largeContentImage:UIImage;
 
 	@:native("scalesLargeContentImage")
 	public var scalesLargeContentImage:Bool;
@@ -84,7 +85,7 @@ extern class UIView{
 	overload public function initWithFrame(frame:CGRect):UIView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIView;
+	overload public function initWithCoder(coder:NSCoder):UIView;
 
 	@:native("userInteractionEnabled")
 	public var userInteractionEnabled:Bool;
@@ -102,13 +103,13 @@ extern class UIView{
 	public var focused:Bool;
 
 	@:native("semanticContentAttribute")
-	public var semanticContentAttribute:Dynamic;
+	public var semanticContentAttribute:UISemanticContentAttribute;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:Dynamic):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:Dynamic, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("effectiveUserInterfaceLayoutDirection")
 	public var effectiveUserInterfaceLayoutDirection:UIUserInterfaceLayoutDirection;
@@ -144,10 +145,10 @@ extern class UIView{
 	public var exclusiveTouch:Bool;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:Dynamic):UIView;
+	overload public function hitTest_withEvent(point:CGPoint, withEvent:UIEvent):UIView;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside_withEvent(point:CGPoint, withEvent:Dynamic):Bool;
+	overload public function pointInside_withEvent(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
 	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
@@ -165,7 +166,7 @@ extern class UIView{
 	public var autoresizesSubviews:Bool;
 
 	@:native("autoresizingMask")
-	public var autoresizingMask:Dynamic;
+	public var autoresizingMask:UIViewAutoresizing;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;
@@ -183,7 +184,7 @@ extern class UIView{
 	public var superview:UIView;
 
 	@:native("window")
-	public var window:Dynamic;
+	public var window:UIWindow;
 
 	@:native("removeFromSuperview")
 	overload public function removeFromSuperview():Void;
@@ -222,7 +223,7 @@ extern class UIView{
 	overload public function didMoveToSuperview():Void;
 
 	@:native("willMoveToWindow")
-	overload public function willMoveToWindow(newWindow:Dynamic):Void;
+	overload public function willMoveToWindow(newWindow:UIWindow):Void;
 
 	@:native("didMoveToWindow")
 	overload public function didMoveToWindow():Void;
@@ -303,7 +304,7 @@ extern class UIView{
 	public var hidden:Bool;
 
 	@:native("contentMode")
-	public var contentMode:Dynamic;
+	public var contentMode:UIViewContentMode;
 
 	@:native("contentStretch")
 	public var contentStretch:CGRect;
@@ -312,10 +313,10 @@ extern class UIView{
 	public var maskView:UIView;
 
 	@:native("tintColor")
-	public var tintColor:Dynamic;
+	public var tintColor:UIColor;
 
 	@:native("tintAdjustmentMode")
-	public var tintAdjustmentMode:Dynamic;
+	public var tintAdjustmentMode:UIViewTintAdjustmentMode;
 
 	@:native("tintColorDidChange")
 	overload public function tintColorDidChange():Void;
@@ -345,7 +346,7 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("animateWithDuration:delay:options:animations:completion")
-	overload public static function animateWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations:completion")
 	overload public static function animateWithDuration_animations_completion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
@@ -354,16 +355,16 @@ extern class UIView{
 	overload public static function animateWithDuration_animations(duration:Dynamic, animations:Dynamic):Void;
 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
-	overload public static function animateWithDuration_delay_usingSpringWithDamping_initialSpringVelocity_options_animations_completion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDuration_delay_usingSpringWithDamping_initialSpringVelocity_options_animations_completion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionWithView:duration:options:animations:completion")
-	overload public static function transitionWithView_duration_options_animations_completion(view:UIView, duration:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function transitionWithView_duration_options_animations_completion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionFromView:toView:duration:options:completion")
-	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:Dynamic, completion:Dynamic):Void;
+	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:Dynamic, onViews:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -375,7 +376,7 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
-	overload public static function animateKeyframesWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateKeyframesWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
 	overload public static function addKeyframeWithRelativeStartTime_relativeDuration_animations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
@@ -387,13 +388,13 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("addGestureRecognizer")
-	overload public function addGestureRecognizer(gestureRecognizer:Dynamic):Void;
+	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("removeGestureRecognizer")
-	overload public function removeGestureRecognizer(gestureRecognizer:Dynamic):Void;
+	overload public function removeGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("gestureRecognizerShouldBegin")
-	overload public function gestureRecognizerShouldBegin(gestureRecognizer:Dynamic):Bool;
+	overload public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("alloc")
 	overload public static function alloc():UIView;
@@ -402,10 +403,10 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("addMotionEffect")
-	overload public function addMotionEffect(effect:Dynamic):Void;
+	overload public function addMotionEffect(effect:UIMotionEffect):Void;
 
 	@:native("removeMotionEffect")
-	overload public function removeMotionEffect(effect:Dynamic):Void;
+	overload public function removeMotionEffect(effect:UIMotionEffect):Void;
 
 	@:native("alloc")
 	overload public static function alloc():UIView;
@@ -417,13 +418,13 @@ extern class UIView{
 	public var constraints:Dynamic;
 
 	@:native("addConstraint")
-	overload public function addConstraint(constraint:Dynamic):Void;
+	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
 	overload public function addConstraints(constraints:Dynamic):Void;
 
 	@:native("removeConstraint")
-	overload public function removeConstraint(constraint:Dynamic):Void;
+	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
 	overload public function removeConstraints(constraints:Dynamic):Void;
@@ -489,16 +490,16 @@ extern class UIView{
 	overload public function invalidateIntrinsicContentSize():Void;
 
 	@:native("contentHuggingPriorityForAxis")
-	overload public function contentHuggingPriorityForAxis(axis:Dynamic):Dynamic;
+	overload public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:Dynamic):Void;
+	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
-	overload public function contentCompressionResistancePriorityForAxis(axis:Dynamic):Dynamic;
+	overload public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:Dynamic):Void;
+	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("alloc")
 	overload public static function alloc():UIView;
@@ -531,40 +532,40 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("leadingAnchor")
-	public var leadingAnchor:Dynamic;
+	public var leadingAnchor:NSLayoutXAxisAnchor;
 
 	@:native("trailingAnchor")
-	public var trailingAnchor:Dynamic;
+	public var trailingAnchor:NSLayoutXAxisAnchor;
 
 	@:native("leftAnchor")
-	public var leftAnchor:Dynamic;
+	public var leftAnchor:NSLayoutXAxisAnchor;
 
 	@:native("rightAnchor")
-	public var rightAnchor:Dynamic;
+	public var rightAnchor:NSLayoutXAxisAnchor;
 
 	@:native("topAnchor")
-	public var topAnchor:Dynamic;
+	public var topAnchor:NSLayoutYAxisAnchor;
 
 	@:native("bottomAnchor")
-	public var bottomAnchor:Dynamic;
+	public var bottomAnchor:NSLayoutYAxisAnchor;
 
 	@:native("widthAnchor")
-	public var widthAnchor:Dynamic;
+	public var widthAnchor:NSLayoutDimension;
 
 	@:native("heightAnchor")
-	public var heightAnchor:Dynamic;
+	public var heightAnchor:NSLayoutDimension;
 
 	@:native("centerXAnchor")
-	public var centerXAnchor:Dynamic;
+	public var centerXAnchor:NSLayoutXAxisAnchor;
 
 	@:native("centerYAnchor")
-	public var centerYAnchor:Dynamic;
+	public var centerYAnchor:NSLayoutYAxisAnchor;
 
 	@:native("firstBaselineAnchor")
-	public var firstBaselineAnchor:Dynamic;
+	public var firstBaselineAnchor:NSLayoutYAxisAnchor;
 
 	@:native("lastBaselineAnchor")
-	public var lastBaselineAnchor:Dynamic;
+	public var lastBaselineAnchor:NSLayoutYAxisAnchor;
 
 	@:native("alloc")
 	overload public static function alloc():UIView;
@@ -573,7 +574,7 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:Dynamic):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("hasAmbiguousLayout")
 	public var hasAmbiguousLayout:Bool;
@@ -588,10 +589,10 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("encodeRestorableStateWithCoder")
-	overload public function encodeRestorableStateWithCoder(coder:Dynamic):Void;
+	overload public function encodeRestorableStateWithCoder(coder:NSCoder):Void;
 
 	@:native("decodeRestorableStateWithCoder")
-	overload public function decodeRestorableStateWithCoder(coder:Dynamic):Void;
+	overload public function decodeRestorableStateWithCoder(coder:NSCoder):Void;
 
 	@:native("alloc")
 	overload public static function alloc():UIView;
@@ -615,7 +616,7 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("beginAnimations:context")
-	overload public static function beginAnimations_context(animationID:Dynamic, context:Void):Void;
+	overload public static function beginAnimations_context(animationID:NSString, context:Void):Void;
 
 	@:native("commitAnimations")
 	overload public static function commitAnimations():Void;
@@ -639,7 +640,7 @@ extern class UIView{
 	overload public static function setAnimationStartDate(startDate:Dynamic):Void;
 
 	@:native("setAnimationCurve")
-	overload public static function setAnimationCurve(curve:Dynamic):Void;
+	overload public static function setAnimationCurve(curve:UIViewAnimationCurve):Void;
 
 	@:native("setAnimationRepeatCount")
 	overload public static function setAnimationRepeatCount(repeatCount:Dynamic):Void;
@@ -651,7 +652,7 @@ extern class UIView{
 	overload public static function setAnimationBeginsFromCurrentState(fromCurrentState:Bool):Void;
 
 	@:native("setAnimationTransition:forView:cache")
-	overload public static function setAnimationTransition_forView_cache(transition:Dynamic, forView:UIView, cache:Bool):Void;
+	overload public static function setAnimationTransition_forView_cache(transition:UIViewAnimationTransition, forView:UIView, cache:Bool):Void;
 
 	@:native("alloc")
 	overload public static function alloc():UIView;

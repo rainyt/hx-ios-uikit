@@ -15,7 +15,7 @@ extern class UIMotionEffect{
 	overload public function init():UIMotionEffect;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIMotionEffect;
+	overload public function initWithCoder(coder:NSCoder):UIMotionEffect;
 
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
 	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:Dynamic):Dynamic;

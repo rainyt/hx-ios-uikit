@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UISplitViewController")
 @:include("UIKit/UIKit.h")
@@ -12,16 +13,16 @@ extern class UISplitViewController extends UIViewController{
 	overload public static function autorelease():UISplitViewController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UISplitViewController;
+	overload public function initWithCoder(coder:NSCoder):UISplitViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:Dynamic, bundle:Dynamic):UISplitViewController;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UISplitViewController;
 
-	@:native("initWithStyle:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithStyle_NS_DESIGNATED_INITIALIZER(style:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UISplitViewController;
+	@:native("initWithStyle")
+	overload public function initWithStyle(style:UISplitViewControllerStyle):UISplitViewController;
 
 	@:native("style")
-	public var style:Dynamic;
+	public var style:UISplitViewControllerStyle;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -30,22 +31,22 @@ extern class UISplitViewController extends UIViewController{
 	public var showsSecondaryOnlyButton:Bool;
 
 	@:native("preferredSplitBehavior")
-	public var preferredSplitBehavior:Dynamic;
+	public var preferredSplitBehavior:UISplitViewControllerSplitBehavior;
 
 	@:native("splitBehavior")
-	public var splitBehavior:Dynamic;
+	public var splitBehavior:UISplitViewControllerSplitBehavior;
 
 	@:native("setViewController:forColumn")
-	overload public function setViewController_forColumn(vc:Dynamic, forColumn:Dynamic):Void;
+	overload public function setViewController_forColumn(vc:UIViewController, forColumn:UISplitViewControllerColumn):Void;
 
 	@:native("viewControllerForColumn")
-	overload public function viewControllerForColumn(column:Dynamic):Dynamic;
+	overload public function viewControllerForColumn(column:UISplitViewControllerColumn):UIViewController;
 
 	@:native("hideColumn")
-	overload public function hideColumn(column:Dynamic):Void;
+	overload public function hideColumn(column:UISplitViewControllerColumn):Void;
 
 	@:native("showColumn")
-	overload public function showColumn(column:Dynamic):Void;
+	overload public function showColumn(column:UISplitViewControllerColumn):Void;
 
 	@:native("presentsWithGesture")
 	public var presentsWithGesture:Bool;
@@ -54,13 +55,13 @@ extern class UISplitViewController extends UIViewController{
 	public var collapsed:Bool;
 
 	@:native("preferredDisplayMode")
-	public var preferredDisplayMode:Dynamic;
+	public var preferredDisplayMode:UISplitViewControllerDisplayMode;
 
 	@:native("displayMode")
-	public var displayMode:Dynamic;
+	public var displayMode:UISplitViewControllerDisplayMode;
 
 	@:native("displayModeButtonItem")
-	public var displayModeButtonItem:Dynamic;
+	public var displayModeButtonItem:UIBarButtonItem;
 
 	@:native("preferredPrimaryColumnWidthFraction")
 	public var preferredPrimaryColumnWidthFraction:Float;
@@ -93,16 +94,16 @@ extern class UISplitViewController extends UIViewController{
 	public var supplementaryColumnWidth:Float;
 
 	@:native("primaryEdge")
-	public var primaryEdge:Dynamic;
+	public var primaryEdge:UISplitViewControllerPrimaryEdge;
 
 	@:native("showViewController:sender")
-	overload public function showViewController_sender(vc:Dynamic, sender:Dynamic):Void;
+	overload public function showViewController_sender(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("showDetailViewController:sender")
-	overload public function showDetailViewController_sender(vc:Dynamic, sender:Dynamic):Void;
+	overload public function showDetailViewController_sender(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("primaryBackgroundStyle")
-	public var primaryBackgroundStyle:Dynamic;
+	public var primaryBackgroundStyle:UISplitViewControllerBackgroundStyle;
 
 
 }

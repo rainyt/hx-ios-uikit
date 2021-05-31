@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UILexiconEntry")
 @:include("UIKit/UIKit.h")
@@ -12,10 +13,10 @@ extern class UILexiconEntry{
 	overload public static function autorelease():UILexiconEntry;
 
 	@:native("documentText")
-	public var documentText:Dynamic;
+	public var documentText:NSString;
 
 	@:native("userInput")
-	public var userInput:Dynamic;
+	public var userInput:NSString;
 
 
 }

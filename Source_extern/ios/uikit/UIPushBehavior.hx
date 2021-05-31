@@ -13,7 +13,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	overload public static function autorelease():UIPushBehavior;
 
 	@:native("initWithItems:mode")
-	overload public function initWithItems_mode(items:Dynamic, mode:Dynamic):UIPushBehavior;
+	overload public function initWithItems_mode(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -28,7 +28,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	overload public function setTargetOffsetFromCenter_forItem(o:Dynamic, forItem:Dynamic):Void;
 
 	@:native("mode")
-	public var mode:Dynamic;
+	public var mode:UIPushBehaviorMode;
 
 	@:native("active")
 	public var active:Bool;

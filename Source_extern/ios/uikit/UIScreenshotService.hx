@@ -18,7 +18,7 @@ extern class UIScreenshotService{
 	public var delegate:Dynamic;
 
 	@:native("windowScene")
-	public var windowScene:Dynamic;
+	public var windowScene:UIWindowScene;
 
 
 }

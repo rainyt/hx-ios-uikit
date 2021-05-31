@@ -31,7 +31,7 @@ extern class UIBezierPath{
 	overload public static function bezierPathWithRoundedRect_cornerRadius(rect:CGRect, cornerRadius:Float):UIBezierPath;
 
 	@:native("bezierPathWithRoundedRect:byRoundingCorners:cornerRadii")
-	overload public static function bezierPathWithRoundedRect_byRoundingCorners_cornerRadii(rect:CGRect, byRoundingCorners:Dynamic, cornerRadii:CGSize):UIBezierPath;
+	overload public static function bezierPathWithRoundedRect_byRoundingCorners_cornerRadii(rect:CGRect, byRoundingCorners:UIRectCorner, cornerRadii:CGSize):UIBezierPath;
 
 	@:native("bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise")
 	overload public static function bezierPathWithArcCenter_radius_startAngle_endAngle_clockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):UIBezierPath;
@@ -43,7 +43,7 @@ extern class UIBezierPath{
 	overload public function init():UIBezierPath;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIBezierPath;
+	overload public function initWithCoder(coder:NSCoder):UIBezierPath;
 
 	@:native("CGPath")
 	public var CGPath:Dynamic;

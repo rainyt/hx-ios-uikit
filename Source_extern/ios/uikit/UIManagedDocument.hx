@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIManagedDocument")
 @:include("UIKit/UIKit.h")
@@ -12,7 +13,7 @@ extern class UIManagedDocument extends UIDocument{
 	overload public static function autorelease():UIManagedDocument;
 
 	@:native("persistentStoreName")
-	overload public static function persistentStoreName():Dynamic;
+	overload public static function persistentStoreName():NSString;
 
 	@:native("managedObjectContext")
 	public var managedObjectContext:Dynamic;
@@ -21,10 +22,10 @@ extern class UIManagedDocument extends UIDocument{
 	public var managedObjectModel:Dynamic;
 
 	@:native("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error")
-	overload public function configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error(storeURL:Dynamic, ofType:Dynamic, modelConfiguration:Dynamic, storeOptions:Dynamic, error:Dynamic):Bool;
+	overload public function configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error(storeURL:Dynamic, ofType:NSString, modelConfiguration:NSString, storeOptions:Dynamic, error:Dynamic):Bool;
 
 	@:native("persistentStoreTypeForFileType")
-	overload public function persistentStoreTypeForFileType(fileType:Dynamic):Dynamic;
+	overload public function persistentStoreTypeForFileType(fileType:NSString):NSString;
 
 	@:native("readAdditionalContentFromURL:error")
 	overload public function readAdditionalContentFromURL_error(absoluteURL:Dynamic, error:Dynamic):Bool;

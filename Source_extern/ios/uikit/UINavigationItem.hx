@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UINavigationItem")
 @:include("UIKit/UIKit.h")
@@ -12,16 +13,16 @@ extern class UINavigationItem{
 	overload public static function autorelease():UINavigationItem;
 
 	@:native("initWithTitle")
-	overload public function initWithTitle(title:Dynamic):UINavigationItem;
+	overload public function initWithTitle(title:NSString):UINavigationItem;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UINavigationItem;
+	overload public function initWithCoder(coder:NSCoder):UINavigationItem;
 
 	@:native("titleView")
-	public var titleView:Dynamic;
+	public var titleView:UIView;
 
 	@:native("backBarButtonItem")
-	public var backBarButtonItem:Dynamic;
+	public var backBarButtonItem:UIBarButtonItem;
 
 	@:native("hidesBackButton")
 	public var hidesBackButton:Bool;
@@ -30,7 +31,7 @@ extern class UINavigationItem{
 	overload public function setHidesBackButton_animated(hidesBackButton:Bool, animated:Bool):Void;
 
 	@:native("backButtonDisplayMode")
-	public var backButtonDisplayMode:Dynamic;
+	public var backButtonDisplayMode:UINavigationItemBackButtonDisplayMode;
 
 	@:native("setLeftBarButtonItems:animated")
 	overload public function setLeftBarButtonItems_animated(items:Dynamic, animated:Bool):Void;
@@ -42,22 +43,22 @@ extern class UINavigationItem{
 	public var leftItemsSupplementBackButton:Bool;
 
 	@:native("leftBarButtonItem")
-	public var leftBarButtonItem:Dynamic;
+	public var leftBarButtonItem:UIBarButtonItem;
 
 	@:native("rightBarButtonItem")
-	public var rightBarButtonItem:Dynamic;
+	public var rightBarButtonItem:UIBarButtonItem;
 
 	@:native("setLeftBarButtonItem:animated")
-	overload public function setLeftBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
+	overload public function setLeftBarButtonItem_animated(item:UIBarButtonItem, animated:Bool):Void;
 
 	@:native("setRightBarButtonItem:animated")
-	overload public function setRightBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
+	overload public function setRightBarButtonItem_animated(item:UIBarButtonItem, animated:Bool):Void;
 
 	@:native("largeTitleDisplayMode")
-	public var largeTitleDisplayMode:Dynamic;
+	public var largeTitleDisplayMode:UINavigationItemLargeTitleDisplayMode;
 
 	@:native("searchController")
-	public var searchController:Dynamic;
+	public var searchController:UISearchController;
 
 	@:native("hidesSearchBarWhenScrolling")
 	public var hidesSearchBarWhenScrolling:Bool;

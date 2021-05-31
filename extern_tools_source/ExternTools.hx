@@ -34,7 +34,7 @@ class ExternTools {
 				parsingFramework(indir + "/" + value, out);
 			} else {
 				// 开始解析头文件
-				if (value.indexOf("NSLayoutConstraint.h") != -1)
+				if (value.indexOf(".h") != -1)
 					parsingHFile(indir + "/" + value, out);
 			}
 		}

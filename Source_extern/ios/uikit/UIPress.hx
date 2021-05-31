@@ -21,16 +21,16 @@ extern class UIPress{
 	public var type:Dynamic;
 
 	@:native("window")
-	public var window:Dynamic;
+	public var window:UIWindow;
 
 	@:native("responder")
-	public var responder:Dynamic;
+	public var responder:UIResponder;
 
 	@:native("force")
 	public var force:Float;
 
 	@:native("key")
-	public var key:Dynamic;
+	public var key:UIKey;
 
 
 }

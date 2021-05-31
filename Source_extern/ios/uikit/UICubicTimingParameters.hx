@@ -13,7 +13,7 @@ extern class UICubicTimingParameters{
 	overload public static function autorelease():UICubicTimingParameters;
 
 	@:native("animationCurve")
-	public var animationCurve:Dynamic;
+	public var animationCurve:UIViewAnimationCurve;
 
 	@:native("controlPoint1")
 	public var controlPoint1:CGPoint;
@@ -25,10 +25,10 @@ extern class UICubicTimingParameters{
 	overload public function init():UICubicTimingParameters;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UICubicTimingParameters;
+	overload public function initWithCoder(coder:NSCoder):UICubicTimingParameters;
 
 	@:native("initWithAnimationCurve")
-	overload public function initWithAnimationCurve(curve:Dynamic):UICubicTimingParameters;
+	overload public function initWithAnimationCurve(curve:UIViewAnimationCurve):UICubicTimingParameters;
 
 	@:native("initWithControlPoint1:controlPoint2")
 	overload public function initWithControlPoint1_controlPoint2(point1:CGPoint, controlPoint2:CGPoint):UICubicTimingParameters;

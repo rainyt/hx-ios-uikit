@@ -72,10 +72,10 @@ extern class NSAttributedString{
 	overload public static function autorelease():NSAttributedString;
 
 	@:native("drawWithRect:options:context")
-	overload public function drawWithRect_options_context(rect:CGRect, options:Dynamic, context:NSStringDrawingContext):Void;
+	overload public function drawWithRect_options_context(rect:CGRect, options:NSStringDrawingOptions, context:NSStringDrawingContext):Void;
 
 	@:native("boundingRectWithSize:options:context")
-	overload public function boundingRectWithSize_options_context(size:CGSize, options:Dynamic, context:NSStringDrawingContext):CGRect;
+	overload public function boundingRectWithSize_options_context(size:CGSize, options:NSStringDrawingOptions, context:NSStringDrawingContext):CGRect;
 
 	@:native("alloc")
 	overload public static function alloc():NSAttributedString;

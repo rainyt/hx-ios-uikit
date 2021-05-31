@@ -3,6 +3,7 @@ package ios.uikit;
 import cpp.objc.NSObject;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
+import cpp.objc.NSString;
 @:objc
 @:native("NSObject")
 @:include("UIKit/UIKit.h")
@@ -27,7 +28,7 @@ extern class NSObject{
 	public var accessibilityActivationPoint:CGPoint;
 
 	@:native("accessibilityLanguage")
-	public var accessibilityLanguage:Dynamic;
+	public var accessibilityLanguage:NSString;
 
 	@:native("accessibilityElementsHidden")
 	public var accessibilityElementsHidden:Bool;

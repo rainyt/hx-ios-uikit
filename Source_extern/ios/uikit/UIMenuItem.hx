@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIMenuItem")
 @:include("UIKit/UIKit.h")
@@ -12,7 +13,7 @@ extern class UIMenuItem{
 	overload public static function autorelease():UIMenuItem;
 
 	@:native("initWithTitle:action")
-	overload public function initWithTitle_action(title:Dynamic, action:String):UIMenuItem;
+	overload public function initWithTitle_action(title:NSString, action:String):UIMenuItem;
 
 	@:native("action")
 	public var action:String;

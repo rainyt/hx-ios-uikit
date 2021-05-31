@@ -15,7 +15,7 @@ extern class UITabBar extends UIView{
 	public var delegate:Dynamic;
 
 	@:native("selectedItem")
-	public var selectedItem:Dynamic;
+	public var selectedItem:UITabBarItem;
 
 	@:native("setItems:animated")
 	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
@@ -30,43 +30,19 @@ extern class UITabBar extends UIView{
 	public var customizing:Bool;
 
 	@:native("tintColor")
-	public var tintColor:Dynamic;
+	public var tintColor:UIColor;
 
-	@:native("barTintColor")
-	public var barTintColor:Dynamic;
-
-	@:native("selectedImageTintColor")
-	public var selectedImageTintColor:Dynamic;
-
-	@:native("backgroundImage")
-	public var backgroundImage:Dynamic;
-
-	@:native("selectionIndicatorImage")
-	public var selectionIndicatorImage:Dynamic;
-
-	@:native("shadowImage")
-	public var shadowImage:Dynamic;
-
-	@:native("itemPositioning")
-	public var itemPositioning:Dynamic;
-
-	@:native("itemWidth")
-	public var itemWidth:Float;
-
-	@:native("itemSpacing")
-	public var itemSpacing:Float;
-
-	@:native("barStyle")
-	public var barStyle:UIBarStyle;
+	@:native(" UI_APPEARANCE_SELECTOR")
+	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
 	@:native("translucent")
 	public var translucent:Bool;
 
 	@:native("leadingAccessoryView")
-	public var leadingAccessoryView:Dynamic;
+	public var leadingAccessoryView:UIView;
 
 	@:native("trailingAccessoryView")
-	public var trailingAccessoryView:Dynamic;
+	public var trailingAccessoryView:UIView;
 
 	@:native("alloc")
 	overload public static function alloc():UITabBar;

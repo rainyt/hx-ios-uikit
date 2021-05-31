@@ -12,7 +12,7 @@ extern class UICellAccessory{
 	overload public static function autorelease():UICellAccessory;
 
 	@:native("displayedState")
-	public var displayedState:Dynamic;
+	public var displayedState:UICellAccessoryDisplayedState;
 
 	@:native("hidden")
 	public var hidden:Bool;
@@ -21,10 +21,10 @@ extern class UICellAccessory{
 	public var reservedLayoutWidth:Float;
 
 	@:native("tintColor")
-	public var tintColor:Dynamic;
+	public var tintColor:UIColor;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UICellAccessory;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessory;
 
 	@:native("init")
 	overload public function init():UICellAccessory;

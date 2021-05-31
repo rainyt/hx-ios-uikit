@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
@@ -18,10 +19,10 @@ extern class UICollectionViewLayout{
 	overload public function init():UICollectionViewLayout;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UICollectionViewLayout;
+	overload public function initWithCoder(coder:NSCoder):UICollectionViewLayout;
 
 	@:native("collectionView")
-	public var collectionView:Dynamic;
+	public var collectionView:UICollectionView;
 
 	@:native("invalidateLayout")
 	overload public function invalidateLayout():Void;
@@ -30,10 +31,10 @@ extern class UICollectionViewLayout{
 	overload public function invalidateLayoutWithContext(context:Dynamic):Void;
 
 	@:native("registerClass:forDecorationViewOfKind")
-	overload public function registerClass_forDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:Dynamic):Void;
+	overload public function registerClass_forDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:NSString):Void;
 
 	@:native("registerNib:forDecorationViewOfKind")
-	overload public function registerNib_forDecorationViewOfKind(nib:Dynamic, forDecorationViewOfKind:Dynamic):Void;
+	overload public function registerNib_forDecorationViewOfKind(nib:UINib, forDecorationViewOfKind:NSString):Void;
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayout;
@@ -57,10 +58,10 @@ extern class UICollectionViewLayout{
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("shouldInvalidateLayoutForBoundsChange")
 	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect):Bool;
@@ -84,7 +85,7 @@ extern class UICollectionViewLayout{
 	public var collectionViewContentSize:CGSize;
 
 	@:native("developmentLayoutDirection")
-	public var developmentLayoutDirection:Dynamic;
+	public var developmentLayoutDirection:UIUserInterfaceLayoutDirection;
 
 	@:native("flipsHorizontallyInOppositeLayoutDirection")
 	public var flipsHorizontallyInOppositeLayoutDirection:Bool;
@@ -123,28 +124,28 @@ extern class UICollectionViewLayout{
 	overload public function finalLayoutAttributesForDisappearingItemAtIndexPath(itemIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath")
-	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("finalLayoutAttributesForDisappearingSupplementaryElementOfKind:atIndexPath")
-	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath")
-	overload public function initialLayoutAttributesForAppearingDecorationElementOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function initialLayoutAttributesForAppearingDecorationElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("finalLayoutAttributesForDisappearingDecorationElementOfKind:atIndexPath")
-	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("indexPathsToDeleteForSupplementaryViewOfKind")
-	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:Dynamic):Dynamic;
+	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
 
 	@:native("indexPathsToDeleteForDecorationViewOfKind")
-	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:Dynamic):Dynamic;
+	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:NSString):Dynamic;
 
 	@:native("indexPathsToInsertForSupplementaryViewOfKind")
-	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:Dynamic):Dynamic;
+	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
 
 	@:native("indexPathsToInsertForDecorationViewOfKind")
-	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:Dynamic):Dynamic;
+	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):Dynamic;
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayout;

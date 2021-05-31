@@ -13,7 +13,7 @@ extern class UIPrintFormatter{
 	overload public static function autorelease():UIPrintFormatter;
 
 	@:native("printPageRenderer")
-	public var printPageRenderer:Dynamic;
+	public var printPageRenderer:UIPrintPageRenderer;
 
 	@:native("removeFromPrintPageRenderer")
 	overload public function removeFromPrintPageRenderer():Void;

@@ -16,28 +16,19 @@ extern class UIProgressView{
 	overload public function initWithFrame(frame:CGRect):UIProgressView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIProgressView;
+	overload public function initWithCoder(coder:NSCoder):UIProgressView;
 
 	@:native("initWithProgressViewStyle")
-	overload public function initWithProgressViewStyle(style:Dynamic):UIProgressView;
+	overload public function initWithProgressViewStyle(style:UIProgressViewStyle):UIProgressView;
 
 	@:native("progressViewStyle")
-	public var progressViewStyle:Dynamic;
+	public var progressViewStyle:UIProgressViewStyle;
 
 	@:native("progress")
 	public var progress:Dynamic;
 
-	@:native("progressTintColor")
-	public var progressTintColor:Dynamic;
-
-	@:native("trackTintColor")
-	public var trackTintColor:Dynamic;
-
-	@:native("progressImage")
-	public var progressImage:Dynamic;
-
-	@:native("trackImage")
-	public var trackImage:Dynamic;
+	@:native(" UI_APPEARANCE_SELECTOR")
+	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
 	@:native("setProgress:animated")
 	overload public function setProgress_animated(progress:Dynamic, animated:Bool):Void;

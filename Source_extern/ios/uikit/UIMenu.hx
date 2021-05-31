@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIMenu")
 @:include("UIKit/UIKit.h")
@@ -12,10 +13,10 @@ extern class UIMenu extends UIMenuElement{
 	overload public static function autorelease():UIMenu;
 
 	@:native("identifier")
-	public var identifier:Dynamic;
+	public var identifier:NSString;
 
 	@:native("options")
-	public var options:Dynamic;
+	public var options:UIMenuOptions;
 
 	@:native("children")
 	public var children:Dynamic;
@@ -24,7 +25,7 @@ extern class UIMenu extends UIMenuElement{
 	overload public static function menuWithChildren(children:Dynamic):UIMenu;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIMenu;
+	overload public function initWithCoder(coder:NSCoder):UIMenu;
 
 	@:native("init")
 	overload public function init():UIMenu;

@@ -12,7 +12,7 @@ extern class UIWindowSceneDestructionRequestOptions extends UISceneDestructionRe
 	overload public static function autorelease():UIWindowSceneDestructionRequestOptions;
 
 	@:native("windowDismissalAnimation")
-	public var windowDismissalAnimation:Dynamic;
+	public var windowDismissalAnimation:UIWindowSceneDismissalAnimation;
 
 
 }

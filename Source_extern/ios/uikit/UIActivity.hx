@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIActivity")
 @:include("UIKit/UIKit.h")
@@ -12,16 +13,16 @@ extern class UIActivity{
 	overload public static function autorelease():UIActivity;
 
 	@:native("activityCategory")
-	overload public static function activityCategory():Dynamic;
+	overload public static function activityCategory():UIActivityCategory;
 
 	@:native("activityType")
-	public var activityType:Dynamic;
+	public var activityType:NSString;
 
 	@:native("activityTitle")
-	public var activityTitle:Dynamic;
+	public var activityTitle:NSString;
 
 	@:native("activityImage")
-	public var activityImage:Dynamic;
+	public var activityImage:UIImage;
 
 	@:native("canPerformWithActivityItems")
 	overload public function canPerformWithActivityItems(activityItems:Dynamic):Bool;
@@ -30,7 +31,7 @@ extern class UIActivity{
 	overload public function prepareWithActivityItems(activityItems:Dynamic):Void;
 
 	@:native("activityViewController")
-	public var activityViewController:Dynamic;
+	public var activityViewController:UIViewController;
 
 	@:native("performActivity")
 	overload public function performActivity():Void;

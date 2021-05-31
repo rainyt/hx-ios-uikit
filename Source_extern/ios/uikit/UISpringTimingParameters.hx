@@ -19,7 +19,7 @@ extern class UISpringTimingParameters{
 	overload public function init():UISpringTimingParameters;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UISpringTimingParameters;
+	overload public function initWithCoder(coder:NSCoder):UISpringTimingParameters;
 
 	@:native("initWithDampingRatio:initialVelocity")
 	overload public function initWithDampingRatio_initialVelocity(ratio:Float, initialVelocity:CGVector):UISpringTimingParameters;

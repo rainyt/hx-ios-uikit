@@ -37,7 +37,7 @@ extern class UIViewPropertyAnimator{
 	overload public function initWithDuration_timingParameters(duration:Dynamic, timingParameters:Dynamic):UIViewPropertyAnimator;
 
 	@:native("initWithDuration:curve:animations")
-	overload public function initWithDuration_curve_animations(duration:Dynamic, curve:Dynamic, animations:Dynamic):UIViewPropertyAnimator;
+	overload public function initWithDuration_curve_animations(duration:Dynamic, curve:UIViewAnimationCurve, animations:Dynamic):UIViewPropertyAnimator;
 
 	@:native("initWithDuration:controlPoint1:controlPoint2:animations")
 	overload public function initWithDuration_controlPoint1_controlPoint2_animations(duration:Dynamic, controlPoint1:CGPoint, controlPoint2:CGPoint, animations:Dynamic):UIViewPropertyAnimator;

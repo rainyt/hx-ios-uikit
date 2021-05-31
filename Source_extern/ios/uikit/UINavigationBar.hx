@@ -17,20 +17,20 @@ extern class UINavigationBar{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("translucent")
-	public var translucent:Bool;
+	@:native(" UI_APPEARANCE_SELECTOR")
+	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
 	@:native("pushNavigationItem:animated")
-	overload public function pushNavigationItem_animated(item:Dynamic, animated:Bool):Void;
+	overload public function pushNavigationItem_animated(item:UINavigationItem, animated:Bool):Void;
 
 	@:native("popNavigationItemAnimated")
-	overload public function popNavigationItemAnimated(animated:Bool):Dynamic;
+	overload public function popNavigationItemAnimated(animated:Bool):UINavigationItem;
 
 	@:native("topItem")
-	public var topItem:Dynamic;
+	public var topItem:UINavigationItem;
 
 	@:native("backItem")
-	public var backItem:Dynamic;
+	public var backItem:UINavigationItem;
 
 	@:native("setItems:animated")
 	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
@@ -39,37 +39,25 @@ extern class UINavigationBar{
 	public var prefersLargeTitles:Bool;
 
 	@:native("tintColor")
-	public var tintColor:Dynamic;
-
-	@:native("barTintColor")
-	public var barTintColor:Dynamic;
+	public var tintColor:UIColor;
 
 	@:native("setBackgroundImage:forBarPosition:barMetrics")
-	overload public function setBackgroundImage_forBarPosition_barMetrics(backgroundImage:Dynamic, forBarPosition:Dynamic, barMetrics:Dynamic):Void;
+	overload public function setBackgroundImage_forBarPosition_barMetrics(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics):Void;
 
 	@:native("backgroundImageForBarPosition:barMetrics")
-	overload public function backgroundImageForBarPosition_barMetrics(barPosition:Dynamic, barMetrics:Dynamic):Dynamic;
+	overload public function backgroundImageForBarPosition_barMetrics(barPosition:UIBarPosition, barMetrics:UIBarMetrics):UIImage;
 
 	@:native("setBackgroundImage:forBarMetrics")
-	overload public function setBackgroundImage_forBarMetrics(backgroundImage:Dynamic, forBarMetrics:Dynamic):Void;
+	overload public function setBackgroundImage_forBarMetrics(backgroundImage:UIImage, forBarMetrics:UIBarMetrics):Void;
 
 	@:native("backgroundImageForBarMetrics")
-	overload public function backgroundImageForBarMetrics(barMetrics:Dynamic):Dynamic;
-
-	@:native("shadowImage")
-	public var shadowImage:Dynamic;
+	overload public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics):UIImage;
 
 	@:native("setTitleVerticalPositionAdjustment:forBarMetrics")
-	overload public function setTitleVerticalPositionAdjustment_forBarMetrics(adjustment:Float, forBarMetrics:Dynamic):Void;
+	overload public function setTitleVerticalPositionAdjustment_forBarMetrics(adjustment:Float, forBarMetrics:UIBarMetrics):Void;
 
 	@:native("titleVerticalPositionAdjustmentForBarMetrics")
-	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:Dynamic):Float;
-
-	@:native("backIndicatorImage")
-	public var backIndicatorImage:Dynamic;
-
-	@:native("backIndicatorTransitionMaskImage")
-	public var backIndicatorTransitionMaskImage:Dynamic;
+	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Float;
 
 
 }

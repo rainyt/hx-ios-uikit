@@ -12,10 +12,10 @@ extern class UIMutableUserNotificationAction extends UIUserNotificationAction{
 	overload public static function autorelease():UIMutableUserNotificationAction;
 
 	@:native("behavior")
-	public var behavior:Dynamic;
+	public var behavior:UIUserNotificationActionBehavior;
 
 	@:native("activationMode")
-	public var activationMode:Dynamic;
+	public var activationMode:UIUserNotificationActivationMode;
 
 	@:native("authenticationRequired")
 	public var authenticationRequired:Bool;

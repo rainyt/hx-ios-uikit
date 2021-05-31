@@ -16,7 +16,7 @@ extern class UIListContentView{
 	overload public function initWithConfiguration(configuration:UIListContentConfiguration):UIListContentView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIListContentView;
+	overload public function initWithCoder(coder:NSCoder):UIListContentView;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIListContentView;

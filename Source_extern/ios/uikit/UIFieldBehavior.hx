@@ -26,7 +26,7 @@ extern class UIFieldBehavior extends UIDynamicBehavior{
 	public var position:CGPoint;
 
 	@:native("region")
-	public var region:Dynamic;
+	public var region:UIRegion;
 
 	@:native("strength")
 	public var strength:Float;

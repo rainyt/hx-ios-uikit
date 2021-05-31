@@ -13,10 +13,10 @@ extern class UIListContentImageProperties{
 	overload public static function autorelease():UIListContentImageProperties;
 
 	@:native("tintColor")
-	public var tintColor:Dynamic;
+	public var tintColor:UIColor;
 
 	@:native("resolvedTintColorForTintColor")
-	overload public function resolvedTintColorForTintColor(tintColor:Dynamic):Dynamic;
+	overload public function resolvedTintColorForTintColor(tintColor:UIColor):UIColor;
 
 	@:native("cornerRadius")
 	public var cornerRadius:Float;

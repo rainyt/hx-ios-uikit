@@ -12,13 +12,13 @@ extern class UIVisualEffectView{
 	overload public static function autorelease():UIVisualEffectView;
 
 	@:native("contentView")
-	public var contentView:Dynamic;
+	public var contentView:UIView;
 
 	@:native("initWithEffect")
-	overload public function initWithEffect(effect:Dynamic):UIVisualEffectView;
+	overload public function initWithEffect(effect:UIVisualEffect):UIVisualEffectView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIVisualEffectView;
+	overload public function initWithCoder(coder:NSCoder):UIVisualEffectView;
 
 
 }

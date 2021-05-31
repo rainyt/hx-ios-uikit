@@ -13,13 +13,13 @@ extern class UIGestureRecognizer{
 	overload public static function autorelease():UIGestureRecognizer;
 
 	@:native("state")
-	public var state:Dynamic;
+	public var state:UIGestureRecognizerState;
 
 	@:native("ignoreTouch:forEvent")
-	overload public function ignoreTouch_forEvent(touch:Dynamic, forEvent:Dynamic):Void;
+	overload public function ignoreTouch_forEvent(touch:UITouch, forEvent:UIEvent):Void;
 
 	@:native("ignorePress:forEvent")
-	overload public function ignorePress_forEvent(button:Dynamic, forEvent:Dynamic):Void;
+	overload public function ignorePress_forEvent(button:UIPress, forEvent:UIPressesEvent):Void;
 
 	@:native("reset")
 	overload public function reset():Void;
@@ -37,34 +37,34 @@ extern class UIGestureRecognizer{
 	overload public function shouldBeRequiredToFailByGestureRecognizer(otherGestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("shouldReceiveEvent")
-	overload public function shouldReceiveEvent(event:Dynamic):Bool;
+	overload public function shouldReceiveEvent(event:UIEvent):Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBegan_withEvent(touches:Dynamic, withEvent:Dynamic):Void;
+	overload public function touchesBegan_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMoved_withEvent(touches:Dynamic, withEvent:Dynamic):Void;
+	overload public function touchesMoved_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEnded_withEvent(touches:Dynamic, withEvent:Dynamic):Void;
+	overload public function touchesEnded_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelled_withEvent(touches:Dynamic, withEvent:Dynamic):Void;
+	overload public function touchesCancelled_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
 	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBegan_withEvent(presses:Dynamic, withEvent:Dynamic):Void;
+	overload public function pressesBegan_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChanged_withEvent(presses:Dynamic, withEvent:Dynamic):Void;
+	overload public function pressesChanged_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEnded_withEvent(presses:Dynamic, withEvent:Dynamic):Void;
+	overload public function pressesEnded_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:Dynamic):Void;
+	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("alloc")
 	overload public static function alloc():UIGestureRecognizer;
@@ -79,7 +79,7 @@ extern class UIGestureRecognizer{
 	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIGestureRecognizer;
+	overload public function initWithCoder(coder:NSCoder):UIGestureRecognizer;
 
 	@:native("addTarget:action")
 	overload public function addTarget_action(target:Dynamic, action:String):Void;
@@ -88,7 +88,7 @@ extern class UIGestureRecognizer{
 	overload public function removeTarget_action(target:Dynamic, action:String):Void;
 
 	@:native("state")
-	public var state:Dynamic;
+	public var state:UIGestureRecognizerState;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -97,7 +97,7 @@ extern class UIGestureRecognizer{
 	public var enabled:Bool;
 
 	@:native("view")
-	public var view:Dynamic;
+	public var view:UIView;
 
 	@:native("cancelsTouchesInView")
 	public var cancelsTouchesInView:Bool;
@@ -115,13 +115,13 @@ extern class UIGestureRecognizer{
 	overload public function requireGestureRecognizerToFail(otherGestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("locationInView")
-	overload public function locationInView(view:Dynamic):CGPoint;
+	overload public function locationInView(view:UIView):CGPoint;
 
 	@:native("numberOfTouches")
 	public var numberOfTouches:Int;
 
 	@:native("locationOfTouch:inView")
-	overload public function locationOfTouch_inView(touchIndex:Int, inView:Dynamic):CGPoint;
+	overload public function locationOfTouch_inView(touchIndex:Int, inView:UIView):CGPoint;
 
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;

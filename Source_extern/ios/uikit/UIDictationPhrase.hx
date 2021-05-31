@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIDictationPhrase")
 @:include("UIKit/UIKit.h")
@@ -12,7 +13,7 @@ extern class UIDictationPhrase{
 	overload public static function autorelease():UIDictationPhrase;
 
 	@:native("text")
-	public var text:Dynamic;
+	public var text:NSString;
 
 	@:native("alternativeInterpretations")
 	public var alternativeInterpretations:Dynamic;

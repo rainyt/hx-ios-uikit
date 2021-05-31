@@ -12,13 +12,13 @@ extern class UIBarButtonItemGroup{
 	overload public static function autorelease():UIBarButtonItemGroup;
 
 	@:native("initWithBarButtonItems:representativeItem")
-	overload public function initWithBarButtonItems_representativeItem(barButtonItems:Dynamic, representativeItem:Dynamic):UIBarButtonItemGroup;
+	overload public function initWithBarButtonItems_representativeItem(barButtonItems:Dynamic, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIBarButtonItemGroup;
+	overload public function initWithCoder(coder:NSCoder):UIBarButtonItemGroup;
 
 	@:native("representativeItem")
-	public var representativeItem:Dynamic;
+	public var representativeItem:UIBarButtonItem;
 
 	@:native("displayingRepresentativeItem")
 	public var displayingRepresentativeItem:Bool;

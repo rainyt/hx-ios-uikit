@@ -13,10 +13,10 @@ extern class UIPrinterPickerController{
 	overload public static function autorelease():UIPrinterPickerController;
 
 	@:native("printerPickerControllerWithInitiallySelectedPrinter")
-	overload public static function printerPickerControllerWithInitiallySelectedPrinter(printer:Dynamic):UIPrinterPickerController;
+	overload public static function printerPickerControllerWithInitiallySelectedPrinter(printer:UIPrinter):UIPrinterPickerController;
 
 	@:native("selectedPrinter")
-	public var selectedPrinter:Dynamic;
+	public var selectedPrinter:UIPrinter;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -25,10 +25,10 @@ extern class UIPrinterPickerController{
 	overload public function presentAnimated_completionHandler(animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("presentFromRect:inView:animated:completionHandler")
-	overload public function presentFromRect_inView_animated_completionHandler(rect:CGRect, inView:Dynamic, animated:Bool, completionHandler:Dynamic):Bool;
+	overload public function presentFromRect_inView_animated_completionHandler(rect:CGRect, inView:UIView, animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("presentFromBarButtonItem:animated:completionHandler")
-	overload public function presentFromBarButtonItem_animated_completionHandler(item:Dynamic, animated:Bool, completionHandler:Dynamic):Bool;
+	overload public function presentFromBarButtonItem_animated_completionHandler(item:UIBarButtonItem, animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("dismissAnimated")
 	overload public function dismissAnimated(animated:Bool):Void;

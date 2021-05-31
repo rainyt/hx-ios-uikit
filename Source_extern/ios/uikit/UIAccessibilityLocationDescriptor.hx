@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIAccessibilityLocationDescriptor")
@@ -16,25 +17,25 @@ extern class UIAccessibilityLocationDescriptor{
 	overload public function init():UIAccessibilityLocationDescriptor;
 
 	@:native("initWithName:view")
-	overload public function initWithName_view(name:Dynamic, view:Dynamic):UIAccessibilityLocationDescriptor;
+	overload public function initWithName_view(name:NSString, view:UIView):UIAccessibilityLocationDescriptor;
 
 	@:native("initWithName:point:inView")
-	overload public function initWithName_point_inView(name:Dynamic, point:CGPoint, inView:Dynamic):UIAccessibilityLocationDescriptor;
+	overload public function initWithName_point_inView(name:NSString, point:CGPoint, inView:UIView):UIAccessibilityLocationDescriptor;
 
 	@:native("initWithAttributedName:point:inView")
-	overload public function initWithAttributedName_point_inView(attributedName:Dynamic, point:CGPoint, inView:Dynamic):UIAccessibilityLocationDescriptor;
+	overload public function initWithAttributedName_point_inView(attributedName:NSAttributedString, point:CGPoint, inView:UIView):UIAccessibilityLocationDescriptor;
 
 	@:native("view")
-	public var view:Dynamic;
+	public var view:UIView;
 
 	@:native("point")
 	public var point:CGPoint;
 
 	@:native("name")
-	public var name:Dynamic;
+	public var name:NSString;
 
 	@:native("attributedName")
-	public var attributedName:Dynamic;
+	public var attributedName:NSAttributedString;
 
 
 }

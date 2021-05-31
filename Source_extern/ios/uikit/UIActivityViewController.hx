@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIActivityViewController")
 @:include("UIKit/UIKit.h")
@@ -15,10 +16,10 @@ extern class UIActivityViewController extends UIViewController{
 	overload public function init():UIActivityViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:Dynamic, bundle:Dynamic):UIActivityViewController;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIActivityViewController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIActivityViewController;
+	overload public function initWithCoder(coder:NSCoder):UIActivityViewController;
 
 	@:native("initWithActivityItems:applicationActivities")
 	overload public function initWithActivityItems_applicationActivities(activityItems:Dynamic, applicationActivities:Dynamic):UIActivityViewController;

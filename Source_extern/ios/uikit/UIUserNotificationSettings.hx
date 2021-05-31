@@ -12,7 +12,7 @@ extern class UIUserNotificationSettings{
 	overload public static function autorelease():UIUserNotificationSettings;
 
 	@:native("types")
-	public var types:Dynamic;
+	public var types:UIUserNotificationType;
 
 
 }

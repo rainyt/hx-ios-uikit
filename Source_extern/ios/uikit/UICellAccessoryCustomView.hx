@@ -12,19 +12,19 @@ extern class UICellAccessoryCustomView extends UICellAccessory{
 	overload public static function autorelease():UICellAccessoryCustomView;
 
 	@:native("initWithCustomView:placement")
-	overload public function initWithCustomView_placement(customView:Dynamic, placement:Dynamic):UICellAccessoryCustomView;
+	overload public function initWithCustomView_placement(customView:UIView, placement:UICellAccessoryPlacement):UICellAccessoryCustomView;
 
 	@:native("customView")
-	public var customView:Dynamic;
+	public var customView:UIView;
 
 	@:native("placement")
-	public var placement:Dynamic;
+	public var placement:UICellAccessoryPlacement;
 
 	@:native("maintainsFixedSize")
 	public var maintainsFixedSize:Bool;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UICellAccessoryCustomView;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessoryCustomView;
 
 	@:native("init")
 	overload public function init():UICellAccessoryCustomView;

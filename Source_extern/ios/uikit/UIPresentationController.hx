@@ -13,31 +13,31 @@ extern class UIPresentationController{
 	overload public static function autorelease():UIPresentationController;
 
 	@:native("presentingViewController")
-	public var presentingViewController:Dynamic;
+	public var presentingViewController:UIViewController;
 
 	@:native("presentedViewController")
-	public var presentedViewController:Dynamic;
+	public var presentedViewController:UIViewController;
 
 	@:native("presentationStyle")
-	public var presentationStyle:Dynamic;
+	public var presentationStyle:UIModalPresentationStyle;
 
 	@:native("containerView")
-	public var containerView:Dynamic;
+	public var containerView:UIView;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("initWithPresentedViewController:presentingViewController")
-	overload public function initWithPresentedViewController_presentingViewController(presentedViewController:Dynamic, presentingViewController:Dynamic):UIPresentationController;
+	overload public function initWithPresentedViewController_presentingViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPresentationController;
 
 	@:native("init")
 	overload public function init():UIPresentationController;
 
 	@:native("adaptivePresentationStyle")
-	public var adaptivePresentationStyle:Dynamic;
+	public var adaptivePresentationStyle:UIModalPresentationStyle;
 
 	@:native("adaptivePresentationStyleForTraitCollection")
-	overload public function adaptivePresentationStyleForTraitCollection(traitCollection:Dynamic):Dynamic;
+	overload public function adaptivePresentationStyleForTraitCollection(traitCollection:UITraitCollection):UIModalPresentationStyle;
 
 	@:native("containerViewWillLayoutSubviews")
 	overload public function containerViewWillLayoutSubviews():Void;
@@ -46,7 +46,7 @@ extern class UIPresentationController{
 	overload public function containerViewDidLayoutSubviews():Void;
 
 	@:native("presentedView")
-	public var presentedView:Dynamic;
+	public var presentedView:UIView;
 
 	@:native("frameOfPresentedViewInContainerView")
 	public var frameOfPresentedViewInContainerView:CGRect;

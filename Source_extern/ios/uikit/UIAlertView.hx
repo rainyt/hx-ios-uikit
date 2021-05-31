@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc
 @:native("UIAlertView")
@@ -13,22 +14,22 @@ extern class UIAlertView extends UIView{
 	overload public static function autorelease():UIAlertView;
 
 	@:native("initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:...")
-	overload public function initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles_...(title:Dynamic, message:Dynamic, delegate:Dynamic, cancelButtonTitle:Dynamic, otherButtonTitles:Dynamic, ...:Dynamic):UIAlertView;
+	overload public function initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles_...(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):UIAlertView;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UIAlertView;
+	overload public function initWithCoder(coder:NSCoder):UIAlertView;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("addButtonWithTitle")
-	overload public function addButtonWithTitle(title:Dynamic):Int;
+	overload public function addButtonWithTitle(title:NSString):Int;
 
 	@:native("buttonTitleAtIndex")
-	overload public function buttonTitleAtIndex(buttonIndex:Int):Dynamic;
+	overload public function buttonTitleAtIndex(buttonIndex:Int):NSString;
 
 	@:native("numberOfButtons")
 	public var numberOfButtons:Int;
@@ -49,10 +50,10 @@ extern class UIAlertView extends UIView{
 	overload public function dismissWithClickedButtonIndex_animated(buttonIndex:Int, animated:Bool):Void;
 
 	@:native("alertViewStyle")
-	public var alertViewStyle:Dynamic;
+	public var alertViewStyle:UIAlertViewStyle;
 
 	@:native("textFieldAtIndex")
-	overload public function textFieldAtIndex(textFieldIndex:Int):Dynamic;
+	overload public function textFieldAtIndex(textFieldIndex:Int):UITextField;
 
 
 }

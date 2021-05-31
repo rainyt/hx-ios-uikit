@@ -25,19 +25,19 @@ extern class UIMenuController{
 	overload public function setMenuVisible_animated(menuVisible:Bool, animated:Bool):Void;
 
 	@:native("setTargetRect:inView")
-	overload public function setTargetRect_inView(targetRect:CGRect, inView:Dynamic):Void;
+	overload public function setTargetRect_inView(targetRect:CGRect, inView:UIView):Void;
 
 	@:native("showMenuFromView:rect")
-	overload public function showMenuFromView_rect(targetView:Dynamic, rect:CGRect):Void;
+	overload public function showMenuFromView_rect(targetView:UIView, rect:CGRect):Void;
 
 	@:native("hideMenuFromView")
-	overload public function hideMenuFromView(targetView:Dynamic):Void;
+	overload public function hideMenuFromView(targetView:UIView):Void;
 
 	@:native("hideMenu")
 	overload public function hideMenu():Void;
 
 	@:native("arrowDirection")
-	public var arrowDirection:Dynamic;
+	public var arrowDirection:UIMenuControllerArrowDirection;
 
 	@:native("update")
 	overload public function update():Void;

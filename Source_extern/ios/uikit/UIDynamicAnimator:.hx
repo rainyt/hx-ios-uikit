@@ -13,19 +13,19 @@ extern class UIDynamicAnimator:{
 	overload public static function autorelease():UIDynamicAnimator:;
 
 	@:native("initWithReferenceView")
-	overload public function initWithReferenceView(view:Dynamic):UIDynamicAnimator:;
+	overload public function initWithReferenceView(view:UIView):UIDynamicAnimator:;
 
 	@:native("addBehavior")
-	overload public function addBehavior(behavior:Dynamic):Void;
+	overload public function addBehavior(behavior:UIDynamicBehavior):Void;
 
 	@:native("removeBehavior")
-	overload public function removeBehavior(behavior:Dynamic):Void;
+	overload public function removeBehavior(behavior:UIDynamicBehavior):Void;
 
 	@:native("removeAllBehaviors")
 	overload public function removeAllBehaviors():Void;
 
 	@:native("referenceView")
-	public var referenceView:Dynamic;
+	public var referenceView:UIView;
 
 	@:native("itemsInRect")
 	overload public function itemsInRect(rect:CGRect):Dynamic;

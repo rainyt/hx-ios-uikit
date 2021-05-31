@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UITableViewHeaderFooterView")
 @:include("UIKit/UIKit.h")
@@ -12,40 +13,40 @@ extern class UITableViewHeaderFooterView extends UIView{
 	overload public static function autorelease():UITableViewHeaderFooterView;
 
 	@:native("initWithReuseIdentifier")
-	overload public function initWithReuseIdentifier(reuseIdentifier:Dynamic):UITableViewHeaderFooterView;
+	overload public function initWithReuseIdentifier(reuseIdentifier:NSString):UITableViewHeaderFooterView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):UITableViewHeaderFooterView;
+	overload public function initWithCoder(coder:NSCoder):UITableViewHeaderFooterView;
 
 	@:native("configurationState")
-	public var configurationState:Dynamic;
+	public var configurationState:UIViewConfigurationState;
 
 	@:native("setNeedsUpdateConfiguration")
 	overload public function setNeedsUpdateConfiguration():Void;
 
 	@:native("updateConfigurationUsingState")
-	overload public function updateConfigurationUsingState(state:Dynamic):Void;
+	overload public function updateConfigurationUsingState(state:UIViewConfigurationState):Void;
 
 	@:native("defaultContentConfiguration")
-	overload public function defaultContentConfiguration():Dynamic;
+	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
 	@:native("contentView")
-	public var contentView:Dynamic;
+	public var contentView:UIView;
 
 	@:native("textLabel")
-	public var textLabel:Dynamic;
+	public var textLabel:UILabel;
 
 	@:native("detailTextLabel")
-	public var detailTextLabel:Dynamic;
+	public var detailTextLabel:UILabel;
 
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
 	@:native("backgroundView")
-	public var backgroundView:Dynamic;
+	public var backgroundView:UIView;
 
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;

@@ -21,7 +21,7 @@ extern class UIPercentDrivenInteractiveTransition{
 	public var completionSpeed:Float;
 
 	@:native("completionCurve")
-	public var completionCurve:Dynamic;
+	public var completionCurve:UIViewAnimationCurve;
 
 	@:native("timingCurve")
 	public var timingCurve:Dynamic;

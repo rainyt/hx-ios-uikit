@@ -33,28 +33,28 @@ extern class UIStepper extends UIControl{
 	public var stepValue:Dynamic;
 
 	@:native("setBackgroundImage:forState")
-	overload public function setBackgroundImage_forState(image:Dynamic, forState:Dynamic):Void;
+	overload public function setBackgroundImage_forState(image:UIImage, forState:UIControlState):Void;
 
 	@:native("backgroundImageForState")
-	overload public function backgroundImageForState(state:Dynamic):Dynamic;
+	overload public function backgroundImageForState(state:UIControlState):UIImage;
 
 	@:native("setDividerImage:forLeftSegmentState:rightSegmentState")
-	overload public function setDividerImage_forLeftSegmentState_rightSegmentState(image:Dynamic, forLeftSegmentState:Dynamic, rightSegmentState:Dynamic):Void;
+	overload public function setDividerImage_forLeftSegmentState_rightSegmentState(image:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState):Void;
 
 	@:native("dividerImageForLeftSegmentState:rightSegmentState")
-	overload public function dividerImageForLeftSegmentState_rightSegmentState(state:Dynamic, rightSegmentState:Dynamic):Dynamic;
+	overload public function dividerImageForLeftSegmentState_rightSegmentState(state:UIControlState, rightSegmentState:UIControlState):UIImage;
 
 	@:native("setIncrementImage:forState")
-	overload public function setIncrementImage_forState(image:Dynamic, forState:Dynamic):Void;
+	overload public function setIncrementImage_forState(image:UIImage, forState:UIControlState):Void;
 
 	@:native("incrementImageForState")
-	overload public function incrementImageForState(state:Dynamic):Dynamic;
+	overload public function incrementImageForState(state:UIControlState):UIImage;
 
 	@:native("setDecrementImage:forState")
-	overload public function setDecrementImage_forState(image:Dynamic, forState:Dynamic):Void;
+	overload public function setDecrementImage_forState(image:UIImage, forState:UIControlState):Void;
 
 	@:native("decrementImageForState")
-	overload public function decrementImageForState(state:Dynamic):Dynamic;
+	overload public function decrementImageForState(state:UIControlState):UIImage;
 
 
 }

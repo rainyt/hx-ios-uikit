@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UIPreviewActionGroup")
 @:include("UIKit/UIKit.h")
@@ -12,7 +13,7 @@ extern class UIPreviewActionGroup{
 	overload public static function autorelease():UIPreviewActionGroup;
 
 	@:native("actionGroupWithTitle:style:actions")
-	overload public static function actionGroupWithTitle_style_actions(title:Dynamic, style:Dynamic, actions:Dynamic):UIPreviewActionGroup;
+	overload public static function actionGroupWithTitle_style_actions(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
 
 
 }

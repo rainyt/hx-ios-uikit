@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
 import ios.objc.CGBlendMode;
@@ -16,25 +17,25 @@ extern class UIImage{
 	overload public static function autorelease():UIImage;
 
 	@:native("systemImageNamed")
-	overload public static function systemImageNamed(name:Dynamic):UIImage;
+	overload public static function systemImageNamed(name:NSString):UIImage;
 
 	@:native("systemImageNamed:withConfiguration")
-	overload public static function systemImageNamed_withConfiguration(name:Dynamic, withConfiguration:Dynamic):UIImage;
+	overload public static function systemImageNamed_withConfiguration(name:NSString, withConfiguration:UIImageConfiguration):UIImage;
 
 	@:native("systemImageNamed:compatibleWithTraitCollection")
-	overload public static function systemImageNamed_compatibleWithTraitCollection(name:Dynamic, compatibleWithTraitCollection:Dynamic):UIImage;
+	overload public static function systemImageNamed_compatibleWithTraitCollection(name:NSString, compatibleWithTraitCollection:UITraitCollection):UIImage;
 
 	@:native("imageNamed")
-	overload public static function imageNamed(name:Dynamic):UIImage;
+	overload public static function imageNamed(name:NSString):UIImage;
 
 	@:native("imageNamed:inBundle:withConfiguration")
-	overload public static function imageNamed_inBundle_withConfiguration(name:Dynamic, inBundle:Dynamic, withConfiguration:Dynamic):UIImage;
+	overload public static function imageNamed_inBundle_withConfiguration(name:NSString, inBundle:NSBundle, withConfiguration:UIImageConfiguration):UIImage;
 
 	@:native("imageNamed:inBundle:compatibleWithTraitCollection")
-	overload public static function imageNamed_inBundle_compatibleWithTraitCollection(name:Dynamic, inBundle:Dynamic, compatibleWithTraitCollection:Dynamic):UIImage;
+	overload public static function imageNamed_inBundle_compatibleWithTraitCollection(name:NSString, inBundle:NSBundle, compatibleWithTraitCollection:UITraitCollection):UIImage;
 
 	@:native("imageWithContentsOfFile")
-	overload public static function imageWithContentsOfFile(path:Dynamic):UIImage;
+	overload public static function imageWithContentsOfFile(path:NSString):UIImage;
 
 	@:native("imageWithData")
 	overload public static function imageWithData(data:Dynamic):UIImage;
@@ -46,16 +47,16 @@ extern class UIImage{
 	overload public static function imageWithCGImage(cgImage:Dynamic):UIImage;
 
 	@:native("imageWithCGImage:scale:orientation")
-	overload public static function imageWithCGImage_scale_orientation(cgImage:Dynamic, scale:Float, orientation:Dynamic):UIImage;
+	overload public static function imageWithCGImage_scale_orientation(cgImage:Dynamic, scale:Float, orientation:UIImageOrientation):UIImage;
 
 	@:native("imageWithCIImage")
-	overload public static function imageWithCIImage(ciImage:Dynamic):UIImage;
+	overload public static function imageWithCIImage(ciImage:CIImage):UIImage;
 
 	@:native("imageWithCIImage:scale:orientation")
-	overload public static function imageWithCIImage_scale_orientation(ciImage:Dynamic, scale:Float, orientation:Dynamic):UIImage;
+	overload public static function imageWithCIImage_scale_orientation(ciImage:CIImage, scale:Float, orientation:UIImageOrientation):UIImage;
 
 	@:native("initWithContentsOfFile")
-	overload public function initWithContentsOfFile(path:Dynamic):UIImage;
+	overload public function initWithContentsOfFile(path:NSString):UIImage;
 
 	@:native("initWithData")
 	overload public function initWithData(data:Dynamic):UIImage;
@@ -67,13 +68,13 @@ extern class UIImage{
 	overload public function initWithCGImage(cgImage:Dynamic):UIImage;
 
 	@:native("initWithCGImage:scale:orientation")
-	overload public function initWithCGImage_scale_orientation(cgImage:Dynamic, scale:Float, orientation:Dynamic):UIImage;
+	overload public function initWithCGImage_scale_orientation(cgImage:Dynamic, scale:Float, orientation:UIImageOrientation):UIImage;
 
 	@:native("initWithCIImage")
-	overload public function initWithCIImage(ciImage:Dynamic):UIImage;
+	overload public function initWithCIImage(ciImage:CIImage):UIImage;
 
 	@:native("initWithCIImage:scale:orientation")
-	overload public function initWithCIImage_scale_orientation(ciImage:Dynamic, scale:Float, orientation:Dynamic):UIImage;
+	overload public function initWithCIImage_scale_orientation(ciImage:CIImage, scale:Float, orientation:UIImageOrientation):UIImage;
 
 	@:native("size")
 	public var size:CGSize;
@@ -85,10 +86,10 @@ extern class UIImage{
 	overload public function CGImage():Dynamic;
 
 	@:native("CIImage")
-	public var CIImage:Dynamic;
+	public var CIImage:CIImage;
 
 	@:native("imageOrientation")
-	public var imageOrientation:Dynamic;
+	public var imageOrientation:UIImageOrientation;
 
 	@:native("scale")
 	public var scale:Float;
@@ -97,13 +98,13 @@ extern class UIImage{
 	public var symbolImage:Bool;
 
 	@:native("animatedImageNamed:duration")
-	overload public static function animatedImageNamed_duration(name:Dynamic, duration:Dynamic):UIImage;
+	overload public static function animatedImageNamed_duration(name:NSString, duration:Dynamic):UIImage;
 
 	@:native("animatedResizableImageNamed:capInsets:duration")
-	overload public static function animatedResizableImageNamed_capInsets_duration(name:Dynamic, capInsets:Dynamic, duration:Dynamic):UIImage;
+	overload public static function animatedResizableImageNamed_capInsets_duration(name:NSString, capInsets:Dynamic, duration:Dynamic):UIImage;
 
 	@:native("animatedResizableImageNamed:capInsets:resizingMode:duration")
-	overload public static function animatedResizableImageNamed_capInsets_resizingMode_duration(name:Dynamic, capInsets:Dynamic, resizingMode:Dynamic, duration:Dynamic):UIImage;
+	overload public static function animatedResizableImageNamed_capInsets_resizingMode_duration(name:NSString, capInsets:Dynamic, resizingMode:UIImageResizingMode, duration:Dynamic):UIImage;
 
 	@:native("animatedImageWithImages:duration")
 	overload public static function animatedImageWithImages_duration(images:Dynamic, duration:Dynamic):UIImage;
@@ -133,13 +134,13 @@ extern class UIImage{
 	overload public function resizableImageWithCapInsets(capInsets:Dynamic):UIImage;
 
 	@:native("resizableImageWithCapInsets:resizingMode")
-	overload public function resizableImageWithCapInsets_resizingMode(capInsets:Dynamic, resizingMode:Dynamic):UIImage;
+	overload public function resizableImageWithCapInsets_resizingMode(capInsets:Dynamic, resizingMode:UIImageResizingMode):UIImage;
 
 	@:native("capInsets")
 	public var capInsets:Dynamic;
 
 	@:native("resizingMode")
-	public var resizingMode:Dynamic;
+	public var resizingMode:UIImageResizingMode;
 
 	@:native("imageWithAlignmentRectInsets")
 	overload public function imageWithAlignmentRectInsets(alignmentInsets:Dynamic):UIImage;
@@ -148,16 +149,16 @@ extern class UIImage{
 	public var alignmentRectInsets:Dynamic;
 
 	@:native("imageWithRenderingMode")
-	overload public function imageWithRenderingMode(renderingMode:Dynamic):UIImage;
+	overload public function imageWithRenderingMode(renderingMode:UIImageRenderingMode):UIImage;
 
 	@:native("renderingMode")
-	public var renderingMode:Dynamic;
+	public var renderingMode:UIImageRenderingMode;
 
 	@:native("imageRendererFormat")
-	public var imageRendererFormat:Dynamic;
+	public var imageRendererFormat:UIGraphicsImageRendererFormat;
 
 	@:native("imageAsset")
-	public var imageAsset:Dynamic;
+	public var imageAsset:UIImageAsset;
 
 	@:native("imageFlippedForRightToLeftLayoutDirection")
 	overload public function imageFlippedForRightToLeftLayoutDirection():UIImage;
@@ -181,16 +182,16 @@ extern class UIImage{
 	overload public function imageWithoutBaseline():UIImage;
 
 	@:native("imageWithConfiguration")
-	overload public function imageWithConfiguration(configuration:Dynamic):UIImage;
+	overload public function imageWithConfiguration(configuration:UIImageConfiguration):UIImage;
 
 	@:native("imageByApplyingSymbolConfiguration")
-	overload public function imageByApplyingSymbolConfiguration(configuration:Dynamic):UIImage;
+	overload public function imageByApplyingSymbolConfiguration(configuration:UIImageSymbolConfiguration):UIImage;
 
 	@:native("imageWithTintColor")
-	overload public function imageWithTintColor(color:Dynamic):UIImage;
+	overload public function imageWithTintColor(color:UIColor):UIImage;
 
 	@:native("imageWithTintColor:renderingMode")
-	overload public function imageWithTintColor_renderingMode(color:Dynamic, renderingMode:Dynamic):UIImage;
+	overload public function imageWithTintColor_renderingMode(color:UIColor, renderingMode:UIImageRenderingMode):UIImage;
 
 	@:native("alloc")
 	overload public static function alloc():UIImage;
