@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 @:objc
 @:native("UIFontPickerViewController")
 @:include("UIKit/UIKit.h")
@@ -14,19 +13,19 @@ extern class UIFontPickerViewController{
 	overload public static function autorelease():UIFontPickerViewController;
 
 	@:native("initWithConfiguration")
-	overload public function initWithConfiguration(configuration:UIFontPickerViewControllerConfiguration):UIFontPickerViewController;
+	overload public function initWithConfiguration(configuration:Dynamic):Dynamic;
 
 	@:native("configuration")
-	public var configuration:UIFontPickerViewControllerConfiguration;
+	public var configuration:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("selectedFontDescriptor")
-	public var selectedFontDescriptor:UIFontDescriptor;
+	public var selectedFontDescriptor:Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIFontPickerViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 
 }

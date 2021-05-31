@@ -13,10 +13,10 @@ extern class NSLayoutConstraint{
 	overload public static function autorelease():NSLayoutConstraint;
 
 	@:native("constraintsWithVisualFormat:options:metrics:views")
-	overload public static function constraintsWithVisualFormat(format:NSString, options:NSLayoutFormatOptions, metrics:Dynamic, views:Dynamic):Dynamic;
+	overload public static function constraintsWithVisualFormat(format:NSString, options:Dynamic, metrics:Dynamic, views:Dynamic):Dynamic;
 
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
-	overload public static function constraintWithItem(view1:Dynamic, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:Dynamic, attribute:NSLayoutAttribute, multiplier:CGFloat, constant:CGFloat):NSLayoutConstraint;
+	overload public static function constraintWithItem(view1:Dynamic, attribute:Dynamic, relatedBy:Dynamic, toItem:Dynamic, attribute:Dynamic, multiplier:Dynamic, constant:Dynamic):Dynamic;
 
 	@:native("priority")
 	public var priority:null;
@@ -34,22 +34,22 @@ extern class NSLayoutConstraint{
 	public var secondItem:Dynamic;
 
 	@:native("firstAttribute")
-	public var firstAttribute:NSLayoutAttribute;
+	public var firstAttribute:Dynamic;
 
 	@:native("secondAttribute")
-	public var secondAttribute:NSLayoutAttribute;
+	public var secondAttribute:Dynamic;
 
 	@:native("firstAnchor")
-	public var firstAnchor:NSLayoutAnchor;
+	public var firstAnchor:Dynamic;
 
 	@:native("secondAnchor")
-	public var secondAnchor:NSLayoutAnchor;
+	public var secondAnchor:Dynamic;
 
 	@:native("relation")
-	public var relation:NSLayoutRelation;
+	public var relation:Dynamic;
 
 	@:native("multiplier")
-	public var multiplier:CGFloat;
+	public var multiplier:Dynamic;
 
 	@:native("constant")
 	public var constant:null;

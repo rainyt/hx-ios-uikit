@@ -12,7 +12,7 @@ extern class UIPencilInteraction{
 	overload public static function autorelease():UIPencilInteraction;
 
 	@:native("preferredTapAction")
-	public var preferredTapAction:UIPencilPreferredAction;
+	public var preferredTapAction:Dynamic;
 
 	@:native("prefersPencilOnlyDrawing")
 	public var prefersPencilOnlyDrawing:Bool;

@@ -13,22 +13,22 @@ extern class UIResponderInputViewAdditions{
 	overload public static function autorelease():UIResponderInputViewAdditions;
 
 	@:native("inputView")
-	public var inputView:UIView;
+	public var inputView:Dynamic;
 
 	@:native("inputAccessoryView")
-	public var inputAccessoryView:UIView;
+	public var inputAccessoryView:Dynamic;
 
 	@:native("inputAssistantItem")
-	public var inputAssistantItem:UITextInputAssistantItem;
+	public var inputAssistantItem:Dynamic;
 
 	@:native("inputViewController")
-	public var inputViewController:UIInputViewController;
+	public var inputViewController:Dynamic;
 
 	@:native("inputAccessoryViewController")
-	public var inputAccessoryViewController:UIInputViewController;
+	public var inputAccessoryViewController:Dynamic;
 
 	@:native("textInputMode")
-	public var textInputMode:UITextInputMode;
+	public var textInputMode:Dynamic;
 
 	@:native("textInputContextIdentifier")
 	public var textInputContextIdentifier:NSString;

@@ -13,7 +13,7 @@ extern class UICollisionBehavior{
 	overload public static function autorelease():UICollisionBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):UICollisionBehavior;
+	overload public function initWithItems(items:Dynamic):Dynamic;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -25,22 +25,22 @@ extern class UICollisionBehavior{
 	public var items:Dynamic;
 
 	@:native("collisionMode")
-	public var collisionMode:UICollisionBehaviorMode;
+	public var collisionMode:Dynamic;
 
 	@:native("translatesReferenceBoundsIntoBoundary")
 	public var translatesReferenceBoundsIntoBoundary:Bool;
 
 	@:native("setTranslatesReferenceBoundsIntoBoundaryWithInsets")
-	overload public function setTranslatesReferenceBoundsIntoBoundaryWithInsets(insets:UIEdgeInsets):Void;
+	overload public function setTranslatesReferenceBoundsIntoBoundaryWithInsets(insets:Dynamic):Void;
 
 	@:native("addBoundaryWithIdentifier:forPath")
-	overload public function addBoundaryWithIdentifier(identifier:Dynamic, forPath:UIBezierPath):Void;
+	overload public function addBoundaryWithIdentifier(identifier:Dynamic, forPath:Dynamic):Void;
 
 	@:native("addBoundaryWithIdentifier:fromPoint:toPoint")
 	overload public function addBoundaryWithIdentifier(identifier:Dynamic, fromPoint:CGPoint, toPoint:CGPoint):Void;
 
 	@:native("boundaryWithIdentifier")
-	overload public function boundaryWithIdentifier(identifier:Dynamic):UIBezierPath;
+	overload public function boundaryWithIdentifier(identifier:Dynamic):Dynamic;
 
 	@:native("removeBoundaryWithIdentifier")
 	overload public function removeBoundaryWithIdentifier(identifier:Dynamic):Void;

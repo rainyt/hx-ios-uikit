@@ -13,10 +13,10 @@ extern class UISceneConnectionOptions{
 	overload public static function autorelease():UISceneConnectionOptions;
 
 	@:native("new")
-	overload public static function new():UISceneConnectionOptions;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UISceneConnectionOptions;
+	overload public function init():Dynamic;
 
 	@:native("URLContexts")
 	public var URLContexts:Dynamic;
@@ -31,13 +31,13 @@ extern class UISceneConnectionOptions{
 	public var userActivities:Dynamic;
 
 	@:native("notificationResponse")
-	public var notificationResponse:UNNotificationResponse;
+	public var notificationResponse:Dynamic;
 
 	@:native("shortcutItem")
-	public var shortcutItem:UIApplicationShortcutItem;
+	public var shortcutItem:Dynamic;
 
 	@:native("cloudKitShareMetadata")
-	public var cloudKitShareMetadata:CKShareMetadata;
+	public var cloudKitShareMetadata:Dynamic;
 
 
 }

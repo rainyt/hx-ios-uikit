@@ -12,19 +12,19 @@ extern class NSCollectionLayoutSpacing{
 	overload public static function autorelease():NSCollectionLayoutSpacing;
 
 	@:native("flexibleSpacing")
-	overload public static function flexibleSpacing(flexibleSpacing:CGFloat):NSCollectionLayoutSpacing;
+	overload public static function flexibleSpacing(flexibleSpacing:Dynamic):Dynamic;
 
 	@:native("fixedSpacing")
-	overload public static function fixedSpacing(fixedSpacing:CGFloat):NSCollectionLayoutSpacing;
+	overload public static function fixedSpacing(fixedSpacing:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():NSCollectionLayoutSpacing;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():NSCollectionLayoutSpacing;
+	overload public static function new():Dynamic;
 
 	@:native("spacing")
-	public var spacing:CGFloat;
+	public var spacing:Dynamic;
 
 	@:native("isFlexibleSpacing")
 	public var isFlexibleSpacing:Bool;

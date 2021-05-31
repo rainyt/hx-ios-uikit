@@ -14,7 +14,7 @@ extern class UIActionSheet{
 	overload public static function autorelease():UIActionSheet;
 
 	@:native("initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:...")
-	overload public function initWithTitle(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:NS_REQUIRES_NIL_TERMINATION):UIActionSheet;
+	overload public function initWithTitle(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -23,46 +23,46 @@ extern class UIActionSheet{
 	public var title:NSString;
 
 	@:native("actionSheetStyle")
-	public var actionSheetStyle:UIActionSheetStyle;
+	public var actionSheetStyle:Dynamic;
 
 	@:native("addButtonWithTitle")
-	overload public function addButtonWithTitle(title:NSString):NSInteger;
+	overload public function addButtonWithTitle(title:NSString):Dynamic;
 
 	@:native("buttonTitleAtIndex")
-	overload public function buttonTitleAtIndex(buttonIndex:NSInteger):NSString;
+	overload public function buttonTitleAtIndex(buttonIndex:Dynamic):NSString;
 
 	@:native("numberOfButtons")
-	public var numberOfButtons:NSInteger;
+	public var numberOfButtons:Dynamic;
 
 	@:native("cancelButtonIndex")
-	public var cancelButtonIndex:NSInteger;
+	public var cancelButtonIndex:Dynamic;
 
 	@:native("destructiveButtonIndex")
-	public var destructiveButtonIndex:NSInteger;
+	public var destructiveButtonIndex:Dynamic;
 
 	@:native("firstOtherButtonIndex")
-	public var firstOtherButtonIndex:NSInteger;
+	public var firstOtherButtonIndex:Dynamic;
 
 	@:native("visible")
 	public var visible:Bool;
 
 	@:native("showFromToolbar")
-	overload public function showFromToolbar(view:UIToolbar):Void;
+	overload public function showFromToolbar(view:Dynamic):Void;
 
 	@:native("showFromTabBar")
-	overload public function showFromTabBar(view:UITabBar):Void;
+	overload public function showFromTabBar(view:Dynamic):Void;
 
 	@:native("showFromBarButtonItem:animated")
-	overload public function showFromBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function showFromBarButtonItem(item:Dynamic, animated:Bool):Void;
 
 	@:native("showFromRect:inView:animated")
-	overload public function showFromRect(rect:CGRect, inView:UIView, animated:Bool):Void;
+	overload public function showFromRect(rect:CGRect, inView:Dynamic, animated:Bool):Void;
 
 	@:native("showInView")
-	overload public function showInView(view:UIView):Void;
+	overload public function showInView(view:Dynamic):Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;
+	overload public function dismissWithClickedButtonIndex(buttonIndex:Dynamic, animated:Bool):Void;
 
 
 }

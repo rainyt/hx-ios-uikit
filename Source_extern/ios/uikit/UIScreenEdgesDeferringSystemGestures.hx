@@ -12,10 +12,10 @@ extern class UIScreenEdgesDeferringSystemGestures{
 	overload public static function autorelease():UIScreenEdgesDeferringSystemGestures;
 
 	@:native("childViewControllerForScreenEdgesDeferringSystemGestures")
-	public var childViewControllerForScreenEdgesDeferringSystemGestures:UIViewController;
+	public var childViewControllerForScreenEdgesDeferringSystemGestures:Dynamic;
 
 	@:native("preferredScreenEdgesDeferringSystemGestures")
-	public var preferredScreenEdgesDeferringSystemGestures:UIRectEdge;
+	public var preferredScreenEdgesDeferringSystemGestures:Dynamic;
 
 	@:native("setNeedsUpdateOfScreenEdgesDeferringSystemGestures")
 	overload public function setNeedsUpdateOfScreenEdgesDeferringSystemGestures():Void;

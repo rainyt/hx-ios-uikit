@@ -19,13 +19,13 @@ extern class UILargeContentViewer{
 	public var largeContentTitle:NSString;
 
 	@:native("largeContentImage")
-	public var largeContentImage:UIImage;
+	public var largeContentImage:Dynamic;
 
 	@:native("scalesLargeContentImage")
 	public var scalesLargeContentImage:Bool;
 
 	@:native("largeContentImageInsets")
-	public var largeContentImageInsets:UIEdgeInsets;
+	public var largeContentImageInsets:Dynamic;
 
 
 }

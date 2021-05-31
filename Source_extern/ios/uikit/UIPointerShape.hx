@@ -13,22 +13,22 @@ extern class UIPointerShape{
 	overload public static function autorelease():UIPointerShape;
 
 	@:native("shapeWithPath")
-	overload public static function shapeWithPath(path:UIBezierPath):UIPointerShape;
+	overload public static function shapeWithPath(path:Dynamic):Dynamic;
 
 	@:native("shapeWithRoundedRect")
-	overload public static function shapeWithRoundedRect(rect:CGRect):UIPointerShape;
+	overload public static function shapeWithRoundedRect(rect:CGRect):Dynamic;
 
 	@:native("shapeWithRoundedRect:cornerRadius")
-	overload public static function shapeWithRoundedRect(rect:CGRect, cornerRadius:CGFloat):UIPointerShape;
+	overload public static function shapeWithRoundedRect(rect:CGRect, cornerRadius:Dynamic):Dynamic;
 
 	@:native("beamWithPreferredLength:axis")
-	overload public static function beamWithPreferredLength(length:CGFloat, axis:UIAxis):UIPointerShape;
+	overload public static function beamWithPreferredLength(length:Dynamic, axis:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIPointerShape;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIPointerShape;
+	overload public static function new():Dynamic;
 
 
 }

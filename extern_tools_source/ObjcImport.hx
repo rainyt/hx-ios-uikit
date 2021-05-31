@@ -19,8 +19,6 @@ class ObjcImport {
 				return "cpp.objc.ObjcBlock";
 			case "Protocol":
 				return "cpp.objc.Protocol";
-			case "NSBundle":
-				return "ios.objc.NSBundle";
 		}
 		// 本地查找
 		// trace(ExternTools.externDir + "/ios/objc/" + type + ".hx");

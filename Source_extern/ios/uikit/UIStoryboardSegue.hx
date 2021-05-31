@@ -13,22 +13,22 @@ extern class UIStoryboardSegue{
 	overload public static function autorelease():UIStoryboardSegue;
 
 	@:native("segueWithIdentifier:source:destination:performHandler")
-	overload public static function segueWithIdentifier(identifier:NSString, source:UIViewController, destination:UIViewController, performHandler:Dynamic):UIStoryboardSegue;
+	overload public static function segueWithIdentifier(identifier:NSString, source:Dynamic, destination:Dynamic, performHandler:Dynamic):Dynamic;
 
 	@:native("initWithIdentifier:source:destination")
-	overload public function initWithIdentifier(identifier:NSString, source:UIViewController, destination:UIViewController):UIStoryboardSegue;
+	overload public function initWithIdentifier(identifier:NSString, source:Dynamic, destination:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIStoryboardSegue;
+	overload public function init():Dynamic;
 
 	@:native("identifier")
 	public var identifier:NSString;
 
 	@:native("sourceViewController")
-	public var sourceViewController:UIViewController;
+	public var sourceViewController:Dynamic;
 
 	@:native("destinationViewController")
-	public var destinationViewController:UIViewController;
+	public var destinationViewController:Dynamic;
 
 	@:native("perform")
 	overload public function perform():Void;

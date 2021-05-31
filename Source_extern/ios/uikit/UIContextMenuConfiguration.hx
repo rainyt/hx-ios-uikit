@@ -15,7 +15,7 @@ extern class UIContextMenuConfiguration{
 	public var identifier:Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 
 }

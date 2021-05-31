@@ -12,19 +12,19 @@ extern class UIWindowScene{
 	overload public static function autorelease():UIWindowScene;
 
 	@:native("screen")
-	public var screen:UIScreen;
+	public var screen:Dynamic;
 
 	@:native("interfaceOrientation")
-	public var interfaceOrientation:UIInterfaceOrientation;
+	public var interfaceOrientation:Dynamic;
 
 	@:native("coordinateSpace")
 	public var coordinateSpace:Dynamic;
 
 	@:native("traitCollection")
-	public var traitCollection:UITraitCollection;
+	public var traitCollection:Dynamic;
 
 	@:native("sizeRestrictions")
-	public var sizeRestrictions:UISceneSizeRestrictions;
+	public var sizeRestrictions:Dynamic;
 
 	@:native("windows")
 	public var windows:Dynamic;

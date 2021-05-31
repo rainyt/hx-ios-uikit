@@ -18,25 +18,25 @@ extern class UIApplicationDeprecated{
 	overload public function setStatusBarHidden(hidden:Bool, animated:Bool):Void;
 
 	@:native("statusBarOrientation")
-	public var statusBarOrientation:UIInterfaceOrientation;
+	public var statusBarOrientation:Dynamic;
 
 	@:native("setStatusBarOrientation:animated")
-	overload public function setStatusBarOrientation(interfaceOrientation:UIInterfaceOrientation, animated:Bool):Void;
+	overload public function setStatusBarOrientation(interfaceOrientation:Dynamic, animated:Bool):Void;
 
 	@:native("statusBarStyle")
-	public var statusBarStyle:UIStatusBarStyle;
+	public var statusBarStyle:Dynamic;
 
 	@:native("setStatusBarStyle:animated")
-	overload public function setStatusBarStyle(statusBarStyle:UIStatusBarStyle, animated:Bool):Void;
+	overload public function setStatusBarStyle(statusBarStyle:Dynamic, animated:Bool):Void;
 
 	@:native("statusBarHidden")
 	public var statusBarHidden:Bool;
 
 	@:native("setStatusBarHidden:withAnimation")
-	overload public function setStatusBarHidden(hidden:Bool, withAnimation:UIStatusBarAnimation):Void;
+	overload public function setStatusBarHidden(hidden:Bool, withAnimation:Dynamic):Void;
 
 	@:native("setKeepAliveTimeout:handler")
-	overload public function setKeepAliveTimeout(timeout:NSTimeInterval, handler:Dynamic):Bool;
+	overload public function setKeepAliveTimeout(timeout:Dynamic, handler:Dynamic):Bool;
 
 	@:native("clearKeepAliveTimeout")
 	overload public function clearKeepAliveTimeout():Void;

@@ -13,10 +13,10 @@ extern class UIBarItem{
 	overload public static function autorelease():UIBarItem;
 
 	@:native("init")
-	overload public function init():UIBarItem;
+	overload public function init():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIBarItem;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("enabled")
 	public var enabled:Bool;
@@ -25,31 +25,31 @@ extern class UIBarItem{
 	public var title:NSString;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("landscapeImagePhone")
-	public var landscapeImagePhone:UIImage;
+	public var landscapeImagePhone:Dynamic;
 
 	@:native("largeContentSizeImage")
-	public var largeContentSizeImage:UIImage;
+	public var largeContentSizeImage:Dynamic;
 
 	@:native("imageInsets")
-	public var imageInsets:UIEdgeInsets;
+	public var imageInsets:Dynamic;
 
 	@:native("landscapeImagePhoneInsets")
-	public var landscapeImagePhoneInsets:UIEdgeInsets;
+	public var landscapeImagePhoneInsets:Dynamic;
 
 	@:native("largeContentSizeImageInsets")
-	public var largeContentSizeImageInsets:UIEdgeInsets;
+	public var largeContentSizeImageInsets:Dynamic;
 
 	@:native("tag")
-	public var tag:NSInteger;
+	public var tag:Dynamic;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState):Void;
+	overload public function setTitleTextAttributes(attributes:Dynamic, forState:Dynamic):Void;
 
 	@:native("titleTextAttributesForState")
-	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
+	overload public function titleTextAttributesForState(state:Dynamic):Dynamic;
 
 
 }

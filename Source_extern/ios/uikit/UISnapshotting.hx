@@ -13,10 +13,10 @@ extern class UISnapshotting{
 	overload public static function autorelease():UISnapshotting;
 
 	@:native("snapshotViewAfterScreenUpdates")
-	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
+	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):Dynamic;
 
 	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets")
-	overload public function resizableSnapshotViewFromRect(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:UIEdgeInsets):UIView;
+	overload public function resizableSnapshotViewFromRect(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):Dynamic;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
 	overload public function drawViewHierarchyInRect(rect:CGRect, afterScreenUpdates:Bool):Bool;

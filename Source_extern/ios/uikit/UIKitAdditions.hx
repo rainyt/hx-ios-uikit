@@ -12,10 +12,10 @@ extern class UIKitAdditions{
 	overload public static function autorelease():UIKitAdditions;
 
 	@:native("initWithImage")
-	overload public function initWithImage(image:UIImage):UIKitAdditions;
+	overload public function initWithImage(image:Dynamic):Dynamic;
 
 	@:native("initWithImage:options")
-	overload public function initWithImage(image:UIImage, options:Dynamic):UIKitAdditions;
+	overload public function initWithImage(image:Dynamic, options:Dynamic):Dynamic;
 
 
 }

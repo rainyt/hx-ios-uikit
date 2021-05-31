@@ -15,25 +15,25 @@ extern class UISearchTextField{
 	public var tokens:Dynamic;
 
 	@:native("insertToken:atIndex")
-	overload public function insertToken(token:UISearchToken, atIndex:NSInteger):Void;
+	overload public function insertToken(token:Dynamic, atIndex:Dynamic):Void;
 
 	@:native("removeTokenAtIndex")
-	overload public function removeTokenAtIndex(tokenIndex:NSInteger):Void;
+	overload public function removeTokenAtIndex(tokenIndex:Dynamic):Void;
 
 	@:native("positionOfTokenAtIndex")
-	overload public function positionOfTokenAtIndex(tokenIndex:NSInteger):UITextPosition;
+	overload public function positionOfTokenAtIndex(tokenIndex:Dynamic):Dynamic;
 
 	@:native("tokensInRange")
-	overload public function tokensInRange(textRange:UITextRange):Dynamic;
+	overload public function tokensInRange(textRange:Dynamic):Dynamic;
 
 	@:native("textualRange")
-	public var textualRange:UITextRange;
+	public var textualRange:Dynamic;
 
 	@:native("replaceTextualPortionOfRange:withToken:atIndex")
-	overload public function replaceTextualPortionOfRange(textRange:UITextRange, withToken:UISearchToken, atIndex:NSUInteger):Void;
+	overload public function replaceTextualPortionOfRange(textRange:Dynamic, withToken:Dynamic, atIndex:Dynamic):Void;
 
 	@:native("tokenBackgroundColor")
-	public var tokenBackgroundColor:UIColor;
+	public var tokenBackgroundColor:Dynamic;
 
 	@:native("allowsDeletingTokens")
 	public var allowsDeletingTokens:Bool;

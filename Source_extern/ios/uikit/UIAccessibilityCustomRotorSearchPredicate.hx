@@ -12,10 +12,10 @@ extern class UIAccessibilityCustomRotorSearchPredicate{
 	overload public static function autorelease():UIAccessibilityCustomRotorSearchPredicate;
 
 	@:native("currentItem")
-	public var currentItem:UIAccessibilityCustomRotorItemResult;
+	public var currentItem:Dynamic;
 
 	@:native("searchDirection")
-	public var searchDirection:UIAccessibilityCustomRotorDirection;
+	public var searchDirection:Dynamic;
 
 
 }

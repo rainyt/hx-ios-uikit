@@ -12,94 +12,94 @@ extern class UITraitCollection{
 	overload public static function autorelease():UITraitCollection;
 
 	@:native("init")
-	overload public function init():UITraitCollection;
+	overload public function init():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITraitCollection;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("containsTraitsInCollection")
-	overload public function containsTraitsInCollection(trait:UITraitCollection):Bool;
+	overload public function containsTraitsInCollection(trait:Dynamic):Bool;
 
 	@:native("traitCollectionWithTraitsFromCollections")
-	overload public static function traitCollectionWithTraitsFromCollections(traitCollections:Dynamic):UITraitCollection;
+	overload public static function traitCollectionWithTraitsFromCollections(traitCollections:Dynamic):Dynamic;
 
 	@:native("traitCollectionWithUserInterfaceIdiom")
-	overload public static function traitCollectionWithUserInterfaceIdiom(idiom:UIUserInterfaceIdiom):UITraitCollection;
+	overload public static function traitCollectionWithUserInterfaceIdiom(idiom:Dynamic):Dynamic;
 
 	@:native("userInterfaceIdiom")
-	public var userInterfaceIdiom:UIUserInterfaceIdiom;
+	public var userInterfaceIdiom:Dynamic;
 
 	@:native("traitCollectionWithUserInterfaceStyle")
-	overload public static function traitCollectionWithUserInterfaceStyle(userInterfaceStyle:UIUserInterfaceStyle):UITraitCollection;
+	overload public static function traitCollectionWithUserInterfaceStyle(userInterfaceStyle:Dynamic):Dynamic;
 
 	@:native("userInterfaceStyle")
-	public var userInterfaceStyle:UIUserInterfaceStyle;
+	public var userInterfaceStyle:Dynamic;
 
 	@:native("traitCollectionWithLayoutDirection")
-	overload public static function traitCollectionWithLayoutDirection(layoutDirection:UITraitEnvironmentLayoutDirection):UITraitCollection;
+	overload public static function traitCollectionWithLayoutDirection(layoutDirection:Dynamic):Dynamic;
 
 	@:native("layoutDirection")
-	public var layoutDirection:UITraitEnvironmentLayoutDirection;
+	public var layoutDirection:Dynamic;
 
 	@:native("traitCollectionWithDisplayScale")
-	overload public static function traitCollectionWithDisplayScale(scale:CGFloat):UITraitCollection;
+	overload public static function traitCollectionWithDisplayScale(scale:Dynamic):Dynamic;
 
 	@:native("displayScale")
-	public var displayScale:CGFloat;
+	public var displayScale:Dynamic;
 
 	@:native("traitCollectionWithHorizontalSizeClass")
-	overload public static function traitCollectionWithHorizontalSizeClass(horizontalSizeClass:UIUserInterfaceSizeClass):UITraitCollection;
+	overload public static function traitCollectionWithHorizontalSizeClass(horizontalSizeClass:Dynamic):Dynamic;
 
 	@:native("horizontalSizeClass")
-	public var horizontalSizeClass:UIUserInterfaceSizeClass;
+	public var horizontalSizeClass:Dynamic;
 
 	@:native("traitCollectionWithVerticalSizeClass")
-	overload public static function traitCollectionWithVerticalSizeClass(verticalSizeClass:UIUserInterfaceSizeClass):UITraitCollection;
+	overload public static function traitCollectionWithVerticalSizeClass(verticalSizeClass:Dynamic):Dynamic;
 
 	@:native("verticalSizeClass")
-	public var verticalSizeClass:UIUserInterfaceSizeClass;
+	public var verticalSizeClass:Dynamic;
 
 	@:native("traitCollectionWithForceTouchCapability")
-	overload public static function traitCollectionWithForceTouchCapability(capability:UIForceTouchCapability):UITraitCollection;
+	overload public static function traitCollectionWithForceTouchCapability(capability:Dynamic):Dynamic;
 
 	@:native("forceTouchCapability")
-	public var forceTouchCapability:UIForceTouchCapability;
+	public var forceTouchCapability:Dynamic;
 
 	@:native("traitCollectionWithPreferredContentSizeCategory")
-	overload public static function traitCollectionWithPreferredContentSizeCategory(preferredContentSizeCategory:UIContentSizeCategory):UITraitCollection;
+	overload public static function traitCollectionWithPreferredContentSizeCategory(preferredContentSizeCategory:Dynamic):Dynamic;
 
 	@:native("preferredContentSizeCategory")
-	public var preferredContentSizeCategory:UIContentSizeCategory;
+	public var preferredContentSizeCategory:Dynamic;
 
 	@:native("traitCollectionWithDisplayGamut")
-	overload public static function traitCollectionWithDisplayGamut(displayGamut:UIDisplayGamut):UITraitCollection;
+	overload public static function traitCollectionWithDisplayGamut(displayGamut:Dynamic):Dynamic;
 
 	@:native("displayGamut")
-	public var displayGamut:UIDisplayGamut;
+	public var displayGamut:Dynamic;
 
 	@:native("traitCollectionWithAccessibilityContrast")
-	overload public static function traitCollectionWithAccessibilityContrast(accessibilityContrast:UIAccessibilityContrast):UITraitCollection;
+	overload public static function traitCollectionWithAccessibilityContrast(accessibilityContrast:Dynamic):Dynamic;
 
 	@:native("accessibilityContrast")
-	public var accessibilityContrast:UIAccessibilityContrast;
+	public var accessibilityContrast:Dynamic;
 
 	@:native("traitCollectionWithUserInterfaceLevel")
-	overload public static function traitCollectionWithUserInterfaceLevel(userInterfaceLevel:UIUserInterfaceLevel):UITraitCollection;
+	overload public static function traitCollectionWithUserInterfaceLevel(userInterfaceLevel:Dynamic):Dynamic;
 
 	@:native("userInterfaceLevel")
-	public var userInterfaceLevel:UIUserInterfaceLevel;
+	public var userInterfaceLevel:Dynamic;
 
 	@:native("traitCollectionWithLegibilityWeight")
-	overload public static function traitCollectionWithLegibilityWeight(legibilityWeight:UILegibilityWeight):UITraitCollection;
+	overload public static function traitCollectionWithLegibilityWeight(legibilityWeight:Dynamic):Dynamic;
 
 	@:native("legibilityWeight")
-	public var legibilityWeight:UILegibilityWeight;
+	public var legibilityWeight:Dynamic;
 
 	@:native("traitCollectionWithActiveAppearance")
-	overload public static function traitCollectionWithActiveAppearance(userInterfaceActiveAppearance:UIUserInterfaceActiveAppearance):UITraitCollection;
+	overload public static function traitCollectionWithActiveAppearance(userInterfaceActiveAppearance:Dynamic):Dynamic;
 
 	@:native("activeAppearance")
-	public var activeAppearance:UIUserInterfaceActiveAppearance;
+	public var activeAppearance:Dynamic;
 
 
 }

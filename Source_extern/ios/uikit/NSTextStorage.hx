@@ -15,25 +15,25 @@ extern class NSTextStorage{
 	public var layoutManagers:Dynamic;
 
 	@:native("addLayoutManager")
-	overload public function addLayoutManager(aLayoutManager:NSLayoutManager):Void;
+	overload public function addLayoutManager(aLayoutManager:Dynamic):Void;
 
 	@:native("removeLayoutManager")
-	overload public function removeLayoutManager(aLayoutManager:NSLayoutManager):Void;
+	overload public function removeLayoutManager(aLayoutManager:Dynamic):Void;
 
 	@:native("editedMask")
-	public var editedMask:NSTextStorageEditActions;
+	public var editedMask:Dynamic;
 
 	@:native("editedRange")
-	public var editedRange:NSRange;
+	public var editedRange:Dynamic;
 
 	@:native("changeInLength")
-	public var changeInLength:NSInteger;
+	public var changeInLength:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("edited:range:changeInLength")
-	overload public function edited(editedMask:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
+	overload public function edited(editedMask:Dynamic, range:Dynamic, changeInLength:Dynamic):Void;
 
 	@:native("processEditing")
 	overload public function processEditing():Void;
@@ -42,10 +42,10 @@ extern class NSTextStorage{
 	public var fixesAttributesLazily:Bool;
 
 	@:native("invalidateAttributesInRange")
-	overload public function invalidateAttributesInRange(range:NSRange):Void;
+	overload public function invalidateAttributesInRange(range:Dynamic):Void;
 
 	@:native("ensureAttributesAreFixedInRange")
-	overload public function ensureAttributesAreFixedInRange(range:NSRange):Void;
+	overload public function ensureAttributesAreFixedInRange(range:Dynamic):Void;
 
 
 }

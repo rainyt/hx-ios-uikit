@@ -12,31 +12,31 @@ extern class UIListContentTextProperties{
 	overload public static function autorelease():UIListContentTextProperties;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("color")
-	public var color:UIColor;
+	public var color:Dynamic;
 
 	@:native("colorTransformer")
-	public var colorTransformer:UIConfigurationColorTransformer;
+	public var colorTransformer:Dynamic;
 
 	@:native("resolvedColor")
-	overload public function resolvedColor():UIColor;
+	overload public function resolvedColor():Dynamic;
 
 	@:native("alignment")
-	public var alignment:UIListContentTextAlignment;
+	public var alignment:Dynamic;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:NSLineBreakMode;
+	public var lineBreakMode:Dynamic;
 
 	@:native("numberOfLines")
-	public var numberOfLines:NSInteger;
+	public var numberOfLines:Dynamic;
 
 	@:native("adjustsFontSizeToFitWidth")
 	public var adjustsFontSizeToFitWidth:Bool;
 
 	@:native("minimumScaleFactor")
-	public var minimumScaleFactor:CGFloat;
+	public var minimumScaleFactor:Dynamic;
 
 	@:native("allowsDefaultTighteningForTruncation")
 	public var allowsDefaultTighteningForTruncation:Bool;
@@ -45,7 +45,7 @@ extern class UIListContentTextProperties{
 	public var adjustsFontForContentSizeCategory:Bool;
 
 	@:native("transform")
-	public var transform:UIListContentTextTransform;
+	public var transform:Dynamic;
 
 
 }

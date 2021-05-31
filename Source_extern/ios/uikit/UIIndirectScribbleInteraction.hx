@@ -12,13 +12,13 @@ extern class UIIndirectScribbleInteraction{
 	overload public static function autorelease():UIIndirectScribbleInteraction;
 
 	@:native("init")
-	overload public function init():UIIndirectScribbleInteraction;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIIndirectScribbleInteraction;
+	overload public static function new():Dynamic;
 
 	@:native("initWithDelegate")
-	overload public function initWithDelegate(delegate:Dynamic):UIIndirectScribbleInteraction;
+	overload public function initWithDelegate(delegate:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

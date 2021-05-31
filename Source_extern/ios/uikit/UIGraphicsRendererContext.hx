@@ -14,10 +14,10 @@ extern class UIGraphicsRendererContext{
 	overload public static function autorelease():UIGraphicsRendererContext;
 
 	@:native("CGContext")
-	public var CGContext:CGContextRef;
+	public var CGContext:Dynamic;
 
 	@:native("format")
-	public var format:UIGraphicsRendererFormat;
+	public var format:Dynamic;
 
 	@:native("fillRect")
 	overload public function fillRect(rect:CGRect):Void;

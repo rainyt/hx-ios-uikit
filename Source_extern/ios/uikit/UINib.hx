@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 import cpp.objc.NSData;
 @:objc
 @:native("UINib")
@@ -15,13 +14,13 @@ extern class UINib{
 	overload public static function autorelease():UINib;
 
 	@:native("nibWithNibName:bundle")
-	overload public static function nibWithNibName(name:NSString, bundle:NSBundle):UINib;
+	overload public static function nibWithNibName(name:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("nibWithData:bundle")
-	overload public static function nibWithData(data:NSData, bundle:NSBundle):UINib;
+	overload public static function nibWithData(data:NSData, bundle:Dynamic):Dynamic;
 
 	@:native("instantiateWithOwner:options")
-	overload public function instantiateWithOwner(ownerOrNil:Dynamic, options:Dynamic):NSArray;
+	overload public function instantiateWithOwner(ownerOrNil:Dynamic, options:Dynamic):Dynamic;
 
 
 }

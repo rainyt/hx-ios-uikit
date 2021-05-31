@@ -12,7 +12,7 @@ extern class UINewsstand{
 	overload public static function autorelease():UINewsstand;
 
 	@:native("setNewsstandIconImage")
-	overload public function setNewsstandIconImage(image:UIImage):Void;
+	overload public function setNewsstandIconImage(image:Dynamic):Void;
 
 
 }

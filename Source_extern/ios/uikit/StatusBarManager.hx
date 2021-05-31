@@ -12,7 +12,7 @@ extern class StatusBarManager{
 	overload public static function autorelease():StatusBarManager;
 
 	@:native("statusBarManager")
-	public var statusBarManager:UIStatusBarManager;
+	public var statusBarManager:Dynamic;
 
 
 }

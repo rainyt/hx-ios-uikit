@@ -13,7 +13,7 @@ extern class UIDevice{
 	overload public static function autorelease():UIDevice;
 
 	@:native("currentDevice")
-	public var currentDevice:UIDevice;
+	public var currentDevice:Dynamic;
 
 	@:native("name")
 	public var name:NSString;
@@ -31,10 +31,10 @@ extern class UIDevice{
 	public var systemVersion:NSString;
 
 	@:native("orientation")
-	public var orientation:UIDeviceOrientation;
+	public var orientation:Dynamic;
 
 	@:native("identifierForVendor")
-	public var identifierForVendor:NSUUID;
+	public var identifierForVendor:Dynamic;
 
 	@:native("generatesDeviceOrientationNotifications")
 	public var generatesDeviceOrientationNotifications:Bool;
@@ -49,10 +49,10 @@ extern class UIDevice{
 	public var batteryMonitoringEnabled:Bool;
 
 	@:native("batteryState")
-	public var batteryState:UIDeviceBatteryState;
+	public var batteryState:Dynamic;
 
 	@:native("batteryLevel")
-	public var batteryLevel:float;
+	public var batteryLevel:Dynamic;
 
 	@:native("proximityMonitoringEnabled")
 	public var proximityMonitoringEnabled:Bool;
@@ -64,7 +64,7 @@ extern class UIDevice{
 	public var multitaskingSupported:Bool;
 
 	@:native("userInterfaceIdiom")
-	public var userInterfaceIdiom:UIUserInterfaceIdiom;
+	public var userInterfaceIdiom:Dynamic;
 
 	@:native("playInputClick")
 	overload public function playInputClick():Void;

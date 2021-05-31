@@ -13,13 +13,13 @@ extern class UIApplicationShortcutItem{
 	overload public static function autorelease():UIApplicationShortcutItem;
 
 	@:native("init")
-	overload public function init():UIApplicationShortcutItem;
+	overload public function init():Dynamic;
 
 	@:native("initWithType:localizedTitle:localizedSubtitle:icon:userInfo")
-	overload public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:Dynamic):UIApplicationShortcutItem;
+	overload public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:Dynamic, userInfo:Dynamic):Dynamic;
 
 	@:native("initWithType:localizedTitle")
-	overload public function initWithType(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
+	overload public function initWithType(type:NSString, localizedTitle:NSString):Dynamic;
 
 	@:native("type")
 	public var type:NSString;
@@ -31,7 +31,7 @@ extern class UIApplicationShortcutItem{
 	public var localizedSubtitle:NSString;
 
 	@:native("icon")
-	public var icon:UIApplicationShortcutIcon;
+	public var icon:Dynamic;
 
 	@:native("userInfo")
 	public var userInfo:Dynamic;

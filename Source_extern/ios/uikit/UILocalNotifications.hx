@@ -12,13 +12,13 @@ extern class UILocalNotifications{
 	overload public static function autorelease():UILocalNotifications;
 
 	@:native("presentLocalNotificationNow")
-	overload public function presentLocalNotificationNow(notification:UILocalNotification):Void;
+	overload public function presentLocalNotificationNow(notification:Dynamic):Void;
 
 	@:native("scheduleLocalNotification")
-	overload public function scheduleLocalNotification(notification:UILocalNotification):Void;
+	overload public function scheduleLocalNotification(notification:Dynamic):Void;
 
 	@:native("cancelLocalNotification")
-	overload public function cancelLocalNotification(notification:UILocalNotification):Void;
+	overload public function cancelLocalNotification(notification:Dynamic):Void;
 
 	@:native("cancelAllLocalNotifications")
 	overload public function cancelAllLocalNotifications():Void;

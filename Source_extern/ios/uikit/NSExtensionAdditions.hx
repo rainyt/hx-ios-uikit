@@ -12,7 +12,7 @@ extern class NSExtensionAdditions{
 	overload public static function autorelease():NSExtensionAdditions;
 
 	@:native("extensionContext")
-	public var extensionContext:NSExtensionContext;
+	public var extensionContext:Dynamic;
 
 
 }

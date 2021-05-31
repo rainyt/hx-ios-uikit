@@ -15,13 +15,13 @@ extern class UIGraphicsPDFRenderer{
 	overload public static function autorelease():UIGraphicsPDFRenderer;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
+	overload public function initWithBounds(bounds:CGRect, format:Dynamic):Dynamic;
 
 	@:native("writePDFToURL:withActions:error")
-	overload public function writePDFToURL(url:NSURL, withActions:NS_NOESCAPEUIGraphicsPDFDrawingActions, error:NSError):Bool;
+	overload public function writePDFToURL(url:Dynamic, withActions:Dynamic, error:NSError):Bool;
 
 	@:native("PDFDataWithActions")
-	overload public function PDFDataWithActions(actions:NS_NOESCAPEUIGraphicsPDFDrawingActions):NSData;
+	overload public function PDFDataWithActions(actions:Dynamic):NSData;
 
 
 }

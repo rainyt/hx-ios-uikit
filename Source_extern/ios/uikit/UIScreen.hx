@@ -17,40 +17,40 @@ extern class UIScreen{
 	public var screens:Dynamic;
 
 	@:native("mainScreen")
-	public var mainScreen:UIScreen;
+	public var mainScreen:Dynamic;
 
 	@:native("bounds")
 	public var bounds:CGRect;
 
 	@:native("scale")
-	public var scale:CGFloat;
+	public var scale:Dynamic;
 
 	@:native("availableModes")
 	public var availableModes:Dynamic;
 
 	@:native("preferredMode")
-	public var preferredMode:UIScreenMode;
+	public var preferredMode:Dynamic;
 
 	@:native("currentMode")
-	public var currentMode:UIScreenMode;
+	public var currentMode:Dynamic;
 
 	@:native("currentMode")
-	public var currentMode:UIScreenMode;
+	public var currentMode:Dynamic;
 
 	@:native("overscanCompensation")
-	public var overscanCompensation:UIScreenOverscanCompensation;
+	public var overscanCompensation:Dynamic;
 
 	@:native("overscanCompensationInsets")
-	public var overscanCompensationInsets:UIEdgeInsets;
+	public var overscanCompensationInsets:Dynamic;
 
 	@:native("mirroredScreen")
-	public var mirroredScreen:UIScreen;
+	public var mirroredScreen:Dynamic;
 
 	@:native("captured")
 	public var captured:Bool;
 
 	@:native("brightness")
-	public var brightness:CGFloat;
+	public var brightness:Dynamic;
 
 	@:native("wantsSoftwareDimming")
 	public var wantsSoftwareDimming:Bool;
@@ -65,22 +65,22 @@ extern class UIScreen{
 	public var nativeBounds:CGRect;
 
 	@:native("nativeScale")
-	public var nativeScale:CGFloat;
+	public var nativeScale:Dynamic;
 
 	@:native("displayLinkWithTarget:selector")
 	overload public function displayLinkWithTarget(target:Dynamic, selector:String):CADisplayLink;
 
 	@:native("maximumFramesPerSecond")
-	public var maximumFramesPerSecond:NSInteger;
+	public var maximumFramesPerSecond:Dynamic;
 
 	@:native("calibratedLatency")
-	public var calibratedLatency:CFTimeInterval;
+	public var calibratedLatency:Dynamic;
 
 	@:native("focusedItem")
 	public var focusedItem:Dynamic;
 
 	@:native("focusedView")
-	public var focusedView:UIView;
+	public var focusedView:Dynamic;
 
 	@:native("supportsFocus")
 	public var supportsFocus:Bool;

@@ -12,7 +12,7 @@ extern class UISearchDisplayControllerSupport{
 	overload public static function autorelease():UISearchDisplayControllerSupport;
 
 	@:native("searchDisplayController")
-	public var searchDisplayController:UISearchDisplayController;
+	public var searchDisplayController:Dynamic;
 
 
 }

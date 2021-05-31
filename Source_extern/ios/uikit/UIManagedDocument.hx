@@ -18,10 +18,10 @@ extern class UIManagedDocument{
 	public var persistentStoreName:NSString;
 
 	@:native("managedObjectContext")
-	public var managedObjectContext:NSManagedObjectContext;
+	public var managedObjectContext:Dynamic;
 
 	@:native("managedObjectModel")
-	public var managedObjectModel:NSManagedObjectModel;
+	public var managedObjectModel:Dynamic;
 
 	@:native("persistentStoreOptions")
 	public var persistentStoreOptions:NSDictionary;
@@ -30,19 +30,19 @@ extern class UIManagedDocument{
 	public var modelConfiguration:NSString;
 
 	@:native("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error")
-	overload public function configurePersistentStoreCoordinatorForURL(storeURL:NSURL, ofType:NSString, modelConfiguration:NSString, storeOptions:NSDictionary, error:NSError):Bool;
+	overload public function configurePersistentStoreCoordinatorForURL(storeURL:Dynamic, ofType:NSString, modelConfiguration:NSString, storeOptions:NSDictionary, error:NSError):Bool;
 
 	@:native("persistentStoreTypeForFileType")
 	overload public function persistentStoreTypeForFileType(fileType:NSString):NSString;
 
 	@:native("readAdditionalContentFromURL:error")
-	overload public function readAdditionalContentFromURL(absoluteURL:NSURL, error:NSError):Bool;
+	overload public function readAdditionalContentFromURL(absoluteURL:Dynamic, error:NSError):Bool;
 
 	@:native("additionalContentForURL:error")
-	overload public function additionalContentForURL(absoluteURL:NSURL, error:NSError):Dynamic;
+	overload public function additionalContentForURL(absoluteURL:Dynamic, error:NSError):Dynamic;
 
 	@:native("writeAdditionalContent:toURL:originalContentsURL:error")
-	overload public function writeAdditionalContent(content:Dynamic, toURL:NSURL, originalContentsURL:NSURL, error:NSError):Bool;
+	overload public function writeAdditionalContent(content:Dynamic, toURL:Dynamic, originalContentsURL:Dynamic, error:NSError):Bool;
 
 
 }

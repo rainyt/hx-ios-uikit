@@ -13,61 +13,61 @@ extern class UISlider{
 	overload public static function autorelease():UISlider;
 
 	@:native("value")
-	public var value:float;
+	public var value:Dynamic;
 
 	@:native("minimumValue")
-	public var minimumValue:float;
+	public var minimumValue:Dynamic;
 
 	@:native("maximumValue")
-	public var maximumValue:float;
+	public var maximumValue:Dynamic;
 
 	@:native("minimumValueImage")
-	public var minimumValueImage:UIImage;
+	public var minimumValueImage:Dynamic;
 
 	@:native("maximumValueImage")
-	public var maximumValueImage:UIImage;
+	public var maximumValueImage:Dynamic;
 
 	@:native("continuous")
 	public var continuous:Bool;
 
 	@:native("minimumTrackTintColor")
-	public var minimumTrackTintColor:UIColor;
+	public var minimumTrackTintColor:Dynamic;
 
 	@:native("maximumTrackTintColor")
-	public var maximumTrackTintColor:UIColor;
+	public var maximumTrackTintColor:Dynamic;
 
 	@:native("thumbTintColor")
-	public var thumbTintColor:UIColor;
+	public var thumbTintColor:Dynamic;
 
 	@:native("setValue:animated")
-	overload public function setValue(value:float, animated:Bool):Void;
+	overload public function setValue(value:Dynamic, animated:Bool):Void;
 
 	@:native("setThumbImage:forState")
-	overload public function setThumbImage(image:UIImage, forState:UIControlState):Void;
+	overload public function setThumbImage(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("setMinimumTrackImage:forState")
-	overload public function setMinimumTrackImage(image:UIImage, forState:UIControlState):Void;
+	overload public function setMinimumTrackImage(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("setMaximumTrackImage:forState")
-	overload public function setMaximumTrackImage(image:UIImage, forState:UIControlState):Void;
+	overload public function setMaximumTrackImage(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("thumbImageForState")
-	overload public function thumbImageForState(state:UIControlState):UIImage;
+	overload public function thumbImageForState(state:Dynamic):Dynamic;
 
 	@:native("minimumTrackImageForState")
-	overload public function minimumTrackImageForState(state:UIControlState):UIImage;
+	overload public function minimumTrackImageForState(state:Dynamic):Dynamic;
 
 	@:native("maximumTrackImageForState")
-	overload public function maximumTrackImageForState(state:UIControlState):UIImage;
+	overload public function maximumTrackImageForState(state:Dynamic):Dynamic;
 
 	@:native("currentThumbImage")
-	public var currentThumbImage:UIImage;
+	public var currentThumbImage:Dynamic;
 
 	@:native("currentMinimumTrackImage")
-	public var currentMinimumTrackImage:UIImage;
+	public var currentMinimumTrackImage:Dynamic;
 
 	@:native("currentMaximumTrackImage")
-	public var currentMaximumTrackImage:UIImage;
+	public var currentMaximumTrackImage:Dynamic;
 
 	@:native("minimumValueImageRectForBounds")
 	overload public function minimumValueImageRectForBounds(bounds:CGRect):CGRect;
@@ -79,7 +79,7 @@ extern class UISlider{
 	overload public function trackRectForBounds(bounds:CGRect):CGRect;
 
 	@:native("thumbRectForBounds:trackRect:value")
-	overload public function thumbRectForBounds(bounds:CGRect, trackRect:CGRect, value:float):CGRect;
+	overload public function thumbRectForBounds(bounds:CGRect, trackRect:CGRect, value:Dynamic):CGRect;
 
 
 }

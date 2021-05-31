@@ -12,16 +12,16 @@ extern class UIMenuSystem{
 	overload public static function autorelease():UIMenuSystem;
 
 	@:native("mainSystem")
-	public var mainSystem:UIMenuSystem;
+	public var mainSystem:Dynamic;
 
 	@:native("contextSystem")
-	public var contextSystem:UIMenuSystem;
+	public var contextSystem:Dynamic;
 
 	@:native("new")
-	overload public static function new():UIMenuSystem;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UIMenuSystem;
+	overload public function init():Dynamic;
 
 	@:native("setNeedsRebuild")
 	overload public function setNeedsRebuild():Void;

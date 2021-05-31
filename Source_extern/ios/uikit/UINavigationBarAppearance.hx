@@ -15,28 +15,28 @@ extern class UINavigationBarAppearance{
 	public var titleTextAttributes:Dynamic;
 
 	@:native("titlePositionAdjustment")
-	public var titlePositionAdjustment:UIOffset;
+	public var titlePositionAdjustment:Dynamic;
 
 	@:native("largeTitleTextAttributes")
 	public var largeTitleTextAttributes:Dynamic;
 
 	@:native("buttonAppearance")
-	public var buttonAppearance:UIBarButtonItemAppearance;
+	public var buttonAppearance:Dynamic;
 
 	@:native("doneButtonAppearance")
-	public var doneButtonAppearance:UIBarButtonItemAppearance;
+	public var doneButtonAppearance:Dynamic;
 
 	@:native("backButtonAppearance")
-	public var backButtonAppearance:UIBarButtonItemAppearance;
+	public var backButtonAppearance:Dynamic;
 
 	@:native("backIndicatorImage")
-	public var backIndicatorImage:UIImage;
+	public var backIndicatorImage:Dynamic;
 
 	@:native("backIndicatorTransitionMaskImage")
-	public var backIndicatorTransitionMaskImage:UIImage;
+	public var backIndicatorTransitionMaskImage:Dynamic;
 
 	@:native("setBackIndicatorImage:transitionMaskImage")
-	overload public function setBackIndicatorImage(backIndicatorImage:UIImage, transitionMaskImage:UIImage):Void;
+	overload public function setBackIndicatorImage(backIndicatorImage:Dynamic, transitionMaskImage:Dynamic):Void;
 
 
 }

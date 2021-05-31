@@ -19,19 +19,19 @@ extern class UICommandAlternate{
 	public var action:String;
 
 	@:native("modifierFlags")
-	public var modifierFlags:UIKeyModifierFlags;
+	public var modifierFlags:Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("new")
-	overload public static function new():UICommandAlternate;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UICommandAlternate;
+	overload public function init():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICommandAlternate;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 
 }

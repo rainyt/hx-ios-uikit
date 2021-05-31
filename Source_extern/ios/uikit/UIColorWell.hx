@@ -19,7 +19,7 @@ extern class UIColorWell{
 	public var supportsAlpha:Bool;
 
 	@:native("selectedColor")
-	public var selectedColor:UIColor;
+	public var selectedColor:Dynamic;
 
 
 }

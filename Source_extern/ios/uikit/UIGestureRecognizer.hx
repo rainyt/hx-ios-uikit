@@ -14,22 +14,22 @@ extern class UIGestureRecognizer{
 	overload public static function autorelease():UIGestureRecognizer;
 
 	@:native("initWithTarget:action")
-	overload public function initWithTarget(target:Dynamic, action:SEL):UIGestureRecognizer;
+	overload public function initWithTarget(target:Dynamic, action:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIGestureRecognizer;
+	overload public function init():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIGestureRecognizer;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("addTarget:action")
 	overload public function addTarget(target:Dynamic, action:String):Void;
 
 	@:native("removeTarget:action")
-	overload public function removeTarget(target:Dynamic, action:SEL):Void;
+	overload public function removeTarget(target:Dynamic, action:Dynamic):Void;
 
 	@:native("state")
-	public var state:UIGestureRecognizerState;
+	public var state:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -38,7 +38,7 @@ extern class UIGestureRecognizer{
 	public var enabled:Bool;
 
 	@:native("view")
-	public var view:UIView;
+	public var view:Dynamic;
 
 	@:native("cancelsTouchesInView")
 	public var cancelsTouchesInView:Bool;
@@ -59,25 +59,25 @@ extern class UIGestureRecognizer{
 	public var requiresExclusiveTouchType:Bool;
 
 	@:native("requireGestureRecognizerToFail")
-	overload public function requireGestureRecognizerToFail(otherGestureRecognizer:UIGestureRecognizer):Void;
+	overload public function requireGestureRecognizerToFail(otherGestureRecognizer:Dynamic):Void;
 
 	@:native("locationInView")
-	overload public function locationInView(view:UIView):CGPoint;
+	overload public function locationInView(view:Dynamic):CGPoint;
 
 	@:native("numberOfTouches")
-	public var numberOfTouches:NSUInteger;
+	public var numberOfTouches:Dynamic;
 
 	@:native("locationOfTouch:inView")
-	overload public function locationOfTouch(touchIndex:NSUInteger, inView:UIView):CGPoint;
+	overload public function locationOfTouch(touchIndex:Dynamic, inView:Dynamic):CGPoint;
 
 	@:native("name")
 	public var name:NSString;
 
 	@:native("modifierFlags")
-	public var modifierFlags:UIKeyModifierFlags;
+	public var modifierFlags:Dynamic;
 
 	@:native("buttonMask")
-	public var buttonMask:UIEventButtonMask;
+	public var buttonMask:Dynamic;
 
 
 }

@@ -13,25 +13,25 @@ extern class UICellAccessoryLabel{
 	overload public static function autorelease():UICellAccessoryLabel;
 
 	@:native("initWithText")
-	overload public function initWithText(text:NSString):UICellAccessoryLabel;
+	overload public function initWithText(text:NSString):Dynamic;
 
 	@:native("text")
 	public var text:NSString;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("adjustsFontForContentSizeCategory")
 	public var adjustsFontForContentSizeCategory:Bool;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICellAccessoryLabel;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UICellAccessoryLabel;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UICellAccessoryLabel;
+	overload public static function new():Dynamic;
 
 
 }

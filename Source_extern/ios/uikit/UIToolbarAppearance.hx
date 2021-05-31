@@ -12,10 +12,10 @@ extern class UIToolbarAppearance{
 	overload public static function autorelease():UIToolbarAppearance;
 
 	@:native("buttonAppearance")
-	public var buttonAppearance:UIBarButtonItemAppearance;
+	public var buttonAppearance:Dynamic;
 
 	@:native("doneButtonAppearance")
-	public var doneButtonAppearance:UIBarButtonItemAppearance;
+	public var doneButtonAppearance:Dynamic;
 
 
 }

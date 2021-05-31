@@ -13,10 +13,10 @@ extern class UIReorderingSupportHooks{
 	overload public static function autorelease():UIReorderingSupportHooks;
 
 	@:native("targetIndexPathForInteractivelyMovingItem:withPosition")
-	overload public function targetIndexPathForInteractivelyMovingItem(previousIndexPath:NSIndexPath, withPosition:CGPoint):NSIndexPath;
+	overload public function targetIndexPathForInteractivelyMovingItem(previousIndexPath:Dynamic, withPosition:CGPoint):Dynamic;
 
 	@:native("layoutAttributesForInteractivelyMovingItemAtIndexPath:withTargetPosition")
-	overload public function layoutAttributesForInteractivelyMovingItemAtIndexPath(indexPath:NSIndexPath, withTargetPosition:CGPoint):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForInteractivelyMovingItemAtIndexPath(indexPath:Dynamic, withTargetPosition:CGPoint):Dynamic;
 
 	@:native("invalidationContextForInteractivelyMovingItems:withTargetPosition:previousIndexPaths:previousPosition")
 	overload public function invalidationContextForInteractivelyMovingItems(targetIndexPaths:Dynamic, withTargetPosition:CGPoint, previousIndexPaths:Dynamic, previousPosition:CGPoint):Dynamic;

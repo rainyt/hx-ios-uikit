@@ -12,19 +12,19 @@ extern class UIAccessibilityContainer{
 	overload public static function autorelease():UIAccessibilityContainer;
 
 	@:native("accessibilityElementCount")
-	overload public function accessibilityElementCount():NSInteger;
+	overload public function accessibilityElementCount():Dynamic;
 
 	@:native("accessibilityElementAtIndex")
-	overload public function accessibilityElementAtIndex(index:NSInteger):Dynamic;
+	overload public function accessibilityElementAtIndex(index:Dynamic):Dynamic;
 
 	@:native("indexOfAccessibilityElement")
-	overload public function indexOfAccessibilityElement(element:Dynamic):NSInteger;
+	overload public function indexOfAccessibilityElement(element:Dynamic):Dynamic;
 
 	@:native("accessibilityElements")
-	public var accessibilityElements:NSArray;
+	public var accessibilityElements:Dynamic;
 
 	@:native("accessibilityContainerType")
-	public var accessibilityContainerType:UIAccessibilityContainerType;
+	public var accessibilityContainerType:Dynamic;
 
 
 }

@@ -12,13 +12,13 @@ extern class UIDocumentBrowserTransitionController{
 	overload public static function autorelease():UIDocumentBrowserTransitionController;
 
 	@:native("init")
-	overload public function init():UIDocumentBrowserTransitionController;
+	overload public function init():Dynamic;
 
 	@:native("loadingProgress")
-	public var loadingProgress:NSProgress;
+	public var loadingProgress:Dynamic;
 
 	@:native("targetView")
-	public var targetView:UIView;
+	public var targetView:Dynamic;
 
 
 }

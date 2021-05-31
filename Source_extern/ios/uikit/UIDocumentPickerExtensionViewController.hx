@@ -13,16 +13,16 @@ extern class UIDocumentPickerExtensionViewController{
 	overload public static function autorelease():UIDocumentPickerExtensionViewController;
 
 	@:native("dismissGrantingAccessToURL")
-	overload public function dismissGrantingAccessToURL(url:NSURL):Void;
+	overload public function dismissGrantingAccessToURL(url:Dynamic):Void;
 
 	@:native("prepareForPresentationInMode")
-	overload public function prepareForPresentationInMode(mode:UIDocumentPickerMode):Void;
+	overload public function prepareForPresentationInMode(mode:Dynamic):Void;
 
 	@:native("documentPickerMode")
-	public var documentPickerMode:UIDocumentPickerMode;
+	public var documentPickerMode:Dynamic;
 
 	@:native("originalURL")
-	public var originalURL:NSURL;
+	public var originalURL:Dynamic;
 
 	@:native("validTypes")
 	public var validTypes:Dynamic;
@@ -31,7 +31,7 @@ extern class UIDocumentPickerExtensionViewController{
 	public var providerIdentifier:NSString;
 
 	@:native("documentStorageURL")
-	public var documentStorageURL:NSURL;
+	public var documentStorageURL:Dynamic;
 
 
 }

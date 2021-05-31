@@ -18,13 +18,13 @@ extern class UIFontPickerViewControllerConfiguration{
 	public var displayUsingSystemFont:Bool;
 
 	@:native("filteredTraits")
-	public var filteredTraits:UIFontDescriptorSymbolicTraits;
+	public var filteredTraits:Dynamic;
 
 	@:native("filteredLanguagesPredicate")
-	public var filteredLanguagesPredicate:NSPredicate;
+	public var filteredLanguagesPredicate:Dynamic;
 
 	@:native("filterPredicateForFilteredLanguages")
-	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):NSPredicate;
+	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):Dynamic;
 
 
 }

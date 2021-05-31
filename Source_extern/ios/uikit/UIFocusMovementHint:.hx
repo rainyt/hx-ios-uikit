@@ -29,10 +29,10 @@ extern class UIFocusMovementHint:{
 	public var interactionTransform:CATransform3D;
 
 	@:native("init")
-	overload public function init():UIFocusMovementHint:;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIFocusMovementHint:;
+	overload public static function new():Dynamic;
 
 
 }

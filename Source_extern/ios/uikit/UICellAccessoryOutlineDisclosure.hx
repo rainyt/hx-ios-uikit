@@ -12,7 +12,7 @@ extern class UICellAccessoryOutlineDisclosure{
 	overload public static function autorelease():UICellAccessoryOutlineDisclosure;
 
 	@:native("style")
-	public var style:UICellAccessoryOutlineDisclosureStyle;
+	public var style:Dynamic;
 
 	@:native("void")
 	public var void:Dynamic;

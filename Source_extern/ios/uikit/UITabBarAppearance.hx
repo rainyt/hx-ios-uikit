@@ -12,28 +12,28 @@ extern class UITabBarAppearance{
 	overload public static function autorelease():UITabBarAppearance;
 
 	@:native("stackedLayoutAppearance")
-	public var stackedLayoutAppearance:UITabBarItemAppearance;
+	public var stackedLayoutAppearance:Dynamic;
 
 	@:native("inlineLayoutAppearance")
-	public var inlineLayoutAppearance:UITabBarItemAppearance;
+	public var inlineLayoutAppearance:Dynamic;
 
 	@:native("compactInlineLayoutAppearance")
-	public var compactInlineLayoutAppearance:UITabBarItemAppearance;
+	public var compactInlineLayoutAppearance:Dynamic;
 
 	@:native("selectionIndicatorTintColor")
-	public var selectionIndicatorTintColor:UIColor;
+	public var selectionIndicatorTintColor:Dynamic;
 
 	@:native("selectionIndicatorImage")
-	public var selectionIndicatorImage:UIImage;
+	public var selectionIndicatorImage:Dynamic;
 
 	@:native("stackedItemPositioning")
-	public var stackedItemPositioning:UITabBarItemPositioning;
+	public var stackedItemPositioning:Dynamic;
 
 	@:native("stackedItemWidth")
-	public var stackedItemWidth:CGFloat;
+	public var stackedItemWidth:Dynamic;
 
 	@:native("stackedItemSpacing")
-	public var stackedItemSpacing:CGFloat;
+	public var stackedItemSpacing:Dynamic;
 
 
 }

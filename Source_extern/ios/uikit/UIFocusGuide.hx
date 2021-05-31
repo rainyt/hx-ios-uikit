@@ -18,7 +18,7 @@ extern class UIFocusGuide{
 	public var preferredFocusEnvironments:Dynamic;
 
 	@:native("preferredFocusedView")
-	public var preferredFocusedView:UIView;
+	public var preferredFocusedView:Dynamic;
 
 
 }

@@ -12,7 +12,7 @@ extern class UIHomeIndicatorAutoHidden{
 	overload public static function autorelease():UIHomeIndicatorAutoHidden;
 
 	@:native("childViewControllerForHomeIndicatorAutoHidden")
-	public var childViewControllerForHomeIndicatorAutoHidden:UIViewController;
+	public var childViewControllerForHomeIndicatorAutoHidden:Dynamic;
 
 	@:native("prefersHomeIndicatorAutoHidden")
 	public var prefersHomeIndicatorAutoHidden:Bool;

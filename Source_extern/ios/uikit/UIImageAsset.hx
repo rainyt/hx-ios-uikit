@@ -12,28 +12,28 @@ extern class UIImageAsset{
 	overload public static function autorelease():UIImageAsset;
 
 	@:native("init")
-	overload public function init():UIImageAsset;
+	overload public function init():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIImageAsset;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("imageWithConfiguration")
-	overload public function imageWithConfiguration(configuration:UIImageConfiguration):UIImage;
+	overload public function imageWithConfiguration(configuration:Dynamic):Dynamic;
 
 	@:native("registerImage:withConfiguration")
-	overload public function registerImage(image:UIImage, withConfiguration:UIImageConfiguration):Void;
+	overload public function registerImage(image:Dynamic, withConfiguration:Dynamic):Void;
 
 	@:native("unregisterImageWithConfiguration")
-	overload public function unregisterImageWithConfiguration(configuration:UIImageConfiguration):Void;
+	overload public function unregisterImageWithConfiguration(configuration:Dynamic):Void;
 
 	@:native("imageWithTraitCollection")
-	overload public function imageWithTraitCollection(traitCollection:UITraitCollection):UIImage;
+	overload public function imageWithTraitCollection(traitCollection:Dynamic):Dynamic;
 
 	@:native("registerImage:withTraitCollection")
-	overload public function registerImage(image:UIImage, withTraitCollection:UITraitCollection):Void;
+	overload public function registerImage(image:Dynamic, withTraitCollection:Dynamic):Void;
 
 	@:native("unregisterImageWithTraitCollection")
-	overload public function unregisterImageWithTraitCollection(traitCollection:UITraitCollection):Void;
+	overload public function unregisterImageWithTraitCollection(traitCollection:Dynamic):Void;
 
 
 }

@@ -12,16 +12,16 @@ extern class NSTextTab{
 	overload public static function autorelease():NSTextTab;
 
 	@:native("columnTerminatorsForLocale")
-	overload public static function columnTerminatorsForLocale(aLocale:NSLocale):NSCharacterSet;
+	overload public static function columnTerminatorsForLocale(aLocale:Dynamic):Dynamic;
 
 	@:native("initWithTextAlignment:location:options")
-	overload public function initWithTextAlignment(alignment:NSTextAlignment, location:CGFloat, options:Dynamic):NSTextTab;
+	overload public function initWithTextAlignment(alignment:Dynamic, location:Dynamic, options:Dynamic):Dynamic;
 
 	@:native("alignment")
-	public var alignment:NSTextAlignment;
+	public var alignment:Dynamic;
 
 	@:native("location")
-	public var location:CGFloat;
+	public var location:Dynamic;
 
 	@:native("options")
 	public var options:Dynamic;

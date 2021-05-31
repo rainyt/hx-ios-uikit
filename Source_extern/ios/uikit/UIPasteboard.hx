@@ -14,13 +14,13 @@ extern class UIPasteboard{
 	overload public static function autorelease():UIPasteboard;
 
 	@:native("generalPasteboard")
-	public var generalPasteboard:UIPasteboard;
+	public var generalPasteboard:Dynamic;
 
 	@:native("pasteboardWithName:create")
-	overload public static function pasteboardWithName(pasteboardName:NSString, create:Bool):UIPasteboard;
+	overload public static function pasteboardWithName(pasteboardName:NSString, create:Bool):Dynamic;
 
 	@:native("pasteboardWithUniqueName")
-	overload public static function pasteboardWithUniqueName():UIPasteboard;
+	overload public static function pasteboardWithUniqueName():Dynamic;
 
 	@:native("name")
 	public var name:NSString;
@@ -35,19 +35,19 @@ extern class UIPasteboard{
 	overload public function setPersistent(persistent:Bool):Void;
 
 	@:native("changeCount")
-	public var changeCount:NSInteger;
+	public var changeCount:Dynamic;
 
 	@:native("itemProviders")
 	public var itemProviders:Dynamic;
 
 	@:native("setItemProviders:localOnly:expirationDate")
-	overload public function setItemProviders(itemProviders:Dynamic, localOnly:Bool, expirationDate:NSDate_Nullable):Void;
+	overload public function setItemProviders(itemProviders:Dynamic, localOnly:Bool, expirationDate:Dynamic):Void;
 
 	@:native("setObjects")
 	overload public function setObjects(objects:Dynamic):Void;
 
 	@:native("setObjects:localOnly:expirationDate")
-	overload public function setObjects(objects:Dynamic, localOnly:Bool, expirationDate:NSDate_Nullable):Void;
+	overload public function setObjects(objects:Dynamic, localOnly:Bool, expirationDate:Dynamic):Void;
 
 	@:native("pasteboardTypes")
 	public var pasteboardTypes:Dynamic;
@@ -68,22 +68,22 @@ extern class UIPasteboard{
 	overload public function setData(data:NSData, forPasteboardType:NSString):Void;
 
 	@:native("numberOfItems")
-	public var numberOfItems:NSInteger;
+	public var numberOfItems:Dynamic;
 
 	@:native("pasteboardTypesForItemSet")
-	overload public function pasteboardTypesForItemSet(itemSet:NSIndexSet):Dynamic;
+	overload public function pasteboardTypesForItemSet(itemSet:Dynamic):Dynamic;
 
 	@:native("containsPasteboardTypes:inItemSet")
-	overload public function containsPasteboardTypes(pasteboardTypes:Dynamic, inItemSet:NSIndexSet):Bool;
+	overload public function containsPasteboardTypes(pasteboardTypes:Dynamic, inItemSet:Dynamic):Bool;
 
 	@:native("itemSetWithPasteboardTypes")
-	overload public function itemSetWithPasteboardTypes(pasteboardTypes:Dynamic):NSIndexSet;
+	overload public function itemSetWithPasteboardTypes(pasteboardTypes:Dynamic):Dynamic;
 
 	@:native("valuesForPasteboardType:inItemSet")
-	overload public function valuesForPasteboardType(pasteboardType:NSString, inItemSet:NSIndexSet):NSArray;
+	overload public function valuesForPasteboardType(pasteboardType:NSString, inItemSet:Dynamic):Dynamic;
 
 	@:native("dataForPasteboardType:inItemSet")
-	overload public function dataForPasteboardType(pasteboardType:NSString, inItemSet:NSIndexSet):Dynamic;
+	overload public function dataForPasteboardType(pasteboardType:NSString, inItemSet:Dynamic):Dynamic;
 
 	@:native("items")
 	public var items:Dynamic;
@@ -101,19 +101,19 @@ extern class UIPasteboard{
 	public var strings:Dynamic;
 
 	@:native("URL")
-	public var URL:NSURL;
+	public var URL:Dynamic;
 
 	@:native("URLs")
 	public var URLs:Dynamic;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("images")
 	public var images:Dynamic;
 
 	@:native("color")
-	public var color:UIColor;
+	public var color:Dynamic;
 
 	@:native("colors")
 	public var colors:Dynamic;
@@ -131,16 +131,16 @@ extern class UIPasteboard{
 	public var hasColors:Bool;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 
 }

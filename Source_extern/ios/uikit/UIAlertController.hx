@@ -13,16 +13,16 @@ extern class UIAlertController{
 	overload public static function autorelease():UIAlertController;
 
 	@:native("alertControllerWithTitle:message:preferredStyle")
-	overload public static function alertControllerWithTitle(title:NSString, message:NSString, preferredStyle:UIAlertControllerStyle):UIAlertController;
+	overload public static function alertControllerWithTitle(title:NSString, message:NSString, preferredStyle:Dynamic):Dynamic;
 
 	@:native("addAction")
-	overload public function addAction(action:UIAlertAction):Void;
+	overload public function addAction(action:Dynamic):Void;
 
 	@:native("actions")
 	public var actions:Dynamic;
 
 	@:native("preferredAction")
-	public var preferredAction:UIAlertAction;
+	public var preferredAction:Dynamic;
 
 	@:native("addTextFieldWithConfigurationHandler")
 	overload public function addTextFieldWithConfigurationHandler(configurationHandler:Dynamic):Void;
@@ -37,7 +37,7 @@ extern class UIAlertController{
 	public var message:NSString;
 
 	@:native("preferredStyle")
-	public var preferredStyle:UIAlertControllerStyle;
+	public var preferredStyle:Dynamic;
 
 
 }

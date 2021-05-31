@@ -12,40 +12,40 @@ extern class UIDatePicker{
 	overload public static function autorelease():UIDatePicker;
 
 	@:native("datePickerMode")
-	public var datePickerMode:UIDatePickerMode;
+	public var datePickerMode:Dynamic;
 
 	@:native("locale")
-	public var locale:NSLocale;
+	public var locale:Dynamic;
 
 	@:native("calendar")
-	public var calendar:NSCalendar;
+	public var calendar:Dynamic;
 
 	@:native("timeZone")
-	public var timeZone:NSTimeZone;
+	public var timeZone:Dynamic;
 
 	@:native("date")
-	public var date:NSDate;
+	public var date:Dynamic;
 
 	@:native("minimumDate")
-	public var minimumDate:NSDate;
+	public var minimumDate:Dynamic;
 
 	@:native("maximumDate")
-	public var maximumDate:NSDate;
+	public var maximumDate:Dynamic;
 
 	@:native("countDownDuration")
-	public var countDownDuration:NSTimeInterval;
+	public var countDownDuration:Dynamic;
 
 	@:native("minuteInterval")
-	public var minuteInterval:NSInteger;
+	public var minuteInterval:Dynamic;
 
 	@:native("setDate:animated")
-	overload public function setDate(date:NSDate, animated:Bool):Void;
+	overload public function setDate(date:Dynamic, animated:Bool):Void;
 
 	@:native("preferredDatePickerStyle")
-	public var preferredDatePickerStyle:UIDatePickerStyle;
+	public var preferredDatePickerStyle:Dynamic;
 
 	@:native("datePickerStyle")
-	public var datePickerStyle:UIDatePickerStyle;
+	public var datePickerStyle:Dynamic;
 
 
 }

@@ -13,7 +13,7 @@ extern class UIMarkupTextPrintFormatter{
 	overload public static function autorelease():UIMarkupTextPrintFormatter;
 
 	@:native("initWithMarkupText")
-	overload public function initWithMarkupText(markupText:NSString):UIMarkupTextPrintFormatter;
+	overload public function initWithMarkupText(markupText:NSString):Dynamic;
 
 	@:native("markupText")
 	public var markupText:NSString;

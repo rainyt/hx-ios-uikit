@@ -12,13 +12,13 @@ extern class UIImpactFeedbackGenerator{
 	overload public static function autorelease():UIImpactFeedbackGenerator;
 
 	@:native("initWithStyle")
-	overload public function initWithStyle(style:UIImpactFeedbackStyle):UIImpactFeedbackGenerator;
+	overload public function initWithStyle(style:Dynamic):Dynamic;
 
 	@:native("impactOccurred")
 	overload public function impactOccurred():Void;
 
 	@:native("impactOccurredWithIntensity")
-	overload public function impactOccurredWithIntensity(intensity:CGFloat):Void;
+	overload public function impactOccurredWithIntensity(intensity:Dynamic):Void;
 
 
 }

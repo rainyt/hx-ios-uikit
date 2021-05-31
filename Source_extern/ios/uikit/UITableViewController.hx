@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 @:objc
 @:native("UITableViewController")
 @:include("UIKit/UIKit.h")
@@ -14,22 +13,22 @@ extern class UITableViewController{
 	overload public static function autorelease():UITableViewController;
 
 	@:native("initWithStyle")
-	overload public function initWithStyle(style:UITableViewStyle):UITableViewController;
+	overload public function initWithStyle(style:Dynamic):Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UITableViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITableViewController;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("tableView")
-	public var tableView:UITableView;
+	public var tableView:Dynamic;
 
 	@:native("clearsSelectionOnViewWillAppear")
 	public var clearsSelectionOnViewWillAppear:Bool;
 
 	@:native("refreshControl")
-	public var refreshControl:UIRefreshControl;
+	public var refreshControl:Dynamic;
 
 
 }

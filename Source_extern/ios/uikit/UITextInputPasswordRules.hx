@@ -16,13 +16,13 @@ extern class UITextInputPasswordRules{
 	public var passwordRulesDescriptor:NSString;
 
 	@:native("init")
-	overload public function init():UITextInputPasswordRules;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UITextInputPasswordRules;
+	overload public static function new():Dynamic;
 
 	@:native("passwordRulesWithDescriptor")
-	overload public static function passwordRulesWithDescriptor(passwordRulesDescriptor:NSString):UITextInputPasswordRules;
+	overload public static function passwordRulesWithDescriptor(passwordRulesDescriptor:NSString):Dynamic;
 
 
 }

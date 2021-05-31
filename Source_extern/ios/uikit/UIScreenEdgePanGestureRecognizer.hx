@@ -12,7 +12,7 @@ extern class UIScreenEdgePanGestureRecognizer{
 	overload public static function autorelease():UIScreenEdgePanGestureRecognizer;
 
 	@:native("edges")
-	public var edges:UIRectEdge;
+	public var edges:Dynamic;
 
 
 }

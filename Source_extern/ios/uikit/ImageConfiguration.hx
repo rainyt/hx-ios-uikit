@@ -12,7 +12,7 @@ extern class ImageConfiguration{
 	overload public static function autorelease():ImageConfiguration;
 
 	@:native("imageConfiguration")
-	public var imageConfiguration:UIImageConfiguration;
+	public var imageConfiguration:Dynamic;
 
 
 }

@@ -16,10 +16,10 @@ extern class UISubclassingHooks{
 	overload public static function autorelease():UISubclassingHooks;
 
 	@:native("layoutAttributesClass")
-	public var layoutAttributesClass:Class;
+	public var layoutAttributesClass:Dynamic;
 
 	@:native("invalidationContextClass")
-	public var invalidationContextClass:Class;
+	public var invalidationContextClass:Dynamic;
 
 	@:native("prepareLayout")
 	overload public function prepareLayout():Void;
@@ -28,13 +28,13 @@ extern class UISubclassingHooks{
 	overload public function layoutAttributesForElementsInRect(rect:CGRect):Dynamic;
 
 	@:native("layoutAttributesForItemAtIndexPath")
-	overload public function layoutAttributesForItemAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForDecorationViewOfKind(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("shouldInvalidateLayoutForBoundsChange")
 	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect):Bool;
@@ -43,10 +43,10 @@ extern class UISubclassingHooks{
 	overload public function invalidationContextForBoundsChange(newBounds:CGRect):Dynamic;
 
 	@:native("shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Bool;
+	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes(preferredAttributes:Dynamic, withOriginalAttributes:Dynamic):Bool;
 
 	@:native("invalidationContextForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function invalidationContextForPreferredLayoutAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Dynamic;
+	overload public function invalidationContextForPreferredLayoutAttributes(preferredAttributes:Dynamic, withOriginalAttributes:Dynamic):Dynamic;
 
 	@:native("targetContentOffsetForProposedContentOffset:withScrollingVelocity")
 	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint):CGPoint;
@@ -58,7 +58,7 @@ extern class UISubclassingHooks{
 	public var collectionViewContentSize:CGSize;
 
 	@:native("developmentLayoutDirection")
-	public var developmentLayoutDirection:UIUserInterfaceLayoutDirection;
+	public var developmentLayoutDirection:Dynamic;
 
 	@:native("flipsHorizontallyInOppositeLayoutDirection")
 	public var flipsHorizontallyInOppositeLayoutDirection:Bool;

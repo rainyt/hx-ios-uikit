@@ -16,16 +16,16 @@ extern class UIMenuElement{
 	public var title:NSString;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIMenuElement;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIMenuElement;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIMenuElement;
+	overload public static function new():Dynamic;
 
 
 }

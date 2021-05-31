@@ -12,19 +12,19 @@ extern class UIImageView{
 	overload public static function autorelease():UIImageView;
 
 	@:native("initWithImage")
-	overload public function initWithImage(image:UIImage):UIImageView;
+	overload public function initWithImage(image:Dynamic):Dynamic;
 
 	@:native("initWithImage:highlightedImage")
-	overload public function initWithImage(image:UIImage, highlightedImage:UIImage):UIImageView;
+	overload public function initWithImage(image:Dynamic, highlightedImage:Dynamic):Dynamic;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("highlightedImage")
-	public var highlightedImage:UIImage;
+	public var highlightedImage:Dynamic;
 
 	@:native("preferredSymbolConfiguration")
-	public var preferredSymbolConfiguration:UIImageSymbolConfiguration;
+	public var preferredSymbolConfiguration:Dynamic;
 
 	@:native("userInteractionEnabled")
 	public var userInteractionEnabled:Bool;
@@ -39,13 +39,13 @@ extern class UIImageView{
 	public var highlightedAnimationImages:Dynamic;
 
 	@:native("animationDuration")
-	public var animationDuration:NSTimeInterval;
+	public var animationDuration:Dynamic;
 
 	@:native("animationRepeatCount")
-	public var animationRepeatCount:NSInteger;
+	public var animationRepeatCount:Dynamic;
 
 	@:native("tintColor")
-	public var tintColor:UIColor;
+	public var tintColor:Dynamic;
 
 	@:native("startAnimating")
 	overload public function startAnimating():Void;
@@ -57,16 +57,16 @@ extern class UIImageView{
 	public var animating:Bool;
 
 	@:native("UIKIT_AVAILABLE_TVOS_ONLY(9_0")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(9_0:adjustsImageWhenAncestorFocused;
+	public var UIKIT_AVAILABLE_TVOS_ONLY(9_0:Dynamic;
 
 	@:native("UIKIT_AVAILABLE_TVOS_ONLY(9_0")
 	public var UIKIT_AVAILABLE_TVOS_ONLY(9_0:Dynamic;
 
 	@:native("UIKIT_AVAILABLE_TVOS_ONLY(11_0")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(11_0:overlayContentView;
+	public var UIKIT_AVAILABLE_TVOS_ONLY(11_0:Dynamic;
 
 	@:native("UIKIT_AVAILABLE_TVOS_ONLY(11_0")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(11_0:masksFocusEffectToContents;
+	public var UIKIT_AVAILABLE_TVOS_ONLY(11_0:Dynamic;
 
 
 }

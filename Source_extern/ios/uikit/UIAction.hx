@@ -16,7 +16,7 @@ extern class UIAction{
 	public var title:NSString;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("discoverabilityTitle")
 	public var discoverabilityTitle:NSString;
@@ -25,25 +25,25 @@ extern class UIAction{
 	public var identifier:NSString;
 
 	@:native("attributes")
-	public var attributes:UIMenuElementAttributes;
+	public var attributes:Dynamic;
 
 	@:native("state")
-	public var state:UIMenuElementState;
+	public var state:Dynamic;
 
 	@:native("sender")
 	public var sender:Dynamic;
 
 	@:native("actionWithHandler")
-	overload public static function actionWithHandler(handler:UIActionHandler):UIAction;
+	overload public static function actionWithHandler(handler:Dynamic):Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("init")
-	overload public function init():UIAction;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIAction;
+	overload public static function new():Dynamic;
 
 
 }

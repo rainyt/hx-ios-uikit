@@ -14,16 +14,16 @@ extern class NSAttributedStringDocumentFormats{
 	overload public static function autorelease():NSAttributedStringDocumentFormats;
 
 	@:native("initWithURL:options:documentAttributes:error")
-	overload public function initWithURL(url:NSURL, options:Dynamic, documentAttributes:Dynamic, error:NSError):NSAttributedStringDocumentFormats;
+	overload public function initWithURL(url:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:NSError):Dynamic;
 
 	@:native("initWithData:options:documentAttributes:error")
-	overload public function initWithData(data:NSData, options:Dynamic, documentAttributes:Dynamic, error:NSError):NSAttributedStringDocumentFormats;
+	overload public function initWithData(data:NSData, options:Dynamic, documentAttributes:Dynamic, error:NSError):Dynamic;
 
 	@:native("dataFromRange:documentAttributes:error")
-	overload public function dataFromRange(range:NSRange, documentAttributes:Dynamic, error:NSError):NSData;
+	overload public function dataFromRange(range:Dynamic, documentAttributes:Dynamic, error:NSError):NSData;
 
 	@:native("fileWrapperFromRange:documentAttributes:error")
-	overload public function fileWrapperFromRange(range:NSRange, documentAttributes:Dynamic, error:NSError):NSFileWrapper;
+	overload public function fileWrapperFromRange(range:Dynamic, documentAttributes:Dynamic, error:NSError):Dynamic;
 
 
 }

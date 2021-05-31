@@ -21,40 +21,40 @@ extern class UIStepper{
 	public var wraps:Bool;
 
 	@:native("value")
-	public var value:double;
+	public var value:Dynamic;
 
 	@:native("minimumValue")
-	public var minimumValue:double;
+	public var minimumValue:Dynamic;
 
 	@:native("maximumValue")
-	public var maximumValue:double;
+	public var maximumValue:Dynamic;
 
 	@:native("stepValue")
-	public var stepValue:double;
+	public var stepValue:Dynamic;
 
 	@:native("setBackgroundImage:forState")
-	overload public function setBackgroundImage(image:UIImage, forState:UIControlState):Void;
+	overload public function setBackgroundImage(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("backgroundImageForState")
-	overload public function backgroundImageForState(state:UIControlState):UIImage;
+	overload public function backgroundImageForState(state:Dynamic):Dynamic;
 
 	@:native("setDividerImage:forLeftSegmentState:rightSegmentState")
-	overload public function setDividerImage(image:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState):Void;
+	overload public function setDividerImage(image:Dynamic, forLeftSegmentState:Dynamic, rightSegmentState:Dynamic):Void;
 
 	@:native("dividerImageForLeftSegmentState:rightSegmentState")
-	overload public function dividerImageForLeftSegmentState(state:UIControlState, rightSegmentState:UIControlState):UIImage;
+	overload public function dividerImageForLeftSegmentState(state:Dynamic, rightSegmentState:Dynamic):Dynamic;
 
 	@:native("setIncrementImage:forState")
-	overload public function setIncrementImage(image:UIImage, forState:UIControlState):Void;
+	overload public function setIncrementImage(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("incrementImageForState")
-	overload public function incrementImageForState(state:UIControlState):UIImage;
+	overload public function incrementImageForState(state:Dynamic):Dynamic;
 
 	@:native("setDecrementImage:forState")
-	overload public function setDecrementImage(image:UIImage, forState:UIControlState):Void;
+	overload public function setDecrementImage(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("decrementImageForState")
-	overload public function decrementImageForState(state:UIControlState):UIImage;
+	overload public function decrementImageForState(state:Dynamic):Dynamic;
 
 
 }

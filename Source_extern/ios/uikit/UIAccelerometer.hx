@@ -12,10 +12,10 @@ extern class UIAccelerometer{
 	overload public static function autorelease():UIAccelerometer;
 
 	@:native("sharedAccelerometer")
-	overload public static function sharedAccelerometer():UIAccelerometer;
+	overload public static function sharedAccelerometer():Dynamic;
 
 	@:native("updateInterval")
-	public var updateInterval:NSTimeInterval;
+	public var updateInterval:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

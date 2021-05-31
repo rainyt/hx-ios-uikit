@@ -21,16 +21,16 @@ extern class UIScrollView{
 	public var contentSize:CGSize;
 
 	@:native("contentInset")
-	public var contentInset:UIEdgeInsets;
+	public var contentInset:Dynamic;
 
 	@:native("adjustedContentInset")
-	public var adjustedContentInset:UIEdgeInsets;
+	public var adjustedContentInset:Dynamic;
 
 	@:native("adjustedContentInsetDidChange")
 	overload public function adjustedContentInsetDidChange():Void;
 
 	@:native("contentInsetAdjustmentBehavior")
-	public var contentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentBehavior;
+	public var contentInsetAdjustmentBehavior:Dynamic;
 
 	@:native("automaticallyAdjustsScrollIndicatorInsets")
 	public var automaticallyAdjustsScrollIndicatorInsets:Bool;
@@ -69,25 +69,25 @@ extern class UIScrollView{
 	public var showsHorizontalScrollIndicator:Bool;
 
 	@:native("indicatorStyle")
-	public var indicatorStyle:UIScrollViewIndicatorStyle;
+	public var indicatorStyle:Dynamic;
 
 	@:native("verticalScrollIndicatorInsets")
-	public var verticalScrollIndicatorInsets:UIEdgeInsets;
+	public var verticalScrollIndicatorInsets:Dynamic;
 
 	@:native("horizontalScrollIndicatorInsets")
-	public var horizontalScrollIndicatorInsets:UIEdgeInsets;
+	public var horizontalScrollIndicatorInsets:Dynamic;
 
 	@:native("scrollIndicatorInsets")
-	public var scrollIndicatorInsets:UIEdgeInsets;
+	public var scrollIndicatorInsets:Dynamic;
 
 	@:native("scrollIndicatorInsets")
-	overload public function scrollIndicatorInsets():UIEdgeInsets;
+	overload public function scrollIndicatorInsets():Dynamic;
 
 	@:native("decelerationRate")
-	public var decelerationRate:CGFloat;
+	public var decelerationRate:Dynamic;
 
 	@:native("indexDisplayMode")
-	public var indexDisplayMode:UIScrollViewIndexDisplayMode;
+	public var indexDisplayMode:Dynamic;
 
 	@:native("setContentOffset:animated")
 	overload public function setContentOffset(contentOffset:CGPoint, animated:Bool):Void;
@@ -114,22 +114,22 @@ extern class UIScrollView{
 	public var canCancelContentTouches:Bool;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBegin(touches:Dynamic, withEvent:Dynamic, inContentView:Dynamic):Bool;
 
 	@:native("touchesShouldCancelInContentView")
-	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
+	overload public function touchesShouldCancelInContentView(view:Dynamic):Bool;
 
 	@:native("minimumZoomScale")
-	public var minimumZoomScale:CGFloat;
+	public var minimumZoomScale:Dynamic;
 
 	@:native("maximumZoomScale")
-	public var maximumZoomScale:CGFloat;
+	public var maximumZoomScale:Dynamic;
 
 	@:native("zoomScale")
-	public var zoomScale:CGFloat;
+	public var zoomScale:Dynamic;
 
 	@:native("setZoomScale:animated")
-	overload public function setZoomScale(scale:CGFloat, animated:Bool):Void;
+	overload public function setZoomScale(scale:Dynamic, animated:Bool):Void;
 
 	@:native("zoomToRect:animated")
 	overload public function zoomToRect(rect:CGRect, animated:Bool):Void;
@@ -147,19 +147,19 @@ extern class UIScrollView{
 	public var scrollsToTop:Bool;
 
 	@:native("panGestureRecognizer")
-	public var panGestureRecognizer:UIPanGestureRecognizer;
+	public var panGestureRecognizer:Dynamic;
 
 	@:native("pinchGestureRecognizer")
-	public var pinchGestureRecognizer:UIPinchGestureRecognizer;
+	public var pinchGestureRecognizer:Dynamic;
 
 	@:native("directionalPressGestureRecognizer")
-	public var directionalPressGestureRecognizer:UIGestureRecognizer;
+	public var directionalPressGestureRecognizer:Dynamic;
 
 	@:native("keyboardDismissMode")
-	public var keyboardDismissMode:UIScrollViewKeyboardDismissMode;
+	public var keyboardDismissMode:Dynamic;
 
 	@:native("refreshControl")
-	public var refreshControl:UIRefreshControl;
+	public var refreshControl:Dynamic;
 
 
 }

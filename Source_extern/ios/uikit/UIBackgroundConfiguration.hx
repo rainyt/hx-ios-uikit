@@ -12,76 +12,76 @@ extern class UIBackgroundConfiguration{
 	overload public static function autorelease():UIBackgroundConfiguration;
 
 	@:native("clearConfiguration")
-	overload public static function clearConfiguration():UIBackgroundConfiguration;
+	overload public static function clearConfiguration():Dynamic;
 
 	@:native("listPlainCellConfiguration")
-	overload public static function listPlainCellConfiguration():UIBackgroundConfiguration;
+	overload public static function listPlainCellConfiguration():Dynamic;
 
 	@:native("listPlainHeaderFooterConfiguration")
-	overload public static function listPlainHeaderFooterConfiguration():UIBackgroundConfiguration;
+	overload public static function listPlainHeaderFooterConfiguration():Dynamic;
 
 	@:native("listGroupedCellConfiguration")
-	overload public static function listGroupedCellConfiguration():UIBackgroundConfiguration;
+	overload public static function listGroupedCellConfiguration():Dynamic;
 
 	@:native("listGroupedHeaderFooterConfiguration")
-	overload public static function listGroupedHeaderFooterConfiguration():UIBackgroundConfiguration;
+	overload public static function listGroupedHeaderFooterConfiguration():Dynamic;
 
 	@:native("listSidebarHeaderConfiguration")
-	overload public static function listSidebarHeaderConfiguration():UIBackgroundConfiguration;
+	overload public static function listSidebarHeaderConfiguration():Dynamic;
 
 	@:native("listSidebarCellConfiguration")
-	overload public static function listSidebarCellConfiguration():UIBackgroundConfiguration;
+	overload public static function listSidebarCellConfiguration():Dynamic;
 
 	@:native("listAccompaniedSidebarCellConfiguration")
-	overload public static function listAccompaniedSidebarCellConfiguration():UIBackgroundConfiguration;
+	overload public static function listAccompaniedSidebarCellConfiguration():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIBackgroundConfiguration;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UIBackgroundConfiguration;
+	overload public function init():Dynamic;
 
 	@:native("updatedConfigurationForState")
-	overload public function updatedConfigurationForState(state:Dynamic):UIBackgroundConfiguration;
+	overload public function updatedConfigurationForState(state:Dynamic):Dynamic;
 
 	@:native("customView")
-	public var customView:UIView;
+	public var customView:Dynamic;
 
 	@:native("cornerRadius")
-	public var cornerRadius:CGFloat;
+	public var cornerRadius:Dynamic;
 
 	@:native("backgroundInsets")
-	public var backgroundInsets:NSDirectionalEdgeInsets;
+	public var backgroundInsets:Dynamic;
 
 	@:native("edgesAddingLayoutMarginsToBackgroundInsets")
-	public var edgesAddingLayoutMarginsToBackgroundInsets:NSDirectionalRectEdge;
+	public var edgesAddingLayoutMarginsToBackgroundInsets:Dynamic;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("backgroundColorTransformer")
-	public var backgroundColorTransformer:UIConfigurationColorTransformer;
+	public var backgroundColorTransformer:Dynamic;
 
 	@:native("resolvedBackgroundColorForTintColor")
-	overload public function resolvedBackgroundColorForTintColor(tintColor:UIColor):UIColor;
+	overload public function resolvedBackgroundColorForTintColor(tintColor:Dynamic):Dynamic;
 
 	@:native("visualEffect")
-	public var visualEffect:UIVisualEffect;
+	public var visualEffect:Dynamic;
 
 	@:native("strokeColor")
-	public var strokeColor:UIColor;
+	public var strokeColor:Dynamic;
 
 	@:native("strokeColorTransformer")
-	public var strokeColorTransformer:UIConfigurationColorTransformer;
+	public var strokeColorTransformer:Dynamic;
 
 	@:native("resolvedStrokeColorForTintColor")
-	overload public function resolvedStrokeColorForTintColor(tintColor:UIColor):UIColor;
+	overload public function resolvedStrokeColorForTintColor(tintColor:Dynamic):Dynamic;
 
 	@:native("strokeWidth")
-	public var strokeWidth:CGFloat;
+	public var strokeWidth:Dynamic;
 
 	@:native("strokeOutset")
-	public var strokeOutset:CGFloat;
+	public var strokeOutset:Dynamic;
 
 
 }

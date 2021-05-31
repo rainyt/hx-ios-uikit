@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 @:objc
 @:native("UIStoryboard")
 @:include("UIKit/UIKit.h")
@@ -14,19 +13,19 @@ extern class UIStoryboard{
 	overload public static function autorelease():UIStoryboard;
 
 	@:native("storyboardWithName:bundle")
-	overload public static function storyboardWithName(name:NSString, bundle:NSBundle):UIStoryboard;
+	overload public static function storyboardWithName(name:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("instantiateInitialViewController")
-	overload public function instantiateInitialViewController():UIViewController;
+	overload public function instantiateInitialViewController():Dynamic;
 
 	@:native("instantiateInitialViewControllerWithCreator")
-	overload public function instantiateInitialViewControllerWithCreator(block:NS_NOESCAPEUIStoryboardViewControllerCreator):UIViewController;
+	overload public function instantiateInitialViewControllerWithCreator(block:Dynamic):Dynamic;
 
 	@:native("instantiateViewControllerWithIdentifier")
-	overload public function instantiateViewControllerWithIdentifier(identifier:NSString):UIViewController;
+	overload public function instantiateViewControllerWithIdentifier(identifier:NSString):Dynamic;
 
 	@:native("instantiateViewControllerWithIdentifier:creator")
-	overload public function instantiateViewControllerWithIdentifier(identifier:NSString, creator:NS_NOESCAPEUIStoryboardViewControllerCreator):UIViewController;
+	overload public function instantiateViewControllerWithIdentifier(identifier:NSString, creator:Dynamic):Dynamic;
 
 
 }

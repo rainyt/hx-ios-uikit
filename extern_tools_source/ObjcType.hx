@@ -12,7 +12,11 @@ class ObjcType {
 			return "Dynamic";
 		t = StringTools.replace(t, "nullable ", "");
 		t = StringTools.replace(t, "__kindof ", "");
-		return StringTools.replace(StringTools.replace((typedefs.exists(t) && !typedefs.get(t).createHaxeFile) ? typedefs.get(t).parentClassName : t, "*",
-			""), " ", "");
+		t = StringTools.replace(StringTools.replace((typedefs.exists(t) && !typedefs.get(t).createHaxeFile) ? typedefs.get(t).parentClassName : t, "*", ""),
+			" ", "");
+		var i = ObjcImport.toImport(t);
+		if (i == null)
+			return "Dynamic";
+		return t;
 	}
 }

@@ -16,10 +16,10 @@ extern class UIPopoverPresentationController{
 	public var delegate:Dynamic;
 
 	@:native("permittedArrowDirections")
-	public var permittedArrowDirections:UIPopoverArrowDirection;
+	public var permittedArrowDirections:Dynamic;
 
 	@:native("sourceView")
-	public var sourceView:UIView;
+	public var sourceView:Dynamic;
 
 	@:native("sourceRect")
 	public var sourceRect:CGRect;
@@ -28,19 +28,19 @@ extern class UIPopoverPresentationController{
 	public var canOverlapSourceViewRect:Bool;
 
 	@:native("barButtonItem")
-	public var barButtonItem:UIBarButtonItem;
+	public var barButtonItem:Dynamic;
 
 	@:native("arrowDirection")
-	public var arrowDirection:UIPopoverArrowDirection;
+	public var arrowDirection:Dynamic;
 
 	@:native("passthroughViews")
 	public var passthroughViews:Dynamic;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("popoverLayoutMargins")
-	public var popoverLayoutMargins:UIEdgeInsets;
+	public var popoverLayoutMargins:Dynamic;
 
 	@:native("popoverBackgroundViewClass")
 	public var popoverBackgroundViewClass:Dynamic;

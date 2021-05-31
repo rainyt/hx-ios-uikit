@@ -12,7 +12,7 @@ extern class UITextInputStringTokenizer{
 	overload public static function autorelease():UITextInputStringTokenizer;
 
 	@:native("initWithTextInput")
-	overload public function initWithTextInput(textInput:Dynamic):UITextInputStringTokenizer;
+	overload public function initWithTextInput(textInput:Dynamic):Dynamic;
 
 
 }

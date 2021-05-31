@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 @:objc
 @:native("UIReferenceLibraryViewController")
 @:include("UIKit/UIKit.h")
@@ -17,16 +16,16 @@ extern class UIReferenceLibraryViewController{
 	overload public static function dictionaryHasDefinitionForTerm(term:NSString):Bool;
 
 	@:native("initWithTerm")
-	overload public function initWithTerm(term:NSString):UIReferenceLibraryViewController;
+	overload public function initWithTerm(term:NSString):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIReferenceLibraryViewController;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIReferenceLibraryViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIReferenceLibraryViewController;
+	overload public function init():Dynamic;
 
 
 }

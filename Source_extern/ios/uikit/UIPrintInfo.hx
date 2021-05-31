@@ -14,13 +14,13 @@ extern class UIPrintInfo{
 	overload public static function autorelease():UIPrintInfo;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIPrintInfo;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("printInfo")
-	overload public static function printInfo():UIPrintInfo;
+	overload public static function printInfo():Dynamic;
 
 	@:native("printInfoWithDictionary")
-	overload public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo;
+	overload public static function printInfoWithDictionary(dictionary:NSDictionary):Dynamic;
 
 	@:native("printerID")
 	public var printerID:NSString;
@@ -29,13 +29,13 @@ extern class UIPrintInfo{
 	public var jobName:NSString;
 
 	@:native("outputType")
-	public var outputType:UIPrintInfoOutputType;
+	public var outputType:Dynamic;
 
 	@:native("orientation")
-	public var orientation:UIPrintInfoOrientation;
+	public var orientation:Dynamic;
 
 	@:native("duplex")
-	public var duplex:UIPrintInfoDuplex;
+	public var duplex:Dynamic;
 
 	@:native("dictionaryRepresentation")
 	public var dictionaryRepresentation:NSDictionary;

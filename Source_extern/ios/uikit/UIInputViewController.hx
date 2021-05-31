@@ -13,7 +13,7 @@ extern class UIInputViewController{
 	overload public static function autorelease():UIInputViewController;
 
 	@:native("inputView")
-	public var inputView:UIInputView;
+	public var inputView:Dynamic;
 
 	@:native("textDocumentProxy")
 	public var textDocumentProxy:Dynamic;
@@ -37,7 +37,7 @@ extern class UIInputViewController{
 	overload public function advanceToNextInputMode():Void;
 
 	@:native("handleInputModeListFromView:withEvent")
-	overload public function handleInputModeListFromView(view:nonnullUIView, withEvent:nonnullUIEvent):Void;
+	overload public function handleInputModeListFromView(view:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("requestSupplementaryLexiconWithCompletion")
 	overload public function requestSupplementaryLexiconWithCompletion(completionHandler:Dynamic):Void;

@@ -12,7 +12,7 @@ extern class NSAttributedStringKitAdditions{
 	overload public static function autorelease():NSAttributedStringKitAdditions;
 
 	@:native("containsAttachmentsInRange")
-	overload public function containsAttachmentsInRange(range:NSRange):Bool;
+	overload public function containsAttachmentsInRange(range:Dynamic):Bool;
 
 
 }

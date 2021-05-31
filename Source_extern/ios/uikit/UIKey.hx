@@ -19,10 +19,10 @@ extern class UIKey{
 	public var charactersIgnoringModifiers:NSString;
 
 	@:native("modifierFlags")
-	public var modifierFlags:UIKeyModifierFlags;
+	public var modifierFlags:Dynamic;
 
 	@:native("keyCode")
-	public var keyCode:UIKeyboardHIDUsage;
+	public var keyCode:Dynamic;
 
 
 }

@@ -12,13 +12,13 @@ extern class UISplitViewController{
 	overload public static function autorelease():UISplitViewController;
 
 	@:native("splitViewController")
-	public var splitViewController:UISplitViewController;
+	public var splitViewController:Dynamic;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
-	overload public function collapseSecondaryViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;
+	overload public function collapseSecondaryViewController(secondaryViewController:Dynamic, forSplitViewController:Dynamic):Void;
 
 	@:native("separateSecondaryViewControllerForSplitViewController")
-	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):UIViewController;
+	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:Dynamic):Dynamic;
 
 
 }

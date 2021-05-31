@@ -12,10 +12,10 @@ extern class UIPageViewController{
 	overload public static function autorelease():UIPageViewController;
 
 	@:native("initWithTransitionStyle:navigationOrientation:options")
-	overload public function initWithTransitionStyle(style:UIPageViewControllerTransitionStyle, navigationOrientation:UIPageViewControllerNavigationOrientation, options:Dynamic):UIPageViewController;
+	overload public function initWithTransitionStyle(style:Dynamic, navigationOrientation:Dynamic, options:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIPageViewController;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -24,13 +24,13 @@ extern class UIPageViewController{
 	public var dataSource:Dynamic;
 
 	@:native("transitionStyle")
-	public var transitionStyle:UIPageViewControllerTransitionStyle;
+	public var transitionStyle:Dynamic;
 
 	@:native("navigationOrientation")
-	public var navigationOrientation:UIPageViewControllerNavigationOrientation;
+	public var navigationOrientation:Dynamic;
 
 	@:native("spineLocation")
-	public var spineLocation:UIPageViewControllerSpineLocation;
+	public var spineLocation:Dynamic;
 
 	@:native("doubleSided")
 	public var doubleSided:Bool;
@@ -42,7 +42,7 @@ extern class UIPageViewController{
 	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:direction:animated:completion")
-	overload public function setViewControllers(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
+	overload public function setViewControllers(viewControllers:Dynamic, direction:Dynamic, animated:Bool, completion:Dynamic):Void;
 
 
 }

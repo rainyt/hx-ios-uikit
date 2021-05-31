@@ -741,9 +741,7 @@ class ObjcImport:
             if (type1 == "NSError"):
                 return "cpp.objc.NSError"
         elif (_hx_local_0 == 8):
-            if (type1 == "NSBundle"):
-                return "ios.objc.NSBundle"
-            elif (type1 == "NSObject"):
+            if (type1 == "NSObject"):
                 return "cpp.objc.NSObject"
             elif (type1 == "NSString"):
                 return "cpp.objc.NSString"
@@ -836,8 +834,14 @@ class ObjcProperty:
                 skip = (skip - 1)
         def _hx_local_7(f):
             p = None
+            p1 = None
             startIndex = None
-            if (((f.find("API_") if ((startIndex is None)) else HxString.indexOfImpl(f,"API_",startIndex))) == -1):
+            if (((f.find("NS_") if ((startIndex is None)) else HxString.indexOfImpl(f,"NS_",startIndex))) == -1):
+                startIndex = None
+                p1 = (((f.find("API_") if ((startIndex is None)) else HxString.indexOfImpl(f,"API_",startIndex))) == -1)
+            else:
+                p1 = False
+            if p1:
                 startIndex = None
                 p = (((f.find("ios(") if ((startIndex is None)) else HxString.indexOfImpl(f,"ios(",startIndex))) == -1)
             else:
@@ -882,7 +886,11 @@ class ObjcType:
             return "Dynamic"
         t = StringTools.replace(t,"nullable ","")
         t = StringTools.replace(t,"__kindof ","")
-        return StringTools.replace(StringTools.replace((typedefs.h.get(t,None).parentClassName if (((t in typedefs.h) and (not typedefs.h.get(t,None).createHaxeFile))) else t),"*","")," ","")
+        t = StringTools.replace(StringTools.replace((typedefs.h.get(t,None).parentClassName if (((t in typedefs.h) and (not typedefs.h.get(t,None).createHaxeFile))) else t),"*","")," ","")
+        i = ObjcImport.toImport(t)
+        if (i is None):
+            return "Dynamic"
+        return t
 
 
 class Std:

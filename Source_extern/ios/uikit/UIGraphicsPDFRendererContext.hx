@@ -24,7 +24,7 @@ extern class UIGraphicsPDFRendererContext{
 	overload public function beginPageWithBounds(bounds:CGRect, pageInfo:Dynamic):Void;
 
 	@:native("setURL:forRect")
-	overload public function setURL(url:NSURL, forRect:CGRect):Void;
+	overload public function setURL(url:Dynamic, forRect:CGRect):Void;
 
 	@:native("addDestinationWithName:atPoint")
 	overload public function addDestinationWithName(name:NSString, atPoint:CGPoint):Void;

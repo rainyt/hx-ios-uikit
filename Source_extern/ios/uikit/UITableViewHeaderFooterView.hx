@@ -13,22 +13,22 @@ extern class UITableViewHeaderFooterView{
 	overload public static function autorelease():UITableViewHeaderFooterView;
 
 	@:native("initWithReuseIdentifier")
-	overload public function initWithReuseIdentifier(reuseIdentifier:NSString):UITableViewHeaderFooterView;
+	overload public function initWithReuseIdentifier(reuseIdentifier:NSString):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITableViewHeaderFooterView;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("configurationState")
-	public var configurationState:UIViewConfigurationState;
+	public var configurationState:Dynamic;
 
 	@:native("setNeedsUpdateConfiguration")
 	overload public function setNeedsUpdateConfiguration():Void;
 
 	@:native("updateConfigurationUsingState")
-	overload public function updateConfigurationUsingState(state:UIViewConfigurationState):Void;
+	overload public function updateConfigurationUsingState(state:Dynamic):Void;
 
 	@:native("defaultContentConfiguration")
-	overload public function defaultContentConfiguration():UIListContentConfiguration;
+	overload public function defaultContentConfiguration():Dynamic;
 
 	@:native("contentConfiguration")
 	public var contentConfiguration:Dynamic;
@@ -37,22 +37,22 @@ extern class UITableViewHeaderFooterView{
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
 	@:native("contentView")
-	public var contentView:UIView;
+	public var contentView:Dynamic;
 
 	@:native("textLabel")
-	public var textLabel:UILabel;
+	public var textLabel:Dynamic;
 
 	@:native("detailTextLabel")
-	public var detailTextLabel:UILabel;
+	public var detailTextLabel:Dynamic;
 
 	@:native("backgroundConfiguration")
-	public var backgroundConfiguration:UIBackgroundConfiguration;
+	public var backgroundConfiguration:Dynamic;
 
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
 	@:native("backgroundView")
-	public var backgroundView:UIView;
+	public var backgroundView:Dynamic;
 
 	@:native("reuseIdentifier")
 	public var reuseIdentifier:NSString;

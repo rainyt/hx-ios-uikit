@@ -12,7 +12,7 @@ extern class UILocalizedIndexedCollation{
 	overload public static function autorelease():UILocalizedIndexedCollation;
 
 	@:native("currentCollation")
-	overload public static function currentCollation():UILocalizedIndexedCollation;
+	overload public static function currentCollation():Dynamic;
 
 	@:native("sectionTitles")
 	public var sectionTitles:Dynamic;
@@ -21,13 +21,13 @@ extern class UILocalizedIndexedCollation{
 	public var sectionIndexTitles:Dynamic;
 
 	@:native("sectionForSectionIndexTitleAtIndex")
-	overload public function sectionForSectionIndexTitleAtIndex(indexTitleIndex:NSInteger):NSInteger;
+	overload public function sectionForSectionIndexTitleAtIndex(indexTitleIndex:Dynamic):Dynamic;
 
 	@:native("sectionForObject:collationStringSelector")
-	overload public function sectionForObject(object:Dynamic, collationStringSelector:String):NSInteger;
+	overload public function sectionForObject(object:Dynamic, collationStringSelector:String):Dynamic;
 
 	@:native("sortedArrayFromArray:collationStringSelector")
-	overload public function sortedArrayFromArray(array:NSArray, collationStringSelector:String):NSArray;
+	overload public function sortedArrayFromArray(array:Dynamic, collationStringSelector:String):Dynamic;
 
 
 }

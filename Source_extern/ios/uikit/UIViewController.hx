@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 import ios.objc.CGSize;
 @:objc
 @:native("UIViewController")
@@ -15,13 +14,13 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIViewController;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("view")
-	public var view:UIView;
+	public var view:Dynamic;
 
 	@:native("loadView")
 	overload public function loadView():Void;
@@ -30,7 +29,7 @@ extern class UIViewController{
 	overload public function loadViewIfNeeded():Void;
 
 	@:native("viewIfLoaded")
-	public var viewIfLoaded:UIView;
+	public var viewIfLoaded:Dynamic;
 
 	@:native("viewWillUnload")
 	overload public function viewWillUnload():Void;
@@ -48,10 +47,10 @@ extern class UIViewController{
 	public var nibName:NSString;
 
 	@:native("nibBundle")
-	public var nibBundle:NSBundle;
+	public var nibBundle:Dynamic;
 
 	@:native("storyboard")
-	public var storyboard:UIStoryboard;
+	public var storyboard:Dynamic;
 
 	@:native("performSegueWithIdentifier:sender")
 	overload public function performSegueWithIdentifier(identifier:NSString, sender:Dynamic):Void;
@@ -60,28 +59,28 @@ extern class UIViewController{
 	overload public function shouldPerformSegueWithIdentifier(identifier:NSString, sender:Dynamic):Bool;
 
 	@:native("prepareForSegue:sender")
-	overload public function prepareForSegue(segue:UIStoryboardSegue, sender:Dynamic):Void;
+	overload public function prepareForSegue(segue:Dynamic, sender:Dynamic):Void;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:sender")
-	overload public function canPerformUnwindSegueAction(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
+	overload public function canPerformUnwindSegueAction(action:String, fromViewController:Dynamic, sender:Dynamic):Bool;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:withSender")
-	overload public function canPerformUnwindSegueAction(action:String, fromViewController:UIViewController, withSender:Dynamic):Bool;
+	overload public function canPerformUnwindSegueAction(action:String, fromViewController:Dynamic, withSender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:Dynamic):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
-	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
+	overload public function childViewControllerContainingSegueSource(source:Dynamic):Dynamic;
 
 	@:native("viewControllerForUnwindSegueAction:fromViewController:withSender")
-	overload public function viewControllerForUnwindSegueAction(action:String, fromViewController:UIViewController, withSender:Dynamic):UIViewController;
+	overload public function viewControllerForUnwindSegueAction(action:String, fromViewController:Dynamic, withSender:Dynamic):Dynamic;
 
 	@:native("unwindForSegue:towardsViewController")
-	overload public function unwindForSegue(unwindSegue:UIStoryboardSegue, towardsViewController:UIViewController):Void;
+	overload public function unwindForSegue(unwindSegue:Dynamic, towardsViewController:Dynamic):Void;
 
 	@:native("segueForUnwindingToViewController:fromViewController:identifier")
-	overload public function segueForUnwindingToViewController(toViewController:UIViewController, fromViewController:UIViewController, identifier:NSString):UIStoryboardSegue;
+	overload public function segueForUnwindingToViewController(toViewController:Dynamic, fromViewController:Dynamic, identifier:NSString):Dynamic;
 
 	@:native("viewWillAppear")
 	overload public function viewWillAppear(animated:Bool):Void;
@@ -108,16 +107,16 @@ extern class UIViewController{
 	overload public function didReceiveMemoryWarning():Void;
 
 	@:native("parentViewController")
-	public var parentViewController:UIViewController;
+	public var parentViewController:Dynamic;
 
 	@:native("modalViewController")
-	public var modalViewController:UIViewController;
+	public var modalViewController:Dynamic;
 
 	@:native("presentedViewController")
-	public var presentedViewController:UIViewController;
+	public var presentedViewController:Dynamic;
 
 	@:native("presentingViewController")
-	public var presentingViewController:UIViewController;
+	public var presentingViewController:Dynamic;
 
 	@:native("definesPresentationContext")
 	public var definesPresentationContext:Bool;
@@ -141,22 +140,22 @@ extern class UIViewController{
 	public var movingFromParentViewController:Bool;
 
 	@:native("presentViewController:animated:completion")
-	overload public function presentViewController(viewControllerToPresent:UIViewController, animated:Dynamic, completion:Dynamic):Void;
+	overload public function presentViewController(viewControllerToPresent:Dynamic, animated:Dynamic, completion:Dynamic):Void;
 
 	@:native("dismissViewControllerAnimated:completion")
 	overload public function dismissViewControllerAnimated(flag:Dynamic, completion:Dynamic):Void;
 
 	@:native("presentModalViewController:animated")
-	overload public function presentModalViewController(modalViewController:UIViewController, animated:Bool):Void;
+	overload public function presentModalViewController(modalViewController:Dynamic, animated:Bool):Void;
 
 	@:native("dismissModalViewControllerAnimated")
 	overload public function dismissModalViewControllerAnimated(animated:Bool):Void;
 
 	@:native("modalTransitionStyle")
-	public var modalTransitionStyle:UIModalTransitionStyle;
+	public var modalTransitionStyle:Dynamic;
 
 	@:native("modalPresentationStyle")
-	public var modalPresentationStyle:UIModalPresentationStyle;
+	public var modalPresentationStyle:Dynamic;
 
 	@:native("modalPresentationCapturesStatusBarAppearance")
 	public var modalPresentationCapturesStatusBarAppearance:Bool;
@@ -168,7 +167,7 @@ extern class UIViewController{
 	public var wantsFullScreenLayout:Bool;
 
 	@:native("edgesForExtendedLayout")
-	public var edgesForExtendedLayout:UIRectEdge;
+	public var edgesForExtendedLayout:Dynamic;
 
 	@:native("extendedLayoutIncludesOpaqueBars")
 	public var extendedLayoutIncludesOpaqueBars:Bool;
@@ -180,34 +179,34 @@ extern class UIViewController{
 	public var preferredContentSize:CGSize;
 
 	@:native("preferredStatusBarStyle")
-	public var preferredStatusBarStyle:UIStatusBarStyle;
+	public var preferredStatusBarStyle:Dynamic;
 
 	@:native("prefersStatusBarHidden")
 	public var prefersStatusBarHidden:Bool;
 
 	@:native("preferredStatusBarUpdateAnimation")
-	public var preferredStatusBarUpdateAnimation:UIStatusBarAnimation;
+	public var preferredStatusBarUpdateAnimation:Dynamic;
 
 	@:native("setNeedsStatusBarAppearanceUpdate")
 	overload public function setNeedsStatusBarAppearanceUpdate():Void;
 
 	@:native("targetViewControllerForAction:sender")
-	overload public function targetViewControllerForAction(action:String, sender:Dynamic):UIViewController;
+	overload public function targetViewControllerForAction(action:String, sender:Dynamic):Dynamic;
 
 	@:native("showViewController:sender")
-	overload public function showViewController(vc:UIViewController, sender:Dynamic):Void;
+	overload public function showViewController(vc:Dynamic, sender:Dynamic):Void;
 
 	@:native("showDetailViewController:sender")
-	overload public function showDetailViewController(vc:UIViewController, sender:Dynamic):Void;
+	overload public function showDetailViewController(vc:Dynamic, sender:Dynamic):Void;
 
 	@:native("preferredUserInterfaceStyle")
-	public var preferredUserInterfaceStyle:UIUserInterfaceStyle;
+	public var preferredUserInterfaceStyle:Dynamic;
 
 	@:native("setNeedsUserInterfaceAppearanceUpdate")
 	overload public function setNeedsUserInterfaceAppearanceUpdate():Void;
 
 	@:native("overrideUserInterfaceStyle")
-	public var overrideUserInterfaceStyle:UIUserInterfaceStyle;
+	public var overrideUserInterfaceStyle:Dynamic;
 
 
 }

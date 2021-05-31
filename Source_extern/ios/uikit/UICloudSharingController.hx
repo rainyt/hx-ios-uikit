@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 @:objc
 @:native("UICloudSharingController")
 @:include("UIKit/UIKit.h")
@@ -14,25 +13,25 @@ extern class UICloudSharingController{
 	overload public static function autorelease():UICloudSharingController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UICloudSharingController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICloudSharingController;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithPreparationHandler")
-	overload public function initWithPreparationHandler(preparationHandler:Dynamic):UICloudSharingController;
+	overload public function initWithPreparationHandler(preparationHandler:Dynamic):Dynamic;
 
 	@:native("initWithShare:container")
-	overload public function initWithShare(share:CKShare, container:CKContainer):UICloudSharingController;
+	overload public function initWithShare(share:Dynamic, container:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("share")
-	public var share:CKShare;
+	public var share:Dynamic;
 
 	@:native("availablePermissions")
-	public var availablePermissions:UICloudSharingPermissionOptions;
+	public var availablePermissions:Dynamic;
 
 	@:native("activityItemSource")
 	overload public function activityItemSource():Dynamic;

@@ -13,19 +13,19 @@ extern class UITableViewRowAction{
 	overload public static function autorelease():UITableViewRowAction;
 
 	@:native("rowActionWithStyle:title:handler")
-	overload public static function rowActionWithStyle(style:UITableViewRowActionStyle, title:NSString, handler:Dynamic):UITableViewRowAction;
+	overload public static function rowActionWithStyle(style:Dynamic, title:NSString, handler:Dynamic):Dynamic;
 
 	@:native("style")
-	public var style:UITableViewRowActionStyle;
+	public var style:Dynamic;
 
 	@:native("title")
 	public var title:NSString;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("backgroundEffect")
-	public var backgroundEffect:UIVisualEffect;
+	public var backgroundEffect:Dynamic;
 
 
 }

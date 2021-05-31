@@ -12,34 +12,34 @@ extern class UIDocumentPickerViewController{
 	overload public static function autorelease():UIDocumentPickerViewController;
 
 	@:native("initWithDocumentTypes:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithDocumentTypes(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload public function initWithDocumentTypes(allowedUTIs:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initForOpeningContentTypes:asCopy:NS_DESIGNATED_INITIALIZER")
-	overload public function initForOpeningContentTypes(contentTypes:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload public function initForOpeningContentTypes(contentTypes:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initForOpeningContentTypes")
-	overload public function initForOpeningContentTypes(contentTypes:Dynamic):UIDocumentPickerViewController;
+	overload public function initForOpeningContentTypes(contentTypes:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIDocumentPickerViewController;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithURL:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithURL(url:NSURL, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload public function initWithURL(url:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initWithURLs:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithURLs(urls:Dynamic, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload public function initWithURLs(urls:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initForExportingURLs:asCopy:NS_DESIGNATED_INITIALIZER")
-	overload public function initForExportingURLs(urls:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload public function initForExportingURLs(urls:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initForExportingURLs")
-	overload public function initForExportingURLs(urls:Dynamic):UIDocumentPickerViewController;
+	overload public function initForExportingURLs(urls:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("documentPickerMode")
-	public var documentPickerMode:UIDocumentPickerMode;
+	public var documentPickerMode:Dynamic;
 
 	@:native("allowsMultipleSelection")
 	public var allowsMultipleSelection:Bool;
@@ -48,7 +48,7 @@ extern class UIDocumentPickerViewController{
 	public var shouldShowFileExtensions:Bool;
 
 	@:native("directoryURL")
-	public var directoryURL:NSURL;
+	public var directoryURL:Dynamic;
 
 
 }

@@ -22,10 +22,10 @@ extern class UIVideoEditorController{
 	public var videoPath:NSString;
 
 	@:native("videoMaximumDuration")
-	public var videoMaximumDuration:NSTimeInterval;
+	public var videoMaximumDuration:Dynamic;
 
 	@:native("videoQuality")
-	public var videoQuality:UIImagePickerControllerQualityType;
+	public var videoQuality:Dynamic;
 
 
 }

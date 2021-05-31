@@ -12,10 +12,10 @@ extern class UICollectionViewDropProposal{
 	overload public static function autorelease():UICollectionViewDropProposal;
 
 	@:native("initWithDropOperation:intent")
-	overload public function initWithDropOperation(operation:UIDropOperation, intent:UICollectionViewDropIntent):UICollectionViewDropProposal;
+	overload public function initWithDropOperation(operation:Dynamic, intent:Dynamic):Dynamic;
 
 	@:native("intent")
-	public var intent:UICollectionViewDropIntent;
+	public var intent:Dynamic;
 
 
 }

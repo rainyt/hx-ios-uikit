@@ -13,43 +13,43 @@ extern class UIStackView{
 	overload public static function autorelease():UIStackView;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIStackView;
+	overload public function initWithFrame(frame:CGRect):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIStackView;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithArrangedSubviews")
-	overload public function initWithArrangedSubviews(views:Dynamic):UIStackView;
+	overload public function initWithArrangedSubviews(views:Dynamic):Dynamic;
 
 	@:native("arrangedSubviews")
 	public var arrangedSubviews:Dynamic;
 
 	@:native("addArrangedSubview")
-	overload public function addArrangedSubview(view:UIView):Void;
+	overload public function addArrangedSubview(view:Dynamic):Void;
 
 	@:native("removeArrangedSubview")
-	overload public function removeArrangedSubview(view:UIView):Void;
+	overload public function removeArrangedSubview(view:Dynamic):Void;
 
 	@:native("insertArrangedSubview:atIndex")
-	overload public function insertArrangedSubview(view:UIView, atIndex:NSUInteger):Void;
+	overload public function insertArrangedSubview(view:Dynamic, atIndex:Dynamic):Void;
 
 	@:native("axis")
-	public var axis:UILayoutConstraintAxis;
+	public var axis:Dynamic;
 
 	@:native("distribution")
-	public var distribution:UIStackViewDistribution;
+	public var distribution:Dynamic;
 
 	@:native("alignment")
-	public var alignment:UIStackViewAlignment;
+	public var alignment:Dynamic;
 
 	@:native("spacing")
-	public var spacing:CGFloat;
+	public var spacing:Dynamic;
 
 	@:native("setCustomSpacing:afterView")
-	overload public function setCustomSpacing(spacing:CGFloat, afterView:UIView):Void;
+	overload public function setCustomSpacing(spacing:Dynamic, afterView:Dynamic):Void;
 
 	@:native("customSpacingAfterView")
-	overload public function customSpacingAfterView(arrangedSubview:UIView):CGFloat;
+	overload public function customSpacingAfterView(arrangedSubview:Dynamic):Dynamic;
 
 	@:native("baselineRelativeArrangement")
 	public var baselineRelativeArrangement:Bool;

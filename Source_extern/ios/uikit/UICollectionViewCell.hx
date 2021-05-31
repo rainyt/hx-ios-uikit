@@ -12,13 +12,13 @@ extern class UICollectionViewCell{
 	overload public static function autorelease():UICollectionViewCell;
 
 	@:native("configurationState")
-	public var configurationState:UICellConfigurationState;
+	public var configurationState:Dynamic;
 
 	@:native("setNeedsUpdateConfiguration")
 	overload public function setNeedsUpdateConfiguration():Void;
 
 	@:native("updateConfigurationUsingState")
-	overload public function updateConfigurationUsingState(state:UICellConfigurationState):Void;
+	overload public function updateConfigurationUsingState(state:Dynamic):Void;
 
 	@:native("contentConfiguration")
 	public var contentConfiguration:Dynamic;
@@ -27,7 +27,7 @@ extern class UICollectionViewCell{
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
 	@:native("contentView")
-	public var contentView:UIView;
+	public var contentView:Dynamic;
 
 	@:native("selected")
 	public var selected:Bool;
@@ -36,19 +36,19 @@ extern class UICollectionViewCell{
 	public var highlighted:Bool;
 
 	@:native("dragStateDidChange")
-	overload public function dragStateDidChange(dragState:UICollectionViewCellDragState):Void;
+	overload public function dragStateDidChange(dragState:Dynamic):Void;
 
 	@:native("backgroundConfiguration")
-	public var backgroundConfiguration:UIBackgroundConfiguration;
+	public var backgroundConfiguration:Dynamic;
 
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
 	@:native("backgroundView")
-	public var backgroundView:UIView;
+	public var backgroundView:Dynamic;
 
 	@:native("selectedBackgroundView")
-	public var selectedBackgroundView:UIView;
+	public var selectedBackgroundView:Dynamic;
 
 
 }

@@ -15,13 +15,13 @@ extern class UIConstraintBasedLayoutInstallingConstraints{
 	public var constraints:Dynamic;
 
 	@:native("addConstraint")
-	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
+	overload public function addConstraint(constraint:Dynamic):Void;
 
 	@:native("addConstraints")
 	overload public function addConstraints(constraints:Dynamic):Void;
 
 	@:native("removeConstraint")
-	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
+	overload public function removeConstraint(constraint:Dynamic):Void;
 
 	@:native("removeConstraints")
 	overload public function removeConstraints(constraints:Dynamic):Void;

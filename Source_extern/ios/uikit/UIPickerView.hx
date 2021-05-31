@@ -22,28 +22,28 @@ extern class UIPickerView{
 	public var showsSelectionIndicator:Bool;
 
 	@:native("numberOfComponents")
-	public var numberOfComponents:NSInteger;
+	public var numberOfComponents:Dynamic;
 
 	@:native("numberOfRowsInComponent")
-	overload public function numberOfRowsInComponent(component:NSInteger):NSInteger;
+	overload public function numberOfRowsInComponent(component:Dynamic):Dynamic;
 
 	@:native("rowSizeForComponent")
-	overload public function rowSizeForComponent(component:NSInteger):CGSize;
+	overload public function rowSizeForComponent(component:Dynamic):CGSize;
 
 	@:native("viewForRow:forComponent")
-	overload public function viewForRow(row:NSInteger, forComponent:NSInteger):UIView;
+	overload public function viewForRow(row:Dynamic, forComponent:Dynamic):Dynamic;
 
 	@:native("reloadAllComponents")
 	overload public function reloadAllComponents():Void;
 
 	@:native("reloadComponent")
-	overload public function reloadComponent(component:NSInteger):Void;
+	overload public function reloadComponent(component:Dynamic):Void;
 
 	@:native("selectRow:inComponent:animated")
-	overload public function selectRow(row:NSInteger, inComponent:NSInteger, animated:Bool):Void;
+	overload public function selectRow(row:Dynamic, inComponent:Dynamic, animated:Bool):Void;
 
 	@:native("selectedRowInComponent")
-	overload public function selectedRowInComponent(component:NSInteger):NSInteger;
+	overload public function selectedRowInComponent(component:Dynamic):Dynamic;
 
 
 }

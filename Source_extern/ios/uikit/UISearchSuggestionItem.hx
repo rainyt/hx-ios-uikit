@@ -13,22 +13,22 @@ extern class UISearchSuggestionItem{
 	overload public static function autorelease():UISearchSuggestionItem;
 
 	@:native("suggestionWithLocalizedSuggestion")
-	overload public static function suggestionWithLocalizedSuggestion(suggestion:NSString):UISearchSuggestionItem;
+	overload public static function suggestionWithLocalizedSuggestion(suggestion:NSString):Dynamic;
 
 	@:native("suggestionWithLocalizedSuggestion:descriptionString")
-	overload public static function suggestionWithLocalizedSuggestion(suggestion:NSString, descriptionString:NSString):UISearchSuggestionItem;
+	overload public static function suggestionWithLocalizedSuggestion(suggestion:NSString, descriptionString:NSString):Dynamic;
 
 	@:native("suggestionWithLocalizedSuggestion:descriptionString:iconImage")
-	overload public static function suggestionWithLocalizedSuggestion(suggestion:NSString, descriptionString:NSString, iconImage:UIImage):UISearchSuggestionItem;
+	overload public static function suggestionWithLocalizedSuggestion(suggestion:NSString, descriptionString:NSString, iconImage:Dynamic):Dynamic;
 
 	@:native("initWithLocalizedSuggestion")
-	overload public function initWithLocalizedSuggestion(suggestion:NSString):UISearchSuggestionItem;
+	overload public function initWithLocalizedSuggestion(suggestion:NSString):Dynamic;
 
 	@:native("initWithLocalizedSuggestion:localizedDescription")
-	overload public function initWithLocalizedSuggestion(suggestion:NSString, localizedDescription:NSString):UISearchSuggestionItem;
+	overload public function initWithLocalizedSuggestion(suggestion:NSString, localizedDescription:NSString):Dynamic;
 
 	@:native("initWithLocalizedSuggestion:localizedDescription:iconImage")
-	overload public function initWithLocalizedSuggestion(suggestion:NSString, localizedDescription:NSString, iconImage:UIImage):UISearchSuggestionItem;
+	overload public function initWithLocalizedSuggestion(suggestion:NSString, localizedDescription:NSString, iconImage:Dynamic):Dynamic;
 
 	@:native("localizedSuggestion")
 	public var localizedSuggestion:NSString;
@@ -37,7 +37,7 @@ extern class UISearchSuggestionItem{
 	public var localizedDescription:NSString;
 
 	@:native("iconImage")
-	public var iconImage:UIImage;
+	public var iconImage:Dynamic;
 
 
 }

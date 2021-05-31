@@ -14,13 +14,13 @@ extern class UIDocumentInteractionController{
 	overload public static function autorelease():UIDocumentInteractionController;
 
 	@:native("interactionControllerWithURL")
-	overload public static function interactionControllerWithURL(url:NSURL):UIDocumentInteractionController;
+	overload public static function interactionControllerWithURL(url:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("URL")
-	public var URL:NSURL;
+	public var URL:Dynamic;
 
 	@:native("UTI")
 	public var UTI:NSString;
@@ -35,19 +35,19 @@ extern class UIDocumentInteractionController{
 	public var annotation:Dynamic;
 
 	@:native("presentOptionsMenuFromRect:inView:animated")
-	overload public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):Bool;
+	overload public function presentOptionsMenuFromRect(rect:CGRect, inView:Dynamic, animated:Bool):Bool;
 
 	@:native("presentOptionsMenuFromBarButtonItem:animated")
-	overload public function presentOptionsMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):Bool;
+	overload public function presentOptionsMenuFromBarButtonItem(item:Dynamic, animated:Bool):Bool;
 
 	@:native("presentPreviewAnimated")
 	overload public function presentPreviewAnimated(animated:Bool):Bool;
 
 	@:native("presentOpenInMenuFromRect:inView:animated")
-	overload public function presentOpenInMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):Bool;
+	overload public function presentOpenInMenuFromRect(rect:CGRect, inView:Dynamic, animated:Bool):Bool;
 
 	@:native("presentOpenInMenuFromBarButtonItem:animated")
-	overload public function presentOpenInMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):Bool;
+	overload public function presentOpenInMenuFromBarButtonItem(item:Dynamic, animated:Bool):Bool;
 
 	@:native("dismissPreviewAnimated")
 	overload public function dismissPreviewAnimated(animated:Bool):Void;

@@ -13,7 +13,7 @@ extern class UIActivity{
 	overload public static function autorelease():UIActivity;
 
 	@:native("activityCategory")
-	public var activityCategory:UIActivityCategory;
+	public var activityCategory:Dynamic;
 
 	@:native("activityType")
 	public var activityType:NSString;
@@ -22,16 +22,16 @@ extern class UIActivity{
 	public var activityTitle:NSString;
 
 	@:native("activityImage")
-	public var activityImage:UIImage;
+	public var activityImage:Dynamic;
 
 	@:native("canPerformWithActivityItems")
-	overload public function canPerformWithActivityItems(activityItems:NSArray):Bool;
+	overload public function canPerformWithActivityItems(activityItems:Dynamic):Bool;
 
 	@:native("prepareWithActivityItems")
-	overload public function prepareWithActivityItems(activityItems:NSArray):Void;
+	overload public function prepareWithActivityItems(activityItems:Dynamic):Void;
 
 	@:native("activityViewController")
-	public var activityViewController:UIViewController;
+	public var activityViewController:Dynamic;
 
 	@:native("performActivity")
 	overload public function performActivity():Void;

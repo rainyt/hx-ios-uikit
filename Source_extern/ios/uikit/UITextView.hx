@@ -20,16 +20,16 @@ extern class UITextView{
 	public var text:NSString;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("textColor")
-	public var textColor:UIColor;
+	public var textColor:Dynamic;
 
 	@:native("textAlignment")
-	public var textAlignment:NSTextAlignment;
+	public var textAlignment:Dynamic;
 
 	@:native("selectedRange")
-	public var selectedRange:NSRange;
+	public var selectedRange:Dynamic;
 
 	@:native("editable")
 	public var editable:Bool;
@@ -38,46 +38,46 @@ extern class UITextView{
 	public var selectable:Bool;
 
 	@:native("dataDetectorTypes")
-	public var dataDetectorTypes:UIDataDetectorTypes;
+	public var dataDetectorTypes:Dynamic;
 
 	@:native("allowsEditingTextAttributes")
 	public var allowsEditingTextAttributes:Bool;
 
 	@:native("attributedText")
-	public var attributedText:NSAttributedString;
+	public var attributedText:Dynamic;
 
 	@:native("typingAttributes")
 	public var typingAttributes:Dynamic;
 
 	@:native("scrollRangeToVisible")
-	overload public function scrollRangeToVisible(range:NSRange):Void;
+	overload public function scrollRangeToVisible(range:Dynamic):Void;
 
 	@:native("inputView")
-	public var inputView:UIView;
+	public var inputView:Dynamic;
 
 	@:native("inputAccessoryView")
-	public var inputAccessoryView:UIView;
+	public var inputAccessoryView:Dynamic;
 
 	@:native("clearsOnInsertion")
 	public var clearsOnInsertion:Bool;
 
 	@:native("initWithFrame:textContainer")
-	overload public function initWithFrame(frame:CGRect, textContainer:NSTextContainer):UITextView;
+	overload public function initWithFrame(frame:CGRect, textContainer:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITextView;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("textContainer")
-	public var textContainer:NSTextContainer;
+	public var textContainer:Dynamic;
 
 	@:native("textContainerInset")
-	public var textContainerInset:UIEdgeInsets;
+	public var textContainerInset:Dynamic;
 
 	@:native("layoutManager")
-	public var layoutManager:NSLayoutManager;
+	public var layoutManager:Dynamic;
 
 	@:native("textStorage")
-	public var textStorage:NSTextStorage;
+	public var textStorage:Dynamic;
 
 	@:native("linkTextAttributes")
 	public var linkTextAttributes:Dynamic;

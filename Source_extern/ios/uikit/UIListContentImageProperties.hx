@@ -13,19 +13,19 @@ extern class UIListContentImageProperties{
 	overload public static function autorelease():UIListContentImageProperties;
 
 	@:native("preferredSymbolConfiguration")
-	public var preferredSymbolConfiguration:UIImageSymbolConfiguration;
+	public var preferredSymbolConfiguration:Dynamic;
 
 	@:native("tintColor")
-	public var tintColor:UIColor;
+	public var tintColor:Dynamic;
 
 	@:native("tintColorTransformer")
-	public var tintColorTransformer:UIConfigurationColorTransformer;
+	public var tintColorTransformer:Dynamic;
 
 	@:native("resolvedTintColorForTintColor")
-	overload public function resolvedTintColorForTintColor(tintColor:UIColor):UIColor;
+	overload public function resolvedTintColorForTintColor(tintColor:Dynamic):Dynamic;
 
 	@:native("cornerRadius")
-	public var cornerRadius:CGFloat;
+	public var cornerRadius:Dynamic;
 
 	@:native("maximumSize")
 	public var maximumSize:CGSize;

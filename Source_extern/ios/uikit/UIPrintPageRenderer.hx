@@ -13,10 +13,10 @@ extern class UIPrintPageRenderer{
 	overload public static function autorelease():UIPrintPageRenderer;
 
 	@:native("headerHeight")
-	public var headerHeight:CGFloat;
+	public var headerHeight:Dynamic;
 
 	@:native("footerHeight")
-	public var footerHeight:CGFloat;
+	public var footerHeight:Dynamic;
 
 	@:native("paperRect")
 	public var paperRect:CGRect;
@@ -25,34 +25,34 @@ extern class UIPrintPageRenderer{
 	public var printableRect:CGRect;
 
 	@:native("numberOfPages")
-	public var numberOfPages:NSInteger;
+	public var numberOfPages:Dynamic;
 
 	@:native("printFormatters")
 	public var printFormatters:Dynamic;
 
 	@:native("printFormattersForPageAtIndex")
-	overload public function printFormattersForPageAtIndex(pageIndex:NSInteger):Dynamic;
+	overload public function printFormattersForPageAtIndex(pageIndex:Dynamic):Dynamic;
 
 	@:native("addPrintFormatter:startingAtPageAtIndex")
-	overload public function addPrintFormatter(formatter:UIPrintFormatter, startingAtPageAtIndex:NSInteger):Void;
+	overload public function addPrintFormatter(formatter:Dynamic, startingAtPageAtIndex:Dynamic):Void;
 
 	@:native("prepareForDrawingPages")
-	overload public function prepareForDrawingPages(range:NSRange):Void;
+	overload public function prepareForDrawingPages(range:Dynamic):Void;
 
 	@:native("drawPageAtIndex:inRect")
-	overload public function drawPageAtIndex(pageIndex:NSInteger, inRect:CGRect):Void;
+	overload public function drawPageAtIndex(pageIndex:Dynamic, inRect:CGRect):Void;
 
 	@:native("drawPrintFormatter:forPageAtIndex")
-	overload public function drawPrintFormatter(printFormatter:UIPrintFormatter, forPageAtIndex:NSInteger):Void;
+	overload public function drawPrintFormatter(printFormatter:Dynamic, forPageAtIndex:Dynamic):Void;
 
 	@:native("drawHeaderForPageAtIndex:")
-	overload public function drawHeaderForPageAtIndex(pageIndex:NSInteger, :inRect):Void;
+	overload public function drawHeaderForPageAtIndex(pageIndex:Dynamic, :Dynamic):Void;
 
 	@:native("drawContentForPageAtIndex:inRect")
-	overload public function drawContentForPageAtIndex(pageIndex:NSInteger, inRect:CGRect):Void;
+	overload public function drawContentForPageAtIndex(pageIndex:Dynamic, inRect:CGRect):Void;
 
 	@:native("drawFooterForPageAtIndex:")
-	overload public function drawFooterForPageAtIndex(pageIndex:NSInteger, :inRect):Void;
+	overload public function drawFooterForPageAtIndex(pageIndex:Dynamic, :Dynamic):Void;
 
 
 }

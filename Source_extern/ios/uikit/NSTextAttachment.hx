@@ -15,7 +15,7 @@ extern class NSTextAttachment{
 	overload public static function autorelease():NSTextAttachment;
 
 	@:native("initWithData:ofType:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithData(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
+	overload public function initWithData(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("contents")
 	public var contents:NSData;
@@ -24,13 +24,13 @@ extern class NSTextAttachment{
 	public var fileType:NSString;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("bounds")
 	public var bounds:CGRect;
 
 	@:native("fileWrapper")
-	public var fileWrapper:NSFileWrapper;
+	public var fileWrapper:Dynamic;
 
 
 }

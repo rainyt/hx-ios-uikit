@@ -16,7 +16,7 @@ extern class UICommand{
 	public var title:NSString;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("discoverabilityTitle")
 	public var discoverabilityTitle:NSString;
@@ -28,28 +28,28 @@ extern class UICommand{
 	public var propertyList:Dynamic;
 
 	@:native("attributes")
-	public var attributes:UIMenuElementAttributes;
+	public var attributes:Dynamic;
 
 	@:native("state")
-	public var state:UIMenuElementState;
+	public var state:Dynamic;
 
 	@:native("alternates")
 	public var alternates:Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("new")
-	overload public static function new():UICommand;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UICommand;
+	overload public function init():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICommand;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 
 }

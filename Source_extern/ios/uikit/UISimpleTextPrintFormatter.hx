@@ -13,25 +13,25 @@ extern class UISimpleTextPrintFormatter{
 	overload public static function autorelease():UISimpleTextPrintFormatter;
 
 	@:native("initWithText")
-	overload public function initWithText(text:NSString):UISimpleTextPrintFormatter;
+	overload public function initWithText(text:NSString):Dynamic;
 
 	@:native("initWithAttributedText")
-	overload public function initWithAttributedText(attributedText:NSAttributedString):UISimpleTextPrintFormatter;
+	overload public function initWithAttributedText(attributedText:Dynamic):Dynamic;
 
 	@:native("text")
 	public var text:NSString;
 
 	@:native("attributedText")
-	public var attributedText:NSAttributedString;
+	public var attributedText:Dynamic;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("color")
-	public var color:UIColor;
+	public var color:Dynamic;
 
 	@:native("textAlignment")
-	public var textAlignment:NSTextAlignment;
+	public var textAlignment:Dynamic;
 
 
 }

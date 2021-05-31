@@ -12,10 +12,10 @@ extern class UIViewKeyframeAnimations{
 	overload public static function autorelease():UIViewKeyframeAnimations;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
-	overload public static function animateKeyframesWithDuration(duration:NSTimeInterval, delay:NSTimeInterval, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateKeyframesWithDuration(duration:Dynamic, delay:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
-	overload public static function addKeyframeWithRelativeStartTime(frameStartTime:double, relativeDuration:double, animations:Dynamic):Void;
+	overload public static function addKeyframeWithRelativeStartTime(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
 
 }

@@ -12,7 +12,7 @@ extern class DynamicAppearance{
 	overload public static function autorelease():DynamicAppearance;
 
 	@:native("hasDifferentColorAppearanceComparedToTraitCollection")
-	overload public function hasDifferentColorAppearanceComparedToTraitCollection(traitCollection:UITraitCollection):Bool;
+	overload public function hasDifferentColorAppearanceComparedToTraitCollection(traitCollection:Dynamic):Bool;
 
 
 }

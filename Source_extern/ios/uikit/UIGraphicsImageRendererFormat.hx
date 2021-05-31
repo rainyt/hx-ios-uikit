@@ -12,7 +12,7 @@ extern class UIGraphicsImageRendererFormat{
 	overload public static function autorelease():UIGraphicsImageRendererFormat;
 
 	@:native("scale")
-	public var scale:CGFloat;
+	public var scale:Dynamic;
 
 	@:native("opaque")
 	public var opaque:Bool;
@@ -21,10 +21,10 @@ extern class UIGraphicsImageRendererFormat{
 	public var prefersExtendedRange:Bool;
 
 	@:native("preferredRange")
-	public var preferredRange:UIGraphicsImageRendererFormatRange;
+	public var preferredRange:Dynamic;
 
 	@:native("formatForTraitCollection")
-	overload public static function formatForTraitCollection(traitCollection:UITraitCollection):UIGraphicsImageRendererFormat;
+	overload public static function formatForTraitCollection(traitCollection:Dynamic):Dynamic;
 
 
 }

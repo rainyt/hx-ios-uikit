@@ -13,13 +13,13 @@ extern class UISnapBehavior{
 	overload public static function autorelease():UISnapBehavior;
 
 	@:native("initWithItem:snapToPoint")
-	overload public function initWithItem(item:Dynamic, snapToPoint:CGPoint):UISnapBehavior;
+	overload public function initWithItem(item:Dynamic, snapToPoint:CGPoint):Dynamic;
 
 	@:native("snapPoint")
 	public var snapPoint:CGPoint;
 
 	@:native("damping")
-	public var damping:CGFloat;
+	public var damping:Dynamic;
 
 
 }

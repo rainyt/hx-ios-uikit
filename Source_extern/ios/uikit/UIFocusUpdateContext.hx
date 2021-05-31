@@ -18,13 +18,13 @@ extern class UIFocusUpdateContext{
 	public var nextFocusedItem:Dynamic;
 
 	@:native("previouslyFocusedView")
-	public var previouslyFocusedView:UIView;
+	public var previouslyFocusedView:Dynamic;
 
 	@:native("nextFocusedView")
-	public var nextFocusedView:UIView;
+	public var nextFocusedView:Dynamic;
 
 	@:native("focusHeading")
-	public var focusHeading:UIFocusHeading;
+	public var focusHeading:Dynamic;
 
 
 }

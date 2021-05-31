@@ -12,13 +12,13 @@ extern class UIDropInteraction{
 	overload public static function autorelease():UIDropInteraction;
 
 	@:native("initWithDelegate")
-	overload public function initWithDelegate(delegate:Dynamic):UIDropInteraction;
+	overload public function initWithDelegate(delegate:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIDropInteraction;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIDropInteraction;
+	overload public static function new():Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

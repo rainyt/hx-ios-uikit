@@ -13,10 +13,10 @@ extern class UICollectionViewFlowLayout{
 	overload public static function autorelease():UICollectionViewFlowLayout;
 
 	@:native("minimumLineSpacing")
-	public var minimumLineSpacing:CGFloat;
+	public var minimumLineSpacing:Dynamic;
 
 	@:native("minimumInteritemSpacing")
-	public var minimumInteritemSpacing:CGFloat;
+	public var minimumInteritemSpacing:Dynamic;
 
 	@:native("itemSize")
 	public var itemSize:CGSize;
@@ -25,7 +25,7 @@ extern class UICollectionViewFlowLayout{
 	public var estimatedItemSize:CGSize;
 
 	@:native("scrollDirection")
-	public var scrollDirection:UICollectionViewScrollDirection;
+	public var scrollDirection:Dynamic;
 
 	@:native("headerReferenceSize")
 	public var headerReferenceSize:CGSize;
@@ -34,10 +34,10 @@ extern class UICollectionViewFlowLayout{
 	public var footerReferenceSize:CGSize;
 
 	@:native("sectionInset")
-	public var sectionInset:UIEdgeInsets;
+	public var sectionInset:Dynamic;
 
 	@:native("sectionInsetReference")
-	public var sectionInsetReference:UICollectionViewFlowLayoutSectionInsetReference;
+	public var sectionInsetReference:Dynamic;
 
 	@:native("sectionHeadersPinToVisibleBounds")
 	public var sectionHeadersPinToVisibleBounds:Bool;

@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 @:objc
 @:native("UISearchController")
 @:include("UIKit/UIKit.h")
@@ -14,13 +13,13 @@ extern class UISearchController{
 	overload public static function autorelease():UISearchController;
 
 	@:native("initWithSearchResultsController")
-	overload public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
+	overload public function initWithSearchResultsController(searchResultsController:Dynamic):Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UISearchController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UISearchController;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("searchResultsUpdater")
 	public var searchResultsUpdater:Dynamic;
@@ -41,10 +40,10 @@ extern class UISearchController{
 	public var hidesNavigationBarDuringPresentation:Bool;
 
 	@:native("searchResultsController")
-	public var searchResultsController:UIViewController;
+	public var searchResultsController:Dynamic;
 
 	@:native("searchBar")
-	public var searchBar:UISearchBar;
+	public var searchBar:Dynamic;
 
 	@:native("automaticallyShowsSearchResultsController")
 	public var automaticallyShowsSearchResultsController:Bool;
@@ -62,7 +61,7 @@ extern class UISearchController{
 	public var searchSuggestions:Dynamic;
 
 	@:native("searchControllerObservedScrollView")
-	public var searchControllerObservedScrollView:UIScrollView;
+	public var searchControllerObservedScrollView:Dynamic;
 
 
 }

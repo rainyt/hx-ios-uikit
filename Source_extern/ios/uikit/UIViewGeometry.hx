@@ -32,7 +32,7 @@ extern class UIViewGeometry{
 	public var transform3D:CATransform3D;
 
 	@:native("contentScaleFactor")
-	public var contentScaleFactor:CGFloat;
+	public var contentScaleFactor:Dynamic;
 
 	@:native("multipleTouchEnabled")
 	public var multipleTouchEnabled:Bool;
@@ -41,28 +41,28 @@ extern class UIViewGeometry{
 	public var exclusiveTouch:Bool;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest(point:CGPoint, withEvent:UIEvent):UIView;
+	overload public function hitTest(point:CGPoint, withEvent:Dynamic):Dynamic;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside(point:CGPoint, withEvent:UIEvent):Bool;
+	overload public function pointInside(point:CGPoint, withEvent:Dynamic):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint(point:CGPoint, toView:UIView):CGPoint;
+	overload public function convertPoint(point:CGPoint, toView:Dynamic):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint(point:CGPoint, fromView:UIView):CGPoint;
+	overload public function convertPoint(point:CGPoint, fromView:Dynamic):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect(rect:CGRect, toView:UIView):CGRect;
+	overload public function convertRect(rect:CGRect, toView:Dynamic):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect(rect:CGRect, fromView:UIView):CGRect;
+	overload public function convertRect(rect:CGRect, fromView:Dynamic):CGRect;
 
 	@:native("autoresizesSubviews")
 	public var autoresizesSubviews:Bool;
 
 	@:native("autoresizingMask")
-	public var autoresizingMask:UIViewAutoresizing;
+	public var autoresizingMask:Dynamic;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;

@@ -12,16 +12,16 @@ extern class UICollectionViewCompositionalLayoutConfiguration{
 	overload public static function autorelease():UICollectionViewCompositionalLayoutConfiguration;
 
 	@:native("scrollDirection")
-	public var scrollDirection:UICollectionViewScrollDirection;
+	public var scrollDirection:Dynamic;
 
 	@:native("interSectionSpacing")
-	public var interSectionSpacing:CGFloat;
+	public var interSectionSpacing:Dynamic;
 
 	@:native("boundarySupplementaryItems")
 	public var boundarySupplementaryItems:Dynamic;
 
 	@:native("contentInsetsReference")
-	public var contentInsetsReference:UIContentInsetsReference;
+	public var contentInsetsReference:Dynamic;
 
 
 }

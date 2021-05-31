@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 import cpp.objc.NSData;
 @:objc
 @:native("NSDataAsset")
@@ -15,13 +14,13 @@ extern class NSDataAsset{
 	overload public static function autorelease():NSDataAsset;
 
 	@:native("init")
-	overload public function init():NSDataAsset;
+	overload public function init():Dynamic;
 
 	@:native("initWithName")
-	overload public function initWithName(name:NSString):NSDataAsset;
+	overload public function initWithName(name:NSString):Dynamic;
 
 	@:native("initWithName:bundle")
-	overload public function initWithName(name:NSString, bundle:NSBundle):NSDataAsset;
+	overload public function initWithName(name:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("name")
 	public var name:NSString;

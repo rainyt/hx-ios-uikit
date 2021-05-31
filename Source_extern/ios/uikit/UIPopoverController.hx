@@ -14,16 +14,16 @@ extern class UIPopoverController{
 	overload public static function autorelease():UIPopoverController;
 
 	@:native("initWithContentViewController")
-	overload public function initWithContentViewController(viewController:UIViewController):UIPopoverController;
+	overload public function initWithContentViewController(viewController:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("contentViewController")
-	public var contentViewController:UIViewController;
+	public var contentViewController:Dynamic;
 
 	@:native("setContentViewController:animated")
-	overload public function setContentViewController(viewController:UIViewController, animated:Bool):Void;
+	overload public function setContentViewController(viewController:Dynamic, animated:Bool):Void;
 
 	@:native("popoverContentSize")
 	public var popoverContentSize:CGSize;
@@ -35,28 +35,28 @@ extern class UIPopoverController{
 	public var popoverVisible:Bool;
 
 	@:native("popoverArrowDirection")
-	public var popoverArrowDirection:UIPopoverArrowDirection;
+	public var popoverArrowDirection:Dynamic;
 
 	@:native("passthroughViews")
 	public var passthroughViews:Dynamic;
 
 	@:native("presentPopoverFromRect:inView:permittedArrowDirections:animated")
-	overload public function presentPopoverFromRect(rect:CGRect, inView:UIView, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
+	overload public function presentPopoverFromRect(rect:CGRect, inView:Dynamic, permittedArrowDirections:Dynamic, animated:Bool):Void;
 
 	@:native("presentPopoverFromBarButtonItem:permittedArrowDirections:animated")
-	overload public function presentPopoverFromBarButtonItem(item:UIBarButtonItem, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
+	overload public function presentPopoverFromBarButtonItem(item:Dynamic, permittedArrowDirections:Dynamic, animated:Bool):Void;
 
 	@:native("dismissPopoverAnimated")
 	overload public function dismissPopoverAnimated(animated:Bool):Void;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("popoverLayoutMargins")
-	public var popoverLayoutMargins:UIEdgeInsets;
+	public var popoverLayoutMargins:Dynamic;
 
 	@:native("popoverBackgroundViewClass")
-	public var popoverBackgroundViewClass:Class;
+	public var popoverBackgroundViewClass:Dynamic;
 
 
 }

@@ -12,10 +12,10 @@ extern class UICollectionViewFocusUpdateContext{
 	overload public static function autorelease():UICollectionViewFocusUpdateContext;
 
 	@:native("previouslyFocusedIndexPath")
-	public var previouslyFocusedIndexPath:NSIndexPath;
+	public var previouslyFocusedIndexPath:Dynamic;
 
 	@:native("nextFocusedIndexPath")
-	public var nextFocusedIndexPath:NSIndexPath;
+	public var nextFocusedIndexPath:Dynamic;
 
 
 }

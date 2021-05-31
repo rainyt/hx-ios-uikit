@@ -14,22 +14,22 @@ extern class UITextDragPreviewRenderer{
 	overload public static function autorelease():UITextDragPreviewRenderer;
 
 	@:native("initWithLayoutManager:range")
-	overload public function initWithLayoutManager(layoutManager:NSLayoutManager, range:NSRange):UITextDragPreviewRenderer;
+	overload public function initWithLayoutManager(layoutManager:Dynamic, range:Dynamic):Dynamic;
 
 	@:native("initWithLayoutManager:range:unifyRects")
-	overload public function initWithLayoutManager(layoutManager:NSLayoutManager, range:NSRange, unifyRects:Bool):UITextDragPreviewRenderer;
+	overload public function initWithLayoutManager(layoutManager:Dynamic, range:Dynamic, unifyRects:Bool):Dynamic;
 
 	@:native("new")
-	overload public static function new():UITextDragPreviewRenderer;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UITextDragPreviewRenderer;
+	overload public function init():Dynamic;
 
 	@:native("layoutManager")
-	public var layoutManager:NSLayoutManager;
+	public var layoutManager:Dynamic;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("firstLineRect")
 	public var firstLineRect:CGRect;
@@ -41,7 +41,7 @@ extern class UITextDragPreviewRenderer{
 	public var lastLineRect:CGRect;
 
 	@:native("adjustFirstLineRect:bodyRect:lastLineRect:textOrigin")
-	overload public function adjustFirstLineRect(firstLineRect:inoutCGRect, bodyRect:inoutCGRect, lastLineRect:inoutCGRect, textOrigin:CGPoint):Void;
+	overload public function adjustFirstLineRect(firstLineRect:Dynamic, bodyRect:Dynamic, lastLineRect:Dynamic, textOrigin:CGPoint):Void;
 
 
 }

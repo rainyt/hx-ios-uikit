@@ -12,25 +12,25 @@ extern class NSCollectionLayoutItem{
 	overload public static function autorelease():NSCollectionLayoutItem;
 
 	@:native("itemWithLayoutSize")
-	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutItem;
+	overload public static function itemWithLayoutSize(layoutSize:Dynamic):Dynamic;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutItem;
+	overload public static function itemWithLayoutSize(layoutSize:Dynamic, supplementaryItems:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():NSCollectionLayoutItem;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():NSCollectionLayoutItem;
+	overload public static function new():Dynamic;
 
 	@:native("contentInsets")
-	public var contentInsets:NSDirectionalEdgeInsets;
+	public var contentInsets:Dynamic;
 
 	@:native("edgeSpacing")
-	public var edgeSpacing:NSCollectionLayoutEdgeSpacing;
+	public var edgeSpacing:Dynamic;
 
 	@:native("layoutSize")
-	public var layoutSize:NSCollectionLayoutSize;
+	public var layoutSize:Dynamic;
 
 	@:native("supplementaryItems")
 	public var supplementaryItems:Dynamic;

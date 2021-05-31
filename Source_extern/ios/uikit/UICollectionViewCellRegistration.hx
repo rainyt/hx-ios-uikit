@@ -12,19 +12,19 @@ extern class UICollectionViewCellRegistration{
 	overload public static function autorelease():UICollectionViewCellRegistration;
 
 	@:native("registrationWithCellClass:configurationHandler")
-	overload public static function registrationWithCellClass(cellClass:Class, configurationHandler:UICollectionViewCellRegistrationConfigurationHandler):UICollectionViewCellRegistration;
+	overload public static function registrationWithCellClass(cellClass:Dynamic, configurationHandler:Dynamic):Dynamic;
 
 	@:native("registrationWithCellNib:configurationHandler")
-	overload public static function registrationWithCellNib(cellNib:UINib, configurationHandler:UICollectionViewCellRegistrationConfigurationHandler):UICollectionViewCellRegistration;
+	overload public static function registrationWithCellNib(cellNib:Dynamic, configurationHandler:Dynamic):Dynamic;
 
 	@:native("cellClass")
-	public var cellClass:Class;
+	public var cellClass:Dynamic;
 
 	@:native("cellNib")
-	public var cellNib:UINib;
+	public var cellNib:Dynamic;
 
 	@:native("configurationHandler")
-	public var configurationHandler:UICollectionViewCellRegistrationConfigurationHandler;
+	public var configurationHandler:Dynamic;
 
 
 }

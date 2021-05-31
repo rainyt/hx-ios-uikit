@@ -13,61 +13,61 @@ extern class NSParagraphStyle{
 	overload public static function autorelease():NSParagraphStyle;
 
 	@:native("defaultParagraphStyle")
-	public var defaultParagraphStyle:NSParagraphStyle;
+	public var defaultParagraphStyle:Dynamic;
 
 	@:native("defaultWritingDirectionForLanguage")
-	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):NSWritingDirection;
+	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):Dynamic;
 
 	@:native("lineSpacing")
-	public var lineSpacing:CGFloat;
+	public var lineSpacing:Dynamic;
 
 	@:native("paragraphSpacing")
-	public var paragraphSpacing:CGFloat;
+	public var paragraphSpacing:Dynamic;
 
 	@:native("alignment")
-	public var alignment:NSTextAlignment;
+	public var alignment:Dynamic;
 
 	@:native("headIndent")
-	public var headIndent:CGFloat;
+	public var headIndent:Dynamic;
 
 	@:native("tailIndent")
-	public var tailIndent:CGFloat;
+	public var tailIndent:Dynamic;
 
 	@:native("firstLineHeadIndent")
-	public var firstLineHeadIndent:CGFloat;
+	public var firstLineHeadIndent:Dynamic;
 
 	@:native("minimumLineHeight")
-	public var minimumLineHeight:CGFloat;
+	public var minimumLineHeight:Dynamic;
 
 	@:native("maximumLineHeight")
-	public var maximumLineHeight:CGFloat;
+	public var maximumLineHeight:Dynamic;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:NSLineBreakMode;
+	public var lineBreakMode:Dynamic;
 
 	@:native("baseWritingDirection")
-	public var baseWritingDirection:NSWritingDirection;
+	public var baseWritingDirection:Dynamic;
 
 	@:native("lineHeightMultiple")
-	public var lineHeightMultiple:CGFloat;
+	public var lineHeightMultiple:Dynamic;
 
 	@:native("paragraphSpacingBefore")
-	public var paragraphSpacingBefore:CGFloat;
+	public var paragraphSpacingBefore:Dynamic;
 
 	@:native("hyphenationFactor")
-	public var hyphenationFactor:float;
+	public var hyphenationFactor:Dynamic;
 
 	@:native("tabStops")
 	public var tabStops:Dynamic;
 
 	@:native("defaultTabInterval")
-	public var defaultTabInterval:CGFloat;
+	public var defaultTabInterval:Dynamic;
 
 	@:native("allowsDefaultTighteningForTruncation")
 	public var allowsDefaultTighteningForTruncation:Bool;
 
 	@:native("lineBreakStrategy")
-	public var lineBreakStrategy:NSLineBreakStrategy;
+	public var lineBreakStrategy:Dynamic;
 
 
 }

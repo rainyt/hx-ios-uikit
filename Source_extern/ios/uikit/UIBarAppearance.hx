@@ -12,22 +12,22 @@ extern class UIBarAppearance{
 	overload public static function autorelease():UIBarAppearance;
 
 	@:native("init")
-	overload public function init():UIBarAppearance;
+	overload public function init():Dynamic;
 
 	@:native("initWithIdiom")
-	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIBarAppearance;
+	overload public function initWithIdiom(idiom:Dynamic):Dynamic;
 
 	@:native("idiom")
-	public var idiom:UIUserInterfaceIdiom;
+	public var idiom:Dynamic;
 
 	@:native("initWithBarAppearance")
-	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
+	overload public function initWithBarAppearance(barAppearance:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIBarAppearance;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("copy")
-	overload public function copy():UIBarAppearance;
+	overload public function copy():Dynamic;
 
 	@:native("configureWithDefaultBackground")
 	overload public function configureWithDefaultBackground():Void;
@@ -39,22 +39,22 @@ extern class UIBarAppearance{
 	overload public function configureWithTransparentBackground():Void;
 
 	@:native("backgroundEffect")
-	public var backgroundEffect:UIBlurEffect;
+	public var backgroundEffect:Dynamic;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("backgroundImage")
-	public var backgroundImage:UIImage;
+	public var backgroundImage:Dynamic;
 
 	@:native("backgroundImageContentMode")
-	public var backgroundImageContentMode:UIViewContentMode;
+	public var backgroundImageContentMode:Dynamic;
 
 	@:native("shadowColor")
-	public var shadowColor:UIColor;
+	public var shadowColor:Dynamic;
 
 	@:native("shadowImage")
-	public var shadowImage:UIImage;
+	public var shadowImage:Dynamic;
 
 
 }

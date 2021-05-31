@@ -21,7 +21,7 @@ extern class UIAccessibilityAction{
 	overload public function accessibilityDecrement():Void;
 
 	@:native("accessibilityScroll")
-	overload public function accessibilityScroll(direction:UIAccessibilityScrollDirection):Bool;
+	overload public function accessibilityScroll(direction:Dynamic):Bool;
 
 	@:native("accessibilityPerformEscape")
 	overload public function accessibilityPerformEscape():Bool;

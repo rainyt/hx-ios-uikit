@@ -25,10 +25,10 @@ extern class UIViewRendering{
 	public var clipsToBounds:Bool;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("alpha")
-	public var alpha:CGFloat;
+	public var alpha:Dynamic;
 
 	@:native("opaque")
 	public var opaque:Bool;
@@ -40,19 +40,19 @@ extern class UIViewRendering{
 	public var hidden:Bool;
 
 	@:native("contentMode")
-	public var contentMode:UIViewContentMode;
+	public var contentMode:Dynamic;
 
 	@:native("contentStretch")
 	public var contentStretch:CGRect;
 
 	@:native("maskView")
-	public var maskView:UIView;
+	public var maskView:Dynamic;
 
 	@:native("tintColor")
-	public var tintColor:UIColor;
+	public var tintColor:Dynamic;
 
 	@:native("tintAdjustmentMode")
-	public var tintAdjustmentMode:UIViewTintAdjustmentMode;
+	public var tintAdjustmentMode:Dynamic;
 
 	@:native("tintColorDidChange")
 	overload public function tintColorDidChange():Void;

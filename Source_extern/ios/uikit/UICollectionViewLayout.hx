@@ -13,13 +13,13 @@ extern class UICollectionViewLayout{
 	overload public static function autorelease():UICollectionViewLayout;
 
 	@:native("init")
-	overload public function init():UICollectionViewLayout;
+	overload public function init():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICollectionViewLayout;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("collectionView")
-	public var collectionView:UICollectionView;
+	public var collectionView:Dynamic;
 
 	@:native("invalidateLayout")
 	overload public function invalidateLayout():Void;
@@ -28,10 +28,10 @@ extern class UICollectionViewLayout{
 	overload public function invalidateLayoutWithContext(context:Dynamic):Void;
 
 	@:native("registerClass:forDecorationViewOfKind")
-	overload public function registerClass(viewClass:Class, forDecorationViewOfKind:NSString):Void;
+	overload public function registerClass(viewClass:Dynamic, forDecorationViewOfKind:NSString):Void;
 
 	@:native("registerNib:forDecorationViewOfKind")
-	overload public function registerNib(nib:UINib, forDecorationViewOfKind:NSString):Void;
+	overload public function registerNib(nib:Dynamic, forDecorationViewOfKind:NSString):Void;
 
 
 }

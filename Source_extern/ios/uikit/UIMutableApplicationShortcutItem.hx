@@ -22,7 +22,7 @@ extern class UIMutableApplicationShortcutItem{
 	public var localizedSubtitle:NSString;
 
 	@:native("icon")
-	public var icon:UIApplicationShortcutIcon;
+	public var icon:Dynamic;
 
 	@:native("userInfo")
 	public var userInfo:Dynamic;

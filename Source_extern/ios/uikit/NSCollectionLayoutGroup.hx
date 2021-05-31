@@ -13,31 +13,31 @@ extern class NSCollectionLayoutGroup{
 	overload public static function autorelease():NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitem:count")
-	overload public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):NSCollectionLayoutGroup;
+	overload public static function horizontalGroupWithLayoutSize(layoutSize:Dynamic, subitem:Dynamic, count:Dynamic):Dynamic;
 
 	@:native("horizontalGroupWithLayoutSize:subitems")
-	overload public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
+	overload public static function horizontalGroupWithLayoutSize(layoutSize:Dynamic, subitems:Dynamic):Dynamic;
 
 	@:native("verticalGroupWithLayoutSize:subitem:count")
-	overload public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):NSCollectionLayoutGroup;
+	overload public static function verticalGroupWithLayoutSize(layoutSize:Dynamic, subitem:Dynamic, count:Dynamic):Dynamic;
 
 	@:native("verticalGroupWithLayoutSize:subitems")
-	overload public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
+	overload public static function verticalGroupWithLayoutSize(layoutSize:Dynamic, subitems:Dynamic):Dynamic;
 
 	@:native("customGroupWithLayoutSize:itemProvider")
-	overload public static function customGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, itemProvider:Dynamic):NSCollectionLayoutGroup;
+	overload public static function customGroupWithLayoutSize(layoutSize:Dynamic, itemProvider:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():NSCollectionLayoutGroup;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():NSCollectionLayoutGroup;
+	overload public static function new():Dynamic;
 
 	@:native("supplementaryItems")
 	public var supplementaryItems:Dynamic;
 
 	@:native("interItemSpacing")
-	public var interItemSpacing:NSCollectionLayoutSpacing;
+	public var interItemSpacing:Dynamic;
 
 	@:native("subitems")
 	public var subitems:Dynamic;

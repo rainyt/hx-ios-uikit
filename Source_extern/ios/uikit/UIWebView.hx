@@ -17,19 +17,19 @@ extern class UIWebView{
 	public var delegate:Dynamic;
 
 	@:native("scrollView")
-	public var scrollView:UIScrollView;
+	public var scrollView:Dynamic;
 
 	@:native("loadRequest")
-	overload public function loadRequest(request:NSURLRequest):Void;
+	overload public function loadRequest(request:Dynamic):Void;
 
 	@:native("loadHTMLString:baseURL")
-	overload public function loadHTMLString(string:NSString, baseURL:NSURL):Void;
+	overload public function loadHTMLString(string:NSString, baseURL:Dynamic):Void;
 
 	@:native("loadData:MIMEType:textEncodingName:baseURL")
-	overload public function loadData(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:NSURL):Void;
+	overload public function loadData(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:Dynamic):Void;
 
 	@:native("request")
-	public var request:NSURLRequest;
+	public var request:Dynamic;
 
 	@:native("reload")
 	overload public function reload():Void;
@@ -62,7 +62,7 @@ extern class UIWebView{
 	public var detectsPhoneNumbers:Bool;
 
 	@:native("dataDetectorTypes")
-	public var dataDetectorTypes:UIDataDetectorTypes;
+	public var dataDetectorTypes:Dynamic;
 
 	@:native("allowsInlineMediaPlayback")
 	public var allowsInlineMediaPlayback:Bool;
@@ -80,19 +80,19 @@ extern class UIWebView{
 	public var keyboardDisplayRequiresUserAction:Bool;
 
 	@:native("paginationMode")
-	public var paginationMode:UIWebPaginationMode;
+	public var paginationMode:Dynamic;
 
 	@:native("paginationBreakingMode")
-	public var paginationBreakingMode:UIWebPaginationBreakingMode;
+	public var paginationBreakingMode:Dynamic;
 
 	@:native("pageLength")
-	public var pageLength:CGFloat;
+	public var pageLength:Dynamic;
 
 	@:native("gapBetweenPages")
-	public var gapBetweenPages:CGFloat;
+	public var gapBetweenPages:Dynamic;
 
 	@:native("pageCount")
-	public var pageCount:NSUInteger;
+	public var pageCount:Dynamic;
 
 	@:native("allowsPictureInPictureMediaPlayback")
 	public var allowsPictureInPictureMediaPlayback:Bool;

@@ -12,34 +12,34 @@ extern class UIFontMetrics{
 	overload public static function autorelease():UIFontMetrics;
 
 	@:native("defaultMetrics")
-	public var defaultMetrics:UIFontMetrics;
+	public var defaultMetrics:Dynamic;
 
 	@:native("metricsForTextStyle")
-	overload public static function metricsForTextStyle(textStyle:UIFontTextStyle):UIFontMetrics;
+	overload public static function metricsForTextStyle(textStyle:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIFontMetrics;
+	overload public function init():Dynamic;
 
 	@:native("initForTextStyle")
-	overload public function initForTextStyle(textStyle:UIFontTextStyle):UIFontMetrics;
+	overload public function initForTextStyle(textStyle:Dynamic):Dynamic;
 
 	@:native("scaledFontForFont")
-	overload public function scaledFontForFont(font:UIFont):UIFont;
+	overload public function scaledFontForFont(font:Dynamic):Dynamic;
 
 	@:native("scaledFontForFont:maximumPointSize")
-	overload public function scaledFontForFont(font:UIFont, maximumPointSize:CGFloat):UIFont;
+	overload public function scaledFontForFont(font:Dynamic, maximumPointSize:Dynamic):Dynamic;
 
 	@:native("scaledFontForFont:compatibleWithTraitCollection")
-	overload public function scaledFontForFont(font:UIFont, compatibleWithTraitCollection:UITraitCollection):UIFont;
+	overload public function scaledFontForFont(font:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
 
 	@:native("scaledFontForFont:maximumPointSize:compatibleWithTraitCollection")
-	overload public function scaledFontForFont(font:UIFont, maximumPointSize:CGFloat, compatibleWithTraitCollection:UITraitCollection):UIFont;
+	overload public function scaledFontForFont(font:Dynamic, maximumPointSize:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
 
 	@:native("scaledValueForValue")
-	overload public function scaledValueForValue(value:CGFloat):CGFloat;
+	overload public function scaledValueForValue(value:Dynamic):Dynamic;
 
 	@:native("scaledValueForValue:compatibleWithTraitCollection")
-	overload public function scaledValueForValue(value:CGFloat, compatibleWithTraitCollection:UITraitCollection):CGFloat;
+	overload public function scaledValueForValue(value:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
 
 
 }

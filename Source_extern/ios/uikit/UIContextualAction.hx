@@ -13,22 +13,22 @@ extern class UIContextualAction{
 	overload public static function autorelease():UIContextualAction;
 
 	@:native("contextualActionWithStyle:title:handler")
-	overload public static function contextualActionWithStyle(style:UIContextualActionStyle, title:NSString, handler:UIContextualActionHandler):UIContextualAction;
+	overload public static function contextualActionWithStyle(style:Dynamic, title:NSString, handler:Dynamic):Dynamic;
 
 	@:native("style")
-	public var style:UIContextualActionStyle;
+	public var style:Dynamic;
 
 	@:native("handler")
-	public var handler:UIContextualActionHandler;
+	public var handler:Dynamic;
 
 	@:native("title")
 	public var title:NSString;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 
 }

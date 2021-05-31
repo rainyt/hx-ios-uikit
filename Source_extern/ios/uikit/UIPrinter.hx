@@ -13,10 +13,10 @@ extern class UIPrinter{
 	overload public static function autorelease():UIPrinter;
 
 	@:native("printerWithURL")
-	overload public static function printerWithURL(url:NSURL):UIPrinter;
+	overload public static function printerWithURL(url:Dynamic):Dynamic;
 
 	@:native("URL")
-	public var URL:NSURL;
+	public var URL:Dynamic;
 
 	@:native("displayName")
 	public var displayName:NSString;
@@ -25,7 +25,7 @@ extern class UIPrinter{
 	public var displayLocation:NSString;
 
 	@:native("supportedJobTypes")
-	public var supportedJobTypes:UIPrinterJobTypes;
+	public var supportedJobTypes:Dynamic;
 
 	@:native("makeAndModel")
 	public var makeAndModel:NSString;

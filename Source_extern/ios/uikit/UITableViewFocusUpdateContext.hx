@@ -12,10 +12,10 @@ extern class UITableViewFocusUpdateContext{
 	overload public static function autorelease():UITableViewFocusUpdateContext;
 
 	@:native("previouslyFocusedIndexPath")
-	public var previouslyFocusedIndexPath:NSIndexPath;
+	public var previouslyFocusedIndexPath:Dynamic;
 
 	@:native("nextFocusedIndexPath")
-	public var nextFocusedIndexPath:NSIndexPath;
+	public var nextFocusedIndexPath:Dynamic;
 
 
 }

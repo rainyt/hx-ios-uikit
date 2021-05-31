@@ -13,10 +13,10 @@ extern class UIGraphicsRendererFormat{
 	overload public static function autorelease():UIGraphicsRendererFormat;
 
 	@:native("defaultFormat")
-	overload public static function defaultFormat():UIGraphicsRendererFormat;
+	overload public static function defaultFormat():Dynamic;
 
 	@:native("preferredFormat")
-	overload public static function preferredFormat():UIGraphicsRendererFormat;
+	overload public static function preferredFormat():Dynamic;
 
 	@:native("bounds")
 	public var bounds:CGRect;

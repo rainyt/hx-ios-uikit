@@ -14,13 +14,13 @@ extern class UIControl{
 	overload public static function autorelease():UIControl;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIControl;
+	overload public function initWithFrame(frame:CGRect):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIControl;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame(frame:CGRect, primaryAction:UIAction):UIControl;
+	overload public function initWithFrame(frame:CGRect, primaryAction:Dynamic):Dynamic;
 
 	@:native("enabled")
 	public var enabled:Bool;
@@ -32,16 +32,16 @@ extern class UIControl{
 	public var highlighted:Bool;
 
 	@:native("contentVerticalAlignment")
-	public var contentVerticalAlignment:UIControlContentVerticalAlignment;
+	public var contentVerticalAlignment:Dynamic;
 
 	@:native("contentHorizontalAlignment")
-	public var contentHorizontalAlignment:UIControlContentHorizontalAlignment;
+	public var contentHorizontalAlignment:Dynamic;
 
 	@:native("effectiveContentHorizontalAlignment")
-	public var effectiveContentHorizontalAlignment:UIControlContentHorizontalAlignment;
+	public var effectiveContentHorizontalAlignment:Dynamic;
 
 	@:native("state")
-	public var state:UIControlState;
+	public var state:Dynamic;
 
 	@:native("tracking")
 	public var tracking:Bool;
@@ -50,55 +50,55 @@ extern class UIControl{
 	public var touchInside:Bool;
 
 	@:native("beginTrackingWithTouch:withEvent")
-	overload public function beginTrackingWithTouch(touch:UITouch, withEvent:UIEvent):Bool;
+	overload public function beginTrackingWithTouch(touch:Dynamic, withEvent:Dynamic):Bool;
 
 	@:native("continueTrackingWithTouch:withEvent")
-	overload public function continueTrackingWithTouch(touch:UITouch, withEvent:UIEvent):Bool;
+	overload public function continueTrackingWithTouch(touch:Dynamic, withEvent:Dynamic):Bool;
 
 	@:native("endTrackingWithTouch:withEvent")
-	overload public function endTrackingWithTouch(touch:UITouch, withEvent:UIEvent):Void;
+	overload public function endTrackingWithTouch(touch:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("cancelTrackingWithEvent")
-	overload public function cancelTrackingWithEvent(event:UIEvent):Void;
+	overload public function cancelTrackingWithEvent(event:Dynamic):Void;
 
 	@:native("addTarget:action:forControlEvents")
-	overload public function addTarget(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
+	overload public function addTarget(target:Dynamic, action:String, forControlEvents:Dynamic):Void;
 
 	@:native("removeTarget:action:forControlEvents")
-	overload public function removeTarget(target:Dynamic, action:SEL, forControlEvents:UIControlEvents):Void;
+	overload public function removeTarget(target:Dynamic, action:Dynamic, forControlEvents:Dynamic):Void;
 
 	@:native("addAction:forControlEvents")
-	overload public function addAction(action:UIAction, forControlEvents:UIControlEvents):Void;
+	overload public function addAction(action:Dynamic, forControlEvents:Dynamic):Void;
 
 	@:native("removeAction:forControlEvents")
-	overload public function removeAction(action:UIAction, forControlEvents:UIControlEvents):Void;
+	overload public function removeAction(action:Dynamic, forControlEvents:Dynamic):Void;
 
 	@:native("removeActionForIdentifier:forControlEvents")
-	overload public function removeActionForIdentifier(actionIdentifier:UIActionIdentifier, forControlEvents:UIControlEvents):Void;
+	overload public function removeActionForIdentifier(actionIdentifier:Dynamic, forControlEvents:Dynamic):Void;
 
 	@:native("allTargets")
-	public var allTargets:NSSet;
+	public var allTargets:Dynamic;
 
 	@:native("allControlEvents")
-	public var allControlEvents:UIControlEvents;
+	public var allControlEvents:Dynamic;
 
 	@:native("actionsForTarget:forControlEvent")
-	overload public function actionsForTarget(target:Dynamic, forControlEvent:UIControlEvents):Dynamic;
+	overload public function actionsForTarget(target:Dynamic, forControlEvent:Dynamic):Dynamic;
 
 	@:native("enumerateEventHandlers")
 	overload public function enumerateEventHandlers(iterator:Dynamic):Void;
 
 	@:native("sendAction:to:forEvent")
-	overload public function sendAction(action:String, to:Dynamic, forEvent:UIEvent):Void;
+	overload public function sendAction(action:String, to:Dynamic, forEvent:Dynamic):Void;
 
 	@:native("sendAction")
-	overload public function sendAction(action:UIAction):Void;
+	overload public function sendAction(action:Dynamic):Void;
 
 	@:native("sendActionsForControlEvents")
-	overload public function sendActionsForControlEvents(controlEvents:UIControlEvents):Void;
+	overload public function sendActionsForControlEvents(controlEvents:Dynamic):Void;
 
 	@:native("contextMenuInteraction")
-	public var contextMenuInteraction:UIContextMenuInteraction;
+	public var contextMenuInteraction:Dynamic;
 
 	@:native("contextMenuInteractionEnabled")
 	public var contextMenuInteractionEnabled:Bool;
@@ -107,7 +107,7 @@ extern class UIControl{
 	public var showsMenuAsPrimaryAction:Bool;
 
 	@:native("menuAttachmentPointForConfiguration")
-	overload public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration):CGPoint;
+	overload public function menuAttachmentPointForConfiguration(configuration:Dynamic):CGPoint;
 
 
 }

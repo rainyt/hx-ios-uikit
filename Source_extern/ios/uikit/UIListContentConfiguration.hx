@@ -13,88 +13,88 @@ extern class UIListContentConfiguration{
 	overload public static function autorelease():UIListContentConfiguration;
 
 	@:native("cellConfiguration")
-	overload public static function cellConfiguration():UIListContentConfiguration;
+	overload public static function cellConfiguration():Dynamic;
 
 	@:native("subtitleCellConfiguration")
-	overload public static function subtitleCellConfiguration():UIListContentConfiguration;
+	overload public static function subtitleCellConfiguration():Dynamic;
 
 	@:native("valueCellConfiguration")
-	overload public static function valueCellConfiguration():UIListContentConfiguration;
+	overload public static function valueCellConfiguration():Dynamic;
 
 	@:native("plainHeaderConfiguration")
-	overload public static function plainHeaderConfiguration():UIListContentConfiguration;
+	overload public static function plainHeaderConfiguration():Dynamic;
 
 	@:native("plainFooterConfiguration")
-	overload public static function plainFooterConfiguration():UIListContentConfiguration;
+	overload public static function plainFooterConfiguration():Dynamic;
 
 	@:native("groupedHeaderConfiguration")
-	overload public static function groupedHeaderConfiguration():UIListContentConfiguration;
+	overload public static function groupedHeaderConfiguration():Dynamic;
 
 	@:native("groupedFooterConfiguration")
-	overload public static function groupedFooterConfiguration():UIListContentConfiguration;
+	overload public static function groupedFooterConfiguration():Dynamic;
 
 	@:native("sidebarCellConfiguration")
-	overload public static function sidebarCellConfiguration():UIListContentConfiguration;
+	overload public static function sidebarCellConfiguration():Dynamic;
 
 	@:native("sidebarSubtitleCellConfiguration")
-	overload public static function sidebarSubtitleCellConfiguration():UIListContentConfiguration;
+	overload public static function sidebarSubtitleCellConfiguration():Dynamic;
 
 	@:native("accompaniedSidebarCellConfiguration")
-	overload public static function accompaniedSidebarCellConfiguration():UIListContentConfiguration;
+	overload public static function accompaniedSidebarCellConfiguration():Dynamic;
 
 	@:native("accompaniedSidebarSubtitleCellConfiguration")
-	overload public static function accompaniedSidebarSubtitleCellConfiguration():UIListContentConfiguration;
+	overload public static function accompaniedSidebarSubtitleCellConfiguration():Dynamic;
 
 	@:native("sidebarHeaderConfiguration")
-	overload public static function sidebarHeaderConfiguration():UIListContentConfiguration;
+	overload public static function sidebarHeaderConfiguration():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIListContentConfiguration;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UIListContentConfiguration;
+	overload public function init():Dynamic;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("imageProperties")
-	public var imageProperties:UIListContentImageProperties;
+	public var imageProperties:Dynamic;
 
 	@:native("text")
 	public var text:NSString;
 
 	@:native("attributedText")
-	public var attributedText:NSAttributedString;
+	public var attributedText:Dynamic;
 
 	@:native("textProperties")
-	public var textProperties:UIListContentTextProperties;
+	public var textProperties:Dynamic;
 
 	@:native("secondaryText")
 	public var secondaryText:NSString;
 
 	@:native("secondaryAttributedText")
-	public var secondaryAttributedText:NSAttributedString;
+	public var secondaryAttributedText:Dynamic;
 
 	@:native("secondaryTextProperties")
-	public var secondaryTextProperties:UIListContentTextProperties;
+	public var secondaryTextProperties:Dynamic;
 
 	@:native("axesPreservingSuperviewLayoutMargins")
-	public var axesPreservingSuperviewLayoutMargins:UIAxis;
+	public var axesPreservingSuperviewLayoutMargins:Dynamic;
 
 	@:native("directionalLayoutMargins")
-	public var directionalLayoutMargins:NSDirectionalEdgeInsets;
+	public var directionalLayoutMargins:Dynamic;
 
 	@:native("prefersSideBySideTextAndSecondaryText")
 	public var prefersSideBySideTextAndSecondaryText:Bool;
 
 	@:native("imageToTextPadding")
-	public var imageToTextPadding:CGFloat;
+	public var imageToTextPadding:Dynamic;
 
 	@:native("textToSecondaryTextHorizontalPadding")
-	public var textToSecondaryTextHorizontalPadding:CGFloat;
+	public var textToSecondaryTextHorizontalPadding:Dynamic;
 
 	@:native("textToSecondaryTextVerticalPadding")
-	public var textToSecondaryTextVerticalPadding:CGFloat;
+	public var textToSecondaryTextVerticalPadding:Dynamic;
 
 
 }

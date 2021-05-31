@@ -16,7 +16,7 @@ extern class UIPointerRegionRequest{
 	public var location:CGPoint;
 
 	@:native("modifiers")
-	public var modifiers:UIKeyModifierFlags;
+	public var modifiers:Dynamic;
 
 
 }

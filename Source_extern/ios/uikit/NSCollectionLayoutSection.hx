@@ -12,25 +12,25 @@ extern class NSCollectionLayoutSection{
 	overload public static function autorelease():NSCollectionLayoutSection;
 
 	@:native("sectionWithGroup")
-	overload public static function sectionWithGroup(group:NSCollectionLayoutGroup):NSCollectionLayoutSection;
+	overload public static function sectionWithGroup(group:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():NSCollectionLayoutSection;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():NSCollectionLayoutSection;
+	overload public static function new():Dynamic;
 
 	@:native("contentInsets")
-	public var contentInsets:NSDirectionalEdgeInsets;
+	public var contentInsets:Dynamic;
 
 	@:native("interGroupSpacing")
-	public var interGroupSpacing:CGFloat;
+	public var interGroupSpacing:Dynamic;
 
 	@:native("contentInsetsReference")
-	public var contentInsetsReference:UIContentInsetsReference;
+	public var contentInsetsReference:Dynamic;
 
 	@:native("orthogonalScrollingBehavior")
-	public var orthogonalScrollingBehavior:UICollectionLayoutSectionOrthogonalScrollingBehavior;
+	public var orthogonalScrollingBehavior:Dynamic;
 
 	@:native("boundarySupplementaryItems")
 	public var boundarySupplementaryItems:Dynamic;

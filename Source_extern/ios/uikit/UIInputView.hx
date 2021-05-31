@@ -13,16 +13,16 @@ extern class UIInputView{
 	overload public static function autorelease():UIInputView;
 
 	@:native("inputViewStyle")
-	public var inputViewStyle:UIInputViewStyle;
+	public var inputViewStyle:Dynamic;
 
 	@:native("allowsSelfSizing")
 	public var allowsSelfSizing:Bool;
 
 	@:native("initWithFrame:inputViewStyle")
-	overload public function initWithFrame(frame:CGRect, inputViewStyle:UIInputViewStyle):UIInputView;
+	overload public function initWithFrame(frame:CGRect, inputViewStyle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIInputView;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 
 }

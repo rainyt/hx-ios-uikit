@@ -20,13 +20,13 @@ extern class UIMutableUserNotificationAction{
 	public var title:NSString;
 
 	@:native("behavior")
-	public var behavior:UIUserNotificationActionBehavior;
+	public var behavior:Dynamic;
 
 	@:native("parameters")
 	public var parameters:NSDictionary;
 
 	@:native("activationMode")
-	public var activationMode:UIUserNotificationActivationMode;
+	public var activationMode:Dynamic;
 
 	@:native("authenticationRequired")
 	public var authenticationRequired:Bool;

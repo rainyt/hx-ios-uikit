@@ -14,55 +14,55 @@ extern class UIAttachmentBehavior{
 	overload public static function autorelease():UIAttachmentBehavior;
 
 	@:native("initWithItem:attachedToAnchor")
-	overload public function initWithItem(item:Dynamic, attachedToAnchor:CGPoint):UIAttachmentBehavior;
+	overload public function initWithItem(item:Dynamic, attachedToAnchor:CGPoint):Dynamic;
 
 	@:native("initWithItem:offsetFromCenter:attachedToAnchor")
-	overload public function initWithItem(item:Dynamic, offsetFromCenter:UIOffset, attachedToAnchor:CGPoint):UIAttachmentBehavior;
+	overload public function initWithItem(item:Dynamic, offsetFromCenter:Dynamic, attachedToAnchor:CGPoint):Dynamic;
 
 	@:native("initWithItem:attachedToItem")
-	overload public function initWithItem(item1:Dynamic, attachedToItem:Dynamic):UIAttachmentBehavior;
+	overload public function initWithItem(item1:Dynamic, attachedToItem:Dynamic):Dynamic;
 
 	@:native("initWithItem:offsetFromCenter:attachedToItem:offsetFromCenter")
-	overload public function initWithItem(item1:Dynamic, offsetFromCenter:UIOffset, attachedToItem:Dynamic, offsetFromCenter:UIOffset):UIAttachmentBehavior;
+	overload public function initWithItem(item1:Dynamic, offsetFromCenter:Dynamic, attachedToItem:Dynamic, offsetFromCenter:Dynamic):Dynamic;
 
 	@:native("slidingAttachmentWithItem:attachedToItem:attachmentAnchor:axisOfTranslation")
-	overload public static function slidingAttachmentWithItem(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint, axisOfTranslation:CGVector):UIAttachmentBehavior;
+	overload public static function slidingAttachmentWithItem(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint, axisOfTranslation:CGVector):Dynamic;
 
 	@:native("slidingAttachmentWithItem:attachmentAnchor:axisOfTranslation")
-	overload public static function slidingAttachmentWithItem(item:Dynamic, attachmentAnchor:CGPoint, axisOfTranslation:CGVector):UIAttachmentBehavior;
+	overload public static function slidingAttachmentWithItem(item:Dynamic, attachmentAnchor:CGPoint, axisOfTranslation:CGVector):Dynamic;
 
 	@:native("limitAttachmentWithItem:offsetFromCenter:attachedToItem:offsetFromCenter")
-	overload public static function limitAttachmentWithItem(item1:Dynamic, offsetFromCenter:UIOffset, attachedToItem:Dynamic, offsetFromCenter:UIOffset):UIAttachmentBehavior;
+	overload public static function limitAttachmentWithItem(item1:Dynamic, offsetFromCenter:Dynamic, attachedToItem:Dynamic, offsetFromCenter:Dynamic):Dynamic;
 
 	@:native("fixedAttachmentWithItem:attachedToItem:attachmentAnchor")
-	overload public static function fixedAttachmentWithItem(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint):UIAttachmentBehavior;
+	overload public static function fixedAttachmentWithItem(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint):Dynamic;
 
 	@:native("pinAttachmentWithItem:attachedToItem:attachmentAnchor")
-	overload public static function pinAttachmentWithItem(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint):UIAttachmentBehavior;
+	overload public static function pinAttachmentWithItem(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint):Dynamic;
 
 	@:native("items")
 	public var items:Dynamic;
 
 	@:native("attachedBehaviorType")
-	public var attachedBehaviorType:UIAttachmentBehaviorType;
+	public var attachedBehaviorType:Dynamic;
 
 	@:native("anchorPoint")
 	public var anchorPoint:CGPoint;
 
 	@:native("length")
-	public var length:CGFloat;
+	public var length:Dynamic;
 
 	@:native("damping")
-	public var damping:CGFloat;
+	public var damping:Dynamic;
 
 	@:native("frequency")
-	public var frequency:CGFloat;
+	public var frequency:Dynamic;
 
 	@:native("frictionTorque")
-	public var frictionTorque:CGFloat;
+	public var frictionTorque:Dynamic;
 
 	@:native("attachmentRange")
-	public var attachmentRange:UIFloatRange;
+	public var attachmentRange:Dynamic;
 
 
 }

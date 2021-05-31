@@ -16,10 +16,10 @@ extern class UIViewPropertyAnimator{
 	public var timingParameters:Dynamic;
 
 	@:native("duration")
-	public var duration:NSTimeInterval;
+	public var duration:Dynamic;
 
 	@:native("delay")
-	public var delay:NSTimeInterval;
+	public var delay:Dynamic;
 
 	@:native("userInteractionEnabled")
 	public var userInteractionEnabled:Bool;
@@ -37,22 +37,22 @@ extern class UIViewPropertyAnimator{
 	public var pausesOnCompletion:Bool;
 
 	@:native("initWithDuration:timingParameters")
-	overload public function initWithDuration(duration:NSTimeInterval, timingParameters:Dynamic):UIViewPropertyAnimator;
+	overload public function initWithDuration(duration:Dynamic, timingParameters:Dynamic):Dynamic;
 
 	@:native("initWithDuration:curve:animations")
-	overload public function initWithDuration(duration:NSTimeInterval, curve:UIViewAnimationCurve, animations:Dynamic):UIViewPropertyAnimator;
+	overload public function initWithDuration(duration:Dynamic, curve:Dynamic, animations:Dynamic):Dynamic;
 
 	@:native("initWithDuration:controlPoint1:controlPoint2:animations")
-	overload public function initWithDuration(duration:NSTimeInterval, controlPoint1:CGPoint, controlPoint2:CGPoint, animations:Dynamic):UIViewPropertyAnimator;
+	overload public function initWithDuration(duration:Dynamic, controlPoint1:CGPoint, controlPoint2:CGPoint, animations:Dynamic):Dynamic;
 
 	@:native("initWithDuration:dampingRatio:animations")
-	overload public function initWithDuration(duration:NSTimeInterval, dampingRatio:CGFloat, animations:Dynamic):UIViewPropertyAnimator;
+	overload public function initWithDuration(duration:Dynamic, dampingRatio:Dynamic, animations:Dynamic):Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("addAnimations:delayFactor")
-	overload public function addAnimations(animation:Dynamic, delayFactor:CGFloat):Void;
+	overload public function addAnimations(animation:Dynamic, delayFactor:Dynamic):Void;
 
 	@:native("addAnimations")
 	overload public function addAnimations(animation:Dynamic):Void;
@@ -61,7 +61,7 @@ extern class UIViewPropertyAnimator{
 	overload public function addCompletion(completion:Dynamic):Void;
 
 	@:native("continueAnimationWithTimingParameters:durationFactor")
-	overload public function continueAnimationWithTimingParameters(parameters:Dynamic, durationFactor:CGFloat):Void;
+	overload public function continueAnimationWithTimingParameters(parameters:Dynamic, durationFactor:Dynamic):Void;
 
 
 }

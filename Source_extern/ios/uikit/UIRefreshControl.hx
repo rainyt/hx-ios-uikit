@@ -12,16 +12,16 @@ extern class UIRefreshControl{
 	overload public static function autorelease():UIRefreshControl;
 
 	@:native("init")
-	overload public function init():UIRefreshControl;
+	overload public function init():Dynamic;
 
 	@:native("refreshing")
 	public var refreshing:Bool;
 
 	@:native("tintColor")
-	public var tintColor:UIColor;
+	public var tintColor:Dynamic;
 
 	@:native("attributedTitle")
-	public var attributedTitle:NSAttributedString;
+	public var attributedTitle:Dynamic;
 
 	@:native("beginRefreshing")
 	overload public function beginRefreshing():Void;

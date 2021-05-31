@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSBundle;
 @:objc
 @:native("UIColorPickerViewController")
 @:include("UIKit/UIKit.h")
@@ -17,16 +16,16 @@ extern class UIColorPickerViewController{
 	public var delegate:Dynamic;
 
 	@:native("selectedColor")
-	public var selectedColor:UIColor;
+	public var selectedColor:Dynamic;
 
 	@:native("supportsAlpha")
 	public var supportsAlpha:Bool;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIColorPickerViewController;
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIColorPickerViewController;
+	overload public function init():Dynamic;
 
 
 }

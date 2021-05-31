@@ -12,121 +12,121 @@ extern class UIColorSystemColors{
 	overload public static function autorelease():UIColorSystemColors;
 
 	@:native("systemRedColor")
-	public var systemRedColor:UIColor;
+	public var systemRedColor:Dynamic;
 
 	@:native("systemGreenColor")
-	public var systemGreenColor:UIColor;
+	public var systemGreenColor:Dynamic;
 
 	@:native("systemBlueColor")
-	public var systemBlueColor:UIColor;
+	public var systemBlueColor:Dynamic;
 
 	@:native("systemOrangeColor")
-	public var systemOrangeColor:UIColor;
+	public var systemOrangeColor:Dynamic;
 
 	@:native("systemYellowColor")
-	public var systemYellowColor:UIColor;
+	public var systemYellowColor:Dynamic;
 
 	@:native("systemPinkColor")
-	public var systemPinkColor:UIColor;
+	public var systemPinkColor:Dynamic;
 
 	@:native("systemPurpleColor")
-	public var systemPurpleColor:UIColor;
+	public var systemPurpleColor:Dynamic;
 
 	@:native("systemTealColor")
-	public var systemTealColor:UIColor;
+	public var systemTealColor:Dynamic;
 
 	@:native("systemIndigoColor")
-	public var systemIndigoColor:UIColor;
+	public var systemIndigoColor:Dynamic;
 
 	@:native("systemGrayColor")
-	public var systemGrayColor:UIColor;
+	public var systemGrayColor:Dynamic;
 
 	@:native("systemGray2Color")
-	public var systemGray2Color:UIColor;
+	public var systemGray2Color:Dynamic;
 
 	@:native("systemGray3Color")
-	public var systemGray3Color:UIColor;
+	public var systemGray3Color:Dynamic;
 
 	@:native("systemGray4Color")
-	public var systemGray4Color:UIColor;
+	public var systemGray4Color:Dynamic;
 
 	@:native("systemGray5Color")
-	public var systemGray5Color:UIColor;
+	public var systemGray5Color:Dynamic;
 
 	@:native("systemGray6Color")
-	public var systemGray6Color:UIColor;
+	public var systemGray6Color:Dynamic;
 
 	@:native("labelColor")
-	public var labelColor:UIColor;
+	public var labelColor:Dynamic;
 
 	@:native("secondaryLabelColor")
-	public var secondaryLabelColor:UIColor;
+	public var secondaryLabelColor:Dynamic;
 
 	@:native("tertiaryLabelColor")
-	public var tertiaryLabelColor:UIColor;
+	public var tertiaryLabelColor:Dynamic;
 
 	@:native("quaternaryLabelColor")
-	public var quaternaryLabelColor:UIColor;
+	public var quaternaryLabelColor:Dynamic;
 
 	@:native("linkColor")
-	public var linkColor:UIColor;
+	public var linkColor:Dynamic;
 
 	@:native("placeholderTextColor")
-	public var placeholderTextColor:UIColor;
+	public var placeholderTextColor:Dynamic;
 
 	@:native("separatorColor")
-	public var separatorColor:UIColor;
+	public var separatorColor:Dynamic;
 
 	@:native("opaqueSeparatorColor")
-	public var opaqueSeparatorColor:UIColor;
+	public var opaqueSeparatorColor:Dynamic;
 
 	@:native("systemBackgroundColor")
-	public var systemBackgroundColor:UIColor;
+	public var systemBackgroundColor:Dynamic;
 
 	@:native("secondarySystemBackgroundColor")
-	public var secondarySystemBackgroundColor:UIColor;
+	public var secondarySystemBackgroundColor:Dynamic;
 
 	@:native("tertiarySystemBackgroundColor")
-	public var tertiarySystemBackgroundColor:UIColor;
+	public var tertiarySystemBackgroundColor:Dynamic;
 
 	@:native("systemGroupedBackgroundColor")
-	public var systemGroupedBackgroundColor:UIColor;
+	public var systemGroupedBackgroundColor:Dynamic;
 
 	@:native("secondarySystemGroupedBackgroundColor")
-	public var secondarySystemGroupedBackgroundColor:UIColor;
+	public var secondarySystemGroupedBackgroundColor:Dynamic;
 
 	@:native("tertiarySystemGroupedBackgroundColor")
-	public var tertiarySystemGroupedBackgroundColor:UIColor;
+	public var tertiarySystemGroupedBackgroundColor:Dynamic;
 
 	@:native("systemFillColor")
-	public var systemFillColor:UIColor;
+	public var systemFillColor:Dynamic;
 
 	@:native("secondarySystemFillColor")
-	public var secondarySystemFillColor:UIColor;
+	public var secondarySystemFillColor:Dynamic;
 
 	@:native("tertiarySystemFillColor")
-	public var tertiarySystemFillColor:UIColor;
+	public var tertiarySystemFillColor:Dynamic;
 
 	@:native("quaternarySystemFillColor")
-	public var quaternarySystemFillColor:UIColor;
+	public var quaternarySystemFillColor:Dynamic;
 
 	@:native("lightTextColor")
-	public var lightTextColor:UIColor;
+	public var lightTextColor:Dynamic;
 
 	@:native("darkTextColor")
-	public var darkTextColor:UIColor;
+	public var darkTextColor:Dynamic;
 
 	@:native("groupTableViewBackgroundColor")
-	public var groupTableViewBackgroundColor:UIColor;
+	public var groupTableViewBackgroundColor:Dynamic;
 
 	@:native("viewFlipsideBackgroundColor")
-	public var viewFlipsideBackgroundColor:UIColor;
+	public var viewFlipsideBackgroundColor:Dynamic;
 
 	@:native("scrollViewTexturedBackgroundColor")
-	public var scrollViewTexturedBackgroundColor:UIColor;
+	public var scrollViewTexturedBackgroundColor:Dynamic;
 
 	@:native("underPageBackgroundColor")
-	public var underPageBackgroundColor:UIColor;
+	public var underPageBackgroundColor:Dynamic;
 
 
 }

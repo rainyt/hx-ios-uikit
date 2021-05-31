@@ -12,16 +12,16 @@ extern class UILongPressGestureRecognizer{
 	overload public static function autorelease():UILongPressGestureRecognizer;
 
 	@:native("numberOfTapsRequired")
-	public var numberOfTapsRequired:NSUInteger;
+	public var numberOfTapsRequired:Dynamic;
 
 	@:native("numberOfTouchesRequired")
-	public var numberOfTouchesRequired:NSUInteger;
+	public var numberOfTouchesRequired:Dynamic;
 
 	@:native("minimumPressDuration")
-	public var minimumPressDuration:NSTimeInterval;
+	public var minimumPressDuration:Dynamic;
 
 	@:native("allowableMovement")
-	public var allowableMovement:CGFloat;
+	public var allowableMovement:Dynamic;
 
 
 }

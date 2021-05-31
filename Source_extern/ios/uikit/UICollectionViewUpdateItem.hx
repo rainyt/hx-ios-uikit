@@ -12,13 +12,13 @@ extern class UICollectionViewUpdateItem{
 	overload public static function autorelease():UICollectionViewUpdateItem;
 
 	@:native("indexPathBeforeUpdate")
-	public var indexPathBeforeUpdate:NSIndexPath;
+	public var indexPathBeforeUpdate:Dynamic;
 
 	@:native("indexPathAfterUpdate")
-	public var indexPathAfterUpdate:NSIndexPath;
+	public var indexPathAfterUpdate:Dynamic;
 
 	@:native("updateAction")
-	public var updateAction:UICollectionUpdateAction;
+	public var updateAction:Dynamic;
 
 
 }

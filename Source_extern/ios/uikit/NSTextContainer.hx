@@ -14,16 +14,16 @@ extern class NSTextContainer{
 	overload public static function autorelease():NSTextContainer;
 
 	@:native("initWithSize:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithSize(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextContainer;
+	overload public function initWithSize(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):NSTextContainer;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("layoutManager")
-	public var layoutManager:NSLayoutManager;
+	public var layoutManager:Dynamic;
 
 	@:native("replaceLayoutManager")
-	overload public function replaceLayoutManager(newLayoutManager:NSLayoutManager):Void;
+	overload public function replaceLayoutManager(newLayoutManager:Dynamic):Void;
 
 	@:native("size")
 	public var size:CGSize;
@@ -32,16 +32,16 @@ extern class NSTextContainer{
 	public var exclusionPaths:Dynamic;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:NSLineBreakMode;
+	public var lineBreakMode:Dynamic;
 
 	@:native("lineFragmentPadding")
-	public var lineFragmentPadding:CGFloat;
+	public var lineFragmentPadding:Dynamic;
 
 	@:native("maximumNumberOfLines")
-	public var maximumNumberOfLines:NSUInteger;
+	public var maximumNumberOfLines:Dynamic;
 
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
-	overload public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
+	overload public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:Dynamic, writingDirection:Dynamic, remainingRect:CGRect):CGRect;
 
 	@:native("simpleRectangularTextContainer")
 	public var simpleRectangularTextContainer:Bool;

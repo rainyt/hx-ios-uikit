@@ -13,40 +13,40 @@ extern class UIPageControl{
 	overload public static function autorelease():UIPageControl;
 
 	@:native("numberOfPages")
-	public var numberOfPages:NSInteger;
+	public var numberOfPages:Dynamic;
 
 	@:native("currentPage")
-	public var currentPage:NSInteger;
+	public var currentPage:Dynamic;
 
 	@:native("hidesForSinglePage")
 	public var hidesForSinglePage:Bool;
 
 	@:native("pageIndicatorTintColor")
-	public var pageIndicatorTintColor:UIColor;
+	public var pageIndicatorTintColor:Dynamic;
 
 	@:native("currentPageIndicatorTintColor")
-	public var currentPageIndicatorTintColor:UIColor;
+	public var currentPageIndicatorTintColor:Dynamic;
 
 	@:native("backgroundStyle")
-	public var backgroundStyle:UIPageControlBackgroundStyle;
+	public var backgroundStyle:Dynamic;
 
 	@:native("interactionState")
-	public var interactionState:UIPageControlInteractionState;
+	public var interactionState:Dynamic;
 
 	@:native("allowsContinuousInteraction")
 	public var allowsContinuousInteraction:Bool;
 
 	@:native("preferredIndicatorImage")
-	public var preferredIndicatorImage:UIImage;
+	public var preferredIndicatorImage:Dynamic;
 
 	@:native("indicatorImageForPage")
-	overload public function indicatorImageForPage(page:NSInteger):UIImage;
+	overload public function indicatorImageForPage(page:Dynamic):Dynamic;
 
 	@:native("setIndicatorImage:forPage")
-	overload public function setIndicatorImage(image:UIImage, forPage:NSInteger):Void;
+	overload public function setIndicatorImage(image:Dynamic, forPage:Dynamic):Void;
 
 	@:native("sizeForNumberOfPages")
-	overload public function sizeForNumberOfPages(pageCount:NSInteger):CGSize;
+	overload public function sizeForNumberOfPages(pageCount:Dynamic):CGSize;
 
 	@:native("defersCurrentPageDisplay")
 	public var defersCurrentPageDisplay:Bool;

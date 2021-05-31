@@ -12,7 +12,7 @@ extern class NSAttributedStringAttributeFixing{
 	overload public static function autorelease():NSAttributedStringAttributeFixing;
 
 	@:native("fixAttributesInRange")
-	overload public function fixAttributesInRange(range:NSRange):Void;
+	overload public function fixAttributesInRange(range:Dynamic):Void;
 
 
 }

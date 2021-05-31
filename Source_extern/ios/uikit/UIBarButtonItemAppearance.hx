@@ -12,31 +12,31 @@ extern class UIBarButtonItemAppearance{
 	overload public static function autorelease():UIBarButtonItemAppearance;
 
 	@:native("init")
-	overload public function init():UIBarButtonItemAppearance;
+	overload public function init():Dynamic;
 
 	@:native("initWithStyle")
-	overload public function initWithStyle(style:UIBarButtonItemStyle):UIBarButtonItemAppearance;
+	overload public function initWithStyle(style:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIBarButtonItemAppearance;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("copy")
-	overload public function copy():UIBarButtonItemAppearance;
+	overload public function copy():Dynamic;
 
 	@:native("configureWithDefaultForStyle")
-	overload public function configureWithDefaultForStyle(style:UIBarButtonItemStyle):Void;
+	overload public function configureWithDefaultForStyle(style:Dynamic):Void;
 
 	@:native("normal")
-	public var normal:UIBarButtonItemStateAppearance;
+	public var normal:Dynamic;
 
 	@:native("highlighted")
-	public var highlighted:UIBarButtonItemStateAppearance;
+	public var highlighted:Dynamic;
 
 	@:native("disabled")
-	public var disabled:UIBarButtonItemStateAppearance;
+	public var disabled:Dynamic;
 
 	@:native("focused")
-	public var focused:UIBarButtonItemStateAppearance;
+	public var focused:Dynamic;
 
 
 }

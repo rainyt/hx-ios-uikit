@@ -13,16 +13,16 @@ extern class NSCollectionLayoutDecorationItem{
 	overload public static function autorelease():NSCollectionLayoutDecorationItem;
 
 	@:native("backgroundDecorationItemWithElementKind")
-	overload public static function backgroundDecorationItemWithElementKind(elementKind:NSString):NSCollectionLayoutDecorationItem;
+	overload public static function backgroundDecorationItemWithElementKind(elementKind:NSString):Dynamic;
 
 	@:native("init")
-	overload public function init():NSCollectionLayoutDecorationItem;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():NSCollectionLayoutDecorationItem;
+	overload public static function new():Dynamic;
 
 	@:native("zIndex")
-	public var zIndex:NSInteger;
+	public var zIndex:Dynamic;
 
 	@:native("elementKind")
 	public var elementKind:NSString;

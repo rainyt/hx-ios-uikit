@@ -12,7 +12,7 @@ extern class CurrentTraitCollection{
 	overload public static function autorelease():CurrentTraitCollection;
 
 	@:native("currentTraitCollection")
-	public var currentTraitCollection:UITraitCollection;
+	public var currentTraitCollection:Dynamic;
 
 	@:native("performAsCurrentTraitCollection")
 	overload public function performAsCurrentTraitCollection(actions:Dynamic):Void;

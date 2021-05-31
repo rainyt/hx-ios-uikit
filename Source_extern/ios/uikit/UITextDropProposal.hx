@@ -12,16 +12,16 @@ extern class UITextDropProposal{
 	overload public static function autorelease():UITextDropProposal;
 
 	@:native("dropAction")
-	public var dropAction:UITextDropAction;
+	public var dropAction:Dynamic;
 
 	@:native("dropProgressMode")
-	public var dropProgressMode:UITextDropProgressMode;
+	public var dropProgressMode:Dynamic;
 
 	@:native("useFastSameViewOperations")
 	public var useFastSameViewOperations:Bool;
 
 	@:native("dropPerformer")
-	public var dropPerformer:UITextDropPerformer;
+	public var dropPerformer:Dynamic;
 
 
 }

@@ -13,22 +13,22 @@ extern class UINavigationItem{
 	overload public static function autorelease():UINavigationItem;
 
 	@:native("initWithTitle")
-	overload public function initWithTitle(title:NSString):UINavigationItem;
+	overload public function initWithTitle(title:NSString):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UINavigationItem;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("title")
 	public var title:NSString;
 
 	@:native("titleView")
-	public var titleView:UIView;
+	public var titleView:Dynamic;
 
 	@:native("prompt")
 	public var prompt:NSString;
 
 	@:native("backBarButtonItem")
-	public var backBarButtonItem:UIBarButtonItem;
+	public var backBarButtonItem:Dynamic;
 
 	@:native("backButtonTitle")
 	public var backButtonTitle:NSString;
@@ -40,7 +40,7 @@ extern class UINavigationItem{
 	overload public function setHidesBackButton(hidesBackButton:Bool, animated:Bool):Void;
 
 	@:native("backButtonDisplayMode")
-	public var backButtonDisplayMode:UINavigationItemBackButtonDisplayMode;
+	public var backButtonDisplayMode:Dynamic;
 
 	@:native("leftBarButtonItems")
 	public var leftBarButtonItems:Dynamic;
@@ -58,34 +58,34 @@ extern class UINavigationItem{
 	public var leftItemsSupplementBackButton:Bool;
 
 	@:native("leftBarButtonItem")
-	public var leftBarButtonItem:UIBarButtonItem;
+	public var leftBarButtonItem:Dynamic;
 
 	@:native("rightBarButtonItem")
-	public var rightBarButtonItem:UIBarButtonItem;
+	public var rightBarButtonItem:Dynamic;
 
 	@:native("setLeftBarButtonItem:animated")
-	overload public function setLeftBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function setLeftBarButtonItem(item:Dynamic, animated:Bool):Void;
 
 	@:native("setRightBarButtonItem:animated")
-	overload public function setRightBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function setRightBarButtonItem(item:Dynamic, animated:Bool):Void;
 
 	@:native("largeTitleDisplayMode")
-	public var largeTitleDisplayMode:UINavigationItemLargeTitleDisplayMode;
+	public var largeTitleDisplayMode:Dynamic;
 
 	@:native("searchController")
-	public var searchController:UISearchController;
+	public var searchController:Dynamic;
 
 	@:native("hidesSearchBarWhenScrolling")
 	public var hidesSearchBarWhenScrolling:Bool;
 
 	@:native("standardAppearance")
-	public var standardAppearance:UINavigationBarAppearance;
+	public var standardAppearance:Dynamic;
 
 	@:native("compactAppearance")
-	public var compactAppearance:UINavigationBarAppearance;
+	public var compactAppearance:Dynamic;
 
 	@:native("scrollEdgeAppearance")
-	public var scrollEdgeAppearance:UINavigationBarAppearance;
+	public var scrollEdgeAppearance:Dynamic;
 
 
 }

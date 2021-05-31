@@ -13,16 +13,16 @@ extern class UICollectionViewAdditions{
 	overload public static function autorelease():UICollectionViewAdditions;
 
 	@:native("initWithCollectionViewLayout")
-	overload public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UICollectionViewAdditions;
+	overload public function initWithCollectionViewLayout(layout:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForCellAtIndexPath")
-	overload public function layoutAttributesForCellAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForCellAtIndexPath(indexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind(kind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryViewOfKind(kind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 
 }

@@ -21,7 +21,7 @@ extern class UIViewAnimation{
 	overload public static function performWithoutAnimation(actionsWithoutAnimation:Dynamic):Void;
 
 	@:native("inheritedAnimationDuration")
-	public var inheritedAnimationDuration:NSTimeInterval;
+	public var inheritedAnimationDuration:Dynamic;
 
 
 }

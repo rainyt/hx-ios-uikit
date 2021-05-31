@@ -18,28 +18,28 @@ extern class UILabel{
 	public var text:NSString;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("textColor")
-	public var textColor:UIColor;
+	public var textColor:Dynamic;
 
 	@:native("shadowColor")
-	public var shadowColor:UIColor;
+	public var shadowColor:Dynamic;
 
 	@:native("shadowOffset")
 	public var shadowOffset:CGSize;
 
 	@:native("textAlignment")
-	public var textAlignment:NSTextAlignment;
+	public var textAlignment:Dynamic;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:NSLineBreakMode;
+	public var lineBreakMode:Dynamic;
 
 	@:native("attributedText")
-	public var attributedText:NSAttributedString;
+	public var attributedText:Dynamic;
 
 	@:native("highlightedTextColor")
-	public var highlightedTextColor:UIColor;
+	public var highlightedTextColor:Dynamic;
 
 	@:native("highlighted")
 	public var highlighted:Bool;
@@ -51,37 +51,37 @@ extern class UILabel{
 	public var enabled:Bool;
 
 	@:native("numberOfLines")
-	public var numberOfLines:NSInteger;
+	public var numberOfLines:Dynamic;
 
 	@:native("adjustsFontSizeToFitWidth")
 	public var adjustsFontSizeToFitWidth:Bool;
 
 	@:native("baselineAdjustment")
-	public var baselineAdjustment:UIBaselineAdjustment;
+	public var baselineAdjustment:Dynamic;
 
 	@:native("minimumScaleFactor")
-	public var minimumScaleFactor:CGFloat;
+	public var minimumScaleFactor:Dynamic;
 
 	@:native("allowsDefaultTighteningForTruncation")
 	public var allowsDefaultTighteningForTruncation:Bool;
 
 	@:native("lineBreakStrategy")
-	public var lineBreakStrategy:NSLineBreakStrategy;
+	public var lineBreakStrategy:Dynamic;
 
 	@:native("textRectForBounds:limitedToNumberOfLines")
-	overload public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:NSInteger):CGRect;
+	overload public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:Dynamic):CGRect;
 
 	@:native("drawTextInRect")
 	overload public function drawTextInRect(rect:CGRect):Void;
 
 	@:native("preferredMaxLayoutWidth")
-	public var preferredMaxLayoutWidth:CGFloat;
+	public var preferredMaxLayoutWidth:Dynamic;
 
 	@:native("enablesMarqueeWhenAncestorFocused")
 	public var enablesMarqueeWhenAncestorFocused:Bool;
 
 	@:native("minimumFontSize")
-	public var minimumFontSize:CGFloat;
+	public var minimumFontSize:Dynamic;
 
 	@:native("adjustsLetterSpacingToFitWidth")
 	public var adjustsLetterSpacingToFitWidth:Bool;

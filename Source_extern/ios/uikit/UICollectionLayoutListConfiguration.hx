@@ -12,22 +12,22 @@ extern class UICollectionLayoutListConfiguration{
 	overload public static function autorelease():UICollectionLayoutListConfiguration;
 
 	@:native("new")
-	overload public static function new():UICollectionLayoutListConfiguration;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UICollectionLayoutListConfiguration;
+	overload public function init():Dynamic;
 
 	@:native("initWithAppearance")
-	overload public function initWithAppearance(appearance:UICollectionLayoutListAppearance):UICollectionLayoutListConfiguration;
+	overload public function initWithAppearance(appearance:Dynamic):Dynamic;
 
 	@:native("appearance")
-	public var appearance:UICollectionLayoutListAppearance;
+	public var appearance:Dynamic;
 
 	@:native("showsSeparators")
 	public var showsSeparators:Bool;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("leadingSwipeActionsConfigurationProvider")
 	public var leadingSwipeActionsConfigurationProvider:Dynamic;
@@ -36,10 +36,10 @@ extern class UICollectionLayoutListConfiguration{
 	public var trailingSwipeActionsConfigurationProvider:Dynamic;
 
 	@:native("headerMode")
-	public var headerMode:UICollectionLayoutListHeaderMode;
+	public var headerMode:Dynamic;
 
 	@:native("footerMode")
-	public var footerMode:UICollectionLayoutListFooterMode;
+	public var footerMode:Dynamic;
 
 
 }

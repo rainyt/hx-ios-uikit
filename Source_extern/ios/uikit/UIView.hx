@@ -15,19 +15,19 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("layerClass")
-	public var layerClass:Class;
+	public var layerClass:Dynamic;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIView;
+	overload public function initWithFrame(frame:CGRect):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIView;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("userInteractionEnabled")
 	public var userInteractionEnabled:Bool;
 
 	@:native("tag")
-	public var tag:NSInteger;
+	public var tag:Dynamic;
 
 	@:native("layer")
 	public var layer:CALayer;
@@ -42,16 +42,16 @@ extern class UIView{
 	public var focusGroupIdentifier:NSString;
 
 	@:native("semanticContentAttribute")
-	public var semanticContentAttribute:UISemanticContentAttribute;
+	public var semanticContentAttribute:Dynamic;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:Dynamic):Dynamic;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(semanticContentAttribute:Dynamic, relativeToLayoutDirection:Dynamic):Dynamic;
 
 	@:native("effectiveUserInterfaceLayoutDirection")
-	public var effectiveUserInterfaceLayoutDirection:UIUserInterfaceLayoutDirection;
+	public var effectiveUserInterfaceLayoutDirection:Dynamic;
 
 
 }

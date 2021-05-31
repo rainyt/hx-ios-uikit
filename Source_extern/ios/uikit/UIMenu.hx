@@ -16,31 +16,31 @@ extern class UIMenu{
 	public var identifier:NSString;
 
 	@:native("options")
-	public var options:UIMenuOptions;
+	public var options:Dynamic;
 
 	@:native("children")
 	public var children:Dynamic;
 
 	@:native("menuWithChildren")
-	overload public static function menuWithChildren(children:Dynamic):UIMenu;
+	overload public static function menuWithChildren(children:Dynamic):Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("")
-	overload public function ():;
+	overload public function ():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIMenu;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("init")
-	overload public function init():UIMenu;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UIMenu;
+	overload public static function new():Dynamic;
 
 	@:native("menuByReplacingChildren")
-	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu;
+	overload public function menuByReplacingChildren(newChildren:Dynamic):Dynamic;
 
 
 }

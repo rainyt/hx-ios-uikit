@@ -12,7 +12,7 @@ extern class UIResponder{
 	overload public static function autorelease():UIResponder;
 
 	@:native("nextResponder")
-	public var nextResponder:UIResponder;
+	public var nextResponder:Dynamic;
 
 	@:native("canBecomeFirstResponder")
 	public var canBecomeFirstResponder:Bool;
@@ -30,43 +30,43 @@ extern class UIResponder{
 	public var isFirstResponder:Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBegan(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBegan(touches:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMoved(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMoved(touches:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEnded(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEnded(touches:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelled(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelled(touches:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
 	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBegan(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBegan(presses:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChanged(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChanged(presses:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEnded(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEnded(presses:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelled(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelled(presses:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("motionBegan:withEvent")
-	overload public function motionBegan(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionBegan(motion:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("motionEnded:withEvent")
-	overload public function motionEnded(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionEnded(motion:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("motionCancelled:withEvent")
-	overload public function motionCancelled(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionCancelled(motion:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("remoteControlReceivedWithEvent")
-	overload public function remoteControlReceivedWithEvent(event:UIEvent):Void;
+	overload public function remoteControlReceivedWithEvent(event:Dynamic):Void;
 
 	@:native("canPerformAction:withSender")
 	overload public function canPerformAction(action:String, withSender:Dynamic):Bool;
@@ -78,13 +78,13 @@ extern class UIResponder{
 	overload public function buildMenuWithBuilder(builder:Dynamic):Void;
 
 	@:native("validateCommand")
-	overload public function validateCommand(command:UICommand):Void;
+	overload public function validateCommand(command:Dynamic):Void;
 
 	@:native("undoManager")
-	public var undoManager:NSUndoManager;
+	public var undoManager:Dynamic;
 
 	@:native("editingInteractionConfiguration")
-	public var editingInteractionConfiguration:UIEditingInteractionConfiguration;
+	public var editingInteractionConfiguration:Dynamic;
 
 
 }

@@ -12,13 +12,13 @@ extern class UIAccessibilityCustomRotorItemResult{
 	overload public static function autorelease():UIAccessibilityCustomRotorItemResult;
 
 	@:native("initWithTargetElement:targetRange")
-	overload public function initWithTargetElement(targetElement:Dynamic, targetRange:UITextRange):UIAccessibilityCustomRotorItemResult;
+	overload public function initWithTargetElement(targetElement:Dynamic, targetRange:Dynamic):Dynamic;
 
 	@:native("targetElement")
 	public var targetElement:Dynamic;
 
 	@:native("targetRange")
-	public var targetRange:UITextRange;
+	public var targetRange:Dynamic;
 
 
 }

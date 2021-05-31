@@ -13,19 +13,19 @@ extern class UIDynamicAnimator:{
 	overload public static function autorelease():UIDynamicAnimator:;
 
 	@:native("initWithReferenceView")
-	overload public function initWithReferenceView(view:UIView):UIDynamicAnimator:;
+	overload public function initWithReferenceView(view:Dynamic):Dynamic;
 
 	@:native("addBehavior")
-	overload public function addBehavior(behavior:UIDynamicBehavior):Void;
+	overload public function addBehavior(behavior:Dynamic):Void;
 
 	@:native("removeBehavior")
-	overload public function removeBehavior(behavior:UIDynamicBehavior):Void;
+	overload public function removeBehavior(behavior:Dynamic):Void;
 
 	@:native("removeAllBehaviors")
 	overload public function removeAllBehaviors():Void;
 
 	@:native("referenceView")
-	public var referenceView:UIView;
+	public var referenceView:Dynamic;
 
 	@:native("behaviors")
 	public var behaviors:Dynamic;
@@ -40,7 +40,7 @@ extern class UIDynamicAnimator:{
 	public var running:Bool;
 
 	@:native("elapsedTime")
-	public var elapsedTime:NSTimeInterval;
+	public var elapsedTime:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

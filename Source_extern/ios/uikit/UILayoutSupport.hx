@@ -18,10 +18,10 @@ extern class UILayoutSupport{
 	public var bottomLayoutGuide:Dynamic;
 
 	@:native("additionalSafeAreaInsets")
-	public var additionalSafeAreaInsets:UIEdgeInsets;
+	public var additionalSafeAreaInsets:Dynamic;
 
 	@:native("systemMinimumLayoutMargins")
-	public var systemMinimumLayoutMargins:NSDirectionalEdgeInsets;
+	public var systemMinimumLayoutMargins:Dynamic;
 
 	@:native("viewRespectsSystemMinimumLayoutMargins")
 	public var viewRespectsSystemMinimumLayoutMargins:Bool;

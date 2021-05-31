@@ -14,16 +14,16 @@ extern class NSCollectionLayoutBoundarySupplementaryItem{
 	overload public static function autorelease():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment")
-	overload public static function boundarySupplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment):NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function boundarySupplementaryItemWithLayoutSize(layoutSize:Dynamic, elementKind:NSString, alignment:Dynamic):Dynamic;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset")
-	overload public static function boundarySupplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment, absoluteOffset:CGPoint):NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function boundarySupplementaryItemWithLayoutSize(layoutSize:Dynamic, elementKind:NSString, alignment:Dynamic, absoluteOffset:CGPoint):Dynamic;
 
 	@:native("init")
-	overload public function init():NSCollectionLayoutBoundarySupplementaryItem;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function new():Dynamic;
 
 	@:native("extendsBoundary")
 	public var extendsBoundary:Bool;
@@ -32,7 +32,7 @@ extern class NSCollectionLayoutBoundarySupplementaryItem{
 	public var pinToVisibleBounds:Bool;
 
 	@:native("alignment")
-	public var alignment:NSRectAlignment;
+	public var alignment:Dynamic;
 
 	@:native("offset")
 	public var offset:CGPoint;

@@ -13,7 +13,7 @@ extern class UIMenuController{
 	overload public static function autorelease():UIMenuController;
 
 	@:native("sharedMenuController")
-	public var sharedMenuController:UIMenuController;
+	public var sharedMenuController:Dynamic;
 
 	@:native("menuVisible")
 	public var menuVisible:Bool;
@@ -25,19 +25,19 @@ extern class UIMenuController{
 	overload public function setMenuVisible(menuVisible:Bool, animated:Bool):Void;
 
 	@:native("setTargetRect:inView")
-	overload public function setTargetRect(targetRect:CGRect, inView:UIView):Void;
+	overload public function setTargetRect(targetRect:CGRect, inView:Dynamic):Void;
 
 	@:native("showMenuFromView:rect")
-	overload public function showMenuFromView(targetView:UIView, rect:CGRect):Void;
+	overload public function showMenuFromView(targetView:Dynamic, rect:CGRect):Void;
 
 	@:native("hideMenuFromView")
-	overload public function hideMenuFromView(targetView:UIView):Void;
+	overload public function hideMenuFromView(targetView:Dynamic):Void;
 
 	@:native("hideMenu")
 	overload public function hideMenu():Void;
 
 	@:native("arrowDirection")
-	public var arrowDirection:UIMenuControllerArrowDirection;
+	public var arrowDirection:Dynamic;
 
 	@:native("menuItems")
 	public var menuItems:Dynamic;

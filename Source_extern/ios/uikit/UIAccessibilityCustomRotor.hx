@@ -13,25 +13,25 @@ extern class UIAccessibilityCustomRotor{
 	overload public static function autorelease():UIAccessibilityCustomRotor;
 
 	@:native("initWithName:itemSearchBlock")
-	overload public function initWithName(name:NSString, itemSearchBlock:UIAccessibilityCustomRotorSearch):UIAccessibilityCustomRotor;
+	overload public function initWithName(name:NSString, itemSearchBlock:Dynamic):Dynamic;
 
 	@:native("initWithAttributedName:itemSearchBlock")
-	overload public function initWithAttributedName(attributedName:NSAttributedString, itemSearchBlock:UIAccessibilityCustomRotorSearch):UIAccessibilityCustomRotor;
+	overload public function initWithAttributedName(attributedName:Dynamic, itemSearchBlock:Dynamic):Dynamic;
 
 	@:native("initWithSystemType:itemSearchBlock")
-	overload public function initWithSystemType(type:UIAccessibilityCustomSystemRotorType, itemSearchBlock:UIAccessibilityCustomRotorSearch):UIAccessibilityCustomRotor;
+	overload public function initWithSystemType(type:Dynamic, itemSearchBlock:Dynamic):Dynamic;
 
 	@:native("name")
 	public var name:NSString;
 
 	@:native("attributedName")
-	public var attributedName:NSAttributedString;
+	public var attributedName:Dynamic;
 
 	@:native("itemSearchBlock")
-	public var itemSearchBlock:UIAccessibilityCustomRotorSearch;
+	public var itemSearchBlock:Dynamic;
 
 	@:native("systemRotorType")
-	public var systemRotorType:UIAccessibilityCustomSystemRotorType;
+	public var systemRotorType:Dynamic;
 
 
 }

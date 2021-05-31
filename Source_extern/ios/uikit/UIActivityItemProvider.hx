@@ -21,7 +21,7 @@ extern class UIActivityItemProvider{
 	public var placeholderItem:Dynamic;
 
 	@:native("activityType")
-	public var activityType:UIActivityType;
+	public var activityType:Dynamic;
 
 	@:native("item")
 	public var item:Dynamic;

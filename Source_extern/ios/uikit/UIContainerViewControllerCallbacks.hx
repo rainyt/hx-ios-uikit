@@ -21,10 +21,10 @@ extern class UIContainerViewControllerCallbacks{
 	public var shouldAutomaticallyForwardAppearanceMethods:Bool;
 
 	@:native("willMoveToParentViewController")
-	overload public function willMoveToParentViewController(parent:UIViewController):Void;
+	overload public function willMoveToParentViewController(parent:Dynamic):Void;
 
 	@:native("didMoveToParentViewController")
-	overload public function didMoveToParentViewController(parent:UIViewController):Void;
+	overload public function didMoveToParentViewController(parent:Dynamic):Void;
 
 
 }

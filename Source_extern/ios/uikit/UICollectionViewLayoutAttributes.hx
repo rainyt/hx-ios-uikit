@@ -36,31 +36,31 @@ extern class UICollectionViewLayoutAttributes{
 	public var transform:CGAffineTransform;
 
 	@:native("alpha")
-	public var alpha:CGFloat;
+	public var alpha:Dynamic;
 
 	@:native("zIndex")
-	public var zIndex:NSInteger;
+	public var zIndex:Dynamic;
 
 	@:native("hidden")
 	public var hidden:Bool;
 
 	@:native("indexPath")
-	public var indexPath:NSIndexPath;
+	public var indexPath:Dynamic;
 
 	@:native("representedElementCategory")
-	public var representedElementCategory:UICollectionElementCategory;
+	public var representedElementCategory:Dynamic;
 
 	@:native("representedElementKind")
 	public var representedElementKind:NSString;
 
 	@:native("layoutAttributesForCellWithIndexPath")
-	overload public static function layoutAttributesForCellWithIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForCellWithIndexPath(indexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, withIndexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, withIndexPath:Dynamic):Dynamic;
 
 
 }

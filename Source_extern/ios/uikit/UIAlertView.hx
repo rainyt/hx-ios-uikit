@@ -14,13 +14,13 @@ extern class UIAlertView{
 	overload public static function autorelease():UIAlertView;
 
 	@:native("initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:...")
-	overload public function initWithTitle(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:NS_REQUIRES_NIL_TERMINATION):UIAlertView;
+	overload public function initWithTitle(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):Dynamic;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIAlertView;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -32,19 +32,19 @@ extern class UIAlertView{
 	public var message:NSString;
 
 	@:native("addButtonWithTitle")
-	overload public function addButtonWithTitle(title:NSString):NSInteger;
+	overload public function addButtonWithTitle(title:NSString):Dynamic;
 
 	@:native("buttonTitleAtIndex")
-	overload public function buttonTitleAtIndex(buttonIndex:NSInteger):NSString;
+	overload public function buttonTitleAtIndex(buttonIndex:Dynamic):NSString;
 
 	@:native("numberOfButtons")
-	public var numberOfButtons:NSInteger;
+	public var numberOfButtons:Dynamic;
 
 	@:native("cancelButtonIndex")
-	public var cancelButtonIndex:NSInteger;
+	public var cancelButtonIndex:Dynamic;
 
 	@:native("firstOtherButtonIndex")
-	public var firstOtherButtonIndex:NSInteger;
+	public var firstOtherButtonIndex:Dynamic;
 
 	@:native("visible")
 	public var visible:Bool;
@@ -53,13 +53,13 @@ extern class UIAlertView{
 	overload public function show():Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;
+	overload public function dismissWithClickedButtonIndex(buttonIndex:Dynamic, animated:Bool):Void;
 
 	@:native("alertViewStyle")
-	public var alertViewStyle:UIAlertViewStyle;
+	public var alertViewStyle:Dynamic;
 
 	@:native("textFieldAtIndex")
-	overload public function textFieldAtIndex(textFieldIndex:NSInteger):UITextField;
+	overload public function textFieldAtIndex(textFieldIndex:Dynamic):Dynamic;
 
 
 }

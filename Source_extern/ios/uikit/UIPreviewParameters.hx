@@ -12,19 +12,19 @@ extern class UIPreviewParameters{
 	overload public static function autorelease():UIPreviewParameters;
 
 	@:native("init")
-	overload public function init():UIPreviewParameters;
+	overload public function init():Dynamic;
 
 	@:native("initWithTextLineRects")
-	overload public function initWithTextLineRects(textLineRects:Dynamic):UIPreviewParameters;
+	overload public function initWithTextLineRects(textLineRects:Dynamic):Dynamic;
 
 	@:native("visiblePath")
-	public var visiblePath:UIBezierPath;
+	public var visiblePath:Dynamic;
 
 	@:native("shadowPath")
-	public var shadowPath:UIBezierPath;
+	public var shadowPath:Dynamic;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 
 }

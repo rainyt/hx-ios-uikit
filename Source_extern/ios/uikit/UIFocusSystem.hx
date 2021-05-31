@@ -15,13 +15,13 @@ extern class UIFocusSystem{
 	public var focusedItem:Dynamic;
 
 	@:native("new")
-	overload public static function new():UIFocusSystem;
+	overload public static function new():Dynamic;
 
 	@:native("init")
-	overload public function init():UIFocusSystem;
+	overload public function init():Dynamic;
 
 	@:native("focusSystemForEnvironment")
-	overload public static function focusSystemForEnvironment(environment:Dynamic):UIFocusSystem;
+	overload public static function focusSystemForEnvironment(environment:Dynamic):Dynamic;
 
 	@:native("requestFocusUpdateToEnvironment")
 	overload public function requestFocusUpdateToEnvironment(environment:Dynamic):Void;
@@ -33,7 +33,7 @@ extern class UIFocusSystem{
 	overload public static function environment(environment:Dynamic, containsEnvironment:Dynamic):Bool;
 
 	@:native("registerURL:forSoundIdentifier")
-	overload public static function registerURL(soundFileURL:NSURL, forSoundIdentifier:UIFocusSoundIdentifier):Void;
+	overload public static function registerURL(soundFileURL:Dynamic, forSoundIdentifier:Dynamic):Void;
 
 
 }

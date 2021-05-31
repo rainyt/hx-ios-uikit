@@ -24,10 +24,10 @@ extern class UICellConfigurationState{
 	public var reordering:Bool;
 
 	@:native("cellDragState")
-	public var cellDragState:UICellConfigurationDragState;
+	public var cellDragState:Dynamic;
 
 	@:native("cellDropState")
-	public var cellDropState:UICellConfigurationDropState;
+	public var cellDropState:Dynamic;
 
 
 }

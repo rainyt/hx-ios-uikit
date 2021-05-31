@@ -14,25 +14,25 @@ extern class UILocalNotification{
 	overload public static function autorelease():UILocalNotification;
 
 	@:native("init")
-	overload public function init():UILocalNotification;
+	overload public function init():Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UILocalNotification;
+	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("fireDate")
-	public var fireDate:NSDate;
+	public var fireDate:Dynamic;
 
 	@:native("timeZone")
-	public var timeZone:NSTimeZone;
+	public var timeZone:Dynamic;
 
 	@:native("repeatInterval")
-	public var repeatInterval:NSCalendarUnit;
+	public var repeatInterval:Dynamic;
 
 	@:native("repeatCalendar")
-	public var repeatCalendar:NSCalendar;
+	public var repeatCalendar:Dynamic;
 
 	@:native("region")
-	public var region:CLRegion;
+	public var region:Dynamic;
 
 	@:native("regionTriggersOnce")
 	public var regionTriggersOnce:Bool;
@@ -56,7 +56,7 @@ extern class UILocalNotification{
 	public var soundName:NSString;
 
 	@:native("applicationIconBadgeNumber")
-	public var applicationIconBadgeNumber:NSInteger;
+	public var applicationIconBadgeNumber:Dynamic;
 
 	@:native("userInfo")
 	public var userInfo:NSDictionary;

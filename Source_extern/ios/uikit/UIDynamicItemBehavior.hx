@@ -13,7 +13,7 @@ extern class UIDynamicItemBehavior{
 	overload public static function autorelease():UIDynamicItemBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):UIDynamicItemBehavior;
+	overload public function initWithItems(items:Dynamic):Dynamic;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -25,22 +25,22 @@ extern class UIDynamicItemBehavior{
 	public var items:Dynamic;
 
 	@:native("elasticity")
-	public var elasticity:CGFloat;
+	public var elasticity:Dynamic;
 
 	@:native("friction")
-	public var friction:CGFloat;
+	public var friction:Dynamic;
 
 	@:native("density")
-	public var density:CGFloat;
+	public var density:Dynamic;
 
 	@:native("resistance")
-	public var resistance:CGFloat;
+	public var resistance:Dynamic;
 
 	@:native("angularResistance")
-	public var angularResistance:CGFloat;
+	public var angularResistance:Dynamic;
 
 	@:native("charge")
-	public var charge:CGFloat;
+	public var charge:Dynamic;
 
 	@:native("anchored")
 	public var anchored:Bool;
@@ -55,10 +55,10 @@ extern class UIDynamicItemBehavior{
 	overload public function linearVelocityForItem(item:Dynamic):CGPoint;
 
 	@:native("addAngularVelocity:forItem")
-	overload public function addAngularVelocity(velocity:CGFloat, forItem:Dynamic):Void;
+	overload public function addAngularVelocity(velocity:Dynamic, forItem:Dynamic):Void;
 
 	@:native("angularVelocityForItem")
-	overload public function angularVelocityForItem(item:Dynamic):CGFloat;
+	overload public function angularVelocityForItem(item:Dynamic):Dynamic;
 
 
 }

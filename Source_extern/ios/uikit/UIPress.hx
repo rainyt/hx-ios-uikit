@@ -12,28 +12,28 @@ extern class UIPress{
 	overload public static function autorelease():UIPress;
 
 	@:native("timestamp")
-	public var timestamp:NSTimeInterval;
+	public var timestamp:Dynamic;
 
 	@:native("phase")
-	public var phase:UIPressPhase;
+	public var phase:Dynamic;
 
 	@:native("type")
-	public var type:UIPressType;
+	public var type:Dynamic;
 
 	@:native("window")
-	public var window:UIWindow;
+	public var window:Dynamic;
 
 	@:native("responder")
-	public var responder:UIResponder;
+	public var responder:Dynamic;
 
 	@:native("gestureRecognizers")
 	public var gestureRecognizers:Dynamic;
 
 	@:native("force")
-	public var force:CGFloat;
+	public var force:Dynamic;
 
 	@:native("key")
-	public var key:UIKey;
+	public var key:Dynamic;
 
 
 }

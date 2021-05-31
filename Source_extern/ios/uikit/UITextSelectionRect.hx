@@ -16,7 +16,7 @@ extern class UITextSelectionRect{
 	public var rect:CGRect;
 
 	@:native("writingDirection")
-	public var writingDirection:NSWritingDirection;
+	public var writingDirection:Dynamic;
 
 	@:native("containsStart")
 	public var containsStart:Bool;

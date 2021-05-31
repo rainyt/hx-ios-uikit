@@ -20,25 +20,25 @@ extern class UIDeprecated{
 	public var text:NSString;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("textAlignment")
-	public var textAlignment:NSTextAlignment;
+	public var textAlignment:Dynamic;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:NSLineBreakMode;
+	public var lineBreakMode:Dynamic;
 
 	@:native("textColor")
-	public var textColor:UIColor;
+	public var textColor:Dynamic;
 
 	@:native("selectedTextColor")
-	public var selectedTextColor:UIColor;
+	public var selectedTextColor:Dynamic;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("selectedImage")
-	public var selectedImage:UIImage;
+	public var selectedImage:Dynamic;
 
 	@:native("hidesAccessoryWhenEditing")
 	public var hidesAccessoryWhenEditing:Bool;

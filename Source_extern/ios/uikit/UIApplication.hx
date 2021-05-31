@@ -13,8 +13,8 @@ extern class UIApplication{
 	@:native("autorelease")
 	overload public static function autorelease():UIApplication;
 
-	@:native("NS_EXTENSION_UNAVAILABLE_IOS("Use view controller based solutions where appropriate instead."")
-	public var NS_EXTENSION_UNAVAILABLE_IOS("Use view controller based solutions where appropriate instead.":sharedApplication;
+	@:native("sharedApplication")
+	public var sharedApplication:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -32,82 +32,82 @@ extern class UIApplication{
 	public var idleTimerDisabled:Bool;
 
 	@:native("openURL")
-	overload public function openURL(url:NSURL):Bool;
+	overload public function openURL(url:Dynamic):Bool;
 
 	@:native("canOpenURL")
-	overload public function canOpenURL(url:NSURL):Bool;
+	overload public function canOpenURL(url:Dynamic):Bool;
 
 	@:native("openURL:options:completionHandler")
-	overload public function openURL(url:NSURL, options:Dynamic, completionHandler:Dynamic):Void;
+	overload public function openURL(url:Dynamic, options:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("sendEvent")
-	overload public function sendEvent(event:UIEvent):Void;
+	overload public function sendEvent(event:Dynamic):Void;
 
 	@:native("keyWindow")
-	public var keyWindow:UIWindow;
+	public var keyWindow:Dynamic;
 
 	@:native("windows")
 	public var windows:Dynamic;
 
 	@:native("sendAction:to:from:forEvent")
-	overload public function sendAction(action:String, to:Dynamic, from:Dynamic, forEvent:UIEvent):Bool;
+	overload public function sendAction(action:String, to:Dynamic, from:Dynamic, forEvent:Dynamic):Bool;
 
 	@:native("networkActivityIndicatorVisible")
 	public var networkActivityIndicatorVisible:Bool;
 
 	@:native("statusBarStyle")
-	public var statusBarStyle:UIStatusBarStyle;
+	public var statusBarStyle:Dynamic;
 
 	@:native("statusBarHidden")
 	public var statusBarHidden:Bool;
 
 	@:native("statusBarOrientation")
-	public var statusBarOrientation:UIInterfaceOrientation;
+	public var statusBarOrientation:Dynamic;
 
 	@:native("supportedInterfaceOrientationsForWindow")
-	overload public function supportedInterfaceOrientationsForWindow(window:UIWindow):UIInterfaceOrientationMask;
+	overload public function supportedInterfaceOrientationsForWindow(window:Dynamic):Dynamic;
 
 	@:native("statusBarOrientationAnimationDuration")
-	public var statusBarOrientationAnimationDuration:NSTimeInterval;
+	public var statusBarOrientationAnimationDuration:Dynamic;
 
 	@:native("statusBarFrame")
 	public var statusBarFrame:CGRect;
 
 	@:native("applicationIconBadgeNumber")
-	public var applicationIconBadgeNumber:NSInteger;
+	public var applicationIconBadgeNumber:Dynamic;
 
 	@:native("applicationSupportsShakeToEdit")
 	public var applicationSupportsShakeToEdit:Bool;
 
 	@:native("applicationState")
-	public var applicationState:UIApplicationState;
+	public var applicationState:Dynamic;
 
 	@:native("backgroundTimeRemaining")
-	public var backgroundTimeRemaining:NSTimeInterval;
+	public var backgroundTimeRemaining:Dynamic;
 
 	@:native("beginBackgroundTaskWithExpirationHandler:")
-	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic, :Dynamic):NSUInteger;
+	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic, :Dynamic):Dynamic;
 
 	@:native("beginBackgroundTaskWithName:expirationHandler")
-	overload public function beginBackgroundTaskWithName(taskName:NSString, expirationHandler:Dynamic):NSUInteger;
+	overload public function beginBackgroundTaskWithName(taskName:NSString, expirationHandler:Dynamic):Dynamic;
 
 	@:native("endBackgroundTask")
-	overload public function endBackgroundTask(identifier:NSUInteger):Void;
+	overload public function endBackgroundTask(identifier:Dynamic):Void;
 
 	@:native("setMinimumBackgroundFetchInterval")
-	overload public function setMinimumBackgroundFetchInterval(minimumBackgroundFetchInterval:NSTimeInterval):Void;
+	overload public function setMinimumBackgroundFetchInterval(minimumBackgroundFetchInterval:Dynamic):Void;
 
 	@:native("backgroundRefreshStatus")
-	public var backgroundRefreshStatus:UIBackgroundRefreshStatus;
+	public var backgroundRefreshStatus:Dynamic;
 
 	@:native("protectedDataAvailable")
 	public var protectedDataAvailable:Bool;
 
 	@:native("userInterfaceLayoutDirection")
-	public var userInterfaceLayoutDirection:UIUserInterfaceLayoutDirection;
+	public var userInterfaceLayoutDirection:Dynamic;
 
 	@:native("preferredContentSizeCategory")
-	public var preferredContentSizeCategory:UIContentSizeCategory;
+	public var preferredContentSizeCategory:Dynamic;
 
 	@:native("connectedScenes")
 	public var connectedScenes:Dynamic;
@@ -119,13 +119,13 @@ extern class UIApplication{
 	public var supportsMultipleScenes:Bool;
 
 	@:native("requestSceneSessionActivation:userActivity:options:errorHandler")
-	overload public function requestSceneSessionActivation(sceneSession:UISceneSession, userActivity:NSUserActivity, options:UISceneActivationRequestOptions, errorHandler:Dynamic):Void;
+	overload public function requestSceneSessionActivation(sceneSession:Dynamic, userActivity:Dynamic, options:Dynamic, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionDestruction:options:errorHandler")
-	overload public function requestSceneSessionDestruction(sceneSession:UISceneSession, options:UISceneDestructionRequestOptions, errorHandler:Dynamic):Void;
+	overload public function requestSceneSessionDestruction(sceneSession:Dynamic, options:Dynamic, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionRefresh")
-	overload public function requestSceneSessionRefresh(sceneSession:UISceneSession):Void;
+	overload public function requestSceneSessionRefresh(sceneSession:Dynamic):Void;
 
 
 }

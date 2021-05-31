@@ -12,31 +12,31 @@ extern class UITabBarItemStateAppearance{
 	overload public static function autorelease():UITabBarItemStateAppearance;
 
 	@:native("init")
-	overload public function init():UITabBarItemStateAppearance;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UITabBarItemStateAppearance;
+	overload public static function new():Dynamic;
 
 	@:native("titleTextAttributes")
 	public var titleTextAttributes:Dynamic;
 
 	@:native("titlePositionAdjustment")
-	public var titlePositionAdjustment:UIOffset;
+	public var titlePositionAdjustment:Dynamic;
 
 	@:native("iconColor")
-	public var iconColor:UIColor;
+	public var iconColor:Dynamic;
 
 	@:native("badgePositionAdjustment")
-	public var badgePositionAdjustment:UIOffset;
+	public var badgePositionAdjustment:Dynamic;
 
 	@:native("badgeBackgroundColor")
-	public var badgeBackgroundColor:UIColor;
+	public var badgeBackgroundColor:Dynamic;
 
 	@:native("badgeTextAttributes")
 	public var badgeTextAttributes:Dynamic;
 
 	@:native("badgeTitlePositionAdjustment")
-	public var badgeTitlePositionAdjustment:UIOffset;
+	public var badgeTitlePositionAdjustment:Dynamic;
 
 
 }

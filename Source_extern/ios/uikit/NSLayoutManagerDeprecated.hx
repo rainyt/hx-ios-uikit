@@ -13,16 +13,16 @@ extern class NSLayoutManagerDeprecated{
 	overload public static function autorelease():NSLayoutManagerDeprecated;
 
 	@:native("glyphAtIndex:isValidIndex")
-	overload public function glyphAtIndex(glyphIndex:NSUInteger, isValidIndex:BOOL):CGGlyph;
+	overload public function glyphAtIndex(glyphIndex:Dynamic, isValidIndex:Dynamic):Dynamic;
 
 	@:native("glyphAtIndex")
-	overload public function glyphAtIndex(glyphIndex:NSUInteger):CGGlyph;
+	overload public function glyphAtIndex(glyphIndex:Dynamic):Dynamic;
 
 	@:native("hyphenationFactor")
 	public var hyphenationFactor:null;
 
 	@:native("showCGGlyphs:positions:count:font:matrix:attributes:inContext")
-	overload public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:NSUInteger, font:UIFont, matrix:CGAffineTransform, attributes:Dynamic, inContext:CGContextRef):Void;
+	overload public function showCGGlyphs(glyphs:Dynamic, positions:Dynamic, count:Dynamic, font:Dynamic, matrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
 
 
 }

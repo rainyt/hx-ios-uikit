@@ -14,67 +14,67 @@ extern class UITouch{
 	overload public static function autorelease():UITouch;
 
 	@:native("timestamp")
-	public var timestamp:NSTimeInterval;
+	public var timestamp:Dynamic;
 
 	@:native("phase")
-	public var phase:UITouchPhase;
+	public var phase:Dynamic;
 
 	@:native("tapCount")
-	public var tapCount:NSUInteger;
+	public var tapCount:Dynamic;
 
 	@:native("type")
-	public var type:UITouchType;
+	public var type:Dynamic;
 
 	@:native("majorRadius")
-	public var majorRadius:CGFloat;
+	public var majorRadius:Dynamic;
 
 	@:native("majorRadiusTolerance")
-	public var majorRadiusTolerance:CGFloat;
+	public var majorRadiusTolerance:Dynamic;
 
 	@:native("window")
-	public var window:UIWindow;
+	public var window:Dynamic;
 
 	@:native("view")
-	public var view:UIView;
+	public var view:Dynamic;
 
 	@:native("gestureRecognizers")
 	public var gestureRecognizers:Dynamic;
 
 	@:native("locationInView")
-	overload public function locationInView(view:UIView):CGPoint;
+	overload public function locationInView(view:Dynamic):CGPoint;
 
 	@:native("previousLocationInView")
-	overload public function previousLocationInView(view:UIView):CGPoint;
+	overload public function previousLocationInView(view:Dynamic):CGPoint;
 
 	@:native("preciseLocationInView")
-	overload public function preciseLocationInView(view:UIView):CGPoint;
+	overload public function preciseLocationInView(view:Dynamic):CGPoint;
 
 	@:native("precisePreviousLocationInView")
-	overload public function precisePreviousLocationInView(view:UIView):CGPoint;
+	overload public function precisePreviousLocationInView(view:Dynamic):CGPoint;
 
 	@:native("force")
-	public var force:CGFloat;
+	public var force:Dynamic;
 
 	@:native("maximumPossibleForce")
-	public var maximumPossibleForce:CGFloat;
+	public var maximumPossibleForce:Dynamic;
 
 	@:native("azimuthAngleInView")
-	overload public function azimuthAngleInView(view:UIView):CGFloat;
+	overload public function azimuthAngleInView(view:Dynamic):Dynamic;
 
 	@:native("azimuthUnitVectorInView")
-	overload public function azimuthUnitVectorInView(view:UIView):CGVector;
+	overload public function azimuthUnitVectorInView(view:Dynamic):CGVector;
 
 	@:native("altitudeAngle")
-	public var altitudeAngle:CGFloat;
+	public var altitudeAngle:Dynamic;
 
 	@:native("estimationUpdateIndex")
-	public var estimationUpdateIndex:_Nullable;
+	public var estimationUpdateIndex:Dynamic;
 
 	@:native("estimatedProperties")
-	public var estimatedProperties:UITouchProperties;
+	public var estimatedProperties:Dynamic;
 
 	@:native("estimatedPropertiesExpectingUpdates")
-	public var estimatedPropertiesExpectingUpdates:UITouchProperties;
+	public var estimatedPropertiesExpectingUpdates:Dynamic;
 
 
 }

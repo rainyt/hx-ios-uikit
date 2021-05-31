@@ -13,13 +13,13 @@ extern class UISearchToken{
 	overload public static function autorelease():UISearchToken;
 
 	@:native("init")
-	overload public function init():UISearchToken;
+	overload public function init():Dynamic;
 
 	@:native("new")
-	overload public static function new():UISearchToken;
+	overload public static function new():Dynamic;
 
 	@:native("tokenWithIcon:text")
-	overload public static function tokenWithIcon(icon:UIImage, text:NSString):UISearchToken;
+	overload public static function tokenWithIcon(icon:Dynamic, text:NSString):Dynamic;
 
 	@:native("representedObject")
 	public var representedObject:Dynamic;

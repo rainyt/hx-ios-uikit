@@ -14,22 +14,22 @@ extern class UIWindow{
 	overload public static function autorelease():UIWindow;
 
 	@:native("initWithWindowScene")
-	overload public function initWithWindowScene(windowScene:UIWindowScene):UIWindow;
+	overload public function initWithWindowScene(windowScene:Dynamic):Dynamic;
 
 	@:native("windowScene")
-	public var windowScene:UIWindowScene;
+	public var windowScene:Dynamic;
 
 	@:native("canResizeToFitContent")
 	public var canResizeToFitContent:Bool;
 
 	@:native("screen")
-	public var screen:UIScreen;
+	public var screen:Dynamic;
 
 	@:native("setScreen")
-	overload public function setScreen(screen:UIScreen):Void;
+	overload public function setScreen(screen:Dynamic):Void;
 
 	@:native("windowLevel")
-	public var windowLevel:CGFloat;
+	public var windowLevel:Dynamic;
 
 	@:native("keyWindow")
 	public var keyWindow:Bool;
@@ -47,22 +47,22 @@ extern class UIWindow{
 	overload public function makeKeyAndVisible():Void;
 
 	@:native("rootViewController")
-	public var rootViewController:UIViewController;
+	public var rootViewController:Dynamic;
 
 	@:native("sendEvent")
-	overload public function sendEvent(event:UIEvent):Void;
+	overload public function sendEvent(event:Dynamic):Void;
 
 	@:native("convertPoint:toWindow")
-	overload public function convertPoint(point:CGPoint, toWindow:UIWindow):CGPoint;
+	overload public function convertPoint(point:CGPoint, toWindow:Dynamic):CGPoint;
 
 	@:native("convertPoint:fromWindow")
-	overload public function convertPoint(point:CGPoint, fromWindow:UIWindow):CGPoint;
+	overload public function convertPoint(point:CGPoint, fromWindow:Dynamic):CGPoint;
 
 	@:native("convertRect:toWindow")
-	overload public function convertRect(rect:CGRect, toWindow:UIWindow):CGRect;
+	overload public function convertRect(rect:CGRect, toWindow:Dynamic):CGRect;
 
 	@:native("convertRect:fromWindow")
-	overload public function convertRect(rect:CGRect, fromWindow:UIWindow):CGRect;
+	overload public function convertRect(rect:CGRect, fromWindow:Dynamic):CGRect;
 
 
 }

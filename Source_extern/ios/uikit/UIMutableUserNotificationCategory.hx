@@ -16,7 +16,7 @@ extern class UIMutableUserNotificationCategory{
 	public var identifier:NSString;
 
 	@:native("setActions:forContext")
-	overload public function setActions(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
+	overload public function setActions(actions:Dynamic, forContext:Dynamic):Void;
 
 
 }

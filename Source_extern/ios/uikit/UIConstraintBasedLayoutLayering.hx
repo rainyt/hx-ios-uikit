@@ -20,16 +20,16 @@ extern class UIConstraintBasedLayoutLayering{
 	overload public function frameForAlignmentRect(alignmentRect:CGRect):CGRect;
 
 	@:native("alignmentRectInsets")
-	public var alignmentRectInsets:UIEdgeInsets;
+	public var alignmentRectInsets:Dynamic;
 
 	@:native("viewForBaselineLayout")
-	overload public function viewForBaselineLayout():UIView;
+	overload public function viewForBaselineLayout():Dynamic;
 
 	@:native("viewForFirstBaselineLayout")
-	public var viewForFirstBaselineLayout:UIView;
+	public var viewForFirstBaselineLayout:Dynamic;
 
 	@:native("viewForLastBaselineLayout")
-	public var viewForLastBaselineLayout:UIView;
+	public var viewForLastBaselineLayout:Dynamic;
 
 	@:native("intrinsicContentSize")
 	public var intrinsicContentSize:CGSize;
@@ -38,16 +38,16 @@ extern class UIConstraintBasedLayoutLayering{
 	overload public function invalidateIntrinsicContentSize():Void;
 
 	@:native("contentHuggingPriorityForAxis")
-	overload public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):UILayoutPriority;
+	overload public function contentHuggingPriorityForAxis(axis:Dynamic):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority(priority:UILayoutPriority, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentHuggingPriority(priority:Dynamic, forAxis:Dynamic):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
-	overload public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):UILayoutPriority;
+	overload public function contentCompressionResistancePriorityForAxis(axis:Dynamic):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority(priority:UILayoutPriority, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentCompressionResistancePriority(priority:Dynamic, forAxis:Dynamic):Void;
 
 
 }

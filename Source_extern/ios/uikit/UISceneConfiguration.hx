@@ -13,25 +13,25 @@ extern class UISceneConfiguration{
 	overload public static function autorelease():UISceneConfiguration;
 
 	@:native("configurationWithName:sessionRole")
-	overload public static function configurationWithName(name:NSString, sessionRole:UISceneSessionRole):UISceneConfiguration;
+	overload public static function configurationWithName(name:NSString, sessionRole:Dynamic):Dynamic;
 
 	@:native("initWithName:sessionRole")
-	overload public function initWithName(name:NSString, sessionRole:UISceneSessionRole):UISceneConfiguration;
+	overload public function initWithName(name:NSString, sessionRole:Dynamic):Dynamic;
 
 	@:native("name")
 	public var name:NSString;
 
 	@:native("role")
-	public var role:UISceneSessionRole;
+	public var role:Dynamic;
 
 	@:native("sceneClass")
-	public var sceneClass:Class;
+	public var sceneClass:Dynamic;
 
 	@:native("delegateClass")
-	public var delegateClass:Class;
+	public var delegateClass:Dynamic;
 
 	@:native("storyboard")
-	public var storyboard:UIStoryboard;
+	public var storyboard:Dynamic;
 
 
 }

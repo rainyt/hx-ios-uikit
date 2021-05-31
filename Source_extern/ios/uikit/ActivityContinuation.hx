@@ -12,13 +12,13 @@ extern class ActivityContinuation{
 	overload public static function autorelease():ActivityContinuation;
 
 	@:native("userActivity")
-	public var userActivity:NSUserActivity;
+	public var userActivity:Dynamic;
 
 	@:native("updateUserActivityState")
-	overload public function updateUserActivityState(userActivity:NSUserActivity):Void;
+	overload public function updateUserActivityState(userActivity:Dynamic):Void;
 
 	@:native("restoreUserActivityState")
-	overload public function restoreUserActivityState(userActivity:NSUserActivity):Void;
+	overload public function restoreUserActivityState(userActivity:Dynamic):Void;
 
 
 }
