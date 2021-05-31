@@ -12,10 +12,10 @@ extern class NSCollectionLayoutSupplementaryItem{
 	overload public static function autorelease():NSCollectionLayoutSupplementaryItem;
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor")
-	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor(layoutSize:NSCollectionLayoutSize, elementKind:Dynamic, containerAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;
+	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor(layoutSize:NSCollectionLayoutSize, elementKind:Dynamic, containerAnchor:Dynamic):NSCollectionLayoutSupplementaryItem;
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor")
-	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor_itemAnchor(layoutSize:NSCollectionLayoutSize, elementKind:Dynamic, containerAnchor:NSCollectionLayoutAnchor, itemAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;
+	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor_itemAnchor(layoutSize:NSCollectionLayoutSize, elementKind:Dynamic, containerAnchor:Dynamic, itemAnchor:Dynamic):NSCollectionLayoutSupplementaryItem;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutSupplementaryItem;
@@ -27,10 +27,10 @@ extern class NSCollectionLayoutSupplementaryItem{
 	public var elementKind:Dynamic;
 
 	@:native("containerAnchor")
-	public var containerAnchor:NSCollectionLayoutAnchor;
+	public var containerAnchor:Dynamic;
 
 	@:native("itemAnchor")
-	public var itemAnchor:NSCollectionLayoutAnchor;
+	public var itemAnchor:Dynamic;
 
 
 }

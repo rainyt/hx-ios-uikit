@@ -12,7 +12,7 @@ extern class UISearchDisplayController{
 	overload public static function autorelease():UISearchDisplayController;
 
 	@:native("initWithSearchBar:contentsController")
-	overload public function initWithSearchBar_contentsController(searchBar:UISearchBar, contentsController:UIViewController):UISearchDisplayController;
+	overload public function initWithSearchBar_contentsController(searchBar:Dynamic, contentsController:Dynamic):UISearchDisplayController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -24,13 +24,13 @@ extern class UISearchDisplayController{
 	overload public function setActive_animated(visible:Bool, animated:Bool):Void;
 
 	@:native("searchBar")
-	public var searchBar:UISearchBar;
+	public var searchBar:Dynamic;
 
 	@:native("searchContentsController")
-	public var searchContentsController:UIViewController;
+	public var searchContentsController:Dynamic;
 
 	@:native("searchResultsTableView")
-	public var searchResultsTableView:UITableView;
+	public var searchResultsTableView:Dynamic;
 
 	@:native("searchResultsDataSource")
 	public var searchResultsDataSource:Dynamic;
@@ -42,7 +42,7 @@ extern class UISearchDisplayController{
 	public var displaysSearchBarInNavigationBar:Bool;
 
 	@:native("navigationItem")
-	public var navigationItem:UINavigationItem;
+	public var navigationItem:Dynamic;
 
 
 }

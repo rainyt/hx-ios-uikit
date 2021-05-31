@@ -15,7 +15,7 @@ extern class UIStoryboardUnwindSegueSource{
 	overload public function init():UIStoryboardUnwindSegueSource;
 
 	@:native("sourceViewController")
-	public var sourceViewController:UIViewController;
+	public var sourceViewController:Dynamic;
 
 	@:native("unwindAction")
 	public var unwindAction:String;

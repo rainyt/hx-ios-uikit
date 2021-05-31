@@ -18,10 +18,10 @@ extern class UINavigationItem{
 	overload public function initWithCoder(coder:Dynamic):UINavigationItem;
 
 	@:native("titleView")
-	public var titleView:UIView;
+	public var titleView:Dynamic;
 
 	@:native("backBarButtonItem")
-	public var backBarButtonItem:UIBarButtonItem;
+	public var backBarButtonItem:Dynamic;
 
 	@:native("hidesBackButton")
 	public var hidesBackButton:Bool;
@@ -30,7 +30,7 @@ extern class UINavigationItem{
 	overload public function setHidesBackButton_animated(hidesBackButton:Bool, animated:Bool):Void;
 
 	@:native("backButtonDisplayMode")
-	public var backButtonDisplayMode:UINavigationItemBackButtonDisplayMode;
+	public var backButtonDisplayMode:Dynamic;
 
 	@:native("setLeftBarButtonItems:animated")
 	overload public function setLeftBarButtonItems_animated(items:Dynamic, animated:Bool):Void;
@@ -42,22 +42,22 @@ extern class UINavigationItem{
 	public var leftItemsSupplementBackButton:Bool;
 
 	@:native("leftBarButtonItem")
-	public var leftBarButtonItem:UIBarButtonItem;
+	public var leftBarButtonItem:Dynamic;
 
 	@:native("rightBarButtonItem")
-	public var rightBarButtonItem:UIBarButtonItem;
+	public var rightBarButtonItem:Dynamic;
 
 	@:native("setLeftBarButtonItem:animated")
-	overload public function setLeftBarButtonItem_animated(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function setLeftBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
 
 	@:native("setRightBarButtonItem:animated")
-	overload public function setRightBarButtonItem_animated(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function setRightBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
 
 	@:native("largeTitleDisplayMode")
-	public var largeTitleDisplayMode:UINavigationItemLargeTitleDisplayMode;
+	public var largeTitleDisplayMode:Dynamic;
 
 	@:native("searchController")
-	public var searchController:UISearchController;
+	public var searchController:Dynamic;
 
 	@:native("hidesSearchBarWhenScrolling")
 	public var hidesSearchBarWhenScrolling:Bool;

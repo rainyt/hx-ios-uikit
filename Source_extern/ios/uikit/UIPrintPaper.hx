@@ -22,5 +22,14 @@ extern class UIPrintPaper{
 	@:native("printableRect")
 	public var printableRect:CGRect;
 
+	@:native("alloc")
+	overload public static function alloc():UIPrintPaper;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIPrintPaper;
+
+	@:native("printRect")
+	overload public function printRect():CGRect;
+
 
 }

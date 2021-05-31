@@ -12,13 +12,13 @@ extern class UIFontPickerViewController extends UIViewController{
 	overload public static function autorelease():UIFontPickerViewController;
 
 	@:native("initWithConfiguration")
-	overload public function initWithConfiguration(configuration:UIFontPickerViewControllerConfiguration):UIFontPickerViewController;
+	overload public function initWithConfiguration(configuration:Dynamic):UIFontPickerViewController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("selectedFontDescriptor")
-	public var selectedFontDescriptor:UIFontDescriptor;
+	public var selectedFontDescriptor:Dynamic;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:Dynamic, bundle:Dynamic):UIFontPickerViewController;

@@ -12,7 +12,7 @@ extern class UIInputViewController{
 	overload public static function autorelease():UIInputViewController;
 
 	@:native("inputView")
-	public var inputView:UIInputView;
+	public var inputView:Dynamic;
 
 	@:native("textDocumentProxy")
 	public var textDocumentProxy:Dynamic;

@@ -21,13 +21,13 @@ extern class UITableViewController{
 	overload public function initWithCoder(coder:Dynamic):UITableViewController;
 
 	@:native("tableView")
-	public var tableView:UITableView;
+	public var tableView:Dynamic;
 
 	@:native("clearsSelectionOnViewWillAppear")
 	public var clearsSelectionOnViewWillAppear:Bool;
 
 	@:native("refreshControl")
-	public var refreshControl:UIRefreshControl;
+	public var refreshControl:Dynamic;
 
 
 }

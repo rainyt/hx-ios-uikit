@@ -15,7 +15,7 @@ extern class UIDocumentBrowserAction{
 	overload public function init():UIDocumentBrowserAction;
 
 	@:native("initWithIdentifier:localizedTitle:availability:handler")
-	overload public function initWithIdentifier_localizedTitle_availability_handler(identifier:Dynamic, localizedTitle:Dynamic, availability:UIDocumentBrowserActionAvailability, handler:Dynamic):UIDocumentBrowserAction;
+	overload public function initWithIdentifier_localizedTitle_availability_handler(identifier:Dynamic, localizedTitle:Dynamic, availability:Dynamic, handler:Dynamic):UIDocumentBrowserAction;
 
 	@:native("identifier")
 	public var identifier:Dynamic;
@@ -24,10 +24,10 @@ extern class UIDocumentBrowserAction{
 	public var localizedTitle:Dynamic;
 
 	@:native("availability")
-	public var availability:UIDocumentBrowserActionAvailability;
+	public var availability:Dynamic;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("supportsMultipleItems")
 	public var supportsMultipleItems:Bool;

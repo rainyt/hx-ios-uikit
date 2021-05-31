@@ -33,28 +33,28 @@ extern class UIStepper extends UIControl{
 	public var stepValue:Dynamic;
 
 	@:native("setBackgroundImage:forState")
-	overload public function setBackgroundImage_forState(image:UIImage, forState:UIControlState):Void;
+	overload public function setBackgroundImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("backgroundImageForState")
-	overload public function backgroundImageForState(state:UIControlState):UIImage;
+	overload public function backgroundImageForState(state:Dynamic):Dynamic;
 
 	@:native("setDividerImage:forLeftSegmentState:rightSegmentState")
-	overload public function setDividerImage_forLeftSegmentState_rightSegmentState(image:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState):Void;
+	overload public function setDividerImage_forLeftSegmentState_rightSegmentState(image:Dynamic, forLeftSegmentState:Dynamic, rightSegmentState:Dynamic):Void;
 
 	@:native("dividerImageForLeftSegmentState:rightSegmentState")
-	overload public function dividerImageForLeftSegmentState_rightSegmentState(state:UIControlState, rightSegmentState:UIControlState):UIImage;
+	overload public function dividerImageForLeftSegmentState_rightSegmentState(state:Dynamic, rightSegmentState:Dynamic):Dynamic;
 
 	@:native("setIncrementImage:forState")
-	overload public function setIncrementImage_forState(image:UIImage, forState:UIControlState):Void;
+	overload public function setIncrementImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("incrementImageForState")
-	overload public function incrementImageForState(state:UIControlState):UIImage;
+	overload public function incrementImageForState(state:Dynamic):Dynamic;
 
 	@:native("setDecrementImage:forState")
-	overload public function setDecrementImage_forState(image:UIImage, forState:UIControlState):Void;
+	overload public function setDecrementImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("decrementImageForState")
-	overload public function decrementImageForState(state:UIControlState):UIImage;
+	overload public function decrementImageForState(state:Dynamic):Dynamic;
 
 
 }

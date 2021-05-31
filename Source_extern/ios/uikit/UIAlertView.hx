@@ -49,10 +49,10 @@ extern class UIAlertView extends UIView{
 	overload public function dismissWithClickedButtonIndex_animated(buttonIndex:Int, animated:Bool):Void;
 
 	@:native("alertViewStyle")
-	public var alertViewStyle:UIAlertViewStyle;
+	public var alertViewStyle:Dynamic;
 
 	@:native("textFieldAtIndex")
-	overload public function textFieldAtIndex(textFieldIndex:Int):UITextField;
+	overload public function textFieldAtIndex(textFieldIndex:Int):Dynamic;
 
 
 }

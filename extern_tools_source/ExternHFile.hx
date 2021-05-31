@@ -5,6 +5,16 @@ import sys.io.File;
  */
 class ExternHFile {
 	/**
+	 * Haxe储存文件夹
+	 */
+	private var haxeSaveDir:String;
+
+	/**
+	 * Haxe包名
+	 */
+	private var haxePkg:String;
+
+	/**
 	 * 头文件中的typedef定义
 	 */
 	public var typedefs:Map<String, ExternTypedefClass> = [];
@@ -12,9 +22,11 @@ class ExternHFile {
 	/**
 	 * 类型的定义
 	 */
-	public var classdefs:Map<String, ExternBaseClass> = [];
+	// public var classdefs:Map<String, ExternBaseClass> = [];
 
-	public function new(file:String) {
+	public function new(file:String, haxeSaveDir:String, haxePkg:String) {
+		this.haxeSaveDir = haxeSaveDir;
+		this.haxePkg = haxePkg;
 		var contents = File.getContent(file).split("\n");
 		// trace(contents);
 		var read:Array<String> = [];
@@ -75,10 +87,17 @@ class ExternHFile {
 			d.parentClassName = t2.className;
 			typedefs.set(t2.className, d);
 		});
+		t.saveFile = haxeSaveDir + "/" + t.className + ".hx";
+		t.pkg = haxePkg;
 		// if(t.className == "UIAlertAction")
 		// trace("类定义：" + t.className,data,t.toHaxeFile("test"));
 		if (t.className != null) {
-			classdefs.set(t.className, t);
+			if (ExternTools.classDefine.exists(t.className)) {
+				// 当已经存在了类型后，应该让他们进行合并处理
+				// trace("合并",t.className);
+				ExternTools.classDefine.get(t.className).putClass(t);
+			} else
+				ExternTools.classDefine.set(t.className, t);
 		}
 	}
 

@@ -19,7 +19,7 @@ extern class UIActionSheet extends UIView{
 	public var delegate:Dynamic;
 
 	@:native("actionSheetStyle")
-	public var actionSheetStyle:UIActionSheetStyle;
+	public var actionSheetStyle:Dynamic;
 
 	@:native("addButtonWithTitle")
 	overload public function addButtonWithTitle(title:Dynamic):Int;
@@ -43,19 +43,19 @@ extern class UIActionSheet extends UIView{
 	public var visible:Bool;
 
 	@:native("showFromToolbar")
-	overload public function showFromToolbar(view:UIToolbar):Void;
+	overload public function showFromToolbar(view:Dynamic):Void;
 
 	@:native("showFromTabBar")
-	overload public function showFromTabBar(view:UITabBar):Void;
+	overload public function showFromTabBar(view:Dynamic):Void;
 
 	@:native("showFromBarButtonItem:animated")
-	overload public function showFromBarButtonItem_animated(item:UIBarButtonItem, animated:Bool):Void;
+	overload public function showFromBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
 
 	@:native("showFromRect:inView:animated")
-	overload public function showFromRect_inView_animated(rect:CGRect, inView:UIView, animated:Bool):Void;
+	overload public function showFromRect_inView_animated(rect:CGRect, inView:Dynamic, animated:Bool):Void;
 
 	@:native("showInView")
-	overload public function showInView(view:UIView):Void;
+	overload public function showInView(view:Dynamic):Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
 	overload public function dismissWithClickedButtonIndex_animated(buttonIndex:Int, animated:Bool):Void;

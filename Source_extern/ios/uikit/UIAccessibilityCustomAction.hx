@@ -18,10 +18,10 @@ extern class UIAccessibilityCustomAction{
 	overload public function initWithAttributedName_target_selector(attributedName:Dynamic, target:Dynamic, selector:String):UIAccessibilityCustomAction;
 
 	@:native("initWithName:image:target:selector")
-	overload public function initWithName_image_target_selector(name:Dynamic, image:UIImage, target:Dynamic, selector:String):UIAccessibilityCustomAction;
+	overload public function initWithName_image_target_selector(name:Dynamic, image:Dynamic, target:Dynamic, selector:String):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName:image:target:selector")
-	overload public function initWithAttributedName_image_target_selector(attributedName:Dynamic, image:UIImage, target:Dynamic, selector:String):UIAccessibilityCustomAction;
+	overload public function initWithAttributedName_image_target_selector(attributedName:Dynamic, image:Dynamic, target:Dynamic, selector:String):UIAccessibilityCustomAction;
 
 	@:native("initWithName:actionHandler")
 	overload public function initWithName_actionHandler(name:Dynamic, actionHandler:Dynamic):UIAccessibilityCustomAction;
@@ -30,13 +30,13 @@ extern class UIAccessibilityCustomAction{
 	overload public function initWithAttributedName_actionHandler(attributedName:Dynamic, actionHandler:Dynamic):UIAccessibilityCustomAction;
 
 	@:native("initWithName:image:actionHandler")
-	overload public function initWithName_image_actionHandler(name:Dynamic, image:UIImage, actionHandler:Dynamic):UIAccessibilityCustomAction;
+	overload public function initWithName_image_actionHandler(name:Dynamic, image:Dynamic, actionHandler:Dynamic):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName:image:actionHandler")
-	overload public function initWithAttributedName_image_actionHandler(attributedName:Dynamic, image:UIImage, actionHandler:Dynamic):UIAccessibilityCustomAction;
+	overload public function initWithAttributedName_image_actionHandler(attributedName:Dynamic, image:Dynamic, actionHandler:Dynamic):UIAccessibilityCustomAction;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("target")
 	public var target:Dynamic;

@@ -18,13 +18,13 @@ extern class UISimpleTextPrintFormatter extends UIPrintFormatter{
 	overload public function initWithAttributedText(attributedText:Dynamic):UISimpleTextPrintFormatter;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("color")
-	public var color:UIColor;
+	public var color:Dynamic;
 
 	@:native("textAlignment")
-	public var textAlignment:NSTextAlignment;
+	public var textAlignment:Dynamic;
 
 
 }

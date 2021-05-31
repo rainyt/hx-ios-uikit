@@ -98,5 +98,35 @@ extern class UITraitCollection{
 	@:native("activeAppearance")
 	public var activeAppearance:UIUserInterfaceActiveAppearance;
 
+	@:native("alloc")
+	overload public static function alloc():UITraitCollection;
+
+	@:native("autorelease")
+	overload public static function autorelease():UITraitCollection;
+
+	@:native("currentTraitCollection")
+	overload public static function currentTraitCollection():UITraitCollection;
+
+	@:native("performAsCurrentTraitCollection")
+	overload public function performAsCurrentTraitCollection(actions:Dynamic):Void;
+
+	@:native("alloc")
+	overload public static function alloc():UITraitCollection;
+
+	@:native("autorelease")
+	overload public static function autorelease():UITraitCollection;
+
+	@:native("hasDifferentColorAppearanceComparedToTraitCollection")
+	overload public function hasDifferentColorAppearanceComparedToTraitCollection(traitCollection:UITraitCollection):Bool;
+
+	@:native("alloc")
+	overload public static function alloc():UITraitCollection;
+
+	@:native("autorelease")
+	overload public static function autorelease():UITraitCollection;
+
+	@:native("imageConfiguration")
+	public var imageConfiguration:Dynamic;
+
 
 }

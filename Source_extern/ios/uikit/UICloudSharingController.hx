@@ -30,7 +30,7 @@ extern class UICloudSharingController extends UIViewController{
 	public var share:Dynamic;
 
 	@:native("availablePermissions")
-	public var availablePermissions:UICloudSharingPermissionOptions;
+	public var availablePermissions:Dynamic;
 
 	@:native("activityItemSource")
 	overload public function activityItemSource():Dynamic;

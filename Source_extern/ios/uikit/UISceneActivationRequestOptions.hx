@@ -12,10 +12,10 @@ extern class UISceneActivationRequestOptions{
 	overload public static function autorelease():UISceneActivationRequestOptions;
 
 	@:native("requestingScene")
-	public var requestingScene:UIScene;
+	public var requestingScene:Dynamic;
 
 	@:native("collectionJoinBehavior")
-	public var collectionJoinBehavior:UISceneCollectionJoinBehavior;
+	public var collectionJoinBehavior:Dynamic;
 
 
 }

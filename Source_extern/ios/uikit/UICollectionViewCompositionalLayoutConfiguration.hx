@@ -18,7 +18,7 @@ extern class UICollectionViewCompositionalLayoutConfiguration{
 	public var interSectionSpacing:Float;
 
 	@:native("contentInsetsReference")
-	public var contentInsetsReference:UIContentInsetsReference;
+	public var contentInsetsReference:Dynamic;
 
 
 }

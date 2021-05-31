@@ -18,7 +18,7 @@ extern class UIKey{
 	public var charactersIgnoringModifiers:Dynamic;
 
 	@:native("modifierFlags")
-	public var modifierFlags:UIKeyModifierFlags;
+	public var modifierFlags:Dynamic;
 
 	@:native("keyCode")
 	public var keyCode:Dynamic;

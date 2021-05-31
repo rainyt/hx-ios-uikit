@@ -12,37 +12,37 @@ extern class UIEvent{
 	overload public static function autorelease():UIEvent;
 
 	@:native("type")
-	public var type:UIEventType;
+	public var type:Dynamic;
 
 	@:native("subtype")
-	public var subtype:UIEventSubtype;
+	public var subtype:Dynamic;
 
 	@:native("timestamp")
 	public var timestamp:Dynamic;
 
 	@:native("modifierFlags")
-	public var modifierFlags:UIKeyModifierFlags;
+	public var modifierFlags:Dynamic;
 
 	@:native("buttonMask")
-	public var buttonMask:UIEventButtonMask;
+	public var buttonMask:Dynamic;
 
 	@:native("allTouches")
 	public var allTouches:Dynamic;
 
 	@:native("touchesForWindow")
-	overload public function touchesForWindow(window:UIWindow):Dynamic;
+	overload public function touchesForWindow(window:Dynamic):Dynamic;
 
 	@:native("touchesForView")
-	overload public function touchesForView(view:UIView):Dynamic;
+	overload public function touchesForView(view:Dynamic):Dynamic;
 
 	@:native("touchesForGestureRecognizer")
-	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):Dynamic;
+	overload public function touchesForGestureRecognizer(gesture:Dynamic):Dynamic;
 
 	@:native("coalescedTouchesForTouch")
-	overload public function coalescedTouchesForTouch(touch:UITouch):Dynamic;
+	overload public function coalescedTouchesForTouch(touch:Dynamic):Dynamic;
 
 	@:native("predictedTouchesForTouch")
-	overload public function predictedTouchesForTouch(touch:UITouch):Dynamic;
+	overload public function predictedTouchesForTouch(touch:Dynamic):Dynamic;
 
 
 }

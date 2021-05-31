@@ -12,7 +12,7 @@ extern class UIDatePicker{
 	overload public static function autorelease():UIDatePicker;
 
 	@:native("datePickerMode")
-	public var datePickerMode:UIDatePickerMode;
+	public var datePickerMode:Dynamic;
 
 	@:native("locale")
 	public var locale:Dynamic;
@@ -39,10 +39,10 @@ extern class UIDatePicker{
 	overload public function setDate_animated(date:Dynamic, animated:Bool):Void;
 
 	@:native("preferredDatePickerStyle")
-	public var preferredDatePickerStyle:UIDatePickerStyle;
+	public var preferredDatePickerStyle:Dynamic;
 
 	@:native("datePickerStyle")
-	public var datePickerStyle:UIDatePickerStyle;
+	public var datePickerStyle:Dynamic;
 
 
 }

@@ -12,7 +12,7 @@ extern class UISearchController{
 	overload public static function autorelease():UISearchController;
 
 	@:native("initWithSearchResultsController")
-	overload public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
+	overload public function initWithSearchResultsController(searchResultsController:Dynamic):UISearchController;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:Dynamic, bundle:Dynamic):UISearchController;
@@ -39,10 +39,10 @@ extern class UISearchController{
 	public var hidesNavigationBarDuringPresentation:Bool;
 
 	@:native("searchResultsController")
-	public var searchResultsController:UIViewController;
+	public var searchResultsController:Dynamic;
 
 	@:native("searchBar")
-	public var searchBar:UISearchBar;
+	public var searchBar:Dynamic;
 
 	@:native("automaticallyShowsSearchResultsController")
 	public var automaticallyShowsSearchResultsController:Bool;
@@ -57,7 +57,7 @@ extern class UISearchController{
 	public var automaticallyShowsScopeBar:Bool;
 
 	@:native("searchControllerObservedScrollView")
-	public var searchControllerObservedScrollView:UIScrollView;
+	public var searchControllerObservedScrollView:Dynamic;
 
 
 }

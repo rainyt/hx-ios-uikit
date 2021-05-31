@@ -12,7 +12,7 @@ extern class UIPointerEffect{
 	overload public static function autorelease():UIPointerEffect;
 
 	@:native("effectWithPreview")
-	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerEffect;
+	overload public static function effectWithPreview(preview:Dynamic):UIPointerEffect;
 
 	@:native("init")
 	overload public function init():UIPointerEffect;

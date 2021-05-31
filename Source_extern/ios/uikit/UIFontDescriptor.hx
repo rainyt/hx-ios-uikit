@@ -28,7 +28,7 @@ extern class UIFontDescriptor{
 	public var matrix:CGAffineTransform;
 
 	@:native("symbolicTraits")
-	public var symbolicTraits:UIFontDescriptorSymbolicTraits;
+	public var symbolicTraits:Dynamic;
 
 	@:native("objectForKey")
 	overload public function objectForKey(anAttribute:Dynamic):Dynamic;
@@ -52,7 +52,7 @@ extern class UIFontDescriptor{
 	overload public static function preferredFontDescriptorWithTextStyle(style:Dynamic):UIFontDescriptor;
 
 	@:native("preferredFontDescriptorWithTextStyle:compatibleWithTraitCollection")
-	overload public static function preferredFontDescriptorWithTextStyle_compatibleWithTraitCollection(style:Dynamic, compatibleWithTraitCollection:UITraitCollection):UIFontDescriptor;
+	overload public static function preferredFontDescriptorWithTextStyle_compatibleWithTraitCollection(style:Dynamic, compatibleWithTraitCollection:Dynamic):UIFontDescriptor;
 
 	@:native("initWithFontAttributes")
 	overload public function initWithFontAttributes(attributes:Dynamic):UIFontDescriptor;
@@ -73,7 +73,7 @@ extern class UIFontDescriptor{
 	overload public function fontDescriptorWithFamily(newFamily:Dynamic):UIFontDescriptor;
 
 	@:native("fontDescriptorWithSymbolicTraits")
-	overload public function fontDescriptorWithSymbolicTraits(symbolicTraits:UIFontDescriptorSymbolicTraits):UIFontDescriptor;
+	overload public function fontDescriptorWithSymbolicTraits(symbolicTraits:Dynamic):UIFontDescriptor;
 
 	@:native("fontDescriptorWithDesign")
 	overload public function fontDescriptorWithDesign(design:Dynamic):UIFontDescriptor;

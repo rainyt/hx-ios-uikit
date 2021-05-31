@@ -30,7 +30,7 @@ extern class UIDevice{
 	public var systemVersion:Dynamic;
 
 	@:native("orientation")
-	public var orientation:UIDeviceOrientation;
+	public var orientation:Dynamic;
 
 	@:native("identifierForVendor")
 	public var identifierForVendor:Dynamic;
@@ -48,7 +48,7 @@ extern class UIDevice{
 	public var batteryMonitoringEnabled:Bool;
 
 	@:native("batteryState")
-	public var batteryState:UIDeviceBatteryState;
+	public var batteryState:Dynamic;
 
 	@:native("batteryLevel")
 	public var batteryLevel:Dynamic;
@@ -63,7 +63,7 @@ extern class UIDevice{
 	public var multitaskingSupported:Bool;
 
 	@:native("userInterfaceIdiom")
-	public var userInterfaceIdiom:UIUserInterfaceIdiom;
+	public var userInterfaceIdiom:Dynamic;
 
 	@:native("playInputClick")
 	overload public function playInputClick():Void;

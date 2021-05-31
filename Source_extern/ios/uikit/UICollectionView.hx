@@ -14,13 +14,13 @@ extern class UICollectionView{
 	overload public static function autorelease():UICollectionView;
 
 	@:native("initWithFrame:collectionViewLayout")
-	overload public function initWithFrame_collectionViewLayout(frame:CGRect, collectionViewLayout:UICollectionViewLayout):UICollectionView;
+	overload public function initWithFrame_collectionViewLayout(frame:CGRect, collectionViewLayout:Dynamic):UICollectionView;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UICollectionView;
 
 	@:native("collectionViewLayout")
-	public var collectionViewLayout:UICollectionViewLayout;
+	public var collectionViewLayout:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -44,37 +44,37 @@ extern class UICollectionView{
 	public var dragInteractionEnabled:Bool;
 
 	@:native("contextMenuInteraction")
-	public var contextMenuInteraction:UIContextMenuInteraction;
+	public var contextMenuInteraction:Dynamic;
 
 	@:native("reorderingCadence")
-	public var reorderingCadence:UICollectionViewReorderingCadence;
+	public var reorderingCadence:Dynamic;
 
 	@:native("backgroundView")
-	public var backgroundView:UIView;
+	public var backgroundView:Dynamic;
 
 	@:native("registerClass:forCellWithReuseIdentifier")
 	overload public function registerClass_forCellWithReuseIdentifier(cellClass:Dynamic, forCellWithReuseIdentifier:Dynamic):Void;
 
 	@:native("registerNib:forCellWithReuseIdentifier")
-	overload public function registerNib_forCellWithReuseIdentifier(nib:UINib, forCellWithReuseIdentifier:Dynamic):Void;
+	overload public function registerNib_forCellWithReuseIdentifier(nib:Dynamic, forCellWithReuseIdentifier:Dynamic):Void;
 
 	@:native("registerClass:forSupplementaryViewOfKind:withReuseIdentifier")
 	overload public function registerClass_forSupplementaryViewOfKind_withReuseIdentifier(viewClass:Dynamic, forSupplementaryViewOfKind:Dynamic, withReuseIdentifier:Dynamic):Void;
 
 	@:native("registerNib:forSupplementaryViewOfKind:withReuseIdentifier")
-	overload public function registerNib_forSupplementaryViewOfKind_withReuseIdentifier(nib:UINib, forSupplementaryViewOfKind:Dynamic, withReuseIdentifier:Dynamic):Void;
+	overload public function registerNib_forSupplementaryViewOfKind_withReuseIdentifier(nib:Dynamic, forSupplementaryViewOfKind:Dynamic, withReuseIdentifier:Dynamic):Void;
 
 	@:native("dequeueReusableCellWithReuseIdentifier:forIndexPath")
-	overload public function dequeueReusableCellWithReuseIdentifier_forIndexPath(identifier:Dynamic, forIndexPath:Dynamic):UICollectionViewCell;
+	overload public function dequeueReusableCellWithReuseIdentifier_forIndexPath(identifier:Dynamic, forIndexPath:Dynamic):Dynamic;
 
 	@:native("dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath")
-	overload public function dequeueReusableSupplementaryViewOfKind_withReuseIdentifier_forIndexPath(elementKind:Dynamic, withReuseIdentifier:Dynamic, forIndexPath:Dynamic):UICollectionReusableView;
+	overload public function dequeueReusableSupplementaryViewOfKind_withReuseIdentifier_forIndexPath(elementKind:Dynamic, withReuseIdentifier:Dynamic, forIndexPath:Dynamic):Dynamic;
 
 	@:native("dequeueConfiguredReusableCellWithRegistration:forIndexPath:item")
-	overload public function dequeueConfiguredReusableCellWithRegistration_forIndexPath_item(registration:UICollectionViewCellRegistration, forIndexPath:Dynamic, item:Dynamic):UICollectionViewCell;
+	overload public function dequeueConfiguredReusableCellWithRegistration_forIndexPath_item(registration:Dynamic, forIndexPath:Dynamic, item:Dynamic):Dynamic;
 
 	@:native("dequeueConfiguredReusableSupplementaryViewWithRegistration:forIndexPath")
-	overload public function dequeueConfiguredReusableSupplementaryViewWithRegistration_forIndexPath(registration:UICollectionViewSupplementaryRegistration, forIndexPath:Dynamic):UICollectionReusableView;
+	overload public function dequeueConfiguredReusableSupplementaryViewWithRegistration_forIndexPath(registration:Dynamic, forIndexPath:Dynamic):Dynamic;
 
 	@:native("allowsSelection")
 	public var allowsSelection:Bool;
@@ -86,7 +86,7 @@ extern class UICollectionView{
 	public var indexPathsForSelectedItems:Dynamic;
 
 	@:native("selectItemAtIndexPath:animated:scrollPosition")
-	overload public function selectItemAtIndexPath_animated_scrollPosition(indexPath:Dynamic, animated:Bool, scrollPosition:UICollectionViewScrollPosition):Void;
+	overload public function selectItemAtIndexPath_animated_scrollPosition(indexPath:Dynamic, animated:Bool, scrollPosition:Dynamic):Void;
 
 	@:native("deselectItemAtIndexPath:animated")
 	overload public function deselectItemAtIndexPath_animated(indexPath:Dynamic, animated:Bool):Void;
@@ -98,13 +98,13 @@ extern class UICollectionView{
 	overload public function reloadData():Void;
 
 	@:native("setCollectionViewLayout:animated")
-	overload public function setCollectionViewLayout_animated(layout:UICollectionViewLayout, animated:Bool):Void;
+	overload public function setCollectionViewLayout_animated(layout:Dynamic, animated:Bool):Void;
 
 	@:native("setCollectionViewLayout:animated:completion")
-	overload public function setCollectionViewLayout_animated_completion(layout:UICollectionViewLayout, animated:Bool, completion:Dynamic):Void;
+	overload public function setCollectionViewLayout_animated_completion(layout:Dynamic, animated:Bool, completion:Dynamic):Void;
 
 	@:native("startInteractiveTransitionToCollectionViewLayout:completion")
-	overload public function startInteractiveTransitionToCollectionViewLayout_completion(layout:UICollectionViewLayout, completion:Dynamic):UICollectionViewTransitionLayout;
+	overload public function startInteractiveTransitionToCollectionViewLayout_completion(layout:Dynamic, completion:Dynamic):Dynamic;
 
 	@:native("finishInteractiveTransition")
 	overload public function finishInteractiveTransition():Void;
@@ -119,19 +119,19 @@ extern class UICollectionView{
 	overload public function numberOfItemsInSection(section:Int):Int;
 
 	@:native("layoutAttributesForItemAtIndexPath")
-	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForSupplementaryElementOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryElementOfKind_atIndexPath(kind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryElementOfKind_atIndexPath(kind:Dynamic, atIndexPath:Dynamic):Dynamic;
 
 	@:native("indexPathForItemAtPoint")
 	overload public function indexPathForItemAtPoint(point:CGPoint):Dynamic;
 
 	@:native("indexPathForCell")
-	overload public function indexPathForCell(cell:UICollectionViewCell):Dynamic;
+	overload public function indexPathForCell(cell:Dynamic):Dynamic;
 
 	@:native("cellForItemAtIndexPath")
-	overload public function cellForItemAtIndexPath(indexPath:Dynamic):UICollectionViewCell;
+	overload public function cellForItemAtIndexPath(indexPath:Dynamic):Dynamic;
 
 	@:native("visibleCells")
 	public var visibleCells:Dynamic;
@@ -140,7 +140,7 @@ extern class UICollectionView{
 	public var indexPathsForVisibleItems:Dynamic;
 
 	@:native("supplementaryViewForElementKind:atIndexPath")
-	overload public function supplementaryViewForElementKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionReusableView;
+	overload public function supplementaryViewForElementKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):Dynamic;
 
 	@:native("visibleSupplementaryViewsOfKind")
 	overload public function visibleSupplementaryViewsOfKind(elementKind:Dynamic):Dynamic;
@@ -149,7 +149,7 @@ extern class UICollectionView{
 	overload public function indexPathsForVisibleSupplementaryElementsOfKind(elementKind:Dynamic):Dynamic;
 
 	@:native("scrollToItemAtIndexPath:atScrollPosition:animated")
-	overload public function scrollToItemAtIndexPath_atScrollPosition_animated(indexPath:Dynamic, atScrollPosition:UICollectionViewScrollPosition, animated:Bool):Void;
+	overload public function scrollToItemAtIndexPath_atScrollPosition_animated(indexPath:Dynamic, atScrollPosition:Dynamic, animated:Bool):Void;
 
 	@:native("insertSections")
 	overload public function insertSections(sections:Dynamic):Void;
@@ -210,6 +210,12 @@ extern class UICollectionView{
 
 	@:native("allowsMultipleSelectionDuringEditing")
 	public var allowsMultipleSelectionDuringEditing:Bool;
+
+	@:native("alloc")
+	overload public static function alloc():UICollectionView;
+
+	@:native("autorelease")
+	overload public static function autorelease():UICollectionView;
 
 
 }

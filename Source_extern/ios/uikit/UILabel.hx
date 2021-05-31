@@ -14,13 +14,13 @@ extern class UILabel{
 	overload public static function autorelease():UILabel;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("textColor")
-	public var textColor:UIColor;
+	public var textColor:Dynamic;
 
 	@:native("shadowColor")
-	public var shadowColor:UIColor;
+	public var shadowColor:Dynamic;
 
 	@:native("shadowOffset")
 	public var shadowOffset:CGSize;
@@ -32,7 +32,7 @@ extern class UILabel{
 	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("highlightedTextColor")
-	public var highlightedTextColor:UIColor;
+	public var highlightedTextColor:Dynamic;
 
 	@:native("highlighted")
 	public var highlighted:Bool;

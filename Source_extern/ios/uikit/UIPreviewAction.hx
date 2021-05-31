@@ -12,7 +12,7 @@ extern class UIPreviewAction{
 	overload public static function autorelease():UIPreviewAction;
 
 	@:native("actionWithTitle:style:handler")
-	overload public static function actionWithTitle_style_handler(title:Dynamic, style:UIPreviewActionStyle, handler:Dynamic):UIPreviewAction;
+	overload public static function actionWithTitle_style_handler(title:Dynamic, style:Dynamic, handler:Dynamic):UIPreviewAction;
 
 
 }

@@ -12,10 +12,10 @@ extern class NSLayoutConstraint{
 	overload public static function autorelease():NSLayoutConstraint;
 
 	@:native("constraintsWithVisualFormat:options:metrics:views")
-	overload public static function constraintsWithVisualFormat_options_metrics_views(format:Dynamic, options:NSLayoutFormatOptions, metrics:Dynamic, views:Dynamic):Dynamic;
+	overload public static function constraintsWithVisualFormat_options_metrics_views(format:Dynamic, options:Dynamic, metrics:Dynamic, views:Dynamic):Dynamic;
 
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
-	overload public static function constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant(view1:Dynamic, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:Dynamic, attribute:NSLayoutAttribute, multiplier:Float, constant:Float):NSLayoutConstraint;
+	overload public static function constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant(view1:Dynamic, attribute:Dynamic, relatedBy:Dynamic, toItem:Dynamic, attribute:Dynamic, multiplier:Float, constant:Float):NSLayoutConstraint;
 
 	@:native("priority")
 	public var priority:null;
@@ -30,13 +30,13 @@ extern class NSLayoutConstraint{
 	public var secondItem:Dynamic;
 
 	@:native("firstAttribute")
-	public var firstAttribute:NSLayoutAttribute;
+	public var firstAttribute:Dynamic;
 
 	@:native("secondAttribute")
-	public var secondAttribute:NSLayoutAttribute;
+	public var secondAttribute:Dynamic;
 
 	@:native("relation")
-	public var relation:NSLayoutRelation;
+	public var relation:Dynamic;
 
 	@:native("multiplier")
 	public var multiplier:Float;
@@ -52,6 +52,12 @@ extern class NSLayoutConstraint{
 
 	@:native("deactivateConstraints")
 	overload public static function deactivateConstraints(constraints:Dynamic):Void;
+
+	@:native("alloc")
+	overload public static function alloc():NSLayoutConstraint;
+
+	@:native("autorelease")
+	overload public static function autorelease():NSLayoutConstraint;
 
 
 }

@@ -15,13 +15,13 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	public var transitionProgress:Float;
 
 	@:native("currentLayout")
-	public var currentLayout:UICollectionViewLayout;
+	public var currentLayout:Dynamic;
 
 	@:native("nextLayout")
-	public var nextLayout:UICollectionViewLayout;
+	public var nextLayout:Dynamic;
 
 	@:native("initWithCurrentLayout:nextLayout")
-	overload public function initWithCurrentLayout_nextLayout(currentLayout:UICollectionViewLayout, nextLayout:UICollectionViewLayout):UICollectionViewTransitionLayout;
+	overload public function initWithCurrentLayout_nextLayout(currentLayout:Dynamic, nextLayout:Dynamic):UICollectionViewTransitionLayout;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UICollectionViewTransitionLayout;

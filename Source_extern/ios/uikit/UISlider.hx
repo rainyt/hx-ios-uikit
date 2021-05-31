@@ -22,52 +22,52 @@ extern class UISlider{
 	public var maximumValue:Dynamic;
 
 	@:native("minimumValueImage")
-	public var minimumValueImage:UIImage;
+	public var minimumValueImage:Dynamic;
 
 	@:native("maximumValueImage")
-	public var maximumValueImage:UIImage;
+	public var maximumValueImage:Dynamic;
 
 	@:native("continuous")
 	public var continuous:Bool;
 
 	@:native("minimumTrackTintColor")
-	public var minimumTrackTintColor:UIColor;
+	public var minimumTrackTintColor:Dynamic;
 
 	@:native("maximumTrackTintColor")
-	public var maximumTrackTintColor:UIColor;
+	public var maximumTrackTintColor:Dynamic;
 
 	@:native("thumbTintColor")
-	public var thumbTintColor:UIColor;
+	public var thumbTintColor:Dynamic;
 
 	@:native("setValue:animated")
 	overload public function setValue_animated(value:Dynamic, animated:Bool):Void;
 
 	@:native("setThumbImage:forState")
-	overload public function setThumbImage_forState(image:UIImage, forState:UIControlState):Void;
+	overload public function setThumbImage_forState(image:Dynamic, forState:UIControlState):Void;
 
 	@:native("setMinimumTrackImage:forState")
-	overload public function setMinimumTrackImage_forState(image:UIImage, forState:UIControlState):Void;
+	overload public function setMinimumTrackImage_forState(image:Dynamic, forState:UIControlState):Void;
 
 	@:native("setMaximumTrackImage:forState")
-	overload public function setMaximumTrackImage_forState(image:UIImage, forState:UIControlState):Void;
+	overload public function setMaximumTrackImage_forState(image:Dynamic, forState:UIControlState):Void;
 
 	@:native("thumbImageForState")
-	overload public function thumbImageForState(state:UIControlState):UIImage;
+	overload public function thumbImageForState(state:UIControlState):Dynamic;
 
 	@:native("minimumTrackImageForState")
-	overload public function minimumTrackImageForState(state:UIControlState):UIImage;
+	overload public function minimumTrackImageForState(state:UIControlState):Dynamic;
 
 	@:native("maximumTrackImageForState")
-	overload public function maximumTrackImageForState(state:UIControlState):UIImage;
+	overload public function maximumTrackImageForState(state:UIControlState):Dynamic;
 
 	@:native("currentThumbImage")
-	public var currentThumbImage:UIImage;
+	public var currentThumbImage:Dynamic;
 
 	@:native("currentMinimumTrackImage")
-	public var currentMinimumTrackImage:UIImage;
+	public var currentMinimumTrackImage:Dynamic;
 
 	@:native("currentMaximumTrackImage")
-	public var currentMaximumTrackImage:UIImage;
+	public var currentMaximumTrackImage:Dynamic;
 
 	@:native("minimumValueImageRectForBounds")
 	overload public function minimumValueImageRectForBounds(bounds:CGRect):CGRect;

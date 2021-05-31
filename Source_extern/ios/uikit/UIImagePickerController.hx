@@ -13,25 +13,25 @@ extern class UIImagePickerController{
 	overload public static function autorelease():UIImagePickerController;
 
 	@:native("isSourceTypeAvailable")
-	overload public static function isSourceTypeAvailable(sourceType:UIImagePickerControllerSourceType):Bool;
+	overload public static function isSourceTypeAvailable(sourceType:Dynamic):Bool;
 
 	@:native("availableMediaTypesForSourceType")
-	overload public static function availableMediaTypesForSourceType(sourceType:UIImagePickerControllerSourceType):Dynamic;
+	overload public static function availableMediaTypesForSourceType(sourceType:Dynamic):Dynamic;
 
 	@:native("isCameraDeviceAvailable")
-	overload public static function isCameraDeviceAvailable(cameraDevice:UIImagePickerControllerCameraDevice):Bool;
+	overload public static function isCameraDeviceAvailable(cameraDevice:Dynamic):Bool;
 
 	@:native("isFlashAvailableForCameraDevice")
-	overload public static function isFlashAvailableForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice):Bool;
+	overload public static function isFlashAvailableForCameraDevice(cameraDevice:Dynamic):Bool;
 
 	@:native("availableCaptureModesForCameraDevice")
-	overload public static function availableCaptureModesForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice):Dynamic;
+	overload public static function availableCaptureModesForCameraDevice(cameraDevice:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("sourceType")
-	public var sourceType:UIImagePickerControllerSourceType;
+	public var sourceType:Dynamic;
 
 	@:native("allowsEditing")
 	public var allowsEditing:Bool;
@@ -40,19 +40,19 @@ extern class UIImagePickerController{
 	public var allowsImageEditing:Bool;
 
 	@:native("imageExportPreset")
-	public var imageExportPreset:UIImagePickerControllerImageURLExportPreset;
+	public var imageExportPreset:Dynamic;
 
 	@:native("videoMaximumDuration")
 	public var videoMaximumDuration:Dynamic;
 
 	@:native("videoQuality")
-	public var videoQuality:UIImagePickerControllerQualityType;
+	public var videoQuality:Dynamic;
 
 	@:native("showsCameraControls")
 	public var showsCameraControls:Bool;
 
 	@:native("cameraOverlayView")
-	public var cameraOverlayView:UIView;
+	public var cameraOverlayView:Dynamic;
 
 	@:native("cameraViewTransform")
 	public var cameraViewTransform:CGAffineTransform;
@@ -67,13 +67,13 @@ extern class UIImagePickerController{
 	overload public function stopVideoCapture():Void;
 
 	@:native("cameraCaptureMode")
-	public var cameraCaptureMode:UIImagePickerControllerCameraCaptureMode;
+	public var cameraCaptureMode:Dynamic;
 
 	@:native("cameraDevice")
-	public var cameraDevice:UIImagePickerControllerCameraDevice;
+	public var cameraDevice:Dynamic;
 
 	@:native("cameraFlashMode")
-	public var cameraFlashMode:UIImagePickerControllerCameraFlashMode;
+	public var cameraFlashMode:Dynamic;
 
 
 }

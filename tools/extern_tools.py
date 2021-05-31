@@ -63,14 +63,16 @@ class Class: pass
 
 class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
-    __slots__ = ("className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys")
-    _hx_fields = ["className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys"]
-    _hx_methods = ["toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
+    __slots__ = ("pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys")
+    _hx_fields = ["pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys"]
+    _hx_methods = ["putClass", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
 
     def __init__(self,_hdata,hextern,defcall):
         self._hdata = None
         self.extendClassName = None
         self.className = None
+        self.saveFile = None
+        self.pkg = None
         self._propertys = haxe_ds_StringMap()
         self.funcAndAttr = []
         self._imported = []
@@ -80,31 +82,9 @@ class ExternBaseClass:
         pclassName = HxString.substr(pclassName,(((pclassName.find("@interface") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"@interface",startIndex))) + 10),None)
         startIndex = None
         if (((pclassName.find("(") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"(",startIndex))) != -1):
-            self.extendClassName = pclassName
-            _this = self.extendClassName
             startIndex = None
-            self.extendClassName = HxString.substr(self.extendClassName,0,(_this.find("(") if ((startIndex is None)) else HxString.indexOfImpl(_this,"(",startIndex)))
-            self.extendClassName = StringTools.replace(self.extendClassName," ","")
-            startIndex1 = None
-            pos = None
-            if (startIndex1 is None):
-                pos = pclassName.rfind("(", 0, len(pclassName))
-            else:
-                i = pclassName.rfind("(", 0, (startIndex1 + 1))
-                startLeft = (max(0,((startIndex1 + 1) - len("("))) if ((i == -1)) else (i + 1))
-                check = pclassName.find("(", startLeft, len(pclassName))
-                pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
-            pclassName = HxString.substr(pclassName,(pos + 1),None)
-            startIndex1 = None
-            _hx_len = None
-            if (startIndex1 is None):
-                _hx_len = pclassName.rfind(")", 0, len(pclassName))
-            else:
-                i = pclassName.rfind(")", 0, (startIndex1 + 1))
-                startLeft = (max(0,((startIndex1 + 1) - len(")"))) if ((i == -1)) else (i + 1))
-                check = pclassName.find(")", startLeft, len(pclassName))
-                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
-            pclassName = HxString.substr(pclassName,0,_hx_len)
+            pclassName = HxString.substr(pclassName,0,(pclassName.find("(") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"(",startIndex)))
+            pclassName = StringTools.replace(pclassName," ","")
         else:
             _g = 0
             _g1 = len(pclassName)
@@ -183,8 +163,11 @@ class ExternBaseClass:
                         _this1 = self.funcAndAttr
                         _this1.append(func)
 
-    def toHaxeFile(self,pkg):
-        haxe = (("package " + ("null" if pkg is None else pkg)) + ";\n\n")
+    def putClass(self,t):
+        self.funcAndAttr = (self.funcAndAttr + t.funcAndAttr)
+
+    def toHaxeFile(self):
+        haxe = (("package " + HxOverrides.stringOrNull(self.pkg)) + ";\n\n")
         _g_current = 0
         _g_array = self.funcAndAttr
         while (_g_current < len(_g_array)):
@@ -275,13 +258,14 @@ class ExternBaseClassType:
 
 class ExternHFile:
     _hx_class_name = "ExternHFile"
-    __slots__ = ("typedefs", "classdefs")
-    _hx_fields = ["typedefs", "classdefs"]
+    __slots__ = ("haxeSaveDir", "haxePkg", "typedefs")
+    _hx_fields = ["haxeSaveDir", "haxePkg", "typedefs"]
     _hx_methods = ["defClass", "defTypedef"]
 
-    def __init__(self,file):
-        self.classdefs = haxe_ds_StringMap()
+    def __init__(self,file,haxeSaveDir,haxePkg):
         self.typedefs = haxe_ds_StringMap()
+        self.haxeSaveDir = haxeSaveDir
+        self.haxePkg = haxePkg
         _this = sys_io_File.getContent(file)
         contents = _this.split("\n")
         read = []
@@ -369,8 +353,13 @@ class ExternHFile:
             d.parentClassName = t2.className
             _gthis.typedefs.h[t2.className] = d
         t = ExternBaseClass(data,self,_hx_local_0)
+        t.saveFile = (((HxOverrides.stringOrNull(self.haxeSaveDir) + "/") + HxOverrides.stringOrNull(t.className)) + ".hx")
+        t.pkg = self.haxePkg
         if (t.className is not None):
-            self.classdefs.h[t.className] = t
+            if (t.className in ExternTools.classDefine.h):
+                ExternTools.classDefine.h.get(t.className,None).putClass(t)
+            else:
+                ExternTools.classDefine.h[t.className] = t
 
     def defTypedef(self,data):
         t = ExternTypedefClass(data)
@@ -381,14 +370,28 @@ class ExternHFile:
 class ExternTools:
     _hx_class_name = "ExternTools"
     __slots__ = ()
-    _hx_statics = ["externDir", "main", "parsingFramework", "parsingHFile"]
+    _hx_statics = ["classDefine", "externDir", "main", "parsingFrameworkDir", "parsingFramework", "parsingHFile"]
     externDir = None
 
     @staticmethod
     def main():
         ExternTools.externDir = StringTools.replace(Sys.programPath(),"extern_tools.py","../Source_extern")
         framework = StringTools.replace(Sys.programPath(),"extern_tools.py","../framework")
-        ExternTools.parsingFramework(framework,ExternTools.externDir)
+        ExternTools.parsingFrameworkDir(framework,ExternTools.externDir)
+
+    @staticmethod
+    def parsingFrameworkDir(indir,out):
+        ExternTools.parsingFramework(indir,out)
+        _hx_map = ExternTools.classDefine
+        _g_map = _hx_map
+        _g_keys = _hx_map.keys()
+        while _g_keys.hasNext():
+            key = _g_keys.next()
+            _g1_value = _g_map.get(key)
+            _g1_key = key
+            key1 = _g1_key
+            value = _g1_value
+            sys_io_File.saveContent(value.saveFile,value.toHaxeFile())
 
     @staticmethod
     def parsingFramework(indir,out):
@@ -436,30 +439,10 @@ class ExternTools:
         if (((haxefile.find("+") if ((startIndex is None)) else HxString.indexOfImpl(haxefile,"+",startIndex))) != -1):
             return
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
-        c = ExternHFile(hfile)
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
+        c = ExternHFile(hfile,haxedir,classpkg)
         if (not sys_FileSystem.exists(haxedir)):
             sys_FileSystem.createDirectory(haxedir)
-        _hx_map = c.classdefs
-        _g_map = _hx_map
-        _g_keys = _hx_map.keys()
-        while _g_keys.hasNext():
-            key = _g_keys.next()
-            _g1_value = _g_map.get(key)
-            _g1_key = key
-            key1 = _g1_key
-            value = _g1_value
-            tmp = None
-            _this = value.className
-            startIndex = None
-            if (((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) == -1):
-                _this1 = value.className
-                startIndex1 = None
-                tmp = (((_this1.find("(") if ((startIndex1 is None)) else HxString.indexOfImpl(_this1,"(",startIndex1))) == -1)
-            else:
-                tmp = False
-            if tmp:
-                sys_io_File.saveContent((((("null" if haxedir is None else haxedir) + "/") + HxOverrides.stringOrNull(value.className)) + ".hx"),value.toHaxeFile(classpkg))
         _hx_map = c.typedefs
         _g_map = _hx_map
         _g_keys = _hx_map.keys()
@@ -929,7 +912,6 @@ class ObjcProperty:
             else:
                 return False
         p = list(filter(_hx_local_7,p))
-        print(str(p))
         return _hx_AnonObject({'name': python_internal_ArrayImpl._get(p, (len(p) - 1)), 'type': ("func" if isClass else "property"), 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': isClass, 'args': None})
 
 
@@ -1675,6 +1657,7 @@ Math.PI = python_lib_Math.pi
 
 ExternBaseClassType.FUNC = "func"
 ExternBaseClassType.PROPERTY = "property"
+ExternTools.classDefine = haxe_ds_StringMap()
 Sys._programPath = sys_FileSystem.fullPath(python_lib_Inspect.getsourcefile(Sys))
 python_Boot.keywords = set(["and", "del", "from", "not", "with", "as", "elif", "global", "or", "yield", "assert", "else", "if", "pass", "None", "break", "except", "import", "raise", "True", "class", "exec", "in", "return", "False", "continue", "finally", "is", "try", "def", "for", "lambda", "while"])
 python_Boot.prefixLength = len("_hx_")

@@ -12,7 +12,7 @@ extern class UICollectionViewController{
 	overload public static function autorelease():UICollectionViewController;
 
 	@:native("initWithCollectionViewLayout")
-	overload public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UICollectionViewController;
+	overload public function initWithCollectionViewLayout(layout:Dynamic):UICollectionViewController;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:Dynamic, bundle:Dynamic):UICollectionViewController;
@@ -21,7 +21,7 @@ extern class UICollectionViewController{
 	overload public function initWithCoder(coder:Dynamic):UICollectionViewController;
 
 	@:native("collectionView")
-	public var collectionView:UICollectionView;
+	public var collectionView:Dynamic;
 
 	@:native("clearsSelectionOnViewWillAppear")
 	public var clearsSelectionOnViewWillAppear:Bool;
@@ -30,7 +30,7 @@ extern class UICollectionViewController{
 	public var useLayoutToLayoutNavigationTransitions:Bool;
 
 	@:native("collectionViewLayout")
-	public var collectionViewLayout:UICollectionViewLayout;
+	public var collectionViewLayout:Dynamic;
 
 	@:native("installsStandardGestureForInteractiveMovement")
 	public var installsStandardGestureForInteractiveMovement:Bool;

@@ -18,7 +18,7 @@ extern class UILargeContentViewerInteraction{
 	public var delegate:Dynamic;
 
 	@:native("gestureRecognizerForExclusionRelationship")
-	public var gestureRecognizerForExclusionRelationship:UIGestureRecognizer;
+	public var gestureRecognizerForExclusionRelationship:Dynamic;
 
 	@:native("enabled")
 	overload public static function enabled():Bool;

@@ -30,7 +30,7 @@ extern class UISceneConfiguration{
 	public var delegateClass:Dynamic;
 
 	@:native("storyboard")
-	public var storyboard:UIStoryboard;
+	public var storyboard:Dynamic;
 
 
 }

@@ -4,12 +4,27 @@ import sys.io.File;
 import sys.FileSystem;
 
 class ExternTools {
+	/**
+	 * 全局类型定义
+	 */
+	public static var classDefine:Map<String, ExternBaseClass> = [];
+
+	/**
+	 * 扩展目录
+	 */
 	public static var externDir:String;
 
 	static function main() {
 		externDir = StringTools.replace(Sys.programPath(), "extern_tools.py", "../Source_extern");
 		var framework = StringTools.replace(Sys.programPath(), "extern_tools.py", "../framework");
-		parsingFramework(framework, externDir);
+		parsingFrameworkDir(framework, externDir);
+	}
+
+	public static function parsingFrameworkDir(indir:String, out:String):Void {
+		parsingFramework(indir, out);
+		for (key => value in ExternTools.classDefine) {
+			File.saveContent(value.saveFile, value.toHaxeFile());
+		}
 	}
 
 	public static function parsingFramework(indir:String, out:String):Void {
@@ -36,16 +51,16 @@ class ExternTools {
 		// trace("parsing " + pkg + ":" + haxefile);
 		var classpkg = "ios." + pkg.toLowerCase();
 		// var c = new ExternBaseClass(haxefile, "ios." + pkg.toLowerCase(), hfile);
-		var c = new ExternHFile(hfile);
 		var haxedir = out + "/ios/" + pkg.toLowerCase();
+		var c = new ExternHFile(hfile, haxedir, classpkg);
 		if (!FileSystem.exists(haxedir)) {
 			FileSystem.createDirectory(haxedir);
 		}
 		// 保存类型
-		for (key => value in c.classdefs) {
-			if (value.className.indexOf("<") == -1 && value.className.indexOf("(") == -1)
-				File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile(classpkg));
-		}
+		// for (key => value in c.classdefs) {
+		// 	if (value.className.indexOf("<") == -1 && value.className.indexOf("(") == -1)
+		// 		File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile(classpkg));
+		// }
 		// 保存定义
 		for (key => value in c.typedefs) {
 			if (value.className.indexOf("<") == -1 && value.className.indexOf("(") == -1)

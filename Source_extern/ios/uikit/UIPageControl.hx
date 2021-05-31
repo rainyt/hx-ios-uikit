@@ -22,28 +22,28 @@ extern class UIPageControl extends UIControl{
 	public var hidesForSinglePage:Bool;
 
 	@:native("pageIndicatorTintColor")
-	public var pageIndicatorTintColor:UIColor;
+	public var pageIndicatorTintColor:Dynamic;
 
 	@:native("currentPageIndicatorTintColor")
-	public var currentPageIndicatorTintColor:UIColor;
+	public var currentPageIndicatorTintColor:Dynamic;
 
 	@:native("backgroundStyle")
-	public var backgroundStyle:UIPageControlBackgroundStyle;
+	public var backgroundStyle:Dynamic;
 
 	@:native("interactionState")
-	public var interactionState:UIPageControlInteractionState;
+	public var interactionState:Dynamic;
 
 	@:native("allowsContinuousInteraction")
 	public var allowsContinuousInteraction:Bool;
 
 	@:native("preferredIndicatorImage")
-	public var preferredIndicatorImage:UIImage;
+	public var preferredIndicatorImage:Dynamic;
 
 	@:native("indicatorImageForPage")
-	overload public function indicatorImageForPage(page:Int):UIImage;
+	overload public function indicatorImageForPage(page:Int):Dynamic;
 
 	@:native("setIndicatorImage:forPage")
-	overload public function setIndicatorImage_forPage(image:UIImage, forPage:Int):Void;
+	overload public function setIndicatorImage_forPage(image:Dynamic, forPage:Int):Void;
 
 	@:native("sizeForNumberOfPages")
 	overload public function sizeForNumberOfPages(pageCount:Int):CGSize;

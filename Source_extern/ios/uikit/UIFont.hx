@@ -11,11 +11,35 @@ extern class UIFont{
 	@:native("autorelease")
 	overload public static function autorelease():UIFont;
 
+	@:native("labelFontSize")
+	overload public static function labelFontSize():Float;
+
+	@:native("buttonFontSize")
+	overload public static function buttonFontSize():Float;
+
+	@:native("smallSystemFontSize")
+	overload public static function smallSystemFontSize():Float;
+
+	@:native("systemFontSize")
+	overload public static function systemFontSize():Float;
+
+	@:native("defaultFontSize")
+	overload public static function defaultFontSize():Float;
+
+	@:native("systemMinimumFontSize")
+	overload public static function systemMinimumFontSize():Float;
+
+	@:native("alloc")
+	overload public static function alloc():UIFont;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIFont;
+
 	@:native("preferredFontForTextStyle")
 	overload public static function preferredFontForTextStyle(style:Dynamic):UIFont;
 
 	@:native("preferredFontForTextStyle:compatibleWithTraitCollection")
-	overload public static function preferredFontForTextStyle_compatibleWithTraitCollection(style:Dynamic, compatibleWithTraitCollection:UITraitCollection):UIFont;
+	overload public static function preferredFontForTextStyle_compatibleWithTraitCollection(style:Dynamic, compatibleWithTraitCollection:Dynamic):UIFont;
 
 	@:native("fontWithName:size")
 	overload public static function fontWithName_size(fontName:Dynamic, size:Float):UIFont;
@@ -75,10 +99,10 @@ extern class UIFont{
 	overload public function fontWithSize(fontSize:Float):UIFont;
 
 	@:native("fontWithDescriptor:size")
-	overload public static function fontWithDescriptor_size(descriptor:UIFontDescriptor, size:Float):UIFont;
+	overload public static function fontWithDescriptor_size(descriptor:Dynamic, size:Float):UIFont;
 
 	@:native("fontDescriptor")
-	public var fontDescriptor:UIFontDescriptor;
+	public var fontDescriptor:Dynamic;
 
 
 }

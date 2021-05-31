@@ -17,13 +17,13 @@ extern class UITouch{
 	public var timestamp:Dynamic;
 
 	@:native("phase")
-	public var phase:UITouchPhase;
+	public var phase:Dynamic;
 
 	@:native("tapCount")
 	public var tapCount:Int;
 
 	@:native("type")
-	public var type:UITouchType;
+	public var type:Dynamic;
 
 	@:native("majorRadius")
 	public var majorRadius:Float;
@@ -32,22 +32,22 @@ extern class UITouch{
 	public var majorRadiusTolerance:Float;
 
 	@:native("window")
-	public var window:UIWindow;
+	public var window:Dynamic;
 
 	@:native("view")
-	public var view:UIView;
+	public var view:Dynamic;
 
 	@:native("locationInView")
-	overload public function locationInView(view:UIView):CGPoint;
+	overload public function locationInView(view:Dynamic):CGPoint;
 
 	@:native("previousLocationInView")
-	overload public function previousLocationInView(view:UIView):CGPoint;
+	overload public function previousLocationInView(view:Dynamic):CGPoint;
 
 	@:native("preciseLocationInView")
-	overload public function preciseLocationInView(view:UIView):CGPoint;
+	overload public function preciseLocationInView(view:Dynamic):CGPoint;
 
 	@:native("precisePreviousLocationInView")
-	overload public function precisePreviousLocationInView(view:UIView):CGPoint;
+	overload public function precisePreviousLocationInView(view:Dynamic):CGPoint;
 
 	@:native("force")
 	public var force:Float;
@@ -56,10 +56,10 @@ extern class UITouch{
 	public var maximumPossibleForce:Float;
 
 	@:native("azimuthAngleInView")
-	overload public function azimuthAngleInView(view:UIView):Float;
+	overload public function azimuthAngleInView(view:Dynamic):Float;
 
 	@:native("azimuthUnitVectorInView")
-	overload public function azimuthUnitVectorInView(view:UIView):CGVector;
+	overload public function azimuthUnitVectorInView(view:Dynamic):CGVector;
 
 	@:native("altitudeAngle")
 	public var altitudeAngle:Float;
@@ -68,10 +68,10 @@ extern class UITouch{
 	public var estimationUpdateIndex:Dynamic;
 
 	@:native("estimatedProperties")
-	public var estimatedProperties:UITouchProperties;
+	public var estimatedProperties:Dynamic;
 
 	@:native("estimatedPropertiesExpectingUpdates")
-	public var estimatedPropertiesExpectingUpdates:UITouchProperties;
+	public var estimatedPropertiesExpectingUpdates:Dynamic;
 
 
 }

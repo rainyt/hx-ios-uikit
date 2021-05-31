@@ -18,13 +18,13 @@ extern class UITextInteraction{
 	public var textInput:Dynamic;
 
 	@:native("textInteractionMode")
-	public var textInteractionMode:UITextInteractionMode;
+	public var textInteractionMode:Dynamic;
 
 	@:native("gesturesForFailureRequirements")
 	public var gesturesForFailureRequirements:Dynamic;
 
 	@:native("textInteractionForMode")
-	overload public static function textInteractionForMode(mode:UITextInteractionMode):UITextInteraction;
+	overload public static function textInteractionForMode(mode:Dynamic):UITextInteraction;
 
 
 }

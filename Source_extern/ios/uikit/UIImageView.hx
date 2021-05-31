@@ -12,19 +12,19 @@ extern class UIImageView extends UIView{
 	overload public static function autorelease():UIImageView;
 
 	@:native("initWithImage")
-	overload public function initWithImage(image:UIImage):UIImageView;
+	overload public function initWithImage(image:Dynamic):UIImageView;
 
 	@:native("initWithImage:highlightedImage")
-	overload public function initWithImage_highlightedImage(image:UIImage, highlightedImage:UIImage):UIImageView;
+	overload public function initWithImage_highlightedImage(image:Dynamic, highlightedImage:Dynamic):UIImageView;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("highlightedImage")
-	public var highlightedImage:UIImage;
+	public var highlightedImage:Dynamic;
 
 	@:native("preferredSymbolConfiguration")
-	public var preferredSymbolConfiguration:UIImageSymbolConfiguration;
+	public var preferredSymbolConfiguration:Dynamic;
 
 	@:native("userInteractionEnabled")
 	public var userInteractionEnabled:Bool;
@@ -39,7 +39,7 @@ extern class UIImageView extends UIView{
 	public var animationRepeatCount:Int;
 
 	@:native("tintColor")
-	public var tintColor:UIColor;
+	public var tintColor:Dynamic;
 
 	@:native("startAnimating")
 	overload public function startAnimating():Void;
@@ -57,10 +57,16 @@ extern class UIImageView extends UIView{
 	public var focusedFrameGuide:Dynamic;
 
 	@:native("overlayContentView")
-	public var overlayContentView:UIView;
+	public var overlayContentView:Dynamic;
 
 	@:native("masksFocusEffectToContents")
 	public var masksFocusEffectToContents:Bool;
+
+	@:native("alloc")
+	overload public static function alloc():UIImageView;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIImageView;
 
 
 }

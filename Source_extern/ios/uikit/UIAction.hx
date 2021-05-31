@@ -15,10 +15,10 @@ extern class UIAction extends UIMenuElement{
 	public var identifier:Dynamic;
 
 	@:native("attributes")
-	public var attributes:UIMenuElementAttributes;
+	public var attributes:Dynamic;
 
 	@:native("state")
-	public var state:UIMenuElementState;
+	public var state:Dynamic;
 
 	@:native("sender")
 	public var sender:Dynamic;

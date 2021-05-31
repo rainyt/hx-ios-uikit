@@ -15,7 +15,7 @@ extern class UISceneSession{
 	overload public function init():UISceneSession;
 
 	@:native("scene")
-	public var scene:UIScene;
+	public var scene:Dynamic;
 
 	@:native("role")
 	public var role:Dynamic;

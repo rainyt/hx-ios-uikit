@@ -42,16 +42,16 @@ extern class UIDocumentBrowserViewController{
 	overload public function revealDocumentAtURL_importIfNeeded_completion(url:Dynamic, importIfNeeded:Bool, completion:Dynamic):Void;
 
 	@:native("importDocumentAtURL:nextToDocumentAtURL:mode:completionHandler")
-	overload public function importDocumentAtURL_nextToDocumentAtURL_mode_completionHandler(documentURL:Dynamic, nextToDocumentAtURL:Dynamic, mode:UIDocumentBrowserImportMode, completionHandler:Dynamic):Void;
+	overload public function importDocumentAtURL_nextToDocumentAtURL_mode_completionHandler(documentURL:Dynamic, nextToDocumentAtURL:Dynamic, mode:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("transitionControllerForDocumentAtURL")
-	overload public function transitionControllerForDocumentAtURL(documentURL:Dynamic):UIDocumentBrowserTransitionController;
+	overload public function transitionControllerForDocumentAtURL(documentURL:Dynamic):Dynamic;
 
 	@:native("transitionControllerForDocumentURL")
-	overload public function transitionControllerForDocumentURL(documentURL:Dynamic):UIDocumentBrowserTransitionController;
+	overload public function transitionControllerForDocumentURL(documentURL:Dynamic):Dynamic;
 
 	@:native("browserUserInterfaceStyle")
-	public var browserUserInterfaceStyle:UIDocumentBrowserUserInterfaceStyle;
+	public var browserUserInterfaceStyle:Dynamic;
 
 	@:native("defaultDocumentAspectRatio")
 	public var defaultDocumentAspectRatio:Float;

@@ -1,9 +1,10 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
 @:objc
 @:native("UITextField")
 @:include("UIKit/UIKit.h")
-extern class UITextField extends UIView{
+extern class UITextField{
 
 	@:native("alloc")
 	overload public static function alloc():UITextField;
@@ -11,8 +12,98 @@ extern class UITextField extends UIView{
 	@:native("autorelease")
 	overload public static function autorelease():UITextField;
 
-	@:native("endEditing")
-	overload public function endEditing(force:Bool):Bool;
+	@:native("textColor")
+	public var textColor:Dynamic;
+
+	@:native("font")
+	public var font:Dynamic;
+
+	@:native("textAlignment")
+	public var textAlignment:Dynamic;
+
+	@:native("borderStyle")
+	public var borderStyle:Dynamic;
+
+	@:native("clearsOnBeginEditing")
+	public var clearsOnBeginEditing:Bool;
+
+	@:native("adjustsFontSizeToFitWidth")
+	public var adjustsFontSizeToFitWidth:Bool;
+
+	@:native("minimumFontSize")
+	public var minimumFontSize:Float;
+
+	@:native("delegate")
+	public var delegate:Dynamic;
+
+	@:native("background")
+	public var background:Dynamic;
+
+	@:native("disabledBackground")
+	public var disabledBackground:Dynamic;
+
+	@:native("editing")
+	public var editing:Bool;
+
+	@:native("allowsEditingTextAttributes")
+	public var allowsEditingTextAttributes:Bool;
+
+	@:native("clearButtonMode")
+	public var clearButtonMode:Dynamic;
+
+	@:native("leftView")
+	public var leftView:Dynamic;
+
+	@:native("leftViewMode")
+	public var leftViewMode:Dynamic;
+
+	@:native("rightView")
+	public var rightView:Dynamic;
+
+	@:native("rightViewMode")
+	public var rightViewMode:Dynamic;
+
+	@:native("borderRectForBounds")
+	overload public function borderRectForBounds(bounds:CGRect):CGRect;
+
+	@:native("textRectForBounds")
+	overload public function textRectForBounds(bounds:CGRect):CGRect;
+
+	@:native("placeholderRectForBounds")
+	overload public function placeholderRectForBounds(bounds:CGRect):CGRect;
+
+	@:native("editingRectForBounds")
+	overload public function editingRectForBounds(bounds:CGRect):CGRect;
+
+	@:native("clearButtonRectForBounds")
+	overload public function clearButtonRectForBounds(bounds:CGRect):CGRect;
+
+	@:native("leftViewRectForBounds")
+	overload public function leftViewRectForBounds(bounds:CGRect):CGRect;
+
+	@:native("rightViewRectForBounds")
+	overload public function rightViewRectForBounds(bounds:CGRect):CGRect;
+
+	@:native("drawTextInRect")
+	overload public function drawTextInRect(rect:CGRect):Void;
+
+	@:native("drawPlaceholderInRect")
+	overload public function drawPlaceholderInRect(rect:CGRect):Void;
+
+	@:native("inputView")
+	public var inputView:Dynamic;
+
+	@:native("inputAccessoryView")
+	public var inputAccessoryView:Dynamic;
+
+	@:native("clearsOnInsertion")
+	public var clearsOnInsertion:Bool;
+
+	@:native("alloc")
+	overload public static function alloc():UITextField;
+
+	@:native("autorelease")
+	overload public static function autorelease():UITextField;
 
 
 }

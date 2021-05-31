@@ -15,13 +15,13 @@ extern class UINavigationBarAppearance extends UIBarAppearance{
 	public var titlePositionAdjustment:Dynamic;
 
 	@:native("backIndicatorImage")
-	public var backIndicatorImage:UIImage;
+	public var backIndicatorImage:Dynamic;
 
 	@:native("backIndicatorTransitionMaskImage")
-	public var backIndicatorTransitionMaskImage:UIImage;
+	public var backIndicatorTransitionMaskImage:Dynamic;
 
 	@:native("setBackIndicatorImage:transitionMaskImage")
-	overload public function setBackIndicatorImage_transitionMaskImage(backIndicatorImage:UIImage, transitionMaskImage:UIImage):Void;
+	overload public function setBackIndicatorImage_transitionMaskImage(backIndicatorImage:Dynamic, transitionMaskImage:Dynamic):Void;
 
 
 }

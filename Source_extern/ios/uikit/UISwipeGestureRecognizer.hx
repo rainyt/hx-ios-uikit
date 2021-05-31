@@ -15,7 +15,7 @@ extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 	public var numberOfTouchesRequired:Int;
 
 	@:native("direction")
-	public var direction:UISwipeGestureRecognizerDirection;
+	public var direction:Dynamic;
 
 
 }

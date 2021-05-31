@@ -15,7 +15,7 @@ extern class UIColorPickerViewController extends UIViewController{
 	public var delegate:Dynamic;
 
 	@:native("selectedColor")
-	public var selectedColor:UIColor;
+	public var selectedColor:Dynamic;
 
 	@:native("supportsAlpha")
 	public var supportsAlpha:Bool;

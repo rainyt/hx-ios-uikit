@@ -24,5 +24,23 @@ extern class UIGraphicsRenderer{
 	@:native("allowsImageOutput")
 	public var allowsImageOutput:Bool;
 
+	@:native("alloc")
+	overload public static function alloc():UIGraphicsRenderer;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIGraphicsRenderer;
+
+	@:native("rendererContextClass")
+	overload public static function rendererContextClass():Dynamic;
+
+	@:native("contextWithFormat:CF_RETURNS_RETAINED")
+	overload public static function contextWithFormat_CF_RETURNS_RETAINED(format:Dynamic, CF_RETURNS_RETAINED:Dynamic):Dynamic;
+
+	@:native("prepareCGContext:withRendererContext")
+	overload public static function prepareCGContext_withRendererContext(context:Dynamic, withRendererContext:Dynamic):Void;
+
+	@:native("runDrawingActions:completionActions:error")
+	overload public function runDrawingActions_completionActions_error(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
+
 
 }

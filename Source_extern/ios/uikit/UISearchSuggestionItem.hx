@@ -18,7 +18,7 @@ extern class UISearchSuggestionItem{
 	overload public static function suggestionWithLocalizedSuggestion_descriptionString(suggestion:Dynamic, descriptionString:Dynamic):UISearchSuggestionItem;
 
 	@:native("suggestionWithLocalizedSuggestion:descriptionString:iconImage")
-	overload public static function suggestionWithLocalizedSuggestion_descriptionString_iconImage(suggestion:Dynamic, descriptionString:Dynamic, iconImage:UIImage):UISearchSuggestionItem;
+	overload public static function suggestionWithLocalizedSuggestion_descriptionString_iconImage(suggestion:Dynamic, descriptionString:Dynamic, iconImage:Dynamic):UISearchSuggestionItem;
 
 	@:native("initWithLocalizedSuggestion")
 	overload public function initWithLocalizedSuggestion(suggestion:Dynamic):UISearchSuggestionItem;
@@ -27,7 +27,7 @@ extern class UISearchSuggestionItem{
 	overload public function initWithLocalizedSuggestion_localizedDescription(suggestion:Dynamic, localizedDescription:Dynamic):UISearchSuggestionItem;
 
 	@:native("initWithLocalizedSuggestion:localizedDescription:iconImage")
-	overload public function initWithLocalizedSuggestion_localizedDescription_iconImage(suggestion:Dynamic, localizedDescription:Dynamic, iconImage:UIImage):UISearchSuggestionItem;
+	overload public function initWithLocalizedSuggestion_localizedDescription_iconImage(suggestion:Dynamic, localizedDescription:Dynamic, iconImage:Dynamic):UISearchSuggestionItem;
 
 	@:native("localizedSuggestion")
 	public var localizedSuggestion:Dynamic;
@@ -36,7 +36,7 @@ extern class UISearchSuggestionItem{
 	public var localizedDescription:Dynamic;
 
 	@:native("iconImage")
-	public var iconImage:UIImage;
+	public var iconImage:Dynamic;
 
 
 }

@@ -18,7 +18,7 @@ extern class UIDocument{
 	public var fileURL:Dynamic;
 
 	@:native("documentState")
-	public var documentState:UIDocumentState;
+	public var documentState:Dynamic;
 
 	@:native("progress")
 	public var progress:Dynamic;
@@ -48,16 +48,16 @@ extern class UIDocument{
 	public var hasUnsavedChanges:Bool;
 
 	@:native("updateChangeCount")
-	overload public function updateChangeCount(change:UIDocumentChangeKind):Void;
+	overload public function updateChangeCount(change:Dynamic):Void;
 
 	@:native("changeCountTokenForSaveOperation")
-	overload public function changeCountTokenForSaveOperation(saveOperation:UIDocumentSaveOperation):Dynamic;
+	overload public function changeCountTokenForSaveOperation(saveOperation:Dynamic):Dynamic;
 
 	@:native("updateChangeCountWithToken:forSaveOperation")
-	overload public function updateChangeCountWithToken_forSaveOperation(changeCountToken:Dynamic, forSaveOperation:UIDocumentSaveOperation):Void;
+	overload public function updateChangeCountWithToken_forSaveOperation(changeCountToken:Dynamic, forSaveOperation:Dynamic):Void;
 
 	@:native("saveToURL:forSaveOperation:completionHandler")
-	overload public function saveToURL_forSaveOperation_completionHandler(url:Dynamic, forSaveOperation:UIDocumentSaveOperation, completionHandler:Dynamic):Void;
+	overload public function saveToURL_forSaveOperation_completionHandler(url:Dynamic, forSaveOperation:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("autosaveWithCompletionHandler")
 	overload public function autosaveWithCompletionHandler(completionHandler:Dynamic):Void;
@@ -66,16 +66,16 @@ extern class UIDocument{
 	public var savingFileType:Dynamic;
 
 	@:native("fileNameExtensionForType:saveOperation")
-	overload public function fileNameExtensionForType_saveOperation(typeName:Dynamic, saveOperation:UIDocumentSaveOperation):Dynamic;
+	overload public function fileNameExtensionForType_saveOperation(typeName:Dynamic, saveOperation:Dynamic):Dynamic;
 
 	@:native("writeContents:andAttributes:safelyToURL:forSaveOperation:error")
-	overload public function writeContents_andAttributes_safelyToURL_forSaveOperation_error(contents:Dynamic, andAttributes:Dynamic, safelyToURL:Dynamic, forSaveOperation:UIDocumentSaveOperation, error:Dynamic):Bool;
+	overload public function writeContents_andAttributes_safelyToURL_forSaveOperation_error(contents:Dynamic, andAttributes:Dynamic, safelyToURL:Dynamic, forSaveOperation:Dynamic, error:Dynamic):Bool;
 
 	@:native("writeContents:toURL:forSaveOperation:originalContentsURL:error")
-	overload public function writeContents_toURL_forSaveOperation_originalContentsURL_error(contents:Dynamic, toURL:Dynamic, forSaveOperation:UIDocumentSaveOperation, originalContentsURL:Dynamic, error:Dynamic):Bool;
+	overload public function writeContents_toURL_forSaveOperation_originalContentsURL_error(contents:Dynamic, toURL:Dynamic, forSaveOperation:Dynamic, originalContentsURL:Dynamic, error:Dynamic):Bool;
 
 	@:native("fileAttributesToWriteToURL:forSaveOperation:error")
-	overload public function fileAttributesToWriteToURL_forSaveOperation_error(url:Dynamic, forSaveOperation:UIDocumentSaveOperation, error:Dynamic):Dynamic;
+	overload public function fileAttributesToWriteToURL_forSaveOperation_error(url:Dynamic, forSaveOperation:Dynamic, error:Dynamic):Dynamic;
 
 	@:native("readFromURL:error")
 	overload public function readFromURL_error(url:Dynamic, error:Dynamic):Bool;
@@ -94,6 +94,21 @@ extern class UIDocument{
 
 	@:native("revertToContentsOfURL:completionHandler")
 	overload public function revertToContentsOfURL_completionHandler(url:Dynamic, completionHandler:Dynamic):Void;
+
+	@:native("alloc")
+	overload public static function alloc():UIDocument;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIDocument;
+
+	@:native("userActivity")
+	public var userActivity:Dynamic;
+
+	@:native("updateUserActivityState")
+	overload public function updateUserActivityState(userActivity:Dynamic):Void;
+
+	@:native("restoreUserActivityState")
+	overload public function restoreUserActivityState(userActivity:Dynamic):Void;
 
 
 }

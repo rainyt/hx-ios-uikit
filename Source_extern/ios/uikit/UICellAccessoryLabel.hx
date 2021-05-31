@@ -15,7 +15,7 @@ extern class UICellAccessoryLabel extends UICellAccessory{
 	overload public function initWithText(text:Dynamic):UICellAccessoryLabel;
 
 	@:native("font")
-	public var font:UIFont;
+	public var font:Dynamic;
 
 	@:native("adjustsFontForContentSizeCategory")
 	public var adjustsFontForContentSizeCategory:Bool;

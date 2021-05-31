@@ -18,7 +18,7 @@ extern class UIRefreshControl extends UIControl{
 	public var refreshing:Bool;
 
 	@:native("tintColor")
-	public var tintColor:UIColor;
+	public var tintColor:Dynamic;
 
 	@:native("attributedTitle")
 	public var attributedTitle:Dynamic;

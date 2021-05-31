@@ -18,7 +18,7 @@ extern class UIBarButtonItemStateAppearance{
 	public var titlePositionAdjustment:Dynamic;
 
 	@:native("backgroundImage")
-	public var backgroundImage:UIImage;
+	public var backgroundImage:Dynamic;
 
 	@:native("backgroundImagePositionAdjustment")
 	public var backgroundImagePositionAdjustment:Dynamic;

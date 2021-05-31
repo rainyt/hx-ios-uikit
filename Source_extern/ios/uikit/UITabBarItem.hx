@@ -18,34 +18,40 @@ extern class UITabBarItem extends UIBarItem{
 	overload public function initWithCoder(coder:Dynamic):UITabBarItem;
 
 	@:native("initWithTitle:image:tag")
-	overload public function initWithTitle_image_tag(title:Dynamic, image:UIImage, tag:Int):UITabBarItem;
+	overload public function initWithTitle_image_tag(title:Dynamic, image:Dynamic, tag:Int):UITabBarItem;
 
 	@:native("initWithTitle:image:selectedImage")
-	overload public function initWithTitle_image_selectedImage(title:Dynamic, image:UIImage, selectedImage:UIImage):UITabBarItem;
+	overload public function initWithTitle_image_selectedImage(title:Dynamic, image:Dynamic, selectedImage:Dynamic):UITabBarItem;
 
 	@:native("initWithTabBarSystemItem:tag")
-	overload public function initWithTabBarSystemItem_tag(systemItem:UITabBarSystemItem, tag:Int):UITabBarItem;
+	overload public function initWithTabBarSystemItem_tag(systemItem:Dynamic, tag:Int):UITabBarItem;
 
 	@:native("selectedImage")
-	public var selectedImage:UIImage;
+	public var selectedImage:Dynamic;
 
 	@:native("setFinishedSelectedImage:withFinishedUnselectedImage")
-	overload public function setFinishedSelectedImage_withFinishedUnselectedImage(selectedImage:UIImage, withFinishedUnselectedImage:UIImage):Void;
+	overload public function setFinishedSelectedImage_withFinishedUnselectedImage(selectedImage:Dynamic, withFinishedUnselectedImage:Dynamic):Void;
 
 	@:native("finishedSelectedImage")
-	overload public function finishedSelectedImage():UIImage;
+	overload public function finishedSelectedImage():Dynamic;
 
 	@:native("finishedUnselectedImage")
-	overload public function finishedUnselectedImage():UIImage;
+	overload public function finishedUnselectedImage():Dynamic;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:Dynamic;
 
 	@:native("setBadgeTextAttributes:forState")
-	overload public function setBadgeTextAttributes_forState(textAttributes:Dynamic, forState:UIControlState):Void;
+	overload public function setBadgeTextAttributes_forState(textAttributes:Dynamic, forState:Dynamic):Void;
 
 	@:native("badgeTextAttributesForState")
-	overload public function badgeTextAttributesForState(state:UIControlState):Dynamic;
+	overload public function badgeTextAttributesForState(state:Dynamic):Dynamic;
+
+	@:native("alloc")
+	overload public static function alloc():UITabBarItem;
+
+	@:native("autorelease")
+	overload public static function autorelease():UITabBarItem;
 
 
 }

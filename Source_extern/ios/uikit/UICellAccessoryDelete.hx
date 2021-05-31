@@ -12,7 +12,7 @@ extern class UICellAccessoryDelete extends UICellAccessory{
 	overload public static function autorelease():UICellAccessoryDelete;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 
 }

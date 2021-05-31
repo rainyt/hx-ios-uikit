@@ -3,7 +3,16 @@ package ios.uikit;
 @:objc
 @:native("UIScene")
 @:include("UIKit/UIKit.h")
-extern class UIScene extends UIResponder{
+extern class UIScene{
+
+	@:native("alloc")
+	overload public static function alloc():UIScene;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIScene;
+
+	@:native("pointerLockState")
+	public var pointerLockState:UIPointerLockState;
 
 	@:native("alloc")
 	overload public static function alloc():UIScene;
@@ -15,22 +24,22 @@ extern class UIScene extends UIResponder{
 	overload public function init():UIScene;
 
 	@:native("initWithSession:connectionOptions")
-	overload public function initWithSession_connectionOptions(session:UISceneSession, connectionOptions:UISceneConnectionOptions):UIScene;
+	overload public function initWithSession_connectionOptions(session:Dynamic, connectionOptions:Dynamic):UIScene;
 
 	@:native("session")
-	public var session:UISceneSession;
+	public var session:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("activationState")
-	public var activationState:UISceneActivationState;
+	public var activationState:Dynamic;
 
 	@:native("openURL:options:completionHandler")
-	overload public function openURL_options_completionHandler(url:Dynamic, options:UISceneOpenExternalURLOptions, completionHandler:Dynamic):Void;
+	overload public function openURL_options_completionHandler(url:Dynamic, options:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("activationConditions")
-	public var activationConditions:UISceneActivationConditions;
+	public var activationConditions:Dynamic;
 
 
 }

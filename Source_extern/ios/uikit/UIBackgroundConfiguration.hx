@@ -42,7 +42,7 @@ extern class UIBackgroundConfiguration{
 	overload public function updatedConfigurationForState(state:Dynamic):UIBackgroundConfiguration;
 
 	@:native("customView")
-	public var customView:UIView;
+	public var customView:Dynamic;
 
 	@:native("cornerRadius")
 	public var cornerRadius:Float;
@@ -51,19 +51,19 @@ extern class UIBackgroundConfiguration{
 	public var backgroundInsets:Dynamic;
 
 	@:native("edgesAddingLayoutMarginsToBackgroundInsets")
-	public var edgesAddingLayoutMarginsToBackgroundInsets:NSDirectionalRectEdge;
+	public var edgesAddingLayoutMarginsToBackgroundInsets:Dynamic;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 	@:native("resolvedBackgroundColorForTintColor")
-	overload public function resolvedBackgroundColorForTintColor(tintColor:UIColor):UIColor;
+	overload public function resolvedBackgroundColorForTintColor(tintColor:Dynamic):Dynamic;
 
 	@:native("strokeColor")
-	public var strokeColor:UIColor;
+	public var strokeColor:Dynamic;
 
 	@:native("resolvedStrokeColorForTintColor")
-	overload public function resolvedStrokeColorForTintColor(tintColor:UIColor):UIColor;
+	overload public function resolvedStrokeColorForTintColor(tintColor:Dynamic):Dynamic;
 
 	@:native("strokeWidth")
 	public var strokeWidth:Float;

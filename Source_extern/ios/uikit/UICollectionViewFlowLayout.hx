@@ -37,7 +37,7 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	public var sectionInset:Dynamic;
 
 	@:native("sectionInsetReference")
-	public var sectionInsetReference:UICollectionViewFlowLayoutSectionInsetReference;
+	public var sectionInsetReference:Dynamic;
 
 	@:native("sectionHeadersPinToVisibleBounds")
 	public var sectionHeadersPinToVisibleBounds:Bool;

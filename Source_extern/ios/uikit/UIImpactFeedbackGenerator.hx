@@ -12,7 +12,7 @@ extern class UIImpactFeedbackGenerator extends UIFeedbackGenerator{
 	overload public static function autorelease():UIImpactFeedbackGenerator;
 
 	@:native("initWithStyle")
-	overload public function initWithStyle(style:UIImpactFeedbackStyle):UIImpactFeedbackGenerator;
+	overload public function initWithStyle(style:Dynamic):UIImpactFeedbackGenerator;
 
 	@:native("impactOccurred")
 	overload public function impactOccurred():Void;

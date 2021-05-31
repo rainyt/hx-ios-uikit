@@ -22,31 +22,31 @@ extern class UIStackView extends UIView{
 	overload public function initWithArrangedSubviews(views:Dynamic):UIStackView;
 
 	@:native("addArrangedSubview")
-	overload public function addArrangedSubview(view:UIView):Void;
+	overload public function addArrangedSubview(view:Dynamic):Void;
 
 	@:native("removeArrangedSubview")
-	overload public function removeArrangedSubview(view:UIView):Void;
+	overload public function removeArrangedSubview(view:Dynamic):Void;
 
 	@:native("insertArrangedSubview:atIndex")
-	overload public function insertArrangedSubview_atIndex(view:UIView, atIndex:Int):Void;
+	overload public function insertArrangedSubview_atIndex(view:Dynamic, atIndex:Int):Void;
 
 	@:native("axis")
 	public var axis:UILayoutConstraintAxis;
 
 	@:native("distribution")
-	public var distribution:UIStackViewDistribution;
+	public var distribution:Dynamic;
 
 	@:native("alignment")
-	public var alignment:UIStackViewAlignment;
+	public var alignment:Dynamic;
 
 	@:native("spacing")
 	public var spacing:Float;
 
 	@:native("setCustomSpacing:afterView")
-	overload public function setCustomSpacing_afterView(spacing:Float, afterView:UIView):Void;
+	overload public function setCustomSpacing_afterView(spacing:Float, afterView:Dynamic):Void;
 
 	@:native("customSpacingAfterView")
-	overload public function customSpacingAfterView(arrangedSubview:UIView):Float;
+	overload public function customSpacingAfterView(arrangedSubview:Dynamic):Float;
 
 	@:native("baselineRelativeArrangement")
 	public var baselineRelativeArrangement:Bool;

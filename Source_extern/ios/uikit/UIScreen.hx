@@ -26,13 +26,13 @@ extern class UIScreen{
 	public var scale:Float;
 
 	@:native("preferredMode")
-	public var preferredMode:UIScreenMode;
+	public var preferredMode:Dynamic;
 
 	@:native("currentMode")
-	public var currentMode:UIScreenMode;
+	public var currentMode:Dynamic;
 
 	@:native("overscanCompensation")
-	public var overscanCompensation:UIScreenOverscanCompensation;
+	public var overscanCompensation:Dynamic;
 
 	@:native("overscanCompensationInsets")
 	public var overscanCompensationInsets:Dynamic;
@@ -74,13 +74,22 @@ extern class UIScreen{
 	public var focusedItem:Dynamic;
 
 	@:native("focusedView")
-	public var focusedView:UIView;
+	public var focusedView:Dynamic;
 
 	@:native("supportsFocus")
 	public var supportsFocus:Bool;
 
 	@:native("applicationFrame")
 	public var applicationFrame:CGRect;
+
+	@:native("alloc")
+	overload public static function alloc():UIScreen;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIScreen;
+
+	@:native("snapshotViewAfterScreenUpdates")
+	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):Dynamic;
 
 
 }

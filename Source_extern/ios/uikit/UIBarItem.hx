@@ -21,13 +21,13 @@ extern class UIBarItem{
 	public var enabled:Bool;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("landscapeImagePhone")
-	public var landscapeImagePhone:UIImage;
+	public var landscapeImagePhone:Dynamic;
 
 	@:native("largeContentSizeImage")
-	public var largeContentSizeImage:UIImage;
+	public var largeContentSizeImage:Dynamic;
 
 	@:native("imageInsets")
 	public var imageInsets:Dynamic;
@@ -46,6 +46,12 @@ extern class UIBarItem{
 
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
+
+	@:native("alloc")
+	overload public static function alloc():UIBarItem;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIBarItem;
 
 
 }

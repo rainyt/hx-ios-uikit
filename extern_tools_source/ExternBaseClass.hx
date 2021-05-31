@@ -6,6 +6,16 @@ import sys.io.File;
  */
 class ExternBaseClass {
 	/**
+	 * 包名
+	 */
+	public var pkg:String;
+
+	/**
+	 * 储存路径
+	 */
+	public var saveFile:String;
+
+	/**
 	 * 类名
 	 */
 	public var className:String;
@@ -40,12 +50,9 @@ class ExternBaseClass {
 		var pclassName = harray[0];
 		pclassName = pclassName.substr(pclassName.indexOf("@interface") + 10);
 		if (pclassName.indexOf("(") != -1) {
-			// 继承关系
-			extendClassName = pclassName;
-			extendClassName = extendClassName.substr(0, extendClassName.indexOf("("));
-			extendClassName = StringTools.replace(extendClassName, " ", "");
-			pclassName = pclassName.substr(pclassName.lastIndexOf("(") + 1);
-			pclassName = pclassName.substr(0, pclassName.lastIndexOf(")"));
+			// 只有分类关系，没有继承关系
+			pclassName = pclassName.substr(0, pclassName.indexOf("("));
+			pclassName = StringTools.replace(pclassName, " ", "");
 		} else {
 			for (i in 0...pclassName.length) {
 				if (pclassName.charAt(i) != " ") {
@@ -64,13 +71,8 @@ class ExternBaseClass {
 
 		if (extendClassName != null && (extendClassName.indexOf("<") != -1 || extendClassName == "NSObject"))
 			extendClassName = null;
-		// trace("pclassname2", pclassName);
-		// if(pclassName == "UIViewController"){
-		// 	trace("---------------------------\n",_hdata);
-		// }
 		if (pclassName == "") {
 			className = null;
-			// throw "错误解析：" + _hdata;
 			return;
 		}
 		this.className = StringTools.replace(pclassName, " ", "");
@@ -106,11 +108,15 @@ class ExternBaseClass {
 		}
 	}
 
+	public function putClass(t:ExternBaseClass):Void {
+		funcAndAttr = funcAndAttr.concat(t.funcAndAttr);
+	}
+
 	/**
 	 * 导出Haxe文件
 	 * @return String
 	 */
-	public function toHaxeFile(pkg:String):String {
+	public function toHaxeFile():String {
 		var haxe = "package " + pkg + ";\n\n";
 		// 统一引入
 		// haxe += "import " + ObjcImport.toImport("NSString") + ";\n";

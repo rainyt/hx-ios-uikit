@@ -15,7 +15,7 @@ extern class UIPressesEvent extends UIEvent{
 	public var allPresses:Dynamic;
 
 	@:native("pressesForGestureRecognizer")
-	overload public function pressesForGestureRecognizer(gesture:UIGestureRecognizer):Dynamic;
+	overload public function pressesForGestureRecognizer(gesture:Dynamic):Dynamic;
 
 
 }

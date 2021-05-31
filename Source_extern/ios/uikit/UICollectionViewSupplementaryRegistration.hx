@@ -15,13 +15,13 @@ extern class UICollectionViewSupplementaryRegistration{
 	overload public static function registrationWithSupplementaryClass_elementKind(supplementaryClass:Dynamic, elementKind:Dynamic):UICollectionViewSupplementaryRegistration;
 
 	@:native("registrationWithSupplementaryNib:elementKind:configurationHandler")
-	overload public static function registrationWithSupplementaryNib_elementKind_configurationHandler(supplementaryNib:UINib, elementKind:Dynamic, configurationHandler:Dynamic):UICollectionViewSupplementaryRegistration;
+	overload public static function registrationWithSupplementaryNib_elementKind_configurationHandler(supplementaryNib:Dynamic, elementKind:Dynamic, configurationHandler:Dynamic):UICollectionViewSupplementaryRegistration;
 
 	@:native("supplementaryClass")
 	public var supplementaryClass:Dynamic;
 
 	@:native("supplementaryNib")
-	public var supplementaryNib:UINib;
+	public var supplementaryNib:Dynamic;
 
 	@:native("elementKind")
 	public var elementKind:Dynamic;

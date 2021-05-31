@@ -12,7 +12,7 @@ extern class UICellAccessoryInsert extends UICellAccessory{
 	overload public static function autorelease():UICellAccessoryInsert;
 
 	@:native("backgroundColor")
-	public var backgroundColor:UIColor;
+	public var backgroundColor:Dynamic;
 
 
 }

@@ -16,37 +16,49 @@ extern class UILayoutGuide{
 	public var layoutFrame:CGRect;
 
 	@:native("owningView")
-	public var owningView:UIView;
+	public var owningView:Dynamic;
 
 	@:native("leadingAnchor")
-	public var leadingAnchor:NSLayoutXAxisAnchor;
+	public var leadingAnchor:Dynamic;
 
 	@:native("trailingAnchor")
-	public var trailingAnchor:NSLayoutXAxisAnchor;
+	public var trailingAnchor:Dynamic;
 
 	@:native("leftAnchor")
-	public var leftAnchor:NSLayoutXAxisAnchor;
+	public var leftAnchor:Dynamic;
 
 	@:native("rightAnchor")
-	public var rightAnchor:NSLayoutXAxisAnchor;
+	public var rightAnchor:Dynamic;
 
 	@:native("topAnchor")
-	public var topAnchor:NSLayoutYAxisAnchor;
+	public var topAnchor:Dynamic;
 
 	@:native("bottomAnchor")
-	public var bottomAnchor:NSLayoutYAxisAnchor;
+	public var bottomAnchor:Dynamic;
 
 	@:native("widthAnchor")
-	public var widthAnchor:NSLayoutDimension;
+	public var widthAnchor:Dynamic;
 
 	@:native("heightAnchor")
-	public var heightAnchor:NSLayoutDimension;
+	public var heightAnchor:Dynamic;
 
 	@:native("centerXAnchor")
-	public var centerXAnchor:NSLayoutXAxisAnchor;
+	public var centerXAnchor:Dynamic;
 
 	@:native("centerYAnchor")
-	public var centerYAnchor:NSLayoutYAxisAnchor;
+	public var centerYAnchor:Dynamic;
+
+	@:native("alloc")
+	overload public static function alloc():UILayoutGuide;
+
+	@:native("autorelease")
+	overload public static function autorelease():UILayoutGuide;
+
+	@:native("constraintsAffectingLayoutForAxis")
+	overload public function constraintsAffectingLayoutForAxis(axis:Dynamic):Dynamic;
+
+	@:native("hasAmbiguousLayout")
+	public var hasAmbiguousLayout:Bool;
 
 
 }

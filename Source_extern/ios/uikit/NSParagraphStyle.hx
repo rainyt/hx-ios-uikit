@@ -12,7 +12,7 @@ extern class NSParagraphStyle{
 	overload public static function autorelease():NSParagraphStyle;
 
 	@:native("defaultWritingDirectionForLanguage")
-	overload public static function defaultWritingDirectionForLanguage(languageName:Dynamic):NSWritingDirection;
+	overload public static function defaultWritingDirectionForLanguage(languageName:Dynamic):Dynamic;
 
 	@:native("lineSpacing")
 	public var lineSpacing:Float;
@@ -21,7 +21,7 @@ extern class NSParagraphStyle{
 	public var paragraphSpacing:Float;
 
 	@:native("alignment")
-	public var alignment:NSTextAlignment;
+	public var alignment:Dynamic;
 
 	@:native("headIndent")
 	public var headIndent:Float;
@@ -39,10 +39,10 @@ extern class NSParagraphStyle{
 	public var maximumLineHeight:Float;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:NSLineBreakMode;
+	public var lineBreakMode:Dynamic;
 
 	@:native("baseWritingDirection")
-	public var baseWritingDirection:NSWritingDirection;
+	public var baseWritingDirection:Dynamic;
 
 	@:native("lineHeightMultiple")
 	public var lineHeightMultiple:Float;
@@ -60,7 +60,7 @@ extern class NSParagraphStyle{
 	public var allowsDefaultTighteningForTruncation:Bool;
 
 	@:native("lineBreakStrategy")
-	public var lineBreakStrategy:NSLineBreakStrategy;
+	public var lineBreakStrategy:Dynamic;
 
 
 }

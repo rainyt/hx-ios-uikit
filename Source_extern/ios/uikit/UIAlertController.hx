@@ -12,7 +12,7 @@ extern class UIAlertController extends UIViewController{
 	overload public static function autorelease():UIAlertController;
 
 	@:native("alertControllerWithTitle:message:preferredStyle")
-	overload public static function alertControllerWithTitle_message_preferredStyle(title:Dynamic, message:Dynamic, preferredStyle:UIAlertControllerStyle):UIAlertController;
+	overload public static function alertControllerWithTitle_message_preferredStyle(title:Dynamic, message:Dynamic, preferredStyle:Dynamic):UIAlertController;
 
 	@:native("addAction")
 	overload public function addAction(action:UIAlertAction):Void;
@@ -30,7 +30,13 @@ extern class UIAlertController extends UIViewController{
 	public var textFields:Dynamic;
 
 	@:native("preferredStyle")
-	public var preferredStyle:UIAlertControllerStyle;
+	public var preferredStyle:Dynamic;
+
+	@:native("alloc")
+	overload public static function alloc():UIAlertController;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIAlertController;
 
 
 }

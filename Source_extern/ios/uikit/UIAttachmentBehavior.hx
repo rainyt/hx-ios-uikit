@@ -41,7 +41,7 @@ extern class UIAttachmentBehavior extends UIDynamicBehavior{
 	overload public static function pinAttachmentWithItem_attachedToItem_attachmentAnchor(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint):UIAttachmentBehavior;
 
 	@:native("attachedBehaviorType")
-	public var attachedBehaviorType:UIAttachmentBehaviorType;
+	public var attachedBehaviorType:Dynamic;
 
 	@:native("anchorPoint")
 	public var anchorPoint:CGPoint;

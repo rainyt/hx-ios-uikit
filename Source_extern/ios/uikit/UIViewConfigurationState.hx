@@ -12,7 +12,7 @@ extern class UIViewConfigurationState{
 	overload public static function autorelease():UIViewConfigurationState;
 
 	@:native("initWithTraitCollection")
-	overload public function initWithTraitCollection(traitCollection:UITraitCollection):UIViewConfigurationState;
+	overload public function initWithTraitCollection(traitCollection:Dynamic):UIViewConfigurationState;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UIViewConfigurationState;
@@ -21,7 +21,7 @@ extern class UIViewConfigurationState{
 	overload public function init():UIViewConfigurationState;
 
 	@:native("traitCollection")
-	public var traitCollection:UITraitCollection;
+	public var traitCollection:Dynamic;
 
 	@:native("disabled")
 	public var disabled:Bool;

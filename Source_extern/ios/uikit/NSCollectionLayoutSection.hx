@@ -11,8 +11,17 @@ extern class NSCollectionLayoutSection{
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutSection;
 
+	@:native("sectionWithListConfiguration:layoutEnvironment")
+	overload public static function sectionWithListConfiguration_layoutEnvironment(configuration:UICollectionLayoutListConfiguration, layoutEnvironment:Dynamic):NSCollectionLayoutSection;
+
+	@:native("alloc")
+	overload public static function alloc():NSCollectionLayoutSection;
+
+	@:native("autorelease")
+	overload public static function autorelease():NSCollectionLayoutSection;
+
 	@:native("sectionWithGroup")
-	overload public static function sectionWithGroup(group:NSCollectionLayoutGroup):NSCollectionLayoutSection;
+	overload public static function sectionWithGroup(group:Dynamic):NSCollectionLayoutSection;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutSection;
@@ -24,10 +33,10 @@ extern class NSCollectionLayoutSection{
 	public var interGroupSpacing:Float;
 
 	@:native("contentInsetsReference")
-	public var contentInsetsReference:UIContentInsetsReference;
+	public var contentInsetsReference:Dynamic;
 
 	@:native("orthogonalScrollingBehavior")
-	public var orthogonalScrollingBehavior:UICollectionLayoutSectionOrthogonalScrollingBehavior;
+	public var orthogonalScrollingBehavior:Dynamic;
 
 	@:native("supplementariesFollowContentInsets")
 	public var supplementariesFollowContentInsets:Bool;

@@ -47,7 +47,7 @@ extern class UICollectionViewLayoutAttributes{
 	public var indexPath:Dynamic;
 
 	@:native("representedElementCategory")
-	public var representedElementCategory:UICollectionElementCategory;
+	public var representedElementCategory:Dynamic;
 
 	@:native("representedElementKind")
 	public var representedElementKind:Dynamic;

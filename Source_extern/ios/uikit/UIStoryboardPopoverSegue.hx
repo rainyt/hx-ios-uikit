@@ -12,7 +12,7 @@ extern class UIStoryboardPopoverSegue extends UIStoryboardSegue{
 	overload public static function autorelease():UIStoryboardPopoverSegue;
 
 	@:native("popoverController")
-	public var popoverController:UIPopoverController;
+	public var popoverController:Dynamic;
 
 
 }

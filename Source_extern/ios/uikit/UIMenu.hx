@@ -15,7 +15,7 @@ extern class UIMenu extends UIMenuElement{
 	public var identifier:Dynamic;
 
 	@:native("options")
-	public var options:UIMenuOptions;
+	public var options:Dynamic;
 
 	@:native("children")
 	public var children:Dynamic;

@@ -30,7 +30,7 @@ extern class UIScrollView{
 	overload public function adjustedContentInsetDidChange():Void;
 
 	@:native("contentInsetAdjustmentBehavior")
-	public var contentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentBehavior;
+	public var contentInsetAdjustmentBehavior:Dynamic;
 
 	@:native("automaticallyAdjustsScrollIndicatorInsets")
 	public var automaticallyAdjustsScrollIndicatorInsets:Bool;
@@ -69,7 +69,7 @@ extern class UIScrollView{
 	public var showsHorizontalScrollIndicator:Bool;
 
 	@:native("indicatorStyle")
-	public var indicatorStyle:UIScrollViewIndicatorStyle;
+	public var indicatorStyle:Dynamic;
 
 	@:native("verticalScrollIndicatorInsets")
 	public var verticalScrollIndicatorInsets:Dynamic;
@@ -87,7 +87,7 @@ extern class UIScrollView{
 	public var decelerationRate:Float;
 
 	@:native("indexDisplayMode")
-	public var indexDisplayMode:UIScrollViewIndexDisplayMode;
+	public var indexDisplayMode:Dynamic;
 
 	@:native("setContentOffset:animated")
 	overload public function setContentOffset_animated(contentOffset:CGPoint, animated:Bool):Void;
@@ -114,10 +114,10 @@ extern class UIScrollView{
 	public var canCancelContentTouches:Bool;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:Dynamic, inContentView:Dynamic):Bool;
 
 	@:native("touchesShouldCancelInContentView")
-	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
+	overload public function touchesShouldCancelInContentView(view:Dynamic):Bool;
 
 	@:native("minimumZoomScale")
 	public var minimumZoomScale:Float;
@@ -147,19 +147,19 @@ extern class UIScrollView{
 	public var scrollsToTop:Bool;
 
 	@:native("panGestureRecognizer")
-	public var panGestureRecognizer:UIPanGestureRecognizer;
+	public var panGestureRecognizer:Dynamic;
 
 	@:native("pinchGestureRecognizer")
-	public var pinchGestureRecognizer:UIPinchGestureRecognizer;
+	public var pinchGestureRecognizer:Dynamic;
 
 	@:native("directionalPressGestureRecognizer")
-	public var directionalPressGestureRecognizer:UIGestureRecognizer;
+	public var directionalPressGestureRecognizer:Dynamic;
 
 	@:native("keyboardDismissMode")
-	public var keyboardDismissMode:UIScrollViewKeyboardDismissMode;
+	public var keyboardDismissMode:Dynamic;
 
 	@:native("refreshControl")
-	public var refreshControl:UIRefreshControl;
+	public var refreshControl:Dynamic;
 
 
 }

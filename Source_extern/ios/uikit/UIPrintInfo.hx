@@ -21,13 +21,13 @@ extern class UIPrintInfo{
 	overload public static function printInfoWithDictionary(dictionary:Dynamic):UIPrintInfo;
 
 	@:native("outputType")
-	public var outputType:UIPrintInfoOutputType;
+	public var outputType:Dynamic;
 
 	@:native("orientation")
-	public var orientation:UIPrintInfoOrientation;
+	public var orientation:Dynamic;
 
 	@:native("duplex")
-	public var duplex:UIPrintInfoDuplex;
+	public var duplex:Dynamic;
 
 	@:native("dictionaryRepresentation")
 	public var dictionaryRepresentation:Dynamic;

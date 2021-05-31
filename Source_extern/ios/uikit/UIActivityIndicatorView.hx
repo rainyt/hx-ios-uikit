@@ -13,7 +13,7 @@ extern class UIActivityIndicatorView{
 	overload public static function autorelease():UIActivityIndicatorView;
 
 	@:native("initWithActivityIndicatorStyle")
-	overload public function initWithActivityIndicatorStyle(style:UIActivityIndicatorViewStyle):UIActivityIndicatorView;
+	overload public function initWithActivityIndicatorStyle(style:Dynamic):UIActivityIndicatorView;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIActivityIndicatorView;
@@ -22,13 +22,13 @@ extern class UIActivityIndicatorView{
 	overload public function initWithCoder(coder:Dynamic):UIActivityIndicatorView;
 
 	@:native("activityIndicatorViewStyle")
-	public var activityIndicatorViewStyle:UIActivityIndicatorViewStyle;
+	public var activityIndicatorViewStyle:Dynamic;
 
 	@:native("hidesWhenStopped")
 	public var hidesWhenStopped:Bool;
 
 	@:native("color")
-	public var color:UIColor;
+	public var color:Dynamic;
 
 	@:native("startAnimating")
 	overload public function startAnimating():Void;

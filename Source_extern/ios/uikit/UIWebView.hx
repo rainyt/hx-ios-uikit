@@ -15,7 +15,7 @@ extern class UIWebView{
 	public var delegate:Dynamic;
 
 	@:native("scrollView")
-	public var scrollView:UIScrollView;
+	public var scrollView:Dynamic;
 
 	@:native("loadRequest")
 	overload public function loadRequest(request:Dynamic):Void;
@@ -60,7 +60,7 @@ extern class UIWebView{
 	public var detectsPhoneNumbers:Bool;
 
 	@:native("dataDetectorTypes")
-	public var dataDetectorTypes:UIDataDetectorTypes;
+	public var dataDetectorTypes:Dynamic;
 
 	@:native("allowsInlineMediaPlayback")
 	public var allowsInlineMediaPlayback:Bool;
@@ -78,10 +78,10 @@ extern class UIWebView{
 	public var keyboardDisplayRequiresUserAction:Bool;
 
 	@:native("paginationMode")
-	public var paginationMode:UIWebPaginationMode;
+	public var paginationMode:Dynamic;
 
 	@:native("paginationBreakingMode")
-	public var paginationBreakingMode:UIWebPaginationBreakingMode;
+	public var paginationBreakingMode:Dynamic;
 
 	@:native("pageLength")
 	public var pageLength:Float;

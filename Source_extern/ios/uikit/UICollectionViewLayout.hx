@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
+import ios.objc.CGPoint;
+import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewLayout")
 @:include("UIKit/UIKit.h")
@@ -18,7 +21,7 @@ extern class UICollectionViewLayout{
 	overload public function initWithCoder(coder:Dynamic):UICollectionViewLayout;
 
 	@:native("collectionView")
-	public var collectionView:UICollectionView;
+	public var collectionView:Dynamic;
 
 	@:native("invalidateLayout")
 	overload public function invalidateLayout():Void;
@@ -30,7 +33,136 @@ extern class UICollectionViewLayout{
 	overload public function registerClass_forDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:Dynamic):Void;
 
 	@:native("registerNib:forDecorationViewOfKind")
-	overload public function registerNib_forDecorationViewOfKind(nib:UINib, forDecorationViewOfKind:Dynamic):Void;
+	overload public function registerNib_forDecorationViewOfKind(nib:Dynamic, forDecorationViewOfKind:Dynamic):Void;
+
+	@:native("alloc")
+	overload public static function alloc():UICollectionViewLayout;
+
+	@:native("autorelease")
+	overload public static function autorelease():UICollectionViewLayout;
+
+	@:native("layoutAttributesClass")
+	overload public static function layoutAttributesClass():Dynamic;
+
+	@:native("invalidationContextClass")
+	overload public static function invalidationContextClass():Dynamic;
+
+	@:native("prepareLayout")
+	overload public function prepareLayout():Void;
+
+	@:native("layoutAttributesForElementsInRect")
+	overload public function layoutAttributesForElementsInRect(rect:CGRect):Dynamic;
+
+	@:native("layoutAttributesForItemAtIndexPath")
+	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
+	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
+	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("shouldInvalidateLayoutForBoundsChange")
+	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect):Bool;
+
+	@:native("invalidationContextForBoundsChange")
+	overload public function invalidationContextForBoundsChange(newBounds:CGRect):Dynamic;
+
+	@:native("shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes")
+	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Bool;
+
+	@:native("invalidationContextForPreferredLayoutAttributes:withOriginalAttributes")
+	overload public function invalidationContextForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Dynamic;
+
+	@:native("targetContentOffsetForProposedContentOffset:withScrollingVelocity")
+	overload public function targetContentOffsetForProposedContentOffset_withScrollingVelocity(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint):CGPoint;
+
+	@:native("targetContentOffsetForProposedContentOffset")
+	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint):CGPoint;
+
+	@:native("collectionViewContentSize")
+	public var collectionViewContentSize:CGSize;
+
+	@:native("developmentLayoutDirection")
+	public var developmentLayoutDirection:Dynamic;
+
+	@:native("flipsHorizontallyInOppositeLayoutDirection")
+	public var flipsHorizontallyInOppositeLayoutDirection:Bool;
+
+	@:native("alloc")
+	overload public static function alloc():UICollectionViewLayout;
+
+	@:native("autorelease")
+	overload public static function autorelease():UICollectionViewLayout;
+
+	@:native("prepareForCollectionViewUpdates")
+	overload public function prepareForCollectionViewUpdates(updateItems:Dynamic):Void;
+
+	@:native("finalizeCollectionViewUpdates")
+	overload public function finalizeCollectionViewUpdates():Void;
+
+	@:native("prepareForAnimatedBoundsChange")
+	overload public function prepareForAnimatedBoundsChange(oldBounds:CGRect):Void;
+
+	@:native("finalizeAnimatedBoundsChange")
+	overload public function finalizeAnimatedBoundsChange():Void;
+
+	@:native("prepareForTransitionToLayout")
+	overload public function prepareForTransitionToLayout(newLayout:UICollectionViewLayout):Void;
+
+	@:native("prepareForTransitionFromLayout")
+	overload public function prepareForTransitionFromLayout(oldLayout:UICollectionViewLayout):Void;
+
+	@:native("finalizeLayoutTransition")
+	overload public function finalizeLayoutTransition():Void;
+
+	@:native("initialLayoutAttributesForAppearingItemAtIndexPath")
+	overload public function initialLayoutAttributesForAppearingItemAtIndexPath(itemIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("finalLayoutAttributesForDisappearingItemAtIndexPath")
+	overload public function finalLayoutAttributesForDisappearingItemAtIndexPath(itemIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath")
+	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("finalLayoutAttributesForDisappearingSupplementaryElementOfKind:atIndexPath")
+	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath")
+	overload public function initialLayoutAttributesForAppearingDecorationElementOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("finalLayoutAttributesForDisappearingDecorationElementOfKind:atIndexPath")
+	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("indexPathsToDeleteForSupplementaryViewOfKind")
+	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:Dynamic):Dynamic;
+
+	@:native("indexPathsToDeleteForDecorationViewOfKind")
+	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:Dynamic):Dynamic;
+
+	@:native("indexPathsToInsertForSupplementaryViewOfKind")
+	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:Dynamic):Dynamic;
+
+	@:native("indexPathsToInsertForDecorationViewOfKind")
+	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:Dynamic):Dynamic;
+
+	@:native("alloc")
+	overload public static function alloc():UICollectionViewLayout;
+
+	@:native("autorelease")
+	overload public static function autorelease():UICollectionViewLayout;
+
+	@:native("targetIndexPathForInteractivelyMovingItem:withPosition")
+	overload public function targetIndexPathForInteractivelyMovingItem_withPosition(previousIndexPath:Dynamic, withPosition:CGPoint):Dynamic;
+
+	@:native("layoutAttributesForInteractivelyMovingItemAtIndexPath:withTargetPosition")
+	overload public function layoutAttributesForInteractivelyMovingItemAtIndexPath_withTargetPosition(indexPath:Dynamic, withTargetPosition:CGPoint):UICollectionViewLayoutAttributes;
+
+	@:native("invalidationContextForInteractivelyMovingItems:withTargetPosition:previousIndexPaths:previousPosition")
+	overload public function invalidationContextForInteractivelyMovingItems_withTargetPosition_previousIndexPaths_previousPosition(targetIndexPaths:Dynamic, withTargetPosition:CGPoint, previousIndexPaths:Dynamic, previousPosition:CGPoint):Dynamic;
+
+	@:native("invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:previousIndexPaths:movementCancelled")
+	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths_previousIndexPaths_movementCancelled(indexPaths:Dynamic, previousIndexPaths:Dynamic, movementCancelled:Bool):Dynamic;
 
 
 }

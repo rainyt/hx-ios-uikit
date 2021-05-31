@@ -23,7 +23,7 @@ extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("imageWithActions")
-	overload public function imageWithActions(actions:Dynamic):UIImage;
+	overload public function imageWithActions(actions:Dynamic):Dynamic;
 
 	@:native("PNGDataWithActions")
 	overload public function PNGDataWithActions(actions:Dynamic):Dynamic;

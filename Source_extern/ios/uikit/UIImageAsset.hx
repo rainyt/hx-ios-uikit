@@ -18,22 +18,22 @@ extern class UIImageAsset{
 	overload public function initWithCoder(coder:Dynamic):UIImageAsset;
 
 	@:native("imageWithConfiguration")
-	overload public function imageWithConfiguration(configuration:UIImageConfiguration):UIImage;
+	overload public function imageWithConfiguration(configuration:Dynamic):Dynamic;
 
 	@:native("registerImage:withConfiguration")
-	overload public function registerImage_withConfiguration(image:UIImage, withConfiguration:UIImageConfiguration):Void;
+	overload public function registerImage_withConfiguration(image:Dynamic, withConfiguration:Dynamic):Void;
 
 	@:native("unregisterImageWithConfiguration")
-	overload public function unregisterImageWithConfiguration(configuration:UIImageConfiguration):Void;
+	overload public function unregisterImageWithConfiguration(configuration:Dynamic):Void;
 
 	@:native("imageWithTraitCollection")
-	overload public function imageWithTraitCollection(traitCollection:UITraitCollection):UIImage;
+	overload public function imageWithTraitCollection(traitCollection:Dynamic):Dynamic;
 
 	@:native("registerImage:withTraitCollection")
-	overload public function registerImage_withTraitCollection(image:UIImage, withTraitCollection:UITraitCollection):Void;
+	overload public function registerImage_withTraitCollection(image:Dynamic, withTraitCollection:Dynamic):Void;
 
 	@:native("unregisterImageWithTraitCollection")
-	overload public function unregisterImageWithTraitCollection(traitCollection:UITraitCollection):Void;
+	overload public function unregisterImageWithTraitCollection(traitCollection:Dynamic):Void;
 
 
 }

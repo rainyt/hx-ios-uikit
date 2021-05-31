@@ -24,7 +24,7 @@ extern class UISceneConnectionOptions{
 	public var notificationResponse:Dynamic;
 
 	@:native("shortcutItem")
-	public var shortcutItem:UIApplicationShortcutItem;
+	public var shortcutItem:Dynamic;
 
 	@:native("cloudKitShareMetadata")
 	public var cloudKitShareMetadata:Dynamic;

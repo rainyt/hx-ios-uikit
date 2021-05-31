@@ -15,13 +15,19 @@ extern class UIMenuElement{
 	public var title:Dynamic;
 
 	@:native("image")
-	public var image:UIImage;
+	public var image:Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UIMenuElement;
 
 	@:native("init")
 	overload public function init():UIMenuElement;
+
+	@:native("alloc")
+	overload public static function alloc():UIMenuElement;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIMenuElement;
 
 
 }

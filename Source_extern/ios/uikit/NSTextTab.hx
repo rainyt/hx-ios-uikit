@@ -15,10 +15,10 @@ extern class NSTextTab{
 	overload public static function columnTerminatorsForLocale(aLocale:Dynamic):Dynamic;
 
 	@:native("initWithTextAlignment:location:options")
-	overload public function initWithTextAlignment_location_options(alignment:NSTextAlignment, location:Float, options:Dynamic):NSTextTab;
+	overload public function initWithTextAlignment_location_options(alignment:Dynamic, location:Float, options:Dynamic):NSTextTab;
 
 	@:native("alignment")
-	public var alignment:NSTextAlignment;
+	public var alignment:Dynamic;
 
 	@:native("location")
 	public var location:Float;

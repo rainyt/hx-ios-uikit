@@ -13,10 +13,10 @@ extern class UIPreviewInteraction{
 	overload public static function autorelease():UIPreviewInteraction;
 
 	@:native("initWithView")
-	overload public function initWithView(view:UIView):UIPreviewInteraction;
+	overload public function initWithView(view:Dynamic):UIPreviewInteraction;
 
 	@:native("view")
-	public var view:UIView;
+	public var view:Dynamic;
 
 	@:native("init")
 	overload public function init():UIPreviewInteraction;
