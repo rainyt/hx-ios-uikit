@@ -1,0 +1,14 @@
+{
+    "name": "hx-ios-uikit",
+    "url": "https://github.com/rainyt/hx-ios-uikit",
+    "license": "MIT",
+    "tags": ["ios","uikit"],
+    "description": "Use Haxe to write IOS native UI usage",
+    "version": "0.0.1",
+    "releasenote": "",
+    "contributors": ["rainy"],
+    "classPath": "Source",
+    "dependencies": {
+  
+    }
+  }
