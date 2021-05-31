@@ -30,6 +30,11 @@ class ExternBaseClass {
 	 */
 	private var funcAndAttr:Array<ExternBaseClassFunProperty> = [];
 
+	/**
+	 * 已定义的属性
+	 */
+	private var _propertys:Map<String, ExternBaseClassFunProperty> = [];
+
 	public function new(_hdata:String, hextern:ExternHFile, defcall:ExternBaseClass->Void) {
 		var harray = _hdata.split("\n");
 		var pclassName = harray[0];
@@ -88,8 +93,10 @@ class ExternBaseClass {
 			if (value.indexOf("@property") == 0) {
 				// 属性解析
 				var property = ObjcProperty.parsing(hextern.typedefs, this.className, value);
-				if (property != null)
+				if (property != null && !_propertys.exists(property.name)) {
+					_propertys.set(property.name, property);
 					funcAndAttr.push(property);
+				}
 			} else if (value.indexOf("-") == 0 || value.indexOf("+") == 0) {
 				// 对象方法
 				var func = ObjcFun.parsing(hextern.typedefs, this.className, value);

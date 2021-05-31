@@ -31,9 +31,6 @@ extern class UIScreen{
 	@:native("currentMode")
 	public var currentMode:UIScreenMode;
 
-	@:native("currentMode")
-	public var currentMode:UIScreenMode;
-
 	@:native("overscanCompensation")
 	public var overscanCompensation:UIScreenOverscanCompensation;
 

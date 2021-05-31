@@ -50,17 +50,17 @@ extern class UIImageView extends UIView{
 	@:native("animating")
 	public var animating:Bool;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(9_0")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(9_0:Dynamic;
+	@:native("adjustsImageWhenAncestorFocused")
+	public var adjustsImageWhenAncestorFocused:Bool;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(9_0")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(9_0:Dynamic;
+	@:native("focusedFrameGuide")
+	public var focusedFrameGuide:Dynamic;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(11_0")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(11_0:Dynamic;
+	@:native("overlayContentView")
+	public var overlayContentView:UIView;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(11_0")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(11_0:Dynamic;
+	@:native("masksFocusEffectToContents")
+	public var masksFocusEffectToContents:Bool;
 
 
 }

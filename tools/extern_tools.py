@@ -63,14 +63,15 @@ class Class: pass
 
 class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
-    __slots__ = ("className", "extendClassName", "_imported", "_hdata", "funcAndAttr")
-    _hx_fields = ["className", "extendClassName", "_imported", "_hdata", "funcAndAttr"]
+    __slots__ = ("className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys")
+    _hx_fields = ["className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys"]
     _hx_methods = ["toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
 
     def __init__(self,_hdata,hextern,defcall):
         self._hdata = None
         self.extendClassName = None
         self.className = None
+        self._propertys = haxe_ds_StringMap()
         self.funcAndAttr = []
         self._imported = []
         harray = _hdata.split("\n")
@@ -164,7 +165,8 @@ class ExternBaseClass:
             startIndex = None
             if (((value.find("@property") if ((startIndex is None)) else HxString.indexOfImpl(value,"@property",startIndex))) == 0):
                 property = ObjcProperty.parsing(hextern.typedefs,self.className,value)
-                if (property is not None):
+                if ((property is not None) and (not (property.name in self._propertys.h))):
+                    self._propertys.h[property.name] = property
                     _this = self.funcAndAttr
                     _this.append(property)
             else:
@@ -905,8 +907,14 @@ class ObjcProperty:
         def _hx_local_7(f):
             p = None
             p1 = None
+            p2 = None
             startIndex = None
-            if (((f.find("NS_") if ((startIndex is None)) else HxString.indexOfImpl(f,"NS_",startIndex))) == -1):
+            if (((f.find("UIKIT_") if ((startIndex is None)) else HxString.indexOfImpl(f,"UIKIT_",startIndex))) == -1):
+                startIndex = None
+                p2 = (((f.find("NS_") if ((startIndex is None)) else HxString.indexOfImpl(f,"NS_",startIndex))) == -1)
+            else:
+                p2 = False
+            if p2:
                 startIndex = None
                 p1 = (((f.find("API_") if ((startIndex is None)) else HxString.indexOfImpl(f,"API_",startIndex))) == -1)
             else:

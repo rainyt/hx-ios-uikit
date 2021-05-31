@@ -20,9 +20,6 @@ extern class NSLayoutConstraint{
 	@:native("priority")
 	public var priority:null;
 
-	@:native("priority")
-	public var priority:null;
-
 	@:native("shouldBeArchived")
 	public var shouldBeArchived:null;
 
