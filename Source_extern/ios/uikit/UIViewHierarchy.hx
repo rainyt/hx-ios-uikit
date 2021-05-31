@@ -69,7 +69,7 @@ extern class UIViewHierarchy{
 	overload public function isDescendantOfView(view:UIView):Bool;
 
 	@:native("viewWithTag")
-	overload public function viewWithTag(tag:NSInteger):__kindofUIView;
+	overload public function viewWithTag(tag:NSInteger):UIView;
 
 	@:native("setNeedsLayout")
 	overload public function setNeedsLayout():Void;

@@ -63,10 +63,10 @@ extern class UIViewController{
 	overload public function prepareForSegue(segue:UIStoryboardSegue, sender:Dynamic):Void;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:sender")
-	overload public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, sender:Dynamic):Bool;
+	overload public function canPerformUnwindSegueAction(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:withSender")
-	overload public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:Dynamic):Bool;
+	overload public function canPerformUnwindSegueAction(action:String, fromViewController:UIViewController, withSender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
 	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
@@ -75,7 +75,7 @@ extern class UIViewController{
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
 
 	@:native("viewControllerForUnwindSegueAction:fromViewController:withSender")
-	overload public function viewControllerForUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:Dynamic):UIViewController;
+	overload public function viewControllerForUnwindSegueAction(action:String, fromViewController:UIViewController, withSender:Dynamic):UIViewController;
 
 	@:native("unwindForSegue:towardsViewController")
 	overload public function unwindForSegue(unwindSegue:UIStoryboardSegue, towardsViewController:UIViewController):Void;
@@ -192,7 +192,7 @@ extern class UIViewController{
 	overload public function setNeedsStatusBarAppearanceUpdate():Void;
 
 	@:native("targetViewControllerForAction:sender")
-	overload public function targetViewControllerForAction(action:SEL, sender:Dynamic):UIViewController;
+	overload public function targetViewControllerForAction(action:String, sender:Dynamic):UIViewController;
 
 	@:native("showViewController:sender")
 	overload public function showViewController(vc:UIViewController, sender:Dynamic):Void;

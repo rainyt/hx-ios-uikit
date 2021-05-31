@@ -24,7 +24,7 @@ extern class UICommand{
 	public var discoverabilityTitle:NSString;
 
 	@:native("action")
-	public var action:SEL;
+	public var action:String;
 
 	@:native("propertyList")
 	public var propertyList:Dynamic;

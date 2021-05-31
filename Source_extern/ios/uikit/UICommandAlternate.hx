@@ -18,7 +18,7 @@ extern class UICommandAlternate{
 	public var title:NSString;
 
 	@:native("action")
-	public var action:SEL;
+	public var action:String;
 
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;

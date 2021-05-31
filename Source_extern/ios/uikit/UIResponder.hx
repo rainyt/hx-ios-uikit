@@ -72,10 +72,10 @@ extern class UIResponder{
 	overload public function remoteControlReceivedWithEvent(event:UIEvent):Void;
 
 	@:native("canPerformAction:withSender")
-	overload public function canPerformAction(action:SEL, withSender:Dynamic):Bool;
+	overload public function canPerformAction(action:String, withSender:Dynamic):Bool;
 
 	@:native("targetForAction:withSender")
-	overload public function targetForAction(action:SEL, withSender:Dynamic):Dynamic;
+	overload public function targetForAction(action:String, withSender:Dynamic):Dynamic;
 
 	@:native("buildMenuWithBuilder")
 	overload public function buildMenuWithBuilder(builder:Dynamic):Void;

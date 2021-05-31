@@ -802,6 +802,8 @@ class ObjcType:
     def toType(t,typedefs):
         if (t is None):
             return t
+        if (t == "SEL"):
+            return "String"
         if (t == "BOOL"):
             return "Bool"
         if (t == "void"):
@@ -822,6 +824,7 @@ class ObjcType:
         if tmp:
             return "Dynamic"
         t = StringTools.replace(t,"nullable ","")
+        t = StringTools.replace(t,"__kindof ","")
         return StringTools.replace(StringTools.replace((typedefs.h.get(t,None).parentClassName if (((t in typedefs.h) and (not typedefs.h.get(t,None).createHaxeFile))) else t),"*","")," ","")
 
 

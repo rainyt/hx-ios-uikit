@@ -48,10 +48,10 @@ extern class UIDeprecated{
 	public var target:Dynamic;
 
 	@:native("editAction")
-	public var editAction:SEL;
+	public var editAction:String;
 
 	@:native("accessoryAction")
-	public var accessoryAction:SEL;
+	public var accessoryAction:String;
 
 
 }

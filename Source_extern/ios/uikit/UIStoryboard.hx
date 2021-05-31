@@ -18,16 +18,16 @@ extern class UIStoryboard{
 	overload public static function storyboardWithName(name:NSString, bundle:NSBundle):UIStoryboard;
 
 	@:native("instantiateInitialViewController")
-	overload public function instantiateInitialViewController():__kindofUIViewController;
+	overload public function instantiateInitialViewController():UIViewController;
 
 	@:native("instantiateInitialViewControllerWithCreator")
-	overload public function instantiateInitialViewControllerWithCreator(block:NS_NOESCAPEUIStoryboardViewControllerCreator):__kindofUIViewController;
+	overload public function instantiateInitialViewControllerWithCreator(block:NS_NOESCAPEUIStoryboardViewControllerCreator):UIViewController;
 
 	@:native("instantiateViewControllerWithIdentifier")
-	overload public function instantiateViewControllerWithIdentifier(identifier:NSString):__kindofUIViewController;
+	overload public function instantiateViewControllerWithIdentifier(identifier:NSString):UIViewController;
 
 	@:native("instantiateViewControllerWithIdentifier:creator")
-	overload public function instantiateViewControllerWithIdentifier(identifier:NSString, creator:NS_NOESCAPEUIStoryboardViewControllerCreator):__kindofUIViewController;
+	overload public function instantiateViewControllerWithIdentifier(identifier:NSString, creator:NS_NOESCAPEUIStoryboardViewControllerCreator):UIViewController;
 
 
 }

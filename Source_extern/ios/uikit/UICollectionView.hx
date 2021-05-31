@@ -66,16 +66,16 @@ extern class UICollectionView{
 	overload public function registerNib(nib:UINib, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
 
 	@:native("dequeueReusableCellWithReuseIdentifier:forIndexPath")
-	overload public function dequeueReusableCellWithReuseIdentifier(identifier:NSString, forIndexPath:NSIndexPath):__kindofUICollectionViewCell;
+	overload public function dequeueReusableCellWithReuseIdentifier(identifier:NSString, forIndexPath:NSIndexPath):UICollectionViewCell;
 
 	@:native("dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath")
-	overload public function dequeueReusableSupplementaryViewOfKind(elementKind:NSString, withReuseIdentifier:NSString, forIndexPath:NSIndexPath):__kindofUICollectionReusableView;
+	overload public function dequeueReusableSupplementaryViewOfKind(elementKind:NSString, withReuseIdentifier:NSString, forIndexPath:NSIndexPath):UICollectionReusableView;
 
 	@:native("dequeueConfiguredReusableCellWithRegistration:forIndexPath:item")
-	overload public function dequeueConfiguredReusableCellWithRegistration(registration:UICollectionViewCellRegistration, forIndexPath:NSIndexPath, item:Dynamic):__kindofUICollectionViewCell;
+	overload public function dequeueConfiguredReusableCellWithRegistration(registration:UICollectionViewCellRegistration, forIndexPath:NSIndexPath, item:Dynamic):UICollectionViewCell;
 
 	@:native("dequeueConfiguredReusableSupplementaryViewWithRegistration:forIndexPath")
-	overload public function dequeueConfiguredReusableSupplementaryViewWithRegistration(registration:UICollectionViewSupplementaryRegistration, forIndexPath:NSIndexPath):__kindofUICollectionReusableView;
+	overload public function dequeueConfiguredReusableSupplementaryViewWithRegistration(registration:UICollectionViewSupplementaryRegistration, forIndexPath:NSIndexPath):UICollectionReusableView;
 
 	@:native("allowsSelection")
 	public var allowsSelection:Bool;

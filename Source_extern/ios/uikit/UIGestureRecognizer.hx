@@ -24,7 +24,7 @@ extern class UIGestureRecognizer{
 	overload public function initWithCoder(coder:NSCoder):UIGestureRecognizer;
 
 	@:native("addTarget:action")
-	overload public function addTarget(target:Dynamic, action:SEL):Void;
+	overload public function addTarget(target:Dynamic, action:String):Void;
 
 	@:native("removeTarget:action")
 	overload public function removeTarget(target:Dynamic, action:SEL):Void;

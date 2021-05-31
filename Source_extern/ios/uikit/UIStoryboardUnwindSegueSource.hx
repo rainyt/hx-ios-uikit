@@ -21,7 +21,7 @@ extern class UIStoryboardUnwindSegueSource{
 	public var sourceViewController:UIViewController;
 
 	@:native("unwindAction")
-	public var unwindAction:SEL;
+	public var unwindAction:String;
 
 	@:native("sender")
 	public var sender:Dynamic;

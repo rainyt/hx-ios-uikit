@@ -96,7 +96,7 @@ extern class UITableView{
 	overload public function indexPathsForRowsInRect(rect:CGRect):Dynamic;
 
 	@:native("cellForRowAtIndexPath")
-	overload public function cellForRowAtIndexPath(indexPath:NSIndexPath):__kindofUITableViewCell;
+	overload public function cellForRowAtIndexPath(indexPath:NSIndexPath):UITableViewCell;
 
 	@:native("visibleCells")
 	public var visibleCells:Dynamic;
@@ -222,13 +222,13 @@ extern class UITableView{
 	public var tableFooterView:UIView;
 
 	@:native("dequeueReusableCellWithIdentifier")
-	overload public function dequeueReusableCellWithIdentifier(identifier:NSString):__kindofUITableViewCell;
+	overload public function dequeueReusableCellWithIdentifier(identifier:NSString):UITableViewCell;
 
 	@:native("dequeueReusableCellWithIdentifier:forIndexPath")
-	overload public function dequeueReusableCellWithIdentifier(identifier:NSString, forIndexPath:NSIndexPath):__kindofUITableViewCell;
+	overload public function dequeueReusableCellWithIdentifier(identifier:NSString, forIndexPath:NSIndexPath):UITableViewCell;
 
 	@:native("dequeueReusableHeaderFooterViewWithIdentifier")
-	overload public function dequeueReusableHeaderFooterViewWithIdentifier(identifier:NSString):__kindofUITableViewHeaderFooterView;
+	overload public function dequeueReusableHeaderFooterViewWithIdentifier(identifier:NSString):UITableViewHeaderFooterView;
 
 	@:native("registerNib:forCellReuseIdentifier")
 	overload public function registerNib(nib:UINib, forCellReuseIdentifier:NSString):Void;

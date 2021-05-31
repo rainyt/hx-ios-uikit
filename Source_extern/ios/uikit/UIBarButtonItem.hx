@@ -69,7 +69,7 @@ extern class UIBarButtonItem{
 	public var customView:UIView;
 
 	@:native("action")
-	public var action:SEL;
+	public var action:String;
 
 	@:native("target")
 	public var target:Dynamic;

@@ -63,7 +63,7 @@ extern class UIControl{
 	overload public function cancelTrackingWithEvent(event:UIEvent):Void;
 
 	@:native("addTarget:action:forControlEvents")
-	overload public function addTarget(target:Dynamic, action:SEL, forControlEvents:UIControlEvents):Void;
+	overload public function addTarget(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeTarget:action:forControlEvents")
 	overload public function removeTarget(target:Dynamic, action:SEL, forControlEvents:UIControlEvents):Void;
@@ -90,7 +90,7 @@ extern class UIControl{
 	overload public function enumerateEventHandlers(iterator:Dynamic):Void;
 
 	@:native("sendAction:to:forEvent")
-	overload public function sendAction(action:SEL, to:Dynamic, forEvent:UIEvent):Void;
+	overload public function sendAction(action:String, to:Dynamic, forEvent:UIEvent):Void;
 
 	@:native("sendAction")
 	overload public function sendAction(action:UIAction):Void;

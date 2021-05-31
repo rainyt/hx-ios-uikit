@@ -15,13 +15,13 @@ extern class UIMenuItem{
 	overload public static function autorelease():UIMenuItem;
 
 	@:native("initWithTitle:action")
-	overload public function initWithTitle(title:NSString, action:SEL):UIMenuItem;
+	overload public function initWithTitle(title:NSString, action:String):UIMenuItem;
 
 	@:native("title")
 	public var title:NSString;
 
 	@:native("action")
-	public var action:SEL;
+	public var action:String;
 
 
 }

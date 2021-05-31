@@ -51,7 +51,7 @@ extern class UIApplication{
 	public var windows:Dynamic;
 
 	@:native("sendAction:to:from:forEvent")
-	overload public function sendAction(action:SEL, to:Dynamic, from:Dynamic, forEvent:UIEvent):Bool;
+	overload public function sendAction(action:String, to:Dynamic, from:Dynamic, forEvent:UIEvent):Bool;
 
 	@:native("networkActivityIndicatorVisible")
 	public var networkActivityIndicatorVisible:Bool;
