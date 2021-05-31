@@ -14,11 +14,11 @@ extern abstract UIImageResizingMode(Int) from Int to Int {
 	@:native("UIImageResizingModeStretch")
 	var UIImageResizingModeStretch;
 
-	@:native("UIImageResizingModeStretch")
-	var UIImageResizingModeStretch;
+	// @:native("UIImageResizingModeStretch")
+	// var UIImageResizingModeStretch;
 
-	@:native("UIImageResizingModeTile")
-	var UIImageResizingModeTile;
+	// @:native("UIImageResizingModeTile")
+	// var UIImageResizingModeTile;
 
 
 }
