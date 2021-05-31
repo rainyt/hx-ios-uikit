@@ -13,7 +13,7 @@ extern class UIDynamicAnimator:{
 	overload public static function autorelease():UIDynamicAnimator:;
 
 	@:native("initWithReferenceView")
-	overload public function initWithReferenceView(view:Dynamic):Dynamic;
+	overload public function initWithReferenceView(view:Dynamic):UIDynamicAnimator:;
 
 	@:native("addBehavior")
 	overload public function addBehavior(behavior:Dynamic):Void;

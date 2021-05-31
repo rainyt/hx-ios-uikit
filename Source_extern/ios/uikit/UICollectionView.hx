@@ -15,10 +15,10 @@ extern class UICollectionView{
 	overload public static function autorelease():UICollectionView;
 
 	@:native("initWithFrame:collectionViewLayout")
-	overload public function initWithFrame_collectionViewLayout(frame:CGRect, collectionViewLayout:Dynamic):Dynamic;
+	overload public function initWithFrame_collectionViewLayout(frame:CGRect, collectionViewLayout:Dynamic):UICollectionView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UICollectionView;
 
 	@:native("collectionViewLayout")
 	public var collectionViewLayout:Dynamic;

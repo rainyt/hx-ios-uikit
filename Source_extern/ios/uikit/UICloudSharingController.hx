@@ -13,16 +13,16 @@ extern class UICloudSharingController{
 	overload public static function autorelease():UICloudSharingController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UICloudSharingController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UICloudSharingController;
 
 	@:native("initWithPreparationHandler")
-	overload public function initWithPreparationHandler(preparationHandler:Dynamic):Dynamic;
+	overload public function initWithPreparationHandler(preparationHandler:Dynamic):UICloudSharingController;
 
 	@:native("initWithShare:container")
-	overload public function initWithShare_container(share:Dynamic, container:Dynamic):Dynamic;
+	overload public function initWithShare_container(share:Dynamic, container:Dynamic):UICloudSharingController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

@@ -13,7 +13,7 @@ extern class UIDevice{
 	overload public static function autorelease():UIDevice;
 
 	@:native("currentDevice")
-	public var currentDevice:Dynamic;
+	overload public static function currentDevice():UIDevice;
 
 	@:native("name")
 	public var name:NSString;

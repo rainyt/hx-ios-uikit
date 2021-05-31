@@ -14,10 +14,10 @@ extern class UIPrintInteractionController{
 	overload public static function autorelease():UIPrintInteractionController;
 
 	@:native("printingAvailable")
-	public var printingAvailable:Bool;
+	overload public static function printingAvailable():Bool;
 
 	@:native("printableUTIs")
-	public var printableUTIs:Dynamic;
+	overload public static function printableUTIs():Dynamic;
 
 	@:native("canPrintURL")
 	overload public static function canPrintURL(url:Dynamic):Bool;
@@ -26,7 +26,7 @@ extern class UIPrintInteractionController{
 	overload public static function canPrintData(data:NSData):Bool;
 
 	@:native("sharedPrintController")
-	public var sharedPrintController:Dynamic;
+	overload public static function sharedPrintController():UIPrintInteractionController;
 
 	@:native("printInfo")
 	public var printInfo:Dynamic;

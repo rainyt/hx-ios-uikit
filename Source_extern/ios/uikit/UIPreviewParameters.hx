@@ -12,10 +12,10 @@ extern class UIPreviewParameters{
 	overload public static function autorelease():UIPreviewParameters;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIPreviewParameters;
 
 	@:native("initWithTextLineRects")
-	overload public function initWithTextLineRects(textLineRects:Dynamic):Dynamic;
+	overload public function initWithTextLineRects(textLineRects:Dynamic):UIPreviewParameters;
 
 	@:native("visiblePath")
 	public var visiblePath:Dynamic;

@@ -13,7 +13,7 @@ extern class UIStoryboard{
 	overload public static function autorelease():UIStoryboard;
 
 	@:native("storyboardWithName:bundle")
-	overload public static function storyboardWithName_bundle(name:NSString, bundle:Dynamic):Dynamic;
+	overload public static function storyboardWithName_bundle(name:NSString, bundle:Dynamic):UIStoryboard;
 
 	@:native("instantiateInitialViewController")
 	overload public function instantiateInitialViewController():Dynamic;

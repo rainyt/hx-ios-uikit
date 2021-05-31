@@ -13,46 +13,46 @@ extern class UIListContentConfiguration{
 	overload public static function autorelease():UIListContentConfiguration;
 
 	@:native("cellConfiguration")
-	overload public static function cellConfiguration():Dynamic;
+	overload public static function cellConfiguration():UIListContentConfiguration;
 
 	@:native("subtitleCellConfiguration")
-	overload public static function subtitleCellConfiguration():Dynamic;
+	overload public static function subtitleCellConfiguration():UIListContentConfiguration;
 
 	@:native("valueCellConfiguration")
-	overload public static function valueCellConfiguration():Dynamic;
+	overload public static function valueCellConfiguration():UIListContentConfiguration;
 
 	@:native("plainHeaderConfiguration")
-	overload public static function plainHeaderConfiguration():Dynamic;
+	overload public static function plainHeaderConfiguration():UIListContentConfiguration;
 
 	@:native("plainFooterConfiguration")
-	overload public static function plainFooterConfiguration():Dynamic;
+	overload public static function plainFooterConfiguration():UIListContentConfiguration;
 
 	@:native("groupedHeaderConfiguration")
-	overload public static function groupedHeaderConfiguration():Dynamic;
+	overload public static function groupedHeaderConfiguration():UIListContentConfiguration;
 
 	@:native("groupedFooterConfiguration")
-	overload public static function groupedFooterConfiguration():Dynamic;
+	overload public static function groupedFooterConfiguration():UIListContentConfiguration;
 
 	@:native("sidebarCellConfiguration")
-	overload public static function sidebarCellConfiguration():Dynamic;
+	overload public static function sidebarCellConfiguration():UIListContentConfiguration;
 
 	@:native("sidebarSubtitleCellConfiguration")
-	overload public static function sidebarSubtitleCellConfiguration():Dynamic;
+	overload public static function sidebarSubtitleCellConfiguration():UIListContentConfiguration;
 
 	@:native("accompaniedSidebarCellConfiguration")
-	overload public static function accompaniedSidebarCellConfiguration():Dynamic;
+	overload public static function accompaniedSidebarCellConfiguration():UIListContentConfiguration;
 
 	@:native("accompaniedSidebarSubtitleCellConfiguration")
-	overload public static function accompaniedSidebarSubtitleCellConfiguration():Dynamic;
+	overload public static function accompaniedSidebarSubtitleCellConfiguration():UIListContentConfiguration;
 
 	@:native("sidebarHeaderConfiguration")
-	overload public static function sidebarHeaderConfiguration():Dynamic;
+	overload public static function sidebarHeaderConfiguration():UIListContentConfiguration;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIListContentConfiguration;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIListContentConfiguration;
 
 	@:native("image")
 	public var image:Dynamic;

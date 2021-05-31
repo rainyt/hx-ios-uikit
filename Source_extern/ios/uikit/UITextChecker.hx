@@ -37,7 +37,7 @@ extern class UITextChecker{
 	overload public static function unlearnWord(word:NSString):Void;
 
 	@:native("availableLanguages")
-	public var availableLanguages:Dynamic;
+	overload public static function availableLanguages():Dynamic;
 
 
 }

@@ -14,7 +14,7 @@ extern class UIApplication{
 	overload public static function autorelease():UIApplication;
 
 	@:native("sharedApplication")
-	public var sharedApplication:Dynamic;
+	overload public static function sharedApplication():UIApplication;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

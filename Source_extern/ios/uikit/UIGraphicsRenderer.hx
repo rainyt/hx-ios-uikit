@@ -13,13 +13,13 @@ extern class UIGraphicsRenderer{
 	overload public static function autorelease():UIGraphicsRenderer;
 
 	@:native("initWithBounds")
-	overload public function initWithBounds(bounds:CGRect):Dynamic;
+	overload public function initWithBounds(bounds:CGRect):UIGraphicsRenderer;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds_format(bounds:CGRect, format:Dynamic):Dynamic;
+	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsRendererFormat):UIGraphicsRenderer;
 
 	@:native("format")
-	public var format:Dynamic;
+	public var format:UIGraphicsRendererFormat;
 
 	@:native("allowsImageOutput")
 	public var allowsImageOutput:Bool;

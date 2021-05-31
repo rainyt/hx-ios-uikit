@@ -12,7 +12,7 @@ extern class NSLayoutYAxisAnchor{
 	overload public static function autorelease():NSLayoutYAxisAnchor;
 
 	@:native("anchorWithOffsetToAnchor")
-	overload public function anchorWithOffsetToAnchor(otherAnchor:Dynamic):Dynamic;
+	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutYAxisAnchor):Dynamic;
 
 
 }

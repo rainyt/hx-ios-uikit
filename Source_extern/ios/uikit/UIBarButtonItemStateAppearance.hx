@@ -12,10 +12,10 @@ extern class UIBarButtonItemStateAppearance{
 	overload public static function autorelease():UIBarButtonItemStateAppearance;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIBarButtonItemStateAppearance;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIBarButtonItemStateAppearance;
 
 	@:native("titleTextAttributes")
 	public var titleTextAttributes:Dynamic;

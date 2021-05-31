@@ -14,13 +14,13 @@ extern class UISearchBar{
 	overload public static function autorelease():UISearchBar;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UISearchBar;
 
 	@:native("initWithFrame:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithFrame_NS_DESIGNATED_INITIALIZER(frame:CGRect, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithFrame_NS_DESIGNATED_INITIALIZER(frame:CGRect, NS_DESIGNATED_INITIALIZER:Dynamic):UISearchBar;
 
 	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithCoder_NS_DESIGNATED_INITIALIZER(coder:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithCoder_NS_DESIGNATED_INITIALIZER(coder:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UISearchBar;
 
 	@:native("barStyle")
 	public var barStyle:Dynamic;

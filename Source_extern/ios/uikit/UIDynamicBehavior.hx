@@ -12,10 +12,10 @@ extern class UIDynamicBehavior{
 	overload public static function autorelease():UIDynamicBehavior;
 
 	@:native("addChildBehavior")
-	overload public function addChildBehavior(behavior:Dynamic):Void;
+	overload public function addChildBehavior(behavior:UIDynamicBehavior):Void;
 
 	@:native("removeChildBehavior")
-	overload public function removeChildBehavior(behavior:Dynamic):Void;
+	overload public function removeChildBehavior(behavior:UIDynamicBehavior):Void;
 
 	@:native("childBehaviors")
 	public var childBehaviors:Dynamic;

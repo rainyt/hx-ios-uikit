@@ -13,10 +13,10 @@ extern class UISceneSession{
 	overload public static function autorelease():UISceneSession;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UISceneSession;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UISceneSession;
 
 	@:native("scene")
 	public var scene:Dynamic;
@@ -25,7 +25,7 @@ extern class UISceneSession{
 	public var role:Dynamic;
 
 	@:native("configuration")
-	public var configuration:Dynamic;
+	public var configuration:UISceneConfiguration;
 
 	@:native("persistentIdentifier")
 	public var persistentIdentifier:NSString;

@@ -24,7 +24,7 @@ extern class UIGraphicsImageRendererFormat{
 	public var preferredRange:Dynamic;
 
 	@:native("formatForTraitCollection")
-	overload public static function formatForTraitCollection(traitCollection:Dynamic):Dynamic;
+	overload public static function formatForTraitCollection(traitCollection:Dynamic):UIGraphicsImageRendererFormat;
 
 
 }

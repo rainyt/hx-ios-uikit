@@ -13,7 +13,7 @@ extern class UIPushBehavior{
 	overload public static function autorelease():UIPushBehavior;
 
 	@:native("initWithItems:mode")
-	overload public function initWithItems_mode(items:Dynamic, mode:Dynamic):Dynamic;
+	overload public function initWithItems_mode(items:Dynamic, mode:Dynamic):UIPushBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;

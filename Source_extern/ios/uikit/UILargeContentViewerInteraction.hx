@@ -12,7 +12,7 @@ extern class UILargeContentViewerInteraction{
 	overload public static function autorelease():UILargeContentViewerInteraction;
 
 	@:native("initWithDelegate")
-	overload public function initWithDelegate(delegate:Dynamic):Dynamic;
+	overload public function initWithDelegate(delegate:Dynamic):UILargeContentViewerInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -21,7 +21,7 @@ extern class UILargeContentViewerInteraction{
 	public var gestureRecognizerForExclusionRelationship:Dynamic;
 
 	@:native("enabled")
-	public var enabled:Bool;
+	overload public static function enabled():Bool;
 
 
 }

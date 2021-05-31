@@ -12,10 +12,10 @@ extern class UIOpenURLContext{
 	overload public static function autorelease():UIOpenURLContext;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIOpenURLContext;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIOpenURLContext;
 
 	@:native("URL")
 	public var URL:Dynamic;

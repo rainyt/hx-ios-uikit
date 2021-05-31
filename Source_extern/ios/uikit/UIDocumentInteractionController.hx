@@ -14,7 +14,7 @@ extern class UIDocumentInteractionController{
 	overload public static function autorelease():UIDocumentInteractionController;
 
 	@:native("interactionControllerWithURL")
-	overload public static function interactionControllerWithURL(url:Dynamic):Dynamic;
+	overload public static function interactionControllerWithURL(url:Dynamic):UIDocumentInteractionController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

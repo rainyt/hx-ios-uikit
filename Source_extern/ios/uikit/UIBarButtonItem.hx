@@ -13,46 +13,46 @@ extern class UIBarButtonItem{
 	overload public static function autorelease():UIBarButtonItem;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIBarButtonItem;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIBarButtonItem;
 
 	@:native("initWithImage:style:target:action")
-	overload public function initWithImage_style_target_action(image:Dynamic, style:Dynamic, target:Dynamic, action:String):Dynamic;
+	overload public function initWithImage_style_target_action(image:Dynamic, style:Dynamic, target:Dynamic, action:String):UIBarButtonItem;
 
 	@:native("initWithImage:landscapeImagePhone:style:target:action")
-	overload public function initWithImage_landscapeImagePhone_style_target_action(image:Dynamic, landscapeImagePhone:Dynamic, style:Dynamic, target:Dynamic, action:String):Dynamic;
+	overload public function initWithImage_landscapeImagePhone_style_target_action(image:Dynamic, landscapeImagePhone:Dynamic, style:Dynamic, target:Dynamic, action:String):UIBarButtonItem;
 
 	@:native("initWithTitle:style:target:action")
-	overload public function initWithTitle_style_target_action(title:NSString, style:Dynamic, target:Dynamic, action:String):Dynamic;
+	overload public function initWithTitle_style_target_action(title:NSString, style:Dynamic, target:Dynamic, action:String):UIBarButtonItem;
 
 	@:native("initWithBarButtonSystemItem:target:action")
-	overload public function initWithBarButtonSystemItem_target_action(systemItem:Dynamic, target:Dynamic, action:String):Dynamic;
+	overload public function initWithBarButtonSystemItem_target_action(systemItem:Dynamic, target:Dynamic, action:String):UIBarButtonItem;
 
 	@:native("initWithCustomView")
-	overload public function initWithCustomView(customView:Dynamic):Dynamic;
+	overload public function initWithCustomView(customView:Dynamic):UIBarButtonItem;
 
 	@:native("initWithBarButtonSystemItem:primaryAction")
-	overload public function initWithBarButtonSystemItem_primaryAction(systemItem:Dynamic, primaryAction:Dynamic):Dynamic;
+	overload public function initWithBarButtonSystemItem_primaryAction(systemItem:Dynamic, primaryAction:Dynamic):UIBarButtonItem;
 
 	@:native("initWithPrimaryAction")
-	overload public function initWithPrimaryAction(primaryAction:Dynamic):Dynamic;
+	overload public function initWithPrimaryAction(primaryAction:Dynamic):UIBarButtonItem;
 
 	@:native("initWithBarButtonSystemItem:menu")
-	overload public function initWithBarButtonSystemItem_menu(systemItem:Dynamic, menu:Dynamic):Dynamic;
+	overload public function initWithBarButtonSystemItem_menu(systemItem:Dynamic, menu:Dynamic):UIBarButtonItem;
 
 	@:native("initWithTitle:menu")
-	overload public function initWithTitle_menu(title:NSString, menu:Dynamic):Dynamic;
+	overload public function initWithTitle_menu(title:NSString, menu:Dynamic):UIBarButtonItem;
 
 	@:native("initWithImage:menu")
-	overload public function initWithImage_menu(image:Dynamic, menu:Dynamic):Dynamic;
+	overload public function initWithImage_menu(image:Dynamic, menu:Dynamic):UIBarButtonItem;
 
 	@:native("fixedSpaceItemOfWidth")
-	overload public static function fixedSpaceItemOfWidth(width:Float):Dynamic;
+	overload public static function fixedSpaceItemOfWidth(width:Float):UIBarButtonItem;
 
 	@:native("flexibleSpaceItem")
-	overload public static function flexibleSpaceItem():Dynamic;
+	overload public static function flexibleSpaceItem():UIBarButtonItem;
 
 	@:native("style")
 	public var style:Dynamic;

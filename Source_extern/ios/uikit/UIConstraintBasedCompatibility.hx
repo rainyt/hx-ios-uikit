@@ -15,7 +15,7 @@ extern class UIConstraintBasedCompatibility{
 	public var translatesAutoresizingMaskIntoConstraints:Bool;
 
 	@:native("requiresConstraintBasedLayout")
-	public var requiresConstraintBasedLayout:Bool;
+	overload public static function requiresConstraintBasedLayout():Bool;
 
 
 }

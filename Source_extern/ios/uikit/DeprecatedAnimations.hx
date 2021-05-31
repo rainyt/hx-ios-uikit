@@ -49,7 +49,7 @@ extern class DeprecatedAnimations{
 	overload public static function setAnimationBeginsFromCurrentState(fromCurrentState:Bool):Void;
 
 	@:native("setAnimationTransition:forView:cache")
-	overload public static function setAnimationTransition_forView_cache(transition:Dynamic, forView:Dynamic, cache:Bool):Void;
+	overload public static function setAnimationTransition_forView_cache(transition:Dynamic, forView:UIView, cache:Bool):Void;
 
 
 }

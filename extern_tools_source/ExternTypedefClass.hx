@@ -16,7 +16,9 @@ class ExternTypedefClass {
 
 	public var enums:Array<String> = [];
 
-	public function new(value:String) {
+	public function new(value:String = null) {
+		if (value == null)
+			return;
 		createHaxeFile = value.indexOf("typedef NS_ENUM") == 0 || value.indexOf("typedef NS_OPTIONS") == 0;
 		if (createHaxeFile) {
 			// 解析类关系

@@ -12,7 +12,7 @@ extern class UIScreenshotService{
 	overload public static function autorelease():UIScreenshotService;
 
 	@:native("screenshotService")
-	public var screenshotService:Dynamic;
+	public var screenshotService:UIScreenshotService;
 
 
 }

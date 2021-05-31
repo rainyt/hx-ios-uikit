@@ -54,13 +54,13 @@ extern class UICollectionViewLayoutAttributes{
 	public var representedElementKind:NSString;
 
 	@:native("layoutAttributesForCellWithIndexPath")
-	overload public static function layoutAttributesForCellWithIndexPath(indexPath:Dynamic):Dynamic;
+	overload public static function layoutAttributesForCellWithIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForSupplementaryViewOfKind_withIndexPath(elementKind:NSString, withIndexPath:Dynamic):Dynamic;
+	overload public static function layoutAttributesForSupplementaryViewOfKind_withIndexPath(elementKind:NSString, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:Dynamic):Dynamic;
+	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 
 }

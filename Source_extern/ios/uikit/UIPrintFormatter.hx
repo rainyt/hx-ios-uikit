@@ -13,10 +13,10 @@ extern class UIPrintFormatter{
 	overload public static function autorelease():UIPrintFormatter;
 
 	@:native("viewPrintFormatter")
-	overload public function viewPrintFormatter():Dynamic;
+	overload public function viewPrintFormatter():UIViewPrintFormatter;
 
 	@:native("drawRect:forViewPrintFormatter")
-	overload public function drawRect_forViewPrintFormatter(rect:CGRect, forViewPrintFormatter:Dynamic):Void;
+	overload public function drawRect_forViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
 
 
 }

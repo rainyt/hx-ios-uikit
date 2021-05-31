@@ -12,22 +12,22 @@ extern class UIBarAppearance{
 	overload public static function autorelease():UIBarAppearance;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIBarAppearance;
 
 	@:native("initWithIdiom")
-	overload public function initWithIdiom(idiom:Dynamic):Dynamic;
+	overload public function initWithIdiom(idiom:Dynamic):UIBarAppearance;
 
 	@:native("idiom")
 	public var idiom:Dynamic;
 
 	@:native("initWithBarAppearance")
-	overload public function initWithBarAppearance(barAppearance:Dynamic):Dynamic;
+	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIBarAppearance;
 
 	@:native("copy")
-	overload public function copy():Dynamic;
+	overload public function copy():UIBarAppearance;
 
 	@:native("configureWithDefaultBackground")
 	overload public function configureWithDefaultBackground():Void;

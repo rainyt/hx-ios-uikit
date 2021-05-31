@@ -12,16 +12,16 @@ extern class UIFontMetrics{
 	overload public static function autorelease():UIFontMetrics;
 
 	@:native("defaultMetrics")
-	public var defaultMetrics:Dynamic;
+	overload public static function defaultMetrics():UIFontMetrics;
 
 	@:native("metricsForTextStyle")
-	overload public static function metricsForTextStyle(textStyle:Dynamic):Dynamic;
+	overload public static function metricsForTextStyle(textStyle:Dynamic):UIFontMetrics;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIFontMetrics;
 
 	@:native("initForTextStyle")
-	overload public function initForTextStyle(textStyle:Dynamic):Dynamic;
+	overload public function initForTextStyle(textStyle:Dynamic):UIFontMetrics;
 
 	@:native("scaledFontForFont")
 	overload public function scaledFontForFont(font:Dynamic):Dynamic;

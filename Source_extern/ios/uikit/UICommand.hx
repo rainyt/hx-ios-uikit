@@ -43,13 +43,13 @@ extern class UICommand{
 	overload public function ():Dynamic;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UICommand;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UICommand;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UICommand;
 
 
 }

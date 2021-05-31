@@ -13,7 +13,7 @@ extern class UIPrinterPickerController{
 	overload public static function autorelease():UIPrinterPickerController;
 
 	@:native("printerPickerControllerWithInitiallySelectedPrinter")
-	overload public static function printerPickerControllerWithInitiallySelectedPrinter(printer:Dynamic):Dynamic;
+	overload public static function printerPickerControllerWithInitiallySelectedPrinter(printer:Dynamic):UIPrinterPickerController;
 
 	@:native("selectedPrinter")
 	public var selectedPrinter:Dynamic;

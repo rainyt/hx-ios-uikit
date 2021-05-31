@@ -13,37 +13,37 @@ extern class UIFont{
 	overload public static function autorelease():UIFont;
 
 	@:native("preferredFontForTextStyle")
-	overload public static function preferredFontForTextStyle(style:Dynamic):Dynamic;
+	overload public static function preferredFontForTextStyle(style:Dynamic):UIFont;
 
 	@:native("preferredFontForTextStyle:compatibleWithTraitCollection")
-	overload public static function preferredFontForTextStyle_compatibleWithTraitCollection(style:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public static function preferredFontForTextStyle_compatibleWithTraitCollection(style:Dynamic, compatibleWithTraitCollection:Dynamic):UIFont;
 
 	@:native("fontWithName:size")
-	overload public static function fontWithName_size(fontName:NSString, size:Float):Dynamic;
+	overload public static function fontWithName_size(fontName:NSString, size:Float):UIFont;
 
 	@:native("familyNames")
-	public var familyNames:Dynamic;
+	overload public static function familyNames():Dynamic;
 
 	@:native("fontNamesForFamilyName")
 	overload public static function fontNamesForFamilyName(familyName:NSString):Dynamic;
 
 	@:native("systemFontOfSize")
-	overload public static function systemFontOfSize(fontSize:Float):Dynamic;
+	overload public static function systemFontOfSize(fontSize:Float):UIFont;
 
 	@:native("boldSystemFontOfSize")
-	overload public static function boldSystemFontOfSize(fontSize:Float):Dynamic;
+	overload public static function boldSystemFontOfSize(fontSize:Float):UIFont;
 
 	@:native("italicSystemFontOfSize")
-	overload public static function italicSystemFontOfSize(fontSize:Float):Dynamic;
+	overload public static function italicSystemFontOfSize(fontSize:Float):UIFont;
 
 	@:native("systemFontOfSize:weight")
-	overload public static function systemFontOfSize_weight(fontSize:Float, weight:Dynamic):Dynamic;
+	overload public static function systemFontOfSize_weight(fontSize:Float, weight:Dynamic):UIFont;
 
 	@:native("monospacedDigitSystemFontOfSize:weight")
-	overload public static function monospacedDigitSystemFontOfSize_weight(fontSize:Float, weight:Dynamic):Dynamic;
+	overload public static function monospacedDigitSystemFontOfSize_weight(fontSize:Float, weight:Dynamic):UIFont;
 
 	@:native("monospacedSystemFontOfSize:weight")
-	overload public static function monospacedSystemFontOfSize_weight(fontSize:Float, weight:Dynamic):Dynamic;
+	overload public static function monospacedSystemFontOfSize_weight(fontSize:Float, weight:Dynamic):UIFont;
 
 	@:native("familyName")
 	public var familyName:NSString;
@@ -73,10 +73,10 @@ extern class UIFont{
 	public var leading:Float;
 
 	@:native("fontWithSize")
-	overload public function fontWithSize(fontSize:Float):Dynamic;
+	overload public function fontWithSize(fontSize:Float):UIFont;
 
 	@:native("fontWithDescriptor:size")
-	overload public static function fontWithDescriptor_size(descriptor:Dynamic, size:Float):Dynamic;
+	overload public static function fontWithDescriptor_size(descriptor:Dynamic, size:Float):UIFont;
 
 	@:native("fontDescriptor")
 	public var fontDescriptor:Dynamic;

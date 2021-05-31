@@ -16,10 +16,10 @@ extern class NSLayoutManager{
 	overload public static function autorelease():NSLayoutManager;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSLayoutManager;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):NSLayoutManager;
 
 	@:native("textStorage")
 	public var textStorage:Dynamic;

@@ -12,31 +12,31 @@ extern class UITabBarItemAppearance{
 	overload public static function autorelease():UITabBarItemAppearance;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UITabBarItemAppearance;
 
 	@:native("initWithStyle")
-	overload public function initWithStyle(style:Dynamic):Dynamic;
+	overload public function initWithStyle(style:Dynamic):UITabBarItemAppearance;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UITabBarItemAppearance;
 
 	@:native("copy")
-	overload public function copy():Dynamic;
+	overload public function copy():UITabBarItemAppearance;
 
 	@:native("configureWithDefaultForStyle")
 	overload public function configureWithDefaultForStyle(style:Dynamic):Void;
 
 	@:native("normal")
-	public var normal:Dynamic;
+	public var normal:UITabBarItemStateAppearance;
 
 	@:native("selected")
-	public var selected:Dynamic;
+	public var selected:UITabBarItemStateAppearance;
 
 	@:native("disabled")
-	public var disabled:Dynamic;
+	public var disabled:UITabBarItemStateAppearance;
 
 	@:native("focused")
-	public var focused:Dynamic;
+	public var focused:UITabBarItemStateAppearance;
 
 
 }

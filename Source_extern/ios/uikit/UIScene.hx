@@ -13,13 +13,13 @@ extern class UIScene{
 	overload public static function autorelease():UIScene;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIScene;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIScene;
 
 	@:native("initWithSession:connectionOptions")
-	overload public function initWithSession_connectionOptions(session:Dynamic, connectionOptions:Dynamic):Dynamic;
+	overload public function initWithSession_connectionOptions(session:Dynamic, connectionOptions:Dynamic):UIScene;
 
 	@:native("session")
 	public var session:Dynamic;

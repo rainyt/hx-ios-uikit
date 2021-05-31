@@ -12,25 +12,25 @@ extern class UICollectionViewCompositionalLayout{
 	overload public static function autorelease():UICollectionViewCompositionalLayout;
 
 	@:native("initWithSection")
-	overload public function initWithSection(section:Dynamic):Dynamic;
+	overload public function initWithSection(section:Dynamic):UICollectionViewCompositionalLayout;
 
 	@:native("initWithSection:configuration")
-	overload public function initWithSection_configuration(section:Dynamic, configuration:Dynamic):Dynamic;
+	overload public function initWithSection_configuration(section:Dynamic, configuration:UICollectionViewCompositionalLayoutConfiguration):UICollectionViewCompositionalLayout;
 
 	@:native("initWithSectionProvider")
-	overload public function initWithSectionProvider(sectionProvider:Dynamic):Dynamic;
+	overload public function initWithSectionProvider(sectionProvider:Dynamic):UICollectionViewCompositionalLayout;
 
 	@:native("initWithSectionProvider:configuration")
-	overload public function initWithSectionProvider_configuration(sectionProvider:Dynamic, configuration:Dynamic):Dynamic;
+	overload public function initWithSectionProvider_configuration(sectionProvider:Dynamic, configuration:UICollectionViewCompositionalLayoutConfiguration):UICollectionViewCompositionalLayout;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UICollectionViewCompositionalLayout;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("configuration")
-	public var configuration:Dynamic;
+	public var configuration:UICollectionViewCompositionalLayoutConfiguration;
 
 
 }

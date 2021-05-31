@@ -13,10 +13,10 @@ extern class UITableViewCell{
 	overload public static function autorelease():UITableViewCell;
 
 	@:native("initWithStyle:reuseIdentifier")
-	overload public function initWithStyle_reuseIdentifier(style:Dynamic, reuseIdentifier:NSString):Dynamic;
+	overload public function initWithStyle_reuseIdentifier(style:Dynamic, reuseIdentifier:NSString):UITableViewCell;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UITableViewCell;
 
 	@:native("configurationState")
 	public var configurationState:Dynamic;

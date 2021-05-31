@@ -13,22 +13,22 @@ extern class UIListContentView{
 	overload public static function autorelease():UIListContentView;
 
 	@:native("initWithConfiguration")
-	overload public function initWithConfiguration(configuration:Dynamic):Dynamic;
+	overload public function initWithConfiguration(configuration:UIListContentConfiguration):UIListContentView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIListContentView;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UIListContentView;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIListContentView;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIListContentView;
 
 	@:native("configuration")
-	public var configuration:Dynamic;
+	public var configuration:UIListContentConfiguration;
 
 	@:native("textLayoutGuide")
 	public var textLayoutGuide:Dynamic;

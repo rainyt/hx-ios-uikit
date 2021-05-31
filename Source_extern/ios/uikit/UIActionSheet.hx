@@ -14,7 +14,7 @@ extern class UIActionSheet{
 	overload public static function autorelease():UIActionSheet;
 
 	@:native("initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:...")
-	overload public function initWithTitle_delegate_cancelButtonTitle_destructiveButtonTitle_otherButtonTitles_...(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):Dynamic;
+	overload public function initWithTitle_delegate_cancelButtonTitle_destructiveButtonTitle_otherButtonTitles_...(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):UIActionSheet;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

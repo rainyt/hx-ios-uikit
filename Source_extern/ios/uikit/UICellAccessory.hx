@@ -24,10 +24,10 @@ extern class UICellAccessory{
 	public var tintColor:Dynamic;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UICellAccessory;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UICellAccessory;
 
 
 }

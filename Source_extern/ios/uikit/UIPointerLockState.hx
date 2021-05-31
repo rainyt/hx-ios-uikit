@@ -12,10 +12,10 @@ extern class UIPointerLockState{
 	overload public static function autorelease():UIPointerLockState;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIPointerLockState;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIPointerLockState;
 
 	@:native("locked")
 	public var locked:Bool;

@@ -12,121 +12,121 @@ extern class UIColorSystemColors{
 	overload public static function autorelease():UIColorSystemColors;
 
 	@:native("systemRedColor")
-	public var systemRedColor:Dynamic;
+	overload public static function systemRedColor():Dynamic;
 
 	@:native("systemGreenColor")
-	public var systemGreenColor:Dynamic;
+	overload public static function systemGreenColor():Dynamic;
 
 	@:native("systemBlueColor")
-	public var systemBlueColor:Dynamic;
+	overload public static function systemBlueColor():Dynamic;
 
 	@:native("systemOrangeColor")
-	public var systemOrangeColor:Dynamic;
+	overload public static function systemOrangeColor():Dynamic;
 
 	@:native("systemYellowColor")
-	public var systemYellowColor:Dynamic;
+	overload public static function systemYellowColor():Dynamic;
 
 	@:native("systemPinkColor")
-	public var systemPinkColor:Dynamic;
+	overload public static function systemPinkColor():Dynamic;
 
 	@:native("systemPurpleColor")
-	public var systemPurpleColor:Dynamic;
+	overload public static function systemPurpleColor():Dynamic;
 
 	@:native("systemTealColor")
-	public var systemTealColor:Dynamic;
+	overload public static function systemTealColor():Dynamic;
 
 	@:native("systemIndigoColor")
-	public var systemIndigoColor:Dynamic;
+	overload public static function systemIndigoColor():Dynamic;
 
 	@:native("systemGrayColor")
-	public var systemGrayColor:Dynamic;
+	overload public static function systemGrayColor():Dynamic;
 
 	@:native("systemGray2Color")
-	public var systemGray2Color:Dynamic;
+	overload public static function systemGray2Color():Dynamic;
 
 	@:native("systemGray3Color")
-	public var systemGray3Color:Dynamic;
+	overload public static function systemGray3Color():Dynamic;
 
 	@:native("systemGray4Color")
-	public var systemGray4Color:Dynamic;
+	overload public static function systemGray4Color():Dynamic;
 
 	@:native("systemGray5Color")
-	public var systemGray5Color:Dynamic;
+	overload public static function systemGray5Color():Dynamic;
 
 	@:native("systemGray6Color")
-	public var systemGray6Color:Dynamic;
+	overload public static function systemGray6Color():Dynamic;
 
 	@:native("labelColor")
-	public var labelColor:Dynamic;
+	overload public static function labelColor():Dynamic;
 
 	@:native("secondaryLabelColor")
-	public var secondaryLabelColor:Dynamic;
+	overload public static function secondaryLabelColor():Dynamic;
 
 	@:native("tertiaryLabelColor")
-	public var tertiaryLabelColor:Dynamic;
+	overload public static function tertiaryLabelColor():Dynamic;
 
 	@:native("quaternaryLabelColor")
-	public var quaternaryLabelColor:Dynamic;
+	overload public static function quaternaryLabelColor():Dynamic;
 
 	@:native("linkColor")
-	public var linkColor:Dynamic;
+	overload public static function linkColor():Dynamic;
 
 	@:native("placeholderTextColor")
-	public var placeholderTextColor:Dynamic;
+	overload public static function placeholderTextColor():Dynamic;
 
 	@:native("separatorColor")
-	public var separatorColor:Dynamic;
+	overload public static function separatorColor():Dynamic;
 
 	@:native("opaqueSeparatorColor")
-	public var opaqueSeparatorColor:Dynamic;
+	overload public static function opaqueSeparatorColor():Dynamic;
 
 	@:native("systemBackgroundColor")
-	public var systemBackgroundColor:Dynamic;
+	overload public static function systemBackgroundColor():Dynamic;
 
 	@:native("secondarySystemBackgroundColor")
-	public var secondarySystemBackgroundColor:Dynamic;
+	overload public static function secondarySystemBackgroundColor():Dynamic;
 
 	@:native("tertiarySystemBackgroundColor")
-	public var tertiarySystemBackgroundColor:Dynamic;
+	overload public static function tertiarySystemBackgroundColor():Dynamic;
 
 	@:native("systemGroupedBackgroundColor")
-	public var systemGroupedBackgroundColor:Dynamic;
+	overload public static function systemGroupedBackgroundColor():Dynamic;
 
 	@:native("secondarySystemGroupedBackgroundColor")
-	public var secondarySystemGroupedBackgroundColor:Dynamic;
+	overload public static function secondarySystemGroupedBackgroundColor():Dynamic;
 
 	@:native("tertiarySystemGroupedBackgroundColor")
-	public var tertiarySystemGroupedBackgroundColor:Dynamic;
+	overload public static function tertiarySystemGroupedBackgroundColor():Dynamic;
 
 	@:native("systemFillColor")
-	public var systemFillColor:Dynamic;
+	overload public static function systemFillColor():Dynamic;
 
 	@:native("secondarySystemFillColor")
-	public var secondarySystemFillColor:Dynamic;
+	overload public static function secondarySystemFillColor():Dynamic;
 
 	@:native("tertiarySystemFillColor")
-	public var tertiarySystemFillColor:Dynamic;
+	overload public static function tertiarySystemFillColor():Dynamic;
 
 	@:native("quaternarySystemFillColor")
-	public var quaternarySystemFillColor:Dynamic;
+	overload public static function quaternarySystemFillColor():Dynamic;
 
 	@:native("lightTextColor")
-	public var lightTextColor:Dynamic;
+	overload public static function lightTextColor():Dynamic;
 
 	@:native("darkTextColor")
-	public var darkTextColor:Dynamic;
+	overload public static function darkTextColor():Dynamic;
 
 	@:native("groupTableViewBackgroundColor")
-	public var groupTableViewBackgroundColor:Dynamic;
+	overload public static function groupTableViewBackgroundColor():Dynamic;
 
 	@:native("viewFlipsideBackgroundColor")
-	public var viewFlipsideBackgroundColor:Dynamic;
+	overload public static function viewFlipsideBackgroundColor():Dynamic;
 
 	@:native("scrollViewTexturedBackgroundColor")
-	public var scrollViewTexturedBackgroundColor:Dynamic;
+	overload public static function scrollViewTexturedBackgroundColor():Dynamic;
 
 	@:native("underPageBackgroundColor")
-	public var underPageBackgroundColor:Dynamic;
+	overload public static function underPageBackgroundColor():Dynamic;
 
 
 }

@@ -13,10 +13,10 @@ extern class NSShadow{
 	overload public static function autorelease():NSShadow;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSShadow;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):NSShadow;
 
 	@:native("shadowOffset")
 	public var shadowOffset:CGSize;

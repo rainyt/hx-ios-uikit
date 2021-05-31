@@ -13,10 +13,10 @@ extern class UIUserNotificationAction{
 	overload public static function autorelease():UIUserNotificationAction;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIUserNotificationAction;
 
 	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithCoder_NS_DESIGNATED_INITIALIZER(coder:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithCoder_NS_DESIGNATED_INITIALIZER(coder:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationAction;
 
 	@:native("identifier")
 	public var identifier:NSString;

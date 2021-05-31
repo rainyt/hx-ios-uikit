@@ -12,7 +12,7 @@ extern class UIPresentationController{
 	overload public static function autorelease():UIPresentationController;
 
 	@:native("presentationController")
-	public var presentationController:Dynamic;
+	public var presentationController:UIPresentationController;
 
 	@:native("popoverPresentationController")
 	public var popoverPresentationController:Dynamic;

@@ -12,19 +12,19 @@ extern class NSCollectionLayoutSize{
 	overload public static function autorelease():NSCollectionLayoutSize;
 
 	@:native("sizeWithWidthDimension:heightDimension")
-	overload public static function sizeWithWidthDimension_heightDimension(width:Dynamic, heightDimension:Dynamic):Dynamic;
+	overload public static function sizeWithWidthDimension_heightDimension(width:NSCollectionLayoutDimension, heightDimension:NSCollectionLayoutDimension):NSCollectionLayoutSize;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSCollectionLayoutSize;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():NSCollectionLayoutSize;
 
 	@:native("widthDimension")
-	public var widthDimension:Dynamic;
+	public var widthDimension:NSCollectionLayoutDimension;
 
 	@:native("heightDimension")
-	public var heightDimension:Dynamic;
+	public var heightDimension:NSCollectionLayoutDimension;
 
 
 }

@@ -13,7 +13,7 @@ extern class UICollectionViewAdditions{
 	overload public static function autorelease():UICollectionViewAdditions;
 
 	@:native("initWithCollectionViewLayout")
-	overload public function initWithCollectionViewLayout(layout:Dynamic):Dynamic;
+	overload public function initWithCollectionViewLayout(layout:Dynamic):UICollectionViewAdditions;
 
 	@:native("layoutAttributesForCellAtIndexPath")
 	overload public function layoutAttributesForCellAtIndexPath(indexPath:Dynamic):Dynamic;

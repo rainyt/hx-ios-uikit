@@ -12,22 +12,22 @@ extern class NSCollectionLayoutDimension{
 	overload public static function autorelease():NSCollectionLayoutDimension;
 
 	@:native("fractionalWidthDimension")
-	overload public static function fractionalWidthDimension(fractionalWidth:Float):Dynamic;
+	overload public static function fractionalWidthDimension(fractionalWidth:Float):NSCollectionLayoutDimension;
 
 	@:native("fractionalHeightDimension")
-	overload public static function fractionalHeightDimension(fractionalHeight:Float):Dynamic;
+	overload public static function fractionalHeightDimension(fractionalHeight:Float):NSCollectionLayoutDimension;
 
 	@:native("absoluteDimension")
-	overload public static function absoluteDimension(absoluteDimension:Float):Dynamic;
+	overload public static function absoluteDimension(absoluteDimension:Float):NSCollectionLayoutDimension;
 
 	@:native("estimatedDimension")
-	overload public static function estimatedDimension(estimatedDimension:Float):Dynamic;
+	overload public static function estimatedDimension(estimatedDimension:Float):NSCollectionLayoutDimension;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSCollectionLayoutDimension;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():NSCollectionLayoutDimension;
 
 	@:native("isFractionalWidth")
 	public var isFractionalWidth:Bool;

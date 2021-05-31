@@ -12,7 +12,7 @@ extern class UIPointerLockSupport{
 	overload public static function autorelease():UIPointerLockSupport;
 
 	@:native("childViewControllerForPointerLock")
-	public var childViewControllerForPointerLock:Dynamic;
+	public var childViewControllerForPointerLock:UIViewController;
 
 	@:native("prefersPointerLocked")
 	public var prefersPointerLocked:Bool;

@@ -15,13 +15,13 @@ extern class UIFocusSystem{
 	public var focusedItem:Dynamic;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIFocusSystem;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIFocusSystem;
 
 	@:native("focusSystemForEnvironment")
-	overload public static function focusSystemForEnvironment(environment:Dynamic):Dynamic;
+	overload public static function focusSystemForEnvironment(environment:Dynamic):UIFocusSystem;
 
 	@:native("requestFocusUpdateToEnvironment")
 	overload public function requestFocusUpdateToEnvironment(environment:Dynamic):Void;

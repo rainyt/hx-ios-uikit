@@ -12,10 +12,10 @@ extern class UIPageViewController{
 	overload public static function autorelease():UIPageViewController;
 
 	@:native("initWithTransitionStyle:navigationOrientation:options")
-	overload public function initWithTransitionStyle_navigationOrientation_options(style:Dynamic, navigationOrientation:Dynamic, options:Dynamic):Dynamic;
+	overload public function initWithTransitionStyle_navigationOrientation_options(style:Dynamic, navigationOrientation:Dynamic, options:Dynamic):UIPageViewController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIPageViewController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

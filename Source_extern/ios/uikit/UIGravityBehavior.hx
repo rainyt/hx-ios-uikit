@@ -13,7 +13,7 @@ extern class UIGravityBehavior{
 	overload public static function autorelease():UIGravityBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):Dynamic;
+	overload public function initWithItems(items:Dynamic):UIGravityBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;

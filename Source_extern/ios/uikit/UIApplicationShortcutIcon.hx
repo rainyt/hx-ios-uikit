@@ -13,13 +13,13 @@ extern class UIApplicationShortcutIcon{
 	overload public static function autorelease():UIApplicationShortcutIcon;
 
 	@:native("iconWithType")
-	overload public static function iconWithType(type:Dynamic):Dynamic;
+	overload public static function iconWithType(type:Dynamic):UIApplicationShortcutIcon;
 
 	@:native("iconWithTemplateImageName")
-	overload public static function iconWithTemplateImageName(templateImageName:NSString):Dynamic;
+	overload public static function iconWithTemplateImageName(templateImageName:NSString):UIApplicationShortcutIcon;
 
 	@:native("iconWithSystemImageName")
-	overload public static function iconWithSystemImageName(systemImageName:NSString):Dynamic;
+	overload public static function iconWithSystemImageName(systemImageName:NSString):UIApplicationShortcutIcon;
 
 
 }

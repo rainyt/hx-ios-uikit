@@ -13,13 +13,13 @@ extern class UICollectionViewController{
 	overload public static function autorelease():UICollectionViewController;
 
 	@:native("initWithCollectionViewLayout")
-	overload public function initWithCollectionViewLayout(layout:Dynamic):Dynamic;
+	overload public function initWithCollectionViewLayout(layout:Dynamic):UICollectionViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UICollectionViewController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UICollectionViewController;
 
 	@:native("collectionView")
 	public var collectionView:Dynamic;

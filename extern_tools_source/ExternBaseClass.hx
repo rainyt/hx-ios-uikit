@@ -25,7 +25,7 @@ class ExternBaseClass {
 	 */
 	private var funcAndAttr:Array<ExternBaseClassFunProperty> = [];
 
-	public function new(_hdata:String, hextern:ExternHFile) {
+	public function new(_hdata:String, hextern:ExternHFile, defcall:ExternBaseClass->Void) {
 		var harray = _hdata.split("\n");
 		var pclassName = harray[0];
 		pclassName = pclassName.substr(pclassName.indexOf("@interface") + 10);
@@ -52,6 +52,7 @@ class ExternBaseClass {
 			return;
 		}
 		this.className = StringTools.replace(pclassName, " ", "");
+		defcall(this);
 		funcAndAttr.push({
 			type: ExternBaseClassType.FUNC,
 			name: "alloc",

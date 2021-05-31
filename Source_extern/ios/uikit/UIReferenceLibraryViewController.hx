@@ -16,16 +16,16 @@ extern class UIReferenceLibraryViewController{
 	overload public static function dictionaryHasDefinitionForTerm(term:NSString):Bool;
 
 	@:native("initWithTerm")
-	overload public function initWithTerm(term:NSString):Dynamic;
+	overload public function initWithTerm(term:NSString):UIReferenceLibraryViewController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIReferenceLibraryViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UIReferenceLibraryViewController;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIReferenceLibraryViewController;
 
 
 }

@@ -14,16 +14,16 @@ extern class NSCollectionLayoutBoundarySupplementaryItem{
 	overload public static function autorelease():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment")
-	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment(layoutSize:Dynamic, elementKind:NSString, alignment:Dynamic):Dynamic;
+	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:Dynamic):NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset")
-	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment_absoluteOffset(layoutSize:Dynamic, elementKind:NSString, alignment:Dynamic, absoluteOffset:CGPoint):Dynamic;
+	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment_absoluteOffset(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:Dynamic, absoluteOffset:CGPoint):NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("extendsBoundary")
 	public var extendsBoundary:Bool;

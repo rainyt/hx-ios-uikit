@@ -12,13 +12,13 @@ extern class NSCollectionLayoutSection{
 	overload public static function autorelease():NSCollectionLayoutSection;
 
 	@:native("sectionWithGroup")
-	overload public static function sectionWithGroup(group:Dynamic):Dynamic;
+	overload public static function sectionWithGroup(group:Dynamic):NSCollectionLayoutSection;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSCollectionLayoutSection;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():NSCollectionLayoutSection;
 
 	@:native("contentInsets")
 	public var contentInsets:Dynamic;

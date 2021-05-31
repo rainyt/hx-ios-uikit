@@ -13,10 +13,10 @@ extern class UINavigationItem{
 	overload public static function autorelease():UINavigationItem;
 
 	@:native("initWithTitle")
-	overload public function initWithTitle(title:NSString):Dynamic;
+	overload public function initWithTitle(title:NSString):UINavigationItem;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UINavigationItem;
 
 	@:native("title")
 	public var title:NSString;

@@ -13,16 +13,16 @@ extern class NSCollectionLayoutGroupCustomItem{
 	overload public static function autorelease():NSCollectionLayoutGroupCustomItem;
 
 	@:native("customItemWithFrame")
-	overload public static function customItemWithFrame(frame:CGRect):Dynamic;
+	overload public static function customItemWithFrame(frame:CGRect):NSCollectionLayoutGroupCustomItem;
 
 	@:native("customItemWithFrame:zIndex")
-	overload public static function customItemWithFrame_zIndex(frame:CGRect, zIndex:Int):Dynamic;
+	overload public static function customItemWithFrame_zIndex(frame:CGRect, zIndex:Int):NSCollectionLayoutGroupCustomItem;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSCollectionLayoutGroupCustomItem;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():NSCollectionLayoutGroupCustomItem;
 
 	@:native("frame")
 	public var frame:CGRect;

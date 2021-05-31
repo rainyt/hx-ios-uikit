@@ -12,13 +12,13 @@ extern class UIDragItem{
 	overload public static function autorelease():UIDragItem;
 
 	@:native("initWithItemProvider")
-	overload public function initWithItemProvider(itemProvider:Dynamic):Dynamic;
+	overload public function initWithItemProvider(itemProvider:Dynamic):UIDragItem;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIDragItem;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIDragItem;
 
 	@:native("itemProvider")
 	public var itemProvider:Dynamic;

@@ -14,10 +14,10 @@ extern class UIFontDescriptor{
 	overload public static function autorelease():UIFontDescriptor;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIFontDescriptor;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIFontDescriptor;
 
 	@:native("postscriptName")
 	public var postscriptName:NSString;
@@ -41,43 +41,43 @@ extern class UIFontDescriptor{
 	overload public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:Dynamic):Dynamic;
 
 	@:native("fontDescriptorWithFontAttributes")
-	overload public static function fontDescriptorWithFontAttributes(attributes:Dynamic):Dynamic;
+	overload public static function fontDescriptorWithFontAttributes(attributes:Dynamic):UIFontDescriptor;
 
 	@:native("fontDescriptorWithName:size")
-	overload public static function fontDescriptorWithName_size(fontName:NSString, size:Float):Dynamic;
+	overload public static function fontDescriptorWithName_size(fontName:NSString, size:Float):UIFontDescriptor;
 
 	@:native("fontDescriptorWithName:matrix")
-	overload public static function fontDescriptorWithName_matrix(fontName:NSString, matrix:CGAffineTransform):Dynamic;
+	overload public static function fontDescriptorWithName_matrix(fontName:NSString, matrix:CGAffineTransform):UIFontDescriptor;
 
 	@:native("preferredFontDescriptorWithTextStyle")
-	overload public static function preferredFontDescriptorWithTextStyle(style:NSString):Dynamic;
+	overload public static function preferredFontDescriptorWithTextStyle(style:NSString):UIFontDescriptor;
 
 	@:native("preferredFontDescriptorWithTextStyle:compatibleWithTraitCollection")
-	overload public static function preferredFontDescriptorWithTextStyle_compatibleWithTraitCollection(style:NSString, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public static function preferredFontDescriptorWithTextStyle_compatibleWithTraitCollection(style:NSString, compatibleWithTraitCollection:Dynamic):UIFontDescriptor;
 
 	@:native("initWithFontAttributes")
-	overload public function initWithFontAttributes(attributes:Dynamic):Dynamic;
+	overload public function initWithFontAttributes(attributes:Dynamic):UIFontDescriptor;
 
 	@:native("fontDescriptorByAddingAttributes")
-	overload public function fontDescriptorByAddingAttributes(attributes:Dynamic):Dynamic;
+	overload public function fontDescriptorByAddingAttributes(attributes:Dynamic):UIFontDescriptor;
 
 	@:native("fontDescriptorWithSize")
-	overload public function fontDescriptorWithSize(newPointSize:Float):Dynamic;
+	overload public function fontDescriptorWithSize(newPointSize:Float):UIFontDescriptor;
 
 	@:native("fontDescriptorWithMatrix")
-	overload public function fontDescriptorWithMatrix(matrix:CGAffineTransform):Dynamic;
+	overload public function fontDescriptorWithMatrix(matrix:CGAffineTransform):UIFontDescriptor;
 
 	@:native("fontDescriptorWithFace")
-	overload public function fontDescriptorWithFace(newFace:NSString):Dynamic;
+	overload public function fontDescriptorWithFace(newFace:NSString):UIFontDescriptor;
 
 	@:native("fontDescriptorWithFamily")
-	overload public function fontDescriptorWithFamily(newFamily:NSString):Dynamic;
+	overload public function fontDescriptorWithFamily(newFamily:NSString):UIFontDescriptor;
 
 	@:native("fontDescriptorWithSymbolicTraits")
-	overload public function fontDescriptorWithSymbolicTraits(symbolicTraits:Dynamic):Dynamic;
+	overload public function fontDescriptorWithSymbolicTraits(symbolicTraits:Dynamic):UIFontDescriptor;
 
 	@:native("fontDescriptorWithDesign")
-	overload public function fontDescriptorWithDesign(design:NSString):Dynamic;
+	overload public function fontDescriptorWithDesign(design:NSString):UIFontDescriptor;
 
 
 }

@@ -12,7 +12,7 @@ extern class NSAttributedStringAttachmentConveniences{
 	overload public static function autorelease():NSAttributedStringAttachmentConveniences;
 
 	@:native("attributedStringWithAttachment")
-	overload public static function attributedStringWithAttachment(attachment:Dynamic):Dynamic;
+	overload public static function attributedStringWithAttachment(attachment:NSTextAttachment):Dynamic;
 
 
 }

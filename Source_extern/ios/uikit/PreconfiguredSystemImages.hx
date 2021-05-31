@@ -12,19 +12,19 @@ extern class PreconfiguredSystemImages{
 	overload public static function autorelease():PreconfiguredSystemImages;
 
 	@:native("actionsImage")
-	public var actionsImage:Dynamic;
+	overload public static function actionsImage():UIImage;
 
 	@:native("addImage")
-	public var addImage:Dynamic;
+	overload public static function addImage():UIImage;
 
 	@:native("removeImage")
-	public var removeImage:Dynamic;
+	overload public static function removeImage():UIImage;
 
 	@:native("checkmarkImage")
-	public var checkmarkImage:Dynamic;
+	overload public static function checkmarkImage():UIImage;
 
 	@:native("strokedCheckmarkImage")
-	public var strokedCheckmarkImage:Dynamic;
+	overload public static function strokedCheckmarkImage():UIImage;
 
 
 }

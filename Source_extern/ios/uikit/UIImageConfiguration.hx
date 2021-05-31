@@ -12,19 +12,19 @@ extern class UIImageConfiguration{
 	overload public static function autorelease():UIImageConfiguration;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIImageConfiguration;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIImageConfiguration;
 
 	@:native("traitCollection")
 	public var traitCollection:Dynamic;
 
 	@:native("configurationWithTraitCollection")
-	overload public function configurationWithTraitCollection(traitCollection:Dynamic):Dynamic;
+	overload public function configurationWithTraitCollection(traitCollection:Dynamic):UIImageConfiguration;
 
 	@:native("configurationByApplyingConfiguration")
-	overload public function configurationByApplyingConfiguration(otherConfiguration:Dynamic):Dynamic;
+	overload public function configurationByApplyingConfiguration(otherConfiguration:UIImageConfiguration):UIImageConfiguration;
 
 
 }

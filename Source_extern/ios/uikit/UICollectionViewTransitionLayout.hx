@@ -22,13 +22,13 @@ extern class UICollectionViewTransitionLayout{
 	public var nextLayout:Dynamic;
 
 	@:native("initWithCurrentLayout:nextLayout")
-	overload public function initWithCurrentLayout_nextLayout(currentLayout:Dynamic, nextLayout:Dynamic):Dynamic;
+	overload public function initWithCurrentLayout_nextLayout(currentLayout:Dynamic, nextLayout:Dynamic):UICollectionViewTransitionLayout;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UICollectionViewTransitionLayout;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UICollectionViewTransitionLayout;
 
 	@:native("updateValue:forAnimatedKey")
 	overload public function updateValue_forAnimatedKey(value:Float, forAnimatedKey:NSString):Void;

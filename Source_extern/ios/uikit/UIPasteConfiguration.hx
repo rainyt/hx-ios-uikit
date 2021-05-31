@@ -15,16 +15,16 @@ extern class UIPasteConfiguration{
 	public var acceptableTypeIdentifiers:Dynamic;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIPasteConfiguration;
 
 	@:native("initWithAcceptableTypeIdentifiers")
-	overload public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):Dynamic;
+	overload public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):UIPasteConfiguration;
 
 	@:native("addAcceptableTypeIdentifiers")
 	overload public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):Void;
 
 	@:native("initWithTypeIdentifiersForAcceptingClass")
-	overload public function initWithTypeIdentifiersForAcceptingClass(aClass:Dynamic):Dynamic;
+	overload public function initWithTypeIdentifiersForAcceptingClass(aClass:Dynamic):UIPasteConfiguration;
 
 	@:native("addTypeIdentifiersForAcceptingClass")
 	overload public function addTypeIdentifiersForAcceptingClass(aClass:Dynamic):Void;

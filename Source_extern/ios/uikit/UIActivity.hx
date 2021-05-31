@@ -13,7 +13,7 @@ extern class UIActivity{
 	overload public static function autorelease():UIActivity;
 
 	@:native("activityCategory")
-	public var activityCategory:Dynamic;
+	overload public static function activityCategory():Dynamic;
 
 	@:native("activityType")
 	public var activityType:NSString;

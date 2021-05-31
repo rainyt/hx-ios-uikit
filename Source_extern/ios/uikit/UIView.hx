@@ -15,13 +15,13 @@ extern class UIView{
 	overload public static function autorelease():UIView;
 
 	@:native("layerClass")
-	public var layerClass:Dynamic;
+	overload public static function layerClass():Dynamic;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UIView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIView;
 
 	@:native("userInteractionEnabled")
 	public var userInteractionEnabled:Bool;

@@ -13,13 +13,13 @@ extern class UIDocumentBrowserViewController{
 	overload public static function autorelease():UIDocumentBrowserViewController;
 
 	@:native("initForOpeningFilesWithContentTypes:NS_DESIGNATED_INITIALIZER")
-	overload public function initForOpeningFilesWithContentTypes_NS_DESIGNATED_INITIALIZER(allowedContentTypes:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initForOpeningFilesWithContentTypes_NS_DESIGNATED_INITIALIZER(allowedContentTypes:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentBrowserViewController;
 
 	@:native("initForOpeningContentTypes:NS_DESIGNATED_INITIALIZER")
-	overload public function initForOpeningContentTypes_NS_DESIGNATED_INITIALIZER(contentTypes:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initForOpeningContentTypes_NS_DESIGNATED_INITIALIZER(contentTypes:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentBrowserViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibName:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibName:NSString, bundle:Dynamic):UIDocumentBrowserViewController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

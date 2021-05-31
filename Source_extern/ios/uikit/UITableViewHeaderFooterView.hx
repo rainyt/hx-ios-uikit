@@ -13,10 +13,10 @@ extern class UITableViewHeaderFooterView{
 	overload public static function autorelease():UITableViewHeaderFooterView;
 
 	@:native("initWithReuseIdentifier")
-	overload public function initWithReuseIdentifier(reuseIdentifier:NSString):Dynamic;
+	overload public function initWithReuseIdentifier(reuseIdentifier:NSString):UITableViewHeaderFooterView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UITableViewHeaderFooterView;
 
 	@:native("configurationState")
 	public var configurationState:Dynamic;

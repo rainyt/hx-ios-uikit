@@ -13,10 +13,10 @@ extern class UISceneConnectionOptions{
 	overload public static function autorelease():UISceneConnectionOptions;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UISceneConnectionOptions;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UISceneConnectionOptions;
 
 	@:native("URLContexts")
 	public var URLContexts:Dynamic;

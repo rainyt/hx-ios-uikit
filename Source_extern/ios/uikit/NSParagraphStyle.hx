@@ -13,7 +13,7 @@ extern class NSParagraphStyle{
 	overload public static function autorelease():NSParagraphStyle;
 
 	@:native("defaultParagraphStyle")
-	public var defaultParagraphStyle:Dynamic;
+	overload public static function defaultParagraphStyle():NSParagraphStyle;
 
 	@:native("defaultWritingDirectionForLanguage")
 	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):Dynamic;

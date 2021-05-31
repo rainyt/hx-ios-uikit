@@ -13,19 +13,19 @@ extern class UITabBarItem{
 	overload public static function autorelease():UITabBarItem;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UITabBarItem;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UITabBarItem;
 
 	@:native("initWithTitle:image:tag")
-	overload public function initWithTitle_image_tag(title:NSString, image:Dynamic, tag:Int):Dynamic;
+	overload public function initWithTitle_image_tag(title:NSString, image:Dynamic, tag:Int):UITabBarItem;
 
 	@:native("initWithTitle:image:selectedImage")
-	overload public function initWithTitle_image_selectedImage(title:NSString, image:Dynamic, selectedImage:Dynamic):Dynamic;
+	overload public function initWithTitle_image_selectedImage(title:NSString, image:Dynamic, selectedImage:Dynamic):UITabBarItem;
 
 	@:native("initWithTabBarSystemItem:tag")
-	overload public function initWithTabBarSystemItem_tag(systemItem:Dynamic, tag:Int):Dynamic;
+	overload public function initWithTabBarSystemItem_tag(systemItem:Dynamic, tag:Int):UITabBarItem;
 
 	@:native("selectedImage")
 	public var selectedImage:Dynamic;

@@ -19,31 +19,31 @@ extern class UIBezierPath{
 	overload public static function autorelease():UIBezierPath;
 
 	@:native("bezierPath")
-	overload public static function bezierPath():Dynamic;
+	overload public static function bezierPath():UIBezierPath;
 
 	@:native("bezierPathWithRect")
-	overload public static function bezierPathWithRect(rect:CGRect):Dynamic;
+	overload public static function bezierPathWithRect(rect:CGRect):UIBezierPath;
 
 	@:native("bezierPathWithOvalInRect")
-	overload public static function bezierPathWithOvalInRect(rect:CGRect):Dynamic;
+	overload public static function bezierPathWithOvalInRect(rect:CGRect):UIBezierPath;
 
 	@:native("bezierPathWithRoundedRect:cornerRadius")
-	overload public static function bezierPathWithRoundedRect_cornerRadius(rect:CGRect, cornerRadius:Float):Dynamic;
+	overload public static function bezierPathWithRoundedRect_cornerRadius(rect:CGRect, cornerRadius:Float):UIBezierPath;
 
 	@:native("bezierPathWithRoundedRect:byRoundingCorners:cornerRadii")
-	overload public static function bezierPathWithRoundedRect_byRoundingCorners_cornerRadii(rect:CGRect, byRoundingCorners:Dynamic, cornerRadii:CGSize):Dynamic;
+	overload public static function bezierPathWithRoundedRect_byRoundingCorners_cornerRadii(rect:CGRect, byRoundingCorners:Dynamic, cornerRadii:CGSize):UIBezierPath;
 
 	@:native("bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise")
-	overload public static function bezierPathWithArcCenter_radius_startAngle_endAngle_clockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):Dynamic;
+	overload public static function bezierPathWithArcCenter_radius_startAngle_endAngle_clockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):UIBezierPath;
 
 	@:native("bezierPathWithCGPath")
-	overload public static function bezierPathWithCGPath(CGPath:Dynamic):Dynamic;
+	overload public static function bezierPathWithCGPath(CGPath:Dynamic):UIBezierPath;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIBezierPath;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIBezierPath;
 
 	@:native("CGPath")
 	public var CGPath:Dynamic;
@@ -73,10 +73,10 @@ extern class UIBezierPath{
 	overload public function removeAllPoints():Void;
 
 	@:native("appendPath")
-	overload public function appendPath(bezierPath:Dynamic):Void;
+	overload public function appendPath(bezierPath:UIBezierPath):Void;
 
 	@:native("bezierPathByReversingPath")
-	overload public function bezierPathByReversingPath():Dynamic;
+	overload public function bezierPathByReversingPath():UIBezierPath;
 
 	@:native("applyTransform")
 	overload public function applyTransform(transform:CGAffineTransform):Void;

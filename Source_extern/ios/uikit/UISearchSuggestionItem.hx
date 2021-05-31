@@ -13,22 +13,22 @@ extern class UISearchSuggestionItem{
 	overload public static function autorelease():UISearchSuggestionItem;
 
 	@:native("suggestionWithLocalizedSuggestion")
-	overload public static function suggestionWithLocalizedSuggestion(suggestion:NSString):Dynamic;
+	overload public static function suggestionWithLocalizedSuggestion(suggestion:NSString):UISearchSuggestionItem;
 
 	@:native("suggestionWithLocalizedSuggestion:descriptionString")
-	overload public static function suggestionWithLocalizedSuggestion_descriptionString(suggestion:NSString, descriptionString:NSString):Dynamic;
+	overload public static function suggestionWithLocalizedSuggestion_descriptionString(suggestion:NSString, descriptionString:NSString):UISearchSuggestionItem;
 
 	@:native("suggestionWithLocalizedSuggestion:descriptionString:iconImage")
-	overload public static function suggestionWithLocalizedSuggestion_descriptionString_iconImage(suggestion:NSString, descriptionString:NSString, iconImage:Dynamic):Dynamic;
+	overload public static function suggestionWithLocalizedSuggestion_descriptionString_iconImage(suggestion:NSString, descriptionString:NSString, iconImage:Dynamic):UISearchSuggestionItem;
 
 	@:native("initWithLocalizedSuggestion")
-	overload public function initWithLocalizedSuggestion(suggestion:NSString):Dynamic;
+	overload public function initWithLocalizedSuggestion(suggestion:NSString):UISearchSuggestionItem;
 
 	@:native("initWithLocalizedSuggestion:localizedDescription")
-	overload public function initWithLocalizedSuggestion_localizedDescription(suggestion:NSString, localizedDescription:NSString):Dynamic;
+	overload public function initWithLocalizedSuggestion_localizedDescription(suggestion:NSString, localizedDescription:NSString):UISearchSuggestionItem;
 
 	@:native("initWithLocalizedSuggestion:localizedDescription:iconImage")
-	overload public function initWithLocalizedSuggestion_localizedDescription_iconImage(suggestion:NSString, localizedDescription:NSString, iconImage:Dynamic):Dynamic;
+	overload public function initWithLocalizedSuggestion_localizedDescription_iconImage(suggestion:NSString, localizedDescription:NSString, iconImage:Dynamic):UISearchSuggestionItem;
 
 	@:native("localizedSuggestion")
 	public var localizedSuggestion:NSString;

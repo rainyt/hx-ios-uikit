@@ -12,10 +12,10 @@ extern class UIKeyCommand{
 	overload public static function autorelease():UIKeyCommand;
 
 	@:native("addKeyCommand")
-	overload public function addKeyCommand(keyCommand:Dynamic):Void;
+	overload public function addKeyCommand(keyCommand:UIKeyCommand):Void;
 
 	@:native("removeKeyCommand")
-	overload public function removeKeyCommand(keyCommand:Dynamic):Void;
+	overload public function removeKeyCommand(keyCommand:UIKeyCommand):Void;
 
 
 }

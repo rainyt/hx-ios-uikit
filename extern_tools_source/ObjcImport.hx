@@ -21,7 +21,6 @@ class ObjcImport {
 				return "cpp.objc.Protocol";
 		}
 		// 本地查找
-		// trace(ExternTools.externDir + "/ios/objc/" + type + ".hx");
 		if (FileSystem.exists(ExternTools.externDir + "/ios/objc/" + type + ".hx"))
 			return "ios.objc." + type;
 		return null;

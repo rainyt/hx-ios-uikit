@@ -63,13 +63,13 @@ extern class NSMutableParagraphStyle{
 	public var lineBreakStrategy:Dynamic;
 
 	@:native("addTabStop")
-	overload public function addTabStop(anObject:Dynamic):Void;
+	overload public function addTabStop(anObject:NSTextTab):Void;
 
 	@:native("removeTabStop")
-	overload public function removeTabStop(anObject:Dynamic):Void;
+	overload public function removeTabStop(anObject:NSTextTab):Void;
 
 	@:native("setParagraphStyle")
-	overload public function setParagraphStyle(obj:Dynamic):Void;
+	overload public function setParagraphStyle(obj:NSParagraphStyle):Void;
 
 
 }

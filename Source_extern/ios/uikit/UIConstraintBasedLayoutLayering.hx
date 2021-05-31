@@ -23,13 +23,13 @@ extern class UIConstraintBasedLayoutLayering{
 	public var alignmentRectInsets:Dynamic;
 
 	@:native("viewForBaselineLayout")
-	overload public function viewForBaselineLayout():Dynamic;
+	overload public function viewForBaselineLayout():UIView;
 
 	@:native("viewForFirstBaselineLayout")
-	public var viewForFirstBaselineLayout:Dynamic;
+	public var viewForFirstBaselineLayout:UIView;
 
 	@:native("viewForLastBaselineLayout")
-	public var viewForLastBaselineLayout:Dynamic;
+	public var viewForLastBaselineLayout:UIView;
 
 	@:native("intrinsicContentSize")
 	public var intrinsicContentSize:CGSize;

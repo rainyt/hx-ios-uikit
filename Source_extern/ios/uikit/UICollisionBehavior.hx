@@ -13,7 +13,7 @@ extern class UICollisionBehavior{
 	overload public static function autorelease():UICollisionBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):Dynamic;
+	overload public function initWithItems(items:Dynamic):UICollisionBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;

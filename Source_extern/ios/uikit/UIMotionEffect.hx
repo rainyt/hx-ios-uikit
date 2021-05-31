@@ -12,10 +12,10 @@ extern class UIMotionEffect{
 	overload public static function autorelease():UIMotionEffect;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIMotionEffect;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIMotionEffect;
 
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
 	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:Dynamic):Dynamic;

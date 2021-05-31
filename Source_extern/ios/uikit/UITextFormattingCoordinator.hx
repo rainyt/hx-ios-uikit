@@ -15,16 +15,16 @@ extern class UITextFormattingCoordinator{
 	public var delegate:Dynamic;
 
 	@:native("fontPanelVisible")
-	public var fontPanelVisible:Bool;
+	overload public static function fontPanelVisible():Bool;
 
 	@:native("textFormattingCoordinatorForWindowScene")
-	overload public static function textFormattingCoordinatorForWindowScene(windowScene:Dynamic):Dynamic;
+	overload public static function textFormattingCoordinatorForWindowScene(windowScene:Dynamic):UITextFormattingCoordinator;
 
 	@:native("initWithWindowScene")
-	overload public function initWithWindowScene(windowScene:Dynamic):Dynamic;
+	overload public function initWithWindowScene(windowScene:Dynamic):UITextFormattingCoordinator;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UITextFormattingCoordinator;
 
 	@:native("")
 	overload public function ():Dynamic;

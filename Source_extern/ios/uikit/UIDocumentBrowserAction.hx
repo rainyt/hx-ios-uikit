@@ -13,10 +13,10 @@ extern class UIDocumentBrowserAction{
 	overload public static function autorelease():UIDocumentBrowserAction;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIDocumentBrowserAction;
 
 	@:native("initWithIdentifier:localizedTitle:availability:handler")
-	overload public function initWithIdentifier_localizedTitle_availability_handler(identifier:NSString, localizedTitle:NSString, availability:Dynamic, handler:Dynamic):Dynamic;
+	overload public function initWithIdentifier_localizedTitle_availability_handler(identifier:NSString, localizedTitle:NSString, availability:Dynamic, handler:Dynamic):UIDocumentBrowserAction;
 
 	@:native("identifier")
 	public var identifier:NSString;

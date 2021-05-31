@@ -12,13 +12,13 @@ extern class UIDragInteraction{
 	overload public static function autorelease():UIDragInteraction;
 
 	@:native("initWithDelegate")
-	overload public function initWithDelegate(delegate:Dynamic):Dynamic;
+	overload public function initWithDelegate(delegate:Dynamic):UIDragInteraction;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIDragInteraction;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIDragInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -30,7 +30,7 @@ extern class UIDragInteraction{
 	public var enabled:Bool;
 
 	@:native("enabledByDefault")
-	public var enabledByDefault:Bool;
+	overload public static function enabledByDefault():Bool;
 
 
 }

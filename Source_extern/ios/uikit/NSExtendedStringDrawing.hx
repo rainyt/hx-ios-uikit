@@ -14,10 +14,10 @@ extern class NSExtendedStringDrawing{
 	overload public static function autorelease():NSExtendedStringDrawing;
 
 	@:native("drawWithRect:options:context")
-	overload public function drawWithRect_options_context(rect:CGRect, options:Dynamic, context:Dynamic):Void;
+	overload public function drawWithRect_options_context(rect:CGRect, options:Dynamic, context:NSStringDrawingContext):Void;
 
 	@:native("boundingRectWithSize:options:context")
-	overload public function boundingRectWithSize_options_context(size:CGSize, options:Dynamic, context:Dynamic):CGRect;
+	overload public function boundingRectWithSize_options_context(size:CGSize, options:Dynamic, context:NSStringDrawingContext):CGRect;
 
 
 }

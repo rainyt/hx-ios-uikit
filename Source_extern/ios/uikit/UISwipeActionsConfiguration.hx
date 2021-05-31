@@ -12,7 +12,7 @@ extern class UISwipeActionsConfiguration{
 	overload public static function autorelease():UISwipeActionsConfiguration;
 
 	@:native("configurationWithActions")
-	overload public static function configurationWithActions(actions:Dynamic):Dynamic;
+	overload public static function configurationWithActions(actions:Dynamic):UISwipeActionsConfiguration;
 
 	@:native("actions")
 	public var actions:Dynamic;

@@ -13,13 +13,13 @@ extern class UIStackView{
 	overload public static function autorelease():UIStackView;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UIStackView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIStackView;
 
 	@:native("initWithArrangedSubviews")
-	overload public function initWithArrangedSubviews(views:Dynamic):Dynamic;
+	overload public function initWithArrangedSubviews(views:Dynamic):UIStackView;
 
 	@:native("arrangedSubviews")
 	public var arrangedSubviews:Dynamic;

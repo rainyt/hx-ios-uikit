@@ -15,13 +15,13 @@ extern class UIGraphicsImageRenderer{
 	overload public static function autorelease():UIGraphicsImageRenderer;
 
 	@:native("initWithSize")
-	overload public function initWithSize(size:CGSize):Dynamic;
+	overload public function initWithSize(size:CGSize):UIGraphicsImageRenderer;
 
 	@:native("initWithSize:format")
-	overload public function initWithSize_format(size:CGSize, format:Dynamic):Dynamic;
+	overload public function initWithSize_format(size:CGSize, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds_format(bounds:CGRect, format:Dynamic):Dynamic;
+	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("imageWithActions")
 	overload public function imageWithActions(actions:Dynamic):Dynamic;

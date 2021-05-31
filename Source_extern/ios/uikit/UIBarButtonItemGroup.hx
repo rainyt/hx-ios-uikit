@@ -12,7 +12,7 @@ extern class UIBarButtonItemGroup{
 	overload public static function autorelease():UIBarButtonItemGroup;
 
 	@:native("buttonGroup")
-	public var buttonGroup:Dynamic;
+	public var buttonGroup:UIBarButtonItemGroup;
 
 
 }

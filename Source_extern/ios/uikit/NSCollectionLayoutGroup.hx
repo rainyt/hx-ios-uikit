@@ -13,25 +13,25 @@ extern class NSCollectionLayoutGroup{
 	overload public static function autorelease():NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitem:count")
-	overload public static function horizontalGroupWithLayoutSize_subitem_count(layoutSize:Dynamic, subitem:Dynamic, count:Int):Dynamic;
+	overload public static function horizontalGroupWithLayoutSize_subitem_count(layoutSize:Dynamic, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitems")
-	overload public static function horizontalGroupWithLayoutSize_subitems(layoutSize:Dynamic, subitems:Dynamic):Dynamic;
+	overload public static function horizontalGroupWithLayoutSize_subitems(layoutSize:Dynamic, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitem:count")
-	overload public static function verticalGroupWithLayoutSize_subitem_count(layoutSize:Dynamic, subitem:Dynamic, count:Int):Dynamic;
+	overload public static function verticalGroupWithLayoutSize_subitem_count(layoutSize:Dynamic, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitems")
-	overload public static function verticalGroupWithLayoutSize_subitems(layoutSize:Dynamic, subitems:Dynamic):Dynamic;
+	overload public static function verticalGroupWithLayoutSize_subitems(layoutSize:Dynamic, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("customGroupWithLayoutSize:itemProvider")
-	overload public static function customGroupWithLayoutSize_itemProvider(layoutSize:Dynamic, itemProvider:Dynamic):Dynamic;
+	overload public static function customGroupWithLayoutSize_itemProvider(layoutSize:Dynamic, itemProvider:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSCollectionLayoutGroup;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():NSCollectionLayoutGroup;
 
 	@:native("supplementaryItems")
 	public var supplementaryItems:Dynamic;

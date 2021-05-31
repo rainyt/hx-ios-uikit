@@ -12,13 +12,13 @@ extern class UIDropProposal{
 	overload public static function autorelease():UIDropProposal;
 
 	@:native("initWithDropOperation")
-	overload public function initWithDropOperation(operation:Dynamic):Dynamic;
+	overload public function initWithDropOperation(operation:Dynamic):UIDropProposal;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIDropProposal;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIDropProposal;
 
 	@:native("operation")
 	public var operation:Dynamic;

@@ -12,7 +12,7 @@ extern class UIResponder{
 	overload public static function autorelease():UIResponder;
 
 	@:native("nextResponder")
-	public var nextResponder:Dynamic;
+	public var nextResponder:UIResponder;
 
 	@:native("canBecomeFirstResponder")
 	public var canBecomeFirstResponder:Bool;

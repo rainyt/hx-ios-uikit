@@ -13,16 +13,16 @@ extern class NSCollectionLayoutSupplementaryItem{
 	overload public static function autorelease():NSCollectionLayoutSupplementaryItem;
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor")
-	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor(layoutSize:Dynamic, elementKind:NSString, containerAnchor:Dynamic):Dynamic;
+	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:Dynamic):NSCollectionLayoutSupplementaryItem;
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor")
-	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor_itemAnchor(layoutSize:Dynamic, elementKind:NSString, containerAnchor:Dynamic, itemAnchor:Dynamic):Dynamic;
+	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor_itemAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:Dynamic, itemAnchor:Dynamic):NSCollectionLayoutSupplementaryItem;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSCollectionLayoutSupplementaryItem;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():NSCollectionLayoutSupplementaryItem;
 
 	@:native("zIndex")
 	public var zIndex:Int;

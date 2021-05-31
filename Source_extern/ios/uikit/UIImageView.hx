@@ -12,10 +12,10 @@ extern class UIImageView{
 	overload public static function autorelease():UIImageView;
 
 	@:native("initWithImage")
-	overload public function initWithImage(image:Dynamic):Dynamic;
+	overload public function initWithImage(image:Dynamic):UIImageView;
 
 	@:native("initWithImage:highlightedImage")
-	overload public function initWithImage_highlightedImage(image:Dynamic, highlightedImage:Dynamic):Dynamic;
+	overload public function initWithImage_highlightedImage(image:Dynamic, highlightedImage:Dynamic):UIImageView;
 
 	@:native("image")
 	public var image:Dynamic;

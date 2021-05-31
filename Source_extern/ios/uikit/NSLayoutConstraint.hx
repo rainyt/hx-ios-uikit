@@ -16,7 +16,7 @@ extern class NSLayoutConstraint{
 	overload public static function constraintsWithVisualFormat_options_metrics_views(format:NSString, options:Dynamic, metrics:Dynamic, views:Dynamic):Dynamic;
 
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
-	overload public static function constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant(view1:Dynamic, attribute:Dynamic, relatedBy:Dynamic, toItem:Dynamic, attribute:Dynamic, multiplier:Float, constant:Float):Dynamic;
+	overload public static function constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant(view1:Dynamic, attribute:Dynamic, relatedBy:Dynamic, toItem:Dynamic, attribute:Dynamic, multiplier:Float, constant:Float):NSLayoutConstraint;
 
 	@:native("priority")
 	public var priority:null;

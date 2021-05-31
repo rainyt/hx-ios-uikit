@@ -18,7 +18,7 @@ extern class UINavigationControllerItem{
 	public var hidesBottomBarWhenPushed:Bool;
 
 	@:native("navigationController")
-	public var navigationController:Dynamic;
+	public var navigationController:UINavigationController;
 
 
 }

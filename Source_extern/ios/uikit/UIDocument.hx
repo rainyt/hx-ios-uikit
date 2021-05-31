@@ -15,7 +15,7 @@ extern class UIDocument{
 	overload public static function autorelease():UIDocument;
 
 	@:native("initWithFileURL:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithFileURL_NS_DESIGNATED_INITIALIZER(url:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithFileURL_NS_DESIGNATED_INITIALIZER(url:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocument;
 
 	@:native("fileURL")
 	public var fileURL:Dynamic;

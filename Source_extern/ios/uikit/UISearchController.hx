@@ -13,13 +13,13 @@ extern class UISearchController{
 	overload public static function autorelease():UISearchController;
 
 	@:native("initWithSearchResultsController")
-	overload public function initWithSearchResultsController(searchResultsController:Dynamic):Dynamic;
+	overload public function initWithSearchResultsController(searchResultsController:Dynamic):UISearchController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UISearchController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UISearchController;
 
 	@:native("searchResultsUpdater")
 	public var searchResultsUpdater:Dynamic;

@@ -15,22 +15,22 @@ extern class NSCollectionLayoutEdgeSpacing{
 	overload public function ():Dynamic;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSCollectionLayoutEdgeSpacing;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():NSCollectionLayoutEdgeSpacing;
 
 	@:native("leading")
-	public var leading:Dynamic;
+	public var leading:NSCollectionLayoutSpacing;
 
 	@:native("top")
-	public var top:Dynamic;
+	public var top:NSCollectionLayoutSpacing;
 
 	@:native("trailing")
-	public var trailing:Dynamic;
+	public var trailing:NSCollectionLayoutSpacing;
 
 	@:native("bottom")
-	public var bottom:Dynamic;
+	public var bottom:NSCollectionLayoutSpacing;
 
 
 }

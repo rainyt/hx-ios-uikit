@@ -13,22 +13,22 @@ extern class UITargetedPreview{
 	overload public static function autorelease():UITargetedPreview;
 
 	@:native("initWithView:parameters:target")
-	overload public function initWithView_parameters_target(view:Dynamic, parameters:Dynamic, target:Dynamic):Dynamic;
+	overload public function initWithView_parameters_target(view:Dynamic, parameters:Dynamic, target:UIPreviewTarget):UITargetedPreview;
 
 	@:native("initWithView:parameters")
-	overload public function initWithView_parameters(view:Dynamic, parameters:Dynamic):Dynamic;
+	overload public function initWithView_parameters(view:Dynamic, parameters:Dynamic):UITargetedPreview;
 
 	@:native("initWithView")
-	overload public function initWithView(view:Dynamic):Dynamic;
+	overload public function initWithView(view:Dynamic):UITargetedPreview;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UITargetedPreview;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UITargetedPreview;
 
 	@:native("target")
-	public var target:Dynamic;
+	public var target:UIPreviewTarget;
 
 	@:native("view")
 	public var view:Dynamic;
@@ -40,7 +40,7 @@ extern class UITargetedPreview{
 	public var size:CGSize;
 
 	@:native("retargetedPreviewWithTarget")
-	overload public function retargetedPreviewWithTarget(newTarget:Dynamic):Dynamic;
+	overload public function retargetedPreviewWithTarget(newTarget:UIPreviewTarget):UITargetedPreview;
 
 
 }

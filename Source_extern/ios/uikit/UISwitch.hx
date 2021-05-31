@@ -38,10 +38,10 @@ extern class UISwitch{
 	public var on:Bool;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UISwitch;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UISwitch;
 
 	@:native("setOn:animated")
 	overload public function setOn_animated(on:Bool, animated:Bool):Void;

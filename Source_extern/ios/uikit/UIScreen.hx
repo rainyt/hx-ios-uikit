@@ -14,10 +14,10 @@ extern class UIScreen{
 	overload public static function autorelease():UIScreen;
 
 	@:native("screens")
-	public var screens:Dynamic;
+	overload public static function screens():Dynamic;
 
 	@:native("mainScreen")
-	public var mainScreen:Dynamic;
+	overload public static function mainScreen():UIScreen;
 
 	@:native("bounds")
 	public var bounds:CGRect;
@@ -44,7 +44,7 @@ extern class UIScreen{
 	public var overscanCompensationInsets:Dynamic;
 
 	@:native("mirroredScreen")
-	public var mirroredScreen:Dynamic;
+	public var mirroredScreen:UIScreen;
 
 	@:native("captured")
 	public var captured:Bool;

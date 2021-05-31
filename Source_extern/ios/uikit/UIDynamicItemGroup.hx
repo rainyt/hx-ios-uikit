@@ -12,7 +12,7 @@ extern class UIDynamicItemGroup{
 	overload public static function autorelease():UIDynamicItemGroup;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):Dynamic;
+	overload public function initWithItems(items:Dynamic):UIDynamicItemGroup;
 
 	@:native("items")
 	public var items:Dynamic;

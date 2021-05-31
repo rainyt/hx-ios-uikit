@@ -12,16 +12,16 @@ extern class UISpringLoadedInteraction{
 	overload public static function autorelease():UISpringLoadedInteraction;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UISpringLoadedInteraction;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UISpringLoadedInteraction;
 
 	@:native("initWithInteractionBehavior:interactionEffect:activationHandler")
-	overload public function initWithInteractionBehavior_interactionEffect_activationHandler(interactionBehavior:Dynamic, interactionEffect:Dynamic, activationHandler:Dynamic):Dynamic;
+	overload public function initWithInteractionBehavior_interactionEffect_activationHandler(interactionBehavior:Dynamic, interactionEffect:Dynamic, activationHandler:Dynamic):UISpringLoadedInteraction;
 
 	@:native("initWithActivationHandler")
-	overload public function initWithActivationHandler(handler:Dynamic):Dynamic;
+	overload public function initWithActivationHandler(handler:Dynamic):UISpringLoadedInteraction;
 
 	@:native("interactionBehavior")
 	public var interactionBehavior:Dynamic;

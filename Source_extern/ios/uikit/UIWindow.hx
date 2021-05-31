@@ -14,7 +14,7 @@ extern class UIWindow{
 	overload public static function autorelease():UIWindow;
 
 	@:native("initWithWindowScene")
-	overload public function initWithWindowScene(windowScene:Dynamic):Dynamic;
+	overload public function initWithWindowScene(windowScene:Dynamic):UIWindow;
 
 	@:native("windowScene")
 	public var windowScene:Dynamic;
@@ -53,16 +53,16 @@ extern class UIWindow{
 	overload public function sendEvent(event:Dynamic):Void;
 
 	@:native("convertPoint:toWindow")
-	overload public function convertPoint_toWindow(point:CGPoint, toWindow:Dynamic):CGPoint;
+	overload public function convertPoint_toWindow(point:CGPoint, toWindow:UIWindow):CGPoint;
 
 	@:native("convertPoint:fromWindow")
-	overload public function convertPoint_fromWindow(point:CGPoint, fromWindow:Dynamic):CGPoint;
+	overload public function convertPoint_fromWindow(point:CGPoint, fromWindow:UIWindow):CGPoint;
 
 	@:native("convertRect:toWindow")
-	overload public function convertRect_toWindow(rect:CGRect, toWindow:Dynamic):CGRect;
+	overload public function convertRect_toWindow(rect:CGRect, toWindow:UIWindow):CGRect;
 
 	@:native("convertRect:fromWindow")
-	overload public function convertRect_fromWindow(rect:CGRect, fromWindow:Dynamic):CGRect;
+	overload public function convertRect_fromWindow(rect:CGRect, fromWindow:UIWindow):CGRect;
 
 
 }

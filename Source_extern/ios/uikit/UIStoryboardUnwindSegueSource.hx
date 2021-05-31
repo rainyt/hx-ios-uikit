@@ -12,7 +12,7 @@ extern class UIStoryboardUnwindSegueSource{
 	overload public static function autorelease():UIStoryboardUnwindSegueSource;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIStoryboardUnwindSegueSource;
 
 	@:native("sourceViewController")
 	public var sourceViewController:Dynamic;

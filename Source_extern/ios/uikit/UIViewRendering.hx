@@ -46,7 +46,7 @@ extern class UIViewRendering{
 	public var contentStretch:CGRect;
 
 	@:native("maskView")
-	public var maskView:Dynamic;
+	public var maskView:UIView;
 
 	@:native("tintColor")
 	public var tintColor:Dynamic;

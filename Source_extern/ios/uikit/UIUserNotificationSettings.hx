@@ -12,10 +12,10 @@ extern class UIUserNotificationSettings{
 	overload public static function autorelease():UIUserNotificationSettings;
 
 	@:native("registerUserNotificationSettings")
-	overload public function registerUserNotificationSettings(notificationSettings:Dynamic):Void;
+	overload public function registerUserNotificationSettings(notificationSettings:UIUserNotificationSettings):Void;
 
 	@:native("currentUserNotificationSettings")
-	public var currentUserNotificationSettings:Dynamic;
+	public var currentUserNotificationSettings:UIUserNotificationSettings;
 
 
 }

@@ -22,10 +22,10 @@ extern class UIColorPickerViewController{
 	public var supportsAlpha:Bool;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UIColorPickerViewController;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIColorPickerViewController;
 
 
 }

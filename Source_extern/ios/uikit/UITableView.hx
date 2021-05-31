@@ -15,10 +15,10 @@ extern class UITableView{
 	overload public static function autorelease():UITableView;
 
 	@:native("initWithFrame:style")
-	overload public function initWithFrame_style(frame:CGRect, style:Dynamic):Dynamic;
+	overload public function initWithFrame_style(frame:CGRect, style:Dynamic):UITableView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UITableView;
 
 	@:native("style")
 	public var style:Dynamic;

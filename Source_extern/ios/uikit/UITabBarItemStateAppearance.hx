@@ -12,10 +12,10 @@ extern class UITabBarItemStateAppearance{
 	overload public static function autorelease():UITabBarItemStateAppearance;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UITabBarItemStateAppearance;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UITabBarItemStateAppearance;
 
 	@:native("titleTextAttributes")
 	public var titleTextAttributes:Dynamic;

@@ -19,10 +19,10 @@ extern class UIInputView{
 	public var allowsSelfSizing:Bool;
 
 	@:native("initWithFrame:inputViewStyle")
-	overload public function initWithFrame_inputViewStyle(frame:CGRect, inputViewStyle:Dynamic):Dynamic;
+	overload public function initWithFrame_inputViewStyle(frame:CGRect, inputViewStyle:Dynamic):UIInputView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIInputView;
 
 
 }

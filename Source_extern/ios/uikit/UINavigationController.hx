@@ -13,16 +13,16 @@ extern class UINavigationController{
 	overload public static function autorelease():UINavigationController;
 
 	@:native("initWithNavigationBarClass:toolbarClass:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithNavigationBarClass_toolbarClass_NS_DESIGNATED_INITIALIZER(navigationBarClass:Dynamic, toolbarClass:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithNavigationBarClass_toolbarClass_NS_DESIGNATED_INITIALIZER(navigationBarClass:Dynamic, toolbarClass:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UINavigationController;
 
 	@:native("initWithRootViewController")
-	overload public function initWithRootViewController(rootViewController:Dynamic):Dynamic;
+	overload public function initWithRootViewController(rootViewController:Dynamic):UINavigationController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UINavigationController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:Dynamic):Dynamic;
+	overload public function initWithCoder(aDecoder:Dynamic):UINavigationController;
 
 	@:native("pushViewController:animated")
 	overload public function pushViewController_animated(viewController:Dynamic, animated:Bool):Void;

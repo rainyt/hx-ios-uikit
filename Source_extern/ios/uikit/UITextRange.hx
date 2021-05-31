@@ -15,10 +15,10 @@ extern class UITextRange{
 	public var empty:Bool;
 
 	@:native("start")
-	public var start:Dynamic;
+	public var start:UITextPosition;
 
 	@:native("end")
-	public var end:Dynamic;
+	public var end:UITextPosition;
 
 
 }

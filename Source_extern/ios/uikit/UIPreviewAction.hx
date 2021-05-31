@@ -16,7 +16,7 @@ extern class UIPreviewAction{
 	public var id<UIPreviewActionItem> action, UIViewController previewViewController:Dynamic;
 
 	@:native("actionWithTitle:style:handler")
-	overload public static function actionWithTitle_style_handler(title:NSString, style:Dynamic, handler:Dynamic):Dynamic;
+	overload public static function actionWithTitle_style_handler(title:NSString, style:Dynamic, handler:Dynamic):UIPreviewAction;
 
 
 }

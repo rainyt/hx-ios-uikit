@@ -14,10 +14,10 @@ extern class NSTextContainer{
 	overload public static function autorelease():NSTextContainer;
 
 	@:native("initWithSize:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithSize_NS_DESIGNATED_INITIALIZER(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithSize_NS_DESIGNATED_INITIALIZER(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextContainer;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):NSTextContainer;
 
 	@:native("layoutManager")
 	public var layoutManager:Dynamic;

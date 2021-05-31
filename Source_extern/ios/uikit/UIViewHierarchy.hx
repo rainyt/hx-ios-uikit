@@ -12,7 +12,7 @@ extern class UIViewHierarchy{
 	overload public static function autorelease():UIViewHierarchy;
 
 	@:native("superview")
-	public var superview:Dynamic;
+	public var superview:UIView;
 
 	@:native("subviews")
 	public var subviews:Dynamic;
@@ -24,34 +24,34 @@ extern class UIViewHierarchy{
 	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
-	overload public function insertSubview_atIndex(view:Dynamic, atIndex:Int):Void;
+	overload public function insertSubview_atIndex(view:UIView, atIndex:Int):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
 	overload public function exchangeSubviewAtIndex_withSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
 
 	@:native("addSubview")
-	overload public function addSubview(view:Dynamic):Void;
+	overload public function addSubview(view:UIView):Void;
 
 	@:native("insertSubview:belowSubview")
-	overload public function insertSubview_belowSubview(view:Dynamic, belowSubview:Dynamic):Void;
+	overload public function insertSubview_belowSubview(view:UIView, belowSubview:UIView):Void;
 
 	@:native("insertSubview:aboveSubview")
-	overload public function insertSubview_aboveSubview(view:Dynamic, aboveSubview:Dynamic):Void;
+	overload public function insertSubview_aboveSubview(view:UIView, aboveSubview:UIView):Void;
 
 	@:native("bringSubviewToFront")
-	overload public function bringSubviewToFront(view:Dynamic):Void;
+	overload public function bringSubviewToFront(view:UIView):Void;
 
 	@:native("sendSubviewToBack")
-	overload public function sendSubviewToBack(view:Dynamic):Void;
+	overload public function sendSubviewToBack(view:UIView):Void;
 
 	@:native("didAddSubview")
-	overload public function didAddSubview(subview:Dynamic):Void;
+	overload public function didAddSubview(subview:UIView):Void;
 
 	@:native("willRemoveSubview")
-	overload public function willRemoveSubview(subview:Dynamic):Void;
+	overload public function willRemoveSubview(subview:UIView):Void;
 
 	@:native("willMoveToSuperview")
-	overload public function willMoveToSuperview(newSuperview:Dynamic):Void;
+	overload public function willMoveToSuperview(newSuperview:UIView):Void;
 
 	@:native("didMoveToSuperview")
 	overload public function didMoveToSuperview():Void;
@@ -63,10 +63,10 @@ extern class UIViewHierarchy{
 	overload public function didMoveToWindow():Void;
 
 	@:native("isDescendantOfView")
-	overload public function isDescendantOfView(view:Dynamic):Bool;
+	overload public function isDescendantOfView(view:UIView):Bool;
 
 	@:native("viewWithTag")
-	overload public function viewWithTag(tag:Int):Dynamic;
+	overload public function viewWithTag(tag:Int):UIView;
 
 	@:native("setNeedsLayout")
 	overload public function setNeedsLayout():Void;

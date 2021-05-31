@@ -8,6 +8,9 @@ class ObjcProperty {
 		if (line.indexOf("//") != -1) {
 			line = line.substr(0, line.lastIndexOf("//"));
 		}
+		var property = line.substr(0, line.indexOf(")"));
+		// 包含了class则为单例模式
+		var isClass = property.indexOf("class") != -1;
 		var newline = "";
 		var lastchat = "";
 		// 调整空格，去除连续空格
@@ -68,9 +71,9 @@ class ObjcProperty {
 		// trace(p);
 		return ({
 			name: p[p.length - 1],
-			type: ExternBaseClassType.PROPERTY,
+			type: isClass ? ExternBaseClassType.FUNC : ExternBaseClassType.PROPERTY,
 			returnClass: ObjcType.toType(p[p.length - 2], typedefs),
-			isStatic: false,
+			isStatic: isClass,
 			args: null
 		});
 	}

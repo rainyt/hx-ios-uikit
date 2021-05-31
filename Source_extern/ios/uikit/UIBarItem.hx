@@ -13,10 +13,10 @@ extern class UIBarItem{
 	overload public static function autorelease():UIBarItem;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIBarItem;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIBarItem;
 
 	@:native("enabled")
 	public var enabled:Bool;

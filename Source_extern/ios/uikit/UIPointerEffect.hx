@@ -15,13 +15,13 @@ extern class UIPointerEffect{
 	public var preview:Dynamic;
 
 	@:native("effectWithPreview")
-	overload public static function effectWithPreview(preview:Dynamic):Dynamic;
+	overload public static function effectWithPreview(preview:Dynamic):UIPointerEffect;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIPointerEffect;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIPointerEffect;
 
 
 }

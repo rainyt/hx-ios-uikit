@@ -15,16 +15,16 @@ extern class UISegmentedControl{
 	overload public static function autorelease():UISegmentedControl;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UISegmentedControl;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UISegmentedControl;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):Dynamic;
+	overload public function initWithItems(items:Dynamic):UISegmentedControl;
 
 	@:native("initWithFrame:actions")
-	overload public function initWithFrame_actions(frame:CGRect, actions:Dynamic):Dynamic;
+	overload public function initWithFrame_actions(frame:CGRect, actions:Dynamic):UISegmentedControl;
 
 	@:native("insertSegmentWithAction:atIndex:animated")
 	overload public function insertSegmentWithAction_atIndex_animated(action:Dynamic, atIndex:Int, animated:Bool):Void;

@@ -13,7 +13,7 @@ extern class UIFontPickerViewController{
 	overload public static function autorelease():UIFontPickerViewController;
 
 	@:native("initWithConfiguration")
-	overload public function initWithConfiguration(configuration:Dynamic):Dynamic;
+	overload public function initWithConfiguration(configuration:Dynamic):UIFontPickerViewController;
 
 	@:native("configuration")
 	public var configuration:Dynamic;
@@ -25,7 +25,7 @@ extern class UIFontPickerViewController{
 	public var selectedFontDescriptor:Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UIFontPickerViewController;
 
 
 }

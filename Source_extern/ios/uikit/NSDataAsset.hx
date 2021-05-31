@@ -14,13 +14,13 @@ extern class NSDataAsset{
 	overload public static function autorelease():NSDataAsset;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():NSDataAsset;
 
 	@:native("initWithName")
-	overload public function initWithName(name:NSString):Dynamic;
+	overload public function initWithName(name:NSString):NSDataAsset;
 
 	@:native("initWithName:bundle")
-	overload public function initWithName_bundle(name:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithName_bundle(name:NSString, bundle:Dynamic):NSDataAsset;
 
 	@:native("name")
 	public var name:NSString;

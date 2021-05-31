@@ -12,13 +12,13 @@ extern class UICollectionLayoutListConfiguration{
 	overload public static function autorelease():UICollectionLayoutListConfiguration;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UICollectionLayoutListConfiguration;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UICollectionLayoutListConfiguration;
 
 	@:native("initWithAppearance")
-	overload public function initWithAppearance(appearance:Dynamic):Dynamic;
+	overload public function initWithAppearance(appearance:Dynamic):UICollectionLayoutListConfiguration;
 
 	@:native("appearance")
 	public var appearance:Dynamic;

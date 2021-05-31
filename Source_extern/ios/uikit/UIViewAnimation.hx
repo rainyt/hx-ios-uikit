@@ -15,13 +15,13 @@ extern class UIViewAnimation{
 	overload public static function setAnimationsEnabled(enabled:Bool):Void;
 
 	@:native("areAnimationsEnabled")
-	public var areAnimationsEnabled:Bool;
+	overload public static function areAnimationsEnabled():Bool;
 
 	@:native("performWithoutAnimation")
 	overload public static function performWithoutAnimation(actionsWithoutAnimation:Dynamic):Void;
 
 	@:native("inheritedAnimationDuration")
-	public var inheritedAnimationDuration:Dynamic;
+	overload public static function inheritedAnimationDuration():Dynamic;
 
 
 }

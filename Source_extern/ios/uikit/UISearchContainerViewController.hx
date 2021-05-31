@@ -15,7 +15,7 @@ extern class UISearchContainerViewController{
 	public var searchController:Dynamic;
 
 	@:native("initWithSearchController")
-	overload public function initWithSearchController(searchController:Dynamic):Dynamic;
+	overload public function initWithSearchController(searchController:Dynamic):UISearchContainerViewController;
 
 
 }

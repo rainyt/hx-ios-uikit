@@ -15,7 +15,7 @@ extern class NSTextAttachment{
 	overload public static function autorelease():NSTextAttachment;
 
 	@:native("initWithData:ofType:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithData_ofType_NS_DESIGNATED_INITIALIZER(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithData_ofType_NS_DESIGNATED_INITIALIZER(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
 
 	@:native("contents")
 	public var contents:NSData;

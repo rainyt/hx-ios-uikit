@@ -14,10 +14,10 @@ extern class UILocalNotification{
 	overload public static function autorelease():UILocalNotification;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UILocalNotification;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UILocalNotification;
 
 	@:native("fireDate")
 	public var fireDate:Dynamic;

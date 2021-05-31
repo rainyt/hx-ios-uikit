@@ -13,13 +13,13 @@ extern class UIActivityIndicatorView{
 	overload public static function autorelease():UIActivityIndicatorView;
 
 	@:native("initWithActivityIndicatorStyle")
-	overload public function initWithActivityIndicatorStyle(style:Dynamic):Dynamic;
+	overload public function initWithActivityIndicatorStyle(style:Dynamic):UIActivityIndicatorView;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UIActivityIndicatorView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIActivityIndicatorView;
 
 	@:native("activityIndicatorViewStyle")
 	public var activityIndicatorViewStyle:Dynamic;

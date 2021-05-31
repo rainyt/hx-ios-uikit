@@ -17,7 +17,7 @@ extern class UIGraphicsRendererContext{
 	public var CGContext:Dynamic;
 
 	@:native("format")
-	public var format:Dynamic;
+	public var format:UIGraphicsRendererFormat;
 
 	@:native("fillRect")
 	overload public function fillRect(rect:CGRect):Void;

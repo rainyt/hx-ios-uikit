@@ -14,13 +14,13 @@ extern class UIGestureRecognizer{
 	overload public static function autorelease():UIGestureRecognizer;
 
 	@:native("initWithTarget:action")
-	overload public function initWithTarget_action(target:Dynamic, action:String):Dynamic;
+	overload public function initWithTarget_action(target:Dynamic, action:String):UIGestureRecognizer;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIGestureRecognizer;
 
 	@:native("addTarget:action")
 	overload public function addTarget_action(target:Dynamic, action:String):Void;
@@ -59,7 +59,7 @@ extern class UIGestureRecognizer{
 	public var requiresExclusiveTouchType:Bool;
 
 	@:native("requireGestureRecognizerToFail")
-	overload public function requireGestureRecognizerToFail(otherGestureRecognizer:Dynamic):Void;
+	overload public function requireGestureRecognizerToFail(otherGestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("locationInView")
 	overload public function locationInView(view:Dynamic):CGPoint;

@@ -41,22 +41,22 @@ extern class UIViewGeometry{
 	public var exclusiveTouch:Bool;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:Dynamic):Dynamic;
+	overload public function hitTest_withEvent(point:CGPoint, withEvent:Dynamic):UIView;
 
 	@:native("pointInside:withEvent")
 	overload public function pointInside_withEvent(point:CGPoint, withEvent:Dynamic):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint_toView(point:CGPoint, toView:Dynamic):CGPoint;
+	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint_fromView(point:CGPoint, fromView:Dynamic):CGPoint;
+	overload public function convertPoint_fromView(point:CGPoint, fromView:UIView):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect_toView(rect:CGRect, toView:Dynamic):CGRect;
+	overload public function convertRect_toView(rect:CGRect, toView:UIView):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect_fromView(rect:CGRect, fromView:Dynamic):CGRect;
+	overload public function convertRect_fromView(rect:CGRect, fromView:UIView):CGRect;
 
 	@:native("autoresizesSubviews")
 	public var autoresizesSubviews:Bool;

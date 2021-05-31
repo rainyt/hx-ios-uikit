@@ -13,10 +13,10 @@ extern class UISceneSizeRestrictions{
 	overload public static function autorelease():UISceneSizeRestrictions;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UISceneSizeRestrictions;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UISceneSizeRestrictions;
 
 	@:native("minimumSize")
 	public var minimumSize:CGSize;

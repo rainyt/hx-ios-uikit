@@ -13,7 +13,7 @@ extern class UIDynamicItemBehavior{
 	overload public static function autorelease():UIDynamicItemBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):Dynamic;
+	overload public function initWithItems(items:Dynamic):UIDynamicItemBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;

@@ -14,25 +14,25 @@ extern class UIRegion{
 	overload public static function autorelease():UIRegion;
 
 	@:native("infiniteRegion")
-	public var infiniteRegion:Dynamic;
+	overload public static function infiniteRegion():UIRegion;
 
 	@:native("initWithRadius")
-	overload public function initWithRadius(radius:Float):Dynamic;
+	overload public function initWithRadius(radius:Float):UIRegion;
 
 	@:native("initWithSize")
-	overload public function initWithSize(size:CGSize):Dynamic;
+	overload public function initWithSize(size:CGSize):UIRegion;
 
 	@:native("inverseRegion")
-	overload public function inverseRegion():Dynamic;
+	overload public function inverseRegion():UIRegion;
 
 	@:native("regionByUnionWithRegion")
-	overload public function regionByUnionWithRegion(region:Dynamic):Dynamic;
+	overload public function regionByUnionWithRegion(region:UIRegion):UIRegion;
 
 	@:native("regionByDifferenceFromRegion")
-	overload public function regionByDifferenceFromRegion(region:Dynamic):Dynamic;
+	overload public function regionByDifferenceFromRegion(region:UIRegion):UIRegion;
 
 	@:native("regionByIntersectionWithRegion")
-	overload public function regionByIntersectionWithRegion(region:Dynamic):Dynamic;
+	overload public function regionByIntersectionWithRegion(region:UIRegion):UIRegion;
 
 	@:native("containsPoint")
 	overload public function containsPoint(point:CGPoint):Bool;

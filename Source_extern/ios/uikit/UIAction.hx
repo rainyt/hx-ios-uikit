@@ -34,16 +34,16 @@ extern class UIAction{
 	public var sender:Dynamic;
 
 	@:native("actionWithHandler")
-	overload public static function actionWithHandler(handler:Dynamic):Dynamic;
+	overload public static function actionWithHandler(handler:Dynamic):UIAction;
 
 	@:native("")
 	overload public function ():Dynamic;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIAction;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIAction;
 
 
 }

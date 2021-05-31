@@ -13,13 +13,13 @@ extern class UITableViewPlaceholder{
 	overload public static function autorelease():UITableViewPlaceholder;
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier:rowHeight")
-	overload public function initWithInsertionIndexPath_reuseIdentifier_rowHeight(insertionIndexPath:Dynamic, reuseIdentifier:NSString, rowHeight:Float):Dynamic;
+	overload public function initWithInsertionIndexPath_reuseIdentifier_rowHeight(insertionIndexPath:Dynamic, reuseIdentifier:NSString, rowHeight:Float):UITableViewPlaceholder;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UITableViewPlaceholder;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UITableViewPlaceholder;
 
 	@:native("__kindof UITableViewCell ")
 	public var __kindof UITableViewCell :Dynamic;

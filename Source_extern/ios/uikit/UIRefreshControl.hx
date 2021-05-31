@@ -12,7 +12,7 @@ extern class UIRefreshControl{
 	overload public static function autorelease():UIRefreshControl;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIRefreshControl;
 
 	@:native("refreshing")
 	public var refreshing:Bool;

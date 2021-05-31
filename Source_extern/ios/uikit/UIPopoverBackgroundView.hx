@@ -18,7 +18,7 @@ extern class UIPopoverBackgroundView{
 	public var arrowDirection:Dynamic;
 
 	@:native("wantsDefaultContentAppearance")
-	public var wantsDefaultContentAppearance:Bool;
+	overload public static function wantsDefaultContentAppearance():Bool;
 
 
 }

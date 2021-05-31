@@ -14,13 +14,13 @@ extern class UIControl{
 	overload public static function autorelease():UIControl;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UIControl;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIControl;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:Dynamic):Dynamic;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:Dynamic):UIControl;
 
 	@:native("enabled")
 	public var enabled:Bool;

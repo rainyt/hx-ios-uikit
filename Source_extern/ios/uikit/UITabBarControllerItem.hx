@@ -15,7 +15,7 @@ extern class UITabBarControllerItem{
 	public var tabBarItem:Dynamic;
 
 	@:native("tabBarController")
-	public var tabBarController:Dynamic;
+	public var tabBarController:UITabBarController;
 
 	@:native("tabBarObservedScrollView")
 	public var tabBarObservedScrollView:Dynamic;

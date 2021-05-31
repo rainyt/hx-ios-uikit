@@ -14,13 +14,13 @@ extern class UIPasteboard{
 	overload public static function autorelease():UIPasteboard;
 
 	@:native("generalPasteboard")
-	public var generalPasteboard:Dynamic;
+	overload public static function generalPasteboard():UIPasteboard;
 
 	@:native("pasteboardWithName:create")
-	overload public static function pasteboardWithName_create(pasteboardName:NSString, create:Bool):Dynamic;
+	overload public static function pasteboardWithName_create(pasteboardName:NSString, create:Bool):UIPasteboard;
 
 	@:native("pasteboardWithUniqueName")
-	overload public static function pasteboardWithUniqueName():Dynamic;
+	overload public static function pasteboardWithUniqueName():UIPasteboard;
 
 	@:native("name")
 	public var name:NSString;

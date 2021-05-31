@@ -15,13 +15,13 @@ extern class UIContainerViewControllerProtectedMethods{
 	public var childViewControllers:Dynamic;
 
 	@:native("addChildViewController")
-	overload public function addChildViewController(childController:Dynamic):Void;
+	overload public function addChildViewController(childController:UIViewController):Void;
 
 	@:native("removeFromParentViewController")
 	overload public function removeFromParentViewController():Void;
 
 	@:native("transitionFromViewController:toViewController:duration:options:animations:completion")
-	overload public function transitionFromViewController_toViewController_duration_options_animations_completion(fromViewController:Dynamic, toViewController:Dynamic, duration:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public function transitionFromViewController_toViewController_duration_options_animations_completion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginAppearanceTransition:animated")
 	overload public function beginAppearanceTransition_animated(isAppearing:Bool, animated:Bool):Void;
@@ -30,19 +30,19 @@ extern class UIContainerViewControllerProtectedMethods{
 	overload public function endAppearanceTransition():Void;
 
 	@:native("childViewControllerForStatusBarStyle")
-	public var childViewControllerForStatusBarStyle:Dynamic;
+	public var childViewControllerForStatusBarStyle:UIViewController;
 
 	@:native("childViewControllerForStatusBarHidden")
-	public var childViewControllerForStatusBarHidden:Dynamic;
+	public var childViewControllerForStatusBarHidden:UIViewController;
 
 	@:native("setOverrideTraitCollection:forChildViewController")
-	overload public function setOverrideTraitCollection_forChildViewController(collection:Dynamic, forChildViewController:Dynamic):Void;
+	overload public function setOverrideTraitCollection_forChildViewController(collection:Dynamic, forChildViewController:UIViewController):Void;
 
 	@:native("overrideTraitCollectionForChildViewController")
-	overload public function overrideTraitCollectionForChildViewController(childViewController:Dynamic):Dynamic;
+	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):Dynamic;
 
 	@:native("childViewControllerForUserInterfaceStyle")
-	public var childViewControllerForUserInterfaceStyle:Dynamic;
+	public var childViewControllerForUserInterfaceStyle:UIViewController;
 
 
 }

@@ -12,22 +12,22 @@ extern class UIFontSystemFonts{
 	overload public static function autorelease():UIFontSystemFonts;
 
 	@:native("labelFontSize")
-	public var labelFontSize:Float;
+	overload public static function labelFontSize():Float;
 
 	@:native("buttonFontSize")
-	public var buttonFontSize:Float;
+	overload public static function buttonFontSize():Float;
 
 	@:native("smallSystemFontSize")
-	public var smallSystemFontSize:Float;
+	overload public static function smallSystemFontSize():Float;
 
 	@:native("systemFontSize")
-	public var systemFontSize:Float;
+	overload public static function systemFontSize():Float;
 
 	@:native("defaultFontSize")
-	public var defaultFontSize:Float;
+	overload public static function defaultFontSize():Float;
 
 	@:native("systemMinimumFontSize")
-	public var systemMinimumFontSize:Float;
+	overload public static function systemMinimumFontSize():Float;
 
 
 }

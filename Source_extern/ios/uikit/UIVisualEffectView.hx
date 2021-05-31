@@ -18,10 +18,10 @@ extern class UIVisualEffectView{
 	public var effect:Dynamic;
 
 	@:native("initWithEffect")
-	overload public function initWithEffect(effect:Dynamic):Dynamic;
+	overload public function initWithEffect(effect:Dynamic):UIVisualEffectView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIVisualEffectView;
 
 
 }

@@ -12,7 +12,7 @@ extern class UICollectionLayoutListSection{
 	overload public static function autorelease():UICollectionLayoutListSection;
 
 	@:native("layoutWithListConfiguration")
-	overload public static function layoutWithListConfiguration(configuration:Dynamic):Dynamic;
+	overload public static function layoutWithListConfiguration(configuration:UICollectionLayoutListConfiguration):UICollectionLayoutListSection;
 
 
 }

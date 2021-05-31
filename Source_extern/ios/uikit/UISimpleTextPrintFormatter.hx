@@ -13,10 +13,10 @@ extern class UISimpleTextPrintFormatter{
 	overload public static function autorelease():UISimpleTextPrintFormatter;
 
 	@:native("initWithText")
-	overload public function initWithText(text:NSString):Dynamic;
+	overload public function initWithText(text:NSString):UISimpleTextPrintFormatter;
 
 	@:native("initWithAttributedText")
-	overload public function initWithAttributedText(attributedText:Dynamic):Dynamic;
+	overload public function initWithAttributedText(attributedText:Dynamic):UISimpleTextPrintFormatter;
 
 	@:native("text")
 	public var text:NSString;

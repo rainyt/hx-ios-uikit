@@ -15,7 +15,7 @@ extern class UIManagedDocument{
 	overload public static function autorelease():UIManagedDocument;
 
 	@:native("persistentStoreName")
-	public var persistentStoreName:NSString;
+	overload public static function persistentStoreName():NSString;
 
 	@:native("managedObjectContext")
 	public var managedObjectContext:Dynamic;

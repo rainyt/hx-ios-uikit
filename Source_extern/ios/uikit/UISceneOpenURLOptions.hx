@@ -13,10 +13,10 @@ extern class UISceneOpenURLOptions{
 	overload public static function autorelease():UISceneOpenURLOptions;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UISceneOpenURLOptions;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UISceneOpenURLOptions;
 
 	@:native("sourceApplication")
 	public var sourceApplication:NSString;

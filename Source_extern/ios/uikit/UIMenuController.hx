@@ -13,7 +13,7 @@ extern class UIMenuController{
 	overload public static function autorelease():UIMenuController;
 
 	@:native("sharedMenuController")
-	public var sharedMenuController:Dynamic;
+	overload public static function sharedMenuController():UIMenuController;
 
 	@:native("menuVisible")
 	public var menuVisible:Bool;

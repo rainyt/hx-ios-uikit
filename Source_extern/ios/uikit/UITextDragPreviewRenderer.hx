@@ -14,16 +14,16 @@ extern class UITextDragPreviewRenderer{
 	overload public static function autorelease():UITextDragPreviewRenderer;
 
 	@:native("initWithLayoutManager:range")
-	overload public function initWithLayoutManager_range(layoutManager:Dynamic, range:Dynamic):Dynamic;
+	overload public function initWithLayoutManager_range(layoutManager:Dynamic, range:Dynamic):UITextDragPreviewRenderer;
 
 	@:native("initWithLayoutManager:range:unifyRects")
-	overload public function initWithLayoutManager_range_unifyRects(layoutManager:Dynamic, range:Dynamic, unifyRects:Bool):Dynamic;
+	overload public function initWithLayoutManager_range_unifyRects(layoutManager:Dynamic, range:Dynamic, unifyRects:Bool):UITextDragPreviewRenderer;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UITextDragPreviewRenderer;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UITextDragPreviewRenderer;
 
 	@:native("layoutManager")
 	public var layoutManager:Dynamic;

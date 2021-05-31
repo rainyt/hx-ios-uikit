@@ -69,11 +69,17 @@ class ExternHFile {
 	}
 
 	public function defClass(data:String):Void {
-		var t = new ExternBaseClass(data, this);
+		var t = new ExternBaseClass(data, this, function(t2:ExternBaseClass) {
+			var d = new ExternTypedefClass();
+			d.className = t2.className;
+			d.parentClassName = t2.className;
+			typedefs.set(t2.className, d);
+		});
 		// if(t.className == "UIAlertAction")
 		// trace("类定义：" + t.className,data,t.toHaxeFile("test"));
-		if(t.className != null)
-            classdefs.set(t.className, t);
+		if (t.className != null) {
+			classdefs.set(t.className, t);
+		}
 	}
 
 	public function defTypedef(data:String):Void {

@@ -13,13 +13,13 @@ extern class UIProgressView{
 	overload public static function autorelease():UIProgressView;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UIProgressView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIProgressView;
 
 	@:native("initWithProgressViewStyle")
-	overload public function initWithProgressViewStyle(style:Dynamic):Dynamic;
+	overload public function initWithProgressViewStyle(style:Dynamic):UIProgressView;
 
 	@:native("progressViewStyle")
 	public var progressViewStyle:Dynamic;

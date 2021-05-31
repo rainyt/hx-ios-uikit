@@ -13,7 +13,7 @@ extern class UIAlertAction{
 	overload public static function autorelease():UIAlertAction;
 
 	@:native("actionWithTitle:style:handler")
-	overload public static function actionWithTitle_style_handler(title:NSString, style:Dynamic, handler:Dynamic):Dynamic;
+	overload public static function actionWithTitle_style_handler(title:NSString, style:Dynamic, handler:Dynamic):UIAlertAction;
 
 	@:native("title")
 	public var title:NSString;

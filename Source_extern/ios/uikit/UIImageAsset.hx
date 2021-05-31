@@ -12,10 +12,10 @@ extern class UIImageAsset{
 	overload public static function autorelease():UIImageAsset;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIImageAsset;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIImageAsset;
 
 	@:native("imageWithConfiguration")
 	overload public function imageWithConfiguration(configuration:Dynamic):Dynamic;

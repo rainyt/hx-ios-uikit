@@ -12,7 +12,7 @@ extern class PointerLockState{
 	overload public static function autorelease():PointerLockState;
 
 	@:native("pointerLockState")
-	public var pointerLockState:Dynamic;
+	public var pointerLockState:UIPointerLockState;
 
 
 }

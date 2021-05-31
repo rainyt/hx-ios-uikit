@@ -12,13 +12,13 @@ extern class UIScribbleInteraction{
 	overload public static function autorelease():UIScribbleInteraction;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIScribbleInteraction;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIScribbleInteraction;
 
 	@:native("initWithDelegate")
-	overload public function initWithDelegate(delegate:Dynamic):Dynamic;
+	overload public function initWithDelegate(delegate:Dynamic):UIScribbleInteraction;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -27,7 +27,7 @@ extern class UIScribbleInteraction{
 	public var handlingWriting:Bool;
 
 	@:native("pencilInputExpected")
-	public var pencilInputExpected:Bool;
+	overload public static function pencilInputExpected():Bool;
 
 
 }

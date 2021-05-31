@@ -14,7 +14,7 @@ extern class UIPopoverController{
 	overload public static function autorelease():UIPopoverController;
 
 	@:native("initWithContentViewController")
-	overload public function initWithContentViewController(viewController:Dynamic):Dynamic;
+	overload public function initWithContentViewController(viewController:Dynamic):UIPopoverController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

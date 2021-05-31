@@ -14,25 +14,25 @@ extern class UIButton{
 	overload public static function autorelease():UIButton;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
+	overload public function initWithFrame(frame:CGRect):UIButton;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:Dynamic):Dynamic;
+	overload public function initWithCoder(coder:Dynamic):UIButton;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:Dynamic):Dynamic;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:Dynamic):UIButton;
 
 	@:native("buttonWithType")
-	overload public static function buttonWithType(buttonType:Dynamic):Dynamic;
+	overload public static function buttonWithType(buttonType:Dynamic):UIButton;
 
 	@:native("systemButtonWithImage:target:action")
-	overload public static function systemButtonWithImage_target_action(image:Dynamic, target:Dynamic, action:String):Dynamic;
+	overload public static function systemButtonWithImage_target_action(image:Dynamic, target:Dynamic, action:String):UIButton;
 
 	@:native("systemButtonWithPrimaryAction")
-	overload public static function systemButtonWithPrimaryAction(primaryAction:Dynamic):Dynamic;
+	overload public static function systemButtonWithPrimaryAction(primaryAction:Dynamic):UIButton;
 
 	@:native("buttonWithType:primaryAction")
-	overload public static function buttonWithType_primaryAction(buttonType:Dynamic, primaryAction:Dynamic):Dynamic;
+	overload public static function buttonWithType_primaryAction(buttonType:Dynamic, primaryAction:Dynamic):UIButton;
 
 	@:native("contentEdgeInsets")
 	public var contentEdgeInsets:Dynamic;

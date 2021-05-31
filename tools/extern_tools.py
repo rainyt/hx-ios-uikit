@@ -68,7 +68,7 @@ class ExternBaseClass:
     _hx_fields = ["className", "_imported", "_hdata", "funcAndAttr"]
     _hx_methods = ["toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
 
-    def __init__(self,_hdata,hextern):
+    def __init__(self,_hdata,hextern,defcall):
         self._hdata = None
         self.funcAndAttr = []
         self._imported = []
@@ -113,6 +113,7 @@ class ExternBaseClass:
             self.className = None
             return
         self.className = StringTools.replace(pclassName," ","")
+        defcall(self)
         _this = self.funcAndAttr
         x = _hx_AnonObject({'type': "func", 'name': "alloc", 'returnClass': self.className, 'isStatic': True, 'args': None})
         _this.append(x)
@@ -324,7 +325,13 @@ class ExternHFile:
                             read = []
 
     def defClass(self,data):
-        t = ExternBaseClass(data,self)
+        _gthis = self
+        def _hx_local_0(t2):
+            d = ExternTypedefClass()
+            d.className = t2.className
+            d.parentClassName = t2.className
+            _gthis.typedefs.h[t2.className] = d
+        t = ExternBaseClass(data,self,_hx_local_0)
         if (t.className is not None):
             self.classdefs.h[t.className] = t
 
@@ -445,11 +452,13 @@ class ExternTypedefClass:
     _hx_fields = ["parentClassName", "createHaxeFile", "className", "enums"]
     _hx_methods = ["toHaxeFile"]
 
-    def __init__(self,value):
+    def __init__(self,value = None):
         self.parentClassName = None
         self.enums = []
         self.className = None
         self.createHaxeFile = False
+        if (value is None):
+            return
         tmp = None
         startIndex = None
         if (((value.find("typedef NS_ENUM") if ((startIndex is None)) else HxString.indexOfImpl(value,"typedef NS_ENUM",startIndex))) != 0):
@@ -779,6 +788,10 @@ class ObjcProperty:
                 check = line.find("//", startLeft, len(line))
                 _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
             line = HxString.substr(line,0,_hx_len)
+        startIndex = None
+        property = HxString.substr(line,0,(line.find(")") if ((startIndex is None)) else HxString.indexOfImpl(line,")",startIndex)))
+        startIndex = None
+        isClass = (((property.find("class") if ((startIndex is None)) else HxString.indexOfImpl(property,"class",startIndex))) != -1)
         newline = ""
         lastchat = ""
         _g = 0
@@ -852,7 +865,7 @@ class ObjcProperty:
             else:
                 return False
         p = list(filter(_hx_local_7,p))
-        return _hx_AnonObject({'name': python_internal_ArrayImpl._get(p, (len(p) - 1)), 'type': "property", 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': False, 'args': None})
+        return _hx_AnonObject({'name': python_internal_ArrayImpl._get(p, (len(p) - 1)), 'type': ("func" if isClass else "property"), 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': isClass, 'args': None})
 
 
 class ObjcType:
@@ -896,7 +909,10 @@ class ObjcType:
         if (t in typedefs.h):
             _hx_def = typedefs.h.get(t,None)
             if (not _hx_def.createHaxeFile):
-                return ObjcType.toType(_hx_def.parentClassName,typedefs)
+                if (_hx_def.className == _hx_def.parentClassName):
+                    return _hx_def.className
+                else:
+                    return ObjcType.toType(_hx_def.parentClassName,typedefs)
         i = ObjcImport.toImport(t)
         if (i is None):
             return "Dynamic"

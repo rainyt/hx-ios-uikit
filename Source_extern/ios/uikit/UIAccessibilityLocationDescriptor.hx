@@ -14,19 +14,19 @@ extern class UIAccessibilityLocationDescriptor{
 	overload public static function autorelease():UIAccessibilityLocationDescriptor;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIAccessibilityLocationDescriptor;
 
 	@:native("new")
-	overload public static function new():Dynamic;
+	overload public static function new():UIAccessibilityLocationDescriptor;
 
 	@:native("initWithName:view")
-	overload public function initWithName_view(name:NSString, view:Dynamic):Dynamic;
+	overload public function initWithName_view(name:NSString, view:Dynamic):UIAccessibilityLocationDescriptor;
 
 	@:native("initWithName:point:inView")
-	overload public function initWithName_point_inView(name:NSString, point:CGPoint, inView:Dynamic):Dynamic;
+	overload public function initWithName_point_inView(name:NSString, point:CGPoint, inView:Dynamic):UIAccessibilityLocationDescriptor;
 
 	@:native("initWithAttributedName:point:inView")
-	overload public function initWithAttributedName_point_inView(attributedName:Dynamic, point:CGPoint, inView:Dynamic):Dynamic;
+	overload public function initWithAttributedName_point_inView(attributedName:Dynamic, point:CGPoint, inView:Dynamic):UIAccessibilityLocationDescriptor;
 
 	@:native("view")
 	public var view:Dynamic;

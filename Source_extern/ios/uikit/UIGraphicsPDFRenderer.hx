@@ -15,7 +15,7 @@ extern class UIGraphicsPDFRenderer{
 	overload public static function autorelease():UIGraphicsPDFRenderer;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds_format(bounds:CGRect, format:Dynamic):Dynamic;
+	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
 
 	@:native("writePDFToURL:withActions:error")
 	overload public function writePDFToURL_withActions_error(url:Dynamic, withActions:Dynamic, error:NSError):Bool;

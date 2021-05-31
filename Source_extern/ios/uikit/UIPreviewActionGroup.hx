@@ -13,7 +13,7 @@ extern class UIPreviewActionGroup{
 	overload public static function autorelease():UIPreviewActionGroup;
 
 	@:native("actionGroupWithTitle:style:actions")
-	overload public static function actionGroupWithTitle_style_actions(title:NSString, style:Dynamic, actions:Dynamic):Dynamic;
+	overload public static function actionGroupWithTitle_style_actions(title:NSString, style:Dynamic, actions:Dynamic):UIPreviewActionGroup;
 
 
 }
