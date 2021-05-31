@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UINavigationControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UINavigationControllerDelegate{
+extern interface UINavigationControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UINavigationControllerDelegate;

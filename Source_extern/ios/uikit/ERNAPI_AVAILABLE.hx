@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("ERNAPI_AVAILABLE")
 @:include("UIKit/UIKit.h")
-extern class ERNAPI_AVAILABLE{
+extern interface ERNAPI_AVAILABLE{
 
 	@:native("alloc")
 	overload public static function alloc():ERNAPI_AVAILABLE;

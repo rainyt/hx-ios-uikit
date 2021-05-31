@@ -5,7 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UITableViewDelegate<NSObject,")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDelegate<NSObject,{
+extern interface UITableViewDelegate<NSObject,{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDelegate<NSObject,;

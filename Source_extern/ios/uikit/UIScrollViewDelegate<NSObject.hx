@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIScrollViewDelegate<NSObject")
 @:include("UIKit/UIKit.h")
-extern class UIScrollViewDelegate<NSObject{
+extern interface UIScrollViewDelegate<NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIScrollViewDelegate<NSObject;

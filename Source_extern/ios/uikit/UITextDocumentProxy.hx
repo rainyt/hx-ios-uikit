@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextDocumentProxy")
 @:include("UIKit/UIKit.h")
-extern class UITextDocumentProxy{
+extern interface UITextDocumentProxy{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDocumentProxy;

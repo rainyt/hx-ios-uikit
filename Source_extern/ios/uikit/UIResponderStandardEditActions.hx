@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIResponderStandardEditActions")
 @:include("UIKit/UIKit.h")
-extern class UIResponderStandardEditActions{
+extern interface UIResponderStandardEditActions{
 
 	@:native("alloc")
 	overload public static function alloc():UIResponderStandardEditActions;

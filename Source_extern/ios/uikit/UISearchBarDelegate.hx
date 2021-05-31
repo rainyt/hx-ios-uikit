@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISearchBarDelegate")
 @:include("UIKit/UIKit.h")
-extern class UISearchBarDelegate{
+extern interface UISearchBarDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchBarDelegate;

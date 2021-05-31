@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPickerViewDataSource<NSObject")
 @:include("UIKit/UIKit.h")
-extern class UIPickerViewDataSource<NSObject{
+extern interface UIPickerViewDataSource<NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewDataSource<NSObject;

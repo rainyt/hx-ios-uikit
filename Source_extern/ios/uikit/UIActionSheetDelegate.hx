@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIActionSheetDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIActionSheetDelegate{
+extern interface UIActionSheetDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIActionSheetDelegate;

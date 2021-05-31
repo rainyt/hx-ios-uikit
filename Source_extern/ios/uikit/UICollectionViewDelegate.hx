@@ -5,7 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UICollectionViewDelegate")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDelegate{
+extern interface UICollectionViewDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDelegate;

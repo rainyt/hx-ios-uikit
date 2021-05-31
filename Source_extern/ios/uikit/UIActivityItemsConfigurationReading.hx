@@ -5,7 +5,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIActivityItemsConfigurationReading")
 @:include("UIKit/UIKit.h")
-extern class UIActivityItemsConfigurationReading{
+extern interface UIActivityItemsConfigurationReading{
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemsConfigurationReading;

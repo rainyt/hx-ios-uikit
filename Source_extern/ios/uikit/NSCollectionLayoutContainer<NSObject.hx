@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("NSCollectionLayoutContainer<NSObject")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutContainer<NSObject{
+extern interface NSCollectionLayoutContainer<NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutContainer<NSObject;

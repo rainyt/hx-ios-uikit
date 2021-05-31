@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSCollectionLayoutEnvironment<NSObject")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutEnvironment<NSObject{
+extern interface NSCollectionLayoutEnvironment<NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutEnvironment<NSObject;

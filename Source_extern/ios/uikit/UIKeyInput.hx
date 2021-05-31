@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIKeyInput")
 @:include("UIKit/UIKit.h")
-extern class UIKeyInput{
+extern interface UIKeyInput{
 
 	@:native("alloc")
 	overload public static function alloc():UIKeyInput;

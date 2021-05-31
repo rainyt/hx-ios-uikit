@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UICollectionViewDragDelegate")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDragDelegate{
+extern interface UICollectionViewDragDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDragDelegate;

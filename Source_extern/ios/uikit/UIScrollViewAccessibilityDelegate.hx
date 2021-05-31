@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIScrollViewAccessibilityDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIScrollViewAccessibilityDelegate{
+extern interface UIScrollViewAccessibilityDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIScrollViewAccessibilityDelegate;

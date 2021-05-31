@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPopoverBackgroundViewMethod")
 @:include("UIKit/UIKit.h")
-extern class UIPopoverBackgroundViewMethod{
+extern interface UIPopoverBackgroundViewMethod{
 
 	@:native("alloc")
 	overload public static function alloc():UIPopoverBackgroundViewMethod;

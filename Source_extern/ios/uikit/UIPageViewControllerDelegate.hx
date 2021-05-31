@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPageViewControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIPageViewControllerDelegate{
+extern interface UIPageViewControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIPageViewControllerDelegate;

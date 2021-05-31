@@ -5,7 +5,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIActivityItemSource")
 @:include("UIKit/UIKit.h")
-extern class UIActivityItemSource{
+extern interface UIActivityItemSource{
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemSource;

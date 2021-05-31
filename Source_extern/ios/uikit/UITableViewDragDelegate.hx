@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UITableViewDragDelegate")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDragDelegate{
+extern interface UITableViewDragDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDragDelegate;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextDragDelegate")
 @:include("UIKit/UIKit.h")
-extern class UITextDragDelegate{
+extern interface UITextDragDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDragDelegate;

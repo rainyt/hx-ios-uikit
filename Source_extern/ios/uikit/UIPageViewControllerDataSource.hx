@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPageViewControllerDataSource")
 @:include("UIKit/UIKit.h")
-extern class UIPageViewControllerDataSource{
+extern interface UIPageViewControllerDataSource{
 
 	@:native("alloc")
 	overload public static function alloc():UIPageViewControllerDataSource;

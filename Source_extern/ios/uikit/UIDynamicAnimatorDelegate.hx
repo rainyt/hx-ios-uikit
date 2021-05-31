@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDynamicAnimatorDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIDynamicAnimatorDelegate{
+extern interface UIDynamicAnimatorDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIDynamicAnimatorDelegate;

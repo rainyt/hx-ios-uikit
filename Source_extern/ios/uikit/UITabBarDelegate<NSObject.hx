@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITabBarDelegate<NSObject")
 @:include("UIKit/UIKit.h")
-extern class UITabBarDelegate<NSObject{
+extern interface UITabBarDelegate<NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarDelegate<NSObject;

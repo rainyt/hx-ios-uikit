@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextPasteConfigurationSupporting")
 @:include("UIKit/UIKit.h")
-extern class UITextPasteConfigurationSupporting{
+extern interface UITextPasteConfigurationSupporting{
 
 	@:native("alloc")
 	overload public static function alloc():UITextPasteConfigurationSupporting;

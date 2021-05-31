@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewDropItem")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDropItem{
+extern interface UICollectionViewDropItem{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropItem;

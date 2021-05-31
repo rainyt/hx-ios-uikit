@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSTextStorageDelegate")
 @:include("UIKit/UIKit.h")
-extern class NSTextStorageDelegate{
+extern interface NSTextStorageDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():NSTextStorageDelegate;

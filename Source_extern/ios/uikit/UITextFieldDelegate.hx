@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextFieldDelegate")
 @:include("UIKit/UIKit.h")
-extern class UITextFieldDelegate{
+extern interface UITextFieldDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UITextFieldDelegate;

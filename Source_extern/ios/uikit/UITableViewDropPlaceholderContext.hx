@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITableViewDropPlaceholderContext")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDropPlaceholderContext{
+extern interface UITableViewDropPlaceholderContext{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropPlaceholderContext;

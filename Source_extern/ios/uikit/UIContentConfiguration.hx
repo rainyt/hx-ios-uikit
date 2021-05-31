@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIContentConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIContentConfiguration{
+extern interface UIContentConfiguration{
 
 	@:native("alloc")
 	overload public static function alloc():UIContentConfiguration;
@@ -15,7 +15,7 @@ extern class UIContentConfiguration{
 	overload public function makeContentView():Dynamic;
 
 	@:native("updatedConfigurationForState")
-	overload public function updatedConfigurationForState(state:Dynamic):Dynamic;
+	overload public function updatedConfigurationForState(state:Dynamic):UIContentConfiguration;
 
 
 }

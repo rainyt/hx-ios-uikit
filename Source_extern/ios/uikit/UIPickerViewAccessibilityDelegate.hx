@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIPickerViewAccessibilityDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIPickerViewAccessibilityDelegate{
+extern interface UIPickerViewAccessibilityDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewAccessibilityDelegate;

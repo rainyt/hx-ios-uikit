@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("NSTextLayoutOrientationProvide")
 @:include("UIKit/UIKit.h")
-extern class NSTextLayoutOrientationProvide{
+extern interface NSTextLayoutOrientationProvide{
 
 	@:native("alloc")
 	overload public static function alloc():NSTextLayoutOrientationProvide;

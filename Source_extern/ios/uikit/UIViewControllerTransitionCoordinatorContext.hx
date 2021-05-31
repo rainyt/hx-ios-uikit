@@ -5,7 +5,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIViewControllerTransitionCoordinatorContext")
 @:include("UIKit/UIKit.h")
-extern class UIViewControllerTransitionCoordinatorContext{
+extern interface UIViewControllerTransitionCoordinatorContext{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerTransitionCoordinatorContext;

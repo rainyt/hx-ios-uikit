@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("ILABLE")
 @:include("UIKit/UIKit.h")
-extern class ILABLE{
+extern interface ILABLE{
 
 	@:native("alloc")
 	overload public static function alloc():ILABLE;

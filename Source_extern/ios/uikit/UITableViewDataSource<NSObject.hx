@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITableViewDataSource<NSObject")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDataSource<NSObject{
+extern interface UITableViewDataSource<NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDataSource<NSObject;

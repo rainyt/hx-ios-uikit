@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIColorPickerViewControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIColorPickerViewControllerDelegate{
+extern interface UIColorPickerViewControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIColorPickerViewControllerDelegate;

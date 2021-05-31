@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UICollectionViewDropCoordinator")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDropCoordinator{
+extern interface UICollectionViewDropCoordinator{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropCoordinator;

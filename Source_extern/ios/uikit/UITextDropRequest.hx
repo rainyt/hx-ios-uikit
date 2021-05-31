@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextDropRequest")
 @:include("UIKit/UIKit.h")
-extern class UITextDropRequest{
+extern interface UITextDropRequest{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDropRequest;

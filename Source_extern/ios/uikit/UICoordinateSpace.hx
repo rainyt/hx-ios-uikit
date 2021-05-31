@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UICoordinateSpace")
 @:include("UIKit/UIKit.h")
-extern class UICoordinateSpace{
+extern interface UICoordinateSpace{
 
 	@:native("alloc")
 	overload public static function alloc():UICoordinateSpace;

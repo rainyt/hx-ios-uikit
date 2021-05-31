@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewImplicitlyAnimating")
 @:include("UIKit/UIKit.h")
-extern class UIViewImplicitlyAnimating{
+extern interface UIViewImplicitlyAnimating{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewImplicitlyAnimating;

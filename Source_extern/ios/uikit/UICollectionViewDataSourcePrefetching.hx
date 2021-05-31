@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewDataSourcePrefetching")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDataSourcePrefetching{
+extern interface UICollectionViewDataSourcePrefetching{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDataSourcePrefetching;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITraitEnvironment")
 @:include("UIKit/UIKit.h")
-extern class UITraitEnvironment{
+extern interface UITraitEnvironment{
 
 	@:native("alloc")
 	overload public static function alloc():UITraitEnvironment;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UILayoutSupport")
 @:include("UIKit/UIKit.h")
-extern class UILayoutSupport{
+extern interface UILayoutSupport{
 
 	@:native("alloc")
 	overload public static function alloc():UILayoutSupport;

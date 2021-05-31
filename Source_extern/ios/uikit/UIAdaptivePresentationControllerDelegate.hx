@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAdaptivePresentationControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIAdaptivePresentationControllerDelegate{
+extern interface UIAdaptivePresentationControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIAdaptivePresentationControllerDelegate;

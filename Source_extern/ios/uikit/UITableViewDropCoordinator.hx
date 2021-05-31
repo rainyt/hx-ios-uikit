@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UITableViewDropCoordinator")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDropCoordinator{
+extern interface UITableViewDropCoordinator{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropCoordinator;

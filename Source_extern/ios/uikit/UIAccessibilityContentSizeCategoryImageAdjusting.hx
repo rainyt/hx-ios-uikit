@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAccessibilityContentSizeCategoryImageAdjusting")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityContentSizeCategoryImageAdjusting{
+extern interface UIAccessibilityContentSizeCategoryImageAdjusting{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityContentSizeCategoryImageAdjusting;

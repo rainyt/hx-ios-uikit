@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextInputDelegate")
 @:include("UIKit/UIKit.h")
-extern class UITextInputDelegate{
+extern interface UITextInputDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputDelegate;

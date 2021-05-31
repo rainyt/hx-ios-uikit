@@ -53,6 +53,7 @@ class ExternBaseClass {
 	public function new(_hdata:String, hextern:ExternHFile, defcall:ExternBaseClass->Void) {
 		var harray = _hdata.split("\n");
 		var pclassName = harray[0];
+		isProtocol = Std.isOfType(this,ExternProtocolClass);
 		pclassName = pclassName.substr(pclassName.indexOf("@interface") + 10);
 		if (pclassName.indexOf("(") != -1) {
 			// 只有分类关系，没有继承关系
@@ -178,7 +179,12 @@ class ExternBaseClass {
 		haxe += "@:objc\n";
 		haxe += "@:native(\"" + className + "\")\n";
 		haxe += "@:include(\"UIKit/UIKit.h\")\n";
-		haxe += "extern class " + className + (extendClassName != null ? " extends " + extendClassName : "") + "{\n\n";
+		haxe += "extern "
+			+ (isProtocol ? "interface" : "class")
+			+ " "
+			+ className
+			+ (extendClassName != null ? " extends " + extendClassName : "")
+			+ "{\n\n";
 		for (index => value in funcAndAttr) {
 			if (hasFuncExtendsOrAttr(value))
 				continue;

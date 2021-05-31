@@ -7,7 +7,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UITextInput")
 @:include("UIKit/UIKit.h")
-extern class UITextInput{
+extern interface UITextInput{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInput;

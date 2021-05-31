@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDataSourceTranslating")
 @:include("UIKit/UIKit.h")
-extern class UIDataSourceTranslating{
+extern interface UIDataSourceTranslating{
 
 	@:native("alloc")
 	overload public static function alloc():UIDataSourceTranslating;

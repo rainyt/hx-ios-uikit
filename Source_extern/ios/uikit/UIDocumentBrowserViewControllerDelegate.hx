@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDocumentBrowserViewControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentBrowserViewControllerDelegate{
+extern interface UIDocumentBrowserViewControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserViewControllerDelegate;

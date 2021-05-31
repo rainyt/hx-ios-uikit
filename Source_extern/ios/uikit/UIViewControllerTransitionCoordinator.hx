@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewControllerTransitionCoordinator")
 @:include("UIKit/UIKit.h")
-extern class UIViewControllerTransitionCoordinator{
+extern interface UIViewControllerTransitionCoordinator{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerTransitionCoordinator;

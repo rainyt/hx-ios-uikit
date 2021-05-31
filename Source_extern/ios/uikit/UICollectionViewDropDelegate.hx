@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewDropDelegate")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDropDelegate{
+extern interface UICollectionViewDropDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropDelegate;

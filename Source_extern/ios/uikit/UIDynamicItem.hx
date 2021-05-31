@@ -6,7 +6,7 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIDynamicItem")
 @:include("UIKit/UIKit.h")
-extern class UIDynamicItem{
+extern interface UIDynamicItem{
 
 	@:native("alloc")
 	overload public static function alloc():UIDynamicItem;

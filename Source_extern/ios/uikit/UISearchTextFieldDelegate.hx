@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISearchTextFieldDelegate")
 @:include("UIKit/UIKit.h")
-extern class UISearchTextFieldDelegate{
+extern interface UISearchTextFieldDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchTextFieldDelegate;

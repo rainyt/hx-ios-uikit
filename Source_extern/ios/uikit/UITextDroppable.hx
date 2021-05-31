@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextDroppable")
 @:include("UIKit/UIKit.h")
-extern class UITextDroppable{
+extern interface UITextDroppable{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDroppable;

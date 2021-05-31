@@ -5,7 +5,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIViewControllerContextTransitioning")
 @:include("UIKit/UIKit.h")
-extern class UIViewControllerContextTransitioning{
+extern interface UIViewControllerContextTransitioning{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerContextTransitioning;

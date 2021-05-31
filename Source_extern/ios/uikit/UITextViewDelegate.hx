@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextViewDelegate")
 @:include("UIKit/UIKit.h")
-extern class UITextViewDelegate{
+extern interface UITextViewDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UITextViewDelegate;

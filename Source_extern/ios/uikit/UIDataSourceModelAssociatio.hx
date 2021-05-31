@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDataSourceModelAssociatio")
 @:include("UIKit/UIKit.h")
-extern class UIDataSourceModelAssociatio{
+extern interface UIDataSourceModelAssociatio{
 
 	@:native("alloc")
 	overload public static function alloc():UIDataSourceModelAssociatio;

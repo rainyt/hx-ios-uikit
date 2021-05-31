@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPopoverControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIPopoverControllerDelegate{
+extern interface UIPopoverControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIPopoverControllerDelegate;

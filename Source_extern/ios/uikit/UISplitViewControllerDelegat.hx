@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISplitViewControllerDelegat")
 @:include("UIKit/UIKit.h")
-extern class UISplitViewControllerDelegat{
+extern interface UISplitViewControllerDelegat{
 
 	@:native("alloc")
 	overload public static function alloc():UISplitViewControllerDelegat;

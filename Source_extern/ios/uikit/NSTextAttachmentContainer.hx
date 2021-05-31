@@ -5,7 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("NSTextAttachmentContainer")
 @:include("UIKit/UIKit.h")
-extern class NSTextAttachmentContainer{
+extern interface NSTextAttachmentContainer{
 
 	@:native("alloc")
 	overload public static function alloc():NSTextAttachmentContainer;

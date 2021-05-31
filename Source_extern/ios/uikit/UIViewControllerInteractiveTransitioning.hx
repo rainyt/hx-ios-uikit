@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIViewControllerInteractiveTransitioning")
 @:include("UIKit/UIKit.h")
-extern class UIViewControllerInteractiveTransitioning{
+extern interface UIViewControllerInteractiveTransitioning{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerInteractiveTransitioning;

@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIApplicationDelegate<NSObject")
 @:include("UIKit/UIKit.h")
-extern class UIApplicationDelegate<NSObject{
+extern interface UIApplicationDelegate<NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIApplicationDelegate<NSObject;

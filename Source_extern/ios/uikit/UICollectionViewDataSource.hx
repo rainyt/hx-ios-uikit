@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewDataSource")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDataSource{
+extern interface UICollectionViewDataSource{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDataSource;

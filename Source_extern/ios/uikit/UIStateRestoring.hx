@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIStateRestoring")
 @:include("UIKit/UIKit.h")
-extern class UIStateRestoring{
+extern interface UIStateRestoring{
 
 	@:native("alloc")
 	overload public static function alloc():UIStateRestoring;

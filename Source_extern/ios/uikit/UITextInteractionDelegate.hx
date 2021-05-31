@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UITextInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern class UITextInteractionDelegate{
+extern interface UITextInteractionDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInteractionDelegate;

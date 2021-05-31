@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UICollisionBehaviorDelegate")
 @:include("UIKit/UIKit.h")
-extern class UICollisionBehaviorDelegate{
+extern interface UICollisionBehaviorDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UICollisionBehaviorDelegate;

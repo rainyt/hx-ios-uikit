@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITableViewDataSourcePrefetching")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDataSourcePrefetching{
+extern interface UITableViewDataSourcePrefetching{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDataSourcePrefetching;

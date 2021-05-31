@@ -6,7 +6,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIAccessibilityReadingConten")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityReadingConten{
+extern interface UIAccessibilityReadingConten{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityReadingConten;

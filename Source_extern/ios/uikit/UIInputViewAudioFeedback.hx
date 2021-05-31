@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIInputViewAudioFeedback")
 @:include("UIKit/UIKit.h")
-extern class UIInputViewAudioFeedback{
+extern interface UIInputViewAudioFeedback{
 
 	@:native("alloc")
 	overload public static function alloc():UIInputViewAudioFeedback;

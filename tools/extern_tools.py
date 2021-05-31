@@ -79,6 +79,7 @@ class ExternBaseClass:
         self.isProtocol = False
         harray = _hdata.split("\n")
         pclassName = (harray[0] if 0 < len(harray) else None)
+        self.isProtocol = Std.isOfType(self,ExternProtocolClass)
         startIndex = None
         pclassName = HxString.substr(pclassName,(((pclassName.find("@interface") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"@interface",startIndex))) + 10),None)
         startIndex = None
@@ -231,7 +232,7 @@ class ExternBaseClass:
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
-        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull((((("extern class " + HxOverrides.stringOrNull(self.className)) + HxOverrides.stringOrNull((((" extends " + HxOverrides.stringOrNull(self.extendClassName)) if ((self.extendClassName is not None)) else "")))) + "{\n\n"))))
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull((((((("extern " + HxOverrides.stringOrNull((("interface" if (self.isProtocol) else "class")))) + " ") + HxOverrides.stringOrNull(self.className)) + HxOverrides.stringOrNull((((" extends " + HxOverrides.stringOrNull(self.extendClassName)) if ((self.extendClassName is not None)) else "")))) + "{\n\n"))))
         _g_current = 0
         _g_array = self.funcAndAttr
         while (_g_current < len(_g_array)):
@@ -444,7 +445,6 @@ class ExternProtocolClass(ExternBaseClass):
 
 
     def __init__(self,data,hextern):
-        self.isProtocol = True
         super().__init__(data,hextern,None)
 
 

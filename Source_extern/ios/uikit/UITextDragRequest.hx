@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextDragRequest")
 @:include("UIKit/UIKit.h")
-extern class UITextDragRequest{
+extern interface UITextDragRequest{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDragRequest;

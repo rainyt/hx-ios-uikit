@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIContentContainer")
 @:include("UIKit/UIKit.h")
-extern class UIContentContainer{
+extern interface UIContentContainer{
 
 	@:native("alloc")
 	overload public static function alloc():UIContentContainer;

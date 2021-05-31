@@ -8,7 +8,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("NSCollectionLayoutVisibleItem<NSObject,UIDynamicItem")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutVisibleItem<NSObject,UIDynamicItem{
+extern interface NSCollectionLayoutVisibleItem<NSObject,UIDynamicItem{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutVisibleItem<NSObject,UIDynamicItem;

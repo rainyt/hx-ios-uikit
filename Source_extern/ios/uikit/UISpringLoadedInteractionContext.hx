@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UISpringLoadedInteractionContext")
 @:include("UIKit/UIKit.h")
-extern class UISpringLoadedInteractionContext{
+extern interface UISpringLoadedInteractionContext{
 
 	@:native("alloc")
 	overload public static function alloc():UISpringLoadedInteractionContext;

@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewDelegateFlowLayout")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDelegateFlowLayout{
+extern interface UICollectionViewDelegateFlowLayout{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDelegateFlowLayout;

@@ -6,7 +6,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("NSLayoutManagerDelegate")
 @:include("UIKit/UIKit.h")
-extern class NSLayoutManagerDelegate{
+extern interface NSLayoutManagerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutManagerDelegate;

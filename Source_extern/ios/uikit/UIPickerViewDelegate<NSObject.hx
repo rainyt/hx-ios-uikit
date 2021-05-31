@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIPickerViewDelegate<NSObject")
 @:include("UIKit/UIKit.h")
-extern class UIPickerViewDelegate<NSObject{
+extern interface UIPickerViewDelegate<NSObject{
 
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewDelegate<NSObject;

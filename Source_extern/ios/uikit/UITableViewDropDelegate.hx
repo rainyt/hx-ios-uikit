@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITableViewDropDelegate")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDropDelegate{
+extern interface UITableViewDropDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropDelegate;

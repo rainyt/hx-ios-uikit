@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITabBarControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UITabBarControllerDelegate{
+extern interface UITabBarControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarControllerDelegate;

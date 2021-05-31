@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIConfigurationState")
 @:include("UIKit/UIKit.h")
-extern class UIConfigurationState{
+extern interface UIConfigurationState{
 
 	@:native("alloc")
 	overload public static function alloc():UIConfigurationState;
@@ -13,7 +13,7 @@ extern class UIConfigurationState{
 	overload public static function autorelease():UIConfigurationState;
 
 	@:native("initWithTraitCollection")
-	overload public function initWithTraitCollection(traitCollection:UITraitCollection):Dynamic;
+	overload public function initWithTraitCollection(traitCollection:UITraitCollection):UIConfigurationState;
 
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;

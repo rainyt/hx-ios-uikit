@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIObjectRestoratio")
 @:include("UIKit/UIKit.h")
-extern class UIObjectRestoratio{
+extern interface UIObjectRestoratio{
 
 	@:native("alloc")
 	overload public static function alloc():UIObjectRestoratio;

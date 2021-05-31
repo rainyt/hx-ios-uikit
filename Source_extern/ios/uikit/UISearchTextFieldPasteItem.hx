@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISearchTextFieldPasteItem")
 @:include("UIKit/UIKit.h")
-extern class UISearchTextFieldPasteItem{
+extern interface UISearchTextFieldPasteItem{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchTextFieldPasteItem;

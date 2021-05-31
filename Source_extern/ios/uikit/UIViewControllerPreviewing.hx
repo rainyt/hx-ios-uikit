@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIViewControllerPreviewing")
 @:include("UIKit/UIKit.h")
-extern class UIViewControllerPreviewing{
+extern interface UIViewControllerPreviewing{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerPreviewing;

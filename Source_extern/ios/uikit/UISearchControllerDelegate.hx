@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISearchControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UISearchControllerDelegate{
+extern interface UISearchControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchControllerDelegate;

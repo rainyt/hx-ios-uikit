@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIBarPositioning")
 @:include("UIKit/UIKit.h")
-extern class UIBarPositioning{
+extern interface UIBarPositioning{
 
 	@:native("alloc")
 	overload public static function alloc():UIBarPositioning;

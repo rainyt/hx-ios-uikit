@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPrinterPickerControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIPrinterPickerControllerDelegate{
+extern interface UIPrinterPickerControllerDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrinterPickerControllerDelegate;

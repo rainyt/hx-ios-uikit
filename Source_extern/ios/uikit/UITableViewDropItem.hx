@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UITableViewDropItem")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDropItem{
+extern interface UITableViewDropItem{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropItem;

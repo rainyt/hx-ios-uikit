@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("ABLE")
 @:include("UIKit/UIKit.h")
-extern class ABLE{
+extern interface ABLE{
 
 	@:native("alloc")
 	overload public static function alloc():ABLE;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextInputTokenizer")
 @:include("UIKit/UIKit.h")
-extern class UITextInputTokenizer{
+extern interface UITextInputTokenizer{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputTokenizer;

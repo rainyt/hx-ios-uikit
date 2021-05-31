@@ -4,7 +4,7 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextPasteItem")
 @:include("UIKit/UIKit.h")
-extern class UITextPasteItem{
+extern interface UITextPasteItem{
 
 	@:native("alloc")
 	overload public static function alloc():UITextPasteItem;

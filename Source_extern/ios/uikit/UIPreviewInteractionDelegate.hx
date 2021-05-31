@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPreviewInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern class UIPreviewInteractionDelegate{
+extern interface UIPreviewInteractionDelegate{
 
 	@:native("alloc")
 	overload public static function alloc():UIPreviewInteractionDelegate;
