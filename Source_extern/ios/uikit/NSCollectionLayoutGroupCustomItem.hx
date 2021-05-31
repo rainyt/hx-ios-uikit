@@ -4,13 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("NSCollectionLayoutGroupCustomItem")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutGroupCustomItem extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():NSCollectionLayoutGroupCustomItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSCollectionLayoutGroupCustomItem;
+extern class NSCollectionLayoutGroupCustomItem extends NSObject
+{
 
 	@:native("customItemWithFrame")
 	overload public static function customItemWithFrame(frame:CGRect):NSCollectionLayoutGroupCustomItem;

@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIBackgroundConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIBackgroundConfiguration extends NSObject<NSCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIBackgroundConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIBackgroundConfiguration;
+extern class UIBackgroundConfiguration extends NSObject
+{
 
 	@:native("clearConfiguration")
 	overload public static function clearConfiguration():UIBackgroundConfiguration;

@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIPreviewParameters")
 @:include("UIKit/UIKit.h")
-extern class UIPreviewParameters extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPreviewParameters;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPreviewParameters;
+extern class UIPreviewParameters extends NSObject
+{
 
 	@:native("init")
 	overload public function init():UIPreviewParameters;

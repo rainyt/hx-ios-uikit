@@ -5,13 +5,8 @@ import ios.objc.CATransform3D;
 @:objc
 @:native("UIFocusMovementHint:")
 @:include("UIKit/UIKit.h")
-extern class UIFocusMovementHint: extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIFocusMovementHint:;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIFocusMovementHint:;
+extern class UIFocusMovementHint: extends NSObject
+{
 
 	@:native("movementDirection")
 	public var movementDirection:CGVector;

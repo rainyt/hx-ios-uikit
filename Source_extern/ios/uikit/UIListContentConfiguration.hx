@@ -3,13 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIListContentConfiguration extends NSObject<UIContentConfiguration,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIListContentConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIListContentConfiguration;
+extern class UIListContentConfiguration extends NSObject
+implements cpp.objc.Protocol<UIContentConfiguration>
+{
 
 	@:native("cellConfiguration")
 	overload public static function cellConfiguration():UIListContentConfiguration;

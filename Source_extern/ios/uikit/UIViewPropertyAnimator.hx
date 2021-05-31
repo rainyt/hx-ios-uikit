@@ -4,13 +4,9 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIViewPropertyAnimator")
 @:include("UIKit/UIKit.h")
-extern class UIViewPropertyAnimator extends NSObject<UIViewImplicitlyAnimating,NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIViewPropertyAnimator;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewPropertyAnimator;
+extern class UIViewPropertyAnimator extends NSObject
+implements cpp.objc.Protocol<UIViewImplicitlyAnimating>
+{
 
 	@:native("duration")
 	public var duration:Dynamic;

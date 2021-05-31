@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIDragInteraction")
 @:include("UIKit/UIKit.h")
-extern class UIDragInteraction extends NSObject<UIInteraction>{
-
-	@:native("alloc")
-	overload public static function alloc():UIDragInteraction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDragInteraction;
+extern class UIDragInteraction extends NSObject
+{
 
 	@:native("initWithDelegate")
 	overload public function initWithDelegate(delegate:Dynamic):UIDragInteraction;

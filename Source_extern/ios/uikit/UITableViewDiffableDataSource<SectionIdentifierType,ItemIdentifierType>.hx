@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>")
 @:include("UIKit/UIKit.h")
-extern class UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType> extends NSObject<UITableViewDataSource>{
-
-	@:native("alloc")
-	overload public static function alloc():UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>;
+extern class UITableViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType> extends NSObject
+{
 
 	@:native("initWithTableView:cellProvider")
 	overload public function initWithTableView_cellProvider(tableView:UITableView, cellProvider:Dynamic):Dynamic;

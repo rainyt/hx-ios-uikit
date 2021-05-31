@@ -15,9 +15,6 @@ implements cpp.objc.Protocol<UIAccessibilityIdentification>
 	@:native("accessibilityContainer")
 	public var accessibilityContainer:Dynamic;
 
-	@:native("isAccessibilityElement")
-	public var isAccessibilityElement:Bool;
-
 	@:native("accessibilityLabel")
 	public var accessibilityLabel:NSString;
 
@@ -26,12 +23,6 @@ implements cpp.objc.Protocol<UIAccessibilityIdentification>
 
 	@:native("accessibilityValue")
 	public var accessibilityValue:NSString;
-
-	@:native("accessibilityFrame")
-	public var accessibilityFrame:CGRect;
-
-	@:native("accessibilityTraits")
-	public var accessibilityTraits:Dynamic;
 
 	@:native("accessibilityFrameInContainerSpace")
 	public var accessibilityFrameInContainerSpace:CGRect;

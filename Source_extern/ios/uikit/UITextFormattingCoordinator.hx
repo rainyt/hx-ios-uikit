@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UITextFormattingCoordinator")
 @:include("UIKit/UIKit.h")
-extern class UITextFormattingCoordinator extends NSObject<UIFontPickerViewControllerDelegate>{
-
-	@:native("alloc")
-	overload public static function alloc():UITextFormattingCoordinator;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextFormattingCoordinator;
+extern class UITextFormattingCoordinator extends NSObject
+{
 
 	@:native("delegate")
 	public var delegate:Dynamic;

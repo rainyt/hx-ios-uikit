@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextInputPasswordRules")
 @:include("UIKit/UIKit.h")
-extern class UITextInputPasswordRules extends NSObject<NSSecureCoding,NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UITextInputPasswordRules;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextInputPasswordRules;
+extern class UITextInputPasswordRules extends NSObject
+{
 
 	@:native("passwordRulesDescriptor")
 	public var passwordRulesDescriptor:NSString;

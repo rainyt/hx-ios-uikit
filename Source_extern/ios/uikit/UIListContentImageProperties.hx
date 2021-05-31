@@ -4,13 +4,8 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIListContentImageProperties")
 @:include("UIKit/UIKit.h")
-extern class UIListContentImageProperties extends NSObject<NSCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIListContentImageProperties;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIListContentImageProperties;
+extern class UIListContentImageProperties extends NSObject
+{
 
 	@:native("tintColor")
 	public var tintColor:UIColor;

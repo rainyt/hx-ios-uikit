@@ -5,13 +5,8 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIRegion")
 @:include("UIKit/UIKit.h")
-extern class UIRegion extends NSObject<NSCopying,NSCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIRegion;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIRegion;
+extern class UIRegion extends NSObject
+{
 
 	@:native("infiniteRegion")
 	overload public static function infiniteRegion():UIRegion;

@@ -5,13 +5,9 @@ import ios.objc.CADisplayLink;
 @:objc
 @:native("UIScreen")
 @:include("UIKit/UIKit.h")
-extern class UIScreen extends NSObject<UITraitEnvironment>{
-
-	@:native("alloc")
-	overload public static function alloc():UIScreen;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIScreen;
+extern class UIScreen extends NSObject
+implements cpp.objc.Protocol<UITraitEnvironment>
+{
 
 	@:native("screens")
 	overload public static function screens():Dynamic;

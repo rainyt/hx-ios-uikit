@@ -3,13 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType> extends NSObject<UICollectionViewDataSource>{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType>;
+extern class UICollectionViewDiffableDataSource<SectionIdentifierType,ItemIdentifierType> extends NSObject
+implements cpp.objc.Protocol<UICollectionViewDataSource>
+{
 
 	@:native("initWithCollectionView:cellProvider")
 	overload public function initWithCollectionView_cellProvider(collectionView:UICollectionView, cellProvider:Dynamic):Dynamic;

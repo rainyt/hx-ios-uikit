@@ -4,13 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPointerShape")
 @:include("UIKit/UIKit.h")
-extern class UIPointerShape extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPointerShape;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPointerShape;
+extern class UIPointerShape extends NSObject
+{
 
 	@:native("shapeWithPath")
 	overload public static function shapeWithPath(path:UIBezierPath):UIPointerShape;

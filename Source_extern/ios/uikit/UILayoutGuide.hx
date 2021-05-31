@@ -4,13 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UILayoutGuide")
 @:include("UIKit/UIKit.h")
-extern class UILayoutGuide extends NSObject<NSCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UILayoutGuide;
-
-	@:native("autorelease")
-	overload public static function autorelease():UILayoutGuide;
+extern class UILayoutGuide extends NSObject
+{
 
 	@:native("layoutFrame")
 	public var layoutFrame:CGRect;

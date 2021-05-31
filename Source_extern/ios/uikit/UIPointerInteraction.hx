@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIPointerInteraction")
 @:include("UIKit/UIKit.h")
-extern class UIPointerInteraction extends NSObject<UIInteraction>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPointerInteraction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPointerInteraction;
+extern class UIPointerInteraction extends NSObject
+{
 
 	@:native("delegate")
 	public var delegate:Dynamic;

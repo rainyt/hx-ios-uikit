@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIUserNotificationCategory")
 @:include("UIKit/UIKit.h")
-extern class UIUserNotificationCategory extends NSObject<NSCopying,NSMutableCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIUserNotificationCategory;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIUserNotificationCategory;
+extern class UIUserNotificationCategory extends NSObject
+{
 
 	@:native("init")
 	overload public function init():UIUserNotificationCategory;

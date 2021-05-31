@@ -3,13 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UIActivityItemsConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIActivityItemsConfiguration extends NSObject<UIActivityItemsConfigurationReading>{
-
-	@:native("alloc")
-	overload public static function alloc():UIActivityItemsConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIActivityItemsConfiguration;
+extern class UIActivityItemsConfiguration extends NSObject
+implements cpp.objc.Protocol<UIActivityItemsConfigurationReading>
+{
 
 	@:native("localObject")
 	public var localObject:Dynamic;

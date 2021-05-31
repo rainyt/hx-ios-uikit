@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UITextInteraction")
 @:include("UIKit/UIKit.h")
-extern class UITextInteraction extends NSObject<UIInteraction>{
-
-	@:native("alloc")
-	overload public static function alloc():UITextInteraction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextInteraction;
+extern class UITextInteraction extends NSObject
+{
 
 	@:native("delegate")
 	public var delegate:Dynamic;

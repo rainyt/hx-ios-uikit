@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIColor")
 @:include("UIKit/UIKit.h")
-extern class UIColor extends NSObject<NSSecureCoding,NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIColor;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIColor;
+extern class UIColor extends NSObject
+{
 
 	@:native("colorWithWhite:alpha")
 	overload public static function colorWithWhite_alpha(white:Float, alpha:Float):UIColor;

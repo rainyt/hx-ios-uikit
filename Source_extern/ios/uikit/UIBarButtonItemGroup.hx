@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIBarButtonItemGroup")
 @:include("UIKit/UIKit.h")
-extern class UIBarButtonItemGroup extends NSObject<NSCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIBarButtonItemGroup;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIBarButtonItemGroup;
+extern class UIBarButtonItemGroup extends NSObject
+{
 
 	@:native("initWithBarButtonItems:representativeItem")
 	overload public function initWithBarButtonItems_representativeItem(barButtonItems:Dynamic, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;

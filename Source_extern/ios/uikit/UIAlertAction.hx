@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIAlertAction")
 @:include("UIKit/UIKit.h")
-extern class UIAlertAction extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIAlertAction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAlertAction;
+extern class UIAlertAction extends NSObject
+{
 
 	@:native("actionWithTitle:style:handler")
 	overload public static function actionWithTitle_style_handler(title:NSString, style:UIAlertActionStyle, handler:Dynamic):UIAlertAction;

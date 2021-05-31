@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIPencilInteraction")
 @:include("UIKit/UIKit.h")
-extern class UIPencilInteraction extends NSObject<UIInteraction>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPencilInteraction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPencilInteraction;
+extern class UIPencilInteraction extends NSObject
+{
 
 	@:native("preferredTapAction")
 	overload public static function preferredTapAction():UIPencilPreferredAction;

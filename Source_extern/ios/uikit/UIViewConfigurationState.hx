@@ -3,13 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UIViewConfigurationState")
 @:include("UIKit/UIKit.h")
-extern class UIViewConfigurationState extends NSObject<UIConfigurationState>{
-
-	@:native("alloc")
-	overload public static function alloc():UIViewConfigurationState;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIViewConfigurationState;
+extern class UIViewConfigurationState extends NSObject
+implements cpp.objc.Protocol<UIConfigurationState>
+{
 
 	@:native("initWithTraitCollection")
 	overload public function initWithTraitCollection(traitCollection:UITraitCollection):UIViewConfigurationState;

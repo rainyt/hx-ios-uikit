@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextInputMode")
 @:include("UIKit/UIKit.h")
-extern class UITextInputMode extends NSObject<NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UITextInputMode;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITextInputMode;
+extern class UITextInputMode extends NSObject
+{
 
 	@:native("primaryLanguage")
 	public var primaryLanguage:NSString;

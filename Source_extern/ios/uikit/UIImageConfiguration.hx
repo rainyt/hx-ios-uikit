@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIImageConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UIImageConfiguration extends NSObject<NSCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIImageConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImageConfiguration;
+extern class UIImageConfiguration extends NSObject
+{
 
 	@:native("init")
 	overload public function init():UIImageConfiguration;

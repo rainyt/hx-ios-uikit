@@ -4,13 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPointerRegion")
 @:include("UIKit/UIKit.h")
-extern class UIPointerRegion extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPointerRegion;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPointerRegion;
+extern class UIPointerRegion extends NSObject
+{
 
 	@:native("rect")
 	public var rect:CGRect;

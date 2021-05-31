@@ -80,7 +80,7 @@ class ExternBaseClass {
 			}
 		}
 
-		if (extendClassName != null && extendClassName.indexOf("NSObject") == -1) {
+		if (extendClassName != null) {
 			if (extendClassName.indexOf("<") != -1) {
 				// 解析协议
 				var ps = extendClassName.substr(extendClassName.indexOf("<") + 1);

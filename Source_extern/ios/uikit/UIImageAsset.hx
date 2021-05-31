@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIImageAsset")
 @:include("UIKit/UIKit.h")
-extern class UIImageAsset extends NSObject<NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIImageAsset;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImageAsset;
+extern class UIImageAsset extends NSObject
+{
 
 	@:native("init")
 	overload public function init():UIImageAsset;

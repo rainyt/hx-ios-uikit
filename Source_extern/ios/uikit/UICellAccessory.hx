@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UICellAccessory")
 @:include("UIKit/UIKit.h")
-extern class UICellAccessory extends NSObject<NSCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UICellAccessory;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICellAccessory;
+extern class UICellAccessory extends NSObject
+{
 
 	@:native("displayedState")
 	public var displayedState:UICellAccessoryDisplayedState;

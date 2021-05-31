@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("NSCollectionLayoutSize")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutSize extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():NSCollectionLayoutSize;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSCollectionLayoutSize;
+extern class NSCollectionLayoutSize extends NSObject
+{
 
 	@:native("sizeWithWidthDimension:heightDimension")
 	overload public static function sizeWithWidthDimension_heightDimension(width:NSCollectionLayoutDimension, heightDimension:NSCollectionLayoutDimension):NSCollectionLayoutSize;

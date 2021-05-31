@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIIndirectScribbleInteraction")
 @:include("UIKit/UIKit.h")
-extern class UIIndirectScribbleInteraction extends NSObject<UIInteraction>{
-
-	@:native("alloc")
-	overload public static function alloc():UIIndirectScribbleInteraction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIIndirectScribbleInteraction;
+extern class UIIndirectScribbleInteraction extends NSObject
+{
 
 	@:native("init")
 	overload public function init():UIIndirectScribbleInteraction;

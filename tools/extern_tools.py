@@ -117,14 +117,7 @@ class ExternBaseClass:
                 self.extendClassName = HxString.substr(_this,(pos + 1),None)
                 self.extendClassName = StringTools.replace(self.extendClassName," ","")
                 self.extendClassName = StringTools.replace(self.extendClassName,"{","")
-        tmp = None
         if (self.extendClassName is not None):
-            _this = self.extendClassName
-            startIndex = None
-            tmp = (((_this.find("NSObject") if ((startIndex is None)) else HxString.indexOfImpl(_this,"NSObject",startIndex))) == -1)
-        else:
-            tmp = False
-        if tmp:
             _this = self.extendClassName
             startIndex = None
             if (((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) != -1):

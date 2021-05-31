@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("NSCollectionLayoutSpacing")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutSpacing extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():NSCollectionLayoutSpacing;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSCollectionLayoutSpacing;
+extern class NSCollectionLayoutSpacing extends NSObject
+{
 
 	@:native("flexibleSpacing")
 	overload public static function flexibleSpacing(flexibleSpacing:Float):NSCollectionLayoutSpacing;

@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSDataAsset")
 @:include("UIKit/UIKit.h")
-extern class NSDataAsset extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():NSDataAsset;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSDataAsset;
+extern class NSDataAsset extends NSObject
+{
 
 	@:native("init")
 	overload public function init():NSDataAsset;

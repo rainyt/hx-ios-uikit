@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UICollectionLayoutListConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UICollectionLayoutListConfiguration extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionLayoutListConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionLayoutListConfiguration;
+extern class UICollectionLayoutListConfiguration extends NSObject
+{
 
 	@:native("init")
 	overload public function init():UICollectionLayoutListConfiguration;

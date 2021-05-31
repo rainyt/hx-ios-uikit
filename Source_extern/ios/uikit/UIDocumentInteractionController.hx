@@ -4,13 +4,9 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIDocumentInteractionController")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentInteractionController extends NSObject<UIActionSheetDelegate>{
-
-	@:native("alloc")
-	overload public static function alloc():UIDocumentInteractionController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDocumentInteractionController;
+extern class UIDocumentInteractionController extends NSObject
+implements cpp.objc.Protocol<UIActionSheetDelegate>
+{
 
 	@:native("interactionControllerWithURL")
 	overload public static function interactionControllerWithURL(url:Dynamic):UIDocumentInteractionController;

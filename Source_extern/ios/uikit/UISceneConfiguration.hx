@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UISceneConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UISceneConfiguration extends NSObject<NSCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UISceneConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISceneConfiguration;
+extern class UISceneConfiguration extends NSObject
+{
 
 	@:native("configurationWithName:sessionRole")
 	overload public static function configurationWithName_sessionRole(name:NSString, sessionRole:Dynamic):UISceneConfiguration;

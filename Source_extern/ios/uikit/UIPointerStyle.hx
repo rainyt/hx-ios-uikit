@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIPointerStyle")
 @:include("UIKit/UIKit.h")
-extern class UIPointerStyle extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPointerStyle;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPointerStyle;
+extern class UIPointerStyle extends NSObject
+{
 
 	@:native("styleWithEffect:shape")
 	overload public static function styleWithEffect_shape(effect:UIPointerEffect, shape:UIPointerShape):UIPointerStyle;

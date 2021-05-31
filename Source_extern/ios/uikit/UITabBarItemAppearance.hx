@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UITabBarItemAppearance")
 @:include("UIKit/UIKit.h")
-extern class UITabBarItemAppearance extends NSObject<NSCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UITabBarItemAppearance;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITabBarItemAppearance;
+extern class UITabBarItemAppearance extends NSObject
+{
 
 	@:native("init")
 	overload public function init():UITabBarItemAppearance;

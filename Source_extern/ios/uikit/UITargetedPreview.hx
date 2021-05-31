@@ -4,13 +4,8 @@ import ios.objc.CGSize;
 @:objc
 @:native("UITargetedPreview")
 @:include("UIKit/UIKit.h")
-extern class UITargetedPreview extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UITargetedPreview;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITargetedPreview;
+extern class UITargetedPreview extends NSObject
+{
 
 	@:native("initWithView:parameters:target")
 	overload public function initWithView_parameters_target(view:UIView, parameters:UIPreviewParameters, target:UIPreviewTarget):UITargetedPreview;

@@ -9,13 +9,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewLayoutAttributes")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewLayoutAttributes extends NSObject<NSCopying,UIDynamicItem>{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewLayoutAttributes;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewLayoutAttributes;
+extern class UICollectionViewLayoutAttributes extends NSObject
+implements cpp.objc.Protocol<UIDynamicItem>
+{
 
 	@:native("frame")
 	public var frame:CGRect;

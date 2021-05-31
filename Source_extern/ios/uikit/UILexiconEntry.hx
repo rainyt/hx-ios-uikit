@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UILexiconEntry")
 @:include("UIKit/UIKit.h")
-extern class UILexiconEntry extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UILexiconEntry;
-
-	@:native("autorelease")
-	overload public static function autorelease():UILexiconEntry;
+extern class UILexiconEntry extends NSObject
+{
 
 	@:native("documentText")
 	public var documentText:NSString;

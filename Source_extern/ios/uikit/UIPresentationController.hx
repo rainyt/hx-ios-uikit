@@ -4,13 +4,10 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPresentationController")
 @:include("UIKit/UIKit.h")
-extern class UIPresentationController extends NSObject<UIAppearanceContainer,UITraitEnvironment,UIContentContainer,UIFocusEnvironment>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPresentationController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPresentationController;
+extern class UIPresentationController extends NSObject
+implements cpp.objc.Protocol<UITraitEnvironment>
+implements cpp.objc.Protocol<UIContentContainer>
+{
 
 	@:native("presentingViewController")
 	public var presentingViewController:UIViewController;

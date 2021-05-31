@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSParagraphStyle")
 @:include("UIKit/UIKit.h")
-extern class NSParagraphStyle extends NSObject<NSCopying,NSMutableCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():NSParagraphStyle;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSParagraphStyle;
+extern class NSParagraphStyle extends NSObject
+{
 
 	@:native("defaultWritingDirectionForLanguage")
 	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):NSWritingDirection;

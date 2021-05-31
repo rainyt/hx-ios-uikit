@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewCompositionalLayoutConfiguration")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewCompositionalLayoutConfiguration extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewCompositionalLayoutConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewCompositionalLayoutConfiguration;
+extern class UICollectionViewCompositionalLayoutConfiguration extends NSObject
+{
 
 	@:native("scrollDirection")
 	public var scrollDirection:UICollectionViewScrollDirection;

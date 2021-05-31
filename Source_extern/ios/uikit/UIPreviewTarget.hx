@@ -5,13 +5,8 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIPreviewTarget")
 @:include("UIKit/UIKit.h")
-extern class UIPreviewTarget extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPreviewTarget;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPreviewTarget;
+extern class UIPreviewTarget extends NSObject
+{
 
 	@:native("initWithContainer:center:transform")
 	overload public function initWithContainer_center_transform(container:UIView, center:CGPoint, transform:CGAffineTransform):UIPreviewTarget;

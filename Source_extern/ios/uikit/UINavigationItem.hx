@@ -4,13 +4,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UINavigationItem")
 @:include("UIKit/UIKit.h")
-extern class UINavigationItem extends NSObject<NSCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UINavigationItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UINavigationItem;
+extern class UINavigationItem extends NSObject
+{
 
 	@:native("initWithTitle")
 	overload public function initWithTitle(title:NSString):UINavigationItem;

@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIDragPreview")
 @:include("UIKit/UIKit.h")
-extern class UIDragPreview extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIDragPreview;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDragPreview;
+extern class UIDragPreview extends NSObject
+{
 
 	@:native("initWithView:parameters")
 	overload public function initWithView_parameters(view:UIView, parameters:UIDragPreviewParameters):UIDragPreview;

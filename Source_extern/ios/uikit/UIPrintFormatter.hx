@@ -4,13 +4,8 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrintFormatter")
 @:include("UIKit/UIKit.h")
-extern class UIPrintFormatter extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPrintFormatter;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPrintFormatter;
+extern class UIPrintFormatter extends NSObject
+{
 
 	@:native("printPageRenderer")
 	public var printPageRenderer:UIPrintPageRenderer;

@@ -3,13 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UIDocumentBrowserTransitionController")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentBrowserTransitionController extends NSObject<UIViewControllerAnimatedTransitioning>{
-
-	@:native("alloc")
-	overload public static function alloc():UIDocumentBrowserTransitionController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDocumentBrowserTransitionController;
+extern class UIDocumentBrowserTransitionController extends NSObject
+implements cpp.objc.Protocol<UIViewControllerAnimatedTransitioning>
+{
 
 	@:native("init")
 	overload public function init():UIDocumentBrowserTransitionController;

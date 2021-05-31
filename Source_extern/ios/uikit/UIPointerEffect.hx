@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIPointerEffect")
 @:include("UIKit/UIKit.h")
-extern class UIPointerEffect extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():UIPointerEffect;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPointerEffect;
+extern class UIPointerEffect extends NSObject
+{
 
 	@:native("effectWithPreview")
 	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerEffect;

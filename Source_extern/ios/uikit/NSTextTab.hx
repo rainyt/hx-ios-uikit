@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("NSTextTab")
 @:include("UIKit/UIKit.h")
-extern class NSTextTab extends NSObject<NSCopying,NSCoding,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():NSTextTab;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSTextTab;
+extern class NSTextTab extends NSObject
+{
 
 	@:native("columnTerminatorsForLocale")
 	overload public static function columnTerminatorsForLocale(aLocale:Dynamic):Dynamic;

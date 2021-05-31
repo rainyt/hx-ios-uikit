@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("NSCollectionLayoutDimension")
 @:include("UIKit/UIKit.h")
-extern class NSCollectionLayoutDimension extends NSObject<NSCopying>{
-
-	@:native("alloc")
-	overload public static function alloc():NSCollectionLayoutDimension;
-
-	@:native("autorelease")
-	overload public static function autorelease():NSCollectionLayoutDimension;
+extern class NSCollectionLayoutDimension extends NSObject
+{
 
 	@:native("fractionalWidthDimension")
 	overload public static function fractionalWidthDimension(fractionalWidth:Float):NSCollectionLayoutDimension;

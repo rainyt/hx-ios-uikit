@@ -3,13 +3,9 @@ package ios.uikit;
 @:objc
 @:native("UIBarItem")
 @:include("UIKit/UIKit.h")
-extern class UIBarItem extends NSObject<NSCoding,UIAppearance>{
-
-	@:native("alloc")
-	overload public static function alloc():UIBarItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIBarItem;
+extern class UIBarItem extends NSObject
+implements cpp.objc.Protocol<UIAppearance>
+{
 
 	@:native("init")
 	overload public function init():UIBarItem;

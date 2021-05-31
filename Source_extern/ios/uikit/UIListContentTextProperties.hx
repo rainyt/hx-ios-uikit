@@ -3,13 +3,8 @@ package ios.uikit;
 @:objc
 @:native("UIListContentTextProperties")
 @:include("UIKit/UIKit.h")
-extern class UIListContentTextProperties extends NSObject<NSCopying,NSSecureCoding>{
-
-	@:native("alloc")
-	overload public static function alloc():UIListContentTextProperties;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIListContentTextProperties;
+extern class UIListContentTextProperties extends NSObject
+{
 
 	@:native("font")
 	public var font:UIFont;
