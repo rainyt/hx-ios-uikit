@@ -6,12 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UISimpleTextPrintFormatter extends UIPrintFormatter{
 
-	@:native("alloc")
-	overload public static function alloc():UISimpleTextPrintFormatter;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISimpleTextPrintFormatter;
-
 	@:native("initWithText")
 	overload public function initWithText(text:NSString):UISimpleTextPrintFormatter;
 

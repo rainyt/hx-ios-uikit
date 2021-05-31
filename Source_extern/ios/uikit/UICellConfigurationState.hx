@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UICellConfigurationState extends UIViewConfigurationState{
 
-	@:native("alloc")
-	overload public static function alloc():UICellConfigurationState;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICellConfigurationState;
-
 	@:native("editing")
 	public var editing:Bool;
 

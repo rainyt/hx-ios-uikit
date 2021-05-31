@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UITableViewDropProposal extends UIDropProposal{
 
-	@:native("alloc")
-	overload public static function alloc():UITableViewDropProposal;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableViewDropProposal;
-
 	@:native("initWithDropOperation:intent")
 	overload public function initWithDropOperation_intent(operation:UIDropOperation, intent:UITableViewDropIntent):UITableViewDropProposal;
 

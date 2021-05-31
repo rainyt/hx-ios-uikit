@@ -5,11 +5,5 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIHoverGestureRecognizer extends UIGestureRecognizer{
 
-	@:native("alloc")
-	overload public static function alloc():UIHoverGestureRecognizer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIHoverGestureRecognizer;
-
 
 }

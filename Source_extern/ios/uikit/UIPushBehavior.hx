@@ -6,12 +6,6 @@ import ios.objc.CGVector;
 @:include("UIKit/UIKit.h")
 extern class UIPushBehavior extends UIDynamicBehavior{
 
-	@:native("alloc")
-	overload public static function alloc():UIPushBehavior;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPushBehavior;
-
 	@:native("initWithItems:mode")
 	overload public function initWithItems_mode(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
 

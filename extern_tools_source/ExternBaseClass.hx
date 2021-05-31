@@ -115,10 +115,29 @@ class ExternBaseClass {
 		}
 	}
 
+	/**
+	 * 判断当前方法是否已经存在
+	 * @param t 
+	 * @return Bool
+	 */
 	public function hasFuncOrAttr(t:ExternBaseClassFunProperty):Bool {
 		for (index => value in funcAndAttr) {
 			if (value.type == t.type && value.name == t.name)
 				return true;
+		}
+		if (extendClassName != null) {
+			if (ExternTools.classDefine.exists(extendClassName)) {
+				return ExternTools.classDefine.get(extendClassName).hasFuncOrAttr(t);
+			}
+		}
+		return false;
+	}
+
+	public function hasFuncExtendsOrAttr(t:ExternBaseClassFunProperty):Bool {
+		if (extendClassName != null) {
+			if (ExternTools.classDefine.exists(extendClassName)) {
+				return ExternTools.classDefine.get(extendClassName).hasFuncOrAttr(t);
+			}
 		}
 		return false;
 	}
@@ -155,6 +174,8 @@ class ExternBaseClass {
 		haxe += "@:include(\"UIKit/UIKit.h\")\n";
 		haxe += "extern class " + className + (extendClassName != null ? " extends " + extendClassName : "") + "{\n\n";
 		for (index => value in funcAndAttr) {
+			if (hasFuncExtendsOrAttr(value))
+				continue;
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
@@ -166,6 +187,7 @@ class ExternBaseClass {
 					haxe += "\tpublic var " + value.name + ":" + value.returnClass + ";\n\n";
 			}
 		}
+
 		haxe += "\n}";
 		return haxe;
 	}

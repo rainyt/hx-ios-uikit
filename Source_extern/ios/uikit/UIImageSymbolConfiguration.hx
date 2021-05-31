@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIImageSymbolConfiguration extends UIImageConfiguration{
 
-	@:native("alloc")
-	overload public static function alloc():UIImageSymbolConfiguration;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImageSymbolConfiguration;
-
 	@:native("unspecifiedConfiguration")
 	overload public static function unspecifiedConfiguration():UIImageSymbolConfiguration;
 

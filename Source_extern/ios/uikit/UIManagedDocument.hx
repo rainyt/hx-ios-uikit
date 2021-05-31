@@ -6,12 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UIManagedDocument extends UIDocument{
 
-	@:native("alloc")
-	overload public static function alloc():UIManagedDocument;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIManagedDocument;
-
 	@:native("persistentStoreName")
 	overload public static function persistentStoreName():NSString;
 

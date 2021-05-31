@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UICollectionReusableView extends UIView{
 
-	@:native("alloc")
-	overload public static function alloc():UICollectionReusableView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionReusableView;
-
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;
 

@@ -6,12 +6,6 @@ import ios.objc.CGPoint;
 @:include("UIKit/UIKit.h")
 extern class UICollisionBehavior extends UIDynamicBehavior{
 
-	@:native("alloc")
-	overload public static function alloc():UICollisionBehavior;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollisionBehavior;
-
 	@:native("initWithItems")
 	overload public function initWithItems(items:Dynamic):UICollisionBehavior;
 

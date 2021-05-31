@@ -6,12 +6,6 @@ import ios.objc.CGVector;
 @:include("UIKit/UIKit.h")
 extern class UIGravityBehavior extends UIDynamicBehavior{
 
-	@:native("alloc")
-	overload public static function alloc():UIGravityBehavior;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIGravityBehavior;
-
 	@:native("initWithItems")
 	overload public function initWithItems(items:Dynamic):UIGravityBehavior;
 

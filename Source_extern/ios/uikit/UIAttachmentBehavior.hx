@@ -7,12 +7,6 @@ import ios.objc.CGVector;
 @:include("UIKit/UIKit.h")
 extern class UIAttachmentBehavior extends UIDynamicBehavior{
 
-	@:native("alloc")
-	overload public static function alloc():UIAttachmentBehavior;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAttachmentBehavior;
-
 	@:native("initWithItem:attachedToAnchor")
 	overload public function initWithItem_attachedToAnchor(item:Dynamic, attachedToAnchor:CGPoint):UIAttachmentBehavior;
 

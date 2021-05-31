@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UICommand extends UIMenuElement{
 
-	@:native("alloc")
-	overload public static function alloc():UICommand;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICommand;
-
 	@:native("action")
 	public var action:String;
 
@@ -25,12 +19,6 @@ extern class UICommand extends UIMenuElement{
 
 	@:native("alternates")
 	public var alternates:Dynamic;
-
-	@:native("init")
-	overload public function init():UICommand;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICommand;
 
 
 }

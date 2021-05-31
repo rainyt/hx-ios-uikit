@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIGraphicsImageRendererFormat extends UIGraphicsRendererFormat{
 
-	@:native("alloc")
-	overload public static function alloc():UIGraphicsImageRendererFormat;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIGraphicsImageRendererFormat;
-
 	@:native("scale")
 	public var scale:Float;
 

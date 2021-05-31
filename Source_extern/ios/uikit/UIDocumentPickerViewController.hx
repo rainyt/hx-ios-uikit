@@ -5,20 +5,11 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIDocumentPickerViewController extends UIViewController{
 
-	@:native("alloc")
-	overload public static function alloc():UIDocumentPickerViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDocumentPickerViewController;
-
 	@:native("initForOpeningContentTypes:asCopy")
 	overload public function initForOpeningContentTypes_asCopy(contentTypes:Dynamic, asCopy:Bool):UIDocumentPickerViewController;
 
 	@:native("initForOpeningContentTypes")
 	overload public function initForOpeningContentTypes(contentTypes:Dynamic):UIDocumentPickerViewController;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIDocumentPickerViewController;
 
 	@:native("initForExportingURLs:asCopy")
 	overload public function initForExportingURLs_asCopy(urls:Dynamic, asCopy:Bool):UIDocumentPickerViewController;

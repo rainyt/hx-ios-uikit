@@ -6,12 +6,6 @@ import ios.objc.CGPoint;
 @:include("UIKit/UIKit.h")
 extern class UIPanGestureRecognizer extends UIGestureRecognizer{
 
-	@:native("alloc")
-	overload public static function alloc():UIPanGestureRecognizer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPanGestureRecognizer;
-
 	@:native("minimumNumberOfTouches")
 	public var minimumNumberOfTouches:Int;
 

@@ -6,15 +6,6 @@ import ios.objc.CGRect;
 @:include("UIKit/UIKit.h")
 extern class UIPopoverPresentationController extends UIPresentationController{
 
-	@:native("alloc")
-	overload public static function alloc():UIPopoverPresentationController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPopoverPresentationController;
-
-	@:native("delegate")
-	public var delegate:Dynamic;
-
 	@:native("permittedArrowDirections")
 	public var permittedArrowDirections:UIPopoverArrowDirection;
 

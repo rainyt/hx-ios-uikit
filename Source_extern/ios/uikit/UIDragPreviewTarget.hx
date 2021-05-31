@@ -5,11 +5,5 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIDragPreviewTarget extends UIPreviewTarget{
 
-	@:native("alloc")
-	overload public static function alloc():UIDragPreviewTarget;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDragPreviewTarget;
-
 
 }

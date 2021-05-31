@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UITableViewFocusUpdateContext extends UIFocusUpdateContext{
 
-	@:native("alloc")
-	overload public static function alloc():UITableViewFocusUpdateContext;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableViewFocusUpdateContext;
-
 	@:native("previouslyFocusedIndexPath")
 	public var previouslyFocusedIndexPath:Dynamic;
 

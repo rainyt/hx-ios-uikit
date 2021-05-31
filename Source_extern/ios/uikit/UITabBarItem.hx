@@ -6,18 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UITabBarItem extends UIBarItem{
 
-	@:native("alloc")
-	overload public static function alloc():UITabBarItem;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITabBarItem;
-
-	@:native("init")
-	overload public function init():UITabBarItem;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITabBarItem;
-
 	@:native("initWithTitle:image:tag")
 	overload public function initWithTitle_image_tag(title:NSString, image:UIImage, tag:Int):UITabBarItem;
 

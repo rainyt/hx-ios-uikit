@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UITabBar extends UIView{
 
-	@:native("alloc")
-	overload public static function alloc():UITabBar;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITabBar;
-
 	@:native("delegate")
 	public var delegate:Dynamic;
 
@@ -28,9 +22,6 @@ extern class UITabBar extends UIView{
 
 	@:native("customizing")
 	public var customizing:Bool;
-
-	@:native("tintColor")
-	public var tintColor:UIColor;
 
 	@:native(" UI_APPEARANCE_SELECTOR")
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;

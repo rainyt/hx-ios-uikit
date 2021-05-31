@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIColorWell extends UIControl{
 
-	@:native("alloc")
-	overload public static function alloc():UIColorWell;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIColorWell;
-
 	@:native("supportsAlpha")
 	public var supportsAlpha:Bool;
 

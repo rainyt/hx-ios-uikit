@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIBlurEffect extends UIVisualEffect{
 
-	@:native("alloc")
-	overload public static function alloc():UIBlurEffect;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIBlurEffect;
-
 	@:native("effectWithStyle")
 	overload public static function effectWithStyle(style:UIBlurEffectStyle):UIBlurEffect;
 

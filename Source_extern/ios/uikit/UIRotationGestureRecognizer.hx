@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIRotationGestureRecognizer extends UIGestureRecognizer{
 
-	@:native("alloc")
-	overload public static function alloc():UIRotationGestureRecognizer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIRotationGestureRecognizer;
-
 	@:native("rotation")
 	public var rotation:Float;
 

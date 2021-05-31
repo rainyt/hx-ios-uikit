@@ -6,18 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UICloudSharingController extends UIViewController{
 
-	@:native("alloc")
-	overload public static function alloc():UICloudSharingController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICloudSharingController;
-
-	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UICloudSharingController;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICloudSharingController;
-
 	@:native("initWithPreparationHandler")
 	overload public function initWithPreparationHandler(preparationHandler:Dynamic):UICloudSharingController;
 

@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIImageView extends UIView{
 
-	@:native("alloc")
-	overload public static function alloc():UIImageView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIImageView;
-
 	@:native("initWithImage")
 	overload public function initWithImage(image:UIImage):UIImageView;
 
@@ -26,9 +20,6 @@ extern class UIImageView extends UIView{
 	@:native("preferredSymbolConfiguration")
 	public var preferredSymbolConfiguration:UIImageSymbolConfiguration;
 
-	@:native("userInteractionEnabled")
-	public var userInteractionEnabled:Bool;
-
 	@:native("highlighted")
 	public var highlighted:Bool;
 
@@ -37,9 +28,6 @@ extern class UIImageView extends UIView{
 
 	@:native("animationRepeatCount")
 	public var animationRepeatCount:Int;
-
-	@:native("tintColor")
-	public var tintColor:UIColor;
 
 	@:native("startAnimating")
 	overload public function startAnimating():Void;

@@ -6,17 +6,8 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UIInterpolatingMotionEffect extends UIMotionEffect{
 
-	@:native("alloc")
-	overload public static function alloc():UIInterpolatingMotionEffect;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIInterpolatingMotionEffect;
-
 	@:native("initWithKeyPath:type")
 	overload public function initWithKeyPath_type(keyPath:NSString, type:UIInterpolatingMotionEffectType):UIInterpolatingMotionEffect;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIInterpolatingMotionEffect;
 
 	@:native("keyPath")
 	public var keyPath:NSString;

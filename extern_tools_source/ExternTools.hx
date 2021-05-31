@@ -45,7 +45,7 @@ class ExternTools {
 		pkg = pkg.substr(0, pkg.indexOf("."));
 		var haxefile = hfile.substr(hfile.lastIndexOf("/") + 1) + "x";
 		if (haxefile.indexOf("+") != -1) {
-			// trace("igone:" + haxefile);
+			trace("igone:" + haxefile);
 			return;
 		}
 		var classpkg = "ios." + pkg.toLowerCase();

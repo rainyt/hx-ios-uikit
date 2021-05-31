@@ -6,12 +6,6 @@ import ios.objc.CGSize;
 @:include("UIKit/UIKit.h")
 extern class UIPageControl extends UIControl{
 
-	@:native("alloc")
-	overload public static function alloc():UIPageControl;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPageControl;
-
 	@:native("numberOfPages")
 	public var numberOfPages:Int;
 

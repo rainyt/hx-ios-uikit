@@ -6,18 +6,6 @@ import ios.objc.CGRect;
 @:include("UIKit/UIKit.h")
 extern class UIStackView extends UIView{
 
-	@:native("alloc")
-	overload public static function alloc():UIStackView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIStackView;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIStackView;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIStackView;
-
 	@:native("initWithArrangedSubviews")
 	overload public function initWithArrangedSubviews(views:Dynamic):UIStackView;
 

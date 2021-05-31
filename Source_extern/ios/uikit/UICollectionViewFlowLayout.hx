@@ -6,12 +6,6 @@ import ios.objc.CGSize;
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewFlowLayout;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewFlowLayout;
-
 	@:native("minimumLineSpacing")
 	public var minimumLineSpacing:Float;
 

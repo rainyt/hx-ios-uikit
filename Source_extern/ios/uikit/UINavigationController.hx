@@ -6,23 +6,11 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UINavigationController extends UIViewController{
 
-	@:native("alloc")
-	overload public static function alloc():UINavigationController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UINavigationController;
-
 	@:native("initWithNavigationBarClass:toolbarClass")
 	overload public function initWithNavigationBarClass_toolbarClass(navigationBarClass:Dynamic, toolbarClass:Dynamic):UINavigationController;
 
 	@:native("initWithRootViewController")
 	overload public function initWithRootViewController(rootViewController:UIViewController):UINavigationController;
-
-	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UINavigationController;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:NSCoder):UINavigationController;
 
 	@:native("pushViewController:animated")
 	overload public function pushViewController_animated(viewController:UIViewController, animated:Bool):Void;
@@ -68,9 +56,6 @@ extern class UINavigationController extends UIViewController{
 
 	@:native("interactivePopGestureRecognizer")
 	public var interactivePopGestureRecognizer:UIGestureRecognizer;
-
-	@:native("showViewController:sender")
-	overload public function showViewController_sender(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("hidesBarsWhenKeyboardAppears")
 	public var hidesBarsWhenKeyboardAppears:Bool;

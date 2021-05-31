@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewFlowLayoutInvalidationContext extends UICollectionViewLayoutInvalidationContext{
 
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewFlowLayoutInvalidationContext;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewFlowLayoutInvalidationContext;
-
 	@:native("invalidateFlowLayoutDelegateMetrics")
 	public var invalidateFlowLayoutDelegateMetrics:Bool;
 

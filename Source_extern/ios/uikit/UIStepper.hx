@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIStepper extends UIControl{
 
-	@:native("alloc")
-	overload public static function alloc():UIStepper;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIStepper;
-
 	@:native("continuous")
 	public var continuous:Bool;
 

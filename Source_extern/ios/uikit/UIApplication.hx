@@ -7,12 +7,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UIApplication extends UIResponder{
 
-	@:native("alloc")
-	overload public static function alloc():UIApplication;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIApplication;
-
 	@:native("sharedApplication")
 	overload public static function sharedApplication():UIApplication;
 

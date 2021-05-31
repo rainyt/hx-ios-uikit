@@ -7,12 +7,6 @@ import ios.objc.CGVector;
 @:include("UIKit/UIKit.h")
 extern class UIFieldBehavior extends UIDynamicBehavior{
 
-	@:native("alloc")
-	overload public static function alloc():UIFieldBehavior;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIFieldBehavior;
-
 	@:native("init")
 	overload public function init():UIFieldBehavior;
 

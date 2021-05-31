@@ -6,12 +6,6 @@ import ios.objc.CGPoint;
 @:include("UIKit/UIKit.h")
 extern class UIDynamicItemBehavior extends UIDynamicBehavior{
 
-	@:native("alloc")
-	overload public static function alloc():UIDynamicItemBehavior;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDynamicItemBehavior;
-
 	@:native("initWithItems")
 	overload public function initWithItems(items:Dynamic):UIDynamicItemBehavior;
 

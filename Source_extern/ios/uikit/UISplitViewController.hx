@@ -6,18 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UISplitViewController extends UIViewController{
 
-	@:native("alloc")
-	overload public static function alloc():UISplitViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISplitViewController;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UISplitViewController;
-
-	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UISplitViewController;
-
 	@:native("initWithStyle")
 	overload public function initWithStyle(style:UISplitViewControllerStyle):UISplitViewController;
 
@@ -95,12 +83,6 @@ extern class UISplitViewController extends UIViewController{
 
 	@:native("primaryEdge")
 	public var primaryEdge:UISplitViewControllerPrimaryEdge;
-
-	@:native("showViewController:sender")
-	overload public function showViewController_sender(vc:UIViewController, sender:Dynamic):Void;
-
-	@:native("showDetailViewController:sender")
-	overload public function showDetailViewController_sender(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("primaryBackgroundStyle")
 	public var primaryBackgroundStyle:UISplitViewControllerBackgroundStyle;

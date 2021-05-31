@@ -7,20 +7,8 @@ import ios.objc.CGRect;
 @:include("UIKit/UIKit.h")
 extern class UIAlertView extends UIView{
 
-	@:native("alloc")
-	overload public static function alloc():UIAlertView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAlertView;
-
 	@:native("initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:...")
 	overload public function initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles_...(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):UIAlertView;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):Dynamic;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIAlertView;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

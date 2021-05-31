@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIDocumentPickerExtensionViewController extends UIViewController{
 
-	@:native("alloc")
-	overload public static function alloc():UIDocumentPickerExtensionViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIDocumentPickerExtensionViewController;
-
 	@:native("dismissGrantingAccessToURL")
 	overload public function dismissGrantingAccessToURL(url:Dynamic):Void;
 

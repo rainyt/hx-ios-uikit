@@ -65,7 +65,7 @@ class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
     __slots__ = ("pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys")
     _hx_fields = ["pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys"]
-    _hx_methods = ["putClass", "hasFuncOrAttr", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
+    _hx_methods = ["putClass", "hasFuncOrAttr", "hasFuncExtendsOrAttr", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
 
     def __init__(self,_hdata,hextern,defcall):
         self._hdata = None
@@ -187,6 +187,15 @@ class ExternBaseClass:
             value = _g1_value
             if ((value.type == t.type) and ((value.name == t.name))):
                 return True
+        if (self.extendClassName is not None):
+            if (self.extendClassName in ExternTools.classDefine.h):
+                return ExternTools.classDefine.h.get(self.extendClassName,None).hasFuncOrAttr(t)
+        return False
+
+    def hasFuncExtendsOrAttr(self,t):
+        if (self.extendClassName is not None):
+            if (self.extendClassName in ExternTools.classDefine.h):
+                return ExternTools.classDefine.h.get(self.extendClassName,None).hasFuncOrAttr(t)
         return False
 
     def toHaxeFile(self):
@@ -229,6 +238,8 @@ class ExternBaseClass:
             _g_current = (_g_current + 1)
             index = _g1_key
             value = _g1_value
+            if self.hasFuncExtendsOrAttr(value):
+                continue
             _g = value.type
             _hx_local_7 = len(_g)
             if (_hx_local_7 == 4):
@@ -460,6 +471,7 @@ class ExternTools:
         haxefile = (HxOverrides.stringOrNull(HxString.substr(hfile,(pos + 1),None)) + "x")
         startIndex = None
         if (((haxefile.find("+") if ((startIndex is None)) else HxString.indexOfImpl(haxefile,"+",startIndex))) != -1):
+            print(str(("igone:" + ("null" if haxefile is None else haxefile))))
             return
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
@@ -807,7 +819,6 @@ class ObjcFun:
             if ((a[0] if 0 < len(a) else None) == ""):
                 continue
             r.append(_hx_AnonObject({'name': (a[0] if 0 < len(a) else None), 'type': (a[1] if 1 < len(a) else None)}))
-        print(str(r))
         return r
 
 

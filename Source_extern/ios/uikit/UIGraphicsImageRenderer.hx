@@ -7,20 +7,11 @@ import ios.objc.CGRect;
 @:include("UIKit/UIKit.h")
 extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 
-	@:native("alloc")
-	overload public static function alloc():UIGraphicsImageRenderer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIGraphicsImageRenderer;
-
 	@:native("initWithSize")
 	overload public function initWithSize(size:CGSize):UIGraphicsImageRenderer;
 
 	@:native("initWithSize:format")
 	overload public function initWithSize_format(size:CGSize, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
-
-	@:native("initWithBounds:format")
-	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("imageWithActions")
 	overload public function imageWithActions(actions:Dynamic):UIImage;

@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewListCell extends UICollectionViewCell{
 
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewListCell;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewListCell;
-
 	@:native("defaultContentConfiguration")
 	overload public function defaultContentConfiguration():UIListContentConfiguration;
 

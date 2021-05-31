@@ -6,17 +6,8 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UITableViewHeaderFooterView extends UIView{
 
-	@:native("alloc")
-	overload public static function alloc():UITableViewHeaderFooterView;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITableViewHeaderFooterView;
-
 	@:native("initWithReuseIdentifier")
 	overload public function initWithReuseIdentifier(reuseIdentifier:NSString):UITableViewHeaderFooterView;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UITableViewHeaderFooterView;
 
 	@:native("configurationState")
 	public var configurationState:UIViewConfigurationState;

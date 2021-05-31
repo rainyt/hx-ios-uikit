@@ -5,17 +5,8 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIPageViewController extends UIViewController{
 
-	@:native("alloc")
-	overload public static function alloc():UIPageViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIPageViewController;
-
 	@:native("initWithTransitionStyle:navigationOrientation:options")
 	overload public function initWithTransitionStyle_navigationOrientation_options(style:UIPageViewControllerTransitionStyle, navigationOrientation:UIPageViewControllerNavigationOrientation, options:Dynamic):UIPageViewController;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIPageViewController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

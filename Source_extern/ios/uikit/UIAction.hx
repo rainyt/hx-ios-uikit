@@ -6,12 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UIAction extends UIMenuElement{
 
-	@:native("alloc")
-	overload public static function alloc():UIAction;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAction;
-
 	@:native("identifier")
 	public var identifier:NSString;
 
@@ -26,9 +20,6 @@ extern class UIAction extends UIMenuElement{
 
 	@:native("actionWithHandler")
 	overload public static function actionWithHandler(handler:Dynamic):UIAction;
-
-	@:native("init")
-	overload public function init():UIAction;
 
 
 }

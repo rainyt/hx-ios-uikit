@@ -139,7 +139,7 @@ class ObjcFun {
 			});
 		}
 
-		trace(r);
+		// trace(r);
 		return r;
 	}
 }

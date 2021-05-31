@@ -7,12 +7,6 @@ import ios.objc.CGRect;
 @:include("UIKit/UIKit.h")
 extern class UIWindow extends UIView{
 
-	@:native("alloc")
-	overload public static function alloc():UIWindow;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIWindow;
-
 	@:native("initWithWindowScene")
 	overload public function initWithWindowScene(windowScene:UIWindowScene):UIWindow;
 

@@ -8,12 +8,6 @@ import ios.objc.CGPoint;
 @:include("UIKit/UIKit.h")
 extern class UIGraphicsPDFRendererContext extends UIGraphicsRendererContext{
 
-	@:native("alloc")
-	overload public static function alloc():UIGraphicsPDFRendererContext;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIGraphicsPDFRendererContext;
-
 	@:native("pdfContextBounds")
 	public var pdfContextBounds:CGRect;
 

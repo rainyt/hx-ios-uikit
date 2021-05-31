@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UINavigationBarAppearance extends UIBarAppearance{
 
-	@:native("alloc")
-	overload public static function alloc():UINavigationBarAppearance;
-
-	@:native("autorelease")
-	overload public static function autorelease():UINavigationBarAppearance;
-
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:Dynamic;
 

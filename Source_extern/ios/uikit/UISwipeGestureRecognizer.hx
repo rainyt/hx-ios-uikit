@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 
-	@:native("alloc")
-	overload public static function alloc():UISwipeGestureRecognizer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UISwipeGestureRecognizer;
-
 	@:native("numberOfTouchesRequired")
 	public var numberOfTouchesRequired:Int;
 

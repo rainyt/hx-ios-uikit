@@ -6,12 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UIColorPickerViewController extends UIViewController{
 
-	@:native("alloc")
-	overload public static function alloc():UIColorPickerViewController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIColorPickerViewController;
-
 	@:native("delegate")
 	public var delegate:Dynamic;
 
@@ -20,9 +14,6 @@ extern class UIColorPickerViewController extends UIViewController{
 
 	@:native("supportsAlpha")
 	public var supportsAlpha:Bool;
-
-	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIColorPickerViewController;
 
 	@:native("init")
 	overload public function init():UIColorPickerViewController;

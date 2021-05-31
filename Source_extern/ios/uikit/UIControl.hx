@@ -7,18 +7,6 @@ import ios.objc.CGPoint;
 @:include("UIKit/UIKit.h")
 extern class UIControl extends UIView{
 
-	@:native("alloc")
-	overload public static function alloc():UIControl;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIControl;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIControl;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIControl;
-
 	@:native("initWithFrame:primaryAction")
 	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;
 

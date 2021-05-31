@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UITapGestureRecognizer extends UIGestureRecognizer{
 
-	@:native("alloc")
-	overload public static function alloc():UITapGestureRecognizer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UITapGestureRecognizer;
-
 	@:native("numberOfTapsRequired")
 	public var numberOfTapsRequired:Int;
 

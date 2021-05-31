@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UILongPressGestureRecognizer extends UIGestureRecognizer{
 
-	@:native("alloc")
-	overload public static function alloc():UILongPressGestureRecognizer;
-
-	@:native("autorelease")
-	overload public static function autorelease():UILongPressGestureRecognizer;
-
 	@:native("numberOfTapsRequired")
 	public var numberOfTapsRequired:Int;
 

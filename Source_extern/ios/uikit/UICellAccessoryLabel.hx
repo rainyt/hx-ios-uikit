@@ -6,12 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UICellAccessoryLabel extends UICellAccessory{
 
-	@:native("alloc")
-	overload public static function alloc():UICellAccessoryLabel;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICellAccessoryLabel;
-
 	@:native("initWithText")
 	overload public function initWithText(text:NSString):UICellAccessoryLabel;
 
@@ -20,12 +14,6 @@ extern class UICellAccessoryLabel extends UICellAccessory{
 
 	@:native("adjustsFontForContentSizeCategory")
 	public var adjustsFontForContentSizeCategory:Bool;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICellAccessoryLabel;
-
-	@:native("init")
-	overload public function init():UICellAccessoryLabel;
 
 
 }

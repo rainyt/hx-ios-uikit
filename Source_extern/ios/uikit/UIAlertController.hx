@@ -6,12 +6,6 @@ import cpp.objc.NSString;
 @:include("UIKit/UIKit.h")
 extern class UIAlertController extends UIViewController{
 
-	@:native("alloc")
-	overload public static function alloc():UIAlertController;
-
-	@:native("autorelease")
-	overload public static function autorelease():UIAlertController;
-
 	@:native("alertControllerWithTitle:message:preferredStyle")
 	overload public static function alertControllerWithTitle_message_preferredStyle(title:NSString, message:NSString, preferredStyle:UIAlertControllerStyle):UIAlertController;
 

@@ -5,12 +5,6 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewCell extends UICollectionReusableView{
 
-	@:native("alloc")
-	overload public static function alloc():UICollectionViewCell;
-
-	@:native("autorelease")
-	overload public static function autorelease():UICollectionViewCell;
-
 	@:native("configurationState")
 	public var configurationState:UICellConfigurationState;
 
