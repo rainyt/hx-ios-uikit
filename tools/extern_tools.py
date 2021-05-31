@@ -514,6 +514,16 @@ class ObjcFun:
 
     @staticmethod
     def parsing(typedefs,className,line):
+        startIndex1 = None
+        _hx_len = None
+        if (startIndex1 is None):
+            _hx_len = line.rfind(";", 0, len(line))
+        else:
+            i = line.rfind(";", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len(";"))) if ((i == -1)) else (i + 1))
+            check = line.find(";", startLeft, len(line))
+            _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+        line = HxString.substr(line,0,(_hx_len + 1))
         startIndex = None
         isStatic = (((line.find("+") if ((startIndex is None)) else HxString.indexOfImpl(line,"+",startIndex))) == 0)
         startIndex = None
@@ -548,10 +558,7 @@ class ObjcFun:
                 funcName = HxString.substr(funcName,0,i)
         startIndex = None
         c = (className if ((((returnClass.find("instancetype") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"instancetype",startIndex))) != -1)) else returnClass)
-        if ((c in typedefs.h) and (not typedefs.h.get(c,None).createHaxeFile)):
-            c = typedefs.h.get(c,None).parentClassName
-        if (c == "void"):
-            c = "Void"
+        c = ObjcType.toType(c,typedefs)
         if (funcName == ""):
             print(str(line))
         return _hx_AnonObject({'name': ObjcFun.parsingFuncName(funcName,args), 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
@@ -773,17 +780,25 @@ class ObjcType:
     def toType(t,typedefs):
         if (t is None):
             return t
+        if (t == "BOOL"):
+            return "Bool"
+        if (t == "void"):
+            return "Void"
         tmp = None
+        tmp1 = None
         startIndex = None
         if (((t.find("(") if ((startIndex is None)) else HxString.indexOfImpl(t,"(",startIndex))) == -1):
             startIndex = None
-            tmp = (((t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex))) != -1)
+            tmp1 = (((t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex))) != -1)
+        else:
+            tmp1 = True
+        if (not tmp1):
+            startIndex = None
+            tmp = (((t.find("id") if ((startIndex is None)) else HxString.indexOfImpl(t,"id",startIndex))) != -1)
         else:
             tmp = True
         if tmp:
             return "Dynamic"
-        if (t == "BOOL"):
-            return "Bool"
         t = StringTools.replace(t,"nullable ","")
         return StringTools.replace(StringTools.replace((typedefs.h.get(t,None).parentClassName if (((t in typedefs.h) and (not typedefs.h.get(t,None).createHaxeFile))) else t),"*","")," ","")
 

@@ -26,7 +26,7 @@ extern class NSCollectionLayoutGroup{
 	overload public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("customGroupWithLayoutSize:itemProvider")
-	overload public static function customGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, itemProvider:NSCollectionLayoutGroupCustomItemProvider):NSCollectionLayoutGroup;
+	overload public static function customGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, itemProvider:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutGroup;
@@ -44,7 +44,7 @@ extern class NSCollectionLayoutGroup{
 	public var subitems:Dynamic;
 
 	@:native("visualDescription")
-	overload public function visualDescription():NSString*;
+	overload public function visualDescription():NSString;
 
 
 }

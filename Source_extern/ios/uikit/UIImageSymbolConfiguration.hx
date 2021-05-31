@@ -37,11 +37,11 @@ extern class UIImageSymbolConfiguration{
 	@:native("configurationWithTextStyle:scale")
 	overload public static function configurationWithTextStyle(textStyle:UIFontTextStyle, scale:UIImageSymbolScale):UIImageSymbolConfiguration;
 
-	@:native("configurationWithFont://:for:Type.:UIFontMetrics:get:adjustment:a")
-	overload public static function configurationWithFont(font:UIFont, //:Adjusts, for:Dynamic, Type.:Use, UIFontMetrics:to, get:automatic, adjustment:with, a:custom):UIImageSymbolConfiguration;
+	@:native("configurationWithFont")
+	overload public static function configurationWithFont(font:UIFont):UIImageSymbolConfiguration;
 
-	@:native("configurationWithFont:scale://:for:Type.:UIFontMetrics:get:adjustment:a")
-	overload public static function configurationWithFont(font:UIFont, scale:UIImageSymbolScale, //:Adjusts, for:Dynamic, Type.:Use, UIFontMetrics:to, get:automatic, adjustment:with, a:custom):UIImageSymbolConfiguration;
+	@:native("configurationWithFont:scale")
+	overload public static function configurationWithFont(font:UIFont, scale:UIImageSymbolScale):UIImageSymbolConfiguration;
 
 	@:native("configurationWithoutTextStyle")
 	overload public function configurationWithoutTextStyle():UIImageSymbolConfiguration;
@@ -56,7 +56,7 @@ extern class UIImageSymbolConfiguration{
 	overload public function configurationWithoutPointSizeAndWeight():UIImageSymbolConfiguration;
 
 	@:native("isEqualToConfiguration")
-	overload public function isEqualToConfiguration(otherConfiguration:UIImageSymbolConfiguration):BOOL;
+	overload public function isEqualToConfiguration(otherConfiguration:UIImageSymbolConfiguration):Bool;
 
 
 }

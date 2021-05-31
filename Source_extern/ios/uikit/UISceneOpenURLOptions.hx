@@ -23,7 +23,7 @@ extern class UISceneOpenURLOptions{
 	public var sourceApplication:NSString;
 
 	@:native("annotation")
-	public var annotation:id;
+	public var annotation:Dynamic;
 
 	@:native("openInPlace")
 	public var openInPlace:Bool;

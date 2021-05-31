@@ -29,7 +29,7 @@ extern class UICollectionReusableView{
 	overload public function didTransitionFromLayout(oldLayout:UICollectionViewLayout, toLayout:UICollectionViewLayout):Void;
 
 	@:native("preferredLayoutAttributesFittingAttributes")
-	overload public function preferredLayoutAttributesFittingAttributes(layoutAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutAttributes *;
+	overload public function preferredLayoutAttributesFittingAttributes(layoutAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutAttributes;
 
 
 }

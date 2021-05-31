@@ -16,8 +16,8 @@ extern class UIViewControllerEditing{
 	@:native("editing")
 	public var editing:Bool;
 
-	@:native("setEditing:animated://:the:of:Edit|Done:item:necessary.:who:it:call")
-	overload public function setEditing(editing:Bool, animated:Bool, //:Updates, the:appearance, of:the, Edit|Done:button, item:as, necessary.:Clients, who:override, it:must, call:super):Void;
+	@:native("setEditing:animated")
+	overload public function setEditing(editing:Bool, animated:Bool):Void;
 
 	@:native("editButtonItem")
 	public var editButtonItem:UIBarButtonItem;

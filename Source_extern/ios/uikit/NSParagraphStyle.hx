@@ -16,8 +16,8 @@ extern class NSParagraphStyle{
 	@:native("defaultParagraphStyle")
 	public var defaultParagraphStyle:NSParagraphStyle;
 
-	@:native("defaultWritingDirectionForLanguage::languageName:in:lang")
-	overload public static function defaultWritingDirectionForLanguage(languageName:NSString, ://, languageName:is, in:ISO, lang:region):NSWritingDirection;
+	@:native("defaultWritingDirectionForLanguage")
+	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):NSWritingDirection;
 
 	@:native("lineSpacing")
 	public var lineSpacing:CGFloat;

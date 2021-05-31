@@ -20,7 +20,7 @@ extern class UISplitViewController{
 	overload public function collapseSecondaryViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;
 
 	@:native("separateSecondaryViewControllerForSplitViewController")
-	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):nullable UIViewController *;
+	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):UIViewController;
 
 
 }

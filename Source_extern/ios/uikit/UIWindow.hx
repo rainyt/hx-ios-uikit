@@ -49,14 +49,14 @@ extern class UIWindow{
 	@:native("rootViewController")
 	public var rootViewController:UIViewController;
 
-	@:native("sendEvent:::::::::::called:UIApplication:dispatch:to:inside")
-	overload public function sendEvent(event:UIEvent, :, :, :, :, :, :, :, :, :, ://, called:by, UIApplication:to, dispatch:events, to:views, inside:the):Void;
+	@:native("sendEvent")
+	overload public function sendEvent(event:UIEvent):Void;
 
-	@:native("convertPoint:toWindow:::can:used:convert")
-	overload public function convertPoint(point:CGPoint, toWindow:UIWindow, :, ://, can:be, used:to, convert:to):CGPoint;
+	@:native("convertPoint:toWindow")
+	overload public function convertPoint(point:CGPoint, toWindow:UIWindow):CGPoint;
 
-	@:native("convertPoint:fromWindow::pass:nil")
-	overload public function convertPoint(point:CGPoint, fromWindow:UIWindow, ://, pass:in, nil:to):CGPoint;
+	@:native("convertPoint:fromWindow")
+	overload public function convertPoint(point:CGPoint, fromWindow:UIWindow):CGPoint;
 
 	@:native("convertRect:toWindow")
 	overload public function convertRect(rect:CGRect, toWindow:UIWindow):CGRect;

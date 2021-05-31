@@ -35,7 +35,7 @@ extern class UIRegion{
 	overload public function regionByIntersectionWithRegion(region:UIRegion):UIRegion;
 
 	@:native("containsPoint")
-	overload public function containsPoint(point:CGPoint):BOOL;
+	overload public function containsPoint(point:CGPoint):Bool;
 
 
 }

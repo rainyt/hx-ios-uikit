@@ -17,13 +17,13 @@ extern class UICollectionViewAdditions{
 	overload public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UICollectionViewAdditions;
 
 	@:native("layoutAttributesForCellAtIndexPath")
-	overload public function layoutAttributesForCellAtIndexPath(indexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForCellAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind(kind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForSupplementaryViewOfKind(kind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 
 }

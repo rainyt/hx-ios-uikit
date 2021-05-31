@@ -14,16 +14,16 @@ extern class UIAccessibilityCustomAction{
 	overload public static function autorelease():UIAccessibilityCustomAction;
 
 	@:native("initWithName:target:selector")
-	overload public function initWithName(name:NSString, target:id, selector:SEL):UIAccessibilityCustomAction;
+	overload public function initWithName(name:NSString, target:Dynamic, selector:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName:target:selector")
-	overload public function initWithAttributedName(attributedName:NSAttributedString, target:id, selector:SEL):UIAccessibilityCustomAction;
+	overload public function initWithAttributedName(attributedName:NSAttributedString, target:Dynamic, selector:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithName:image:target:selector")
-	overload public function initWithName(name:NSString, image:UIImage, target:id, selector:SEL):UIAccessibilityCustomAction;
+	overload public function initWithName(name:NSString, image:UIImage, target:Dynamic, selector:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithAttributedName:image:target:selector")
-	overload public function initWithAttributedName(attributedName:NSAttributedString, image:UIImage, target:id, selector:SEL):UIAccessibilityCustomAction;
+	overload public function initWithAttributedName(attributedName:NSAttributedString, image:UIImage, target:Dynamic, selector:SEL):UIAccessibilityCustomAction;
 
 	@:native("initWithName:actionHandler")
 	overload public function initWithName(name:NSString, actionHandler:UIAccessibilityCustomActionHandler):UIAccessibilityCustomAction;
@@ -47,7 +47,7 @@ extern class UIAccessibilityCustomAction{
 	public var attributedName:NSAttributedString;
 
 	@:native("target")
-	public var target:id;
+	public var target:Dynamic;
 
 	@:native("selector")
 	public var selector:SEL;

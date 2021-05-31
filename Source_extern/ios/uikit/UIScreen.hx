@@ -68,7 +68,7 @@ extern class UIScreen{
 	public var nativeScale:CGFloat;
 
 	@:native("displayLinkWithTarget:selector")
-	overload public function displayLinkWithTarget(target:id, selector:SEL):nullable CADisplayLink *;
+	overload public function displayLinkWithTarget(target:Dynamic, selector:SEL):CADisplayLink;
 
 	@:native("maximumFramesPerSecond")
 	public var maximumFramesPerSecond:NSInteger;

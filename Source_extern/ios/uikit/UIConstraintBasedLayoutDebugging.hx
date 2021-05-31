@@ -14,7 +14,7 @@ extern class UIConstraintBasedLayoutDebugging{
 	overload public static function autorelease():UIConstraintBasedLayoutDebugging;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray<__kindof NSLayoutConstraint *> *;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("hasAmbiguousLayout")
 	public var hasAmbiguousLayout:Bool;

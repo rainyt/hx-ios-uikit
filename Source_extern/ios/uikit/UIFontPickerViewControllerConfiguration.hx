@@ -26,7 +26,7 @@ extern class UIFontPickerViewControllerConfiguration{
 	public var filteredLanguagesPredicate:NSPredicate;
 
 	@:native("filterPredicateForFilteredLanguages")
-	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):nullable NSPredicate *;
+	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):NSPredicate;
 
 
 }

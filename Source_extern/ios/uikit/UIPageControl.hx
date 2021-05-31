@@ -41,7 +41,7 @@ extern class UIPageControl{
 	public var preferredIndicatorImage:UIImage;
 
 	@:native("indicatorImageForPage")
-	overload public function indicatorImageForPage(page:NSInteger):nullable UIImage *;
+	overload public function indicatorImageForPage(page:NSInteger):UIImage;
 
 	@:native("setIndicatorImage:forPage")
 	overload public function setIndicatorImage(image:UIImage, forPage:NSInteger):Void;

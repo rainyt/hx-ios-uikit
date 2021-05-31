@@ -38,10 +38,10 @@ extern class UITabBarItem{
 	overload public function setFinishedSelectedImage(selectedImage:UIImage, withFinishedUnselectedImage:UIImage, API_DEPRECATED("Use initWithTitle:image:selectedImage: or the image and selectedImage properties along with UIImageRenderingModeAlwaysOriginal", ios(5.0, 7.0):Dynamic):Void;
 
 	@:native("finishedSelectedImage")
-	overload public function finishedSelectedImage():nullable UIImage *;
+	overload public function finishedSelectedImage():UIImage;
 
 	@:native("finishedUnselectedImage")
-	overload public function finishedUnselectedImage():nullable UIImage *;
+	overload public function finishedUnselectedImage():UIImage;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:UIOffset;
@@ -53,7 +53,7 @@ extern class UITabBarItem{
 	overload public function setBadgeTextAttributes(textAttributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("badgeTextAttributesForState:API_AVAILABLE(ios(10.0)")
-	overload public function badgeTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;
+	overload public function badgeTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):Dynamic;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:standardAppearance;

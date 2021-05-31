@@ -13,11 +13,11 @@ extern class NSCollectionLayoutSpacing{
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutSpacing;
 
-	@:native("flexibleSpacing:")
-	overload public static function flexibleSpacing(flexibleSpacing:CGFloat, ://):NSCollectionLayoutSpacing;
+	@:native("flexibleSpacing")
+	overload public static function flexibleSpacing(flexibleSpacing:CGFloat):NSCollectionLayoutSpacing;
 
-	@:native("fixedSpacing::::")
-	overload public static function fixedSpacing(fixedSpacing:CGFloat, :, :, :, ://):NSCollectionLayoutSpacing;
+	@:native("fixedSpacing")
+	overload public static function fixedSpacing(fixedSpacing:CGFloat):NSCollectionLayoutSpacing;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutSpacing;

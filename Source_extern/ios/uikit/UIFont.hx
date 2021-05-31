@@ -14,37 +14,37 @@ extern class UIFont{
 	overload public static function autorelease():UIFont;
 
 	@:native("preferredFontForTextStyle")
-	overload public static function preferredFontForTextStyle(style:UIFontTextStyle):UIFont *;
+	overload public static function preferredFontForTextStyle(style:UIFontTextStyle):UIFont;
 
 	@:native("preferredFontForTextStyle:compatibleWithTraitCollection:API_AVAILABLE(ios(10.0)")
-	overload public static function preferredFontForTextStyle(style:UIFontTextStyle, compatibleWithTraitCollection:UITraitCollection, API_AVAILABLE(ios(10.0):Dynamic):UIFont *;
+	overload public static function preferredFontForTextStyle(style:UIFontTextStyle, compatibleWithTraitCollection:UITraitCollection, API_AVAILABLE(ios(10.0):Dynamic):UIFont;
 
 	@:native("fontWithName:size")
-	overload public static function fontWithName(fontName:NSString, size:CGFloat):nullable UIFont *;
+	overload public static function fontWithName(fontName:NSString, size:CGFloat):UIFont;
 
 	@:native("familyNames")
 	public var familyNames:Dynamic;
 
 	@:native("fontNamesForFamilyName")
-	overload public static function fontNamesForFamilyName(familyName:NSString):NSArray<NSString *> *;
+	overload public static function fontNamesForFamilyName(familyName:NSString):Dynamic;
 
 	@:native("systemFontOfSize")
-	overload public static function systemFontOfSize(fontSize:CGFloat):UIFont *;
+	overload public static function systemFontOfSize(fontSize:CGFloat):UIFont;
 
 	@:native("boldSystemFontOfSize")
-	overload public static function boldSystemFontOfSize(fontSize:CGFloat):UIFont *;
+	overload public static function boldSystemFontOfSize(fontSize:CGFloat):UIFont;
 
 	@:native("italicSystemFontOfSize")
-	overload public static function italicSystemFontOfSize(fontSize:CGFloat):UIFont *;
+	overload public static function italicSystemFontOfSize(fontSize:CGFloat):UIFont;
 
 	@:native("systemFontOfSize:weight")
-	overload public static function systemFontOfSize(fontSize:CGFloat, weight:UIFontWeight):UIFont *;
+	overload public static function systemFontOfSize(fontSize:CGFloat, weight:UIFontWeight):UIFont;
 
 	@:native("monospacedDigitSystemFontOfSize:weight")
-	overload public static function monospacedDigitSystemFontOfSize(fontSize:CGFloat, weight:UIFontWeight):UIFont *;
+	overload public static function monospacedDigitSystemFontOfSize(fontSize:CGFloat, weight:UIFontWeight):UIFont;
 
 	@:native("monospacedSystemFontOfSize:weight")
-	overload public static function monospacedSystemFontOfSize(fontSize:CGFloat, weight:UIFontWeight):UIFont *;
+	overload public static function monospacedSystemFontOfSize(fontSize:CGFloat, weight:UIFontWeight):UIFont;
 
 	@:native("familyName")
 	public var familyName:NSString;
@@ -74,10 +74,10 @@ extern class UIFont{
 	public var leading:CGFloat;
 
 	@:native("fontWithSize")
-	overload public function fontWithSize(fontSize:CGFloat):UIFont *;
+	overload public function fontWithSize(fontSize:CGFloat):UIFont;
 
 	@:native("fontWithDescriptor:size")
-	overload public static function fontWithDescriptor(descriptor:UIFontDescriptor, size:CGFloat):UIFont *;
+	overload public static function fontWithDescriptor(descriptor:UIFontDescriptor, size:CGFloat):UIFont;
 
 	@:native("fontDescriptor")
 	public var fontDescriptor:UIFontDescriptor;

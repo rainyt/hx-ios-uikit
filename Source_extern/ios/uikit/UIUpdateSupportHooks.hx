@@ -19,8 +19,8 @@ extern class UIUpdateSupportHooks{
 	@:native("finalizeCollectionViewUpdates")
 	overload public function finalizeCollectionViewUpdates():Void;
 
-	@:native("prepareForAnimatedBoundsChange://:calls:when:bounds:changed:an:block:displaying:in")
-	overload public function prepareForAnimatedBoundsChange(oldBounds:CGRect, //:UICollectionView, calls:this, when:its, bounds:have, changed:inside, an:animation, block:before, displaying:cells, in:its):Void;
+	@:native("prepareForAnimatedBoundsChange")
+	overload public function prepareForAnimatedBoundsChange(oldBounds:CGRect):Void;
 
 	@:native("finalizeAnimatedBoundsChange")
 	overload public function finalizeAnimatedBoundsChange():Void;
@@ -35,34 +35,34 @@ extern class UIUpdateSupportHooks{
 	overload public function finalizeLayoutTransition():Void;
 
 	@:native("initialLayoutAttributesForAppearingItemAtIndexPath")
-	overload public function initialLayoutAttributesForAppearingItemAtIndexPath(itemIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function initialLayoutAttributesForAppearingItemAtIndexPath(itemIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("finalLayoutAttributesForDisappearingItemAtIndexPath")
-	overload public function finalLayoutAttributesForDisappearingItemAtIndexPath(itemIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function finalLayoutAttributesForDisappearingItemAtIndexPath(itemIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath")
-	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKind(elementKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKind(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("finalLayoutAttributesForDisappearingSupplementaryElementOfKind:atIndexPath")
-	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKind(elementKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKind(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath")
-	overload public function initialLayoutAttributesForAppearingDecorationElementOfKind(elementKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function initialLayoutAttributesForAppearingDecorationElementOfKind(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("finalLayoutAttributesForDisappearingDecorationElementOfKind:atIndexPath")
-	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind(elementKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("indexPathsToDeleteForSupplementaryViewOfKind")
-	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):NSArray<NSIndexPath *> *;
+	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
 
 	@:native("indexPathsToDeleteForDecorationViewOfKind")
-	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:NSString):NSArray<NSIndexPath *> *;
+	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:NSString):Dynamic;
 
 	@:native("indexPathsToInsertForSupplementaryViewOfKind")
-	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:NSString):NSArray<NSIndexPath *> *;
+	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
 
 	@:native("indexPathsToInsertForDecorationViewOfKind")
-	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):NSArray<NSIndexPath *> *;
+	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):Dynamic;
 
 
 }

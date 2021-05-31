@@ -26,10 +26,10 @@ extern class UIInterpolatingMotionEffect{
 	public var type:UIInterpolatingMotionEffectType;
 
 	@:native("minimumRelativeValue")
-	public var minimumRelativeValue:id;
+	public var minimumRelativeValue:Dynamic;
 
 	@:native("maximumRelativeValue")
-	public var maximumRelativeValue:id;
+	public var maximumRelativeValue:Dynamic;
 
 
 }

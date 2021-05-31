@@ -29,7 +29,7 @@ extern class UIMutableApplicationShortcutItem{
 	public var userInfo:Dynamic;
 
 	@:native("targetContentIdentifier")
-	public var targetContentIdentifier:id;
+	public var targetContentIdentifier:Dynamic;
 
 
 }

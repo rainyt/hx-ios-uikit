@@ -49,8 +49,8 @@ extern class UIViewPropertyAnimator{
 	@:native("initWithDuration:dampingRatio:animations")
 	overload public function initWithDuration(duration:NSTimeInterval, dampingRatio:CGFloat, animations:Dynamic):UIViewPropertyAnimator;
 
-	@:native("runningPropertyAnimatorWithDuration")
-	overload public static function runningPropertyAnimatorWithDuration():UIViewPropertyAnimator;
+	@:native("")
+	overload public function ():;
 
 	@:native("addAnimations:delayFactor")
 	overload public function addAnimations(animation:Dynamic, delayFactor:CGFloat):Void;

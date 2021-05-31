@@ -14,7 +14,7 @@ extern class UIPrinter{
 	overload public static function autorelease():UIPrinter;
 
 	@:native("printerWithURL")
-	overload public static function printerWithURL(url:NSURL):UIPrinter *;
+	overload public static function printerWithURL(url:NSURL):UIPrinter;
 
 	@:native("URL")
 	public var URL:NSURL;

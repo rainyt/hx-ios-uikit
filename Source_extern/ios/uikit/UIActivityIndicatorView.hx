@@ -13,8 +13,8 @@ extern class UIActivityIndicatorView{
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityIndicatorView;
 
-	@:native("initWithActivityIndicatorStyle:NS_DESIGNATED_INITIALIZER:sizes:view:to")
-	overload public function initWithActivityIndicatorStyle(style:UIActivityIndicatorViewStyle, NS_DESIGNATED_INITIALIZER://, sizes:the, view:according, to:the):UIActivityIndicatorView;
+	@:native("initWithActivityIndicatorStyle")
+	overload public function initWithActivityIndicatorStyle(style:UIActivityIndicatorViewStyle):UIActivityIndicatorView;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIActivityIndicatorView;

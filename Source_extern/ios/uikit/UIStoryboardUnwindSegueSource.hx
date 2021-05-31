@@ -23,7 +23,7 @@ extern class UIStoryboardUnwindSegueSource{
 	public var unwindAction:SEL;
 
 	@:native("sender")
-	public var sender:id;
+	public var sender:Dynamic;
 
 
 }

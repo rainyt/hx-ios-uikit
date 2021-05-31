@@ -35,10 +35,10 @@ extern class UIScrollView{
 	public var automaticallyAdjustsScrollIndicatorInsets:Bool;
 
 	@:native("contentLayoutGuide")
-	public var contentLayoutGuide:UILayoutGuide;
+	public var contentLayoutGuide:Dynamic;
 
 	@:native("frameLayoutGuide")
-	public var frameLayoutGuide:UILayoutGuide;
+	public var frameLayoutGuide:Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -88,11 +88,11 @@ extern class UIScrollView{
 	@:native("indexDisplayMode")
 	public var indexDisplayMode:UIScrollViewIndexDisplayMode;
 
-	@:native("setContentOffset:animated::animate:constant:to")
-	overload public function setContentOffset(contentOffset:CGPoint, animated:Bool, ://, animate:at, constant:velocity, to:new):Void;
+	@:native("setContentOffset:animated")
+	overload public function setContentOffset(contentOffset:CGPoint, animated:Bool):Void;
 
-	@:native("scrollRectToVisible:animated::::://:so:is:visible:nothing:rect")
-	overload public function scrollRectToVisible(rect:CGRect, animated:Bool, :, :, :, :, //:scroll, so:rect, is:just, visible:Dynamic, nothing:if, rect:completely):Void;
+	@:native("scrollRectToVisible:animated")
+	overload public function scrollRectToVisible(rect:CGRect, animated:Bool):Void;
 
 	@:native("flashScrollIndicators")
 	overload public function flashScrollIndicators():Void;
@@ -113,10 +113,10 @@ extern class UIScrollView{
 	public var canCancelContentTouches:Bool;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):BOOL;
+	overload public function touchesShouldBegin(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
 
 	@:native("touchesShouldCancelInContentView")
-	overload public function touchesShouldCancelInContentView(view:UIView):BOOL;
+	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
 
 	@:native("minimumZoomScale")
 	public var minimumZoomScale:CGFloat;

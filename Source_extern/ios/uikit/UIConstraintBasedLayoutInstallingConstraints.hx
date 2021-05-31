@@ -16,17 +16,17 @@ extern class UIConstraintBasedLayoutInstallingConstraints{
 	@:native("constraints")
 	public var constraints:Dynamic;
 
-	@:native("addConstraint:API_AVAILABLE(ios(6.0):This:will:deprecated:a:release:should:avoided. :set:active")
-	overload public function addConstraint(constraint:NSLayoutConstraint, API_AVAILABLE(ios(6.0)://, This:method, will:be, deprecated:in, a:future, release:and, should:be, avoided. :Instead,, set:NSLayoutConstraint's, active:property):Void;
+	@:native("addConstraint")
+	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
-	@:native("addConstraints:API_AVAILABLE(ios(6.0):This:will:deprecated:a:release:should:avoided. :use")
-	overload public function addConstraints(constraints:Dynamic, API_AVAILABLE(ios(6.0)://, This:method, will:be, deprecated:in, a:future, release:and, should:be, avoided. :Instead, use:+[NSLayoutConstraint):Void;
+	@:native("addConstraints")
+	overload public function addConstraints(constraints:Dynamic):Void;
 
-	@:native("removeConstraint:API_AVAILABLE(ios(6.0):This:will:deprecated:a:release:should:avoided. :set:active")
-	overload public function removeConstraint(constraint:NSLayoutConstraint, API_AVAILABLE(ios(6.0)://, This:method, will:be, deprecated:in, a:future, release:and, should:be, avoided. :Instead, set:NSLayoutConstraint's, active:property):Void;
+	@:native("removeConstraint")
+	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
-	@:native("removeConstraints:API_AVAILABLE(ios(6.0):This:will:deprecated:a:release:should:avoided. :use")
-	overload public function removeConstraints(constraints:Dynamic, API_AVAILABLE(ios(6.0)://, This:method, will:be, deprecated:in, a:future, release:and, should:be, avoided. :Instead, use:+[NSLayoutConstraint):Void;
+	@:native("removeConstraints")
+	overload public function removeConstraints(constraints:Dynamic):Void;
 
 
 }

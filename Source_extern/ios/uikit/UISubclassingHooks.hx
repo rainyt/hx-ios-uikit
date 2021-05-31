@@ -22,35 +22,35 @@ extern class UISubclassingHooks{
 	@:native("prepareLayout")
 	overload public function prepareLayout():Void;
 
-	@:native("layoutAttributesForElementsInRect://:an:layout:instances:all:views:the")
-	overload public function layoutAttributesForElementsInRect(rect:CGRect, //:return, an:array, layout:attributes, instances:for, all:the, views:in, the:given):nullable NSArray<__kindof UICollectionViewLayoutAttributes *> *;
+	@:native("layoutAttributesForElementsInRect")
+	overload public function layoutAttributesForElementsInRect(rect:CGRect):Dynamic;
 
 	@:native("layoutAttributesForItemAtIndexPath")
-	overload public function layoutAttributesForItemAtIndexPath(indexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForItemAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind(elementKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionViewLayoutAttributes *;
+	overload public function layoutAttributesForDecorationViewOfKind(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
-	@:native("shouldInvalidateLayoutForBoundsChange://:YES:cause:collection:to:the:for")
-	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect, //:return, YES:to, cause:the, collection:view, to:requery, the:layout, for:geometry):BOOL;
+	@:native("shouldInvalidateLayoutForBoundsChange")
+	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect):Bool;
 
 	@:native("invalidationContextForBoundsChange")
-	overload public function invalidationContextForBoundsChange(newBounds:CGRect):UICollectionViewLayoutInvalidationContext *;
+	overload public function invalidationContextForBoundsChange(newBounds:CGRect):Dynamic;
 
 	@:native("shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):BOOL;
+	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Bool;
 
 	@:native("invalidationContextForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function invalidationContextForPreferredLayoutAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutInvalidationContext *;
+	overload public function invalidationContextForPreferredLayoutAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Dynamic;
 
-	@:native("targetContentOffsetForProposedContentOffset:withScrollingVelocity://:a:at:to:after:-:layouts:want")
-	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint, //:return, a:point, at:which, to:rest, after:scrolling, -:for, layouts:that, want:snap-to-point):CGPoint;
+	@:native("targetContentOffsetForProposedContentOffset:withScrollingVelocity")
+	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint):CGPoint;
 
-	@:native("targetContentOffsetForProposedContentOffset:API_AVAILABLE(ios(7.0):a:can:the:offset:be:during:or")
-	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint, API_AVAILABLE(ios(7.0)://, a:layout, can:return, the:content, offset:to, be:applied, during:transition, or:update):CGPoint;
+	@:native("targetContentOffsetForProposedContentOffset")
+	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint):CGPoint;
 
 	@:native("collectionViewContentSize")
 	public var collectionViewContentSize:CGSize;

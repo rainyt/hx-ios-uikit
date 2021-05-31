@@ -14,7 +14,7 @@ extern class UIDragItem{
 	overload public static function autorelease():UIDragItem;
 
 	@:native("initWithItemProvider")
-	overload public function initWithItemProvider(itemProvider:NSItemProvider):UIDragItem;
+	overload public function initWithItemProvider(itemProvider:Dynamic):UIDragItem;
 
 	@:native("init")
 	overload public function init():UIDragItem;
@@ -23,10 +23,10 @@ extern class UIDragItem{
 	overload public static function new():UIDragItem;
 
 	@:native("itemProvider")
-	public var itemProvider:NSItemProvider;
+	public var itemProvider:Dynamic;
 
 	@:native("localObject")
-	public var localObject:id;
+	public var localObject:Dynamic;
 
 	@:native("_Nullable")
 	public var _Nullable:UIDragPreview;

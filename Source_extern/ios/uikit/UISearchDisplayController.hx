@@ -22,8 +22,8 @@ extern class UISearchDisplayController{
 	@:native("active")
 	public var active:Bool;
 
-	@:native("setActive:animated:::://:the:controller")
-	overload public function setActive(visible:Bool, animated:Bool, :, :, :, //:animate, the:view, controller:for):Void;
+	@:native("setActive:animated")
+	overload public function setActive(visible:Bool, animated:Bool):Void;
 
 	@:native("searchBar")
 	public var searchBar:UISearchBar;

@@ -26,7 +26,7 @@ extern class UICollectionViewLayout{
 	overload public function invalidateLayout():Void;
 
 	@:native("invalidateLayoutWithContext")
-	overload public function invalidateLayoutWithContext(context:UICollectionViewLayoutInvalidationContext):Void;
+	overload public function invalidateLayoutWithContext(context:Dynamic):Void;
 
 	@:native("registerClass:forDecorationViewOfKind")
 	overload public function registerClass(viewClass:Class, forDecorationViewOfKind:NSString):Void;

@@ -22,8 +22,8 @@ extern class UICommandAlternate{
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;
 
-	@:native("alternateWithTitle")
-	overload public static function alternateWithTitle():UICommandAlternate;
+	@:native("")
+	overload public function ():;
 
 	@:native("new")
 	overload public static function new():UICommandAlternate;

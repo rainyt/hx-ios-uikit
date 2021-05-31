@@ -17,7 +17,7 @@ extern class UIPointerRegion{
 	public var rect:CGRect;
 
 	@:native("NS_REFINED_FOR_SWIFT")
-	public var NS_REFINED_FOR_SWIFT:identifier;
+	public var NS_REFINED_FOR_SWIFT:Dynamic;
 
 	@:native("regionWithRect:identifier")
 	overload public static function regionWithRect(rect:CGRect, identifier:Dynamic):UIPointerRegion;

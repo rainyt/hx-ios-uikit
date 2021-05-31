@@ -2,6 +2,7 @@ import ExternBaseClass.ExternBaseClassType;
 
 class ObjcFun {
 	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClass.ExternBaseClassFunProperty {
+		line = line.substr(0, line.lastIndexOf(";") + 1);
 		var isStatic = line.indexOf("+") == 0;
 		var returnClass = line.substr(0, line.indexOf(")"));
 		returnClass = returnClass.substr(returnClass.indexOf("(") + 1);
@@ -19,8 +20,8 @@ class ObjcFun {
 			if (end == " ") {
 				// 无参数
 				funcName = funcName.substr(0, i);
-				if(funcName == "")
-					throw "line="+line;
+				if (funcName == "")
+					throw "line=" + line;
 				break;
 			} else if (end == ":") {
 				// 带参数
@@ -29,10 +30,7 @@ class ObjcFun {
 			}
 		}
 		var c = returnClass.indexOf("instancetype") != -1 ? className : returnClass;
-		if (typedefs.exists(c) && !typedefs.get(c).createHaxeFile)
-			c = typedefs.get(c).parentClassName;
-		if (c == "void")
-			c = "Void";
+		c = ObjcType.toType(c, typedefs);
 		if (funcName == "")
 			trace(line);
 		return {

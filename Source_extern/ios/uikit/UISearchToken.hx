@@ -20,10 +20,10 @@ extern class UISearchToken{
 	overload public static function new():UISearchToken;
 
 	@:native("tokenWithIcon:text")
-	overload public static function tokenWithIcon(icon:UIImage, text:NSString):UISearchToken *;
+	overload public static function tokenWithIcon(icon:UIImage, text:NSString):UISearchToken;
 
 	@:native("representedObject")
-	public var representedObject:id;
+	public var representedObject:Dynamic;
 
 
 }

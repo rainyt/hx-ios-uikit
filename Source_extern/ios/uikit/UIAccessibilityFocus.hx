@@ -20,10 +20,10 @@ extern class UIAccessibilityFocus{
 	overload public function accessibilityElementDidLoseFocus():Void;
 
 	@:native("accessibilityElementIsFocused")
-	overload public function accessibilityElementIsFocused():BOOL;
+	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():nullable NSSet<UIAccessibilityAssistiveTechnologyIdentifier> *;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 
 }

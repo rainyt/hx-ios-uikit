@@ -20,10 +20,10 @@ extern class NSAttributedStringDocumentFormats{
 	overload public function initWithData(data:NSData, options:Dynamic, documentAttributes:Dynamic, error:NSError):NSAttributedStringDocumentFormats;
 
 	@:native("dataFromRange:documentAttributes:error")
-	overload public function dataFromRange(range:NSRange, documentAttributes:Dynamic, error:NSError):nullable NSData *;
+	overload public function dataFromRange(range:NSRange, documentAttributes:Dynamic, error:NSError):NSData;
 
 	@:native("fileWrapperFromRange:documentAttributes:error")
-	overload public function fileWrapperFromRange(range:NSRange, documentAttributes:Dynamic, error:NSError):nullable NSFileWrapper *;
+	overload public function fileWrapperFromRange(range:NSRange, documentAttributes:Dynamic, error:NSError):NSFileWrapper;
 
 
 }

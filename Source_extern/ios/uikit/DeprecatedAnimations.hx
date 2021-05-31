@@ -14,13 +14,13 @@ extern class DeprecatedAnimations{
 	overload public static function autorelease():DeprecatedAnimations;
 
 	@:native("beginAnimations:context:::::::::::")
-	overload public static function beginAnimations(animationID:NSString, context:void, :, :, :, :, :, :, :, :, :, :, :):Void;
+	overload public static function beginAnimations(animationID:NSString, context:Dynamic, :, :, :, :, :, :, :, :, :, :, :):Void;
 
 	@:native("commitAnimations")
 	overload public static function commitAnimations():Void;
 
 	@:native("setAnimationDelegate:::::::::::::::::::::::::::::::")
-	overload public static function setAnimationDelegate(delegate:id, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+	overload public static function setAnimationDelegate(delegate:Dynamic, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
 
 	@:native("setAnimationWillStartSelector::::::::::::::::::::::::::")
 	overload public static function setAnimationWillStartSelector(selector:SEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;

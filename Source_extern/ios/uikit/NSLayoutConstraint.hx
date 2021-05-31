@@ -14,10 +14,10 @@ extern class NSLayoutConstraint{
 	overload public static function autorelease():NSLayoutConstraint;
 
 	@:native("constraintsWithVisualFormat:options:metrics:views")
-	overload public static function constraintsWithVisualFormat(format:NSString, options:NSLayoutFormatOptions, metrics:Dynamic, views:Dynamic):NSArray<NSLayoutConstraint *> *;
+	overload public static function constraintsWithVisualFormat(format:NSString, options:NSLayoutFormatOptions, metrics:Dynamic, views:Dynamic):Dynamic;
 
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
-	overload public static function constraintWithItem(view1:id, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:id, attribute:NSLayoutAttribute, multiplier:CGFloat, constant:CGFloat):NSLayoutConstraint;
+	overload public static function constraintWithItem(view1:Dynamic, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:Dynamic, attribute:NSLayoutAttribute, multiplier:CGFloat, constant:CGFloat):NSLayoutConstraint;
 
 	@:native("priority")
 	public var priority:null;
@@ -29,10 +29,10 @@ extern class NSLayoutConstraint{
 	public var shouldBeArchived:null;
 
 	@:native("firstItem")
-	public var firstItem:id;
+	public var firstItem:Dynamic;
 
 	@:native("secondItem")
-	public var secondItem:id;
+	public var secondItem:Dynamic;
 
 	@:native("firstAttribute")
 	public var firstAttribute:NSLayoutAttribute;

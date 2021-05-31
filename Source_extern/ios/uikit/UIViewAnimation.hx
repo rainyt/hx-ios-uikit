@@ -13,8 +13,8 @@ extern class UIViewAnimation{
 	@:native("autorelease")
 	overload public static function autorelease():UIViewAnimation;
 
-	@:native("setAnimationsEnabled::::::::::::://:any:changes")
-	overload public static function setAnimationsEnabled(enabled:Bool, :, :, :, :, :, :, :, :, :, :, :, :, //:ignore, any:attribute, changes:while):Void;
+	@:native("setAnimationsEnabled")
+	overload public static function setAnimationsEnabled(enabled:Bool):Void;
 
 	@:native("areAnimationsEnabled")
 	public var areAnimationsEnabled:Bool;

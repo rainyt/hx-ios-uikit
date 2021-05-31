@@ -64,11 +64,11 @@ extern class UIViewHierarchy{
 	@:native("didMoveToWindow")
 	overload public function didMoveToWindow():Void;
 
-	@:native("isDescendantOfView::returns")
-	overload public function isDescendantOfView(view:UIView, ://, returns:YES):BOOL;
+	@:native("isDescendantOfView")
+	overload public function isDescendantOfView(view:UIView):Bool;
 
-	@:native("viewWithTag://:search.")
-	overload public function viewWithTag(tag:NSInteger, //:recursive, search.:includes):nullable __kindof UIView *;
+	@:native("viewWithTag")
+	overload public function viewWithTag(tag:NSInteger):__kindofUIView;
 
 	@:native("setNeedsLayout")
 	overload public function setNeedsLayout():Void;
@@ -101,13 +101,13 @@ extern class UIViewHierarchy{
 	overload public function safeAreaInsetsDidChange():Void;
 
 	@:native("layoutMarginsGuide")
-	public var layoutMarginsGuide:UILayoutGuide;
+	public var layoutMarginsGuide:Dynamic;
 
 	@:native("readableContentGuide")
-	public var readableContentGuide:UILayoutGuide;
+	public var readableContentGuide:Dynamic;
 
 	@:native("safeAreaLayoutGuide")
-	public var safeAreaLayoutGuide:UILayoutGuide;
+	public var safeAreaLayoutGuide:Dynamic;
 
 
 }

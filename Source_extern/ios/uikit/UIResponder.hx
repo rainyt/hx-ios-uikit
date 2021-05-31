@@ -20,13 +20,13 @@ extern class UIResponder{
 	public var canBecomeFirstResponder:Bool;
 
 	@:native("becomeFirstResponder")
-	overload public function becomeFirstResponder():BOOL;
+	overload public function becomeFirstResponder():Bool;
 
 	@:native("canResignFirstResponder")
 	public var canResignFirstResponder:Bool;
 
 	@:native("resignFirstResponder")
-	overload public function resignFirstResponder():BOOL;
+	overload public function resignFirstResponder():Bool;
 
 	@:native("isFirstResponder")
 	public var isFirstResponder:Bool;
@@ -71,10 +71,10 @@ extern class UIResponder{
 	overload public function remoteControlReceivedWithEvent(event:UIEvent):Void;
 
 	@:native("canPerformAction:withSender")
-	overload public function canPerformAction(action:SEL, withSender:id):BOOL;
+	overload public function canPerformAction(action:SEL, withSender:Dynamic):Bool;
 
 	@:native("targetForAction:withSender")
-	overload public function targetForAction(action:SEL, withSender:id):nullable id;
+	overload public function targetForAction(action:SEL, withSender:Dynamic):Dynamic;
 
 	@:native("buildMenuWithBuilder")
 	overload public function buildMenuWithBuilder(builder:Dynamic):Void;

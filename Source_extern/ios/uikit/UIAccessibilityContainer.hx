@@ -17,10 +17,10 @@ extern class UIAccessibilityContainer{
 	overload public function accessibilityElementCount():NSInteger;
 
 	@:native("accessibilityElementAtIndex")
-	overload public function accessibilityElementAtIndex(index:NSInteger):nullable id;
+	overload public function accessibilityElementAtIndex(index:NSInteger):Dynamic;
 
 	@:native("indexOfAccessibilityElement")
-	overload public function indexOfAccessibilityElement(element:id):NSInteger;
+	overload public function indexOfAccessibilityElement(element:Dynamic):NSInteger;
 
 	@:native("accessibilityElements")
 	public var accessibilityElements:NSArray;

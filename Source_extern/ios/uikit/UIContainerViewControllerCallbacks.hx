@@ -14,10 +14,10 @@ extern class UIContainerViewControllerCallbacks{
 	overload public static function autorelease():UIContainerViewControllerCallbacks;
 
 	@:native("automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers")
-	overload public function automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers():BOOL;
+	overload public function automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers():Bool;
 
 	@:native("shouldAutomaticallyForwardRotationMethods")
-	overload public function shouldAutomaticallyForwardRotationMethods():BOOL;
+	overload public function shouldAutomaticallyForwardRotationMethods():Bool;
 
 	@:native("shouldAutomaticallyForwardAppearanceMethods")
 	public var shouldAutomaticallyForwardAppearanceMethods:Bool;

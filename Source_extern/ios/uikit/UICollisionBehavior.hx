@@ -41,7 +41,7 @@ extern class UICollisionBehavior{
 	overload public function addBoundaryWithIdentifier(identifier:Dynamic, fromPoint:CGPoint, toPoint:CGPoint):Void;
 
 	@:native("boundaryWithIdentifier")
-	overload public function boundaryWithIdentifier(identifier:Dynamic):nullable UIBezierPath *;
+	overload public function boundaryWithIdentifier(identifier:Dynamic):UIBezierPath;
 
 	@:native("removeBoundaryWithIdentifier")
 	overload public function removeBoundaryWithIdentifier(identifier:Dynamic):Void;

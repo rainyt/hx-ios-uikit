@@ -50,22 +50,22 @@ extern class UIControl{
 	public var touchInside:Bool;
 
 	@:native("beginTrackingWithTouch:withEvent")
-	overload public function beginTrackingWithTouch(touch:UITouch, withEvent:UIEvent):BOOL;
+	overload public function beginTrackingWithTouch(touch:UITouch, withEvent:UIEvent):Bool;
 
 	@:native("continueTrackingWithTouch:withEvent")
-	overload public function continueTrackingWithTouch(touch:UITouch, withEvent:UIEvent):BOOL;
+	overload public function continueTrackingWithTouch(touch:UITouch, withEvent:UIEvent):Bool;
 
-	@:native("endTrackingWithTouch:withEvent://:is:nil:cancelTracking:through")
-	overload public function endTrackingWithTouch(touch:UITouch, withEvent:UIEvent, //:touch, is:sometimes, nil:if, cancelTracking:calls, through:to):Void;
+	@:native("endTrackingWithTouch:withEvent")
+	overload public function endTrackingWithTouch(touch:UITouch, withEvent:UIEvent):Void;
 
-	@:native("cancelTrackingWithEvent:://:may:nil:cancelled:non-event:e.g.")
-	overload public function cancelTrackingWithEvent(event:UIEvent, :, //:event, may:be, nil:if, cancelled:for, non-event:reasons,, e.g.:removed):Void;
+	@:native("cancelTrackingWithEvent")
+	overload public function cancelTrackingWithEvent(event:UIEvent):Void;
 
 	@:native("addTarget:action:forControlEvents")
-	overload public function addTarget(target:id, action:SEL, forControlEvents:UIControlEvents):Void;
+	overload public function addTarget(target:Dynamic, action:SEL, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeTarget:action:forControlEvents")
-	overload public function removeTarget(target:id, action:SEL, forControlEvents:UIControlEvents):Void;
+	overload public function removeTarget(target:Dynamic, action:SEL, forControlEvents:UIControlEvents):Void;
 
 	@:native("addAction:forControlEvents")
 	overload public function addAction(action:UIAction, forControlEvents:UIControlEvents):Void;
@@ -82,14 +82,14 @@ extern class UIControl{
 	@:native("allControlEvents")
 	public var allControlEvents:UIControlEvents;
 
-	@:native("actionsForTarget:forControlEvent:::single:returns:of:selector:returns")
-	overload public function actionsForTarget(target:id, forControlEvent:UIControlEvents, :, ://, single:event., returns:NSArray, of:NSString, selector:names., returns:nil):nullable NSArray<NSString *> *;
+	@:native("actionsForTarget:forControlEvent")
+	overload public function actionsForTarget(target:Dynamic, forControlEvent:UIControlEvents):Dynamic;
 
 	@:native("enumerateEventHandlers")
 	overload public function enumerateEventHandlers(iterator:Dynamic):Void;
 
 	@:native("sendAction:to:forEvent")
-	overload public function sendAction(action:SEL, to:id, forEvent:UIEvent):Void;
+	overload public function sendAction(action:SEL, to:Dynamic, forEvent:UIEvent):Void;
 
 	@:native("sendAction")
 	overload public function sendAction(action:UIAction):Void;

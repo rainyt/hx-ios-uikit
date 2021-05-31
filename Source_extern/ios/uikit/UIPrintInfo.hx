@@ -17,10 +17,10 @@ extern class UIPrintInfo{
 	overload public function initWithCoder(coder:NSCoder):UIPrintInfo;
 
 	@:native("printInfo")
-	overload public static function printInfo():UIPrintInfo *;
+	overload public static function printInfo():UIPrintInfo;
 
 	@:native("printInfoWithDictionary")
-	overload public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo *;
+	overload public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo;
 
 	@:native("printerID")
 	public var printerID:NSString;

@@ -25,8 +25,8 @@ extern class UINavigationBar{
 	@:native("pushNavigationItem:animated")
 	overload public function pushNavigationItem(item:UINavigationItem, animated:Bool):Void;
 
-	@:native("popNavigationItemAnimated://:the:that")
-	overload public function popNavigationItemAnimated(animated:Bool, //:Returns, the:item, that:was):nullable UINavigationItem *;
+	@:native("popNavigationItemAnimated")
+	overload public function popNavigationItemAnimated(animated:Bool):UINavigationItem;
 
 	@:native("topItem")
 	public var topItem:UINavigationItem;
@@ -37,8 +37,8 @@ extern class UINavigationBar{
 	@:native("items")
 	public var items:Dynamic;
 
-	@:native("setItems:animated://:animated:YES,:simulate:push:pop:on:the:top:was:in")
-	overload public function setItems(items:Dynamic, animated:Bool, //:If, animated:is, YES,:then, simulate:a, push:or, pop:depending, on:whether, the:new, top:item, was:previously, in:the):Void;
+	@:native("setItems:animated")
+	overload public function setItems(items:Dynamic, animated:Bool):Void;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:prefersLargeTitles;
@@ -53,13 +53,13 @@ extern class UINavigationBar{
 	overload public function setBackgroundImage(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("backgroundImageForBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
-	overload public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
+	overload public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):UIImage;
 
 	@:native("setBackgroundImage:forBarMetrics:API_AVAILABLE(ios(5.0)")
 	overload public function setBackgroundImage(backgroundImage:UIImage, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("backgroundImageForBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
+	overload public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIImage;
 
 	@:native("shadowImage")
 	public var shadowImage:UIImage;

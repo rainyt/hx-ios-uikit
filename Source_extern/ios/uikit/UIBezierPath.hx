@@ -22,8 +22,8 @@ extern class UIBezierPath{
 	@:native("bezierPathWithOvalInRect")
 	overload public static function bezierPathWithOvalInRect(rect:CGRect):UIBezierPath;
 
-	@:native("bezierPathWithRoundedRect:cornerRadius://:all:with:same:and")
-	overload public static function bezierPathWithRoundedRect(rect:CGRect, cornerRadius:CGFloat, //:rounds, all:corners, with:the, same:horizontal, and:vertical):UIBezierPath;
+	@:native("bezierPathWithRoundedRect:cornerRadius")
+	overload public static function bezierPathWithRoundedRect(rect:CGRect, cornerRadius:CGFloat):UIBezierPath;
 
 	@:native("bezierPathWithRoundedRect:byRoundingCorners:cornerRadii")
 	overload public static function bezierPathWithRoundedRect(rect:CGRect, byRoundingCorners:UIRectCorner, cornerRadii:CGSize):UIBezierPath;
@@ -71,7 +71,7 @@ extern class UIBezierPath{
 	overload public function appendPath(bezierPath:UIBezierPath):Void;
 
 	@:native("bezierPathByReversingPath")
-	overload public function bezierPathByReversingPath():UIBezierPath *;
+	overload public function bezierPathByReversingPath():UIBezierPath;
 
 	@:native("applyTransform")
 	overload public function applyTransform(transform:CGAffineTransform):Void;
@@ -86,7 +86,7 @@ extern class UIBezierPath{
 	public var currentPoint:CGPoint;
 
 	@:native("containsPoint")
-	overload public function containsPoint(point:CGPoint):BOOL;
+	overload public function containsPoint(point:CGPoint):Bool;
 
 	@:native("lineWidth")
 	public var lineWidth:CGFloat;

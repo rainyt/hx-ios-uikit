@@ -38,25 +38,25 @@ extern class UIStepper{
 	overload public function setBackgroundImage(image:UIImage, forState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("backgroundImageForState:API_AVAILABLE(ios(6.0)")
-	overload public function backgroundImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage*;
+	overload public function backgroundImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):UIImage;
 
 	@:native("setDividerImage:forLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(6.0)")
 	overload public function setDividerImage(image:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("dividerImageForLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(6.0)")
-	overload public function dividerImageForLeftSegmentState(state:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage*;
+	overload public function dividerImageForLeftSegmentState(state:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):UIImage;
 
 	@:native("setIncrementImage:forState:API_AVAILABLE(ios(6.0)")
 	overload public function setIncrementImage(image:UIImage, forState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("incrementImageForState:API_AVAILABLE(ios(6.0)")
-	overload public function incrementImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
+	overload public function incrementImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):UIImage;
 
 	@:native("setDecrementImage:forState:API_AVAILABLE(ios(6.0)")
 	overload public function setDecrementImage(image:UIImage, forState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("decrementImageForState:API_AVAILABLE(ios(6.0)")
-	overload public function decrementImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
+	overload public function decrementImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):UIImage;
 
 
 }

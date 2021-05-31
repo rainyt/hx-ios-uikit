@@ -14,7 +14,7 @@ extern class UIVideoEditorController{
 	overload public static function autorelease():UIVideoEditorController;
 
 	@:native("canEditVideoAtPath")
-	overload public static function canEditVideoAtPath(videoPath:NSString):BOOL;
+	overload public static function canEditVideoAtPath(videoPath:NSString):Bool;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

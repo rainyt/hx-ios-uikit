@@ -20,10 +20,10 @@ extern class UIPrintInteractionController{
 	public var printableUTIs:Dynamic;
 
 	@:native("canPrintURL")
-	overload public static function canPrintURL(url:NSURL):BOOL;
+	overload public static function canPrintURL(url:NSURL):Bool;
 
 	@:native("canPrintData")
-	overload public static function canPrintData(data:NSData):BOOL;
+	overload public static function canPrintData(data:NSData):Bool;
 
 	@:native("sharedPrintController")
 	public var sharedPrintController:UIPrintInteractionController;
@@ -53,22 +53,22 @@ extern class UIPrintInteractionController{
 	public var printFormatter:UIPrintFormatter;
 
 	@:native("printingItem")
-	public var printingItem:id;
+	public var printingItem:Dynamic;
 
 	@:native("printingItems")
 	public var printingItems:NSArray;
 
-	@:native("presentAnimated:completionHandler::::::::::::::::::::::::")
-	overload public function presentAnimated(animated:Bool, completionHandler:UIPrintInteractionCompletionHandler, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://):BOOL;
+	@:native("presentAnimated:completionHandler")
+	overload public function presentAnimated(animated:Bool, completionHandler:UIPrintInteractionCompletionHandler):Bool;
 
-	@:native("presentFromRect:inView:animated:completionHandler::")
-	overload public function presentFromRect(rect:CGRect, inView:UIView, animated:Bool, completionHandler:UIPrintInteractionCompletionHandler, :, ://):BOOL;
+	@:native("presentFromRect:inView:animated:completionHandler")
+	overload public function presentFromRect(rect:CGRect, inView:UIView, animated:Bool, completionHandler:UIPrintInteractionCompletionHandler):Bool;
 
-	@:native("presentFromBarButtonItem:animated:completionHandler:::")
-	overload public function presentFromBarButtonItem(item:UIBarButtonItem, animated:Bool, completionHandler:UIPrintInteractionCompletionHandler, :, :, ://):BOOL;
+	@:native("presentFromBarButtonItem:animated:completionHandler")
+	overload public function presentFromBarButtonItem(item:UIBarButtonItem, animated:Bool, completionHandler:UIPrintInteractionCompletionHandler):Bool;
 
 	@:native("printToPrinter:completionHandler")
-	overload public function printToPrinter(printer:UIPrinter, completionHandler:UIPrintInteractionCompletionHandler):BOOL;
+	overload public function printToPrinter(printer:UIPrinter, completionHandler:UIPrintInteractionCompletionHandler):Bool;
 
 	@:native("dismissAnimated")
 	overload public function dismissAnimated(animated:Bool):Void;

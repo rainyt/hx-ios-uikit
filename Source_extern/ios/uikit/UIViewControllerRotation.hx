@@ -17,7 +17,7 @@ extern class UIViewControllerRotation{
 	overload public static function attemptRotationToDeviceOrientation():Void;
 
 	@:native("shouldAutorotateToInterfaceOrientation:API_DEPRECATED("", ios(2.0, 6.0)")
-	overload public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):BOOL;
+	overload public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Bool;
 
 	@:native("shouldAutorotate")
 	public var shouldAutorotate:Bool;
@@ -29,10 +29,10 @@ extern class UIViewControllerRotation{
 	public var preferredInterfaceOrientationForPresentation:UIInterfaceOrientation;
 
 	@:native("rotatingHeaderView")
-	overload public function rotatingHeaderView():nullable UIView *;
+	overload public function rotatingHeaderView():UIView;
 
 	@:native("rotatingFooterView")
-	overload public function rotatingFooterView():nullable UIView *;
+	overload public function rotatingFooterView():UIView;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:Dynamic;
@@ -49,11 +49,11 @@ extern class UIViewControllerRotation{
 	@:native("willAnimateFirstHalfOfRotationToInterfaceOrientation:duration:API_DEPRECATED("", ios(2.0, 5.0)")
 	overload public function willAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("", ios(2.0, 5.0):Dynamic):Void;
 
-	@:native("didAnimateFirstHalfOfRotationToInterfaceOrientation:API_DEPRECATED("", ios(2.0, 5.0)://:rotating:and:views")
-	overload public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 5.0):Dynamic, //:The, rotating:header, and:footer, views:are):Void;
+	@:native("didAnimateFirstHalfOfRotationToInterfaceOrientation:API_DEPRECATED("", ios(2.0, 5.0)")
+	overload public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 5.0):Dynamic):Void;
 
-	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration:API_DEPRECATED("", ios(2.0, 5.0)://:this:our:orientation:set:the")
-	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("", ios(2.0, 5.0):Dynamic, //:A, this:point,, our:view, orientation:is, set:to, the:new):Void;
+	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration:API_DEPRECATED("", ios(2.0, 5.0)")
+	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("", ios(2.0, 5.0):Dynamic):Void;
 
 
 }

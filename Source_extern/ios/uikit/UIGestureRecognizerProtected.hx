@@ -16,8 +16,8 @@ extern class UIGestureRecognizerProtected{
 	@:native("state")
 	public var state:UIGestureRecognizerState;
 
-	@:native("ignoreTouch:forEvent://:a:isn't:of:gesture:can:passed:this:to:ignored.:touches:be:on:view:if")
-	overload public function ignoreTouch(touch:UITouch, forEvent:UIEvent, //:if, a:touch, isn't:part, of:this, gesture:it, can:be, passed:to, this:method, to:be, ignored.:ignored, touches:won't, be:cancelled, on:the, view:even, if:cancelsTouchesInView):Void;
+	@:native("ignoreTouch:forEvent")
+	overload public function ignoreTouch(touch:UITouch, forEvent:UIEvent):Void;
 
 	@:native("ignorePress:forEvent")
 	overload public function ignorePress(button:UIPress, forEvent:UIPressesEvent):Void;
@@ -26,19 +26,19 @@ extern class UIGestureRecognizerProtected{
 	overload public function reset():Void;
 
 	@:native("canPreventGestureRecognizer")
-	overload public function canPreventGestureRecognizer(preventedGestureRecognizer:UIGestureRecognizer):BOOL;
+	overload public function canPreventGestureRecognizer(preventedGestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("canBePreventedByGestureRecognizer")
-	overload public function canBePreventedByGestureRecognizer(preventingGestureRecognizer:UIGestureRecognizer):BOOL;
+	overload public function canBePreventedByGestureRecognizer(preventingGestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("shouldRequireFailureOfGestureRecognizer")
-	overload public function shouldRequireFailureOfGestureRecognizer(otherGestureRecognizer:UIGestureRecognizer):BOOL;
+	overload public function shouldRequireFailureOfGestureRecognizer(otherGestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("shouldBeRequiredToFailByGestureRecognizer")
-	overload public function shouldBeRequiredToFailByGestureRecognizer(otherGestureRecognizer:UIGestureRecognizer):BOOL;
+	overload public function shouldBeRequiredToFailByGestureRecognizer(otherGestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("shouldReceiveEvent:API_AVAILABLE(ios(13.4), tvos(13.4)")
-	overload public function shouldReceiveEvent(event:UIEvent, API_AVAILABLE(ios(13.4), tvos(13.4):Dynamic):BOOL;
+	overload public function shouldReceiveEvent(event:UIEvent, API_AVAILABLE(ios(13.4), tvos(13.4):Dynamic):Bool;
 
 	@:native("touchesBegan:withEvent")
 	overload public function touchesBegan(touches:Dynamic, withEvent:UIEvent):Void;

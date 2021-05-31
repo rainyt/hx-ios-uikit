@@ -32,28 +32,28 @@ extern class UIPrintPageRenderer{
 	public var printFormatters:Dynamic;
 
 	@:native("printFormattersForPageAtIndex")
-	overload public function printFormattersForPageAtIndex(pageIndex:NSInteger):nullable NSArray<UIPrintFormatter *> *;
+	overload public function printFormattersForPageAtIndex(pageIndex:NSInteger):Dynamic;
 
 	@:native("addPrintFormatter:startingAtPageAtIndex")
 	overload public function addPrintFormatter(formatter:UIPrintFormatter, startingAtPageAtIndex:NSInteger):Void;
 
-	@:native("prepareForDrawingPages::://:point.:does:called:requesting:set:pages")
-	overload public function prepareForDrawingPages(range:NSRange, :, :, //:override, point.:default, does:nothing., called:before, requesting:a, set:of, pages:to):Void;
+	@:native("prepareForDrawingPages")
+	overload public function prepareForDrawingPages(range:NSRange):Void;
 
-	@:native("drawPageAtIndex:inRect::::::::::::://:point.:be:from:thread.:calls:various")
-	overload public function drawPageAtIndex(pageIndex:NSInteger, inRect:CGRect, :, :, :, :, :, :, :, :, :, :, :, :, //:override, point.:may, be:called, from:non-main, thread.:, calls:the, various:draw):Void;
+	@:native("drawPageAtIndex:inRect")
+	overload public function drawPageAtIndex(pageIndex:NSInteger, inRect:CGRect):Void;
 
-	@:native("drawPrintFormatter:forPageAtIndex://:point.:each:to:for:page.:must")
-	overload public function drawPrintFormatter(printFormatter:UIPrintFormatter, forPageAtIndex:NSInteger, //:override, point.:calls, each:formatter, to:draw, for:that, page.:subclassers, must:call):Void;
+	@:native("drawPrintFormatter:forPageAtIndex")
+	overload public function drawPrintFormatter(printFormatter:UIPrintFormatter, forPageAtIndex:NSInteger):Void;
 
-	@:native("drawHeaderForPageAtIndex::CGRect::::::::://:point.")
-	overload public function drawHeaderForPageAtIndex(pageIndex:NSInteger, :inRect, CGRect:, :, :, :, :, :, :, :, :, //:override, point.:default):Void;
+	@:native("drawHeaderForPageAtIndex:")
+	overload public function drawHeaderForPageAtIndex(pageIndex:NSInteger, :inRect):Void;
 
-	@:native("drawContentForPageAtIndex:inRect::::::::://:point.")
-	overload public function drawContentForPageAtIndex(pageIndex:NSInteger, inRect:CGRect, :, :, :, :, :, :, :, :, //:override, point.:default):Void;
+	@:native("drawContentForPageAtIndex:inRect")
+	overload public function drawContentForPageAtIndex(pageIndex:NSInteger, inRect:CGRect):Void;
 
-	@:native("drawFooterForPageAtIndex::CGRect::::::::://:point.")
-	overload public function drawFooterForPageAtIndex(pageIndex:NSInteger, :inRect, CGRect:, :, :, :, :, :, :, :, :, //:override, point.:default):Void;
+	@:native("drawFooterForPageAtIndex:")
+	overload public function drawFooterForPageAtIndex(pageIndex:NSInteger, :inRect):Void;
 
 
 }

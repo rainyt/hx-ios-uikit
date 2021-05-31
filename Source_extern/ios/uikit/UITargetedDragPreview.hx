@@ -14,7 +14,7 @@ extern class UITargetedDragPreview{
 	overload public static function autorelease():UITargetedDragPreview;
 
 	@:native("retargetedPreviewWithTarget")
-	overload public function retargetedPreviewWithTarget(newTarget:UIDragPreviewTarget):UITargetedDragPreview *;
+	overload public function retargetedPreviewWithTarget(newTarget:UIDragPreviewTarget):UITargetedDragPreview;
 
 
 }

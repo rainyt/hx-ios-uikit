@@ -41,7 +41,7 @@ extern class UITargetedPreview{
 	public var size:CGSize;
 
 	@:native("retargetedPreviewWithTarget")
-	overload public function retargetedPreviewWithTarget(newTarget:__kindofUIPreviewTarget):__kindof UITargetedPreview *;
+	overload public function retargetedPreviewWithTarget(newTarget:__kindofUIPreviewTarget):__kindofUITargetedPreview;
 
 
 }

@@ -13,8 +13,8 @@ extern class UIConstraintBasedLayoutFittingSize{
 	@:native("autorelease")
 	overload public static function autorelease():UIConstraintBasedLayoutFittingSize;
 
-	@:native("systemLayoutSizeFittingSize:API_AVAILABLE(ios(6.0):Equivalent:sending:with:for")
-	overload public function systemLayoutSizeFittingSize(targetSize:CGSize, API_AVAILABLE(ios(6.0)://, Equivalent:to, sending:-systemLayoutSizeFittingSize, with:UILayoutPriorityFittingSizeLevel, for:both):CGSize;
+	@:native("systemLayoutSizeFittingSize")
+	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize, withHorizontalFittingPriority:UILayoutPriority, verticalFittingPriority:UILayoutPriority):CGSize;

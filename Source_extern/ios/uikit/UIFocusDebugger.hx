@@ -14,16 +14,16 @@ extern class UIFocusDebugger{
 	overload public static function autorelease():UIFocusDebugger;
 
 	@:native("help")
-	overload public static function help():id<UIFocusDebuggerOutput>;
+	overload public static function help():Dynamic;
 
 	@:native("status")
-	overload public static function status():id<UIFocusDebuggerOutput>;
+	overload public static function status():Dynamic;
 
 	@:native("checkFocusabilityForItem")
-	overload public static function checkFocusabilityForItem(item:Dynamic):id<UIFocusDebuggerOutput>;
+	overload public static function checkFocusabilityForItem(item:Dynamic):Dynamic;
 
 	@:native("simulateFocusUpdateRequestFromEnvironment")
-	overload public static function simulateFocusUpdateRequestFromEnvironment(environment:Dynamic):id<UIFocusDebuggerOutput>;
+	overload public static function simulateFocusUpdateRequestFromEnvironment(environment:Dynamic):Dynamic;
 
 
 }

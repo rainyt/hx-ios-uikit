@@ -23,10 +23,10 @@ extern class UISearchTextField{
 	overload public function removeTokenAtIndex(tokenIndex:NSInteger):Void;
 
 	@:native("positionOfTokenAtIndex")
-	overload public function positionOfTokenAtIndex(tokenIndex:NSInteger):UITextPosition *;
+	overload public function positionOfTokenAtIndex(tokenIndex:NSInteger):UITextPosition;
 
 	@:native("tokensInRange")
-	overload public function tokensInRange(textRange:UITextRange):NSArray<UISearchToken *> *;
+	overload public function tokensInRange(textRange:UITextRange):Dynamic;
 
 	@:native("textualRange")
 	public var textualRange:UITextRange;

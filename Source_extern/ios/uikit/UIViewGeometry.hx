@@ -37,11 +37,11 @@ extern class UIViewGeometry{
 	@:native("exclusiveTouch")
 	public var exclusiveTouch:Bool;
 
-	@:native("hitTest:withEvent:://:calls:point:in:receiver's")
-	overload public function hitTest(point:CGPoint, withEvent:UIEvent, :, //:recursively, calls:-pointInside, point:is, in:the, receiver's:coordinate):nullable UIView *;
+	@:native("hitTest:withEvent")
+	overload public function hitTest(point:CGPoint, withEvent:UIEvent):UIView;
 
-	@:native("pointInside:withEvent:://:returns:if:is")
-	overload public function pointInside(point:CGPoint, withEvent:UIEvent, :, //:default, returns:YES, if:point, is:in):BOOL;
+	@:native("pointInside:withEvent")
+	overload public function pointInside(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
 	overload public function convertPoint(point:CGPoint, toView:UIView):CGPoint;
@@ -61,8 +61,8 @@ extern class UIViewGeometry{
 	@:native("autoresizingMask")
 	public var autoresizingMask:UIViewAutoresizing;
 
-	@:native("sizeThatFits::://:'best':to:given:does:actually:view.:is:existing")
-	overload public function sizeThatFits(size:CGSize, :, :, //:return, 'best':size, to:fit, given:size., does:not, actually:resize, view.:Default, is:return, existing:view):CGSize;
+	@:native("sizeThatFits")
+	overload public function sizeThatFits(size:CGSize):CGSize;
 
 	@:native("sizeToFit")
 	overload public function sizeToFit():Void;

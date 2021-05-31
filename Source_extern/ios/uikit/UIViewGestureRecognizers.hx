@@ -23,7 +23,7 @@ extern class UIViewGestureRecognizers{
 	overload public function removeGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("gestureRecognizerShouldBegin")
-	overload public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):BOOL;
+	overload public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):Bool;
 
 
 }

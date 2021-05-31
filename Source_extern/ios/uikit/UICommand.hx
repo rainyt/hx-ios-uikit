@@ -26,7 +26,7 @@ extern class UICommand{
 	public var action:SEL;
 
 	@:native("propertyList")
-	public var propertyList:id;
+	public var propertyList:Dynamic;
 
 	@:native("attributes")
 	public var attributes:UIMenuElementAttributes;
@@ -37,11 +37,11 @@ extern class UICommand{
 	@:native("alternates")
 	public var alternates:Dynamic;
 
-	@:native("commandWithTitle")
-	overload public static function commandWithTitle():UICommand;
+	@:native("")
+	overload public function ():;
 
-	@:native("commandWithTitle")
-	overload public static function commandWithTitle():UICommand;
+	@:native("")
+	overload public function ():;
 
 	@:native("new")
 	overload public static function new():UICommand;

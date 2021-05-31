@@ -41,7 +41,7 @@ extern class NSCollectionLayoutSection{
 	public var supplementariesFollowContentInsets:Bool;
 
 	@:native("visibleItemsInvalidationHandler")
-	public var visibleItemsInvalidationHandler:NSCollectionLayoutSectionVisibleItemsInvalidationHandler;
+	public var visibleItemsInvalidationHandler:Dynamic;
 
 	@:native("decorationItems")
 	public var decorationItems:Dynamic;

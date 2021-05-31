@@ -53,46 +53,46 @@ extern class UIViewController{
 	public var storyboard:UIStoryboard;
 
 	@:native("performSegueWithIdentifier:sender")
-	overload public function performSegueWithIdentifier(identifier:NSString, sender:id):Void;
+	overload public function performSegueWithIdentifier(identifier:NSString, sender:Dynamic):Void;
 
-	@:native("shouldPerformSegueWithIdentifier:sender:API_AVAILABLE(ios(6.0):Invoked:prior:initiating:segue.:NO:prevent:segue:firing.:default:returns:This:is:invoked:-performSegueWithIdentifier")
-	overload public function shouldPerformSegueWithIdentifier(identifier:NSString, sender:id, API_AVAILABLE(ios(6.0)://, Invoked:immediately, prior:to, initiating:a, segue.:Return, NO:to, prevent:the, segue:from, firing.:The, default:implementation, returns:YES., This:method, is:not, invoked:when, -performSegueWithIdentifier:is):BOOL;
+	@:native("shouldPerformSegueWithIdentifier:sender")
+	overload public function shouldPerformSegueWithIdentifier(identifier:NSString, sender:Dynamic):Bool;
 
 	@:native("prepareForSegue:sender")
-	overload public function prepareForSegue(segue:UIStoryboardSegue, sender:id):Void;
+	overload public function prepareForSegue(segue:UIStoryboardSegue, sender:Dynamic):Void;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:sender")
-	overload public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, sender:id):BOOL;
+	overload public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:withSender")
-	overload public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:id):BOOL;
+	overload public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray<UIViewController *> *;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
-	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):nullable UIViewController *;
+	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
 
 	@:native("viewControllerForUnwindSegueAction:fromViewController:withSender")
-	overload public function viewControllerForUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:id):nullable UIViewController *;
+	overload public function viewControllerForUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:Dynamic):UIViewController;
 
 	@:native("unwindForSegue:towardsViewController")
 	overload public function unwindForSegue(unwindSegue:UIStoryboardSegue, towardsViewController:UIViewController):Void;
 
 	@:native("segueForUnwindingToViewController:fromViewController:identifier")
-	overload public function segueForUnwindingToViewController(toViewController:UIViewController, fromViewController:UIViewController, identifier:NSString):nullable UIStoryboardSegue *;
+	overload public function segueForUnwindingToViewController(toViewController:UIViewController, fromViewController:UIViewController, identifier:NSString):UIStoryboardSegue;
 
-	@:native("viewWillAppear:::Called:the:is:to:visible.")
-	overload public function viewWillAppear(animated:Bool, :, ://, Called:when, the:view, is:about, to:made, visible.:Default):Void;
+	@:native("viewWillAppear")
+	overload public function viewWillAppear(animated:Bool):Void;
 
-	@:native("viewDidAppear::://:when:view:been:transitioned:the:Default")
-	overload public function viewDidAppear(animated:Bool, :, :, //:Called, when:the, view:has, been:fully, transitioned:onto, the:screen., Default:does):Void;
+	@:native("viewDidAppear")
+	overload public function viewDidAppear(animated:Bool):Void;
 
-	@:native("viewWillDisappear://:when:view:dismissed,:or:hidden.")
-	overload public function viewWillDisappear(animated:Bool, //:Called, when:the, view:is, dismissed,:covered, or:otherwise, hidden.:Default):Void;
+	@:native("viewWillDisappear")
+	overload public function viewWillDisappear(animated:Bool):Void;
 
-	@:native("viewDidDisappear::Called:the:was:covered:otherwise:Default")
-	overload public function viewDidDisappear(animated:Bool, ://, Called:after, the:view, was:dismissed,, covered:or, otherwise:hidden., Default:does):Void;
+	@:native("viewDidDisappear")
+	overload public function viewDidDisappear(animated:Bool):Void;
 
 	@:native("viewWillLayoutSubviews")
 	overload public function viewWillLayoutSubviews():Void;
@@ -191,13 +191,13 @@ extern class UIViewController{
 	overload public function setNeedsStatusBarAppearanceUpdate():Void;
 
 	@:native("targetViewControllerForAction:sender")
-	overload public function targetViewControllerForAction(action:SEL, sender:id):nullable UIViewController *;
+	overload public function targetViewControllerForAction(action:SEL, sender:Dynamic):UIViewController;
 
 	@:native("showViewController:sender")
-	overload public function showViewController(vc:UIViewController, sender:id):Void;
+	overload public function showViewController(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("showDetailViewController:sender")
-	overload public function showDetailViewController(vc:UIViewController, sender:id):Void;
+	overload public function showDetailViewController(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("preferredUserInterfaceStyle")
 	public var preferredUserInterfaceStyle:UIUserInterfaceStyle;

@@ -19,8 +19,8 @@ extern class UIProgressView{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIProgressView;
 
-	@:native("initWithProgressViewStyle://:the:height:to")
-	overload public function initWithProgressViewStyle(style:UIProgressViewStyle, //:sets, the:view, height:according, to:the):UIProgressView;
+	@:native("initWithProgressViewStyle")
+	overload public function initWithProgressViewStyle(style:UIProgressViewStyle):UIProgressView;
 
 	@:native("progressViewStyle")
 	public var progressViewStyle:UIProgressViewStyle;

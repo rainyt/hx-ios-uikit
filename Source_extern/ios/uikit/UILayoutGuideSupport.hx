@@ -17,10 +17,10 @@ extern class UILayoutGuideSupport{
 	public var layoutGuides:Dynamic;
 
 	@:native("addLayoutGuide")
-	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
+	overload public function addLayoutGuide(layoutGuide:Dynamic):Void;
 
 	@:native("removeLayoutGuide")
-	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
+	overload public function removeLayoutGuide(layoutGuide:Dynamic):Void;
 
 
 }

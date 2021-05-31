@@ -13,11 +13,11 @@ extern class NSLayoutManagerDeprecated{
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutManagerDeprecated;
 
-	@:native("glyphAtIndex:isValidIndex://")
-	overload public function glyphAtIndex(glyphIndex:NSUInteger, isValidIndex:BOOL, //:Use):CGGlyph;
+	@:native("glyphAtIndex:isValidIndex")
+	overload public function glyphAtIndex(glyphIndex:NSUInteger, isValidIndex:BOOL):CGGlyph;
 
-	@:native("glyphAtIndex://")
-	overload public function glyphAtIndex(glyphIndex:NSUInteger, //:Use):CGGlyph;
+	@:native("glyphAtIndex")
+	overload public function glyphAtIndex(glyphIndex:NSUInteger):CGGlyph;
 
 	@:native("instead.",")
 	public var instead.",:hyphenationFactor];

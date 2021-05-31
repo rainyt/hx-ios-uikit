@@ -14,28 +14,28 @@ extern class NSValueUIGeometryExtensions{
 	overload public static function autorelease():NSValueUIGeometryExtensions;
 
 	@:native("valueWithCGPoint")
-	overload public static function valueWithCGPoint(point:CGPoint):NSValue *;
+	overload public static function valueWithCGPoint(point:CGPoint):NSValue;
 
 	@:native("valueWithCGVector")
-	overload public static function valueWithCGVector(vector:CGVector):NSValue *;
+	overload public static function valueWithCGVector(vector:CGVector):NSValue;
 
 	@:native("valueWithCGSize")
-	overload public static function valueWithCGSize(size:CGSize):NSValue *;
+	overload public static function valueWithCGSize(size:CGSize):NSValue;
 
 	@:native("valueWithCGRect")
-	overload public static function valueWithCGRect(rect:CGRect):NSValue *;
+	overload public static function valueWithCGRect(rect:CGRect):NSValue;
 
 	@:native("valueWithCGAffineTransform")
-	overload public static function valueWithCGAffineTransform(transform:CGAffineTransform):NSValue *;
+	overload public static function valueWithCGAffineTransform(transform:CGAffineTransform):NSValue;
 
 	@:native("valueWithUIEdgeInsets")
-	overload public static function valueWithUIEdgeInsets(insets:UIEdgeInsets):NSValue *;
+	overload public static function valueWithUIEdgeInsets(insets:UIEdgeInsets):NSValue;
 
 	@:native("valueWithDirectionalEdgeInsets")
-	overload public static function valueWithDirectionalEdgeInsets(insets:NSDirectionalEdgeInsets):NSValue *;
+	overload public static function valueWithDirectionalEdgeInsets(insets:NSDirectionalEdgeInsets):NSValue;
 
 	@:native("valueWithUIOffset")
-	overload public static function valueWithUIOffset(insets:UIOffset):NSValue *;
+	overload public static function valueWithUIOffset(insets:UIOffset):NSValue;
 
 	@:native("CGPointValue")
 	public var CGPointValue:CGPoint;

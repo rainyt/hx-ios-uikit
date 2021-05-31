@@ -32,10 +32,10 @@ extern class UIApplication{
 	public var idleTimerDisabled:Bool;
 
 	@:native("openURL:API_DEPRECATED_WITH_REPLACEMENT("openURL")
-	overload public function openURL(url:NSURL, API_DEPRECATED_WITH_REPLACEMENT("openURL:options:completionHandler:", ios(2.0, 10.0):Dynamic):BOOL;
+	overload public function openURL(url:NSURL, API_DEPRECATED_WITH_REPLACEMENT("openURL:options:completionHandler:", ios(2.0, 10.0):Dynamic):Bool;
 
 	@:native("canOpenURL")
-	overload public function canOpenURL(url:NSURL):BOOL;
+	overload public function canOpenURL(url:NSURL):Bool;
 
 	@:native("openURL:options:completionHandler:API_AVAILABLE(ios(10.0)")
 	overload public function openURL(url:NSURL, options:Dynamic, completionHandler:Dynamic, API_AVAILABLE(ios(10.0):Dynamic):Void;
@@ -50,7 +50,7 @@ extern class UIApplication{
 	public var windows:Dynamic;
 
 	@:native("sendAction:to:from:forEvent")
-	overload public function sendAction(action:SEL, to:id, from:id, forEvent:UIEvent):BOOL;
+	overload public function sendAction(action:SEL, to:Dynamic, from:Dynamic, forEvent:UIEvent):Bool;
 
 	@:native("networkActivityIndicatorVisible")
 	public var networkActivityIndicatorVisible:Bool;

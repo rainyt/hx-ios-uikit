@@ -14,7 +14,7 @@ extern class NSLayoutYAxisAnchor{
 	overload public static function autorelease():NSLayoutYAxisAnchor;
 
 	@:native("anchorWithOffsetToAnchor")
-	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutYAxisAnchor):NSLayoutDimension *;
+	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutYAxisAnchor):NSLayoutDimension;
 
 
 }

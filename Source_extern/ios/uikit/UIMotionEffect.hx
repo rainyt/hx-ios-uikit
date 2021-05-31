@@ -20,7 +20,7 @@ extern class UIMotionEffect{
 	overload public function initWithCoder(coder:NSCoder):UIMotionEffect;
 
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
-	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:UIOffset):nullable NSDictionary<NSString *, id> *;
+	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:UIOffset):Dynamic;
 
 
 }

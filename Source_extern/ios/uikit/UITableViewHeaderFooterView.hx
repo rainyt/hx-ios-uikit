@@ -29,7 +29,7 @@ extern class UITableViewHeaderFooterView{
 	overload public function updateConfigurationUsingState(state:UIViewConfigurationState):Void;
 
 	@:native("defaultContentConfiguration")
-	overload public function defaultContentConfiguration():UIListContentConfiguration *;
+	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
 	@:native("contentConfiguration")
 	public var contentConfiguration:Dynamic;

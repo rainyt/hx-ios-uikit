@@ -14,7 +14,7 @@ extern class UIImageDeprecated{
 	overload public static function autorelease():UIImageDeprecated;
 
 	@:native("stretchableImageWithLeftCapWidth:topCapHeight")
-	overload public function stretchableImageWithLeftCapWidth(leftCapWidth:NSInteger, topCapHeight:NSInteger):UIImage *;
+	overload public function stretchableImageWithLeftCapWidth(leftCapWidth:NSInteger, topCapHeight:NSInteger):UIImage;
 
 	@:native("leftCapWidth")
 	public var leftCapWidth:NSInteger;

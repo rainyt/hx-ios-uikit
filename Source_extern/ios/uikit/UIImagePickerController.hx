@@ -13,20 +13,20 @@ extern class UIImagePickerController{
 	@:native("autorelease")
 	overload public static function autorelease():UIImagePickerController;
 
-	@:native("isSourceTypeAvailable::::::::://:YES:source:available")
-	overload public static function isSourceTypeAvailable(sourceType:UIImagePickerControllerSourceType, :, :, :, :, :, :, :, :, //:returns, YES:if, source:is, available:Dynamic):BOOL;
+	@:native("isSourceTypeAvailable")
+	overload public static function isSourceTypeAvailable(sourceType:UIImagePickerControllerSourceType):Bool;
 
-	@:native("availableMediaTypesForSourceType://:array:available:types")
-	overload public static function availableMediaTypesForSourceType(sourceType:UIImagePickerControllerSourceType, //:returns, array:of, available:media, types:Dynamic):nullable NSArray<NSString *> *;
+	@:native("availableMediaTypesForSourceType")
+	overload public static function availableMediaTypesForSourceType(sourceType:UIImagePickerControllerSourceType):Dynamic;
 
-	@:native("isCameraDeviceAvailable::::::::::API_AVAILABLE(ios(4.0):returns:if:device")
-	overload public static function isCameraDeviceAvailable(cameraDevice:UIImagePickerControllerCameraDevice, :, :, :, :, :, :, :, :, :, API_AVAILABLE(ios(4.0)://, returns:YES, if:camera, device:is):BOOL;
+	@:native("isCameraDeviceAvailable:::::::::")
+	overload public static function isCameraDeviceAvailable(cameraDevice:UIImagePickerControllerCameraDevice, :, :, :, :, :, :, :, :, :):Bool;
 
-	@:native("isFlashAvailableForCameraDevice::::::API_AVAILABLE(ios(4.0):returns:if:device:flash")
-	overload public static function isFlashAvailableForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice, :, :, :, :, :, API_AVAILABLE(ios(4.0)://, returns:YES, if:camera, device:supports, flash:and):BOOL;
+	@:native("isFlashAvailableForCameraDevice:::::")
+	overload public static function isFlashAvailableForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice, :, :, :, :, :):Bool;
 
-	@:native("availableCaptureModesForCameraDevice:API_AVAILABLE(ios(4.0):returns:of")
-	overload public static function availableCaptureModesForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice, API_AVAILABLE(ios(4.0)://, returns:array, of:NSNumbers):nullable NSArray<NSNumber *> *;
+	@:native("availableCaptureModesForCameraDevice")
+	overload public static function availableCaptureModesForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -68,7 +68,7 @@ extern class UIImagePickerController{
 	overload public function takePicture():Void;
 
 	@:native("startVideoCapture")
-	overload public function startVideoCapture():BOOL;
+	overload public function startVideoCapture():Bool;
 
 	@:native("stopVideoCapture")
 	overload public function stopVideoCapture():Void;

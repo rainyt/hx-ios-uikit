@@ -32,13 +32,13 @@ extern class UIListContentView{
 	public var configuration:UIListContentConfiguration;
 
 	@:native("textLayoutGuide")
-	public var textLayoutGuide:UILayoutGuide;
+	public var textLayoutGuide:Dynamic;
 
 	@:native("secondaryTextLayoutGuide")
-	public var secondaryTextLayoutGuide:UILayoutGuide;
+	public var secondaryTextLayoutGuide:Dynamic;
 
 	@:native("imageLayoutGuide")
-	public var imageLayoutGuide:UILayoutGuide;
+	public var imageLayoutGuide:Dynamic;
 
 
 }

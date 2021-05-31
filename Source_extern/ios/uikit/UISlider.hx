@@ -40,8 +40,8 @@ extern class UISlider{
 	@:native("thumbTintColor")
 	public var thumbTintColor:UIColor;
 
-	@:native("setValue:animated://:slider:fixed:(i.e. duration depends on distance:not")
-	overload public function setValue(value:float, animated:Bool, //:move, slider:at, fixed:velocity, (i.e. duration depends on distance:does, not:send):Void;
+	@:native("setValue:animated")
+	overload public function setValue(value:float, animated:Bool):Void;
 
 	@:native("setThumbImage:forState")
 	overload public function setThumbImage(image:UIImage, forState:UIControlState):Void;
@@ -53,13 +53,13 @@ extern class UISlider{
 	overload public function setMaximumTrackImage(image:UIImage, forState:UIControlState):Void;
 
 	@:native("thumbImageForState")
-	overload public function thumbImageForState(state:UIControlState):nullable UIImage *;
+	overload public function thumbImageForState(state:UIControlState):UIImage;
 
 	@:native("minimumTrackImageForState")
-	overload public function minimumTrackImageForState(state:UIControlState):nullable UIImage *;
+	overload public function minimumTrackImageForState(state:UIControlState):UIImage;
 
 	@:native("maximumTrackImageForState")
-	overload public function maximumTrackImageForState(state:UIControlState):nullable UIImage *;
+	overload public function maximumTrackImageForState(state:UIControlState):UIImage;
 
 	@:native("currentThumbImage")
 	public var currentThumbImage:UIImage;

@@ -107,7 +107,7 @@ extern class NSLayoutManager{
 	overload public function CGGlyphAtIndex(glyphIndex:NSUInteger):CGGlyph;
 
 	@:native("isValidGlyphIndex")
-	overload public function isValidGlyphIndex(glyphIndex:NSUInteger):BOOL;
+	overload public function isValidGlyphIndex(glyphIndex:NSUInteger):Bool;
 
 	@:native("propertyForGlyphAtIndex")
 	overload public function propertyForGlyphAtIndex(glyphIndex:NSUInteger):NSGlyphProperty;
@@ -152,10 +152,10 @@ extern class NSLayoutManager{
 	overload public function firstUnlaidGlyphIndex():NSUInteger;
 
 	@:native("textContainerForGlyphAtIndex:effectiveRange")
-	overload public function textContainerForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer):nullable NSTextContainer *;
+	overload public function textContainerForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer):NSTextContainer;
 
 	@:native("textContainerForGlyphAtIndex:effectiveRange:withoutAdditionalLayout")
-	overload public function textContainerForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer, withoutAdditionalLayout:Bool):nullable NSTextContainer *;
+	overload public function textContainerForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer, withoutAdditionalLayout:Bool):NSTextContainer;
 
 	@:native("usedRectForTextContainer")
 	overload public function usedRectForTextContainer(container:NSTextContainer):CGRect;
@@ -185,10 +185,10 @@ extern class NSLayoutManager{
 	overload public function locationForGlyphAtIndex(glyphIndex:NSUInteger):CGPoint;
 
 	@:native("notShownAttributeForGlyphAtIndex")
-	overload public function notShownAttributeForGlyphAtIndex(glyphIndex:NSUInteger):BOOL;
+	overload public function notShownAttributeForGlyphAtIndex(glyphIndex:NSUInteger):Bool;
 
 	@:native("drawsOutsideLineFragmentForGlyphAtIndex")
-	overload public function drawsOutsideLineFragmentForGlyphAtIndex(glyphIndex:NSUInteger):BOOL;
+	overload public function drawsOutsideLineFragmentForGlyphAtIndex(glyphIndex:NSUInteger):Bool;
 
 	@:native("attachmentSizeForGlyphAtIndex")
 	overload public function attachmentSizeForGlyphAtIndex(glyphIndex:NSUInteger):CGSize;

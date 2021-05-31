@@ -14,7 +14,7 @@ extern class UIDeprecated{
 	overload public static function autorelease():UIDeprecated;
 
 	@:native("initWithFrame:reuseIdentifier:API_DEPRECATED("", ios(2.0, 3.0)")
-	overload public function initWithFrame(frame:CGRect, reuseIdentifier:NSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):id;
+	overload public function initWithFrame(frame:CGRect, reuseIdentifier:NSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):Dynamic;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:Dynamic;

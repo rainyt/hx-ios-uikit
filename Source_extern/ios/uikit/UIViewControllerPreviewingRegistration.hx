@@ -14,7 +14,7 @@ extern class UIViewControllerPreviewingRegistration{
 	overload public static function autorelease():UIViewControllerPreviewingRegistration;
 
 	@:native("registerForPreviewingWithDelegate:sourceView")
-	overload public function registerForPreviewingWithDelegate(delegate:Dynamic, sourceView:UIView):id <UIViewControllerPreviewing>;
+	overload public function registerForPreviewingWithDelegate(delegate:Dynamic, sourceView:UIView):Dynamic;
 
 	@:native("unregisterForPreviewingWithContext")
 	overload public function unregisterForPreviewingWithContext(previewing:Dynamic):Void;

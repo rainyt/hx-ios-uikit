@@ -41,10 +41,10 @@ extern class UIDocument{
 	overload public function closeWithCompletionHandler(completionHandler:Dynamic):Void;
 
 	@:native("loadFromContents:ofType:error")
-	overload public function loadFromContents(contents:id, ofType:NSString, error:NSError):BOOL;
+	overload public function loadFromContents(contents:Dynamic, ofType:NSString, error:NSError):Bool;
 
 	@:native("contentsForType:error")
-	overload public function contentsForType(typeName:NSString, error:NSError):nullable id;
+	overload public function contentsForType(typeName:NSString, error:NSError):Dynamic;
 
 	@:native("disableEditing")
 	overload public function disableEditing():Void;
@@ -62,10 +62,10 @@ extern class UIDocument{
 	overload public function updateChangeCount(change:UIDocumentChangeKind):Void;
 
 	@:native("changeCountTokenForSaveOperation")
-	overload public function changeCountTokenForSaveOperation(saveOperation:UIDocumentSaveOperation):id;
+	overload public function changeCountTokenForSaveOperation(saveOperation:UIDocumentSaveOperation):Dynamic;
 
 	@:native("updateChangeCountWithToken:forSaveOperation")
-	overload public function updateChangeCountWithToken(changeCountToken:id, forSaveOperation:UIDocumentSaveOperation):Void;
+	overload public function updateChangeCountWithToken(changeCountToken:Dynamic, forSaveOperation:UIDocumentSaveOperation):Void;
 
 	@:native("saveToURL:forSaveOperation:completionHandler")
 	overload public function saveToURL(url:NSURL, forSaveOperation:UIDocumentSaveOperation, completionHandler:Dynamic):Void;
@@ -76,20 +76,20 @@ extern class UIDocument{
 	@:native("savingFileType")
 	public var savingFileType:NSString;
 
-	@:native("fileNameExtensionForType:saveOperation:API_UNAVAILABLE(tvos:For:specified:and:particular:of:operation,:a:name:that:be:to:base")
-	overload public function fileNameExtensionForType(typeName:NSString, saveOperation:UIDocumentSaveOperation, API_UNAVAILABLE(tvos://, For:a, specified:type,, and:a, particular:kind, of:save, operation,:return, a:file, name:extension, that:can, be:appended, to:a, base:file):NSString *;
+	@:native("fileNameExtensionForType:saveOperation")
+	overload public function fileNameExtensionForType(typeName:NSString, saveOperation:UIDocumentSaveOperation):NSString;
 
 	@:native("writeContents:andAttributes:safelyToURL:forSaveOperation:error")
-	overload public function writeContents(contents:id, andAttributes:NSDictionary, safelyToURL:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):BOOL;
+	overload public function writeContents(contents:Dynamic, andAttributes:NSDictionary, safelyToURL:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):Bool;
 
 	@:native("writeContents:toURL:forSaveOperation:originalContentsURL:error")
-	overload public function writeContents(contents:id, toURL:NSURL, forSaveOperation:UIDocumentSaveOperation, originalContentsURL:NSURL, error:NSError):BOOL;
+	overload public function writeContents(contents:Dynamic, toURL:NSURL, forSaveOperation:UIDocumentSaveOperation, originalContentsURL:NSURL, error:NSError):Bool;
 
 	@:native("fileAttributesToWriteToURL:forSaveOperation:error")
-	overload public function fileAttributesToWriteToURL(url:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):nullable NSDictionary *;
+	overload public function fileAttributesToWriteToURL(url:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):NSDictionary;
 
 	@:native("readFromURL:error")
-	overload public function readFromURL(url:NSURL, error:NSError):BOOL;
+	overload public function readFromURL(url:NSURL, error:NSError):Bool;
 
 	@:native("performAsynchronousFileAccessUsingBlock")
 	overload public function performAsynchronousFileAccessUsingBlock(block:Dynamic):Void;

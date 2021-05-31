@@ -23,7 +23,7 @@ extern class UIConstraintBasedLayoutLayering{
 	public var alignmentRectInsets:UIEdgeInsets;
 
 	@:native("viewForBaselineLayout")
-	overload public function viewForBaselineLayout():UIView *;
+	overload public function viewForBaselineLayout():UIView;
 
 	@:native("viewForFirstBaselineLayout")
 	public var viewForFirstBaselineLayout:UIView;

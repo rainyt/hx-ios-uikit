@@ -17,10 +17,10 @@ extern class UITextChecker{
 	overload public function rangeOfMisspelledWordInString(stringToCheck:NSString, range:NSRange, startingAt:NSInteger, wrap:Bool, language:NSString):NSRange;
 
 	@:native("guessesForWordRange:inString:language")
-	overload public function guessesForWordRange(range:NSRange, inString:NSString, language:NSString):nullable NSArray<NSString *> *;
+	overload public function guessesForWordRange(range:NSRange, inString:NSString, language:NSString):Dynamic;
 
 	@:native("completionsForPartialWordRange:inString:language")
-	overload public function completionsForPartialWordRange(range:NSRange, inString:NSString, language:NSString):nullable NSArray<NSString *> *;
+	overload public function completionsForPartialWordRange(range:NSRange, inString:NSString, language:NSString):Dynamic;
 
 	@:native("ignoreWord")
 	overload public function ignoreWord(wordToIgnore:NSString):Void;
@@ -32,7 +32,7 @@ extern class UITextChecker{
 	overload public static function learnWord(word:NSString):Void;
 
 	@:native("hasLearnedWord")
-	overload public static function hasLearnedWord(word:NSString):BOOL;
+	overload public static function hasLearnedWord(word:NSString):Bool;
 
 	@:native("unlearnWord")
 	overload public static function unlearnWord(word:NSString):Void;

@@ -23,7 +23,7 @@ extern class UIUserNotificationCategory{
 	public var identifier:NSString;
 
 	@:native("actionsForContext")
-	overload public function actionsForContext(context:UIUserNotificationActionContext):nullable NSArray<UIUserNotificationAction *> *;
+	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;
 
 
 }

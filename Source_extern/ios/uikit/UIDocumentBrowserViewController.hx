@@ -56,10 +56,10 @@ extern class UIDocumentBrowserViewController{
 	overload public function importDocumentAtURL(documentURL:NSURL, nextToDocumentAtURL:NSURL, mode:UIDocumentBrowserImportMode, completionHandler:Dynamic):Void;
 
 	@:native("transitionControllerForDocumentAtURL:API_AVAILABLE(ios(12.0)")
-	overload public function transitionControllerForDocumentAtURL(documentURL:NSURL, API_AVAILABLE(ios(12.0):Dynamic):UIDocumentBrowserTransitionController *;
+	overload public function transitionControllerForDocumentAtURL(documentURL:NSURL, API_AVAILABLE(ios(12.0):Dynamic):UIDocumentBrowserTransitionController;
 
 	@:native("transitionControllerForDocumentURL")
-	overload public function transitionControllerForDocumentURL(documentURL:NSURL):UIDocumentBrowserTransitionController *;
+	overload public function transitionControllerForDocumentURL(documentURL:NSURL):UIDocumentBrowserTransitionController;
 
 	@:native("customActions")
 	public var customActions:Dynamic;

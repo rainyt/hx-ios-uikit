@@ -23,13 +23,13 @@ extern class UIMenu{
 	public var children:Dynamic;
 
 	@:native("menuWithChildren:API_AVAILABLE(ios(14.0)")
-	overload public static function menuWithChildren(children:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIMenu *;
+	overload public static function menuWithChildren(children:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIMenu;
 
-	@:native("menuWithTitle")
-	overload public static function menuWithTitle():UIMenu *;
+	@:native("")
+	overload public function ():;
 
-	@:native("menuWithTitle")
-	overload public static function menuWithTitle():UIMenu *;
+	@:native("")
+	overload public function ():;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIMenu;
@@ -41,7 +41,7 @@ extern class UIMenu{
 	overload public static function new():UIMenu;
 
 	@:native("menuByReplacingChildren")
-	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu *;
+	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu;
 
 
 }

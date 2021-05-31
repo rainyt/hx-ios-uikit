@@ -16,8 +16,8 @@ extern class UILocalNotifications{
 	@:native("presentLocalNotificationNow:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest")
 	overload public function presentLocalNotificationNow(notification:UILocalNotification, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest:withCompletionHandler:]", ios(4.0, 10.0):Dynamic):Void;
 
-	@:native("scheduleLocalNotification:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest:")
-	overload public function scheduleLocalNotification(notification:UILocalNotification, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest:withCompletionHandler:]", ios(4.0, 10.0):Dynamic, ://):Void;
+	@:native("scheduleLocalNotification:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest")
+	overload public function scheduleLocalNotification(notification:UILocalNotification, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter addNotificationRequest:withCompletionHandler:]", ios(4.0, 10.0):Dynamic):Void;
 
 	@:native("cancelLocalNotification:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter removePendingNotificationRequestsWithIdentifiers")
 	overload public function cancelLocalNotification(notification:UILocalNotification, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter removePendingNotificationRequestsWithIdentifiers:]", ios(4.0, 10.0):Dynamic):Void;

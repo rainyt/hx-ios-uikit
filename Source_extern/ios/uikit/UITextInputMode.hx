@@ -17,7 +17,7 @@ extern class UITextInputMode{
 	public var primaryLanguage:NSString;
 
 	@:native("currentInputMode")
-	overload public static function currentInputMode():nullable UITextInputMode *;
+	overload public static function currentInputMode():UITextInputMode;
 
 	@:native("activeInputModes")
 	public var activeInputModes:Dynamic;

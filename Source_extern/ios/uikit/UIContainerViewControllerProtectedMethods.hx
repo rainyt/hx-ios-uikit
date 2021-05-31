@@ -41,7 +41,7 @@ extern class UIContainerViewControllerProtectedMethods{
 	overload public function setOverrideTraitCollection(collection:UITraitCollection, forChildViewController:UIViewController):Void;
 
 	@:native("overrideTraitCollectionForChildViewController")
-	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):nullable UITraitCollection *;
+	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):UITraitCollection;
 
 	@:native("childViewControllerForUserInterfaceStyle")
 	public var childViewControllerForUserInterfaceStyle:UIViewController;

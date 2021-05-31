@@ -14,19 +14,19 @@ extern class UIActivityItemProvider{
 	overload public static function autorelease():UIActivityItemProvider;
 
 	@:native("init")
-	overload public function init():UIActivityItemProvider;
+	overload public function init():Dynamic;
 
-	@:native("initWithPlaceholderItem:NS_DESIGNATED_INITIALIZER::::::::placeHolder:the:value")
-	overload public function initWithPlaceholderItem(placeholderItem:id, NS_DESIGNATED_INITIALIZER:, :, :, :, :, :, :, ://, placeHolder:is, the:return, value:for):UIActivityItemProvider;
+	@:native("initWithPlaceholderItem")
+	overload public function initWithPlaceholderItem(placeholderItem:Dynamic):Dynamic;
 
 	@:native("placeholderItem")
-	public var placeholderItem:id;
+	public var placeholderItem:Dynamic;
 
 	@:native("activityType")
 	public var activityType:UIActivityType;
 
 	@:native("item")
-	public var item:id;
+	public var item:Dynamic;
 
 
 }

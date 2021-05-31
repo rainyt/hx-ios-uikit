@@ -43,8 +43,8 @@ extern class UIMenuController{
 	@:native("menuItems")
 	public var menuItems:Dynamic;
 
-	@:native("update	")
-	overload public function update	():Void;
+	@:native("update")
+	overload public function update():Void;
 
 	@:native("menuFrame")
 	public var menuFrame:CGRect;

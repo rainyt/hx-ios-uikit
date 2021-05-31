@@ -20,7 +20,7 @@ extern class UIConstraintBasedLayoutCoreMethods{
 	overload public function updateConstraints():Void;
 
 	@:native("needsUpdateConstraints")
-	overload public function needsUpdateConstraints():BOOL;
+	overload public function needsUpdateConstraints():Bool;
 
 	@:native("setNeedsUpdateConstraints")
 	overload public function setNeedsUpdateConstraints():Void;

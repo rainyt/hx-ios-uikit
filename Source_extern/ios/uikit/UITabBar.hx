@@ -22,14 +22,14 @@ extern class UITabBar{
 	@:native("selectedItem")
 	public var selectedItem:UITabBarItem;
 
-	@:native("setItems:animated:://:fade:or:or:and")
-	overload public function setItems(items:Dynamic, animated:Bool, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
+	@:native("setItems:animated")
+	overload public function setItems(items:Dynamic, animated:Bool):Void;
 
-	@:native("beginCustomizingItems:API_UNAVAILABLE(tvos::list:items:can:reordered.:animates:sheet:visible:not:are")
-	overload public function beginCustomizingItems(items:Dynamic, API_UNAVAILABLE(tvos:, ://, list:all, items:that, can:be, reordered.:always, animates:a, sheet:up., visible:items, not:listed, are:fixed):Void;
+	@:native("beginCustomizingItems")
+	overload public function beginCustomizingItems(items:Dynamic):Void;
 
-	@:native("endCustomizingAnimated:API_UNAVAILABLE(tvos:://:customization:normally:should:the:do:check:of:to:new:returns:if")
-	overload public function endCustomizingAnimated(animated:Bool, API_UNAVAILABLE(tvos:, :, //:hide, customization:sheet., normally:you, should:let, the:user, do:it., check:list, of:items, to:see, new:layout., returns:YES, if:layout):BOOL;
+	@:native("endCustomizingAnimated")
+	overload public function endCustomizingAnimated(animated:Bool):Bool;
 
 	@:native("customizing")
 	public var customizing:Bool;

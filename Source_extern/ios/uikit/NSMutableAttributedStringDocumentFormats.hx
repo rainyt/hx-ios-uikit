@@ -14,10 +14,10 @@ extern class NSMutableAttributedStringDocumentFormats{
 	overload public static function autorelease():NSMutableAttributedStringDocumentFormats;
 
 	@:native("readFromURL:options:documentAttributes:error:")
-	overload public function readFromURL(url:NSURL, options:Dynamic, documentAttributes:Dynamic, error:NSError, :Dynamic):BOOL;
+	overload public function readFromURL(url:NSURL, options:Dynamic, documentAttributes:Dynamic, error:NSError, :Dynamic):Bool;
 
 	@:native("readFromData:options:documentAttributes:error")
-	overload public function readFromData(data:NSData, options:Dynamic, documentAttributes:Dynamic, error:NSError):BOOL;
+	overload public function readFromData(data:NSData, options:Dynamic, documentAttributes:Dynamic, error:NSError):Bool;
 
 
 }

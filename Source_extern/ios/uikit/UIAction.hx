@@ -32,13 +32,13 @@ extern class UIAction{
 	public var state:UIMenuElementState;
 
 	@:native("sender")
-	public var sender:id;
+	public var sender:Dynamic;
 
 	@:native("actionWithHandler:API_AVAILABLE(ios(14.0)")
 	overload public static function actionWithHandler(handler:UIActionHandler, API_AVAILABLE(ios(14.0):Dynamic):UIAction;
 
-	@:native("actionWithTitle")
-	overload public static function actionWithTitle():UIAction;
+	@:native("")
+	overload public function ():;
 
 	@:native("init")
 	overload public function init():UIAction;

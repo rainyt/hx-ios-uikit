@@ -25,11 +25,11 @@ extern class UIActionSheet{
 	@:native("actionSheetStyle")
 	public var actionSheetStyle:UIActionSheetStyle;
 
-	@:native("addButtonWithTitle:::returns:of")
-	overload public function addButtonWithTitle(title:NSString, :, ://, returns:index, of:button.):NSInteger;
+	@:native("addButtonWithTitle")
+	overload public function addButtonWithTitle(title:NSString):NSInteger;
 
 	@:native("buttonTitleAtIndex")
-	overload public function buttonTitleAtIndex(buttonIndex:NSInteger):nullable NSString *;
+	overload public function buttonTitleAtIndex(buttonIndex:NSInteger):NSString;
 
 	@:native("numberOfButtons")
 	public var numberOfButtons:NSInteger;

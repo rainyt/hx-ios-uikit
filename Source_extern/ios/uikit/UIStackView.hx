@@ -19,8 +19,8 @@ extern class UIStackView{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIStackView;
 
-	@:native("initWithArrangedSubviews://:views:subviews")
-	overload public function initWithArrangedSubviews(views:Dynamic, //:Adds, views:as, subviews:of):UIStackView;
+	@:native("initWithArrangedSubviews")
+	overload public function initWithArrangedSubviews(views:Dynamic):UIStackView;
 
 	@:native("arrangedSubviews")
 	public var arrangedSubviews:Dynamic;

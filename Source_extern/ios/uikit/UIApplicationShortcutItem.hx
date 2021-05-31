@@ -38,7 +38,7 @@ extern class UIApplicationShortcutItem{
 	public var userInfo:Dynamic;
 
 	@:native("targetContentIdentifier")
-	public var targetContentIdentifier:id;
+	public var targetContentIdentifier:Dynamic;
 
 
 }

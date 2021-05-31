@@ -13,8 +13,8 @@ extern class UIDocumentInteractionController{
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentInteractionController;
 
-	@:native("interactionControllerWithURL://:file:determine:assumes")
-	overload public static function interactionControllerWithURL(url:NSURL, //:use, file:to, determine:UTI., assumes:file):UIDocumentInteractionController *;
+	@:native("interactionControllerWithURL")
+	overload public static function interactionControllerWithURL(url:NSURL):UIDocumentInteractionController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -32,22 +32,22 @@ extern class UIDocumentInteractionController{
 	public var icons:Dynamic;
 
 	@:native("annotation")
-	public var annotation:id;
+	public var annotation:Dynamic;
 
 	@:native("presentOptionsMenuFromRect:inView:animated")
-	overload public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;
+	overload public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):Bool;
 
 	@:native("presentOptionsMenuFromBarButtonItem:animated")
-	overload public function presentOptionsMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):BOOL;
+	overload public function presentOptionsMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):Bool;
 
 	@:native("presentPreviewAnimated")
-	overload public function presentPreviewAnimated(animated:Bool):BOOL;
+	overload public function presentPreviewAnimated(animated:Bool):Bool;
 
 	@:native("presentOpenInMenuFromRect:inView:animated")
-	overload public function presentOpenInMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;
+	overload public function presentOpenInMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):Bool;
 
 	@:native("presentOpenInMenuFromBarButtonItem:animated")
-	overload public function presentOpenInMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):BOOL;
+	overload public function presentOpenInMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):Bool;
 
 	@:native("dismissPreviewAnimated")
 	overload public function dismissPreviewAnimated(animated:Bool):Void;

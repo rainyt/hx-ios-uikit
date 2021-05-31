@@ -62,7 +62,7 @@ extern class UIImageView{
 	public var adjustsImageWhenAncestorFocused:Bool;
 
 	@:native("focusedFrameGuide")
-	public var focusedFrameGuide:UILayoutGuide;
+	public var focusedFrameGuide:Dynamic;
 
 	@:native("overlayContentView")
 	public var overlayContentView:UIView;

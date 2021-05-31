@@ -14,7 +14,7 @@ extern class UICollectionViewListCell{
 	overload public static function autorelease():UICollectionViewListCell;
 
 	@:native("defaultContentConfiguration")
-	overload public function defaultContentConfiguration():UIListContentConfiguration *;
+	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
 	@:native("indentationLevel")
 	public var indentationLevel:NSInteger;
@@ -29,7 +29,7 @@ extern class UICollectionViewListCell{
 	public var accessories:Dynamic;
 
 	@:native("separatorLayoutGuide")
-	public var separatorLayoutGuide:UILayoutGuide;
+	public var separatorLayoutGuide:Dynamic;
 
 
 }

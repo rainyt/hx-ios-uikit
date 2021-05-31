@@ -53,7 +53,7 @@ extern class UIWebView{
 	public var loading:Bool;
 
 	@:native("stringByEvaluatingJavaScriptFromString")
-	overload public function stringByEvaluatingJavaScriptFromString(script:NSString):nullable NSString *;
+	overload public function stringByEvaluatingJavaScriptFromString(script:NSString):NSString;
 
 	@:native("scalesPageToFit")
 	public var scalesPageToFit:Bool;

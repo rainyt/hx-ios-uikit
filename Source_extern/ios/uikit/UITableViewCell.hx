@@ -29,7 +29,7 @@ extern class UITableViewCell{
 	overload public function updateConfigurationUsingState(state:UICellConfigurationState):Void;
 
 	@:native("defaultContentConfiguration")
-	overload public function defaultContentConfiguration():UIListContentConfiguration *;
+	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
 	@:native("contentConfiguration")
 	public var contentConfiguration:Dynamic;
@@ -79,11 +79,11 @@ extern class UITableViewCell{
 	@:native("highlighted")
 	public var highlighted:Bool;
 
-	@:native("setSelected:animated::::::::::://:between:and")
-	overload public function setSelected(selected:Bool, animated:Bool, :, :, :, :, :, :, :, :, :, :, //:animate, between:regular, and:selected):Void;
+	@:native("setSelected:animated")
+	overload public function setSelected(selected:Bool, animated:Bool):Void;
 
-	@:native("setHighlighted:animated:::::::://:between:and")
-	overload public function setHighlighted(highlighted:Bool, animated:Bool, :, :, :, :, :, :, :, //:animate, between:regular, and:highlighted):Void;
+	@:native("setHighlighted:animated")
+	overload public function setHighlighted(highlighted:Bool, animated:Bool):Void;
 
 	@:native("editingStyle")
 	public var editingStyle:UITableViewCellEditingStyle;

@@ -32,13 +32,13 @@ extern class UIApplicationDeprecated{
 	overload public function setStatusBarStyle(statusBarStyle:UIStatusBarStyle, animated:Bool, API_DEPRECATED("Use -[UIViewController preferredStatusBarStyle]", ios(2.0, 9.0):Dynamic):Void;
 
 	@:native("ios(2.0,")
-	public var ios(2.0,:prefersStatusBarHidden]",;
+	public var ios(2.0,:Dynamic;
 
 	@:native("setStatusBarHidden:withAnimation:API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(3.2, 9.0)")
 	overload public function setStatusBarHidden(hidden:Bool, withAnimation:UIStatusBarAnimation, API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(3.2, 9.0):Dynamic):Void;
 
 	@:native("setKeepAliveTimeout:handler:API_DEPRECATED("Please use PushKit for VoIP applications instead of calling this method", ios(4.0, 9.0)")
-	overload public function setKeepAliveTimeout(timeout:NSTimeInterval, handler:Dynamic, API_DEPRECATED("Please use PushKit for VoIP applications instead of calling this method", ios(4.0, 9.0):Dynamic):BOOL;
+	overload public function setKeepAliveTimeout(timeout:NSTimeInterval, handler:Dynamic, API_DEPRECATED("Please use PushKit for VoIP applications instead of calling this method", ios(4.0, 9.0):Dynamic):Bool;
 
 	@:native("clearKeepAliveTimeout")
 	overload public function clearKeepAliveTimeout():Void;

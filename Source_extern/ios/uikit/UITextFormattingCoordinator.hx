@@ -28,11 +28,11 @@ extern class UITextFormattingCoordinator{
 	@:native("init")
 	overload public function init():UITextFormattingCoordinator;
 
-	@:native("setSelectedAttributes")
-	overload public function setSelectedAttributes():Void;
+	@:native("")
+	overload public function ():;
 
 	@:native("toggleFontPanel")
-	overload public static function toggleFontPanel(sender:id):Void;
+	overload public static function toggleFontPanel(sender:Dynamic):Void;
 
 
 }

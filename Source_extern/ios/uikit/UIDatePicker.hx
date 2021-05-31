@@ -40,8 +40,8 @@ extern class UIDatePicker{
 	@:native("minuteInterval")
 	public var minuteInterval:NSInteger;
 
-	@:native("setDate:animated://:animated:YES,:the:of:to:the")
-	overload public function setDate(date:NSDate, animated:Bool, //:if, animated:is, YES,:animate, the:wheels, of:time, to:display, the:new):Void;
+	@:native("setDate:animated")
+	overload public function setDate(date:NSDate, animated:Bool):Void;
 
 	@:native("preferredDatePickerStyle")
 	public var preferredDatePickerStyle:UIDatePickerStyle;

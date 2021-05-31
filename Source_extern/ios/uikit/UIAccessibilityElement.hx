@@ -14,10 +14,10 @@ extern class UIAccessibilityElement{
 	overload public static function autorelease():UIAccessibilityElement;
 
 	@:native("initWithAccessibilityContainer")
-	overload public function initWithAccessibilityContainer(container:id):UIAccessibilityElement;
+	overload public function initWithAccessibilityContainer(container:Dynamic):UIAccessibilityElement;
 
 	@:native("accessibilityContainer")
-	public var accessibilityContainer:id;
+	public var accessibilityContainer:Dynamic;
 
 	@:native("isAccessibilityElement")
 	public var isAccessibilityElement:Bool;

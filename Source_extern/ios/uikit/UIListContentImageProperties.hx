@@ -23,7 +23,7 @@ extern class UIListContentImageProperties{
 	public var tintColorTransformer:UIConfigurationColorTransformer;
 
 	@:native("resolvedTintColorForTintColor")
-	overload public function resolvedTintColorForTintColor(tintColor:UIColor):UIColor *;
+	overload public function resolvedTintColorForTintColor(tintColor:UIColor):UIColor;
 
 	@:native("cornerRadius")
 	public var cornerRadius:CGFloat;

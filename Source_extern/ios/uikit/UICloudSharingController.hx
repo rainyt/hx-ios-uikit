@@ -35,7 +35,7 @@ extern class UICloudSharingController{
 	public var availablePermissions:UICloudSharingPermissionOptions;
 
 	@:native("activityItemSource")
-	overload public function activityItemSource():id <UIActivityItemSource>;
+	overload public function activityItemSource():Dynamic;
 
 
 }

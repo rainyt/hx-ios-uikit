@@ -14,7 +14,7 @@ extern class UIAccessibilityAction{
 	overload public static function autorelease():UIAccessibilityAction;
 
 	@:native("accessibilityActivate")
-	overload public function accessibilityActivate():BOOL;
+	overload public function accessibilityActivate():Bool;
 
 	@:native("accessibilityIncrement")
 	overload public function accessibilityIncrement():Void;
@@ -23,13 +23,13 @@ extern class UIAccessibilityAction{
 	overload public function accessibilityDecrement():Void;
 
 	@:native("accessibilityScroll")
-	overload public function accessibilityScroll(direction:UIAccessibilityScrollDirection):BOOL;
+	overload public function accessibilityScroll(direction:UIAccessibilityScrollDirection):Bool;
 
 	@:native("accessibilityPerformEscape")
-	overload public function accessibilityPerformEscape():BOOL;
+	overload public function accessibilityPerformEscape():Bool;
 
 	@:native("accessibilityPerformMagicTap")
-	overload public function accessibilityPerformMagicTap():BOOL;
+	overload public function accessibilityPerformMagicTap():Bool;
 
 	@:native("accessibilityCustomActions")
 	public var accessibilityCustomActions:Dynamic;

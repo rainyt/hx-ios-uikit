@@ -50,7 +50,7 @@ extern class UIBarItem{
 	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("titleTextAttributesForState:API_AVAILABLE(ios(5.0)")
-	overload public function titleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;
+	overload public function titleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Dynamic;
 
 
 }
