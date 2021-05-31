@@ -20,3 +20,24 @@ But because the Git seems to have ceased maintenance, it can no longer be used c
 
 Please don't worry, I did not complete the specific target milestone. When the library can be used normally, I will release a version to haxelib.
 
+## Demo
+
+完成第一个里程碑，可以正常简单的编写。
+
+After completing the first milestone, you can write normally and simply.
+```haxe
+// Haxe编写IOS原生UI的例子：
+// 创建一个Title和消息
+var alter = UIAlertController.alertControllerWithTitle_message_preferredStyle(NSString.castFromString("title"), NSString.castFromString("msg"),
+    UIAlertControllerStyle.UIAlertControllerStyleAlert);
+var action = UIAlertAction.actionWithTitle_style_handler(NSString.castFromString("ok"), UIAlertActionStyle.UIAlertActionStyleDefault,
+    ObjcHandler.UIAlertActionCall(function(data:UIAlertAction) {
+        var title = data.title;
+        trace("点击事件！", title.toString());
+    }));
+alter.addAction(action);
+// 获得容器
+var application:UIViewController = UIApplication.sharedApplication().keyWindow.rootViewController;
+// 把Alert添加到容器
+application.presentViewController_animated_completion(alter, true, untyped nil);
+```
