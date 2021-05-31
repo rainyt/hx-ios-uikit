@@ -41,8 +41,8 @@ extern class UIAccessibilityCustomAction{
 	@:native("image")
 	public var image:UIImage;
 
-	@:native("tvos(11.0))")
-	public var tvos(11.0)):API_AVAILABLE(ios(11.0),;
+	@:native("attributedName")
+	public var attributedName:NSAttributedString;
 
 	@:native("target")
 	public var target:id;
@@ -50,8 +50,8 @@ extern class UIAccessibilityCustomAction{
 	@:native("selector")
 	public var selector:SEL;
 
-	@:native("tvos(13.0))")
-	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;
+	@:native("actionHandler")
+	public var actionHandler:UIAccessibilityCustomActionHandler;
 
 
 }

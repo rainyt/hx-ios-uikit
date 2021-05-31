@@ -11,32 +11,32 @@ extern class UISlider{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISlider;
 
-	@:native("min/max")
-	public var min/max:to;
+	@:native("to")
+	public var to:pinned;
 
-	@:native("value")
-	public var value:min;
+	@:native("min")
+	public var min:new;
 
-	@:native("value")
-	public var value:max;
+	@:native("max")
+	public var max:new;
 
-	@:native("off)")
-	public var off):speaker;
+	@:native("speaker")
+	public var speaker:Dynamic;
 
-	@:native("max)")
-	public var max):speaker;
+	@:native("speaker")
+	public var speaker:Dynamic;
 
-	@:native("YES")
-	public var YES:=;
+	@:native("=")
+	public var =:default;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("minimumTrackTintColor")
+	public var minimumTrackTintColor:UIColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("maximumTrackTintColor")
+	public var maximumTrackTintColor:UIColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("thumbTintColor")
+	public var thumbTintColor:UIColor;
 
 	@:native("setValue:animated://:slider:fixed:(i.e. duration depends on distance:not")
 	overload extern inline public function setValue(value:float, animated:BOOL, //:move, slider:at, fixed:velocity, (i.e. duration depends on distance:does, not:send):Void;

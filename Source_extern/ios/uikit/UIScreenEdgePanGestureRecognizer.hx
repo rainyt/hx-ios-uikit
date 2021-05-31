@@ -11,8 +11,8 @@ extern class UIScreenEdgePanGestureRecognizer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIScreenEdgePanGestureRecognizer;
 
-	@:native("orientation")
-	public var orientation:interface;
+	@:native("interface")
+	public var interface:current;
 
 
 }

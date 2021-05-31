@@ -11,8 +11,8 @@ extern class UIGestureRecognizerSubclass{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIGestureRecognizerSubclass;
 
-	@:native("consumers")
-	public var consumers:by;
+	@:native("by")
+	public var by:read;
 
 	@:native("ignoreTouch:forEvent://:a:isn't:of:gesture:can:passed:this:to:ignored.:touches:be:on:view:if")
 	overload extern inline public function ignoreTouch(touch:UITouch, forEvent:UIEvent, //:if, a:touch, isn't:part, of:this, gesture:it, can:be, passed:to, this:method, to:be, ignored.:ignored, touches:won't, be:cancelled, on:the, view:even, if:cancelsTouchesInView):Void;

@@ -12,7 +12,7 @@ extern class UIActivityItemsConfigurationReading{
 	overload extern inline public static function autorelease():UIActivityItemsConfigurationReading;
 
 	@:native("itemProvidersForActivityItemsConfiguration")
-	public var itemProvidersForActivityItemsConfiguration:>;
+	public var itemProvidersForActivityItemsConfiguration:Dynamic;
 
 	@:native("activityItemsConfigurationSupportsInteraction:NS_SWIFT_NAME(activityItemsConfigurationSupports(interaction:If:implemented,")
 	overload extern inline public function activityItemsConfigurationSupportsInteraction(interaction:NSString, NS_SWIFT_NAME(activityItemsConfigurationSupports(interaction:)://, If:not, implemented,:defaults):BOOL;
@@ -27,7 +27,7 @@ extern class UIActivityItemsConfigurationReading{
 	overload extern inline public function activityItemsConfigurationPreviewForItemAtIndex(index:NSInteger, intent:NSString, suggestedSize:CGSize):nullable NSItemProvider *;
 
 	@:native("applicationActivitiesForActivityItemsConfiguration")
-	public var applicationActivitiesForActivityItemsConfiguration:>;
+	public var applicationActivitiesForActivityItemsConfiguration:<UIActivity>;
 
 
 }

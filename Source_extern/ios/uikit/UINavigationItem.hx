@@ -23,38 +23,38 @@ extern class UINavigationItem{
 	@:native("titleView")
 	public var titleView:UIView;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):prompt;
+	@:native("prompt")
+	public var prompt:NSString;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):backBarButtonItem;
+	@:native("backBarButtonItem")
+	public var backBarButtonItem:UIBarButtonItem;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):backButtonTitle;
+	@:native("backButtonTitle")
+	public var backButtonTitle:NSString;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):hidesBackButton;
+	@:native("hidesBackButton")
+	public var hidesBackButton:BOOL;
 
 	@:native("setHidesBackButton:animated")
 	overload extern inline public function setHidesBackButton(hidesBackButton:BOOL, animated:BOOL):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(14.0));
+	@:native("backButtonDisplayMode")
+	public var backButtonDisplayMode:UINavigationItemBackButtonDisplayMode;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):leftBarButtonItems;
+	@:native("leftBarButtonItems")
+	public var leftBarButtonItems:Dynamic;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):rightBarButtonItems;
+	@:native("rightBarButtonItems")
+	public var rightBarButtonItems:Dynamic;
 
 	@:native("setLeftBarButtonItems:animated")
-	overload extern inline public function setLeftBarButtonItems(items:NSArray<UIBarButtonItem>, animated:BOOL):Void;
+	overload extern inline public function setLeftBarButtonItems(items:Dynamic, animated:BOOL):Void;
 
 	@:native("setRightBarButtonItems:animated")
-	overload extern inline public function setRightBarButtonItems(items:NSArray<UIBarButtonItem>, animated:BOOL):Void;
+	overload extern inline public function setRightBarButtonItems(items:Dynamic, animated:BOOL):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(5.0));
+	@:native("leftItemsSupplementBackButton")
+	public var leftItemsSupplementBackButton:BOOL;
 
 	@:native("leftBarButtonItem")
 	public var leftBarButtonItem:UIBarButtonItem;
@@ -68,23 +68,23 @@ extern class UINavigationItem{
 	@:native("setRightBarButtonItem:animated")
 	overload extern inline public function setRightBarButtonItem(item:UIBarButtonItem, animated:BOOL):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(11.0));
+	@:native("largeTitleDisplayMode")
+	public var largeTitleDisplayMode:UINavigationItemLargeTitleDisplayMode;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(11.0));
+	@:native("searchController")
+	public var searchController:UISearchController;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(11.0));
+	@:native("hidesSearchBarWhenScrolling")
+	public var hidesSearchBarWhenScrolling:BOOL;
 
-	@:native("tvos(13.0))")
-	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;
+	@:native("standardAppearance")
+	public var standardAppearance:UINavigationBarAppearance;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):compactAppearance;
+	@:native("compactAppearance")
+	public var compactAppearance:UINavigationBarAppearance;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):scrollEdgeAppearance;
+	@:native("scrollEdgeAppearance")
+	public var scrollEdgeAppearance:UINavigationBarAppearance;
 
 
 }

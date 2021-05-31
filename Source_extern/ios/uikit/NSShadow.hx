@@ -17,14 +17,14 @@ extern class NSShadow{
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):NSShadow;
 
-	@:native("drawing")
-	public var drawing:original;
+	@:native("original")
+	public var original:the;
 
-	@:native("units")
-	public var units:space;
+	@:native("space")
+	public var space:user;
 
-	@:native("1/3)")
-	public var 1/3):of;
+	@:native("of")
+	public var of:value;
 
 
 }

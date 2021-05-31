@@ -11,11 +11,11 @@ extern class UIPinchGestureRecognizer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPinchGestureRecognizer;
 
-	@:native("coordinates")
-	public var coordinates:screen;
+	@:native("screen")
+	public var screen:in;
 
-	@:native("scale/second")
-	public var scale/second:in;
+	@:native("in")
+	public var in:pinch;
 
 
 }

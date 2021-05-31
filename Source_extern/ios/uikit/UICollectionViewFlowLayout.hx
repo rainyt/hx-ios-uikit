@@ -11,11 +11,11 @@ extern class UICollectionViewFlowLayout{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UICollectionViewFlowLayout;
 
-	@:native("etc.")
-	public var etc.:information;
+	@:native("information")
+	public var information:size;
 
-	@:native("itself")
-	public var itself:of;
+	@:native("of")
+	public var of:piece;
 
 	@:native("collectionView:layout:sizeForItemAtIndexPath")
 	overload extern inline public function collectionView(collectionView:UICollectionView, layout:UICollectionViewLayout, sizeForItemAtIndexPath:NSIndexPath):CGSize;
@@ -44,11 +44,11 @@ extern class UICollectionViewFlowLayout{
 	@:native("itemSize")
 	public var itemSize:CGSize;
 
-	@:native("-preferredLayoutAttributesFittingAttributes:")
-	public var -preferredLayoutAttributesFittingAttributes::via;
+	@:native("estimatedItemSize")
+	public var estimatedItemSize:CGSize;
 
-	@:native("UICollectionViewScrollDirectionVertical")
-	public var UICollectionViewScrollDirectionVertical:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("headerReferenceSize")
 	public var headerReferenceSize:CGSize;
@@ -59,14 +59,14 @@ extern class UICollectionViewFlowLayout{
 	@:native("sectionInset")
 	public var sectionInset:UIEdgeInsets;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(11.0));
+	@:native("sectionInsetReference")
+	public var sectionInsetReference:UICollectionViewFlowLayoutSectionInsetReference;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):sectionHeadersPinToVisibleBounds;
+	@:native("sectionHeadersPinToVisibleBounds")
+	public var sectionHeadersPinToVisibleBounds:BOOL;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):sectionFootersPinToVisibleBounds;
+	@:native("sectionFootersPinToVisibleBounds")
+	public var sectionFootersPinToVisibleBounds:BOOL;
 
 
 }

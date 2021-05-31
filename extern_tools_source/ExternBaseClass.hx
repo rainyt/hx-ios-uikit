@@ -65,14 +65,7 @@ class ExternBaseClass {
 				typedefs.set(t2, t[1]);
 			} else if (value.indexOf("@property") == 0) {
 				// 属性解析
-				var array = StringTools.replace(value, "*", "").split(" ");
-				funcAndAttr.push({
-					name: StringTools.replace(array[array.length - 1], ";", ""),
-					type: ExternBaseClassType.PROPERTY,
-					returnClass: array[array.length - 2],
-					isStatic: false,
-					args: null
-				});
+				funcAndAttr.push(ObjcProperty.parsing(typedefs, this.classname, value));
 			} else if (value.indexOf("-") == 0 || value.indexOf("+") == 0) {
 				// 对象方法
 				funcAndAttr.push(ObjcFun.parsing(typedefs, this.classname, value));

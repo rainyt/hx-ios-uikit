@@ -24,7 +24,7 @@ extern class UICollisionBehavior{
 	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:id<UIDynamicItem>, withBoundaryIdentifier:id<NSCopying>):Void;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>):UICollisionBehavior;
+	overload extern inline public function initWithItems(items:Dynamic):UICollisionBehavior;
 
 	@:native("addItem")
 	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
@@ -33,7 +33,7 @@ extern class UICollisionBehavior{
 	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
 
 	@:native("items")
-	public var items:<UIDynamicItem>>;
+	public var items:Dynamic;
 
 	@:native("collisionMode")
 	public var collisionMode:UICollisionBehaviorMode;
@@ -57,7 +57,7 @@ extern class UICollisionBehavior{
 	overload extern inline public function removeBoundaryWithIdentifier(identifier:id<NSCopying>):Void;
 
 	@:native("boundaryIdentifiers")
-	public var boundaryIdentifiers:<NSCopying>>;
+	public var boundaryIdentifiers:Dynamic;
 
 	@:native("removeAllBoundaries;")
 	overload extern inline public function removeAllBoundaries;():Void;

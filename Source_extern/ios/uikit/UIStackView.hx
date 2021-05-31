@@ -18,10 +18,10 @@ extern class UIStackView{
 	overload extern inline public function initWithCoder(coder:NSCoder):UIStackView;
 
 	@:native("initWithArrangedSubviews://:views:subviews")
-	overload extern inline public function initWithArrangedSubviews(views:NSArray<__kindofUIView>, //:Adds, views:as, subviews:of):UIStackView;
+	overload extern inline public function initWithArrangedSubviews(views:Dynamic, //:Adds, views:as, subviews:of):UIStackView;
 
 	@:native("arrangedSubviews")
-	public var arrangedSubviews:>;
+	public var arrangedSubviews:Dynamic;
 
 	@:native("addArrangedSubview")
 	overload extern inline public function addArrangedSubview(view:UIView):Void;

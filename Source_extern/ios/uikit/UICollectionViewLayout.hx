@@ -23,20 +23,20 @@ extern class UICollectionViewLayout{
 	@:native("transform3D")
 	public var transform3D:CATransform3D;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):bounds;
+	@:native("bounds")
+	public var bounds:CGRect;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):transform;
+	@:native("transform")
+	public var transform:CGAffineTransform;
 
 	@:native("alpha")
 	public var alpha:CGFloat;
 
-	@:native("0")
-	public var 0:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("is")
+	public var is:attribute;
 
 	@:native("indexPath")
 	public var indexPath:NSIndexPath;
@@ -44,8 +44,8 @@ extern class UICollectionViewLayout{
 	@:native("representedElementCategory")
 	public var representedElementCategory:UICollectionElementCategory;
 
-	@:native("UICollectionElementCategoryCell")
-	public var UICollectionElementCategoryCell:is;
+	@:native("is")
+	public var is:representedElementCategory;
 
 	@:native("layoutAttributesForCellWithIndexPath")
 	overload extern inline public static function layoutAttributesForCellWithIndexPath(indexPath:NSIndexPath):UICollectionViewLayout;
@@ -56,53 +56,53 @@ extern class UICollectionViewLayout{
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
 	overload extern inline public static function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayout;
 
-	@:native("UICollectionUpdateActionInsert")
-	public var UICollectionUpdateActionInsert:for;
+	@:native("for")
+	public var for:nil;
 
-	@:native("UICollectionUpdateActionDelete")
-	public var UICollectionUpdateActionDelete:for;
+	@:native("for")
+	public var for:nil;
 
 	@:native("updateAction")
 	public var updateAction:UICollectionUpdateAction;
 
-	@:native("-reloadData")
-	public var -reloadData:sent;
+	@:native("sent")
+	public var sent:is;
 
-	@:native("deleted")
-	public var deleted:or;
+	@:native("or")
+	public var or:inserted;
 
 	@:native("invalidateItemsAtIndexPaths")
-	overload extern inline public function invalidateItemsAtIndexPaths(indexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;
 
 	@:native("invalidateSupplementaryElementsOfKind:atIndexPaths")
-	overload extern inline public function invalidateSupplementaryElementsOfKind(elementKind:NSString, atIndexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function invalidateSupplementaryElementsOfKind(elementKind:NSString, atIndexPaths:Dynamic):Void;
 
 	@:native("invalidateDecorationElementsOfKind:atIndexPaths")
-	overload extern inline public function invalidateDecorationElementsOfKind(elementKind:NSString, atIndexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function invalidateDecorationElementsOfKind(elementKind:NSString, atIndexPaths:Dynamic):Void;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):invalidatedItemIndexPaths;
+	@:native("invalidatedItemIndexPaths")
+	public var invalidatedItemIndexPaths:Dynamic;
 
-	@:native("NSIndexPaths")
-	public var NSIndexPaths:of;
+	@:native("invalidatedSupplementaryIndexPaths")
+	public var invalidatedSupplementaryIndexPaths:Dynamic;
 
-	@:native("NSIndexPaths")
-	public var NSIndexPaths:of;
+	@:native("invalidatedDecorationIndexPaths")
+	public var invalidatedDecorationIndexPaths:Dynamic;
 
-	@:native("CGPointZero")
-	public var CGPointZero:is;
+	@:native("contentOffsetAdjustment")
+	public var contentOffsetAdjustment:CGPoint;
 
-	@:native("CGSizeZero")
-	public var CGSizeZero:is;
+	@:native("contentSizeAdjustment")
+	public var contentSizeAdjustment:CGSize;
 
-	@:native("invalidation")
-	public var invalidation:the;
+	@:native("previousIndexPathsForInteractivelyMovingItems")
+	public var previousIndexPathsForInteractivelyMovingItems:Dynamic;
 
-	@:native("invalidation")
-	public var invalidation:the;
+	@:native("targetIndexPathsForInteractivelyMovingItems")
+	public var targetIndexPathsForInteractivelyMovingItems:Dynamic;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):interactiveMovementTarget;
+	@:native("interactiveMovementTarget")
+	public var interactiveMovementTarget:CGPoint;
 
 	@:native("init")
 	overload extern inline public function init():UICollectionViewLayout;
@@ -125,11 +125,11 @@ extern class UICollectionViewLayout{
 	@:native("registerNib:forDecorationViewOfKind")
 	overload extern inline public function registerNib(nib:UINib, forDecorationViewOfKind:NSString):Void;
 
-	@:native("UICollectionViewLayoutAttributes")
-	public var UICollectionViewLayoutAttributes:of;
+	@:native("of")
+	public var of:instances;
 
-	@:native("contexts")
-	public var contexts:invalidation;
+	@:native("invalidationContextClass")
+	public var invalidationContextClass:Class;
 
 	@:native("prepareLayout;")
 	overload extern inline public function prepareLayout;():Void;
@@ -164,17 +164,17 @@ extern class UICollectionViewLayout{
 	@:native("targetContentOffsetForProposedContentOffset:API_AVAILABLE(ios(7.0):a:can:the:offset:be:during:or")
 	overload extern inline public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint, API_AVAILABLE(ios(7.0)://, a:layout, can:return, the:content, offset:to, be:applied, during:transition, or:update):CGPoint;
 
-	@:native("scrolling.")
-	public var scrolling.:facilitate;
+	@:native("facilitate")
+	public var facilitate:to;
 
-	@:native("layout.")
-	public var layout.:the;
+	@:native("the")
+	public var the:of;
 
-	@:native("necessary.")
-	public var necessary.:if;
+	@:native("if")
+	public var if:horizontally;
 
 	@:native("prepareForCollectionViewUpdates")
-	overload extern inline public function prepareForCollectionViewUpdates(updateItems:NSArray<UICollectionViewUpdateItem>):Void;
+	overload extern inline public function prepareForCollectionViewUpdates(updateItems:Dynamic):Void;
 
 	@:native("finalizeCollectionViewUpdates;")
 	overload extern inline public function finalizeCollectionViewUpdates;():Void;
@@ -231,10 +231,10 @@ extern class UICollectionViewLayout{
 	overload extern inline public function layoutAttributesForInteractivelyMovingItemAtIndexPath(indexPath:NSIndexPath, withTargetPosition:CGPoint):UICollectionViewLayoutAttributes *;
 
 	@:native("invalidationContextForInteractivelyMovingItems:withTargetPosition:previousIndexPaths:previousPosition")
-	overload extern inline public function invalidationContextForInteractivelyMovingItems(targetIndexPaths:NSArray<NSIndexPath>, withTargetPosition:CGPoint, previousIndexPaths:NSArray<NSIndexPath>, previousPosition:CGPoint):UICollectionViewLayoutInvalidationContext *;
+	overload extern inline public function invalidationContextForInteractivelyMovingItems(targetIndexPaths:Dynamic, withTargetPosition:CGPoint, previousIndexPaths:Dynamic, previousPosition:CGPoint):UICollectionViewLayoutInvalidationContext *;
 
 	@:native("invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:previousIndexPaths:movementCancelled")
-	overload extern inline public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths(indexPaths:NSArray<NSIndexPath>, previousIndexPaths:NSArray<NSIndexPath>, movementCancelled:BOOL):UICollectionViewLayoutInvalidationContext *;
+	overload extern inline public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths(indexPaths:Dynamic, previousIndexPaths:Dynamic, movementCancelled:BOOL):UICollectionViewLayoutInvalidationContext *;
 
 
 }

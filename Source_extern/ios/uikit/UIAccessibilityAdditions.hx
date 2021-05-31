@@ -35,11 +35,11 @@ extern class UIAccessibilityAdditions{
 	@:native("accessibilityAttributedScrollStatusForScrollView")
 	overload extern inline public function accessibilityAttributedScrollStatusForScrollView(scrollView:UIScrollView):nullable NSAttributedString *;
 
-	@:native("tvos(11_0))")
-	public var tvos(11_0)):API_AVAILABLE(ios(11_0),;
+	@:native("accessibilityIgnoresInvertColors")
+	public var accessibilityIgnoresInvertColors:BOOL;
 
-	@:native("macos(11.0))")
-	public var macos(11.0)):watchos(7.0),;
+	@:native("accessibilityName")
+	public var accessibilityName:NSString;
 
 
 }

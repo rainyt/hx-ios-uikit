@@ -14,11 +14,11 @@ extern class UISnapBehavior{
 	@:native("initWithItem:snapToPoint")
 	overload extern inline public function initWithItem(item:id<UIDynamicItem>, snapToPoint:CGPoint):UISnapBehavior;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):snapPoint;
+	@:native("snapPoint")
+	public var snapPoint:CGPoint;
 
-	@:native("oscillation.")
-	public var oscillation.:least;
+	@:native("least")
+	public var least:the;
 
 
 }

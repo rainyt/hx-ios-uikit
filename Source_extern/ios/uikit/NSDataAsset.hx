@@ -21,7 +21,7 @@ extern class NSDataAsset{
 	overload extern inline public function initWithName(name:NSString, bundle:NSBundle):NSDataAsset;
 
 	@:native("name")
-	public var name:NSDataAssetName;
+	public var name:NSString;
 
 	@:native("data")
 	public var data:NSData;

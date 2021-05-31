@@ -20,11 +20,11 @@ extern class UIAccessibilityContainer{
 	@:native("indexOfAccessibilityElement")
 	overload extern inline public function indexOfAccessibilityElement(element:id):NSInteger;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):accessibilityElements;
+	@:native("accessibilityElements")
+	public var accessibilityElements:Dynamic;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):accessibilityContainerType;
+	@:native("accessibilityContainerType")
+	public var accessibilityContainerType:UIAccessibilityContainerType;
 
 	@:native("accessibilityRowRange;")
 	overload extern inline public function accessibilityRowRange;():NSRange;

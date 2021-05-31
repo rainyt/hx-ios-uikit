@@ -26,35 +26,35 @@ extern class UIGestureRecognizer{
 	@:native("removeTarget:action://:the:target/action:passing:for:matches:targets,:the")
 	overload extern inline public function removeTarget(target:id, action:SEL, //:remove, the:specified, target/action:pair., passing:nil, for:target, matches:all, targets,:and, the:same):Void;
 
-	@:native("recognizer")
-	public var recognizer:gesture;
-
-	@:native("delegate")
-	public var delegate:recognizer's;
-
 	@:native("gesture")
-	public var gesture:a;
+	public var gesture:the;
 
-	@:native("method")
-	public var method:addGestureRecognizer:;
+	@:native("recognizer's")
+	public var recognizer's:gesture;
 
-	@:native("called.")
-	public var called.:is;
+	@:native("a")
+	public var a:recognizing;
 
-	@:native("gesture")
-	public var gesture:this;
+	@:native("addGestureRecognizer:")
+	public var addGestureRecognizer::the;
 
-	@:native("recognized")
-	public var recognized:is;
+	@:native("is")
+	public var is:method;
 
-	@:native("NSNumbers.")
-	public var NSNumbers.:as;
+	@:native("this")
+	public var this:of;
 
-	@:native("NSNumbers.")
-	public var NSNumbers.:as;
+	@:native("is")
+	public var is:gesture;
 
-	@:native("YES")
-	public var YES:to;
+	@:native("allowedTouchTypes")
+	public var allowedTouchTypes:Dynamic;
+
+	@:native("allowedPressTypes")
+	public var allowedPressTypes:Dynamic;
+
+	@:native("requiresExclusiveTouchType")
+	public var requiresExclusiveTouchType:BOOL;
 
 	@:native("requireGestureRecognizerToFail")
 	overload extern inline public function requireGestureRecognizerToFail(otherGestureRecognizer:UIGestureRecognizer):Void;
@@ -62,20 +62,20 @@ extern class UIGestureRecognizer{
 	@:native("locationInView:::::::::::::::::a:single-point:for:gesture.:the:of")
 	overload extern inline public function locationInView(view:UIView, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, a:generic, single-point:location, for:the, gesture.:usually, the:centroid, of:the):CGPoint;
 
-	@:native("queried")
-	public var queried:be;
+	@:native("be")
+	public var be:can;
 
 	@:native("locationOfTouch:inView://:location:a")
 	overload extern inline public function locationOfTouch(touchIndex:NSUInteger, inView:UIView, //:the, location:of, a:particular):CGPoint;
 
-	@:native("logging")
-	public var logging:in;
+	@:native("name")
+	public var name:NSString;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("modifierFlags")
+	public var modifierFlags:UIKeyModifierFlags;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("buttonMask")
+	public var buttonMask:UIEventButtonMask;
 
 	@:native("gestureRecognizerShouldBegin")
 	overload extern inline public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):BOOL;

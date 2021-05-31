@@ -71,26 +71,26 @@ extern class UIImage{
 	@:native("initWithCIImage:scale:orientation")
 	overload extern inline public function initWithCIImage(ciImage:CIImage, scale:CGFloat, orientation:UIImageOrientation):UIImage;
 
-	@:native("pixels")
-	public var pixels:in;
+	@:native("in")
+	public var in:measured;
 
-	@:native("based")
-	public var based:CIImage;
+	@:native("CIImage")
+	public var CIImage:if;
 
 	@:native("CGImage")
 	overload extern inline public function CGImage():nullable CGImageRef;
 
-	@:native("based")
-	public var based:CGImageRef;
+	@:native("CIImage")
+	public var CIImage:CIImage;
 
-	@:native("composited")
-	public var composited:is;
+	@:native("is")
+	public var is:image;
 
-	@:native("API_AVAILABLE(ios(4.0))")
-	public var API_AVAILABLE(ios(4.0)):scale;
+	@:native("scale")
+	public var scale:CGFloat;
 
-	@:native("API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0))")
-	public var API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0)):symbolImage;
+	@:native("symbolImage")
+	public var symbolImage:BOOL;
 
 	@:native("animatedImageNamed:duration:API_AVAILABLE(ios(5.0)://:sequence:files:suffix:at")
 	overload extern inline public static function animatedImageNamed(name:NSString, duration:NSTimeInterval, API_AVAILABLE(ios(5.0):, //:read, sequence:of, files:with, suffix:starting, at:0):nullable UIImage *;
@@ -102,13 +102,13 @@ extern class UIImage{
 	overload extern inline public static function animatedResizableImageNamed(name:NSString, capInsets:UIEdgeInsets, resizingMode:UIImageResizingMode, duration:NSTimeInterval):nullable UIImage *;
 
 	@:native("animatedImageWithImages:duration")
-	overload extern inline public static function animatedImageWithImages(images:NSArray<UIImage>, duration:NSTimeInterval):nullable UIImage *;
+	overload extern inline public static function animatedImageWithImages(images:Dynamic, duration:NSTimeInterval):nullable UIImage *;
 
-	@:native("images")
-	public var images:non-animated;
+	@:native("")
+	public var :;
 
-	@:native("images")
-	public var images:non-animated;
+	@:native("duration")
+	public var duration:NSTimeInterval;
 
 	@:native("drawAtPoint:::::::::::::::::::::::::::::mode:kCGBlendModeNormal,")
 	overload extern inline public function drawAtPoint(point:CGPoint, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, mode:=, kCGBlendModeNormal,:alpha):Void;
@@ -131,47 +131,47 @@ extern class UIImage{
 	@:native("resizableImageWithCapInsets:resizingMode:API_AVAILABLE(ios(6.0):the:is:according")
 	overload extern inline public function resizableImageWithCapInsets(capInsets:UIEdgeInsets, resizingMode:UIImageResizingMode, API_AVAILABLE(ios(6.0)://, the:interior, is:resized, according:to):UIImage *;
 
-	@:native("images")
-	public var images:resizable;
+	@:native("")
+	public var :;
 
-	@:native("UIImageResizingModeTile")
-	public var UIImageResizingModeTile:is;
+	@:native("resizingMode")
+	public var resizingMode:UIImageResizingMode;
 
 	@:native("imageWithAlignmentRectInsets")
 	overload extern inline public function imageWithAlignmentRectInsets(alignmentInsets:UIEdgeInsets):UIImage *;
 
-	@:native("API_AVAILABLE(ios(6.0))")
-	public var API_AVAILABLE(ios(6.0)):alignmentRectInsets;
+	@:native("alignmentRectInsets")
+	public var alignmentRectInsets:UIEdgeInsets;
 
 	@:native("imageWithRenderingMode")
 	overload extern inline public function imageWithRenderingMode(renderingMode:UIImageRenderingMode):UIImage *;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):renderingMode;
+	@:native("renderingMode")
+	public var renderingMode:UIImageRenderingMode;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):imageRendererFormat;
+	@:native("imageRendererFormat")
+	public var imageRendererFormat:UIGraphicsImageRendererFormat;
 
-	@:native("traits")
-	public var traits:its;
+	@:native("traitCollection")
+	public var traitCollection:UITraitCollection;
 
-	@:native("based.")
-	public var based.:CGImage;
+	@:native("imageAsset")
+	public var imageAsset:UIImageAsset;
 
 	@:native("imageFlippedForRightToLeftLayoutDirection")
 	overload extern inline public function imageFlippedForRightToLeftLayoutDirection():UIImage *;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):flipsForRightToLeftLayoutDirection;
+	@:native("flipsForRightToLeftLayoutDirection")
+	public var flipsForRightToLeftLayoutDirection:BOOL;
 
 	@:native("imageWithHorizontallyFlippedOrientation")
 	overload extern inline public function imageWithHorizontallyFlippedOrientation():UIImage *;
 
-	@:native("NS_REFINED_FOR_SWIFT")
-	public var NS_REFINED_FOR_SWIFT:API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0));
+	@:native("baselineOffsetFromBottom")
+	public var baselineOffsetFromBottom:CGFloat;
 
-	@:native("NS_REFINED_FOR_SWIFT")
-	public var NS_REFINED_FOR_SWIFT:API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0));
+	@:native("hasBaseline")
+	public var hasBaseline:BOOL;
 
 	@:native("imageWithBaselineOffsetFromBottom")
 	overload extern inline public function imageWithBaselineOffsetFromBottom(baselineOffset:CGFloat):UIImage *;
@@ -179,14 +179,14 @@ extern class UIImage{
 	@:native("imageWithoutBaseline")
 	overload extern inline public function imageWithoutBaseline():UIImage *;
 
-	@:native("API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0))")
-	public var API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0)):configuration;
+	@:native("configuration")
+	public var configuration:UIImageConfiguration;
 
 	@:native("imageWithConfiguration")
 	overload extern inline public function imageWithConfiguration(configuration:UIImageConfiguration):UIImage *;
 
-	@:native("API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0))")
-	public var API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0)):symbolConfiguration;
+	@:native("symbolConfiguration")
+	public var symbolConfiguration:UIImageSymbolConfiguration;
 
 	@:native("imageByApplyingSymbolConfiguration")
 	overload extern inline public function imageByApplyingSymbolConfiguration(configuration:UIImageSymbolConfiguration):nullable UIImage *;
@@ -197,20 +197,20 @@ extern class UIImage{
 	@:native("imageWithTintColor:renderingMode")
 	overload extern inline public function imageWithTintColor(color:UIColor, renderingMode:UIImageRenderingMode):UIImage *;
 
-	@:native("circle")
-	public var circle:filled;
+	@:native("actionsImage")
+	public var actionsImage:UIImage;
 
-	@:native("cirlce")
-	public var cirlce:filled;
+	@:native("addImage")
+	public var addImage:UIImage;
 
-	@:native("circle")
-	public var circle:filled;
+	@:native("removeImage")
+	public var removeImage:UIImage;
 
-	@:native("circle")
-	public var circle:filled;
+	@:native("checkmarkImage")
+	public var checkmarkImage:UIImage;
 
-	@:native("circle")
-	public var circle:stroked;
+	@:native("strokedCheckmarkImage")
+	public var strokedCheckmarkImage:UIImage;
 
 	@:native("textAttachmentWithImage")
 	overload extern inline public static function textAttachmentWithImage(image:UIImage):NSTextAttachment *;
@@ -218,11 +218,11 @@ extern class UIImage{
 	@:native("stretchableImageWithLeftCapWidth:topCapHeight")
 	overload extern inline public function stretchableImageWithLeftCapWidth(leftCapWidth:NSInteger, topCapHeight:NSInteger):UIImage *;
 
-	@:native("1")
-	public var 1:-;
+	@:native("leftCapWidth")
+	public var leftCapWidth:NSInteger;
 
-	@:native("1")
-	public var 1:-;
+	@:native("topCapHeight")
+	public var topCapHeight:NSInteger;
 
 	@:native("initWithImage")
 	overload extern inline public function initWithImage(image:UIImage):UIImage;

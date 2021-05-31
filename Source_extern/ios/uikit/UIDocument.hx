@@ -14,23 +14,23 @@ extern class UIDocument{
 	@:native("initWithFileURL:NS_DESIGNATED_INITIALIZER")
 	overload extern inline public function initWithFileURL(url:NSURL, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocument;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):fileURL;
+	@:native("fileURL")
+	public var fileURL:NSURL;
 
-	@:native("strings.")
-	public var strings.:error;
+	@:native("localizedName")
+	public var localizedName:NSString;
 
-	@:native("default.")
-	public var default.:by;
+	@:native("fileType")
+	public var fileType:NSString;
 
-	@:native("once.")
-	public var once.:least;
+	@:native("fileModificationDate")
+	public var fileModificationDate:NSDate;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):documentState;
+	@:native("documentState")
+	public var documentState:UIDocumentState;
 
-	@:native("set.")
-	public var set.:is;
+	@:native("progress")
+	public var progress:NSProgress;
 
 	@:native("openWithCompletionHandler")
 	overload extern inline public function openWithCompletionHandler(completionHandler:Dynamic):Void;
@@ -50,11 +50,11 @@ extern class UIDocument{
 	@:native("enableEditing")
 	overload extern inline public function enableEditing():Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):undoManager;
+	@:native("undoManager")
+	public var undoManager:NSUndoManager;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):hasUnsavedChanges;
+	@:native("hasUnsavedChanges")
+	public var hasUnsavedChanges:BOOL;
 
 	@:native("updateChangeCount")
 	overload extern inline public function updateChangeCount(change:UIDocumentChangeKind):Void;
@@ -71,8 +71,8 @@ extern class UIDocument{
 	@:native("autosaveWithCompletionHandler")
 	overload extern inline public function autosaveWithCompletionHandler(completionHandler:Dynamic):Void;
 
-	@:native("type.")
-	public var type.:new;
+	@:native("savingFileType")
+	public var savingFileType:NSString;
 
 	@:native("fileNameExtensionForType:saveOperation:API_UNAVAILABLE(tvos:For:specified:and:particular:of:operation,:a:name:that:be:to:base")
 	overload extern inline public function fileNameExtensionForType(typeName:NSString, saveOperation:UIDocumentSaveOperation, API_UNAVAILABLE(tvos://, For:a, specified:type,, and:a, particular:kind, of:save, operation,:return, a:file, name:extension, that:can, be:appended, to:a, base:file):NSString *;
@@ -104,8 +104,8 @@ extern class UIDocument{
 	@:native("revertToContentsOfURL:completionHandler")
 	overload extern inline public function revertToContentsOfURL(url:NSURL, completionHandler:Dynamic):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(8.0));
+	@:native("userActivity")
+	public var userActivity:NSUserActivity;
 
 	@:native("updateUserActivityState:API_AVAILABLE(ios(8.0)")
 	overload extern inline public function updateUserActivityState(userActivity:NSUserActivity, API_AVAILABLE(ios(8.0):Dynamic):Void;

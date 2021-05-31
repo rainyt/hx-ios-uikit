@@ -21,7 +21,7 @@ extern class UIFieldBehavior{
 	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
 
 	@:native("items")
-	public var items:<UIDynamicItem>>;
+	public var items:Dynamic;
 
 	@:native("position")
 	public var position:CGPoint;

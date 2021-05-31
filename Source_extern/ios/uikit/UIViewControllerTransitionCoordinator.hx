@@ -20,8 +20,8 @@ extern class UIViewControllerTransitionCoordinator{
 	@:native("initiallyInteractive")
 	public var initiallyInteractive:BOOL;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):isInterruptible;
+	@:native("isInterruptible")
+	public var isInterruptible:BOOL;
 
 	@:native("interactive")
 	public var interactive:BOOL;
@@ -50,8 +50,8 @@ extern class UIViewControllerTransitionCoordinator{
 	@:native("containerView")
 	public var containerView:UIView;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):targetTransform;
+	@:native("targetTransform")
+	public var targetTransform:CGAffineTransform;
 
 	@:native("animateAlongsideTransition")
 	overload extern inline public function animateAlongsideTransition():BOOL;
@@ -65,8 +65,8 @@ extern class UIViewControllerTransitionCoordinator{
 	@:native("notifyWhenInteractionChangesUsingBlock")
 	overload extern inline public function notifyWhenInteractionChangesUsingBlock(handler:Dynamic):Void;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):transitionCoordinator;
+	@:native("transitionCoordinator")
+	public var transitionCoordinator:<UIViewControllerTransitionCoordinator>;
 
 
 }

@@ -23,8 +23,8 @@ extern class UIContextualAction{
 	@:native("title")
 	public var title:NSString;
 
-	@:native("style")
-	public var style:action;
+	@:native("action")
+	public var action:the;
 
 	@:native("image")
 	public var image:UIImage;

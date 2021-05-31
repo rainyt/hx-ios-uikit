@@ -14,20 +14,20 @@ extern class UIWindow{
 	@:native("initWithWindowScene")
 	overload extern inline public function initWithWindowScene(windowScene:UIWindowScene):UIWindow;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):windowScene;
+	@:native("windowScene")
+	public var windowScene:UIWindowScene;
 
-	@:native("API_AVAILABLE(macCatalyst(13.0))")
-	public var API_AVAILABLE(macCatalyst(13.0)):canResizeToFitContent;
+	@:native("canResizeToFitContent")
+	public var canResizeToFitContent:BOOL;
 
-	@:native("code")
-	public var code:performance-sensitive;
+	@:native("screen")
+	public var screen:UIScreen;
 
 	@:native("setScreen")
 	overload extern inline public function setScreen(screen:UIScreen):Void;
 
-	@:native("0.0")
-	public var 0.0:=;
+	@:native("=")
+	public var =:default;
 
 	@:native("keyWindow")
 	public var keyWindow:BOOL;
@@ -44,8 +44,8 @@ extern class UIWindow{
 	@:native("makeKeyAndVisible;")
 	overload extern inline public function makeKeyAndVisible;():Void;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("rootViewController")
+	public var rootViewController:UIViewController;
 
 	@:native("sendEvent:::::::::::called:UIApplication:dispatch:to:inside")
 	overload extern inline public function sendEvent(event:UIEvent, :, :, :, :, :, :, :, :, :, ://, called:by, UIApplication:to, dispatch:events, to:views, inside:the):Void;

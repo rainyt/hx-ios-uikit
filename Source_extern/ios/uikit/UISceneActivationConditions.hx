@@ -17,14 +17,14 @@ extern class UISceneActivationConditions{
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(aDecoder:NSCoder):UISceneActivationConditions;
 
-	@:native("predicateWithValue:YES]")
-	public var predicateWithValue:YES]:[NSPredicate;
+	@:native("[NSPredicate")
+	public var [NSPredicate:is;
 
 	@:native("predicateWithValue:NO]")
 	public var predicateWithValue:NO]:[NSPredicate;
 
-	@:native("nil")
-	public var nil:default;
+	@:native("targetContentIdentifier")
+	public var targetContentIdentifier:NSString;
 
 
 }

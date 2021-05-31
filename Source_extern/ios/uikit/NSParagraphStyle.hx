@@ -17,44 +17,44 @@ extern class NSParagraphStyle{
 	@:native("initWithTextAlignment:location:options:NS_DESIGNATED_INITIALIZER:Initializes:text:with:text:location,:options.:The:alignment:used:determine:position:text:the")
 	overload extern inline public function initWithTextAlignment(alignment:NSTextAlignment, location:CGFloat, options:NSDictionary<NSTextTabOptionKey,id>, NS_DESIGNATED_INITIALIZER://, Initializes:a, text:tab, with:the, text:alignment,, location,:and, options.:, The:text, alignment:is, used:to, determine:the, position:of, text:inside, the:tab):NSParagraphStyle;
 
-	@:native("language.")
-	public var language.:preferred;
+	@:native("preferred")
+	public var preferred:user's;
 
-	@:native("system")
-	public var system:coordinate;
+	@:native("coordinate")
+	public var coordinate:rect;
 
-	@:native("attributes")
-	public var attributes:configuration;
+	@:native("configuration")
+	public var configuration:Optional;
 
-	@:native("init].")
-	public var init].:alloc];
+	@:native("alloc]")
+	public var alloc]:[[NSParagraphStyle;
 
 	@:native("defaultWritingDirectionForLanguage::languageName:in:lang")
 	overload extern inline public static function defaultWritingDirectionForLanguage(languageName:NSString, ://, languageName:is, in:ISO, lang:region):NSWritingDirection;
 
-	@:native("manager.")
-	public var manager.:layout;
+	@:native("same")
+	public var same:the;
 
-	@:native("any).")
-	public var any).:if;
+	@:native("if")
+	public var if:paragraphSpacingBefore,;
 
 	@:native("alignment")
 	public var alignment:NSTextAlignment;
 
-	@:native("paragraph")
-	public var paragraph:of;
+	@:native("of")
+	public var of:edge;
 
-	@:native("margin")
-	public var margin:other;
+	@:native("other")
+	public var other:from;
 
-	@:native("direction")
-	public var direction:text;
+	@:native("text")
+	public var text:for;
 
-	@:native("computation).")
-	public var computation).:this;
+	@:native("this")
+	public var this:after;
 
-	@:native("maximum.")
-	public var maximum.:no;
+	@:native("no")
+	public var no:implies;
 
 	@:native("lineBreakMode")
 	public var lineBreakMode:NSLineBreakMode;
@@ -62,26 +62,26 @@ extern class NSParagraphStyle{
 	@:native("baseWritingDirection")
 	public var baseWritingDirection:NSWritingDirection;
 
-	@:native("height.")
-	public var height.:line;
+	@:native("(if")
+	public var (if:factor;
 
-	@:native("paragraph.")
-	public var paragraph.:this;
+	@:native("if")
+	public var if:paragraphSpacing,;
 
 	@:native("hyphenationFactor")
 	public var hyphenationFactor:float;
 
-	@:native("interval")
-	public var interval:28pt;
-
 	@:native("tabStops")
-	public var tabStops:in;
+	public var tabStops:Dynamic;
 
-	@:native("etc.")
-	public var etc.:width,;
+	@:native("defaultTabInterval")
+	public var defaultTabInterval:CGFloat;
 
-	@:native("NSLineBreakStrategyNone.")
-	public var NSLineBreakStrategyNone.:is;
+	@:native("allowsDefaultTighteningForTruncation")
+	public var allowsDefaultTighteningForTruncation:BOOL;
+
+	@:native("lineBreakStrategy")
+	public var lineBreakStrategy:NSLineBreakStrategy;
 
 	@:native("lineSpacing")
 	public var lineSpacing:CGFloat;
@@ -122,17 +122,17 @@ extern class NSParagraphStyle{
 	@:native("hyphenationFactor")
 	public var hyphenationFactor:float;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.0),;
+	@:native("tabStops")
+	public var tabStops:Dynamic;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.0),;
+	@:native("defaultTabInterval")
+	public var defaultTabInterval:CGFloat;
 
-	@:native("ios(9.0))")
-	public var ios(9.0)):API_AVAILABLE(macos(10.11),;
+	@:native("allowsDefaultTighteningForTruncation")
+	public var allowsDefaultTighteningForTruncation:BOOL;
 
-	@:native("ios(9.0))")
-	public var ios(9.0)):API_AVAILABLE(macos(10.11),;
+	@:native("lineBreakStrategy")
+	public var lineBreakStrategy:NSLineBreakStrategy;
 
 	@:native("addTabStop")
 	overload extern inline public function addTabStop(anObject:NSTextTab):Void;

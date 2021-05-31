@@ -18,7 +18,7 @@ extern class UILocalizedIndexedCollation{
 	public var sectionTitles:;
 
 	@:native("sectionIndexTitles")
-	public var sectionIndexTitles:>;
+	public var sectionIndexTitles:Dynamic;
 
 	@:native("sectionForSectionIndexTitleAtIndex")
 	overload extern inline public function sectionForSectionIndexTitleAtIndex(indexTitleIndex:NSInteger):NSInteger;
@@ -27,7 +27,7 @@ extern class UILocalizedIndexedCollation{
 	overload extern inline public function sectionForObject(object:id, collationStringSelector:SEL):NSInteger;
 
 	@:native("sortedArrayFromArray:collationStringSelector")
-	overload extern inline public function sortedArrayFromArray(array:NSArray, collationStringSelector:SEL):NSArray *;
+	overload extern inline public function sortedArrayFromArray(array:Dynamic, collationStringSelector:SEL):NSArray *;
 
 
 }

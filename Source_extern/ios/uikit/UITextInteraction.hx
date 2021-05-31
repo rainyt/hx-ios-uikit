@@ -30,7 +30,7 @@ extern class UITextInteraction{
 	public var textInteractionMode:UITextInteractionMode;
 
 	@:native("gesturesForFailureRequirements")
-	public var gesturesForFailureRequirements:>;
+	public var gesturesForFailureRequirements:<UIGestureRecognizer>;
 
 	@:native("textInteractionForMode")
 	overload extern inline public static function textInteractionForMode(mode:UITextInteractionMode):UITextInteraction;

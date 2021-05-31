@@ -14,8 +14,8 @@ extern class UIFontPickerViewControllerConfiguration{
 	@:native("includeFaces")
 	public var includeFaces:BOOL;
 
-	@:native("themselves.")
-	public var themselves.:of;
+	@:native("of")
+	public var of:instead;
 
 	@:native("filteredTraits")
 	public var filteredTraits:UIFontDescriptorSymbolicTraits;
@@ -24,7 +24,7 @@ extern class UIFontPickerViewControllerConfiguration{
 	public var filteredLanguagesPredicate:NSPredicate;
 
 	@:native("filterPredicateForFilteredLanguages")
-	overload extern inline public static function filterPredicateForFilteredLanguages(filteredLanguages:NSArray<NSString>):nullable NSPredicate *;
+	overload extern inline public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):nullable NSPredicate *;
 
 
 }

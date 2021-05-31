@@ -12,7 +12,7 @@ extern class UIDynamicItemBehavior{
 	overload extern inline public static function autorelease():UIDynamicItemBehavior;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>):UIDynamicItemBehavior;
+	overload extern inline public function initWithItems(items:Dynamic):UIDynamicItemBehavior;
 
 	@:native("addItem")
 	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
@@ -21,31 +21,31 @@ extern class UIDynamicItemBehavior{
 	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
 
 	@:native("items")
-	public var items:<UIDynamicItem>>;
+	public var items:Dynamic;
 
-	@:native("")
-	public var :elastically);
+	@:native("0")
+	public var 0:between;
 
-	@:native("other")
-	public var other:each;
+	@:native("each")
+	public var each:along;
 
-	@:native("default")
-	public var default:by;
+	@:native("by")
+	public var by:1;
 
-	@:native("damping")
-	public var damping:velocity;
+	@:native("velocity")
+	public var velocity:no;
 
-	@:native("damping")
-	public var damping:velocity;
+	@:native("velocity")
+	public var velocity:angular;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):charge;
+	@:native("charge")
+	public var charge:CGFloat;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):anchored;
+	@:native("anchored")
+	public var anchored:BOOL;
 
-	@:native("rotate")
-	public var rotate:never;
+	@:native("never")
+	public var never:to;
 
 	@:native("addLinearVelocity:forItem")
 	overload extern inline public function addLinearVelocity(velocity:CGPoint, forItem:id<UIDynamicItem>):Void;

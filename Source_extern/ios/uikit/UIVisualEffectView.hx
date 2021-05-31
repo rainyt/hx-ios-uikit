@@ -11,8 +11,8 @@ extern class UIVisualEffectView{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIVisualEffectView;
 
-	@:native("instead.")
-	public var instead.:view;
+	@:native("view")
+	public var view:this;
 
 	@:native("effect")
 	public var effect:UIVisualEffect;

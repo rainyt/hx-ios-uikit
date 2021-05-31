@@ -14,23 +14,23 @@ extern class UIDocumentInteractionController{
 	@:native("interactionControllerWithURL://:file:determine:assumes")
 	overload extern inline public static function interactionControllerWithURL(url:NSURL, //:use, file:to, determine:UTI., assumes:file):UIDocumentInteractionController *;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("name")
-	public var name:and;
+	@:native("and")
+	public var and:icon;
 
-	@:native("automatically")
-	public var automatically:determined;
+	@:native("determined")
+	public var determined:be;
 
-	@:native("automatically")
-	public var automatically:determined;
+	@:native("determined")
+	public var determined:be;
 
-	@:native("largest.")
-	public var largest.:to;
+	@:native("to")
+	public var to:smallest;
 
-	@:native("nil.")
-	public var nil.:is;
+	@:native("plist")
+	public var plist:a;
 
 	@:native("presentOptionsMenuFromRect:inView:animated")
 	overload extern inline public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:BOOL):BOOL;
@@ -54,7 +54,7 @@ extern class UIDocumentInteractionController{
 	overload extern inline public function dismissMenuAnimated(animated:BOOL):Void;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:>;
+	public var gestureRecognizers:Dynamic;
 
 	@:native("documentInteractionControllerViewControllerForPreview")
 	overload extern inline public function documentInteractionControllerViewControllerForPreview(controller:UIDocumentInteractionController):UIViewController *;

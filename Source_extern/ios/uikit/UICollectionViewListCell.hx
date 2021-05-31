@@ -24,10 +24,10 @@ extern class UICollectionViewListCell{
 	public var indentsAccessories:BOOL;
 
 	@:native("accessories")
-	public var accessories:>;
+	public var accessories:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):separatorLayoutGuide;
+	@:native("separatorLayoutGuide")
+	public var separatorLayoutGuide:UILayoutGuide;
 
 
 }

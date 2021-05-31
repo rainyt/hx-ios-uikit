@@ -21,7 +21,7 @@ extern class UIPasteboard{
 	overload extern inline public static function pasteboardWithUniqueName;():UIPasteboard *;
 
 	@:native("name")
-	public var name:UIPasteboardName;
+	public var name:NSString;
 
 	@:native("removePasteboardWithName")
 	overload extern inline public static function removePasteboardWithName(pasteboardName:NSString):Void;
@@ -35,23 +35,23 @@ extern class UIPasteboard{
 	@:native("changeCount")
 	public var changeCount:NSInteger;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("itemProviders")
+	public var itemProviders:Dynamic;
 
 	@:native("setItemProviders:localOnly:expirationDate:API_AVAILABLE(ios(11.0)")
-	overload extern inline public function setItemProviders(itemProviders:NSArray<NSItemProvider>, localOnly:BOOL, expirationDate:NSDate_Nullable, API_AVAILABLE(ios(11.0):Dynamic):Void;
+	overload extern inline public function setItemProviders(itemProviders:Dynamic, localOnly:BOOL, expirationDate:NSDate_Nullable, API_AVAILABLE(ios(11.0):Dynamic):Void;
 
 	@:native("setObjects:API_AVAILABLE(ios(11.0)")
-	overload extern inline public function setObjects(objects:NSArray<id<NSItemProviderWriting>>, API_AVAILABLE(ios(11.0):Dynamic):Void;
+	overload extern inline public function setObjects(objects:Dynamic, API_AVAILABLE(ios(11.0):Dynamic):Void;
 
 	@:native("setObjects:localOnly:expirationDate:API_AVAILABLE(ios(11.0)")
-	overload extern inline public function setObjects(objects:NSArray<id<NSItemProviderWriting>>, localOnly:BOOL, expirationDate:NSDate_Nullable, API_AVAILABLE(ios(11.0):Dynamic):Void;
+	overload extern inline public function setObjects(objects:Dynamic, localOnly:BOOL, expirationDate:NSDate_Nullable, API_AVAILABLE(ios(11.0):Dynamic):Void;
 
 	@:native("pasteboardTypes")
 	public var pasteboardTypes:;
 
 	@:native("containsPasteboardTypes")
-	overload extern inline public function containsPasteboardTypes(pasteboardTypes:NSArray<NSString>):BOOL;
+	overload extern inline public function containsPasteboardTypes(pasteboardTypes:Dynamic):BOOL;
 
 	@:native("dataForPasteboardType")
 	overload extern inline public function dataForPasteboardType(pasteboardType:NSString):nullable NSData *;
@@ -72,10 +72,10 @@ extern class UIPasteboard{
 	overload extern inline public function pasteboardTypesForItemSet(itemSet:NSIndexSet):nullable NSArray<NSArray<NSString *> *> *;
 
 	@:native("containsPasteboardTypes:inItemSet")
-	overload extern inline public function containsPasteboardTypes(pasteboardTypes:NSArray<NSString>, inItemSet:NSIndexSet):BOOL;
+	overload extern inline public function containsPasteboardTypes(pasteboardTypes:Dynamic, inItemSet:NSIndexSet):BOOL;
 
 	@:native("itemSetWithPasteboardTypes")
-	overload extern inline public function itemSetWithPasteboardTypes(pasteboardTypes:NSArray<NSString>):nullable NSIndexSet *;
+	overload extern inline public function itemSetWithPasteboardTypes(pasteboardTypes:Dynamic):nullable NSIndexSet *;
 
 	@:native("valuesForPasteboardType:inItemSet")
 	overload extern inline public function valuesForPasteboardType(pasteboardType:NSString, inItemSet:NSIndexSet):nullable NSArray *;
@@ -84,49 +84,49 @@ extern class UIPasteboard{
 	overload extern inline public function dataForPasteboardType(pasteboardType:NSString, inItemSet:NSIndexSet):nullable NSArray<NSData *> *;
 
 	@:native("items")
-	public var items:>;
+	public var items:Dynamic;
 
 	@:native("addItems")
-	overload extern inline public function addItems(items:NSArray<NSDictionary<NSString,id>>):Void;
+	overload extern inline public function addItems(items:Dynamic):Void;
 
 	@:native("setItems:options")
-	overload extern inline public function setItems(items:NSArray<NSDictionary<NSString,id>>, options:NSDictionary<UIPasteboardOption,id>):Void;
+	overload extern inline public function setItems(items:Dynamic, options:NSDictionary<UIPasteboardOption,id>):Void;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("string")
+	public var string:NSString;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("strings")
+	public var strings:Dynamic;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("URL")
+	public var URL:NSURL;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("URLs")
+	public var URLs:Dynamic;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("image")
+	public var image:UIImage;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("images")
+	public var images:Dynamic;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("color")
+	public var color:UIColor;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("colors")
+	public var colors:Dynamic;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):API_UNAVAILABLE(watchos);
+	@:native("hasStrings")
+	public var hasStrings:BOOL;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):API_UNAVAILABLE(watchos);
+	@:native("hasURLs")
+	public var hasURLs:BOOL;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):API_UNAVAILABLE(watchos);
+	@:native("hasImages")
+	public var hasImages:BOOL;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):API_UNAVAILABLE(watchos);
+	@:native("hasColors")
+	public var hasColors:BOOL;
 
 	@:native("detectPatternsForPatterns")
 	overload extern inline public function detectPatternsForPatterns():Void;

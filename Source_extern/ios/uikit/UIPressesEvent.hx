@@ -12,7 +12,7 @@ extern class UIPressesEvent{
 	overload extern inline public static function autorelease():UIPressesEvent;
 
 	@:native("allPresses")
-	public var allPresses:>;
+	public var allPresses:<UIPress>;
 
 	@:native("pressesForGestureRecognizer")
 	overload extern inline public function pressesForGestureRecognizer(gesture:UIGestureRecognizer):NSSet <UIPress *> *;

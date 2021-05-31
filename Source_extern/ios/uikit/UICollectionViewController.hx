@@ -26,14 +26,14 @@ extern class UICollectionViewController{
 	@:native("clearsSelectionOnViewWillAppear")
 	public var clearsSelectionOnViewWillAppear:BOOL;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):useLayoutToLayoutNavigationTransitions;
+	@:native("useLayoutToLayoutNavigationTransitions")
+	public var useLayoutToLayoutNavigationTransitions:BOOL;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):collectionViewLayout;
+	@:native("collectionViewLayout")
+	public var collectionViewLayout:UICollectionViewLayout;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):installsStandardGestureForInteractiveMovement;
+	@:native("installsStandardGestureForInteractiveMovement")
+	public var installsStandardGestureForInteractiveMovement:BOOL;
 
 
 }

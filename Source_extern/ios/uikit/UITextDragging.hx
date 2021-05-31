@@ -42,10 +42,10 @@ extern class UITextDragging{
 	public var dragRange:UITextRange;
 
 	@:native("suggestedItems")
-	public var suggestedItems:>;
+	public var suggestedItems:Dynamic;
 
 	@:native("existingItems")
-	public var existingItems:>;
+	public var existingItems:Dynamic;
 
 	@:native("selected")
 	public var selected:BOOL;

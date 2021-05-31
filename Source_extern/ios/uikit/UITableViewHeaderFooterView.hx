@@ -17,8 +17,8 @@ extern class UITableViewHeaderFooterView{
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UITableViewHeaderFooterView;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("configurationState")
+	public var configurationState:UIViewConfigurationState;
 
 	@:native("setNeedsUpdateConfiguration")
 	overload extern inline public function setNeedsUpdateConfiguration():Void;
@@ -29,26 +29,26 @@ extern class UITableViewHeaderFooterView{
 	@:native("defaultContentConfiguration")
 	overload extern inline public function defaultContentConfiguration():UIListContentConfiguration *;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("contentConfiguration")
+	public var contentConfiguration:id<UIContentConfiguration>;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("automaticallyUpdatesContentConfiguration")
+	public var automaticallyUpdatesContentConfiguration:BOOL;
 
 	@:native("contentView")
 	public var contentView:UIView;
 
-	@:native("API_TO_BE_DEPRECATED))")
-	public var API_TO_BE_DEPRECATED)):ios(6.0,;
+	@:native("ios(6.0,")
+	public var ios(6.0,:release.",;
 
-	@:native("style")
-	public var style:grouped;
+	@:native("ios(6.0,")
+	public var ios(6.0,:release.",;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("backgroundConfiguration")
+	public var backgroundConfiguration:UIBackgroundConfiguration;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("automaticallyUpdatesBackgroundConfiguration")
+	public var automaticallyUpdatesBackgroundConfiguration:BOOL;
 
 	@:native("backgroundView")
 	public var backgroundView:UIView;

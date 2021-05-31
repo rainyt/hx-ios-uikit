@@ -20,8 +20,8 @@ extern class UITableView{
 	@:native("title")
 	public var title:NSString;
 
-	@:native("style")
-	public var style:on;
+	@:native("on")
+	public var on:dependent;
 
 	@:native("backgroundEffect")
 	public var backgroundEffect:UIVisualEffect;
@@ -197,44 +197,44 @@ extern class UITableView{
 	@:native("delegate")
 	public var delegate:<UITableViewDelegate>;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):prefetchDataSource;
+	@:native("prefetchDataSource")
+	public var prefetchDataSource:<UITableViewDataSourcePrefetching>;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("dragDelegate")
+	public var dragDelegate:<UITableViewDragDelegate>;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("dropDelegate")
+	public var dropDelegate:<UITableViewDropDelegate>;
 
-	@:native("UITableViewAutomaticDimension")
-	public var UITableViewAutomaticDimension:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("UITableViewAutomaticDimension")
-	public var UITableViewAutomaticDimension:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("UITableViewAutomaticDimension")
-	public var UITableViewAutomaticDimension:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("disable")
-	public var disable:to;
+	@:native("estimatedRowHeight")
+	public var estimatedRowHeight:CGFloat;
 
-	@:native("disable")
-	public var disable:to;
+	@:native("estimatedSectionHeaderHeight")
+	public var estimatedSectionHeaderHeight:CGFloat;
 
-	@:native("disable")
-	public var disable:to;
+	@:native("estimatedSectionFooterHeight")
+	public var estimatedSectionFooterHeight:CGFloat;
 
-	@:native("edge.")
-	public var edge.:that;
+	@:native("separatorInset")
+	public var separatorInset:UIEdgeInsets;
 
-	@:native("UITableViewSeparatorInsetFromCellEdges")
-	public var UITableViewSeparatorInsetFromCellEdges:is;
+	@:native("separatorInsetReference")
+	public var separatorInsetReference:UITableViewSeparatorInsetReference;
 
-	@:native("devices.")
-	public var devices.:some;
+	@:native("backgroundView")
+	public var backgroundView:UIView;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("contextMenuInteraction")
+	public var contextMenuInteraction:UIContextMenuInteraction;
 
 	@:native("numberOfSections")
 	public var numberOfSections:NSInteger;
@@ -267,10 +267,10 @@ extern class UITableView{
 	overload extern inline public function cellForRowAtIndexPath(indexPath:NSIndexPath, :, //:returns, nil:if, cell:is, not:visible, or:index, path:is, out:of):nullable __kindof UITableViewCell *;
 
 	@:native("visibleCells")
-	public var visibleCells:>;
+	public var visibleCells:Dynamic;
 
 	@:native("indexPathsForVisibleRows")
-	public var indexPathsForVisibleRows:>;
+	public var indexPathsForVisibleRows:Dynamic;
 
 	@:native("headerViewForSection")
 	overload extern inline public function headerViewForSection(section:NSInteger):nullable UITableViewHeaderFooterView *;
@@ -306,19 +306,19 @@ extern class UITableView{
 	overload extern inline public function moveSection(section:NSInteger, toSection:NSInteger):Void;
 
 	@:native("insertRowsAtIndexPaths:withRowAnimation")
-	overload extern inline public function insertRowsAtIndexPaths(indexPaths:NSArray<NSIndexPath>, withRowAnimation:UITableViewRowAnimation):Void;
+	overload extern inline public function insertRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("deleteRowsAtIndexPaths:withRowAnimation")
-	overload extern inline public function deleteRowsAtIndexPaths(indexPaths:NSArray<NSIndexPath>, withRowAnimation:UITableViewRowAnimation):Void;
+	overload extern inline public function deleteRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("reloadRowsAtIndexPaths:withRowAnimation")
-	overload extern inline public function reloadRowsAtIndexPaths(indexPaths:NSArray<NSIndexPath>, withRowAnimation:UITableViewRowAnimation):Void;
+	overload extern inline public function reloadRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveRowAtIndexPath:toIndexPath")
 	overload extern inline public function moveRowAtIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
-	@:native("tvos(11.0))")
-	public var tvos(11.0)):API_AVAILABLE(ios(11.0),;
+	@:native("hasUncommittedUpdates")
+	public var hasUncommittedUpdates:BOOL;
 
 	@:native("reloadData;")
 	overload extern inline public function reloadData;():Void;
@@ -326,29 +326,29 @@ extern class UITableView{
 	@:native("reloadSectionIndexTitles")
 	overload extern inline public function reloadSectionIndexTitles():Void;
 
-	@:native("animated.")
-	public var animated.:not;
+	@:native("not")
+	public var not:is;
 
 	@:native("setEditing:animated")
 	overload extern inline public function setEditing(editing:BOOL, animated:BOOL):Void;
 
-	@:native("mode")
-	public var mode:editing;
+	@:native("allowsSelection")
+	public var allowsSelection:BOOL;
 
-	@:native("mode")
-	public var mode:editing;
+	@:native("editing")
+	public var editing:in;
 
-	@:native("simultaneously")
-	public var simultaneously:selected;
+	@:native("allowsMultipleSelection")
+	public var allowsMultipleSelection:BOOL;
 
-	@:native("mode")
-	public var mode:editing;
+	@:native("allowsMultipleSelectionDuringEditing")
+	public var allowsMultipleSelectionDuringEditing:BOOL;
 
-	@:native("selection.")
-	public var selection.:of;
+	@:native("of")
+	public var of:row;
 
-	@:native("selection.")
-	public var selection.:the;
+	@:native("indexPathsForSelectedRows")
+	public var indexPathsForSelectedRows:Dynamic;
 
 	@:native("selectRowAtIndexPath:animated:scrollPosition")
 	overload extern inline public function selectRowAtIndexPath(indexPath:NSIndexPath, animated:BOOL, scrollPosition:UITableViewScrollPosition):Void;
@@ -356,38 +356,38 @@ extern class UITableView{
 	@:native("deselectRowAtIndexPath:animated")
 	overload extern inline public function deselectRowAtIndexPath(indexPath:NSIndexPath, animated:BOOL):Void;
 
-	@:native("0")
-	public var 0:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("index")
-	public var index:section;
+	@:native("sectionIndexColor")
+	public var sectionIndexColor:UIColor;
 
-	@:native("touched")
-	public var touched:being;
+	@:native("sectionIndexBackgroundColor")
+	public var sectionIndexBackgroundColor:UIColor;
 
-	@:native("touched")
-	public var touched:being;
+	@:native("sectionIndexTrackingBackgroundColor")
+	public var sectionIndexTrackingBackgroundColor:UIColor;
 
-	@:native("UITableViewCellSeparatorStyleSingleLine")
-	public var UITableViewCellSeparatorStyleSingleLine:is;
+	@:native("separatorStyle")
+	public var separatorStyle:UITableViewCellSeparatorStyle;
 
-	@:native("gray")
-	public var gray:separator;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:separatorColor;
 
-	@:native("separators")
-	public var separators:table;
+	@:native("separatorEffect")
+	public var separatorEffect:UIVisualEffect;
 
-	@:native("NO.")
-	public var NO.:is;
+	@:native("cellLayoutMarginsFollowReadableWidth")
+	public var cellLayoutMarginsFollowReadableWidth:BOOL;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("insetsContentViewsToSafeArea")
+	public var insetsContentViewsToSafeArea:BOOL;
 
-	@:native("header")
-	public var header:section;
+	@:native("section")
+	public var section:with;
 
-	@:native("footer")
-	public var footer:section;
+	@:native("section")
+	public var section:with;
 
 	@:native("dequeueReusableCellWithIdentifier::Used:the:to:an:allocated:in:of:a")
 	overload extern inline public function dequeueReusableCellWithIdentifier(identifier:NSString, ://, Used:by, the:delegate, to:acquire, an:already, allocated:cell,, in:lieu, of:allocating, a:new):nullable __kindof UITableViewCell *;
@@ -410,20 +410,20 @@ extern class UITableView{
 	@:native("registerClass:forHeaderFooterViewReuseIdentifier")
 	overload extern inline public function registerClass(aClass:Class, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
-	@:native("used.")
-	public var used.:is;
+	@:native("remembersLastFocusedIndexPath")
+	public var remembersLastFocusedIndexPath:BOOL;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("selectionFollowsFocus")
+	public var selectionFollowsFocus:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("dragInteractionEnabled")
+	public var dragInteractionEnabled:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("hasActiveDrag")
+	public var hasActiveDrag:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("hasActiveDrop")
+	public var hasActiveDrop:BOOL;
 
 	@:native("tableView:numberOfRowsInSection")
 	overload extern inline public function tableView(tableView:UITableView, numberOfRowsInSection:NSInteger):NSInteger;
@@ -459,10 +459,10 @@ extern class UITableView{
 	overload extern inline public function tableView(tableView:UITableView, moveRowAtIndexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:prefetchRowsAtIndexPaths")
-	overload extern inline public function tableView(tableView:UITableView, prefetchRowsAtIndexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function tableView(tableView:UITableView, prefetchRowsAtIndexPaths:Dynamic):Void;
 
 	@:native("tableView:cancelPrefetchingForRowsAtIndexPaths")
-	overload extern inline public function tableView(tableView:UITableView, cancelPrefetchingForRowsAtIndexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function tableView(tableView:UITableView, cancelPrefetchingForRowsAtIndexPaths:Dynamic):Void;
 
 	@:native("tableView:itemsForBeginningDragSession:atIndexPath")
 	overload extern inline public function tableView(tableView:UITableView, itemsForBeginningDragSession:id<UIDragSession>, atIndexPath:NSIndexPath):NSArray<UIDragItem *> *;
@@ -513,7 +513,7 @@ extern class UITableView{
 	public var intent:UITableViewDropIntent;
 
 	@:native("items")
-	public var items:NSArray<id<UITableViewDropItem>>;
+	public var items:Dynamic;
 
 	@:native("destinationIndexPath")
 	public var destinationIndexPath:NSIndexPath;
@@ -545,11 +545,11 @@ extern class UITableView{
 	@:native("new")
 	overload extern inline public static function new():UITableView;
 
-	@:native(")")
-	public var ):UITableViewCell;
+	@:native("nonatomic, nullable, copy")
+	public var nonatomic, nullable, copy:null;
 
-	@:native(")")
-	public var ):UITableViewCell;
+	@:native("_Nullable")
+	public var _Nullable:;
 
 	@:native("dragItem")
 	public var dragItem:UIDragItem;

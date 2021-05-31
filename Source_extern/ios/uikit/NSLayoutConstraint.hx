@@ -18,13 +18,13 @@ extern class NSLayoutConstraint{
 	overload extern inline public static function constraintWithItem(view1:id, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:id, attribute:NSLayoutAttribute, multiplier:CGFloat, constant:CGFloat):NSLayoutConstraint;
 
 	@:native("priority")
-	public var priority:UILayoutPriority;
+	public var priority:null;
 
 	@:native("priority")
-	public var priority:NSLayoutPriority;
+	public var priority:null;
 
 	@:native("shouldBeArchived")
-	public var shouldBeArchived:BOOL;
+	public var shouldBeArchived:null;
 
 	@:native("firstItem")
 	public var firstItem:id;
@@ -38,11 +38,11 @@ extern class NSLayoutConstraint{
 	@:native("secondAttribute")
 	public var secondAttribute:NSLayoutAttribute;
 
-	@:native("ios(10.0))")
-	public var ios(10.0)):API_AVAILABLE(macos(10.12),;
+	@:native("firstAnchor")
+	public var firstAnchor:NSLayoutAnchor;
 
-	@:native("ios(10.0))")
-	public var ios(10.0)):API_AVAILABLE(macos(10.12),;
+	@:native("secondAnchor")
+	public var secondAnchor:NSLayoutAnchor;
 
 	@:native("relation")
 	public var relation:NSLayoutRelation;
@@ -51,31 +51,31 @@ extern class NSLayoutConstraint{
 	public var multiplier:CGFloat;
 
 	@:native("constant")
-	public var constant:CGFloat;
+	public var constant:null;
 
-	@:native("ios(8.0))")
-	public var ios(8.0)):API_AVAILABLE(macos(10.10),;
+	@:native("active")
+	public var active:BOOL;
 
 	@:native("activateConstraints")
-	overload extern inline public static function activateConstraints(constraints:NSArray<NSLayoutConstraint>):Void;
+	overload extern inline public static function activateConstraints(constraints:Dynamic):Void;
 
 	@:native("deactivateConstraints")
-	overload extern inline public static function deactivateConstraints(constraints:NSArray<NSLayoutConstraint>):Void;
+	overload extern inline public static function deactivateConstraints(constraints:Dynamic):Void;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.7),;
+	@:native("identifier")
+	public var identifier:NSString;
 
-	@:native("super")
-	public var super:calling;
+	@:native("calling")
+	public var calling:after;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):topAnchor;
+	@:native("topAnchor")
+	public var topAnchor:NSLayoutYAxisAnchor;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):bottomAnchor;
+	@:native("bottomAnchor")
+	public var bottomAnchor:NSLayoutYAxisAnchor;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):heightAnchor;
+	@:native("heightAnchor")
+	public var heightAnchor:NSLayoutDimension;
 
 
 }

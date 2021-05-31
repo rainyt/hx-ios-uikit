@@ -12,7 +12,7 @@ extern class UISearchTextField{
 	overload extern inline public static function autorelease():UISearchTextField;
 
 	@:native("tokens")
-	public var tokens:>;
+	public var tokens:Dynamic;
 
 	@:native("insertToken:atIndex")
 	overload extern inline public function insertToken(token:UISearchToken, atIndex:NSInteger):Void;

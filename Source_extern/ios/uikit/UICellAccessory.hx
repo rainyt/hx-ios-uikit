@@ -32,14 +32,14 @@ extern class UICellAccessory{
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
 
-	@:native("(^actionHandler)(void)")
-	public var (^actionHandler)(void):void;
+	@:native("void")
+	public var void:nonatomic,copy,nullable;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
 
-	@:native("(^actionHandler)(void)")
-	public var (^actionHandler)(void):void;
+	@:native("void")
+	public var void:nonatomic,copy,nullable;
 
 	@:native("showsVerticalSeparator")
 	public var showsVerticalSeparator:BOOL;
@@ -50,8 +50,8 @@ extern class UICellAccessory{
 	@:native("style")
 	public var style:UICellAccessoryOutlineDisclosureStyle;
 
-	@:native("(^actionHandler)(void)")
-	public var (^actionHandler)(void):void;
+	@:native("void")
+	public var void:nonatomic,copy,nullable;
 
 	@:native("initWithText")
 	overload extern inline public function initWithText(text:NSString):UICellAccessory;

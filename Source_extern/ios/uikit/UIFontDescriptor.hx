@@ -23,8 +23,8 @@ extern class UIFontDescriptor{
 	@:native("pointSize")
 	public var pointSize:;
 
-	@:native("API_UNAVAILABLE(macCatalyst)")
-	public var API_UNAVAILABLE(macCatalyst):matrix;
+	@:native("matrix")
+	public var matrix:CGAffineTransform;
 
 	@:native("symbolicTraits")
 	public var symbolicTraits:UIFontDescriptorSymbolicTraits;
@@ -33,7 +33,7 @@ extern class UIFontDescriptor{
 	overload extern inline public function objectForKey(anAttribute:NSString):nullable id;
 
 	@:native("fontAttributes")
-	public var fontAttributes:id>;
+	public var fontAttributes:NSDictionary<UIFontDescriptorAttributeName,id>;
 
 	@:native("matchingFontDescriptorsWithMandatoryKeys")
 	overload extern inline public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:NSSet<UIFontDescriptorAttributeName>):NSArray<UIFontDescriptor *> *;

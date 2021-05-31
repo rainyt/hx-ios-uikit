@@ -20,14 +20,14 @@ extern class UIActivityIndicatorView{
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UIActivityIndicatorView;
 
-	@:native("UIActivityIndicatorViewStyleMedium")
-	public var UIActivityIndicatorViewStyleMedium:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("NO")
-	public var NO:to;
+	@:native("to")
+	public var to:set;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("color")
+	public var color:UIColor;
 
 	@:native("startAnimating;")
 	overload extern inline public function startAnimating;():Void;

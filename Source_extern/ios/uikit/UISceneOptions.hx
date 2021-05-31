@@ -18,7 +18,7 @@ extern class UISceneOptions{
 	overload extern inline public function init():UISceneOptions;
 
 	@:native("URLContexts")
-	public var URLContexts:>;
+	public var URLContexts:NSSet<UIOpenURLContext>;
 
 	@:native("sourceApplication")
 	public var sourceApplication:NSString;
@@ -27,13 +27,13 @@ extern class UISceneOptions{
 	public var handoffUserActivityType:NSString;
 
 	@:native("userActivities")
-	public var userActivities:>;
+	public var userActivities:NSSet<NSUserActivity>;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):notificationResponse;
+	@:native("notificationResponse")
+	public var notificationResponse:UNNotificationResponse;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):shortcutItem;
+	@:native("shortcutItem")
+	public var shortcutItem:UIApplicationShortcutItem;
 
 	@:native("cloudKitShareMetadata")
 	public var cloudKitShareMetadata:CKShareMetadata;
@@ -59,8 +59,8 @@ extern class UISceneOptions{
 	@:native("requestingScene")
 	public var requestingScene:UIScene;
 
-	@:native("tvos)")
-	public var tvos):watchos,;
+	@:native("")
+	public var :collectionJoinBehavior;
 
 
 }

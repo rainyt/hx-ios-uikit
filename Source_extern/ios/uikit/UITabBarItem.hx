@@ -26,11 +26,11 @@ extern class UITabBarItem{
 	@:native("initWithTabBarSystemItem:tag")
 	overload extern inline public function initWithTabBarSystemItem(systemItem:UITabBarSystemItem, tag:NSInteger):UITabBarItem;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):selectedImage;
+	@:native("selectedImage")
+	public var selectedImage:UIImage;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("setFinishedSelectedImage:withFinishedUnselectedImage:API_DEPRECATED("Use initWithTitle")
 	overload extern inline public function setFinishedSelectedImage(selectedImage:UIImage, withFinishedUnselectedImage:UIImage, API_DEPRECATED("Use initWithTitle:image:selectedImage: or the image and selectedImage properties along with UIImageRenderingModeAlwaysOriginal", ios(5.0, 7.0):Dynamic):Void;
@@ -41,11 +41,11 @@ extern class UITabBarItem{
 	@:native("finishedUnselectedImage")
 	overload extern inline public function finishedUnselectedImage():nullable UIImage *;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("titlePositionAdjustment")
+	public var titlePositionAdjustment:UIOffset;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(10.0));
+	@:native("badgeColor")
+	public var badgeColor:UIColor;
 
 	@:native("setBadgeTextAttributes:forState:API_AVAILABLE(ios(10.0)")
 	overload extern inline public function setBadgeTextAttributes(textAttributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):Void;
@@ -53,8 +53,8 @@ extern class UITabBarItem{
 	@:native("badgeTextAttributesForState:API_AVAILABLE(ios(10.0)")
 	overload extern inline public function badgeTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;
 
-	@:native("tvos(13.0))")
-	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:standardAppearance;
 
 
 }

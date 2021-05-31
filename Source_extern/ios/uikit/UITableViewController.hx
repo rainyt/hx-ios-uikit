@@ -23,11 +23,11 @@ extern class UITableViewController{
 	@:native("tableView")
 	public var tableView:UITableView;
 
-	@:native("viewWillAppear:")
-	public var viewWillAppear::in;
+	@:native("clearsSelectionOnViewWillAppear")
+	public var clearsSelectionOnViewWillAppear:BOOL;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(6.0));
+	@:native("refreshControl")
+	public var refreshControl:UIRefreshControl;
 
 
 }

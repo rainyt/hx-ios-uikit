@@ -11,140 +11,140 @@ extern class UIInterface{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIInterface;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(9.0));
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("")
+	public var :;
 
-	@:native("background")
-	public var background:dark;
+	@:native("lightTextColor")
+	public var lightTextColor:UIColor;
 
-	@:native("background")
-	public var background:light;
+	@:native("darkTextColor")
+	public var darkTextColor:UIColor;
 
-	@:native("13.0))")
-	public var 13.0)):tvos(13.0,;
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):7.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):7.0));
+	@:native("ios(3.2,")
+	public var ios(3.2,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):7.0));
+	@:native("ios(5.0,")
+	public var ios(5.0,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):labelFontSize;
+	@:native("labelFontSize")
+	public var labelFontSize:CGFloat;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):buttonFontSize;
+	@:native("buttonFontSize")
+	public var buttonFontSize:CGFloat;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):smallSystemFontSize;
+	@:native("smallSystemFontSize")
+	public var smallSystemFontSize:CGFloat;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):systemFontSize;
+	@:native("systemFontSize")
+	public var systemFontSize:CGFloat;
 
-	@:native("watchos)")
-	public var watchos):tvos,;
+	@:native("tvos,")
+	public var tvos,:ios,;
 
-	@:native("watchos)")
-	public var watchos):tvos,;
+	@:native("tvos,")
+	public var tvos,:ios,;
 
 
 }

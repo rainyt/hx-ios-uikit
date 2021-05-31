@@ -17,32 +17,32 @@ extern class UIBarItem{
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UIBarItem;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("landscapeImagePhone")
+	public var landscapeImagePhone:;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):largeContentSizeImage;
+	@:native("largeContentSizeImage")
+	public var largeContentSizeImage:;
 
-	@:native("UIEdgeInsetsZero")
-	public var UIEdgeInsetsZero:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("set.")
-	public var set.:is;
+	@:native("landscapeImagePhoneInsets")
+	public var landscapeImagePhoneInsets:UIEdgeInsets;
 
-	@:native("set.")
-	public var set.:is;
+	@:native("largeContentSizeImageInsets")
+	public var largeContentSizeImageInsets:UIEdgeInsets;
 
-	@:native("0")
-	public var 0:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("setTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function setTitleTextAttributes(attributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;

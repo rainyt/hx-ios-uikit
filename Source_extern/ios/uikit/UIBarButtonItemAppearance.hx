@@ -18,7 +18,7 @@ extern class UIBarButtonItemAppearance{
 	overload extern inline public static function new():UIBarButtonItemAppearance;
 
 	@:native("titleTextAttributes")
-	public var titleTextAttributes:id>;
+	public var titleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:UIOffset;

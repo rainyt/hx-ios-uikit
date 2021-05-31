@@ -11,80 +11,80 @@ extern class UIScrollView{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIScrollView;
 
-	@:native("CGPointZero")
-	public var CGPointZero:default;
+	@:native("default")
+	public var default://;
 
-	@:native("CGSizeZero")
-	public var CGSizeZero:default;
+	@:native("default")
+	public var default://;
 
-	@:native("content")
-	public var content:around;
+	@:native("around")
+	public var around:area;
 
-	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
-	public var API_AVAILABLE(ios(11.0),tvos(11.0)):adjustedContentInset;
+	@:native("adjustedContentInset")
+	public var adjustedContentInset:UIEdgeInsets;
 
 	@:native("adjustedContentInsetDidChange")
 	overload extern inline public function adjustedContentInsetDidChange():Void;
 
-	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
-	public var API_AVAILABLE(ios(11.0),tvos(11.0)):contentInsetAdjustmentBehavior;
+	@:native("contentInsetAdjustmentBehavior")
+	public var contentInsetAdjustmentBehavior:UIScrollViewContentInsetAdjustmentBehavior;
 
-	@:native("tvos(13.0))")
-	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;
+	@:native("automaticallyAdjustsScrollIndicatorInsets")
+	public var automaticallyAdjustsScrollIndicatorInsets:BOOL;
 
-	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
-	public var API_AVAILABLE(ios(11.0),tvos(11.0)):contentLayoutGuide;
+	@:native("contentLayoutGuide")
+	public var contentLayoutGuide:UILayoutGuide;
 
-	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
-	public var API_AVAILABLE(ios(11.0),tvos(11.0)):frameLayoutGuide;
+	@:native("frameLayoutGuide")
+	public var frameLayoutGuide:UILayoutGuide;
 
-	@:native("reference")
-	public var reference:weak;
+	@:native("weak")
+	public var weak:nil.;
+
+	@:native("while")
+	public var while:scrolling;
+
+	@:native("back")
+	public var back:and;
+
+	@:native("drag")
+	public var drag:allow;
+
+	@:native("drag")
+	public var drag:allow;
+
+	@:native("pagingEnabled")
+	public var pagingEnabled:;
 
 	@:native("dragging")
-	public var dragging:while;
+	public var dragging:any;
 
-	@:native("again")
-	public var again:back;
+	@:native("after")
+	public var after:out;
 
-	@:native("vertically")
-	public var vertically:drag;
+	@:native("after")
+	public var after:out;
 
-	@:native("horizontally")
-	public var horizontally:drag;
+	@:native("is")
+	public var is:default;
 
-	@:native("bounds")
-	public var bounds:view;
+	@:native("verticalScrollIndicatorInsets")
+	public var verticalScrollIndicatorInsets:;
 
-	@:native("temporarily")
-	public var temporarily:dragging;
+	@:native("horizontalScrollIndicatorInsets")
+	public var horizontalScrollIndicatorInsets:;
 
-	@:native("tracking")
-	public var tracking:after;
-
-	@:native("tracking")
-	public var tracking:after;
-
-	@:native("UIScrollViewIndicatorStyleDefault")
-	public var UIScrollViewIndicatorStyleDefault:is;
-
-	@:native("UIEdgeInsetsZero.")
-	public var UIEdgeInsetsZero.:is;
-
-	@:native("UIEdgeInsetsZero.")
-	public var UIEdgeInsetsZero.:is;
-
-	@:native("undefined.")
-	public var undefined.:is;
+	@:native("getter")
+	public var getter:this;
 
 	@:native("scrollIndicatorInsets")
 	overload extern inline public function scrollIndicatorInsets():UIEdgeInsets;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):decelerationRate;
+	@:native("decelerationRate")
+	public var decelerationRate:CGFloat;
 
-	@:native("API_AVAILABLE(tvos(10.2))")
-	public var API_AVAILABLE(tvos(10.2)):indexDisplayMode;
+	@:native("indexDisplayMode")
+	public var indexDisplayMode:UIScrollViewIndexDisplayMode;
 
 	@:native("setContentOffset:animated::animate:constant:to")
 	overload extern inline public function setContentOffset(contentOffset:CGPoint, animated:BOOL, ://, animate:at, constant:velocity, to:new):Void;
@@ -95,20 +95,20 @@ extern class UIScrollView{
 	@:native("flashScrollIndicators;")
 	overload extern inline public function flashScrollIndicators;():Void;
 
-	@:native("dragging")
-	public var dragging:started;
+	@:native("started")
+	public var started:have;
 
-	@:native("dragging")
-	public var dragging:initiate;
+	@:native("initiate")
+	public var initiate:to;
 
-	@:native("moving")
-	public var moving:still;
+	@:native("(touch")
+	public var (touch:dragging;
 
-	@:native("presses")
-	public var presses:on;
+	@:native("on")
+	public var on:effect;
 
-	@:native("presses")
-	public var presses:on;
+	@:native("on")
+	public var on:effect;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
 	overload extern inline public function touchesShouldBegin(touches:NSSet<UITouch>, withEvent:UIEvent, inContentView:UIView):BOOL;
@@ -116,14 +116,14 @@ extern class UIScrollView{
 	@:native("touchesShouldCancelInContentView")
 	overload extern inline public function touchesShouldCancelInContentView(view:UIView):BOOL;
 
-	@:native("1.0")
-	public var 1.0:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("zooming")
-	public var zooming:enable;
+	@:native("be")
+	public var be:must;
 
-	@:native("1.0")
-	public var 1.0:is;
+	@:native("zoomScale")
+	public var zoomScale:CGFloat;
 
 	@:native("setZoomScale:animated")
 	overload extern inline public function setZoomScale(scale:CGFloat, animated:BOOL):Void;
@@ -131,32 +131,32 @@ extern class UIScrollView{
 	@:native("zoomToRect:animated")
 	overload extern inline public function zoomToRect(rect:CGRect, animated:BOOL):Void;
 
-	@:native("end")
-	public var end:gesture;
-
 	@:native("gesture")
-	public var gesture:zoom;
+	public var gesture:at;
 
-	@:native("value")
-	public var value:min/max;
+	@:native("zoom")
+	public var zoom:in;
 
-	@:native("YES.")
-	public var YES.:is;
+	@:native("min/max")
+	public var min/max:the;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):panGestureRecognizer;
+	@:native("scrollsToTop")
+	public var scrollsToTop:;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):pinchGestureRecognizer;
+	@:native("panGestureRecognizer")
+	public var panGestureRecognizer:UIPanGestureRecognizer;
 
-	@:native("11.0))")
-	public var 11.0)):tvos(9.0,;
+	@:native("pinchGestureRecognizer")
+	public var pinchGestureRecognizer:UIPinchGestureRecognizer;
 
-	@:native("UIScrollViewKeyboardDismissModeNone")
-	public var UIScrollViewKeyboardDismissModeNone:is;
+	@:native("tvos(9.0,")
+	public var tvos(9.0,:useful.",;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(10.0));
+	@:native("keyboardDismissMode")
+	public var keyboardDismissMode:UIScrollViewKeyboardDismissMode;
+
+	@:native("refreshControl")
+	public var refreshControl:UIRefreshControl;
 
 	@:native("scrollViewDidScroll:::::::::::::::::::::::://")
 	overload extern inline public function scrollViewDidScroll(scrollView:UIScrollView, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, //:any):Void;

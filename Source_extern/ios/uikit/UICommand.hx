@@ -54,7 +54,7 @@ extern class UICommand{
 	public var state:UIMenuElementState;
 
 	@:native("alternates")
-	public var alternates:>;
+	public var alternates:Dynamic;
 
 	@:native("commandWithTitle")
 	overload extern inline public static function commandWithTitle():UICommand;

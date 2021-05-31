@@ -12,7 +12,7 @@ extern class UIDragSession{
 	overload extern inline public static function autorelease():UIDragSession;
 
 	@:native("items")
-	public var items:>;
+	public var items:Dynamic;
 
 	@:native("locationInView")
 	overload extern inline public function locationInView(view:UIView):CGPoint;
@@ -24,7 +24,7 @@ extern class UIDragSession{
 	public var restrictedToDraggingApplication:BOOL;
 
 	@:native("hasItemsConformingToTypeIdentifiers")
-	overload extern inline public function hasItemsConformingToTypeIdentifiers(typeIdentifiers:NSArray<NSString>):BOOL;
+	overload extern inline public function hasItemsConformingToTypeIdentifiers(typeIdentifiers:Dynamic):BOOL;
 
 	@:native("canLoadObjectsOfClass")
 	overload extern inline public function canLoadObjectsOfClass(aClass:Class<NSItemProviderReading>):BOOL;

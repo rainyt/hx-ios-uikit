@@ -20,23 +20,23 @@ extern class UIPageControl{
 	@:native("hidesForSinglePage")
 	public var hidesForSinglePage:BOOL;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(6.0));
+	@:native("pageIndicatorTintColor")
+	public var pageIndicatorTintColor:UIColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(6.0));
+	@:native("currentPageIndicatorTintColor")
+	public var currentPageIndicatorTintColor:UIColor;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):backgroundStyle;
+	@:native("backgroundStyle")
+	public var backgroundStyle:UIPageControlBackgroundStyle;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):interactionState;
+	@:native("interactionState")
+	public var interactionState:UIPageControlInteractionState;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):allowsContinuousInteraction;
+	@:native("allowsContinuousInteraction")
+	public var allowsContinuousInteraction:BOOL;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):preferredIndicatorImage;
+	@:native("preferredIndicatorImage")
+	public var preferredIndicatorImage:UIImage;
 
 	@:native("indicatorImageForPage")
 	overload extern inline public function indicatorImageForPage(page:NSInteger):nullable UIImage *;
@@ -47,8 +47,8 @@ extern class UIPageControl{
 	@:native("sizeForNumberOfPages")
 	overload extern inline public function sizeForNumberOfPages(pageCount:NSInteger):CGSize;
 
-	@:native("14.0))")
-	public var 14.0)):ios(2.0,;
+	@:native("ios(2.0,")
+	public var ios(2.0,:mode.",;
 
 	@:native("updateCurrentPageDisplay")
 	overload extern inline public function updateCurrentPageDisplay():Void;

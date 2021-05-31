@@ -11,8 +11,8 @@ extern class UIAccessibilityCustomRotor{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIAccessibilityCustomRotor;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):accessibilityCustomRotors;
+	@:native("accessibilityCustomRotors")
+	public var accessibilityCustomRotors:Dynamic;
 
 	@:native("currentItem")
 	public var currentItem:UIAccessibilityCustomRotorItemResult;
@@ -32,14 +32,14 @@ extern class UIAccessibilityCustomRotor{
 	@:native("name")
 	public var name:NSString;
 
-	@:native("tvos(11.0))")
-	public var tvos(11.0)):API_AVAILABLE(ios(11.0),;
+	@:native("attributedName")
+	public var attributedName:NSAttributedString;
 
 	@:native("itemSearchBlock")
 	public var itemSearchBlock:UIAccessibilityCustomRotorSearch;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):systemRotorType;
+	@:native("systemRotorType")
+	public var systemRotorType:UIAccessibilityCustomSystemRotorType;
 
 	@:native("initWithTargetElement:targetRange")
 	overload extern inline public function initWithTargetElement(targetElement:id<NSObject>, targetRange:UITextRange):UIAccessibilityCustomRotor;

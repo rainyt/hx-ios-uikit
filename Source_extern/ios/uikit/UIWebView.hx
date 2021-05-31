@@ -14,8 +14,8 @@ extern class UIWebView{
 	@:native("delegate")
 	public var delegate:<UIWebViewDelegate>;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):scrollView;
+	@:native("scrollView")
+	public var scrollView:UIScrollView;
 
 	@:native("loadRequest")
 	overload extern inline public function loadRequest(request:NSURLRequest):Void;
@@ -56,47 +56,47 @@ extern class UIWebView{
 	@:native("scalesPageToFit")
 	public var scalesPageToFit:BOOL;
 
-	@:native("3.0))")
-	public var 3.0)):ios(2.0,;
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):dataDetectorTypes;
+	@:native("dataDetectorTypes")
+	public var dataDetectorTypes:UIDataDetectorTypes;
 
-	@:native("YES")
-	public var YES:to;
+	@:native("allowsInlineMediaPlayback")
+	public var allowsInlineMediaPlayback:BOOL;
 
-	@:native("YES")
-	public var YES:to;
+	@:native("mediaPlaybackRequiresUserAction")
+	public var mediaPlaybackRequiresUserAction:BOOL;
 
-	@:native("YES")
-	public var YES:to;
+	@:native("mediaPlaybackAllowsAirPlay")
+	public var mediaPlaybackAllowsAirPlay:BOOL;
 
-	@:native("NO")
-	public var NO:to;
+	@:native("suppressesIncrementalRendering")
+	public var suppressesIncrementalRendering:BOOL;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("keyboardDisplayRequiresUserAction")
+	public var keyboardDisplayRequiresUserAction:BOOL;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):paginationMode;
+	@:native("paginationMode")
+	public var paginationMode:UIWebPaginationMode;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):paginationBreakingMode;
+	@:native("paginationBreakingMode")
+	public var paginationBreakingMode:UIWebPaginationBreakingMode;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):pageLength;
+	@:native("pageLength")
+	public var pageLength:CGFloat;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):gapBetweenPages;
+	@:native("gapBetweenPages")
+	public var gapBetweenPages:CGFloat;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):pageCount;
+	@:native("pageCount")
+	public var pageCount:NSUInteger;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):allowsPictureInPictureMediaPlayback;
+	@:native("allowsPictureInPictureMediaPlayback")
+	public var allowsPictureInPictureMediaPlayback:BOOL;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("allowsLinkPreview")
+	public var allowsLinkPreview:BOOL;
 
 	@:native("webView:shouldStartLoadWithRequest:navigationType")
 	overload extern inline public function webView(webView:UIWebView, shouldStartLoadWithRequest:NSURLRequest, navigationType:UIWebViewNavigationType):BOOL;

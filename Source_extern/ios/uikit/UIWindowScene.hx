@@ -14,8 +14,8 @@ extern class UIWindowScene{
 	@:native("screen")
 	public var screen:UIScreen;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):interfaceOrientation;
+	@:native("interfaceOrientation")
+	public var interfaceOrientation:UIInterfaceOrientation;
 
 	@:native("coordinateSpace")
 	public var coordinateSpace:id<UICoordinateSpace>;
@@ -23,11 +23,11 @@ extern class UIWindowScene{
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):sizeRestrictions;
+	@:native("sizeRestrictions")
+	public var sizeRestrictions:UISceneSizeRestrictions;
 
 	@:native("windows")
-	public var windows:>;
+	public var windows:Dynamic;
 
 	@:native("window")
 	public var window:UIWindow;

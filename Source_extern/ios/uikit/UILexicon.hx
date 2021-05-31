@@ -18,7 +18,7 @@ extern class UILexicon{
 	public var userInput:NSString;
 
 	@:native("entries")
-	public var entries:>;
+	public var entries:Dynamic;
 
 
 }

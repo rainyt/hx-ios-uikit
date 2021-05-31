@@ -12,7 +12,7 @@ extern class UIGraphicsPDFRenderer{
 	overload extern inline public static function autorelease():UIGraphicsPDFRenderer;
 
 	@:native("documentInfo")
-	public var documentInfo:id>;
+	public var documentInfo:NSDictionary<NSString,id>;
 
 	@:native("pdfContextBounds")
 	public var pdfContextBounds:CGRect;

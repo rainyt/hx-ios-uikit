@@ -17,35 +17,35 @@ extern class UIImageView{
 	@:native("initWithImage:highlightedImage")
 	overload extern inline public function initWithImage(image:UIImage, highlightedImage:UIImage):UIImageView;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("highlightedImage")
+	public var highlightedImage:UIImage;
 
-	@:native("API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0))")
-	public var API_AVAILABLE(ios(13.0),tvos(13.0),watchos(6.0)):preferredSymbolConfiguration;
+	@:native("preferredSymbolConfiguration")
+	public var preferredSymbolConfiguration:UIImageSymbolConfiguration;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("highlighted")
+	public var highlighted:BOOL;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("highlightedAnimationImages")
+	public var highlightedAnimationImages:Dynamic;
 
-	@:native("fps)")
-	public var fps):30;
+	@:native("30")
+	public var 30:Dynamic;
 
-	@:native("0)")
-	public var 0):is;
+	@:native("is")
+	public var is:Dynamic;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):tintColor;
+	@:native("tintColor")
+	public var tintColor:UIColor;
 
 	@:native("startAnimating;")
 	overload extern inline public function startAnimating;():Void;
@@ -56,17 +56,17 @@ extern class UIImageView{
 	@:native("animating")
 	public var animating:BOOL;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(9_0)")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(9_0):adjustsImageWhenAncestorFocused;
+	@:native("adjustsImageWhenAncestorFocused")
+	public var adjustsImageWhenAncestorFocused:BOOL;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(9_0)")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(9_0):focusedFrameGuide;
+	@:native("focusedFrameGuide")
+	public var focusedFrameGuide:UILayoutGuide;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(11_0)")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(11_0):overlayContentView;
+	@:native("overlayContentView")
+	public var overlayContentView:UIView;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(11_0)")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(11_0):masksFocusEffectToContents;
+	@:native("masksFocusEffectToContents")
+	public var masksFocusEffectToContents:BOOL;
 
 
 }

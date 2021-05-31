@@ -30,7 +30,7 @@ extern class UIDocumentBrowserAction{
 	public var image:UIImage;
 
 	@:native("supportedContentTypes")
-	public var supportedContentTypes:NSArray<NSString>;
+	public var supportedContentTypes:Dynamic;
 
 	@:native("supportsMultipleItems")
 	public var supportsMultipleItems:BOOL;

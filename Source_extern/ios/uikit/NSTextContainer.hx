@@ -23,26 +23,26 @@ extern class NSTextContainer{
 	@:native("replaceLayoutManager")
 	overload extern inline public function replaceLayoutManager(newLayoutManager:NSLayoutManager):Void;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
+	@:native("size")
+	public var size:CGSize;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
+	@:native("exclusionPaths")
+	public var exclusionPaths:Dynamic;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
+	@:native("lineBreakMode")
+	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("lineFragmentPadding")
 	public var lineFragmentPadding:CGFloat;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
+	@:native("maximumNumberOfLines")
+	public var maximumNumberOfLines:NSUInteger;
 
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
 	overload extern inline public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
 
-	@:native("ios(9.0))")
-	public var ios(9.0)):API_AVAILABLE(macos(10.0),;
+	@:native("simpleRectangularTextContainer")
+	public var simpleRectangularTextContainer:BOOL;
 
 	@:native("widthTracksTextView")
 	public var widthTracksTextView:BOOL;

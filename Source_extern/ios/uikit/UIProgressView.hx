@@ -20,29 +20,29 @@ extern class UIProgressView{
 	@:native("initWithProgressViewStyle://:the:height:to")
 	overload extern inline public function initWithProgressViewStyle(style:UIProgressViewStyle, //:sets, the:view, height:according, to:the):UIProgressView;
 
-	@:native("UIProgressViewStyleDefault")
-	public var UIProgressViewStyleDefault:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("pinned.")
-	public var pinned.:are;
+	@:native("are")
+	public var are:outside;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("")
+	public var :progressTintColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("")
+	public var :;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("")
+	public var :;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("")
+	public var :;
 
 	@:native("setProgress:animated")
 	overload extern inline public function setProgress(progress:float, animated:BOOL):Void;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):observedProgress;
+	@:native("observedProgress")
+	public var observedProgress:NSProgress;
 
 
 }

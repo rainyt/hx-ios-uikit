@@ -56,29 +56,29 @@ extern class UITextView{
 	@:native("textColor")
 	public var textColor:UIColor;
 
-	@:native("NSLeftTextAlignment")
-	public var NSLeftTextAlignment:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("selectedRange")
 	public var selectedRange:NSRange;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):editable;
+	@:native("editable")
+	public var editable:BOOL;
 
-	@:native("focusable.")
-	public var focusable.:view;
+	@:native("selectable")
+	public var selectable:BOOL;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(3.0));
+	@:native("dataDetectorTypes")
+	public var dataDetectorTypes:UIDataDetectorTypes;
 
-	@:native("NO")
-	public var NO:to;
+	@:native("allowsEditingTextAttributes")
+	public var allowsEditingTextAttributes:BOOL;
 
-	@:native("API_AVAILABLE(ios(6.0))")
-	public var API_AVAILABLE(ios(6.0)):attributedText;
+	@:native("attributedText")
+	public var attributedText:NSAttributedString;
 
-	@:native("changes")
-	public var changes:selection;
+	@:native("typingAttributes")
+	public var typingAttributes:NSDictionary<NSAttributedStringKey,id>;
 
 	@:native("scrollRangeToVisible")
 	overload extern inline public function scrollRangeToVisible(range:NSRange):Void;
@@ -89,8 +89,8 @@ extern class UITextView{
 	@:native("inputAccessoryView")
 	public var inputAccessoryView:UIView;
 
-	@:native("NO.")
-	public var NO.:to;
+	@:native("clearsOnInsertion")
+	public var clearsOnInsertion:BOOL;
 
 	@:native("initWithFrame:textContainer:API_AVAILABLE(ios(7.0)")
 	overload extern inline public function initWithFrame(frame:CGRect, textContainer:NSTextContainer, API_AVAILABLE(ios(7.0):NS_DESIGNATED_INITIALIZER):UITextView;
@@ -98,23 +98,23 @@ extern class UITextView{
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UITextView;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):textContainer;
+	@:native("textContainer")
+	public var textContainer:NSTextContainer;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):textContainerInset;
+	@:native("textContainerInset")
+	public var textContainerInset:UIEdgeInsets;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):layoutManager;
+	@:native("layoutManager")
+	public var layoutManager:NSLayoutManager;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):textStorage;
+	@:native("textStorage")
+	public var textStorage:NSTextStorage;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):linkTextAttributes;
+	@:native("linkTextAttributes")
+	public var linkTextAttributes:NSDictionary<NSAttributedStringKey,id>;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):usesStandardTextScaling;
+	@:native("usesStandardTextScaling")
+	public var usesStandardTextScaling:BOOL;
 
 
 }

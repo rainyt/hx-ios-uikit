@@ -11,8 +11,8 @@ extern class UISpringLoadedInteractionSupporting{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISpringLoadedInteractionSupporting;
 
-	@:native("UIKIT_AVAILABLE_IOS_ONLY(11_0)")
-	public var UIKIT_AVAILABLE_IOS_ONLY(11_0):springLoaded;
+	@:native("springLoaded")
+	public var springLoaded:BOOL;
 
 
 }

@@ -29,8 +29,8 @@ extern class UICollectionViewCell{
 	@:native("preferredLayoutAttributesFittingAttributes")
 	overload extern inline public function preferredLayoutAttributesFittingAttributes(layoutAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutAttributes *;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("configurationState")
+	public var configurationState:UICellConfigurationState;
 
 	@:native("setNeedsUpdateConfiguration")
 	overload extern inline public function setNeedsUpdateConfiguration():Void;
@@ -38,14 +38,14 @@ extern class UICollectionViewCell{
 	@:native("updateConfigurationUsingState")
 	overload extern inline public function updateConfigurationUsingState(state:UICellConfigurationState):Void;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("contentConfiguration")
+	public var contentConfiguration:id<UIContentConfiguration>;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("automaticallyUpdatesContentConfiguration")
+	public var automaticallyUpdatesContentConfiguration:BOOL;
 
-	@:native("contentView")
-	public var contentView:cell's;
+	@:native("cell's")
+	public var cell's:the;
 
 	@:native("selected")
 	public var selected:BOOL;
@@ -56,11 +56,11 @@ extern class UICollectionViewCell{
 	@:native("dragStateDidChange:API_AVAILABLE(ios(11.0)")
 	overload extern inline public function dragStateDidChange(dragState:UICollectionViewCellDragState, API_AVAILABLE(ios(11.0):Dynamic):Void;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("backgroundConfiguration")
+	public var backgroundConfiguration:UIBackgroundConfiguration;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("automaticallyUpdatesBackgroundConfiguration")
+	public var automaticallyUpdatesBackgroundConfiguration:BOOL;
 
 	@:native("backgroundView")
 	public var backgroundView:UIView;

@@ -12,25 +12,25 @@ extern class UITabBarController{
 	overload extern inline public static function autorelease():UITabBarController;
 
 	@:native("viewControllers")
-	public var viewControllers:>;
+	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:animated")
-	overload extern inline public function setViewControllers(viewControllers:NSArray<__kindofUIViewController>__nullable, animated:BOOL):Void;
+	overload extern inline public function setViewControllers(viewControllers:Dynamic, animated:BOOL):Void;
 
-	@:native("exists.")
-	public var exists.:it;
+	@:native("it")
+	public var it:if;
 
 	@:native("selectedIndex")
 	public var selectedIndex:NSUInteger;
 
-	@:native("exist.")
-	public var exist.:already;
+	@:native("moreNavigationController")
+	public var moreNavigationController:UINavigationController;
 
-	@:native("customizable.")
-	public var customizable.:are;
+	@:native("customizableViewControllers")
+	public var customizableViewControllers:Dynamic;
 
-	@:native("exception.")
-	public var exception.:an;
+	@:native("tabBar")
+	public var tabBar:UITabBar;
 
 	@:native("delegate")
 	public var delegate:id<UITabBarControllerDelegate>;
@@ -42,13 +42,13 @@ extern class UITabBarController{
 	overload extern inline public function tabBarController(tabBarController:UITabBarController, didSelectViewController:UIViewController):Void;
 
 	@:native("tabBarController:willBeginCustomizingViewControllers:API_AVAILABLE(ios(3.0)")
-	overload extern inline public function tabBarController(tabBarController:UITabBarController, willBeginCustomizingViewControllers:NSArray<__kindofUIViewController>, API_AVAILABLE(ios(3.0):Dynamic):Void;
+	overload extern inline public function tabBarController(tabBarController:UITabBarController, willBeginCustomizingViewControllers:Dynamic, API_AVAILABLE(ios(3.0):Dynamic):Void;
 
 	@:native("tabBarController:willEndCustomizingViewControllers:changed:API_AVAILABLE(ios(3.0)")
-	overload extern inline public function tabBarController(tabBarController:UITabBarController, willEndCustomizingViewControllers:NSArray<__kindofUIViewController>, changed:BOOL, API_AVAILABLE(ios(3.0):Dynamic):Void;
+	overload extern inline public function tabBarController(tabBarController:UITabBarController, willEndCustomizingViewControllers:Dynamic, changed:BOOL, API_AVAILABLE(ios(3.0):Dynamic):Void;
 
 	@:native("tabBarController:didEndCustomizingViewControllers:changed")
-	overload extern inline public function tabBarController(tabBarController:UITabBarController, didEndCustomizingViewControllers:NSArray<__kindofUIViewController>, changed:BOOL):Void;
+	overload extern inline public function tabBarController(tabBarController:UITabBarController, didEndCustomizingViewControllers:Dynamic, changed:BOOL):Void;
 
 	@:native("tabBarControllerSupportedInterfaceOrientations:API_AVAILABLE(ios(7.0)")
 	overload extern inline public function tabBarControllerSupportedInterfaceOrientations(tabBarController:UITabBarController, API_AVAILABLE(ios(7.0):Dynamic):UIInterfaceOrientationMask;
@@ -62,14 +62,14 @@ extern class UITabBarController{
 	@:native("tabBarController")
 	overload extern inline public function tabBarController():nullable id <UIViewControllerAnimatedTransitioning>;
 
-	@:native("explicitly.")
-	public var explicitly.:set;
+	@:native("set")
+	public var set:not;
 
-	@:native("otherwise.")
-	public var otherwise.:nil;
+	@:native("nil")
+	public var nil:Returns;
 
-	@:native("exists.")
-	public var exists.:one;
+	@:native("tabBarObservedScrollView")
+	public var tabBarObservedScrollView:UIScrollView;
 
 
 }

@@ -53,11 +53,11 @@ extern class UIGeometry{
 	@:native("UIEdgeInsetsValue")
 	public var UIEdgeInsetsValue:UIEdgeInsets;
 
-	@:native("API_AVAILABLE(ios(11.0),tvos(11.0),watchos(4.0))")
-	public var API_AVAILABLE(ios(11.0),tvos(11.0),watchos(4.0)):directionalEdgeInsetsValue;
+	@:native("directionalEdgeInsetsValue")
+	public var directionalEdgeInsetsValue:NSDirectionalEdgeInsets;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):UIOffsetValue;
+	@:native("UIOffsetValue")
+	public var UIOffsetValue:UIOffset;
 
 	@:native("encodeCGPoint:forKey")
 	overload extern inline public function encodeCGPoint(point:CGPoint, forKey:NSString):Void;

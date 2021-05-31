@@ -11,17 +11,17 @@ extern class UILongPressGestureRecognizer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UILongPressGestureRecognizer;
 
-	@:native("recognized")
-	public var recognized:be;
+	@:native("be")
+	public var be:to;
 
-	@:native("recognized")
-	public var recognized:be;
+	@:native("numberOfTouchesRequired")
+	public var numberOfTouchesRequired:NSUInteger;
 
-	@:native("recognized")
-	public var recognized:be;
+	@:native("be")
+	public var be:to;
 
-	@:native("tracking")
-	public var tracking:touch;
+	@:native("(after")
+	public var (after:recognized;
 
 
 }

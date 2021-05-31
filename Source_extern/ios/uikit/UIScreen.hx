@@ -11,80 +11,80 @@ extern class UIScreen{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIScreen;
 
-	@:native("device")
-	public var device:the;
+	@:native("screens")
+	public var screens:Dynamic;
 
-	@:native("screen")
-	public var screen:internal;
+	@:native("internal")
+	public var internal:device's;
 
-	@:native("points")
-	public var points:in;
+	@:native("in")
+	public var in:screen;
 
-	@:native("API_AVAILABLE(ios(4.0))")
-	public var API_AVAILABLE(ios(4.0)):scale;
+	@:native("scale")
+	public var scale:CGFloat;
 
-	@:native("supports")
-	public var supports:screen;
+	@:native("availableModes")
+	public var availableModes:Dynamic;
 
-	@:native("results")
-	public var results:best;
+	@:native("preferredMode")
+	public var preferredMode:UIScreenMode;
 
-	@:native("screen")
-	public var screen:this;
+	@:native("currentMode")
+	public var currentMode:UIScreenMode;
 
-	@:native("screen")
-	public var screen:this;
+	@:native("currentMode")
+	public var currentMode:UIScreenMode;
 
-	@:native("overscanning")
-	public var overscanning:is;
+	@:native("overscanCompensation")
+	public var overscanCompensation:UIScreenOverscanCompensation;
 
-	@:native("clipping")
-	public var clipping:avoid;
+	@:native("overscanCompensationInsets")
+	public var overscanCompensationInsets:UIEdgeInsets;
 
-	@:native("mirroring")
-	public var mirroring:disable;
+	@:native("mirroredScreen")
+	public var mirroredScreen:UIScreen;
 
-	@:native("etc.)")
-	public var etc.):mirrored,;
+	@:native("captured")
+	public var captured:BOOL;
 
-	@:native("screen.")
-	public var screen.:main;
+	@:native("brightness")
+	public var brightness:CGFloat;
 
-	@:native("cost.")
-	public var cost.:performance;
+	@:native("wantsSoftwareDimming")
+	public var wantsSoftwareDimming:BOOL;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):coordinateSpace;
+	@:native("coordinateSpace")
+	public var coordinateSpace:<UICoordinateSpace>;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):fixedCoordinateSpace;
+	@:native("fixedCoordinateSpace")
+	public var fixedCoordinateSpace:<UICoordinateSpace>;
 
-	@:native("pixels")
-	public var pixels:in;
+	@:native("nativeBounds")
+	public var nativeBounds:;
 
-	@:native("screen")
-	public var screen:physical;
+	@:native("")
+	public var :nativeScale;
 
 	@:native("displayLinkWithTarget:selector")
 	overload extern inline public function displayLinkWithTarget(target:id, selector:SEL):nullable CADisplayLink *;
 
-	@:native("of")
-	public var of:capable;
+	@:native("")
+	public var :maximumFramesPerSecond;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):calibratedLatency;
+	@:native("calibratedLatency")
+	public var calibratedLatency:CFTimeInterval;
 
-	@:native("release.")
-	public var release.:future;
+	@:native("focusedItem")
+	public var focusedItem:id<UIFocusItem>;
 
-	@:native("release.")
-	public var release.:future;
+	@:native("focusedView")
+	public var focusedView:UIView;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):supportsFocus;
+	@:native("supportsFocus")
+	public var supportsFocus:BOOL;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):9.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
 	@:native("snapshotViewAfterScreenUpdates")
 	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:BOOL):UIView *;

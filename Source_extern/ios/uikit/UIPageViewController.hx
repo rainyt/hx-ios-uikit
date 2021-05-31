@@ -20,8 +20,8 @@ extern class UIPageViewController{
 	@:native("delegate")
 	public var delegate:<UIPageViewControllerDelegate>;
 
-	@:native("disabled.")
-	public var disabled.:be;
+	@:native("be")
+	public var be:will;
 
 	@:native("transitionStyle")
 	public var transitionStyle:UIPageViewControllerTransitionStyle;
@@ -29,26 +29,26 @@ extern class UIPageViewController{
 	@:native("navigationOrientation")
 	public var navigationOrientation:UIPageViewControllerNavigationOrientation;
 
-	@:native("'UIPageViewControllerSpineLocationNone'.")
-	public var 'UIPageViewControllerSpineLocationNone'.:otherwise;
+	@:native("otherwise")
+	public var otherwise:'UIPageViewControllerSpineLocationMin',;
 
-	@:native("'NO'.")
-	public var 'NO'.:is;
+	@:native("is")
+	public var is:Default;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:>;
+	public var gestureRecognizers:Dynamic;
 
 	@:native("viewControllers")
-	public var viewControllers:>;
+	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:direction:animated:completion")
-	overload extern inline public function setViewControllers(viewControllers:NSArray<UIViewController>, direction:UIPageViewControllerNavigationDirection, animated:BOOL, completion:Dynamic):Void;
+	overload extern inline public function setViewControllers(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:BOOL, completion:Dynamic):Void;
 
 	@:native("pageViewController:willTransitionToViewControllers")
-	overload extern inline public function pageViewController(pageViewController:UIPageViewController, willTransitionToViewControllers:NSArray<UIViewController>):Void;
+	overload extern inline public function pageViewController(pageViewController:UIPageViewController, willTransitionToViewControllers:Dynamic):Void;
 
 	@:native("pageViewController:didFinishAnimating:previousViewControllers:transitionCompleted")
-	overload extern inline public function pageViewController(pageViewController:UIPageViewController, didFinishAnimating:BOOL, previousViewControllers:NSArray<UIViewController>, transitionCompleted:BOOL):Void;
+	overload extern inline public function pageViewController(pageViewController:UIPageViewController, didFinishAnimating:BOOL, previousViewControllers:Dynamic, transitionCompleted:BOOL):Void;
 
 	@:native("pageViewController:spineLocationForInterfaceOrientation")
 	overload extern inline public function pageViewController(pageViewController:UIPageViewController, spineLocationForInterfaceOrientation:UIInterfaceOrientation):UIPageViewControllerSpineLocation;

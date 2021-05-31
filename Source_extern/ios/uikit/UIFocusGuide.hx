@@ -14,11 +14,11 @@ extern class UIFocusGuide{
 	@:native("enabled")
 	public var enabled:BOOL;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):preferredFocusEnvironments;
+	@:native("preferredFocusEnvironments")
+	public var preferredFocusEnvironments:Dynamic;
 
-	@:native("10.0))")
-	public var 10.0)):ios(9.0,;
+	@:native("ios(9.0,")
+	public var ios(9.0,:Dynamic;
 
 
 }

@@ -11,11 +11,11 @@ extern class UIPanGestureRecognizer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPanGestureRecognizer;
 
-	@:native("match")
-	public var match:to;
+	@:native("minimumNumberOfTouches")
+	public var minimumNumberOfTouches:NSUInteger;
 
-	@:native("down")
-	public var down:be;
+	@:native("maximumNumberOfTouches")
+	public var maximumNumberOfTouches:NSUInteger;
 
 	@:native("translationInView:::::::::::::translation:the:system:the")
 	overload extern inline public function translationInView(view:UIView, :, :, :, :, :, :, :, :, :, :, :, ://, translation:in, the:coordinate, system:of, the:specified):CGPoint;
@@ -26,8 +26,8 @@ extern class UIPanGestureRecognizer{
 	@:native("velocityInView:::::::::::::://:of:pan:points/second:the:system:the")
 	overload extern inline public function velocityInView(view:UIView, :, :, :, :, :, :, :, :, :, :, :, :, :, //:velocity, of:the, pan:in, points/second:in, the:coordinate, system:of, the:specified):CGPoint;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("allowedScrollTypesMask")
+	public var allowedScrollTypesMask:UIScrollTypeMask;
 
 
 }

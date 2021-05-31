@@ -12,13 +12,13 @@ extern class UIFocus{
 	overload extern inline public static function autorelease():UIFocus;
 
 	@:native("preferredFocusEnvironments")
-	public var preferredFocusEnvironments:NSArray<id<UIFocusEnvironment>>;
+	public var preferredFocusEnvironments:Dynamic;
 
-	@:native("ios(12.0))")
-	public var ios(12.0)):API_AVAILABLE(tvos(12.0),;
+	@:native("parentFocusEnvironment")
+	public var parentFocusEnvironment:id<UIFocusEnvironment>;
 
-	@:native("ios(12.0))")
-	public var ios(12.0)):API_AVAILABLE(tvos(12.0),;
+	@:native("focusItemContainer")
+	public var focusItemContainer:id<UIFocusItemContainer>;
 
 	@:native("setNeedsFocusUpdate;")
 	overload extern inline public function setNeedsFocusUpdate;():Void;
@@ -35,14 +35,14 @@ extern class UIFocus{
 	@:native("soundIdentifierForFocusUpdateInContext:API_AVAILABLE(tvos(11.0)")
 	overload extern inline public function soundIdentifierForFocusUpdateInContext(context:UIFocusUpdateContext, API_AVAILABLE(tvos(11.0):Dynamic):nullable UIFocusSoundIdentifier;
 
-	@:native("10.0))")
-	public var 10.0)):ios(9.0,;
+	@:native("ios(9.0,")
+	public var ios(9.0,:Dynamic;
 
 	@:native("canBecomeFocused")
 	public var canBecomeFocused:BOOL;
 
-	@:native("ios(12.0))")
-	public var ios(12.0)):API_AVAILABLE(tvos(12.0),;
+	@:native("frame")
+	public var frame:CGRect;
 
 	@:native("didHintFocusMovement")
 	overload extern inline public function didHintFocusMovement(hint:UIFocusMovementHint):Void;
@@ -62,11 +62,11 @@ extern class UIFocus{
 	@:native("visibleSize")
 	public var visibleSize:CGSize;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):previouslyFocusedItem;
+	@:native("previouslyFocusedItem")
+	public var previouslyFocusedItem:id<UIFocusItem>;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):nextFocusedItem;
+	@:native("nextFocusedItem")
+	public var nextFocusedItem:id<UIFocusItem>;
 
 	@:native("previouslyFocusedView")
 	public var previouslyFocusedView:UIView;

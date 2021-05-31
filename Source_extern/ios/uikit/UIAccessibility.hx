@@ -17,20 +17,20 @@ extern class UIAccessibility{
 	@:native("accessibilityLabel")
 	public var accessibilityLabel:NSString;
 
-	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
-	public var API_AVAILABLE(ios(11.0),tvos(11.0)):accessibilityAttributedLabel;
+	@:native("accessibilityAttributedLabel")
+	public var accessibilityAttributedLabel:NSAttributedString;
 
 	@:native("accessibilityHint")
 	public var accessibilityHint:NSString;
 
-	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
-	public var API_AVAILABLE(ios(11.0),tvos(11.0)):accessibilityAttributedHint;
+	@:native("accessibilityAttributedHint")
+	public var accessibilityAttributedHint:NSAttributedString;
 
 	@:native("accessibilityValue")
 	public var accessibilityValue:NSString;
 
-	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
-	public var API_AVAILABLE(ios(11.0),tvos(11.0)):accessibilityAttributedValue;
+	@:native("accessibilityAttributedValue")
+	public var accessibilityAttributedValue:NSAttributedString;
 
 	@:native("accessibilityTraits")
 	public var accessibilityTraits:UIAccessibilityTraits;
@@ -38,41 +38,41 @@ extern class UIAccessibility{
 	@:native("accessibilityFrame")
 	public var accessibilityFrame:CGRect;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):accessibilityPath;
+	@:native("accessibilityPath")
+	public var accessibilityPath:UIBezierPath;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):accessibilityActivationPoint;
+	@:native("accessibilityActivationPoint")
+	public var accessibilityActivationPoint:CGPoint;
 
 	@:native("accessibilityLanguage")
 	public var accessibilityLanguage:NSString;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):accessibilityElementsHidden;
+	@:native("accessibilityElementsHidden")
+	public var accessibilityElementsHidden:BOOL;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):accessibilityViewIsModal;
+	@:native("accessibilityViewIsModal")
+	public var accessibilityViewIsModal:BOOL;
 
-	@:native("API_AVAILABLE(ios(6.0))")
-	public var API_AVAILABLE(ios(6.0)):shouldGroupAccessibilityChildren;
+	@:native("shouldGroupAccessibilityChildren")
+	public var shouldGroupAccessibilityChildren:BOOL;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):accessibilityNavigationStyle;
+	@:native("accessibilityNavigationStyle")
+	public var accessibilityNavigationStyle:UIAccessibilityNavigationStyle;
 
-	@:native("API_AVAILABLE(ios(13.0),tvos(13.0))")
-	public var API_AVAILABLE(ios(13.0),tvos(13.0)):accessibilityRespondsToUserInteraction;
+	@:native("accessibilityRespondsToUserInteraction")
+	public var accessibilityRespondsToUserInteraction:BOOL;
 
-	@:native("API_AVAILABLE(ios(13.0),tvos(13.0))")
-	public var API_AVAILABLE(ios(13.0),tvos(13.0)):accessibilityUserInputLabels;
+	@:native("accessibilityUserInputLabels")
+	public var accessibilityUserInputLabels:Dynamic;
 
-	@:native("API_AVAILABLE(ios(13.0),tvos(13.0))")
-	public var API_AVAILABLE(ios(13.0),tvos(13.0)):accessibilityAttributedUserInputLabels;
+	@:native("accessibilityAttributedUserInputLabels")
+	public var accessibilityAttributedUserInputLabels:Dynamic;
 
-	@:native("UIKIT_AVAILABLE_TVOS_ONLY(9_0)")
-	public var UIKIT_AVAILABLE_TVOS_ONLY(9_0):accessibilityHeaderElements;
+	@:native("accessibilityHeaderElements")
+	public var accessibilityHeaderElements:Dynamic;
 
-	@:native("tvos(13.0))")
-	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;
+	@:native("accessibilityTextualContext")
+	public var accessibilityTextualContext:UIAccessibilityTextualContext;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload extern inline public function accessibilityElementDidBecomeFocused():Void;
@@ -104,8 +104,8 @@ extern class UIAccessibility{
 	@:native("accessibilityPerformMagicTap")
 	overload extern inline public function accessibilityPerformMagicTap():BOOL;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):accessibilityCustomActions;
+	@:native("accessibilityCustomActions")
+	public var accessibilityCustomActions:<UIAccessibilityCustomAction>;
 
 	@:native("accessibilityLineNumberForPoint")
 	overload extern inline public function accessibilityLineNumberForPoint(point:CGPoint):NSInteger;
@@ -125,11 +125,11 @@ extern class UIAccessibility{
 	@:native("accessibilityAttributedPageContent")
 	overload extern inline public function accessibilityAttributedPageContent():nullable NSAttributedString *;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("accessibilityDragSourceDescriptors")
+	public var accessibilityDragSourceDescriptors:Dynamic;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("accessibilityDropPointDescriptors")
+	public var accessibilityDropPointDescriptors:Dynamic;
 
 
 }

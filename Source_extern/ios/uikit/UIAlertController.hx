@@ -30,16 +30,16 @@ extern class UIAlertController{
 	overload extern inline public function addAction(action:UIAlertAction):Void;
 
 	@:native("actions")
-	public var actions:>;
+	public var actions:Dynamic;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):preferredAction;
+	@:native("preferredAction")
+	public var preferredAction:UIAlertAction;
 
 	@:native("addTextFieldWithConfigurationHandler")
 	overload extern inline public function addTextFieldWithConfigurationHandler(configurationHandler:Dynamic):Void;
 
 	@:native("textFields")
-	public var textFields:>;
+	public var textFields:Dynamic;
 
 	@:native("title")
 	public var title:NSString;

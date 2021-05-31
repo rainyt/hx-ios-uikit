@@ -21,7 +21,7 @@ extern class UIAction{
 	public var discoverabilityTitle:NSString;
 
 	@:native("identifier")
-	public var identifier:UIActionIdentifier;
+	public var identifier:NSString;
 
 	@:native("attributes")
 	public var attributes:UIMenuElementAttributes;
@@ -29,8 +29,8 @@ extern class UIAction{
 	@:native("state")
 	public var state:UIMenuElementState;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):sender;
+	@:native("sender")
+	public var sender:id;
 
 	@:native("actionWithHandler:API_AVAILABLE(ios(14.0)")
 	overload extern inline public static function actionWithHandler(handler:UIActionHandler, API_AVAILABLE(ios(14.0):Dynamic):UIAction;

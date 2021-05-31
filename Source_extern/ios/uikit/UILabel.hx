@@ -11,56 +11,56 @@ extern class UILabel{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UILabel;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("plain)")
-	public var plain):17;
+	@:native("17")
+	public var 17:font;
 
-	@:native("labelColor")
-	public var labelColor:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("shadow)")
-	public var shadow):(no;
+	@:native("(no")
+	public var (no:nil;
 
-	@:native("shadow")
-	public var shadow:top;
+	@:native("CGSizeMake(0,")
+	public var CGSizeMake(0,:is;
 
-	@:native("NSTextAlignmentLeft)")
-	public var NSTextAlignmentLeft):was;
+	@:native("was")
+	public var was:default;
 
-	@:native("text")
-	public var text:of;
+	@:native("of")
+	public var of:lines;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("attributedText")
+	public var attributedText:NSAttributedString;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("drawn")
-	public var drawn:is;
+	@:native("is")
+	public var is:label;
 
 	@:native("numberOfLines")
 	public var numberOfLines:NSInteger;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("UIBaselineAdjustmentAlignBaselines")
-	public var UIBaselineAdjustmentAlignBaselines:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("0.0")
-	public var 0.0:is;
+	@:native("minimumScaleFactor")
+	public var minimumScaleFactor:CGFloat;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("allowsDefaultTighteningForTruncation")
+	public var allowsDefaultTighteningForTruncation:BOOL;
 
 	@:native("lineBreakStrategy")
 	public var lineBreakStrategy:NSLineBreakStrategy;
@@ -71,17 +71,17 @@ extern class UILabel{
 	@:native("drawTextInRect")
 	overload extern inline public function drawTextInRect(rect:CGRect):Void;
 
-	@:native("API_AVAILABLE(ios(6.0))")
-	public var API_AVAILABLE(ios(6.0)):preferredMaxLayoutWidth;
+	@:native("preferredMaxLayoutWidth")
+	public var preferredMaxLayoutWidth:CGFloat;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(ios,;
+	@:native("enablesMarqueeWhenAncestorFocused")
+	public var enablesMarqueeWhenAncestorFocused:BOOL;
 
-	@:native("0.0")
-	public var 0.0:is;
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):7.0));
+	@:native("ios(6.0,")
+	public var ios(6.0,:Dynamic;
 
 
 }

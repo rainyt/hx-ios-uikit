@@ -11,11 +11,11 @@ extern class UIPopoverSupport{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPopoverSupport;
 
-	@:native("13.0))")
-	public var 13.0)):ios(3.2,;
+	@:native("ios(3.2,")
+	public var ios(3.2,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):7.0));
+	@:native("ios(3.2,")
+	public var ios(3.2,:Dynamic;
 
 
 }

@@ -23,44 +23,44 @@ extern class UILocalNotification{
 	@:native("timeZone")
 	public var timeZone:NSTimeZone;
 
-	@:native("repeat")
-	public var repeat:don't;
+	@:native("don't")
+	public var don't:means;
 
 	@:native("repeatCalendar")
 	public var repeatCalendar:NSCalendar;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):region;
+	@:native("region")
+	public var region:CLRegion;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):regionTriggersOnce;
+	@:native("regionTriggersOnce")
+	public var regionTriggersOnce:BOOL;
 
-	@:native("alert")
-	public var alert:an;
+	@:native("an")
+	public var an:show;
 
-	@:native("button/slider")
-	public var button/slider:launching;
+	@:native("launching")
+	public var launching:hide;
 
-	@:native("unlock")
-	public var unlock:of;
+	@:native("of")
+	public var of:place;
 
-	@:native("tapped")
-	public var tapped:is;
+	@:native("image")
+	public var image:launch;
 
-	@:native("key")
-	public var key:string;
+	@:native("alertTitle")
+	public var alertTitle:NSString;
 
-	@:native("UILocalNotificationDefaultSoundName")
-	public var UILocalNotificationDefaultSoundName:or;
+	@:native("or")
+	public var or:play;
 
-	@:native("0")
-	public var 0:to;
+	@:native("to")
+	public var to:defaults;
 
-	@:native("types")
-	public var types:list;
+	@:native("list")
+	public var list:non-property;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):category;
+	@:native("category")
+	public var category:NSString;
 
 
 }

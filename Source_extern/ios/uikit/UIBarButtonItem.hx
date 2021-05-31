@@ -53,29 +53,29 @@ extern class UIBarButtonItem{
 	@:native("flexibleSpaceItem")
 	overload extern inline public static function flexibleSpaceItem():UIBarButtonItem;
 
-	@:native("UIBarButtonItemStylePlain")
-	public var UIBarButtonItemStylePlain:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("0.0")
-	public var 0.0:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("NULL")
-	public var NULL:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):primaryAction;
+	@:native("primaryAction")
+	public var primaryAction:UIAction;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("menu")
+	public var menu:UIMenu;
 
 	@:native("setBackgroundImage:forState:barMetrics:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
@@ -89,8 +89,8 @@ extern class UIBarButtonItem{
 	@:native("backgroundImageForState:style:barMetrics:API_AVAILABLE(ios(6.0)")
 	overload extern inline public function backgroundImageForState(state:UIControlState, style:UIBarButtonItemStyle, barMetrics:UIBarMetrics, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):tintColor;
+	@:native("tintColor")
+	public var tintColor:UIColor;
 
 	@:native("setBackgroundVerticalPositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function setBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;

@@ -14,8 +14,8 @@ extern class UIMenuController{
 	@:native("sharedMenuController")
 	public var sharedMenuController:UIMenuController;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("setMenuVisible")
 	overload extern inline public function setMenuVisible(menuVisible:BOOL):Void;
@@ -35,11 +35,11 @@ extern class UIMenuController{
 	@:native("hideMenu")
 	overload extern inline public function hideMenu():Void;
 
-	@:native("UIMenuControllerArrowDefault")
-	public var UIMenuControllerArrowDefault:is;
+	@:native("arrowDirection")
+	public var arrowDirection:UIMenuControllerArrowDirection;
 
-	@:native("items")
-	public var items:standard;
+	@:native("menuItems")
+	public var menuItems:Dynamic;
 
 	@:native("update;	")
 	overload extern inline public function update;	():Void;

@@ -18,7 +18,7 @@ extern class UITabBarAppearance{
 	overload extern inline public static function new():UITabBarAppearance;
 
 	@:native("titleTextAttributes")
-	public var titleTextAttributes:id>;
+	public var titleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:UIOffset;
@@ -33,7 +33,7 @@ extern class UITabBarAppearance{
 	public var badgeBackgroundColor:UIColor;
 
 	@:native("badgeTextAttributes")
-	public var badgeTextAttributes:id>;
+	public var badgeTextAttributes:NSDictionary<NSAttributedStringKey,id>;
 
 	@:native("badgeTitlePositionAdjustment")
 	public var badgeTitlePositionAdjustment:UIOffset;

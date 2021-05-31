@@ -23,11 +23,11 @@ extern class UIStatusBarManager{
 	@:native("statusBarHidden")
 	public var statusBarHidden:BOOL;
 
-	@:native("hidden")
-	public var hidden:is;
+	@:native("is")
+	public var is:bar;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(13.0));
+	@:native("statusBarManager")
+	public var statusBarManager:UIStatusBarManager;
 
 
 }

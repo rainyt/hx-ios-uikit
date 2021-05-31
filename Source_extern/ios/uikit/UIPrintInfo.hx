@@ -20,20 +20,20 @@ extern class UIPrintInfo{
 	@:native("printInfoWithDictionary")
 	overload extern inline public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo *;
 
-	@:native("printer")
-	public var printer:selects;
+	@:native("selects")
+	public var selects:user;
 
-	@:native("name")
-	public var name:application;
+	@:native("application")
+	public var application:is;
 
-	@:native("UIPrintInfoOutputGeneral")
-	public var UIPrintInfoOutputGeneral:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("UIPrintInfoOrientationPortrait")
-	public var UIPrintInfoOrientationPortrait:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("other)")
-	public var other):for;
+	@:native("for")
+	public var for:edge;
 
 	@:native("dictionaryRepresentation")
 	public var dictionaryRepresentation:NSDictionary;

@@ -35,8 +35,8 @@ extern class UIAccessibilityElement{
 	@:native("accessibilityTraits")
 	public var accessibilityTraits:UIAccessibilityTraits;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):accessibilityFrameInContainerSpace;
+	@:native("accessibilityFrameInContainerSpace")
+	public var accessibilityFrameInContainerSpace:CGRect;
 
 
 }

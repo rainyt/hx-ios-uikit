@@ -14,29 +14,29 @@ extern class UIDevice{
 	@:native("currentDevice")
 	public var currentDevice:UIDevice;
 
-	@:native("iPhone"")
-	public var iPhone":"My;
+	@:native(""My")
+	public var "My:e.g.;
 
-	@:native("touch"")
-	public var touch":@"iPod;
+	@:native("@"iPod")
+	public var @"iPod:@"iPhone",;
 
-	@:native("model")
-	public var model:of;
+	@:native("of")
+	public var of:version;
 
-	@:native("@"iOS"")
-	public var @"iOS":e.g.;
+	@:native("e.g.")
+	public var e.g.://;
 
-	@:native("@"4.0"")
-	public var @"4.0":e.g.;
+	@:native("e.g.")
+	public var e.g.://;
 
-	@:native("generated.")
-	public var generated.:being;
+	@:native("orientation")
+	public var orientation:UIDeviceOrientation;
 
-	@:native("vendor.")
-	public var vendor.:single;
+	@:native("identifierForVendor")
+	public var identifierForVendor:;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):generatesDeviceOrientationNotifications;
+	@:native("generatesDeviceOrientationNotifications")
+	public var generatesDeviceOrientationNotifications:BOOL;
 
 	@:native("beginGeneratingDeviceOrientationNotifications")
 	overload extern inline public function beginGeneratingDeviceOrientationNotifications():Void;
@@ -44,32 +44,32 @@ extern class UIDevice{
 	@:native("endGeneratingDeviceOrientationNotifications")
 	overload extern inline public function endGeneratingDeviceOrientationNotifications():Void;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("batteryMonitoringEnabled")
+	public var batteryMonitoringEnabled:BOOL;
 
-	@:native("disabled")
-	public var disabled:monitoring;
+	@:native("batteryState")
+	public var batteryState:;
 
-	@:native("UIDeviceBatteryStateUnknown")
-	public var UIDeviceBatteryStateUnknown:if;
+	@:native("batteryLevel")
+	public var batteryLevel:;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("proximityMonitoringEnabled")
+	public var proximityMonitoringEnabled:BOOL;
 
-	@:native("detector")
-	public var detector:proximity;
+	@:native("proximityState")
+	public var proximityState:BOOL;
 
-	@:native("API_AVAILABLE(ios(4.0))")
-	public var API_AVAILABLE(ios(4.0)):multitaskingSupported;
+	@:native("multitaskingSupported")
+	public var multitaskingSupported:BOOL;
 
-	@:native("API_AVAILABLE(ios(3.2))")
-	public var API_AVAILABLE(ios(3.2)):userInterfaceIdiom;
+	@:native("userInterfaceIdiom")
+	public var userInterfaceIdiom:UIUserInterfaceIdiom;
 
 	@:native("playInputClick")
 	overload extern inline public function playInputClick():Void;
 
-	@:native("playInputClick.")
-	public var playInputClick.:enable;
+	@:native("enable")
+	public var enable:will;
 
 
 }

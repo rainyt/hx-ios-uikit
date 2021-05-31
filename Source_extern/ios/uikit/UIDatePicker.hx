@@ -11,41 +11,41 @@ extern class UIDatePicker{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDatePicker;
 
-	@:native("UIDatePickerModeDateAndTime")
-	public var UIDatePickerModeDateAndTime:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("default")
-	public var default:to;
+	@:native("to")
+	public var to:returns;
 
-	@:native("default")
-	public var default:to;
+	@:native("to")
+	public var to:returns;
 
-	@:native("calendar")
-	public var calendar:from;
+	@:native("from")
+	public var from:zone;
 
-	@:native("0:00")
-	public var 0:00:at;
+	@:native("at")
+	public var at:starts;
 
-	@:native("mode")
-	public var mode:timer;
+	@:native("min")
+	public var min:When;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("seconds).")
-	public var seconds).:remaining;
+	@:native("(86,399")
+	public var (86,399:23:59;
 
-	@:native("30")
-	public var 30:is;
+	@:native("is")
+	public var is:max;
 
 	@:native("setDate:animated://:animated:YES,:the:of:to:the")
 	overload extern inline public function setDate(date:NSDate, animated:BOOL, //:if, animated:is, YES,:animate, the:wheels, of:time, to:display, the:new):Void;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("preferredDatePickerStyle")
+	public var preferredDatePickerStyle:UIDatePickerStyle;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("datePickerStyle")
+	public var datePickerStyle:UIDatePickerStyle;
 
 
 }

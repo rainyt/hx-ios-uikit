@@ -29,11 +29,11 @@ extern class UIViewPropertyAnimator{
 	@:native("interruptible")
 	public var interruptible:BOOL;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):scrubsLinearly;
+	@:native("scrubsLinearly")
+	public var scrubsLinearly:BOOL;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):pausesOnCompletion;
+	@:native("pausesOnCompletion")
+	public var pausesOnCompletion:BOOL;
 
 	@:native("initWithDuration:timingParameters")
 	overload extern inline public function initWithDuration(duration:NSTimeInterval, timingParameters:id<UITimingCurveProvider>):UIViewPropertyAnimator;

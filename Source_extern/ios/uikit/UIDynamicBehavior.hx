@@ -20,17 +20,17 @@ extern class UIDynamicBehavior{
 	@:native("transform")
 	public var transform:CGAffineTransform;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):collisionBoundsType;
+	@:native("collisionBoundsType")
+	public var collisionBoundsType:UIDynamicItemCollisionBoundsType;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):collisionBoundingPath;
+	@:native("collisionBoundingPath")
+	public var collisionBoundingPath:UIBezierPath;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>):UIDynamicBehavior;
+	overload extern inline public function initWithItems(items:Dynamic):UIDynamicBehavior;
 
 	@:native("items")
-	public var items:<UIDynamicItem>>;
+	public var items:Dynamic;
 
 	@:native("addChildBehavior")
 	overload extern inline public function addChildBehavior(behavior:UIDynamicBehavior):Void;
@@ -39,10 +39,10 @@ extern class UIDynamicBehavior{
 	overload extern inline public function removeChildBehavior(behavior:UIDynamicBehavior):Void;
 
 	@:native("childBehaviors")
-	public var childBehaviors:>;
+	public var childBehaviors:Dynamic;
 
-	@:native("(^action)(void)")
-	public var (^action)(void):void;
+	@:native("void")
+	public var void:nullable,nonatomic,copy;
 
 	@:native("willMoveToAnimator://:when:removed")
 	overload extern inline public function willMoveToAnimator(dynamicAnimator:UIDynamicAnimator, //:nil, when:being, removed:from):Void;

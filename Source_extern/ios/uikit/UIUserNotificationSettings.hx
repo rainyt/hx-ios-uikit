@@ -18,7 +18,7 @@ extern class UIUserNotificationSettings{
 	public var types:UIUserNotificationType;
 
 	@:native("categories")
-	public var categories:>;
+	public var categories:NSSet<UIUserNotificationCategory>;
 
 	@:native("init")
 	overload extern inline public function init():UIUserNotificationSettings;
@@ -26,8 +26,8 @@ extern class UIUserNotificationSettings{
 	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
 	overload extern inline public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationSettings;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):identifier;
+	@:native("identifier")
+	public var identifier:NSString;
 
 	@:native("actionsForContext")
 	overload extern inline public function actionsForContext(context:UIUserNotificationActionContext):nullable NSArray<UIUserNotificationAction *> *;
@@ -36,7 +36,7 @@ extern class UIUserNotificationSettings{
 	public var identifier:NSString;
 
 	@:native("setActions:forContext")
-	overload extern inline public function setActions(actions:NSArray<UIUserNotificationAction>, forContext:UIUserNotificationActionContext):Void;
+	overload extern inline public function setActions(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
 
 	@:native("init")
 	overload extern inline public function init():UIUserNotificationSettings;
@@ -44,26 +44,26 @@ extern class UIUserNotificationSettings{
 	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
 	overload extern inline public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationSettings;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):identifier;
+	@:native("identifier")
+	public var identifier:NSString;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):title;
+	@:native("title")
+	public var title:NSString;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(9.0));
+	@:native("behavior")
+	public var behavior:UIUserNotificationActionBehavior;
 
-	@:native("API_AVAILABLE(ios(9.0))API_UNAVAILABLE(tvos)")
-	public var API_AVAILABLE(ios(9.0))API_UNAVAILABLE(tvos):parameters;
+	@:native("parameters")
+	public var parameters:NSDictionary;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):activationMode;
+	@:native("activationMode")
+	public var activationMode:UIUserNotificationActivationMode;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):authenticationRequired;
+	@:native("authenticationRequired")
+	public var authenticationRequired:BOOL;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):destructive;
+	@:native("destructive")
+	public var destructive:BOOL;
 
 	@:native("identifier")
 	public var identifier:NSString;
@@ -71,11 +71,11 @@ extern class UIUserNotificationSettings{
 	@:native("title")
 	public var title:NSString;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):behavior;
+	@:native("behavior")
+	public var behavior:UIUserNotificationActionBehavior;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):parameters;
+	@:native("parameters")
+	public var parameters:NSDictionary;
 
 	@:native("activationMode")
 	public var activationMode:UIUserNotificationActivationMode;

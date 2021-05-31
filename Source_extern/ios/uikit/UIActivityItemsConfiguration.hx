@@ -11,35 +11,35 @@ extern class UIActivityItemsConfiguration{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIActivityItemsConfiguration;
 
-	@:native("developer")
-	public var developer:app;
+	@:native("app")
+	public var app:the;
 
-	@:native("interactions")
-	public var interactions:known;
+	@:native("known")
+	public var known:all;
 
-	@:native("key)")
-	public var key):(^metadataProvider)(UIActivityItemsConfigurationMetadataKey;
+	@:native("_Nullable")
+	public var _Nullable:id;
 
-	@:native("key)")
-	public var key):UIActivityItemsConfigurationMetadataKey;
+	@:native("_Nullable")
+	public var _Nullable:id;
 
-	@:native("suggestedSize)")
-	public var suggestedSize):CGSize;
+	@:native("_Nullable")
+	public var _Nullable:NSItemProvider;
 
-	@:native("(^applicationActivitiesProvider)(void)")
-	public var (^applicationActivitiesProvider)(void):>;
+	@:native("NSArray<UIActivity >")
+	public var NSArray<UIActivity >:nonatomic,strong,nullable;
 
 	@:native("activityItemsConfigurationWithObjects://:data")
-	overload extern inline public static function activityItemsConfigurationWithObjects(objects:NSArray<id<NSItemProviderWriting>>, //:Provide, data:up):UIActivityItemsConfiguration;
+	overload extern inline public static function activityItemsConfigurationWithObjects(objects:Dynamic, //:Provide, data:up):UIActivityItemsConfiguration;
 
 	@:native("activityItemsConfigurationWithItemProviders://")
-	overload extern inline public static function activityItemsConfigurationWithItemProviders(itemProviders:NSArray<NSItemProvider>, //:Provide):UIActivityItemsConfiguration;
+	overload extern inline public static function activityItemsConfigurationWithItemProviders(itemProviders:Dynamic, //:Provide):UIActivityItemsConfiguration;
 
 	@:native("initWithObjects:NS_DESIGNATED_INITIALIZER:Provide")
-	overload extern inline public function initWithObjects(objects:NSArray<id<NSItemProviderWriting>>, NS_DESIGNATED_INITIALIZER://, Provide:data):UIActivityItemsConfiguration;
+	overload extern inline public function initWithObjects(objects:Dynamic, NS_DESIGNATED_INITIALIZER://, Provide:data):UIActivityItemsConfiguration;
 
 	@:native("initWithItemProviders:NS_DESIGNATED_INITIALIZER:Provide")
-	overload extern inline public function initWithItemProviders(itemProviders:NSArray<NSItemProvider>, NS_DESIGNATED_INITIALIZER://, Provide:promised):UIActivityItemsConfiguration;
+	overload extern inline public function initWithItemProviders(itemProviders:Dynamic, NS_DESIGNATED_INITIALIZER://, Provide:promised):UIActivityItemsConfiguration;
 
 	@:native("init")
 	overload extern inline public function init():UIActivityItemsConfiguration;

@@ -50,11 +50,11 @@ extern class NSStringDrawing{
 	@:native("boundingRectWithSize:options:context")
 	overload extern inline public function boundingRectWithSize(size:CGSize, options:NSStringDrawingOptions, context:NSStringDrawingContext):CGRect;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):7.0));
+	@:native("ios(6.0,")
+	public var ios(6.0,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):7.0));
+	@:native("ios(6.0,")
+	public var ios(6.0,:Dynamic;
 
 
 }

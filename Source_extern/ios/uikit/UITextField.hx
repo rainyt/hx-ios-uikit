@@ -11,74 +11,74 @@ extern class UITextField{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UITextField;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("attributedText")
+	public var attributedText:;
 
-	@:native("black")
-	public var black:opaque;
+	@:native("opaque")
+	public var opaque:use;
 
-	@:native("pt")
-	public var pt:12;
+	@:native("12")
+	public var 12:font;
 
-	@:native("NSLeftTextAlignment")
-	public var NSLeftTextAlignment:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("ignored.")
-	public var ignored.:are;
+	@:native("are")
+	public var are:images;
 
-	@:native("values.")
-	public var values.:default;
+	@:native("defaultTextAttributes")
+	public var defaultTextAttributes:NSDictionary<NSAttributedStringKey,id>;
 
-	@:native("gray")
-	public var gray:70%;
+	@:native("70%")
+	public var 70%:drawn;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("attributedPlaceholder")
+	public var attributedPlaceholder:;
 
-	@:native("cleared")
-	public var cleared:text;
+	@:native("text")
+	public var text:all;
 
-	@:native("baseline")
-	public var baseline:along;
+	@:native("along")
+	public var along:minFontSize;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("is")
+	public var is:adjustsFontSizeToFitWidth;
 
-	@:native("reference")
-	public var reference:weak;
+	@:native("weak")
+	public var weak:nil.;
 
-	@:native("stretchable")
-	public var stretchable:be;
+	@:native("be")
+	public var be:should;
 
-	@:native("stretchable")
-	public var stretchable:be;
+	@:native("be")
+	public var be:should;
 
 	@:native("editing")
 	public var editing:BOOL;
 
-	@:native("text")
-	public var text:rich;
+	@:native("allowsEditingTextAttributes")
+	public var allowsEditingTextAttributes:BOOL;
 
-	@:native("changes")
-	public var changes:selection;
+	@:native("typingAttributes")
+	public var typingAttributes:NSDictionary<NSAttributedStringKey,id>;
 
-	@:native("UITextFieldViewModeNever")
-	public var UITextFieldViewModeNever:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("glass")
-	public var glass:magnifying;
+	@:native("magnifying")
+	public var magnifying:e.g.;
 
-	@:native("UITextFieldViewModeNever")
-	public var UITextFieldViewModeNever:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("button")
-	public var button:bookmarks;
+	@:native("bookmarks")
+	public var bookmarks:e.g.;
 
-	@:native("UITextFieldViewModeNever")
-	public var UITextFieldViewModeNever:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("borderRectForBounds")
 	overload extern inline public function borderRectForBounds(bounds:CGRect):CGRect;
@@ -113,8 +113,8 @@ extern class UITextField{
 	@:native("inputAccessoryView")
 	public var inputAccessoryView:UIView;
 
-	@:native("NO.")
-	public var NO.:to;
+	@:native("clearsOnInsertion")
+	public var clearsOnInsertion:BOOL;
 
 	@:native("endEditing:::use:make:view:any:that:the:responder")
 	overload extern inline public function endEditing(force:BOOL, :, ://, use:to, make:the, view:or, any:subview, that:is, the:first, responder:resign):BOOL;

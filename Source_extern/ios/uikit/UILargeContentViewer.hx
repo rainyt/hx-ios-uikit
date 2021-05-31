@@ -26,20 +26,20 @@ extern class UILargeContentViewer{
 	@:native("largeContentImageInsets")
 	public var largeContentImageInsets:UIEdgeInsets;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("showsLargeContentViewer")
+	public var showsLargeContentViewer:BOOL;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("largeContentTitle")
+	public var largeContentTitle:NSString;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("largeContentImage")
+	public var largeContentImage:UIImage;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("scalesLargeContentImage")
+	public var scalesLargeContentImage:BOOL;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("largeContentImageInsets")
+	public var largeContentImageInsets:UIEdgeInsets;
 
 	@:native("initWithDelegate")
 	overload extern inline public function initWithDelegate(delegate:id<UILargeContentViewerInteractionDelegate>):UILargeContentViewer;

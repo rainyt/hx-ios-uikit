@@ -39,7 +39,7 @@ extern class UIAttachmentBehavior{
 	overload extern inline public static function pinAttachmentWithItem(item1:id<UIDynamicItem>, attachedToItem:id<UIDynamicItem>, attachmentAnchor:CGPoint):UIAttachmentBehavior;
 
 	@:native("items")
-	public var items:<UIDynamicItem>>;
+	public var items:Dynamic;
 
 	@:native("attachedBehaviorType")
 	public var attachedBehaviorType:UIAttachmentBehaviorType;
@@ -50,17 +50,17 @@ extern class UIAttachmentBehavior{
 	@:native("length")
 	public var length:CGFloat;
 
-	@:native("damping")
-	public var damping:critical;
+	@:native("critical")
+	public var critical:1:;
 
-	@:native("Hertz")
-	public var Hertz:in;
+	@:native("in")
+	public var in://;
 
-	@:native("0.0")
-	public var 0.0:is;
+	@:native("frictionTorque")
+	public var frictionTorque:CGFloat;
 
-	@:native("UIFloatRangeInfinite")
-	public var UIFloatRangeInfinite:is;
+	@:native("attachmentRange")
+	public var attachmentRange:UIFloatRange;
 
 
 }

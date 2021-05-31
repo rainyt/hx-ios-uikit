@@ -33,7 +33,7 @@ extern class UIDynamicAnimator{
 	public var referenceView:UIView;
 
 	@:native("behaviors")
-	public var behaviors:UIDynamicBehavior>;
+	public var behaviors:Dynamic;
 
 	@:native("itemsInRect")
 	overload extern inline public function itemsInRect(rect:CGRect):NSArray<id<UIDynamicItem>> *;

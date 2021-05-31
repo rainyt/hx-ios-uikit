@@ -17,14 +17,14 @@ extern class UIInputViewController{
 	@:native("documentContextAfterInput")
 	public var documentContextAfterInput:NSString;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):selectedText;
+	@:native("selectedText")
+	public var selectedText:NSString;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):documentInputMode;
+	@:native("documentInputMode")
+	public var documentInputMode:UITextInputMode;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):documentIdentifier;
+	@:native("documentIdentifier")
+	public var documentIdentifier:NSUUID;
 
 	@:native("adjustTextPositionByCharacterOffset")
 	overload extern inline public function adjustTextPositionByCharacterOffset(offset:NSInteger):Void;
@@ -47,11 +47,11 @@ extern class UIInputViewController{
 	@:native("hasDictationKey")
 	public var hasDictationKey:BOOL;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):hasFullAccess;
+	@:native("hasFullAccess")
+	public var hasFullAccess:BOOL;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):needsInputModeSwitchKey;
+	@:native("needsInputModeSwitchKey")
+	public var needsInputModeSwitchKey:BOOL;
 
 	@:native("dismissKeyboard;")
 	overload extern inline public function dismissKeyboard;():Void;

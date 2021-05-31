@@ -11,8 +11,8 @@ extern class UIViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIViewController;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):preferredContentSize;
+	@:native("preferredContentSize")
+	public var preferredContentSize:CGSize;
 
 	@:native("preferredContentSizeDidChangeForChildContentContainer")
 	overload extern inline public function preferredContentSizeDidChangeForChildContentContainer(container:id<UIContentContainer>):Void;
@@ -35,8 +35,8 @@ extern class UIViewController{
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UIViewController;
 
-	@:native("getter.")
-	public var getter.:or;
+	@:native("or")
+	public var or:setter;
 
 	@:native("loadView;")
 	overload extern inline public function loadView;():Void;
@@ -44,8 +44,8 @@ extern class UIViewController{
 	@:native("loadViewIfNeeded")
 	overload extern inline public function loadViewIfNeeded():Void;
 
-	@:native("not.")
-	public var not.:if;
+	@:native("viewIfLoaded")
+	public var viewIfLoaded:UIView;
 
 	@:native("viewWillUnload")
 	overload extern inline public function viewWillUnload():Void;
@@ -56,17 +56,17 @@ extern class UIViewController{
 	@:native("viewDidLoad;")
 	overload extern inline public function viewDidLoad;():Void;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):viewLoaded;
+	@:native("viewLoaded")
+	public var viewLoaded:BOOL;
 
-	@:native("view.")
-	public var view.:the;
+	@:native("the")
+	public var the:instantiate;
 
-	@:native("nib.")
-	public var nib.:the;
+	@:native("the")
+	public var the:load;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):storyboard;
+	@:native("storyboard")
+	public var storyboard:UIStoryboard;
 
 	@:native("performSegueWithIdentifier:sender")
 	overload extern inline public function performSegueWithIdentifier(identifier:NSString, sender:id):Void;
@@ -116,8 +116,8 @@ extern class UIViewController{
 	@:native("viewDidLayoutSubviews")
 	overload extern inline public function viewDidLayoutSubviews():Void;
 
-	@:native("controller.")
-	public var controller.:parent;
+	@:native("parent")
+	public var parent:a;
 
 	@:native("didReceiveMemoryWarning;")
 	overload extern inline public function didReceiveMemoryWarning;():Void;
@@ -125,35 +125,35 @@ extern class UIViewController{
 	@:native("parentViewController")
 	public var parentViewController:UIViewController;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):6.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):;
+	@:native("")
+	public var :presentedViewController;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):presentingViewController;
+	@:native("presentingViewController")
+	public var presentingViewController:UIViewController;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):definesPresentationContext;
+	@:native("definesPresentationContext")
+	public var definesPresentationContext:BOOL;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):providesPresentationContextTransitionStyle;
+	@:native("providesPresentationContextTransitionStyle")
+	public var providesPresentationContextTransitionStyle:BOOL;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):restoresFocusAfterTransition;
+	@:native("restoresFocusAfterTransition")
+	public var restoresFocusAfterTransition:BOOL;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):beingPresented;
+	@:native("beingPresented")
+	public var beingPresented:BOOL;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):beingDismissed;
+	@:native("beingDismissed")
+	public var beingDismissed:BOOL;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):movingToParentViewController;
+	@:native("movingToParentViewController")
+	public var movingToParentViewController:BOOL;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):movingFromParentViewController;
+	@:native("movingFromParentViewController")
+	public var movingFromParentViewController:BOOL;
 
 	@:native("presentViewController:animated:completion")
 	overload extern inline public function presentViewController(viewControllerToPresent:UIViewController, animated:Dynamic, completion:Dynamic):Void;
@@ -167,41 +167,41 @@ extern class UIViewController{
 	@:native("dismissModalViewControllerAnimated:API_DEPRECATED("", ios(2.0, 6.0)")
 	overload extern inline public function dismissModalViewControllerAnimated(animated:BOOL, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Void;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):modalTransitionStyle;
+	@:native("modalTransitionStyle")
+	public var modalTransitionStyle:UIModalTransitionStyle;
 
-	@:native("API_AVAILABLE(ios(3.2))")
-	public var API_AVAILABLE(ios(3.2)):modalPresentationStyle;
+	@:native("modalPresentationStyle")
+	public var modalPresentationStyle:UIModalPresentationStyle;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(7.0));
+	@:native("modalPresentationCapturesStatusBarAppearance")
+	public var modalPresentationCapturesStatusBarAppearance:BOOL;
 
-	@:native("API_AVAILABLE(ios(4.3))")
-	public var API_AVAILABLE(ios(4.3)):disablesAutomaticKeyboardDismissal;
+	@:native("disablesAutomaticKeyboardDismissal")
+	public var disablesAutomaticKeyboardDismissal:BOOL;
 
-	@:native("following:")
-	public var following::the;
+	@:native("ios(3.0,")
+	public var ios(3.0,:Dynamic;
 
-	@:native("UIRectEdgeAll")
-	public var UIRectEdgeAll:to;
+	@:native("edgesForExtendedLayout")
+	public var edgesForExtendedLayout:UIRectEdge;
 
-	@:native("")
-	public var :;
+	@:native("extendedLayoutIncludesOpaqueBars")
+	public var extendedLayoutIncludesOpaqueBars:BOOL;
 
-	@:native("YES")
-	public var YES:to;
+	@:native("instead",")
+	public var instead",:contentInsetAdjustmentBehavior;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):preferredContentSize;
+	@:native("preferredContentSize")
+	public var preferredContentSize:CGSize;
 
-	@:native("UIStatusBarStyleDefault")
-	public var UIStatusBarStyleDefault:to;
+	@:native("preferredStatusBarStyle")
+	public var preferredStatusBarStyle:UIStatusBarStyle;
 
-	@:native("NO")
-	public var NO:to;
+	@:native("prefersStatusBarHidden")
+	public var prefersStatusBarHidden:BOOL;
 
-	@:native("UIStatusBarAnimationFade")
-	public var UIStatusBarAnimationFade:to;
+	@:native("preferredStatusBarUpdateAnimation")
+	public var preferredStatusBarUpdateAnimation:UIStatusBarAnimation;
 
 	@:native("setNeedsStatusBarAppearanceUpdate")
 	overload extern inline public function setNeedsStatusBarAppearanceUpdate():Void;
@@ -215,14 +215,14 @@ extern class UIViewController{
 	@:native("showDetailViewController:sender")
 	overload extern inline public function showDetailViewController(vc:UIViewController, sender:id):Void;
 
-	@:native("UIUserInterfaceStyleUnspecified")
-	public var UIUserInterfaceStyleUnspecified:to;
+	@:native("preferredUserInterfaceStyle")
+	public var preferredUserInterfaceStyle:UIUserInterfaceStyle;
 
 	@:native("setNeedsUserInterfaceAppearanceUpdate")
 	overload extern inline public function setNeedsUserInterfaceAppearanceUpdate():Void;
 
-	@:native("UIUserInterfaceStyleUnspecified")
-	public var UIUserInterfaceStyleUnspecified:to;
+	@:native("overrideUserInterfaceStyle")
+	public var overrideUserInterfaceStyle:UIUserInterfaceStyle;
 
 	@:native("attemptRotationToDeviceOrientation")
 	overload extern inline public static function attemptRotationToDeviceOrientation():Void;
@@ -230,14 +230,14 @@ extern class UIViewController{
 	@:native("shouldAutorotateToInterfaceOrientation:API_DEPRECATED("", ios(2.0, 6.0)")
 	overload extern inline public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):BOOL;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(6.0));
+	@:native("shouldAutorotate")
+	public var shouldAutorotate:BOOL;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(6.0));
+	@:native("supportedInterfaceOrientations")
+	public var supportedInterfaceOrientations:UIInterfaceOrientationMask;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(6.0));
+	@:native("preferredInterfaceOrientationForPresentation")
+	public var preferredInterfaceOrientationForPresentation:UIInterfaceOrientation;
 
 	@:native("rotatingHeaderView")
 	overload extern inline public function rotatingHeaderView():nullable UIView *;
@@ -245,8 +245,8 @@ extern class UIViewController{
 	@:native("rotatingFooterView")
 	overload extern inline public function rotatingFooterView():nullable UIView *;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):8.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
 	@:native("willRotateToInterfaceOrientation:duration:API_DEPRECATED("Implement viewWillTransitionToSize")
 	overload extern inline public function willRotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("Implement viewWillTransitionToSize:withTransitionCoordinator: instead", ios(2.0, 8.0):Dynamic):Void;
@@ -272,14 +272,14 @@ extern class UIViewController{
 	@:native("setEditing:animated://:the:of:Edit|Done:item:necessary.:who:it:call")
 	overload extern inline public function setEditing(editing:BOOL, animated:BOOL, //:Updates, the:appearance, of:the, Edit|Done:button, item:as, necessary.:Clients, who:override, it:must, call:super):Void;
 
-	@:native("animation.")
-	public var animation.:with;
+	@:native("with")
+	public var with:state;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):8.0));
+	@:native("ios(3.0,")
+	public var ios(3.0,:Dynamic;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):childViewControllers;
+	@:native("childViewControllers")
+	public var childViewControllers:Dynamic;
 
 	@:native("addChildViewController")
 	overload extern inline public function addChildViewController(childController:UIViewController):Void;
@@ -296,11 +296,11 @@ extern class UIViewController{
 	@:native("endAppearanceTransition")
 	overload extern inline public function endAppearanceTransition():Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(7.0));
+	@:native("childViewControllerForStatusBarStyle")
+	public var childViewControllerForStatusBarStyle:UIViewController;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(7.0));
+	@:native("childViewControllerForStatusBarHidden")
+	public var childViewControllerForStatusBarHidden:UIViewController;
 
 	@:native("setOverrideTraitCollection:forChildViewController")
 	overload extern inline public function setOverrideTraitCollection(collection:UITraitCollection, forChildViewController:UIViewController):Void;
@@ -308,8 +308,8 @@ extern class UIViewController{
 	@:native("overrideTraitCollectionForChildViewController")
 	overload extern inline public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):nullable UITraitCollection *;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(ios,;
+	@:native("childViewControllerForUserInterfaceStyle")
+	public var childViewControllerForUserInterfaceStyle:UIViewController;
 
 	@:native("automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers")
 	overload extern inline public function automaticallyForwardAppearanceAndRotationMethodsToChildViewControllers():BOOL;
@@ -317,8 +317,8 @@ extern class UIViewController{
 	@:native("shouldAutomaticallyForwardRotationMethods")
 	overload extern inline public function shouldAutomaticallyForwardRotationMethods():BOOL;
 
-	@:native("API_AVAILABLE(ios(6.0))")
-	public var API_AVAILABLE(ios(6.0)):shouldAutomaticallyForwardAppearanceMethods;
+	@:native("shouldAutomaticallyForwardAppearanceMethods")
+	public var shouldAutomaticallyForwardAppearanceMethods:BOOL;
 
 	@:native("willMoveToParentViewController")
 	overload extern inline public function willMoveToParentViewController(parent:UIViewController):Void;
@@ -326,11 +326,11 @@ extern class UIViewController{
 	@:native("didMoveToParentViewController")
 	overload extern inline public function didMoveToParentViewController(parent:UIViewController):Void;
 
-	@:native("API_AVAILABLE(ios(6.0))")
-	public var API_AVAILABLE(ios(6.0)):restorationIdentifier;
+	@:native("restorationIdentifier")
+	public var restorationIdentifier:NSString;
 
-	@:native("API_AVAILABLE(ios(6.0))")
-	public var API_AVAILABLE(ios(6.0)):restorationClass;
+	@:native("restorationClass")
+	public var restorationClass:Class<UIViewControllerRestoration>;
 
 	@:native("")
 	overload extern inline public function ():Void;
@@ -344,23 +344,23 @@ extern class UIViewController{
 	@:native("updateViewConstraints")
 	overload extern inline public function updateViewConstraints():Void;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):transitioningDelegate;
+	@:native("transitioningDelegate")
+	public var transitioningDelegate:<UIViewControllerTransitioningDelegate>;
 
-	@:native("tvos(7.0,11.0))")
-	public var tvos(7.0,11.0)):ios(7.0,11.0),;
+	@:native("topLayoutGuide.bottomAnchor",")
+	public var topLayoutGuide.bottomAnchor",:of;
 
-	@:native("tvos(7.0,11.0))")
-	public var tvos(7.0,11.0)):ios(7.0,11.0),;
+	@:native("bottomLayoutGuide.topAnchor",")
+	public var bottomLayoutGuide.topAnchor",:of;
 
-	@:native("tvos(11.0))")
-	public var tvos(11.0)):API_AVAILABLE(ios(11.0),;
+	@:native("additionalSafeAreaInsets")
+	public var additionalSafeAreaInsets:UIEdgeInsets;
 
-	@:native("tvos(11.0))")
-	public var tvos(11.0)):API_AVAILABLE(ios(11.0),;
+	@:native("systemMinimumLayoutMargins")
+	public var systemMinimumLayoutMargins:NSDirectionalEdgeInsets;
 
-	@:native("tvos(11.0))")
-	public var tvos(11.0)):API_AVAILABLE(ios(11.0),;
+	@:native("viewRespectsSystemMinimumLayoutMargins")
+	public var viewRespectsSystemMinimumLayoutMargins:BOOL;
 
 	@:native("viewLayoutMarginsDidChange")
 	overload extern inline public function viewLayoutMarginsDidChange():Void;
@@ -374,32 +374,32 @@ extern class UIViewController{
 	@:native("removeKeyCommand")
 	overload extern inline public function removeKeyCommand(keyCommand:UIKeyCommand):Void;
 
-	@:native("tvos(13.0))")
-	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;
+	@:native("performsActionsWhilePresentingModally")
+	public var performsActionsWhilePresentingModally:BOOL;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):extensionContext;
+	@:native("extensionContext")
+	public var extensionContext:NSExtensionContext;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):presentationController;
+	@:native("presentationController")
+	public var presentationController:UIPresentationController;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):popoverPresentationController;
+	@:native("popoverPresentationController")
+	public var popoverPresentationController:UIPopoverPresentationController;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):modalInPresentation;
+	@:native("modalInPresentation")
+	public var modalInPresentation:BOOL;
 
-	@:native("13.0))")
-	public var 13.0)):ios(9.0,;
+	@:native("ios(9.0,")
+	public var ios(9.0,:Dynamic;
 
-	@:native("13.0))")
-	public var 13.0)):ios(9.0,;
+	@:native("ios(9.0,")
+	public var ios(9.0,:Dynamic;
 
-	@:native("13.0))")
-	public var 13.0)):ios(9.0,;
+	@:native("ios(9.0,")
+	public var ios(9.0,:Dynamic;
 
-	@:native("13.0))")
-	public var 13.0)):ios(9.0,;
+	@:native("ios(9.0,")
+	public var ios(9.0,:Dynamic;
 
 	@:native("previewingContext:viewControllerForLocation")
 	overload extern inline public function previewingContext(previewingContext:id<UIViewControllerPreviewing>, viewControllerForLocation:CGPoint):nullable UIViewController *;
@@ -413,47 +413,47 @@ extern class UIViewController{
 	@:native("unregisterForPreviewingWithContext")
 	overload extern inline public function unregisterForPreviewingWithContext(previewing:id<UIViewControllerPreviewing>):Void;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("childViewControllerForScreenEdgesDeferringSystemGestures")
+	public var childViewControllerForScreenEdgesDeferringSystemGestures:UIViewController;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("preferredScreenEdgesDeferringSystemGestures")
+	public var preferredScreenEdgesDeferringSystemGestures:UIRectEdge;
 
 	@:native("setNeedsUpdateOfScreenEdgesDeferringSystemGestures")
 	overload extern inline public function setNeedsUpdateOfScreenEdgesDeferringSystemGestures():Void;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("childViewControllerForHomeIndicatorAutoHidden")
+	public var childViewControllerForHomeIndicatorAutoHidden:UIViewController;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("prefersHomeIndicatorAutoHidden")
+	public var prefersHomeIndicatorAutoHidden:BOOL;
 
 	@:native("setNeedsUpdateOfHomeIndicatorAutoHidden")
 	overload extern inline public function setNeedsUpdateOfHomeIndicatorAutoHidden():Void;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("childViewControllerForPointerLock")
+	public var childViewControllerForPointerLock:UIViewController;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("prefersPointerLocked")
+	public var prefersPointerLocked:BOOL;
 
 	@:native("setNeedsUpdateOfPrefersPointerLocked")
 	overload extern inline public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
-	@:native("13.0))")
-	public var 13.0)):ios(9.0,;
+	@:native("ios(9.0,")
+	public var ios(9.0,:UIContextMenuInteraction.",;
 
 	@:native("title")
 	public var title:NSString;
 
-	@:native("previewViewController)")
-	public var previewViewController):UIViewController;
+	@:native("void")
+	public var void:nonatomic,copy,readonly;
 
 	@:native("actionWithTitle:style:handler")
 	overload extern inline public static function actionWithTitle(title:NSString, style:UIPreviewActionStyle, handler:Dynamic):UIViewController;
 
 	@:native("actionGroupWithTitle:style:actions")
-	overload extern inline public static function actionGroupWithTitle(title:NSString, style:UIPreviewActionStyle, actions:NSArray<UIPreviewAction>):UIViewController;
+	overload extern inline public static function actionGroupWithTitle(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIViewController;
 
 
 }

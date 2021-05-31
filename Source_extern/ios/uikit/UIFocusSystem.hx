@@ -11,8 +11,8 @@ extern class UIFocusSystem{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIFocusSystem;
 
-	@:native("ios(12.0))")
-	public var ios(12.0)):API_AVAILABLE(tvos(12.0),;
+	@:native("focusedItem")
+	public var focusedItem:id<UIFocusItem>;
 
 	@:native("new")
 	overload extern inline public static function new():UIFocusSystem;

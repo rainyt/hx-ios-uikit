@@ -23,17 +23,17 @@ extern class UICollectionLayoutList{
 	@:native("appearance")
 	public var appearance:UICollectionLayoutListAppearance;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):showsSeparators;
+	@:native("showsSeparators")
+	public var showsSeparators:BOOL;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):leadingSwipeActionsConfigurationProvider;
+	@:native("leadingSwipeActionsConfigurationProvider")
+	public var leadingSwipeActionsConfigurationProvider:UICollectionLayoutListSwipeActionsConfigurationProvider;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):trailingSwipeActionsConfigurationProvider;
+	@:native("trailingSwipeActionsConfigurationProvider")
+	public var trailingSwipeActionsConfigurationProvider:UICollectionLayoutListSwipeActionsConfigurationProvider;
 
 	@:native("headerMode")
 	public var headerMode:UICollectionLayoutListHeaderMode;

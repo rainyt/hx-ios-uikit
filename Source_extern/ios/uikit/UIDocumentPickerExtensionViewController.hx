@@ -24,7 +24,7 @@ extern class UIDocumentPickerExtensionViewController{
 	public var originalURL:NSURL;
 
 	@:native("validTypes")
-	public var validTypes:>;
+	public var validTypes:Dynamic;
 
 	@:native("providerIdentifier")
 	public var providerIdentifier:NSString;

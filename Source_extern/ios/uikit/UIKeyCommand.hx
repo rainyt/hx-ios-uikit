@@ -17,14 +17,14 @@ extern class UIKeyCommand{
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UIKeyCommand;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):title;
+	@:native("title")
+	public var title:NSString;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):image;
+	@:native("image")
+	public var image:UIImage;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):discoverabilityTitle;
+	@:native("discoverabilityTitle")
+	public var discoverabilityTitle:NSString;
 
 	@:native("action")
 	public var action:SEL;
@@ -35,17 +35,17 @@ extern class UIKeyCommand{
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):propertyList;
+	@:native("propertyList")
+	public var propertyList:id;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):attributes;
+	@:native("attributes")
+	public var attributes:UIMenuElementAttributes;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):state;
+	@:native("state")
+	public var state:UIMenuElementState;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):alternates;
+	@:native("alternates")
+	public var alternates:Dynamic;
 
 	@:native("commandWithTitle")
 	overload extern inline public static function commandWithTitle():UIKeyCommand;

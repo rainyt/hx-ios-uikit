@@ -39,7 +39,7 @@ extern class UIMotionEffect{
 	public var maximumRelativeValue:id;
 
 	@:native("motionEffects")
-	public var motionEffects:>;
+	public var motionEffects:Dynamic;
 
 
 }

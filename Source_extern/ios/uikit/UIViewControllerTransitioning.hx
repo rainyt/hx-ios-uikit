@@ -17,8 +17,8 @@ extern class UIViewControllerTransitioning{
 	@:native("animated")
 	public var animated:BOOL;
 
-	@:native("interactive.")
-	public var interactive.:currently;
+	@:native("currently")
+	public var currently:is;
 
 	@:native("transitionWasCancelled")
 	public var transitionWasCancelled:BOOL;
@@ -47,8 +47,8 @@ extern class UIViewControllerTransitioning{
 	@:native("viewForKey")
 	overload extern inline public function viewForKey(key:UITransitionContextViewKey):nullable __kindof UIView *;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):targetTransform;
+	@:native("targetTransform")
+	public var targetTransform:CGAffineTransform;
 
 	@:native("initialFrameForViewController")
 	overload extern inline public function initialFrameForViewController(vc:UIViewController):CGRect;
@@ -77,8 +77,8 @@ extern class UIViewControllerTransitioning{
 	@:native("completionCurve")
 	public var completionCurve:UIViewAnimationCurve;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):wantsInteractiveStart;
+	@:native("wantsInteractiveStart")
+	public var wantsInteractiveStart:BOOL;
 
 	@:native("animationControllerForPresentedController:presentingController:sourceController")
 	overload extern inline public function animationControllerForPresentedController(presented:UIViewController, presentingController:UIViewController, sourceController:UIViewController):nullable id <UIViewControllerAnimatedTransitioning>;
@@ -107,11 +107,11 @@ extern class UIViewControllerTransitioning{
 	@:native("completionCurve")
 	public var completionCurve:UIViewAnimationCurve;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):timingCurve;
+	@:native("timingCurve")
+	public var timingCurve:<UITimingCurveProvider>;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):wantsInteractiveStart;
+	@:native("wantsInteractiveStart")
+	public var wantsInteractiveStart:BOOL;
 
 	@:native("pauseInteractiveTransition")
 	overload extern inline public function pauseInteractiveTransition():Void;

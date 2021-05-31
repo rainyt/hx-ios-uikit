@@ -26,8 +26,8 @@ extern class UIDragItem{
 	@:native("localObject")
 	public var localObject:id;
 
-	@:native("(^previewProvider)(void)")
-	public var (^previewProvider)(void):_Nullable;
+	@:native("_Nullable")
+	public var _Nullable:;
 
 
 }

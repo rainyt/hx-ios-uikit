@@ -75,10 +75,10 @@ extern class UIDragInteraction{
 	overload extern inline public function dragInteraction(interaction:UIDragInteraction, itemsForAddingToSession:id<UIDragSession>, withTouchAtPoint:CGPoint):NSArray<UIDragItem *> *;
 
 	@:native("dragInteraction:sessionForAddingItems:withTouchAtPoint")
-	overload extern inline public function dragInteraction(interaction:UIDragInteraction, sessionForAddingItems:NSArray<id<UIDragSession>>, withTouchAtPoint:CGPoint):nullable id<UIDragSession>;
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, sessionForAddingItems:Dynamic, withTouchAtPoint:CGPoint):nullable id<UIDragSession>;
 
 	@:native("dragInteraction:session:willAddItems:forInteraction")
-	overload extern inline public function dragInteraction(interaction:UIDragInteraction, session:id<UIDragSession>, willAddItems:NSArray<UIDragItem>, forInteraction:UIDragInteraction):Void;
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, session:id<UIDragSession>, willAddItems:Dynamic, forInteraction:UIDragInteraction):Void;
 
 	@:native("dragInteraction:previewForCancellingItem:withDefault")
 	overload extern inline public function dragInteraction(interaction:UIDragInteraction, previewForCancellingItem:UIDragItem, withDefault:UITargetedDragPreview):nullable UITargetedDragPreview *;

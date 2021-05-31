@@ -21,7 +21,7 @@ extern class UIViewAnimating{
 	public var reversed:BOOL;
 
 	@:native("")
-	public var :;
+	public var :fractionComplete;
 
 	@:native("startAnimation;")
 	overload extern inline public function startAnimation;():Void;

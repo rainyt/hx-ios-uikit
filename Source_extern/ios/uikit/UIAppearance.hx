@@ -18,7 +18,7 @@ extern class UIAppearance{
 	overload extern inline public static function appearanceWhenContainedIn(ContainerClass,:Class<UIAppearanceContainer>, ...:NS_REQUIRES_NIL_TERMINATION, API_DEPRECATED_WITH_REPLACEMENT("appearanceWhenContainedInInstancesOfClasses:", ios(5.0, 9.0):Dynamic):UIAppearance;
 
 	@:native("appearanceWhenContainedInInstancesOfClasses")
-	overload extern inline public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray<Class<UIAppearanceContainer>>):UIAppearance;
+	overload extern inline public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:Dynamic):UIAppearance;
 
 	@:native("appearanceForTraitCollection")
 	overload extern inline public static function appearanceForTraitCollection(trait:UITraitCollection):UIAppearance;
@@ -27,7 +27,7 @@ extern class UIAppearance{
 	overload extern inline public static function appearanceForTraitCollection(trait:UITraitCollection, whenContainedIn:Class<UIAppearanceContainer>, ...:NS_REQUIRES_NIL_TERMINATION, API_DEPRECATED_WITH_REPLACEMENT("appearanceForTraitCollection:whenContainedInInstancesOfClasses:", ios(8.0, 9.0):Dynamic):UIAppearance;
 
 	@:native("appearanceForTraitCollection:whenContainedInInstancesOfClasses:")
-	overload extern inline public static function appearanceForTraitCollection(trait:UITraitCollection, whenContainedInInstancesOfClasses:NSArray<Class<UIAppearanceContainer>>, :Dynamic):UIAppearance;
+	overload extern inline public static function appearanceForTraitCollection(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic, :Dynamic):UIAppearance;
 
 
 }

@@ -42,7 +42,7 @@ extern class UIApplicationShortcutItem{
 	public var icon:UIApplicationShortcutIcon;
 
 	@:native("userInfo")
-	public var userInfo:<NSSecureCoding>>;
+	public var userInfo:NSDictionary<NSString,id<NSSecureCoding>>;
 
 	@:native("targetContentIdentifier")
 	public var targetContentIdentifier:id;
@@ -60,7 +60,7 @@ extern class UIApplicationShortcutItem{
 	public var icon:UIApplicationShortcutIcon;
 
 	@:native("userInfo")
-	public var userInfo:<NSSecureCoding>>;
+	public var userInfo:NSDictionary<NSString,id<NSSecureCoding>>;
 
 	@:native("targetContentIdentifier")
 	public var targetContentIdentifier:id;

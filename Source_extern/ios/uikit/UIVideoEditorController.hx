@@ -15,16 +15,16 @@ extern class UIVideoEditorController{
 	overload extern inline public static function canEditVideoAtPath(videoPath:NSString):BOOL;
 
 	@:native("delegate")
-	public var delegate:UIVideoEditorControllerDelegate>;
+	public var delegate:<UINavigationControllerDelegate,UIVideoEditorControllerDelegate>;
 
 	@:native("videoPath")
 	public var videoPath:;
 
-	@:native("duration.")
-	public var duration.:maximum;
+	@:native("maximum")
+	public var maximum:no;
 
-	@:native("UIImagePickerControllerQualityTypeMedium")
-	public var UIImagePickerControllerQualityTypeMedium:is;
+	@:native("is")
+	public var is:value;
 
 	@:native("videoEditorController:didSaveEditedVideoToPath://:video:saved:a:in")
 	overload extern inline public function videoEditorController(editor:UIVideoEditorController, didSaveEditedVideoToPath:NSString, //:edited, video:is, saved:to, a:path, in:app's):Void;

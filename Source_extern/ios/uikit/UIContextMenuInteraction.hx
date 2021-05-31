@@ -14,8 +14,8 @@ extern class UIContextMenuInteraction{
 	@:native("delegate")
 	public var delegate:id<UIContextMenuInteractionDelegate>;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):menuAppearance;
+	@:native("menuAppearance")
+	public var menuAppearance:UIContextMenuInteractionAppearance;
 
 	@:native("initWithDelegate")
 	overload extern inline public function initWithDelegate(delegate:id<UIContextMenuInteractionDelegate>):UIContextMenuInteraction;

@@ -11,23 +11,23 @@ extern class UIPrintPageRenderer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPrintPageRenderer;
 
-	@:native("printableRect")
-	public var printableRect:from;
+	@:native("from")
+	public var from:contentRect;
 
-	@:native("printableRect")
-	public var printableRect:from;
+	@:native("from")
+	public var from:contentRect;
 
-	@:native("(0,0)")
-	public var (0,0):is;
+	@:native("is")
+	public var is:origin;
 
-	@:native("rect")
-	public var rect:paper;
+	@:native("paper")
+	public var paper:inside;
 
-	@:native("0")
-	public var 0:or;
+	@:native("or")
+	public var or:formatters;
 
 	@:native("printFormatters")
-	public var printFormatters:>;
+	public var printFormatters:Dynamic;
 
 	@:native("printFormattersForPageAtIndex")
 	overload extern inline public function printFormattersForPageAtIndex(pageIndex:NSInteger):nullable NSArray<UIPrintFormatter *> *;

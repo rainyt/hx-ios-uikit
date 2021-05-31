@@ -12,7 +12,7 @@ extern class UIGuidedAccess{
 	overload extern inline public static function autorelease():UIGuidedAccess;
 
 	@:native("guidedAccessRestrictionIdentifiers")
-	public var guidedAccessRestrictionIdentifiers:>;
+	public var guidedAccessRestrictionIdentifiers:Dynamic;
 
 	@:native("guidedAccessRestrictionWithIdentifier:didChangeState")
 	overload extern inline public function guidedAccessRestrictionWithIdentifier(restrictionIdentifier:NSString, didChangeState:UIGuidedAccessRestrictionState):Void;

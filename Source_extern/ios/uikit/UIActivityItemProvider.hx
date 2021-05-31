@@ -38,11 +38,11 @@ extern class UIActivityItemProvider{
 	@:native("placeholderItem")
 	public var placeholderItem:;
 
-	@:native("return")
-	public var return:to;
+	@:native("to")
+	public var to:data;
 
-	@:native("information")
-	public var information:extra;
+	@:native("extra")
+	public var extra:return;
 
 
 }

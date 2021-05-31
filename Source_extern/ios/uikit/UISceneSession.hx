@@ -54,7 +54,7 @@ extern class UISceneSession{
 	public var stateRestorationActivity:NSUserActivity;
 
 	@:native("userInfo")
-	public var userInfo:id>;
+	public var userInfo:NSDictionary<NSString,id>;
 
 
 }

@@ -11,23 +11,23 @@ extern class UIEvent{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIEvent;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):type;
+	@:native("type")
+	public var type:;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):subtype;
+	@:native("subtype")
+	public var subtype:;
 
 	@:native("timestamp")
 	public var timestamp:;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.4));
+	@:native("modifierFlags")
+	public var modifierFlags:UIKeyModifierFlags;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("buttonMask")
+	public var buttonMask:UIEventButtonMask;
 
 	@:native("allTouches")
-	public var allTouches:>;
+	public var allTouches:<UITouch>;
 
 	@:native("touchesForWindow")
 	overload extern inline public function touchesForWindow(window:UIWindow):nullable NSSet <UITouch *> *;

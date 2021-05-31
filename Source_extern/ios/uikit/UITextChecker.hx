@@ -24,7 +24,7 @@ extern class UITextChecker{
 	overload extern inline public function ignoreWord(wordToIgnore:NSString):Void;
 
 	@:native("ignoredWords")
-	public var ignoredWords:>;
+	public var ignoredWords:Dynamic;
 
 	@:native("learnWord")
 	overload extern inline public static function learnWord(word:NSString):Void;
@@ -36,7 +36,7 @@ extern class UITextChecker{
 	overload extern inline public static function unlearnWord(word:NSString):Void;
 
 	@:native("availableLanguages")
-	public var availableLanguages:>;
+	public var availableLanguages:Dynamic;
 
 
 }

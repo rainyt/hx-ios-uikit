@@ -21,94 +21,94 @@ extern class UITraitCollection{
 	overload extern inline public function containsTraitsInCollection(trait:UITraitCollection):BOOL;
 
 	@:native("traitCollectionWithTraitsFromCollections")
-	overload extern inline public static function traitCollectionWithTraitsFromCollections(traitCollections:NSArray<UITraitCollection>):UITraitCollection *;
+	overload extern inline public static function traitCollectionWithTraitsFromCollections(traitCollections:Dynamic):UITraitCollection *;
 
 	@:native("traitCollectionWithUserInterfaceIdiom")
 	overload extern inline public static function traitCollectionWithUserInterfaceIdiom(idiom:UIUserInterfaceIdiom):UITraitCollection *;
 
-	@:native("UIUserInterfaceIdiomUnspecified")
-	public var UIUserInterfaceIdiomUnspecified:unspecified:;
+	@:native("unspecified:")
+	public var unspecified:://;
 
 	@:native("traitCollectionWithUserInterfaceStyle:API_AVAILABLE(tvos(10.0)")
 	overload extern inline public static function traitCollectionWithUserInterfaceStyle(userInterfaceStyle:UIUserInterfaceStyle, API_AVAILABLE(tvos(10.0):Dynamic):UITraitCollection *;
 
-	@:native("UIUserInterfaceStyleUnspecified")
-	public var UIUserInterfaceStyleUnspecified:unspecified:;
+	@:native("userInterfaceStyle")
+	public var userInterfaceStyle:UIUserInterfaceStyle;
 
 	@:native("traitCollectionWithLayoutDirection")
 	overload extern inline public static function traitCollectionWithLayoutDirection(layoutDirection:UITraitEnvironmentLayoutDirection):UITraitCollection *;
 
-	@:native("UITraitEnvironmentLayoutDirectionUnspecified")
-	public var UITraitEnvironmentLayoutDirectionUnspecified:unspecified:;
+	@:native("layoutDirection")
+	public var layoutDirection:UITraitEnvironmentLayoutDirection;
 
 	@:native("traitCollectionWithDisplayScale")
 	overload extern inline public static function traitCollectionWithDisplayScale(scale:CGFloat):UITraitCollection *;
 
-	@:native("0.0")
-	public var 0.0:unspecified:;
+	@:native("unspecified:")
+	public var unspecified:://;
 
 	@:native("traitCollectionWithHorizontalSizeClass")
 	overload extern inline public static function traitCollectionWithHorizontalSizeClass(horizontalSizeClass:UIUserInterfaceSizeClass):UITraitCollection *;
 
-	@:native("UIUserInterfaceSizeClassUnspecified")
-	public var UIUserInterfaceSizeClassUnspecified:unspecified:;
+	@:native("unspecified:")
+	public var unspecified:://;
 
 	@:native("traitCollectionWithVerticalSizeClass")
 	overload extern inline public static function traitCollectionWithVerticalSizeClass(verticalSizeClass:UIUserInterfaceSizeClass):UITraitCollection *;
 
-	@:native("UIUserInterfaceSizeClassUnspecified")
-	public var UIUserInterfaceSizeClassUnspecified:unspecified:;
+	@:native("unspecified:")
+	public var unspecified:://;
 
 	@:native("traitCollectionWithForceTouchCapability")
 	overload extern inline public static function traitCollectionWithForceTouchCapability(capability:UIForceTouchCapability):UITraitCollection *;
 
-	@:native("UIForceTouchCapabilityUnknown")
-	public var UIForceTouchCapabilityUnknown:unspecified:;
+	@:native("forceTouchCapability")
+	public var forceTouchCapability:UIForceTouchCapability;
 
 	@:native("traitCollectionWithPreferredContentSizeCategory")
 	overload extern inline public static function traitCollectionWithPreferredContentSizeCategory(preferredContentSizeCategory:UIContentSizeCategory):UITraitCollection *;
 
-	@:native("UIContentSizeCategoryUnspecified")
-	public var UIContentSizeCategoryUnspecified:unspecified:;
+	@:native("preferredContentSizeCategory")
+	public var preferredContentSizeCategory:UIContentSizeCategory;
 
 	@:native("traitCollectionWithDisplayGamut")
 	overload extern inline public static function traitCollectionWithDisplayGamut(displayGamut:UIDisplayGamut):UITraitCollection *;
 
-	@:native("UIDisplayGamutUnspecified")
-	public var UIDisplayGamutUnspecified:unspecified:;
+	@:native("displayGamut")
+	public var displayGamut:UIDisplayGamut;
 
 	@:native("traitCollectionWithAccessibilityContrast:API_AVAILABLE(ios(13.0), tvos(13.0)")
 	overload extern inline public static function traitCollectionWithAccessibilityContrast(accessibilityContrast:UIAccessibilityContrast, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UITraitCollection *;
 
-	@:native("UIAccessibilityContrastUnspecified")
-	public var UIAccessibilityContrastUnspecified:unspecified:;
+	@:native("accessibilityContrast")
+	public var accessibilityContrast:UIAccessibilityContrast;
 
 	@:native("traitCollectionWithUserInterfaceLevel:API_AVAILABLE(ios(13.0)")
 	overload extern inline public static function traitCollectionWithUserInterfaceLevel(userInterfaceLevel:UIUserInterfaceLevel, API_AVAILABLE(ios(13.0):Dynamic):UITraitCollection *;
 
-	@:native("UIUserInterfaceLevelUnspecified")
-	public var UIUserInterfaceLevelUnspecified:unspecified:;
+	@:native("userInterfaceLevel")
+	public var userInterfaceLevel:UIUserInterfaceLevel;
 
 	@:native("traitCollectionWithLegibilityWeight")
 	overload extern inline public static function traitCollectionWithLegibilityWeight(legibilityWeight:UILegibilityWeight):UITraitCollection *;
 
-	@:native("UILegibilityWeightUnspecified")
-	public var UILegibilityWeightUnspecified:unspecified:;
+	@:native("legibilityWeight")
+	public var legibilityWeight:UILegibilityWeight;
 
 	@:native("traitCollectionWithActiveAppearance")
 	overload extern inline public static function traitCollectionWithActiveAppearance(userInterfaceActiveAppearance:UIUserInterfaceActiveAppearance):UITraitCollection *;
 
-	@:native("UIUserInterfaceActiveAppearanceUnspecified")
-	public var UIUserInterfaceActiveAppearanceUnspecified:unspecified:;
+	@:native("activeAppearance")
+	public var activeAppearance:UIUserInterfaceActiveAppearance;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):traitCollection;
+	@:native("traitCollection")
+	public var traitCollection:UITraitCollection;
 
 	@:native("traitCollectionDidChange")
 	overload extern inline public function traitCollectionDidChange(previousTraitCollection:UITraitCollection):Void;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):tvos(13.0));
+	@:native("currentTraitCollection")
+	public var currentTraitCollection:UITraitCollection;
 
 	@:native("performAsCurrentTraitCollection:API_AVAILABLE(ios(13.0), tvos(13.0)")
 	overload extern inline public function performAsCurrentTraitCollection(actions:Dynamic, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):Void;
@@ -116,8 +116,8 @@ extern class UITraitCollection{
 	@:native("hasDifferentColorAppearanceComparedToTraitCollection:API_AVAILABLE(ios(13.0), tvos(13.0)")
 	overload extern inline public function hasDifferentColorAppearanceComparedToTraitCollection(traitCollection:UITraitCollection, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):BOOL;
 
-	@:native("watchos(6.0))")
-	public var watchos(6.0)):tvos(13.0),;
+	@:native("imageConfiguration")
+	public var imageConfiguration:UIImageConfiguration;
 
 
 }

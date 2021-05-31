@@ -35,8 +35,8 @@ extern class UIPopoverPresentationController{
 	@:native("sourceRect")
 	public var sourceRect:CGRect;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):canOverlapSourceViewRect;
+	@:native("canOverlapSourceViewRect")
+	public var canOverlapSourceViewRect:BOOL;
 
 	@:native("barButtonItem")
 	public var barButtonItem:UIBarButtonItem;
@@ -45,7 +45,7 @@ extern class UIPopoverPresentationController{
 	public var arrowDirection:UIPopoverArrowDirection;
 
 	@:native("passthroughViews")
-	public var passthroughViews:>;
+	public var passthroughViews:Dynamic;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;

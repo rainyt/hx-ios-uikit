@@ -27,40 +27,40 @@ extern class UIImagePickerController{
 	overload extern inline public static function availableCaptureModesForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice, API_AVAILABLE(ios(4.0)://, returns:array, of:NSNumbers):nullable NSArray<NSNumber *> *;
 
 	@:native("delegate")
-	public var delegate:UIImagePickerControllerDelegate>;
+	public var delegate:<UINavigationControllerDelegate,UIImagePickerControllerDelegate>;
 
-	@:native("UIImagePickerControllerSourceTypePhotoLibrary.")
-	public var UIImagePickerControllerSourceTypePhotoLibrary.:is;
+	@:native("is")
+	public var is:value;
 
 	@:native("mediaTypes")
 	public var mediaTypes:;
 
-	@:native("NO.")
-	public var NO.:is;
+	@:native("allowsEditing")
+	public var allowsEditing:;
 
-	@:native("3.1))")
-	public var 3.1)):ios(2.0,;
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
-	@:native("UIImagePickerControllerImageExportPresetCompatible.")
-	public var UIImagePickerControllerImageExportPresetCompatible.:is;
+	@:native("ios(11.0,")
+	public var ios(11.0,:PHPicker.",;
 
-	@:native("minutes.")
-	public var minutes.:10;
+	@:native("videoMaximumDuration")
+	public var videoMaximumDuration:;
 
-	@:native("value.")
-	public var value.:default;
+	@:native("videoQuality")
+	public var videoQuality:;
 
-	@:native("UIImagePickerControllerSourceTypeCamera")
-	public var UIImagePickerControllerSourceTypeCamera:is;
+	@:native("ios(11.0,")
+	public var ios(11.0,:PHPicker.",;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("showsCameraControls")
+	public var showsCameraControls:;
 
-	@:native("view.")
-	public var view.:preview;
+	@:native("")
+	public var :cameraOverlayView;
 
-	@:native("view.")
-	public var view.:preview;
+	@:native("cameraViewTransform")
+	public var cameraViewTransform:;
 
 	@:native("takePicture")
 	overload extern inline public function takePicture():Void;
@@ -71,14 +71,14 @@ extern class UIImagePickerController{
 	@:native("stopVideoCapture")
 	overload extern inline public function stopVideoCapture():Void;
 
-	@:native("UIImagePickerControllerCameraCaptureModePhoto")
-	public var UIImagePickerControllerCameraCaptureModePhoto:is;
-
-	@:native("UIImagePickerControllerCameraDeviceRear")
-	public var UIImagePickerControllerCameraDeviceRear:is;
+	@:native("cameraCaptureMode")
+	public var cameraCaptureMode:UIImagePickerControllerCameraCaptureMode;
 
 	@:native("")
-	public var :UIImagePickerControllerCameraFlashModeAuto.;
+	public var :;
+
+	@:native("")
+	public var :;
 
 	@:native("imagePickerController:didFinishPickingImage:editingInfo")
 	overload extern inline public function imagePickerController(picker:UIImagePickerController, didFinishPickingImage:UIImage, editingInfo:NSDictionary<UIImagePickerControllerInfoKey,id>):Void;

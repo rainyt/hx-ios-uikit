@@ -38,14 +38,14 @@ extern class UIPointerStyle{
 	@:native("new")
 	overload extern inline public static function new():UIPointerStyle;
 
-	@:native("UIPointerEffectTintModeOverlay")
-	public var UIPointerEffectTintModeOverlay:to;
+	@:native("to")
+	public var to:Defaults;
 
-	@:native("NO")
-	public var NO:to;
+	@:native("to")
+	public var to:Defaults;
 
-	@:native("YES")
-	public var YES:to;
+	@:native("to")
+	public var to:Defaults;
 
 	@:native("shapeWithPath")
 	overload extern inline public static function shapeWithPath(path:UIBezierPath):UIPointerStyle;

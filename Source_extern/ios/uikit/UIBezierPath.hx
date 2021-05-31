@@ -95,14 +95,14 @@ extern class UIBezierPath{
 	@:native("lineJoinStyle")
 	public var lineJoinStyle:CGLineJoin;
 
-	@:native("kCGLineJoinMiter")
-	public var kCGLineJoinMiter:is;
+	@:native("is")
+	public var is:lineJoinStyle;
 
 	@:native("flatness")
 	public var flatness:CGFloat;
 
-	@:native("testing.")
-	public var testing.:hit;
+	@:native("hit")
+	public var hit:and;
 
 	@:native("setLineDash:count:phase")
 	overload extern inline public function setLineDash(pattern:constCGFloat, count:NSInteger, phase:CGFloat):Void;

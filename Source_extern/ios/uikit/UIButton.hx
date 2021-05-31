@@ -32,44 +32,44 @@ extern class UIButton{
 	@:native("buttonWithType:primaryAction")
 	overload extern inline public static function buttonWithType(buttonType:UIButtonType, primaryAction:UIAction):UIButton;
 
-	@:native("buttons.")
-	public var buttons.:custom;
+	@:native("custom")
+	public var custom:for;
 
-	@:native("UIEdgeInsetsZero")
-	public var UIEdgeInsetsZero:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("appearance")
-	public var appearance:emboss;
+	@:native("emboss")
+	public var emboss:and;
 
-	@:native("UIEdgeInsetsZero")
-	public var UIEdgeInsetsZero:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("highlighted(pressed)")
-	public var highlighted(pressed):when;
+	@:native("when")
+	public var when:darker;
 
-	@:native("disabled")
-	public var disabled:when;
+	@:native("when")
+	public var when:lighter;
 
-	@:native("highlighted")
-	public var highlighted:while;
+	@:native("showsTouchWhenHighlighted")
+	public var showsTouchWhenHighlighted:;
 
-	@:native("information.")
-	public var information.:more;
+	@:native("tintColor")
+	public var tintColor:;
 
 	@:native("buttonType")
 	public var buttonType:UIButtonType;
 
-	@:native("")
-	public var :UIButtonRoleNormal.;
+	@:native("role")
+	public var role:UIButtonRole;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("pointerInteractionEnabled")
+	public var pointerInteractionEnabled:BOOL;
 
-	@:native("NS_REFINED_FOR_SWIFT")
-	public var NS_REFINED_FOR_SWIFT:tvos);
+	@:native("pointerStyleProvider")
+	public var pointerStyleProvider:UIButtonPointerStyleProvider;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("menu")
+	public var menu:UIMenu;
 
 	@:native("setTitle:forState::::::::::://:is:title:assumed:be")
 	overload extern inline public function setTitle(title:NSString, forState:UIControlState, :, :, :, :, :, :, :, :, :, :, //:default, is:nil., title:is, assumed:to, be:single):Void;
@@ -113,32 +113,32 @@ extern class UIButton{
 	@:native("attributedTitleForState")
 	overload extern inline public function attributedTitleForState(state:UIControlState):nullable NSAttributedString *;
 
-	@:native("nil")
-	public var nil:return;
+	@:native("return")
+	public var return:can;
 
-	@:native("white(1,1)")
-	public var white(1,1):is;
+	@:native("is")
+	public var is:default;
 
-	@:native("normal/highlighted/selected/disabled.")
-	public var normal/highlighted/selected/disabled.://;
+	@:native("//")
+	public var //:;
 
-	@:native("nil")
-	public var nil:return;
+	@:native("return")
+	public var return:can;
 
-	@:native("nil")
-	public var nil:return;
+	@:native("return")
+	public var return:can;
 
-	@:native("nil")
-	public var nil:return;
+	@:native("currentPreferredSymbolConfiguration")
+	public var currentPreferredSymbolConfiguration:UIImageSymbolConfiguration;
 
-	@:native("nil")
-	public var nil:return;
+	@:native("currentAttributedTitle")
+	public var currentAttributedTitle:NSAttributedString;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):titleLabel;
+	@:native("titleLabel")
+	public var titleLabel:;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):;
+	@:native("")
+	public var :imageView;
 
 	@:native("backgroundRectForBounds")
 	overload extern inline public function backgroundRectForBounds(bounds:CGRect):CGRect;
@@ -152,14 +152,14 @@ extern class UIButton{
 	@:native("imageRectForContentRect")
 	overload extern inline public function imageRectForContentRect(contentRect:CGRect):CGRect;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):3.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):3.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):3.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
 
 }

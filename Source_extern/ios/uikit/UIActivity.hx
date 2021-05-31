@@ -11,26 +11,26 @@ extern class UIActivity{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIActivity;
 
-	@:native("UIActivityCategoryAction.")
-	public var UIActivityCategoryAction.:is;
+	@:native("activityCategory")
+	public var activityCategory:UIActivityCategory;
 
-	@:native("handler")
-	public var handler:completion;
+	@:native("completion")
+	public var completion:to;
 
-	@:native("value")
-	public var value:non-nil;
+	@:native("non-nil")
+	public var non-nil:return;
 
-	@:native("value")
-	public var value:non-nil;
+	@:native("non-nil")
+	public var non-nil:return;
 
 	@:native("canPerformWithActivityItems:://:this:return:of:based:items.")
-	overload extern inline public function canPerformWithActivityItems(activityItems:NSArray, :, //:override, this:to, return:availability, of:activity, based:on, items.:default):BOOL;
+	overload extern inline public function canPerformWithActivityItems(activityItems:Dynamic, :, //:override, this:to, return:availability, of:activity, based:on, items.:default):BOOL;
 
 	@:native("prepareWithActivityItems::::override:extract:and:up:HI.")
-	overload extern inline public function prepareWithActivityItems(activityItems:NSArray, :, :, ://, override:to, extract:items, and:set, up:your, HI.:default):Void;
+	overload extern inline public function prepareWithActivityItems(activityItems:Dynamic, :, :, ://, override:to, extract:items, and:set, up:your, HI.:default):Void;
 
-	@:native("nil")
-	public var nil:returns;
+	@:native("returns")
+	public var returns:default;
 
 	@:native("performActivity;")
 	overload extern inline public function performActivity;():Void;

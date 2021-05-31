@@ -15,28 +15,28 @@ extern class NSDiffableDataSourceSectionSnapshot{
 	overload extern inline public function init;():NSDiffableDataSourceSectionSnapshot;
 
 	@:native("appendItems")
-	overload extern inline public function appendItems(items:NSArray<ItemIdentifierType>):Void;
+	overload extern inline public function appendItems(items:Dynamic):Void;
 
 	@:native("appendItems:intoParentItem")
-	overload extern inline public function appendItems(items:NSArray<ItemIdentifierType>, intoParentItem:ItemIdentifierType):Void;
+	overload extern inline public function appendItems(items:Dynamic, intoParentItem:ItemIdentifierType):Void;
 
 	@:native("insertItems:beforeItem")
-	overload extern inline public function insertItems(items:NSArray<ItemIdentifierType>, beforeItem:ItemIdentifierType):Void;
+	overload extern inline public function insertItems(items:Dynamic, beforeItem:ItemIdentifierType):Void;
 
 	@:native("insertItems:afterItem")
-	overload extern inline public function insertItems(items:NSArray<ItemIdentifierType>, afterItem:ItemIdentifierType):Void;
+	overload extern inline public function insertItems(items:Dynamic, afterItem:ItemIdentifierType):Void;
 
 	@:native("deleteItems::::::will")
-	overload extern inline public function deleteItems(items:NSArray<ItemIdentifierType>, :, :, :, :, ://, will:also):Void;
+	overload extern inline public function deleteItems(items:Dynamic, :, :, :, :, ://, will:also):Void;
 
 	@:native("deleteAllItems;")
 	overload extern inline public function deleteAllItems;():Void;
 
 	@:native("expandItems::::::will:if:is")
-	overload extern inline public function expandItems(items:NSArray<ItemIdentifierType>, :, :, :, :, ://, will:log, if:item, is:not):Void;
+	overload extern inline public function expandItems(items:Dynamic, :, :, :, :, ://, will:log, if:item, is:not):Void;
 
 	@:native("collapseItems:::::will:if:is")
-	overload extern inline public function collapseItems(items:NSArray<ItemIdentifierType>, :, :, :, ://, will:log, if:item, is:not):Void;
+	overload extern inline public function collapseItems(items:Dynamic, :, :, :, ://, will:log, if:item, is:not):Void;
 
 	@:native("replaceChildrenOfParentItem:withSnapshot")
 	overload extern inline public function replaceChildrenOfParentItem(parentItem:ItemIdentifierType, withSnapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>):Void;
@@ -78,13 +78,13 @@ extern class NSDiffableDataSourceSectionSnapshot{
 	overload extern inline public function snapshotOfParentItem(parentItem:ItemIdentifierType, includingParentItem:BOOL):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
 
 	@:native("items")
-	public var items:NSArray<ItemIdentifierType>;
+	public var items:Dynamic;
 
 	@:native("rootItems")
-	public var rootItems:NSArray<ItemIdentifierType>;
+	public var rootItems:Dynamic;
 
 	@:native("visibleItems")
-	public var visibleItems:NSArray<ItemIdentifierType>;
+	public var visibleItems:Dynamic;
 
 	@:native("visualDescription;")
 	overload extern inline public function visualDescription;():NSString*;

@@ -11,8 +11,8 @@ extern class UIAccessibilityIdentification{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIAccessibilityIdentification;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):accessibilityIdentifier;
+	@:native("accessibilityIdentifier")
+	public var accessibilityIdentifier:NSString;
 
 
 }

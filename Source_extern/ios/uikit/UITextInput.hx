@@ -24,19 +24,19 @@ extern class UITextInput{
 	public var text:NSString;
 
 	@:native("alternativeInterpretations")
-	public var alternativeInterpretations:>;
+	public var alternativeInterpretations:Dynamic;
 
 	@:native("allowsHidingShortcuts")
 	public var allowsHidingShortcuts:BOOL;
 
 	@:native("leadingBarButtonGroups")
-	public var leadingBarButtonGroups:>;
+	public var leadingBarButtonGroups:Dynamic;
 
 	@:native("trailingBarButtonGroups")
-	public var trailingBarButtonGroups:>;
+	public var trailingBarButtonGroups:Dynamic;
 
 	@:native("rects")
-	public var rects:>;
+	public var rects:Dynamic;
 
 	@:native("textInRange")
 	overload extern inline public function textInRange(range:UITextRange):nullable NSString *;
@@ -47,11 +47,11 @@ extern class UITextInput{
 	@:native("selectedTextRange")
 	public var selectedTextRange:UITextRange;
 
-	@:native("text.")
-	public var text.:marked;
+	@:native("marked")
+	public var marked:no;
 
-	@:native("drawn.")
-	public var drawn.:be;
+	@:native("be")
+	public var be:should;
 
 	@:native("setMarkedText:selectedRange://:is:range")
 	overload extern inline public function setMarkedText(markedText:NSString, selectedRange:NSRange, //:selectedRange, is:a, range:within):Void;
@@ -135,7 +135,7 @@ extern class UITextInput{
 	public var selectionAffinity:UITextStorageDirection;
 
 	@:native("insertDictationResult")
-	overload extern inline public function insertDictationResult(dictationResult:NSArray<UIDictationPhrase>):Void;
+	overload extern inline public function insertDictationResult(dictationResult:Dynamic):Void;
 
 	@:native("dictationRecordingDidEnd;")
 	overload extern inline public function dictationRecordingDidEnd;():Void;
@@ -153,7 +153,7 @@ extern class UITextInput{
 	overload extern inline public function removeDictationResultPlaceholder(placeholder:id, willInsertResult:BOOL):Void;
 
 	@:native("insertText:alternatives:style")
-	overload extern inline public function insertText(text:NSString, alternatives:NSArray<NSString>, style:UITextAlternativeStyle):Void;
+	overload extern inline public function insertText(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
 
 	@:native("setAttributedMarkedText:selectedRange")
 	overload extern inline public function setAttributedMarkedText(markedText:NSAttributedString, selectedRange:NSRange):Void;
@@ -173,8 +173,8 @@ extern class UITextInput{
 	@:native("endFloatingCursor")
 	overload extern inline public function endFloatingCursor():Void;
 
-	@:native("zero-length.")
-	public var zero-length.:is;
+	@:native("is")
+	public var is:range;
 
 	@:native("start")
 	public var start:UITextPosition;
@@ -188,14 +188,14 @@ extern class UITextInput{
 	@:native("writingDirection")
 	public var writingDirection:NSWritingDirection;
 
-	@:native("selection.")
-	public var selection.:the;
+	@:native("the")
+	public var the:of;
 
-	@:native("selection.")
-	public var selection.:the;
+	@:native("the")
+	public var the:of;
 
-	@:native("text.")
-	public var text.:oriented;
+	@:native("oriented")
+	public var oriented:vertically;
 
 	@:native("selectionWillChange")
 	overload extern inline public function selectionWillChange(textInput:id<UITextInput>):Void;
@@ -224,14 +224,14 @@ extern class UITextInput{
 	@:native("initWithTextInput")
 	overload extern inline public function initWithTextInput(textInput:UIResponder<UITextInput>):UITextInput;
 
-	@:native("en-US")
-	public var en-US:as;
+	@:native("as")
+	public var as:such;
 
 	@:native("currentInputMode")
 	overload extern inline public static function currentInputMode():nullable UITextInputMode *;
 
-	@:native("modes.")
-	public var modes.:input;
+	@:native("input")
+	public var input:active;
 
 
 }

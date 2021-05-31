@@ -15,7 +15,7 @@ extern class UITextPasteDelegate{
 	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, transformPasteItem:id<UITextPasteItem>):Void;
 
 	@:native("textPasteConfigurationSupporting:combineItemAttributedStrings:forRange")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, combineItemAttributedStrings:NSArray<NSAttributedString>, forRange:UITextRange):NSAttributedString *;
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, combineItemAttributedStrings:Dynamic, forRange:UITextRange):NSAttributedString *;
 
 	@:native("textPasteConfigurationSupporting:performPasteOfAttributedString:toRange")
 	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, performPasteOfAttributedString:NSAttributedString, toRange:UITextRange):UITextRange*;
@@ -30,7 +30,7 @@ extern class UITextPasteDelegate{
 	public var localObject:id;
 
 	@:native("defaultAttributes")
-	public var defaultAttributes:id>;
+	public var defaultAttributes:NSDictionary<NSAttributedStringKey,id>;
 
 	@:native("setStringResult")
 	overload extern inline public function setStringResult(string:NSString):Void;

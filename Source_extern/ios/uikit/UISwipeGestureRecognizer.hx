@@ -11,11 +11,11 @@ extern class UISwipeGestureRecognizer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISwipeGestureRecognizer;
 
-	@:native("swipe")
-	public var swipe:must;
+	@:native("numberOfTouchesRequired")
+	public var numberOfTouchesRequired:;
 
-	@:native("delete)")
-	public var delete):swipe;
+	@:native("swipe")
+	public var swipe:UITableView;
 
 
 }

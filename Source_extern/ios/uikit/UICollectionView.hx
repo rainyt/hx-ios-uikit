@@ -42,10 +42,10 @@ extern class UICollectionView{
 	overload extern inline public function collectionView(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:NSInteger):NSIndexPath *;
 
 	@:native("collectionView:prefetchItemsAtIndexPaths")
-	overload extern inline public function collectionView(collectionView:UICollectionView, prefetchItemsAtIndexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, prefetchItemsAtIndexPaths:Dynamic):Void;
 
 	@:native("collectionView:cancelPrefetchingForItemsAtIndexPaths:")
-	overload extern inline public function collectionView(collectionView:UICollectionView, cancelPrefetchingForItemsAtIndexPaths:NSArray<NSIndexPath>, :Dynamic):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, cancelPrefetchingForItemsAtIndexPaths:Dynamic, :Dynamic):Void;
 
 	@:native("collectionView:shouldHighlightItemAtIndexPath")
 	overload extern inline public function collectionView(collectionView:UICollectionView, shouldHighlightItemAtIndexPath:NSIndexPath):BOOL;
@@ -158,29 +158,29 @@ extern class UICollectionView{
 	@:native("dataSource")
 	public var dataSource:<UICollectionViewDataSource>;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):prefetchDataSource;
+	@:native("prefetchDataSource")
+	public var prefetchDataSource:id<UICollectionViewDataSourcePrefetching>;
 
-	@:native("API_AVAILABLE(ios(10.0))")
-	public var API_AVAILABLE(ios(10.0)):prefetchingEnabled;
+	@:native("prefetchingEnabled")
+	public var prefetchingEnabled:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("dragDelegate")
+	public var dragDelegate:<UICollectionViewDragDelegate>;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("dropDelegate")
+	public var dropDelegate:<UICollectionViewDropDelegate>;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("dragInteractionEnabled")
+	public var dragInteractionEnabled:BOOL;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("contextMenuInteraction")
+	public var contextMenuInteraction:UIContextMenuInteraction;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("reorderingCadence")
+	public var reorderingCadence:UICollectionViewReorderingCadence;
 
-	@:native("views.")
-	public var views.:supplementary;
+	@:native("supplementary")
+	public var supplementary:and;
 
 	@:native("registerClass:forCellWithReuseIdentifier")
 	overload extern inline public function registerClass(cellClass:Class, forCellWithReuseIdentifier:NSString):Void;
@@ -206,14 +206,14 @@ extern class UICollectionView{
 	@:native("dequeueConfiguredReusableSupplementaryViewWithRegistration:forIndexPath")
 	overload extern inline public function dequeueConfiguredReusableSupplementaryViewWithRegistration(registration:UICollectionViewSupplementaryRegistration, forIndexPath:NSIndexPath):__kindof UICollectionReusableView *;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("paths")
-	public var paths:index;
+	@:native("index")
+	public var index:selected;
 
 	@:native("selectItemAtIndexPath:animated:scrollPosition")
 	overload extern inline public function selectItemAtIndexPath(indexPath:NSIndexPath, animated:BOOL, scrollPosition:UICollectionViewScrollPosition):Void;
@@ -221,8 +221,8 @@ extern class UICollectionView{
 	@:native("deselectItemAtIndexPath:animated")
 	overload extern inline public function deselectItemAtIndexPath(indexPath:NSIndexPath, animated:BOOL):Void;
 
-	@:native("API_AVAILABLE(ios(11.0))")
-	public var API_AVAILABLE(ios(11.0)):hasUncommittedUpdates;
+	@:native("hasUncommittedUpdates")
+	public var hasUncommittedUpdates:BOOL;
 
 	@:native("reloadData;")
 	overload extern inline public function reloadData;():Void;
@@ -264,10 +264,10 @@ extern class UICollectionView{
 	overload extern inline public function cellForItemAtIndexPath(indexPath:NSIndexPath):nullable UICollectionViewCell *;
 
 	@:native("visibleCells")
-	public var visibleCells:>;
+	public var visibleCells:Dynamic;
 
 	@:native("indexPathsForVisibleItems")
-	public var indexPathsForVisibleItems:>;
+	public var indexPathsForVisibleItems:Dynamic;
 
 	@:native("supplementaryViewForElementKind:atIndexPath")
 	overload extern inline public function supplementaryViewForElementKind(elementKind:NSString, atIndexPath:NSIndexPath):nullable UICollectionReusableView *;
@@ -294,13 +294,13 @@ extern class UICollectionView{
 	overload extern inline public function moveSection(section:NSInteger, toSection:NSInteger):Void;
 
 	@:native("insertItemsAtIndexPaths")
-	overload extern inline public function insertItemsAtIndexPaths(indexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function insertItemsAtIndexPaths(indexPaths:Dynamic):Void;
 
 	@:native("deleteItemsAtIndexPaths")
-	overload extern inline public function deleteItemsAtIndexPaths(indexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function deleteItemsAtIndexPaths(indexPaths:Dynamic):Void;
 
 	@:native("reloadItemsAtIndexPaths")
-	overload extern inline public function reloadItemsAtIndexPaths(indexPaths:NSArray<NSIndexPath>):Void;
+	overload extern inline public function reloadItemsAtIndexPaths(indexPaths:Dynamic):Void;
 
 	@:native("moveItemAtIndexPath:toIndexPath")
 	overload extern inline public function moveItemAtIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
@@ -320,26 +320,26 @@ extern class UICollectionView{
 	@:native("cancelInteractiveMovement")
 	overload extern inline public function cancelInteractiveMovement():Void;
 
-	@:native("used.")
-	public var used.:is;
+	@:native("remembersLastFocusedIndexPath")
+	public var remembersLastFocusedIndexPath:BOOL;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("selectionFollowsFocus")
+	public var selectionFollowsFocus:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("hasActiveDrag")
+	public var hasActiveDrag:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("hasActiveDrop")
+	public var hasActiveDrop:BOOL;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("editing")
+	public var editing:BOOL;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("allowsSelectionDuringEditing")
+	public var allowsSelectionDuringEditing:BOOL;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("allowsMultipleSelectionDuringEditing")
+	public var allowsMultipleSelectionDuringEditing:BOOL;
 
 	@:native("collectionView:itemsForBeginningDragSession:atIndexPath")
 	overload extern inline public function collectionView(collectionView:UICollectionView, itemsForBeginningDragSession:id<UIDragSession>, atIndexPath:NSIndexPath):NSArray<UIDragItem *> *;
@@ -390,7 +390,7 @@ extern class UICollectionView{
 	public var intent:UICollectionViewDropIntent;
 
 	@:native("items")
-	public var items:NSArray<id<UICollectionViewDropItem>>;
+	public var items:Dynamic;
 
 	@:native("destinationIndexPath")
 	public var destinationIndexPath:NSIndexPath;
@@ -422,11 +422,11 @@ extern class UICollectionView{
 	@:native("new")
 	overload extern inline public static function new():UICollectionView;
 
-	@:native(")")
-	public var ):UICollectionViewCell;
+	@:native("nonatomic, nullable, copy")
+	public var nonatomic, nullable, copy:null;
 
-	@:native(")")
-	public var ):UICollectionViewCell;
+	@:native("_Nullable")
+	public var _Nullable:;
 
 	@:native("dragItem")
 	public var dragItem:UIDragItem;

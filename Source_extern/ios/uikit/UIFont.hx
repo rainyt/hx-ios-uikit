@@ -21,7 +21,7 @@ extern class UIFont{
 	overload extern inline public static function fontWithName(fontName:NSString, size:CGFloat):nullable UIFont *;
 
 	@:native("familyNames")
-	public var familyNames:>;
+	public var familyNames:Dynamic;
 
 	@:native("fontNamesForFamilyName")
 	overload extern inline public static function fontNamesForFamilyName(familyName:NSString):NSArray<NSString *> *;
@@ -65,8 +65,8 @@ extern class UIFont{
 	@:native("xHeight")
 	public var xHeight:;
 
-	@:native("API_AVAILABLE(ios(4.0))")
-	public var API_AVAILABLE(ios(4.0)):lineHeight;
+	@:native("lineHeight")
+	public var lineHeight:;
 
 	@:native("leading")
 	public var leading:;
@@ -77,8 +77,8 @@ extern class UIFont{
 	@:native("fontWithDescriptor:size")
 	overload extern inline public static function fontWithDescriptor(descriptor:UIFontDescriptor, size:CGFloat):UIFont *;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):fontDescriptor;
+	@:native("fontDescriptor")
+	public var fontDescriptor:UIFontDescriptor;
 
 
 }

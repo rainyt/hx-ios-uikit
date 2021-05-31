@@ -12,10 +12,10 @@ extern class UIDocumentBrowserViewController{
 	overload extern inline public static function autorelease():UIDocumentBrowserViewController;
 
 	@:native("initForOpeningFilesWithContentTypes:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initForOpeningFilesWithContentTypes(allowedContentTypes:NSArray<NSString>, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentBrowserViewController;
+	overload extern inline public function initForOpeningFilesWithContentTypes(allowedContentTypes:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentBrowserViewController;
 
 	@:native("initForOpeningContentTypes:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initForOpeningContentTypes(contentTypes:NSArray<UTType>, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentBrowserViewController;
+	overload extern inline public function initForOpeningContentTypes(contentTypes:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentBrowserViewController;
 
 	@:native("initWithNibName:bundle")
 	overload extern inline public function initWithNibName(nibName:NSString, bundle:NSBundle):UIDocumentBrowserViewController;
@@ -29,23 +29,23 @@ extern class UIDocumentBrowserViewController{
 	@:native("allowsPickingMultipleItems")
 	public var allowsPickingMultipleItems:BOOL;
 
-	@:native("14.0))")
-	public var 14.0)):ios(11.0,;
+	@:native("ios(11.0,")
+	public var ios(11.0,:supported",;
 
-	@:native("ios(11.0,14.0))")
-	public var ios(11.0,14.0)):instead",;
+	@:native("instead",")
+	public var instead",:contentTypesForRecentDocuments;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):contentTypesForRecentDocuments;
+	@:native("contentTypesForRecentDocuments")
+	public var contentTypesForRecentDocuments:Dynamic;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):shouldShowFileExtensions;
+	@:native("shouldShowFileExtensions")
+	public var shouldShowFileExtensions:BOOL;
 
 	@:native("additionalLeadingNavigationBarButtonItems")
-	public var additionalLeadingNavigationBarButtonItems:>;
+	public var additionalLeadingNavigationBarButtonItems:<UIBarButtonItem>;
 
 	@:native("additionalTrailingNavigationBarButtonItems")
-	public var additionalTrailingNavigationBarButtonItems:>;
+	public var additionalTrailingNavigationBarButtonItems:<UIBarButtonItem>;
 
 	@:native("revealDocumentAtURL:importIfNeeded:completion")
 	overload extern inline public function revealDocumentAtURL(url:NSURL, importIfNeeded:BOOL, completion:Dynamic):Void;
@@ -60,22 +60,22 @@ extern class UIDocumentBrowserViewController{
 	overload extern inline public function transitionControllerForDocumentURL(documentURL:NSURL):UIDocumentBrowserTransitionController *;
 
 	@:native("customActions")
-	public var customActions:>;
+	public var customActions:<UIDocumentBrowserAction>;
 
 	@:native("browserUserInterfaceStyle")
 	public var browserUserInterfaceStyle:UIDocumentBrowserUserInterfaceStyle;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):localizedCreateDocumentActionTitle;
+	@:native("localizedCreateDocumentActionTitle")
+	public var localizedCreateDocumentActionTitle:;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):defaultDocumentAspectRatio;
+	@:native("defaultDocumentAspectRatio")
+	public var defaultDocumentAspectRatio:CGFloat;
 
 	@:native("documentBrowser:didPickDocumentURLs")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didPickDocumentURLs:NSArray<NSURL>):Void;
+	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didPickDocumentURLs:Dynamic):Void;
 
 	@:native("documentBrowser:didPickDocumentsAtURLs")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didPickDocumentsAtURLs:NSArray<NSURL>):Void;
+	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didPickDocumentsAtURLs:Dynamic):Void;
 
 	@:native("documentBrowser:didRequestDocumentCreationWithHandler")
 	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler:Dynamic):Void;
@@ -87,7 +87,7 @@ extern class UIDocumentBrowserViewController{
 	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, failedToImportDocumentAtURL:NSURL, error:NSError_Nullable):Void;
 
 	@:native("documentBrowser:applicationActivitiesForDocumentURLs")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, applicationActivitiesForDocumentURLs:NSArray<NSURL>):NSArray<__kindof UIActivity *> *;
+	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, applicationActivitiesForDocumentURLs:Dynamic):NSArray<__kindof UIActivity *> *;
 
 	@:native("documentBrowser:willPresentActivityViewController")
 	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, willPresentActivityViewController:UIActivityViewController):Void;

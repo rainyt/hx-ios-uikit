@@ -18,10 +18,10 @@ extern class UISegmentedControl{
 	overload extern inline public function initWithCoder(coder:NSCoder):UISegmentedControl;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(items:NSArray):UISegmentedControl;
+	overload extern inline public function initWithItems(items:Dynamic):UISegmentedControl;
 
 	@:native("initWithFrame:actions")
-	overload extern inline public function initWithFrame(frame:CGRect, actions:NSArray<UIAction>):UISegmentedControl;
+	overload extern inline public function initWithFrame(frame:CGRect, actions:Dynamic):UISegmentedControl;
 
 	@:native("insertSegmentWithAction:atIndex:animated")
 	overload extern inline public function insertSegmentWithAction(action:UIAction, atIndex:NSUInteger, animated:BOOL):Void;
@@ -35,17 +35,17 @@ extern class UISegmentedControl{
 	@:native("segmentIndexForActionIdentifier")
 	overload extern inline public function segmentIndexForActionIdentifier(actionIdentifier:UIActionIdentifier):NSInteger;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):7.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:effect",;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("numberOfSegments")
 	public var numberOfSegments:NSUInteger;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):apportionsSegmentWidthsByContent;
+	@:native("apportionsSegmentWidthsByContent")
+	public var apportionsSegmentWidthsByContent:BOOL;
 
 	@:native("insertSegmentWithTitle:atIndex:animated://:before:number.")
 	overload extern inline public function insertSegmentWithTitle(title:NSString, atIndex:NSUInteger, animated:BOOL, //:insert, before:segment, number.:0..#segments.):Void;
@@ -92,8 +92,8 @@ extern class UISegmentedControl{
 	@:native("selectedSegmentIndex")
 	public var selectedSegmentIndex:NSInteger;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(13.0));
+	@:native("selectedSegmentTintColor")
+	public var selectedSegmentTintColor:UIColor;
 
 	@:native("setBackgroundImage:forState:barMetrics:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;

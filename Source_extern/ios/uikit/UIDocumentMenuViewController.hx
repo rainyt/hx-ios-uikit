@@ -18,7 +18,7 @@ extern class UIDocumentMenuViewController{
 	overload extern inline public function documentMenuWasCancelled(documentMenu:UIDocumentMenuViewController):Void;
 
 	@:native("initWithDocumentTypes:inMode")
-	overload extern inline public function initWithDocumentTypes(allowedUTIs:NSArray<NSString>, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
+	overload extern inline public function initWithDocumentTypes(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
 
 	@:native("initWithURL:inMode")
 	overload extern inline public function initWithURL(url:NSURL, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;

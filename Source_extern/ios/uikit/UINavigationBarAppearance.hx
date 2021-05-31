@@ -12,13 +12,13 @@ extern class UINavigationBarAppearance{
 	overload extern inline public static function autorelease():UINavigationBarAppearance;
 
 	@:native("titleTextAttributes")
-	public var titleTextAttributes:id>;
+	public var titleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:UIOffset;
 
 	@:native("largeTitleTextAttributes")
-	public var largeTitleTextAttributes:id>;
+	public var largeTitleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
 
 	@:native("buttonAppearance")
 	public var buttonAppearance:UIBarButtonItemAppearance;

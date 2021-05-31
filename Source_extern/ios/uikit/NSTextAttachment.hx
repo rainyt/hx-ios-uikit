@@ -20,17 +20,17 @@ extern class NSTextAttachment{
 	@:native("initWithData:ofType:NS_DESIGNATED_INITIALIZER")
 	overload extern inline public function initWithData(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
+	@:native("contents")
+	public var contents:NSData;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
+	@:native("fileType")
+	public var fileType:NSString;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
+	@:native("image")
+	public var image:UIImage;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
+	@:native("bounds")
+	public var bounds:CGRect;
 
 	@:native("fileWrapper")
 	public var fileWrapper:NSFileWrapper;

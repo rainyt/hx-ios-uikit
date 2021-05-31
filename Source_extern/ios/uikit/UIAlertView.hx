@@ -26,8 +26,8 @@ extern class UIAlertView{
 	@:native("title")
 	public var title:NSString;
 
-	@:native("text")
-	public var text:explanation;
+	@:native("explanation")
+	public var explanation:secondary;
 
 	@:native("addButtonWithTitle:::returns:of")
 	overload extern inline public function addButtonWithTitle(title:NSString, :, ://, returns:index, of:button.):NSInteger;
@@ -38,11 +38,11 @@ extern class UIAlertView{
 	@:native("numberOfButtons")
 	public var numberOfButtons:NSInteger;
 
-	@:native("-1")
-	public var -1:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("used")
-	public var used:not;
+	@:native("not")
+	public var not:initWithTitle:...;
 
 	@:native("visible")
 	public var visible:BOOL;
@@ -53,8 +53,8 @@ extern class UIAlertView{
 	@:native("dismissWithClickedButtonIndex:animated")
 	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:BOOL):Void;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):alertViewStyle;
+	@:native("alertViewStyle")
+	public var alertViewStyle:UIAlertViewStyle;
 
 	@:native("textFieldAtIndex")
 	overload extern inline public function textFieldAtIndex(textFieldIndex:NSInteger):nullable UITextField *;

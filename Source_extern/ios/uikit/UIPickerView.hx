@@ -11,14 +11,14 @@ extern class UIPickerView{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPickerView;
 
-	@:native("reference")
-	public var reference:weak;
+	@:native("weak")
+	public var weak:nil.;
 
-	@:native("reference")
-	public var reference:weak;
+	@:native("weak")
+	public var weak:nil.;
 
-	@:native("13.0))")
-	public var 13.0)):ios(2.0,;
+	@:native("ios(2.0,")
+	public var ios(2.0,:later.",;
 
 	@:native("numberOfComponents")
 	public var numberOfComponents:NSInteger;

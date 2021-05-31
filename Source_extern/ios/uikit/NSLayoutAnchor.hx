@@ -29,17 +29,17 @@ extern class NSLayoutAnchor{
 	@:native("constraintLessThanOrEqualToAnchor:constant")
 	overload extern inline public function constraintLessThanOrEqualToAnchor(anchor:NSLayoutAnchor<AnchorType>, constant:CGFloat):NSLayoutConstraint *;
 
-	@:native("tvos)")
-	public var tvos):watchos,;
+	@:native("name")
+	public var name:NSString;
 
-	@:native("tvos)")
-	public var tvos):watchos,;
+	@:native("item")
+	public var item:id;
 
-	@:native("tvos)")
-	public var tvos):watchos,;
+	@:native("hasAmbiguousLayout")
+	public var hasAmbiguousLayout:BOOL;
 
-	@:native("tvos)")
-	public var tvos):watchos,;
+	@:native("constraintsAffectingLayout")
+	public var constraintsAffectingLayout:Dynamic;
 
 	@:native("anchorWithOffsetToAnchor")
 	overload extern inline public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutXAxisAnchor):NSLayoutDimension *;

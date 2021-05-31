@@ -23,44 +23,44 @@ extern class UITextInputTraits{
 	@:native("passwordRulesWithDescriptor")
 	overload extern inline public static function passwordRulesWithDescriptor(passwordRulesDescriptor:NSString):UITextInputTraits;
 
-	@:native("UITextAutocapitalizationTypeSentences")
-	public var UITextAutocapitalizationTypeSentences:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("UITextAutocorrectionTypeDefault")
-	public var UITextAutocorrectionTypeDefault:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("UITextSpellCheckingTypeDefault")
-	public var UITextSpellCheckingTypeDefault:is;
+	@:native("spellCheckingType")
+	public var spellCheckingType:UITextSpellCheckingType;
 
-	@:native("UITextSmartQuotesTypeDefault")
-	public var UITextSmartQuotesTypeDefault:is;
+	@:native("smartQuotesType")
+	public var smartQuotesType:UITextSmartQuotesType;
 
-	@:native("UITextSmartDashesTypeDefault")
-	public var UITextSmartDashesTypeDefault:is;
+	@:native("smartDashesType")
+	public var smartDashesType:UITextSmartDashesType;
 
-	@:native("UITextSmartInsertDeleteTypeDefault")
-	public var UITextSmartInsertDeleteTypeDefault:is;
+	@:native("smartInsertDeleteType")
+	public var smartInsertDeleteType:UITextSmartInsertDeleteType;
 
-	@:native("UIKeyboardTypeDefault")
-	public var UIKeyboardTypeDefault:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("UIKeyboardAppearanceDefault")
-	public var UIKeyboardAppearanceDefault:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("enum)")
-	public var enum):UIReturnKeyType;
+	@:native("UIReturnKeyType")
+	public var UIReturnKeyType:under;
 
-	@:native("contents)")
-	public var contents):non-zero-length;
+	@:native("non-zero-length")
+	public var non-zero-length:has;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("textContentType")
+	public var textContentType:NSString;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("passwordRules")
+	public var passwordRules:UITextInputPasswordRules;
 
 
 }

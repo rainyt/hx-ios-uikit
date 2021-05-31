@@ -47,11 +47,11 @@ extern class UIGraphicsRenderer{
 	@:native("initWithBounds:format")
 	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsRendererFormat):UIGraphicsRenderer;
 
-	@:native("copy.")
-	public var copy.:by;
+	@:native("by")
+	public var by:returned;
 
-	@:native("CGImageRefs.")
-	public var CGImageRefs.:generate;
+	@:native("generate")
+	public var generate:to;
 
 
 }

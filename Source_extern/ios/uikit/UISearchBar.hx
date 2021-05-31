@@ -20,62 +20,62 @@ extern class UISearchBar{
 	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
 	overload extern inline public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UISearchBar;
 
-	@:native("(blue)")
-	public var (blue):UIBarStyleDefault;
+	@:native("barStyle")
+	public var barStyle:;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("text")
-	public var text:search;
+	@:native("search")
+	public var search:current/starting;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("showsBookmarkButton")
+	public var showsBookmarkButton:;
 
-	@:native("API_UNAVAILABLE(tvos,watchos)")
-	public var API_UNAVAILABLE(tvos,watchos):API_AVAILABLE(ios(13.0));
+	@:native("searchTextField")
+	public var searchTextField:UISearchTextField;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("showsCancelButton")
+	public var showsCancelButton:;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("showsSearchResultsButton")
+	public var showsSearchResultsButton:;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("searchResultsButtonSelected")
+	public var searchResultsButtonSelected:BOOL;
 
 	@:native("setShowsCancelButton:animated:API_AVAILABLE(ios(3.0)")
 	overload extern inline public function setShowsCancelButton(showsCancelButton:BOOL, animated:BOOL, API_AVAILABLE(ios(3.0):Dynamic):Void;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("inputAssistantItem")
+	public var inputAssistantItem:UITextInputAssistantItem;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("barTintColor")
+	public var barTintColor:UIColor;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):searchBarStyle;
+	@:native("searchBarStyle")
+	public var searchBarStyle:UISearchBarStyle;
 
-	@:native("UIBarStyleBlackTranslucent")
-	public var UIBarStyleBlackTranslucent:to;
+	@:native("translucent")
+	public var translucent:BOOL;
 
-	@:native("items")
-	public var items:more;
+	@:native("")
+	public var :;
 
-	@:native("range")
-	public var range:of;
+	@:native("selectedScopeButtonIndex")
+	public var selectedScopeButtonIndex:;
 
-	@:native("frame")
-	public var frame:update;
+	@:native("")
+	public var :;
 
 	@:native("setShowsScopeBar:animated")
 	overload extern inline public function setShowsScopeBar(show:BOOL, animated:BOOL):Void;
@@ -83,11 +83,11 @@ extern class UISearchBar{
 	@:native("inputAccessoryView")
 	public var inputAccessoryView:UIView;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("backgroundImage")
+	public var backgroundImage:UIImage;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("scopeBarBackgroundImage")
+	public var scopeBarBackgroundImage:UIImage;
 
 	@:native("setBackgroundImage:forBarPosition:barMetrics:API_AVAILABLE(ios(7.0)::Use:to:a:backgroundImage:a:bar")
 	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR, ://, Use:UIBarMetricsDefaultPrompt, to:set, a:separate, backgroundImage:for, a:search, bar:with):Void;
@@ -125,11 +125,11 @@ extern class UISearchBar{
 	@:native("scopeBarButtonTitleTextAttributesForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function scopeBarButtonTitleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey, id> *;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("searchFieldBackgroundPositionAdjustment")
+	public var searchFieldBackgroundPositionAdjustment:UIOffset;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("searchTextPositionAdjustment")
+	public var searchTextPositionAdjustment:UIOffset;
 
 	@:native("setPositionAdjustment:forSearchBarIcon:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function setPositionAdjustment(adjustment:UIOffset, forSearchBarIcon:UISearchBarIcon, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;

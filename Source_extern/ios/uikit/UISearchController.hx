@@ -50,14 +50,14 @@ extern class UISearchController{
 	@:native("delegate")
 	public var delegate:<UISearchControllerDelegate>;
 
-	@:native("obscuresBackgroundDuringPresentation.")
-	public var obscuresBackgroundDuringPresentation.:as;
+	@:native("dimsBackgroundDuringPresentation")
+	public var dimsBackgroundDuringPresentation:BOOL;
 
-	@:native("UISearchContainerViewController.")
-	public var UISearchContainerViewController.:in;
+	@:native("obscuresBackgroundDuringPresentation")
+	public var obscuresBackgroundDuringPresentation:BOOL;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("searchResultsController")
 	public var searchResultsController:UIViewController;
@@ -65,23 +65,23 @@ extern class UISearchController{
 	@:native("searchBar")
 	public var searchBar:UISearchBar;
 
-	@:native("false.")
-	public var false.:to;
+	@:native("automaticallyShowsSearchResultsController")
+	public var automaticallyShowsSearchResultsController:BOOL;
 
-	@:native("false.")
-	public var false.:to;
+	@:native("showsSearchResultsController")
+	public var showsSearchResultsController:BOOL;
 
-	@:native("YES")
-	public var YES:Default;
+	@:native("automaticallyShowsCancelButton")
+	public var automaticallyShowsCancelButton:BOOL;
 
-	@:native("YES")
-	public var YES:to;
+	@:native("automaticallyShowsScopeBar")
+	public var automaticallyShowsScopeBar:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(ios,;
+	@:native("searchSuggestions")
+	public var searchSuggestions:Dynamic;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(ios,;
+	@:native("searchControllerObservedScrollView")
+	public var searchControllerObservedScrollView:UIScrollView;
 
 
 }

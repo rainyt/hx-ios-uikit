@@ -23,11 +23,11 @@ extern class UICellConfigurationState{
 	@:native("reordering")
 	public var reordering:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("API_UNAVAILABLE(tvos,")
+	public var API_UNAVAILABLE(tvos,:cellDragState;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("API_UNAVAILABLE(tvos,")
+	public var API_UNAVAILABLE(tvos,:cellDropState;
 
 
 }

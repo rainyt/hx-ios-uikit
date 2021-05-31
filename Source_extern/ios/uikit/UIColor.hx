@@ -53,50 +53,50 @@ extern class UIColor{
 	@:native("initWithCIColor")
 	overload extern inline public function initWithCIColor(ciColor:CIColor):UIColor *;
 
-	@:native("white")
-	public var white:0.0;
+	@:native("0.0")
+	public var 0.0://;
 
-	@:native("white")
-	public var white:0.333;
+	@:native("0.333")
+	public var 0.333://;
 
-	@:native("white")
-	public var white:0.667;
+	@:native("0.667")
+	public var 0.667://;
 
-	@:native("white")
-	public var white:1.0;
+	@:native("1.0")
+	public var 1.0://;
 
-	@:native("white")
-	public var white:0.5;
+	@:native("0.5")
+	public var 0.5://;
 
-	@:native("RGB")
-	public var RGB:0.0;
+	@:native("0.0")
+	public var 0.0:0.0,;
 
-	@:native("RGB")
-	public var RGB:0.0;
+	@:native("0.0")
+	public var 0.0:1.0,;
 
-	@:native("RGB")
-	public var RGB:1.0;
+	@:native("1.0")
+	public var 1.0:0.0,;
 
-	@:native("RGB")
-	public var RGB:1.0;
+	@:native("1.0")
+	public var 1.0:1.0,;
 
-	@:native("RGB")
-	public var RGB:0.0;
+	@:native("0.0")
+	public var 0.0:1.0,;
 
-	@:native("RGB")
-	public var RGB:1.0;
+	@:native("1.0")
+	public var 1.0:0.0,;
 
-	@:native("RGB")
-	public var RGB:0.0;
+	@:native("0.0")
+	public var 0.0:0.5,;
 
-	@:native("RGB")
-	public var RGB:0.5;
+	@:native("0.5")
+	public var 0.5:0.0,;
 
-	@:native("RGB")
-	public var RGB:0.2;
+	@:native("0.2")
+	public var 0.2:0.4,;
 
-	@:native("alpha")
-	public var alpha:0.0;
+	@:native("0.0")
+	public var 0.0:white,;
 
 	@:native("set;")
 	overload extern inline public function set;():Void;
@@ -125,8 +125,8 @@ extern class UIColor{
 	@:native("CGColor")
 	overload extern inline public function CGColor():CGColorRef;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):CIColor;
+	@:native("CIColor")
+	public var CIColor:;
 
 	@:native("initWithColor")
 	overload extern inline public function initWithColor(color:UIColor):UIColor;

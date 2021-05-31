@@ -20,8 +20,8 @@ extern class UIPointerLockState{
 	@:native("locked")
 	public var locked:BOOL;
 
-	@:native("watchos)")
-	public var watchos):API_UNAVAILABLE(tvos,;
+	@:native("pointerLockState")
+	public var pointerLockState:UIPointerLockState;
 
 
 }

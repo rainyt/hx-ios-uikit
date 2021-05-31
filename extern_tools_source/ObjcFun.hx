@@ -69,9 +69,9 @@ class ObjcFun {
 					start = false;
 				}
 			} else {
-				if (char == "(") {
+				if (char == "(" || char == "<") {
 					kend++;
-				} else if (char == ")") {
+				} else if (char == ")" || char == ">") {
 					kend--;
 					if (kend == 0) {
 						isRaed = false;
@@ -104,7 +104,7 @@ class ObjcFun {
 		for (index => value in args) {
 			retcount++;
 			if (retcount == 2) {
-				ret += ":" + toType(value, typedefs);
+				ret += ":" + ObjcType.toType(value, typedefs);
 				retcount = 0;
 				retargs.push(ret);
 				ret = "";
@@ -112,16 +112,8 @@ class ObjcFun {
 				ret += value;
 			}
 		}
-		trace(args.length, args, retargs);
+		// trace(args.length, args, retargs);
 		return retargs;
 	}
 
-	public static function toType(t:String, typedefs:Map<String, String>):String {
-		if (t == null)
-			return t;
-		if (t.indexOf("(") != -1)
-			return "Dynamic";
-        t = StringTools.replace(t,"nullable ","");
-		return StringTools.replace(StringTools.replace(typedefs.exists(t) ? typedefs.get(t) : t, "*", ""), " ", "");
-	}
 }

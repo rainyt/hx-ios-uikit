@@ -11,23 +11,23 @@ extern class UIToolbar{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIToolbar;
 
-	@:native("UIBarStyleDefault")
-	public var UIBarStyleDefault:is;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:barStyle;
 
-	@:native("order")
-	public var order:in;
+	@:native("in")
+	public var in:shown;
 
-	@:native("UIBarStyleBlackTranslucent")
-	public var UIBarStyleBlackTranslucent:to;
+	@:native("translucent")
+	public var translucent:BOOL;
 
 	@:native("setItems:animated:://:fade:or:or:and")
-	overload extern inline public function setItems(items:NSArray<UIBarButtonItem>, animated:BOOL, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
+	overload extern inline public function setItems(items:Dynamic, animated:BOOL, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("barTintColor")
+	public var barTintColor:UIColor;
 
 	@:native("setBackgroundImage:forToolbarPosition:barMetrics:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forToolbarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
@@ -41,14 +41,14 @@ extern class UIToolbar{
 	@:native("shadowImageForToolbarPosition:API_AVAILABLE(ios(6.0)")
 	overload extern inline public function shadowImageForToolbarPosition(topOrBottom:UIBarPosition, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):UI_APPEARANCE_SELECTOR;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:standardAppearance;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):UI_APPEARANCE_SELECTOR;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:compactAppearance;
 
-	@:native("UINavigationController.")
-	public var UINavigationController.:a;
+	@:native("delegate")
+	public var delegate:id<UIToolbarDelegate>;
 
 
 }

@@ -17,8 +17,8 @@ extern class UISearchDisplayController{
 	@:native("delegate")
 	public var delegate:id<UISearchDisplayDelegate>;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:animated;
 
 	@:native("setActive:animated:::://:the:controller")
 	overload extern inline public function setActive(visible:BOOL, animated:BOOL, :, :, :, //:animate, the:view, controller:for):Void;
@@ -26,26 +26,26 @@ extern class UISearchDisplayController{
 	@:native("searchBar")
 	public var searchBar:;
 
-	@:native("UITableViewController)")
-	public var UITableViewController):a;
+	@:native("a")
+	public var a:Dynamic;
 
-	@:native("requested")
-	public var requested:if;
+	@:native("if")
+	public var if:create;
 
-	@:native("provide")
-	public var provide:can;
+	@:native("can")
+	public var can:delegate;
 
-	@:native("provide")
-	public var provide:can;
+	@:native("can")
+	public var can:delegate;
 
-	@:native("string")
-	public var string:title;
+	@:native("searchResultsTitle")
+	public var searchResultsTitle:;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):displaysSearchBarInNavigationBar;
+	@:native("displaysSearchBarInNavigationBar")
+	public var displaysSearchBarInNavigationBar:BOOL;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):navigationItem;
+	@:native("navigationItem")
+	public var navigationItem:UINavigationItem;
 
 	@:native("")
 	overload extern inline public function ():Void;

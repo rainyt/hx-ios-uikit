@@ -11,29 +11,29 @@ extern class UIPrintFormatter{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPrintFormatter;
 
-	@:native("renderer")
-	public var renderer:page;
+	@:native("printPageRenderer")
+	public var printPageRenderer:UIPrintPageRenderer;
 
 	@:native("removeFromPrintPageRenderer")
 	overload extern inline public function removeFromPrintPageRenderer():Void;
 
-	@:native("width")
-	public var width:to;
+	@:native("maximumContentHeight")
+	public var maximumContentHeight:;
 
-	@:native("height")
-	public var height:to;
+	@:native("maximumContentWidth")
+	public var maximumContentWidth:;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):10.0));
+	@:native("ios(4.2,")
+	public var ios(4.2,:Dynamic;
 
-	@:native("page)")
-	public var page):each;
+	@:native("perPageContentInsets")
+	public var perPageContentInsets:UIEdgeInsets;
 
-	@:native("NSNotFound")
-	public var NSNotFound:is;
+	@:native("startPage")
+	public var startPage:NSInteger;
 
-	@:native("calculated")
-	public var calculated://;
+	@:native("pageCount")
+	public var pageCount:NSInteger;
 
 	@:native("rectForPageAtIndex:API_UNAVAILABLE(tvos:::::::::::returns:rect:index")
 	overload extern inline public function rectForPageAtIndex(pageIndex:NSInteger, API_UNAVAILABLE(tvos:, :, :, :, :, :, :, :, :, :, ://, returns:empty, rect:if, index:out):CGRect;
@@ -47,11 +47,11 @@ extern class UIPrintFormatter{
 	@:native("initWithAttributedText")
 	overload extern inline public function initWithAttributedText(attributedText:NSAttributedString):UIPrintFormatter;
 
-	@:native("started")
-	public var started:drawing;
+	@:native("drawing")
+	public var drawing:once;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):attributedText;
+	@:native("attributedText")
+	public var attributedText:NSAttributedString;
 
 	@:native("font")
 	public var font:;
@@ -65,8 +65,8 @@ extern class UIPrintFormatter{
 	@:native("initWithMarkupText")
 	overload extern inline public function initWithMarkupText(markupText:NSString):UIPrintFormatter;
 
-	@:native("started")
-	public var started:drawing;
+	@:native("drawing")
+	public var drawing:once;
 
 	@:native("view")
 	public var view:UIView;

@@ -11,17 +11,17 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UICollectionViewCompositionalLayout;
 
-	@:native("UICollectionViewScrollDirectionVertical")
-	public var UICollectionViewScrollDirectionVertical:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("0")
-	public var 0:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("boundarySupplementaryItems")
-	public var boundarySupplementaryItems:NSArray<NSCollectionLayoutBoundarySupplementaryItem>;
+	public var boundarySupplementaryItems:Dynamic;
 
-	@:native("UIContentInsetsReferenceSafeArea")
-	public var UIContentInsetsReferenceSafeArea:is;
+	@:native("contentInsetsReference")
+	public var contentInsetsReference:UIContentInsetsReference;
 
 	@:native("initWithSection")
 	overload extern inline public function initWithSection(section:NSCollectionLayoutSection):UICollectionViewCompositionalLayout;
@@ -59,14 +59,14 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("interGroupSpacing")
 	public var interGroupSpacing:CGFloat;
 
-	@:native("watchos(7.0))")
-	public var watchos(7.0)):tvos(14.0),;
+	@:native("contentInsetsReference")
+	public var contentInsetsReference:UIContentInsetsReference;
 
 	@:native("orthogonalScrollingBehavior")
 	public var orthogonalScrollingBehavior:UICollectionLayoutSectionOrthogonalScrollingBehavior;
 
 	@:native("boundarySupplementaryItems")
-	public var boundarySupplementaryItems:NSArray<NSCollectionLayoutBoundarySupplementaryItem>;
+	public var boundarySupplementaryItems:Dynamic;
 
 	@:native("supplementariesFollowContentInsets")
 	public var supplementariesFollowContentInsets:BOOL;
@@ -75,13 +75,13 @@ extern class UICollectionViewCompositionalLayout{
 	public var visibleItemsInvalidationHandler:NSCollectionLayoutSectionVisibleItemsInvalidationHandler;
 
 	@:native("decorationItems")
-	public var decorationItems:NSArray<NSCollectionLayoutDecorationItem>;
+	public var decorationItems:Dynamic;
 
 	@:native("itemWithLayoutSize")
 	overload extern inline public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):UICollectionViewCompositionalLayout;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload extern inline public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize, supplementaryItems:NSArray<NSCollectionLayoutSupplementaryItem>):UICollectionViewCompositionalLayout;
+	overload extern inline public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):UICollectionViewCompositionalLayout;
 
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
@@ -99,7 +99,7 @@ extern class UICollectionViewCompositionalLayout{
 	public var layoutSize:NSCollectionLayoutSize;
 
 	@:native("supplementaryItems")
-	public var supplementaryItems:NSArray<NSCollectionLayoutSupplementaryItem>;
+	public var supplementaryItems:Dynamic;
 
 	@:native("customItemWithFrame")
 	overload extern inline public static function customItemWithFrame(frame:CGRect):UICollectionViewCompositionalLayout;
@@ -123,13 +123,13 @@ extern class UICollectionViewCompositionalLayout{
 	overload extern inline public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):UICollectionViewCompositionalLayout;
 
 	@:native("horizontalGroupWithLayoutSize:subitems")
-	overload extern inline public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:NSArray<NSCollectionLayoutItem>):UICollectionViewCompositionalLayout;
+	overload extern inline public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):UICollectionViewCompositionalLayout;
 
 	@:native("verticalGroupWithLayoutSize:subitem:count")
 	overload extern inline public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):UICollectionViewCompositionalLayout;
 
 	@:native("verticalGroupWithLayoutSize:subitems")
-	overload extern inline public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:NSArray<NSCollectionLayoutItem>):UICollectionViewCompositionalLayout;
+	overload extern inline public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):UICollectionViewCompositionalLayout;
 
 	@:native("customGroupWithLayoutSize:itemProvider")
 	overload extern inline public static function customGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, itemProvider:NSCollectionLayoutGroupCustomItemProvider):UICollectionViewCompositionalLayout;
@@ -141,13 +141,13 @@ extern class UICollectionViewCompositionalLayout{
 	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("supplementaryItems")
-	public var supplementaryItems:NSArray<NSCollectionLayoutSupplementaryItem>;
+	public var supplementaryItems:Dynamic;
 
 	@:native("interItemSpacing")
 	public var interItemSpacing:NSCollectionLayoutSpacing;
 
 	@:native("subitems")
-	public var subitems:NSArray<NSCollectionLayoutItem>;
+	public var subitems:Dynamic;
 
 	@:native("visualDescription;")
 	overload extern inline public function visualDescription;():NSString*;
@@ -299,8 +299,8 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("new")
 	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
-	@:native("zIndex=1")
-	public var zIndex=1:to;
+	@:native("to")
+	public var to:promoted;
 
 	@:native("elementKind")
 	public var elementKind:NSString;
@@ -332,17 +332,17 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("isFractionalOffset")
 	public var isFractionalOffset:BOOL;
 
-	@:native("applied)")
-	public var applied):are;
+	@:native("are")
+	public var are:insets;
 
-	@:native("applied")
-	public var applied:are;
+	@:native("are")
+	public var are:insets;
 
-	@:native("width)")
-	public var width):15%;
+	@:native("< 1.0 are interpreted as fractional values (e.g. leading:0.15 == 15% width")
+	public var < 1.0 are interpreted as fractional values (e.g. leading:0.15 == 15% width:values;
 
-	@:native("values")
-	public var values:unit;
+	@:native("unit")
+	public var unit:any;
 
 	@:native("container")
 	public var container:id<NSCollectionLayoutContainer>;

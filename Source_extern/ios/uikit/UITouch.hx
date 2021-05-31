@@ -17,17 +17,17 @@ extern class UITouch{
 	@:native("phase")
 	public var phase:;
 
-	@:native("time")
-	public var time:of;
+	@:native("of")
+	public var of:amount;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):type;
+	@:native("type")
+	public var type:;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):majorRadius;
+	@:native("majorRadius")
+	public var majorRadius:CGFloat;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):majorRadiusTolerance;
+	@:native("majorRadiusTolerance")
+	public var majorRadiusTolerance:CGFloat;
 
 	@:native("window")
 	public var window:;
@@ -35,8 +35,8 @@ extern class UITouch{
 	@:native("view")
 	public var view:;
 
-	@:native("API_AVAILABLE(ios(3.2))")
-	public var API_AVAILABLE(ios(3.2)):gestureRecognizers;
+	@:native("gestureRecognizers")
+	public var gestureRecognizers:<UIGestureRecognizer>;
 
 	@:native("locationInView")
 	overload extern inline public function locationInView(view:UIView):CGPoint;
@@ -50,11 +50,11 @@ extern class UITouch{
 	@:native("precisePreviousLocationInView")
 	overload extern inline public function precisePreviousLocationInView(view:UIView):CGPoint;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):force;
+	@:native("force")
+	public var force:CGFloat;
 
-	@:native("API_AVAILABLE(ios(9.0))")
-	public var API_AVAILABLE(ios(9.0)):maximumPossibleForce;
+	@:native("maximumPossibleForce")
+	public var maximumPossibleForce:CGFloat;
 
 	@:native("azimuthAngleInView")
 	overload extern inline public function azimuthAngleInView(view:UIView):CGFloat;
@@ -62,17 +62,17 @@ extern class UITouch{
 	@:native("azimuthUnitVectorInView")
 	overload extern inline public function azimuthUnitVectorInView(view:UIView):CGVector;
 
-	@:native("API_AVAILABLE(ios(9.1))")
-	public var API_AVAILABLE(ios(9.1)):altitudeAngle;
+	@:native("altitudeAngle")
+	public var altitudeAngle:CGFloat;
 
-	@:native("API_AVAILABLE(ios(9.1))")
-	public var API_AVAILABLE(ios(9.1)):estimationUpdateIndex;
+	@:native("estimationUpdateIndex")
+	public var estimationUpdateIndex:_Nullable;
 
-	@:native("API_AVAILABLE(ios(9.1))")
-	public var API_AVAILABLE(ios(9.1)):estimatedProperties;
+	@:native("estimatedProperties")
+	public var estimatedProperties:UITouchProperties;
 
-	@:native("API_AVAILABLE(ios(9.1))")
-	public var API_AVAILABLE(ios(9.1)):estimatedPropertiesExpectingUpdates;
+	@:native("estimatedPropertiesExpectingUpdates")
+	public var estimatedPropertiesExpectingUpdates:UITouchProperties;
 
 
 }

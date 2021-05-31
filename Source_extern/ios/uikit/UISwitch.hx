@@ -11,26 +11,26 @@ extern class UISwitch{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISwitch;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("onTintColor")
+	public var onTintColor:UIColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(6.0));
+	@:native("thumbTintColor")
+	public var thumbTintColor:UIColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(6.0));
+	@:native("onImage")
+	public var onImage:UIImage;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(6.0));
+	@:native("offImage")
+	public var offImage:UIImage;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(14.0));
+	@:native("title")
+	public var title:NSString;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(14.0));
+	@:native("style")
+	public var style:UISwitchStyle;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(14.0));
+	@:native("preferredStyle")
+	public var preferredStyle:UISwitchStyle;
 
 	@:native("on")
 	public var on:BOOL;

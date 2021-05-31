@@ -11,11 +11,11 @@ extern class UIScreenMode{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIScreenMode;
 
-	@:native("pixels")
-	public var pixels:in;
+	@:native("in")
+	public var in:height;
 
-	@:native("X/Y.")
-	public var X/Y.:as;
+	@:native("as")
+	public var as:defined;
 
 
 }

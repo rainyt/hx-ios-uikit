@@ -20,20 +20,20 @@ extern class UISplitViewController{
 	@:native("initWithStyle:NS_DESIGNATED_INITIALIZER")
 	overload extern inline public function initWithStyle(style:UISplitViewControllerStyle, NS_DESIGNATED_INITIALIZER:Dynamic):UISplitViewController;
 
-	@:native("code")
-	public var code:UIKit;
+	@:native("style")
+	public var style:UISplitViewControllerStyle;
 
 	@:native("delegate")
 	public var delegate:<UISplitViewControllerDelegate>;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):showsSecondaryOnlyButton;
+	@:native("showsSecondaryOnlyButton")
+	public var showsSecondaryOnlyButton:BOOL;
 
-	@:native("ration")
-	public var ration:aspect;
+	@:native("preferredSplitBehavior")
+	public var preferredSplitBehavior:UISplitViewControllerSplitBehavior;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):splitBehavior;
+	@:native("splitBehavior")
+	public var splitBehavior:UISplitViewControllerSplitBehavior;
 
 	@:native("setViewController:forColumn:API_AVAILABLE(ios(14.0):If:vc:not:UINavigationController,:will:created,")
 	overload extern inline public function setViewController(vc:UIViewController, forColumn:UISplitViewControllerColumn, API_AVAILABLE(ios(14.0)://, If:the, vc:is, not:a, UINavigationController,:one, will:be, created,:except):Void;
@@ -50,56 +50,56 @@ extern class UISplitViewController{
 	@:native("showColumn")
 	overload extern inline public function showColumn(column:UISplitViewControllerColumn):Void;
 
-	@:native("UISplitViewController")
-	public var UISplitViewController:column-style;
+	@:native("column-style")
+	public var column-style:for;
 
-	@:native("API_AVAILABLE(ios(5.1))")
-	public var API_AVAILABLE(ios(5.1)):presentsWithGesture;
+	@:native("presentsWithGesture")
+	public var presentsWithGesture:BOOL;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):;
+	@:native("")
+	public var :collapsed;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):preferredDisplayMode;
+	@:native("preferredDisplayMode")
+	public var preferredDisplayMode:UISplitViewControllerDisplayMode;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):displayMode;
+	@:native("displayMode")
+	public var displayMode:UISplitViewControllerDisplayMode;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):displayModeButtonItem;
+	@:native("displayModeButtonItem")
+	public var displayModeButtonItem:UIBarButtonItem;
 
-	@:native("UISplitViewControllerAutomaticDimension")
-	public var UISplitViewControllerAutomaticDimension:default:;
+	@:native("preferredPrimaryColumnWidthFraction")
+	public var preferredPrimaryColumnWidthFraction:CGFloat;
 
-	@:native("UISplitViewControllerAutomaticDimension")
-	public var UISplitViewControllerAutomaticDimension:default:;
+	@:native("preferredPrimaryColumnWidth")
+	public var preferredPrimaryColumnWidth:CGFloat;
 
-	@:native("UISplitViewControllerAutomaticDimension")
-	public var UISplitViewControllerAutomaticDimension:default:;
+	@:native("minimumPrimaryColumnWidth")
+	public var minimumPrimaryColumnWidth:CGFloat;
 
-	@:native("UISplitViewControllerAutomaticDimension")
-	public var UISplitViewControllerAutomaticDimension:default:;
+	@:native("maximumPrimaryColumnWidth")
+	public var maximumPrimaryColumnWidth:CGFloat;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):primaryColumnWidth;
+	@:native("primaryColumnWidth")
+	public var primaryColumnWidth:CGFloat;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):preferredSupplementaryColumnWidthFraction;
+	@:native("preferredSupplementaryColumnWidthFraction")
+	public var preferredSupplementaryColumnWidthFraction:CGFloat;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):preferredSupplementaryColumnWidth;
+	@:native("preferredSupplementaryColumnWidth")
+	public var preferredSupplementaryColumnWidth:CGFloat;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):minimumSupplementaryColumnWidth;
+	@:native("minimumSupplementaryColumnWidth")
+	public var minimumSupplementaryColumnWidth:CGFloat;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):maximumSupplementaryColumnWidth;
+	@:native("maximumSupplementaryColumnWidth")
+	public var maximumSupplementaryColumnWidth:CGFloat;
 
-	@:native("API_AVAILABLE(ios(14.0))")
-	public var API_AVAILABLE(ios(14.0)):supplementaryColumnWidth;
+	@:native("supplementaryColumnWidth")
+	public var supplementaryColumnWidth:CGFloat;
 
-	@:native("UISplitViewControllerPrimaryEdgeLeading")
-	public var UISplitViewControllerPrimaryEdgeLeading:default:;
+	@:native("primaryEdge")
+	public var primaryEdge:UISplitViewControllerPrimaryEdge;
 
 	@:native("showViewController:sender")
 	overload extern inline public function showViewController(vc:UIViewController, sender:id):Void;
@@ -107,8 +107,8 @@ extern class UISplitViewController{
 	@:native("showDetailViewController:sender")
 	overload extern inline public function showDetailViewController(vc:UIViewController, sender:id):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(13.0));
+	@:native("primaryBackgroundStyle")
+	public var primaryBackgroundStyle:UISplitViewControllerBackgroundStyle;
 
 	@:native("splitViewController:willChangeToDisplayMode")
 	overload extern inline public function splitViewController(svc:UISplitViewController, willChangeToDisplayMode:UISplitViewControllerDisplayMode):Void;
@@ -176,8 +176,8 @@ extern class UISplitViewController{
 	@:native("splitViewControllerInteractivePresentationGestureDidEnd")
 	overload extern inline public function splitViewControllerInteractivePresentationGestureDidEnd(svc:UISplitViewController):Void;
 
-	@:native("otherwise.")
-	public var otherwise.:nil;
+	@:native("nil")
+	public var nil:Returns;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload extern inline public function collapseSecondaryViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

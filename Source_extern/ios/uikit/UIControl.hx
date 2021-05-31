@@ -20,32 +20,32 @@ extern class UIControl{
 	@:native("initWithFrame:primaryAction")
 	overload extern inline public function initWithFrame(frame:CGRect, primaryAction:UIAction):UIControl;
 
-	@:native("differently")
-	public var differently:draw;
+	@:native("draw")
+	public var draw:may;
 
-	@:native("application")
-	public var application:by;
+	@:native("by")
+	public var by:or;
 
-	@:native("up")
-	public var up:on;
+	@:native("on")
+	public var on:cleared;
 
-	@:native("center")
-	public var center:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("center")
-	public var center:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("'trailing'")
-	public var 'trailing':or;
+	@:native("or")
+	public var or:'leading';
 
-	@:native("flags.")
-	public var flags.:other;
+	@:native("(e.g.")
+	public var (e.g.:state;
 
 	@:native("tracking")
 	public var tracking:BOOL;
 
-	@:native("only")
-	public var only:tracking;
+	@:native("tracking")
+	public var tracking:during;
 
 	@:native("beginTrackingWithTouch:withEvent")
 	overload extern inline public function beginTrackingWithTouch(touch:UITouch, withEvent:UIEvent):BOOL;
@@ -74,14 +74,14 @@ extern class UIControl{
 	@:native("removeActionForIdentifier:forControlEvents")
 	overload extern inline public function removeActionForIdentifier(actionIdentifier:UIActionIdentifier, forControlEvents:UIControlEvents):Void;
 
-	@:native("target")
-	public var target:nil;
+	@:native("nil")
+	public var nil:one;
 
-	@:native("action")
-	public var action:one;
+	@:native("one")
+	public var one:least;
 
 	@:native("actionsForTarget:forControlEvent:::single:returns:of:selector:returns")
-	overload extern inline public function actionsForTarget(target:id, forControlEvent:UIControlEvents, :, ://, single:event., returns:NSArray, of:NSString, selector:names., returns:nil):nullable NSArray<NSString *> *;
+	overload extern inline public function actionsForTarget(target:id, forControlEvent:UIControlEvents, :, ://, single:event., returns:Dynamic, of:NSString, selector:names., returns:nil):nullable NSArray<NSString *> *;
 
 	@:native("enumerateEventHandlers")
 	overload extern inline public function enumerateEventHandlers(iterator:Dynamic):Void;
@@ -95,14 +95,14 @@ extern class UIControl{
 	@:native("sendActionsForControlEvents")
 	overload extern inline public function sendActionsForControlEvents(controlEvents:UIControlEvents):Void;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("contextMenuInteraction")
+	public var contextMenuInteraction:UIContextMenuInteraction;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("contextMenuInteractionEnabled")
+	public var contextMenuInteractionEnabled:BOOL;
 
-	@:native("tvos)")
-	public var tvos):API_UNAVAILABLE(watchos,;
+	@:native("showsMenuAsPrimaryAction")
+	public var showsMenuAsPrimaryAction:BOOL;
 
 	@:native("menuAttachmentPointForConfiguration:API_AVAILABLE(ios(14.0)")
 	overload extern inline public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration, API_AVAILABLE(ios(14.0):Dynamic):CGPoint;

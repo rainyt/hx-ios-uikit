@@ -12,7 +12,7 @@ extern class UIPushBehavior{
 	overload extern inline public static function autorelease():UIPushBehavior;
 
 	@:native("initWithItems:mode")
-	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>, mode:UIPushBehaviorMode):UIPushBehavior;
+	overload extern inline public function initWithItems(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
 
 	@:native("addItem")
 	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
@@ -21,7 +21,7 @@ extern class UIPushBehavior{
 	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
 
 	@:native("items")
-	public var items:<UIDynamicItem>>;
+	public var items:Dynamic;
 
 	@:native("targetOffsetFromCenterForItem")
 	overload extern inline public function targetOffsetFromCenterForItem(item:id<UIDynamicItem>):UIOffset;

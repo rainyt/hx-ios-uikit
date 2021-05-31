@@ -26,8 +26,8 @@ extern class UIInteraction{
 	@:native("removeInteraction")
 	overload extern inline public function removeInteraction(interaction:id<UIInteraction>):Void;
 
-	@:native("tvos(13.0))")
-	public var tvos(13.0)):watchos(5.0),;
+	@:native("interactions")
+	public var interactions:Dynamic;
 
 
 }

@@ -11,11 +11,11 @@ extern class UIPrintInteractionController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPrintInteractionController;
 
-	@:native("devices.")
-	public var devices.:unsupported;
+	@:native("unsupported")
+	public var unsupported:for;
 
-	@:native("print")
-	public var print:can;
+	@:native("can")
+	public var can:we;
 
 	@:native("canPrintURL")
 	overload extern inline public static function canPrintURL(url:NSURL):BOOL;
@@ -26,35 +26,35 @@ extern class UIPrintInteractionController{
 	@:native("sharedPrintController")
 	public var sharedPrintController:UIPrintInteractionController;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("nil")
-	public var nil:is;
+	@:native("is")
+	public var is:default;
 
-	@:native("10.0))")
-	public var 10.0)):ios(4.2,;
+	@:native("ios(4.2,")
+	public var ios(4.2,:shown.",;
 
-	@:native("YES.")
-	public var YES.:is;
+	@:native("showsNumberOfCopies")
+	public var showsNumberOfCopies:;
 
-	@:native("UIPrintInfoOutputPhotoGrayscale")
-	public var UIPrintInfoOutputPhotoGrayscale:and;
+	@:native("showsPaperSelectionForLoadedPapers")
+	public var showsPaperSelectionForLoadedPapers:;
 
-	@:native("selection")
-	public var selection:printer;
+	@:native("printer")
+	public var printer:after;
+
+	@:native("each")
+	public var each:render;
+
+	@:native("the")
+	public var the:fill;
+
+	@:native("NSURL,")
+	public var NSURL,:NSData,;
 
 	@:native("page")
-	public var page:each;
-
-	@:native("pages")
-	public var pages:the;
-
-	@:native("UIImage")
-	public var UIImage:NSURL,;
-
-	@:native("range")
-	public var range:page;
+	public var page:support;
 
 	@:native("presentAnimated:completionHandler::::::::::::::::::::::::")
 	overload extern inline public function presentAnimated(animated:BOOL, completionHandler:UIPrintInteractionCompletionHandler, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://):BOOL;
@@ -75,7 +75,7 @@ extern class UIPrintInteractionController{
 	overload extern inline public function printInteractionControllerParentViewController(printInteractionController:UIPrintInteractionController): UIViewController * _Nullable ;
 
 	@:native("printInteractionController:choosePaper")
-	overload extern inline public function printInteractionController(printInteractionController:UIPrintInteractionController, choosePaper:NSArray<UIPrintPaper>):UIPrintPaper *;
+	overload extern inline public function printInteractionController(printInteractionController:UIPrintInteractionController, choosePaper:Dynamic):UIPrintPaper *;
 
 	@:native("printInteractionControllerWillPresentPrinterOptions")
 	overload extern inline public function printInteractionControllerWillPresentPrinterOptions(printInteractionController:UIPrintInteractionController):Void;

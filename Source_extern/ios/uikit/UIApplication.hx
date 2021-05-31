@@ -11,8 +11,8 @@ extern class UIApplication{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIApplication;
 
-	@:native("instead.")")
-	public var instead."):appropriate;
+	@:native("appropriate")
+	public var appropriate:where;
 
 	@:native("delegate")
 	public var delegate:id<UIApplicationDelegate>;
@@ -23,11 +23,11 @@ extern class UIApplication{
 	@:native("endIgnoringInteractionEvents")
 	overload extern inline public function endIgnoringInteractionEvents():Void;
 
-	@:native("events")
-	public var events:ignoring;
+	@:native("ios(2.0,")
+	public var ios(2.0,:instead",;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("openURL:API_DEPRECATED_WITH_REPLACEMENT("openURL")
 	overload extern inline public function openURL(url:NSURL, API_DEPRECATED_WITH_REPLACEMENT("openURL:options:completionHandler:", ios(2.0, 10.0):Dynamic):BOOL;
@@ -41,8 +41,8 @@ extern class UIApplication{
 	@:native("sendEvent")
 	overload extern inline public function sendEvent(event:UIEvent):Void;
 
-	@:native("13.0))")
-	public var 13.0)):ios(2.0,;
+	@:native("ios(2.0,")
+	public var ios(2.0,:scenes",;
 
 	@:native("windows")
 	public var windows:;
@@ -50,38 +50,38 @@ extern class UIApplication{
 	@:native("sendAction:to:from:forEvent")
 	overload extern inline public function sendAction(action:SEL, to:id, from:id, forEvent:UIEvent):BOOL;
 
-	@:native("13.0))")
-	public var 13.0)):ios(2.0,;
+	@:native("networkActivityIndicatorVisible")
+	public var networkActivityIndicatorVisible:BOOL;
 
-	@:native("UIStatusBarStyleDefault")
-	public var UIStatusBarStyleDefault:is;
+	@:native("statusBarStyle")
+	public var statusBarStyle:UIStatusBarStyle;
 
-	@:native("13.0))")
-	public var 13.0)):ios(2.0,;
+	@:native("statusBarHidden")
+	public var statusBarHidden:BOOL;
 
-	@:native("13.0))")
-	public var 13.0)):ios(2.0,;
+	@:native("statusBarOrientation")
+	public var statusBarOrientation:UIInterfaceOrientation;
 
 	@:native("supportedInterfaceOrientationsForWindow:API_AVAILABLE(ios(6.0)")
 	overload extern inline public function supportedInterfaceOrientationsForWindow(window:UIWindow, API_AVAILABLE(ios(6.0):Dynamic):UIInterfaceOrientationMask;
 
-	@:native("change.")
-	public var change.:orientation;
+	@:native("statusBarOrientationAnimationDuration")
+	public var statusBarOrientationAnimationDuration:NSTimeInterval;
 
-	@:native("hidden")
-	public var hidden:is;
+	@:native("statusBarFrame")
+	public var statusBarFrame:CGRect;
 
-	@:native("badge.")
-	public var badge.:icon;
+	@:native("icon")
+	public var icon:the;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(3.0));
+	@:native("applicationSupportsShakeToEdit")
+	public var applicationSupportsShakeToEdit:BOOL;
 
-	@:native("API_AVAILABLE(ios(4.0))")
-	public var API_AVAILABLE(ios(4.0)):applicationState;
+	@:native("applicationState")
+	public var applicationState:UIApplicationState;
 
-	@:native("API_AVAILABLE(ios(4.0))")
-	public var API_AVAILABLE(ios(4.0)):backgroundTimeRemaining;
+	@:native("backgroundTimeRemaining")
+	public var backgroundTimeRemaining:NSTimeInterval;
 
 	@:native("beginBackgroundTaskWithExpirationHandler:")
 	overload extern inline public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic, :Dynamic):NSUInteger;
@@ -95,26 +95,26 @@ extern class UIApplication{
 	@:native("setMinimumBackgroundFetchInterval")
 	overload extern inline public function setMinimumBackgroundFetchInterval(minimumBackgroundFetchInterval:NSTimeInterval):Void;
 
-	@:native("tvos(11.0))")
-	public var tvos(11.0)):API_AVAILABLE(ios(7.0),;
+	@:native("backgroundRefreshStatus")
+	public var backgroundRefreshStatus:UIBackgroundRefreshStatus;
 
-	@:native("API_AVAILABLE(ios(4.0))")
-	public var API_AVAILABLE(ios(4.0)):protectedDataAvailable;
+	@:native("protectedDataAvailable")
+	public var protectedDataAvailable:BOOL;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):userInterfaceLayoutDirection;
+	@:native("userInterfaceLayoutDirection")
+	public var userInterfaceLayoutDirection:UIUserInterfaceLayoutDirection;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):preferredContentSizeCategory;
+	@:native("preferredContentSizeCategory")
+	public var preferredContentSizeCategory:UIContentSizeCategory;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):connectedScenes;
+	@:native("connectedScenes")
+	public var connectedScenes:NSSet<UIScene>;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):openSessions;
+	@:native("openSessions")
+	public var openSessions:NSSet<UISceneSession>;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):supportsMultipleScenes;
+	@:native("supportsMultipleScenes")
+	public var supportsMultipleScenes:BOOL;
 
 	@:native("requestSceneSessionActivation:userActivity:options:errorHandler")
 	overload extern inline public function requestSceneSessionActivation(sceneSession:UISceneSession, userActivity:NSUserActivity, options:UISceneActivationRequestOptions, errorHandler:Dynamic):Void;
@@ -131,8 +131,8 @@ extern class UIApplication{
 	@:native("unregisterForRemoteNotifications")
 	overload extern inline public function unregisterForRemoteNotifications():Void;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):registeredForRemoteNotifications;
+	@:native("registeredForRemoteNotifications")
+	public var registeredForRemoteNotifications:BOOL;
 
 	@:native("registerForRemoteNotificationTypes:API_DEPRECATED("Use -[UIApplication registerForRemoteNotifications] and UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions")
 	overload extern inline public function registerForRemoteNotificationTypes(types:UIRemoteNotificationType, API_DEPRECATED("Use -[UIApplication registerForRemoteNotifications] and UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions:completionHandler:]", ios(3.0, 8.0):Dynamic):Void;
@@ -152,14 +152,14 @@ extern class UIApplication{
 	@:native("cancelAllLocalNotifications")
 	overload extern inline public function cancelAllLocalNotifications():Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):10.0));
+	@:native("ios(4.0,")
+	public var ios(4.0,:getPendingNotificationRequestsWithCompletionHandler:]",;
 
 	@:native("registerUserNotificationSettings:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions")
 	overload extern inline public function registerUserNotificationSettings(notificationSettings:UIUserNotificationSettings, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions:completionHandler:] and -[UNUserNotificationCenter setNotificationCategories:]", ios(8.0, 10.0):Dynamic):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):10.0));
+	@:native("ios(8.0,")
+	public var ios(8.0,:getNotificationCategoriesWithCompletionHandler:]",;
 
 	@:native("beginReceivingRemoteControlEvents")
 	overload extern inline public function beginReceivingRemoteControlEvents():Void;
@@ -170,17 +170,17 @@ extern class UIApplication{
 	@:native("setNewsstandIconImage:API_DEPRECATED("Newsstand apps now behave like normal apps on SpringBoard", ios(5.0, 9.0)")
 	overload extern inline public function setNewsstandIconImage(image:UIImage, API_DEPRECATED("Newsstand apps now behave like normal apps on SpringBoard", ios(5.0, 9.0):Dynamic):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(9.0));
+	@:native("shortcutItems")
+	public var shortcutItems:Dynamic;
 
-	@:native("tvos(10.2))")
-	public var tvos(10.2)):API_AVAILABLE(ios(10.3),;
+	@:native("alternate")
+	public var alternate:have;
 
 	@:native("setAlternateIconName:completionHandler:NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"")
 	overload extern inline public function setAlternateIconName(alternateIconName:NSString, completionHandler:Dynamic, NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":Dynamic):Void;
 
-	@:native("tvos(10.2))")
-	public var tvos(10.2)):API_AVAILABLE(ios(10.3),;
+	@:native("alternate")
+	public var alternate:have;
 
 	@:native("extendStateRestoration")
 	overload extern inline public function extendStateRestoration():Void;
@@ -299,8 +299,8 @@ extern class UIApplication{
 	@:native("applicationProtectedDataDidBecomeAvailable::")
 	overload extern inline public function applicationProtectedDataDidBecomeAvailable(application:UIApplication, :, :Dynamic):Void;
 
-	@:native("API_AVAILABLE(ios(5.0))")
-	public var API_AVAILABLE(ios(5.0)):window;
+	@:native("window")
+	public var window:UIWindow;
 
 	@:native("application:supportedInterfaceOrientationsForWindow:")
 	overload extern inline public function application(application:UIApplication, supportedInterfaceOrientationsForWindow:UIWindow, :Dynamic):UIInterfaceOrientationMask;
@@ -350,26 +350,26 @@ extern class UIApplication{
 	@:native("application:didDiscardSceneSessions")
 	overload extern inline public function application(application:UIApplication, didDiscardSceneSessions:NSSet<UISceneSession>):Void;
 
-	@:native("replacement")
-	public var replacement:for;
+	@:native("ios(2.0,")
+	public var ios(2.0,:Dynamic;
 
 	@:native("setStatusBarHidden:animated:API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(2.0, 3.2)")
 	overload extern inline public function setStatusBarHidden(hidden:BOOL, animated:BOOL, API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(2.0, 3.2):Dynamic):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):9.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:later",;
 
 	@:native("setStatusBarOrientation:animated:API_DEPRECATED("Explicit setting of the status bar orientation is more limited in iOS 6.0 and later", ios(2.0, 9.0)")
 	overload extern inline public function setStatusBarOrientation(interfaceOrientation:UIInterfaceOrientation, animated:BOOL, API_DEPRECATED("Explicit setting of the status bar orientation is more limited in iOS 6.0 and later", ios(2.0, 9.0):Dynamic):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):9.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:preferredStatusBarStyle]",;
 
 	@:native("setStatusBarStyle:animated:API_DEPRECATED("Use -[UIViewController preferredStatusBarStyle]", ios(2.0, 9.0)")
 	overload extern inline public function setStatusBarStyle(statusBarStyle:UIStatusBarStyle, animated:BOOL, API_DEPRECATED("Use -[UIViewController preferredStatusBarStyle]", ios(2.0, 9.0):Dynamic):Void;
 
-	@:native("API_UNAVAILABLE(tvos)")
-	public var API_UNAVAILABLE(tvos):9.0));
+	@:native("ios(2.0,")
+	public var ios(2.0,:prefersStatusBarHidden]",;
 
 	@:native("setStatusBarHidden:withAnimation:API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(3.2, 9.0)")
 	overload extern inline public function setStatusBarHidden(hidden:BOOL, withAnimation:UIStatusBarAnimation, API_DEPRECATED("Use -[UIViewController prefersStatusBarHidden]", ios(3.2, 9.0):Dynamic):Void;

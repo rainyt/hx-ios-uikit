@@ -56,14 +56,14 @@ extern class UIResponder{
 	@:native("nextResponder")
 	public var nextResponder:UIResponder;
 
-	@:native("NO")
-	public var NO:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("becomeFirstResponder;")
 	overload extern inline public function becomeFirstResponder;():BOOL;
 
-	@:native("YES")
-	public var YES:is;
+	@:native("is")
+	public var is:default;
 
 	@:native("resignFirstResponder;")
 	overload extern inline public function resignFirstResponder;():BOOL;
@@ -122,35 +122,35 @@ extern class UIResponder{
 	@:native("validateCommand")
 	overload extern inline public function validateCommand(command:UICommand):Void;
 
-	@:native("API_AVAILABLE(ios(3.0))")
-	public var API_AVAILABLE(ios(3.0)):undoManager;
+	@:native("undoManager")
+	public var undoManager:NSUndoManager;
 
-	@:native("API_AVAILABLE(ios(13.0))")
-	public var API_AVAILABLE(ios(13.0)):editingInteractionConfiguration;
+	@:native("editingInteractionConfiguration")
+	public var editingInteractionConfiguration:UIEditingInteractionConfiguration;
 
-	@:native("objects<")
-	public var objects<:UIKeyCommand;
+	@:native("keyCommands")
+	public var keyCommands:Dynamic;
 
-	@:native("API_AVAILABLE(ios(3.2))")
-	public var API_AVAILABLE(ios(3.2)):inputView;
+	@:native("inputView")
+	public var inputView:UIView;
 
-	@:native("API_AVAILABLE(ios(3.2))")
-	public var API_AVAILABLE(ios(3.2)):inputAccessoryView;
+	@:native("inputAccessoryView")
+	public var inputAccessoryView:UIView;
 
-	@:native("API_UNAVAILABLE(watchos)")
-	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
+	@:native("inputAssistantItem")
+	public var inputAssistantItem:UITextInputAssistantItem;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):inputViewController;
+	@:native("inputViewController")
+	public var inputViewController:UIInputViewController;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):inputAccessoryViewController;
+	@:native("inputAccessoryViewController")
+	public var inputAccessoryViewController:UIInputViewController;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):textInputMode;
+	@:native("textInputMode")
+	public var textInputMode:UITextInputMode;
 
-	@:native("API_AVAILABLE(ios(7.0))")
-	public var API_AVAILABLE(ios(7.0)):textInputContextIdentifier;
+	@:native("textInputContextIdentifier")
+	public var textInputContextIdentifier:NSString;
 
 	@:native("clearTextInputContextIdentifier")
 	overload extern inline public static function clearTextInputContextIdentifier(identifier:NSString):Void;
@@ -158,8 +158,8 @@ extern class UIResponder{
 	@:native("reloadInputViews")
 	overload extern inline public function reloadInputViews():Void;
 
-	@:native("API_AVAILABLE(ios(8.0))")
-	public var API_AVAILABLE(ios(8.0)):userActivity;
+	@:native("userActivity")
+	public var userActivity:NSUserActivity;
 
 	@:native("updateUserActivityState")
 	overload extern inline public function updateUserActivityState(activity:NSUserActivity):Void;

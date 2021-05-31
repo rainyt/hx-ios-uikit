@@ -11,8 +11,8 @@ extern class NSLayoutManager{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():NSLayoutManager;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.7),;
+	@:native("layoutOrientation")
+	public var layoutOrientation:NSTextLayoutOrientation;
 
 	@:native("init")
 	overload extern inline public function init():NSLayoutManager;
@@ -24,7 +24,7 @@ extern class NSLayoutManager{
 	public var textStorage:NSTextStorage;
 
 	@:native("textContainers")
-	public var textContainers:>;
+	public var textContainers:Dynamic;
 
 	@:native("addTextContainer")
 	overload extern inline public function addTextContainer(container:NSTextContainer):Void;
@@ -50,17 +50,17 @@ extern class NSLayoutManager{
 	@:native("usesFontLeading")
 	public var usesFontLeading:BOOL;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.5),;
+	@:native("allowsNonContiguousLayout")
+	public var allowsNonContiguousLayout:BOOL;
 
-	@:native("ios(7.0))")
-	public var ios(7.0)):API_AVAILABLE(macos(10.5),;
+	@:native("hasNonContiguousLayout")
+	public var hasNonContiguousLayout:BOOL;
 
-	@:native("tvos(12.0))")
-	public var tvos(12.0)):watchos(5.0),;
+	@:native("limitsLayoutForSuspiciousContents")
+	public var limitsLayoutForSuspiciousContents:null;
 
-	@:native("tvos(13.0))")
-	public var tvos(13.0)):watchos(6.0),;
+	@:native("usesDefaultHyphenation")
+	public var usesDefaultHyphenation:null;
 
 	@:native("invalidateGlyphsForCharacterRange:changeInLength:actualCharacterRange")
 	overload extern inline public function invalidateGlyphsForCharacterRange(charRange:NSRange, changeInLength:NSInteger, actualCharacterRange:NSRangePointer):Void;
@@ -305,8 +305,8 @@ extern class NSLayoutManager{
 	@:native("glyphAtIndex://")
 	overload extern inline public function glyphAtIndex(glyphIndex:NSUInteger, //:Use):CGGlyph;
 
-	@:native("API_UNAVAILABLE(macCatalyst)")
-	public var API_UNAVAILABLE(macCatalyst):tvos(9.0,13.0));
+	@:native("instead.",")
+	public var instead.",:hyphenationFactor];
 
 	@:native("showCGGlyphs:positions:count:font:matrix:attributes:inContext:API_DEPRECATED_WITH_REPLACEMENT("showCGGlyphs")
 	overload extern inline public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:NSUInteger, font:UIFont, matrix:CGAffineTransform, attributes:NSDictionary<NSAttributedStringKey,id>, inContext:CGContextRef, API_DEPRECATED_WITH_REPLACEMENT("showCGGlyphs:positions:count:font:textMatrix:attributes:inContext:", macos(10.7,10.15), ios(7.0,13.0), watchos(2.0,6.0), tvos(9.0,13.0):Dynamic):Void;
