@@ -11,27 +11,6 @@ extern abstract UITextDragOptions(Int) from Int to Int {
 	@:native("UITextDragOptionsNone")
 	var UITextDragOptionsNone;
 
-	@:native("/*")
-	var /*;
-
-	@:native("*")
-	var *;
-
-	@:native("*")
-	var *;
-
-	@:native("*")
-	var *;
-
-	@:native("*")
-	var *;
-
-	@:native("*")
-	var *;
-
-	@:native("*/")
-	var */;
-
 	@:native("UITextDragOptionStripTextColorFromPreviews")
 	var UITextDragOptionStripTextColorFromPreviews;
 

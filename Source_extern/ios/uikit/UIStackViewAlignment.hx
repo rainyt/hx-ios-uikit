@@ -8,29 +8,8 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIStackViewAlignment(Int) from Int to Int {
 
-	@:native("/*")
-	var /*;
-
-	@:native("or")
-	var or;
-
-	@:native("*/")
-	var */;
-
 	@:native("UIStackViewAlignmentFill")
 	var UIStackViewAlignmentFill;
-
-	@:native("/*")
-	var /*;
-
-	@:native("or")
-	var or;
-
-	@:native("of")
-	var of;
-
-	@:native("*/")
-	var */;
 
 	@:native("UIStackViewAlignmentLeading")
 	var UIStackViewAlignmentLeading;
@@ -41,29 +20,8 @@ extern abstract UIStackViewAlignment(Int) from Int to Int {
 	@:native("UIStackViewAlignmentFirstBaseline")
 	var UIStackViewAlignmentFirstBaseline;
 
-	@:native("/*")
-	var /*;
-
-	@:native("or")
-	var or;
-
-	@:native("*/")
-	var */;
-
 	@:native("UIStackViewAlignmentCenter")
 	var UIStackViewAlignmentCenter;
-
-	@:native("/*")
-	var /*;
-
-	@:native("or")
-	var or;
-
-	@:native("edge")
-	var edge;
-
-	@:native("*/")
-	var */;
 
 	@:native("UIStackViewAlignmentTrailing")
 	var UIStackViewAlignmentTrailing;

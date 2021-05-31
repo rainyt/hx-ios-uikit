@@ -37,7 +37,16 @@ class ExternTypedefClass {
 			enumContent = enumContent.substr(enumContent.indexOf("{") + 1);
 			enumContent = enumContent.substr(0, enumContent.lastIndexOf("}"));
 			var e = enumContent.split("\n");
+			var isIgone = false;
 			for (index => e2 in e) {
+				if (e2.indexOf("/*") != -1) {
+					isIgone = true;
+				}
+				if (isIgone) {
+					if (e2.indexOf("*/") != -1)
+						isIgone = false;
+					continue;
+				}
 				var e3 = e2.split(" ").filter((f) -> f.length > 0)[0];
 				if (e3 == null || e3.indexOf("//") != -1 || e3.indexOf("#") != -1)
 					continue;

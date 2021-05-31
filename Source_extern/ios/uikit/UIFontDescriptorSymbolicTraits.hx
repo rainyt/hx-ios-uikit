@@ -8,18 +8,6 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIFontDescriptorSymbolicTraits(Int) from Int to Int {
 
-	@:native("/*")
-	var /*;
-
-	@:native("/*")
-	var /*;
-
-	@:native("UIFontDescriptorSymbolicTraits")
-	var UIFontDescriptorSymbolicTraits;
-
-	@:native("*/")
-	var */;
-
 	@:native("UIFontDescriptorTraitItalic")
 	var UIFontDescriptorTraitItalic;
 
@@ -46,15 +34,6 @@ extern abstract UIFontDescriptorSymbolicTraits(Int) from Int to Int {
 
 	@:native("UIFontDescriptorTraitLooseLeading")
 	var UIFontDescriptorTraitLooseLeading;
-
-	@:native("/*")
-	var /*;
-
-	@:native("/*")
-	var /*;
-
-	@:native("*/")
-	var */;
 
 	@:native("UIFontDescriptorClassMask")
 	var UIFontDescriptorClassMask;

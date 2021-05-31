@@ -8,12 +8,6 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIBlurEffectStyle(Int) from Int to Int {
 
-	@:native("/*")
-	var /*;
-
-	@:native("*/")
-	var */;
-
 	@:native("UIBlurEffectStyleExtraLight")
 	var UIBlurEffectStyleExtraLight;
 
@@ -26,47 +20,11 @@ extern abstract UIBlurEffectStyle(Int) from Int to Int {
 	@:native("UIBlurEffectStyleExtraDark")
 	var UIBlurEffectStyleExtraDark;
 
-	@:native("/*")
-	var /*;
-
-	@:native("*")
-	var *;
-
-	@:native("*")
-	var *;
-
-	@:native("*")
-	var *;
-
-	@:native("*/")
-	var */;
-
 	@:native("UIBlurEffectStyleRegular")
 	var UIBlurEffectStyleRegular;
 
-	@:native("/*")
-	var /*;
-
-	@:native("*/")
-	var */;
-
 	@:native("UIBlurEffectStyleProminent")
 	var UIBlurEffectStyleProminent;
-
-	@:native("/*")
-	var /*;
-
-	@:native("*")
-	var *;
-
-	@:native("*")
-	var *;
-
-	@:native("*")
-	var *;
-
-	@:native("*/")
-	var */;
 
 	@:native("UIBlurEffectStyleSystemUltraThinMaterial")
 	var UIBlurEffectStyleSystemUltraThinMaterial;
@@ -82,12 +40,6 @@ extern abstract UIBlurEffectStyle(Int) from Int to Int {
 
 	@:native("UIBlurEffectStyleSystemChromeMaterial")
 	var UIBlurEffectStyleSystemChromeMaterial;
-
-	@:native("/*")
-	var /*;
-
-	@:native("*/")
-	var */;
 
 	@:native("UIBlurEffectStyleSystemUltraThinMaterialLight")
 	var UIBlurEffectStyleSystemUltraThinMaterialLight;

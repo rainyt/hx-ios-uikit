@@ -47,12 +47,6 @@ extern abstract NSLayoutFormatOptions(Int) from Int to Int {
 	@:native("NSLayoutFormatAlignmentMask")
 	var NSLayoutFormatAlignmentMask;
 
-	@:native("/*")
-	var /*;
-
-	@:native("*/")
-	var */;
-
 	@:native("NSLayoutFormatDirectionLeadingToTrailing")
 	var NSLayoutFormatDirectionLeadingToTrailing;
 
@@ -65,35 +59,8 @@ extern abstract NSLayoutFormatOptions(Int) from Int to Int {
 	@:native("NSLayoutFormatDirectionMask")
 	var NSLayoutFormatDirectionMask;
 
-	@:native("/*")
-	var /*;
-
-	@:native("*/")
-	var */;
-
 	@:native("NSLayoutFormatSpacingEdgeToEdge")
 	var NSLayoutFormatSpacingEdgeToEdge;
-
-	@:native("/*")
-	var /*;
-
-	@:native("will")
-	var will;
-
-	@:native("to")
-	var to;
-
-	@:native("or")
-	var or;
-
-	@:native("The")
-	var The;
-
-	@:native("involved")
-	var involved;
-
-	@:native("*/")
-	var */;
 
 	@:native("NSLayoutFormatSpacingBaselineToBaseline")
 	var NSLayoutFormatSpacingBaselineToBaseline;

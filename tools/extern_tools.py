@@ -533,6 +533,7 @@ class ExternTypedefClass:
                 _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
             enumContent = HxString.substr(enumContent,0,_hx_len)
             e = enumContent.split("\n")
+            isIgone = False
             _g_current = 0
             _g_array = e
             while (_g_current < len(_g_array)):
@@ -541,19 +542,27 @@ class ExternTypedefClass:
                 _g_current = (_g_current + 1)
                 index = _g1_key
                 e2 = _g1_value
+                startIndex = None
+                if (((e2.find("/*") if ((startIndex is None)) else HxString.indexOfImpl(e2,"/*",startIndex))) != -1):
+                    isIgone = True
+                if isIgone:
+                    startIndex1 = None
+                    if (((e2.find("*/") if ((startIndex1 is None)) else HxString.indexOfImpl(e2,"*/",startIndex1))) != -1):
+                        isIgone = False
+                    continue
                 def _hx_local_0(f):
                     return (len(f) > 0)
                 e3 = python_internal_ArrayImpl._get(list(filter(_hx_local_0,e2.split(" "))), 0)
                 tmp = None
                 tmp1 = None
                 if (e3 is not None):
-                    startIndex = None
-                    tmp1 = (((e3.find("//") if ((startIndex is None)) else HxString.indexOfImpl(e3,"//",startIndex))) != -1)
+                    startIndex2 = None
+                    tmp1 = (((e3.find("//") if ((startIndex2 is None)) else HxString.indexOfImpl(e3,"//",startIndex2))) != -1)
                 else:
                     tmp1 = True
                 if (not tmp1):
-                    startIndex1 = None
-                    tmp = (((e3.find("#") if ((startIndex1 is None)) else HxString.indexOfImpl(e3,"#",startIndex1))) != -1)
+                    startIndex3 = None
+                    tmp = (((e3.find("#") if ((startIndex3 is None)) else HxString.indexOfImpl(e3,"#",startIndex3))) != -1)
                 else:
                     tmp = True
                 if tmp:
