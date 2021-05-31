@@ -34,7 +34,7 @@ class ExternTools {
 				parsingFramework(indir + "/" + value, out);
 			} else {
 				// 开始解析头文件
-				if (value.indexOf(".h") != -1)
+				if (value.indexOf("NSLayoutConstraint.h") != -1)
 					parsingHFile(indir + "/" + value, out);
 			}
 		}
@@ -48,19 +48,12 @@ class ExternTools {
 			// trace("igone:" + haxefile);
 			return;
 		}
-		// trace("parsing " + pkg + ":" + haxefile);
 		var classpkg = "ios." + pkg.toLowerCase();
-		// var c = new ExternBaseClass(haxefile, "ios." + pkg.toLowerCase(), hfile);
 		var haxedir = out + "/ios/" + pkg.toLowerCase();
 		var c = new ExternHFile(hfile, haxedir, classpkg);
 		if (!FileSystem.exists(haxedir)) {
 			FileSystem.createDirectory(haxedir);
 		}
-		// 保存类型
-		// for (key => value in c.classdefs) {
-		// 	if (value.className.indexOf("<") == -1 && value.className.indexOf("(") == -1)
-		// 		File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile(classpkg));
-		// }
 		// 保存定义
 		for (key => value in c.typedefs) {
 			if (value.className.indexOf("<") == -1 && value.className.indexOf("(") == -1)
