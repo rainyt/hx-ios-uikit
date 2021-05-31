@@ -13,11 +13,14 @@ extern class NSStringDrawingContext{
 	@:native("autorelease")
 	overload public static function autorelease():NSStringDrawingContext;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:Dynamic;
+	@:native("minimumScaleFactor")
+	public var minimumScaleFactor:CGFloat;
 
-	@:native("ios(6.0,")
-	public var ios(6.0,:Dynamic;
+	@:native("actualScaleFactor")
+	public var actualScaleFactor:CGFloat;
+
+	@:native("totalBounds")
+	public var totalBounds:CGRect;
 
 
 }

@@ -13,14 +13,8 @@ extern class UIViewController{
 	@:native("autorelease")
 	overload public static function autorelease():UIViewController;
 
-	@:native("set")
-	public var set:not;
-
-	@:native("nil")
-	public var nil:Returns;
-
-	@:native("tabBarObservedScrollView")
-	public var tabBarObservedScrollView:UIScrollView;
+	@:native("ios(9.0,")
+	public var ios(9.0,:UIContextMenuInteraction.",;
 
 
 }

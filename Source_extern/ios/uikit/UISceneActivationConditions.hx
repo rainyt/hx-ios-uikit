@@ -13,17 +13,8 @@ extern class UISceneActivationConditions{
 	@:native("autorelease")
 	overload public static function autorelease():UISceneActivationConditions;
 
-	@:native("init")
-	overload public function init():UISceneActivationConditions;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:NSCoder):UISceneActivationConditions;
-
-	@:native("[NSPredicate")
-	public var [NSPredicate:is;
-
-	@:native("predicateWithValue:NO]")
-	public var predicateWithValue:NO]:[NSPredicate;
+	@:native("targetContentIdentifier")
+	public var targetContentIdentifier:NSString;
 
 
 }

@@ -13,14 +13,8 @@ extern class NSLayoutXAxisAnchor{
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutXAxisAnchor;
 
-	@:native("constraintEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintEqualToSystemSpacingAfterAnchor(anchor:NSLayoutXAxisAnchor, multiplier:CGFloat, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint *;
-
-	@:native("constraintGreaterThanOrEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintGreaterThanOrEqualToSystemSpacingAfterAnchor(anchor:NSLayoutXAxisAnchor, multiplier:CGFloat, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint *;
-
-	@:native("constraintLessThanOrEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintLessThanOrEqualToSystemSpacingAfterAnchor(anchor:NSLayoutXAxisAnchor, multiplier:CGFloat, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint *;
+	@:native("anchorWithOffsetToAnchor")
+	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutXAxisAnchor):NSLayoutDimension *;
 
 
 }

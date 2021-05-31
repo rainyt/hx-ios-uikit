@@ -13,8 +13,95 @@ extern class UITraitCollection{
 	@:native("autorelease")
 	overload public static function autorelease():UITraitCollection;
 
-	@:native("imageConfiguration")
-	public var imageConfiguration:UIImageConfiguration;
+	@:native("init")
+	overload public function init():UITraitCollection;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):UITraitCollection;
+
+	@:native("containsTraitsInCollection")
+	overload public function containsTraitsInCollection(trait:UITraitCollection):BOOL;
+
+	@:native("traitCollectionWithTraitsFromCollections")
+	overload public static function traitCollectionWithTraitsFromCollections(traitCollections:Dynamic):UITraitCollection *;
+
+	@:native("traitCollectionWithUserInterfaceIdiom")
+	overload public static function traitCollectionWithUserInterfaceIdiom(idiom:UIUserInterfaceIdiom):UITraitCollection *;
+
+	@:native("unspecified:")
+	public var unspecified:://;
+
+	@:native("traitCollectionWithUserInterfaceStyle:API_AVAILABLE(tvos(10.0)")
+	overload public static function traitCollectionWithUserInterfaceStyle(userInterfaceStyle:UIUserInterfaceStyle, API_AVAILABLE(tvos(10.0):Dynamic):UITraitCollection *;
+
+	@:native("userInterfaceStyle")
+	public var userInterfaceStyle:UIUserInterfaceStyle;
+
+	@:native("traitCollectionWithLayoutDirection")
+	overload public static function traitCollectionWithLayoutDirection(layoutDirection:UITraitEnvironmentLayoutDirection):UITraitCollection *;
+
+	@:native("layoutDirection")
+	public var layoutDirection:UITraitEnvironmentLayoutDirection;
+
+	@:native("traitCollectionWithDisplayScale")
+	overload public static function traitCollectionWithDisplayScale(scale:CGFloat):UITraitCollection *;
+
+	@:native("unspecified:")
+	public var unspecified:://;
+
+	@:native("traitCollectionWithHorizontalSizeClass")
+	overload public static function traitCollectionWithHorizontalSizeClass(horizontalSizeClass:UIUserInterfaceSizeClass):UITraitCollection *;
+
+	@:native("unspecified:")
+	public var unspecified:://;
+
+	@:native("traitCollectionWithVerticalSizeClass")
+	overload public static function traitCollectionWithVerticalSizeClass(verticalSizeClass:UIUserInterfaceSizeClass):UITraitCollection *;
+
+	@:native("unspecified:")
+	public var unspecified:://;
+
+	@:native("traitCollectionWithForceTouchCapability")
+	overload public static function traitCollectionWithForceTouchCapability(capability:UIForceTouchCapability):UITraitCollection *;
+
+	@:native("forceTouchCapability")
+	public var forceTouchCapability:UIForceTouchCapability;
+
+	@:native("traitCollectionWithPreferredContentSizeCategory")
+	overload public static function traitCollectionWithPreferredContentSizeCategory(preferredContentSizeCategory:UIContentSizeCategory):UITraitCollection *;
+
+	@:native("preferredContentSizeCategory")
+	public var preferredContentSizeCategory:UIContentSizeCategory;
+
+	@:native("traitCollectionWithDisplayGamut")
+	overload public static function traitCollectionWithDisplayGamut(displayGamut:UIDisplayGamut):UITraitCollection *;
+
+	@:native("displayGamut")
+	public var displayGamut:UIDisplayGamut;
+
+	@:native("traitCollectionWithAccessibilityContrast:API_AVAILABLE(ios(13.0), tvos(13.0)")
+	overload public static function traitCollectionWithAccessibilityContrast(accessibilityContrast:UIAccessibilityContrast, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UITraitCollection *;
+
+	@:native("accessibilityContrast")
+	public var accessibilityContrast:UIAccessibilityContrast;
+
+	@:native("traitCollectionWithUserInterfaceLevel:API_AVAILABLE(ios(13.0)")
+	overload public static function traitCollectionWithUserInterfaceLevel(userInterfaceLevel:UIUserInterfaceLevel, API_AVAILABLE(ios(13.0):Dynamic):UITraitCollection *;
+
+	@:native("userInterfaceLevel")
+	public var userInterfaceLevel:UIUserInterfaceLevel;
+
+	@:native("traitCollectionWithLegibilityWeight")
+	overload public static function traitCollectionWithLegibilityWeight(legibilityWeight:UILegibilityWeight):UITraitCollection *;
+
+	@:native("legibilityWeight")
+	public var legibilityWeight:UILegibilityWeight;
+
+	@:native("traitCollectionWithActiveAppearance")
+	overload public static function traitCollectionWithActiveAppearance(userInterfaceActiveAppearance:UIUserInterfaceActiveAppearance):UITraitCollection *;
+
+	@:native("activeAppearance")
+	public var activeAppearance:UIUserInterfaceActiveAppearance;
 
 
 }

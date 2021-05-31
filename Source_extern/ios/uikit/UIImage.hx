@@ -13,5 +13,8 @@ extern class UIImage{
 	@:native("autorelease")
 	overload public static function autorelease():UIImage;
 
+	@:native("textAttachmentWithImage")
+	overload public static function textAttachmentWithImage(image:UIImage):NSTextAttachment *;
+
 
 }

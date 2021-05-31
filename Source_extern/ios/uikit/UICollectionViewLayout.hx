@@ -13,17 +13,26 @@ extern class UICollectionViewLayout{
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewLayout;
 
-	@:native("targetIndexPathForInteractivelyMovingItem:withPosition")
-	overload public function targetIndexPathForInteractivelyMovingItem(previousIndexPath:NSIndexPath, withPosition:CGPoint):NSIndexPath *;
+	@:native("init")
+	overload public function init():UICollectionViewLayout;
 
-	@:native("layoutAttributesForInteractivelyMovingItemAtIndexPath:withTargetPosition")
-	overload public function layoutAttributesForInteractivelyMovingItemAtIndexPath(indexPath:NSIndexPath, withTargetPosition:CGPoint):UICollectionViewLayoutAttributes *;
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):UICollectionViewLayout;
 
-	@:native("invalidationContextForInteractivelyMovingItems:withTargetPosition:previousIndexPaths:previousPosition")
-	overload public function invalidationContextForInteractivelyMovingItems(targetIndexPaths:Dynamic, withTargetPosition:CGPoint, previousIndexPaths:Dynamic, previousPosition:CGPoint):UICollectionViewLayoutInvalidationContext *;
+	@:native("collectionView")
+	public var collectionView:UICollectionView;
 
-	@:native("invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:previousIndexPaths:movementCancelled")
-	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths(indexPaths:Dynamic, previousIndexPaths:Dynamic, movementCancelled:Bool):UICollectionViewLayoutInvalidationContext *;
+	@:native("invalidateLayout;")
+	overload public function invalidateLayout;():Void;
+
+	@:native("invalidateLayoutWithContext")
+	overload public function invalidateLayoutWithContext(context:UICollectionViewLayoutInvalidationContext):Void;
+
+	@:native("registerClass:forDecorationViewOfKind")
+	overload public function registerClass(viewClass:Class, forDecorationViewOfKind:NSString):Void;
+
+	@:native("registerNib:forDecorationViewOfKind")
+	overload public function registerNib(nib:UINib, forDecorationViewOfKind:NSString):Void;
 
 
 }

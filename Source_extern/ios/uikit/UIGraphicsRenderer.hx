@@ -13,17 +13,17 @@ extern class UIGraphicsRenderer{
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsRenderer;
 
-	@:native("rendererContextClass")
-	overload public static function rendererContextClass():Class;
+	@:native("initWithBounds")
+	overload public function initWithBounds(bounds:CGRect):UIGraphicsRenderer;
 
-	@:native("contextWithFormat:CF_RETURNS_RETAINED")
-	overload public static function contextWithFormat(format:UIGraphicsRendererFormat, CF_RETURNS_RETAINED:Dynamic):nullable CGContextRef;
+	@:native("initWithBounds:format")
+	overload public function initWithBounds(bounds:CGRect, format:UIGraphicsRendererFormat):UIGraphicsRenderer;
 
-	@:native("prepareCGContext:withRendererContext")
-	overload public static function prepareCGContext(context:CGContextRef, withRendererContext:UIGraphicsRendererContext):Void;
+	@:native("by")
+	public var by:returned;
 
-	@:native("runDrawingActions:completionActions:error")
-	overload public function runDrawingActions(drawingActions:NS_NOESCAPEUIGraphicsDrawingActions, completionActions:NS_NOESCAPEUIGraphicsDrawingActions, error:NSError):BOOL;
+	@:native("generate")
+	public var generate:to;
 
 
 }

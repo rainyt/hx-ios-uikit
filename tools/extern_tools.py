@@ -72,19 +72,50 @@ class ExternBaseClass:
         self._hdata = None
         self.funcAndAttr = []
         self.imports = []
+        harray = _hdata.split("\n")
+        pclassName = (harray[0] if 0 < len(harray) else None)
         startIndex = None
-        pclassName = HxString.substr(_hdata,(((_hdata.find("@interface") if ((startIndex is None)) else HxString.indexOfImpl(_hdata,"@interface",startIndex))) + 10),None)
-        _g = 0
-        _g1 = len(pclassName)
-        while (_g < _g1):
-            i = _g
-            _g = (_g + 1)
-            if ((("" if (((i < 0) or ((i >= len(pclassName))))) else pclassName[i])) != " "):
-                pclassName = HxString.substr(pclassName,i,None)
-                break
+        pclassName = HxString.substr(pclassName,(((pclassName.find("@interface") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"@interface",startIndex))) + 10),None)
+        tmp = None
         startIndex = None
-        pclassName = HxString.substr(pclassName,0,(pclassName.find(" ") if ((startIndex is None)) else HxString.indexOfImpl(pclassName," ",startIndex)))
-        haxe_Log.trace("pclassname2",_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 36, 'className': "ExternBaseClass", 'methodName': "new", 'customParams': [pclassName]}))
+        if (((pclassName.find("(") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"(",startIndex))) != -1):
+            startIndex = None
+            tmp = (((pclassName.find("()") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"()",startIndex))) == -1)
+        else:
+            tmp = False
+        if tmp:
+            startIndex1 = None
+            pos = None
+            if (startIndex1 is None):
+                pos = pclassName.rfind("(", 0, len(pclassName))
+            else:
+                i = pclassName.rfind("(", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("("))) if ((i == -1)) else (i + 1))
+                check = pclassName.find("(", startLeft, len(pclassName))
+                pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            pclassName = HxString.substr(pclassName,(pos + 1),None)
+            startIndex1 = None
+            _hx_len = None
+            if (startIndex1 is None):
+                _hx_len = pclassName.rfind(")", 0, len(pclassName))
+            else:
+                i = pclassName.rfind(")", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len(")"))) if ((i == -1)) else (i + 1))
+                check = pclassName.find(")", startLeft, len(pclassName))
+                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            pclassName = HxString.substr(pclassName,0,_hx_len)
+        else:
+            _g = 0
+            _g1 = len(pclassName)
+            while (_g < _g1):
+                i = _g
+                _g = (_g + 1)
+                if ((("" if (((i < 0) or ((i >= len(pclassName))))) else pclassName[i])) != " "):
+                    pclassName = HxString.substr(pclassName,i,None)
+                    break
+            startIndex = None
+            pclassName = HxString.substr(pclassName,0,(pclassName.find(" ") if ((startIndex is None)) else HxString.indexOfImpl(pclassName," ",startIndex)))
+        haxe_Log.trace("pclassname2",_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 44, 'className': "ExternBaseClass", 'methodName': "new", 'customParams': [pclassName]}))
         if (pclassName == ""):
             raise haxe_Exception.thrown(("错误解析：" + ("null" if _hdata is None else _hdata)))
         self.className = StringTools.replace(pclassName," ","")
@@ -94,15 +125,14 @@ class ExternBaseClass:
         _this = self.funcAndAttr
         x = _hx_AnonObject({'type': "func", 'name': "autorelease", 'returnClass': self.className, 'isStatic': True, 'args': None})
         _this.append(x)
-        harray = _hdata.split("\n")
-        _g2_current = 0
-        _g2_array = harray
-        while (_g2_current < len(_g2_array)):
-            _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
-            _g3_key = _g2_current
-            _g2_current = (_g2_current + 1)
-            index = _g3_key
-            value = _g3_value
+        _g_current = 0
+        _g_array = harray
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
             startIndex = None
             if (((value.find("@property") if ((startIndex is None)) else HxString.indexOfImpl(value,"@property",startIndex))) == 0):
                 _this = self.funcAndAttr
@@ -205,10 +235,7 @@ class ExternHFile:
                     tmp = (((value.find("#if") if ((startIndex is None)) else HxString.indexOfImpl(value,"#if",startIndex))) != -1)
                 else:
                     tmp = False
-                if tmp:
-                    isMacro = True
-                    isRead = True
-                else:
+                if (not tmp):
                     startIndex1 = None
                     if (((value.find("@interface") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"@interface",startIndex1))) != -1):
                         isInterface = True
@@ -240,10 +267,7 @@ class ExternHFile:
                     tmp1 = (((value.find("#endif") if ((startIndex5 is None)) else HxString.indexOfImpl(value,"#endif",startIndex5))) != -1)
                 else:
                     tmp1 = False
-                if tmp1:
-                    isMacro = False
-                    isRead = False
-                else:
+                if (not tmp1):
                     tmp2 = None
                     if isTypedef:
                         startIndex6 = None

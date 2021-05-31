@@ -25,8 +25,8 @@ class ExternHFile {
 		for (index => value in contents) {
 			if (!isRead) {
 				if (index != 0 && value.indexOf("#if") != -1) {
-					isMacro = true;
-					isRead = true;
+					// isMacro = true;
+					// isRead = true;
 				} else if (value.indexOf("@interface") != -1) {
 					isInterface = true;
 					isRead = true;
@@ -51,8 +51,8 @@ class ExternHFile {
 			} else {
 				read.push(value);
 				if (isMacro && value.indexOf("#endif") != -1) {
-					isMacro = false;
-					isRead = false;
+					// isMacro = false;
+					// isRead = false;
 				} else if (isTypedef && value.indexOf(";") != -1) {
 					isRead = false;
 					isTypedef = false;

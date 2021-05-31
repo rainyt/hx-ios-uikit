@@ -24,18 +24,25 @@ class ExternBaseClass {
 	 */
 	private var funcAndAttr:Array<ExternBaseClassFunProperty> = [];
 
-	public function new(_hdata:String,hextern:ExternHFile) {
-		var pclassName = _hdata.substr(_hdata.indexOf("@interface") + 10);
-		for (i in 0...pclassName.length) {
-			if(pclassName.charAt(i) != " "){
-				pclassName = pclassName.substr(i);
-				break;
+	public function new(_hdata:String, hextern:ExternHFile) {
+		var harray = _hdata.split("\n");
+		var pclassName = harray[0];
+		pclassName = pclassName.substr(pclassName.indexOf("@interface") + 10);
+		if (pclassName.indexOf("(") != -1 && pclassName.indexOf("()") == -1) {
+			// 继承关系
+			pclassName = pclassName.substr(pclassName.lastIndexOf("(") + 1);
+			pclassName = pclassName.substr(0, pclassName.lastIndexOf(")"));
+		} else {
+			for (i in 0...pclassName.length) {
+				if (pclassName.charAt(i) != " ") {
+					pclassName = pclassName.substr(i);
+					break;
+				}
 			}
+			pclassName = pclassName.substr(0, pclassName.indexOf(" "));
 		}
-		pclassName = pclassName.substr(0, pclassName.indexOf(" "));
-		trace("pclassname2",pclassName);
-		if(pclassName == "")
-		{
+		trace("pclassname2", pclassName);
+		if (pclassName == "") {
 			throw "错误解析：" + _hdata;
 		}
 		this.className = StringTools.replace(pclassName, " ", "");
@@ -53,7 +60,6 @@ class ExternBaseClass {
 			isStatic: true,
 			args: null
 		});
-		var harray = _hdata.split("\n");
 		for (index => value in harray) {
 			if (value.indexOf("@property") == 0) {
 				// 属性解析

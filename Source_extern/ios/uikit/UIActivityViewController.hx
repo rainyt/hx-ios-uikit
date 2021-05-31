@@ -13,8 +13,26 @@ extern class UIActivityViewController{
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityViewController;
 
-	@:native("initWithActivityItemsConfiguration:API_AVAILABLE(ios(14.0)")
-	overload public function initWithActivityItemsConfiguration(activityItemsConfiguration:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIActivityViewController;
+	@:native("init")
+	overload public function init():UIActivityViewController;
+
+	@:native("initWithNibName:bundle")
+	overload public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIActivityViewController;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):UIActivityViewController;
+
+	@:native("initWithActivityItems:applicationActivities")
+	overload public function initWithActivityItems(activityItems:NSArray, applicationActivities:Dynamic):UIActivityViewController;
+
+	@:native("ios(6.0,")
+	public var ios(6.0,:Dynamic;
+
+	@:native("completionWithItemsHandler")
+	public var completionWithItemsHandler:UIActivityViewControllerCompletionWithItemsHandler;
+
+	@:native("be")
+	public var be:not;
 
 
 }

@@ -13,14 +13,11 @@ extern class UIUserNotificationSettings{
 	@:native("autorelease")
 	overload public static function autorelease():UIUserNotificationSettings;
 
-	@:native("settingsForTypes")
-	overload public static function settingsForTypes():UIUserNotificationSettings;
+	@:native("registerUserNotificationSettings:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions")
+	overload public function registerUserNotificationSettings(notificationSettings:UIUserNotificationSettings, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenter requestAuthorizationWithOptions:completionHandler:] and -[UNUserNotificationCenter setNotificationCategories:]", ios(8.0, 10.0):Dynamic):Void;
 
-	@:native("types")
-	public var types:UIUserNotificationType;
-
-	@:native("categories")
-	public var categories:Dynamic;
+	@:native("ios(8.0,")
+	public var ios(8.0,:getNotificationCategoriesWithCompletionHandler:]",;
 
 
 }

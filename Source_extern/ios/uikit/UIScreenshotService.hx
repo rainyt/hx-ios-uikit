@@ -13,17 +13,8 @@ extern class UIScreenshotService{
 	@:native("autorelease")
 	overload public static function autorelease():UIScreenshotService;
 
-	@:native("init")
-	overload public function init():UIScreenshotService;
-
-	@:native("new")
-	overload public static function new():UIScreenshotService;
-
-	@:native("delegate")
-	public var delegate:Dynamic;
-
-	@:native("windowScene")
-	public var windowScene:UIWindowScene;
+	@:native("screenshotService")
+	public var screenshotService:UIScreenshotService;
 
 
 }

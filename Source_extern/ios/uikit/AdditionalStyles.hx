@@ -1,0 +1,20 @@
+package ios.uikit;
+
+import cpp.objc.NSString;
+import cpp.objc.NSData;
+@:objc
+@:native("AdditionalStyles")
+@:include("UIKit/UIKit.h")
+extern class AdditionalStyles{
+
+	@:native("alloc")
+	overload public static function alloc():AdditionalStyles;
+
+	@:native("autorelease")
+	overload public static function autorelease():AdditionalStyles;
+
+	@:native("effectForBlurEffect:style:API_AVAILABLE(ios(13.0)")
+	overload public static function effectForBlurEffect(blurEffect:UIBlurEffect, style:UIVibrancyEffectStyle, API_AVAILABLE(ios(13.0):Dynamic):UIVibrancyEffect *;
+
+
+}
