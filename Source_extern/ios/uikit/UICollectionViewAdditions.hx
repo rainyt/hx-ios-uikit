@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewAdditions")
 @:include("UIKit/UIKit.h")
@@ -13,16 +12,16 @@ extern class UICollectionViewAdditions extends UIDynamicAnimator{
 	overload public static function autorelease():UICollectionViewAdditions;
 
 	@:native("initWithCollectionViewLayout")
-	overload public function initWithCollectionViewLayout(layout:Dynamic):UICollectionViewAdditions;
+	overload public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UICollectionViewAdditions;
 
 	@:native("layoutAttributesForCellAtIndexPath")
-	overload public function layoutAttributesForCellAtIndexPath(indexPath:Dynamic):Dynamic;
+	overload public function layoutAttributesForCellAtIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(kind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(kind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(decorationViewKind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(decorationViewKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 
 }

@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UICellAccessoryLabel")
 @:include("UIKit/UIKit.h")
@@ -13,10 +12,10 @@ extern class UICellAccessoryLabel extends UICellAccessory{
 	overload public static function autorelease():UICellAccessoryLabel;
 
 	@:native("initWithText")
-	overload public function initWithText(text:NSString):UICellAccessoryLabel;
+	overload public function initWithText(text:Dynamic):UICellAccessoryLabel;
 
 	@:native("font")
-	public var font:Dynamic;
+	public var font:UIFont;
 
 	@:native("adjustsFontForContentSizeCategory")
 	public var adjustsFontForContentSizeCategory:Bool;

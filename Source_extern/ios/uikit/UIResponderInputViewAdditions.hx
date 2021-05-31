@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIResponderInputViewAdditions")
 @:include("UIKit/UIKit.h")
@@ -13,28 +12,28 @@ extern class UIResponderInputViewAdditions extends UIResponder{
 	overload public static function autorelease():UIResponderInputViewAdditions;
 
 	@:native("inputView")
-	public var inputView:Dynamic;
+	public var inputView:UIView;
 
 	@:native("inputAccessoryView")
-	public var inputAccessoryView:Dynamic;
+	public var inputAccessoryView:UIView;
 
 	@:native("inputAssistantItem")
-	public var inputAssistantItem:Dynamic;
+	public var inputAssistantItem:UITextInputAssistantItem;
 
 	@:native("inputViewController")
-	public var inputViewController:Dynamic;
+	public var inputViewController:UIInputViewController;
 
 	@:native("inputAccessoryViewController")
-	public var inputAccessoryViewController:Dynamic;
+	public var inputAccessoryViewController:UIInputViewController;
 
 	@:native("textInputMode")
-	public var textInputMode:Dynamic;
+	public var textInputMode:UITextInputMode;
 
 	@:native("textInputContextIdentifier")
-	public var textInputContextIdentifier:NSString;
+	public var textInputContextIdentifier:Dynamic;
 
 	@:native("clearTextInputContextIdentifier")
-	overload public static function clearTextInputContextIdentifier(identifier:NSString):Void;
+	overload public static function clearTextInputContextIdentifier(identifier:Dynamic):Void;
 
 	@:native("reloadInputViews")
 	overload public function reloadInputViews():Void;

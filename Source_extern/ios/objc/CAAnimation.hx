@@ -9,7 +9,7 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class CAAnimation
 implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<Dynamic>
 implements cpp.objc.Protocol<CAMediaTiming>
 implements cpp.objc.Protocol<CAAction>
 {
@@ -18,13 +18,13 @@ implements cpp.objc.Protocol<CAAction>
   @:native("autorelease") public function autorelease():CAAnimation;
   /* Implicit from CAMediaTiming */ @:native("autoreverses") public function autoreverses():Bool;
   /* Implicit from CAMediaTiming */ @:native("beginTime") public function beginTime():Float;
-  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  /* Implicit from Dynamic */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
   @:native("defaultValueForKey") public static function defaultValueForKey(key:NSString):Dynamic;
   @:native("delegate") public function delegate():CAAnimationDelegate;
   /* Implicit from CAMediaTiming */ @:native("duration") public function duration():Float;
-  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:Dynamic):Void;
   /* Implicit from CAMediaTiming */ @:native("fillMode") public function fillMode():NSString;
-  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:Dynamic):NSCoding;
   @:native("isRemovedOnCompletion") public function isRemovedOnCompletion():Bool;
   /* Implicit from CAMediaTiming */ @:native("repeatCount") public function repeatCount():Float;
   /* Implicit from CAMediaTiming */ @:native("repeatDuration") public function repeatDuration():Float;

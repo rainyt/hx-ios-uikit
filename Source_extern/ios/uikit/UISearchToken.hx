@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UISearchToken")
 @:include("UIKit/UIKit.h")
-extern class UISearchToken extends NSObject{
+extern class UISearchToken{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchToken;
@@ -19,7 +18,7 @@ extern class UISearchToken extends NSObject{
 	overload public static function new():UISearchToken;
 
 	@:native("tokenWithIcon:text")
-	overload public static function tokenWithIcon_text(icon:Dynamic, text:NSString):UISearchToken;
+	overload public static function tokenWithIcon_text(icon:UIImage, text:Dynamic):UISearchToken;
 
 	@:native("representedObject")
 	public var representedObject:Dynamic;

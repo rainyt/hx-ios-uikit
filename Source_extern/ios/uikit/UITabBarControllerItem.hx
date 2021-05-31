@@ -12,13 +12,13 @@ extern class UITabBarControllerItem extends UIViewController{
 	overload public static function autorelease():UITabBarControllerItem;
 
 	@:native("tabBarItem")
-	public var tabBarItem:Dynamic;
+	public var tabBarItem:UITabBarItem;
 
 	@:native("tabBarController")
 	public var tabBarController:UITabBarController;
 
 	@:native("tabBarObservedScrollView")
-	public var tabBarObservedScrollView:Dynamic;
+	public var tabBarObservedScrollView:UIScrollView;
 
 
 }

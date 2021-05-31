@@ -41,10 +41,10 @@ extern class UIViewGeometry extends UIView{
 	public var exclusiveTouch:Bool;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:Dynamic):UIView;
+	overload public function hitTest_withEvent(point:CGPoint, withEvent:UIEvent):UIView;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside_withEvent(point:CGPoint, withEvent:Dynamic):Bool;
+	overload public function pointInside_withEvent(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
 	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
@@ -62,7 +62,7 @@ extern class UIViewGeometry extends UIView{
 	public var autoresizesSubviews:Bool;
 
 	@:native("autoresizingMask")
-	public var autoresizingMask:Dynamic;
+	public var autoresizingMask:UIViewAutoresizing;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;

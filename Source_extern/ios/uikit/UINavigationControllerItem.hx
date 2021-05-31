@@ -12,7 +12,7 @@ extern class UINavigationControllerItem extends UIViewController{
 	overload public static function autorelease():UINavigationControllerItem;
 
 	@:native("navigationItem")
-	public var navigationItem:Dynamic;
+	public var navigationItem:UINavigationItem;
 
 	@:native("hidesBottomBarWhenPushed")
 	public var hidesBottomBarWhenPushed:Bool;

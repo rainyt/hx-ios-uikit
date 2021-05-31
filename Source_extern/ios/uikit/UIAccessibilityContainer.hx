@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAccessibilityContainer")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityContainer extends NSObject{
+extern class UIAccessibilityContainer{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityContainer;
@@ -24,7 +24,7 @@ extern class UIAccessibilityContainer extends NSObject{
 	public var accessibilityElements:Dynamic;
 
 	@:native("accessibilityContainerType")
-	public var accessibilityContainerType:Dynamic;
+	public var accessibilityContainerType:UIAccessibilityContainerType;
 
 
 }

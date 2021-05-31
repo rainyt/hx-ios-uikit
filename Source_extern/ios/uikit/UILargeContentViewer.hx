@@ -15,7 +15,7 @@ extern class UILargeContentViewer extends UIView{
 	public var showsLargeContentViewer:Bool;
 
 	@:native("largeContentImage")
-	public var largeContentImage:Dynamic;
+	public var largeContentImage:UIImage;
 
 	@:native("scalesLargeContentImage")
 	public var scalesLargeContentImage:Bool;

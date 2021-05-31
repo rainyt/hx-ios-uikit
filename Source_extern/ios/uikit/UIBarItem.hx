@@ -21,13 +21,13 @@ extern class UIBarItem{
 	public var enabled:Bool;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("landscapeImagePhone")
-	public var landscapeImagePhone:Dynamic;
+	public var landscapeImagePhone:UIImage;
 
 	@:native("largeContentSizeImage")
-	public var largeContentSizeImage:Dynamic;
+	public var largeContentSizeImage:UIImage;
 
 	@:native("imageInsets")
 	public var imageInsets:Dynamic;
@@ -42,10 +42,10 @@ extern class UIBarItem{
 	public var tag:Int;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes_forState(attributes:Dynamic, forState:Dynamic):Void;
+	overload public function setTitleTextAttributes_forState(attributes:Dynamic, forState:UIControlState):Void;
 
 	@:native("titleTextAttributesForState")
-	overload public function titleTextAttributesForState(state:Dynamic):Dynamic;
+	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
 
 
 }

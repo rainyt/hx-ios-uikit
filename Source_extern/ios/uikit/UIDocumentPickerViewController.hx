@@ -12,7 +12,7 @@ extern class UIDocumentPickerViewController extends UIViewController{
 	overload public static function autorelease():UIDocumentPickerViewController;
 
 	@:native("initWithDocumentTypes:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithDocumentTypes_inMode_NS_DESIGNATED_INITIALIZER(allowedUTIs:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload public function initWithDocumentTypes_inMode_NS_DESIGNATED_INITIALIZER(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
 	@:native("initForOpeningContentTypes:asCopy:NS_DESIGNATED_INITIALIZER")
 	overload public function initForOpeningContentTypes_asCopy_NS_DESIGNATED_INITIALIZER(contentTypes:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
@@ -24,10 +24,10 @@ extern class UIDocumentPickerViewController extends UIViewController{
 	overload public function initWithCoder(coder:Dynamic):UIDocumentPickerViewController;
 
 	@:native("initWithURL:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithURL_inMode_NS_DESIGNATED_INITIALIZER(url:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload public function initWithURL_inMode_NS_DESIGNATED_INITIALIZER(url:Dynamic, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
 	@:native("initWithURLs:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithURLs_inMode_NS_DESIGNATED_INITIALIZER(urls:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload public function initWithURLs_inMode_NS_DESIGNATED_INITIALIZER(urls:Dynamic, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
 	@:native("initForExportingURLs:asCopy:NS_DESIGNATED_INITIALIZER")
 	overload public function initForExportingURLs_asCopy_NS_DESIGNATED_INITIALIZER(urls:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
@@ -39,7 +39,7 @@ extern class UIDocumentPickerViewController extends UIViewController{
 	public var delegate:Dynamic;
 
 	@:native("documentPickerMode")
-	public var documentPickerMode:Dynamic;
+	public var documentPickerMode:UIDocumentPickerMode;
 
 	@:native("allowsMultipleSelection")
 	public var allowsMultipleSelection:Bool;

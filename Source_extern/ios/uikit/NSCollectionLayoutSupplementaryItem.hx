@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("NSCollectionLayoutSupplementaryItem")
 @:include("UIKit/UIKit.h")
@@ -13,10 +12,10 @@ extern class NSCollectionLayoutSupplementaryItem{
 	overload public static function autorelease():NSCollectionLayoutSupplementaryItem;
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor")
-	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:Dynamic):NSCollectionLayoutSupplementaryItem;
+	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor(layoutSize:NSCollectionLayoutSize, elementKind:Dynamic, containerAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor")
-	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor_itemAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:Dynamic, itemAnchor:Dynamic):NSCollectionLayoutSupplementaryItem;
+	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor_itemAnchor(layoutSize:NSCollectionLayoutSize, elementKind:Dynamic, containerAnchor:NSCollectionLayoutAnchor, itemAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutSupplementaryItem;
@@ -28,13 +27,13 @@ extern class NSCollectionLayoutSupplementaryItem{
 	public var zIndex:Int;
 
 	@:native("elementKind")
-	public var elementKind:NSString;
+	public var elementKind:Dynamic;
 
 	@:native("containerAnchor")
-	public var containerAnchor:Dynamic;
+	public var containerAnchor:NSCollectionLayoutAnchor;
 
 	@:native("itemAnchor")
-	public var itemAnchor:Dynamic;
+	public var itemAnchor:NSCollectionLayoutAnchor;
 
 
 }

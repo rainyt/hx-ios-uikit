@@ -13,22 +13,22 @@ extern class UISwitch{
 	overload public static function autorelease():UISwitch;
 
 	@:native("onTintColor")
-	public var onTintColor:Dynamic;
+	public var onTintColor:UIColor;
 
 	@:native("thumbTintColor")
-	public var thumbTintColor:Dynamic;
+	public var thumbTintColor:UIColor;
 
 	@:native("onImage")
-	public var onImage:Dynamic;
+	public var onImage:UIImage;
 
 	@:native("offImage")
-	public var offImage:Dynamic;
+	public var offImage:UIImage;
 
 	@:native("style")
-	public var style:Dynamic;
+	public var style:UISwitchStyle;
 
 	@:native("preferredStyle")
-	public var preferredStyle:Dynamic;
+	public var preferredStyle:UISwitchStyle;
 
 	@:native("on")
 	public var on:Bool;

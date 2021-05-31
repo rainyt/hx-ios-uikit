@@ -19,16 +19,16 @@ extern class UIPanGestureRecognizer extends UIGestureRecognizer{
 	public var maximumNumberOfTouches:Int;
 
 	@:native("translationInView")
-	overload public function translationInView(view:Dynamic):CGPoint;
+	overload public function translationInView(view:UIView):CGPoint;
 
 	@:native("setTranslation:inView")
-	overload public function setTranslation_inView(translation:CGPoint, inView:Dynamic):Void;
+	overload public function setTranslation_inView(translation:CGPoint, inView:UIView):Void;
 
 	@:native("velocityInView")
-	overload public function velocityInView(view:Dynamic):CGPoint;
+	overload public function velocityInView(view:UIView):CGPoint;
 
 	@:native("allowedScrollTypesMask")
-	public var allowedScrollTypesMask:Dynamic;
+	public var allowedScrollTypesMask:UIScrollTypeMask;
 
 
 }

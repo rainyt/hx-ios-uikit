@@ -4,7 +4,7 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIScreenMode")
 @:include("UIKit/UIKit.h")
-extern class UIScreenMode extends NSObject{
+extern class UIScreenMode{
 
 	@:native("alloc")
 	overload public static function alloc():UIScreenMode;

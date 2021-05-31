@@ -29,8 +29,8 @@ class ObjcType {
 				return def.className == def.parentClassName ? def.className : ObjcType.toType(def.parentClassName, typedefs);
 		}
 
-		var i = ObjcImport.toImport(t);
-		if (i == null) {
+		var i = ObjcImport.hasClass(t);
+		if (!i) {
 			return "Dynamic";
 		}
 		return t;

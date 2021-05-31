@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("NSCollectionLayoutDecorationItem")
 @:include("UIKit/UIKit.h")
@@ -13,7 +12,7 @@ extern class NSCollectionLayoutDecorationItem{
 	overload public static function autorelease():NSCollectionLayoutDecorationItem;
 
 	@:native("backgroundDecorationItemWithElementKind")
-	overload public static function backgroundDecorationItemWithElementKind(elementKind:NSString):NSCollectionLayoutDecorationItem;
+	overload public static function backgroundDecorationItemWithElementKind(elementKind:Dynamic):NSCollectionLayoutDecorationItem;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutDecorationItem;
@@ -25,7 +24,7 @@ extern class NSCollectionLayoutDecorationItem{
 	public var zIndex:Int;
 
 	@:native("elementKind")
-	public var elementKind:NSString;
+	public var elementKind:Dynamic;
 
 
 }

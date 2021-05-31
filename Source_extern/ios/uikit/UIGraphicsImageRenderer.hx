@@ -2,7 +2,6 @@ package ios.uikit;
 
 import ios.objc.CGSize;
 import ios.objc.CGRect;
-import cpp.objc.NSData;
 @:objc
 @:native("UIGraphicsImageRenderer")
 @:include("UIKit/UIKit.h")
@@ -24,13 +23,13 @@ extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("imageWithActions")
-	overload public function imageWithActions(actions:Dynamic):Dynamic;
+	overload public function imageWithActions(actions:Dynamic):UIImage;
 
 	@:native("PNGDataWithActions")
-	overload public function PNGDataWithActions(actions:Dynamic):NSData;
+	overload public function PNGDataWithActions(actions:Dynamic):Dynamic;
 
 	@:native("JPEGDataWithCompressionQuality:actions")
-	overload public function JPEGDataWithCompressionQuality_actions(compressionQuality:Float, actions:Dynamic):NSData;
+	overload public function JPEGDataWithCompressionQuality_actions(compressionQuality:Float, actions:Dynamic):Dynamic;
 
 
 }

@@ -12,7 +12,7 @@ extern class ImageConfiguration extends UITraitCollection{
 	overload public static function autorelease():ImageConfiguration;
 
 	@:native("imageConfiguration")
-	public var imageConfiguration:Dynamic;
+	public var imageConfiguration:UIImageConfiguration;
 
 
 }

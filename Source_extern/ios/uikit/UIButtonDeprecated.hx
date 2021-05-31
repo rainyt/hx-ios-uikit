@@ -13,10 +13,10 @@ extern class UIButtonDeprecated extends UIButton{
 	overload public static function autorelease():UIButtonDeprecated;
 
 	@:native("font")
-	public var font:Dynamic;
+	public var font:UIFont;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:Dynamic;
+	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("titleShadowOffset")
 	public var titleShadowOffset:CGSize;

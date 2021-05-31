@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UINavigationController")
 @:include("UIKit/UIKit.h")
@@ -16,31 +15,31 @@ extern class UINavigationController extends UIViewController{
 	overload public function initWithNavigationBarClass_toolbarClass_NS_DESIGNATED_INITIALIZER(navigationBarClass:Dynamic, toolbarClass:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UINavigationController;
 
 	@:native("initWithRootViewController")
-	overload public function initWithRootViewController(rootViewController:Dynamic):UINavigationController;
+	overload public function initWithRootViewController(rootViewController:UIViewController):UINavigationController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UINavigationController;
+	overload public function initWithNibName_bundle(nibNameOrNil:Dynamic, bundle:Dynamic):UINavigationController;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(aDecoder:Dynamic):UINavigationController;
 
 	@:native("pushViewController:animated")
-	overload public function pushViewController_animated(viewController:Dynamic, animated:Bool):Void;
+	overload public function pushViewController_animated(viewController:UIViewController, animated:Bool):Void;
 
 	@:native("popViewControllerAnimated")
-	overload public function popViewControllerAnimated(animated:Bool):Dynamic;
+	overload public function popViewControllerAnimated(animated:Bool):UIViewController;
 
 	@:native("popToViewController:animated")
-	overload public function popToViewController_animated(viewController:Dynamic, animated:Bool):Dynamic;
+	overload public function popToViewController_animated(viewController:UIViewController, animated:Bool):Dynamic;
 
 	@:native("popToRootViewControllerAnimated")
 	overload public function popToRootViewControllerAnimated(animated:Bool):Dynamic;
 
 	@:native("topViewController")
-	public var topViewController:Dynamic;
+	public var topViewController:UIViewController;
 
 	@:native("visibleViewController")
-	public var visibleViewController:Dynamic;
+	public var visibleViewController:UIViewController;
 
 	@:native("setViewControllers:animated")
 	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;
@@ -52,7 +51,7 @@ extern class UINavigationController extends UIViewController{
 	overload public function setNavigationBarHidden_animated(hidden:Bool, animated:Bool):Void;
 
 	@:native("navigationBar")
-	public var navigationBar:Dynamic;
+	public var navigationBar:UINavigationBar;
 
 	@:native("toolbarHidden")
 	public var toolbarHidden:Bool;
@@ -61,16 +60,16 @@ extern class UINavigationController extends UIViewController{
 	overload public function setToolbarHidden_animated(hidden:Bool, animated:Bool):Void;
 
 	@:native("toolbar")
-	public var toolbar:Dynamic;
+	public var toolbar:UIToolbar;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("interactivePopGestureRecognizer")
-	public var interactivePopGestureRecognizer:Dynamic;
+	public var interactivePopGestureRecognizer:UIGestureRecognizer;
 
 	@:native("showViewController:sender")
-	overload public function showViewController_sender(vc:Dynamic, sender:Dynamic):Void;
+	overload public function showViewController_sender(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("hidesBarsWhenKeyboardAppears")
 	public var hidesBarsWhenKeyboardAppears:Bool;
@@ -79,7 +78,7 @@ extern class UINavigationController extends UIViewController{
 	public var hidesBarsOnSwipe:Bool;
 
 	@:native("barHideOnSwipeGestureRecognizer")
-	public var barHideOnSwipeGestureRecognizer:Dynamic;
+	public var barHideOnSwipeGestureRecognizer:UIPanGestureRecognizer;
 
 	@:native("hidesBarsWhenVerticallyCompact")
 	public var hidesBarsWhenVerticallyCompact:Bool;
@@ -88,7 +87,7 @@ extern class UINavigationController extends UIViewController{
 	public var hidesBarsOnTap:Bool;
 
 	@:native("barHideOnTapGestureRecognizer")
-	public var barHideOnTapGestureRecognizer:Dynamic;
+	public var barHideOnTapGestureRecognizer:UITapGestureRecognizer;
 
 
 }

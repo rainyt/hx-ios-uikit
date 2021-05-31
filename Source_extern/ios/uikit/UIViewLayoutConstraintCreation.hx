@@ -12,40 +12,40 @@ extern class UIViewLayoutConstraintCreation extends UIView{
 	overload public static function autorelease():UIViewLayoutConstraintCreation;
 
 	@:native("leadingAnchor")
-	public var leadingAnchor:Dynamic;
+	public var leadingAnchor:NSLayoutXAxisAnchor;
 
 	@:native("trailingAnchor")
-	public var trailingAnchor:Dynamic;
+	public var trailingAnchor:NSLayoutXAxisAnchor;
 
 	@:native("leftAnchor")
-	public var leftAnchor:Dynamic;
+	public var leftAnchor:NSLayoutXAxisAnchor;
 
 	@:native("rightAnchor")
-	public var rightAnchor:Dynamic;
+	public var rightAnchor:NSLayoutXAxisAnchor;
 
 	@:native("topAnchor")
-	public var topAnchor:Dynamic;
+	public var topAnchor:NSLayoutYAxisAnchor;
 
 	@:native("bottomAnchor")
-	public var bottomAnchor:Dynamic;
+	public var bottomAnchor:NSLayoutYAxisAnchor;
 
 	@:native("widthAnchor")
-	public var widthAnchor:Dynamic;
+	public var widthAnchor:NSLayoutDimension;
 
 	@:native("heightAnchor")
-	public var heightAnchor:Dynamic;
+	public var heightAnchor:NSLayoutDimension;
 
 	@:native("centerXAnchor")
-	public var centerXAnchor:Dynamic;
+	public var centerXAnchor:NSLayoutXAxisAnchor;
 
 	@:native("centerYAnchor")
-	public var centerYAnchor:Dynamic;
+	public var centerYAnchor:NSLayoutYAxisAnchor;
 
 	@:native("firstBaselineAnchor")
-	public var firstBaselineAnchor:Dynamic;
+	public var firstBaselineAnchor:NSLayoutYAxisAnchor;
 
 	@:native("lastBaselineAnchor")
-	public var lastBaselineAnchor:Dynamic;
+	public var lastBaselineAnchor:NSLayoutYAxisAnchor;
 
 
 }

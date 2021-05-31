@@ -13,10 +13,10 @@ extends CALayer
   @:native("alloc") public static function alloc():CAGradientLayer;
   @:overload(function():CAGradientLayer {})
   @:native("autorelease") override public function autorelease():CALayer;
-  @:native("colors") public function colors():NSArray;
+  @:native("colors") public function colors():Dynamic;
   @:native("endPoint") public function endPoint():CGPoint;
   @:native("locations") public function locations():Dynamic;
-  @:native("setColors") public function setColors(colors:NSArray):Void;
+  @:native("setColors") public function setColors(colors:Dynamic):Void;
   @:native("setEndPoint") public function setEndPoint(endPoint:CGPoint):Void;
   @:native("setLocations") public function setLocations(locations:Dynamic):Void;
   @:native("setStartPoint") public function setStartPoint(startPoint:CGPoint):Void;

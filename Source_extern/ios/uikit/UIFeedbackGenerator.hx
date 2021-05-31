@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFeedbackGenerator")
 @:include("UIKit/UIKit.h")
-extern class UIFeedbackGenerator extends NSObject{
+extern class UIFeedbackGenerator{
 
 	@:native("alloc")
 	overload public static function alloc():UIFeedbackGenerator;

@@ -18,7 +18,7 @@ extern class UIViewControllerEditing extends UIViewController{
 	overload public function setEditing_animated(editing:Bool, animated:Bool):Void;
 
 	@:native("editButtonItem")
-	public var editButtonItem:Dynamic;
+	public var editButtonItem:UIBarButtonItem;
 
 
 }

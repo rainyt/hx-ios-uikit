@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIMenuSystem")
 @:include("UIKit/UIKit.h")
-extern class UIMenuSystem extends NSObject{
+extern class UIMenuSystem{
 
 	@:native("alloc")
 	overload public static function alloc():UIMenuSystem;

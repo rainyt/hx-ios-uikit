@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UITextSelectionRect")
 @:include("UIKit/UIKit.h")
-extern class UITextSelectionRect extends NSObject{
+extern class UITextSelectionRect{
 
 	@:native("alloc")
 	overload public static function alloc():UITextSelectionRect;
@@ -16,7 +16,7 @@ extern class UITextSelectionRect extends NSObject{
 	public var rect:CGRect;
 
 	@:native("writingDirection")
-	public var writingDirection:Dynamic;
+	public var writingDirection:NSWritingDirection;
 
 	@:native("containsStart")
 	public var containsStart:Bool;

@@ -18,7 +18,7 @@ extern class UIUserNotificationCategory{
 	overload public function initWithCoder_NS_DESIGNATED_INITIALIZER(coder:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationCategory;
 
 	@:native("actionsForContext")
-	overload public function actionsForContext(context:Dynamic):Dynamic;
+	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;
 
 
 }

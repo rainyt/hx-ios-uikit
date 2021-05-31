@@ -18,10 +18,10 @@ extern class UICommand extends UIMenuElement{
 	public var propertyList:Dynamic;
 
 	@:native("attributes")
-	public var attributes:Dynamic;
+	public var attributes:UIMenuElementAttributes;
 
 	@:native("state")
-	public var state:Dynamic;
+	public var state:UIMenuElementState;
 
 	@:native("alternates")
 	public var alternates:Dynamic;

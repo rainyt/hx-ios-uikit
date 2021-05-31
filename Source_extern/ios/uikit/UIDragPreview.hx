@@ -12,10 +12,10 @@ extern class UIDragPreview{
 	overload public static function autorelease():UIDragPreview;
 
 	@:native("initWithView:parameters")
-	overload public function initWithView_parameters(view:Dynamic, parameters:Dynamic):UIDragPreview;
+	overload public function initWithView_parameters(view:UIView, parameters:UIDragPreviewParameters):UIDragPreview;
 
 	@:native("initWithView")
-	overload public function initWithView(view:Dynamic):UIDragPreview;
+	overload public function initWithView(view:UIView):UIDragPreview;
 
 	@:native("init")
 	overload public function init():UIDragPreview;
@@ -24,7 +24,7 @@ extern class UIDragPreview{
 	overload public static function new():UIDragPreview;
 
 	@:native("view")
-	public var view:Dynamic;
+	public var view:UIView;
 
 
 }

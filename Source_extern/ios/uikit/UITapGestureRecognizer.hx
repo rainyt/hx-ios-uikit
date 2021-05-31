@@ -18,7 +18,7 @@ extern class UITapGestureRecognizer extends UIGestureRecognizer{
 	public var numberOfTouchesRequired:Int;
 
 	@:native("buttonMaskRequired")
-	public var buttonMaskRequired:Dynamic;
+	public var buttonMaskRequired:UIEventButtonMask;
 
 
 }

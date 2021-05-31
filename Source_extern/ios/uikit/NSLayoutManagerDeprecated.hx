@@ -22,7 +22,7 @@ extern class NSLayoutManagerDeprecated extends NSLayoutManager{
 	public var hyphenationFactor:null;
 
 	@:native("showCGGlyphs:positions:count:font:matrix:attributes:inContext")
-	overload public function showCGGlyphs_positions_count_font_matrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Int, font:Dynamic, matrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
+	overload public function showCGGlyphs_positions_count_font_matrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Int, font:UIFont, matrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
 
 
 }

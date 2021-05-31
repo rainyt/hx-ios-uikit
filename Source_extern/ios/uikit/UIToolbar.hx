@@ -12,7 +12,7 @@ extern class UIToolbar{
 	overload public static function autorelease():UIToolbar;
 
 	@:native("barStyle")
-	public var barStyle:Dynamic;
+	public var barStyle:UIBarStyle;
 
 	@:native("translucent")
 	public var translucent:Bool;
@@ -21,22 +21,22 @@ extern class UIToolbar{
 	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
 
 	@:native("tintColor")
-	public var tintColor:Dynamic;
+	public var tintColor:UIColor;
 
 	@:native("barTintColor")
-	public var barTintColor:Dynamic;
+	public var barTintColor:UIColor;
 
 	@:native("setBackgroundImage:forToolbarPosition:barMetrics")
-	overload public function setBackgroundImage_forToolbarPosition_barMetrics(backgroundImage:Dynamic, forToolbarPosition:Dynamic, barMetrics:Dynamic):Void;
+	overload public function setBackgroundImage_forToolbarPosition_barMetrics(backgroundImage:UIImage, forToolbarPosition:UIBarPosition, barMetrics:UIBarMetrics):Void;
 
 	@:native("backgroundImageForToolbarPosition:barMetrics")
-	overload public function backgroundImageForToolbarPosition_barMetrics(topOrBottom:Dynamic, barMetrics:Dynamic):Dynamic;
+	overload public function backgroundImageForToolbarPosition_barMetrics(topOrBottom:UIBarPosition, barMetrics:UIBarMetrics):UIImage;
 
 	@:native("setShadowImage:forToolbarPosition")
-	overload public function setShadowImage_forToolbarPosition(shadowImage:Dynamic, forToolbarPosition:Dynamic):Void;
+	overload public function setShadowImage_forToolbarPosition(shadowImage:UIImage, forToolbarPosition:UIBarPosition):Void;
 
 	@:native("shadowImageForToolbarPosition")
-	overload public function shadowImageForToolbarPosition(topOrBottom:Dynamic):Dynamic;
+	overload public function shadowImageForToolbarPosition(topOrBottom:UIBarPosition):UIImage;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

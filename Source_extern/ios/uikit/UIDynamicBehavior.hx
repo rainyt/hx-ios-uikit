@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIDynamicBehavior")
 @:include("UIKit/UIKit.h")
-extern class UIDynamicBehavior extends NSObject{
+extern class UIDynamicBehavior{
 
 	@:native("alloc")
 	overload public static function alloc():UIDynamicBehavior;

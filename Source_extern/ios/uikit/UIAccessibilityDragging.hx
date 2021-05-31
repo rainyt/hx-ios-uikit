@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAccessibilityDragging")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityDragging extends NSObject{
+extern class UIAccessibilityDragging{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityDragging;

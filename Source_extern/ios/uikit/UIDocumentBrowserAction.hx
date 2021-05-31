@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentBrowserAction")
 @:include("UIKit/UIKit.h")
-extern class UIDocumentBrowserAction extends NSObject{
+extern class UIDocumentBrowserAction{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserAction;
@@ -16,19 +15,19 @@ extern class UIDocumentBrowserAction extends NSObject{
 	overload public function init():UIDocumentBrowserAction;
 
 	@:native("initWithIdentifier:localizedTitle:availability:handler")
-	overload public function initWithIdentifier_localizedTitle_availability_handler(identifier:NSString, localizedTitle:NSString, availability:Dynamic, handler:Dynamic):UIDocumentBrowserAction;
+	overload public function initWithIdentifier_localizedTitle_availability_handler(identifier:Dynamic, localizedTitle:Dynamic, availability:UIDocumentBrowserActionAvailability, handler:Dynamic):UIDocumentBrowserAction;
 
 	@:native("identifier")
-	public var identifier:NSString;
+	public var identifier:Dynamic;
 
 	@:native("localizedTitle")
-	public var localizedTitle:NSString;
+	public var localizedTitle:Dynamic;
 
 	@:native("availability")
-	public var availability:Dynamic;
+	public var availability:UIDocumentBrowserActionAvailability;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("supportsMultipleItems")
 	public var supportsMultipleItems:Bool;

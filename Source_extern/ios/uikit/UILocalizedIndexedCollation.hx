@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UILocalizedIndexedCollation")
 @:include("UIKit/UIKit.h")
-extern class UILocalizedIndexedCollation extends NSObject{
+extern class UILocalizedIndexedCollation{
 
 	@:native("alloc")
 	overload public static function alloc():UILocalizedIndexedCollation;

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFocusAnimationCoordinator")
 @:include("UIKit/UIKit.h")
-extern class UIFocusAnimationCoordinator extends NSObject{
+extern class UIFocusAnimationCoordinator{
 
 	@:native("alloc")
 	overload public static function alloc():UIFocusAnimationCoordinator;

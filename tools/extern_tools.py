@@ -132,11 +132,12 @@ class ExternBaseClass:
                     pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
                 self.extendClassName = HxString.substr(_this,(pos + 1),None)
                 self.extendClassName = StringTools.replace(self.extendClassName," ","")
+                self.extendClassName = StringTools.replace(self.extendClassName,"{","")
         tmp = None
         if (self.extendClassName is not None):
             _this = self.extendClassName
             startIndex = None
-            tmp = (((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) != -1)
+            tmp = ((((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) != -1) or ((self.extendClassName == "NSObject")))
         else:
             tmp = False
         if tmp:
@@ -764,7 +765,7 @@ class ObjcFun:
 class ObjcImport:
     _hx_class_name = "ObjcImport"
     __slots__ = ()
-    _hx_statics = ["toImport"]
+    _hx_statics = ["toImport", "hasClass"]
 
     @staticmethod
     def toImport(_hx_type):
@@ -796,6 +797,21 @@ class ObjcImport:
         if sys_FileSystem.exists((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/objc/") + ("null" if _hx_type is None else _hx_type)) + ".hx")):
             return ("ios.objc." + ("null" if _hx_type is None else _hx_type))
         return None
+
+    @staticmethod
+    def hasClass(_hx_type):
+        files = sys_FileSystem.readDirectory((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios"))
+        _g_current = 0
+        _g_array = files
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            if sys_FileSystem.exists((((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/") + ("null" if value is None else value)) + "/") + ("null" if _hx_type is None else _hx_type)) + ".hx")):
+                return True
+        return False
 
 
 class ObjcProperty:
@@ -900,6 +916,7 @@ class ObjcProperty:
             else:
                 return False
         p = list(filter(_hx_local_7,p))
+        print(str(p))
         return _hx_AnonObject({'name': python_internal_ArrayImpl._get(p, (len(p) - 1)), 'type': ("func" if isClass else "property"), 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': isClass, 'args': None})
 
 
@@ -948,8 +965,8 @@ class ObjcType:
                     return _hx_def.className
                 else:
                     return ObjcType.toType(_hx_def.parentClassName,typedefs)
-        i = ObjcImport.toImport(t)
-        if (i is None):
+        i = ObjcImport.hasClass(t)
+        if (not i):
             return "Dynamic"
         return t
 

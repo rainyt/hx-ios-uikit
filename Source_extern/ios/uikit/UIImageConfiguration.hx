@@ -18,10 +18,10 @@ extern class UIImageConfiguration{
 	overload public function init():UIImageConfiguration;
 
 	@:native("traitCollection")
-	public var traitCollection:Dynamic;
+	public var traitCollection:UITraitCollection;
 
 	@:native("configurationWithTraitCollection")
-	overload public function configurationWithTraitCollection(traitCollection:Dynamic):UIImageConfiguration;
+	overload public function configurationWithTraitCollection(traitCollection:UITraitCollection):UIImageConfiguration;
 
 	@:native("configurationByApplyingConfiguration")
 	overload public function configurationByApplyingConfiguration(otherConfiguration:UIImageConfiguration):UIImageConfiguration;

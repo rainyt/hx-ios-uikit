@@ -1,11 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
-import cpp.objc.NSData;
 @:objc
 @:native("UIPasteboard")
 @:include("UIKit/UIKit.h")
-extern class UIPasteboard extends NSObject{
+extern class UIPasteboard{
 
 	@:native("alloc")
 	overload public static function alloc():UIPasteboard;
@@ -17,16 +15,16 @@ extern class UIPasteboard extends NSObject{
 	overload public static function generalPasteboard():UIPasteboard;
 
 	@:native("pasteboardWithName:create")
-	overload public static function pasteboardWithName_create(pasteboardName:NSString, create:Bool):UIPasteboard;
+	overload public static function pasteboardWithName_create(pasteboardName:Dynamic, create:Bool):UIPasteboard;
 
 	@:native("pasteboardWithUniqueName")
 	overload public static function pasteboardWithUniqueName():UIPasteboard;
 
 	@:native("name")
-	public var name:NSString;
+	public var name:Dynamic;
 
 	@:native("removePasteboardWithName")
-	overload public static function removePasteboardWithName(pasteboardName:NSString):Void;
+	overload public static function removePasteboardWithName(pasteboardName:Dynamic):Void;
 
 	@:native("persistent")
 	public var persistent:Bool;
@@ -53,16 +51,16 @@ extern class UIPasteboard extends NSObject{
 	overload public function containsPasteboardTypes(pasteboardTypes:Dynamic):Bool;
 
 	@:native("dataForPasteboardType")
-	overload public function dataForPasteboardType(pasteboardType:NSString):NSData;
+	overload public function dataForPasteboardType(pasteboardType:Dynamic):Dynamic;
 
 	@:native("valueForPasteboardType")
-	overload public function valueForPasteboardType(pasteboardType:NSString):Dynamic;
+	overload public function valueForPasteboardType(pasteboardType:Dynamic):Dynamic;
 
 	@:native("setValue:forPasteboardType")
-	overload public function setValue_forPasteboardType(value:Dynamic, forPasteboardType:NSString):Void;
+	overload public function setValue_forPasteboardType(value:Dynamic, forPasteboardType:Dynamic):Void;
 
 	@:native("setData:forPasteboardType")
-	overload public function setData_forPasteboardType(data:NSData, forPasteboardType:NSString):Void;
+	overload public function setData_forPasteboardType(data:Dynamic, forPasteboardType:Dynamic):Void;
 
 	@:native("numberOfItems")
 	public var numberOfItems:Int;
@@ -77,10 +75,10 @@ extern class UIPasteboard extends NSObject{
 	overload public function itemSetWithPasteboardTypes(pasteboardTypes:Dynamic):Dynamic;
 
 	@:native("valuesForPasteboardType:inItemSet")
-	overload public function valuesForPasteboardType_inItemSet(pasteboardType:NSString, inItemSet:Dynamic):Dynamic;
+	overload public function valuesForPasteboardType_inItemSet(pasteboardType:Dynamic, inItemSet:Dynamic):Dynamic;
 
 	@:native("dataForPasteboardType:inItemSet")
-	overload public function dataForPasteboardType_inItemSet(pasteboardType:NSString, inItemSet:Dynamic):Dynamic;
+	overload public function dataForPasteboardType_inItemSet(pasteboardType:Dynamic, inItemSet:Dynamic):Dynamic;
 
 	@:native("addItems")
 	overload public function addItems(items:Dynamic):Void;

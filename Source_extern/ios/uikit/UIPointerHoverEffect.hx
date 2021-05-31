@@ -12,7 +12,7 @@ extern class UIPointerHoverEffect extends UIPointerEffect{
 	overload public static function autorelease():UIPointerHoverEffect;
 
 	@:native("preferredTintMode")
-	public var preferredTintMode:Dynamic;
+	public var preferredTintMode:UIPointerEffectTintMode;
 
 	@:native("prefersShadow")
 	public var prefersShadow:Bool;

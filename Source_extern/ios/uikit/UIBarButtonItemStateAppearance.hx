@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIBarButtonItemStateAppearance")
 @:include("UIKit/UIKit.h")
-extern class UIBarButtonItemStateAppearance extends NSObject{
+extern class UIBarButtonItemStateAppearance{
 
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItemStateAppearance;
@@ -21,7 +21,7 @@ extern class UIBarButtonItemStateAppearance extends NSObject{
 	public var titlePositionAdjustment:Dynamic;
 
 	@:native("backgroundImage")
-	public var backgroundImage:Dynamic;
+	public var backgroundImage:UIImage;
 
 	@:native("backgroundImagePositionAdjustment")
 	public var backgroundImagePositionAdjustment:Dynamic;

@@ -12,10 +12,10 @@ extern class UICollectionViewCompositionalLayout extends UICollectionViewLayout{
 	overload public static function autorelease():UICollectionViewCompositionalLayout;
 
 	@:native("initWithSection")
-	overload public function initWithSection(section:Dynamic):UICollectionViewCompositionalLayout;
+	overload public function initWithSection(section:NSCollectionLayoutSection):UICollectionViewCompositionalLayout;
 
 	@:native("initWithSection:configuration")
-	overload public function initWithSection_configuration(section:Dynamic, configuration:UICollectionViewCompositionalLayoutConfiguration):UICollectionViewCompositionalLayout;
+	overload public function initWithSection_configuration(section:NSCollectionLayoutSection, configuration:UICollectionViewCompositionalLayoutConfiguration):UICollectionViewCompositionalLayout;
 
 	@:native("initWithSectionProvider")
 	overload public function initWithSectionProvider(sectionProvider:Dynamic):UICollectionViewCompositionalLayout;

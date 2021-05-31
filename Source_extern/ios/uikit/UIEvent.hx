@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIEvent")
 @:include("UIKit/UIKit.h")
-extern class UIEvent extends NSObject{
+extern class UIEvent{
 
 	@:native("alloc")
 	overload public static function alloc():UIEvent;
@@ -12,37 +12,37 @@ extern class UIEvent extends NSObject{
 	overload public static function autorelease():UIEvent;
 
 	@:native("type")
-	public var type:Dynamic;
+	public var type:UIEventType;
 
 	@:native("subtype")
-	public var subtype:Dynamic;
+	public var subtype:UIEventSubtype;
 
 	@:native("timestamp")
 	public var timestamp:Dynamic;
 
 	@:native("modifierFlags")
-	public var modifierFlags:Dynamic;
+	public var modifierFlags:UIKeyModifierFlags;
 
 	@:native("buttonMask")
-	public var buttonMask:Dynamic;
+	public var buttonMask:UIEventButtonMask;
 
 	@:native("allTouches")
 	public var allTouches:Dynamic;
 
 	@:native("touchesForWindow")
-	overload public function touchesForWindow(window:Dynamic):Dynamic;
+	overload public function touchesForWindow(window:UIWindow):Dynamic;
 
 	@:native("touchesForView")
-	overload public function touchesForView(view:Dynamic):Dynamic;
+	overload public function touchesForView(view:UIView):Dynamic;
 
 	@:native("touchesForGestureRecognizer")
-	overload public function touchesForGestureRecognizer(gesture:Dynamic):Dynamic;
+	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):Dynamic;
 
 	@:native("coalescedTouchesForTouch")
-	overload public function coalescedTouchesForTouch(touch:Dynamic):Dynamic;
+	overload public function coalescedTouchesForTouch(touch:UITouch):Dynamic;
 
 	@:native("predictedTouchesForTouch")
-	overload public function predictedTouchesForTouch(touch:Dynamic):Dynamic;
+	overload public function predictedTouchesForTouch(touch:UITouch):Dynamic;
 
 
 }

@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import cpp.objc.NSString;
 @:objc
 @:native("UIButton")
 @:include("UIKit/UIKit.h")
@@ -20,19 +19,19 @@ extern class UIButton{
 	overload public function initWithCoder(coder:Dynamic):UIButton;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:Dynamic):UIButton;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIButton;
 
 	@:native("buttonWithType")
-	overload public static function buttonWithType(buttonType:Dynamic):UIButton;
+	overload public static function buttonWithType(buttonType:UIButtonType):UIButton;
 
 	@:native("systemButtonWithImage:target:action")
-	overload public static function systemButtonWithImage_target_action(image:Dynamic, target:Dynamic, action:String):UIButton;
+	overload public static function systemButtonWithImage_target_action(image:UIImage, target:Dynamic, action:String):UIButton;
 
 	@:native("systemButtonWithPrimaryAction")
-	overload public static function systemButtonWithPrimaryAction(primaryAction:Dynamic):UIButton;
+	overload public static function systemButtonWithPrimaryAction(primaryAction:UIAction):UIButton;
 
 	@:native("buttonWithType:primaryAction")
-	overload public static function buttonWithType_primaryAction(buttonType:Dynamic, primaryAction:Dynamic):UIButton;
+	overload public static function buttonWithType_primaryAction(buttonType:UIButtonType, primaryAction:UIAction):UIButton;
 
 	@:native("contentEdgeInsets")
 	public var contentEdgeInsets:Dynamic;
@@ -56,85 +55,85 @@ extern class UIButton{
 	public var showsTouchWhenHighlighted:Bool;
 
 	@:native("tintColor")
-	public var tintColor:Dynamic;
+	public var tintColor:UIColor;
 
 	@:native("buttonType")
-	public var buttonType:Dynamic;
+	public var buttonType:UIButtonType;
 
 	@:native("role")
-	public var role:Dynamic;
+	public var role:UIButtonRole;
 
 	@:native("pointerInteractionEnabled")
 	public var pointerInteractionEnabled:Bool;
 
 	@:native("setTitle:forState")
-	overload public function setTitle_forState(title:NSString, forState:Dynamic):Void;
+	overload public function setTitle_forState(title:Dynamic, forState:UIControlState):Void;
 
 	@:native("setTitleColor:forState")
-	overload public function setTitleColor_forState(color:Dynamic, forState:Dynamic):Void;
+	overload public function setTitleColor_forState(color:UIColor, forState:UIControlState):Void;
 
 	@:native("setTitleShadowColor:forState")
-	overload public function setTitleShadowColor_forState(color:Dynamic, forState:Dynamic):Void;
+	overload public function setTitleShadowColor_forState(color:UIColor, forState:UIControlState):Void;
 
 	@:native("setImage:forState")
-	overload public function setImage_forState(image:Dynamic, forState:Dynamic):Void;
+	overload public function setImage_forState(image:UIImage, forState:UIControlState):Void;
 
 	@:native("setBackgroundImage:forState")
-	overload public function setBackgroundImage_forState(image:Dynamic, forState:Dynamic):Void;
+	overload public function setBackgroundImage_forState(image:UIImage, forState:UIControlState):Void;
 
 	@:native("setPreferredSymbolConfiguration:forImageInState:UI_APPEARANCE_SELECTOR")
-	overload public function setPreferredSymbolConfiguration_forImageInState_UI_APPEARANCE_SELECTOR(configuration:Dynamic, forImageInState:Dynamic, UI_APPEARANCE_SELECTOR:Dynamic):Void;
+	overload public function setPreferredSymbolConfiguration_forImageInState_UI_APPEARANCE_SELECTOR(configuration:UIImageSymbolConfiguration, forImageInState:UIControlState, UI_APPEARANCE_SELECTOR:Dynamic):Void;
 
 	@:native("setAttributedTitle:forState")
-	overload public function setAttributedTitle_forState(title:Dynamic, forState:Dynamic):Void;
+	overload public function setAttributedTitle_forState(title:Dynamic, forState:UIControlState):Void;
 
 	@:native("titleForState")
-	overload public function titleForState(state:Dynamic):NSString;
+	overload public function titleForState(state:UIControlState):Dynamic;
 
 	@:native("titleColorForState")
-	overload public function titleColorForState(state:Dynamic):Dynamic;
+	overload public function titleColorForState(state:UIControlState):UIColor;
 
 	@:native("titleShadowColorForState")
-	overload public function titleShadowColorForState(state:Dynamic):Dynamic;
+	overload public function titleShadowColorForState(state:UIControlState):UIColor;
 
 	@:native("imageForState")
-	overload public function imageForState(state:Dynamic):Dynamic;
+	overload public function imageForState(state:UIControlState):UIImage;
 
 	@:native("backgroundImageForState")
-	overload public function backgroundImageForState(state:Dynamic):Dynamic;
+	overload public function backgroundImageForState(state:UIControlState):UIImage;
 
 	@:native("preferredSymbolConfigurationForImageInState")
-	overload public function preferredSymbolConfigurationForImageInState(state:Dynamic):Dynamic;
+	overload public function preferredSymbolConfigurationForImageInState(state:UIControlState):UIImageSymbolConfiguration;
 
 	@:native("attributedTitleForState")
-	overload public function attributedTitleForState(state:Dynamic):Dynamic;
+	overload public function attributedTitleForState(state:UIControlState):Dynamic;
 
 	@:native("currentTitle")
-	public var currentTitle:NSString;
+	public var currentTitle:Dynamic;
 
 	@:native("currentTitleColor")
-	public var currentTitleColor:Dynamic;
+	public var currentTitleColor:UIColor;
 
 	@:native("currentTitleShadowColor")
-	public var currentTitleShadowColor:Dynamic;
+	public var currentTitleShadowColor:UIColor;
 
 	@:native("currentImage")
-	public var currentImage:Dynamic;
+	public var currentImage:UIImage;
 
 	@:native("currentBackgroundImage")
-	public var currentBackgroundImage:Dynamic;
+	public var currentBackgroundImage:UIImage;
 
 	@:native("currentPreferredSymbolConfiguration")
-	public var currentPreferredSymbolConfiguration:Dynamic;
+	public var currentPreferredSymbolConfiguration:UIImageSymbolConfiguration;
 
 	@:native("currentAttributedTitle")
 	public var currentAttributedTitle:Dynamic;
 
 	@:native("titleLabel")
-	public var titleLabel:Dynamic;
+	public var titleLabel:UILabel;
 
 	@:native("imageView")
-	public var imageView:Dynamic;
+	public var imageView:UIImageView;
 
 	@:native("backgroundRectForBounds")
 	overload public function backgroundRectForBounds(bounds:CGRect):CGRect;

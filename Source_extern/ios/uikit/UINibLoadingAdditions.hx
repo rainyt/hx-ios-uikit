@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UINibLoadingAdditions")
 @:include("UIKit/UIKit.h")
-extern class UINibLoadingAdditions extends NSObject{
+extern class UINibLoadingAdditions{
 
 	@:native("alloc")
 	overload public static function alloc():UINibLoadingAdditions;

@@ -21,7 +21,7 @@ extern class UIContainerViewControllerProtectedMethods extends UIViewController{
 	overload public function removeFromParentViewController():Void;
 
 	@:native("transitionFromViewController:toViewController:duration:options:animations:completion")
-	overload public function transitionFromViewController_toViewController_duration_options_animations_completion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public function transitionFromViewController_toViewController_duration_options_animations_completion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginAppearanceTransition:animated")
 	overload public function beginAppearanceTransition_animated(isAppearing:Bool, animated:Bool):Void;
@@ -36,10 +36,10 @@ extern class UIContainerViewControllerProtectedMethods extends UIViewController{
 	public var childViewControllerForStatusBarHidden:UIViewController;
 
 	@:native("setOverrideTraitCollection:forChildViewController")
-	overload public function setOverrideTraitCollection_forChildViewController(collection:Dynamic, forChildViewController:UIViewController):Void;
+	overload public function setOverrideTraitCollection_forChildViewController(collection:UITraitCollection, forChildViewController:UIViewController):Void;
 
 	@:native("overrideTraitCollectionForChildViewController")
-	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):Dynamic;
+	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):UITraitCollection;
 
 	@:native("childViewControllerForUserInterfaceStyle")
 	public var childViewControllerForUserInterfaceStyle:UIViewController;

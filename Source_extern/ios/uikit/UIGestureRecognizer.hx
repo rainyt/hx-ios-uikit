@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIGestureRecognizer")
 @:include("UIKit/UIKit.h")
-extern class UIGestureRecognizer extends NSObject{
+extern class UIGestureRecognizer{
 
 	@:native("alloc")
 	overload public static function alloc():UIGestureRecognizer;
@@ -28,7 +28,7 @@ extern class UIGestureRecognizer extends NSObject{
 	overload public function removeTarget_action(target:Dynamic, action:String):Void;
 
 	@:native("state")
-	public var state:Dynamic;
+	public var state:UIGestureRecognizerState;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -37,7 +37,7 @@ extern class UIGestureRecognizer extends NSObject{
 	public var enabled:Bool;
 
 	@:native("view")
-	public var view:Dynamic;
+	public var view:UIView;
 
 	@:native("cancelsTouchesInView")
 	public var cancelsTouchesInView:Bool;
@@ -55,19 +55,19 @@ extern class UIGestureRecognizer extends NSObject{
 	overload public function requireGestureRecognizerToFail(otherGestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("locationInView")
-	overload public function locationInView(view:Dynamic):CGPoint;
+	overload public function locationInView(view:UIView):CGPoint;
 
 	@:native("numberOfTouches")
 	public var numberOfTouches:Int;
 
 	@:native("locationOfTouch:inView")
-	overload public function locationOfTouch_inView(touchIndex:Int, inView:Dynamic):CGPoint;
+	overload public function locationOfTouch_inView(touchIndex:Int, inView:UIView):CGPoint;
 
 	@:native("modifierFlags")
-	public var modifierFlags:Dynamic;
+	public var modifierFlags:UIKeyModifierFlags;
 
 	@:native("buttonMask")
-	public var buttonMask:Dynamic;
+	public var buttonMask:UIEventButtonMask;
 
 
 }

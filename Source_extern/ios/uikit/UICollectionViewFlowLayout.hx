@@ -25,7 +25,7 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	public var estimatedItemSize:CGSize;
 
 	@:native("scrollDirection")
-	public var scrollDirection:Dynamic;
+	public var scrollDirection:UICollectionViewScrollDirection;
 
 	@:native("headerReferenceSize")
 	public var headerReferenceSize:CGSize;
@@ -37,7 +37,7 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	public var sectionInset:Dynamic;
 
 	@:native("sectionInsetReference")
-	public var sectionInsetReference:Dynamic;
+	public var sectionInsetReference:UICollectionViewFlowLayoutSectionInsetReference;
 
 	@:native("sectionHeadersPinToVisibleBounds")
 	public var sectionHeadersPinToVisibleBounds:Bool;

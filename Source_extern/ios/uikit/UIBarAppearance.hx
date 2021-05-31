@@ -15,10 +15,10 @@ extern class UIBarAppearance{
 	overload public function init():UIBarAppearance;
 
 	@:native("initWithIdiom")
-	overload public function initWithIdiom(idiom:Dynamic):UIBarAppearance;
+	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIBarAppearance;
 
 	@:native("idiom")
-	public var idiom:Dynamic;
+	public var idiom:UIUserInterfaceIdiom;
 
 	@:native("initWithBarAppearance")
 	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
@@ -39,13 +39,13 @@ extern class UIBarAppearance{
 	overload public function configureWithTransparentBackground():Void;
 
 	@:native("backgroundImage")
-	public var backgroundImage:Dynamic;
+	public var backgroundImage:UIImage;
 
 	@:native("backgroundImageContentMode")
-	public var backgroundImageContentMode:Dynamic;
+	public var backgroundImageContentMode:UIViewContentMode;
 
 	@:native("shadowImage")
-	public var shadowImage:Dynamic;
+	public var shadowImage:UIImage;
 
 
 }

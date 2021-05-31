@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSDictionary;
 @:objc
 @:native("UIPrintInfo")
 @:include("UIKit/UIKit.h")
@@ -19,19 +18,19 @@ extern class UIPrintInfo{
 	overload public static function printInfo():UIPrintInfo;
 
 	@:native("printInfoWithDictionary")
-	overload public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo;
+	overload public static function printInfoWithDictionary(dictionary:Dynamic):UIPrintInfo;
 
 	@:native("outputType")
-	public var outputType:Dynamic;
+	public var outputType:UIPrintInfoOutputType;
 
 	@:native("orientation")
-	public var orientation:Dynamic;
+	public var orientation:UIPrintInfoOrientation;
 
 	@:native("duplex")
-	public var duplex:Dynamic;
+	public var duplex:UIPrintInfoDuplex;
 
 	@:native("dictionaryRepresentation")
-	public var dictionaryRepresentation:NSDictionary;
+	public var dictionaryRepresentation:Dynamic;
 
 
 }

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPress")
 @:include("UIKit/UIKit.h")
-extern class UIPress extends NSObject{
+extern class UIPress{
 
 	@:native("alloc")
 	overload public static function alloc():UIPress;
@@ -21,16 +21,16 @@ extern class UIPress extends NSObject{
 	public var type:Dynamic;
 
 	@:native("window")
-	public var window:Dynamic;
+	public var window:UIWindow;
 
 	@:native("responder")
-	public var responder:Dynamic;
+	public var responder:UIResponder;
 
 	@:native("force")
 	public var force:Float;
 
 	@:native("key")
-	public var key:Dynamic;
+	public var key:UIKey;
 
 
 }

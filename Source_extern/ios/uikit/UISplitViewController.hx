@@ -15,10 +15,10 @@ extern class UISplitViewController extends UIViewController{
 	public var splitViewController:UISplitViewController;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
-	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:Dynamic, forSplitViewController:UISplitViewController):Void;
+	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;
 
 	@:native("separateSecondaryViewControllerForSplitViewController")
-	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):Dynamic;
+	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):UIViewController;
 
 
 }

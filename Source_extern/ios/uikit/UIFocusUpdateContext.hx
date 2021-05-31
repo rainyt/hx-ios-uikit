@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFocusUpdateContext")
 @:include("UIKit/UIKit.h")
-extern class UIFocusUpdateContext extends NSObject{
+extern class UIFocusUpdateContext{
 
 	@:native("alloc")
 	overload public static function alloc():UIFocusUpdateContext;
@@ -18,13 +18,13 @@ extern class UIFocusUpdateContext extends NSObject{
 	public var nextFocusedItem:Dynamic;
 
 	@:native("previouslyFocusedView")
-	public var previouslyFocusedView:Dynamic;
+	public var previouslyFocusedView:UIView;
 
 	@:native("nextFocusedView")
-	public var nextFocusedView:Dynamic;
+	public var nextFocusedView:UIView;
 
 	@:native("focusHeading")
-	public var focusHeading:Dynamic;
+	public var focusHeading:UIFocusHeading;
 
 
 }

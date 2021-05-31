@@ -12,13 +12,13 @@ extern class UIViewGestureRecognizers extends UIView{
 	overload public static function autorelease():UIViewGestureRecognizers;
 
 	@:native("addGestureRecognizer")
-	overload public function addGestureRecognizer(gestureRecognizer:Dynamic):Void;
+	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("removeGestureRecognizer")
-	overload public function removeGestureRecognizer(gestureRecognizer:Dynamic):Void;
+	overload public function removeGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("gestureRecognizerShouldBegin")
-	overload public function gestureRecognizerShouldBegin(gestureRecognizer:Dynamic):Bool;
+	overload public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):Bool;
 
 
 }

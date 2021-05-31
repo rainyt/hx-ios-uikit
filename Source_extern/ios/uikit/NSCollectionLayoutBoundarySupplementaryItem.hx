@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 import ios.objc.CGPoint;
 @:objc
 @:native("NSCollectionLayoutBoundarySupplementaryItem")
@@ -14,10 +13,10 @@ extern class NSCollectionLayoutBoundarySupplementaryItem{
 	overload public static function autorelease():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment")
-	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:Dynamic):NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment(layoutSize:NSCollectionLayoutSize, elementKind:Dynamic, alignment:NSRectAlignment):NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset")
-	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment_absoluteOffset(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:Dynamic, absoluteOffset:CGPoint):NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment_absoluteOffset(layoutSize:NSCollectionLayoutSize, elementKind:Dynamic, alignment:NSRectAlignment, absoluteOffset:CGPoint):NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutBoundarySupplementaryItem;
@@ -32,7 +31,7 @@ extern class NSCollectionLayoutBoundarySupplementaryItem{
 	public var pinToVisibleBounds:Bool;
 
 	@:native("alignment")
-	public var alignment:Dynamic;
+	public var alignment:NSRectAlignment;
 
 	@:native("offset")
 	public var offset:CGPoint;

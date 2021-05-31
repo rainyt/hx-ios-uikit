@@ -14,8 +14,8 @@ implements cpp.objc.Protocol<NSCoding>
   @:native("autorelease") public function autorelease():CAEmitterBehavior;
   @:native("behaviorTypes") public static function behaviorTypes():Dynamic;
   @:native("behaviorWithType") public static function behaviorWithType(type:NSString):CAEmitterBehavior;
-  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
-  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:Dynamic):Void;
+  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:Dynamic):NSCoding;
   @:native("initWithType") public function initWithType(type:NSString):Dynamic;
   @:native("isEnabled") public function isEnabled():Bool;
   @:native("name") public function name():NSString;

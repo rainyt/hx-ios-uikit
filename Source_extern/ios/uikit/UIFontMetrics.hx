@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIFontMetrics")
 @:include("UIKit/UIKit.h")
-extern class UIFontMetrics extends NSObject{
+extern class UIFontMetrics{
 
 	@:native("alloc")
 	overload public static function alloc():UIFontMetrics;
@@ -24,22 +24,22 @@ extern class UIFontMetrics extends NSObject{
 	overload public function initForTextStyle(textStyle:Dynamic):UIFontMetrics;
 
 	@:native("scaledFontForFont")
-	overload public function scaledFontForFont(font:Dynamic):Dynamic;
+	overload public function scaledFontForFont(font:UIFont):UIFont;
 
 	@:native("scaledFontForFont:maximumPointSize")
-	overload public function scaledFontForFont_maximumPointSize(font:Dynamic, maximumPointSize:Float):Dynamic;
+	overload public function scaledFontForFont_maximumPointSize(font:UIFont, maximumPointSize:Float):UIFont;
 
 	@:native("scaledFontForFont:compatibleWithTraitCollection")
-	overload public function scaledFontForFont_compatibleWithTraitCollection(font:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public function scaledFontForFont_compatibleWithTraitCollection(font:UIFont, compatibleWithTraitCollection:UITraitCollection):UIFont;
 
 	@:native("scaledFontForFont:maximumPointSize:compatibleWithTraitCollection")
-	overload public function scaledFontForFont_maximumPointSize_compatibleWithTraitCollection(font:Dynamic, maximumPointSize:Float, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public function scaledFontForFont_maximumPointSize_compatibleWithTraitCollection(font:UIFont, maximumPointSize:Float, compatibleWithTraitCollection:UITraitCollection):UIFont;
 
 	@:native("scaledValueForValue")
 	overload public function scaledValueForValue(value:Float):Float;
 
 	@:native("scaledValueForValue:compatibleWithTraitCollection")
-	overload public function scaledValueForValue_compatibleWithTraitCollection(value:Float, compatibleWithTraitCollection:Dynamic):Float;
+	overload public function scaledValueForValue_compatibleWithTraitCollection(value:Float, compatibleWithTraitCollection:UITraitCollection):Float;
 
 
 }

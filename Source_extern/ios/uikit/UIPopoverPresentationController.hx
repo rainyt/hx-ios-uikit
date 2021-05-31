@@ -16,10 +16,10 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	public var delegate:Dynamic;
 
 	@:native("permittedArrowDirections")
-	public var permittedArrowDirections:Dynamic;
+	public var permittedArrowDirections:UIPopoverArrowDirection;
 
 	@:native("sourceView")
-	public var sourceView:Dynamic;
+	public var sourceView:UIView;
 
 	@:native("sourceRect")
 	public var sourceRect:CGRect;
@@ -28,10 +28,10 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	public var canOverlapSourceViewRect:Bool;
 
 	@:native("barButtonItem")
-	public var barButtonItem:Dynamic;
+	public var barButtonItem:UIBarButtonItem;
 
 	@:native("arrowDirection")
-	public var arrowDirection:Dynamic;
+	public var arrowDirection:UIPopoverArrowDirection;
 
 	@:native("popoverLayoutMargins")
 	public var popoverLayoutMargins:Dynamic;

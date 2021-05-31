@@ -12,7 +12,7 @@ extern class UIViewPrintFormatter extends UIPrintFormatter{
 	overload public static function autorelease():UIViewPrintFormatter;
 
 	@:native("view")
-	public var view:Dynamic;
+	public var view:UIView;
 
 
 }

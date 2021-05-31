@@ -27,7 +27,7 @@ extern class UIColor{
 	overload public static function colorWithCGColor(cgColor:Dynamic):UIColor;
 
 	@:native("colorWithPatternImage")
-	overload public static function colorWithPatternImage(image:Dynamic):UIColor;
+	overload public static function colorWithPatternImage(image:UIImage):UIColor;
 
 	@:native("colorWithCIColor")
 	overload public static function colorWithCIColor(ciColor:Dynamic):UIColor;
@@ -48,7 +48,7 @@ extern class UIColor{
 	overload public function initWithCGColor(cgColor:Dynamic):UIColor;
 
 	@:native("initWithPatternImage")
-	overload public function initWithPatternImage(image:Dynamic):UIColor;
+	overload public function initWithPatternImage(image:UIImage):UIColor;
 
 	@:native("initWithCIColor")
 	overload public function initWithCIColor(ciColor:Dynamic):UIColor;

@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIVideoEditorController")
 @:include("UIKit/UIKit.h")
@@ -13,7 +12,7 @@ extern class UIVideoEditorController extends UINavigationController{
 	overload public static function autorelease():UIVideoEditorController;
 
 	@:native("canEditVideoAtPath")
-	overload public static function canEditVideoAtPath(videoPath:NSString):Bool;
+	overload public static function canEditVideoAtPath(videoPath:Dynamic):Bool;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -22,7 +21,7 @@ extern class UIVideoEditorController extends UINavigationController{
 	public var videoMaximumDuration:Dynamic;
 
 	@:native("videoQuality")
-	public var videoQuality:Dynamic;
+	public var videoQuality:UIImagePickerControllerQualityType;
 
 
 }

@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc
 @:native("UIAccessibilityElement")
@@ -23,13 +22,13 @@ extern class UIAccessibilityElement{
 	public var isAccessibilityElement:Bool;
 
 	@:native("accessibilityLabel")
-	public var accessibilityLabel:NSString;
+	public var accessibilityLabel:Dynamic;
 
 	@:native("accessibilityHint")
-	public var accessibilityHint:NSString;
+	public var accessibilityHint:Dynamic;
 
 	@:native("accessibilityValue")
-	public var accessibilityValue:NSString;
+	public var accessibilityValue:Dynamic;
 
 	@:native("accessibilityFrame")
 	public var accessibilityFrame:CGRect;

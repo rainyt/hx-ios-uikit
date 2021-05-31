@@ -15,7 +15,7 @@ extern class UIViewHierarchy extends UIView{
 	public var superview:UIView;
 
 	@:native("window")
-	public var window:Dynamic;
+	public var window:UIWindow;
 
 	@:native("removeFromSuperview")
 	overload public function removeFromSuperview():Void;
@@ -54,7 +54,7 @@ extern class UIViewHierarchy extends UIView{
 	overload public function didMoveToSuperview():Void;
 
 	@:native("willMoveToWindow")
-	overload public function willMoveToWindow(newWindow:Dynamic):Void;
+	overload public function willMoveToWindow(newWindow:UIWindow):Void;
 
 	@:native("didMoveToWindow")
 	overload public function didMoveToWindow():Void;

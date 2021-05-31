@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIAlternateApplicationIcons")
 @:include("UIKit/UIKit.h")
@@ -16,10 +15,10 @@ extern class UIAlternateApplicationIcons extends UIApplication{
 	public var supportsAlternateIcons:Bool;
 
 	@:native("setAlternateIconName:completionHandler:NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"")
-	overload public function setAlternateIconName_completionHandler_NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"(alternateIconName:NSString, completionHandler:Dynamic, NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":Dynamic):Void;
+	overload public function setAlternateIconName_completionHandler_NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"(alternateIconName:Dynamic, completionHandler:Dynamic, NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":Dynamic):Void;
 
 	@:native("alternateIconName")
-	public var alternateIconName:NSString;
+	public var alternateIconName:Dynamic;
 
 
 }

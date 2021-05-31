@@ -18,7 +18,7 @@ extern class UIDocumentBrowserTransitionController{
 	public var loadingProgress:Dynamic;
 
 	@:native("targetView")
-	public var targetView:Dynamic;
+	public var targetView:UIView;
 
 
 }

@@ -5,7 +5,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UITextDragPreviewRenderer")
 @:include("UIKit/UIKit.h")
-extern class UITextDragPreviewRenderer extends NSObject{
+extern class UITextDragPreviewRenderer{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDragPreviewRenderer;
@@ -14,10 +14,10 @@ extern class UITextDragPreviewRenderer extends NSObject{
 	overload public static function autorelease():UITextDragPreviewRenderer;
 
 	@:native("initWithLayoutManager:range")
-	overload public function initWithLayoutManager_range(layoutManager:Dynamic, range:Dynamic):UITextDragPreviewRenderer;
+	overload public function initWithLayoutManager_range(layoutManager:NSLayoutManager, range:Dynamic):UITextDragPreviewRenderer;
 
 	@:native("initWithLayoutManager:range:unifyRects")
-	overload public function initWithLayoutManager_range_unifyRects(layoutManager:Dynamic, range:Dynamic, unifyRects:Bool):UITextDragPreviewRenderer;
+	overload public function initWithLayoutManager_range_unifyRects(layoutManager:NSLayoutManager, range:Dynamic, unifyRects:Bool):UITextDragPreviewRenderer;
 
 	@:native("new")
 	overload public static function new():UITextDragPreviewRenderer;
@@ -26,10 +26,10 @@ extern class UITextDragPreviewRenderer extends NSObject{
 	overload public function init():UITextDragPreviewRenderer;
 
 	@:native("layoutManager")
-	public var layoutManager:Dynamic;
+	public var layoutManager:NSLayoutManager;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("firstLineRect")
 	public var firstLineRect:CGRect;

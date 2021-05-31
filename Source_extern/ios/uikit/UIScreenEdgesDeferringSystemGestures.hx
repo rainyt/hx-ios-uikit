@@ -15,7 +15,7 @@ extern class UIScreenEdgesDeferringSystemGestures extends UIViewController{
 	public var childViewControllerForScreenEdgesDeferringSystemGestures:UIViewController;
 
 	@:native("preferredScreenEdgesDeferringSystemGestures")
-	public var preferredScreenEdgesDeferringSystemGestures:Dynamic;
+	public var preferredScreenEdgesDeferringSystemGestures:UIRectEdge;
 
 	@:native("setNeedsUpdateOfScreenEdgesDeferringSystemGestures")
 	overload public function setNeedsUpdateOfScreenEdgesDeferringSystemGestures():Void;

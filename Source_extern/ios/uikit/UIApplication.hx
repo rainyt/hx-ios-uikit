@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import cpp.objc.NSString;
 @:objc
 @:native("UIApplication")
 @:include("UIKit/UIKit.h")
@@ -41,31 +40,31 @@ extern class UIApplication extends UIResponder{
 	overload public function openURL_options_completionHandler(url:Dynamic, options:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("sendEvent")
-	overload public function sendEvent(event:Dynamic):Void;
+	overload public function sendEvent(event:UIEvent):Void;
 
 	@:native("keyWindow")
-	public var keyWindow:Dynamic;
+	public var keyWindow:UIWindow;
 
 	@:native("windows")
 	public var windows:Dynamic;
 
 	@:native("sendAction:to:from:forEvent")
-	overload public function sendAction_to_from_forEvent(action:String, to:Dynamic, from:Dynamic, forEvent:Dynamic):Bool;
+	overload public function sendAction_to_from_forEvent(action:String, to:Dynamic, from:Dynamic, forEvent:UIEvent):Bool;
 
 	@:native("networkActivityIndicatorVisible")
 	public var networkActivityIndicatorVisible:Bool;
 
 	@:native("statusBarStyle")
-	public var statusBarStyle:Dynamic;
+	public var statusBarStyle:UIStatusBarStyle;
 
 	@:native("statusBarHidden")
 	public var statusBarHidden:Bool;
 
 	@:native("statusBarOrientation")
-	public var statusBarOrientation:Dynamic;
+	public var statusBarOrientation:UIInterfaceOrientation;
 
 	@:native("supportedInterfaceOrientationsForWindow")
-	overload public function supportedInterfaceOrientationsForWindow(window:Dynamic):Dynamic;
+	overload public function supportedInterfaceOrientationsForWindow(window:UIWindow):UIInterfaceOrientationMask;
 
 	@:native("statusBarOrientationAnimationDuration")
 	public var statusBarOrientationAnimationDuration:Dynamic;
@@ -80,7 +79,7 @@ extern class UIApplication extends UIResponder{
 	public var applicationSupportsShakeToEdit:Bool;
 
 	@:native("applicationState")
-	public var applicationState:Dynamic;
+	public var applicationState:UIApplicationState;
 
 	@:native("backgroundTimeRemaining")
 	public var backgroundTimeRemaining:Dynamic;
@@ -89,7 +88,7 @@ extern class UIApplication extends UIResponder{
 	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic):Int;
 
 	@:native("beginBackgroundTaskWithName:expirationHandler")
-	overload public function beginBackgroundTaskWithName_expirationHandler(taskName:NSString, expirationHandler:Dynamic):Int;
+	overload public function beginBackgroundTaskWithName_expirationHandler(taskName:Dynamic, expirationHandler:Dynamic):Int;
 
 	@:native("endBackgroundTask")
 	overload public function endBackgroundTask(identifier:Int):Void;
@@ -98,13 +97,13 @@ extern class UIApplication extends UIResponder{
 	overload public function setMinimumBackgroundFetchInterval(minimumBackgroundFetchInterval:Dynamic):Void;
 
 	@:native("backgroundRefreshStatus")
-	public var backgroundRefreshStatus:Dynamic;
+	public var backgroundRefreshStatus:UIBackgroundRefreshStatus;
 
 	@:native("protectedDataAvailable")
 	public var protectedDataAvailable:Bool;
 
 	@:native("userInterfaceLayoutDirection")
-	public var userInterfaceLayoutDirection:Dynamic;
+	public var userInterfaceLayoutDirection:UIUserInterfaceLayoutDirection;
 
 	@:native("preferredContentSizeCategory")
 	public var preferredContentSizeCategory:Dynamic;
@@ -119,13 +118,13 @@ extern class UIApplication extends UIResponder{
 	public var supportsMultipleScenes:Bool;
 
 	@:native("requestSceneSessionActivation:userActivity:options:errorHandler")
-	overload public function requestSceneSessionActivation_userActivity_options_errorHandler(sceneSession:Dynamic, userActivity:Dynamic, options:Dynamic, errorHandler:Dynamic):Void;
+	overload public function requestSceneSessionActivation_userActivity_options_errorHandler(sceneSession:UISceneSession, userActivity:Dynamic, options:UISceneActivationRequestOptions, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionDestruction:options:errorHandler")
-	overload public function requestSceneSessionDestruction_options_errorHandler(sceneSession:Dynamic, options:Dynamic, errorHandler:Dynamic):Void;
+	overload public function requestSceneSessionDestruction_options_errorHandler(sceneSession:UISceneSession, options:UISceneDestructionRequestOptions, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionRefresh")
-	overload public function requestSceneSessionRefresh(sceneSession:Dynamic):Void;
+	overload public function requestSceneSessionRefresh(sceneSession:UISceneSession):Void;
 
 
 }

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIStoryboardUnwindSegueSource")
 @:include("UIKit/UIKit.h")
-extern class UIStoryboardUnwindSegueSource extends NSObject{
+extern class UIStoryboardUnwindSegueSource{
 
 	@:native("alloc")
 	overload public static function alloc():UIStoryboardUnwindSegueSource;
@@ -15,7 +15,7 @@ extern class UIStoryboardUnwindSegueSource extends NSObject{
 	overload public function init():UIStoryboardUnwindSegueSource;
 
 	@:native("sourceViewController")
-	public var sourceViewController:Dynamic;
+	public var sourceViewController:UIViewController;
 
 	@:native("unwindAction")
 	public var unwindAction:String;

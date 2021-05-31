@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UISearchController")
 @:include("UIKit/UIKit.h")
@@ -13,10 +12,10 @@ extern class UISearchController{
 	overload public static function autorelease():UISearchController;
 
 	@:native("initWithSearchResultsController")
-	overload public function initWithSearchResultsController(searchResultsController:Dynamic):UISearchController;
+	overload public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):UISearchController;
+	overload public function initWithNibName_bundle(nibNameOrNil:Dynamic, bundle:Dynamic):UISearchController;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UISearchController;
@@ -40,10 +39,10 @@ extern class UISearchController{
 	public var hidesNavigationBarDuringPresentation:Bool;
 
 	@:native("searchResultsController")
-	public var searchResultsController:Dynamic;
+	public var searchResultsController:UIViewController;
 
 	@:native("searchBar")
-	public var searchBar:Dynamic;
+	public var searchBar:UISearchBar;
 
 	@:native("automaticallyShowsSearchResultsController")
 	public var automaticallyShowsSearchResultsController:Bool;
@@ -58,7 +57,7 @@ extern class UISearchController{
 	public var automaticallyShowsScopeBar:Bool;
 
 	@:native("searchControllerObservedScrollView")
-	public var searchControllerObservedScrollView:Dynamic;
+	public var searchControllerObservedScrollView:UIScrollView;
 
 
 }

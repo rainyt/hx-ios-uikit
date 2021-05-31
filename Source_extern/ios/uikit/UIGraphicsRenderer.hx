@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIGraphicsRenderer")
 @:include("UIKit/UIKit.h")
-extern class UIGraphicsRenderer extends NSObject{
+extern class UIGraphicsRenderer{
 
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsRenderer;

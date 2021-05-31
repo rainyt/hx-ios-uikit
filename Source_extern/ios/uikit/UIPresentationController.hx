@@ -15,7 +15,7 @@ extern class UIPresentationController extends UIViewController{
 	public var presentationController:UIPresentationController;
 
 	@:native("popoverPresentationController")
-	public var popoverPresentationController:Dynamic;
+	public var popoverPresentationController:UIPopoverPresentationController;
 
 	@:native("modalInPresentation")
 	public var modalInPresentation:Bool;

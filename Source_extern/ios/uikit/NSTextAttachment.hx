@@ -1,7 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSData;
-import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc
 @:native("NSTextAttachment")
@@ -15,10 +13,10 @@ extern class NSTextAttachment{
 	overload public static function autorelease():NSTextAttachment;
 
 	@:native("initWithData:ofType:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithData_ofType_NS_DESIGNATED_INITIALIZER(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
+	overload public function initWithData_ofType_NS_DESIGNATED_INITIALIZER(contentData:Dynamic, ofType:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("bounds")
 	public var bounds:CGRect;

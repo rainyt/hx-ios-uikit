@@ -25,4 +25,13 @@ class ObjcImport {
 			return "ios.objc." + type;
 		return null;
 	}
+
+	public static function hasClass(type:String):Bool {
+		var files = FileSystem.readDirectory(ExternTools.externDir + "/ios");
+		for (index => value in files) {
+			if (FileSystem.exists(ExternTools.externDir + "/ios/" + value + "/" + type + ".hx"))
+				return true;
+		}
+		return false;
+	}
 }

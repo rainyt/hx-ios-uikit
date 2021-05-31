@@ -12,10 +12,10 @@ implements cpp.objc.Protocol<NSCoding>
 {
   @:native("alloc") public static function alloc():CAMediaTimingFunction;
   @:native("autorelease") public function autorelease():CAMediaTimingFunction;
-  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:Dynamic):Void;
   @:native("functionWithControlPoints") public static function functionWithControlPoints(c1x:Float, c1y:Float, c2x:Float, c2y:Float):CAMediaTimingFunction;
   @:native("functionWithName") public static function functionWithName(name:NSString):CAMediaTimingFunction;
   @:native("getControlPointAtIndex:values") public function getControlPointAtIndex_values(idx:Int, ptr:Float):Void;
-  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:Dynamic):NSCoding;
   @:native("initWithControlPoints") public function initWithControlPoints(c1x:Float, c1y:Float, c2x:Float, c2y:Float):CAMediaTimingFunction;
 }

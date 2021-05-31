@@ -18,7 +18,7 @@ extern class DynamicColors extends UIColor{
 	overload public function initWithDynamicProvider(dynamicProvider:Dynamic):UIColor;
 
 	@:native("resolvedColorWithTraitCollection")
-	overload public function resolvedColorWithTraitCollection(traitCollection:Dynamic):UIColor;
+	overload public function resolvedColorWithTraitCollection(traitCollection:UITraitCollection):UIColor;
 
 
 }

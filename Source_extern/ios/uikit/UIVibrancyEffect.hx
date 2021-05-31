@@ -12,7 +12,7 @@ extern class UIVibrancyEffect extends UIVisualEffect{
 	overload public static function autorelease():UIVibrancyEffect;
 
 	@:native("effectForBlurEffect")
-	overload public static function effectForBlurEffect(blurEffect:Dynamic):UIVibrancyEffect;
+	overload public static function effectForBlurEffect(blurEffect:UIBlurEffect):UIVibrancyEffect;
 
 
 }

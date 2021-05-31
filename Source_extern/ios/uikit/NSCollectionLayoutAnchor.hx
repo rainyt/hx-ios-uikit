@@ -13,13 +13,13 @@ extern class NSCollectionLayoutAnchor{
 	overload public static function autorelease():NSCollectionLayoutAnchor;
 
 	@:native("layoutAnchorWithEdges")
-	overload public static function layoutAnchorWithEdges(edges:Dynamic):NSCollectionLayoutAnchor;
+	overload public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge):NSCollectionLayoutAnchor;
 
 	@:native("layoutAnchorWithEdges:absoluteOffset")
-	overload public static function layoutAnchorWithEdges_absoluteOffset(edges:Dynamic, absoluteOffset:CGPoint):NSCollectionLayoutAnchor;
+	overload public static function layoutAnchorWithEdges_absoluteOffset(edges:NSDirectionalRectEdge, absoluteOffset:CGPoint):NSCollectionLayoutAnchor;
 
 	@:native("layoutAnchorWithEdges:fractionalOffset")
-	overload public static function layoutAnchorWithEdges_fractionalOffset(edges:Dynamic, fractionalOffset:CGPoint):NSCollectionLayoutAnchor;
+	overload public static function layoutAnchorWithEdges_fractionalOffset(edges:NSDirectionalRectEdge, fractionalOffset:CGPoint):NSCollectionLayoutAnchor;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutAnchor;
@@ -28,7 +28,7 @@ extern class NSCollectionLayoutAnchor{
 	overload public static function new():NSCollectionLayoutAnchor;
 
 	@:native("edges")
-	public var edges:Dynamic;
+	public var edges:NSDirectionalRectEdge;
 
 	@:native("offset")
 	public var offset:CGPoint;

@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UISceneOpenURLOptions")
 @:include("UIKit/UIKit.h")
-extern class UISceneOpenURLOptions extends NSObject{
+extern class UISceneOpenURLOptions{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneOpenURLOptions;
@@ -19,7 +18,7 @@ extern class UISceneOpenURLOptions extends NSObject{
 	overload public function init():UISceneOpenURLOptions;
 
 	@:native("sourceApplication")
-	public var sourceApplication:NSString;
+	public var sourceApplication:Dynamic;
 
 	@:native("annotation")
 	public var annotation:Dynamic;

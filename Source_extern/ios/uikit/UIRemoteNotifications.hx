@@ -21,10 +21,10 @@ extern class UIRemoteNotifications extends UIApplication{
 	public var registeredForRemoteNotifications:Bool;
 
 	@:native("registerForRemoteNotificationTypes")
-	overload public function registerForRemoteNotificationTypes(types:Dynamic):Void;
+	overload public function registerForRemoteNotificationTypes(types:UIRemoteNotificationType):Void;
 
 	@:native("enabledRemoteNotificationTypes")
-	overload public function enabledRemoteNotificationTypes():Dynamic;
+	overload public function enabledRemoteNotificationTypes():UIRemoteNotificationType;
 
 
 }

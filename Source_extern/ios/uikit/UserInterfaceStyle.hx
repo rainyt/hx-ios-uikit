@@ -12,7 +12,7 @@ extern class UserInterfaceStyle extends UIView{
 	overload public static function autorelease():UserInterfaceStyle;
 
 	@:native("overrideUserInterfaceStyle")
-	public var overrideUserInterfaceStyle:Dynamic;
+	public var overrideUserInterfaceStyle:UIUserInterfaceStyle;
 
 
 }

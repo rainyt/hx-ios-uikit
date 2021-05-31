@@ -38,16 +38,16 @@ extern class UIView{
 	public var focused:Bool;
 
 	@:native("semanticContentAttribute")
-	public var semanticContentAttribute:Dynamic;
+	public var semanticContentAttribute:UISemanticContentAttribute;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:Dynamic):Dynamic;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:Dynamic, relativeToLayoutDirection:Dynamic):Dynamic;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("effectiveUserInterfaceLayoutDirection")
-	public var effectiveUserInterfaceLayoutDirection:Dynamic;
+	public var effectiveUserInterfaceLayoutDirection:UIUserInterfaceLayoutDirection;
 
 
 }

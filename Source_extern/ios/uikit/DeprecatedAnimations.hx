@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("DeprecatedAnimations")
 @:include("UIKit/UIKit.h")
@@ -13,7 +12,7 @@ extern class DeprecatedAnimations extends UIView{
 	overload public static function autorelease():DeprecatedAnimations;
 
 	@:native("beginAnimations:context")
-	overload public static function beginAnimations_context(animationID:NSString, context:Void):Void;
+	overload public static function beginAnimations_context(animationID:Dynamic, context:Void):Void;
 
 	@:native("commitAnimations")
 	overload public static function commitAnimations():Void;
@@ -37,7 +36,7 @@ extern class DeprecatedAnimations extends UIView{
 	overload public static function setAnimationStartDate(startDate:Dynamic):Void;
 
 	@:native("setAnimationCurve")
-	overload public static function setAnimationCurve(curve:Dynamic):Void;
+	overload public static function setAnimationCurve(curve:UIViewAnimationCurve):Void;
 
 	@:native("setAnimationRepeatCount")
 	overload public static function setAnimationRepeatCount(repeatCount:Dynamic):Void;
@@ -49,7 +48,7 @@ extern class DeprecatedAnimations extends UIView{
 	overload public static function setAnimationBeginsFromCurrentState(fromCurrentState:Bool):Void;
 
 	@:native("setAnimationTransition:forView:cache")
-	overload public static function setAnimationTransition_forView_cache(transition:Dynamic, forView:UIView, cache:Bool):Void;
+	overload public static function setAnimationTransition_forView_cache(transition:UIViewAnimationTransition, forView:UIView, cache:Bool):Void;
 
 
 }

@@ -15,7 +15,7 @@ extern class UIPopoverBackgroundView{
 	public var arrowOffset:Float;
 
 	@:native("arrowDirection")
-	public var arrowDirection:Dynamic;
+	public var arrowDirection:UIPopoverArrowDirection;
 
 	@:native("wantsDefaultContentAppearance")
 	overload public static function wantsDefaultContentAppearance():Bool;

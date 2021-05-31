@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIPrinter")
 @:include("UIKit/UIKit.h")
-extern class UIPrinter extends NSObject{
+extern class UIPrinter{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrinter;

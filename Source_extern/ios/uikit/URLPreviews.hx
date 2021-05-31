@@ -12,10 +12,10 @@ extern class URLPreviews extends UITargetedDragPreview{
 	overload public static function autorelease():URLPreviews;
 
 	@:native("previewForURL:target")
-	overload public static function previewForURL_target(url:Dynamic, target:Dynamic):URLPreviews;
+	overload public static function previewForURL_target(url:Dynamic, target:UIDragPreviewTarget):URLPreviews;
 
 	@:native("previewForURL:title:target")
-	overload public static function previewForURL_title_target(url:Dynamic, title:Dynamic, target:Dynamic):URLPreviews;
+	overload public static function previewForURL_title_target(url:Dynamic, title:Dynamic, target:UIDragPreviewTarget):URLPreviews;
 
 
 }

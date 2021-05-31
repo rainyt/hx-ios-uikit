@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGPoint;
-import cpp.objc.NSString;
 import ios.objc.CGVector;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
@@ -18,52 +17,52 @@ extern class UIGeometryKeyedCoding extends NSCoder{
 	overload public static function autorelease():UIGeometryKeyedCoding;
 
 	@:native("encodeCGPoint:forKey")
-	overload public function encodeCGPoint_forKey(point:CGPoint, forKey:NSString):Void;
+	overload public function encodeCGPoint_forKey(point:CGPoint, forKey:Dynamic):Void;
 
 	@:native("encodeCGVector:forKey")
-	overload public function encodeCGVector_forKey(vector:CGVector, forKey:NSString):Void;
+	overload public function encodeCGVector_forKey(vector:CGVector, forKey:Dynamic):Void;
 
 	@:native("encodeCGSize:forKey")
-	overload public function encodeCGSize_forKey(size:CGSize, forKey:NSString):Void;
+	overload public function encodeCGSize_forKey(size:CGSize, forKey:Dynamic):Void;
 
 	@:native("encodeCGRect:forKey")
-	overload public function encodeCGRect_forKey(rect:CGRect, forKey:NSString):Void;
+	overload public function encodeCGRect_forKey(rect:CGRect, forKey:Dynamic):Void;
 
 	@:native("encodeCGAffineTransform:forKey")
-	overload public function encodeCGAffineTransform_forKey(transform:CGAffineTransform, forKey:NSString):Void;
+	overload public function encodeCGAffineTransform_forKey(transform:CGAffineTransform, forKey:Dynamic):Void;
 
 	@:native("encodeUIEdgeInsets:forKey")
-	overload public function encodeUIEdgeInsets_forKey(insets:Dynamic, forKey:NSString):Void;
+	overload public function encodeUIEdgeInsets_forKey(insets:Dynamic, forKey:Dynamic):Void;
 
 	@:native("encodeDirectionalEdgeInsets:forKey")
-	overload public function encodeDirectionalEdgeInsets_forKey(insets:Dynamic, forKey:NSString):Void;
+	overload public function encodeDirectionalEdgeInsets_forKey(insets:Dynamic, forKey:Dynamic):Void;
 
 	@:native("encodeUIOffset:forKey")
-	overload public function encodeUIOffset_forKey(offset:Dynamic, forKey:NSString):Void;
+	overload public function encodeUIOffset_forKey(offset:Dynamic, forKey:Dynamic):Void;
 
 	@:native("decodeCGPointForKey")
-	overload public function decodeCGPointForKey(key:NSString):CGPoint;
+	overload public function decodeCGPointForKey(key:Dynamic):CGPoint;
 
 	@:native("decodeCGVectorForKey")
-	overload public function decodeCGVectorForKey(key:NSString):CGVector;
+	overload public function decodeCGVectorForKey(key:Dynamic):CGVector;
 
 	@:native("decodeCGSizeForKey")
-	overload public function decodeCGSizeForKey(key:NSString):CGSize;
+	overload public function decodeCGSizeForKey(key:Dynamic):CGSize;
 
 	@:native("decodeCGRectForKey")
-	overload public function decodeCGRectForKey(key:NSString):CGRect;
+	overload public function decodeCGRectForKey(key:Dynamic):CGRect;
 
 	@:native("decodeCGAffineTransformForKey")
-	overload public function decodeCGAffineTransformForKey(key:NSString):CGAffineTransform;
+	overload public function decodeCGAffineTransformForKey(key:Dynamic):CGAffineTransform;
 
 	@:native("decodeUIEdgeInsetsForKey")
-	overload public function decodeUIEdgeInsetsForKey(key:NSString):Dynamic;
+	overload public function decodeUIEdgeInsetsForKey(key:Dynamic):Dynamic;
 
 	@:native("decodeDirectionalEdgeInsetsForKey")
-	overload public function decodeDirectionalEdgeInsetsForKey(key:NSString):Dynamic;
+	overload public function decodeDirectionalEdgeInsetsForKey(key:Dynamic):Dynamic;
 
 	@:native("decodeUIOffsetForKey")
-	overload public function decodeUIOffsetForKey(key:NSString):Dynamic;
+	overload public function decodeUIOffsetForKey(key:Dynamic):Dynamic;
 
 
 }

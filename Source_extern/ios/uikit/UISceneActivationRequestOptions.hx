@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UISceneActivationRequestOptions")
 @:include("UIKit/UIKit.h")
-extern class UISceneActivationRequestOptions extends NSObject{
+extern class UISceneActivationRequestOptions{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneActivationRequestOptions;
@@ -12,10 +12,10 @@ extern class UISceneActivationRequestOptions extends NSObject{
 	overload public static function autorelease():UISceneActivationRequestOptions;
 
 	@:native("requestingScene")
-	public var requestingScene:Dynamic;
+	public var requestingScene:UIScene;
 
 	@:native("collectionJoinBehavior")
-	public var collectionJoinBehavior:Dynamic;
+	public var collectionJoinBehavior:UISceneCollectionJoinBehavior;
 
 
 }

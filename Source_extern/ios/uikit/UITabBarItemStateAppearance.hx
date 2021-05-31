@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITabBarItemStateAppearance")
 @:include("UIKit/UIKit.h")
-extern class UITabBarItemStateAppearance extends NSObject{
+extern class UITabBarItemStateAppearance{
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarItemStateAppearance;

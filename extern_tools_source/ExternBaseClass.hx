@@ -53,10 +53,11 @@ class ExternBaseClass {
 				extendClassName = harray[0];
 				extendClassName = extendClassName.substr(extendClassName.lastIndexOf(":") + 1);
 				extendClassName = StringTools.replace(extendClassName, " ", "");
+				extendClassName = StringTools.replace(extendClassName, "{", "");
 			}
 		}
 
-		if (extendClassName != null && extendClassName.indexOf("<") != -1)
+		if (extendClassName != null && (extendClassName.indexOf("<") != -1 || extendClassName == "NSObject"))
 			extendClassName = null;
 		// trace("pclassname2", pclassName);
 		// if(pclassName == "UIViewController"){

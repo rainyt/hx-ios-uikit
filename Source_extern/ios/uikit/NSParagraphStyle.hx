@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("NSParagraphStyle")
 @:include("UIKit/UIKit.h")
@@ -13,7 +12,7 @@ extern class NSParagraphStyle{
 	overload public static function autorelease():NSParagraphStyle;
 
 	@:native("defaultWritingDirectionForLanguage")
-	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):Dynamic;
+	overload public static function defaultWritingDirectionForLanguage(languageName:Dynamic):NSWritingDirection;
 
 	@:native("lineSpacing")
 	public var lineSpacing:Float;
@@ -22,7 +21,7 @@ extern class NSParagraphStyle{
 	public var paragraphSpacing:Float;
 
 	@:native("alignment")
-	public var alignment:Dynamic;
+	public var alignment:NSTextAlignment;
 
 	@:native("headIndent")
 	public var headIndent:Float;
@@ -40,10 +39,10 @@ extern class NSParagraphStyle{
 	public var maximumLineHeight:Float;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:Dynamic;
+	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("baseWritingDirection")
-	public var baseWritingDirection:Dynamic;
+	public var baseWritingDirection:NSWritingDirection;
 
 	@:native("lineHeightMultiple")
 	public var lineHeightMultiple:Float;
@@ -61,7 +60,7 @@ extern class NSParagraphStyle{
 	public var allowsDefaultTighteningForTruncation:Bool;
 
 	@:native("lineBreakStrategy")
-	public var lineBreakStrategy:Dynamic;
+	public var lineBreakStrategy:NSLineBreakStrategy;
 
 
 }

@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")
@@ -19,13 +18,13 @@ extern class UISceneSession{
 	overload public function init():UISceneSession;
 
 	@:native("scene")
-	public var scene:Dynamic;
+	public var scene:UIScene;
 
 	@:native("role")
 	public var role:Dynamic;
 
 	@:native("persistentIdentifier")
-	public var persistentIdentifier:NSString;
+	public var persistentIdentifier:Dynamic;
 
 	@:native("stateRestorationActivity")
 	public var stateRestorationActivity:Dynamic;

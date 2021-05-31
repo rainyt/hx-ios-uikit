@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UISceneConnectionOptions")
 @:include("UIKit/UIKit.h")
-extern class UISceneConnectionOptions extends NSObject{
+extern class UISceneConnectionOptions{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneConnectionOptions;
@@ -19,16 +18,16 @@ extern class UISceneConnectionOptions extends NSObject{
 	overload public function init():UISceneConnectionOptions;
 
 	@:native("sourceApplication")
-	public var sourceApplication:NSString;
+	public var sourceApplication:Dynamic;
 
 	@:native("handoffUserActivityType")
-	public var handoffUserActivityType:NSString;
+	public var handoffUserActivityType:Dynamic;
 
 	@:native("notificationResponse")
 	public var notificationResponse:Dynamic;
 
 	@:native("shortcutItem")
-	public var shortcutItem:Dynamic;
+	public var shortcutItem:UIApplicationShortcutItem;
 
 	@:native("cloudKitShareMetadata")
 	public var cloudKitShareMetadata:Dynamic;

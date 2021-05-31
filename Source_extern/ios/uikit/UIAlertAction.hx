@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIAlertAction")
 @:include("UIKit/UIKit.h")
@@ -13,13 +12,13 @@ extern class UIAlertAction{
 	overload public static function autorelease():UIAlertAction;
 
 	@:native("actionWithTitle:style:handler")
-	overload public static function actionWithTitle_style_handler(title:NSString, style:Dynamic, handler:Dynamic):UIAlertAction;
+	overload public static function actionWithTitle_style_handler(title:Dynamic, style:UIAlertActionStyle, handler:Dynamic):UIAlertAction;
 
 	@:native("title")
-	public var title:NSString;
+	public var title:Dynamic;
 
 	@:native("style")
-	public var style:Dynamic;
+	public var style:UIAlertActionStyle;
 
 	@:native("enabled")
 	public var enabled:Bool;

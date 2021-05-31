@@ -28,8 +28,8 @@ extends CAPropertyAnimation
   @:native("setRotationMode") public function setRotationMode(rotationMode:NSString):Void;
   @:native("setTensionValues") public function setTensionValues(tensionValues:Dynamic):Void;
   @:native("setTimingFunctions") public function setTimingFunctions(timingFunctions:Dynamic):Void;
-  @:native("setValues") public function setValues(values:NSArray):Void;
+  @:native("setValues") public function setValues(values:Dynamic):Void;
   @:native("tensionValues") public function tensionValues():Dynamic;
   @:native("timingFunctions") public function timingFunctions():Dynamic;
-  @:native("values") public function values():NSArray;
+  @:native("values") public function values():Dynamic;
 }

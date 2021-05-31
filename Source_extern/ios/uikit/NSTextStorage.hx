@@ -12,13 +12,13 @@ extern class NSTextStorage{
 	overload public static function autorelease():NSTextStorage;
 
 	@:native("addLayoutManager")
-	overload public function addLayoutManager(aLayoutManager:Dynamic):Void;
+	overload public function addLayoutManager(aLayoutManager:NSLayoutManager):Void;
 
 	@:native("removeLayoutManager")
-	overload public function removeLayoutManager(aLayoutManager:Dynamic):Void;
+	overload public function removeLayoutManager(aLayoutManager:NSLayoutManager):Void;
 
 	@:native("editedMask")
-	public var editedMask:Dynamic;
+	public var editedMask:NSTextStorageEditActions;
 
 	@:native("editedRange")
 	public var editedRange:Dynamic;
@@ -30,7 +30,7 @@ extern class NSTextStorage{
 	public var delegate:Dynamic;
 
 	@:native("edited:range:changeInLength")
-	overload public function edited_range_changeInLength(editedMask:Dynamic, range:Dynamic, changeInLength:Int):Void;
+	overload public function edited_range_changeInLength(editedMask:NSTextStorageEditActions, range:Dynamic, changeInLength:Int):Void;
 
 	@:native("processEditing")
 	overload public function processEditing():Void;

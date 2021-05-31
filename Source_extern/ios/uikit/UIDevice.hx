@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIDevice")
 @:include("UIKit/UIKit.h")
-extern class UIDevice extends NSObject{
+extern class UIDevice{
 
 	@:native("alloc")
 	overload public static function alloc():UIDevice;
@@ -16,22 +15,22 @@ extern class UIDevice extends NSObject{
 	overload public static function currentDevice():UIDevice;
 
 	@:native("name")
-	public var name:NSString;
+	public var name:Dynamic;
 
 	@:native("model")
-	public var model:NSString;
+	public var model:Dynamic;
 
 	@:native("localizedModel")
-	public var localizedModel:NSString;
+	public var localizedModel:Dynamic;
 
 	@:native("systemName")
-	public var systemName:NSString;
+	public var systemName:Dynamic;
 
 	@:native("systemVersion")
-	public var systemVersion:NSString;
+	public var systemVersion:Dynamic;
 
 	@:native("orientation")
-	public var orientation:Dynamic;
+	public var orientation:UIDeviceOrientation;
 
 	@:native("identifierForVendor")
 	public var identifierForVendor:Dynamic;
@@ -49,7 +48,7 @@ extern class UIDevice extends NSObject{
 	public var batteryMonitoringEnabled:Bool;
 
 	@:native("batteryState")
-	public var batteryState:Dynamic;
+	public var batteryState:UIDeviceBatteryState;
 
 	@:native("batteryLevel")
 	public var batteryLevel:Dynamic;
@@ -64,7 +63,7 @@ extern class UIDevice extends NSObject{
 	public var multitaskingSupported:Bool;
 
 	@:native("userInterfaceIdiom")
-	public var userInterfaceIdiom:Dynamic;
+	public var userInterfaceIdiom:UIUserInterfaceIdiom;
 
 	@:native("playInputClick")
 	overload public function playInputClick():Void;

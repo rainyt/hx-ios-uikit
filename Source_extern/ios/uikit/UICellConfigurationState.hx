@@ -24,10 +24,10 @@ extern class UICellConfigurationState extends UIViewConfigurationState{
 	public var reordering:Bool;
 
 	@:native("cellDragState")
-	public var cellDragState:Dynamic;
+	public var cellDragState:UICellConfigurationDragState;
 
 	@:native("cellDropState")
-	public var cellDropState:Dynamic;
+	public var cellDropState:UICellConfigurationDropState;
 
 
 }

@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import cpp.objc.NSString;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIGraphicsPDFRendererContext")
@@ -27,10 +26,10 @@ extern class UIGraphicsPDFRendererContext extends UIGraphicsRendererContext{
 	overload public function setURL_forRect(url:Dynamic, forRect:CGRect):Void;
 
 	@:native("addDestinationWithName:atPoint")
-	overload public function addDestinationWithName_atPoint(name:NSString, atPoint:CGPoint):Void;
+	overload public function addDestinationWithName_atPoint(name:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("setDestinationWithName:forRect")
-	overload public function setDestinationWithName_forRect(name:NSString, forRect:CGRect):Void;
+	overload public function setDestinationWithName_forRect(name:Dynamic, forRect:CGRect):Void;
 
 
 }

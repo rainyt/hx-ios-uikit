@@ -12,7 +12,7 @@ extern class NSLayoutXAxisAnchor{
 	overload public static function autorelease():NSLayoutXAxisAnchor;
 
 	@:native("anchorWithOffsetToAnchor")
-	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutXAxisAnchor):Dynamic;
+	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutXAxisAnchor):NSLayoutDimension;
 
 
 }

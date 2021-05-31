@@ -3,13 +3,14 @@ package ios.objc;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 import haxe.Int64;
+// import ios.objc.NSCoding;
 
 @:objc
 @:native("CALayer")
 @:include("UIKit/UIKit.h")
 extern class CALayer
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<CAMediaTiming>
+// implements cpp.objc.Protocol<NSCoding>
+// implements cpp.objc.Protocol<CAMediaTiming>
 {
   @:native("actionForKey") public function actionForKey(event:NSString):CAAction;
   @:native("actions") public function actions():Dynamic;
@@ -26,7 +27,7 @@ implements cpp.objc.Protocol<CAMediaTiming>
   @:native("autorelease") public function autorelease():CALayer;
   /* Implicit from CAMediaTiming */ @:native("autoreverses") public function autoreverses():Bool;
   @:native("backgroundColor") public function backgroundColor():CGColor;
-  @:native("backgroundFilters") public function backgroundFilters():NSArray;
+  @:native("backgroundFilters") public function backgroundFilters():Dynamic;
   /* Implicit from CAMediaTiming */ @:native("beginTime") public function beginTime():Float;
   @:native("borderColor") public function borderColor():CGColor;
   @:native("borderWidth") public function borderWidth():Float;
@@ -56,13 +57,13 @@ implements cpp.objc.Protocol<CAMediaTiming>
   @:native("drawsAsynchronously") public function drawsAsynchronously():Bool;
   /* Implicit from CAMediaTiming */ @:native("duration") public function duration():Float;
   @:native("edgeAntialiasingMask") public function edgeAntialiasingMask():CAEdgeAntialiasingMask;
-  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:Dynamic):Void;
   /* Implicit from CAMediaTiming */ @:native("fillMode") public function fillMode():NSString;
-  @:native("filters") public function filters():NSArray;
+  @:native("filters") public function filters():Dynamic;
   @:native("frame") public function frame():CGRect;
   @:native("hitTest") public function hitTest(p:CGPoint):CALayer;
   @:native("init") public function init():CALayer;
-  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:Dynamic):NSCoding;
   @:native("initWithLayer") public function initWithLayer(layer:Dynamic):CALayer;
   @:native("insertSublayer:above") public function insertSublayer_above(layer:CALayer, sibling:CALayer):Void;
   @:native("insertSublayer:atIndex") public function insertSublayer_atIndex(layer:CALayer, idx:Int):Void;
@@ -107,7 +108,7 @@ implements cpp.objc.Protocol<CAMediaTiming>
   @:native("setAnchorPointZ") public function setAnchorPointZ(anchorPointZ:Float):Void;
   /* Implicit from CAMediaTiming */ @:native("setAutoreverses") public function setAutoreverses(autoreverses:Bool):Void;
   @:native("setBackgroundColor") public function setBackgroundColor(backgroundColor:CGColor):Void;
-  @:native("setBackgroundFilters") public function setBackgroundFilters(backgroundFilters:NSArray):Void;
+  @:native("setBackgroundFilters") public function setBackgroundFilters(backgroundFilters:Dynamic):Void;
   /* Implicit from CAMediaTiming */ @:native("setBeginTime") public function setBeginTime(beginTime:Float):Void;
   @:native("setBorderColor") public function setBorderColor(borderColor:CGColor):Void;
   @:native("setBorderWidth") public function setBorderWidth(borderWidth:Float):Void;
@@ -126,7 +127,7 @@ implements cpp.objc.Protocol<CAMediaTiming>
   /* Implicit from CAMediaTiming */ @:native("setDuration") public function setDuration(duration:Float):Void;
   @:native("setEdgeAntialiasingMask") public function setEdgeAntialiasingMask(edgeAntialiasingMask:CAEdgeAntialiasingMask):Void;
   /* Implicit from CAMediaTiming */ @:native("setFillMode") public function setFillMode(fillMode:NSString):Void;
-  @:native("setFilters") public function setFilters(filters:NSArray):Void;
+  @:native("setFilters") public function setFilters(filters:Dynamic):Void;
   @:native("setFrame") public function setFrame(frame:CGRect):Void;
   @:native("setGeometryFlipped") public function setGeometryFlipped(geometryFlipped:Bool):Void;
   @:native("setHidden") public function setHidden(hidden:Bool):Void;

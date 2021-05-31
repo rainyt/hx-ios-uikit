@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIPreviewAction")
 @:include("UIKit/UIKit.h")
@@ -13,7 +12,7 @@ extern class UIPreviewAction{
 	overload public static function autorelease():UIPreviewAction;
 
 	@:native("actionWithTitle:style:handler")
-	overload public static function actionWithTitle_style_handler(title:NSString, style:Dynamic, handler:Dynamic):UIPreviewAction;
+	overload public static function actionWithTitle_style_handler(title:Dynamic, style:UIPreviewActionStyle, handler:Dynamic):UIPreviewAction;
 
 
 }

@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAccessibilityFocus")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityFocus extends NSObject{
+extern class UIAccessibilityFocus{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityFocus;

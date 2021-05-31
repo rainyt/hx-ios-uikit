@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UICollectionViewUpdateItem")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewUpdateItem extends NSObject{
+extern class UICollectionViewUpdateItem{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewUpdateItem;
@@ -18,7 +18,7 @@ extern class UICollectionViewUpdateItem extends NSObject{
 	public var indexPathAfterUpdate:Dynamic;
 
 	@:native("updateAction")
-	public var updateAction:Dynamic;
+	public var updateAction:UICollectionUpdateAction;
 
 
 }

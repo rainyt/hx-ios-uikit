@@ -1,10 +1,9 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewSupplementaryRegistration")
 @:include("UIKit/UIKit.h")
-extern class UICollectionViewSupplementaryRegistration extends NSObject{
+extern class UICollectionViewSupplementaryRegistration{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewSupplementaryRegistration;
@@ -13,19 +12,19 @@ extern class UICollectionViewSupplementaryRegistration extends NSObject{
 	overload public static function autorelease():UICollectionViewSupplementaryRegistration;
 
 	@:native("registrationWithSupplementaryClass:elementKind")
-	overload public static function registrationWithSupplementaryClass_elementKind(supplementaryClass:Dynamic, elementKind:NSString):UICollectionViewSupplementaryRegistration;
+	overload public static function registrationWithSupplementaryClass_elementKind(supplementaryClass:Dynamic, elementKind:Dynamic):UICollectionViewSupplementaryRegistration;
 
 	@:native("registrationWithSupplementaryNib:elementKind:configurationHandler")
-	overload public static function registrationWithSupplementaryNib_elementKind_configurationHandler(supplementaryNib:Dynamic, elementKind:NSString, configurationHandler:Dynamic):UICollectionViewSupplementaryRegistration;
+	overload public static function registrationWithSupplementaryNib_elementKind_configurationHandler(supplementaryNib:UINib, elementKind:Dynamic, configurationHandler:Dynamic):UICollectionViewSupplementaryRegistration;
 
 	@:native("supplementaryClass")
 	public var supplementaryClass:Dynamic;
 
 	@:native("supplementaryNib")
-	public var supplementaryNib:Dynamic;
+	public var supplementaryNib:UINib;
 
 	@:native("elementKind")
-	public var elementKind:NSString;
+	public var elementKind:Dynamic;
 
 	@:native("configurationHandler")
 	public var configurationHandler:Dynamic;

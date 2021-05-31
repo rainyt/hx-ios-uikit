@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewTransitionLayout")
 @:include("UIKit/UIKit.h")
@@ -16,13 +15,13 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	public var transitionProgress:Float;
 
 	@:native("currentLayout")
-	public var currentLayout:Dynamic;
+	public var currentLayout:UICollectionViewLayout;
 
 	@:native("nextLayout")
-	public var nextLayout:Dynamic;
+	public var nextLayout:UICollectionViewLayout;
 
 	@:native("initWithCurrentLayout:nextLayout")
-	overload public function initWithCurrentLayout_nextLayout(currentLayout:Dynamic, nextLayout:Dynamic):UICollectionViewTransitionLayout;
+	overload public function initWithCurrentLayout_nextLayout(currentLayout:UICollectionViewLayout, nextLayout:UICollectionViewLayout):UICollectionViewTransitionLayout;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UICollectionViewTransitionLayout;
@@ -31,10 +30,10 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function init():UICollectionViewTransitionLayout;
 
 	@:native("updateValue:forAnimatedKey")
-	overload public function updateValue_forAnimatedKey(value:Float, forAnimatedKey:NSString):Void;
+	overload public function updateValue_forAnimatedKey(value:Float, forAnimatedKey:Dynamic):Void;
 
 	@:native("valueForAnimatedKey")
-	overload public function valueForAnimatedKey(key:NSString):Float;
+	overload public function valueForAnimatedKey(key:Dynamic):Float;
 
 
 }

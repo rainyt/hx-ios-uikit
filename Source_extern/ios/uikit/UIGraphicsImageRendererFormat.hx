@@ -21,10 +21,10 @@ extern class UIGraphicsImageRendererFormat extends UIGraphicsRendererFormat{
 	public var prefersExtendedRange:Bool;
 
 	@:native("preferredRange")
-	public var preferredRange:Dynamic;
+	public var preferredRange:UIGraphicsImageRendererFormatRange;
 
 	@:native("formatForTraitCollection")
-	overload public static function formatForTraitCollection(traitCollection:Dynamic):UIGraphicsImageRendererFormat;
+	overload public static function formatForTraitCollection(traitCollection:UITraitCollection):UIGraphicsImageRendererFormat;
 
 
 }

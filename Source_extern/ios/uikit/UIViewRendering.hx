@@ -37,7 +37,7 @@ extern class UIViewRendering extends UIView{
 	public var hidden:Bool;
 
 	@:native("contentMode")
-	public var contentMode:Dynamic;
+	public var contentMode:UIViewContentMode;
 
 	@:native("contentStretch")
 	public var contentStretch:CGRect;
@@ -46,10 +46,10 @@ extern class UIViewRendering extends UIView{
 	public var maskView:UIView;
 
 	@:native("tintColor")
-	public var tintColor:Dynamic;
+	public var tintColor:UIColor;
 
 	@:native("tintAdjustmentMode")
-	public var tintAdjustmentMode:Dynamic;
+	public var tintAdjustmentMode:UIViewTintAdjustmentMode;
 
 	@:native("tintColorDidChange")
 	overload public function tintColorDidChange():Void;

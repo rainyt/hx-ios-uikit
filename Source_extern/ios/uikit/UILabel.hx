@@ -14,25 +14,25 @@ extern class UILabel{
 	overload public static function autorelease():UILabel;
 
 	@:native("font")
-	public var font:Dynamic;
+	public var font:UIFont;
 
 	@:native("textColor")
-	public var textColor:Dynamic;
+	public var textColor:UIColor;
 
 	@:native("shadowColor")
-	public var shadowColor:Dynamic;
+	public var shadowColor:UIColor;
 
 	@:native("shadowOffset")
 	public var shadowOffset:CGSize;
 
 	@:native("textAlignment")
-	public var textAlignment:Dynamic;
+	public var textAlignment:NSTextAlignment;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:Dynamic;
+	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("highlightedTextColor")
-	public var highlightedTextColor:Dynamic;
+	public var highlightedTextColor:UIColor;
 
 	@:native("highlighted")
 	public var highlighted:Bool;
@@ -50,7 +50,7 @@ extern class UILabel{
 	public var adjustsFontSizeToFitWidth:Bool;
 
 	@:native("baselineAdjustment")
-	public var baselineAdjustment:Dynamic;
+	public var baselineAdjustment:UIBaselineAdjustment;
 
 	@:native("minimumScaleFactor")
 	public var minimumScaleFactor:Float;
@@ -59,7 +59,7 @@ extern class UILabel{
 	public var allowsDefaultTighteningForTruncation:Bool;
 
 	@:native("lineBreakStrategy")
-	public var lineBreakStrategy:Dynamic;
+	public var lineBreakStrategy:NSLineBreakStrategy;
 
 	@:native("textRectForBounds:limitedToNumberOfLines")
 	overload public function textRectForBounds_limitedToNumberOfLines(bounds:CGRect, limitedToNumberOfLines:Int):CGRect;

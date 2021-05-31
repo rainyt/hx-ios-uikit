@@ -15,16 +15,16 @@ extern class UITabBarController{
 	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;
 
 	@:native("selectedViewController")
-	public var selectedViewController:Dynamic;
+	public var selectedViewController:UIViewController;
 
 	@:native("selectedIndex")
 	public var selectedIndex:Int;
 
 	@:native("moreNavigationController")
-	public var moreNavigationController:Dynamic;
+	public var moreNavigationController:UINavigationController;
 
 	@:native("tabBar")
-	public var tabBar:Dynamic;
+	public var tabBar:UITabBar;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

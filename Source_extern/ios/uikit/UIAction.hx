@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIAction")
 @:include("UIKit/UIKit.h")
@@ -13,13 +12,13 @@ extern class UIAction extends UIMenuElement{
 	overload public static function autorelease():UIAction;
 
 	@:native("identifier")
-	public var identifier:NSString;
+	public var identifier:Dynamic;
 
 	@:native("attributes")
-	public var attributes:Dynamic;
+	public var attributes:UIMenuElementAttributes;
 
 	@:native("state")
-	public var state:Dynamic;
+	public var state:UIMenuElementState;
 
 	@:native("sender")
 	public var sender:Dynamic;

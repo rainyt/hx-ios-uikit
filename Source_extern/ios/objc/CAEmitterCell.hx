@@ -31,11 +31,11 @@ implements cpp.objc.Protocol<CAMediaTiming>
   @:native("emissionRange") public function emissionRange():Float;
   @:native("emitterCell") public static function emitterCell():CAEmitterCell;
   @:native("emitterCells") public function emitterCells():Dynamic;
-  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:Dynamic):Void;
   /* Implicit from CAMediaTiming */ @:native("fillMode") public function fillMode():NSString;
   @:native("greenRange") public function greenRange():Float;
   @:native("greenSpeed") public function greenSpeed():Float;
-  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:Dynamic):NSCoding;
   @:native("isEnabled") public function isEnabled():Bool;
   @:native("lifetime") public function lifetime():Float;
   @:native("lifetimeRange") public function lifetimeRange():Float;

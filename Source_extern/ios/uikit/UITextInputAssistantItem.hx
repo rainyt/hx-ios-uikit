@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UITextInputAssistantItem")
 @:include("UIKit/UIKit.h")
-extern class UITextInputAssistantItem extends NSObject{
+extern class UITextInputAssistantItem{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputAssistantItem;

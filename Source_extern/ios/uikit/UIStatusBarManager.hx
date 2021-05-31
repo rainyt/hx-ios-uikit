@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIStatusBarManager")
 @:include("UIKit/UIKit.h")
-extern class UIStatusBarManager extends NSObject{
+extern class UIStatusBarManager{
 
 	@:native("alloc")
 	overload public static function alloc():UIStatusBarManager;
@@ -19,7 +19,7 @@ extern class UIStatusBarManager extends NSObject{
 	overload public static function new():UIStatusBarManager;
 
 	@:native("statusBarStyle")
-	public var statusBarStyle:Dynamic;
+	public var statusBarStyle:UIStatusBarStyle;
 
 	@:native("statusBarHidden")
 	public var statusBarHidden:Bool;

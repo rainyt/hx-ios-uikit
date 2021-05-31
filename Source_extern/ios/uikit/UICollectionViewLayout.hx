@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewLayout")
 @:include("UIKit/UIKit.h")
@@ -19,7 +18,7 @@ extern class UICollectionViewLayout{
 	overload public function initWithCoder(coder:Dynamic):UICollectionViewLayout;
 
 	@:native("collectionView")
-	public var collectionView:Dynamic;
+	public var collectionView:UICollectionView;
 
 	@:native("invalidateLayout")
 	overload public function invalidateLayout():Void;
@@ -28,10 +27,10 @@ extern class UICollectionViewLayout{
 	overload public function invalidateLayoutWithContext(context:Dynamic):Void;
 
 	@:native("registerClass:forDecorationViewOfKind")
-	overload public function registerClass_forDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:NSString):Void;
+	overload public function registerClass_forDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:Dynamic):Void;
 
 	@:native("registerNib:forDecorationViewOfKind")
-	overload public function registerNib_forDecorationViewOfKind(nib:Dynamic, forDecorationViewOfKind:NSString):Void;
+	overload public function registerNib_forDecorationViewOfKind(nib:UINib, forDecorationViewOfKind:Dynamic):Void;
 
 
 }

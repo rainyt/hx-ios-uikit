@@ -15,7 +15,7 @@ extern class UITabBarItemAppearance{
 	overload public function init():UITabBarItemAppearance;
 
 	@:native("initWithStyle")
-	overload public function initWithStyle(style:Dynamic):UITabBarItemAppearance;
+	overload public function initWithStyle(style:UITabBarItemAppearanceStyle):UITabBarItemAppearance;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UITabBarItemAppearance;
@@ -24,7 +24,7 @@ extern class UITabBarItemAppearance{
 	overload public function copy():UITabBarItemAppearance;
 
 	@:native("configureWithDefaultForStyle")
-	overload public function configureWithDefaultForStyle(style:Dynamic):Void;
+	overload public function configureWithDefaultForStyle(style:UITabBarItemAppearanceStyle):Void;
 
 	@:native("normal")
 	public var normal:UITabBarItemStateAppearance;

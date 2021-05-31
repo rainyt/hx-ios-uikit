@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import cpp.objc.NSString;
 @:objc
 @:native("UIDeprecated")
 @:include("UIKit/UIKit.h")
@@ -14,28 +13,28 @@ extern class UIDeprecated extends UITableViewCell{
 	overload public static function autorelease():UIDeprecated;
 
 	@:native("initWithFrame:reuseIdentifier")
-	overload public function initWithFrame_reuseIdentifier(frame:CGRect, reuseIdentifier:NSString):Dynamic;
+	overload public function initWithFrame_reuseIdentifier(frame:CGRect, reuseIdentifier:Dynamic):Dynamic;
 
 	@:native("font")
-	public var font:Dynamic;
+	public var font:UIFont;
 
 	@:native("textAlignment")
-	public var textAlignment:Dynamic;
+	public var textAlignment:NSTextAlignment;
 
 	@:native("lineBreakMode")
-	public var lineBreakMode:Dynamic;
+	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("textColor")
-	public var textColor:Dynamic;
+	public var textColor:UIColor;
 
 	@:native("selectedTextColor")
-	public var selectedTextColor:Dynamic;
+	public var selectedTextColor:UIColor;
 
 	@:native("image")
-	public var image:Dynamic;
+	public var image:UIImage;
 
 	@:native("selectedImage")
-	public var selectedImage:Dynamic;
+	public var selectedImage:UIImage;
 
 	@:native("hidesAccessoryWhenEditing")
 	public var hidesAccessoryWhenEditing:Bool;

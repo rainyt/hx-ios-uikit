@@ -14,19 +14,19 @@ extern class UIWindow extends UIView{
 	overload public static function autorelease():UIWindow;
 
 	@:native("initWithWindowScene")
-	overload public function initWithWindowScene(windowScene:Dynamic):UIWindow;
+	overload public function initWithWindowScene(windowScene:UIWindowScene):UIWindow;
 
 	@:native("windowScene")
-	public var windowScene:Dynamic;
+	public var windowScene:UIWindowScene;
 
 	@:native("canResizeToFitContent")
 	public var canResizeToFitContent:Bool;
 
 	@:native("screen")
-	public var screen:Dynamic;
+	public var screen:UIScreen;
 
 	@:native("setScreen")
-	overload public function setScreen(screen:Dynamic):Void;
+	overload public function setScreen(screen:UIScreen):Void;
 
 	@:native("windowLevel")
 	public var windowLevel:Float;
@@ -47,10 +47,10 @@ extern class UIWindow extends UIView{
 	overload public function makeKeyAndVisible():Void;
 
 	@:native("rootViewController")
-	public var rootViewController:Dynamic;
+	public var rootViewController:UIViewController;
 
 	@:native("sendEvent")
-	overload public function sendEvent(event:Dynamic):Void;
+	overload public function sendEvent(event:UIEvent):Void;
 
 	@:native("convertPoint:toWindow")
 	overload public function convertPoint_toWindow(point:CGPoint, toWindow:UIWindow):CGPoint;

@@ -18,22 +18,22 @@ extern class UICollectionLayoutListConfiguration{
 	overload public function init():UICollectionLayoutListConfiguration;
 
 	@:native("initWithAppearance")
-	overload public function initWithAppearance(appearance:Dynamic):UICollectionLayoutListConfiguration;
+	overload public function initWithAppearance(appearance:UICollectionLayoutListAppearance):UICollectionLayoutListConfiguration;
 
 	@:native("appearance")
-	public var appearance:Dynamic;
+	public var appearance:UICollectionLayoutListAppearance;
 
 	@:native("showsSeparators")
 	public var showsSeparators:Bool;
 
 	@:native("backgroundColor")
-	public var backgroundColor:Dynamic;
+	public var backgroundColor:UIColor;
 
 	@:native("headerMode")
-	public var headerMode:Dynamic;
+	public var headerMode:UICollectionLayoutListHeaderMode;
 
 	@:native("footerMode")
-	public var footerMode:Dynamic;
+	public var footerMode:UICollectionLayoutListFooterMode;
 
 
 }

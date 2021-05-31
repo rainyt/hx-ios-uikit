@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIOpenURLContext")
 @:include("UIKit/UIKit.h")
-extern class UIOpenURLContext extends NSObject{
+extern class UIOpenURLContext{
 
 	@:native("alloc")
 	overload public static function alloc():UIOpenURLContext;
@@ -18,7 +18,7 @@ extern class UIOpenURLContext extends NSObject{
 	overload public function init():UIOpenURLContext;
 
 	@:native("options")
-	public var options:Dynamic;
+	public var options:UISceneOpenURLOptions;
 
 
 }

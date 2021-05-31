@@ -4,7 +4,7 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIPrintPageRenderer")
 @:include("UIKit/UIKit.h")
-extern class UIPrintPageRenderer extends NSObject{
+extern class UIPrintPageRenderer{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrintPageRenderer;
@@ -31,7 +31,7 @@ extern class UIPrintPageRenderer extends NSObject{
 	overload public function printFormattersForPageAtIndex(pageIndex:Int):Dynamic;
 
 	@:native("addPrintFormatter:startingAtPageAtIndex")
-	overload public function addPrintFormatter_startingAtPageAtIndex(formatter:Dynamic, startingAtPageAtIndex:Int):Void;
+	overload public function addPrintFormatter_startingAtPageAtIndex(formatter:UIPrintFormatter, startingAtPageAtIndex:Int):Void;
 
 	@:native("prepareForDrawingPages")
 	overload public function prepareForDrawingPages(range:Dynamic):Void;
@@ -40,7 +40,7 @@ extern class UIPrintPageRenderer extends NSObject{
 	overload public function drawPageAtIndex_inRect(pageIndex:Int, inRect:CGRect):Void;
 
 	@:native("drawPrintFormatter:forPageAtIndex")
-	overload public function drawPrintFormatter_forPageAtIndex(printFormatter:Dynamic, forPageAtIndex:Int):Void;
+	overload public function drawPrintFormatter_forPageAtIndex(printFormatter:UIPrintFormatter, forPageAtIndex:Int):Void;
 
 	@:native("drawHeaderForPageAtIndex")
 	overload public function drawHeaderForPageAtIndex(pageIndex:Int):Void;

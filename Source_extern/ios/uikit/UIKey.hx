@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
 @:objc
 @:native("UIKey")
 @:include("UIKit/UIKit.h")
@@ -13,13 +12,13 @@ extern class UIKey{
 	overload public static function autorelease():UIKey;
 
 	@:native("characters")
-	public var characters:NSString;
+	public var characters:Dynamic;
 
 	@:native("charactersIgnoringModifiers")
-	public var charactersIgnoringModifiers:NSString;
+	public var charactersIgnoringModifiers:Dynamic;
 
 	@:native("modifierFlags")
-	public var modifierFlags:Dynamic;
+	public var modifierFlags:UIKeyModifierFlags;
 
 	@:native("keyCode")
 	public var keyCode:Dynamic;

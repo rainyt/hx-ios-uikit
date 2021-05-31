@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import cpp.objc.NSString;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 @:objc
@@ -31,10 +30,10 @@ extern class UISubclassingHooks extends UICollectionViewLayout{
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(elementKind:Dynamic, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("shouldInvalidateLayoutForBoundsChange")
 	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect):Bool;
@@ -58,7 +57,7 @@ extern class UISubclassingHooks extends UICollectionViewLayout{
 	public var collectionViewContentSize:CGSize;
 
 	@:native("developmentLayoutDirection")
-	public var developmentLayoutDirection:Dynamic;
+	public var developmentLayoutDirection:UIUserInterfaceLayoutDirection;
 
 	@:native("flipsHorizontallyInOppositeLayoutDirection")
 	public var flipsHorizontallyInOppositeLayoutDirection:Bool;

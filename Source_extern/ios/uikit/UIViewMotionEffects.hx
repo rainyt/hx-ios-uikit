@@ -12,10 +12,10 @@ extern class UIViewMotionEffects extends UIView{
 	overload public static function autorelease():UIViewMotionEffects;
 
 	@:native("addMotionEffect")
-	overload public function addMotionEffect(effect:Dynamic):Void;
+	overload public function addMotionEffect(effect:UIMotionEffect):Void;
 
 	@:native("removeMotionEffect")
-	overload public function removeMotionEffect(effect:Dynamic):Void;
+	overload public function removeMotionEffect(effect:UIMotionEffect):Void;
 
 
 }

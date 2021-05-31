@@ -4,7 +4,7 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIPointerRegionRequest")
 @:include("UIKit/UIKit.h")
-extern class UIPointerRegionRequest extends NSObject{
+extern class UIPointerRegionRequest{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerRegionRequest;
@@ -16,7 +16,7 @@ extern class UIPointerRegionRequest extends NSObject{
 	public var location:CGPoint;
 
 	@:native("modifiers")
-	public var modifiers:Dynamic;
+	public var modifiers:UIKeyModifierFlags;
 
 
 }

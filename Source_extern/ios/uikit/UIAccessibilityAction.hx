@@ -3,7 +3,7 @@ package ios.uikit;
 @:objc
 @:native("UIAccessibilityAction")
 @:include("UIKit/UIKit.h")
-extern class UIAccessibilityAction extends NSObject{
+extern class UIAccessibilityAction{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityAction;
