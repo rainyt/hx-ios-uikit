@@ -17,16 +17,16 @@ extern class UIPasteboard{
 	public var generalPasteboard:UIPasteboard;
 
 	@:native("pasteboardWithName:create")
-	overload extern inline public static function pasteboardWithName(pasteboardName:UIPasteboardName, create:Bool):nullable UIPasteboard *;
+	overload extern inline public static function pasteboardWithName(pasteboardName:NSString, create:Bool):nullable UIPasteboard *;
 
 	@:native("pasteboardWithUniqueName;")
 	overload extern inline public static function pasteboardWithUniqueName;():UIPasteboard *;
 
 	@:native("name")
-	public var name:UIPasteboardName;
+	public var name:NSString;
 
 	@:native("removePasteboardWithName")
-	overload extern inline public static function removePasteboardWithName(pasteboardName:UIPasteboardName):Void;
+	overload extern inline public static function removePasteboardWithName(pasteboardName:NSString):Void;
 
 	@:native("persistent")
 	public var persistent:Bool;

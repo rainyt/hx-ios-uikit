@@ -212,16 +212,16 @@ extern class UITextInput{
 	overload extern inline public function textDidChange(textInput:Dynamic):Void;
 
 	@:native("rangeEnclosingPosition:withGranularity:inDirection:://:range:the:text:of:given:or:if:is:such:unit.:Whether:boundary:is:depends:the:direction,:the:rule")
-	overload extern inline public function rangeEnclosingPosition(position:UITextPosition, withGranularity:UITextGranularity, inDirection:UITextDirection, :, //:Returns, range:of, the:enclosing, text:unit, of:the, given:granularity,, or:nil, if:there, is:no, such:enclosing, unit.:, Whether:a, boundary:position, is:enclosed, depends:on, the:given, direction,:using, the:same, rule:as):nullable UITextRange *;
+	overload extern inline public function rangeEnclosingPosition(position:UITextPosition, withGranularity:UITextGranularity, inDirection:NSInteger, :, //:Returns, range:of, the:enclosing, text:unit, of:the, given:granularity,, or:nil, if:there, is:no, such:enclosing, unit.:, Whether:a, boundary:position, is:enclosed, depends:on, the:given, direction,:using, the:same, rule:as):nullable UITextRange *;
 
 	@:native("isPosition:atBoundary:inDirection::::::::::::::://:YES:if:position:at:boundary:a:unit:the:granularity:the")
-	overload extern inline public function isPosition(position:UITextPosition, atBoundary:UITextGranularity, inDirection:UITextDirection, :, :, :, :, :, :, :, :, :, :, :, :, :, :, //:Returns, YES:only, if:a, position:is, at:a, boundary:of, a:text, unit:of, the:specified, granularity:in, the:particular):BOOL;
+	overload extern inline public function isPosition(position:UITextPosition, atBoundary:UITextGranularity, inDirection:NSInteger, :, :, :, :, :, :, :, :, :, :, :, :, :, :, //:Returns, YES:only, if:a, position:is, at:a, boundary:of, a:text, unit:of, the:specified, granularity:in, the:particular):BOOL;
 
 	@:native("positionFromPosition:toBoundary:inDirection:://:the:boundary:of:text:of:given:in:given:or:if:is")
-	overload extern inline public function positionFromPosition(position:UITextPosition, toBoundary:UITextGranularity, inDirection:UITextDirection, :, //:Returns, the:next, boundary:position, of:a, text:unit, of:the, given:granularity, in:the, given:direction,, or:nil, if:there, is:no):nullable UITextPosition *;
+	overload extern inline public function positionFromPosition(position:UITextPosition, toBoundary:UITextGranularity, inDirection:NSInteger, :, //:Returns, the:next, boundary:position, of:a, text:unit, of:the, given:granularity, in:the, given:direction,, or:nil, if:there, is:no):nullable UITextPosition *;
 
 	@:native("isPosition:withinTextUnit:inDirection::::::::::::://:YES:position:within:text:of:given::the:is:a:returns:only:the:is:of:text:in")
-	overload extern inline public function isPosition(position:UITextPosition, withinTextUnit:UITextGranularity, inDirection:UITextDirection, :, :, :, :, :, :, :, :, :, :, :, :, //:Returns, YES:if, position:is, within:a, text:unit, of:the, given:granularity., :If, the:position, is:at, a:boundary,, returns:YES, only:if, the:boundary, is:part, of:the, text:unit, in:the):BOOL;
+	overload extern inline public function isPosition(position:UITextPosition, withinTextUnit:UITextGranularity, inDirection:NSInteger, :, :, :, :, :, :, :, :, :, :, :, :, //:Returns, YES:if, position:is, within:a, text:unit, of:the, given:granularity., :If, the:position, is:at, a:boundary,, returns:YES, only:if, the:boundary, is:part, of:the, text:unit, in:the):BOOL;
 
 	@:native("initWithTextInput")
 	overload extern inline public function initWithTextInput(textInput:Dynamic):UITextInput;

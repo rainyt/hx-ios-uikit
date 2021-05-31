@@ -86,13 +86,13 @@ extern class UIApplication{
 	public var backgroundTimeRemaining:NSTimeInterval;
 
 	@:native("beginBackgroundTaskWithExpirationHandler:")
-	overload extern inline public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic, :Dynamic):UIBackgroundTaskIdentifier;
+	overload extern inline public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic, :Dynamic):NSUInteger;
 
 	@:native("beginBackgroundTaskWithName:expirationHandler:API_AVAILABLE(ios(7.0)")
-	overload extern inline public function beginBackgroundTaskWithName(taskName:NSString, expirationHandler:Dynamic, API_AVAILABLE(ios(7.0):NS_REQUIRES_SUPER):UIBackgroundTaskIdentifier;
+	overload extern inline public function beginBackgroundTaskWithName(taskName:NSString, expirationHandler:Dynamic, API_AVAILABLE(ios(7.0):NS_REQUIRES_SUPER):NSUInteger;
 
 	@:native("endBackgroundTask:API_AVAILABLE(ios(4.0)")
-	overload extern inline public function endBackgroundTask(identifier:UIBackgroundTaskIdentifier, API_AVAILABLE(ios(4.0):NS_REQUIRES_SUPER):Void;
+	overload extern inline public function endBackgroundTask(identifier:NSUInteger, API_AVAILABLE(ios(4.0):NS_REQUIRES_SUPER):Void;
 
 	@:native("setMinimumBackgroundFetchInterval")
 	overload extern inline public function setMinimumBackgroundFetchInterval(minimumBackgroundFetchInterval:NSTimeInterval):Void;
@@ -308,7 +308,7 @@ extern class UIApplication{
 	overload extern inline public function application(application:UIApplication, supportedInterfaceOrientationsForWindow:UIWindow, :Dynamic):UIInterfaceOrientationMask;
 
 	@:native("application:shouldAllowExtensionPointIdentifier")
-	overload extern inline public function application(application:UIApplication, shouldAllowExtensionPointIdentifier:UIApplicationExtensionPointIdentifier):BOOL;
+	overload extern inline public function application(application:UIApplication, shouldAllowExtensionPointIdentifier:NSString):BOOL;
 
 	@:native("")
 	overload extern inline public function ():nullable UIViewController *;

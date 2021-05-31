@@ -17,13 +17,13 @@ extern class UIAccelerometer{
 	public var timestamp:NSTimeInterval;
 
 	@:native("x")
-	public var x:UIAccelerationValue;
+	public var x:double;
 
 	@:native("y")
-	public var y:UIAccelerationValue;
+	public var y:double;
 
 	@:native("z")
-	public var z:UIAccelerationValue;
+	public var z:double;
 
 	@:native("sharedAccelerometer;")
 	overload extern inline public static function sharedAccelerometer;():UIAccelerometer *;

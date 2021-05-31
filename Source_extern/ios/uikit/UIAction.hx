@@ -23,7 +23,7 @@ extern class UIAction{
 	public var discoverabilityTitle:NSString;
 
 	@:native("identifier")
-	public var identifier:UIActionIdentifier;
+	public var identifier:NSString;
 
 	@:native("attributes")
 	public var attributes:UIMenuElementAttributes;

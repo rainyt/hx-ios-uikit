@@ -44,10 +44,10 @@ extern class UIViewControllerTransitionCoordinator{
 	public var completionCurve:UIViewAnimationCurve;
 
 	@:native("viewControllerForKey")
-	overload extern inline public function viewControllerForKey(key:UITransitionContextViewControllerKey):nullable __kindof UIViewController *;
+	overload extern inline public function viewControllerForKey(key:NSString):nullable __kindof UIViewController *;
 
 	@:native("viewForKey")
-	overload extern inline public function viewForKey(key:UITransitionContextViewKey):nullable __kindof UIView *;
+	overload extern inline public function viewForKey(key:NSString):nullable __kindof UIView *;
 
 	@:native("containerView")
 	public var containerView:UIView;

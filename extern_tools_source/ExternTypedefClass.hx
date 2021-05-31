@@ -40,20 +40,21 @@ class ExternTypedefClass {
 					e2 = e2.substr(0, e2.lastIndexOf("="));
 				enums.push(e2);
 			}
-			trace(enums);
+		} else {
+			value = StringTools.replace(value, "*", "");
+			var t = value.split(" ");
+			var t2 = "";
+			for (index => tv in t) {
+				if (index < 2)
+					continue;
+				if (tv.length > 0) {
+					t2 = tv;
+					break;
+				}
+			}
+			className = t2;
+			parentClassName = t[1];
 		}
-		// value = StringTools.replace(value, "*", "");
-		// var t = value.split(" ");
-		// var t2 = "";
-		// for (index => tv in t) {
-		// 	if (index < 2)
-		// 		continue;
-		// 	if (tv.length > 0) {
-		// 		t2 = tv;
-		// 		break;
-		// 	}
-		// }
-		// typedefs.set(t2, t[1]);
 	}
 
 	public function toHaxeFile(pkg:String):String {

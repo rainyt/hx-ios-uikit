@@ -20,16 +20,16 @@ extern class UIConfigurationState{
 	public var traitCollection:UITraitCollection;
 
 	@:native("customStateForKey")
-	overload extern inline public function customStateForKey(key:UIConfigurationStateCustomKey):nullable id;
+	overload extern inline public function customStateForKey(key:NSString):nullable id;
 
 	@:native("setCustomState:forKey")
-	overload extern inline public function setCustomState(customState:id, forKey:UIConfigurationStateCustomKey):Void;
+	overload extern inline public function setCustomState(customState:id, forKey:NSString):Void;
 
 	@:native("objectForKeyedSubscript")
-	overload extern inline public function objectForKeyedSubscript(key:UIConfigurationStateCustomKey):nullable id;
+	overload extern inline public function objectForKeyedSubscript(key:NSString):nullable id;
 
 	@:native("setObject:forKeyedSubscript")
-	overload extern inline public function setObject(obj:id, forKeyedSubscript:UIConfigurationStateCustomKey):Void;
+	overload extern inline public function setObject(obj:id, forKeyedSubscript:NSString):Void;
 
 
 }

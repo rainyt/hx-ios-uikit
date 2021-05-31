@@ -325,7 +325,25 @@ class ExternTypedefClass:
                     e2 = HxString.substr(e2,0,_hx_len)
                 _this = self.enums
                 _this.append(e2)
-            print(str(self.enums))
+        else:
+            value = StringTools.replace(value,"*","")
+            t = value.split(" ")
+            t2 = ""
+            _g_current = 0
+            _g_array = t
+            while (_g_current < len(_g_array)):
+                _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+                _g1_key = _g_current
+                _g_current = (_g_current + 1)
+                index = _g1_key
+                tv = _g1_value
+                if (index < 2):
+                    continue
+                if (len(tv) > 0):
+                    t2 = tv
+                    break
+            self.className = t2
+            self.parentClassName = (t[1] if 1 < len(t) else None)
 
     def toHaxeFile(self,pkg):
         if (not self.createHaxeFile):

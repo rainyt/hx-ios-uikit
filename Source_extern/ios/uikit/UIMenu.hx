@@ -14,7 +14,7 @@ extern class UIMenu{
 	overload extern inline public static function autorelease():UIMenu;
 
 	@:native("identifier")
-	public var identifier:UIMenuIdentifier;
+	public var identifier:NSString;
 
 	@:native("options")
 	public var options:UIMenuOptions;

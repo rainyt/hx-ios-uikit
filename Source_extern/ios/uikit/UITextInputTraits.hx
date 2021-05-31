@@ -59,7 +59,7 @@ extern class UITextInputTraits{
 	public var is:default;
 
 	@:native("textContentType")
-	public var textContentType:UITextContentType;
+	public var textContentType:NSString;
 
 	@:native("passwordRules")
 	public var passwordRules:UITextInputPasswordRules;

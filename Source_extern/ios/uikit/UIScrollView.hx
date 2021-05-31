@@ -83,7 +83,7 @@ extern class UIScrollView{
 	overload extern inline public function scrollIndicatorInsets():UIEdgeInsets;
 
 	@:native("decelerationRate")
-	public var decelerationRate:UIScrollViewDecelerationRate;
+	public var decelerationRate:CGFloat;
 
 	@:native("indexDisplayMode")
 	public var indexDisplayMode:UIScrollViewIndexDisplayMode;
