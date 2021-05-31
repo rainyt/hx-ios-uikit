@@ -20,20 +20,17 @@ extern abstract UIControlContentHorizontalAlignment(Int) from Int to Int {
 	@:native("UIControlContentHorizontalAlignmentFill")
 	var UIControlContentHorizontalAlignmentFill;
 
-	@:native("UIControlContentHorizontalAlignmentLeadingAPI_AVAILABLE(ios(11.0)")
-	var UIControlContentHorizontalAlignmentLeadingAPI_AVAILABLE(ios(11.0);
+	@:native("UIControlContentHorizontalAlignmentLeading")
+	var UIControlContentHorizontalAlignmentLeading;
 
 	@:native("tvos(11.0))")
 	var tvos(11.0));
 
-	@:native("UIControlContentHorizontalAlignmentTrailingAPI_AVAILABLE(ios(11.0)")
-	var UIControlContentHorizontalAlignmentTrailingAPI_AVAILABLE(ios(11.0);
+	@:native("UIControlContentHorizontalAlignmentTrailing")
+	var UIControlContentHorizontalAlignmentTrailing;
 
 	@:native("tvos(11.0))")
 	var tvos(11.0));
-
-	@:native("")
-	var ;
 
 
 }

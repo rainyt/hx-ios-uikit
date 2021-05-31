@@ -20,8 +20,5 @@ extern abstract UITextAutocapitalizationType(Int) from Int to Int {
 	@:native("UITextAutocapitalizationTypeAllCharacters")
 	var UITextAutocapitalizationTypeAllCharacters;
 
-	@:native("")
-	var ;
-
 
 }

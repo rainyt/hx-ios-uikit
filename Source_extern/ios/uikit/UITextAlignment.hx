@@ -17,8 +17,5 @@ extern abstract UITextAlignment(Int) from Int to Int {
 	@:native("UITextAlignmentRight")
 	var UITextAlignmentRight;
 
-	@:native("//couldaddjustifiedinfuture")
-	var //couldaddjustifiedinfuture;
-
 
 }

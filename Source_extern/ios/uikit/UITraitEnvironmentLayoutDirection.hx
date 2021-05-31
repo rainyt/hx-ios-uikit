@@ -17,8 +17,5 @@ extern abstract UITraitEnvironmentLayoutDirection(Int) from Int to Int {
 	@:native("UITraitEnvironmentLayoutDirectionRightToLeft")
 	var UITraitEnvironmentLayoutDirectionRightToLeft;
 
-	@:native("")
-	var ;
-
 
 }

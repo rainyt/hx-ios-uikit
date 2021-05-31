@@ -14,14 +14,8 @@ extern abstract UIContextMenuInteractionAppearance(Int) from Int to Int {
 	@:native("UIContextMenuInteractionAppearanceRich")
 	var UIContextMenuInteractionAppearanceRich;
 
-	@:native("//Modal"rich"menuwithoptionalpreview.UIContextMenuInteractionAppearanceCompact")
-	var //Modal"rich"menuwithoptionalpreview.UIContextMenuInteractionAppearanceCompact;
-
-	@:native("//Non-modal")
-	var //Non-modal;
-
-	@:native("compactmenuwithnopreview.")
-	var compactmenuwithnopreview.;
+	@:native("compact")
+	var compact;
 
 
 }

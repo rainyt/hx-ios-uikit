@@ -14,8 +14,5 @@ extern abstract UIContextMenuInteractionCommitStyle(Int) from Int to Int {
 	@:native("UIContextMenuInteractionCommitStylePop")
 	var UIContextMenuInteractionCommitStylePop;
 
-	@:native("")
-	var ;
-
 
 }

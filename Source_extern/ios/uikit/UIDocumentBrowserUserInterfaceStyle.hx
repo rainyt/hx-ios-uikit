@@ -17,8 +17,5 @@ extern abstract UIDocumentBrowserUserInterfaceStyle(Int) from Int to Int {
 	@:native("UIDocumentBrowserUserInterfaceStyleDark")
 	var UIDocumentBrowserUserInterfaceStyleDark;
 
-	@:native("")
-	var ;
-
 
 }

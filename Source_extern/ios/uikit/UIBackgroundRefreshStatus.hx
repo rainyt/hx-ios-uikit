@@ -11,8 +11,5 @@ extern abstract UIBackgroundRefreshStatus(Int) from Int to Int {
 	@:native("UIBackgroundRefreshStatusRestricted")
 	var UIBackgroundRefreshStatusRestricted;
 
-	@:native("//unavailableonthissystemduetodeviceconfiguration;theusercannotenablethefeatur")
-	var //unavailableonthissystemduetodeviceconfiguration;theusercannotenablethefeatur;
-
 
 }

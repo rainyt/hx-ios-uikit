@@ -17,44 +17,29 @@ extern abstract UISplitViewControllerDisplayMode(Int) from Int to Int {
 	@:native("UISplitViewControllerDisplayModeOneBesideSecondary")
 	var UISplitViewControllerDisplayModeOneBesideSecondary;
 
-	@:native("//Twotiledcolumns.LeadingwillbeUISplitViewControllerColumnSupplementaryforUISplitViewControllerStyleTripleColumn")
-	var //Twotiledcolumns.LeadingwillbeUISplitViewControllerColumnSupplementaryforUISplitViewControllerStyleTripleColumn;
+	@:native("Primary")
+	var Primary;
 
-	@:native("PrimaryotherwiseUISplitViewControllerDisplayModeOneOverSecondary")
-	var PrimaryotherwiseUISplitViewControllerDisplayModeOneOverSecondary;
-
-	@:native("//SupplementarycolumnoverlaidonSecondarycolumnforUISplitViewControllerStyleTripleColumn")
-	var //SupplementarycolumnoverlaidonSecondarycolumnforUISplitViewControllerStyleTripleColumn;
-
-	@:native("Primaryoverlaidotherwise//Fortriple-columnstyleonly.Threedifferentwaystolayoutprimary")
-	var Primaryoverlaidotherwise//Fortriple-columnstyleonly.Threedifferentwaystolayoutprimary;
+	@:native("Primary")
+	var Primary;
 
 	@:native("supplementary")
 	var supplementary;
 
-	@:native("andsecondarycolumnswiththesecondarymoreorlessvisible")
-	var andsecondarycolumnswiththesecondarymoreorlessvisible;
+	@:native("and")
+	var and;
 
-	@:native("andanadditionallayoutthathidesthesecondary.UISplitViewControllerDisplayModeTwoBesideSecondaryNS_ENUM_AVAILABLE_IOS(14_0)")
-	var andanadditionallayoutthathidesthesecondary.UISplitViewControllerDisplayModeTwoBesideSecondaryNS_ENUM_AVAILABLE_IOS(14_0);
+	@:native("and")
+	var and;
 
-	@:native("//Allthreecolumnsfullydisplayedside-by-sideandinteractiveUISplitViewControllerDisplayModeTwoOverSecondaryNS_ENUM_AVAILABLE_IOS(14_0)")
-	var //Allthreecolumnsfullydisplayedside-by-sideandinteractiveUISplitViewControllerDisplayModeTwoOverSecondaryNS_ENUM_AVAILABLE_IOS(14_0);
+	@:native("supplementary")
+	var supplementary;
 
-	@:native("//primaryandsupplementarycolumnsside-by-sideinoverlayontopofpartiallyvisibledetailcolumn(detailcolumnhasdimmingview).Forwidthstoonarrowtoseemuchofthedetailwhentheprimaryandsupplementarycolumnsaretiled.UISplitViewControllerDisplayModeTwoDisplaceSecondaryNS_ENUM_AVAILABLE_IOS(14_0)")
-	var //primaryandsupplementarycolumnsside-by-sideinoverlayontopofpartiallyvisibledetailcolumn(detailcolumnhasdimmingview).Forwidthstoonarrowtoseemuchofthedetailwhentheprimaryandsupplementarycolumnsaretiled.UISplitViewControllerDisplayModeTwoDisplaceSecondaryNS_ENUM_AVAILABLE_IOS(14_0);
+	@:native("but")
+	var but;
 
-	@:native("//primary")
-	var //primary;
-
-	@:native("supplementaryanddetailcolumnsside-by-side")
-	var supplementaryanddetailcolumnsside-by-side;
-
-	@:native("butthedimmed")
-	var butthedimmed;
-
-	@:native("noninteractivedetailhasbeendisplacedtowardandcroppedonthetrailingedge.ForwiderwidthsthaninTwoOverSecondarybutstilltoonarrowforTwoBesideSecondaryUISplitViewControllerDisplayModePrimaryHiddenAPI_DEPRECATED_WITH_REPLACEMENT("UISplitViewControllerDisplayModeSecondaryOnly"")
-	var noninteractivedetailhasbeendisplacedtowardandcroppedonthetrailingedge.ForwiderwidthsthaninTwoOverSecondarybutstilltoonarrowforTwoBesideSecondaryUISplitViewControllerDisplayModePrimaryHiddenAPI_DEPRECATED_WITH_REPLACEMENT("UISplitViewControllerDisplayModeSecondaryOnly";
+	@:native("noninteractive")
+	var noninteractive;
 
 	@:native("ios(8.0")
 	var ios(8.0;
@@ -62,8 +47,8 @@ extern abstract UISplitViewControllerDisplayMode(Int) from Int to Int {
 	@:native("14.0))")
 	var 14.0));
 
-	@:native("UISplitViewControllerDisplayModeAllVisibleAPI_DEPRECATED_WITH_REPLACEMENT("UISplitViewControllerDisplayModeOneBesideSecondary"")
-	var UISplitViewControllerDisplayModeAllVisibleAPI_DEPRECATED_WITH_REPLACEMENT("UISplitViewControllerDisplayModeOneBesideSecondary";
+	@:native("UISplitViewControllerDisplayModeAllVisible")
+	var UISplitViewControllerDisplayModeAllVisible;
 
 	@:native("ios(8.0")
 	var ios(8.0;
@@ -71,17 +56,14 @@ extern abstract UISplitViewControllerDisplayMode(Int) from Int to Int {
 	@:native("14.0))")
 	var 14.0));
 
-	@:native("UISplitViewControllerDisplayModePrimaryOverlayAPI_DEPRECATED_WITH_REPLACEMENT("UISplitViewControllerDisplayModeOneOverSecondary"")
-	var UISplitViewControllerDisplayModePrimaryOverlayAPI_DEPRECATED_WITH_REPLACEMENT("UISplitViewControllerDisplayModeOneOverSecondary";
+	@:native("UISplitViewControllerDisplayModePrimaryOverlay")
+	var UISplitViewControllerDisplayModePrimaryOverlay;
 
 	@:native("ios(8.0")
 	var ios(8.0;
 
 	@:native("14.0))")
 	var 14.0));
-
-	@:native("")
-	var ;
 
 
 }

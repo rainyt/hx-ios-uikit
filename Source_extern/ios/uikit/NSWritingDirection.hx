@@ -11,11 +11,5 @@ extern abstract NSWritingDirection(Int) from Int to Int {
 	@:native("NSWritingDirectionNatural")
 	var NSWritingDirectionNatural;
 
-	@:native("//DeterminesdirectionusingtheUnicodeBidiAlgorithmrulesP2andP3NSWritingDirectionLeftToRight")
-	var //DeterminesdirectionusingtheUnicodeBidiAlgorithmrulesP2andP3NSWritingDirectionLeftToRight;
-
-	@:native("//LefttorightwritingdirectionNSWritingDirectionRightToLeft")
-	var //LefttorightwritingdirectionNSWritingDirectionRightToLeft;
-
 
 }

@@ -14,8 +14,5 @@ extern abstract UIUserInterfaceLayoutDirection(Int) from Int to Int {
 	@:native("UIUserInterfaceLayoutDirectionRightToLeft")
 	var UIUserInterfaceLayoutDirectionRightToLeft;
 
-	@:native("")
-	var ;
-
 
 }

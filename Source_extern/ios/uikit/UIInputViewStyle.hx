@@ -14,8 +14,5 @@ extern abstract UIInputViewStyle(Int) from Int to Int {
 	@:native("UIInputViewStyleKeyboard")
 	var UIInputViewStyleKeyboard;
 
-	@:native("//mimicsthekeyboardbackground")
-	var //mimicsthekeyboardbackground;
-
 
 }

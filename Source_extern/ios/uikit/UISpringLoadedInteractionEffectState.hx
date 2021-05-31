@@ -20,8 +20,5 @@ extern abstract UISpringLoadedInteractionEffectState(Int) from Int to Int {
 	@:native("UISpringLoadedInteractionEffectStateActivated")
 	var UISpringLoadedInteractionEffectStateActivated;
 
-	@:native("")
-	var ;
-
 
 }

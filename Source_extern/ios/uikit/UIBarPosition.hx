@@ -14,29 +14,20 @@ extern abstract UIBarPosition(Int) from Int to Int {
 	@:native("UIBarPositionBottom")
 	var UIBarPositionBottom;
 
-	@:native("//Thebarisatthebottomofitslocalcontext")
-	var //Thebarisatthebottomofitslocalcontext;
+	@:native("and")
+	var and;
 
-	@:native("anddirectionaldecorationdrawsaccordingly(e.g.")
-	var anddirectionaldecorationdrawsaccordingly(e.g.;
+	@:native("shadow")
+	var shadow;
 
-	@:native("shadowabovethebar).UIBarPositionTop")
-	var shadowabovethebar).UIBarPositionTop;
+	@:native("and")
+	var and;
 
-	@:native("//Thebarisatthetopofitslocalcontext")
-	var //Thebarisatthetopofitslocalcontext;
+	@:native("shadow")
+	var shadow;
 
-	@:native("anddirectionaldecorationdrawsaccordingly(e.g.")
-	var anddirectionaldecorationdrawsaccordingly(e.g.;
-
-	@:native("shadowbelowthebar)UIBarPositionTopAttached")
-	var shadowbelowthebar)UIBarPositionTopAttached;
-
-	@:native("//Thebarisatthetopofthescreen(aswellasitslocalcontext)")
-	var //Thebarisatthetopofthescreen(aswellasitslocalcontext);
-
-	@:native("anditsbackgroundextendsupward—currentlyonlyenoughforthestatusbar.")
-	var anditsbackgroundextendsupward—currentlyonlyenoughforthestatusbar.;
+	@:native("and")
+	var and;
 
 
 }

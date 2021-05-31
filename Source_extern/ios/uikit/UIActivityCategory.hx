@@ -14,8 +14,5 @@ extern abstract UIActivityCategory(Int) from Int to Int {
 	@:native("UIActivityCategoryShare")
 	var UIActivityCategoryShare;
 
-	@:native("")
-	var ;
-
 
 }

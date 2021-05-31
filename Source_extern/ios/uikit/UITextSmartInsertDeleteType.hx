@@ -17,8 +17,5 @@ extern abstract UITextSmartInsertDeleteType(Int) from Int to Int {
 	@:native("UITextSmartInsertDeleteTypeYes")
 	var UITextSmartInsertDeleteTypeYes;
 
-	@:native("")
-	var ;
-
 
 }

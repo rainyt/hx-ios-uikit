@@ -17,8 +17,5 @@ extern abstract UITextAutocorrectionType(Int) from Int to Int {
 	@:native("UITextAutocorrectionTypeYes")
 	var UITextAutocorrectionTypeYes;
 
-	@:native("")
-	var ;
-
 
 }

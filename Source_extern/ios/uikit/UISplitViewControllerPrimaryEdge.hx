@@ -14,8 +14,5 @@ extern abstract UISplitViewControllerPrimaryEdge(Int) from Int to Int {
 	@:native("UISplitViewControllerPrimaryEdgeTrailing")
 	var UISplitViewControllerPrimaryEdgeTrailing;
 
-	@:native("")
-	var ;
-
 
 }

@@ -8,17 +8,17 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIInterpolatingMotionEffectType(Int) from Int to Int {
 
-	@:native("/*!Tracksthedevicebeingtiltedleft/rightrelativetotheviewer.Theminimumrelativevaluesmapstothedevicebeingtiltedallthewaytotheleft")
-	var /*!Tracksthedevicebeingtiltedleft/rightrelativetotheviewer.Theminimumrelativevaluesmapstothedevicebeingtiltedallthewaytotheleft;
+	@:native("/*!")
+	var /*!;
 
-	@:native("themaximumtotheright.*/UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis")
-	var themaximumtotheright.*/UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis;
+	@:native("the")
+	var the;
 
-	@:native("/*!Tracksthedevicebeingtiltedup/downrelativetotheviewer.Theminimumrelativevaluesmapstothedevicebeingtiltedallthewaydown")
-	var /*!Tracksthedevicebeingtiltedup/downrelativetotheviewer.Theminimumrelativevaluesmapstothedevicebeingtiltedallthewaydown;
+	@:native("/*!")
+	var /*!;
 
-	@:native("themaximumallthewayup.*/UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis")
-	var themaximumallthewayup.*/UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis;
+	@:native("the")
+	var the;
 
 
 }

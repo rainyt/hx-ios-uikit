@@ -14,8 +14,5 @@ extern abstract UISplitViewControllerBackgroundStyle(Int) from Int to Int {
 	@:native("UISplitViewControllerBackgroundStyleSidebar")
 	var UISplitViewControllerBackgroundStyleSidebar;
 
-	@:native("")
-	var ;
-
 
 }

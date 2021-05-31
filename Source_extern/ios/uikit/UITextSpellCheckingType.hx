@@ -17,8 +17,5 @@ extern abstract UITextSpellCheckingType(Int) from Int to Int {
 	@:native("UITextSpellCheckingTypeYes")
 	var UITextSpellCheckingTypeYes;
 
-	@:native("")
-	var ;
-
 
 }

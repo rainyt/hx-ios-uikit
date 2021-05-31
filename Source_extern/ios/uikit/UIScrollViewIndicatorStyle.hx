@@ -11,17 +11,11 @@ extern abstract UIScrollViewIndicatorStyle(Int) from Int to Int {
 	@:native("UIScrollViewIndicatorStyleDefault")
 	var UIScrollViewIndicatorStyleDefault;
 
-	@:native("//AutomaticallyswitchesappearancebasedontheuserinterfacestyleUIScrollViewIndicatorStyleBlack")
-	var //AutomaticallyswitchesappearancebasedontheuserinterfacestyleUIScrollViewIndicatorStyleBlack;
+	@:native("for")
+	var for;
 
-	@:native("//Darkindicator")
-	var //Darkindicator;
-
-	@:native("foruseonlightbackgroundsUIScrollViewIndicatorStyleWhite//Lightindicator")
-	var foruseonlightbackgroundsUIScrollViewIndicatorStyleWhite//Lightindicator;
-
-	@:native("foruseondarkbackgrounds")
-	var foruseondarkbackgrounds;
+	@:native("for")
+	var for;
 
 
 }

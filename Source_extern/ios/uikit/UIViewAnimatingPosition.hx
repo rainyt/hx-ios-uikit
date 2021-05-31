@@ -17,8 +17,5 @@ extern abstract UIViewAnimatingPosition(Int) from Int to Int {
 	@:native("UIViewAnimatingPositionCurrent")
 	var UIViewAnimatingPositionCurrent;
 
-	@:native("")
-	var ;
-
 
 }

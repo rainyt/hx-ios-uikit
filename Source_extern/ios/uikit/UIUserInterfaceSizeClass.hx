@@ -17,8 +17,5 @@ extern abstract UIUserInterfaceSizeClass(Int) from Int to Int {
 	@:native("UIUserInterfaceSizeClassRegular")
 	var UIUserInterfaceSizeClassRegular;
 
-	@:native("")
-	var ;
-
 
 }

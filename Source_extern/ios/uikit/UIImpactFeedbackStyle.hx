@@ -17,11 +17,11 @@ extern abstract UIImpactFeedbackStyle(Int) from Int to Int {
 	@:native("UIImpactFeedbackStyleHeavy")
 	var UIImpactFeedbackStyleHeavy;
 
-	@:native("UIImpactFeedbackStyleSoftAPI_AVAILABLE(ios(13.0))")
-	var UIImpactFeedbackStyleSoftAPI_AVAILABLE(ios(13.0));
+	@:native("UIImpactFeedbackStyleSoft")
+	var UIImpactFeedbackStyleSoft;
 
-	@:native("UIImpactFeedbackStyleRigidAPI_AVAILABLE(ios(13.0))")
-	var UIImpactFeedbackStyleRigidAPI_AVAILABLE(ios(13.0));
+	@:native("UIImpactFeedbackStyleRigid")
+	var UIImpactFeedbackStyleRigid;
 
 
 }

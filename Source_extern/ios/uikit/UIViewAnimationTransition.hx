@@ -23,8 +23,5 @@ extern abstract UIViewAnimationTransition(Int) from Int to Int {
 	@:native("UIViewAnimationTransitionCurlDown")
 	var UIViewAnimationTransitionCurlDown;
 
-	@:native("")
-	var ;
-
 
 }

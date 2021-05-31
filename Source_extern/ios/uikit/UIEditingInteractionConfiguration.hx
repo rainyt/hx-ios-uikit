@@ -14,8 +14,5 @@ extern abstract UIEditingInteractionConfiguration(Int) from Int to Int {
 	@:native("UIEditingInteractionConfigurationDefault")
 	var UIEditingInteractionConfigurationDefault;
 
-	@:native("//Default")
-	var //Default;
-
 
 }

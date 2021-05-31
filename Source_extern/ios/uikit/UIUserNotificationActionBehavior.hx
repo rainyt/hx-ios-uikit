@@ -11,11 +11,8 @@ extern abstract UIUserNotificationActionBehavior(Int) from Int to Int {
 	@:native("UIUserNotificationActionBehaviorDefault")
 	var UIUserNotificationActionBehaviorDefault;
 
-	@:native("//thedefaultactionbehaviorUIUserNotificationActionBehaviorTextInput//systemprovidedactionbehavior")
-	var //thedefaultactionbehaviorUIUserNotificationActionBehaviorTextInput//systemprovidedactionbehavior;
-
-	@:native("allowstextinputfromtheuser")
-	var allowstextinputfromtheuser;
+	@:native("allows")
+	var allows;
 
 
 }

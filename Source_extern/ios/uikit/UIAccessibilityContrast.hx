@@ -17,8 +17,5 @@ extern abstract UIAccessibilityContrast(Int) from Int to Int {
 	@:native("UIAccessibilityContrastHigh")
 	var UIAccessibilityContrastHigh;
 
-	@:native("")
-	var ;
-
 
 }

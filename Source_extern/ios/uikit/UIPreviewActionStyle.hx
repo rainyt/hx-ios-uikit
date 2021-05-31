@@ -8,17 +8,14 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIPreviewActionStyle(Int) from Int to Int {
 
-	@:native("UIPreviewActionStyleDefault")
-	var UIPreviewActionStyleDefault;
+	@:native("UIPreviewActionStyleDefault=0")
+	var UIPreviewActionStyleDefault=0;
 
 	@:native("UIPreviewActionStyleSelected")
 	var UIPreviewActionStyleSelected;
 
 	@:native("UIPreviewActionStyleDestructive")
 	var UIPreviewActionStyleDestructive;
-
-	@:native("")
-	var ;
 
 
 }

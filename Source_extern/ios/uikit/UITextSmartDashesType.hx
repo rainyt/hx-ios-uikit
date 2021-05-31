@@ -17,8 +17,5 @@ extern abstract UITextSmartDashesType(Int) from Int to Int {
 	@:native("UITextSmartDashesTypeYes")
 	var UITextSmartDashesTypeYes;
 
-	@:native("")
-	var ;
-
 
 }

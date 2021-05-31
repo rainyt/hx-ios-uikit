@@ -17,32 +17,26 @@ extern abstract UIBarMetrics(Int) from Int to Int {
 	@:native("UIBarMetricsDefaultPrompt")
 	var UIBarMetricsDefaultPrompt;
 
-	@:native("//Applicableonlyinbarswiththepromptproperty")
-	var //Applicableonlyinbarswiththepromptproperty;
+	@:native("such")
+	var such;
 
-	@:native("suchasUINavigationBarandUISearchBarUIBarMetricsCompactPrompt")
-	var suchasUINavigationBarandUISearchBarUIBarMetricsCompactPrompt;
-
-	@:native("UIBarMetricsLandscapePhoneNS_ENUM_DEPRECATED_IOS(5_0")
-	var UIBarMetricsLandscapePhoneNS_ENUM_DEPRECATED_IOS(5_0;
+	@:native("UIBarMetricsLandscapePhone")
+	var UIBarMetricsLandscapePhone;
 
 	@:native("8_0")
 	var 8_0;
 
-	@:native(""UseUIBarMetricsCompactinstead")")
-	var "UseUIBarMetricsCompactinstead");
+	@:native(""Use")
+	var "Use;
 
-	@:native("UIBarMetricsLandscapePhonePromptNS_ENUM_DEPRECATED_IOS(7_0")
-	var UIBarMetricsLandscapePhonePromptNS_ENUM_DEPRECATED_IOS(7_0;
+	@:native("UIBarMetricsLandscapePhonePrompt")
+	var UIBarMetricsLandscapePhonePrompt;
 
 	@:native("8_0")
 	var 8_0;
 
-	@:native(""UseUIBarMetricsCompactPrompt")")
-	var "UseUIBarMetricsCompactPrompt");
-
-	@:native("")
-	var ;
+	@:native(""Use")
+	var "Use;
 
 
 }

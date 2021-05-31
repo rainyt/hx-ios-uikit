@@ -11,11 +11,5 @@ extern abstract UIScrollType(Int) from Int to Int {
 	@:native("UIScrollTypeDiscrete")
 	var UIScrollTypeDiscrete;
 
-	@:native("//DiscretescrollsoriginatefromdeviceslikeascrollwheelmouseUIScrollTypeContinuous")
-	var //DiscretescrollsoriginatefromdeviceslikeascrollwheelmouseUIScrollTypeContinuous;
-
-	@:native("//Continuousscrollsoriginatefromdevicesliketrackpads")
-	var //Continuousscrollsoriginatefromdevicesliketrackpads;
-
 
 }

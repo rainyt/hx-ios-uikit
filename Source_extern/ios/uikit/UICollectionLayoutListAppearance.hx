@@ -14,17 +14,14 @@ extern abstract UICollectionLayoutListAppearance(Int) from Int to Int {
 	@:native("UICollectionLayoutListAppearanceGrouped")
 	var UICollectionLayoutListAppearanceGrouped;
 
-	@:native("UICollectionLayoutListAppearanceInsetGroupedAPI_UNAVAILABLE(tvos)")
-	var UICollectionLayoutListAppearanceInsetGroupedAPI_UNAVAILABLE(tvos);
+	@:native("UICollectionLayoutListAppearanceInsetGrouped")
+	var UICollectionLayoutListAppearanceInsetGrouped;
 
-	@:native("UICollectionLayoutListAppearanceSidebarAPI_UNAVAILABLE(tvos)")
-	var UICollectionLayoutListAppearanceSidebarAPI_UNAVAILABLE(tvos);
+	@:native("UICollectionLayoutListAppearanceSidebar")
+	var UICollectionLayoutListAppearanceSidebar;
 
-	@:native("UICollectionLayoutListAppearanceSidebarPlainAPI_UNAVAILABLE(tvos)")
-	var UICollectionLayoutListAppearanceSidebarPlainAPI_UNAVAILABLE(tvos);
-
-	@:native("")
-	var ;
+	@:native("UICollectionLayoutListAppearanceSidebarPlain")
+	var UICollectionLayoutListAppearanceSidebarPlain;
 
 
 }

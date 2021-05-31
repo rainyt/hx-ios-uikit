@@ -17,8 +17,5 @@ extern abstract UISplitViewControllerStyle(Int) from Int to Int {
 	@:native("UISplitViewControllerStyleTripleColumn")
 	var UISplitViewControllerStyleTripleColumn;
 
-	@:native("")
-	var ;
-
 
 }

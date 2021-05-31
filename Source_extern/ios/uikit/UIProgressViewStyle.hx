@@ -11,11 +11,5 @@ extern abstract UIProgressViewStyle(Int) from Int to Int {
 	@:native("UIProgressViewStyleDefault")
 	var UIProgressViewStyleDefault;
 
-	@:native("//normalprogressbarUIProgressViewStyleBarAPI_UNAVAILABLE(tvos)")
-	var //normalprogressbarUIProgressViewStyleBarAPI_UNAVAILABLE(tvos);
-
-	@:native("//foruseinatoolbar")
-	var //foruseinatoolbar;
-
 
 }

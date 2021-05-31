@@ -446,21 +446,25 @@ class ExternTypedefClass:
                 _g_current = (_g_current + 1)
                 index = _g1_key
                 e2 = _g1_value
-                e2 = StringTools.replace(e2," ","")
-                startIndex = None
-                if (((e2.find("=") if ((startIndex is None)) else HxString.indexOfImpl(e2,"=",startIndex))) != -1):
+                def _hx_local_0(f):
+                    return (len(f) > 0)
+                e3 = python_internal_ArrayImpl._get(list(filter(_hx_local_0,e2.split(" "))), 0)
+                tmp = None
+                tmp1 = None
+                if (e3 is not None):
+                    startIndex = None
+                    tmp1 = (((e3.find("//") if ((startIndex is None)) else HxString.indexOfImpl(e3,"//",startIndex))) != -1)
+                else:
+                    tmp1 = True
+                if (not tmp1):
                     startIndex1 = None
-                    _hx_len = None
-                    if (startIndex1 is None):
-                        _hx_len = e2.rfind("=", 0, len(e2))
-                    else:
-                        i = e2.rfind("=", 0, (startIndex1 + 1))
-                        startLeft = (max(0,((startIndex1 + 1) - len("="))) if ((i == -1)) else (i + 1))
-                        check = e2.find("=", startLeft, len(e2))
-                        _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
-                    e2 = HxString.substr(e2,0,_hx_len)
+                    tmp = (((e3.find("#") if ((startIndex1 is None)) else HxString.indexOfImpl(e3,"#",startIndex1))) != -1)
+                else:
+                    tmp = True
+                if tmp:
+                    continue
                 _this = self.enums
-                _this.append(e2)
+                _this.append(e3)
         else:
             value = StringTools.replace(value,"*","")
             t = value.split(" ")
@@ -789,7 +793,6 @@ class ObjcProperty:
             else:
                 return False
         p = list(filter(_hx_local_7,p))
-        print(str(p))
         return _hx_AnonObject({'name': python_internal_ArrayImpl._get(p, (len(p) - 1)), 'type': "property", 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': False, 'args': None})
 
 

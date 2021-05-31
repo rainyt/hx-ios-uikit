@@ -17,8 +17,5 @@ extern abstract UITextSmartQuotesType(Int) from Int to Int {
 	@:native("UITextSmartQuotesTypeYes")
 	var UITextSmartQuotesTypeYes;
 
-	@:native("")
-	var ;
-
 
 }

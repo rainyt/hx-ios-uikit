@@ -8,20 +8,11 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIEventSubtype(Int) from Int to Int {
 
-	@:native("//availableiniPhoneOS3.0UIEventSubtypeNone")
-	var //availableiniPhoneOS3.0UIEventSubtypeNone;
+	@:native("available")
+	var available;
 
-	@:native("//forUIEventTypeMotion")
-	var //forUIEventTypeMotion;
-
-	@:native("availableiniPhoneOS3.0UIEventSubtypeMotionShake")
-	var availableiniPhoneOS3.0UIEventSubtypeMotionShake;
-
-	@:native("//forUIEventTypeRemoteControl")
-	var //forUIEventTypeRemoteControl;
-
-	@:native("availableiniOS4.0UIEventSubtypeRemoteControlPlay")
-	var availableiniOS4.0UIEventSubtypeRemoteControlPlay;
+	@:native("available")
+	var available;
 
 	@:native("UIEventSubtypeRemoteControlPause")
 	var UIEventSubtypeRemoteControlPause;
@@ -49,9 +40,6 @@ extern abstract UIEventSubtype(Int) from Int to Int {
 
 	@:native("UIEventSubtypeRemoteControlEndSeekingForward")
 	var UIEventSubtypeRemoteControlEndSeekingForward;
-
-	@:native("")
-	var ;
 
 
 }

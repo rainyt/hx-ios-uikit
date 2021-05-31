@@ -11,14 +11,8 @@ extern abstract UIBaselineAdjustment(Int) from Int to Int {
 	@:native("UIBaselineAdjustmentAlignBaselines")
 	var UIBaselineAdjustmentAlignBaselines;
 
-	@:native("//default.usedwhenshrinkingtexttopositionbasedontheoriginalbaselineUIBaselineAdjustmentAlignCenters")
-	var //default.usedwhenshrinkingtexttopositionbasedontheoriginalbaselineUIBaselineAdjustmentAlignCenters;
-
 	@:native("UIBaselineAdjustmentNone")
 	var UIBaselineAdjustmentNone;
-
-	@:native("")
-	var ;
 
 
 }

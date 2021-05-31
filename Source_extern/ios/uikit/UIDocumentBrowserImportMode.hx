@@ -17,8 +17,5 @@ extern abstract UIDocumentBrowserImportMode(Int) from Int to Int {
 	@:native("UIDocumentBrowserImportModeMove")
 	var UIDocumentBrowserImportModeMove;
 
-	@:native("")
-	var ;
-
 
 }

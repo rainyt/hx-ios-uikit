@@ -41,11 +41,8 @@ extern abstract UIReturnKeyType(Int) from Int to Int {
 	@:native("UIReturnKeyEmergencyCall")
 	var UIReturnKeyEmergencyCall;
 
-	@:native("UIReturnKeyContinueAPI_AVAILABLE(ios(9.0))")
-	var UIReturnKeyContinueAPI_AVAILABLE(ios(9.0));
-
-	@:native("")
-	var ;
+	@:native("UIReturnKeyContinue")
+	var UIReturnKeyContinue;
 
 
 }

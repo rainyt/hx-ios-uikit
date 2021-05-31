@@ -8,35 +8,32 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIDropOperation(Int) from Int to Int {
 
-	@:native("/*OperationsthatdoNOTcausedatatransfer.**Iftheuserdropshere")
-	var /*OperationsthatdoNOTcausedatatransfer.**Iftheuserdropshere;
+	@:native("/*")
+	var /*;
 
-	@:native("theUIDropInteraction's-dropInteraction:performDrop:*methodwillNOTbecalled.*//*Thedragwillbecancelled.*/UIDropOperationCancel")
-	var theUIDropInteraction's-dropInteraction:performDrop:*methodwillNOTbecalled.*//*Thedragwillbecancelled.*/UIDropOperationCancel;
+	@:native("the")
+	var the;
 
-	@:native("/*Thedragwillbecancelled.*Usethisoperationtosignalthatthisinteractionwould*normally*perform*adifferentoperation")
-	var /*Thedragwillbecancelled.*Usethisoperationtosignalthatthisinteractionwould*normally*perform*adifferentoperation;
+	@:native("/*")
+	var /*;
 
-	@:native("butthatitexplicitlyforbidsadropatthisspecific*timeandplace.*Thismaycauseaspecialsymboltobedisplayedonthedragimage.*/UIDropOperationForbidden")
-	var butthatitexplicitlyforbidsadropatthisspecific*timeandplace.*Thismaycauseaspecialsymboltobedisplayedonthedragimage.*/UIDropOperationForbidden;
+	@:native("but")
+	var but;
 
-	@:native("/*Operationsthatcausedatatransfer.**Iftheuserdropshere")
-	var /*Operationsthatcausedatatransfer.**Iftheuserdropshere;
+	@:native("/*")
+	var /*;
 
-	@:native("theUIDropInteraction's-dropInteraction:performDrop:*methodwillbecalled.*//*Thedatarepresentedbythedragitem(s)willbecopied.*Thisisthemostcommonoperationtouse.*/UIDropOperationCopy")
-	var theUIDropInteraction's-dropInteraction:performDrop:*methodwillbecalled.*//*Thedatarepresentedbythedragitem(s)willbecopied.*Thisisthemostcommonoperationtouse.*/UIDropOperationCopy;
+	@:native("the")
+	var the;
 
-	@:native("/*Thedatarepresentedbythedragitem(s)willbemoved.**YoumayusethisonlyifUIDropSession'sallowsMoveOperationistrue.*OtherwiseitwillbetreatedasUIDropOperationCancel.**Notethatthesystemdoesnotgiveanyspecialmeaningtothisoperation.*ThedelegatesofboththeUIDragInteractionandUIDropInteractionmust*cooperatetoproducethecorrectresult.Forinstance")
-	var /*Thedatarepresentedbythedragitem(s)willbemoved.**YoumayusethisonlyifUIDropSession'sallowsMoveOperationistrue.*OtherwiseitwillbetreatedasUIDropOperationCancel.**Notethatthesystemdoesnotgiveanyspecialmeaningtothisoperation.*ThedelegatesofboththeUIDragInteractionandUIDropInteractionmust*cooperatetoproducethecorrectresult.Forinstance;
+	@:native("/*")
+	var /*;
 
-	@:native("theUIDropInteraction's*delegatemightinsertthedatainthenewlocation")
-	var theUIDropInteraction's*delegatemightinsertthedatainthenewlocation;
+	@:native("the")
+	var the;
 
-	@:native("andtheUIDragInteraction's*delegatemightremovethedatafromtheoldlocation.*/UIDropOperationMove")
-	var andtheUIDragInteraction's*delegatemightremovethedatafromtheoldlocation.*/UIDropOperationMove;
-
-	@:native("")
-	var ;
+	@:native("and")
+	var and;
 
 
 }

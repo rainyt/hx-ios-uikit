@@ -8,20 +8,17 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIAccessibilityNavigationStyle(Int) from Int to Int {
 
-	@:native("/*Theassistivetechnologywillautomaticallydeterminehowthereceiver'selementsshouldbenavigated.Thisisthedefaultvalue.*/UIAccessibilityNavigationStyleAutomatic")
-	var /*Theassistivetechnologywillautomaticallydeterminehowthereceiver'selementsshouldbenavigated.Thisisthedefaultvalue.*/UIAccessibilityNavigationStyleAutomatic;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Thereceiver'selementsshouldbenavigatedasseparateelements.*/UIAccessibilityNavigationStyleSeparate")
-	var /*Thereceiver'selementsshouldbenavigatedasseparateelements.*/UIAccessibilityNavigationStyleSeparate;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Thereceiver’selementsshouldbecombinedandnavigatedasasingleitem.Whenthecombineditemhasbeenselected")
-	var /*Thereceiver’selementsshouldbecombinedandnavigatedasasingleitem.Whenthecombineditemhasbeenselected;
+	@:native("/*")
+	var /*;
 
-	@:native("theassistivetechnologywillnavigateeachelementseparately.*/UIAccessibilityNavigationStyleCombined")
-	var theassistivetechnologywillnavigateeachelementseparately.*/UIAccessibilityNavigationStyleCombined;
-
-	@:native("")
-	var ;
+	@:native("the")
+	var the;
 
 
 }

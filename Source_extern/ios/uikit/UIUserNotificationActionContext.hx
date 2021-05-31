@@ -11,8 +11,5 @@ extern abstract UIUserNotificationActionContext(Int) from Int to Int {
 	@:native("UIUserNotificationActionContextDefault")
 	var UIUserNotificationActionContextDefault;
 
-	@:native("//thedefaultcontextofanotificationactionUIUserNotificationActionContextMinimal//thecontextofanotificationactionwhenspaceislimited")
-	var //thedefaultcontextofanotificationactionUIUserNotificationActionContextMinimal//thecontextofanotificationactionwhenspaceislimited;
-
 
 }

@@ -8,20 +8,17 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UITextDropEditability(Int) from Int to Int {
 
-	@:native("/*Anon-editablecontrolwillremainnon-editableand*thedropwillnotbeallowed.*/UITextDropEditabilityNo")
-	var /*Anon-editablecontrolwillremainnon-editableand*thedropwillnotbeallowed.*/UITextDropEditabilityNo;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Anon-editablecontrolwillbecomeeditableforthedrop*only")
-	var /*Anon-editablecontrolwillbecomeeditableforthedrop*only;
+	@:native("/*")
+	var /*;
 
-	@:native("butwillberestoredtonon-editableafterwards.*/UITextDropEditabilityTemporary")
-	var butwillberestoredtonon-editableafterwards.*/UITextDropEditabilityTemporary;
+	@:native("but")
+	var but;
 
-	@:native("/*Anon-editablecontrolwillbecomeeditableandremain*editableafterthedropconcludes.*/UITextDropEditabilityYes")
-	var /*Anon-editablecontrolwillbecomeeditableandremain*editableafterthedropconcludes.*/UITextDropEditabilityYes;
-
-	@:native("")
-	var ;
+	@:native("/*")
+	var /*;
 
 
 }

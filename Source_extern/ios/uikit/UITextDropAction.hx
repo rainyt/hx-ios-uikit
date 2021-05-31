@@ -8,26 +8,23 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UITextDropAction(Int) from Int to Int {
 
-	@:native("/*Insertsthetextattheprovidedlocation.Othertextisnotaffected.*/UITextDropActionInsert")
-	var /*Insertsthetextattheprovidedlocation.Othertextisnotaffected.*/UITextDropActionInsert;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Ifthetargethasaselection")
-	var /*Ifthetargethasaselection;
+	@:native("/*")
+	var /*;
 
-	@:native("replacestheselectionwiththedroppedtext.*Otherwise")
-	var replacestheselectionwiththedroppedtext.*Otherwise;
+	@:native("replaces")
+	var replaces;
 
-	@:native("thisbehavesthesameasUITextDropInsert.*/UITextDropActionReplaceSelection")
-	var thisbehavesthesameasUITextDropInsert.*/UITextDropActionReplaceSelection;
+	@:native("this")
+	var this;
 
-	@:native("/*Replacesallthetextinthetargetwiththedroppedtext")
-	var /*Replacesallthetextinthetargetwiththedroppedtext;
+	@:native("/*")
+	var /*;
 
-	@:native("*via`setAttributedText:`.*/UITextDropActionReplaceAll")
-	var *via`setAttributedText:`.*/UITextDropActionReplaceAll;
-
-	@:native("")
-	var ;
+	@:native("*")
+	var *;
 
 
 }

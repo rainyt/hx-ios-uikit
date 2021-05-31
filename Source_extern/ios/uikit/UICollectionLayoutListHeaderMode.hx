@@ -11,14 +11,5 @@ extern abstract UICollectionLayoutListHeaderMode(Int) from Int to Int {
 	@:native("UICollectionLayoutListHeaderModeNone")
 	var UICollectionLayoutListHeaderModeNone;
 
-	@:native("///NoheadersareshownUICollectionLayoutListHeaderModeSupplementary")
-	var ///NoheadersareshownUICollectionLayoutListHeaderModeSupplementary;
-
-	@:native("///UsessupplementaryviewsofkindUICollectionElementKindSectionHeadertoshowheadersUICollectionLayoutListHeaderModeFirstItemInSection")
-	var ///UsessupplementaryviewsofkindUICollectionElementKindSectionHeadertoshowheadersUICollectionLayoutListHeaderModeFirstItemInSection;
-
-	@:native("///Stylesthefirstiteminasectionasaheader.Thisisespeciallyusefulwhenusinghierarchicaldatasourcestobeabletoexpandandcollapsetheheader.")
-	var ///Stylesthefirstiteminasectionasaheader.Thisisespeciallyusefulwhenusinghierarchicaldatasourcestobeabletoexpandandcollapsetheheader.;
-
 
 }

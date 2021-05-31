@@ -11,14 +11,11 @@ extern abstract UIStatusBarAnimation(Int) from Int to Int {
 	@:native("UIStatusBarAnimationNone")
 	var UIStatusBarAnimationNone;
 
-	@:native("UIStatusBarAnimationFadeAPI_AVAILABLE(ios(3.2))")
-	var UIStatusBarAnimationFadeAPI_AVAILABLE(ios(3.2));
+	@:native("UIStatusBarAnimationFade")
+	var UIStatusBarAnimationFade;
 
-	@:native("UIStatusBarAnimationSlideAPI_AVAILABLE(ios(3.2))")
-	var UIStatusBarAnimationSlideAPI_AVAILABLE(ios(3.2));
-
-	@:native("")
-	var ;
+	@:native("UIStatusBarAnimationSlide")
+	var UIStatusBarAnimationSlide;
 
 
 }

@@ -17,8 +17,5 @@ extern abstract UITabBarItemAppearanceStyle(Int) from Int to Int {
 	@:native("UITabBarItemAppearanceStyleCompactInline")
 	var UITabBarItemAppearanceStyleCompactInline;
 
-	@:native("")
-	var ;
-
 
 }

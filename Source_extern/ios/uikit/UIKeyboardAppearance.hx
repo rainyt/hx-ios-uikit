@@ -11,17 +11,11 @@ extern abstract UIKeyboardAppearance(Int) from Int to Int {
 	@:native("UIKeyboardAppearanceDefault")
 	var UIKeyboardAppearanceDefault;
 
-	@:native("//Defaultapperanceforthecurrentinputmethod.UIKeyboardAppearanceDarkAPI_AVAILABLE(ios(7.0))")
-	var //Defaultapperanceforthecurrentinputmethod.UIKeyboardAppearanceDarkAPI_AVAILABLE(ios(7.0));
-
-	@:native("UIKeyboardAppearanceLightAPI_AVAILABLE(ios(7.0))")
-	var UIKeyboardAppearanceLightAPI_AVAILABLE(ios(7.0));
+	@:native("UIKeyboardAppearanceLight")
+	var UIKeyboardAppearanceLight;
 
 	@:native("UIKeyboardAppearanceAlert")
 	var UIKeyboardAppearanceAlert;
-
-	@:native("//Deprecated")
-	var //Deprecated;
 
 
 }

@@ -8,8 +8,8 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIVibrancyEffectStyle(Int) from Int to Int {
 
-	@:native("/*Vibrancyfortextlabels.*/UIVibrancyEffectStyleLabel")
-	var /*Vibrancyfortextlabels.*/UIVibrancyEffectStyleLabel;
+	@:native("/*")
+	var /*;
 
 	@:native("UIVibrancyEffectStyleSecondaryLabel")
 	var UIVibrancyEffectStyleSecondaryLabel;
@@ -20,8 +20,8 @@ extern abstract UIVibrancyEffectStyle(Int) from Int to Int {
 	@:native("UIVibrancyEffectStyleQuaternaryLabel")
 	var UIVibrancyEffectStyleQuaternaryLabel;
 
-	@:native("/*Vibrancyforthickerfilledareas.*/UIVibrancyEffectStyleFill")
-	var /*Vibrancyforthickerfilledareas.*/UIVibrancyEffectStyleFill;
+	@:native("/*")
+	var /*;
 
 	@:native("UIVibrancyEffectStyleSecondaryFill")
 	var UIVibrancyEffectStyleSecondaryFill;
@@ -29,11 +29,8 @@ extern abstract UIVibrancyEffectStyle(Int) from Int to Int {
 	@:native("UIVibrancyEffectStyleTertiaryFill")
 	var UIVibrancyEffectStyleTertiaryFill;
 
-	@:native("/*Vibrancyforseparatorlines.*/UIVibrancyEffectStyleSeparator")
-	var /*Vibrancyforseparatorlines.*/UIVibrancyEffectStyleSeparator;
-
-	@:native("")
-	var ;
+	@:native("/*")
+	var /*;
 
 
 }

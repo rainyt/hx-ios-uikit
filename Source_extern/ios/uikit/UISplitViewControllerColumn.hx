@@ -14,26 +14,20 @@ extern abstract UISplitViewControllerColumn(Int) from Int to Int {
 	@:native("UISplitViewControllerColumnSupplementary")
 	var UISplitViewControllerColumnSupplementary;
 
-	@:native("//ValidforUISplitViewControllerStyleTripleColumnonlyUISplitViewControllerColumnSecondary")
-	var //ValidforUISplitViewControllerStyleTripleColumnonlyUISplitViewControllerColumnSecondary;
-
 	@:native("UISplitViewControllerColumnCompact")
 	var UISplitViewControllerColumnCompact;
 
-	@:native("//Ifavcissetforthiscolumn")
-	var //Ifavcissetforthiscolumn;
+	@:native("it")
+	var it;
 
-	@:native("itwillbeusedwhentheUISVCiscollapsed")
-	var itwillbeusedwhentheUISVCiscollapsed;
-
-	@:native("insteadofstackingthevc’sforthePrimary")
-	var insteadofstackingthevc’sforthePrimary;
+	@:native("instead")
+	var instead;
 
 	@:native("Supplementary")
 	var Supplementary;
 
-	@:native("andSecondarycolumns")
-	var andSecondarycolumns;
+	@:native("and")
+	var and;
 
 
 }

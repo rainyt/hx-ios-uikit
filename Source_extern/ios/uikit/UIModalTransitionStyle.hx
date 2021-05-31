@@ -11,17 +11,14 @@ extern abstract UIModalTransitionStyle(Int) from Int to Int {
 	@:native("UIModalTransitionStyleCoverVertical")
 	var UIModalTransitionStyleCoverVertical;
 
-	@:native("UIModalTransitionStyleFlipHorizontalAPI_UNAVAILABLE(tvos)")
-	var UIModalTransitionStyleFlipHorizontalAPI_UNAVAILABLE(tvos);
+	@:native("UIModalTransitionStyleFlipHorizontal")
+	var UIModalTransitionStyleFlipHorizontal;
 
 	@:native("UIModalTransitionStyleCrossDissolve")
 	var UIModalTransitionStyleCrossDissolve;
 
-	@:native("UIModalTransitionStylePartialCurlAPI_AVAILABLE(ios(3.2))API_UNAVAILABLE(tvos)")
-	var UIModalTransitionStylePartialCurlAPI_AVAILABLE(ios(3.2))API_UNAVAILABLE(tvos);
-
-	@:native("")
-	var ;
+	@:native("UIModalTransitionStylePartialCurl")
+	var UIModalTransitionStylePartialCurl;
 
 
 }

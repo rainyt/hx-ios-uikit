@@ -14,14 +14,8 @@ extern abstract UISemanticContentAttribute(Int) from Int to Int {
 	@:native("UISemanticContentAttributePlayback")
 	var UISemanticContentAttributePlayback;
 
-	@:native("//forplaybackcontrolssuchasPlay/RW/FFbuttonsandplayheadscrubbersUISemanticContentAttributeSpatial")
-	var //forplaybackcontrolssuchasPlay/RW/FFbuttonsandplayheadscrubbersUISemanticContentAttributeSpatial;
-
-	@:native("//forcontrolsthatresultinsomesortofdirectionalchangeintheUI")
-	var //forcontrolsthatresultinsomesortofdirectionalchangeintheUI;
-
-	@:native("e.g.asegmentedcontrolfortextalignmentoraD-padinagameUISemanticContentAttributeForceLeftToRight")
-	var e.g.asegmentedcontrolfortextalignmentoraD-padinagameUISemanticContentAttributeForceLeftToRight;
+	@:native("e.g.")
+	var e.g.;
 
 	@:native("UISemanticContentAttributeForceRightToLeft")
 	var UISemanticContentAttributeForceRightToLeft;

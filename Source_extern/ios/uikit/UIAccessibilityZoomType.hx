@@ -11,8 +11,5 @@ extern abstract UIAccessibilityZoomType(Int) from Int to Int {
 	@:native("UIAccessibilityZoomTypeInsertionPoint")
 	var UIAccessibilityZoomTypeInsertionPoint;
 
-	@:native("//Usedwhenthetextinsertionpointhasmoved")
-	var //Usedwhenthetextinsertionpointhasmoved;
-
 
 }

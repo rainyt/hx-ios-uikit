@@ -44,8 +44,5 @@ extern abstract UITabBarSystemItem(Int) from Int to Int {
 	@:native("UITabBarSystemItemMostViewed")
 	var UITabBarSystemItemMostViewed;
 
-	@:native("")
-	var ;
-
 
 }

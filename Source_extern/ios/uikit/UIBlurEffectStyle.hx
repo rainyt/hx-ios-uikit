@@ -8,8 +8,8 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIBlurEffectStyle(Int) from Int to Int {
 
-	@:native("/*Traditionalblurstyles.*/UIBlurEffectStyleExtraLight")
-	var /*Traditionalblurstyles.*/UIBlurEffectStyleExtraLight;
+	@:native("/*")
+	var /*;
 
 	@:native("UIBlurEffectStyleLight")
 	var UIBlurEffectStyleLight;
@@ -17,116 +17,113 @@ extern abstract UIBlurEffectStyle(Int) from Int to Int {
 	@:native("UIBlurEffectStyleDark")
 	var UIBlurEffectStyleDark;
 
-	@:native("UIBlurEffectStyleExtraDarkAPI_AVAILABLE(tvos(10.0))API_UNAVAILABLE(ios)API_UNAVAILABLE(watchos)")
-	var UIBlurEffectStyleExtraDarkAPI_AVAILABLE(tvos(10.0))API_UNAVAILABLE(ios)API_UNAVAILABLE(watchos);
+	@:native("UIBlurEffectStyleExtraDark")
+	var UIBlurEffectStyleExtraDark;
 
-	@:native("/*Styleswhichautomaticallyshowoneofthetraditionalblurstyles")
-	var /*Styleswhichautomaticallyshowoneofthetraditionalblurstyles;
+	@:native("/*")
+	var /*;
 
-	@:native("*dependingontheuserinterfacestyle.**RegulardisplayseitherLightorDark.*/UIBlurEffectStyleRegularAPI_AVAILABLE(ios(10.0))")
-	var *dependingontheuserinterfacestyle.**RegulardisplayseitherLightorDark.*/UIBlurEffectStyleRegularAPI_AVAILABLE(ios(10.0));
+	@:native("*")
+	var *;
 
-	@:native("/*ProminentdisplayseitherExtraLight")
-	var /*ProminentdisplayseitherExtraLight;
+	@:native("/*")
+	var /*;
 
-	@:native("Dark(oniOS)")
-	var Dark(oniOS);
+	@:native("Dark")
+	var Dark;
 
-	@:native("orExtraDark(ontvOS).*/UIBlurEffectStyleProminentAPI_AVAILABLE(ios(10.0))")
-	var orExtraDark(ontvOS).*/UIBlurEffectStyleProminentAPI_AVAILABLE(ios(10.0));
+	@:native("or")
+	var or;
 
-	@:native("/**BlurstylesavailableiniOS13.**Styleswhichautomaticallyadapttotheuserinterfacestyle:*/UIBlurEffectStyleSystemUltraThinMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var /**BlurstylesavailableiniOS13.**Styleswhichautomaticallyadapttotheuserinterfacestyle:*/UIBlurEffectStyleSystemUltraThinMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
-
-	@:native("watchos)")
-	var watchos);
-
-	@:native("UIBlurEffectStyleSystemThinMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemThinMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("/*")
+	var /*;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemThinMaterial")
+	var UIBlurEffectStyleSystemThinMaterial;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemThickMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemThickMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemMaterial")
+	var UIBlurEffectStyleSystemMaterial;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemChromeMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemChromeMaterialAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemThickMaterial")
+	var UIBlurEffectStyleSystemThickMaterial;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("/*Andalways-lightandalways-darkversions:*/UIBlurEffectStyleSystemUltraThinMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var /*Andalways-lightandalways-darkversions:*/UIBlurEffectStyleSystemUltraThinMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemChromeMaterial")
+	var UIBlurEffectStyleSystemChromeMaterial;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemThinMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemThinMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("/*")
+	var /*;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemThinMaterialLight")
+	var UIBlurEffectStyleSystemThinMaterialLight;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemThickMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemThickMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemMaterialLight")
+	var UIBlurEffectStyleSystemMaterialLight;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemChromeMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemChromeMaterialLightAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemThickMaterialLight")
+	var UIBlurEffectStyleSystemThickMaterialLight;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemUltraThinMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemUltraThinMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemChromeMaterialLight")
+	var UIBlurEffectStyleSystemChromeMaterialLight;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemThinMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemThinMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemUltraThinMaterialDark")
+	var UIBlurEffectStyleSystemUltraThinMaterialDark;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemThinMaterialDark")
+	var UIBlurEffectStyleSystemThinMaterialDark;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemThickMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemThickMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemMaterialDark")
+	var UIBlurEffectStyleSystemMaterialDark;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("UIBlurEffectStyleSystemChromeMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos")
-	var UIBlurEffectStyleSystemChromeMaterialDarkAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos;
+	@:native("UIBlurEffectStyleSystemThickMaterialDark")
+	var UIBlurEffectStyleSystemThickMaterialDark;
 
 	@:native("watchos)")
 	var watchos);
 
-	@:native("")
-	var ;
+	@:native("UIBlurEffectStyleSystemChromeMaterialDark")
+	var UIBlurEffectStyleSystemChromeMaterialDark;
+
+	@:native("watchos)")
+	var watchos);
 
 
 }

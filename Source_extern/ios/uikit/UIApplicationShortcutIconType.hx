@@ -29,71 +29,71 @@ extern abstract UIApplicationShortcutIconType(Int) from Int to Int {
 	@:native("UIApplicationShortcutIconTypeShare")
 	var UIApplicationShortcutIconTypeShare;
 
-	@:native("UIApplicationShortcutIconTypeProhibitAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeProhibitAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeProhibit")
+	var UIApplicationShortcutIconTypeProhibit;
 
-	@:native("UIApplicationShortcutIconTypeContactAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeContactAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeContact")
+	var UIApplicationShortcutIconTypeContact;
 
-	@:native("UIApplicationShortcutIconTypeHomeAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeHomeAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeHome")
+	var UIApplicationShortcutIconTypeHome;
 
-	@:native("UIApplicationShortcutIconTypeMarkLocationAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeMarkLocationAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeMarkLocation")
+	var UIApplicationShortcutIconTypeMarkLocation;
 
-	@:native("UIApplicationShortcutIconTypeFavoriteAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeFavoriteAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeFavorite")
+	var UIApplicationShortcutIconTypeFavorite;
 
-	@:native("UIApplicationShortcutIconTypeLoveAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeLoveAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeLove")
+	var UIApplicationShortcutIconTypeLove;
 
-	@:native("UIApplicationShortcutIconTypeCloudAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeCloudAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeCloud")
+	var UIApplicationShortcutIconTypeCloud;
 
-	@:native("UIApplicationShortcutIconTypeInvitationAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeInvitationAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeInvitation")
+	var UIApplicationShortcutIconTypeInvitation;
 
-	@:native("UIApplicationShortcutIconTypeConfirmationAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeConfirmationAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeConfirmation")
+	var UIApplicationShortcutIconTypeConfirmation;
 
-	@:native("UIApplicationShortcutIconTypeMailAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeMailAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeMail")
+	var UIApplicationShortcutIconTypeMail;
 
-	@:native("UIApplicationShortcutIconTypeMessageAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeMessageAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeMessage")
+	var UIApplicationShortcutIconTypeMessage;
 
-	@:native("UIApplicationShortcutIconTypeDateAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeDateAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeDate")
+	var UIApplicationShortcutIconTypeDate;
 
-	@:native("UIApplicationShortcutIconTypeTimeAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeTimeAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeTime")
+	var UIApplicationShortcutIconTypeTime;
 
-	@:native("UIApplicationShortcutIconTypeCapturePhotoAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeCapturePhotoAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeCapturePhoto")
+	var UIApplicationShortcutIconTypeCapturePhoto;
 
-	@:native("UIApplicationShortcutIconTypeCaptureVideoAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeCaptureVideoAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeCaptureVideo")
+	var UIApplicationShortcutIconTypeCaptureVideo;
 
-	@:native("UIApplicationShortcutIconTypeTaskAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeTaskAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeTask")
+	var UIApplicationShortcutIconTypeTask;
 
-	@:native("UIApplicationShortcutIconTypeTaskCompletedAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeTaskCompletedAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeTaskCompleted")
+	var UIApplicationShortcutIconTypeTaskCompleted;
 
-	@:native("UIApplicationShortcutIconTypeAlarmAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeAlarmAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeAlarm")
+	var UIApplicationShortcutIconTypeAlarm;
 
-	@:native("UIApplicationShortcutIconTypeBookmarkAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeBookmarkAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeBookmark")
+	var UIApplicationShortcutIconTypeBookmark;
 
-	@:native("UIApplicationShortcutIconTypeShuffleAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeShuffleAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeShuffle")
+	var UIApplicationShortcutIconTypeShuffle;
 
-	@:native("UIApplicationShortcutIconTypeAudioAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeAudioAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeAudio")
+	var UIApplicationShortcutIconTypeAudio;
 
-	@:native("UIApplicationShortcutIconTypeUpdateAPI_AVAILABLE(ios(9.1))")
-	var UIApplicationShortcutIconTypeUpdateAPI_AVAILABLE(ios(9.1));
+	@:native("UIApplicationShortcutIconTypeUpdate")
+	var UIApplicationShortcutIconTypeUpdate;
 
 
 }

@@ -8,35 +8,32 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIStackViewDistribution(Int) from Int to Int {
 
-	@:native("/*Whenitemsdonotfit(overflow)orfill(underflow)thespaceavailableadjustmentsoccuraccordingtocompressionResistanceorhuggingprioritiesofitems")
-	var /*Whenitemsdonotfit(overflow)orfill(underflow)thespaceavailableadjustmentsoccuraccordingtocompressionResistanceorhuggingprioritiesofitems;
+	@:native("/*")
+	var /*;
 
-	@:native("orwhenthatisambiguous")
-	var orwhenthatisambiguous;
+	@:native("or")
+	var or;
 
-	@:native("accordingtoarrangementorder.*/UIStackViewDistributionFill")
-	var accordingtoarrangementorder.*/UIStackViewDistributionFill;
+	@:native("according")
+	var according;
 
-	@:native("/*Itemsareallthesamesize.Whenspaceallows")
-	var /*Itemsareallthesamesize.Whenspaceallows;
+	@:native("/*")
+	var /*;
 
-	@:native("thiswillbethesizeoftheitemwiththelargestintrinsicContentSize(alongtheaxisofthestack).Overfloworunderflowadjustmentsaredistributedequallyamongtheitems.*/UIStackViewDistributionFillEqually")
-	var thiswillbethesizeoftheitemwiththelargestintrinsicContentSize(alongtheaxisofthestack).Overfloworunderflowadjustmentsaredistributedequallyamongtheitems.*/UIStackViewDistributionFillEqually;
+	@:native("this")
+	var this;
 
-	@:native("/*OverfloworunderflowadjustmentsaredistributedamongtheitemsproportionaltotheirintrinsicContentSizes.*/UIStackViewDistributionFillProportionally")
-	var /*OverfloworunderflowadjustmentsaredistributedamongtheitemsproportionaltotheirintrinsicContentSizes.*/UIStackViewDistributionFillProportionally;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Additionalunderflowspacingisdividedequallyinthespacesbetweentheitems.OverflowsqueezingiscontrolledbycompressionResistanceprioritiesfollowedbyarrangementorder.*/UIStackViewDistributionEqualSpacing")
-	var /*Additionalunderflowspacingisdividedequallyinthespacesbetweentheitems.OverflowsqueezingiscontrolledbycompressionResistanceprioritiesfollowedbyarrangementorder.*/UIStackViewDistributionEqualSpacing;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Equalcenter-to-centerspacingoftheitemsismaintainedasmuchaspossiblewhilestillmaintainingaminimumedge-to-edgespacingwithintheallowedarea.Additionalunderflowspacingisdividedequallyinthespacing.OverflowsqueezingisdistributedfirstaccordingtocompressionResistanceprioritiesofitems")
-	var /*Equalcenter-to-centerspacingoftheitemsismaintainedasmuchaspossiblewhilestillmaintainingaminimumedge-to-edgespacingwithintheallowedarea.Additionalunderflowspacingisdividedequallyinthespacing.OverflowsqueezingisdistributedfirstaccordingtocompressionResistanceprioritiesofitems;
+	@:native("/*")
+	var /*;
 
-	@:native("thenaccordingtosubvieworderwhilemaintainingtheconfigured(edge-to-edge)spacingasaminimum.*/UIStackViewDistributionEqualCentering")
-	var thenaccordingtosubvieworderwhilemaintainingtheconfigured(edge-to-edge)spacingasaminimum.*/UIStackViewDistributionEqualCentering;
-
-	@:native("")
-	var ;
+	@:native("then")
+	var then;
 
 
 }

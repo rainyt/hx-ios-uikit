@@ -14,11 +14,8 @@ extern abstract UIDynamicItemCollisionBoundsType(Int) from Int to Int {
 	@:native("UIDynamicItemCollisionBoundsTypeEllipse")
 	var UIDynamicItemCollisionBoundsTypeEllipse;
 
-	@:native("//radiiwillbedeterminedfromtheitemsboundswidth")
-	var //radiiwillbedeterminedfromtheitemsboundswidth;
-
-	@:native("heightUIDynamicItemCollisionBoundsTypePath")
-	var heightUIDynamicItemCollisionBoundsTypePath;
+	@:native("height")
+	var height;
 
 
 }

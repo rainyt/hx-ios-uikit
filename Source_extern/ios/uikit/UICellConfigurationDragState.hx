@@ -8,17 +8,8 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UICellConfigurationDragState(Int) from Int to Int {
 
-	@:native("///Thecellisnotassociatedwithadragsession.UICellConfigurationDragStateNone")
-	var ///Thecellisnotassociatedwithadragsession.UICellConfigurationDragStateNone;
-
-	@:native("///Thecellisbeinglifted")
-	var ///Thecellisbeinglifted;
-
-	@:native("beforehasjoinedadragsession.UICellConfigurationDragStateLifting")
-	var beforehasjoinedadragsession.UICellConfigurationDragStateLifting;
-
-	@:native("///Thecellispartofanactivedragsession.UICellConfigurationDragStateDragging")
-	var ///Thecellispartofanactivedragsession.UICellConfigurationDragStateDragging;
+	@:native("before")
+	var before;
 
 
 }

@@ -11,11 +11,8 @@ extern abstract UIDisplayGamut(Int) from Int to Int {
 	@:native("UIDisplayGamutUnspecified")
 	var UIDisplayGamutUnspecified;
 
-	@:native("//UIKitwillnotsetthisanymore")
-	var //UIKitwillnotsetthisanymore;
-
-	@:native("insteadasensibledefaultischosenbasedonthedevicecapabilitiesandsettingsalwaysUIDisplayGamutSRGB")
-	var insteadasensibledefaultischosenbasedonthedevicecapabilitiesandsettingsalwaysUIDisplayGamutSRGB;
+	@:native("instead")
+	var instead;
 
 	@:native("UIDisplayGamutP3")
 	var UIDisplayGamutP3;

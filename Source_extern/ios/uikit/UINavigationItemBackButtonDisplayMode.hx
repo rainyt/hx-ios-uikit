@@ -8,29 +8,17 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UINavigationItemBackButtonDisplayMode(Int) from Int to Int {
 
-	@:native("///Defaultmode")
-	var ///Defaultmode;
+	@:native("uses")
+	var uses;
 
-	@:native("usesanappropriatetitle")
-	var usesanappropriatetitle;
+	@:native("followed")
+	var followed;
 
-	@:native("followedbyagenerictitle(typically'Back')")
-	var followedbyagenerictitle(typically'Back');
+	@:native("then")
+	var then;
 
-	@:native("thennotitle.UINavigationItemBackButtonDisplayModeDefault")
-	var thennotitle.UINavigationItemBackButtonDisplayModeDefault;
-
-	@:native("///Generictitlesonly.Ignores.titleand.backButtonTitle(but*not*.backBarButtonItem.title).UINavigationItemBackButtonDisplayModeGeneric")
-	var ///Generictitlesonly.Ignores.titleand.backButtonTitle(but*not*.backBarButtonItem.title).UINavigationItemBackButtonDisplayModeGeneric;
-
-	@:native("///Don'tuseatitle")
-	var ///Don'tuseatitle;
-
-	@:native("justthebackbuttonindicatorimage.UINavigationItemBackButtonDisplayModeMinimal")
-	var justthebackbuttonindicatorimage.UINavigationItemBackButtonDisplayModeMinimal;
-
-	@:native("")
-	var ;
+	@:native("just")
+	var just;
 
 
 }

@@ -11,38 +11,35 @@ extern abstract UIModalPresentationStyle(Int) from Int to Int {
 	@:native("UIModalPresentationFullScreen")
 	var UIModalPresentationFullScreen;
 
-	@:native("UIModalPresentationPageSheetAPI_AVAILABLE(ios(3.2))API_UNAVAILABLE(tvos)")
-	var UIModalPresentationPageSheetAPI_AVAILABLE(ios(3.2))API_UNAVAILABLE(tvos);
+	@:native("UIModalPresentationPageSheet")
+	var UIModalPresentationPageSheet;
 
-	@:native("UIModalPresentationFormSheetAPI_AVAILABLE(ios(3.2))API_UNAVAILABLE(tvos)")
-	var UIModalPresentationFormSheetAPI_AVAILABLE(ios(3.2))API_UNAVAILABLE(tvos);
+	@:native("UIModalPresentationFormSheet")
+	var UIModalPresentationFormSheet;
 
-	@:native("UIModalPresentationCurrentContextAPI_AVAILABLE(ios(3.2))")
-	var UIModalPresentationCurrentContextAPI_AVAILABLE(ios(3.2));
+	@:native("UIModalPresentationCurrentContext")
+	var UIModalPresentationCurrentContext;
 
-	@:native("UIModalPresentationCustomAPI_AVAILABLE(ios(7.0))")
-	var UIModalPresentationCustomAPI_AVAILABLE(ios(7.0));
+	@:native("UIModalPresentationCustom")
+	var UIModalPresentationCustom;
 
-	@:native("UIModalPresentationOverFullScreenAPI_AVAILABLE(ios(8.0))")
-	var UIModalPresentationOverFullScreenAPI_AVAILABLE(ios(8.0));
+	@:native("UIModalPresentationOverFullScreen")
+	var UIModalPresentationOverFullScreen;
 
-	@:native("UIModalPresentationOverCurrentContextAPI_AVAILABLE(ios(8.0))")
-	var UIModalPresentationOverCurrentContextAPI_AVAILABLE(ios(8.0));
+	@:native("UIModalPresentationOverCurrentContext")
+	var UIModalPresentationOverCurrentContext;
 
-	@:native("UIModalPresentationPopoverAPI_AVAILABLE(ios(8.0))API_UNAVAILABLE(tvos)")
-	var UIModalPresentationPopoverAPI_AVAILABLE(ios(8.0))API_UNAVAILABLE(tvos);
+	@:native("UIModalPresentationPopover")
+	var UIModalPresentationPopover;
 
-	@:native("UIModalPresentationBlurOverFullScreenAPI_AVAILABLE(tvos(11.0))API_UNAVAILABLE(ios)API_UNAVAILABLE(watchos)")
-	var UIModalPresentationBlurOverFullScreenAPI_AVAILABLE(tvos(11.0))API_UNAVAILABLE(ios)API_UNAVAILABLE(watchos);
+	@:native("UIModalPresentationBlurOverFullScreen")
+	var UIModalPresentationBlurOverFullScreen;
 
-	@:native("UIModalPresentationNoneAPI_AVAILABLE(ios(7.0))")
-	var UIModalPresentationNoneAPI_AVAILABLE(ios(7.0));
+	@:native("UIModalPresentationNone")
+	var UIModalPresentationNone;
 
-	@:native("UIModalPresentationAutomaticAPI_AVAILABLE(ios(13.0))")
-	var UIModalPresentationAutomaticAPI_AVAILABLE(ios(13.0));
-
-	@:native("")
-	var ;
+	@:native("UIModalPresentationAutomatic")
+	var UIModalPresentationAutomatic;
 
 
 }

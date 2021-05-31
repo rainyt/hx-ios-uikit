@@ -8,11 +8,11 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIStackViewAlignment(Int) from Int to Int {
 
-	@:native("/*Aligntheleadingandtrailingedgesofverticallystackeditemsorthetopandbottomedgesofhorizontallystackeditemstightlytothecontainer.*/UIStackViewAlignmentFill")
-	var /*Aligntheleadingandtrailingedgesofverticallystackeditemsorthetopandbottomedgesofhorizontallystackeditemstightlytothecontainer.*/UIStackViewAlignmentFill;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Aligntheleadingedgesofverticallystackeditemsorthetopedgesofhorizontallystackeditemstightlytotherelevantedgeofthecontainer*/UIStackViewAlignmentLeading")
-	var /*Aligntheleadingedgesofverticallystackeditemsorthetopedgesofhorizontallystackeditemstightlytotherelevantedgeofthecontainer*/UIStackViewAlignmentLeading;
+	@:native("/*")
+	var /*;
 
 	@:native("UIStackViewAlignmentTop")
 	var UIStackViewAlignmentTop;
@@ -20,20 +20,14 @@ extern abstract UIStackViewAlignment(Int) from Int to Int {
 	@:native("UIStackViewAlignmentFirstBaseline")
 	var UIStackViewAlignmentFirstBaseline;
 
-	@:native("//Validforhorizontalaxisonly/*Centertheitemsinaverticalstackhorizontallyortheitemsinahorizontalstackvertically*/UIStackViewAlignmentCenter")
-	var //Validforhorizontalaxisonly/*Centertheitemsinaverticalstackhorizontallyortheitemsinahorizontalstackvertically*/UIStackViewAlignmentCenter;
-
-	@:native("/*Alignthetrailingedgesofverticallystackeditemsorthebottomedgesofhorizontallystackeditemstightlytotherelevantedgeofthecontainer*/UIStackViewAlignmentTrailing")
-	var /*Alignthetrailingedgesofverticallystackeditemsorthebottomedgesofhorizontallystackeditemstightlytotherelevantedgeofthecontainer*/UIStackViewAlignmentTrailing;
+	@:native("/*")
+	var /*;
 
 	@:native("UIStackViewAlignmentBottom")
 	var UIStackViewAlignmentBottom;
 
 	@:native("UIStackViewAlignmentLastBaseline")
 	var UIStackViewAlignmentLastBaseline;
-
-	@:native("//Validforhorizontalaxisonly")
-	var //Validforhorizontalaxisonly;
 
 
 }

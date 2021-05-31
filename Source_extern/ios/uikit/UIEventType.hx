@@ -17,29 +17,26 @@ extern abstract UIEventType(Int) from Int to Int {
 	@:native("UIEventTypeRemoteControl")
 	var UIEventTypeRemoteControl;
 
-	@:native("UIEventTypePressesAPI_AVAILABLE(ios(9.0))")
-	var UIEventTypePressesAPI_AVAILABLE(ios(9.0));
+	@:native("UIEventTypePresses")
+	var UIEventTypePresses;
 
-	@:native("UIEventTypeScrollAPI_AVAILABLE(ios(13.4)")
-	var UIEventTypeScrollAPI_AVAILABLE(ios(13.4);
+	@:native("UIEventTypeScroll")
+	var UIEventTypeScroll;
 
-	@:native("tvos(13.4))API_UNAVAILABLE(watchos)")
-	var tvos(13.4))API_UNAVAILABLE(watchos);
+	@:native("tvos(13.4))")
+	var tvos(13.4));
 
-	@:native("UIEventTypeHoverAPI_AVAILABLE(ios(13.4)")
-	var UIEventTypeHoverAPI_AVAILABLE(ios(13.4);
+	@:native("UIEventTypeHover")
+	var UIEventTypeHover;
 
-	@:native("tvos(13.4))API_UNAVAILABLE(watchos)")
-	var tvos(13.4))API_UNAVAILABLE(watchos);
+	@:native("tvos(13.4))")
+	var tvos(13.4));
 
-	@:native("UIEventTypeTransformAPI_AVAILABLE(ios(13.4)")
-	var UIEventTypeTransformAPI_AVAILABLE(ios(13.4);
+	@:native("UIEventTypeTransform")
+	var UIEventTypeTransform;
 
-	@:native("tvos(13.4))API_UNAVAILABLE(watchos)")
-	var tvos(13.4))API_UNAVAILABLE(watchos);
-
-	@:native("")
-	var ;
+	@:native("tvos(13.4))")
+	var tvos(13.4));
 
 
 }

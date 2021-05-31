@@ -20,8 +20,5 @@ extern abstract UITimingCurveType(Int) from Int to Int {
 	@:native("UITimingCurveTypeComposed")
 	var UITimingCurveTypeComposed;
 
-	@:native("")
-	var ;
-
 
 }

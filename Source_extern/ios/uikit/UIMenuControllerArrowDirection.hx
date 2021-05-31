@@ -11,20 +11,14 @@ extern abstract UIMenuControllerArrowDirection(Int) from Int to Int {
 	@:native("UIMenuControllerArrowDefault")
 	var UIMenuControllerArrowDefault;
 
-	@:native("//upordownbasedonscreenlocationUIMenuControllerArrowUpAPI_AVAILABLE(ios(3.2))")
-	var //upordownbasedonscreenlocationUIMenuControllerArrowUpAPI_AVAILABLE(ios(3.2));
+	@:native("UIMenuControllerArrowDown")
+	var UIMenuControllerArrowDown;
 
-	@:native("UIMenuControllerArrowDownAPI_AVAILABLE(ios(3.2))")
-	var UIMenuControllerArrowDownAPI_AVAILABLE(ios(3.2));
+	@:native("UIMenuControllerArrowLeft")
+	var UIMenuControllerArrowLeft;
 
-	@:native("UIMenuControllerArrowLeftAPI_AVAILABLE(ios(3.2))")
-	var UIMenuControllerArrowLeftAPI_AVAILABLE(ios(3.2));
-
-	@:native("UIMenuControllerArrowRightAPI_AVAILABLE(ios(3.2))")
-	var UIMenuControllerArrowRightAPI_AVAILABLE(ios(3.2));
-
-	@:native("")
-	var ;
+	@:native("UIMenuControllerArrowRight")
+	var UIMenuControllerArrowRight;
 
 
 }

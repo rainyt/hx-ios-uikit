@@ -17,8 +17,5 @@ extern abstract UITabBarItemPositioning(Int) from Int to Int {
 	@:native("UITabBarItemPositioningCentered")
 	var UITabBarItemPositioningCentered;
 
-	@:native("")
-	var ;
-
 
 }

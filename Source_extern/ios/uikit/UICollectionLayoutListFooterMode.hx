@@ -11,11 +11,5 @@ extern abstract UICollectionLayoutListFooterMode(Int) from Int to Int {
 	@:native("UICollectionLayoutListFooterModeNone")
 	var UICollectionLayoutListFooterModeNone;
 
-	@:native("///NofootersareshownUICollectionLayoutListFooterModeSupplementary")
-	var ///NofootersareshownUICollectionLayoutListFooterModeSupplementary;
-
-	@:native("///UsessupplementaryviewsofkindUICollectionElementKindSectionFootertoshowfooters")
-	var ///UsessupplementaryviewsofkindUICollectionElementKindSectionFootertoshowfooters;
-
 
 }

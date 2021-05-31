@@ -11,38 +11,26 @@ extern abstract UIStatusBarStyle(Int) from Int to Int {
 	@:native("UIStatusBarStyleDefault")
 	var UIStatusBarStyleDefault;
 
-	@:native("//AutomaticallychooseslightordarkcontentbasedontheuserinterfacestyleUIStatusBarStyleLightContentAPI_AVAILABLE(ios(7.0))")
-	var //AutomaticallychooseslightordarkcontentbasedontheuserinterfacestyleUIStatusBarStyleLightContentAPI_AVAILABLE(ios(7.0));
+	@:native("for")
+	var for;
 
-	@:native("//Lightcontent")
-	var //Lightcontent;
-
-	@:native("foruseondarkbackgroundsUIStatusBarStyleDarkContentAPI_AVAILABLE(ios(13.0))")
-	var foruseondarkbackgroundsUIStatusBarStyleDarkContentAPI_AVAILABLE(ios(13.0));
-
-	@:native("//Darkcontent")
-	var //Darkcontent;
-
-	@:native("foruseonlightbackgroundsUIStatusBarStyleBlackTranslucentNS_ENUM_DEPRECATED_IOS(2_0")
-	var foruseonlightbackgroundsUIStatusBarStyleBlackTranslucentNS_ENUM_DEPRECATED_IOS(2_0;
+	@:native("for")
+	var for;
 
 	@:native("7_0")
 	var 7_0;
 
-	@:native(""UseUIStatusBarStyleLightContent")")
-	var "UseUIStatusBarStyleLightContent");
+	@:native(""Use")
+	var "Use;
 
-	@:native("UIStatusBarStyleBlackOpaqueNS_ENUM_DEPRECATED_IOS(2_0")
-	var UIStatusBarStyleBlackOpaqueNS_ENUM_DEPRECATED_IOS(2_0;
+	@:native("UIStatusBarStyleBlackOpaque")
+	var UIStatusBarStyleBlackOpaque;
 
 	@:native("7_0")
 	var 7_0;
 
-	@:native(""UseUIStatusBarStyleLightContent")")
-	var "UseUIStatusBarStyleLightContent");
-
-	@:native("")
-	var ;
+	@:native(""Use")
+	var "Use;
 
 
 }

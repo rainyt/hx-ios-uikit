@@ -71,20 +71,20 @@ extern abstract UIBarButtonSystemItem(Int) from Int to Int {
 	@:native("UIBarButtonSystemItemFastForward")
 	var UIBarButtonSystemItemFastForward;
 
-	@:native("UIBarButtonSystemItemUndoAPI_AVAILABLE(ios(3.0))")
-	var UIBarButtonSystemItemUndoAPI_AVAILABLE(ios(3.0));
+	@:native("UIBarButtonSystemItemUndo")
+	var UIBarButtonSystemItemUndo;
 
-	@:native("UIBarButtonSystemItemRedoAPI_AVAILABLE(ios(3.0))")
-	var UIBarButtonSystemItemRedoAPI_AVAILABLE(ios(3.0));
+	@:native("UIBarButtonSystemItemRedo")
+	var UIBarButtonSystemItemRedo;
 
-	@:native("UIBarButtonSystemItemPageCurlNS_ENUM_DEPRECATED_IOS(4_0")
-	var UIBarButtonSystemItemPageCurlNS_ENUM_DEPRECATED_IOS(4_0;
+	@:native("UIBarButtonSystemItemPageCurl")
+	var UIBarButtonSystemItemPageCurl;
 
 	@:native("11_0)")
 	var 11_0);
 
-	@:native("UIBarButtonSystemItemCloseAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos)")
-	var UIBarButtonSystemItemCloseAPI_AVAILABLE(ios(13.0))API_UNAVAILABLE(tvos);
+	@:native("UIBarButtonSystemItemClose")
+	var UIBarButtonSystemItemClose;
 
 
 }

@@ -41,44 +41,29 @@ extern abstract NSLayoutAttribute(Int) from Int to Int {
 	@:native("NSLayoutAttributeLastBaseline")
 	var NSLayoutAttributeLastBaseline;
 
-	@:native("#ifTARGET_OS_IPHONENSLayoutAttributeBaselineNS_SWIFT_UNAVAILABLE("Use'lastBaseline'instead")")
-	var #ifTARGET_OS_IPHONENSLayoutAttributeBaselineNS_SWIFT_UNAVAILABLE("Use'lastBaseline'instead");
-
-	@:native("#elseNSLayoutAttributeBaseline")
-	var #elseNSLayoutAttributeBaseline;
-
-	@:native("#endifNSLayoutAttributeFirstBaselineAPI_AVAILABLE(macos(10.11)")
-	var #endifNSLayoutAttributeFirstBaselineAPI_AVAILABLE(macos(10.11);
-
 	@:native("ios(8.0))")
 	var ios(8.0));
 
-	@:native("#ifTARGET_OS_IPHONENSLayoutAttributeLeftMarginAPI_AVAILABLE(ios(8.0))")
-	var #ifTARGET_OS_IPHONENSLayoutAttributeLeftMarginAPI_AVAILABLE(ios(8.0));
+	@:native("NSLayoutAttributeRightMargin")
+	var NSLayoutAttributeRightMargin;
 
-	@:native("NSLayoutAttributeRightMarginAPI_AVAILABLE(ios(8.0))")
-	var NSLayoutAttributeRightMarginAPI_AVAILABLE(ios(8.0));
+	@:native("NSLayoutAttributeTopMargin")
+	var NSLayoutAttributeTopMargin;
 
-	@:native("NSLayoutAttributeTopMarginAPI_AVAILABLE(ios(8.0))")
-	var NSLayoutAttributeTopMarginAPI_AVAILABLE(ios(8.0));
+	@:native("NSLayoutAttributeBottomMargin")
+	var NSLayoutAttributeBottomMargin;
 
-	@:native("NSLayoutAttributeBottomMarginAPI_AVAILABLE(ios(8.0))")
-	var NSLayoutAttributeBottomMarginAPI_AVAILABLE(ios(8.0));
+	@:native("NSLayoutAttributeLeadingMargin")
+	var NSLayoutAttributeLeadingMargin;
 
-	@:native("NSLayoutAttributeLeadingMarginAPI_AVAILABLE(ios(8.0))")
-	var NSLayoutAttributeLeadingMarginAPI_AVAILABLE(ios(8.0));
+	@:native("NSLayoutAttributeTrailingMargin")
+	var NSLayoutAttributeTrailingMargin;
 
-	@:native("NSLayoutAttributeTrailingMarginAPI_AVAILABLE(ios(8.0))")
-	var NSLayoutAttributeTrailingMarginAPI_AVAILABLE(ios(8.0));
+	@:native("NSLayoutAttributeCenterXWithinMargins")
+	var NSLayoutAttributeCenterXWithinMargins;
 
-	@:native("NSLayoutAttributeCenterXWithinMarginsAPI_AVAILABLE(ios(8.0))")
-	var NSLayoutAttributeCenterXWithinMarginsAPI_AVAILABLE(ios(8.0));
-
-	@:native("NSLayoutAttributeCenterYWithinMarginsAPI_AVAILABLE(ios(8.0))")
-	var NSLayoutAttributeCenterYWithinMarginsAPI_AVAILABLE(ios(8.0));
-
-	@:native("#endifNSLayoutAttributeNotAnAttribute")
-	var #endifNSLayoutAttributeNotAnAttribute;
+	@:native("NSLayoutAttributeCenterYWithinMargins")
+	var NSLayoutAttributeCenterYWithinMargins;
 
 
 }

@@ -17,8 +17,5 @@ extern abstract UINavigationControllerOperation(Int) from Int to Int {
 	@:native("UINavigationControllerOperationPop")
 	var UINavigationControllerOperationPop;
 
-	@:native("")
-	var ;
-
 
 }

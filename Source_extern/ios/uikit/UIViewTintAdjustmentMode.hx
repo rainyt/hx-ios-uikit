@@ -17,8 +17,5 @@ extern abstract UIViewTintAdjustmentMode(Int) from Int to Int {
 	@:native("UIViewTintAdjustmentModeDimmed")
 	var UIViewTintAdjustmentModeDimmed;
 
-	@:native("")
-	var ;
-
 
 }

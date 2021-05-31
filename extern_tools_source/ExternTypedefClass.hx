@@ -35,10 +35,10 @@ class ExternTypedefClass {
 			enumContent = enumContent.substr(0, enumContent.lastIndexOf("}"));
 			var e = enumContent.split(",");
 			for (index => e2 in e) {
-				e2 = StringTools.replace(e2, " ", "");
-				if (e2.indexOf("=") != -1)
-					e2 = e2.substr(0, e2.lastIndexOf("="));
-				enums.push(e2);
+				var e3 = e2.split(" ").filter((f) -> f.length > 0)[0];
+				if (e3 == null || e3.indexOf("//") != -1 || e3.indexOf("#") != -1)
+					continue;
+				enums.push(e3);
 			}
 		} else {
 			value = StringTools.replace(value, "*", "");

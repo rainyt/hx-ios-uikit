@@ -14,8 +14,5 @@ extern abstract UIPrintInfoOrientation(Int) from Int to Int {
 	@:native("UIPrintInfoOrientationLandscape")
 	var UIPrintInfoOrientationLandscape;
 
-	@:native("")
-	var ;
-
 
 }

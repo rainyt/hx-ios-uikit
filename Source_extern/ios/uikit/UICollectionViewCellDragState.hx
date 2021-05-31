@@ -11,11 +11,11 @@ extern abstract UICollectionViewCellDragState(Int) from Int to Int {
 	@:native("UICollectionViewCellDragStateNone")
 	var UICollectionViewCellDragStateNone;
 
-	@:native("/*Thecellisinthe"lifting"state.*/UICollectionViewCellDragStateLifting")
-	var /*Thecellisinthe"lifting"state.*/UICollectionViewCellDragStateLifting;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Acellinthe"dragging"stateisleftbehindwitha*"ghosted"appearancetodenotewherethedrag*startedfrom.*/UICollectionViewCellDragStateDragging")
-	var /*Acellinthe"dragging"stateisleftbehindwitha*"ghosted"appearancetodenotewherethedrag*startedfrom.*/UICollectionViewCellDragStateDragging;
+	@:native("/*")
+	var /*;
 
 
 }

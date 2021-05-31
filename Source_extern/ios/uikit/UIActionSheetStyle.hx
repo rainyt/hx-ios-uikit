@@ -11,17 +11,11 @@ extern abstract UIActionSheetStyle(Int) from Int to Int {
 	@:native("UIActionSheetStyleAutomatic")
 	var UIActionSheetStyleAutomatic;
 
-	@:native("//takeappearancefromtoolbarstyleotherwiseuses'default'UIActionSheetStyleDefault")
-	var //takeappearancefromtoolbarstyleotherwiseuses'default'UIActionSheetStyleDefault;
-
 	@:native("UIActionSheetStyleBlackTranslucent")
 	var UIActionSheetStyleBlackTranslucent;
 
 	@:native("UIActionSheetStyleBlackOpaque")
 	var UIActionSheetStyleBlackOpaque;
-
-	@:native("")
-	var ;
 
 
 }

@@ -20,8 +20,5 @@ extern abstract UISplitViewControllerSplitBehavior(Int) from Int to Int {
 	@:native("UISplitViewControllerSplitBehaviorDisplace")
 	var UISplitViewControllerSplitBehaviorDisplace;
 
-	@:native("")
-	var ;
-
 
 }

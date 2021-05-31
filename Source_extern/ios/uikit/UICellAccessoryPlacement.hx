@@ -8,11 +8,5 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UICellAccessoryPlacement(Int) from Int to Int {
 
-	@:native("///Accessoryplacedontheleadingedge.UICellAccessoryPlacementLeading")
-	var ///Accessoryplacedontheleadingedge.UICellAccessoryPlacementLeading;
-
-	@:native("///Accessoryplacedonthetrailingedge.UICellAccessoryPlacementTrailing")
-	var ///Accessoryplacedonthetrailingedge.UICellAccessoryPlacementTrailing;
-
 
 }

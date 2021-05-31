@@ -11,20 +11,11 @@ extern abstract UIImageRenderingMode(Int) from Int to Int {
 	@:native("UIImageRenderingModeAutomatic")
 	var UIImageRenderingModeAutomatic;
 
-	@:native("//UsethedefaultrenderingmodeforthecontextwheretheimageisusedUIImageRenderingModeAlwaysOriginal")
-	var //UsethedefaultrenderingmodeforthecontextwheretheimageisusedUIImageRenderingModeAlwaysOriginal;
+	@:native("without")
+	var without;
 
-	@:native("//Alwaysdrawtheoriginalimage")
-	var //Alwaysdrawtheoriginalimage;
-
-	@:native("withouttreatingitasatemplateUIImageRenderingModeAlwaysTemplate")
-	var withouttreatingitasatemplateUIImageRenderingModeAlwaysTemplate;
-
-	@:native("//Alwaysdrawtheimageasatemplateimage")
-	var //Alwaysdrawtheimageasatemplateimage;
-
-	@:native("ignoringitscolorinformation")
-	var ignoringitscolorinformation;
+	@:native("ignoring")
+	var ignoring;
 
 
 }

@@ -8,23 +8,20 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIPencilPreferredAction(Int) from Int to Int {
 
-	@:native("/*Noaction")
-	var /*Noaction;
+	@:native("/*")
+	var /*;
 
-	@:native("ortheuserhasdisabledpencilinteractionsinAccessibilitysettings*/UIPencilPreferredActionIgnore")
-	var ortheuserhasdisabledpencilinteractionsinAccessibilitysettings*/UIPencilPreferredActionIgnore;
+	@:native("or")
+	var or;
 
-	@:native("/*Switchbetweenthecurrenttoolanderaser*/UIPencilPreferredActionSwitchEraser")
-	var /*Switchbetweenthecurrenttoolanderaser*/UIPencilPreferredActionSwitchEraser;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Switchbetweenthecurrenttoolandthepreviouslyusedtool*/UIPencilPreferredActionSwitchPrevious")
-	var /*Switchbetweenthecurrenttoolandthepreviouslyusedtool*/UIPencilPreferredActionSwitchPrevious;
+	@:native("/*")
+	var /*;
 
-	@:native("/*Showandhidethecolorpalette*/UIPencilPreferredActionShowColorPalette")
-	var /*Showandhidethecolorpalette*/UIPencilPreferredActionShowColorPalette;
-
-	@:native("")
-	var ;
+	@:native("/*")
+	var /*;
 
 
 }

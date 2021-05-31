@@ -11,14 +11,5 @@ extern abstract UIViewAnimatingState(Int) from Int to Int {
 	@:native("UIViewAnimatingStateInactive")
 	var UIViewAnimatingStateInactive;
 
-	@:native("//Theanimationisnotexecuting.UIViewAnimatingStateActive")
-	var //Theanimationisnotexecuting.UIViewAnimatingStateActive;
-
-	@:native("//Theanimationisexecuting.UIViewAnimatingStateStopped")
-	var //Theanimationisexecuting.UIViewAnimatingStateStopped;
-
-	@:native("//Theanimationhasbeenstoppedandhasnottransitionedtoinactive.")
-	var //Theanimationhasbeenstoppedandhasnottransitionedtoinactive.;
-
 
 }

@@ -11,32 +11,20 @@ extern abstract UIPrintInfoOutputType(Int) from Int to Int {
 	@:native("UIPrintInfoOutputGeneral")
 	var UIPrintInfoOutputGeneral;
 
-	@:native("//B&Worcolor")
-	var //B&Worcolor;
-
-	@:native("normalqualityoutputformixedtext")
-	var normalqualityoutputformixedtext;
+	@:native("normal")
+	var normal;
 
 	@:native("graphics")
 	var graphics;
 
-	@:native("andimagesUIPrintInfoOutputPhoto")
-	var andimagesUIPrintInfoOutputPhoto;
+	@:native("and")
+	var and;
 
-	@:native("//B&Worcolor")
-	var //B&Worcolor;
+	@:native("best")
+	var best;
 
-	@:native("bestqualityoutputforimagesUIPrintInfoOutputGrayscale")
-	var bestqualityoutputforimagesUIPrintInfoOutputGrayscale;
-
-	@:native("//B&WcontentonlyUIPrintInfoOutputPhotoGrayscaleAPI_AVAILABLE(ios(7.0))")
-	var //B&WcontentonlyUIPrintInfoOutputPhotoGrayscaleAPI_AVAILABLE(ios(7.0));
-
-	@:native("//B&Wonly")
-	var //B&Wonly;
-
-	@:native("bestqualityoutputforimages")
-	var bestqualityoutputforimages;
+	@:native("best")
+	var best;
 
 
 }

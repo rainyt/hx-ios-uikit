@@ -14,8 +14,5 @@ extern abstract UITableViewCellDragState(Int) from Int to Int {
 	@:native("UITableViewCellDragStateLifting")
 	var UITableViewCellDragStateLifting;
 
-	@:native("//Thecellisliftingfromthetableviewbeforeitjoinsthedragsession.UITableViewCellDragStateDragging//Thecellisinvolvedinadragsession.")
-	var //Thecellisliftingfromthetableviewbeforeitjoinsthedragsession.UITableViewCellDragStateDragging//Thecellisinvolvedinadragsession.;
-
 
 }

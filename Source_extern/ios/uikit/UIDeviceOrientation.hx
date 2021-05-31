@@ -14,38 +14,23 @@ extern abstract UIDeviceOrientation(Int) from Int to Int {
 	@:native("UIDeviceOrientationPortrait")
 	var UIDeviceOrientationPortrait;
 
-	@:native("//Deviceorientedvertically")
-	var //Deviceorientedvertically;
+	@:native("home")
+	var home;
 
-	@:native("homebuttononthebottomUIDeviceOrientationPortraitUpsideDown")
-	var homebuttononthebottomUIDeviceOrientationPortraitUpsideDown;
+	@:native("home")
+	var home;
 
-	@:native("//Deviceorientedvertically")
-	var //Deviceorientedvertically;
+	@:native("home")
+	var home;
 
-	@:native("homebuttononthetopUIDeviceOrientationLandscapeLeft")
-	var homebuttononthetopUIDeviceOrientationLandscapeLeft;
+	@:native("home")
+	var home;
 
-	@:native("//Deviceorientedhorizontally")
-	var //Deviceorientedhorizontally;
+	@:native("face")
+	var face;
 
-	@:native("homebuttonontherightUIDeviceOrientationLandscapeRight")
-	var homebuttonontherightUIDeviceOrientationLandscapeRight;
-
-	@:native("//Deviceorientedhorizontally")
-	var //Deviceorientedhorizontally;
-
-	@:native("homebuttonontheleftUIDeviceOrientationFaceUp")
-	var homebuttonontheleftUIDeviceOrientationFaceUp;
-
-	@:native("//Deviceorientedflat")
-	var //Deviceorientedflat;
-
-	@:native("faceupUIDeviceOrientationFaceDown//Deviceorientedflat")
-	var faceupUIDeviceOrientationFaceDown//Deviceorientedflat;
-
-	@:native("facedown")
-	var facedown;
+	@:native("face")
+	var face;
 
 
 }

@@ -35,8 +35,5 @@ extern abstract NSRectAlignment(Int) from Int to Int {
 	@:native("NSRectAlignmentTopTrailing")
 	var NSRectAlignmentTopTrailing;
 
-	@:native("")
-	var ;
-
 
 }

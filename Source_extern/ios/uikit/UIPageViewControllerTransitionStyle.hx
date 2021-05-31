@@ -11,8 +11,5 @@ extern abstract UIPageViewControllerTransitionStyle(Int) from Int to Int {
 	@:native("UIPageViewControllerTransitionStylePageCurl")
 	var UIPageViewControllerTransitionStylePageCurl;
 
-	@:native("//Navigatebetweenviewsviaapagecurltransition.UIPageViewControllerTransitionStyleScroll")
-	var //Navigatebetweenviewsviaapagecurltransition.UIPageViewControllerTransitionStyleScroll;
-
 
 }

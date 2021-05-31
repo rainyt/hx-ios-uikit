@@ -8,32 +8,29 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UITextDropPerformer(Int) from Int to Int {
 
-	@:native("/*Thetextdroppableviewwillhandlethedrop.*Thisisthedefaultbehavior.**Note:`-textDroppableView:willPerformDrop:`willbecalled")
-	var /*Thetextdroppableviewwillhandlethedrop.*Thisisthedefaultbehavior.**Note:`-textDroppableView:willPerformDrop:`willbecalled;
+	@:native("/*")
+	var /*;
 
-	@:native("ifitisimplemented")
-	var ifitisimplemented;
+	@:native("if")
+	var if;
 
-	@:native("*butitisnotrequired.*/UITextDropPerformerView")
-	var *butitisnotrequired.*/UITextDropPerformerView;
+	@:native("*")
+	var *;
 
-	@:native("/*Thedelegatewillberesponsibleforperformingthedrop")
-	var /*Thedelegatewillberesponsibleforperformingthedrop;
+	@:native("/*")
+	var /*;
 
-	@:native("and*thedefaultdataloadingprovidedbythetextdroppableview*willnotbeinvoked.**Thedelegatemustimplement`-textDroppableView:willPerformDrop:`")
-	var and*thedefaultdataloadingprovidedbythetextdroppableview*willnotbeinvoked.**Thedelegatemustimplement`-textDroppableView:willPerformDrop:`;
+	@:native("and")
+	var and;
 
-	@:native("*withcustomcodetostartloadingdata.Ifitdoesnot")
-	var *withcustomcodetostartloadingdata.Ifitdoesnot;
+	@:native("*")
+	var *;
 
-	@:native("thenthetext*droppableviewwillhandlethedrop")
-	var thenthetext*droppableviewwillhandlethedrop;
+	@:native("then")
+	var then;
 
-	@:native("asif`UITextDropPerformerView`*wasspecified.*/UITextDropPerformerDelegate")
-	var asif`UITextDropPerformerView`*wasspecified.*/UITextDropPerformerDelegate;
-
-	@:native("")
-	var ;
+	@:native("as")
+	var as;
 
 
 }

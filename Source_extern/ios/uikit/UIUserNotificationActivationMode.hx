@@ -11,11 +11,8 @@ extern abstract UIUserNotificationActivationMode(Int) from Int to Int {
 	@:native("UIUserNotificationActivationModeForeground")
 	var UIUserNotificationActivationModeForeground;
 
-	@:native("//activatestheapplicationintheforegroundUIUserNotificationActivationModeBackground//activatestheapplicationinthebackground")
-	var //activatestheapplicationintheforegroundUIUserNotificationActivationModeBackground//activatestheapplicationinthebackground;
-
-	@:native("unlessit'salreadyintheforeground")
-	var unlessit'salreadyintheforeground;
+	@:native("unless")
+	var unless;
 
 
 }

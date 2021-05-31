@@ -17,8 +17,5 @@ extern abstract NSLayoutRelation(Int) from Int to Int {
 	@:native("NSLayoutRelationGreaterThanOrEqual")
 	var NSLayoutRelationGreaterThanOrEqual;
 
-	@:native("")
-	var ;
-
 
 }

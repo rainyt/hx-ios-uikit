@@ -17,8 +17,5 @@ extern abstract UIUserInterfaceStyle(Int) from Int to Int {
 	@:native("UIUserInterfaceStyleDark")
 	var UIUserInterfaceStyleDark;
 
-	@:native("")
-	var ;
-
 
 }

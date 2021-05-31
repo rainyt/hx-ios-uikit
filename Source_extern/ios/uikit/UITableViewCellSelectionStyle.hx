@@ -17,8 +17,8 @@ extern abstract UITableViewCellSelectionStyle(Int) from Int to Int {
 	@:native("UITableViewCellSelectionStyleGray")
 	var UITableViewCellSelectionStyleGray;
 
-	@:native("UITableViewCellSelectionStyleDefaultAPI_AVAILABLE(ios(7.0))")
-	var UITableViewCellSelectionStyleDefaultAPI_AVAILABLE(ios(7.0));
+	@:native("UITableViewCellSelectionStyleDefault")
+	var UITableViewCellSelectionStyleDefault;
 
 
 }

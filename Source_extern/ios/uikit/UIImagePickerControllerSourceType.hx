@@ -8,11 +8,11 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIImagePickerControllerSourceType(Int) from Int to Int {
 
-	@:native("UIImagePickerControllerSourceTypePhotoLibraryAPI_DEPRECATED("Willberemovedinafuturerelease")
-	var UIImagePickerControllerSourceTypePhotoLibraryAPI_DEPRECATED("Willberemovedinafuturerelease;
+	@:native("UIImagePickerControllerSourceTypePhotoLibrary")
+	var UIImagePickerControllerSourceTypePhotoLibrary;
 
-	@:native("usePHPicker."")
-	var usePHPicker.";
+	@:native("use")
+	var use;
 
 	@:native("ios(2")
 	var ios(2;
@@ -23,20 +23,17 @@ extern abstract UIImagePickerControllerSourceType(Int) from Int to Int {
 	@:native("UIImagePickerControllerSourceTypeCamera")
 	var UIImagePickerControllerSourceTypeCamera;
 
-	@:native("UIImagePickerControllerSourceTypeSavedPhotosAlbumAPI_DEPRECATED("Willberemovedinafuturerelease")
-	var UIImagePickerControllerSourceTypeSavedPhotosAlbumAPI_DEPRECATED("Willberemovedinafuturerelease;
+	@:native("UIImagePickerControllerSourceTypeSavedPhotosAlbum")
+	var UIImagePickerControllerSourceTypeSavedPhotosAlbum;
 
-	@:native("usePHPicker."")
-	var usePHPicker.";
+	@:native("use")
+	var use;
 
 	@:native("ios(2")
 	var ios(2;
 
 	@:native("API_TO_BE_DEPRECATED))")
 	var API_TO_BE_DEPRECATED));
-
-	@:native("")
-	var ;
 
 
 }

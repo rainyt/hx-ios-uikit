@@ -20,8 +20,5 @@ extern abstract UIControlContentVerticalAlignment(Int) from Int to Int {
 	@:native("UIControlContentVerticalAlignmentFill")
 	var UIControlContentVerticalAlignmentFill;
 
-	@:native("")
-	var ;
-
 
 }

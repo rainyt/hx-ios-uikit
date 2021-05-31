@@ -14,8 +14,5 @@ extern abstract UITextInteractionMode(Int) from Int to Int {
 	@:native("UITextInteractionModeNonEditable")
 	var UITextInteractionModeNonEditable;
 
-	@:native("")
-	var ;
-
 
 }

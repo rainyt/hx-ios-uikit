@@ -8,11 +8,11 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UITextDropProgressMode(Int) from Int to Int {
 
-	@:native("/*UsesthedefaultsystemUIforprogress.*Thisblocksinputtotheapplicationwhilethedropishappening.*/UITextDropProgressModeSystem")
-	var /*UsesthedefaultsystemUIforprogress.*Thisblocksinputtotheapplicationwhilethedropishappening.*/UITextDropProgressModeSystem;
+	@:native("/*")
+	var /*;
 
-	@:native("/*NoprogressUIisshown.You'reonyourown.*/UITextDropProgressModeCustom")
-	var /*NoprogressUIisshown.You'reonyourown.*/UITextDropProgressModeCustom;
+	@:native("/*")
+	var /*;
 
 
 }

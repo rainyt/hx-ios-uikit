@@ -17,8 +17,5 @@ extern abstract UIUserInterfaceActiveAppearance(Int) from Int to Int {
 	@:native("UIUserInterfaceActiveAppearanceActive")
 	var UIUserInterfaceActiveAppearanceActive;
 
-	@:native("")
-	var ;
-
 
 }

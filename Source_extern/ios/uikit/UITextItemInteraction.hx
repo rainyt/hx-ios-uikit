@@ -17,8 +17,5 @@ extern abstract UITextItemInteraction(Int) from Int to Int {
 	@:native("UITextItemInteractionPreview")
 	var UITextItemInteractionPreview;
 
-	@:native("")
-	var ;
-
 
 }

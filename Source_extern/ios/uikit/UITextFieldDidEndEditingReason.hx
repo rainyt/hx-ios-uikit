@@ -11,8 +11,8 @@ extern abstract UITextFieldDidEndEditingReason(Int) from Int to Int {
 	@:native("UITextFieldDidEndEditingReasonCommitted")
 	var UITextFieldDidEndEditingReasonCommitted;
 
-	@:native("UITextFieldDidEndEditingReasonCancelledUIKIT_AVAILABLE_TVOS_ONLY(10_0)")
-	var UITextFieldDidEndEditingReasonCancelledUIKIT_AVAILABLE_TVOS_ONLY(10_0);
+	@:native("UITextFieldDidEndEditingReasonCancelled")
+	var UITextFieldDidEndEditingReasonCancelled;
 
 
 }

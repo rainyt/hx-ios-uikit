@@ -14,18 +14,6 @@ extern abstract UIViewContentMode(Int) from Int to Int {
 	@:native("UIViewContentModeScaleAspectFit")
 	var UIViewContentModeScaleAspectFit;
 
-	@:native("//contentsscaledtofitwithfixedaspect.remainderistransparentUIViewContentModeScaleAspectFill")
-	var //contentsscaledtofitwithfixedaspect.remainderistransparentUIViewContentModeScaleAspectFill;
-
-	@:native("//contentsscaledtofillwithfixedaspect.someportionofcontentmaybeclipped.UIViewContentModeRedraw")
-	var //contentsscaledtofillwithfixedaspect.someportionofcontentmaybeclipped.UIViewContentModeRedraw;
-
-	@:native("//redrawonboundschange(calls-setNeedsDisplay)UIViewContentModeCenter")
-	var //redrawonboundschange(calls-setNeedsDisplay)UIViewContentModeCenter;
-
-	@:native("//contentsremainsamesize.positionedadjusted.UIViewContentModeTop")
-	var //contentsremainsamesize.positionedadjusted.UIViewContentModeTop;
-
 	@:native("UIViewContentModeBottom")
 	var UIViewContentModeBottom;
 
@@ -46,9 +34,6 @@ extern abstract UIViewContentMode(Int) from Int to Int {
 
 	@:native("UIViewContentModeBottomRight")
 	var UIViewContentModeBottomRight;
-
-	@:native("")
-	var ;
 
 
 }

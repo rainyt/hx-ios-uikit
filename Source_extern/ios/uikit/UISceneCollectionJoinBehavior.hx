@@ -11,29 +11,17 @@ extern abstract UISceneCollectionJoinBehavior(Int) from Int to Int {
 	@:native("UISceneCollectionJoinBehaviorAutomatic")
 	var UISceneCollectionJoinBehaviorAutomatic;
 
-	@:native("//Thescenefollowssystempreferencesforjoiningcollections.UISceneCollectionJoinBehaviorPreferred")
-	var //Thescenefollowssystempreferencesforjoiningcollections.UISceneCollectionJoinBehaviorPreferred;
+	@:native("add")
+	var add;
 
-	@:native("//IfrequestingSceneisset")
-	var //IfrequestingSceneisset;
+	@:native("ignoring")
+	var ignoring;
 
-	@:native("addthenewscenetoitscollectionandactivateit.Otherwiseattempttojoinacompatiblecollection.UISceneCollectionJoinBehaviorDisallowed")
-	var addthenewscenetoitscollectionandactivateit.Otherwiseattempttojoinacompatiblecollection.UISceneCollectionJoinBehaviorDisallowed;
+	@:native("add")
+	var add;
 
-	@:native("//Createanewcollectionforthescene")
-	var //Createanewcollectionforthescene;
-
-	@:native("ignoringsystempreferences.UISceneCollectionJoinBehaviorPreferredWithoutActivating")
-	var ignoringsystempreferences.UISceneCollectionJoinBehaviorPreferredWithoutActivating;
-
-	@:native("//IfrequestingSceneisset")
-	var //IfrequestingSceneisset;
-
-	@:native("addthenewscenewithoutdeactivatingtherequestingScene.Otherwisebehavesthesameaspreferrred.Forexample")
-	var addthenewscenewithoutdeactivatingtherequestingScene.Otherwisebehavesthesameaspreferrred.Forexample;
-
-	@:native("inCatalystthiscouldbeusedtoopenalinkinanewtabinthebackground.")
-	var inCatalystthiscouldbeusedtoopenalinkinanewtabinthebackground.;
+	@:native("in")
+	var in;
 
 
 }

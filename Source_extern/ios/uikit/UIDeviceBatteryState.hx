@@ -14,23 +14,14 @@ extern abstract UIDeviceBatteryState(Int) from Int to Int {
 	@:native("UIDeviceBatteryStateUnplugged")
 	var UIDeviceBatteryStateUnplugged;
 
-	@:native("//onbattery")
-	var //onbattery;
+	@:native("discharging")
+	var discharging;
 
-	@:native("dischargingUIDeviceBatteryStateCharging")
-	var dischargingUIDeviceBatteryStateCharging;
+	@:native("less")
+	var less;
 
-	@:native("//pluggedin")
-	var //pluggedin;
-
-	@:native("lessthan100%UIDeviceBatteryStateFull")
-	var lessthan100%UIDeviceBatteryStateFull;
-
-	@:native("//pluggedin")
-	var //pluggedin;
-
-	@:native("at100%")
-	var at100%;
+	@:native("at")
+	var at;
 
 
 }

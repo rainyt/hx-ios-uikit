@@ -14,17 +14,11 @@ extern abstract UIPrintInfoDuplex(Int) from Int to Int {
 	@:native("UIPrintInfoDuplexLongEdge")
 	var UIPrintInfoDuplexLongEdge;
 
-	@:native("//flipbackpagealonglongedge(sameorientationinportrait")
-	var //flipbackpagealonglongedge(sameorientationinportrait;
+	@:native("flipped")
+	var flipped;
 
-	@:native("flippedforlandscape)UIPrintInfoDuplexShortEdge")
-	var flippedforlandscape)UIPrintInfoDuplexShortEdge;
-
-	@:native("//flipbackpagealongshortedge(flippedorientationforportrait")
-	var //flipbackpagealongshortedge(flippedorientationforportrait;
-
-	@:native("sameinlandscape)")
-	var sameinlandscape);
+	@:native("same")
+	var same;
 
 
 }

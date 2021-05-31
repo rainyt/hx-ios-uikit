@@ -11,8 +11,5 @@ extern abstract UISystemAnimation(Int) from Int to Int {
 	@:native("UISystemAnimationDelete")
 	var UISystemAnimationDelete;
 
-	@:native("//removestheviewsfromthehierarchywhencomplete")
-	var //removestheviewsfromthehierarchywhencomplete;
-
 
 }

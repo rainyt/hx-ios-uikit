@@ -14,14 +14,14 @@ extern abstract UITableViewCellSeparatorStyle(Int) from Int to Int {
 	@:native("UITableViewCellSeparatorStyleSingleLine")
 	var UITableViewCellSeparatorStyleSingleLine;
 
-	@:native("UITableViewCellSeparatorStyleSingleLineEtchedNS_ENUM_DEPRECATED_IOS(2_0")
-	var UITableViewCellSeparatorStyleSingleLineEtchedNS_ENUM_DEPRECATED_IOS(2_0;
+	@:native("UITableViewCellSeparatorStyleSingleLineEtched")
+	var UITableViewCellSeparatorStyleSingleLineEtched;
 
 	@:native("11_0")
 	var 11_0;
 
-	@:native(""UseUITableViewCellSeparatorStyleSingleLineforasinglelineseparator.")")
-	var "UseUITableViewCellSeparatorStyleSingleLineforasinglelineseparator.");
+	@:native(""Use")
+	var "Use;
 
 
 }

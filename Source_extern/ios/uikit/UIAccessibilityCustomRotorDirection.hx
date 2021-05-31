@@ -8,14 +8,11 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIAccessibilityCustomRotorDirection(Int) from Int to Int {
 
-	@:native("UIAccessibilityCustomRotorDirectionPreviousAPI_AVAILABLE(ios(10.0))")
-	var UIAccessibilityCustomRotorDirectionPreviousAPI_AVAILABLE(ios(10.0));
+	@:native("UIAccessibilityCustomRotorDirectionPrevious")
+	var UIAccessibilityCustomRotorDirectionPrevious;
 
-	@:native("UIAccessibilityCustomRotorDirectionNextAPI_AVAILABLE(ios(10.0))")
-	var UIAccessibilityCustomRotorDirectionNextAPI_AVAILABLE(ios(10.0));
-
-	@:native("")
-	var ;
+	@:native("UIAccessibilityCustomRotorDirectionNext")
+	var UIAccessibilityCustomRotorDirectionNext;
 
 
 }

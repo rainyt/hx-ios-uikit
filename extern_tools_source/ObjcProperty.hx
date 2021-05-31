@@ -65,7 +65,7 @@ class ObjcProperty {
 				skip--;
 		}
 		p = p.filter((f) -> f.indexOf("API_") == -1 && f.indexOf("ios(") == -1 && f != "UI_APPEARANCE_SELECTOR");
-		trace(p);
+		// trace(p);
 		return ({
 			name: p[p.length - 1],
 			type: ExternBaseClassType.PROPERTY,

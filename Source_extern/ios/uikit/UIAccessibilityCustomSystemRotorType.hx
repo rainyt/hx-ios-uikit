@@ -65,8 +65,5 @@ extern abstract UIAccessibilityCustomSystemRotorType(Int) from Int to Int {
 	@:native("UIAccessibilityCustomSystemRotorTypeLandmark")
 	var UIAccessibilityCustomSystemRotorTypeLandmark;
 
-	@:native("")
-	var ;
-
 
 }
