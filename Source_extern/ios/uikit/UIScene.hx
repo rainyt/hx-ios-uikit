@@ -30,7 +30,7 @@ extern class UIScene{
 	public var activationState:UISceneActivationState;
 
 	@:native("openURL:options:completionHandler")
-	overload extern inline public function openURL(url:NSURL, options:nullableUISceneOpenExternalURLOptions, completionHandler:Dynamic):Void;
+	overload extern inline public function openURL(url:NSURL, options:UISceneOpenExternalURLOptions, completionHandler:Dynamic):Void;
 
 	@:native("title")
 	public var title:NSString;

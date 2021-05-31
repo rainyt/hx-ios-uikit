@@ -15,7 +15,7 @@ extern class UITableViewController{
 	overload extern inline public function initWithStyle(style:UITableViewStyle):UITableViewController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UITableViewController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UITableViewController;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UITableViewController;

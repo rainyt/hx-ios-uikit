@@ -63,7 +63,7 @@ extern class UIPickerView{
 	overload extern inline public function pickerView(pickerView:UIPickerView, attributedTitleForRow:NSInteger, forComponent:NSInteger, API_AVAILABLE(ios(6.0):Dynamic, //:attributed, title:is, favored:if, both:methods):nullable NSAttributedString *;
 
 	@:native("pickerView:viewForRow:forComponent:reusingView")
-	overload extern inline public function pickerView(pickerView:UIPickerView, viewForRow:NSInteger, forComponent:NSInteger, reusingView:nullableUIView):UIView *;
+	overload extern inline public function pickerView(pickerView:UIPickerView, viewForRow:NSInteger, forComponent:NSInteger, reusingView:UIView):UIView *;
 
 	@:native("pickerView:didSelectRow:inComponent")
 	overload extern inline public function pickerView(pickerView:UIPickerView, didSelectRow:NSInteger, inComponent:NSInteger):Void;

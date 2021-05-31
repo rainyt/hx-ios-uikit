@@ -12,7 +12,7 @@ extern class UIBarButtonItemGroup{
 	overload extern inline public static function autorelease():UIBarButtonItemGroup;
 
 	@:native("initWithBarButtonItems:representativeItem")
-	overload extern inline public function initWithBarButtonItems(barButtonItems:NSArray<UIBarButtonItem>, representativeItem:nullableUIBarButtonItem):UIBarButtonItemGroup;
+	overload extern inline public function initWithBarButtonItems(barButtonItems:NSArray<UIBarButtonItem>, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UIBarButtonItemGroup;

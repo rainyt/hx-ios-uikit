@@ -12,13 +12,13 @@ extern class UINavigationController{
 	overload extern inline public static function autorelease():UINavigationController;
 
 	@:native("initWithNavigationBarClass:toolbarClass:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initWithNavigationBarClass(navigationBarClass:nullableClass, toolbarClass:nullableClass, NS_DESIGNATED_INITIALIZER:Dynamic):UINavigationController;
+	overload extern inline public function initWithNavigationBarClass(navigationBarClass:Class, toolbarClass:Class, NS_DESIGNATED_INITIALIZER:Dynamic):UINavigationController;
 
 	@:native("initWithRootViewController:NS_DESIGNATED_INITIALIZER:Initializer:also:the:view")
 	overload extern inline public function initWithRootViewController(rootViewController:UIViewController, NS_DESIGNATED_INITIALIZER://, Initializer:that, also:pushes, the:root, view:controller):UINavigationController;
 
 	@:native("initWithNibName:bundle:NS_DESIGNATED_INITIALIZER:Initializes:navigation:with")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle, NS_DESIGNATED_INITIALIZER://, Initializes:the, navigation:controller, with:an):UINavigationController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle, NS_DESIGNATED_INITIALIZER://, Initializes:the, navigation:controller, with:an):UINavigationController;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(aDecoder:NSCoder):UINavigationController;
@@ -72,7 +72,7 @@ extern class UINavigationController{
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(7.0));
 
 	@:native("showViewController:sender:API_AVAILABLE(ios(8.0):Interpreted")
-	overload extern inline public function showViewController(vc:UIViewController, sender:nullableid, API_AVAILABLE(ios(8.0)://, Interpreted:as):Void;
+	overload extern inline public function showViewController(vc:UIViewController, sender:id, API_AVAILABLE(ios(8.0)://, Interpreted:as):Void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(8.0));
@@ -123,7 +123,7 @@ extern class UINavigationController{
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(3.0));
 
 	@:native("setToolbarItems:animated:API_AVAILABLE(ios(3.0)")
-	overload extern inline public function setToolbarItems(toolbarItems:nullableNSArray<UIBarButtonItem>, animated:BOOL, API_AVAILABLE(ios(3.0):Dynamic):Void;
+	overload extern inline public function setToolbarItems(toolbarItems:NSArray<UIBarButtonItem>, animated:BOOL, API_AVAILABLE(ios(3.0):Dynamic):Void;
 
 
 }

@@ -18,7 +18,7 @@ extern class UIPointerRegion{
 	public var NS_REFINED_FOR_SWIFT:identifier;
 
 	@:native("regionWithRect:identifier")
-	overload extern inline public static function regionWithRect(rect:CGRect, identifier:nullableid<NSObject>):UIPointerRegion;
+	overload extern inline public static function regionWithRect(rect:CGRect, identifier:id<NSObject>):UIPointerRegion;
 
 	@:native("init")
 	overload extern inline public function init():UIPointerRegion;

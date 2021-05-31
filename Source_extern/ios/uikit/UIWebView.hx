@@ -21,7 +21,7 @@ extern class UIWebView{
 	overload extern inline public function loadRequest(request:NSURLRequest):Void;
 
 	@:native("loadHTMLString:baseURL")
-	overload extern inline public function loadHTMLString(string:NSString, baseURL:nullableNSURL):Void;
+	overload extern inline public function loadHTMLString(string:NSString, baseURL:NSURL):Void;
 
 	@:native("loadData:MIMEType:textEncodingName:baseURL")
 	overload extern inline public function loadData(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:NSURL):Void;

@@ -111,7 +111,7 @@ extern class UIScrollView{
 	public var presses:on;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload extern inline public function touchesShouldBegin(touches:NSSet<UITouch>, withEvent:nullableUIEvent, inContentView:UIView):BOOL;
+	overload extern inline public function touchesShouldBegin(touches:NSSet<UITouch>, withEvent:UIEvent, inContentView:UIView):BOOL;
 
 	@:native("touchesShouldCancelInContentView")
 	overload extern inline public function touchesShouldCancelInContentView(view:UIView):BOOL;
@@ -186,10 +186,10 @@ extern class UIScrollView{
 	overload extern inline public function viewForZoomingInScrollView(scrollView:UIScrollView, :, :, //:return, a:view, that:will, be:scaled., if:delegate, returns:nil,):nullable UIView *;
 
 	@:native("scrollViewWillBeginZooming:withView:API_AVAILABLE(ios(3.2):called:the:view:zooming")
-	overload extern inline public function scrollViewWillBeginZooming(scrollView:UIScrollView, withView:nullableUIView, API_AVAILABLE(ios(3.2)://, called:before, the:scroll, view:begins, zooming:its):Void;
+	overload extern inline public function scrollViewWillBeginZooming(scrollView:UIScrollView, withView:UIView, API_AVAILABLE(ios(3.2)://, called:before, the:scroll, view:begins, zooming:its):Void;
 
 	@:native("scrollViewDidEndZooming:withView:atScale://:between:and:called:any")
-	overload extern inline public function scrollViewDidEndZooming(scrollView:UIScrollView, withView:nullableUIView, atScale:CGFloat, //:scale, between:minimum, and:maximum., called:after, any:'bounce'):Void;
+	overload extern inline public function scrollViewDidEndZooming(scrollView:UIScrollView, withView:UIView, atScale:CGFloat, //:scale, between:minimum, and:maximum., called:after, any:'bounce'):Void;
 
 	@:native("scrollViewShouldScrollToTop:://:a:if:want:scroll:the:if:defined,")
 	overload extern inline public function scrollViewShouldScrollToTop(scrollView:UIScrollView, :, //:return, a:yes, if:you, want:to, scroll:to, the:top., if:not, defined,:assumes):BOOL;

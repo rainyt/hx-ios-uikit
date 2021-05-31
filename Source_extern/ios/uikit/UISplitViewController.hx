@@ -15,7 +15,7 @@ extern class UISplitViewController{
 	overload extern inline public function initWithCoder(coder:NSCoder):UISplitViewController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UISplitViewController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UISplitViewController;
 
 	@:native("initWithStyle:NS_DESIGNATED_INITIALIZER")
 	overload extern inline public function initWithStyle(style:UISplitViewControllerStyle, NS_DESIGNATED_INITIALIZER:Dynamic):UISplitViewController;
@@ -36,7 +36,7 @@ extern class UISplitViewController{
 	public var API_AVAILABLE(ios(14.0)):splitBehavior;
 
 	@:native("setViewController:forColumn:API_AVAILABLE(ios(14.0):If:vc:not:UINavigationController,:will:created,")
-	overload extern inline public function setViewController(vc:nullableUIViewController, forColumn:UISplitViewControllerColumn, API_AVAILABLE(ios(14.0)://, If:the, vc:is, not:a, UINavigationController,:one, will:be, created,:except):Void;
+	overload extern inline public function setViewController(vc:UIViewController, forColumn:UISplitViewControllerColumn, API_AVAILABLE(ios(14.0)://, If:the, vc:is, not:a, UINavigationController,:one, will:be, created,:except):Void;
 
 	@:native("viewControllerForColumn")
 	overload extern inline public function viewControllerForColumn(column:UISplitViewControllerColumn):nullable __kindof UIViewController *;
@@ -102,10 +102,10 @@ extern class UISplitViewController{
 	public var UISplitViewControllerPrimaryEdgeLeading:default:;
 
 	@:native("showViewController:sender")
-	overload extern inline public function showViewController(vc:UIViewController, sender:nullableid):Void;
+	overload extern inline public function showViewController(vc:UIViewController, sender:id):Void;
 
 	@:native("showDetailViewController:sender")
-	overload extern inline public function showDetailViewController(vc:UIViewController, sender:nullableid):Void;
+	overload extern inline public function showDetailViewController(vc:UIViewController, sender:id):Void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(13.0));
@@ -117,10 +117,10 @@ extern class UISplitViewController{
 	overload extern inline public function targetDisplayModeForActionInSplitViewController(svc:UISplitViewController):UISplitViewControllerDisplayMode;
 
 	@:native("splitViewController:showViewController:sender")
-	overload extern inline public function splitViewController(splitViewController:UISplitViewController, showViewController:UIViewController, sender:nullableid):BOOL;
+	overload extern inline public function splitViewController(splitViewController:UISplitViewController, showViewController:UIViewController, sender:id):BOOL;
 
 	@:native("splitViewController:showDetailViewController:sender")
-	overload extern inline public function splitViewController(splitViewController:UISplitViewController, showDetailViewController:UIViewController, sender:nullableid):BOOL;
+	overload extern inline public function splitViewController(splitViewController:UISplitViewController, showDetailViewController:UIViewController, sender:id):BOOL;
 
 	@:native("primaryViewControllerForCollapsingSplitViewController")
 	overload extern inline public function primaryViewControllerForCollapsingSplitViewController(splitViewController:UISplitViewController):nullable UIViewController *;

@@ -39,7 +39,7 @@ extern class NSTextContainer{
 	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
 
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
-	overload extern inline public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger, writingDirection:NSWritingDirection, remainingRect:nullableCGRect):CGRect;
+	overload extern inline public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
 
 	@:native("ios(9.0))")
 	public var ios(9.0)):API_AVAILABLE(macos(10.0),;

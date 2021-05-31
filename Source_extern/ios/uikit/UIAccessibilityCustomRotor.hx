@@ -42,7 +42,7 @@ extern class UIAccessibilityCustomRotor{
 	public var API_AVAILABLE(ios(11.0)):systemRotorType;
 
 	@:native("initWithTargetElement:targetRange")
-	overload extern inline public function initWithTargetElement(targetElement:id<NSObject>, targetRange:nullableUITextRange):UIAccessibilityCustomRotor;
+	overload extern inline public function initWithTargetElement(targetElement:id<NSObject>, targetRange:UITextRange):UIAccessibilityCustomRotor;
 
 	@:native("targetElement")
 	public var targetElement:id<NSObject>;

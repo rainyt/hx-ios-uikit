@@ -57,7 +57,7 @@ extern class UIViewControllerTransitioning{
 	overload extern inline public function finalFrameForViewController(vc:UIViewController):CGRect;
 
 	@:native("transitionDuration")
-	overload extern inline public function transitionDuration(transitionContext:nullableid<UIViewControllerContextTransitioning>):NSTimeInterval;
+	overload extern inline public function transitionDuration(transitionContext:id<UIViewControllerContextTransitioning>):NSTimeInterval;
 
 	@:native("animateTransition")
 	overload extern inline public function animateTransition(transitionContext:id<UIViewControllerContextTransitioning>):Void;
@@ -93,7 +93,7 @@ extern class UIViewControllerTransitioning{
 	overload extern inline public function interactionControllerForDismissal(animator:id<UIViewControllerAnimatedTransitioning>):nullable id <UIViewControllerInteractiveTransitioning>;
 
 	@:native("presentationControllerForPresentedViewController:presentingViewController:sourceViewController")
-	overload extern inline public function presentationControllerForPresentedViewController(presented:UIViewController, presentingViewController:nullableUIViewController, sourceViewController:UIViewController):nullable UIPresentationController *;
+	overload extern inline public function presentationControllerForPresentedViewController(presented:UIViewController, presentingViewController:UIViewController, sourceViewController:UIViewController):nullable UIPresentationController *;
 
 	@:native("duration")
 	public var duration:CGFloat;

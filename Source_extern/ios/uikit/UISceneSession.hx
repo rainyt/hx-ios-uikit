@@ -12,10 +12,10 @@ extern class UISceneSession{
 	overload extern inline public static function autorelease():UISceneSession;
 
 	@:native("configurationWithName:sessionRole")
-	overload extern inline public static function configurationWithName(name:nullableNSString, sessionRole:UISceneSessionRole):UISceneSession;
+	overload extern inline public static function configurationWithName(name:NSString, sessionRole:UISceneSessionRole):UISceneSession;
 
 	@:native("initWithName:sessionRole")
-	overload extern inline public function initWithName(name:nullableNSString, sessionRole:UISceneSessionRole):UISceneSession;
+	overload extern inline public function initWithName(name:NSString, sessionRole:UISceneSessionRole):UISceneSession;
 
 	@:native("name")
 	public var name:NSString;

@@ -36,7 +36,7 @@ extern class UIFontDescriptor{
 	public var fontAttributes:id>;
 
 	@:native("matchingFontDescriptorsWithMandatoryKeys")
-	overload extern inline public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:nullableNSSet<UIFontDescriptorAttributeName>):NSArray<UIFontDescriptor *> *;
+	overload extern inline public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:NSSet<UIFontDescriptorAttributeName>):NSArray<UIFontDescriptor *> *;
 
 	@:native("fontDescriptorWithFontAttributes")
 	overload extern inline public static function fontDescriptorWithFontAttributes(attributes:NSDictionary<UIFontDescriptorAttributeName,id>):UIFontDescriptor *;
@@ -51,7 +51,7 @@ extern class UIFontDescriptor{
 	overload extern inline public static function preferredFontDescriptorWithTextStyle(style:NSString):UIFontDescriptor *;
 
 	@:native("preferredFontDescriptorWithTextStyle:compatibleWithTraitCollection:API_AVAILABLE(ios(10.0)")
-	overload extern inline public static function preferredFontDescriptorWithTextStyle(style:NSString, compatibleWithTraitCollection:nullableUITraitCollection, API_AVAILABLE(ios(10.0):Dynamic):UIFontDescriptor *;
+	overload extern inline public static function preferredFontDescriptorWithTextStyle(style:NSString, compatibleWithTraitCollection:UITraitCollection, API_AVAILABLE(ios(10.0):Dynamic):UIFontDescriptor *;
 
 	@:native("initWithFontAttributes")
 	overload extern inline public function initWithFontAttributes(attributes:NSDictionary<UIFontDescriptorAttributeName,id>):UIFontDescriptor;

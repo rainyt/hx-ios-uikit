@@ -12,7 +12,7 @@ extern class UITableView{
 	overload extern inline public static function autorelease():UITableView;
 
 	@:native("rowActionWithStyle:title:handler")
-	overload extern inline public static function rowActionWithStyle(style:UITableViewRowActionStyle, title:nullableNSString, handler:Dynamic):UITableView;
+	overload extern inline public static function rowActionWithStyle(style:UITableViewRowActionStyle, title:NSString, handler:Dynamic):UITableView;
 
 	@:native("style")
 	public var style:UITableViewRowActionStyle;
@@ -123,7 +123,7 @@ extern class UITableView{
 	overload extern inline public function tableView(tableView:UITableView, willBeginEditingRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:didEndEditingRowAtIndexPath")
-	overload extern inline public function tableView(tableView:UITableView, didEndEditingRowAtIndexPath:nullableNSIndexPath):Void;
+	overload extern inline public function tableView(tableView:UITableView, didEndEditingRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath:::::::")
 	overload extern inline public function tableView(tableView:UITableView, targetIndexPathForMoveFromRowAtIndexPath:NSIndexPath, toProposedIndexPath:NSIndexPath, :, :, :, :, :, :, :):NSIndexPath *;
@@ -135,10 +135,10 @@ extern class UITableView{
 	overload extern inline public function tableView(tableView:UITableView, shouldShowMenuForRowAtIndexPath:NSIndexPath):BOOL;
 
 	@:native("tableView:canPerformAction:forRowAtIndexPath:withSender")
-	overload extern inline public function tableView(tableView:UITableView, canPerformAction:SEL, forRowAtIndexPath:NSIndexPath, withSender:nullableid):BOOL;
+	overload extern inline public function tableView(tableView:UITableView, canPerformAction:SEL, forRowAtIndexPath:NSIndexPath, withSender:id):BOOL;
 
 	@:native("tableView:performAction:forRowAtIndexPath:withSender")
-	overload extern inline public function tableView(tableView:UITableView, performAction:SEL, forRowAtIndexPath:NSIndexPath, withSender:nullableid):Void;
+	overload extern inline public function tableView(tableView:UITableView, performAction:SEL, forRowAtIndexPath:NSIndexPath, withSender:id):Void;
 
 	@:native("tableView:canFocusRowAtIndexPath")
 	overload extern inline public function tableView(tableView:UITableView, canFocusRowAtIndexPath:NSIndexPath):BOOL;
@@ -177,10 +177,10 @@ extern class UITableView{
 	overload extern inline public function tableView(tableView:UITableView, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionCommitAnimating>, API_AVAILABLE(ios(13.0):Dynamic):Void;
 
 	@:native("tableView:willDisplayContextMenuWithConfiguration:animator:API_AVAILABLE(ios(14.0)")
-	overload extern inline public function tableView(tableView:UITableView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(14.0):Dynamic):Void;
+	overload extern inline public function tableView(tableView:UITableView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(14.0):Dynamic):Void;
 
 	@:native("tableView:willEndContextMenuInteractionWithConfiguration:animator:API_AVAILABLE(ios(14.0)")
-	overload extern inline public function tableView(tableView:UITableView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(14.0):Dynamic):Void;
+	overload extern inline public function tableView(tableView:UITableView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(14.0):Dynamic):Void;
 
 	@:native("initWithFrame:style:NS_DESIGNATED_INITIALIZER:must:style:creation.:calls")
 	overload extern inline public function initWithFrame(frame:CGRect, style:UITableViewStyle, NS_DESIGNATED_INITIALIZER://, must:specify, style:at, creation.:-initWithFrame, calls:this):UITableView;
@@ -351,7 +351,7 @@ extern class UITableView{
 	public var selection.:the;
 
 	@:native("selectRowAtIndexPath:animated:scrollPosition")
-	overload extern inline public function selectRowAtIndexPath(indexPath:nullableNSIndexPath, animated:BOOL, scrollPosition:UITableViewScrollPosition):Void;
+	overload extern inline public function selectRowAtIndexPath(indexPath:NSIndexPath, animated:BOOL, scrollPosition:UITableViewScrollPosition):Void;
 
 	@:native("deselectRowAtIndexPath:animated")
 	overload extern inline public function deselectRowAtIndexPath(indexPath:NSIndexPath, animated:BOOL):Void;
@@ -399,16 +399,16 @@ extern class UITableView{
 	overload extern inline public function dequeueReusableHeaderFooterViewWithIdentifier(identifier:NSString, API_AVAILABLE(ios(6.0):, //:like, dequeueReusableCellWithIdentifier:but):nullable __kindof UITableViewHeaderFooterView *;
 
 	@:native("registerNib:forCellReuseIdentifier")
-	overload extern inline public function registerNib(nib:nullableUINib, forCellReuseIdentifier:NSString):Void;
+	overload extern inline public function registerNib(nib:UINib, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forCellReuseIdentifier")
-	overload extern inline public function registerClass(cellClass:nullableClass, forCellReuseIdentifier:NSString):Void;
+	overload extern inline public function registerClass(cellClass:Class, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forHeaderFooterViewReuseIdentifier")
-	overload extern inline public function registerNib(nib:nullableUINib, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload extern inline public function registerNib(nib:UINib, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forHeaderFooterViewReuseIdentifier")
-	overload extern inline public function registerClass(aClass:nullableClass, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload extern inline public function registerClass(aClass:Class, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("used.")
 	public var used.:is;
@@ -495,7 +495,7 @@ extern class UITableView{
 	overload extern inline public function tableView(tableView:UITableView, dropSessionDidEnter:id<UIDropSession>):Void;
 
 	@:native("tableView:dropSessionDidUpdate:withDestinationIndexPath")
-	overload extern inline public function tableView(tableView:UITableView, dropSessionDidUpdate:id<UIDropSession>, withDestinationIndexPath:nullableNSIndexPath):UITableViewDropProposal *;
+	overload extern inline public function tableView(tableView:UITableView, dropSessionDidUpdate:id<UIDropSession>, withDestinationIndexPath:NSIndexPath):UITableViewDropProposal *;
 
 	@:native("tableView:dropSessionDidExit")
 	overload extern inline public function tableView(tableView:UITableView, dropSessionDidExit:id<UIDropSession>):Void;

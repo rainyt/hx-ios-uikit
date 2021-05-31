@@ -90,37 +90,37 @@ extern class UISearchBar{
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
 
 	@:native("setBackgroundImage:forBarPosition:barMetrics:API_AVAILABLE(ios(7.0)::Use:to:a:backgroundImage:a:bar")
-	overload extern inline public function setBackgroundImage(backgroundImage:nullableUIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR, ://, Use:UIBarMetricsDefaultPrompt, to:set, a:separate, backgroundImage:for, a:search, bar:with):Void;
+	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR, ://, Use:UIBarMetricsDefaultPrompt, to:set, a:separate, backgroundImage:for, a:search, bar:with):Void;
 
 	@:native("backgroundImageForBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
 	overload extern inline public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setSearchFieldBackgroundImage:forState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setSearchFieldBackgroundImage(backgroundImage:nullableUIImage, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setSearchFieldBackgroundImage(backgroundImage:UIImage, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("searchFieldBackgroundImageForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function searchFieldBackgroundImageForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setImage:forSearchBarIcon:state:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setImage(iconImage:nullableUIImage, forSearchBarIcon:UISearchBarIcon, state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setImage(iconImage:UIImage, forSearchBarIcon:UISearchBarIcon, state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("imageForSearchBarIcon:state:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function imageForSearchBarIcon(icon:UISearchBarIcon, state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setScopeBarButtonBackgroundImage:forState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setScopeBarButtonBackgroundImage(backgroundImage:nullableUIImage, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setScopeBarButtonBackgroundImage(backgroundImage:UIImage, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("scopeBarButtonBackgroundImageForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function scopeBarButtonBackgroundImageForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setScopeBarButtonDividerImage:forLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setScopeBarButtonDividerImage(dividerImage:nullableUIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setScopeBarButtonDividerImage(dividerImage:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("scopeBarButtonDividerImageForLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function scopeBarButtonDividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setScopeBarButtonTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setScopeBarButtonTitleTextAttributes(attributes:nullableNSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setScopeBarButtonTitleTextAttributes(attributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("scopeBarButtonTitleTextAttributesForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function scopeBarButtonTitleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey, id> *;

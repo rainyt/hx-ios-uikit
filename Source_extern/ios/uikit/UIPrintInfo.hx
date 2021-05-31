@@ -18,7 +18,7 @@ extern class UIPrintInfo{
 	overload extern inline public static function printInfo;():UIPrintInfo *;
 
 	@:native("printInfoWithDictionary")
-	overload extern inline public static function printInfoWithDictionary(dictionary:nullableNSDictionary):UIPrintInfo *;
+	overload extern inline public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo *;
 
 	@:native("printer")
 	public var printer:selects;

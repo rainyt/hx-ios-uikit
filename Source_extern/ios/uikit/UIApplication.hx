@@ -48,7 +48,7 @@ extern class UIApplication{
 	public var windows:;
 
 	@:native("sendAction:to:from:forEvent")
-	overload extern inline public function sendAction(action:SEL, to:nullableid, from:nullableid, forEvent:nullableUIEvent):BOOL;
+	overload extern inline public function sendAction(action:SEL, to:id, from:id, forEvent:UIEvent):BOOL;
 
 	@:native("13.0))")
 	public var 13.0)):ios(2.0,;
@@ -63,7 +63,7 @@ extern class UIApplication{
 	public var 13.0)):ios(2.0,;
 
 	@:native("supportedInterfaceOrientationsForWindow:API_AVAILABLE(ios(6.0)")
-	overload extern inline public function supportedInterfaceOrientationsForWindow(window:nullableUIWindow, API_AVAILABLE(ios(6.0):Dynamic):UIInterfaceOrientationMask;
+	overload extern inline public function supportedInterfaceOrientationsForWindow(window:UIWindow, API_AVAILABLE(ios(6.0):Dynamic):UIInterfaceOrientationMask;
 
 	@:native("change.")
 	public var change.:orientation;
@@ -87,7 +87,7 @@ extern class UIApplication{
 	overload extern inline public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic, :Dynamic):NSUInteger;
 
 	@:native("beginBackgroundTaskWithName:expirationHandler:API_AVAILABLE(ios(7.0)")
-	overload extern inline public function beginBackgroundTaskWithName(taskName:nullableNSString, expirationHandler:Dynamic, API_AVAILABLE(ios(7.0):NS_REQUIRES_SUPER):NSUInteger;
+	overload extern inline public function beginBackgroundTaskWithName(taskName:NSString, expirationHandler:Dynamic, API_AVAILABLE(ios(7.0):NS_REQUIRES_SUPER):NSUInteger;
 
 	@:native("endBackgroundTask:API_AVAILABLE(ios(4.0)")
 	overload extern inline public function endBackgroundTask(identifier:NSUInteger, API_AVAILABLE(ios(4.0):NS_REQUIRES_SUPER):Void;
@@ -117,10 +117,10 @@ extern class UIApplication{
 	public var API_AVAILABLE(ios(13.0)):supportsMultipleScenes;
 
 	@:native("requestSceneSessionActivation:userActivity:options:errorHandler")
-	overload extern inline public function requestSceneSessionActivation(sceneSession:nullableUISceneSession, userActivity:nullableNSUserActivity, options:nullableUISceneActivationRequestOptions, errorHandler:Dynamic):Void;
+	overload extern inline public function requestSceneSessionActivation(sceneSession:UISceneSession, userActivity:NSUserActivity, options:UISceneActivationRequestOptions, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionDestruction:options:errorHandler")
-	overload extern inline public function requestSceneSessionDestruction(sceneSession:UISceneSession, options:nullableUISceneDestructionRequestOptions, errorHandler:Dynamic):Void;
+	overload extern inline public function requestSceneSessionDestruction(sceneSession:UISceneSession, options:UISceneDestructionRequestOptions, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionRefresh")
 	overload extern inline public function requestSceneSessionRefresh(sceneSession:UISceneSession):Void;
@@ -168,7 +168,7 @@ extern class UIApplication{
 	overload extern inline public function endReceivingRemoteControlEvents():Void;
 
 	@:native("setNewsstandIconImage:API_DEPRECATED("Newsstand apps now behave like normal apps on SpringBoard", ios(5.0, 9.0)")
-	overload extern inline public function setNewsstandIconImage(image:nullableUIImage, API_DEPRECATED("Newsstand apps now behave like normal apps on SpringBoard", ios(5.0, 9.0):Dynamic):Void;
+	overload extern inline public function setNewsstandIconImage(image:UIImage, API_DEPRECATED("Newsstand apps now behave like normal apps on SpringBoard", ios(5.0, 9.0):Dynamic):Void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(9.0));
@@ -177,7 +177,7 @@ extern class UIApplication{
 	public var tvos(10.2)):API_AVAILABLE(ios(10.3),;
 
 	@:native("setAlternateIconName:completionHandler:NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"")
-	overload extern inline public function setAlternateIconName(alternateIconName:nullableNSString, completionHandler:Dynamic, NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":Dynamic):Void;
+	overload extern inline public function setAlternateIconName(alternateIconName:NSString, completionHandler:Dynamic, NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":Dynamic):Void;
 
 	@:native("tvos(10.2))")
 	public var tvos(10.2)):API_AVAILABLE(ios(10.3),;
@@ -198,10 +198,10 @@ extern class UIApplication{
 	overload extern inline public function applicationDidFinishLaunching(application:UIApplication):Void;
 
 	@:native("application:willFinishLaunchingWithOptions")
-	overload extern inline public function application(application:UIApplication, willFinishLaunchingWithOptions:nullableNSDictionary<UIApplicationLaunchOptionsKey,id>):BOOL;
+	overload extern inline public function application(application:UIApplication, willFinishLaunchingWithOptions:NSDictionary<UIApplicationLaunchOptionsKey,id>):BOOL;
 
 	@:native("application:didFinishLaunchingWithOptions")
-	overload extern inline public function application(application:UIApplication, didFinishLaunchingWithOptions:nullableNSDictionary<UIApplicationLaunchOptionsKey,id>):BOOL;
+	overload extern inline public function application(application:UIApplication, didFinishLaunchingWithOptions:NSDictionary<UIApplicationLaunchOptionsKey,id>):BOOL;
 
 	@:native("applicationDidBecomeActive")
 	overload extern inline public function applicationDidBecomeActive(application:UIApplication):Void;
@@ -213,7 +213,7 @@ extern class UIApplication{
 	overload extern inline public function application(application:UIApplication, handleOpenURL:NSURL, API_DEPRECATED_WITH_REPLACEMENT("application:openURL:options:", ios(2.0, 9.0):Dynamic):BOOL;
 
 	@:native("application:openURL:sourceApplication:annotation:API_DEPRECATED_WITH_REPLACEMENT("application")
-	overload extern inline public function application(application:UIApplication, openURL:NSURL, sourceApplication:nullableNSString, annotation:id, API_DEPRECATED_WITH_REPLACEMENT("application:openURL:options:", ios(4.2, 9.0):Dynamic):BOOL;
+	overload extern inline public function application(application:UIApplication, openURL:NSURL, sourceApplication:NSString, annotation:id, API_DEPRECATED_WITH_REPLACEMENT("application:openURL:options:", ios(4.2, 9.0):Dynamic):BOOL;
 
 	@:native("application:openURL:options:API_AVAILABLE(ios(9.0):no:notification.:NO:the:can't:for")
 	overload extern inline public function application(app:UIApplication, openURL:NSURL, options:NSDictionary<UIApplicationOpenURLOptionsKey,id>, API_AVAILABLE(ios(9.0)://, no:equiv., notification.:return, NO:if, the:application, can't:open, for:some):BOOL;
@@ -252,16 +252,16 @@ extern class UIApplication{
 	overload extern inline public function application(application:UIApplication, didReceiveLocalNotification:UILocalNotification, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate willPresentNotification:withCompletionHandler:] or -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(4.0, 10.0):Dynamic):Void;
 
 	@:native("application:handleActionWithIdentifier:forLocalNotification:completionHandler:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse")
-	overload extern inline public function application(application:UIApplication, handleActionWithIdentifier:nullableNSString, forLocalNotification:UILocalNotification, completionHandler:Dynamic, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(8.0, 10.0):Dynamic):Void;
+	overload extern inline public function application(application:UIApplication, handleActionWithIdentifier:NSString, forLocalNotification:UILocalNotification, completionHandler:Dynamic, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(8.0, 10.0):Dynamic):Void;
 
 	@:native("application:handleActionWithIdentifier:forRemoteNotification:withResponseInfo:completionHandler:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse")
-	overload extern inline public function application(application:UIApplication, handleActionWithIdentifier:nullableNSString, forRemoteNotification:NSDictionary, withResponseInfo:NSDictionary, completionHandler:Dynamic, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(9.0, 10.0):Dynamic):Void;
+	overload extern inline public function application(application:UIApplication, handleActionWithIdentifier:NSString, forRemoteNotification:NSDictionary, withResponseInfo:NSDictionary, completionHandler:Dynamic, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(9.0, 10.0):Dynamic):Void;
 
 	@:native("application:handleActionWithIdentifier:forRemoteNotification:completionHandler:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse")
-	overload extern inline public function application(application:UIApplication, handleActionWithIdentifier:nullableNSString, forRemoteNotification:NSDictionary, completionHandler:Dynamic, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(8.0, 10.0):Dynamic):Void;
+	overload extern inline public function application(application:UIApplication, handleActionWithIdentifier:NSString, forRemoteNotification:NSDictionary, completionHandler:Dynamic, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(8.0, 10.0):Dynamic):Void;
 
 	@:native("application:handleActionWithIdentifier:forLocalNotification:withResponseInfo:completionHandler:API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse")
-	overload extern inline public function application(application:UIApplication, handleActionWithIdentifier:nullableNSString, forLocalNotification:UILocalNotification, withResponseInfo:NSDictionary, completionHandler:Dynamic, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(9.0, 10.0):Dynamic):Void;
+	overload extern inline public function application(application:UIApplication, handleActionWithIdentifier:NSString, forLocalNotification:UILocalNotification, withResponseInfo:NSDictionary, completionHandler:Dynamic, API_DEPRECATED("Use UserNotifications Framework's -[UNUserNotificationCenterDelegate didReceiveNotificationResponse:withCompletionHandler:]", ios(9.0, 10.0):Dynamic):Void;
 
 	@:native("application:didReceiveRemoteNotification:fetchCompletionHandler")
 	overload extern inline public function application(application:UIApplication, didReceiveRemoteNotification:NSDictionary, fetchCompletionHandler:Dynamic):Void;
@@ -276,7 +276,7 @@ extern class UIApplication{
 	overload extern inline public function application(application:UIApplication, handleEventsForBackgroundURLSession:NSString, completionHandler:Dynamic):Void;
 
 	@:native("application:handleWatchKitExtensionRequest:reply")
-	overload extern inline public function application(application:UIApplication, handleWatchKitExtensionRequest:nullableNSDictionary, reply:Dynamic):Void;
+	overload extern inline public function application(application:UIApplication, handleWatchKitExtensionRequest:NSDictionary, reply:Dynamic):Void;
 
 	@:native("applicationShouldRequestHealthAuthorization")
 	overload extern inline public function applicationShouldRequestHealthAuthorization(application:UIApplication):Void;
@@ -303,7 +303,7 @@ extern class UIApplication{
 	public var API_AVAILABLE(ios(5.0)):window;
 
 	@:native("application:supportedInterfaceOrientationsForWindow:")
-	overload extern inline public function application(application:UIApplication, supportedInterfaceOrientationsForWindow:nullableUIWindow, :Dynamic):UIInterfaceOrientationMask;
+	overload extern inline public function application(application:UIApplication, supportedInterfaceOrientationsForWindow:UIWindow, :Dynamic):UIInterfaceOrientationMask;
 
 	@:native("application:shouldAllowExtensionPointIdentifier")
 	overload extern inline public function application(application:UIApplication, shouldAllowExtensionPointIdentifier:NSString):BOOL;

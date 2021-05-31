@@ -120,10 +120,10 @@ extern class UICollectionViewLayout{
 	overload extern inline public function invalidateLayoutWithContext(context:UICollectionViewLayoutInvalidationContext):Void;
 
 	@:native("registerClass:forDecorationViewOfKind")
-	overload extern inline public function registerClass(viewClass:nullableClass, forDecorationViewOfKind:NSString):Void;
+	overload extern inline public function registerClass(viewClass:Class, forDecorationViewOfKind:NSString):Void;
 
 	@:native("registerNib:forDecorationViewOfKind")
-	overload extern inline public function registerNib(nib:nullableUINib, forDecorationViewOfKind:NSString):Void;
+	overload extern inline public function registerNib(nib:UINib, forDecorationViewOfKind:NSString):Void;
 
 	@:native("UICollectionViewLayoutAttributes")
 	public var UICollectionViewLayoutAttributes:of;

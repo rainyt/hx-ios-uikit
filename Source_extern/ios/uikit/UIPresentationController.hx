@@ -21,7 +21,7 @@ extern class UIPresentationController{
 	overload extern inline public function presentationController(controller:UIPresentationController, viewControllerForAdaptivePresentationStyle:UIModalPresentationStyle):nullable UIViewController *;
 
 	@:native("presentationController:willPresentWithAdaptiveStyle:transitionCoordinator")
-	overload extern inline public function presentationController(presentationController:UIPresentationController, willPresentWithAdaptiveStyle:UIModalPresentationStyle, transitionCoordinator:nullableid<UIViewControllerTransitionCoordinator>):Void;
+	overload extern inline public function presentationController(presentationController:UIPresentationController, willPresentWithAdaptiveStyle:UIModalPresentationStyle, transitionCoordinator:id<UIViewControllerTransitionCoordinator>):Void;
 
 	@:native("presentationControllerShouldDismiss")
 	overload extern inline public function presentationControllerShouldDismiss(presentationController:UIPresentationController):BOOL;
@@ -51,7 +51,7 @@ extern class UIPresentationController{
 	public var delegate:<UIAdaptivePresentationControllerDelegate>;
 
 	@:native("initWithPresentedViewController:presentingViewController")
-	overload extern inline public function initWithPresentedViewController(presentedViewController:UIViewController, presentingViewController:nullableUIViewController):UIPresentationController;
+	overload extern inline public function initWithPresentedViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPresentationController;
 
 	@:native("init")
 	overload extern inline public function init():UIPresentationController;

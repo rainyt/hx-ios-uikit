@@ -12,7 +12,7 @@ extern class UIActionSheet{
 	overload extern inline public static function autorelease():UIActionSheet;
 
 	@:native("initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:...")
-	overload extern inline public function initWithTitle(title:nullableNSString, delegate:nullableid<UIActionSheetDelegate>, cancelButtonTitle:nullableNSString, destructiveButtonTitle:nullableNSString, otherButtonTitles:nullableNSString, ...:NS_REQUIRES_NIL_TERMINATION):UIActionSheet;
+	overload extern inline public function initWithTitle(title:NSString, delegate:id<UIActionSheetDelegate>, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:NS_REQUIRES_NIL_TERMINATION):UIActionSheet;
 
 	@:native("delegate")
 	public var delegate:id<UIActionSheetDelegate>;
@@ -24,7 +24,7 @@ extern class UIActionSheet{
 	public var visible:is;
 
 	@:native("addButtonWithTitle:::returns:of")
-	overload extern inline public function addButtonWithTitle(title:nullableNSString, :, ://, returns:index, of:button.):NSInteger;
+	overload extern inline public function addButtonWithTitle(title:NSString, :, ://, returns:index, of:button.):NSInteger;
 
 	@:native("buttonTitleAtIndex")
 	overload extern inline public function buttonTitleAtIndex(buttonIndex:NSInteger):nullable NSString *;

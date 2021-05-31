@@ -15,7 +15,7 @@ extern class UIFont{
 	overload extern inline public static function preferredFontForTextStyle(style:UIFontTextStyle):UIFont *;
 
 	@:native("preferredFontForTextStyle:compatibleWithTraitCollection:API_AVAILABLE(ios(10.0)")
-	overload extern inline public static function preferredFontForTextStyle(style:UIFontTextStyle, compatibleWithTraitCollection:nullableUITraitCollection, API_AVAILABLE(ios(10.0):Dynamic):UIFont *;
+	overload extern inline public static function preferredFontForTextStyle(style:UIFontTextStyle, compatibleWithTraitCollection:UITraitCollection, API_AVAILABLE(ios(10.0):Dynamic):UIFont *;
 
 	@:native("fontWithName:size")
 	overload extern inline public static function fontWithName(fontName:NSString, size:CGFloat):nullable UIFont *;

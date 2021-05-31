@@ -18,10 +18,10 @@ extern class UIDataSourceTranslating{
 	overload extern inline public function dataSourceSectionIndexForPresentationSectionIndex(presentationSectionIndex:NSInteger):NSInteger;
 
 	@:native("presentationIndexPathForDataSourceIndexPath")
-	overload extern inline public function presentationIndexPathForDataSourceIndexPath(dataSourceIndexPath:nullableNSIndexPath):nullable NSIndexPath *;
+	overload extern inline public function presentationIndexPathForDataSourceIndexPath(dataSourceIndexPath:NSIndexPath):nullable NSIndexPath *;
 
 	@:native("dataSourceIndexPathForPresentationIndexPath")
-	overload extern inline public function dataSourceIndexPathForPresentationIndexPath(presentationIndexPath:nullableNSIndexPath):nullable NSIndexPath *;
+	overload extern inline public function dataSourceIndexPathForPresentationIndexPath(presentationIndexPath:NSIndexPath):nullable NSIndexPath *;
 
 	@:native("performUsingPresentationValues")
 	overload extern inline public function performUsingPresentationValues(actionsToTranslate:Dynamic):Void;

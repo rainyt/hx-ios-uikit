@@ -24,7 +24,7 @@ extern class UIApplicationShortcutItem{
 	overload extern inline public function init():UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle:localizedSubtitle:icon:userInfo")
-	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:nullableNSString, icon:nullableUIApplicationShortcutIcon, userInfo:nullableNSDictionary<NSString,id<NSSecureCoding>>):UIApplicationShortcutItem;
+	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:NSDictionary<NSString,id<NSSecureCoding>>):UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle")
 	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;

@@ -12,7 +12,7 @@ extern class NSParagraphStyle{
 	overload extern inline public static function autorelease():NSParagraphStyle;
 
 	@:native("columnTerminatorsForLocale:API_AVAILABLE(macos(10.11), ios(7.0):Returns:column:for:Passing:returns:instance:to:systemLocale].:matching:formatting:pass:currentLocale].:be:as:value:NSTabColumnTerminatorsAttributeName:make:decimal")
-	overload extern inline public static function columnTerminatorsForLocale(aLocale:nullableNSLocale, API_AVAILABLE(macos(10.11), ios(7.0)://, Returns:the, column:terminators, for:locale., Passing:nil, returns:an, instance:corresponding, to:+[NSLocale, systemLocale].:For, matching:user's, formatting:preferences,, pass:+[NSLocale, currentLocale].:Can, be:used, as:the, value:for, NSTabColumnTerminatorsAttributeName:to, make:a, decimal:tab):NSCharacterSet *;
+	overload extern inline public static function columnTerminatorsForLocale(aLocale:NSLocale, API_AVAILABLE(macos(10.11), ios(7.0)://, Returns:the, column:terminators, for:locale., Passing:nil, returns:an, instance:corresponding, to:+[NSLocale, systemLocale].:For, matching:user's, formatting:preferences,, pass:+[NSLocale, currentLocale].:Can, be:used, as:the, value:for, NSTabColumnTerminatorsAttributeName:to, make:a, decimal:tab):NSCharacterSet *;
 
 	@:native("initWithTextAlignment:location:options:NS_DESIGNATED_INITIALIZER:Initializes:text:with:text:location,:options.:The:alignment:used:determine:position:text:the")
 	overload extern inline public function initWithTextAlignment(alignment:NSTextAlignment, location:CGFloat, options:NSDictionary<NSTextTabOptionKey,id>, NS_DESIGNATED_INITIALIZER://, Initializes:a, text:tab, with:the, text:alignment,, location,:and, options.:, The:text, alignment:is, used:to, determine:the, position:of, text:inside, the:tab):NSParagraphStyle;
@@ -30,7 +30,7 @@ extern class NSParagraphStyle{
 	public var init].:alloc];
 
 	@:native("defaultWritingDirectionForLanguage::languageName:in:lang")
-	overload extern inline public static function defaultWritingDirectionForLanguage(languageName:nullableNSString, ://, languageName:is, in:ISO, lang:region):NSWritingDirection;
+	overload extern inline public static function defaultWritingDirectionForLanguage(languageName:NSString, ://, languageName:is, in:ISO, lang:region):NSWritingDirection;
 
 	@:native("manager.")
 	public var manager.:layout;

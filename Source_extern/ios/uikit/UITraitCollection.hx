@@ -18,7 +18,7 @@ extern class UITraitCollection{
 	overload extern inline public function initWithCoder(coder:NSCoder):UITraitCollection;
 
 	@:native("containsTraitsInCollection")
-	overload extern inline public function containsTraitsInCollection(trait:nullableUITraitCollection):BOOL;
+	overload extern inline public function containsTraitsInCollection(trait:UITraitCollection):BOOL;
 
 	@:native("traitCollectionWithTraitsFromCollections")
 	overload extern inline public static function traitCollectionWithTraitsFromCollections(traitCollections:NSArray<UITraitCollection>):UITraitCollection *;
@@ -105,7 +105,7 @@ extern class UITraitCollection{
 	public var API_AVAILABLE(ios(8.0)):traitCollection;
 
 	@:native("traitCollectionDidChange")
-	overload extern inline public function traitCollectionDidChange(previousTraitCollection:nullableUITraitCollection):Void;
+	overload extern inline public function traitCollectionDidChange(previousTraitCollection:UITraitCollection):Void;
 
 	@:native("API_UNAVAILABLE(watchos)")
 	public var API_UNAVAILABLE(watchos):tvos(13.0));
@@ -114,7 +114,7 @@ extern class UITraitCollection{
 	overload extern inline public function performAsCurrentTraitCollection(actions:Dynamic, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):Void;
 
 	@:native("hasDifferentColorAppearanceComparedToTraitCollection:API_AVAILABLE(ios(13.0), tvos(13.0)")
-	overload extern inline public function hasDifferentColorAppearanceComparedToTraitCollection(traitCollection:nullableUITraitCollection, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):BOOL;
+	overload extern inline public function hasDifferentColorAppearanceComparedToTraitCollection(traitCollection:UITraitCollection, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):BOOL;
 
 	@:native("watchos(6.0))")
 	public var watchos(6.0)):tvos(13.0),;

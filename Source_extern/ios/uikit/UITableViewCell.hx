@@ -12,7 +12,7 @@ extern class UITableViewCell{
 	overload extern inline public static function autorelease():UITableViewCell;
 
 	@:native("initWithStyle:reuseIdentifier:API_AVAILABLE(ios(3.0)")
-	overload extern inline public function initWithStyle(style:UITableViewCellStyle, reuseIdentifier:nullableNSString, API_AVAILABLE(ios(3.0):NS_DESIGNATED_INITIALIZER):UITableViewCell;
+	overload extern inline public function initWithStyle(style:UITableViewCellStyle, reuseIdentifier:NSString, API_AVAILABLE(ios(3.0):NS_DESIGNATED_INITIALIZER):UITableViewCell;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UITableViewCell;
@@ -138,7 +138,7 @@ extern class UITableViewCell{
 	public var watchos):API_UNAVAILABLE(tvos,;
 
 	@:native("initWithFrame:reuseIdentifier:API_DEPRECATED("", ios(2.0, 3.0)")
-	overload extern inline public function initWithFrame(frame:CGRect, reuseIdentifier:nullableNSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):id;
+	overload extern inline public function initWithFrame(frame:CGRect, reuseIdentifier:NSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):id;
 
 	@:native("nil")
 	public var nil:is;

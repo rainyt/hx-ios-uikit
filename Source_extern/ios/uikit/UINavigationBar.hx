@@ -36,7 +36,7 @@ extern class UINavigationBar{
 	public var items:>;
 
 	@:native("setItems:animated://:animated:YES,:simulate:push:pop:on:the:top:was:in")
-	overload extern inline public function setItems(items:nullableNSArray<UINavigationItem>, animated:BOOL, //:If, animated:is, YES,:then, simulate:a, push:or, pop:depending, on:whether, the:new, top:item, was:previously, in:the):Void;
+	overload extern inline public function setItems(items:NSArray<UINavigationItem>, animated:BOOL, //:If, animated:is, YES,:then, simulate:a, push:or, pop:depending, on:whether, the:new, top:item, was:previously, in:the):Void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(11.0));
@@ -48,13 +48,13 @@ extern class UINavigationBar{
 	public var nil:is;
 
 	@:native("setBackgroundImage:forBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
-	overload extern inline public function setBackgroundImage(backgroundImage:nullableUIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("backgroundImageForBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
 	overload extern inline public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setBackgroundImage:forBarMetrics:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setBackgroundImage(backgroundImage:nullableUIImage, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("backgroundImageForBarMetrics:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;

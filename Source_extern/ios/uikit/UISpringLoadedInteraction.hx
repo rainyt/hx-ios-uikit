@@ -18,7 +18,7 @@ extern class UISpringLoadedInteraction{
 	overload extern inline public function init():UISpringLoadedInteraction;
 
 	@:native("initWithInteractionBehavior:interactionEffect:activationHandler")
-	overload extern inline public function initWithInteractionBehavior(interactionBehavior:nullableid<UISpringLoadedInteractionBehavior>, interactionEffect:nullableid<UISpringLoadedInteractionEffect>, activationHandler:Dynamic):UISpringLoadedInteraction;
+	overload extern inline public function initWithInteractionBehavior(interactionBehavior:id<UISpringLoadedInteractionBehavior>, interactionEffect:id<UISpringLoadedInteractionEffect>, activationHandler:Dynamic):UISpringLoadedInteraction;
 
 	@:native("initWithActivationHandler")
 	overload extern inline public function initWithActivationHandler(handler:Dynamic):UISpringLoadedInteraction;
@@ -48,7 +48,7 @@ extern class UISpringLoadedInteraction{
 	public var targetItem:id;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(view:nullableUIView):CGPoint;
+	overload extern inline public function locationInView(view:UIView):CGPoint;
 
 
 }

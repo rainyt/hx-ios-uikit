@@ -15,7 +15,7 @@ extern class UICollectionViewController{
 	overload extern inline public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UICollectionViewController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UICollectionViewController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UICollectionViewController;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UICollectionViewController;

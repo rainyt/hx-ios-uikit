@@ -12,13 +12,13 @@ extern class UINib{
 	overload extern inline public static function autorelease():UINib;
 
 	@:native("nibWithNibName:bundle")
-	overload extern inline public static function nibWithNibName(name:NSString, bundle:nullableNSBundle):UINib *;
+	overload extern inline public static function nibWithNibName(name:NSString, bundle:NSBundle):UINib *;
 
 	@:native("nibWithData:bundle")
-	overload extern inline public static function nibWithData(data:NSData, bundle:nullableNSBundle):UINib *;
+	overload extern inline public static function nibWithData(data:NSData, bundle:NSBundle):UINib *;
 
 	@:native("instantiateWithOwner:options")
-	overload extern inline public function instantiateWithOwner(ownerOrNil:nullableid, options:nullableNSDictionary<UINibOptionsKey,id>):NSArray *;
+	overload extern inline public function instantiateWithOwner(ownerOrNil:id, options:NSDictionary<UINibOptionsKey,id>):NSArray *;
 
 
 }

@@ -54,7 +54,7 @@ extern class UIImageSymbolConfiguration{
 	overload extern inline public function configurationWithoutPointSizeAndWeight;():UIImageSymbolConfiguration;
 
 	@:native("isEqualToConfiguration")
-	overload extern inline public function isEqualToConfiguration(otherConfiguration:nullableUIImageSymbolConfiguration):BOOL;
+	overload extern inline public function isEqualToConfiguration(otherConfiguration:UIImageSymbolConfiguration):BOOL;
 
 
 }

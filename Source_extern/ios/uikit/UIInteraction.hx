@@ -15,10 +15,10 @@ extern class UIInteraction{
 	public var view:UIView;
 
 	@:native("willMoveToView")
-	overload extern inline public function willMoveToView(view:nullableUIView):Void;
+	overload extern inline public function willMoveToView(view:UIView):Void;
 
 	@:native("didMoveToView")
-	overload extern inline public function didMoveToView(view:nullableUIView):Void;
+	overload extern inline public function didMoveToView(view:UIView):Void;
 
 	@:native("addInteraction")
 	overload extern inline public function addInteraction(interaction:id<UIInteraction>):Void;

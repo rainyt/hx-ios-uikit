@@ -30,7 +30,7 @@ extern class UIViewController{
 	overload extern inline public function willTransitionToTraitCollection(newCollection:UITraitCollection, withTransitionCoordinator:id<UIViewControllerTransitionCoordinator>):Void;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UIViewController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UIViewController;
@@ -69,16 +69,16 @@ extern class UIViewController{
 	public var API_AVAILABLE(ios(5.0)):storyboard;
 
 	@:native("performSegueWithIdentifier:sender")
-	overload extern inline public function performSegueWithIdentifier(identifier:NSString, sender:nullableid):Void;
+	overload extern inline public function performSegueWithIdentifier(identifier:NSString, sender:id):Void;
 
 	@:native("shouldPerformSegueWithIdentifier:sender:API_AVAILABLE(ios(6.0):Invoked:prior:initiating:segue.:NO:prevent:segue:firing.:default:returns:This:is:invoked:-performSegueWithIdentifier")
-	overload extern inline public function shouldPerformSegueWithIdentifier(identifier:NSString, sender:nullableid, API_AVAILABLE(ios(6.0)://, Invoked:immediately, prior:to, initiating:a, segue.:Return, NO:to, prevent:the, segue:from, firing.:The, default:implementation, returns:YES., This:method, is:not, invoked:when, -performSegueWithIdentifier:is):BOOL;
+	overload extern inline public function shouldPerformSegueWithIdentifier(identifier:NSString, sender:id, API_AVAILABLE(ios(6.0)://, Invoked:immediately, prior:to, initiating:a, segue.:Return, NO:to, prevent:the, segue:from, firing.:The, default:implementation, returns:YES., This:method, is:not, invoked:when, -performSegueWithIdentifier:is):BOOL;
 
 	@:native("prepareForSegue:sender")
-	overload extern inline public function prepareForSegue(segue:UIStoryboardSegue, sender:nullableid):Void;
+	overload extern inline public function prepareForSegue(segue:UIStoryboardSegue, sender:id):Void;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:sender")
-	overload extern inline public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, sender:nullableid):BOOL;
+	overload extern inline public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, sender:id):BOOL;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:withSender")
 	overload extern inline public function canPerformUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:id):BOOL;
@@ -90,13 +90,13 @@ extern class UIViewController{
 	overload extern inline public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):nullable UIViewController *;
 
 	@:native("viewControllerForUnwindSegueAction:fromViewController:withSender")
-	overload extern inline public function viewControllerForUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:nullableid):nullable UIViewController *;
+	overload extern inline public function viewControllerForUnwindSegueAction(action:SEL, fromViewController:UIViewController, withSender:id):nullable UIViewController *;
 
 	@:native("unwindForSegue:towardsViewController")
 	overload extern inline public function unwindForSegue(unwindSegue:UIStoryboardSegue, towardsViewController:UIViewController):Void;
 
 	@:native("segueForUnwindingToViewController:fromViewController:identifier")
-	overload extern inline public function segueForUnwindingToViewController(toViewController:UIViewController, fromViewController:UIViewController, identifier:nullableNSString):nullable UIStoryboardSegue *;
+	overload extern inline public function segueForUnwindingToViewController(toViewController:UIViewController, fromViewController:UIViewController, identifier:NSString):nullable UIStoryboardSegue *;
 
 	@:native("viewWillAppear:::Called:the:is:to:visible.")
 	overload extern inline public function viewWillAppear(animated:BOOL, :, ://, Called:when, the:view, is:about, to:made, visible.:Default):Void;
@@ -207,13 +207,13 @@ extern class UIViewController{
 	overload extern inline public function setNeedsStatusBarAppearanceUpdate():Void;
 
 	@:native("targetViewControllerForAction:sender")
-	overload extern inline public function targetViewControllerForAction(action:SEL, sender:nullableid):nullable UIViewController *;
+	overload extern inline public function targetViewControllerForAction(action:SEL, sender:id):nullable UIViewController *;
 
 	@:native("showViewController:sender")
-	overload extern inline public function showViewController(vc:UIViewController, sender:nullableid):Void;
+	overload extern inline public function showViewController(vc:UIViewController, sender:id):Void;
 
 	@:native("showDetailViewController:sender")
-	overload extern inline public function showDetailViewController(vc:UIViewController, sender:nullableid):Void;
+	overload extern inline public function showDetailViewController(vc:UIViewController, sender:id):Void;
 
 	@:native("UIUserInterfaceStyleUnspecified")
 	public var UIUserInterfaceStyleUnspecified:to;
@@ -303,7 +303,7 @@ extern class UIViewController{
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(7.0));
 
 	@:native("setOverrideTraitCollection:forChildViewController")
-	overload extern inline public function setOverrideTraitCollection(collection:nullableUITraitCollection, forChildViewController:UIViewController):Void;
+	overload extern inline public function setOverrideTraitCollection(collection:UITraitCollection, forChildViewController:UIViewController):Void;
 
 	@:native("overrideTraitCollectionForChildViewController")
 	overload extern inline public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):nullable UITraitCollection *;
@@ -321,10 +321,10 @@ extern class UIViewController{
 	public var API_AVAILABLE(ios(6.0)):shouldAutomaticallyForwardAppearanceMethods;
 
 	@:native("willMoveToParentViewController")
-	overload extern inline public function willMoveToParentViewController(parent:nullableUIViewController):Void;
+	overload extern inline public function willMoveToParentViewController(parent:UIViewController):Void;
 
 	@:native("didMoveToParentViewController")
-	overload extern inline public function didMoveToParentViewController(parent:nullableUIViewController):Void;
+	overload extern inline public function didMoveToParentViewController(parent:UIViewController):Void;
 
 	@:native("API_AVAILABLE(ios(6.0))")
 	public var API_AVAILABLE(ios(6.0)):restorationIdentifier;

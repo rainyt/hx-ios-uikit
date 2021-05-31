@@ -30,16 +30,16 @@ extern class UIFontMetrics{
 	overload extern inline public function scaledFontForFont(font:UIFont, maximumPointSize:CGFloat):UIFont *;
 
 	@:native("scaledFontForFont:compatibleWithTraitCollection")
-	overload extern inline public function scaledFontForFont(font:UIFont, compatibleWithTraitCollection:nullableUITraitCollection):UIFont *;
+	overload extern inline public function scaledFontForFont(font:UIFont, compatibleWithTraitCollection:UITraitCollection):UIFont *;
 
 	@:native("scaledFontForFont:maximumPointSize:compatibleWithTraitCollection")
-	overload extern inline public function scaledFontForFont(font:UIFont, maximumPointSize:CGFloat, compatibleWithTraitCollection:nullableUITraitCollection):UIFont *;
+	overload extern inline public function scaledFontForFont(font:UIFont, maximumPointSize:CGFloat, compatibleWithTraitCollection:UITraitCollection):UIFont *;
 
 	@:native("scaledValueForValue")
 	overload extern inline public function scaledValueForValue(value:CGFloat):CGFloat;
 
 	@:native("scaledValueForValue:compatibleWithTraitCollection")
-	overload extern inline public function scaledValueForValue(value:CGFloat, compatibleWithTraitCollection:nullableUITraitCollection):CGFloat;
+	overload extern inline public function scaledValueForValue(value:CGFloat, compatibleWithTraitCollection:UITraitCollection):CGFloat;
 
 
 }

@@ -45,7 +45,7 @@ extern class UIBarItem{
 	public var 0:is;
 
 	@:native("setTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setTitleTextAttributes(attributes:nullableNSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setTitleTextAttributes(attributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("titleTextAttributesForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function titleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;

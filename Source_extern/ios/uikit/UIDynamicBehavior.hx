@@ -45,7 +45,7 @@ extern class UIDynamicBehavior{
 	public var (^action)(void):void;
 
 	@:native("willMoveToAnimator://:when:removed")
-	overload extern inline public function willMoveToAnimator(dynamicAnimator:nullableUIDynamicAnimator, //:nil, when:being, removed:from):Void;
+	overload extern inline public function willMoveToAnimator(dynamicAnimator:UIDynamicAnimator, //:nil, when:being, removed:from):Void;
 
 	@:native("dynamicAnimator")
 	public var dynamicAnimator:UIDynamicAnimator;

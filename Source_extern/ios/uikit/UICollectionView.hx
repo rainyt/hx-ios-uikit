@@ -84,10 +84,10 @@ extern class UICollectionView{
 	overload extern inline public function collectionView(collectionView:UICollectionView, shouldShowMenuForItemAtIndexPath:NSIndexPath):BOOL;
 
 	@:native("collectionView:canPerformAction:forItemAtIndexPath:withSender")
-	overload extern inline public function collectionView(collectionView:UICollectionView, canPerformAction:SEL, forItemAtIndexPath:NSIndexPath, withSender:nullableid):BOOL;
+	overload extern inline public function collectionView(collectionView:UICollectionView, canPerformAction:SEL, forItemAtIndexPath:NSIndexPath, withSender:id):BOOL;
 
 	@:native("collectionView:performAction:forItemAtIndexPath:withSender")
-	overload extern inline public function collectionView(collectionView:UICollectionView, performAction:SEL, forItemAtIndexPath:NSIndexPath, withSender:nullableid):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, performAction:SEL, forItemAtIndexPath:NSIndexPath, withSender:id):Void;
 
 	@:native("collectionView:transitionLayoutForOldLayout:newLayout")
 	overload extern inline public function collectionView(collectionView:UICollectionView, transitionLayoutForOldLayout:UICollectionViewLayout, newLayout:UICollectionViewLayout):nonnull UICollectionViewTransitionLayout *;
@@ -138,10 +138,10 @@ extern class UICollectionView{
 	overload extern inline public function collectionView(collectionView:UICollectionView, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionCommitAnimating>, API_AVAILABLE(ios(13.0):Dynamic):Void;
 
 	@:native("collectionView:willDisplayContextMenuWithConfiguration:animator:API_AVAILABLE(ios(13.2)")
-	overload extern inline public function collectionView(collectionView:UICollectionView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(13.2):Dynamic):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(13.2):Dynamic):Void;
 
 	@:native("collectionView:willEndContextMenuInteractionWithConfiguration:animator:API_AVAILABLE(ios(13.2)")
-	overload extern inline public function collectionView(collectionView:UICollectionView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(13.2):Dynamic):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(13.2):Dynamic):Void;
 
 	@:native("initWithFrame:collectionViewLayout")
 	overload extern inline public function initWithFrame(frame:CGRect, collectionViewLayout:UICollectionViewLayout):UICollectionView;
@@ -183,16 +183,16 @@ extern class UICollectionView{
 	public var views.:supplementary;
 
 	@:native("registerClass:forCellWithReuseIdentifier")
-	overload extern inline public function registerClass(cellClass:nullableClass, forCellWithReuseIdentifier:NSString):Void;
+	overload extern inline public function registerClass(cellClass:Class, forCellWithReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forCellWithReuseIdentifier")
-	overload extern inline public function registerNib(nib:nullableUINib, forCellWithReuseIdentifier:NSString):Void;
+	overload extern inline public function registerNib(nib:UINib, forCellWithReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forSupplementaryViewOfKind:withReuseIdentifier")
-	overload extern inline public function registerClass(viewClass:nullableClass, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
+	overload extern inline public function registerClass(viewClass:Class, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forSupplementaryViewOfKind:withReuseIdentifier")
-	overload extern inline public function registerNib(nib:nullableUINib, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
+	overload extern inline public function registerNib(nib:UINib, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
 
 	@:native("dequeueReusableCellWithReuseIdentifier:forIndexPath")
 	overload extern inline public function dequeueReusableCellWithReuseIdentifier(identifier:NSString, forIndexPath:NSIndexPath):__kindof UICollectionViewCell *;
@@ -216,7 +216,7 @@ extern class UICollectionView{
 	public var paths:index;
 
 	@:native("selectItemAtIndexPath:animated:scrollPosition")
-	overload extern inline public function selectItemAtIndexPath(indexPath:nullableNSIndexPath, animated:BOOL, scrollPosition:UICollectionViewScrollPosition):Void;
+	overload extern inline public function selectItemAtIndexPath(indexPath:NSIndexPath, animated:BOOL, scrollPosition:UICollectionViewScrollPosition):Void;
 
 	@:native("deselectItemAtIndexPath:animated")
 	overload extern inline public function deselectItemAtIndexPath(indexPath:NSIndexPath, animated:BOOL):Void;
@@ -234,7 +234,7 @@ extern class UICollectionView{
 	overload extern inline public function setCollectionViewLayout(layout:UICollectionViewLayout, animated:BOOL, completion:Dynamic):Void;
 
 	@:native("startInteractiveTransitionToCollectionViewLayout:completion")
-	overload extern inline public function startInteractiveTransitionToCollectionViewLayout(layout:UICollectionViewLayout, completion:nullableUICollectionViewLayoutInteractiveTransitionCompletion):UICollectionViewTransitionLayout *;
+	overload extern inline public function startInteractiveTransitionToCollectionViewLayout(layout:UICollectionViewLayout, completion:UICollectionViewLayoutInteractiveTransitionCompletion):UICollectionViewTransitionLayout *;
 
 	@:native("finishInteractiveTransition")
 	overload extern inline public function finishInteractiveTransition():Void;
@@ -372,7 +372,7 @@ extern class UICollectionView{
 	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidEnter:id<UIDropSession>):Void;
 
 	@:native("collectionView:dropSessionDidUpdate:withDestinationIndexPath")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidUpdate:id<UIDropSession>, withDestinationIndexPath:nullableNSIndexPath):UICollectionViewDropProposal *;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidUpdate:id<UIDropSession>, withDestinationIndexPath:NSIndexPath):UICollectionViewDropProposal *;
 
 	@:native("collectionView:dropSessionDidExit")
 	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidExit:id<UIDropSession>):Void;

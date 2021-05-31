@@ -108,13 +108,13 @@ extern class UIColor{
 	overload extern inline public function setStroke;():Void;
 
 	@:native("getWhite:alpha")
-	overload extern inline public function getWhite(white:nullableCGFloat, alpha:nullableCGFloat):BOOL;
+	overload extern inline public function getWhite(white:CGFloat, alpha:CGFloat):BOOL;
 
 	@:native("getHue:saturation:brightness:alpha")
-	overload extern inline public function getHue(hue:nullableCGFloat, saturation:nullableCGFloat, brightness:nullableCGFloat, alpha:nullableCGFloat):BOOL;
+	overload extern inline public function getHue(hue:CGFloat, saturation:CGFloat, brightness:CGFloat, alpha:CGFloat):BOOL;
 
 	@:native("getRed:green:blue:alpha")
-	overload extern inline public function getRed(red:nullableCGFloat, green:nullableCGFloat, blue:nullableCGFloat, alpha:nullableCGFloat):BOOL;
+	overload extern inline public function getRed(red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat):BOOL;
 
 	@:native("colorWithAlphaComponent")
 	overload extern inline public function colorWithAlphaComponent(alpha:CGFloat):UIColor *;
@@ -135,7 +135,7 @@ extern class UIColor{
 	overload extern inline public static function colorNamed(name:NSString, API_AVAILABLE(ios(11.0):, :, :, //:load, from:main):nullable UIColor *;
 
 	@:native("colorNamed:inBundle:compatibleWithTraitCollection")
-	overload extern inline public static function colorNamed(name:NSString, inBundle:nullableNSBundle, compatibleWithTraitCollection:nullableUITraitCollection):nullable UIColor *;
+	overload extern inline public static function colorNamed(name:NSString, inBundle:NSBundle, compatibleWithTraitCollection:UITraitCollection):nullable UIColor *;
 
 	@:native("colorWithDynamicProvider:API_AVAILABLE(ios(13.0), tvos(13.0)")
 	overload extern inline public static function colorWithDynamicProvider(dynamicProvider:Dynamic, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UIColor *;

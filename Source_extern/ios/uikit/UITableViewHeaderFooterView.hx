@@ -12,7 +12,7 @@ extern class UITableViewHeaderFooterView{
 	overload extern inline public static function autorelease():UITableViewHeaderFooterView;
 
 	@:native("initWithReuseIdentifier")
-	overload extern inline public function initWithReuseIdentifier(reuseIdentifier:nullableNSString):UITableViewHeaderFooterView;
+	overload extern inline public function initWithReuseIdentifier(reuseIdentifier:NSString):UITableViewHeaderFooterView;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UITableViewHeaderFooterView;

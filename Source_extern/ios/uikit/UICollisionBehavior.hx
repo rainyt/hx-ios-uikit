@@ -18,10 +18,10 @@ extern class UICollisionBehavior{
 	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:id<UIDynamicItem>, withItem:id<UIDynamicItem>):Void;
 
 	@:native("collisionBehavior:beganContactForItem:withBoundaryIdentifier:atPoint")
-	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, beganContactForItem:id<UIDynamicItem>, withBoundaryIdentifier:nullableid<NSCopying>, atPoint:CGPoint):Void;
+	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, beganContactForItem:id<UIDynamicItem>, withBoundaryIdentifier:id<NSCopying>, atPoint:CGPoint):Void;
 
 	@:native("collisionBehavior:endedContactForItem:withBoundaryIdentifier")
-	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:id<UIDynamicItem>, withBoundaryIdentifier:nullableid<NSCopying>):Void;
+	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:id<UIDynamicItem>, withBoundaryIdentifier:id<NSCopying>):Void;
 
 	@:native("initWithItems")
 	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>):UICollisionBehavior;

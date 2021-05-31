@@ -33,10 +33,10 @@ extern class UISearchController{
 	overload extern inline public function updateSearchResultsForSearchController(searchController:nonnullUISearchController, selectingSearchSuggestion:nonnullid<UISearchSuggestion>, API_AVAILABLE(tvos(14.0):Dynamic):Void;
 
 	@:native("initWithSearchResultsController")
-	overload extern inline public function initWithSearchResultsController(searchResultsController:nullableUIViewController):UISearchController;
+	overload extern inline public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UISearchController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UISearchController;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UISearchController;

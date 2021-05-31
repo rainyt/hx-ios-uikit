@@ -12,7 +12,7 @@ extern class UIAlertView{
 	overload extern inline public static function autorelease():UIAlertView;
 
 	@:native("initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:...")
-	overload extern inline public function initWithTitle(title:nullableNSString, message:nullableNSString, delegate:nullableid/<UIAlertViewDelegate>/, cancelButtonTitle:nullableNSString, otherButtonTitles:nullableNSString, ...:NS_REQUIRES_NIL_TERMINATION):UIAlertView;
+	overload extern inline public function initWithTitle(title:NSString, message:NSString, delegate:id/<UIAlertViewDelegate>/, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:NS_REQUIRES_NIL_TERMINATION):UIAlertView;
 
 	@:native("initWithFrame")
 	overload extern inline public function initWithFrame(frame:CGRect):id;
@@ -30,7 +30,7 @@ extern class UIAlertView{
 	public var text:explanation;
 
 	@:native("addButtonWithTitle:::returns:of")
-	overload extern inline public function addButtonWithTitle(title:nullableNSString, :, ://, returns:index, of:button.):NSInteger;
+	overload extern inline public function addButtonWithTitle(title:NSString, :, ://, returns:index, of:button.):NSInteger;
 
 	@:native("buttonTitleAtIndex")
 	overload extern inline public function buttonTitleAtIndex(buttonIndex:NSInteger):nullable NSString *;

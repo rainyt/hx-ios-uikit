@@ -105,10 +105,10 @@ extern class UIBezierPath{
 	public var testing.:hit;
 
 	@:native("setLineDash:count:phase")
-	overload extern inline public function setLineDash(pattern:nullableconstCGFloat, count:NSInteger, phase:CGFloat):Void;
+	overload extern inline public function setLineDash(pattern:constCGFloat, count:NSInteger, phase:CGFloat):Void;
 
 	@:native("getLineDash:count:phase")
-	overload extern inline public function getLineDash(pattern:nullableCGFloat, count:nullableNSInteger, phase:nullableCGFloat):Void;
+	overload extern inline public function getLineDash(pattern:CGFloat, count:NSInteger, phase:CGFloat):Void;
 
 	@:native("fill;")
 	overload extern inline public function fill;():Void;

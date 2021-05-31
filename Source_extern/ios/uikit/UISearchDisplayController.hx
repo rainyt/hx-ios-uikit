@@ -78,7 +78,7 @@ extern class UISearchDisplayController{
 	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, didHideSearchResultsTableView:UITableView):Void;
 
 	@:native("searchDisplayController:shouldReloadTableForSearchString")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, shouldReloadTableForSearchString:nullableNSString):BOOL;
+	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, shouldReloadTableForSearchString:NSString):BOOL;
 
 	@:native("searchDisplayController:shouldReloadTableForSearchScope")
 	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, shouldReloadTableForSearchScope:NSInteger):BOOL;

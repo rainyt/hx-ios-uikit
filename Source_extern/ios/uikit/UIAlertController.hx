@@ -12,7 +12,7 @@ extern class UIAlertController{
 	overload extern inline public static function autorelease():UIAlertController;
 
 	@:native("actionWithTitle:style:handler")
-	overload extern inline public static function actionWithTitle(title:nullableNSString, style:UIAlertActionStyle, handler:Dynamic):UIAlertController;
+	overload extern inline public static function actionWithTitle(title:NSString, style:UIAlertActionStyle, handler:Dynamic):UIAlertController;
 
 	@:native("title")
 	public var title:NSString;
@@ -24,7 +24,7 @@ extern class UIAlertController{
 	public var enabled:BOOL;
 
 	@:native("alertControllerWithTitle:message:preferredStyle")
-	overload extern inline public static function alertControllerWithTitle(title:nullableNSString, message:nullableNSString, preferredStyle:UIAlertControllerStyle):UIAlertController;
+	overload extern inline public static function alertControllerWithTitle(title:NSString, message:NSString, preferredStyle:UIAlertControllerStyle):UIAlertController;
 
 	@:native("addAction")
 	overload extern inline public function addAction(action:UIAlertAction):Void;

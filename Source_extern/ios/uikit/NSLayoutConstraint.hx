@@ -12,10 +12,10 @@ extern class NSLayoutConstraint{
 	overload extern inline public static function autorelease():NSLayoutConstraint;
 
 	@:native("constraintsWithVisualFormat:options:metrics:views")
-	overload extern inline public static function constraintsWithVisualFormat(format:NSString, options:NSLayoutFormatOptions, metrics:nullableNSDictionary<NSString,id>, views:NSDictionary<NSString,id>):NSArray<NSLayoutConstraint *> *;
+	overload extern inline public static function constraintsWithVisualFormat(format:NSString, options:NSLayoutFormatOptions, metrics:NSDictionary<NSString,id>, views:NSDictionary<NSString,id>):NSArray<NSLayoutConstraint *> *;
 
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
-	overload extern inline public static function constraintWithItem(view1:id, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:nullableid, attribute:NSLayoutAttribute, multiplier:CGFloat, constant:CGFloat):NSLayoutConstraint;
+	overload extern inline public static function constraintWithItem(view1:id, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:id, attribute:NSLayoutAttribute, multiplier:CGFloat, constant:CGFloat):NSLayoutConstraint;
 
 	@:native("priority")
 	public var priority:UILayoutPriority;

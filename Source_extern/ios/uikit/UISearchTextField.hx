@@ -48,7 +48,7 @@ extern class UISearchTextField{
 	overload extern inline public static function new():UISearchTextField;
 
 	@:native("tokenWithIcon:text")
-	overload extern inline public static function tokenWithIcon(icon:nullableUIImage, text:NSString):UISearchToken *;
+	overload extern inline public static function tokenWithIcon(icon:UIImage, text:NSString):UISearchToken *;
 
 	@:native("representedObject")
 	public var representedObject:id;

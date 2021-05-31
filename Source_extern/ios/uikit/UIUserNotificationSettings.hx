@@ -36,7 +36,7 @@ extern class UIUserNotificationSettings{
 	public var identifier:NSString;
 
 	@:native("setActions:forContext")
-	overload extern inline public function setActions(actions:nullableNSArray<UIUserNotificationAction>, forContext:UIUserNotificationActionContext):Void;
+	overload extern inline public function setActions(actions:NSArray<UIUserNotificationAction>, forContext:UIUserNotificationActionContext):Void;
 
 	@:native("init")
 	overload extern inline public function init():UIUserNotificationSettings;

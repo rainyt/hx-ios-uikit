@@ -27,7 +27,7 @@ extern class UIContextMenuInteraction{
 	overload extern inline public static function new():UIContextMenuInteraction;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(view:nullableUIView):CGPoint;
+	overload extern inline public function locationInView(view:UIView):CGPoint;
 
 	@:native("updateVisibleMenuWithBlock")
 	overload extern inline public function updateVisibleMenuWithBlock(block:Dynamic):Void;
@@ -60,10 +60,10 @@ extern class UIContextMenuInteraction{
 	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionCommitAnimating>):Void;
 
 	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>):Void;
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>):Void;
 
 	@:native("contextMenuInteraction:willEndForConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>):Void;
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>):Void;
 
 
 }

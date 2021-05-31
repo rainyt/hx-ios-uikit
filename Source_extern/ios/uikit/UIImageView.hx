@@ -12,10 +12,10 @@ extern class UIImageView{
 	overload extern inline public static function autorelease():UIImageView;
 
 	@:native("initWithImage")
-	overload extern inline public function initWithImage(image:nullableUIImage):UIImageView;
+	overload extern inline public function initWithImage(image:UIImage):UIImageView;
 
 	@:native("initWithImage:highlightedImage")
-	overload extern inline public function initWithImage(image:nullableUIImage, highlightedImage:nullableUIImage):UIImageView;
+	overload extern inline public function initWithImage(image:UIImage, highlightedImage:UIImage):UIImageView;
 
 	@:native("nil")
 	public var nil:is;

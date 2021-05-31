@@ -18,7 +18,7 @@ extern class UIVisualEffectView{
 	public var effect:UIVisualEffect;
 
 	@:native("initWithEffect")
-	overload extern inline public function initWithEffect(effect:nullableUIVisualEffect):UIVisualEffectView;
+	overload extern inline public function initWithEffect(effect:UIVisualEffect):UIVisualEffectView;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UIVisualEffectView;

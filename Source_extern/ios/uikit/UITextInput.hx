@@ -54,7 +54,7 @@ extern class UITextInput{
 	public var drawn.:be;
 
 	@:native("setMarkedText:selectedRange://:is:range")
-	overload extern inline public function setMarkedText(markedText:nullableNSString, selectedRange:NSRange, //:selectedRange, is:a, range:within):Void;
+	overload extern inline public function setMarkedText(markedText:NSString, selectedRange:NSRange, //:selectedRange, is:a, range:within):Void;
 
 	@:native("unmarkText;")
 	overload extern inline public function unmarkText;():Void;
@@ -156,7 +156,7 @@ extern class UITextInput{
 	overload extern inline public function insertText(text:NSString, alternatives:NSArray<NSString>, style:UITextAlternativeStyle):Void;
 
 	@:native("setAttributedMarkedText:selectedRange")
-	overload extern inline public function setAttributedMarkedText(markedText:nullableNSAttributedString, selectedRange:NSRange):Void;
+	overload extern inline public function setAttributedMarkedText(markedText:NSAttributedString, selectedRange:NSRange):Void;
 
 	@:native("insertTextPlaceholderWithSize")
 	overload extern inline public function insertTextPlaceholderWithSize(size:CGSize):UITextPlaceholder *;
@@ -198,16 +198,16 @@ extern class UITextInput{
 	public var text.:oriented;
 
 	@:native("selectionWillChange")
-	overload extern inline public function selectionWillChange(textInput:nullableid<UITextInput>):Void;
+	overload extern inline public function selectionWillChange(textInput:id<UITextInput>):Void;
 
 	@:native("selectionDidChange")
-	overload extern inline public function selectionDidChange(textInput:nullableid<UITextInput>):Void;
+	overload extern inline public function selectionDidChange(textInput:id<UITextInput>):Void;
 
 	@:native("textWillChange")
-	overload extern inline public function textWillChange(textInput:nullableid<UITextInput>):Void;
+	overload extern inline public function textWillChange(textInput:id<UITextInput>):Void;
 
 	@:native("textDidChange")
-	overload extern inline public function textDidChange(textInput:nullableid<UITextInput>):Void;
+	overload extern inline public function textDidChange(textInput:id<UITextInput>):Void;
 
 	@:native("rangeEnclosingPosition:withGranularity:inDirection:://:range:the:text:of:given:or:if:is:such:unit.:Whether:boundary:is:depends:the:direction,:the:rule")
 	overload extern inline public function rangeEnclosingPosition(position:UITextPosition, withGranularity:UITextGranularity, inDirection:NSInteger, :, //:Returns, range:of, the:enclosing, text:unit, of:the, given:granularity,, or:nil, if:there, is:no, such:enclosing, unit.:, Whether:a, boundary:position, is:enclosed, depends:on, the:given, direction,:using, the:same, rule:as):nullable UITextRange *;

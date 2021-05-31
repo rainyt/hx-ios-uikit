@@ -48,7 +48,7 @@ extern class UIViewAnimating{
 	overload extern inline public function addCompletion(completion:Dynamic):Void;
 
 	@:native("continueAnimationWithTimingParameters:durationFactor")
-	overload extern inline public function continueAnimationWithTimingParameters(parameters:nullableid<UITimingCurveProvider>, durationFactor:CGFloat):Void;
+	overload extern inline public function continueAnimationWithTimingParameters(parameters:id<UITimingCurveProvider>, durationFactor:CGFloat):Void;
 
 
 }

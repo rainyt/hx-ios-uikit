@@ -394,6 +394,7 @@ class ObjcFun:
         startIndex = None
         if (((t.find("(") if ((startIndex is None)) else HxString.indexOfImpl(t,"(",startIndex))) != -1):
             return "Dynamic"
+        t = StringTools.replace(t,"nullable ","")
         return StringTools.replace(StringTools.replace((typedefs.h.get(t,None) if ((t in typedefs.h)) else t),"*","")," ","")
 
 

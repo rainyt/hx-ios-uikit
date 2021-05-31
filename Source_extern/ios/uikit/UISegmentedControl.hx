@@ -18,7 +18,7 @@ extern class UISegmentedControl{
 	overload extern inline public function initWithCoder(coder:NSCoder):UISegmentedControl;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(items:nullableNSArray):UISegmentedControl;
+	overload extern inline public function initWithItems(items:NSArray):UISegmentedControl;
 
 	@:native("initWithFrame:actions")
 	overload extern inline public function initWithFrame(frame:CGRect, actions:NSArray<UIAction>):UISegmentedControl;
@@ -48,10 +48,10 @@ extern class UISegmentedControl{
 	public var API_AVAILABLE(ios(5.0)):apportionsSegmentWidthsByContent;
 
 	@:native("insertSegmentWithTitle:atIndex:animated://:before:number.")
-	overload extern inline public function insertSegmentWithTitle(title:nullableNSString, atIndex:NSUInteger, animated:BOOL, //:insert, before:segment, number.:0..#segments.):Void;
+	overload extern inline public function insertSegmentWithTitle(title:NSString, atIndex:NSUInteger, animated:BOOL, //:insert, before:segment, number.:0..#segments.):Void;
 
 	@:native("insertSegmentWithImage::NSUInteger")
-	overload extern inline public function insertSegmentWithImage(image:nullableUIImage, :atIndex, NSUInteger:animated):Void;
+	overload extern inline public function insertSegmentWithImage(image:UIImage, :atIndex, NSUInteger:animated):Void;
 
 	@:native("removeSegmentAtIndex:animated")
 	overload extern inline public function removeSegmentAtIndex(segment:NSUInteger, animated:BOOL):Void;
@@ -60,13 +60,13 @@ extern class UISegmentedControl{
 	overload extern inline public function removeAllSegments;():Void;
 
 	@:native("setTitle:forSegmentAtIndex::::can:have:or:not:must:0..#segments:1:default")
-	overload extern inline public function setTitle(title:nullableNSString, forSegmentAtIndex:NSUInteger, :, :, ://, can:only, have:image, or:title,, not:both., must:be, 0..#segments:-, 1:Dynamic, default:is):Void;
+	overload extern inline public function setTitle(title:NSString, forSegmentAtIndex:NSUInteger, :, :, ://, can:only, have:image, or:title,, not:both., must:be, 0..#segments:-, 1:Dynamic, default:is):Void;
 
 	@:native("titleForSegmentAtIndex")
 	overload extern inline public function titleForSegmentAtIndex(segment:NSUInteger):nullable NSString *;
 
 	@:native("setImage:forSegmentAtIndex:::://:only:image:title,:both.:be:-:(or ignored")
-	overload extern inline public function setImage(image:nullableUIImage, forSegmentAtIndex:NSUInteger, :, :, :, //:can, only:have, image:or, title,:not, both.:must, be:0..#segments, -:1, (or ignored:default):Void;
+	overload extern inline public function setImage(image:UIImage, forSegmentAtIndex:NSUInteger, :, :, :, //:can, only:have, image:or, title,:not, both.:must, be:0..#segments, -:1, (or ignored:default):Void;
 
 	@:native("imageForSegmentAtIndex")
 	overload extern inline public function imageForSegmentAtIndex(segment:NSUInteger):nullable UIImage *;
@@ -96,19 +96,19 @@ extern class UISegmentedControl{
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(13.0));
 
 	@:native("setBackgroundImage:forState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setBackgroundImage(backgroundImage:nullableUIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setBackgroundImage(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("backgroundImageForState:barMetrics:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function backgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setDividerImage:forLeftSegmentState:rightSegmentState:barMetrics:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setDividerImage(dividerImage:nullableUIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setDividerImage(dividerImage:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("dividerImageForLeftSegmentState:rightSegmentState:barMetrics:")
 	overload extern inline public function dividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics, :Dynamic):nullable UIImage *;
 
 	@:native("setTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setTitleTextAttributes(attributes:nullableNSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setTitleTextAttributes(attributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("titleTextAttributesForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function titleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;

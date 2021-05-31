@@ -21,7 +21,7 @@ extern class UITabBar{
 	public var nil:is;
 
 	@:native("setItems:animated:://:fade:or:or:and")
-	overload extern inline public function setItems(items:nullableNSArray<UITabBarItem>, animated:BOOL, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
+	overload extern inline public function setItems(items:NSArray<UITabBarItem>, animated:BOOL, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
 
 	@:native("beginCustomizingItems:API_UNAVAILABLE(tvos::list:items:can:reordered.:animates:sheet:visible:not:are")
 	overload extern inline public function beginCustomizingItems(items:NSArray<UITabBarItem>, API_UNAVAILABLE(tvos:, ://, list:all, items:that, can:be, reordered.:always, animates:a, sheet:up., visible:items, not:listed, are:fixed):Void;

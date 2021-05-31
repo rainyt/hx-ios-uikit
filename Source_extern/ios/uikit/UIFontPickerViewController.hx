@@ -30,7 +30,7 @@ extern class UIFontPickerViewController{
 	public var selectedFontDescriptor:UIFontDescriptor;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UIFontPickerViewController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIFontPickerViewController;
 
 
 }

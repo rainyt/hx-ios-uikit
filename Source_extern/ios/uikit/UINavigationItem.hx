@@ -48,10 +48,10 @@ extern class UINavigationItem{
 	public var API_AVAILABLE(ios(5.0)):rightBarButtonItems;
 
 	@:native("setLeftBarButtonItems:animated")
-	overload extern inline public function setLeftBarButtonItems(items:nullableNSArray<UIBarButtonItem>, animated:BOOL):Void;
+	overload extern inline public function setLeftBarButtonItems(items:NSArray<UIBarButtonItem>, animated:BOOL):Void;
 
 	@:native("setRightBarButtonItems:animated")
-	overload extern inline public function setRightBarButtonItems(items:nullableNSArray<UIBarButtonItem>, animated:BOOL):Void;
+	overload extern inline public function setRightBarButtonItems(items:NSArray<UIBarButtonItem>, animated:BOOL):Void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(5.0));
@@ -63,10 +63,10 @@ extern class UINavigationItem{
 	public var rightBarButtonItem:UIBarButtonItem;
 
 	@:native("setLeftBarButtonItem:animated")
-	overload extern inline public function setLeftBarButtonItem(item:nullableUIBarButtonItem, animated:BOOL):Void;
+	overload extern inline public function setLeftBarButtonItem(item:UIBarButtonItem, animated:BOOL):Void;
 
 	@:native("setRightBarButtonItem:animated")
-	overload extern inline public function setRightBarButtonItem(item:nullableUIBarButtonItem, animated:BOOL):Void;
+	overload extern inline public function setRightBarButtonItem(item:UIBarButtonItem, animated:BOOL):Void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(11.0));

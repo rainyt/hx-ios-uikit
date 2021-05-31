@@ -24,7 +24,7 @@ extern class UIPreviewInteraction{
 	public var delegate:<UIPreviewInteractionDelegate>;
 
 	@:native("locationInCoordinateSpace://:the:location:the:that")
-	overload extern inline public function locationInCoordinateSpace(coordinateSpace:nullableid<UICoordinateSpace>, //:returns, the:current, location:of, the:touch, that:started):CGPoint;
+	overload extern inline public function locationInCoordinateSpace(coordinateSpace:id<UICoordinateSpace>, //:returns, the:current, location:of, the:touch, that:started):CGPoint;
 
 	@:native("cancelInteraction;")
 	overload extern inline public function cancelInteraction;():Void;

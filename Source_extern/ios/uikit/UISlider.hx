@@ -42,13 +42,13 @@ extern class UISlider{
 	overload extern inline public function setValue(value:float, animated:BOOL, //:move, slider:at, fixed:velocity, (i.e. duration depends on distance:does, not:send):Void;
 
 	@:native("setThumbImage:forState")
-	overload extern inline public function setThumbImage(image:nullableUIImage, forState:UIControlState):Void;
+	overload extern inline public function setThumbImage(image:UIImage, forState:UIControlState):Void;
 
 	@:native("setMinimumTrackImage:forState")
-	overload extern inline public function setMinimumTrackImage(image:nullableUIImage, forState:UIControlState):Void;
+	overload extern inline public function setMinimumTrackImage(image:UIImage, forState:UIControlState):Void;
 
 	@:native("setMaximumTrackImage:forState")
-	overload extern inline public function setMaximumTrackImage(image:nullableUIImage, forState:UIControlState):Void;
+	overload extern inline public function setMaximumTrackImage(image:UIImage, forState:UIControlState):Void;
 
 	@:native("thumbImageForState")
 	overload extern inline public function thumbImageForState(state:UIControlState):nullable UIImage *;

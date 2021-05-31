@@ -15,19 +15,19 @@ extern class UIImage{
 	overload extern inline public static function systemImageNamed(name:NSString):nullable UIImage *;
 
 	@:native("systemImageNamed:withConfiguration")
-	overload extern inline public static function systemImageNamed(name:NSString, withConfiguration:nullableUIImageConfiguration):nullable UIImage *;
+	overload extern inline public static function systemImageNamed(name:NSString, withConfiguration:UIImageConfiguration):nullable UIImage *;
 
 	@:native("systemImageNamed:compatibleWithTraitCollection")
-	overload extern inline public static function systemImageNamed(name:NSString, compatibleWithTraitCollection:nullableUITraitCollection):nullable UIImage *;
+	overload extern inline public static function systemImageNamed(name:NSString, compatibleWithTraitCollection:UITraitCollection):nullable UIImage *;
 
 	@:native("imageNamed::::load")
 	overload extern inline public static function imageNamed(name:NSString, :, :, ://, load:from):nullable UIImage *;
 
 	@:native("imageNamed:inBundle:withConfiguration")
-	overload extern inline public static function imageNamed(name:NSString, inBundle:nullableNSBundle, withConfiguration:nullableUIImageConfiguration):nullable UIImage *;
+	overload extern inline public static function imageNamed(name:NSString, inBundle:NSBundle, withConfiguration:UIImageConfiguration):nullable UIImage *;
 
 	@:native("imageNamed:inBundle:compatibleWithTraitCollection")
-	overload extern inline public static function imageNamed(name:NSString, inBundle:nullableNSBundle, compatibleWithTraitCollection:nullableUITraitCollection):nullable UIImage *;
+	overload extern inline public static function imageNamed(name:NSString, inBundle:NSBundle, compatibleWithTraitCollection:UITraitCollection):nullable UIImage *;
 
 	@:native("imageWithContentsOfFile")
 	overload extern inline public static function imageWithContentsOfFile(path:NSString):nullable UIImage *;
@@ -228,7 +228,7 @@ extern class UIImage{
 	overload extern inline public function initWithImage(image:UIImage):UIImage;
 
 	@:native("initWithImage:options")
-	overload extern inline public function initWithImage(image:UIImage, options:nullableNSDictionary<CIImageOption,id>):UIImage;
+	overload extern inline public function initWithImage(image:UIImage, options:NSDictionary<CIImageOption,id>):UIImage;
 
 
 }

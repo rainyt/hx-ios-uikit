@@ -18,7 +18,7 @@ extern class UIPointerInteraction{
 	public var enabled:BOOL;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:nullableid<UIPointerInteractionDelegate>):UIPointerInteraction;
+	overload extern inline public function initWithDelegate(delegate:id<UIPointerInteractionDelegate>):UIPointerInteraction;
 
 	@:native("invalidate;")
 	overload extern inline public function invalidate;():Void;

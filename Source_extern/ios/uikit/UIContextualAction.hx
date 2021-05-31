@@ -12,7 +12,7 @@ extern class UIContextualAction{
 	overload extern inline public static function autorelease():UIContextualAction;
 
 	@:native("contextualActionWithStyle:title:handler")
-	overload extern inline public static function contextualActionWithStyle(style:UIContextualActionStyle, title:nullableNSString, handler:UIContextualActionHandler):UIContextualAction;
+	overload extern inline public static function contextualActionWithStyle(style:UIContextualActionStyle, title:NSString, handler:UIContextualActionHandler):UIContextualAction;
 
 	@:native("style")
 	public var style:UIContextualActionStyle;

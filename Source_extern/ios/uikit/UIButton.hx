@@ -18,19 +18,19 @@ extern class UIButton{
 	overload extern inline public function initWithCoder(coder:NSCoder):UIButton;
 
 	@:native("initWithFrame:primaryAction")
-	overload extern inline public function initWithFrame(frame:CGRect, primaryAction:nullableUIAction):UIButton;
+	overload extern inline public function initWithFrame(frame:CGRect, primaryAction:UIAction):UIButton;
 
 	@:native("buttonWithType")
 	overload extern inline public static function buttonWithType(buttonType:UIButtonType):UIButton;
 
 	@:native("systemButtonWithImage:target:action")
-	overload extern inline public static function systemButtonWithImage(image:UIImage, target:nullableid, action:nullableSEL):UIButton;
+	overload extern inline public static function systemButtonWithImage(image:UIImage, target:id, action:SEL):UIButton;
 
 	@:native("systemButtonWithPrimaryAction")
-	overload extern inline public static function systemButtonWithPrimaryAction(primaryAction:nullableUIAction):UIButton;
+	overload extern inline public static function systemButtonWithPrimaryAction(primaryAction:UIAction):UIButton;
 
 	@:native("buttonWithType:primaryAction")
-	overload extern inline public static function buttonWithType(buttonType:UIButtonType, primaryAction:nullableUIAction):UIButton;
+	overload extern inline public static function buttonWithType(buttonType:UIButtonType, primaryAction:UIAction):UIButton;
 
 	@:native("buttons.")
 	public var buttons.:custom;
@@ -72,25 +72,25 @@ extern class UIButton{
 	public var tvos):API_UNAVAILABLE(watchos,;
 
 	@:native("setTitle:forState::::::::::://:is:title:assumed:be")
-	overload extern inline public function setTitle(title:nullableNSString, forState:UIControlState, :, :, :, :, :, :, :, :, :, :, //:default, is:nil., title:is, assumed:to, be:single):Void;
+	overload extern inline public function setTitle(title:NSString, forState:UIControlState, :, :, :, :, :, :, :, :, :, :, //:default, is:nil., title:is, assumed:to, be:single):Void;
 
 	@:native("setTitleColor:forState:UI_APPEARANCE_SELECTOR:default:nil.")
-	overload extern inline public function setTitleColor(color:nullableUIColor, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is, nil.:use):Void;
+	overload extern inline public function setTitleColor(color:UIColor, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is, nil.:use):Void;
 
 	@:native("setTitleShadowColor:forState:UI_APPEARANCE_SELECTOR:default:nil.")
-	overload extern inline public function setTitleShadowColor(color:nullableUIColor, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is, nil.:use):Void;
+	overload extern inline public function setTitleShadowColor(color:UIColor, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is, nil.:use):Void;
 
 	@:native("setImage:forState::::::::::::default:nil.:be:size:different")
-	overload extern inline public function setImage(image:nullableUIImage, forState:UIControlState, :, :, :, :, :, :, :, :, :, :, ://, default:is, nil.:should, be:same, size:if, different:for):Void;
+	overload extern inline public function setImage(image:UIImage, forState:UIControlState, :, :, :, :, :, :, :, :, :, :, ://, default:is, nil.:should, be:same, size:if, different:for):Void;
 
 	@:native("setBackgroundImage:forState:UI_APPEARANCE_SELECTOR:default")
-	overload extern inline public function setBackgroundImage(image:nullableUIImage, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is):Void;
+	overload extern inline public function setBackgroundImage(image:UIImage, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is):Void;
 
 	@:native("setPreferredSymbolConfiguration:forImageInState:UI_APPEARANCE_SELECTOR")
-	overload extern inline public function setPreferredSymbolConfiguration(configuration:nullableUIImageSymbolConfiguration, forImageInState:UIControlState, UI_APPEARANCE_SELECTOR:Dynamic):Void;
+	overload extern inline public function setPreferredSymbolConfiguration(configuration:UIImageSymbolConfiguration, forImageInState:UIControlState, UI_APPEARANCE_SELECTOR:Dynamic):Void;
 
 	@:native("setAttributedTitle:forState:API_AVAILABLE(ios(6.0):default:nil.:is:to")
-	overload extern inline public function setAttributedTitle(title:nullableNSAttributedString, forState:UIControlState, API_AVAILABLE(ios(6.0)://, default:is, nil.:title, is:assumed, to:be):Void;
+	overload extern inline public function setAttributedTitle(title:NSAttributedString, forState:UIControlState, API_AVAILABLE(ios(6.0)://, default:is, nil.:title, is:assumed, to:be):Void;
 
 	@:native("titleForState::::::these:only:a")
 	overload extern inline public function titleForState(state:UIControlState, :, :, :, :, ://, these:getters, only:take, a:single):nullable NSString *;

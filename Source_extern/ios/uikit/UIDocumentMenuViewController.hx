@@ -27,7 +27,7 @@ extern class UIDocumentMenuViewController{
 	overload extern inline public function initWithCoder(coder:NSCoder):UIDocumentMenuViewController;
 
 	@:native("addOptionWithTitle:image:order:handler")
-	overload extern inline public function addOptionWithTitle(title:NSString, image:nullableUIImage, order:UIDocumentMenuOrder, handler:Dynamic):Void;
+	overload extern inline public function addOptionWithTitle(title:NSString, image:UIImage, order:UIDocumentMenuOrder, handler:Dynamic):Void;
 
 	@:native("delegate")
 	public var delegate:id<UIDocumentMenuDelegate>;

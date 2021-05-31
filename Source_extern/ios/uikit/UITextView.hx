@@ -93,7 +93,7 @@ extern class UITextView{
 	public var NO.:to;
 
 	@:native("initWithFrame:textContainer:API_AVAILABLE(ios(7.0)")
-	overload extern inline public function initWithFrame(frame:CGRect, textContainer:nullableNSTextContainer, API_AVAILABLE(ios(7.0):NS_DESIGNATED_INITIALIZER):UITextView;
+	overload extern inline public function initWithFrame(frame:CGRect, textContainer:NSTextContainer, API_AVAILABLE(ios(7.0):NS_DESIGNATED_INITIALIZER):UITextView;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UITextView;

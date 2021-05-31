@@ -51,16 +51,16 @@ extern class UIWindow{
 	overload extern inline public function sendEvent(event:UIEvent, :, :, :, :, :, :, :, :, :, ://, called:by, UIApplication:to, dispatch:events, to:views, inside:the):Void;
 
 	@:native("convertPoint:toWindow:::can:used:convert")
-	overload extern inline public function convertPoint(point:CGPoint, toWindow:nullableUIWindow, :, ://, can:be, used:to, convert:to):CGPoint;
+	overload extern inline public function convertPoint(point:CGPoint, toWindow:UIWindow, :, ://, can:be, used:to, convert:to):CGPoint;
 
 	@:native("convertPoint:fromWindow::pass:nil")
-	overload extern inline public function convertPoint(point:CGPoint, fromWindow:nullableUIWindow, ://, pass:in, nil:to):CGPoint;
+	overload extern inline public function convertPoint(point:CGPoint, fromWindow:UIWindow, ://, pass:in, nil:to):CGPoint;
 
 	@:native("convertRect:toWindow")
-	overload extern inline public function convertRect(rect:CGRect, toWindow:nullableUIWindow):CGRect;
+	overload extern inline public function convertRect(rect:CGRect, toWindow:UIWindow):CGRect;
 
 	@:native("convertRect:fromWindow")
-	overload extern inline public function convertRect(rect:CGRect, fromWindow:nullableUIWindow):CGRect;
+	overload extern inline public function convertRect(rect:CGRect, fromWindow:UIWindow):CGRect;
 
 
 }

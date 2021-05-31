@@ -21,7 +21,7 @@ extern class UIMenuBuilder{
 	overload extern inline public function actionForIdentifier(identifier:UIActionIdentifier):nullable UIAction *;
 
 	@:native("commandForAction:propertyList")
-	overload extern inline public function commandForAction(action:SEL, propertyList:nullableid):nullable UICommand *;
+	overload extern inline public function commandForAction(action:SEL, propertyList:id):nullable UICommand *;
 
 	@:native("replaceMenuForIdentifier:withMenu")
 	overload extern inline public function replaceMenuForIdentifier(replacedIdentifier:UIMenuIdentifier, withMenu:UIMenu):Void;

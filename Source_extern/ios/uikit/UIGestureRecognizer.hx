@@ -12,7 +12,7 @@ extern class UIGestureRecognizer{
 	overload extern inline public static function autorelease():UIGestureRecognizer;
 
 	@:native("initWithTarget:action:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initWithTarget(target:nullableid, action:nullableSEL, NS_DESIGNATED_INITIALIZER://):UIGestureRecognizer;
+	overload extern inline public function initWithTarget(target:id, action:SEL, NS_DESIGNATED_INITIALIZER://):UIGestureRecognizer;
 
 	@:native("init;")
 	overload extern inline public function init;():UIGestureRecognizer;
@@ -24,7 +24,7 @@ extern class UIGestureRecognizer{
 	overload extern inline public function addTarget(target:id, action:SEL, :, ://, add:a, target/action:pair., you:can, call:this, multiple:times, to:specify):Void;
 
 	@:native("removeTarget:action://:the:target/action:passing:for:matches:targets,:the")
-	overload extern inline public function removeTarget(target:nullableid, action:nullableSEL, //:remove, the:specified, target/action:pair., passing:nil, for:target, matches:all, targets,:and, the:same):Void;
+	overload extern inline public function removeTarget(target:id, action:SEL, //:remove, the:specified, target/action:pair., passing:nil, for:target, matches:all, targets,:and, the:same):Void;
 
 	@:native("recognizer")
 	public var recognizer:gesture;
@@ -60,13 +60,13 @@ extern class UIGestureRecognizer{
 	overload extern inline public function requireGestureRecognizerToFail(otherGestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("locationInView:::::::::::::::::a:single-point:for:gesture.:the:of")
-	overload extern inline public function locationInView(view:nullableUIView, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, a:generic, single-point:location, for:the, gesture.:usually, the:centroid, of:the):CGPoint;
+	overload extern inline public function locationInView(view:UIView, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://, a:generic, single-point:location, for:the, gesture.:usually, the:centroid, of:the):CGPoint;
 
 	@:native("queried")
 	public var queried:be;
 
 	@:native("locationOfTouch:inView://:location:a")
-	overload extern inline public function locationOfTouch(touchIndex:NSUInteger, inView:nullableUIView, //:the, location:of, a:particular):CGPoint;
+	overload extern inline public function locationOfTouch(touchIndex:NSUInteger, inView:UIView, //:the, location:of, a:particular):CGPoint;
 
 	@:native("logging")
 	public var logging:in;

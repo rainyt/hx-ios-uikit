@@ -21,13 +21,13 @@ extern class UIConfigurationState{
 	overload extern inline public function customStateForKey(key:NSString):nullable id;
 
 	@:native("setCustomState:forKey")
-	overload extern inline public function setCustomState(customState:nullableid, forKey:NSString):Void;
+	overload extern inline public function setCustomState(customState:id, forKey:NSString):Void;
 
 	@:native("objectForKeyedSubscript")
 	overload extern inline public function objectForKeyedSubscript(key:NSString):nullable id;
 
 	@:native("setObject:forKeyedSubscript")
-	overload extern inline public function setObject(obj:nullableid, forKeyedSubscript:NSString):Void;
+	overload extern inline public function setObject(obj:id, forKeyedSubscript:NSString):Void;
 
 
 }

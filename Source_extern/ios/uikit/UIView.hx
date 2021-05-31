@@ -90,22 +90,22 @@ extern class UIView{
 	public var NO:is;
 
 	@:native("hitTest:withEvent:://:calls:point:in:receiver's")
-	overload extern inline public function hitTest(point:CGPoint, withEvent:nullableUIEvent, :, //:recursively, calls:-pointInside, point:is, in:the, receiver's:coordinate):nullable UIView *;
+	overload extern inline public function hitTest(point:CGPoint, withEvent:UIEvent, :, //:recursively, calls:-pointInside, point:is, in:the, receiver's:coordinate):nullable UIView *;
 
 	@:native("pointInside:withEvent:://:returns:if:is")
-	overload extern inline public function pointInside(point:CGPoint, withEvent:nullableUIEvent, :, //:default, returns:YES, if:point, is:in):BOOL;
+	overload extern inline public function pointInside(point:CGPoint, withEvent:UIEvent, :, //:default, returns:YES, if:point, is:in):BOOL;
 
 	@:native("convertPoint:toView")
-	overload extern inline public function convertPoint(point:CGPoint, toView:nullableUIView):CGPoint;
+	overload extern inline public function convertPoint(point:CGPoint, toView:UIView):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload extern inline public function convertPoint(point:CGPoint, fromView:nullableUIView):CGPoint;
+	overload extern inline public function convertPoint(point:CGPoint, fromView:UIView):CGPoint;
 
 	@:native("convertRect:toView")
-	overload extern inline public function convertRect(rect:CGRect, toView:nullableUIView):CGRect;
+	overload extern inline public function convertRect(rect:CGRect, toView:UIView):CGRect;
 
 	@:native("convertRect:fromView")
-	overload extern inline public function convertRect(rect:CGRect, fromView:nullableUIView):CGRect;
+	overload extern inline public function convertRect(rect:CGRect, fromView:UIView):CGRect;
 
 	@:native("changes")
 	public var changes:self.bounds;
@@ -159,13 +159,13 @@ extern class UIView{
 	overload extern inline public function willRemoveSubview(subview:UIView):Void;
 
 	@:native("willMoveToSuperview")
-	overload extern inline public function willMoveToSuperview(newSuperview:nullableUIView):Void;
+	overload extern inline public function willMoveToSuperview(newSuperview:UIView):Void;
 
 	@:native("didMoveToSuperview;")
 	overload extern inline public function didMoveToSuperview;():Void;
 
 	@:native("willMoveToWindow")
-	overload extern inline public function willMoveToWindow(newWindow:nullableUIWindow):Void;
+	overload extern inline public function willMoveToWindow(newWindow:UIWindow):Void;
 
 	@:native("didMoveToWindow;")
 	overload extern inline public function didMoveToWindow;():Void;
@@ -477,19 +477,19 @@ extern class UIView{
 	overload extern inline public function drawViewHierarchyInRect(rect:CGRect, afterScreenUpdates:BOOL):BOOL;
 
 	@:native("beginAnimations:context:::::::::::")
-	overload extern inline public static function beginAnimations(animationID:nullableNSString, context:nullablevoid, :, :, :, :, :, :, :, :, :, :, :):Void;
+	overload extern inline public static function beginAnimations(animationID:NSString, context:void, :, :, :, :, :, :, :, :, :, :, :):Void;
 
 	@:native("commitAnimations")
 	overload extern inline public static function commitAnimations():Void;
 
 	@:native("setAnimationDelegate:::::::::::::::::::::::::::::::")
-	overload extern inline public static function setAnimationDelegate(delegate:nullableid, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+	overload extern inline public static function setAnimationDelegate(delegate:id, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
 
 	@:native("setAnimationWillStartSelector::::::::::::::::::::::::::")
-	overload extern inline public static function setAnimationWillStartSelector(selector:nullableSEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+	overload extern inline public static function setAnimationWillStartSelector(selector:SEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
 
 	@:native("setAnimationDidStopSelector:::::::::::::::::::::::::::")
-	overload extern inline public static function setAnimationDidStopSelector(selector:nullableSEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+	overload extern inline public static function setAnimationDidStopSelector(selector:SEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
 
 	@:native("setAnimationDuration:::::::::::::::::::::::::::::")
 	overload extern inline public static function setAnimationDuration(duration:NSTimeInterval, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;

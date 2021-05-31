@@ -21,7 +21,7 @@ extern class UIGraphicsRendererSubclass{
 	overload extern inline public static function prepareCGContext(context:CGContextRef, withRendererContext:UIGraphicsRendererContext):Void;
 
 	@:native("runDrawingActions:completionActions:error")
-	overload extern inline public function runDrawingActions(drawingActions:NS_NOESCAPEUIGraphicsDrawingActions, completionActions:nullableNS_NOESCAPEUIGraphicsDrawingActions, error:NSError):BOOL;
+	overload extern inline public function runDrawingActions(drawingActions:NS_NOESCAPEUIGraphicsDrawingActions, completionActions:NS_NOESCAPEUIGraphicsDrawingActions, error:NSError):BOOL;
 
 
 }

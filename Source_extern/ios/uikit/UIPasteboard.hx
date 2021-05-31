@@ -69,19 +69,19 @@ extern class UIPasteboard{
 	public var numberOfItems:NSInteger;
 
 	@:native("pasteboardTypesForItemSet")
-	overload extern inline public function pasteboardTypesForItemSet(itemSet:nullableNSIndexSet):nullable NSArray<NSArray<NSString *> *> *;
+	overload extern inline public function pasteboardTypesForItemSet(itemSet:NSIndexSet):nullable NSArray<NSArray<NSString *> *> *;
 
 	@:native("containsPasteboardTypes:inItemSet")
-	overload extern inline public function containsPasteboardTypes(pasteboardTypes:NSArray<NSString>, inItemSet:nullableNSIndexSet):BOOL;
+	overload extern inline public function containsPasteboardTypes(pasteboardTypes:NSArray<NSString>, inItemSet:NSIndexSet):BOOL;
 
 	@:native("itemSetWithPasteboardTypes")
 	overload extern inline public function itemSetWithPasteboardTypes(pasteboardTypes:NSArray<NSString>):nullable NSIndexSet *;
 
 	@:native("valuesForPasteboardType:inItemSet")
-	overload extern inline public function valuesForPasteboardType(pasteboardType:NSString, inItemSet:nullableNSIndexSet):nullable NSArray *;
+	overload extern inline public function valuesForPasteboardType(pasteboardType:NSString, inItemSet:NSIndexSet):nullable NSArray *;
 
 	@:native("dataForPasteboardType:inItemSet")
-	overload extern inline public function dataForPasteboardType(pasteboardType:NSString, inItemSet:nullableNSIndexSet):nullable NSArray<NSData *> *;
+	overload extern inline public function dataForPasteboardType(pasteboardType:NSString, inItemSet:NSIndexSet):nullable NSArray<NSData *> *;
 
 	@:native("items")
 	public var items:>;

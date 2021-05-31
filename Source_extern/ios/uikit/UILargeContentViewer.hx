@@ -42,7 +42,7 @@ extern class UILargeContentViewer{
 	public var tvos):API_UNAVAILABLE(watchos,;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:nullableid<UILargeContentViewerInteractionDelegate>):UILargeContentViewer;
+	overload extern inline public function initWithDelegate(delegate:id<UILargeContentViewerInteractionDelegate>):UILargeContentViewer;
 
 	@:native("delegate")
 	public var delegate:id<UILargeContentViewerInteractionDelegate>;
@@ -54,7 +54,7 @@ extern class UILargeContentViewer{
 	public var enabled:BOOL;
 
 	@:native("largeContentViewerInteraction:didEndOnItem:atPoint")
-	overload extern inline public function largeContentViewerInteraction(interaction:UILargeContentViewerInteraction, didEndOnItem:nullableid<UILargeContentViewerItem>, atPoint:CGPoint):Void;
+	overload extern inline public function largeContentViewerInteraction(interaction:UILargeContentViewerInteraction, didEndOnItem:id<UILargeContentViewerItem>, atPoint:CGPoint):Void;
 
 	@:native("largeContentViewerInteraction:itemAtPoint")
 	overload extern inline public function largeContentViewerInteraction(interaction:UILargeContentViewerInteraction, itemAtPoint:CGPoint):nullable id<UILargeContentViewerItem>;

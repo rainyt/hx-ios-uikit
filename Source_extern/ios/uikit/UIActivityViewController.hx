@@ -15,13 +15,13 @@ extern class UIActivityViewController{
 	overload extern inline public function init():UIActivityViewController;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UIActivityViewController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIActivityViewController;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UIActivityViewController;
 
 	@:native("initWithActivityItems:applicationActivities")
-	overload extern inline public function initWithActivityItems(activityItems:NSArray, applicationActivities:nullableNSArray<__kindofUIActivity>):UIActivityViewController;
+	overload extern inline public function initWithActivityItems(activityItems:NSArray, applicationActivities:NSArray<__kindofUIActivity>):UIActivityViewController;
 
 	@:native("dismissed")
 	public var dismissed:is;

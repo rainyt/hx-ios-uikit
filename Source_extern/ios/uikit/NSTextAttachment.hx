@@ -12,13 +12,13 @@ extern class NSTextAttachment{
 	overload extern inline public static function autorelease():NSTextAttachment;
 
 	@:native("imageForBounds:textContainer:characterIndex:")
-	overload extern inline public function imageForBounds(imageBounds:CGRect, textContainer:nullableNSTextContainer, characterIndex:NSUInteger, :Dynamic):nullable UIImage *;
+	overload extern inline public function imageForBounds(imageBounds:CGRect, textContainer:NSTextContainer, characterIndex:NSUInteger, :Dynamic):nullable UIImage *;
 
 	@:native("attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex")
-	overload extern inline public function attachmentBoundsForTextContainer(textContainer:nullableNSTextContainer, proposedLineFragment:CGRect, glyphPosition:CGPoint, characterIndex:NSUInteger):CGRect;
+	overload extern inline public function attachmentBoundsForTextContainer(textContainer:NSTextContainer, proposedLineFragment:CGRect, glyphPosition:CGPoint, characterIndex:NSUInteger):CGRect;
 
 	@:native("initWithData:ofType:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initWithData(contentData:nullableNSData, ofType:nullableNSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
+	overload extern inline public function initWithData(contentData:NSData, ofType:NSString, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextAttachment;
 
 	@:native("ios(7.0))")
 	public var ios(7.0)):API_AVAILABLE(macos(10.11),;

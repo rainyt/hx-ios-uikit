@@ -18,7 +18,7 @@ extern class NSDiffableDataSourceSectionSnapshot{
 	overload extern inline public function appendItems(items:NSArray<ItemIdentifierType>):Void;
 
 	@:native("appendItems:intoParentItem")
-	overload extern inline public function appendItems(items:NSArray<ItemIdentifierType>, intoParentItem:nullableItemIdentifierType):Void;
+	overload extern inline public function appendItems(items:NSArray<ItemIdentifierType>, intoParentItem:ItemIdentifierType):Void;
 
 	@:native("insertItems:beforeItem")
 	overload extern inline public function insertItems(items:NSArray<ItemIdentifierType>, beforeItem:ItemIdentifierType):Void;

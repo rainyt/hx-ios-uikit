@@ -84,16 +84,16 @@ extern class UIDocumentInteractionController{
 	overload extern inline public function documentInteractionControllerDidDismissOpenInMenu(controller:UIDocumentInteractionController):Void;
 
 	@:native("documentInteractionController:willBeginSendingToApplication://")
-	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, willBeginSendingToApplication:nullableNSString, //:bundle):Void;
+	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, willBeginSendingToApplication:NSString, //:bundle):Void;
 
 	@:native("documentInteractionController:didEndSendingToApplication")
-	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, didEndSendingToApplication:nullableNSString):Void;
+	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, didEndSendingToApplication:NSString):Void;
 
 	@:native("documentInteractionController:canPerformAction")
-	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, canPerformAction:nullableSEL):BOOL;
+	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, canPerformAction:SEL):BOOL;
 
 	@:native("documentInteractionController:performAction")
-	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, performAction:nullableSEL):BOOL;
+	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, performAction:SEL):BOOL;
 
 
 }

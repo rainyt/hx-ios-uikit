@@ -39,7 +39,7 @@ extern class UIDocument{
 	overload extern inline public function closeWithCompletionHandler(completionHandler:Dynamic):Void;
 
 	@:native("loadFromContents:ofType:error")
-	overload extern inline public function loadFromContents(contents:id, ofType:nullableNSString, error:NSError):BOOL;
+	overload extern inline public function loadFromContents(contents:id, ofType:NSString, error:NSError):BOOL;
 
 	@:native("contentsForType:error")
 	overload extern inline public function contentsForType(typeName:NSString, error:NSError):nullable id;
@@ -75,13 +75,13 @@ extern class UIDocument{
 	public var type.:new;
 
 	@:native("fileNameExtensionForType:saveOperation:API_UNAVAILABLE(tvos:For:specified:and:particular:of:operation,:a:name:that:be:to:base")
-	overload extern inline public function fileNameExtensionForType(typeName:nullableNSString, saveOperation:UIDocumentSaveOperation, API_UNAVAILABLE(tvos://, For:a, specified:type,, and:a, particular:kind, of:save, operation,:return, a:file, name:extension, that:can, be:appended, to:a, base:file):NSString *;
+	overload extern inline public function fileNameExtensionForType(typeName:NSString, saveOperation:UIDocumentSaveOperation, API_UNAVAILABLE(tvos://, For:a, specified:type,, and:a, particular:kind, of:save, operation,:return, a:file, name:extension, that:can, be:appended, to:a, base:file):NSString *;
 
 	@:native("writeContents:andAttributes:safelyToURL:forSaveOperation:error")
-	overload extern inline public function writeContents(contents:id, andAttributes:nullableNSDictionary, safelyToURL:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):BOOL;
+	overload extern inline public function writeContents(contents:id, andAttributes:NSDictionary, safelyToURL:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):BOOL;
 
 	@:native("writeContents:toURL:forSaveOperation:originalContentsURL:error")
-	overload extern inline public function writeContents(contents:id, toURL:NSURL, forSaveOperation:UIDocumentSaveOperation, originalContentsURL:nullableNSURL, error:NSError):BOOL;
+	overload extern inline public function writeContents(contents:id, toURL:NSURL, forSaveOperation:UIDocumentSaveOperation, originalContentsURL:NSURL, error:NSError):BOOL;
 
 	@:native("fileAttributesToWriteToURL:forSaveOperation:error")
 	overload extern inline public function fileAttributesToWriteToURL(url:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):nullable NSDictionary *;

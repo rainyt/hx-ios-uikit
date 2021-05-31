@@ -30,7 +30,7 @@ extern class UICloudSharingController{
 	overload extern inline public function cloudSharingControllerDidStopSharing(csc:UICloudSharingController):Void;
 
 	@:native("initWithNibName:bundle")
-	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UICloudSharingController;
+	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UICloudSharingController;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UICloudSharingController;

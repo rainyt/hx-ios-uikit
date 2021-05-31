@@ -33,7 +33,7 @@ extern class UIPrinterPickerController{
 	overload extern inline public function printerPickerControllerDidSelectPrinter(printerPickerController:UIPrinterPickerController):Void;
 
 	@:native("printerPickerControllerWithInitiallySelectedPrinter")
-	overload extern inline public static function printerPickerControllerWithInitiallySelectedPrinter(printer:nullableUIPrinter):UIPrinterPickerController *;
+	overload extern inline public static function printerPickerControllerWithInitiallySelectedPrinter(printer:UIPrinter):UIPrinterPickerController *;
 
 	@:native("selectedPrinter")
 	public var selectedPrinter:UIPrinter;
@@ -42,13 +42,13 @@ extern class UIPrinterPickerController{
 	public var delegate:id<UIPrinterPickerControllerDelegate>;
 
 	@:native("presentAnimated:completionHandler::::::::::::::::::::::::")
-	overload extern inline public function presentAnimated(animated:BOOL, completionHandler:nullableUIPrinterPickerCompletionHandler, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://):BOOL;
+	overload extern inline public function presentAnimated(animated:BOOL, completionHandler:UIPrinterPickerCompletionHandler, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://):BOOL;
 
 	@:native("presentFromRect:inView:animated:completionHandler::")
-	overload extern inline public function presentFromRect(rect:CGRect, inView:UIView, animated:BOOL, completionHandler:nullableUIPrinterPickerCompletionHandler, :, ://):BOOL;
+	overload extern inline public function presentFromRect(rect:CGRect, inView:UIView, animated:BOOL, completionHandler:UIPrinterPickerCompletionHandler, :, ://):BOOL;
 
 	@:native("presentFromBarButtonItem:animated:completionHandler:::")
-	overload extern inline public function presentFromBarButtonItem(item:UIBarButtonItem, animated:BOOL, completionHandler:nullableUIPrinterPickerCompletionHandler, :, :, ://):BOOL;
+	overload extern inline public function presentFromBarButtonItem(item:UIBarButtonItem, animated:BOOL, completionHandler:UIPrinterPickerCompletionHandler, :, :, ://):BOOL;
 
 	@:native("dismissAnimated")
 	overload extern inline public function dismissAnimated(animated:BOOL):Void;
