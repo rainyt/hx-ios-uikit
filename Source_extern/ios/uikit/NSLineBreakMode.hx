@@ -15,6 +15,7 @@ extern abstract NSLineBreakMode(Int) from Int to Int {
 	var NSLineBreakByCharWrapping;
 
 	@:native("NSLineBreakByClipping")
+	var NSLineBreakByClipping;
 
 	@:native("NSLineBreakByTruncatingHead")
 	var NSLineBreakByTruncatingHead;
