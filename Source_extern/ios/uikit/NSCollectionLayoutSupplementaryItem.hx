@@ -25,7 +25,7 @@ extern class NSCollectionLayoutSupplementaryItem{
 	overload public static function new():Dynamic;
 
 	@:native("zIndex")
-	public var zIndex:Dynamic;
+	public var zIndex:Int;
 
 	@:native("elementKind")
 	public var elementKind:NSString;

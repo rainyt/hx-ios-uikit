@@ -19,16 +19,16 @@ extern class UIBarButtonItem{
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithImage:style:target:action")
-	overload public function initWithImage_style_target_action(image:Dynamic, style:Dynamic, target:Dynamic, action:Dynamic):Dynamic;
+	overload public function initWithImage_style_target_action(image:Dynamic, style:Dynamic, target:Dynamic, action:String):Dynamic;
 
 	@:native("initWithImage:landscapeImagePhone:style:target:action")
-	overload public function initWithImage_landscapeImagePhone_style_target_action(image:Dynamic, landscapeImagePhone:Dynamic, style:Dynamic, target:Dynamic, action:Dynamic):Dynamic;
+	overload public function initWithImage_landscapeImagePhone_style_target_action(image:Dynamic, landscapeImagePhone:Dynamic, style:Dynamic, target:Dynamic, action:String):Dynamic;
 
 	@:native("initWithTitle:style:target:action")
-	overload public function initWithTitle_style_target_action(title:NSString, style:Dynamic, target:Dynamic, action:Dynamic):Dynamic;
+	overload public function initWithTitle_style_target_action(title:NSString, style:Dynamic, target:Dynamic, action:String):Dynamic;
 
 	@:native("initWithBarButtonSystemItem:target:action")
-	overload public function initWithBarButtonSystemItem_target_action(systemItem:Dynamic, target:Dynamic, action:Dynamic):Dynamic;
+	overload public function initWithBarButtonSystemItem_target_action(systemItem:Dynamic, target:Dynamic, action:String):Dynamic;
 
 	@:native("initWithCustomView")
 	overload public function initWithCustomView(customView:Dynamic):Dynamic;

@@ -606,8 +606,9 @@ class ObjcFun:
                 funcName = HxString.substr(funcName,0,i)
         startIndex = None
         c = (className if ((((returnClass.find("instancetype") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"instancetype",startIndex))) != -1)) else returnClass)
+        haxe_Log.trace("c-1",_hx_AnonObject({'fileName': "extern_tools_source/ObjcFun.hx", 'lineNumber': 34, 'className': "ObjcFun", 'methodName': "parsing", 'customParams': [c]}))
         c = ObjcType.toType(c,typedefs)
-        haxe_Log.trace(funcName,_hx_AnonObject({'fileName': "extern_tools_source/ObjcFun.hx", 'lineNumber': 37, 'className': "ObjcFun", 'methodName': "parsing", 'customParams': [args]}))
+        haxe_Log.trace("c-2",_hx_AnonObject({'fileName': "extern_tools_source/ObjcFun.hx", 'lineNumber': 36, 'className': "ObjcFun", 'methodName': "parsing", 'customParams': [c]}))
         return _hx_AnonObject({'name': ObjcFun.parsingFuncName(funcName,args), 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
 
     @staticmethod
@@ -863,6 +864,10 @@ class ObjcType:
     def toType(t,typedefs):
         if (t is None):
             return t
+        t = StringTools.replace(t,"nullable","")
+        t = StringTools.replace(t,"__kindof","")
+        t = StringTools.replace(t,"*","")
+        t = StringTools.replace(t," ","")
         if (t == "SEL"):
             return "String"
         if (t == "BOOL"):
@@ -884,23 +889,17 @@ class ObjcType:
             tmp = True
         if tmp:
             return "Dynamic"
-        t = StringTools.replace(t,"nullable","")
-        t = StringTools.replace(t,"__kindof","")
-        t = StringTools.replace(t,"*","")
-        t = StringTools.replace(t," ","")
         if (t == "CGFloat"):
             return "Float"
-        if (t == "NSUInteger"):
+        if ((t == "NSUInteger") or ((t == "NSInteger"))):
             return "Int"
         if (t in typedefs.h):
             _hx_def = typedefs.h.get(t,None)
             if (not _hx_def.createHaxeFile):
-                return _hx_def.parentClassName
+                return ObjcType.toType(_hx_def.parentClassName,typedefs)
         i = ObjcImport.toImport(t)
         if (i is None):
             return "Dynamic"
-        if (t == "__kindof"):
-            raise haxe_Exception.thrown("???")
         return t
 
 

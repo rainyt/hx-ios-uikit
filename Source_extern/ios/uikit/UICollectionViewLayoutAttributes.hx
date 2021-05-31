@@ -39,7 +39,7 @@ extern class UICollectionViewLayoutAttributes{
 	public var alpha:Float;
 
 	@:native("zIndex")
-	public var zIndex:Dynamic;
+	public var zIndex:Int;
 
 	@:native("hidden")
 	public var hidden:Bool;

@@ -74,7 +74,7 @@ extern class UIApplication{
 	public var statusBarFrame:CGRect;
 
 	@:native("applicationIconBadgeNumber")
-	public var applicationIconBadgeNumber:Dynamic;
+	public var applicationIconBadgeNumber:Int;
 
 	@:native("applicationSupportsShakeToEdit")
 	public var applicationSupportsShakeToEdit:Bool;
@@ -86,13 +86,13 @@ extern class UIApplication{
 	public var backgroundTimeRemaining:Dynamic;
 
 	@:native("beginBackgroundTaskWithExpirationHandler")
-	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic):NSUInteger;
+	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic):Int;
 
 	@:native("beginBackgroundTaskWithName:expirationHandler")
-	overload public function beginBackgroundTaskWithName_expirationHandler(taskName:NSString, expirationHandler:Dynamic):NSUInteger;
+	overload public function beginBackgroundTaskWithName_expirationHandler(taskName:NSString, expirationHandler:Dynamic):Int;
 
 	@:native("endBackgroundTask")
-	overload public function endBackgroundTask(identifier:NSUInteger):Void;
+	overload public function endBackgroundTask(identifier:Int):Void;
 
 	@:native("setMinimumBackgroundFetchInterval")
 	overload public function setMinimumBackgroundFetchInterval(minimumBackgroundFetchInterval:Dynamic):Void;

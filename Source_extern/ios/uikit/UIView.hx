@@ -27,7 +27,7 @@ extern class UIView{
 	public var userInteractionEnabled:Bool;
 
 	@:native("tag")
-	public var tag:Dynamic;
+	public var tag:Int;
 
 	@:native("layer")
 	public var layer:CALayer;

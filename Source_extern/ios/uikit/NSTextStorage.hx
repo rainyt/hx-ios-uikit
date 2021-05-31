@@ -27,13 +27,13 @@ extern class NSTextStorage{
 	public var editedRange:Dynamic;
 
 	@:native("changeInLength")
-	public var changeInLength:Dynamic;
+	public var changeInLength:Int;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("edited:range:changeInLength")
-	overload public function edited_range_changeInLength(editedMask:Dynamic, range:Dynamic, changeInLength:Dynamic):Void;
+	overload public function edited_range_changeInLength(editedMask:Dynamic, range:Dynamic, changeInLength:Int):Void;
 
 	@:native("processEditing")
 	overload public function processEditing():Void;

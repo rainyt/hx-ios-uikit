@@ -36,7 +36,7 @@ extern class UISegmentedControl{
 	overload public function actionForSegmentAtIndex(segment:Int):Dynamic;
 
 	@:native("segmentIndexForActionIdentifier")
-	overload public function segmentIndexForActionIdentifier(actionIdentifier:Dynamic):Dynamic;
+	overload public function segmentIndexForActionIdentifier(actionIdentifier:Dynamic):Int;
 
 	@:native("segmentedControlStyle")
 	public var segmentedControlStyle:Dynamic;
@@ -93,7 +93,7 @@ extern class UISegmentedControl{
 	overload public function isEnabledForSegmentAtIndex(segment:Int):Bool;
 
 	@:native("selectedSegmentIndex")
-	public var selectedSegmentIndex:Dynamic;
+	public var selectedSegmentIndex:Int;
 
 	@:native("selectedSegmentTintColor")
 	public var selectedSegmentTintColor:Dynamic;

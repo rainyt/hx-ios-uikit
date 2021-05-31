@@ -29,7 +29,7 @@ extern class UIWindow{
 	overload public function setScreen(screen:Dynamic):Void;
 
 	@:native("windowLevel")
-	public var windowLevel:CGFloat;
+	public var windowLevel:Float;
 
 	@:native("keyWindow")
 	public var keyWindow:Bool;

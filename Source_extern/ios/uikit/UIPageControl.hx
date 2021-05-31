@@ -13,10 +13,10 @@ extern class UIPageControl{
 	overload public static function autorelease():UIPageControl;
 
 	@:native("numberOfPages")
-	public var numberOfPages:Dynamic;
+	public var numberOfPages:Int;
 
 	@:native("currentPage")
-	public var currentPage:Dynamic;
+	public var currentPage:Int;
 
 	@:native("hidesForSinglePage")
 	public var hidesForSinglePage:Bool;
@@ -40,13 +40,13 @@ extern class UIPageControl{
 	public var preferredIndicatorImage:Dynamic;
 
 	@:native("indicatorImageForPage")
-	overload public function indicatorImageForPage(page:Dynamic):Dynamic;
+	overload public function indicatorImageForPage(page:Int):Dynamic;
 
 	@:native("setIndicatorImage:forPage")
-	overload public function setIndicatorImage_forPage(image:Dynamic, forPage:Dynamic):Void;
+	overload public function setIndicatorImage_forPage(image:Dynamic, forPage:Int):Void;
 
 	@:native("sizeForNumberOfPages")
-	overload public function sizeForNumberOfPages(pageCount:Dynamic):CGSize;
+	overload public function sizeForNumberOfPages(pageCount:Int):CGSize;
 
 	@:native("defersCurrentPageDisplay")
 	public var defersCurrentPageDisplay:Bool;

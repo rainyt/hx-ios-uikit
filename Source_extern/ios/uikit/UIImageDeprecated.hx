@@ -12,13 +12,13 @@ extern class UIImageDeprecated{
 	overload public static function autorelease():UIImageDeprecated;
 
 	@:native("stretchableImageWithLeftCapWidth:topCapHeight")
-	overload public function stretchableImageWithLeftCapWidth_topCapHeight(leftCapWidth:Dynamic, topCapHeight:Dynamic):Dynamic;
+	overload public function stretchableImageWithLeftCapWidth_topCapHeight(leftCapWidth:Int, topCapHeight:Int):Dynamic;
 
 	@:native("leftCapWidth")
-	public var leftCapWidth:Dynamic;
+	public var leftCapWidth:Int;
 
 	@:native("topCapHeight")
-	public var topCapHeight:Dynamic;
+	public var topCapHeight:Int;
 
 
 }

@@ -12,13 +12,13 @@ extern class UIAccessibilityContainer{
 	overload public static function autorelease():UIAccessibilityContainer;
 
 	@:native("accessibilityElementCount")
-	overload public function accessibilityElementCount():Dynamic;
+	overload public function accessibilityElementCount():Int;
 
 	@:native("accessibilityElementAtIndex")
-	overload public function accessibilityElementAtIndex(index:Dynamic):Dynamic;
+	overload public function accessibilityElementAtIndex(index:Int):Dynamic;
 
 	@:native("indexOfAccessibilityElement")
-	overload public function indexOfAccessibilityElement(element:Dynamic):Dynamic;
+	overload public function indexOfAccessibilityElement(element:Dynamic):Int;
 
 	@:native("accessibilityElements")
 	public var accessibilityElements:Dynamic;

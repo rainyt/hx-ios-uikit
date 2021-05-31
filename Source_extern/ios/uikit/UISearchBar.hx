@@ -74,7 +74,7 @@ extern class UISearchBar{
 	public var scopeButtonTitles:Dynamic;
 
 	@:native("selectedScopeButtonIndex")
-	public var selectedScopeButtonIndex:Dynamic;
+	public var selectedScopeButtonIndex:Int;
 
 	@:native("showsScopeBar")
 	public var showsScopeBar:Bool;

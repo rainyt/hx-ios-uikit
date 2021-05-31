@@ -64,7 +64,7 @@ extern class NSLayoutManager{
 	public var usesDefaultHyphenation:null;
 
 	@:native("invalidateGlyphsForCharacterRange:changeInLength:actualCharacterRange")
-	overload public function invalidateGlyphsForCharacterRange_changeInLength_actualCharacterRange(charRange:Dynamic, changeInLength:Dynamic, actualCharacterRange:Dynamic):Void;
+	overload public function invalidateGlyphsForCharacterRange_changeInLength_actualCharacterRange(charRange:Dynamic, changeInLength:Int, actualCharacterRange:Dynamic):Void;
 
 	@:native("invalidateLayoutForCharacterRange:actualCharacterRange")
 	overload public function invalidateLayoutForCharacterRange_actualCharacterRange(charRange:Dynamic, actualCharacterRange:Dynamic):Void;
@@ -76,7 +76,7 @@ extern class NSLayoutManager{
 	overload public function invalidateDisplayForGlyphRange(glyphRange:Dynamic):Void;
 
 	@:native("processEditingForTextStorage:edited:range:changeInLength:invalidatedRange")
-	overload public function processEditingForTextStorage_edited_range_changeInLength_invalidatedRange(textStorage:Dynamic, edited:Dynamic, range:Dynamic, changeInLength:Dynamic, invalidatedRange:Dynamic):Void;
+	overload public function processEditingForTextStorage_edited_range_changeInLength_invalidatedRange(textStorage:Dynamic, edited:Dynamic, range:Dynamic, changeInLength:Int, invalidatedRange:Dynamic):Void;
 
 	@:native("ensureGlyphsForCharacterRange")
 	overload public function ensureGlyphsForCharacterRange(charRange:Dynamic):Void;
@@ -103,7 +103,7 @@ extern class NSLayoutManager{
 	public var numberOfGlyphs:Int;
 
 	@:native("CGGlyphAtIndex:isValidIndex")
-	overload public function CGGlyphAtIndex_isValidIndex(glyphIndex:Int, isValidIndex:Dynamic):Dynamic;
+	overload public function CGGlyphAtIndex_isValidIndex(glyphIndex:Int, isValidIndex:Bool):Dynamic;
 
 	@:native("CGGlyphAtIndex")
 	overload public function CGGlyphAtIndex(glyphIndex:Int):Dynamic;
@@ -247,7 +247,7 @@ extern class NSLayoutManager{
 	overload public function drawGlyphsForGlyphRange_atPoint(glyphsToShow:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("showCGGlyphs:positions:count:font:textMatrix:attributes:inContext")
-	overload public function showCGGlyphs_positions_count_font_textMatrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Dynamic, font:Dynamic, textMatrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
+	overload public function showCGGlyphs_positions_count_font_textMatrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Int, font:Dynamic, textMatrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
 
 	@:native("fillBackgroundRectArray:count:forCharacterRange:color")
 	overload public function fillBackgroundRectArray_count_forCharacterRange_color(rectArray:Dynamic, count:Int, forCharacterRange:Dynamic, color:Dynamic):Void;

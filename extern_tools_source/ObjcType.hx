@@ -2,6 +2,12 @@ class ObjcType {
 	public static function toType(t:String, typedefs:Map<String, ExternTypedefClass>):String {
 		if (t == null)
 			return t;
+
+		t = StringTools.replace(t, "nullable", "");
+		t = StringTools.replace(t, "__kindof", "");
+		t = StringTools.replace(t, "*", "");
+		t = StringTools.replace(t, " ", "");
+
 		if (t == "SEL")
 			return "String";
 		if (t == "BOOL")
@@ -10,26 +16,23 @@ class ObjcType {
 			return "Void";
 		if (t.indexOf("(") != -1 || t.indexOf("<") != -1 || t.indexOf("id") != -1)
 			return "Dynamic";
-		t = StringTools.replace(t, "nullable", "");
-		t = StringTools.replace(t, "__kindof", "");
-		t = StringTools.replace(t, "*", "");
-		t = StringTools.replace(t, " ", "");
 
 		if (t == "CGFloat")
 			return "Float";
 
-		if (t == "NSUInteger")
+		if (t == "NSUInteger" || t == "NSInteger")
 			return "Int";
 
 		if (typedefs.exists(t)) {
 			var def = typedefs.get(t);
 			if (!def.createHaxeFile)
-				return def.parentClassName;
+				return ObjcType.toType(def.parentClassName, typedefs);
 		}
 
 		var i = ObjcImport.toImport(t);
-		if (i == null)
+		if (i == null) {
 			return "Dynamic";
+		}
 		return t;
 	}
 }

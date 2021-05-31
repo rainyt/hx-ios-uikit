@@ -112,10 +112,10 @@ extern class UIBezierPath{
 	public var usesEvenOddFillRule:Bool;
 
 	@:native("setLineDash:count:phase")
-	overload public function setLineDash_count_phase(pattern:Dynamic, count:Dynamic, phase:Float):Void;
+	overload public function setLineDash_count_phase(pattern:Dynamic, count:Int, phase:Float):Void;
 
 	@:native("getLineDash:count:phase")
-	overload public function getLineDash_count_phase(pattern:Float, count:Dynamic, phase:Float):Void;
+	overload public function getLineDash_count_phase(pattern:Float, count:Int, phase:Float):Void;
 
 	@:native("fill")
 	overload public function fill():Void;

@@ -69,19 +69,19 @@ extern class UITableView{
 	public var contextMenuInteraction:Dynamic;
 
 	@:native("numberOfSections")
-	public var numberOfSections:Dynamic;
+	public var numberOfSections:Int;
 
 	@:native("numberOfRowsInSection")
-	overload public function numberOfRowsInSection(section:Dynamic):Dynamic;
+	overload public function numberOfRowsInSection(section:Int):Int;
 
 	@:native("rectForSection")
-	overload public function rectForSection(section:Dynamic):CGRect;
+	overload public function rectForSection(section:Int):CGRect;
 
 	@:native("rectForHeaderInSection")
-	overload public function rectForHeaderInSection(section:Dynamic):CGRect;
+	overload public function rectForHeaderInSection(section:Int):CGRect;
 
 	@:native("rectForFooterInSection")
-	overload public function rectForFooterInSection(section:Dynamic):CGRect;
+	overload public function rectForFooterInSection(section:Int):CGRect;
 
 	@:native("rectForRowAtIndexPath")
 	overload public function rectForRowAtIndexPath(indexPath:Dynamic):CGRect;
@@ -105,10 +105,10 @@ extern class UITableView{
 	public var indexPathsForVisibleRows:Dynamic;
 
 	@:native("headerViewForSection")
-	overload public function headerViewForSection(section:Dynamic):Dynamic;
+	overload public function headerViewForSection(section:Int):Dynamic;
 
 	@:native("footerViewForSection")
-	overload public function footerViewForSection(section:Dynamic):Dynamic;
+	overload public function footerViewForSection(section:Int):Dynamic;
 
 	@:native("scrollToRowAtIndexPath:atScrollPosition:animated")
 	overload public function scrollToRowAtIndexPath_atScrollPosition_animated(indexPath:Dynamic, atScrollPosition:Dynamic, animated:Bool):Void;
@@ -135,7 +135,7 @@ extern class UITableView{
 	overload public function reloadSections_withRowAnimation(sections:Dynamic, withRowAnimation:Dynamic):Void;
 
 	@:native("moveSection:toSection")
-	overload public function moveSection_toSection(section:Dynamic, toSection:Dynamic):Void;
+	overload public function moveSection_toSection(section:Int, toSection:Int):Void;
 
 	@:native("insertRowsAtIndexPaths:withRowAnimation")
 	overload public function insertRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:Dynamic):Void;
@@ -189,7 +189,7 @@ extern class UITableView{
 	overload public function deselectRowAtIndexPath_animated(indexPath:Dynamic, animated:Bool):Void;
 
 	@:native("sectionIndexMinimumDisplayRowCount")
-	public var sectionIndexMinimumDisplayRowCount:Dynamic;
+	public var sectionIndexMinimumDisplayRowCount:Int;
 
 	@:native("sectionIndexColor")
 	public var sectionIndexColor:Dynamic;

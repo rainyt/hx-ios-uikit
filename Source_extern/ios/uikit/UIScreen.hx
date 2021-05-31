@@ -71,7 +71,7 @@ extern class UIScreen{
 	overload public function displayLinkWithTarget_selector(target:Dynamic, selector:String):CADisplayLink;
 
 	@:native("maximumFramesPerSecond")
-	public var maximumFramesPerSecond:Dynamic;
+	public var maximumFramesPerSecond:Int;
 
 	@:native("calibratedLatency")
 	public var calibratedLatency:Dynamic;

@@ -51,7 +51,7 @@ extern class UILabel{
 	public var enabled:Bool;
 
 	@:native("numberOfLines")
-	public var numberOfLines:Dynamic;
+	public var numberOfLines:Int;
 
 	@:native("adjustsFontSizeToFitWidth")
 	public var adjustsFontSizeToFitWidth:Bool;
@@ -69,7 +69,7 @@ extern class UILabel{
 	public var lineBreakStrategy:Dynamic;
 
 	@:native("textRectForBounds:limitedToNumberOfLines")
-	overload public function textRectForBounds_limitedToNumberOfLines(bounds:CGRect, limitedToNumberOfLines:Dynamic):CGRect;
+	overload public function textRectForBounds_limitedToNumberOfLines(bounds:CGRect, limitedToNumberOfLines:Int):CGRect;
 
 	@:native("drawTextInRect")
 	overload public function drawTextInRect(rect:CGRect):Void;

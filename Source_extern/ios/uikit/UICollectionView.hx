@@ -114,10 +114,10 @@ extern class UICollectionView{
 	overload public function cancelInteractiveTransition():Void;
 
 	@:native("numberOfSections")
-	public var numberOfSections:Dynamic;
+	public var numberOfSections:Int;
 
 	@:native("numberOfItemsInSection")
-	overload public function numberOfItemsInSection(section:Dynamic):Dynamic;
+	overload public function numberOfItemsInSection(section:Int):Int;
 
 	@:native("layoutAttributesForItemAtIndexPath")
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):Dynamic;
@@ -162,7 +162,7 @@ extern class UICollectionView{
 	overload public function reloadSections(sections:Dynamic):Void;
 
 	@:native("moveSection:toSection")
-	overload public function moveSection_toSection(section:Dynamic, toSection:Dynamic):Void;
+	overload public function moveSection_toSection(section:Int, toSection:Int):Void;
 
 	@:native("insertItemsAtIndexPaths")
 	overload public function insertItemsAtIndexPaths(indexPaths:Dynamic):Void;

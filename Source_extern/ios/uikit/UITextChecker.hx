@@ -13,7 +13,7 @@ extern class UITextChecker{
 	overload public static function autorelease():UITextChecker;
 
 	@:native("rangeOfMisspelledWordInString:range:startingAt:wrap:language")
-	overload public function rangeOfMisspelledWordInString_range_startingAt_wrap_language(stringToCheck:NSString, range:Dynamic, startingAt:Dynamic, wrap:Bool, language:NSString):Dynamic;
+	overload public function rangeOfMisspelledWordInString_range_startingAt_wrap_language(stringToCheck:NSString, range:Dynamic, startingAt:Int, wrap:Bool, language:NSString):Dynamic;
 
 	@:native("guessesForWordRange:inString:language")
 	overload public function guessesForWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):Dynamic;
