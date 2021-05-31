@@ -11,8 +11,8 @@ extern class UISceneConnectionOptions{
 	@:native("autorelease")
 	overload public static function autorelease():UISceneConnectionOptions;
 
-	@:native("new")
-	overload public static function new():UISceneConnectionOptions;
+	// @:native("new")
+	// overload public static function new():UISceneConnectionOptions;
 
 	@:native("init")
 	overload public function init():UISceneConnectionOptions;

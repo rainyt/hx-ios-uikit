@@ -11,8 +11,8 @@ extern class UISceneSession{
 	@:native("autorelease")
 	overload public static function autorelease():UISceneSession;
 
-	@:native("new")
-	overload public static function new():UISceneSession;
+	// @:native("new")
+	// overload public static function new():UISceneSession;
 
 	@:native("init")
 	overload public function init():UISceneSession;

@@ -26,14 +26,14 @@ extern class UICommand extends UIMenuElement{
 	@:native("alternates")
 	public var alternates:Dynamic;
 
-	@:native("")
-	overload public function ():Dynamic;
+	// @:native("")
+	// overload public function ():Dynamic;
 
-	@:native("")
-	overload public function ():Dynamic;
+	// @:native("")
+	// overload public function ():Dynamic;
 
-	@:native("new")
-	overload public static function new():UICommand;
+	// @:native("new")
+	// overload public static function new():UICommand;
 
 	@:native("init")
 	overload public function init():UICommand;
