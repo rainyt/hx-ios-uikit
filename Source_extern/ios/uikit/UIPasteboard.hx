@@ -98,17 +98,5 @@ extern class UIPasteboard{
 	@:native("hasColors")
 	public var hasColors:Bool;
 
-	@:native("")
-	overload public function ():Dynamic;
-
-	@:native("")
-	overload public function ():Dynamic;
-
-	@:native("")
-	overload public function ():Dynamic;
-
-	@:native("")
-	overload public function ():Dynamic;
-
 
 }

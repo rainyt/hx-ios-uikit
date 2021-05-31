@@ -26,9 +26,6 @@ extern class UITextFormattingCoordinator{
 	@:native("init")
 	overload public function init():UITextFormattingCoordinator;
 
-	@:native("")
-	overload public function ():Dynamic;
-
 	@:native("toggleFontPanel")
 	overload public static function toggleFontPanel(sender:Dynamic):Void;
 

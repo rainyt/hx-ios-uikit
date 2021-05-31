@@ -35,9 +35,6 @@ extern class UIBackgroundConfiguration{
 	@:native("listAccompaniedSidebarCellConfiguration")
 	overload public static function listAccompaniedSidebarCellConfiguration():UIBackgroundConfiguration;
 
-	@:native("new")
-	overload public static function new():UIBackgroundConfiguration;
-
 	@:native("init")
 	overload public function init():UIBackgroundConfiguration;
 

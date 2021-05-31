@@ -24,9 +24,6 @@ extern class UITargetedPreview{
 	@:native("init")
 	overload public function init():UITargetedPreview;
 
-	@:native("new")
-	overload public static function new():UITargetedPreview;
-
 	@:native("target")
 	public var target:UIPreviewTarget;
 

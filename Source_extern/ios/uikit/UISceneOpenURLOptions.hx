@@ -11,9 +11,6 @@ extern class UISceneOpenURLOptions{
 	@:native("autorelease")
 	overload public static function autorelease():UISceneOpenURLOptions;
 
-	@:native("new")
-	overload public static function new():UISceneOpenURLOptions;
-
 	@:native("init")
 	overload public function init():UISceneOpenURLOptions;
 

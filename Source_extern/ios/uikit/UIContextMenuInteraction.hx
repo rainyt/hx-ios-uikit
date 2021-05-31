@@ -24,9 +24,6 @@ extern class UIContextMenuInteraction{
 	@:native("init")
 	overload public function init():UIContextMenuInteraction;
 
-	@:native("new")
-	overload public static function new():UIContextMenuInteraction;
-
 	@:native("locationInView")
 	overload public function locationInView(view:UIView):CGPoint;
 

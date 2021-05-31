@@ -24,9 +24,6 @@ extern class NSCollectionLayoutAnchor{
 	@:native("init")
 	overload public function init():NSCollectionLayoutAnchor;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutAnchor;
-
 	@:native("edges")
 	public var edges:NSDirectionalRectEdge;
 

@@ -26,9 +26,6 @@ extern class NSCollectionLayoutDimension{
 	@:native("init")
 	overload public function init():NSCollectionLayoutDimension;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutDimension;
-
 	@:native("isFractionalWidth")
 	public var isFractionalWidth:Bool;
 

@@ -11,14 +11,8 @@ extern class NSCollectionLayoutEdgeSpacing{
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutEdgeSpacing;
 
-	@:native("")
-	overload public function ():Dynamic;
-
 	@:native("init")
 	overload public function init():NSCollectionLayoutEdgeSpacing;
-
-	@:native("new")
-	overload public static function new():NSCollectionLayoutEdgeSpacing;
 
 	@:native("leading")
 	public var leading:NSCollectionLayoutSpacing;

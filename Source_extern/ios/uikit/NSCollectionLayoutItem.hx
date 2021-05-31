@@ -20,9 +20,6 @@ extern class NSCollectionLayoutItem{
 	@:native("init")
 	overload public function init():NSCollectionLayoutItem;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutItem;
-
 	@:native("contentInsets")
 	public var contentInsets:Dynamic;
 

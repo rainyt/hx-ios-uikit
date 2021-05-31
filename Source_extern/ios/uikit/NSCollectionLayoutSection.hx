@@ -17,9 +17,6 @@ extern class NSCollectionLayoutSection{
 	@:native("init")
 	overload public function init():NSCollectionLayoutSection;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutSection;
-
 	@:native("contentInsets")
 	public var contentInsets:Dynamic;
 

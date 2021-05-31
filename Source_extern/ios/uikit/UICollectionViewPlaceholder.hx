@@ -17,8 +17,5 @@ extern class UICollectionViewPlaceholder{
 	@:native("init")
 	overload public function init():UICollectionViewPlaceholder;
 
-	@:native("new")
-	overload public static function new():UICollectionViewPlaceholder;
-
 
 }

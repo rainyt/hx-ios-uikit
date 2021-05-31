@@ -92,7 +92,9 @@ class ExternBaseClass {
 					funcAndAttr.push(property);
 			} else if (value.indexOf("-") == 0 || value.indexOf("+") == 0) {
 				// 对象方法
-				funcAndAttr.push(ObjcFun.parsing(hextern.typedefs, this.className, value));
+				var func = ObjcFun.parsing(hextern.typedefs, this.className, value);
+				if (func != null)
+					funcAndAttr.push(func);
 			}
 		}
 	}

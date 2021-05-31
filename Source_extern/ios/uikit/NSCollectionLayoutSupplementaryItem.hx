@@ -20,9 +20,6 @@ extern class NSCollectionLayoutSupplementaryItem{
 	@:native("init")
 	overload public function init():NSCollectionLayoutSupplementaryItem;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutSupplementaryItem;
-
 	@:native("zIndex")
 	public var zIndex:Int;
 

@@ -176,9 +176,10 @@ class ExternBaseClass:
                 else:
                     tmp = True
                 if tmp:
-                    _this1 = self.funcAndAttr
-                    x = ObjcFun.parsing(hextern.typedefs,self.className,value)
-                    _this1.append(x)
+                    func = ObjcFun.parsing(hextern.typedefs,self.className,value)
+                    if (func is not None):
+                        _this1 = self.funcAndAttr
+                        _this1.append(func)
 
     def toHaxeFile(self,pkg):
         haxe = (("package " + ("null" if pkg is None else pkg)) + ";\n\n")
@@ -650,7 +651,11 @@ class ObjcFun:
         startIndex = None
         c = (className if ((((returnClass.find("instancetype") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"instancetype",startIndex))) != -1)) else returnClass)
         c = ObjcType.toType(c,typedefs)
-        return _hx_AnonObject({'name': ObjcFun.parsingFuncName(funcName,args), 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
+        fname = ObjcFun.parsingFuncName(funcName,args)
+        if ((fname == "new") or ((fname == ""))):
+            return None
+        else:
+            return _hx_AnonObject({'name': fname, 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
 
     @staticmethod
     def parsingFuncName(funcName,args):

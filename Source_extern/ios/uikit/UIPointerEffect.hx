@@ -17,8 +17,5 @@ extern class UIPointerEffect{
 	@:native("init")
 	overload public function init():UIPointerEffect;
 
-	@:native("new")
-	overload public static function new():UIPointerEffect;
-
 
 }

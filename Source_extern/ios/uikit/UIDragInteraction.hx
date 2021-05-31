@@ -17,9 +17,6 @@ extern class UIDragInteraction{
 	@:native("init")
 	overload public function init():UIDragInteraction;
 
-	@:native("new")
-	overload public static function new():UIDragInteraction;
-
 	@:native("delegate")
 	public var delegate:Dynamic;
 

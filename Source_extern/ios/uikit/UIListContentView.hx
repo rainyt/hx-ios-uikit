@@ -24,9 +24,6 @@ extern class UIListContentView{
 	@:native("init")
 	overload public function init():UIListContentView;
 
-	@:native("new")
-	overload public static function new():UIListContentView;
-
 	@:native("textLayoutGuide")
 	public var textLayoutGuide:Dynamic;
 

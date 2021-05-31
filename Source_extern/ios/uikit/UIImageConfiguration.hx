@@ -11,9 +11,6 @@ extern class UIImageConfiguration{
 	@:native("autorelease")
 	overload public static function autorelease():UIImageConfiguration;
 
-	@:native("new")
-	overload public static function new():UIImageConfiguration;
-
 	@:native("init")
 	overload public function init():UIImageConfiguration;
 

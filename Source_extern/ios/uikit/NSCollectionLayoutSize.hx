@@ -17,9 +17,6 @@ extern class NSCollectionLayoutSize{
 	@:native("init")
 	overload public function init():NSCollectionLayoutSize;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutSize;
-
 	@:native("widthDimension")
 	public var widthDimension:NSCollectionLayoutDimension;
 

@@ -11,9 +11,6 @@ extern class UIOpenURLContext{
 	@:native("autorelease")
 	overload public static function autorelease():UIOpenURLContext;
 
-	@:native("new")
-	overload public static function new():UIOpenURLContext;
-
 	@:native("init")
 	overload public function init():UIOpenURLContext;
 

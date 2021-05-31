@@ -14,9 +14,6 @@ extern class UIBarButtonItemStateAppearance{
 	@:native("init")
 	overload public function init():UIBarButtonItemStateAppearance;
 
-	@:native("new")
-	overload public static function new():UIBarButtonItemStateAppearance;
-
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:Dynamic;
 

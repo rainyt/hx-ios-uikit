@@ -19,9 +19,6 @@ extern class UITextDragPreviewRenderer{
 	@:native("initWithLayoutManager:range:unifyRects")
 	overload public function initWithLayoutManager_range_unifyRects(layoutManager:NSLayoutManager, range:Dynamic, unifyRects:Bool):UITextDragPreviewRenderer;
 
-	@:native("new")
-	overload public static function new():UITextDragPreviewRenderer;
-
 	@:native("init")
 	overload public function init():UITextDragPreviewRenderer;
 

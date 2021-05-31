@@ -24,8 +24,5 @@ extern class UIPointerRegion{
 	@:native("init")
 	overload public function init():UIPointerRegion;
 
-	@:native("new")
-	overload public static function new():UIPointerRegion;
-
 
 }

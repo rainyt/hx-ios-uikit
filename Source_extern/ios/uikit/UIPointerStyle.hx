@@ -23,8 +23,5 @@ extern class UIPointerStyle{
 	@:native("init")
 	overload public function init():UIPointerStyle;
 
-	@:native("new")
-	overload public static function new():UIPointerStyle;
-
 
 }

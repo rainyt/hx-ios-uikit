@@ -17,9 +17,6 @@ extern class UIDropProposal{
 	@:native("init")
 	overload public function init():UIDropProposal;
 
-	@:native("new")
-	overload public static function new():UIDropProposal;
-
 	@:native("operation")
 	public var operation:UIDropOperation;
 

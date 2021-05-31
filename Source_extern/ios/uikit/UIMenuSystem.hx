@@ -17,9 +17,6 @@ extern class UIMenuSystem{
 	@:native("contextSystem")
 	overload public static function contextSystem():UIMenuSystem;
 
-	@:native("new")
-	overload public static function new():UIMenuSystem;
-
 	@:native("init")
 	overload public function init():UIMenuSystem;
 

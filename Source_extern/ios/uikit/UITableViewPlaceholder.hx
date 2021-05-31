@@ -17,8 +17,5 @@ extern class UITableViewPlaceholder{
 	@:native("init")
 	overload public function init():UITableViewPlaceholder;
 
-	@:native("new")
-	overload public static function new():UITableViewPlaceholder;
-
 
 }

@@ -27,8 +27,5 @@ extern class UIPointerShape{
 	@:native("init")
 	overload public function init():UIPointerShape;
 
-	@:native("new")
-	overload public static function new():UIPointerShape;
-
 
 }

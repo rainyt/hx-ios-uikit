@@ -15,9 +15,6 @@ extern class UISceneSizeRestrictions{
 	@:native("init")
 	overload public function init():UISceneSizeRestrictions;
 
-	// @:native("new")
-	// overload public static function new():UISceneSizeRestrictions;
-
 	@:native("minimumSize")
 	public var minimumSize:CGSize;
 

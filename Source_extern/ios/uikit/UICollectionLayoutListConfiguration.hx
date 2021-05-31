@@ -11,9 +11,6 @@ extern class UICollectionLayoutListConfiguration{
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionLayoutListConfiguration;
 
-	@:native("new")
-	overload public static function new():UICollectionLayoutListConfiguration;
-
 	@:native("init")
 	overload public function init():UICollectionLayoutListConfiguration;
 

@@ -21,9 +21,6 @@ extern class NSCollectionLayoutGroupCustomItem{
 	@:native("init")
 	overload public function init():NSCollectionLayoutGroupCustomItem;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutGroupCustomItem;
-
 	@:native("frame")
 	public var frame:CGRect;
 

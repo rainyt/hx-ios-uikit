@@ -26,8 +26,5 @@ extern class UICollectionViewCompositionalLayout extends UICollectionViewLayout{
 	@:native("init")
 	overload public function init():UICollectionViewCompositionalLayout;
 
-	@:native("new")
-	overload public static function new():UICollectionViewCompositionalLayout;
-
 
 }

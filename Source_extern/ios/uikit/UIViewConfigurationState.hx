@@ -20,9 +20,6 @@ extern class UIViewConfigurationState{
 	@:native("init")
 	overload public function init():UIViewConfigurationState;
 
-	@:native("new")
-	overload public static function new():UIViewConfigurationState;
-
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;
 

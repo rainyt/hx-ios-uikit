@@ -11,9 +11,6 @@ extern class UIScene extends UIResponder{
 	@:native("autorelease")
 	overload public static function autorelease():UIScene;
 
-	// @:native("new")
-	// overload public static function new():UIScene;
-
 	@:native("init")
 	overload public function init():UIScene;
 

@@ -15,9 +15,6 @@ extern class UIAccessibilityLocationDescriptor{
 	@:native("init")
 	overload public function init():UIAccessibilityLocationDescriptor;
 
-	@:native("new")
-	overload public static function new():UIAccessibilityLocationDescriptor;
-
 	@:native("initWithName:view")
 	overload public function initWithName_view(name:Dynamic, view:UIView):UIAccessibilityLocationDescriptor;
 

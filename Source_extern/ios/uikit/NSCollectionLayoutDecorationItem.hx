@@ -17,9 +17,6 @@ extern class NSCollectionLayoutDecorationItem{
 	@:native("init")
 	overload public function init():NSCollectionLayoutDecorationItem;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutDecorationItem;
-
 	@:native("zIndex")
 	public var zIndex:Int;
 

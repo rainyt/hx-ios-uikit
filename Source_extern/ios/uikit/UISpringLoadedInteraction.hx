@@ -11,9 +11,6 @@ extern class UISpringLoadedInteraction{
 	@:native("autorelease")
 	overload public static function autorelease():UISpringLoadedInteraction;
 
-	@:native("new")
-	overload public static function new():UISpringLoadedInteraction;
-
 	@:native("init")
 	overload public function init():UISpringLoadedInteraction;
 

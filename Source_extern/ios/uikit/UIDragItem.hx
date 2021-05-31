@@ -17,9 +17,6 @@ extern class UIDragItem{
 	@:native("init")
 	overload public function init():UIDragItem;
 
-	@:native("new")
-	overload public static function new():UIDragItem;
-
 	@:native("itemProvider")
 	public var itemProvider:Dynamic;
 

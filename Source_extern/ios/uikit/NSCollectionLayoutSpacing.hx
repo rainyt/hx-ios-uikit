@@ -20,9 +20,6 @@ extern class NSCollectionLayoutSpacing{
 	@:native("init")
 	overload public function init():NSCollectionLayoutSpacing;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutSpacing;
-
 	@:native("spacing")
 	public var spacing:Float;
 

@@ -17,9 +17,6 @@ extern class UITextInputPasswordRules{
 	@:native("init")
 	overload public function init():UITextInputPasswordRules;
 
-	@:native("new")
-	overload public static function new():UITextInputPasswordRules;
-
 	@:native("passwordRulesWithDescriptor")
 	overload public static function passwordRulesWithDescriptor(passwordRulesDescriptor:Dynamic):UITextInputPasswordRules;
 

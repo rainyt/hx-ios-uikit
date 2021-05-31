@@ -14,9 +14,6 @@ extern class UISearchToken{
 	@:native("init")
 	overload public function init():UISearchToken;
 
-	@:native("new")
-	overload public static function new():UISearchToken;
-
 	@:native("tokenWithIcon:text")
 	overload public static function tokenWithIcon_text(icon:UIImage, text:Dynamic):UISearchToken;
 

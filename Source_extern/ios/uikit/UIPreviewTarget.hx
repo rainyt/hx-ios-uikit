@@ -22,9 +22,6 @@ extern class UIPreviewTarget{
 	@:native("init")
 	overload public function init():UIPreviewTarget;
 
-	@:native("new")
-	overload public static function new():UIPreviewTarget;
-
 	@:native("container")
 	public var container:UIView;
 

@@ -21,9 +21,6 @@ extern class NSCollectionLayoutBoundarySupplementaryItem{
 	@:native("init")
 	overload public function init():NSCollectionLayoutBoundarySupplementaryItem;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutBoundarySupplementaryItem;
-
 	@:native("extendsBoundary")
 	public var extendsBoundary:Bool;
 

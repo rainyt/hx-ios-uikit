@@ -47,9 +47,6 @@ extern class UIListContentConfiguration{
 	@:native("sidebarHeaderConfiguration")
 	overload public static function sidebarHeaderConfiguration():UIListContentConfiguration;
 
-	@:native("new")
-	overload public static function new():UIListContentConfiguration;
-
 	@:native("init")
 	overload public function init():UIListContentConfiguration;
 

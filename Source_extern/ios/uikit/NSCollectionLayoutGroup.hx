@@ -29,9 +29,6 @@ extern class NSCollectionLayoutGroup{
 	@:native("init")
 	overload public function init():NSCollectionLayoutGroup;
 
-	@:native("new")
-	overload public static function new():NSCollectionLayoutGroup;
-
 	@:native("subitems")
 	public var subitems:Dynamic;
 

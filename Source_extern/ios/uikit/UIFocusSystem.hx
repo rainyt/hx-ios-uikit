@@ -14,9 +14,6 @@ extern class UIFocusSystem{
 	@:native("focusedItem")
 	public var focusedItem:Dynamic;
 
-	@:native("new")
-	overload public static function new():UIFocusSystem;
-
 	@:native("init")
 	overload public function init():UIFocusSystem;
 

@@ -31,8 +31,5 @@ extern class UIFocusMovementHint:{
 	@:native("init")
 	overload public function init():UIFocusMovementHint:;
 
-	@:native("new")
-	overload public static function new():UIFocusMovementHint:;
-
 
 }

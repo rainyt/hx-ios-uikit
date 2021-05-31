@@ -14,9 +14,6 @@ extern class UITabBarItemStateAppearance{
 	@:native("init")
 	overload public function init():UITabBarItemStateAppearance;
 
-	@:native("new")
-	overload public static function new():UITabBarItemStateAppearance;
-
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:Dynamic;
 

@@ -20,9 +20,6 @@ extern class UIDragPreview{
 	@:native("init")
 	overload public function init():UIDragPreview;
 
-	@:native("new")
-	overload public static function new():UIDragPreview;
-
 	@:native("view")
 	public var view:UIView;
 

@@ -23,20 +23,11 @@ extern class UIMenu extends UIMenuElement{
 	@:native("menuWithChildren")
 	overload public static function menuWithChildren(children:Dynamic):UIMenu;
 
-	@:native("")
-	overload public function ():Dynamic;
-
-	@:native("")
-	overload public function ():Dynamic;
-
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):UIMenu;
 
 	@:native("init")
 	overload public function init():UIMenu;
-
-	@:native("new")
-	overload public static function new():UIMenu;
 
 	@:native("menuByReplacingChildren")
 	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu;

@@ -14,9 +14,6 @@ extern class UIPointerLockState{
 	@:native("init")
 	overload public function init():UIPointerLockState;
 
-	@:native("new")
-	overload public static function new():UIPointerLockState;
-
 	@:native("locked")
 	public var locked:Bool;
 

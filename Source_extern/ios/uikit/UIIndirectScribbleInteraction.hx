@@ -14,9 +14,6 @@ extern class UIIndirectScribbleInteraction{
 	@:native("init")
 	overload public function init():UIIndirectScribbleInteraction;
 
-	@:native("new")
-	overload public static function new():UIIndirectScribbleInteraction;
-
 	@:native("initWithDelegate")
 	overload public function initWithDelegate(delegate:Dynamic):UIIndirectScribbleInteraction;
 

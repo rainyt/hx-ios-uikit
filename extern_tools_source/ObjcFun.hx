@@ -32,8 +32,9 @@ class ObjcFun {
 		}
 		var c = returnClass.indexOf("instancetype") != -1 ? className : returnClass;
 		c = ObjcType.toType(c, typedefs);
-		return {
-			name: parsingFuncName(funcName, args),
+		var fname = parsingFuncName(funcName, args);
+		return fname == "new" || fname == "" ? null : {
+			name: fname,
 			type: ExternBaseClassType.FUNC,
 			returnClass: c,
 			isStatic: isStatic,

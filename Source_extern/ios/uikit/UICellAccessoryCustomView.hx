@@ -29,8 +29,5 @@ extern class UICellAccessoryCustomView extends UICellAccessory{
 	@:native("init")
 	overload public function init():UICellAccessoryCustomView;
 
-	@:native("new")
-	overload public static function new():UICellAccessoryCustomView;
-
 
 }

@@ -26,14 +26,8 @@ extern class UIAction extends UIMenuElement{
 	@:native("actionWithHandler")
 	overload public static function actionWithHandler(handler:Dynamic):UIAction;
 
-	@:native("")
-	overload public function ():Dynamic;
-
 	@:native("init")
 	overload public function init():UIAction;
-
-	@:native("new")
-	overload public static function new():UIAction;
 
 
 }
