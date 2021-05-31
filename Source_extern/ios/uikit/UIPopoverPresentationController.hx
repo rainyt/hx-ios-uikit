@@ -13,18 +13,6 @@ extern class UIPopoverPresentationController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPopoverPresentationController;
 
-	@:native("prepareForPopoverPresentation")
-	overload extern inline public function prepareForPopoverPresentation(popoverPresentationController:UIPopoverPresentationController):Void;
-
-	@:native("popoverPresentationControllerShouldDismissPopover")
-	overload extern inline public function popoverPresentationControllerShouldDismissPopover(popoverPresentationController:UIPopoverPresentationController):BOOL;
-
-	@:native("popoverPresentationControllerDidDismissPopover")
-	overload extern inline public function popoverPresentationControllerDidDismissPopover(popoverPresentationController:UIPopoverPresentationController):Void;
-
-	@:native("popoverPresentationController:willRepositionPopoverToRect:inView")
-	overload extern inline public function popoverPresentationController(popoverPresentationController:UIPopoverPresentationController, willRepositionPopoverToRect:inoutCGRect, inView:inoutUIView__nonnull__nonnull):Void;
-
 	@:native("delegate")
 	public var delegate:Dynamic;
 

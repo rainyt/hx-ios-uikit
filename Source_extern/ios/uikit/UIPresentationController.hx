@@ -13,30 +13,6 @@ extern class UIPresentationController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPresentationController;
 
-	@:native("adaptivePresentationStyleForPresentationController")
-	overload extern inline public function adaptivePresentationStyleForPresentationController(controller:UIPresentationController):UIModalPresentationStyle;
-
-	@:native("adaptivePresentationStyleForPresentationController:traitCollection")
-	overload extern inline public function adaptivePresentationStyleForPresentationController(controller:UIPresentationController, traitCollection:UITraitCollection):UIModalPresentationStyle;
-
-	@:native("presentationController:viewControllerForAdaptivePresentationStyle")
-	overload extern inline public function presentationController(controller:UIPresentationController, viewControllerForAdaptivePresentationStyle:UIModalPresentationStyle):nullable UIViewController *;
-
-	@:native("presentationController:willPresentWithAdaptiveStyle:transitionCoordinator")
-	overload extern inline public function presentationController(presentationController:UIPresentationController, willPresentWithAdaptiveStyle:UIModalPresentationStyle, transitionCoordinator:Dynamic):Void;
-
-	@:native("presentationControllerShouldDismiss")
-	overload extern inline public function presentationControllerShouldDismiss(presentationController:UIPresentationController):BOOL;
-
-	@:native("presentationControllerWillDismiss")
-	overload extern inline public function presentationControllerWillDismiss(presentationController:UIPresentationController):Void;
-
-	@:native("presentationControllerDidDismiss")
-	overload extern inline public function presentationControllerDidDismiss(presentationController:UIPresentationController):Void;
-
-	@:native("presentationControllerDidAttemptToDismiss")
-	overload extern inline public function presentationControllerDidAttemptToDismiss(presentationController:UIPresentationController):Void;
-
 	@:native("presentingViewController")
 	public var presentingViewController:UIViewController;
 

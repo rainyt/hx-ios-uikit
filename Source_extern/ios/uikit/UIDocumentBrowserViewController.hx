@@ -73,35 +73,5 @@ extern class UIDocumentBrowserViewController{
 	@:native("defaultDocumentAspectRatio")
 	public var defaultDocumentAspectRatio:CGFloat;
 
-	@:native("documentBrowser:didPickDocumentURLs")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didPickDocumentURLs:Dynamic):Void;
-
-	@:native("documentBrowser:didPickDocumentsAtURLs")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didPickDocumentsAtURLs:Dynamic):Void;
-
-	@:native("documentBrowser:didRequestDocumentCreationWithHandler")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler:Dynamic):Void;
-
-	@:native("documentBrowser:didImportDocumentAtURL:toDestinationURL")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, didImportDocumentAtURL:NSURL, toDestinationURL:NSURL):Void;
-
-	@:native("documentBrowser:failedToImportDocumentAtURL:error")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, failedToImportDocumentAtURL:NSURL, error:NSError_Nullable):Void;
-
-	@:native("documentBrowser:applicationActivitiesForDocumentURLs")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, applicationActivitiesForDocumentURLs:Dynamic):NSArray<__kindof UIActivity *> *;
-
-	@:native("documentBrowser:willPresentActivityViewController")
-	overload extern inline public function documentBrowser(controller:UIDocumentBrowserViewController, willPresentActivityViewController:UIActivityViewController):Void;
-
-	@:native("init")
-	overload extern inline public function init():UIDocumentBrowserViewController;
-
-	@:native("loadingProgress")
-	public var loadingProgress:NSProgress;
-
-	@:native("targetView")
-	public var targetView:UIView;
-
 
 }

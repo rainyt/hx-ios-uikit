@@ -28,14 +28,5 @@ extern class UIVideoEditorController{
 	@:native("is")
 	public var is:value;
 
-	@:native("videoEditorController:didSaveEditedVideoToPath://:video:saved:a:in")
-	overload extern inline public function videoEditorController(editor:UIVideoEditorController, didSaveEditedVideoToPath:NSString, //:edited, video:is, saved:to, a:path, in:app's):Void;
-
-	@:native("videoEditorController:didFailWithError")
-	overload extern inline public function videoEditorController(editor:UIVideoEditorController, didFailWithError:NSError):Void;
-
-	@:native("videoEditorControllerDidCancel")
-	overload extern inline public function videoEditorControllerDidCancel(editor:UIVideoEditorController):Void;
-
 
 }

@@ -28,8 +28,5 @@ extern class UIStatusBarManager{
 	@:native("is")
 	public var is:bar;
 
-	@:native("statusBarManager")
-	public var statusBarManager:UIStatusBarManager;
-
 
 }

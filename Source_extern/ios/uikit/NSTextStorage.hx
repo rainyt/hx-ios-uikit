@@ -49,11 +49,5 @@ extern class NSTextStorage{
 	@:native("ensureAttributesAreFixedInRange")
 	overload extern inline public function ensureAttributesAreFixedInRange(range:NSRange):Void;
 
-	@:native("textStorage:willProcessEditing:range:changeInLength")
-	overload extern inline public function textStorage(textStorage:NSTextStorage, willProcessEditing:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
-
-	@:native("textStorage:didProcessEditing:range:changeInLength")
-	overload extern inline public function textStorage(textStorage:NSTextStorage, didProcessEditing:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
-
 
 }

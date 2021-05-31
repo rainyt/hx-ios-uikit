@@ -31,17 +31,5 @@ extern class UIPreviewInteraction{
 	@:native("cancelInteraction;")
 	overload extern inline public function cancelInteraction;():Void;
 
-	@:native("previewInteraction:didUpdatePreviewTransition:ended:UIKIT_AVAILABLE_IOS_ONLY(10_0:transitionProgress:from")
-	overload extern inline public function previewInteraction(previewInteraction:UIPreviewInteraction, didUpdatePreviewTransition:CGFloat, ended:Bool, UIKIT_AVAILABLE_IOS_ONLY(10_0://, transitionProgress:ranges, from:0):Void;
-
-	@:native("previewInteractionDidCancel")
-	overload extern inline public function previewInteractionDidCancel(previewInteraction:UIPreviewInteraction):Void;
-
-	@:native("previewInteractionShouldBegin")
-	overload extern inline public function previewInteractionShouldBegin(previewInteraction:UIPreviewInteraction):BOOL;
-
-	@:native("previewInteraction:didUpdateCommitTransition:ended")
-	overload extern inline public function previewInteraction(previewInteraction:UIPreviewInteraction, didUpdateCommitTransition:CGFloat, ended:Bool):Void;
-
 
 }

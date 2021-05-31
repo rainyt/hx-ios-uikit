@@ -25,8 +25,5 @@ extern class UIPencilInteraction{
 	@:native("enabled")
 	public var enabled:Bool;
 
-	@:native("pencilInteractionDidTap")
-	overload extern inline public function pencilInteractionDidTap(interaction:UIPencilInteraction):Void;
-
 
 }

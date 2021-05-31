@@ -94,38 +94,5 @@ extern class UINavigationController{
 	@:native("barHideOnTapGestureRecognizer")
 	public var barHideOnTapGestureRecognizer:UITapGestureRecognizer;
 
-	@:native("navigationController:willShowViewController:animated")
-	overload extern inline public function navigationController(navigationController:UINavigationController, willShowViewController:UIViewController, animated:Bool):Void;
-
-	@:native("navigationController:didShowViewController:animated")
-	overload extern inline public function navigationController(navigationController:UINavigationController, didShowViewController:UIViewController, animated:Bool):Void;
-
-	@:native("navigationControllerSupportedInterfaceOrientations:API_AVAILABLE(ios(7.0)")
-	overload extern inline public function navigationControllerSupportedInterfaceOrientations(navigationController:UINavigationController, API_AVAILABLE(ios(7.0):Dynamic):UIInterfaceOrientationMask;
-
-	@:native("navigationControllerPreferredInterfaceOrientationForPresentation:API_AVAILABLE(ios(7.0)")
-	overload extern inline public function navigationControllerPreferredInterfaceOrientationForPresentation(navigationController:UINavigationController, API_AVAILABLE(ios(7.0):Dynamic):UIInterfaceOrientation;
-
-	@:native("navigationController")
-	overload extern inline public function navigationController():nullable id <UIViewControllerInteractiveTransitioning>;
-
-	@:native("navigationController")
-	overload extern inline public function navigationController():nullable id <UIViewControllerAnimatedTransitioning>;
-
-	@:native("navigation")
-	public var navigation:its;
-
-	@:native("hidesBottomBarWhenPushed")
-	public var hidesBottomBarWhenPushed:Bool;
-
-	@:native("return")
-	public var return:controller,;
-
-	@:native("toolbarItems")
-	public var toolbarItems:Dynamic;
-
-	@:native("setToolbarItems:animated:API_AVAILABLE(ios(3.0)")
-	overload extern inline public function setToolbarItems(toolbarItems:Dynamic, animated:Bool, API_AVAILABLE(ios(3.0):Dynamic):Void;
-
 
 }

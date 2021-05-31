@@ -16,27 +16,6 @@ extern class UICommand{
 	@:native("title")
 	public var title:NSString;
 
-	@:native("action")
-	public var action:SEL;
-
-	@:native("modifierFlags")
-	public var modifierFlags:UIKeyModifierFlags;
-
-	@:native("alternateWithTitle")
-	overload extern inline public static function alternateWithTitle():UICommand;
-
-	@:native("new")
-	overload extern inline public static function new():UICommand;
-
-	@:native("init")
-	overload extern inline public function init():UICommand;
-
-	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UICommand;
-
-	@:native("title")
-	public var title:NSString;
-
 	@:native("image")
 	public var image:UIImage;
 

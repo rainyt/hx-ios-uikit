@@ -37,35 +37,5 @@ extern class UIContextMenuInteraction{
 	@:native("dismissMenu;")
 	overload extern inline public function dismissMenu;():Void;
 
-	@:native("previewViewController")
-	public var previewViewController:UIViewController;
-
-	@:native("addAnimations")
-	overload extern inline public function addAnimations(animations:Dynamic):Void;
-
-	@:native("addCompletion")
-	overload extern inline public function addCompletion(completion:Dynamic):Void;
-
-	@:native("preferredCommitStyle")
-	public var preferredCommitStyle:UIContextMenuInteractionCommitStyle;
-
-	@:native("contextMenuInteraction:configurationForMenuAtLocation")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):nullable UIContextMenuConfiguration *;
-
-	@:native("contextMenuInteraction:previewForHighlightingMenuWithConfiguration")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
-
-	@:native("contextMenuInteraction:previewForDismissingMenuWithConfiguration")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
-
-	@:native("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
-
-	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
-
-	@:native("contextMenuInteraction:willEndForConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
-
 
 }

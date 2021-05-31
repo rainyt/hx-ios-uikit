@@ -61,26 +61,5 @@ extern class UIAlertView{
 	@:native("textFieldAtIndex")
 	overload extern inline public function textFieldAtIndex(textFieldIndex:NSInteger):nullable UITextField *;
 
-	@:native("alertView:clickedButtonAtIndex")
-	overload extern inline public function alertView(alertView:UIAlertView, clickedButtonAtIndex:NSInteger):Void;
-
-	@:native("alertViewCancel")
-	overload extern inline public function alertViewCancel(alertView:UIAlertView):Void;
-
-	@:native("willPresentAlertView:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 9.0)://:animation")
-	overload extern inline public function willPresentAlertView(alertView:UIAlertView, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 9.0):, //:before, animation:and):Void;
-
-	@:native("didPresentAlertView:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 9.0)://")
-	overload extern inline public function didPresentAlertView(alertView:UIAlertView, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 9.0):, //:after):Void;
-
-	@:native("alertView:willDismissWithButtonIndex:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 9.0):before:and")
-	overload extern inline public function alertView(alertView:UIAlertView, willDismissWithButtonIndex:NSInteger, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 9.0)://, before:animation, and:hiding):Void;
-
-	@:native("alertView:didDismissWithButtonIndex:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 9.0)://")
-	overload extern inline public function alertView(alertView:UIAlertView, didDismissWithButtonIndex:NSInteger, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 9.0):, //:after):Void;
-
-	@:native("alertViewShouldEnableFirstOtherButton")
-	overload extern inline public function alertViewShouldEnableFirstOtherButton(alertView:UIAlertView):BOOL;
-
 
 }

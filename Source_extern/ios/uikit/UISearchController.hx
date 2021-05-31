@@ -13,27 +13,6 @@ extern class UISearchController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISearchController;
 
-	@:native("willPresentSearchController")
-	overload extern inline public function willPresentSearchController(searchController:UISearchController):Void;
-
-	@:native("didPresentSearchController")
-	overload extern inline public function didPresentSearchController(searchController:UISearchController):Void;
-
-	@:native("willDismissSearchController")
-	overload extern inline public function willDismissSearchController(searchController:UISearchController):Void;
-
-	@:native("didDismissSearchController")
-	overload extern inline public function didDismissSearchController(searchController:UISearchController):Void;
-
-	@:native("presentSearchController")
-	overload extern inline public function presentSearchController(searchController:UISearchController):Void;
-
-	@:native("updateSearchResultsForSearchController")
-	overload extern inline public function updateSearchResultsForSearchController(searchController:UISearchController):Void;
-
-	@:native("updateSearchResultsForSearchController:selectingSearchSuggestion:API_AVAILABLE(tvos(14.0)")
-	overload extern inline public function updateSearchResultsForSearchController(searchController:nonnullUISearchController, selectingSearchSuggestion:Dynamic, API_AVAILABLE(tvos(14.0):Dynamic):Void;
-
 	@:native("initWithSearchResultsController")
 	overload extern inline public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
 

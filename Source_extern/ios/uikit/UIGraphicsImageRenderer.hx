@@ -13,24 +13,6 @@ extern class UIGraphicsImageRenderer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIGraphicsImageRenderer;
 
-	@:native("current")
-	public var current:screen's;
-
-	@:native("to")
-	public var to:this;
-
-	@:native("ios(10.0,")
-	public var ios(10.0,:instead",;
-
-	@:native("preferredRange")
-	public var preferredRange:UIGraphicsImageRendererFormatRange;
-
-	@:native("formatForTraitCollection")
-	overload extern inline public static function formatForTraitCollection(traitCollection:UITraitCollection):UIGraphicsImageRenderer;
-
-	@:native("renderer's")
-	public var renderer's:the;
-
 	@:native("initWithSize")
 	overload extern inline public function initWithSize(size:CGSize):UIGraphicsImageRenderer;
 

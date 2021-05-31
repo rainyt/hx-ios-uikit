@@ -13,12 +13,6 @@ extern class UIDocumentMenuViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDocumentMenuViewController;
 
-	@:native("documentMenu:didPickDocumentPicker")
-	overload extern inline public function documentMenu(documentMenu:UIDocumentMenuViewController, didPickDocumentPicker:UIDocumentPickerViewController):Void;
-
-	@:native("documentMenuWasCancelled")
-	overload extern inline public function documentMenuWasCancelled(documentMenu:UIDocumentMenuViewController):Void;
-
 	@:native("initWithDocumentTypes:inMode")
 	overload extern inline public function initWithDocumentTypes(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
 

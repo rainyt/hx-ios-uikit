@@ -13,27 +13,6 @@ extern class UITargetedPreview{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UITargetedPreview;
 
-	@:native("initWithContainer:center:transform")
-	overload extern inline public function initWithContainer(container:UIView, center:CGPoint, transform:CGAffineTransform):UITargetedPreview;
-
-	@:native("initWithContainer:center")
-	overload extern inline public function initWithContainer(container:UIView, center:CGPoint):UITargetedPreview;
-
-	@:native("init")
-	overload extern inline public function init():UITargetedPreview;
-
-	@:native("new")
-	overload extern inline public static function new():UITargetedPreview;
-
-	@:native("container")
-	public var container:UIView;
-
-	@:native("center")
-	public var center:CGPoint;
-
-	@:native("transform")
-	public var transform:CGAffineTransform;
-
 	@:native("initWithView:parameters:target")
 	overload extern inline public function initWithView(view:UIView, parameters:__kindofUIPreviewParameters, target:__kindofUIPreviewTarget):UITargetedPreview;
 

@@ -13,12 +13,6 @@ extern class UIFontPickerViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIFontPickerViewController;
 
-	@:native("fontPickerViewControllerDidCancel")
-	overload extern inline public function fontPickerViewControllerDidCancel(viewController:UIFontPickerViewController):Void;
-
-	@:native("fontPickerViewControllerDidPickFont")
-	overload extern inline public function fontPickerViewControllerDidPickFont(viewController:UIFontPickerViewController):Void;
-
 	@:native("initWithConfiguration")
 	overload extern inline public function initWithConfiguration(configuration:UIFontPickerViewControllerConfiguration):UIFontPickerViewController;
 

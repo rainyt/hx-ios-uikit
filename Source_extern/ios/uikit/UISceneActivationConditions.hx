@@ -25,8 +25,5 @@ extern class UISceneActivationConditions{
 	@:native("predicateWithValue:NO]")
 	public var predicateWithValue:NO]:[NSPredicate;
 
-	@:native("targetContentIdentifier")
-	public var targetContentIdentifier:NSString;
-
 
 }

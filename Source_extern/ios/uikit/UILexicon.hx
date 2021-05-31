@@ -13,12 +13,6 @@ extern class UILexicon{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UILexicon;
 
-	@:native("documentText")
-	public var documentText:NSString;
-
-	@:native("userInput")
-	public var userInput:NSString;
-
 	@:native("entries")
 	public var entries:Dynamic;
 

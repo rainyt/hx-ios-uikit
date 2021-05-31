@@ -28,8 +28,5 @@ extern class UIBarButtonItemGroup{
 	@:native("displayingRepresentativeItem")
 	public var displayingRepresentativeItem:Bool;
 
-	@:native("buttonGroup")
-	public var buttonGroup:UIBarButtonItemGroup;
-
 
 }

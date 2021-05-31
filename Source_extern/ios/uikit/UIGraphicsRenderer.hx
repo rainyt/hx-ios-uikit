@@ -13,47 +13,17 @@ extern class UIGraphicsRenderer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIGraphicsRenderer;
 
-	@:native("defaultFormat")
-	overload extern inline public static function defaultFormat():UIGraphicsRenderer;
+	@:native("rendererContextClass")
+	overload extern inline public static function rendererContextClass():Class;
 
-	@:native("preferredFormat")
-	overload extern inline public static function preferredFormat():UIGraphicsRenderer;
+	@:native("contextWithFormat:CF_RETURNS_RETAINED")
+	overload extern inline public static function contextWithFormat(format:UIGraphicsRendererFormat, CF_RETURNS_RETAINED:Dynamic):nullable CGContextRef;
 
-	@:native("bounds")
-	public var bounds:CGRect;
+	@:native("prepareCGContext:withRendererContext")
+	overload extern inline public static function prepareCGContext(context:CGContextRef, withRendererContext:UIGraphicsRendererContext):Void;
 
-	@:native("CGContext")
-	public var CGContext:CGContextRef;
-
-	@:native("format")
-	public var format:UIGraphicsRendererFormat;
-
-	@:native("fillRect")
-	overload extern inline public function fillRect(rect:CGRect):Void;
-
-	@:native("fillRect:blendMode")
-	overload extern inline public function fillRect(rect:CGRect, blendMode:CGBlendMode):Void;
-
-	@:native("strokeRect")
-	overload extern inline public function strokeRect(rect:CGRect):Void;
-
-	@:native("strokeRect:blendMode")
-	overload extern inline public function strokeRect(rect:CGRect, blendMode:CGBlendMode):Void;
-
-	@:native("clipToRect")
-	overload extern inline public function clipToRect(rect:CGRect):Void;
-
-	@:native("initWithBounds")
-	overload extern inline public function initWithBounds(bounds:CGRect):UIGraphicsRenderer;
-
-	@:native("initWithBounds:format")
-	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsRendererFormat):UIGraphicsRenderer;
-
-	@:native("by")
-	public var by:returned;
-
-	@:native("generate")
-	public var generate:to;
+	@:native("runDrawingActions:completionActions:error")
+	overload extern inline public function runDrawingActions(drawingActions:NS_NOESCAPEUIGraphicsDrawingActions, completionActions:NS_NOESCAPEUIGraphicsDrawingActions, error:NSError):BOOL;
 
 
 }

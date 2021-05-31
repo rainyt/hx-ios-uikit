@@ -13,39 +13,6 @@ extern class UITextView{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UITextView;
 
-	@:native("textViewShouldBeginEditing")
-	overload extern inline public function textViewShouldBeginEditing(textView:UITextView):BOOL;
-
-	@:native("textViewShouldEndEditing")
-	overload extern inline public function textViewShouldEndEditing(textView:UITextView):BOOL;
-
-	@:native("textViewDidBeginEditing")
-	overload extern inline public function textViewDidBeginEditing(textView:UITextView):Void;
-
-	@:native("textViewDidEndEditing")
-	overload extern inline public function textViewDidEndEditing(textView:UITextView):Void;
-
-	@:native("textView:shouldChangeTextInRange:replacementText")
-	overload extern inline public function textView(textView:UITextView, shouldChangeTextInRange:NSRange, replacementText:NSString):BOOL;
-
-	@:native("textViewDidChange")
-	overload extern inline public function textViewDidChange(textView:UITextView):Void;
-
-	@:native("textViewDidChangeSelection")
-	overload extern inline public function textViewDidChangeSelection(textView:UITextView):Void;
-
-	@:native("textView:shouldInteractWithURL:inRange:interaction")
-	overload extern inline public function textView(textView:UITextView, shouldInteractWithURL:NSURL, inRange:NSRange, interaction:UITextItemInteraction):BOOL;
-
-	@:native("textView:shouldInteractWithTextAttachment:inRange:interaction")
-	overload extern inline public function textView(textView:UITextView, shouldInteractWithTextAttachment:NSTextAttachment, inRange:NSRange, interaction:UITextItemInteraction):BOOL;
-
-	@:native("textView:shouldInteractWithURL:inRange")
-	overload extern inline public function textView(textView:UITextView, shouldInteractWithURL:NSURL, inRange:NSRange):BOOL;
-
-	@:native("textView:shouldInteractWithTextAttachment:inRange")
-	overload extern inline public function textView(textView:UITextView, shouldInteractWithTextAttachment:NSTextAttachment, inRange:NSRange):BOOL;
-
 	@:native("delegate")
 	public var delegate:Dynamic;
 

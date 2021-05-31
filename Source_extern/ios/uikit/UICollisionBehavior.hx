@@ -13,18 +13,6 @@ extern class UICollisionBehavior{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UICollisionBehavior;
 
-	@:native("collisionBehavior:beganContactForItem:withItem:atPoint")
-	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, beganContactForItem:Dynamic, withItem:Dynamic, atPoint:CGPoint):Void;
-
-	@:native("collisionBehavior:endedContactForItem:withItem")
-	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:Dynamic, withItem:Dynamic):Void;
-
-	@:native("collisionBehavior:beganContactForItem:withBoundaryIdentifier:atPoint")
-	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, beganContactForItem:Dynamic, withBoundaryIdentifier:Dynamic, atPoint:CGPoint):Void;
-
-	@:native("collisionBehavior:endedContactForItem:withBoundaryIdentifier")
-	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:Dynamic, withBoundaryIdentifier:Dynamic):Void;
-
 	@:native("initWithItems")
 	overload extern inline public function initWithItems(items:Dynamic):UICollisionBehavior;
 

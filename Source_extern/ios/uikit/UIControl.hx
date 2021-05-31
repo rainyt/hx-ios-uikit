@@ -109,23 +109,5 @@ extern class UIControl{
 	@:native("menuAttachmentPointForConfiguration:API_AVAILABLE(ios(14.0)")
 	overload extern inline public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration, API_AVAILABLE(ios(14.0):Dynamic):CGPoint;
 
-	@:native("contextMenuInteraction:configurationForMenuAtLocation")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):nullable UIContextMenuConfiguration *;
-
-	@:native("contextMenuInteraction:previewForHighlightingMenuWithConfiguration")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
-
-	@:native("contextMenuInteraction:previewForDismissingMenuWithConfiguration")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
-
-	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator:NS_REQUIRES_SUPER")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:Dynamic, NS_REQUIRES_SUPER:Dynamic):Void;
-
-	@:native("contextMenuInteraction:willEndForConfiguration:animator:NS_REQUIRES_SUPER")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:Dynamic, NS_REQUIRES_SUPER:Dynamic):Void;
-
-	@:native("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
-
 
 }

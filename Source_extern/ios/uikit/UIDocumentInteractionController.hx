@@ -58,44 +58,5 @@ extern class UIDocumentInteractionController{
 	@:native("gestureRecognizers")
 	public var gestureRecognizers:Dynamic;
 
-	@:native("documentInteractionControllerViewControllerForPreview")
-	overload extern inline public function documentInteractionControllerViewControllerForPreview(controller:UIDocumentInteractionController):UIViewController *;
-
-	@:native("documentInteractionControllerRectForPreview")
-	overload extern inline public function documentInteractionControllerRectForPreview(controller:UIDocumentInteractionController):CGRect;
-
-	@:native("documentInteractionControllerViewForPreview")
-	overload extern inline public function documentInteractionControllerViewForPreview(controller:UIDocumentInteractionController):nullable UIView *;
-
-	@:native("documentInteractionControllerWillBeginPreview")
-	overload extern inline public function documentInteractionControllerWillBeginPreview(controller:UIDocumentInteractionController):Void;
-
-	@:native("documentInteractionControllerDidEndPreview")
-	overload extern inline public function documentInteractionControllerDidEndPreview(controller:UIDocumentInteractionController):Void;
-
-	@:native("documentInteractionControllerWillPresentOptionsMenu")
-	overload extern inline public function documentInteractionControllerWillPresentOptionsMenu(controller:UIDocumentInteractionController):Void;
-
-	@:native("documentInteractionControllerDidDismissOptionsMenu")
-	overload extern inline public function documentInteractionControllerDidDismissOptionsMenu(controller:UIDocumentInteractionController):Void;
-
-	@:native("documentInteractionControllerWillPresentOpenInMenu")
-	overload extern inline public function documentInteractionControllerWillPresentOpenInMenu(controller:UIDocumentInteractionController):Void;
-
-	@:native("documentInteractionControllerDidDismissOpenInMenu")
-	overload extern inline public function documentInteractionControllerDidDismissOpenInMenu(controller:UIDocumentInteractionController):Void;
-
-	@:native("documentInteractionController:willBeginSendingToApplication://")
-	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, willBeginSendingToApplication:NSString, //:bundle):Void;
-
-	@:native("documentInteractionController:didEndSendingToApplication")
-	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, didEndSendingToApplication:NSString):Void;
-
-	@:native("documentInteractionController:canPerformAction")
-	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, canPerformAction:SEL):BOOL;
-
-	@:native("documentInteractionController:performAction")
-	overload extern inline public function documentInteractionController(controller:UIDocumentInteractionController, performAction:SEL):BOOL;
-
 
 }

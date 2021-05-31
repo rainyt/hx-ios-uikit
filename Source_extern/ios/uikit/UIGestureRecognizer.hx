@@ -79,26 +79,5 @@ extern class UIGestureRecognizer{
 	@:native("buttonMask")
 	public var buttonMask:UIEventButtonMask;
 
-	@:native("gestureRecognizerShouldBegin")
-	overload extern inline public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):BOOL;
-
-	@:native("gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer")
-	overload extern inline public function gestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer):BOOL;
-
-	@:native("gestureRecognizer:shouldRequireFailureOfGestureRecognizer")
-	overload extern inline public function gestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRequireFailureOfGestureRecognizer:UIGestureRecognizer):BOOL;
-
-	@:native("gestureRecognizer:shouldBeRequiredToFailByGestureRecognizer")
-	overload extern inline public function gestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer:UIGestureRecognizer):BOOL;
-
-	@:native("gestureRecognizer:shouldReceiveTouch")
-	overload extern inline public function gestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldReceiveTouch:UITouch):BOOL;
-
-	@:native("gestureRecognizer:shouldReceivePress")
-	overload extern inline public function gestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldReceivePress:UIPress):BOOL;
-
-	@:native("gestureRecognizer:shouldReceiveEvent:API_AVAILABLE(ios(13.4), tvos(13.4)")
-	overload extern inline public function gestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldReceiveEvent:UIEvent, API_AVAILABLE(ios(13.4), tvos(13.4):Dynamic):BOOL;
-
 
 }

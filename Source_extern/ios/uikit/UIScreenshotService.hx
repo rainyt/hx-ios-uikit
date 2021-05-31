@@ -25,11 +25,5 @@ extern class UIScreenshotService{
 	@:native("windowScene")
 	public var windowScene:UIWindowScene;
 
-	@:native("screenshotService")
-	public var screenshotService:UIScreenshotService;
-
-	@:native("screenshotService:generatePDFRepresentationWithCompletion")
-	overload extern inline public function screenshotService(screenshotService:UIScreenshotService, generatePDFRepresentationWithCompletion:Dynamic):Void;
-
 
 }

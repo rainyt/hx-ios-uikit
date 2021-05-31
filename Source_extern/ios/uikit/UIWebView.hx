@@ -100,17 +100,5 @@ extern class UIWebView{
 	@:native("allowsLinkPreview")
 	public var allowsLinkPreview:Bool;
 
-	@:native("webView:shouldStartLoadWithRequest:navigationType")
-	overload extern inline public function webView(webView:UIWebView, shouldStartLoadWithRequest:NSURLRequest, navigationType:UIWebViewNavigationType):BOOL;
-
-	@:native("webViewDidStartLoad")
-	overload extern inline public function webViewDidStartLoad(webView:UIWebView):Void;
-
-	@:native("webViewDidFinishLoad")
-	overload extern inline public function webViewDidFinishLoad(webView:UIWebView):Void;
-
-	@:native("webView:didFailLoadWithError")
-	overload extern inline public function webView(webView:UIWebView, didFailLoadWithError:NSError):Void;
-
 
 }

@@ -13,12 +13,6 @@ extern class UIColorPickerViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIColorPickerViewController;
 
-	@:native("colorPickerViewControllerDidSelectColor")
-	overload extern inline public function colorPickerViewControllerDidSelectColor(viewController:UIColorPickerViewController):Void;
-
-	@:native("colorPickerViewControllerDidFinish")
-	overload extern inline public function colorPickerViewControllerDidFinish(viewController:UIColorPickerViewController):Void;
-
 	@:native("delegate")
 	public var delegate:Dynamic;
 

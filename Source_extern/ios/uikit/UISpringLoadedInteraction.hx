@@ -31,26 +31,5 @@ extern class UISpringLoadedInteraction{
 	@:native("interactionEffect")
 	public var interactionEffect:Dynamic;
 
-	@:native("shouldAllowInteraction:withContext")
-	overload extern inline public function shouldAllowInteraction(interaction:UISpringLoadedInteraction, withContext:Dynamic):BOOL;
-
-	@:native("interactionDidFinish")
-	overload extern inline public function interactionDidFinish(interaction:UISpringLoadedInteraction):Void;
-
-	@:native("interaction:didChangeWithContext")
-	overload extern inline public function interaction(interaction:UISpringLoadedInteraction, didChangeWithContext:Dynamic):Void;
-
-	@:native("state")
-	public var state:UISpringLoadedInteractionEffectState;
-
-	@:native("targetView")
-	public var targetView:UIView;
-
-	@:native("targetItem")
-	public var targetItem:id;
-
-	@:native("locationInView")
-	overload extern inline public function locationInView(view:UIView):CGPoint;
-
 
 }

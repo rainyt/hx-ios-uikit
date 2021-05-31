@@ -70,8 +70,5 @@ extern class UIDevice{
 	@:native("playInputClick")
 	overload extern inline public function playInputClick():Void;
 
-	@:native("enable")
-	public var enable:will;
-
 
 }

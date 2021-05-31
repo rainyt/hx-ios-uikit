@@ -49,41 +49,5 @@ extern class UISearchDisplayController{
 	@:native("navigationItem")
 	public var navigationItem:UINavigationItem;
 
-	@:native("")
-	overload extern inline public function ():Void;
-
-	@:native("")
-	overload extern inline public function ():Void;
-
-	@:native("")
-	overload extern inline public function ():Void;
-
-	@:native("")
-	overload extern inline public function ():Void;
-
-	@:native("searchDisplayController:didLoadSearchResultsTableView")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, didLoadSearchResultsTableView:UITableView):Void;
-
-	@:native("searchDisplayController:willUnloadSearchResultsTableView")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, willUnloadSearchResultsTableView:UITableView):Void;
-
-	@:native("searchDisplayController:willShowSearchResultsTableView")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, willShowSearchResultsTableView:UITableView):Void;
-
-	@:native("searchDisplayController:didShowSearchResultsTableView")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, didShowSearchResultsTableView:UITableView):Void;
-
-	@:native("searchDisplayController:willHideSearchResultsTableView")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, willHideSearchResultsTableView:UITableView):Void;
-
-	@:native("searchDisplayController:didHideSearchResultsTableView")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, didHideSearchResultsTableView:UITableView):Void;
-
-	@:native("searchDisplayController:shouldReloadTableForSearchString")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, shouldReloadTableForSearchString:NSString):BOOL;
-
-	@:native("searchDisplayController:shouldReloadTableForSearchScope")
-	overload extern inline public function searchDisplayController(controller:UISearchDisplayController, shouldReloadTableForSearchScope:NSInteger):BOOL;
-
 
 }

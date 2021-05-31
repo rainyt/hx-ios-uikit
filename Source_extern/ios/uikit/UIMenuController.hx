@@ -49,14 +49,5 @@ extern class UIMenuController{
 	@:native("menuFrame")
 	public var menuFrame:CGRect;
 
-	@:native("initWithTitle:action")
-	overload extern inline public function initWithTitle(title:NSString, action:SEL):UIMenuController;
-
-	@:native("title")
-	public var title:NSString;
-
-	@:native("action")
-	public var action:;
-
 
 }

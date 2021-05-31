@@ -13,30 +13,6 @@ extern class UICollectionViewFlowLayout{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UICollectionViewFlowLayout;
 
-	@:native("information")
-	public var information:size;
-
-	@:native("of")
-	public var of:piece;
-
-	@:native("collectionView:layout:sizeForItemAtIndexPath")
-	overload extern inline public function collectionView(collectionView:UICollectionView, layout:UICollectionViewLayout, sizeForItemAtIndexPath:NSIndexPath):CGSize;
-
-	@:native("collectionView:layout:insetForSectionAtIndex")
-	overload extern inline public function collectionView(collectionView:UICollectionView, layout:UICollectionViewLayout, insetForSectionAtIndex:NSInteger):UIEdgeInsets;
-
-	@:native("collectionView:layout:minimumLineSpacingForSectionAtIndex")
-	overload extern inline public function collectionView(collectionView:UICollectionView, layout:UICollectionViewLayout, minimumLineSpacingForSectionAtIndex:NSInteger):CGFloat;
-
-	@:native("collectionView:layout:minimumInteritemSpacingForSectionAtIndex")
-	overload extern inline public function collectionView(collectionView:UICollectionView, layout:UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex:NSInteger):CGFloat;
-
-	@:native("collectionView:layout:referenceSizeForHeaderInSection")
-	overload extern inline public function collectionView(collectionView:UICollectionView, layout:UICollectionViewLayout, referenceSizeForHeaderInSection:NSInteger):CGSize;
-
-	@:native("collectionView:layout:referenceSizeForFooterInSection")
-	overload extern inline public function collectionView(collectionView:UICollectionView, layout:UICollectionViewLayout, referenceSizeForFooterInSection:NSInteger):CGSize;
-
 	@:native("minimumLineSpacing")
 	public var minimumLineSpacing:CGFloat;
 

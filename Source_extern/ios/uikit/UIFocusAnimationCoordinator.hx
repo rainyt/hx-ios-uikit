@@ -13,9 +13,6 @@ extern class UIFocusAnimationCoordinator{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIFocusAnimationCoordinator;
 
-	@:native("duration")
-	public var duration:NSTimeInterval;
-
 	@:native("addCoordinatedAnimations:completion")
 	overload extern inline public function addCoordinatedAnimations(animations:Dynamic, completion:Dynamic):Void;
 

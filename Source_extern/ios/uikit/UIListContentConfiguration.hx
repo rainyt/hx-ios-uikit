@@ -97,32 +97,5 @@ extern class UIListContentConfiguration{
 	@:native("textToSecondaryTextVerticalPadding")
 	public var textToSecondaryTextVerticalPadding:CGFloat;
 
-	@:native("initWithConfiguration")
-	overload extern inline public function initWithConfiguration(configuration:UIListContentConfiguration):UIListContentConfiguration;
-
-	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(coder:NSCoder):UIListContentConfiguration;
-
-	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UIListContentConfiguration;
-
-	@:native("init")
-	overload extern inline public function init():UIListContentConfiguration;
-
-	@:native("new")
-	overload extern inline public static function new():UIListContentConfiguration;
-
-	@:native("configuration")
-	public var configuration:UIListContentConfiguration;
-
-	@:native("textLayoutGuide")
-	public var textLayoutGuide:UILayoutGuide;
-
-	@:native("secondaryTextLayoutGuide")
-	public var secondaryTextLayoutGuide:UILayoutGuide;
-
-	@:native("imageLayoutGuide")
-	public var imageLayoutGuide:UILayoutGuide;
-
 
 }

@@ -91,17 +91,5 @@ extern class UINavigationBar{
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:scrollEdgeAppearance;
 
-	@:native("navigationBar:shouldPushItem://:to:return")
-	overload extern inline public function navigationBar(navigationBar:UINavigationBar, shouldPushItem:UINavigationItem, //:called, to:push., return:NO):BOOL;
-
-	@:native("navigationBar:didPushItem:::called:end:animation:push:immediately")
-	overload extern inline public function navigationBar(navigationBar:UINavigationBar, didPushItem:UINavigationItem, :, ://, called:at, end:of, animation:of, push:or, immediately:if):Void;
-
-	@:native("navigationBar:shouldPopItem::same")
-	overload extern inline public function navigationBar(navigationBar:UINavigationBar, shouldPopItem:UINavigationItem, ://, same:as):BOOL;
-
-	@:native("navigationBar:didPopItem")
-	overload extern inline public function navigationBar(navigationBar:UINavigationBar, didPopItem:UINavigationItem):Void;
-
 
 }

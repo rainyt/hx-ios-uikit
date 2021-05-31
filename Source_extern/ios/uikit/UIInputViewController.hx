@@ -13,30 +13,6 @@ extern class UIInputViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIInputViewController;
 
-	@:native("documentContextBeforeInput")
-	public var documentContextBeforeInput:NSString;
-
-	@:native("documentContextAfterInput")
-	public var documentContextAfterInput:NSString;
-
-	@:native("selectedText")
-	public var selectedText:NSString;
-
-	@:native("documentInputMode")
-	public var documentInputMode:UITextInputMode;
-
-	@:native("documentIdentifier")
-	public var documentIdentifier:NSUUID;
-
-	@:native("adjustTextPositionByCharacterOffset")
-	overload extern inline public function adjustTextPositionByCharacterOffset(offset:NSInteger):Void;
-
-	@:native("setMarkedText:selectedRange")
-	overload extern inline public function setMarkedText(markedText:NSString, selectedRange:NSRange):Void;
-
-	@:native("unmarkText")
-	overload extern inline public function unmarkText():Void;
-
 	@:native("inputView")
 	public var inputView:UIInputView;
 

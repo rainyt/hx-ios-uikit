@@ -22,8 +22,5 @@ extern class UIPointerLockState{
 	@:native("locked")
 	public var locked:Bool;
 
-	@:native("pointerLockState")
-	public var pointerLockState:UIPointerLockState;
-
 
 }

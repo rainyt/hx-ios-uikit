@@ -46,29 +46,5 @@ extern class UIPickerView{
 	@:native("selectedRowInComponent:::::::::::::::::://:selected:-1")
 	overload extern inline public function selectedRowInComponent(component:NSInteger, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, //:returns, selected:row., -1:if):NSInteger;
 
-	@:native("numberOfComponentsInPickerView")
-	overload extern inline public function numberOfComponentsInPickerView(pickerView:UIPickerView):NSInteger;
-
-	@:native("pickerView:numberOfRowsInComponent")
-	overload extern inline public function pickerView(pickerView:UIPickerView, numberOfRowsInComponent:NSInteger):NSInteger;
-
-	@:native("pickerView:widthForComponent")
-	overload extern inline public function pickerView(pickerView:UIPickerView, widthForComponent:NSInteger):CGFloat;
-
-	@:native("pickerView:rowHeightForComponent")
-	overload extern inline public function pickerView(pickerView:UIPickerView, rowHeightForComponent:NSInteger):CGFloat;
-
-	@:native("pickerView:titleForRow:forComponent")
-	overload extern inline public function pickerView(pickerView:UIPickerView, titleForRow:NSInteger, forComponent:NSInteger):nullable NSString *;
-
-	@:native("pickerView:attributedTitleForRow:forComponent:API_AVAILABLE(ios(6.0)://:title:favored:both")
-	overload extern inline public function pickerView(pickerView:UIPickerView, attributedTitleForRow:NSInteger, forComponent:NSInteger, API_AVAILABLE(ios(6.0):Dynamic, //:attributed, title:is, favored:if, both:methods):nullable NSAttributedString *;
-
-	@:native("pickerView:viewForRow:forComponent:reusingView")
-	overload extern inline public function pickerView(pickerView:UIPickerView, viewForRow:NSInteger, forComponent:NSInteger, reusingView:UIView):UIView *;
-
-	@:native("pickerView:didSelectRow:inComponent")
-	overload extern inline public function pickerView(pickerView:UIPickerView, didSelectRow:NSInteger, inComponent:NSInteger):Void;
-
 
 }

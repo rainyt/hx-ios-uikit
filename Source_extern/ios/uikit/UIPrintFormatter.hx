@@ -43,41 +43,5 @@ extern class UIPrintFormatter{
 	@:native("drawInRect:forPageAtIndex:API_UNAVAILABLE(tvos::override:to")
 	overload extern inline public function drawInRect(rect:CGRect, forPageAtIndex:NSInteger, API_UNAVAILABLE(tvos:, ://, override:point, to:add):Void;
 
-	@:native("initWithText")
-	overload extern inline public function initWithText(text:NSString):UIPrintFormatter;
-
-	@:native("initWithAttributedText")
-	overload extern inline public function initWithAttributedText(attributedText:NSAttributedString):UIPrintFormatter;
-
-	@:native("drawing")
-	public var drawing:once;
-
-	@:native("attributedText")
-	public var attributedText:NSAttributedString;
-
-	@:native("font")
-	public var font:;
-
-	@:native("color")
-	public var color:;
-
-	@:native("textAlignment")
-	public var textAlignment:NSTextAlignment;
-
-	@:native("initWithMarkupText")
-	overload extern inline public function initWithMarkupText(markupText:NSString):UIPrintFormatter;
-
-	@:native("drawing")
-	public var drawing:once;
-
-	@:native("view")
-	public var view:UIView;
-
-	@:native("viewPrintFormatter")
-	overload extern inline public function viewPrintFormatter():UIViewPrintFormatter *;
-
-	@:native("drawRect:forViewPrintFormatter:API_UNAVAILABLE(tvos:::default")
-	overload extern inline public function drawRect(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter, API_UNAVAILABLE(tvos:, :, ://, default:calls):Void;
-
 
 }

@@ -13,27 +13,6 @@ extern class UIGraphicsPDFRenderer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIGraphicsPDFRenderer;
 
-	@:native("documentInfo")
-	public var documentInfo:Dynamic;
-
-	@:native("pdfContextBounds")
-	public var pdfContextBounds:CGRect;
-
-	@:native("beginPage;")
-	overload extern inline public function beginPage;():Void;
-
-	@:native("beginPageWithBounds:pageInfo")
-	overload extern inline public function beginPageWithBounds(bounds:CGRect, pageInfo:Dynamic):Void;
-
-	@:native("setURL:forRect")
-	overload extern inline public function setURL(url:NSURL, forRect:CGRect):Void;
-
-	@:native("addDestinationWithName:atPoint")
-	overload extern inline public function addDestinationWithName(name:NSString, atPoint:CGPoint):Void;
-
-	@:native("setDestinationWithName:forRect")
-	overload extern inline public function setDestinationWithName(name:NSString, forRect:CGRect):Void;
-
 	@:native("initWithBounds:format")
 	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
 

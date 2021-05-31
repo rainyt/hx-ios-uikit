@@ -34,17 +34,5 @@ extern class UIStoryboardSegue{
 	@:native("perform;")
 	overload extern inline public function perform;():Void;
 
-	@:native("init")
-	overload extern inline public function init():UIStoryboardSegue;
-
-	@:native("sourceViewController")
-	public var sourceViewController:UIViewController;
-
-	@:native("unwindAction")
-	public var unwindAction:SEL;
-
-	@:native("sender")
-	public var sender:id;
-
 
 }

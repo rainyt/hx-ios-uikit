@@ -5,19 +5,9 @@ import sys.io.File;
  */
 class ExternBaseClass {
 	/**
-	 * 包名
-	 */
-	public var pkg:String;
-
-	/**
 	 * 类名
 	 */
-	public var classname:String;
-
-	/**
-	 * 定义识别
-	 */
-	public var typedefs:Map<String, ExternTypedefClass> = [];
+	public var className:String;
 
 	/**
 	 * Import引入
@@ -34,43 +24,43 @@ class ExternBaseClass {
 	 */
 	private var funcAndAttr:Array<ExternBaseClassFunProperty> = [];
 
-	public function new(classname:String, pkg:String, file:String) {
-		this.pkg = pkg;
-		this.classname = classname.substr(0, classname.lastIndexOf("."));
-		_hdata = File.getContent(file);
+	public function new(_hdata:String,hextern:ExternHFile) {
+		var pclassName = _hdata.substr(_hdata.indexOf("@interface") + 10);
+		for (i in 0...pclassName.length) {
+			if(pclassName.charAt(i) != " "){
+				pclassName = pclassName.substr(i);
+				break;
+			}
+		}
+		pclassName = pclassName.substr(0, pclassName.indexOf(" "));
+		trace("pclassname2",pclassName);
+		if(pclassName == "")
+		{
+			throw "错误解析：" + _hdata;
+		}
+		this.className = StringTools.replace(pclassName, " ", "");
 		funcAndAttr.push({
 			type: ExternBaseClassType.FUNC,
 			name: "alloc",
-			returnClass: this.classname,
+			returnClass: this.className,
 			isStatic: true,
 			args: null
 		});
 		funcAndAttr.push({
 			type: ExternBaseClassType.FUNC,
 			name: "autorelease",
-			returnClass: this.classname,
+			returnClass: this.className,
 			isStatic: true,
 			args: null
 		});
-		var isTypedef = false;
-		var read = "";
 		var harray = _hdata.split("\n");
 		for (index => value in harray) {
-			if (isTypedef || value.indexOf("typedef") == 0) {
-				isTypedef = true;
-				read += value;
-				if (read.indexOf(";") != -1) {
-					isTypedef = false;
-					var t = new ExternTypedefClass(read);
-					typedefs.set(t.className, t);
-					read = "";
-				}
-			} else if (value.indexOf("@property") == 0) {
+			if (value.indexOf("@property") == 0) {
 				// 属性解析
-				funcAndAttr.push(ObjcProperty.parsing(typedefs, this.classname, value));
+				funcAndAttr.push(ObjcProperty.parsing(hextern.typedefs, this.className, value));
 			} else if (value.indexOf("-") == 0 || value.indexOf("+") == 0) {
 				// 对象方法
-				funcAndAttr.push(ObjcFun.parsing(typedefs, this.classname, value));
+				funcAndAttr.push(ObjcFun.parsing(hextern.typedefs, this.className, value));
 			}
 		}
 	}
@@ -79,15 +69,15 @@ class ExternBaseClass {
 	 * 导出Haxe文件
 	 * @return String
 	 */
-	public function toHaxeFile():String {
+	public function toHaxeFile(pkg:String):String {
 		var haxe = "package " + pkg + ";\n\n";
 		// 统一引入
 		haxe += "import " + ObjcImport.toImport("NSString") + ";\n";
 		haxe += "import " + ObjcImport.toImport("NSData") + ";\n";
 		haxe += "@:objc\n";
-		haxe += "@:native(\"" + classname + "\")\n";
+		haxe += "@:native(\"" + className + "\")\n";
 		haxe += "@:include(\"UIKit/UIKit.h\")\n";
-		haxe += "extern class " + classname + "{\n\n";
+		haxe += "extern class " + className + "{\n\n";
 		for (index => value in funcAndAttr) {
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:

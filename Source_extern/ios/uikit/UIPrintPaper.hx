@@ -22,8 +22,5 @@ extern class UIPrintPaper{
 	@:native("printableRect")
 	public var printableRect:CGRect;
 
-	@:native("printRect")
-	overload extern inline public function printRect():CGRect;
-
 
 }

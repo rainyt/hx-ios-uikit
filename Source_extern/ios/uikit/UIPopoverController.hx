@@ -58,14 +58,5 @@ extern class UIPopoverController{
 	@:native("popoverBackgroundViewClass")
 	public var popoverBackgroundViewClass:Class;
 
-	@:native("popoverControllerShouldDismissPopover")
-	overload extern inline public function popoverControllerShouldDismissPopover(popoverController:UIPopoverController):BOOL;
-
-	@:native("popoverControllerDidDismissPopover")
-	overload extern inline public function popoverControllerDidDismissPopover(popoverController:UIPopoverController):Void;
-
-	@:native("popoverController:willRepositionPopoverToRect:inView")
-	overload extern inline public function popoverController(popoverController:UIPopoverController, willRepositionPopoverToRect:inoutCGRect, inView:inoutUIView__nonnull__nonnull):Void;
-
 
 }

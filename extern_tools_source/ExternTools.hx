@@ -32,16 +32,30 @@ class ExternTools {
 			return;
 		}
 		trace("parsing " + pkg + ":" + haxefile);
-		var c = new ExternBaseClass(haxefile, "ios." + pkg.toLowerCase(), hfile);
+		var classpkg = "ios." + pkg.toLowerCase();
+		// var c = new ExternBaseClass(haxefile, "ios." + pkg.toLowerCase(), hfile);
+		var c = new ExternHFile(hfile);
 		var haxedir = out + "/ios/" + pkg.toLowerCase();
 		if (!FileSystem.exists(haxedir)) {
 			FileSystem.createDirectory(haxedir);
 		}
-		File.saveContent(haxedir + "/" + haxefile, c.toHaxeFile());
-		for (key => value in c.typedefs) {
-			if (value.createHaxeFile) {
-				File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile("ios." + pkg.toLowerCase()));
-			}
+		// 保存类型
+		for (key => value in c.classdefs) {
+			if (value.className.indexOf("<") == -1 && value.className.indexOf("(") == -1)
+				File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile(classpkg));
 		}
+		// 保存定义
+		for (key => value in c.typedefs) {
+			if (value.className.indexOf("<") == -1 && value.className.indexOf("(") == -1)
+				if (value.createHaxeFile)
+					File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile(classpkg));
+		}
+
+		// File.saveContent(haxedir + "/" + haxefile, c.toHaxeFile());
+		// for (key => value in c.typedefs) {
+		// 	if (value.createHaxeFile) {
+		// 		File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile("ios." + pkg.toLowerCase()));
+		// 	}
+		// }
 	}
 }

@@ -28,44 +28,5 @@ extern class UIPointerStyle{
 	@:native("new")
 	overload extern inline public static function new():UIPointerStyle;
 
-	@:native("preview")
-	public var preview:UITargetedPreview;
-
-	@:native("effectWithPreview")
-	overload extern inline public static function effectWithPreview(preview:UITargetedPreview):UIPointerStyle;
-
-	@:native("init")
-	overload extern inline public function init():UIPointerStyle;
-
-	@:native("new")
-	overload extern inline public static function new():UIPointerStyle;
-
-	@:native("to")
-	public var to:Defaults;
-
-	@:native("to")
-	public var to:Defaults;
-
-	@:native("to")
-	public var to:Defaults;
-
-	@:native("shapeWithPath")
-	overload extern inline public static function shapeWithPath(path:UIBezierPath):UIPointerStyle;
-
-	@:native("shapeWithRoundedRect")
-	overload extern inline public static function shapeWithRoundedRect(rect:CGRect):UIPointerStyle;
-
-	@:native("shapeWithRoundedRect:cornerRadius")
-	overload extern inline public static function shapeWithRoundedRect(rect:CGRect, cornerRadius:CGFloat):UIPointerStyle;
-
-	@:native("beamWithPreferredLength:axis")
-	overload extern inline public static function beamWithPreferredLength(length:CGFloat, axis:UIAxis):UIPointerStyle;
-
-	@:native("init")
-	overload extern inline public function init():UIPointerStyle;
-
-	@:native("new")
-	overload extern inline public static function new():UIPointerStyle;
-
 
 }

@@ -13,15 +13,6 @@ extern class UIDocumentPickerViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDocumentPickerViewController;
 
-	@:native("documentPicker:didPickDocumentsAtURLs")
-	overload extern inline public function documentPicker(controller:UIDocumentPickerViewController, didPickDocumentsAtURLs:Dynamic):Void;
-
-	@:native("documentPickerWasCancelled")
-	overload extern inline public function documentPickerWasCancelled(controller:UIDocumentPickerViewController):Void;
-
-	@:native("documentPicker:didPickDocumentAtURL")
-	overload extern inline public function documentPicker(controller:UIDocumentPickerViewController, didPickDocumentAtURL:NSURL):Void;
-
 	@:native("initWithDocumentTypes:inMode:NS_DESIGNATED_INITIALIZER")
 	overload extern inline public function initWithDocumentTypes(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 

@@ -64,23 +64,5 @@ extern class UIActionSheet{
 	@:native("dismissWithClickedButtonIndex:animated")
 	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;
 
-	@:native("actionSheet:clickedButtonAtIndex:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3)")
-	overload extern inline public function actionSheet(actionSheet:UIActionSheet, clickedButtonAtIndex:NSInteger, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic):Void;
-
-	@:native("actionSheetCancel:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3)")
-	overload extern inline public function actionSheetCancel(actionSheet:UIActionSheet, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic):Void;
-
-	@:native("willPresentActionSheet:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3)::before:and")
-	overload extern inline public function willPresentActionSheet(actionSheet:UIActionSheet, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic, ://, before:animation, and:showing):Void;
-
-	@:native("didPresentActionSheet:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):")
-	overload extern inline public function didPresentActionSheet(actionSheet:UIActionSheet, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic, ://):Void;
-
-	@:native("actionSheet:willDismissWithButtonIndex:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3)://:animation")
-	overload extern inline public function actionSheet(actionSheet:UIActionSheet, willDismissWithButtonIndex:NSInteger, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic, //:before, animation:and):Void;
-
-	@:native("actionSheet:didDismissWithButtonIndex:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):")
-	overload extern inline public function actionSheet(actionSheet:UIActionSheet, didDismissWithButtonIndex:NSInteger, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic, ://):Void;
-
 
 }

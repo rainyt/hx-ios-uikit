@@ -37,8 +37,5 @@ extern class NSTextAttachment{
 	@:native("fileWrapper")
 	public var fileWrapper:NSFileWrapper;
 
-	@:native("attributedStringWithAttachment")
-	overload extern inline public static function attributedStringWithAttachment(attachment:NSTextAttachment):NSAttributedString *;
-
 
 }

@@ -79,20 +79,5 @@ extern class UITabBar{
 	@:native("trailingAccessoryView")
 	public var trailingAccessoryView:UIView;
 
-	@:native("tabBar:didSelectItem://:when:new:is:by:user")
-	overload extern inline public function tabBar(tabBar:UITabBar, didSelectItem:UITabBarItem, //:called, when:a, new:view, is:selected, by:the, user:Dynamic):Void;
-
-	@:native("tabBar:willBeginCustomizingItems:API_UNAVAILABLE(tvos:::::::::::called:customize:is:items:current")
-	overload extern inline public function tabBar(tabBar:UITabBar, willBeginCustomizingItems:Dynamic, API_UNAVAILABLE(tvos:, :, :, :, :, :, :, :, :, :, ://, called:before, customize:sheet, is:shown., items:is, current:item):Void;
-
-	@:native("tabBar:didBeginCustomizingItems:API_UNAVAILABLE(tvos::::::::::://:after:sheet:shown.:is")
-	overload extern inline public function tabBar(tabBar:UITabBar, didBeginCustomizingItems:Dynamic, API_UNAVAILABLE(tvos:, :, :, :, :, :, :, :, :, :, :, //:called, after:customize, sheet:is, shown.:items, is:current):Void;
-
-	@:native("tabBar:willEndCustomizingItems:changed:API_UNAVAILABLE(tvos:called:customize:is:items:new")
-	overload extern inline public function tabBar(tabBar:UITabBar, willEndCustomizingItems:Dynamic, changed:Bool, API_UNAVAILABLE(tvos://, called:before, customize:sheet, is:hidden., items:is, new:item):Void;
-
-	@:native("tabBar:didEndCustomizingItems:changed:API_UNAVAILABLE(tvos://:after:sheet:hidden.:is")
-	overload extern inline public function tabBar(tabBar:UITabBar, didEndCustomizingItems:Dynamic, changed:Bool, API_UNAVAILABLE(tvos:, //:called, after:customize, sheet:is, hidden.:items, is:new):Void;
-
 
 }

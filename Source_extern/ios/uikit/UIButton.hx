@@ -154,14 +154,5 @@ extern class UIButton{
 	@:native("imageRectForContentRect")
 	overload extern inline public function imageRectForContentRect(contentRect:CGRect):CGRect;
 
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
-
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
-
-	@:native("ios(2.0,")
-	public var ios(2.0,:Dynamic;
-
 
 }

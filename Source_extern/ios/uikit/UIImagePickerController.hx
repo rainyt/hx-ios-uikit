@@ -82,14 +82,5 @@ extern class UIImagePickerController{
 	@:native("")
 	public var :;
 
-	@:native("imagePickerController:didFinishPickingImage:editingInfo")
-	overload extern inline public function imagePickerController(picker:UIImagePickerController, didFinishPickingImage:UIImage, editingInfo:Dynamic):Void;
-
-	@:native("imagePickerController:didFinishPickingMediaWithInfo")
-	overload extern inline public function imagePickerController(picker:UIImagePickerController, didFinishPickingMediaWithInfo:Dynamic):Void;
-
-	@:native("imagePickerControllerDidCancel")
-	overload extern inline public function imagePickerControllerDidCancel(picker:UIImagePickerController):Void;
-
 
 }

@@ -13,24 +13,6 @@ extern class UIBarButtonItemAppearance{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIBarButtonItemAppearance;
 
-	@:native("init")
-	overload extern inline public function init():UIBarButtonItemAppearance;
-
-	@:native("new")
-	overload extern inline public static function new():UIBarButtonItemAppearance;
-
-	@:native("titleTextAttributes")
-	public var titleTextAttributes:Dynamic;
-
-	@:native("titlePositionAdjustment")
-	public var titlePositionAdjustment:UIOffset;
-
-	@:native("backgroundImage")
-	public var backgroundImage:UIImage;
-
-	@:native("backgroundImagePositionAdjustment")
-	public var backgroundImagePositionAdjustment:UIOffset;
-
 	@:native("init;")
 	overload extern inline public function init;():UIBarButtonItemAppearance;
 

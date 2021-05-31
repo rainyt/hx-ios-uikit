@@ -13,23 +13,11 @@ extern class UIDragPreview{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDragPreview;
 
-	@:native("initWithView:parameters")
-	overload extern inline public function initWithView(view:UIView, parameters:UIDragPreviewParameters):UIDragPreview;
+	@:native("previewForURL:API_AVAILABLE(ios(11.0)")
+	overload extern inline public static function previewForURL(url:NSURL, API_AVAILABLE(ios(11.0):Dynamic):UIDragPreview;
 
-	@:native("initWithView")
-	overload extern inline public function initWithView(view:UIView):UIDragPreview;
-
-	@:native("init")
-	overload extern inline public function init():UIDragPreview;
-
-	@:native("new")
-	overload extern inline public static function new():UIDragPreview;
-
-	@:native("view")
-	public var view:UIView;
-
-	@:native("parameters")
-	public var parameters:UIDragPreviewParameters;
+	@:native("previewForURL:title:API_AVAILABLE(ios(11.0)")
+	overload extern inline public static function previewForURL(url:NSURL, title:NSString_Nullable, API_AVAILABLE(ios(11.0):Dynamic):UIDragPreview;
 
 
 }

@@ -139,38 +139,5 @@ extern class UISearchBar{
 	@:native("positionAdjustmentForSearchBarIcon:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function positionAdjustmentForSearchBarIcon(icon:UISearchBarIcon, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIOffset;
 
-	@:native("searchBarShouldBeginEditing::::::::::::return:to:become")
-	overload extern inline public function searchBarShouldBeginEditing(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, ://, return:NO, to:not, become:first):BOOL;
-
-	@:native("searchBarTextDidBeginEditing::::::::::://:when")
-	overload extern inline public function searchBarTextDidBeginEditing(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, //:called, when:text):Void;
-
-	@:native("searchBarShouldEndEditing:::::::::::::return:to:resign")
-	overload extern inline public function searchBarShouldEndEditing(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, :, ://, return:NO, to:not, resign:first):BOOL;
-
-	@:native("searchBarTextDidEndEditing:::::::::::://:when")
-	overload extern inline public function searchBarTextDidEndEditing(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, :, //:called, when:text):Void;
-
-	@:native("searchBar:textDidChange:://:when:changes")
-	overload extern inline public function searchBar(searchBar:UISearchBar, textDidChange:NSString, :, //:called, when:text, changes:Dynamic):Void;
-
-	@:native("searchBar:shouldChangeTextInRange:replacementText:API_AVAILABLE(ios(3.0):called")
-	overload extern inline public function searchBar(searchBar:UISearchBar, shouldChangeTextInRange:NSRange, replacementText:NSString, API_AVAILABLE(ios(3.0)://, called:before):BOOL;
-
-	@:native("searchBarSearchButtonClicked::::::::::://:when:search")
-	overload extern inline public function searchBarSearchButtonClicked(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, //:called, when:keyboard, search:button):Void;
-
-	@:native("searchBarBookmarkButtonClicked:API_UNAVAILABLE(tvos:called:bookmark")
-	overload extern inline public function searchBarBookmarkButtonClicked(searchBar:UISearchBar, API_UNAVAILABLE(tvos://, called:when, bookmark:button):Void;
-
-	@:native("searchBarCancelButtonClicked:API_UNAVAILABLE(tvos::called:cancel")
-	overload extern inline public function searchBarCancelButtonClicked(searchBar:UISearchBar, API_UNAVAILABLE(tvos:, ://, called:when, cancel:button):Void;
-
-	@:native("searchBarResultsListButtonClicked:API_AVAILABLE(ios(3.2)://:when:results")
-	overload extern inline public function searchBarResultsListButtonClicked(searchBar:UISearchBar, API_AVAILABLE(ios(3.2):Dynamic, //:called, when:search, results:button):Void;
-
-	@:native("searchBar:selectedScopeButtonIndexDidChange")
-	overload extern inline public function searchBar(searchBar:UISearchBar, selectedScopeButtonIndexDidChange:NSInteger):Void;
-
 
 }
