@@ -8,6 +8,12 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIImageResizingMode(Int) from Int to Int {
 
+	@:native("UIImageResizingModeTile")
+	var UIImageResizingModeTile;
+
+	@:native("UIImageResizingModeStretch")
+	var UIImageResizingModeStretch;
+
 	@:native("UIImageResizingModeStretch")
 	var UIImageResizingModeStretch;
 

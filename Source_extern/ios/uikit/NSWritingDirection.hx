@@ -11,5 +11,11 @@ extern abstract NSWritingDirection(Int) from Int to Int {
 	@:native("NSWritingDirectionNatural")
 	var NSWritingDirectionNatural;
 
+	@:native("NSWritingDirectionLeftToRight")
+	var NSWritingDirectionLeftToRight;
+
+	@:native("NSWritingDirectionRightToLeft")
+	var NSWritingDirectionRightToLeft;
+
 
 }

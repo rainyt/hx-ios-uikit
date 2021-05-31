@@ -11,26 +11,53 @@ extern abstract UITextDropPerformer(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
-	@:native("if")
-	var if;
+	@:native("*")
+	var *;
 
 	@:native("*")
 	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropPerformerView")
+	var UITextDropPerformerView;
 
 	@:native("/*")
 	var /*;
 
-	@:native("and")
-	var and;
+	@:native("*")
+	var *;
 
 	@:native("*")
 	var *;
 
-	@:native("then")
-	var then;
+	@:native("*")
+	var *;
 
-	@:native("as")
-	var as;
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropPerformerDelegate")
+	var UITextDropPerformerDelegate;
 
 
 }

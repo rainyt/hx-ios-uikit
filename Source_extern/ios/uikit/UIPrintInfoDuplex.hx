@@ -14,11 +14,8 @@ extern abstract UIPrintInfoDuplex(Int) from Int to Int {
 	@:native("UIPrintInfoDuplexLongEdge")
 	var UIPrintInfoDuplexLongEdge;
 
-	@:native("flipped")
-	var flipped;
-
-	@:native("same")
-	var same;
+	@:native("UIPrintInfoDuplexShortEdge")
+	var UIPrintInfoDuplexShortEdge;
 
 
 }

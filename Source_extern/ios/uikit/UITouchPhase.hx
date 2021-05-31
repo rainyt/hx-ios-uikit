@@ -11,17 +11,26 @@ extern abstract UITouchPhase(Int) from Int to Int {
 	@:native("UITouchPhaseBegan")
 	var UITouchPhaseBegan;
 
-	@:native("tvos(13.4))")
-	var tvos(13.4));
+	@:native("UITouchPhaseMoved")
+	var UITouchPhaseMoved;
 
-	@:native("tvos(13.4))")
-	var tvos(13.4));
+	@:native("UITouchPhaseStationary")
+	var UITouchPhaseStationary;
 
-	@:native("but")
-	var but;
+	@:native("UITouchPhaseEnded")
+	var UITouchPhaseEnded;
 
-	@:native("tvos(13.4))")
-	var tvos(13.4));
+	@:native("UITouchPhaseCancelled")
+	var UITouchPhaseCancelled;
+
+	@:native("UITouchPhaseRegionEntered")
+	var UITouchPhaseRegionEntered;
+
+	@:native("UITouchPhaseRegionMoved")
+	var UITouchPhaseRegionMoved;
+
+	@:native("UITouchPhaseRegionExited")
+	var UITouchPhaseRegionExited;
 
 
 }

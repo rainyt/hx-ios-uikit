@@ -11,5 +11,11 @@ extern abstract UISwitchStyle(Int) from Int to Int {
 	@:native("UISwitchStyleAutomatic")
 	var UISwitchStyleAutomatic;
 
+	@:native("UISwitchStyleCheckbox")
+	var UISwitchStyleCheckbox;
+
+	@:native("UISwitchStyleSliding")
+	var UISwitchStyleSliding;
+
 
 }

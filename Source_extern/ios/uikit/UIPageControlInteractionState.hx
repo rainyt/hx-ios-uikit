@@ -8,11 +8,14 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIPageControlInteractionState(Int) from Int to Int {
 
-	@:native("where")
-	var where;
+	@:native("UIPageControlInteractionStateNone")
+	var UIPageControlInteractionStateNone;
 
-	@:native("discrete")
-	var discrete;
+	@:native("UIPageControlInteractionStateDiscrete")
+	var UIPageControlInteractionStateDiscrete;
+
+	@:native("UIPageControlInteractionStateContinuous")
+	var UIPageControlInteractionStateContinuous;
 
 
 }

@@ -11,17 +11,26 @@ extern abstract UIPencilPreferredAction(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
-	@:native("or")
-	var or;
+	@:native("UIPencilPreferredActionIgnore")
+	var UIPencilPreferredActionIgnore;
 
 	@:native("/*")
 	var /*;
 
-	@:native("/*")
-	var /*;
+	@:native("UIPencilPreferredActionSwitchEraser")
+	var UIPencilPreferredActionSwitchEraser;
 
 	@:native("/*")
 	var /*;
+
+	@:native("UIPencilPreferredActionSwitchPrevious")
+	var UIPencilPreferredActionSwitchPrevious;
+
+	@:native("/*")
+	var /*;
+
+	@:native("UIPencilPreferredActionShowColorPalette")
+	var UIPencilPreferredActionShowColorPalette;
 
 
 }

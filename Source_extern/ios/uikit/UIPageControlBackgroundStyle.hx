@@ -8,5 +8,14 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIPageControlBackgroundStyle(Int) from Int to Int {
 
+	@:native("UIPageControlBackgroundStyleAutomatic")
+	var UIPageControlBackgroundStyleAutomatic;
+
+	@:native("UIPageControlBackgroundStyleProminent")
+	var UIPageControlBackgroundStyleProminent;
+
+	@:native("UIPageControlBackgroundStyleMinimal")
+	var UIPageControlBackgroundStyleMinimal;
+
 
 }

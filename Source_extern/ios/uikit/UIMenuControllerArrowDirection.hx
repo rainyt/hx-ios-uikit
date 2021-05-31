@@ -11,6 +11,9 @@ extern abstract UIMenuControllerArrowDirection(Int) from Int to Int {
 	@:native("UIMenuControllerArrowDefault")
 	var UIMenuControllerArrowDefault;
 
+	@:native("UIMenuControllerArrowUp")
+	var UIMenuControllerArrowUp;
+
 	@:native("UIMenuControllerArrowDown")
 	var UIMenuControllerArrowDown;
 

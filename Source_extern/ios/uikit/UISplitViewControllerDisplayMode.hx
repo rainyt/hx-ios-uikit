@@ -17,53 +17,26 @@ extern abstract UISplitViewControllerDisplayMode(Int) from Int to Int {
 	@:native("UISplitViewControllerDisplayModeOneBesideSecondary")
 	var UISplitViewControllerDisplayModeOneBesideSecondary;
 
-	@:native("Primary")
-	var Primary;
+	@:native("UISplitViewControllerDisplayModeOneOverSecondary")
+	var UISplitViewControllerDisplayModeOneOverSecondary;
 
-	@:native("Primary")
-	var Primary;
+	@:native("UISplitViewControllerDisplayModeTwoBesideSecondary")
+	var UISplitViewControllerDisplayModeTwoBesideSecondary;
 
-	@:native("supplementary")
-	var supplementary;
+	@:native("UISplitViewControllerDisplayModeTwoOverSecondary")
+	var UISplitViewControllerDisplayModeTwoOverSecondary;
 
-	@:native("and")
-	var and;
+	@:native("UISplitViewControllerDisplayModeTwoDisplaceSecondary")
+	var UISplitViewControllerDisplayModeTwoDisplaceSecondary;
 
-	@:native("and")
-	var and;
-
-	@:native("supplementary")
-	var supplementary;
-
-	@:native("but")
-	var but;
-
-	@:native("noninteractive")
-	var noninteractive;
-
-	@:native("ios(8.0")
-	var ios(8.0;
-
-	@:native("14.0))")
-	var 14.0));
+	@:native("UISplitViewControllerDisplayModePrimaryHidden")
+	var UISplitViewControllerDisplayModePrimaryHidden;
 
 	@:native("UISplitViewControllerDisplayModeAllVisible")
 	var UISplitViewControllerDisplayModeAllVisible;
 
-	@:native("ios(8.0")
-	var ios(8.0;
-
-	@:native("14.0))")
-	var 14.0));
-
 	@:native("UISplitViewControllerDisplayModePrimaryOverlay")
 	var UISplitViewControllerDisplayModePrimaryOverlay;
-
-	@:native("ios(8.0")
-	var ios(8.0;
-
-	@:native("14.0))")
-	var 14.0));
 
 
 }

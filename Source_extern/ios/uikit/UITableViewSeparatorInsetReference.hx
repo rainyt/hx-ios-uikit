@@ -8,5 +8,11 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UITableViewSeparatorInsetReference(Int) from Int to Int {
 
+	@:native("UITableViewSeparatorInsetFromCellEdges")
+	var UITableViewSeparatorInsetFromCellEdges;
+
+	@:native("UITableViewSeparatorInsetFromAutomaticInsets")
+	var UITableViewSeparatorInsetFromAutomaticInsets;
+
 
 }

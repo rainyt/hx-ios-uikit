@@ -11,6 +11,9 @@ extern abstract UIBaselineAdjustment(Int) from Int to Int {
 	@:native("UIBaselineAdjustmentAlignBaselines")
 	var UIBaselineAdjustmentAlignBaselines;
 
+	@:native("UIBaselineAdjustmentAlignCenters")
+	var UIBaselineAdjustmentAlignCenters;
+
 	@:native("UIBaselineAdjustmentNone")
 	var UIBaselineAdjustmentNone;
 

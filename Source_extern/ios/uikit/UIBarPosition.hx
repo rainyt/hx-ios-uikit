@@ -14,20 +14,11 @@ extern abstract UIBarPosition(Int) from Int to Int {
 	@:native("UIBarPositionBottom")
 	var UIBarPositionBottom;
 
-	@:native("and")
-	var and;
+	@:native("UIBarPositionTop")
+	var UIBarPositionTop;
 
-	@:native("shadow")
-	var shadow;
-
-	@:native("and")
-	var and;
-
-	@:native("shadow")
-	var shadow;
-
-	@:native("and")
-	var and;
+	@:native("UIBarPositionTopAttached")
+	var UIBarPositionTopAttached;
 
 
 }

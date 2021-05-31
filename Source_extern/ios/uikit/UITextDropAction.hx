@@ -11,20 +11,35 @@ extern abstract UITextDropAction(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
-	@:native("/*")
-	var /*;
+	@:native("*/")
+	var */;
 
-	@:native("replaces")
-	var replaces;
-
-	@:native("this")
-	var this;
+	@:native("UITextDropActionInsert")
+	var UITextDropActionInsert;
 
 	@:native("/*")
 	var /*;
 
 	@:native("*")
 	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropActionReplaceSelection")
+	var UITextDropActionReplaceSelection;
+
+	@:native("/*")
+	var /*;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropActionReplaceAll")
+	var UITextDropActionReplaceAll;
 
 
 }

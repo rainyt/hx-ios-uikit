@@ -14,14 +14,14 @@ extern abstract UISegmentedControlSegment(Int) from Int to Int {
 	@:native("UISegmentedControlSegmentLeft")
 	var UISegmentedControlSegmentLeft;
 
-	@:native("leftmost")
-	var leftmost;
+	@:native("UISegmentedControlSegmentCenter")
+	var UISegmentedControlSegmentCenter;
 
-	@:native("rightmost")
-	var rightmost;
+	@:native("UISegmentedControlSegmentRight")
+	var UISegmentedControlSegmentRight;
 
-	@:native("capped")
-	var capped;
+	@:native("UISegmentedControlSegmentAlone")
+	var UISegmentedControlSegmentAlone;
 
 
 }

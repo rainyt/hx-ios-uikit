@@ -17,26 +17,14 @@ extern abstract UIBarMetrics(Int) from Int to Int {
 	@:native("UIBarMetricsDefaultPrompt")
 	var UIBarMetricsDefaultPrompt;
 
-	@:native("such")
-	var such;
+	@:native("UIBarMetricsCompactPrompt")
+	var UIBarMetricsCompactPrompt;
 
 	@:native("UIBarMetricsLandscapePhone")
 	var UIBarMetricsLandscapePhone;
 
-	@:native("8_0")
-	var 8_0;
-
-	@:native(""Use")
-	var "Use;
-
 	@:native("UIBarMetricsLandscapePhonePrompt")
 	var UIBarMetricsLandscapePhonePrompt;
-
-	@:native("8_0")
-	var 8_0;
-
-	@:native(""Use")
-	var "Use;
 
 
 }

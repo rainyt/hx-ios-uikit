@@ -80,9 +80,6 @@ extern abstract UIBarButtonSystemItem(Int) from Int to Int {
 	@:native("UIBarButtonSystemItemPageCurl")
 	var UIBarButtonSystemItemPageCurl;
 
-	@:native("11_0)")
-	var 11_0);
-
 	@:native("UIBarButtonSystemItemClose")
 	var UIBarButtonSystemItemClose;
 

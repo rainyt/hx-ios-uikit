@@ -17,11 +17,5 @@ extern abstract UITableViewCellSeparatorStyle(Int) from Int to Int {
 	@:native("UITableViewCellSeparatorStyleSingleLineEtched")
 	var UITableViewCellSeparatorStyleSingleLineEtched;
 
-	@:native("11_0")
-	var 11_0;
-
-	@:native(""Use")
-	var "Use;
-
 
 }

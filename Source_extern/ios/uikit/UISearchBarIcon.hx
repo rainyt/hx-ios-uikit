@@ -11,5 +11,14 @@ extern abstract UISearchBarIcon(Int) from Int to Int {
 	@:native("UISearchBarIconSearch")
 	var UISearchBarIconSearch;
 
+	@:native("UISearchBarIconClear")
+	var UISearchBarIconClear;
+
+	@:native("UISearchBarIconBookmark")
+	var UISearchBarIconBookmark;
+
+	@:native("UISearchBarIconResultsList")
+	var UISearchBarIconResultsList;
+
 
 }

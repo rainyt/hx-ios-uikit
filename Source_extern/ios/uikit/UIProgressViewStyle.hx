@@ -11,5 +11,8 @@ extern abstract UIProgressViewStyle(Int) from Int to Int {
 	@:native("UIProgressViewStyleDefault")
 	var UIProgressViewStyleDefault;
 
+	@:native("UIProgressViewStyleBar")
+	var UIProgressViewStyleBar;
+
 
 }

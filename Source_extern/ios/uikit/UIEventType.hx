@@ -23,20 +23,11 @@ extern abstract UIEventType(Int) from Int to Int {
 	@:native("UIEventTypeScroll")
 	var UIEventTypeScroll;
 
-	@:native("tvos(13.4))")
-	var tvos(13.4));
-
 	@:native("UIEventTypeHover")
 	var UIEventTypeHover;
 
-	@:native("tvos(13.4))")
-	var tvos(13.4));
-
 	@:native("UIEventTypeTransform")
 	var UIEventTypeTransform;
-
-	@:native("tvos(13.4))")
-	var tvos(13.4));
 
 
 }

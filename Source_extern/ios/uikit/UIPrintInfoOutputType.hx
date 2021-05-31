@@ -11,20 +11,14 @@ extern abstract UIPrintInfoOutputType(Int) from Int to Int {
 	@:native("UIPrintInfoOutputGeneral")
 	var UIPrintInfoOutputGeneral;
 
-	@:native("normal")
-	var normal;
+	@:native("UIPrintInfoOutputPhoto")
+	var UIPrintInfoOutputPhoto;
 
-	@:native("graphics")
-	var graphics;
+	@:native("UIPrintInfoOutputGrayscale")
+	var UIPrintInfoOutputGrayscale;
 
-	@:native("and")
-	var and;
-
-	@:native("best")
-	var best;
-
-	@:native("best")
-	var best;
+	@:native("UIPrintInfoOutputPhotoGrayscale")
+	var UIPrintInfoOutputPhotoGrayscale;
 
 
 }

@@ -11,5 +11,17 @@ extern abstract UITableViewCellAccessoryType(Int) from Int to Int {
 	@:native("UITableViewCellAccessoryNone")
 	var UITableViewCellAccessoryNone;
 
+	@:native("UITableViewCellAccessoryDisclosureIndicator")
+	var UITableViewCellAccessoryDisclosureIndicator;
+
+	@:native("UITableViewCellAccessoryDetailDisclosureButton")
+	var UITableViewCellAccessoryDetailDisclosureButton;
+
+	@:native("UITableViewCellAccessoryCheckmark")
+	var UITableViewCellAccessoryCheckmark;
+
+	@:native("UITableViewCellAccessoryDetailButton")
+	var UITableViewCellAccessoryDetailButton;
+
 
 }

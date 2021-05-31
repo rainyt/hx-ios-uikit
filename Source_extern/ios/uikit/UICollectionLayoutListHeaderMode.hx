@@ -11,5 +11,11 @@ extern abstract UICollectionLayoutListHeaderMode(Int) from Int to Int {
 	@:native("UICollectionLayoutListHeaderModeNone")
 	var UICollectionLayoutListHeaderModeNone;
 
+	@:native("UICollectionLayoutListHeaderModeSupplementary")
+	var UICollectionLayoutListHeaderModeSupplementary;
+
+	@:native("UICollectionLayoutListHeaderModeFirstItemInSection")
+	var UICollectionLayoutListHeaderModeFirstItemInSection;
+
 
 }

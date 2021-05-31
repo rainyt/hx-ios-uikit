@@ -14,8 +14,11 @@ extern abstract UISemanticContentAttribute(Int) from Int to Int {
 	@:native("UISemanticContentAttributePlayback")
 	var UISemanticContentAttributePlayback;
 
-	@:native("e.g.")
-	var e.g.;
+	@:native("UISemanticContentAttributeSpatial")
+	var UISemanticContentAttributeSpatial;
+
+	@:native("UISemanticContentAttributeForceLeftToRight")
+	var UISemanticContentAttributeForceLeftToRight;
 
 	@:native("UISemanticContentAttributeForceRightToLeft")
 	var UISemanticContentAttributeForceRightToLeft;

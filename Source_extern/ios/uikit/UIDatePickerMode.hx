@@ -11,26 +11,14 @@ extern abstract UIDatePickerMode(Int) from Int to Int {
 	@:native("UIDatePickerModeTime")
 	var UIDatePickerModeTime;
 
-	@:native("minute")
-	var minute;
+	@:native("UIDatePickerModeDate")
+	var UIDatePickerModeDate;
 
-	@:native("and")
-	var and;
+	@:native("UIDatePickerModeDateAndTime")
+	var UIDatePickerModeDateAndTime;
 
-	@:native("day")
-	var day;
-
-	@:native("and")
-	var and;
-
-	@:native("hour")
-	var hour;
-
-	@:native("minute")
-	var minute;
-
-	@:native("and")
-	var and;
+	@:native("UIDatePickerModeCountDownTimer")
+	var UIDatePickerModeCountDownTimer;
 
 
 }

@@ -11,11 +11,8 @@ extern abstract NSTextLayoutOrientation(Int) from Int to Int {
 	@:native("NSTextLayoutOrientationHorizontal")
 	var NSTextLayoutOrientationHorizontal;
 
-	@:native("grow")
-	var grow;
-
-	@:native("grow")
-	var grow;
+	@:native("NSTextLayoutOrientationVertical")
+	var NSTextLayoutOrientationVertical;
 
 
 }

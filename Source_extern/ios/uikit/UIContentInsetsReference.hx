@@ -11,5 +11,17 @@ extern abstract UIContentInsetsReference(Int) from Int to Int {
 	@:native("UIContentInsetsReferenceAutomatic")
 	var UIContentInsetsReferenceAutomatic;
 
+	@:native("UIContentInsetsReferenceNone")
+	var UIContentInsetsReferenceNone;
+
+	@:native("UIContentInsetsReferenceSafeArea")
+	var UIContentInsetsReferenceSafeArea;
+
+	@:native("UIContentInsetsReferenceLayoutMargins")
+	var UIContentInsetsReferenceLayoutMargins;
+
+	@:native("UIContentInsetsReferenceReadableContent")
+	var UIContentInsetsReferenceReadableContent;
+
 
 }

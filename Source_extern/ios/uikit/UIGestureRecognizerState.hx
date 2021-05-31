@@ -11,11 +11,23 @@ extern abstract UIGestureRecognizerState(Int) from Int to Int {
 	@:native("UIGestureRecognizerStatePossible")
 	var UIGestureRecognizerStatePossible;
 
-	@:native("but")
-	var but;
+	@:native("UIGestureRecognizerStateBegan")
+	var UIGestureRecognizerStateBegan;
 
-	@:native("a")
-	var a;
+	@:native("UIGestureRecognizerStateChanged")
+	var UIGestureRecognizerStateChanged;
+
+	@:native("UIGestureRecognizerStateEnded")
+	var UIGestureRecognizerStateEnded;
+
+	@:native("UIGestureRecognizerStateCancelled")
+	var UIGestureRecognizerStateCancelled;
+
+	@:native("UIGestureRecognizerStateFailed")
+	var UIGestureRecognizerStateFailed;
+
+	@:native("UIGestureRecognizerStateRecognized")
+	var UIGestureRecognizerStateRecognized;
 
 
 }

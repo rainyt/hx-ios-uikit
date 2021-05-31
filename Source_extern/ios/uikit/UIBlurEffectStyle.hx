@@ -11,6 +11,12 @@ extern abstract UIBlurEffectStyle(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
+	@:native("*/")
+	var */;
+
+	@:native("UIBlurEffectStyleExtraLight")
+	var UIBlurEffectStyleExtraLight;
+
 	@:native("UIBlurEffectStyleLight")
 	var UIBlurEffectStyleLight;
 
@@ -26,104 +32,92 @@ extern abstract UIBlurEffectStyle(Int) from Int to Int {
 	@:native("*")
 	var *;
 
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UIBlurEffectStyleRegular")
+	var UIBlurEffectStyleRegular;
+
 	@:native("/*")
 	var /*;
 
-	@:native("Dark")
-	var Dark;
+	@:native("*/")
+	var */;
 
-	@:native("or")
-	var or;
+	@:native("UIBlurEffectStyleProminent")
+	var UIBlurEffectStyleProminent;
 
 	@:native("/*")
 	var /*;
 
-	@:native("watchos)")
-	var watchos);
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UIBlurEffectStyleSystemUltraThinMaterial")
+	var UIBlurEffectStyleSystemUltraThinMaterial;
 
 	@:native("UIBlurEffectStyleSystemThinMaterial")
 	var UIBlurEffectStyleSystemThinMaterial;
 
-	@:native("watchos)")
-	var watchos);
-
 	@:native("UIBlurEffectStyleSystemMaterial")
 	var UIBlurEffectStyleSystemMaterial;
-
-	@:native("watchos)")
-	var watchos);
 
 	@:native("UIBlurEffectStyleSystemThickMaterial")
 	var UIBlurEffectStyleSystemThickMaterial;
 
-	@:native("watchos)")
-	var watchos);
-
 	@:native("UIBlurEffectStyleSystemChromeMaterial")
 	var UIBlurEffectStyleSystemChromeMaterial;
-
-	@:native("watchos)")
-	var watchos);
 
 	@:native("/*")
 	var /*;
 
-	@:native("watchos)")
-	var watchos);
+	@:native("*/")
+	var */;
+
+	@:native("UIBlurEffectStyleSystemUltraThinMaterialLight")
+	var UIBlurEffectStyleSystemUltraThinMaterialLight;
 
 	@:native("UIBlurEffectStyleSystemThinMaterialLight")
 	var UIBlurEffectStyleSystemThinMaterialLight;
 
-	@:native("watchos)")
-	var watchos);
-
 	@:native("UIBlurEffectStyleSystemMaterialLight")
 	var UIBlurEffectStyleSystemMaterialLight;
-
-	@:native("watchos)")
-	var watchos);
 
 	@:native("UIBlurEffectStyleSystemThickMaterialLight")
 	var UIBlurEffectStyleSystemThickMaterialLight;
 
-	@:native("watchos)")
-	var watchos);
-
 	@:native("UIBlurEffectStyleSystemChromeMaterialLight")
 	var UIBlurEffectStyleSystemChromeMaterialLight;
-
-	@:native("watchos)")
-	var watchos);
 
 	@:native("UIBlurEffectStyleSystemUltraThinMaterialDark")
 	var UIBlurEffectStyleSystemUltraThinMaterialDark;
 
-	@:native("watchos)")
-	var watchos);
-
 	@:native("UIBlurEffectStyleSystemThinMaterialDark")
 	var UIBlurEffectStyleSystemThinMaterialDark;
-
-	@:native("watchos)")
-	var watchos);
 
 	@:native("UIBlurEffectStyleSystemMaterialDark")
 	var UIBlurEffectStyleSystemMaterialDark;
 
-	@:native("watchos)")
-	var watchos);
-
 	@:native("UIBlurEffectStyleSystemThickMaterialDark")
 	var UIBlurEffectStyleSystemThickMaterialDark;
 
-	@:native("watchos)")
-	var watchos);
-
 	@:native("UIBlurEffectStyleSystemChromeMaterialDark")
 	var UIBlurEffectStyleSystemChromeMaterialDark;
-
-	@:native("watchos)")
-	var watchos);
 
 
 }

@@ -14,5 +14,17 @@ extern abstract UIUserInterfaceIdiom(Int) from Int to Int {
 	@:native("UIUserInterfaceIdiomPhone")
 	var UIUserInterfaceIdiomPhone;
 
+	@:native("UIUserInterfaceIdiomPad")
+	var UIUserInterfaceIdiomPad;
+
+	@:native("UIUserInterfaceIdiomTV")
+	var UIUserInterfaceIdiomTV;
+
+	@:native("UIUserInterfaceIdiomCarPlay")
+	var UIUserInterfaceIdiomCarPlay;
+
+	@:native("UIUserInterfaceIdiomMac")
+	var UIUserInterfaceIdiomMac;
+
 
 }

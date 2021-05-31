@@ -11,6 +11,9 @@ extern abstract UIKeyboardAppearance(Int) from Int to Int {
 	@:native("UIKeyboardAppearanceDefault")
 	var UIKeyboardAppearanceDefault;
 
+	@:native("UIKeyboardAppearanceDark")
+	var UIKeyboardAppearanceDark;
+
 	@:native("UIKeyboardAppearanceLight")
 	var UIKeyboardAppearanceLight;
 

@@ -11,14 +11,38 @@ extern abstract UITextDropEditability(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropEditabilityNo")
+	var UITextDropEditabilityNo;
+
 	@:native("/*")
 	var /*;
 
-	@:native("but")
-	var but;
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropEditabilityTemporary")
+	var UITextDropEditabilityTemporary;
 
 	@:native("/*")
 	var /*;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropEditabilityYes")
+	var UITextDropEditabilityYes;
 
 
 }

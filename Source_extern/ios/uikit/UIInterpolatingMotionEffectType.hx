@@ -11,14 +11,26 @@ extern abstract UIInterpolatingMotionEffectType(Int) from Int to Int {
 	@:native("/*!")
 	var /*!;
 
-	@:native("the")
-	var the;
+	@:native("relative")
+	var relative;
+
+	@:native("maximum")
+	var maximum;
+
+	@:native("UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis")
+	var UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis;
 
 	@:native("/*!")
 	var /*!;
 
-	@:native("the")
-	var the;
+	@:native("relative")
+	var relative;
+
+	@:native("all")
+	var all;
+
+	@:native("UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis")
+	var UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis;
 
 
 }

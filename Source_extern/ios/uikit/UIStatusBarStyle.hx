@@ -11,26 +11,17 @@ extern abstract UIStatusBarStyle(Int) from Int to Int {
 	@:native("UIStatusBarStyleDefault")
 	var UIStatusBarStyleDefault;
 
-	@:native("for")
-	var for;
+	@:native("UIStatusBarStyleLightContent")
+	var UIStatusBarStyleLightContent;
 
-	@:native("for")
-	var for;
+	@:native("UIStatusBarStyleDarkContent")
+	var UIStatusBarStyleDarkContent;
 
-	@:native("7_0")
-	var 7_0;
-
-	@:native(""Use")
-	var "Use;
+	@:native("UIStatusBarStyleBlackTranslucent")
+	var UIStatusBarStyleBlackTranslucent;
 
 	@:native("UIStatusBarStyleBlackOpaque")
 	var UIStatusBarStyleBlackOpaque;
-
-	@:native("7_0")
-	var 7_0;
-
-	@:native(""Use")
-	var "Use;
 
 
 }

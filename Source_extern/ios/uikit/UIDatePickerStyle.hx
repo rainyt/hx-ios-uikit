@@ -8,8 +8,17 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIDatePickerStyle(Int) from Int to Int {
 
-	@:native("watchos)")
-	var watchos);
+	@:native("UIDatePickerStyleAutomatic")
+	var UIDatePickerStyleAutomatic;
+
+	@:native("UIDatePickerStyleWheels")
+	var UIDatePickerStyleWheels;
+
+	@:native("UIDatePickerStyleCompact")
+	var UIDatePickerStyleCompact;
+
+	@:native("UIDatePickerStyleInline")
+	var UIDatePickerStyleInline;
 
 
 }

@@ -11,6 +11,12 @@ extern abstract UIImageSymbolScale(Int) from Int to Int {
 	@:native("UIImageSymbolScaleDefault")
 	var UIImageSymbolScaleDefault;
 
+	@:native("UIImageSymbolScaleUnspecified")
+	var UIImageSymbolScaleUnspecified;
+
+	@:native("UIImageSymbolScaleSmall")
+	var UIImageSymbolScaleSmall;
+
 	@:native("UIImageSymbolScaleMedium")
 	var UIImageSymbolScaleMedium;
 

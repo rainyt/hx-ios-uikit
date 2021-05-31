@@ -8,11 +8,11 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UICellAccessoryOutlineDisclosureStyle(Int) from Int to Int {
 
-	@:native("where")
-	var where;
+	@:native("UICellAccessoryOutlineDisclosureStyleAutomatic")
+	var UICellAccessoryOutlineDisclosureStyleAutomatic;
 
-	@:native("where")
-	var where;
+	@:native("UICellAccessoryOutlineDisclosureStyleHeader")
+	var UICellAccessoryOutlineDisclosureStyleHeader;
 
 
 }

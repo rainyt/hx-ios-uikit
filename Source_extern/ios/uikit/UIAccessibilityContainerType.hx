@@ -14,23 +14,14 @@ extern abstract UIAccessibilityContainerType(Int) from Int to Int {
 	@:native("UIAccessibilityContainerTypeDataTable")
 	var UIAccessibilityContainerTypeDataTable;
 
-	@:native("you")
-	var you;
+	@:native("UIAccessibilityContainerTypeList")
+	var UIAccessibilityContainerTypeList;
 
 	@:native("UIAccessibilityContainerTypeLandmark")
 	var UIAccessibilityContainerTypeLandmark;
 
 	@:native("UIAccessibilityContainerTypeSemanticGroup")
 	var UIAccessibilityContainerTypeSemanticGroup;
-
-	@:native("tvos(13.0))")
-	var tvos(13.0));
-
-	@:native("such")
-	var such;
-
-	@:native("in")
-	var in;
 
 
 }

@@ -11,11 +11,11 @@ extern abstract UISearchBarStyle(Int) from Int to Int {
 	@:native("UISearchBarStyleDefault")
 	var UISearchBarStyleDefault;
 
-	@:native("Messages")
-	var Messages;
+	@:native("UISearchBarStyleProminent")
+	var UISearchBarStyleProminent;
 
-	@:native("Notes")
-	var Notes;
+	@:native("UISearchBarStyleMinimal")
+	var UISearchBarStyleMinimal;
 
 
 }

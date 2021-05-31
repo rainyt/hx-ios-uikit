@@ -11,11 +11,14 @@ extern abstract UIScreenOverscanCompensation(Int) from Int to Int {
 	@:native("UIScreenOverscanCompensationScale")
 	var UIScreenOverscanCompensationScale;
 
-	@:native("9_0")
-	var 9_0;
+	@:native("UIScreenOverscanCompensationInsetBounds")
+	var UIScreenOverscanCompensationInsetBounds;
 
-	@:native(""Use")
-	var "Use;
+	@:native("UIScreenOverscanCompensationNone")
+	var UIScreenOverscanCompensationNone;
+
+	@:native("UIScreenOverscanCompensationInsetApplicationFrame")
+	var UIScreenOverscanCompensationInsetApplicationFrame;
 
 
 }

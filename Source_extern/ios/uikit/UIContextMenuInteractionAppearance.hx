@@ -14,8 +14,8 @@ extern abstract UIContextMenuInteractionAppearance(Int) from Int to Int {
 	@:native("UIContextMenuInteractionAppearanceRich")
 	var UIContextMenuInteractionAppearanceRich;
 
-	@:native("compact")
-	var compact;
+	@:native("UIContextMenuInteractionAppearanceCompact")
+	var UIContextMenuInteractionAppearanceCompact;
 
 
 }

@@ -11,5 +11,11 @@ extern abstract UIPointerEffectTintMode(Int) from Int to Int {
 	@:native("UIPointerEffectTintModeNone")
 	var UIPointerEffectTintModeNone;
 
+	@:native("UIPointerEffectTintModeOverlay")
+	var UIPointerEffectTintModeOverlay;
+
+	@:native("UIPointerEffectTintModeUnderlay")
+	var UIPointerEffectTintModeUnderlay;
+
 
 }

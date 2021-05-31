@@ -11,6 +11,9 @@ extern abstract UIActionSheetStyle(Int) from Int to Int {
 	@:native("UIActionSheetStyleAutomatic")
 	var UIActionSheetStyleAutomatic;
 
+	@:native("UIActionSheetStyleDefault")
+	var UIActionSheetStyleDefault;
+
 	@:native("UIActionSheetStyleBlackTranslucent")
 	var UIActionSheetStyleBlackTranslucent;
 

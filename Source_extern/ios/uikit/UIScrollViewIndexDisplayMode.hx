@@ -11,5 +11,8 @@ extern abstract UIScrollViewIndexDisplayMode(Int) from Int to Int {
 	@:native("UIScrollViewIndexDisplayModeAutomatic")
 	var UIScrollViewIndexDisplayModeAutomatic;
 
+	@:native("UIScrollViewIndexDisplayModeAlwaysHidden")
+	var UIScrollViewIndexDisplayModeAlwaysHidden;
+
 
 }

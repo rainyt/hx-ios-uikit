@@ -14,6 +14,18 @@ extern abstract UIViewContentMode(Int) from Int to Int {
 	@:native("UIViewContentModeScaleAspectFit")
 	var UIViewContentModeScaleAspectFit;
 
+	@:native("UIViewContentModeScaleAspectFill")
+	var UIViewContentModeScaleAspectFill;
+
+	@:native("UIViewContentModeRedraw")
+	var UIViewContentModeRedraw;
+
+	@:native("UIViewContentModeCenter")
+	var UIViewContentModeCenter;
+
+	@:native("UIViewContentModeTop")
+	var UIViewContentModeTop;
+
 	@:native("UIViewContentModeBottom")
 	var UIViewContentModeBottom;
 

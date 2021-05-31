@@ -11,14 +11,17 @@ extern abstract UITouchType(Int) from Int to Int {
 	@:native("UITouchTypeDirect")
 	var UITouchTypeDirect;
 
-	@:native("use")
-	var use;
+	@:native("UITouchTypeIndirect")
+	var UITouchTypeIndirect;
 
-	@:native("tvos(13.4))")
-	var tvos(13.4));
+	@:native("UITouchTypePencil")
+	var UITouchTypePencil;
 
-	@:native("indirect")
-	var indirect;
+	@:native("UITouchTypeStylus")
+	var UITouchTypeStylus;
+
+	@:native("UITouchTypeIndirectPointer")
+	var UITouchTypeIndirectPointer;
 
 
 }

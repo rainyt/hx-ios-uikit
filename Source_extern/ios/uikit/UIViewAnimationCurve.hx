@@ -11,5 +11,14 @@ extern abstract UIViewAnimationCurve(Int) from Int to Int {
 	@:native("UIViewAnimationCurveEaseInOut")
 	var UIViewAnimationCurveEaseInOut;
 
+	@:native("UIViewAnimationCurveEaseIn")
+	var UIViewAnimationCurveEaseIn;
+
+	@:native("UIViewAnimationCurveEaseOut")
+	var UIViewAnimationCurveEaseOut;
+
+	@:native("UIViewAnimationCurveLinear")
+	var UIViewAnimationCurveLinear;
+
 
 }

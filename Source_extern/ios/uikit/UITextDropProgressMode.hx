@@ -11,8 +11,23 @@ extern abstract UITextDropProgressMode(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropProgressModeSystem")
+	var UITextDropProgressModeSystem;
+
 	@:native("/*")
 	var /*;
+
+	@:native("*/")
+	var */;
+
+	@:native("UITextDropProgressModeCustom")
+	var UITextDropProgressModeCustom;
 
 
 }

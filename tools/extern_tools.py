@@ -412,8 +412,14 @@ class ExternTypedefClass:
         self.enums = []
         self.className = None
         self.createHaxeFile = False
+        tmp = None
         startIndex = None
-        self.createHaxeFile = (((value.find("typedef NS_ENUM") if ((startIndex is None)) else HxString.indexOfImpl(value,"typedef NS_ENUM",startIndex))) == 0)
+        if (((value.find("typedef NS_ENUM") if ((startIndex is None)) else HxString.indexOfImpl(value,"typedef NS_ENUM",startIndex))) != 0):
+            startIndex = None
+            tmp = (((value.find("typedef NS_OPTIONS") if ((startIndex is None)) else HxString.indexOfImpl(value,"typedef NS_OPTIONS",startIndex))) == 0)
+        else:
+            tmp = True
+        self.createHaxeFile = tmp
         if self.createHaxeFile:
             startIndex = None
             cContent = HxString.substr(value,(((value.find("(") if ((startIndex is None)) else HxString.indexOfImpl(value,"(",startIndex))) + 1),None)
@@ -423,8 +429,7 @@ class ExternTypedefClass:
             carr = cContent.split(",")
             self.className = (carr[1] if 1 < len(carr) else None)
             self.parentClassName = (carr[0] if 0 < len(carr) else None)
-            enumContent = StringTools.replace(value,"\n","")
-            enumContent = StringTools.replace(enumContent,"\t","")
+            enumContent = value
             startIndex = None
             enumContent = HxString.substr(enumContent,(((enumContent.find("{") if ((startIndex is None)) else HxString.indexOfImpl(enumContent,"{",startIndex))) + 1),None)
             startIndex1 = None
@@ -437,7 +442,7 @@ class ExternTypedefClass:
                 check = enumContent.find("}", startLeft, len(enumContent))
                 _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
             enumContent = HxString.substr(enumContent,0,_hx_len)
-            e = enumContent.split(",")
+            e = enumContent.split("\n")
             _g_current = 0
             _g_array = e
             while (_g_current < len(_g_array)):
@@ -463,6 +468,7 @@ class ExternTypedefClass:
                     tmp = True
                 if tmp:
                     continue
+                e3 = StringTools.replace(e3,",","")
                 _this = self.enums
                 _this.append(e3)
         else:

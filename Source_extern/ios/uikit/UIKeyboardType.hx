@@ -11,23 +11,41 @@ extern abstract UIKeyboardType(Int) from Int to Int {
 	@:native("UIKeyboardTypeDefault")
 	var UIKeyboardTypeDefault;
 
-	@:native("۰-۹")
-	var ۰-۹;
+	@:native("UIKeyboardTypeASCIICapable")
+	var UIKeyboardTypeASCIICapable;
 
-	@:native("०-९")
-	var ०-९;
+	@:native("UIKeyboardTypeNumbersAndPunctuation")
+	var UIKeyboardTypeNumbersAndPunctuation;
 
-	@:native("etc.).")
-	var etc.).;
+	@:native("UIKeyboardTypeURL")
+	var UIKeyboardTypeURL;
 
-	@:native("*")
-	var *;
+	@:native("UIKeyboardTypeNumberPad")
+	var UIKeyboardTypeNumberPad;
 
-	@:native("0")
-	var 0;
+	@:native("UIKeyboardTypePhonePad")
+	var UIKeyboardTypePhonePad;
 
-	@:native("with")
-	var with;
+	@:native("UIKeyboardTypeNamePhonePad")
+	var UIKeyboardTypeNamePhonePad;
+
+	@:native("UIKeyboardTypeEmailAddress")
+	var UIKeyboardTypeEmailAddress;
+
+	@:native("UIKeyboardTypeDecimalPad")
+	var UIKeyboardTypeDecimalPad;
+
+	@:native("UIKeyboardTypeTwitter")
+	var UIKeyboardTypeTwitter;
+
+	@:native("UIKeyboardTypeWebSearch")
+	var UIKeyboardTypeWebSearch;
+
+	@:native("UIKeyboardTypeASCIICapableNumberPad")
+	var UIKeyboardTypeASCIICapableNumberPad;
+
+	@:native("UIKeyboardTypeAlphabet")
+	var UIKeyboardTypeAlphabet;
 
 
 }

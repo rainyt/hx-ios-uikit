@@ -11,29 +11,110 @@ extern abstract UIDropOperation(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
-	@:native("the")
-	var the;
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
 
 	@:native("/*")
 	var /*;
 
-	@:native("but")
-	var but;
+	@:native("*/")
+	var */;
+
+	@:native("UIDropOperationCancel")
+	var UIDropOperationCancel;
 
 	@:native("/*")
 	var /*;
 
-	@:native("the")
-	var the;
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UIDropOperationForbidden")
+	var UIDropOperationForbidden;
 
 	@:native("/*")
 	var /*;
 
-	@:native("the")
-	var the;
+	@:native("*")
+	var *;
 
-	@:native("and")
-	var and;
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("/*")
+	var /*;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UIDropOperationCopy")
+	var UIDropOperationCopy;
+
+	@:native("/*")
+	var /*;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*")
+	var *;
+
+	@:native("*/")
+	var */;
+
+	@:native("UIDropOperationMove")
+	var UIDropOperationMove;
 
 
 }

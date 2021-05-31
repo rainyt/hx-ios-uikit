@@ -11,17 +11,14 @@ extern abstract UISceneCollectionJoinBehavior(Int) from Int to Int {
 	@:native("UISceneCollectionJoinBehaviorAutomatic")
 	var UISceneCollectionJoinBehaviorAutomatic;
 
-	@:native("add")
-	var add;
+	@:native("UISceneCollectionJoinBehaviorPreferred")
+	var UISceneCollectionJoinBehaviorPreferred;
 
-	@:native("ignoring")
-	var ignoring;
+	@:native("UISceneCollectionJoinBehaviorDisallowed")
+	var UISceneCollectionJoinBehaviorDisallowed;
 
-	@:native("add")
-	var add;
-
-	@:native("in")
-	var in;
+	@:native("UISceneCollectionJoinBehaviorPreferredWithoutActivating")
+	var UISceneCollectionJoinBehaviorPreferredWithoutActivating;
 
 
 }

@@ -8,8 +8,14 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UINavigationItemLargeTitleDisplayMode(Int) from Int to Int {
 
-	@:native("then")
-	var then;
+	@:native("UINavigationItemLargeTitleDisplayModeAutomatic")
+	var UINavigationItemLargeTitleDisplayModeAutomatic;
+
+	@:native("UINavigationItemLargeTitleDisplayModeAlways")
+	var UINavigationItemLargeTitleDisplayModeAlways;
+
+	@:native("UINavigationItemLargeTitleDisplayModeNever")
+	var UINavigationItemLargeTitleDisplayModeNever;
 
 
 }

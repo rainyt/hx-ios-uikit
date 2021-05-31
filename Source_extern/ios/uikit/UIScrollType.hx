@@ -11,5 +11,8 @@ extern abstract UIScrollType(Int) from Int to Int {
 	@:native("UIScrollTypeDiscrete")
 	var UIScrollTypeDiscrete;
 
+	@:native("UIScrollTypeContinuous")
+	var UIScrollTypeContinuous;
+
 
 }

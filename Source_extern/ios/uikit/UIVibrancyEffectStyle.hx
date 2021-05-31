@@ -11,6 +11,12 @@ extern abstract UIVibrancyEffectStyle(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
+	@:native("*/")
+	var */;
+
+	@:native("UIVibrancyEffectStyleLabel")
+	var UIVibrancyEffectStyleLabel;
+
 	@:native("UIVibrancyEffectStyleSecondaryLabel")
 	var UIVibrancyEffectStyleSecondaryLabel;
 
@@ -23,6 +29,12 @@ extern abstract UIVibrancyEffectStyle(Int) from Int to Int {
 	@:native("/*")
 	var /*;
 
+	@:native("*/")
+	var */;
+
+	@:native("UIVibrancyEffectStyleFill")
+	var UIVibrancyEffectStyleFill;
+
 	@:native("UIVibrancyEffectStyleSecondaryFill")
 	var UIVibrancyEffectStyleSecondaryFill;
 
@@ -31,6 +43,12 @@ extern abstract UIVibrancyEffectStyle(Int) from Int to Int {
 
 	@:native("/*")
 	var /*;
+
+	@:native("*/")
+	var */;
+
+	@:native("UIVibrancyEffectStyleSeparator")
+	var UIVibrancyEffectStyleSeparator;
 
 
 }

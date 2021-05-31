@@ -11,14 +11,14 @@ extern abstract UIScrollViewContentInsetAdjustmentBehavior(Int) from Int to Int 
 	@:native("UIScrollViewContentInsetAdjustmentAutomatic")
 	var UIScrollViewContentInsetAdjustmentAutomatic;
 
-	@:native("but")
-	var but;
+	@:native("UIScrollViewContentInsetAdjustmentScrollableAxes")
+	var UIScrollViewContentInsetAdjustmentScrollableAxes;
 
-	@:native("regardless")
-	var regardless;
+	@:native("UIScrollViewContentInsetAdjustmentNever")
+	var UIScrollViewContentInsetAdjustmentNever;
 
-	@:native("contentSize.width/height")
-	var contentSize.width/height;
+	@:native("UIScrollViewContentInsetAdjustmentAlways")
+	var UIScrollViewContentInsetAdjustmentAlways;
 
 
 }

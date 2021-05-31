@@ -8,11 +8,14 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UIEventSubtype(Int) from Int to Int {
 
-	@:native("available")
-	var available;
+	@:native("UIEventSubtypeNone")
+	var UIEventSubtypeNone;
 
-	@:native("available")
-	var available;
+	@:native("UIEventSubtypeMotionShake")
+	var UIEventSubtypeMotionShake;
+
+	@:native("UIEventSubtypeRemoteControlPlay")
+	var UIEventSubtypeRemoteControlPlay;
 
 	@:native("UIEventSubtypeRemoteControlPause")
 	var UIEventSubtypeRemoteControlPause;

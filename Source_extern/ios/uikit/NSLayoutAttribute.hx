@@ -41,8 +41,17 @@ extern abstract NSLayoutAttribute(Int) from Int to Int {
 	@:native("NSLayoutAttributeLastBaseline")
 	var NSLayoutAttributeLastBaseline;
 
-	@:native("ios(8.0))")
-	var ios(8.0));
+	@:native("NSLayoutAttributeBaseline")
+	var NSLayoutAttributeBaseline;
+
+	@:native("NSLayoutAttributeBaseline")
+	var NSLayoutAttributeBaseline;
+
+	@:native("NSLayoutAttributeFirstBaseline")
+	var NSLayoutAttributeFirstBaseline;
+
+	@:native("NSLayoutAttributeLeftMargin")
+	var NSLayoutAttributeLeftMargin;
 
 	@:native("NSLayoutAttributeRightMargin")
 	var NSLayoutAttributeRightMargin;
@@ -64,6 +73,9 @@ extern abstract NSLayoutAttribute(Int) from Int to Int {
 
 	@:native("NSLayoutAttributeCenterYWithinMargins")
 	var NSLayoutAttributeCenterYWithinMargins;
+
+	@:native("NSLayoutAttributeNotAnAttribute")
+	var NSLayoutAttributeNotAnAttribute;
 
 
 }

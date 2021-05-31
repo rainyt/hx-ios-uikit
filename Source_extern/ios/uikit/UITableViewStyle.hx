@@ -11,5 +11,11 @@ extern abstract UITableViewStyle(Int) from Int to Int {
 	@:native("UITableViewStylePlain")
 	var UITableViewStylePlain;
 
+	@:native("UITableViewStyleGrouped")
+	var UITableViewStyleGrouped;
+
+	@:native("UITableViewStyleInsetGrouped")
+	var UITableViewStyleInsetGrouped;
+
 
 }

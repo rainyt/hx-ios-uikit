@@ -8,8 +8,14 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UICellConfigurationDropState(Int) from Int to Int {
 
-	@:native("but")
-	var but;
+	@:native("UICellConfigurationDropStateNone")
+	var UICellConfigurationDropStateNone;
+
+	@:native("UICellConfigurationDropStateNotTargeted")
+	var UICellConfigurationDropStateNotTargeted;
+
+	@:native("UICellConfigurationDropStateTargeted")
+	var UICellConfigurationDropStateTargeted;
 
 
 }

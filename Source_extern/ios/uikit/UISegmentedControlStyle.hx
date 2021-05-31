@@ -11,5 +11,14 @@ extern abstract UISegmentedControlStyle(Int) from Int to Int {
 	@:native("UISegmentedControlStylePlain")
 	var UISegmentedControlStylePlain;
 
+	@:native("UISegmentedControlStyleBordered")
+	var UISegmentedControlStyleBordered;
+
+	@:native("UISegmentedControlStyleBar")
+	var UISegmentedControlStyleBar;
+
+	@:native("UISegmentedControlStyleBezeled")
+	var UISegmentedControlStyleBezeled;
+
 
 }

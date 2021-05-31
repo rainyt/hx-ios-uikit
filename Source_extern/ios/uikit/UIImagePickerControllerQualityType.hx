@@ -11,11 +11,17 @@ extern abstract UIImagePickerControllerQualityType(Int) from Int to Int {
 	@:native("UIImagePickerControllerQualityTypeHigh")
 	var UIImagePickerControllerQualityTypeHigh;
 
-	@:native("suitable")
-	var suitable;
+	@:native("UIImagePickerControllerQualityTypeMedium")
+	var UIImagePickerControllerQualityTypeMedium;
 
-	@:native("suitable")
-	var suitable;
+	@:native("UIImagePickerControllerQualityTypeLow")
+	var UIImagePickerControllerQualityTypeLow;
+
+	@:native("UIImagePickerControllerQualityType640x480")
+	var UIImagePickerControllerQualityType640x480;
+
+	@:native("UIImagePickerControllerQualityTypeIFrame1280x720")
+	var UIImagePickerControllerQualityTypeIFrame1280x720;
 
 	@:native("UIImagePickerControllerQualityTypeIFrame960x540")
 	var UIImagePickerControllerQualityTypeIFrame960x540;

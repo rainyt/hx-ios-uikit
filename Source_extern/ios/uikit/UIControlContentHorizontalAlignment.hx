@@ -23,14 +23,8 @@ extern abstract UIControlContentHorizontalAlignment(Int) from Int to Int {
 	@:native("UIControlContentHorizontalAlignmentLeading")
 	var UIControlContentHorizontalAlignmentLeading;
 
-	@:native("tvos(11.0))")
-	var tvos(11.0));
-
 	@:native("UIControlContentHorizontalAlignmentTrailing")
 	var UIControlContentHorizontalAlignmentTrailing;
-
-	@:native("tvos(11.0))")
-	var tvos(11.0));
 
 
 }

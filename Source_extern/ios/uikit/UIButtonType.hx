@@ -11,6 +11,12 @@ extern abstract UIButtonType(Int) from Int to Int {
 	@:native("UIButtonTypeCustom")
 	var UIButtonTypeCustom;
 
+	@:native("UIButtonTypeSystem")
+	var UIButtonTypeSystem;
+
+	@:native("UIButtonTypeDetailDisclosure")
+	var UIButtonTypeDetailDisclosure;
+
 	@:native("UIButtonTypeInfoLight")
 	var UIButtonTypeInfoLight;
 
@@ -23,14 +29,11 @@ extern abstract UIButtonType(Int) from Int to Int {
 	@:native("UIButtonTypePlain")
 	var UIButtonTypePlain;
 
-	@:native("watchos)")
-	var watchos);
+	@:native("UIButtonTypeClose")
+	var UIButtonTypeClose;
 
 	@:native("UIButtonTypeRoundedRect")
 	var UIButtonTypeRoundedRect;
-
-	@:native("use")
-	var use;
 
 
 }

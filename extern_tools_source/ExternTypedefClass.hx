@@ -17,7 +17,7 @@ class ExternTypedefClass {
 	public var enums:Array<String> = [];
 
 	public function new(value:String) {
-		createHaxeFile = value.indexOf("typedef NS_ENUM") == 0;
+		createHaxeFile = value.indexOf("typedef NS_ENUM") == 0 || value.indexOf("typedef NS_OPTIONS") == 0;
 		if (createHaxeFile) {
 			// 解析类关系
 			var cContent = value.substr(value.indexOf("(") + 1);
@@ -29,15 +29,17 @@ class ExternTypedefClass {
 			parentClassName = carr[0];
 
 			// 解析ENUM
-			var enumContent = StringTools.replace(value, "\n", "");
-			enumContent = StringTools.replace(enumContent, "\t", "");
+			var enumContent = value;
+			// var enumContent = StringTools.replace(value, "\n", "");
+			// enumContent = StringTools.replace(enumContent, "\t", "");
 			enumContent = enumContent.substr(enumContent.indexOf("{") + 1);
 			enumContent = enumContent.substr(0, enumContent.lastIndexOf("}"));
-			var e = enumContent.split(",");
+			var e = enumContent.split("\n");
 			for (index => e2 in e) {
 				var e3 = e2.split(" ").filter((f) -> f.length > 0)[0];
 				if (e3 == null || e3.indexOf("//") != -1 || e3.indexOf("#") != -1)
 					continue;
+				e3 = StringTools.replace(e3, ",", "");
 				enums.push(e3);
 			}
 		} else {

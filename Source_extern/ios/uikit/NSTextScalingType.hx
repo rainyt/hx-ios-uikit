@@ -11,5 +11,8 @@ extern abstract NSTextScalingType(Int) from Int to Int {
 	@:native("NSTextScalingStandard")
 	var NSTextScalingStandard;
 
+	@:native("NSTextScalingiOS")
+	var NSTextScalingiOS;
+
 
 }

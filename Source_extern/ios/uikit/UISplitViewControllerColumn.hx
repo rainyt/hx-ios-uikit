@@ -14,20 +14,11 @@ extern abstract UISplitViewControllerColumn(Int) from Int to Int {
 	@:native("UISplitViewControllerColumnSupplementary")
 	var UISplitViewControllerColumnSupplementary;
 
+	@:native("UISplitViewControllerColumnSecondary")
+	var UISplitViewControllerColumnSecondary;
+
 	@:native("UISplitViewControllerColumnCompact")
 	var UISplitViewControllerColumnCompact;
-
-	@:native("it")
-	var it;
-
-	@:native("instead")
-	var instead;
-
-	@:native("Supplementary")
-	var Supplementary;
-
-	@:native("and")
-	var and;
 
 
 }

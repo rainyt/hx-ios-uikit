@@ -8,11 +8,23 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UICollectionLayoutSectionOrthogonalScrollingBehavior(Int) from Int to Int {
 
-	@:native("the")
-	var the;
+	@:native("UICollectionLayoutSectionOrthogonalScrollingBehaviorNone")
+	var UICollectionLayoutSectionOrthogonalScrollingBehaviorNone;
 
-	@:native("section")
-	var section;
+	@:native("UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuous")
+	var UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuous;
+
+	@:native("UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuousGroupLeadingBoundary")
+	var UICollectionLayoutSectionOrthogonalScrollingBehaviorContinuousGroupLeadingBoundary;
+
+	@:native("UICollectionLayoutSectionOrthogonalScrollingBehaviorPaging")
+	var UICollectionLayoutSectionOrthogonalScrollingBehaviorPaging;
+
+	@:native("UICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPaging")
+	var UICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPaging;
+
+	@:native("UICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPagingCentered")
+	var UICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPagingCentered;
 
 
 }

@@ -8,8 +8,5 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UITableViewCellStyle(Int) from Int to Int {
 
-	@:native("UITableViewCellStyleDefault")
-	var UITableViewCellStyleDefault;
-
 
 }

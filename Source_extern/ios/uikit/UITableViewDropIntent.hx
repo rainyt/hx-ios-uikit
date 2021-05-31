@@ -8,8 +8,17 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UITableViewDropIntent(Int) from Int to Int {
 
-	@:native("but")
-	var but;
+	@:native("UITableViewDropIntentUnspecified")
+	var UITableViewDropIntentUnspecified;
+
+	@:native("UITableViewDropIntentInsertAtDestinationIndexPath")
+	var UITableViewDropIntentInsertAtDestinationIndexPath;
+
+	@:native("UITableViewDropIntentInsertIntoDestinationIndexPath")
+	var UITableViewDropIntentInsertIntoDestinationIndexPath;
+
+	@:native("UITableViewDropIntentAutomatic")
+	var UITableViewDropIntentAutomatic;
 
 
 }

@@ -14,8 +14,8 @@ extern abstract UIScrollViewKeyboardDismissMode(Int) from Int to Int {
 	@:native("UIScrollViewKeyboardDismissModeOnDrag")
 	var UIScrollViewKeyboardDismissModeOnDrag;
 
-	@:native("and")
-	var and;
+	@:native("UIScrollViewKeyboardDismissModeInteractive")
+	var UIScrollViewKeyboardDismissModeInteractive;
 
 
 }

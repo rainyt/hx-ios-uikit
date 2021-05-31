@@ -8,17 +8,14 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract UINavigationItemBackButtonDisplayMode(Int) from Int to Int {
 
-	@:native("uses")
-	var uses;
+	@:native("UINavigationItemBackButtonDisplayModeDefault")
+	var UINavigationItemBackButtonDisplayModeDefault;
 
-	@:native("followed")
-	var followed;
+	@:native("UINavigationItemBackButtonDisplayModeGeneric")
+	var UINavigationItemBackButtonDisplayModeGeneric;
 
-	@:native("then")
-	var then;
-
-	@:native("just")
-	var just;
+	@:native("UINavigationItemBackButtonDisplayModeMinimal")
+	var UINavigationItemBackButtonDisplayModeMinimal;
 
 
 }

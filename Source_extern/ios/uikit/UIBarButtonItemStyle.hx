@@ -14,12 +14,6 @@ extern abstract UIBarButtonItemStyle(Int) from Int to Int {
 	@:native("UIBarButtonItemStyleBordered")
 	var UIBarButtonItemStyleBordered;
 
-	@:native("8_0")
-	var 8_0;
-
-	@:native(""Use")
-	var "Use;
-
 	@:native("UIBarButtonItemStyleDone")
 	var UIBarButtonItemStyleDone;
 

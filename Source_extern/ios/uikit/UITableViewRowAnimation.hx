@@ -14,6 +14,9 @@ extern abstract UITableViewRowAnimation(Int) from Int to Int {
 	@:native("UITableViewRowAnimationRight")
 	var UITableViewRowAnimationRight;
 
+	@:native("UITableViewRowAnimationLeft")
+	var UITableViewRowAnimationLeft;
+
 	@:native("UITableViewRowAnimationTop")
 	var UITableViewRowAnimationTop;
 
@@ -22,6 +25,12 @@ extern abstract UITableViewRowAnimation(Int) from Int to Int {
 
 	@:native("UITableViewRowAnimationNone")
 	var UITableViewRowAnimationNone;
+
+	@:native("UITableViewRowAnimationMiddle")
+	var UITableViewRowAnimationMiddle;
+
+	@:native("UITableViewRowAnimationAutomatic")
+	var UITableViewRowAnimationAutomatic;
 
 
 }
