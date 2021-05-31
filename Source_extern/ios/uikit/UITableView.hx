@@ -15,7 +15,7 @@ extern class UITableView{
 	overload public static function autorelease():UITableView;
 
 	@:native("initWithFrame:style")
-	overload public function initWithFrame(frame:CGRect, style:Dynamic):Dynamic;
+	overload public function initWithFrame_style(frame:CGRect, style:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
@@ -39,22 +39,22 @@ extern class UITableView{
 	public var dropDelegate:Dynamic;
 
 	@:native("rowHeight")
-	public var rowHeight:Dynamic;
+	public var rowHeight:Float;
 
 	@:native("sectionHeaderHeight")
-	public var sectionHeaderHeight:Dynamic;
+	public var sectionHeaderHeight:Float;
 
 	@:native("sectionFooterHeight")
-	public var sectionFooterHeight:Dynamic;
+	public var sectionFooterHeight:Float;
 
 	@:native("estimatedRowHeight")
-	public var estimatedRowHeight:Dynamic;
+	public var estimatedRowHeight:Float;
 
 	@:native("estimatedSectionHeaderHeight")
-	public var estimatedSectionHeaderHeight:Dynamic;
+	public var estimatedSectionHeaderHeight:Float;
 
 	@:native("estimatedSectionFooterHeight")
-	public var estimatedSectionFooterHeight:Dynamic;
+	public var estimatedSectionFooterHeight:Float;
 
 	@:native("separatorInset")
 	public var separatorInset:Dynamic;
@@ -111,13 +111,13 @@ extern class UITableView{
 	overload public function footerViewForSection(section:Dynamic):Dynamic;
 
 	@:native("scrollToRowAtIndexPath:atScrollPosition:animated")
-	overload public function scrollToRowAtIndexPath(indexPath:Dynamic, atScrollPosition:Dynamic, animated:Bool):Void;
+	overload public function scrollToRowAtIndexPath_atScrollPosition_animated(indexPath:Dynamic, atScrollPosition:Dynamic, animated:Bool):Void;
 
 	@:native("scrollToNearestSelectedRowAtScrollPosition:animated")
-	overload public function scrollToNearestSelectedRowAtScrollPosition(scrollPosition:Dynamic, animated:Bool):Void;
+	overload public function scrollToNearestSelectedRowAtScrollPosition_animated(scrollPosition:Dynamic, animated:Bool):Void;
 
 	@:native("performBatchUpdates:completion")
-	overload public function performBatchUpdates(updates:Dynamic, completion:Dynamic):Void;
+	overload public function performBatchUpdates_completion(updates:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginUpdates")
 	overload public function beginUpdates():Void;
@@ -126,28 +126,28 @@ extern class UITableView{
 	overload public function endUpdates():Void;
 
 	@:native("insertSections:withRowAnimation")
-	overload public function insertSections(sections:Dynamic, withRowAnimation:Dynamic):Void;
+	overload public function insertSections_withRowAnimation(sections:Dynamic, withRowAnimation:Dynamic):Void;
 
 	@:native("deleteSections:withRowAnimation")
-	overload public function deleteSections(sections:Dynamic, withRowAnimation:Dynamic):Void;
+	overload public function deleteSections_withRowAnimation(sections:Dynamic, withRowAnimation:Dynamic):Void;
 
 	@:native("reloadSections:withRowAnimation")
-	overload public function reloadSections(sections:Dynamic, withRowAnimation:Dynamic):Void;
+	overload public function reloadSections_withRowAnimation(sections:Dynamic, withRowAnimation:Dynamic):Void;
 
 	@:native("moveSection:toSection")
-	overload public function moveSection(section:Dynamic, toSection:Dynamic):Void;
+	overload public function moveSection_toSection(section:Dynamic, toSection:Dynamic):Void;
 
 	@:native("insertRowsAtIndexPaths:withRowAnimation")
-	overload public function insertRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:Dynamic):Void;
+	overload public function insertRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:Dynamic):Void;
 
 	@:native("deleteRowsAtIndexPaths:withRowAnimation")
-	overload public function deleteRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:Dynamic):Void;
+	overload public function deleteRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:Dynamic):Void;
 
 	@:native("reloadRowsAtIndexPaths:withRowAnimation")
-	overload public function reloadRowsAtIndexPaths(indexPaths:Dynamic, withRowAnimation:Dynamic):Void;
+	overload public function reloadRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:Dynamic):Void;
 
 	@:native("moveRowAtIndexPath:toIndexPath")
-	overload public function moveRowAtIndexPath(indexPath:Dynamic, toIndexPath:Dynamic):Void;
+	overload public function moveRowAtIndexPath_toIndexPath(indexPath:Dynamic, toIndexPath:Dynamic):Void;
 
 	@:native("hasUncommittedUpdates")
 	public var hasUncommittedUpdates:Bool;
@@ -162,7 +162,7 @@ extern class UITableView{
 	public var editing:Bool;
 
 	@:native("setEditing:animated")
-	overload public function setEditing(editing:Bool, animated:Bool):Void;
+	overload public function setEditing_animated(editing:Bool, animated:Bool):Void;
 
 	@:native("allowsSelection")
 	public var allowsSelection:Bool;
@@ -183,10 +183,10 @@ extern class UITableView{
 	public var indexPathsForSelectedRows:Dynamic;
 
 	@:native("selectRowAtIndexPath:animated:scrollPosition")
-	overload public function selectRowAtIndexPath(indexPath:Dynamic, animated:Bool, scrollPosition:Dynamic):Void;
+	overload public function selectRowAtIndexPath_animated_scrollPosition(indexPath:Dynamic, animated:Bool, scrollPosition:Dynamic):Void;
 
 	@:native("deselectRowAtIndexPath:animated")
-	overload public function deselectRowAtIndexPath(indexPath:Dynamic, animated:Bool):Void;
+	overload public function deselectRowAtIndexPath_animated(indexPath:Dynamic, animated:Bool):Void;
 
 	@:native("sectionIndexMinimumDisplayRowCount")
 	public var sectionIndexMinimumDisplayRowCount:Dynamic;
@@ -225,22 +225,22 @@ extern class UITableView{
 	overload public function dequeueReusableCellWithIdentifier(identifier:NSString):Dynamic;
 
 	@:native("dequeueReusableCellWithIdentifier:forIndexPath")
-	overload public function dequeueReusableCellWithIdentifier(identifier:NSString, forIndexPath:Dynamic):Dynamic;
+	overload public function dequeueReusableCellWithIdentifier_forIndexPath(identifier:NSString, forIndexPath:Dynamic):Dynamic;
 
 	@:native("dequeueReusableHeaderFooterViewWithIdentifier")
 	overload public function dequeueReusableHeaderFooterViewWithIdentifier(identifier:NSString):Dynamic;
 
 	@:native("registerNib:forCellReuseIdentifier")
-	overload public function registerNib(nib:Dynamic, forCellReuseIdentifier:NSString):Void;
+	overload public function registerNib_forCellReuseIdentifier(nib:Dynamic, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forCellReuseIdentifier")
-	overload public function registerClass(cellClass:Dynamic, forCellReuseIdentifier:NSString):Void;
+	overload public function registerClass_forCellReuseIdentifier(cellClass:Dynamic, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forHeaderFooterViewReuseIdentifier")
-	overload public function registerNib(nib:Dynamic, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload public function registerNib_forHeaderFooterViewReuseIdentifier(nib:Dynamic, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forHeaderFooterViewReuseIdentifier")
-	overload public function registerClass(aClass:Dynamic, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload public function registerClass_forHeaderFooterViewReuseIdentifier(aClass:Dynamic, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("remembersLastFocusedIndexPath")
 	public var remembersLastFocusedIndexPath:Bool;

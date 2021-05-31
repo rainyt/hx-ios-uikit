@@ -15,7 +15,7 @@ extern class UISplitViewController{
 	public var splitViewController:Dynamic;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
-	overload public function collapseSecondaryViewController(secondaryViewController:Dynamic, forSplitViewController:Dynamic):Void;
+	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:Dynamic, forSplitViewController:Dynamic):Void;
 
 	@:native("separateSecondaryViewControllerForSplitViewController")
 	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:Dynamic):Dynamic;

@@ -13,7 +13,7 @@ extern class UIAlertController{
 	overload public static function autorelease():UIAlertController;
 
 	@:native("alertControllerWithTitle:message:preferredStyle")
-	overload public static function alertControllerWithTitle(title:NSString, message:NSString, preferredStyle:Dynamic):Dynamic;
+	overload public static function alertControllerWithTitle_message_preferredStyle(title:NSString, message:NSString, preferredStyle:Dynamic):Dynamic;
 
 	@:native("addAction")
 	overload public function addAction(action:Dynamic):Void;

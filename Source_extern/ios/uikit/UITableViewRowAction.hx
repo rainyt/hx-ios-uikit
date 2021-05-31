@@ -13,7 +13,7 @@ extern class UITableViewRowAction{
 	overload public static function autorelease():UITableViewRowAction;
 
 	@:native("rowActionWithStyle:title:handler")
-	overload public static function rowActionWithStyle(style:Dynamic, title:NSString, handler:Dynamic):Dynamic;
+	overload public static function rowActionWithStyle_title_handler(style:Dynamic, title:NSString, handler:Dynamic):Dynamic;
 
 	@:native("style")
 	public var style:Dynamic;

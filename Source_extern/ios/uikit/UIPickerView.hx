@@ -31,7 +31,7 @@ extern class UIPickerView{
 	overload public function rowSizeForComponent(component:Dynamic):CGSize;
 
 	@:native("viewForRow:forComponent")
-	overload public function viewForRow(row:Dynamic, forComponent:Dynamic):Dynamic;
+	overload public function viewForRow_forComponent(row:Dynamic, forComponent:Dynamic):Dynamic;
 
 	@:native("reloadAllComponents")
 	overload public function reloadAllComponents():Void;
@@ -40,7 +40,7 @@ extern class UIPickerView{
 	overload public function reloadComponent(component:Dynamic):Void;
 
 	@:native("selectRow:inComponent:animated")
-	overload public function selectRow(row:Dynamic, inComponent:Dynamic, animated:Bool):Void;
+	overload public function selectRow_inComponent_animated(row:Dynamic, inComponent:Dynamic, animated:Bool):Void;
 
 	@:native("selectedRowInComponent")
 	overload public function selectedRowInComponent(component:Dynamic):Dynamic;

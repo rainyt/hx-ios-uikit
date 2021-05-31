@@ -30,10 +30,10 @@ extern class UITabBarAppearance{
 	public var stackedItemPositioning:Dynamic;
 
 	@:native("stackedItemWidth")
-	public var stackedItemWidth:Dynamic;
+	public var stackedItemWidth:Float;
 
 	@:native("stackedItemSpacing")
-	public var stackedItemSpacing:Dynamic;
+	public var stackedItemSpacing:Float;
 
 
 }

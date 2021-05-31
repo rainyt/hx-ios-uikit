@@ -20,7 +20,7 @@ extern class UIControl{
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame(frame:CGRect, primaryAction:Dynamic):Dynamic;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:Dynamic):Dynamic;
 
 	@:native("enabled")
 	public var enabled:Bool;
@@ -50,31 +50,31 @@ extern class UIControl{
 	public var touchInside:Bool;
 
 	@:native("beginTrackingWithTouch:withEvent")
-	overload public function beginTrackingWithTouch(touch:Dynamic, withEvent:Dynamic):Bool;
+	overload public function beginTrackingWithTouch_withEvent(touch:Dynamic, withEvent:Dynamic):Bool;
 
 	@:native("continueTrackingWithTouch:withEvent")
-	overload public function continueTrackingWithTouch(touch:Dynamic, withEvent:Dynamic):Bool;
+	overload public function continueTrackingWithTouch_withEvent(touch:Dynamic, withEvent:Dynamic):Bool;
 
 	@:native("endTrackingWithTouch:withEvent")
-	overload public function endTrackingWithTouch(touch:Dynamic, withEvent:Dynamic):Void;
+	overload public function endTrackingWithTouch_withEvent(touch:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("cancelTrackingWithEvent")
 	overload public function cancelTrackingWithEvent(event:Dynamic):Void;
 
 	@:native("addTarget:action:forControlEvents")
-	overload public function addTarget(target:Dynamic, action:String, forControlEvents:Dynamic):Void;
+	overload public function addTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:Dynamic):Void;
 
 	@:native("removeTarget:action:forControlEvents")
-	overload public function removeTarget(target:Dynamic, action:Dynamic, forControlEvents:Dynamic):Void;
+	overload public function removeTarget_action_forControlEvents(target:Dynamic, action:Dynamic, forControlEvents:Dynamic):Void;
 
 	@:native("addAction:forControlEvents")
-	overload public function addAction(action:Dynamic, forControlEvents:Dynamic):Void;
+	overload public function addAction_forControlEvents(action:Dynamic, forControlEvents:Dynamic):Void;
 
 	@:native("removeAction:forControlEvents")
-	overload public function removeAction(action:Dynamic, forControlEvents:Dynamic):Void;
+	overload public function removeAction_forControlEvents(action:Dynamic, forControlEvents:Dynamic):Void;
 
 	@:native("removeActionForIdentifier:forControlEvents")
-	overload public function removeActionForIdentifier(actionIdentifier:Dynamic, forControlEvents:Dynamic):Void;
+	overload public function removeActionForIdentifier_forControlEvents(actionIdentifier:Dynamic, forControlEvents:Dynamic):Void;
 
 	@:native("allTargets")
 	public var allTargets:Dynamic;
@@ -83,13 +83,13 @@ extern class UIControl{
 	public var allControlEvents:Dynamic;
 
 	@:native("actionsForTarget:forControlEvent")
-	overload public function actionsForTarget(target:Dynamic, forControlEvent:Dynamic):Dynamic;
+	overload public function actionsForTarget_forControlEvent(target:Dynamic, forControlEvent:Dynamic):Dynamic;
 
 	@:native("enumerateEventHandlers")
 	overload public function enumerateEventHandlers(iterator:Dynamic):Void;
 
 	@:native("sendAction:to:forEvent")
-	overload public function sendAction(action:String, to:Dynamic, forEvent:Dynamic):Void;
+	overload public function sendAction_to_forEvent(action:String, to:Dynamic, forEvent:Dynamic):Void;
 
 	@:native("sendAction")
 	overload public function sendAction(action:Dynamic):Void;

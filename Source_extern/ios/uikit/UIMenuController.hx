@@ -22,13 +22,13 @@ extern class UIMenuController{
 	overload public function setMenuVisible(menuVisible:Bool):Void;
 
 	@:native("setMenuVisible:animated")
-	overload public function setMenuVisible(menuVisible:Bool, animated:Bool):Void;
+	overload public function setMenuVisible_animated(menuVisible:Bool, animated:Bool):Void;
 
 	@:native("setTargetRect:inView")
-	overload public function setTargetRect(targetRect:CGRect, inView:Dynamic):Void;
+	overload public function setTargetRect_inView(targetRect:CGRect, inView:Dynamic):Void;
 
 	@:native("showMenuFromView:rect")
-	overload public function showMenuFromView(targetView:Dynamic, rect:CGRect):Void;
+	overload public function showMenuFromView_rect(targetView:Dynamic, rect:CGRect):Void;
 
 	@:native("hideMenuFromView")
 	overload public function hideMenuFromView(targetView:Dynamic):Void;

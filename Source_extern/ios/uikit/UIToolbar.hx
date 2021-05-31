@@ -21,7 +21,7 @@ extern class UIToolbar{
 	public var translucent:Bool;
 
 	@:native("setItems:animated")
-	overload public function setItems(items:Dynamic, animated:Bool):Void;
+	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
 
 	@:native("tintColor")
 	public var tintColor:Dynamic;
@@ -30,13 +30,13 @@ extern class UIToolbar{
 	public var barTintColor:Dynamic;
 
 	@:native("setBackgroundImage:forToolbarPosition:barMetrics")
-	overload public function setBackgroundImage(backgroundImage:Dynamic, forToolbarPosition:Dynamic, barMetrics:Dynamic):Void;
+	overload public function setBackgroundImage_forToolbarPosition_barMetrics(backgroundImage:Dynamic, forToolbarPosition:Dynamic, barMetrics:Dynamic):Void;
 
 	@:native("backgroundImageForToolbarPosition:barMetrics")
-	overload public function backgroundImageForToolbarPosition(topOrBottom:Dynamic, barMetrics:Dynamic):Dynamic;
+	overload public function backgroundImageForToolbarPosition_barMetrics(topOrBottom:Dynamic, barMetrics:Dynamic):Dynamic;
 
 	@:native("setShadowImage:forToolbarPosition")
-	overload public function setShadowImage(shadowImage:Dynamic, forToolbarPosition:Dynamic):Void;
+	overload public function setShadowImage_forToolbarPosition(shadowImage:Dynamic, forToolbarPosition:Dynamic):Void;
 
 	@:native("shadowImageForToolbarPosition")
 	overload public function shadowImageForToolbarPosition(topOrBottom:Dynamic):Dynamic;

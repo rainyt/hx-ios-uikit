@@ -21,7 +21,7 @@ extern class UILongPressGestureRecognizer{
 	public var minimumPressDuration:Dynamic;
 
 	@:native("allowableMovement")
-	public var allowableMovement:Dynamic;
+	public var allowableMovement:Float;
 
 
 }

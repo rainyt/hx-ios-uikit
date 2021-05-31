@@ -13,7 +13,7 @@ extern class UITableViewCell{
 	overload public static function autorelease():UITableViewCell;
 
 	@:native("initWithStyle:reuseIdentifier")
-	overload public function initWithStyle(style:Dynamic, reuseIdentifier:NSString):Dynamic;
+	overload public function initWithStyle_reuseIdentifier(style:Dynamic, reuseIdentifier:NSString):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
@@ -79,10 +79,10 @@ extern class UITableViewCell{
 	public var highlighted:Bool;
 
 	@:native("setSelected:animated")
-	overload public function setSelected(selected:Bool, animated:Bool):Void;
+	overload public function setSelected_animated(selected:Bool, animated:Bool):Void;
 
 	@:native("setHighlighted:animated")
-	overload public function setHighlighted(highlighted:Bool, animated:Bool):Void;
+	overload public function setHighlighted_animated(highlighted:Bool, animated:Bool):Void;
 
 	@:native("editingStyle")
 	public var editingStyle:Dynamic;
@@ -109,7 +109,7 @@ extern class UITableViewCell{
 	public var indentationLevel:Dynamic;
 
 	@:native("indentationWidth")
-	public var indentationWidth:Dynamic;
+	public var indentationWidth:Float;
 
 	@:native("separatorInset")
 	public var separatorInset:Dynamic;
@@ -118,7 +118,7 @@ extern class UITableViewCell{
 	public var editing:Bool;
 
 	@:native("setEditing:animated")
-	overload public function setEditing(editing:Bool, animated:Bool):Void;
+	overload public function setEditing_animated(editing:Bool, animated:Bool):Void;
 
 	@:native("showingDeleteConfirmation")
 	public var showingDeleteConfirmation:Bool;

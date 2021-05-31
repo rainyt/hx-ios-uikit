@@ -21,7 +21,7 @@ extern class UITabBar{
 	public var selectedItem:Dynamic;
 
 	@:native("setItems:animated")
-	overload public function setItems(items:Dynamic, animated:Bool):Void;
+	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
 
 	@:native("beginCustomizingItems")
 	overload public function beginCustomizingItems(items:Dynamic):Void;
@@ -57,10 +57,10 @@ extern class UITabBar{
 	public var itemPositioning:Dynamic;
 
 	@:native("itemWidth")
-	public var itemWidth:Dynamic;
+	public var itemWidth:Float;
 
 	@:native("itemSpacing")
-	public var itemSpacing:Dynamic;
+	public var itemSpacing:Float;
 
 	@:native("barStyle")
 	public var barStyle:Dynamic;

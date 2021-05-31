@@ -13,7 +13,7 @@ extern class UICollectionViewPlaceholder{
 	overload public static function autorelease():UICollectionViewPlaceholder;
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier")
-	overload public function initWithInsertionIndexPath(insertionIndexPath:Dynamic, reuseIdentifier:NSString):Dynamic;
+	overload public function initWithInsertionIndexPath_reuseIdentifier(insertionIndexPath:Dynamic, reuseIdentifier:NSString):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

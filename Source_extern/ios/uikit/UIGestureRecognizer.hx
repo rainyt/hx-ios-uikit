@@ -14,7 +14,7 @@ extern class UIGestureRecognizer{
 	overload public static function autorelease():UIGestureRecognizer;
 
 	@:native("initWithTarget:action")
-	overload public function initWithTarget(target:Dynamic, action:Dynamic):Dynamic;
+	overload public function initWithTarget_action(target:Dynamic, action:Dynamic):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;
@@ -23,10 +23,10 @@ extern class UIGestureRecognizer{
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("addTarget:action")
-	overload public function addTarget(target:Dynamic, action:String):Void;
+	overload public function addTarget_action(target:Dynamic, action:String):Void;
 
 	@:native("removeTarget:action")
-	overload public function removeTarget(target:Dynamic, action:Dynamic):Void;
+	overload public function removeTarget_action(target:Dynamic, action:Dynamic):Void;
 
 	@:native("state")
 	public var state:Dynamic;
@@ -68,7 +68,7 @@ extern class UIGestureRecognizer{
 	public var numberOfTouches:Dynamic;
 
 	@:native("locationOfTouch:inView")
-	overload public function locationOfTouch(touchIndex:Dynamic, inView:Dynamic):CGPoint;
+	overload public function locationOfTouch_inView(touchIndex:Dynamic, inView:Dynamic):CGPoint;
 
 	@:native("name")
 	public var name:NSString;

@@ -18,28 +18,28 @@ extern class UIGeometryKeyedCoding{
 	overload public static function autorelease():UIGeometryKeyedCoding;
 
 	@:native("encodeCGPoint:forKey")
-	overload public function encodeCGPoint(point:CGPoint, forKey:NSString):Void;
+	overload public function encodeCGPoint_forKey(point:CGPoint, forKey:NSString):Void;
 
 	@:native("encodeCGVector:forKey")
-	overload public function encodeCGVector(vector:CGVector, forKey:NSString):Void;
+	overload public function encodeCGVector_forKey(vector:CGVector, forKey:NSString):Void;
 
 	@:native("encodeCGSize:forKey")
-	overload public function encodeCGSize(size:CGSize, forKey:NSString):Void;
+	overload public function encodeCGSize_forKey(size:CGSize, forKey:NSString):Void;
 
 	@:native("encodeCGRect:forKey")
-	overload public function encodeCGRect(rect:CGRect, forKey:NSString):Void;
+	overload public function encodeCGRect_forKey(rect:CGRect, forKey:NSString):Void;
 
 	@:native("encodeCGAffineTransform:forKey")
-	overload public function encodeCGAffineTransform(transform:CGAffineTransform, forKey:NSString):Void;
+	overload public function encodeCGAffineTransform_forKey(transform:CGAffineTransform, forKey:NSString):Void;
 
 	@:native("encodeUIEdgeInsets:forKey")
-	overload public function encodeUIEdgeInsets(insets:Dynamic, forKey:NSString):Void;
+	overload public function encodeUIEdgeInsets_forKey(insets:Dynamic, forKey:NSString):Void;
 
 	@:native("encodeDirectionalEdgeInsets:forKey")
-	overload public function encodeDirectionalEdgeInsets(insets:Dynamic, forKey:NSString):Void;
+	overload public function encodeDirectionalEdgeInsets_forKey(insets:Dynamic, forKey:NSString):Void;
 
 	@:native("encodeUIOffset:forKey")
-	overload public function encodeUIOffset(offset:Dynamic, forKey:NSString):Void;
+	overload public function encodeUIOffset_forKey(offset:Dynamic, forKey:NSString):Void;
 
 	@:native("decodeCGPointForKey")
 	overload public function decodeCGPointForKey(key:NSString):CGPoint;

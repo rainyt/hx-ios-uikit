@@ -22,13 +22,13 @@ extern class UISpringTimingParameters{
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithDampingRatio:initialVelocity")
-	overload public function initWithDampingRatio(ratio:Dynamic, initialVelocity:CGVector):Dynamic;
+	overload public function initWithDampingRatio_initialVelocity(ratio:Float, initialVelocity:CGVector):Dynamic;
 
 	@:native("initWithMass:stiffness:damping:initialVelocity")
-	overload public function initWithMass(mass:Dynamic, stiffness:Dynamic, damping:Dynamic, initialVelocity:CGVector):Dynamic;
+	overload public function initWithMass_stiffness_damping_initialVelocity(mass:Float, stiffness:Float, damping:Float, initialVelocity:CGVector):Dynamic;
 
 	@:native("initWithDampingRatio")
-	overload public function initWithDampingRatio(ratio:Dynamic):Dynamic;
+	overload public function initWithDampingRatio(ratio:Float):Dynamic;
 
 
 }

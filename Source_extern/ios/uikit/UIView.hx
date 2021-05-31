@@ -48,7 +48,7 @@ extern class UIView{
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:Dynamic):Dynamic;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(semanticContentAttribute:Dynamic, relativeToLayoutDirection:Dynamic):Dynamic;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:Dynamic, relativeToLayoutDirection:Dynamic):Dynamic;
 
 	@:native("effectiveUserInterfaceLayoutDirection")
 	public var effectiveUserInterfaceLayoutDirection:Dynamic;

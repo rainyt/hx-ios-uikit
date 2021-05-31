@@ -23,7 +23,7 @@ extern class UIScreen{
 	public var bounds:CGRect;
 
 	@:native("scale")
-	public var scale:Dynamic;
+	public var scale:Float;
 
 	@:native("availableModes")
 	public var availableModes:Dynamic;
@@ -50,7 +50,7 @@ extern class UIScreen{
 	public var captured:Bool;
 
 	@:native("brightness")
-	public var brightness:Dynamic;
+	public var brightness:Float;
 
 	@:native("wantsSoftwareDimming")
 	public var wantsSoftwareDimming:Bool;
@@ -65,10 +65,10 @@ extern class UIScreen{
 	public var nativeBounds:CGRect;
 
 	@:native("nativeScale")
-	public var nativeScale:Dynamic;
+	public var nativeScale:Float;
 
 	@:native("displayLinkWithTarget:selector")
-	overload public function displayLinkWithTarget(target:Dynamic, selector:String):CADisplayLink;
+	overload public function displayLinkWithTarget_selector(target:Dynamic, selector:String):CADisplayLink;
 
 	@:native("maximumFramesPerSecond")
 	public var maximumFramesPerSecond:Dynamic;

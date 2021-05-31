@@ -15,7 +15,7 @@ extern class UIKitAdditions{
 	overload public function initWithImage(image:Dynamic):Dynamic;
 
 	@:native("initWithImage:options")
-	overload public function initWithImage(image:Dynamic, options:Dynamic):Dynamic;
+	overload public function initWithImage_options(image:Dynamic, options:Dynamic):Dynamic;
 
 
 }

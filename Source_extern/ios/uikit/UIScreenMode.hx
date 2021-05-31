@@ -16,7 +16,7 @@ extern class UIScreenMode{
 	public var size:CGSize;
 
 	@:native("pixelAspectRatio")
-	public var pixelAspectRatio:Dynamic;
+	public var pixelAspectRatio:Float;
 
 
 }

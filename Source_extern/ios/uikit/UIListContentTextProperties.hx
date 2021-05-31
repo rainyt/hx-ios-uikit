@@ -36,7 +36,7 @@ extern class UIListContentTextProperties{
 	public var adjustsFontSizeToFitWidth:Bool;
 
 	@:native("minimumScaleFactor")
-	public var minimumScaleFactor:Dynamic;
+	public var minimumScaleFactor:Float;
 
 	@:native("allowsDefaultTighteningForTruncation")
 	public var allowsDefaultTighteningForTruncation:Bool;

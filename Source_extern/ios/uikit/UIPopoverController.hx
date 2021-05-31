@@ -23,13 +23,13 @@ extern class UIPopoverController{
 	public var contentViewController:Dynamic;
 
 	@:native("setContentViewController:animated")
-	overload public function setContentViewController(viewController:Dynamic, animated:Bool):Void;
+	overload public function setContentViewController_animated(viewController:Dynamic, animated:Bool):Void;
 
 	@:native("popoverContentSize")
 	public var popoverContentSize:CGSize;
 
 	@:native("setPopoverContentSize:animated")
-	overload public function setPopoverContentSize(size:CGSize, animated:Bool):Void;
+	overload public function setPopoverContentSize_animated(size:CGSize, animated:Bool):Void;
 
 	@:native("popoverVisible")
 	public var popoverVisible:Bool;
@@ -41,10 +41,10 @@ extern class UIPopoverController{
 	public var passthroughViews:Dynamic;
 
 	@:native("presentPopoverFromRect:inView:permittedArrowDirections:animated")
-	overload public function presentPopoverFromRect(rect:CGRect, inView:Dynamic, permittedArrowDirections:Dynamic, animated:Bool):Void;
+	overload public function presentPopoverFromRect_inView_permittedArrowDirections_animated(rect:CGRect, inView:Dynamic, permittedArrowDirections:Dynamic, animated:Bool):Void;
 
 	@:native("presentPopoverFromBarButtonItem:permittedArrowDirections:animated")
-	overload public function presentPopoverFromBarButtonItem(item:Dynamic, permittedArrowDirections:Dynamic, animated:Bool):Void;
+	overload public function presentPopoverFromBarButtonItem_permittedArrowDirections_animated(item:Dynamic, permittedArrowDirections:Dynamic, animated:Bool):Void;
 
 	@:native("dismissPopoverAnimated")
 	overload public function dismissPopoverAnimated(animated:Bool):Void;

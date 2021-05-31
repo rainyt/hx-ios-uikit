@@ -12,10 +12,10 @@ extern class UIDocumentPickerViewController{
 	overload public static function autorelease():UIDocumentPickerViewController;
 
 	@:native("initWithDocumentTypes:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithDocumentTypes(allowedUTIs:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithDocumentTypes_inMode_NS_DESIGNATED_INITIALIZER(allowedUTIs:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initForOpeningContentTypes:asCopy:NS_DESIGNATED_INITIALIZER")
-	overload public function initForOpeningContentTypes(contentTypes:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initForOpeningContentTypes_asCopy_NS_DESIGNATED_INITIALIZER(contentTypes:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initForOpeningContentTypes")
 	overload public function initForOpeningContentTypes(contentTypes:Dynamic):Dynamic;
@@ -24,13 +24,13 @@ extern class UIDocumentPickerViewController{
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithURL:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithURL(url:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithURL_inMode_NS_DESIGNATED_INITIALIZER(url:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initWithURLs:inMode:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithURLs(urls:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithURLs_inMode_NS_DESIGNATED_INITIALIZER(urls:Dynamic, inMode:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initForExportingURLs:asCopy:NS_DESIGNATED_INITIALIZER")
-	overload public function initForExportingURLs(urls:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initForExportingURLs_asCopy_NS_DESIGNATED_INITIALIZER(urls:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initForExportingURLs")
 	overload public function initForExportingURLs(urls:Dynamic):Dynamic;

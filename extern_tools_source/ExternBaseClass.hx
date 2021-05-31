@@ -143,9 +143,10 @@ class ExternBaseClass {
 	}
 
 	public function toFuncName(str:String):String {
-		if (str.indexOf(":") != -1)
-			return str.substr(0, str.indexOf(":"));
-		return str;
+		// if (str.indexOf(":") != -1)
+		// return str.substr(0, str.indexOf(":"));
+		// return str;
+		return StringTools.replace(str, ":", "_");
 	}
 }
 

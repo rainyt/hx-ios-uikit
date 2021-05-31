@@ -39,7 +39,7 @@ extern class UIDatePicker{
 	public var minuteInterval:Dynamic;
 
 	@:native("setDate:animated")
-	overload public function setDate(date:Dynamic, animated:Bool):Void;
+	overload public function setDate_animated(date:Dynamic, animated:Bool):Void;
 
 	@:native("preferredDatePickerStyle")
 	public var preferredDatePickerStyle:Dynamic;

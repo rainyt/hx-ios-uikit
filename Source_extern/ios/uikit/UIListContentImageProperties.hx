@@ -25,7 +25,7 @@ extern class UIListContentImageProperties{
 	overload public function resolvedTintColorForTintColor(tintColor:Dynamic):Dynamic;
 
 	@:native("cornerRadius")
-	public var cornerRadius:Dynamic;
+	public var cornerRadius:Float;
 
 	@:native("maximumSize")
 	public var maximumSize:CGSize;

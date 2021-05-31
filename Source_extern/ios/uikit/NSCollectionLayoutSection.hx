@@ -24,7 +24,7 @@ extern class NSCollectionLayoutSection{
 	public var contentInsets:Dynamic;
 
 	@:native("interGroupSpacing")
-	public var interGroupSpacing:Dynamic;
+	public var interGroupSpacing:Float;
 
 	@:native("contentInsetsReference")
 	public var contentInsetsReference:Dynamic;

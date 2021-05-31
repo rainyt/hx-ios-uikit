@@ -14,7 +14,7 @@ extern class UIActionSheet{
 	overload public static function autorelease():UIActionSheet;
 
 	@:native("initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:...")
-	overload public function initWithTitle(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):Dynamic;
+	overload public function initWithTitle_delegate_cancelButtonTitle_destructiveButtonTitle_otherButtonTitles_...(title:NSString, delegate:Dynamic, cancelButtonTitle:NSString, destructiveButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -53,16 +53,16 @@ extern class UIActionSheet{
 	overload public function showFromTabBar(view:Dynamic):Void;
 
 	@:native("showFromBarButtonItem:animated")
-	overload public function showFromBarButtonItem(item:Dynamic, animated:Bool):Void;
+	overload public function showFromBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
 
 	@:native("showFromRect:inView:animated")
-	overload public function showFromRect(rect:CGRect, inView:Dynamic, animated:Bool):Void;
+	overload public function showFromRect_inView_animated(rect:CGRect, inView:Dynamic, animated:Bool):Void;
 
 	@:native("showInView")
 	overload public function showInView(view:Dynamic):Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload public function dismissWithClickedButtonIndex(buttonIndex:Dynamic, animated:Bool):Void;
+	overload public function dismissWithClickedButtonIndex_animated(buttonIndex:Dynamic, animated:Bool):Void;
 
 
 }

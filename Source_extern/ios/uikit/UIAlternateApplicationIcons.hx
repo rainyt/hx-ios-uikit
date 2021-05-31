@@ -16,7 +16,7 @@ extern class UIAlternateApplicationIcons{
 	public var supportsAlternateIcons:Bool;
 
 	@:native("setAlternateIconName:completionHandler:NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"")
-	overload public function setAlternateIconName(alternateIconName:NSString, completionHandler:Dynamic, NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":Dynamic):Void;
+	overload public function setAlternateIconName_completionHandler_NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"(alternateIconName:NSString, completionHandler:Dynamic, NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":Dynamic):Void;
 
 	@:native("alternateIconName")
 	public var alternateIconName:NSString;

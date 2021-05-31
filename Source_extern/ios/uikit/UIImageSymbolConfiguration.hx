@@ -18,28 +18,28 @@ extern class UIImageSymbolConfiguration{
 	overload public static function configurationWithScale(scale:Dynamic):Dynamic;
 
 	@:native("configurationWithPointSize")
-	overload public static function configurationWithPointSize(pointSize:Dynamic):Dynamic;
+	overload public static function configurationWithPointSize(pointSize:Float):Dynamic;
 
 	@:native("configurationWithWeight")
 	overload public static function configurationWithWeight(weight:Dynamic):Dynamic;
 
 	@:native("configurationWithPointSize:weight")
-	overload public static function configurationWithPointSize(pointSize:Dynamic, weight:Dynamic):Dynamic;
+	overload public static function configurationWithPointSize_weight(pointSize:Float, weight:Dynamic):Dynamic;
 
 	@:native("configurationWithPointSize:weight:scale")
-	overload public static function configurationWithPointSize(pointSize:Dynamic, weight:Dynamic, scale:Dynamic):Dynamic;
+	overload public static function configurationWithPointSize_weight_scale(pointSize:Float, weight:Dynamic, scale:Dynamic):Dynamic;
 
 	@:native("configurationWithTextStyle")
 	overload public static function configurationWithTextStyle(textStyle:Dynamic):Dynamic;
 
 	@:native("configurationWithTextStyle:scale")
-	overload public static function configurationWithTextStyle(textStyle:Dynamic, scale:Dynamic):Dynamic;
+	overload public static function configurationWithTextStyle_scale(textStyle:Dynamic, scale:Dynamic):Dynamic;
 
 	@:native("configurationWithFont")
 	overload public static function configurationWithFont(font:Dynamic):Dynamic;
 
 	@:native("configurationWithFont:scale")
-	overload public static function configurationWithFont(font:Dynamic, scale:Dynamic):Dynamic;
+	overload public static function configurationWithFont_scale(font:Dynamic, scale:Dynamic):Dynamic;
 
 	@:native("configurationWithoutTextStyle")
 	overload public function configurationWithoutTextStyle():Dynamic;

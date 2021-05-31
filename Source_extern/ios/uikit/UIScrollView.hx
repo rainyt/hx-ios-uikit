@@ -90,10 +90,10 @@ extern class UIScrollView{
 	public var indexDisplayMode:Dynamic;
 
 	@:native("setContentOffset:animated")
-	overload public function setContentOffset(contentOffset:CGPoint, animated:Bool):Void;
+	overload public function setContentOffset_animated(contentOffset:CGPoint, animated:Bool):Void;
 
 	@:native("scrollRectToVisible:animated")
-	overload public function scrollRectToVisible(rect:CGRect, animated:Bool):Void;
+	overload public function scrollRectToVisible_animated(rect:CGRect, animated:Bool):Void;
 
 	@:native("flashScrollIndicators")
 	overload public function flashScrollIndicators():Void;
@@ -114,25 +114,25 @@ extern class UIScrollView{
 	public var canCancelContentTouches:Bool;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin(touches:Dynamic, withEvent:Dynamic, inContentView:Dynamic):Bool;
+	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:Dynamic, inContentView:Dynamic):Bool;
 
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:Dynamic):Bool;
 
 	@:native("minimumZoomScale")
-	public var minimumZoomScale:Dynamic;
+	public var minimumZoomScale:Float;
 
 	@:native("maximumZoomScale")
-	public var maximumZoomScale:Dynamic;
+	public var maximumZoomScale:Float;
 
 	@:native("zoomScale")
-	public var zoomScale:Dynamic;
+	public var zoomScale:Float;
 
 	@:native("setZoomScale:animated")
-	overload public function setZoomScale(scale:Dynamic, animated:Bool):Void;
+	overload public function setZoomScale_animated(scale:Float, animated:Bool):Void;
 
 	@:native("zoomToRect:animated")
-	overload public function zoomToRect(rect:CGRect, animated:Bool):Void;
+	overload public function zoomToRect_animated(rect:CGRect, animated:Bool):Void;
 
 	@:native("bouncesZoom")
 	public var bouncesZoom:Bool;

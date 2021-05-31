@@ -13,7 +13,7 @@ extern class UISearchDisplayController{
 	overload public static function autorelease():UISearchDisplayController;
 
 	@:native("initWithSearchBar:contentsController")
-	overload public function initWithSearchBar(searchBar:Dynamic, contentsController:Dynamic):Dynamic;
+	overload public function initWithSearchBar_contentsController(searchBar:Dynamic, contentsController:Dynamic):Dynamic;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -22,7 +22,7 @@ extern class UISearchDisplayController{
 	public var active:Bool;
 
 	@:native("setActive:animated")
-	overload public function setActive(visible:Bool, animated:Bool):Void;
+	overload public function setActive_animated(visible:Bool, animated:Bool):Void;
 
 	@:native("searchBar")
 	public var searchBar:Dynamic;

@@ -36,7 +36,7 @@ extern class UICollectionViewLayoutAttributes{
 	public var transform:CGAffineTransform;
 
 	@:native("alpha")
-	public var alpha:Dynamic;
+	public var alpha:Float;
 
 	@:native("zIndex")
 	public var zIndex:Dynamic;
@@ -57,10 +57,10 @@ extern class UICollectionViewLayoutAttributes{
 	overload public static function layoutAttributesForCellWithIndexPath(indexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, withIndexPath:Dynamic):Dynamic;
+	overload public static function layoutAttributesForSupplementaryViewOfKind_withIndexPath(elementKind:NSString, withIndexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, withIndexPath:Dynamic):Dynamic;
+	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:Dynamic):Dynamic;
 
 
 }

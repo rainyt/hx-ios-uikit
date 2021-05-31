@@ -12,7 +12,7 @@ extern class UIGraphicsImageRendererFormat{
 	overload public static function autorelease():UIGraphicsImageRendererFormat;
 
 	@:native("scale")
-	public var scale:Dynamic;
+	public var scale:Float;
 
 	@:native("opaque")
 	public var opaque:Bool;

@@ -27,19 +27,19 @@ extern class UIFontMetrics{
 	overload public function scaledFontForFont(font:Dynamic):Dynamic;
 
 	@:native("scaledFontForFont:maximumPointSize")
-	overload public function scaledFontForFont(font:Dynamic, maximumPointSize:Dynamic):Dynamic;
+	overload public function scaledFontForFont_maximumPointSize(font:Dynamic, maximumPointSize:Float):Dynamic;
 
 	@:native("scaledFontForFont:compatibleWithTraitCollection")
-	overload public function scaledFontForFont(font:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public function scaledFontForFont_compatibleWithTraitCollection(font:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
 
 	@:native("scaledFontForFont:maximumPointSize:compatibleWithTraitCollection")
-	overload public function scaledFontForFont(font:Dynamic, maximumPointSize:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public function scaledFontForFont_maximumPointSize_compatibleWithTraitCollection(font:Dynamic, maximumPointSize:Float, compatibleWithTraitCollection:Dynamic):Dynamic;
 
 	@:native("scaledValueForValue")
-	overload public function scaledValueForValue(value:Dynamic):Dynamic;
+	overload public function scaledValueForValue(value:Float):Float;
 
 	@:native("scaledValueForValue:compatibleWithTraitCollection")
-	overload public function scaledValueForValue(value:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public function scaledValueForValue_compatibleWithTraitCollection(value:Float, compatibleWithTraitCollection:Dynamic):Float;
 
 
 }

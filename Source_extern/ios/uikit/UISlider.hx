@@ -40,16 +40,16 @@ extern class UISlider{
 	public var thumbTintColor:Dynamic;
 
 	@:native("setValue:animated")
-	overload public function setValue(value:Dynamic, animated:Bool):Void;
+	overload public function setValue_animated(value:Dynamic, animated:Bool):Void;
 
 	@:native("setThumbImage:forState")
-	overload public function setThumbImage(image:Dynamic, forState:Dynamic):Void;
+	overload public function setThumbImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("setMinimumTrackImage:forState")
-	overload public function setMinimumTrackImage(image:Dynamic, forState:Dynamic):Void;
+	overload public function setMinimumTrackImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("setMaximumTrackImage:forState")
-	overload public function setMaximumTrackImage(image:Dynamic, forState:Dynamic):Void;
+	overload public function setMaximumTrackImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("thumbImageForState")
 	overload public function thumbImageForState(state:Dynamic):Dynamic;
@@ -79,7 +79,7 @@ extern class UISlider{
 	overload public function trackRectForBounds(bounds:CGRect):CGRect;
 
 	@:native("thumbRectForBounds:trackRect:value")
-	overload public function thumbRectForBounds(bounds:CGRect, trackRect:CGRect, value:Dynamic):CGRect;
+	overload public function thumbRectForBounds_trackRect_value(bounds:CGRect, trackRect:CGRect, value:Dynamic):CGRect;
 
 
 }

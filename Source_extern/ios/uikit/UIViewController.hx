@@ -14,7 +14,7 @@ extern class UIViewController{
 	overload public static function autorelease():UIViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
@@ -53,19 +53,19 @@ extern class UIViewController{
 	public var storyboard:Dynamic;
 
 	@:native("performSegueWithIdentifier:sender")
-	overload public function performSegueWithIdentifier(identifier:NSString, sender:Dynamic):Void;
+	overload public function performSegueWithIdentifier_sender(identifier:NSString, sender:Dynamic):Void;
 
 	@:native("shouldPerformSegueWithIdentifier:sender")
-	overload public function shouldPerformSegueWithIdentifier(identifier:NSString, sender:Dynamic):Bool;
+	overload public function shouldPerformSegueWithIdentifier_sender(identifier:NSString, sender:Dynamic):Bool;
 
 	@:native("prepareForSegue:sender")
-	overload public function prepareForSegue(segue:Dynamic, sender:Dynamic):Void;
+	overload public function prepareForSegue_sender(segue:Dynamic, sender:Dynamic):Void;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:sender")
-	overload public function canPerformUnwindSegueAction(action:String, fromViewController:Dynamic, sender:Dynamic):Bool;
+	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:Dynamic, sender:Dynamic):Bool;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:withSender")
-	overload public function canPerformUnwindSegueAction(action:String, fromViewController:Dynamic, withSender:Dynamic):Bool;
+	overload public function canPerformUnwindSegueAction_fromViewController_withSender(action:String, fromViewController:Dynamic, withSender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
 	overload public function allowedChildViewControllersForUnwindingFromSource(source:Dynamic):Dynamic;
@@ -74,13 +74,13 @@ extern class UIViewController{
 	overload public function childViewControllerContainingSegueSource(source:Dynamic):Dynamic;
 
 	@:native("viewControllerForUnwindSegueAction:fromViewController:withSender")
-	overload public function viewControllerForUnwindSegueAction(action:String, fromViewController:Dynamic, withSender:Dynamic):Dynamic;
+	overload public function viewControllerForUnwindSegueAction_fromViewController_withSender(action:String, fromViewController:Dynamic, withSender:Dynamic):Dynamic;
 
 	@:native("unwindForSegue:towardsViewController")
-	overload public function unwindForSegue(unwindSegue:Dynamic, towardsViewController:Dynamic):Void;
+	overload public function unwindForSegue_towardsViewController(unwindSegue:Dynamic, towardsViewController:Dynamic):Void;
 
 	@:native("segueForUnwindingToViewController:fromViewController:identifier")
-	overload public function segueForUnwindingToViewController(toViewController:Dynamic, fromViewController:Dynamic, identifier:NSString):Dynamic;
+	overload public function segueForUnwindingToViewController_fromViewController_identifier(toViewController:Dynamic, fromViewController:Dynamic, identifier:NSString):Dynamic;
 
 	@:native("viewWillAppear")
 	overload public function viewWillAppear(animated:Bool):Void;
@@ -140,13 +140,13 @@ extern class UIViewController{
 	public var movingFromParentViewController:Bool;
 
 	@:native("presentViewController:animated:completion")
-	overload public function presentViewController(viewControllerToPresent:Dynamic, animated:Dynamic, completion:Dynamic):Void;
+	overload public function presentViewController_animated_completion(viewControllerToPresent:Dynamic, animated:Dynamic, completion:Dynamic):Void;
 
 	@:native("dismissViewControllerAnimated:completion")
-	overload public function dismissViewControllerAnimated(flag:Dynamic, completion:Dynamic):Void;
+	overload public function dismissViewControllerAnimated_completion(flag:Dynamic, completion:Dynamic):Void;
 
 	@:native("presentModalViewController:animated")
-	overload public function presentModalViewController(modalViewController:Dynamic, animated:Bool):Void;
+	overload public function presentModalViewController_animated(modalViewController:Dynamic, animated:Bool):Void;
 
 	@:native("dismissModalViewControllerAnimated")
 	overload public function dismissModalViewControllerAnimated(animated:Bool):Void;
@@ -191,13 +191,13 @@ extern class UIViewController{
 	overload public function setNeedsStatusBarAppearanceUpdate():Void;
 
 	@:native("targetViewControllerForAction:sender")
-	overload public function targetViewControllerForAction(action:String, sender:Dynamic):Dynamic;
+	overload public function targetViewControllerForAction_sender(action:String, sender:Dynamic):Dynamic;
 
 	@:native("showViewController:sender")
-	overload public function showViewController(vc:Dynamic, sender:Dynamic):Void;
+	overload public function showViewController_sender(vc:Dynamic, sender:Dynamic):Void;
 
 	@:native("showDetailViewController:sender")
-	overload public function showDetailViewController(vc:Dynamic, sender:Dynamic):Void;
+	overload public function showDetailViewController_sender(vc:Dynamic, sender:Dynamic):Void;
 
 	@:native("preferredUserInterfaceStyle")
 	public var preferredUserInterfaceStyle:Dynamic;

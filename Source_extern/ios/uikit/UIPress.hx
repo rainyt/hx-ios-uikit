@@ -30,7 +30,7 @@ extern class UIPress{
 	public var gestureRecognizers:Dynamic;
 
 	@:native("force")
-	public var force:Dynamic;
+	public var force:Float;
 
 	@:native("key")
 	public var key:Dynamic;

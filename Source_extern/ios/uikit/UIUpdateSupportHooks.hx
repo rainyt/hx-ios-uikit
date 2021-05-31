@@ -41,16 +41,16 @@ extern class UIUpdateSupportHooks{
 	overload public function finalLayoutAttributesForDisappearingItemAtIndexPath(itemIndexPath:Dynamic):Dynamic;
 
 	@:native("initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath")
-	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKind(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("finalLayoutAttributesForDisappearingSupplementaryElementOfKind:atIndexPath")
-	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKind(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath")
-	overload public function initialLayoutAttributesForAppearingDecorationElementOfKind(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function initialLayoutAttributesForAppearingDecorationElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("finalLayoutAttributesForDisappearingDecorationElementOfKind:atIndexPath")
-	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("indexPathsToDeleteForSupplementaryViewOfKind")
 	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):Dynamic;

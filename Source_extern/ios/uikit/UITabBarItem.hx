@@ -19,13 +19,13 @@ extern class UITabBarItem{
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithTitle:image:tag")
-	overload public function initWithTitle(title:NSString, image:Dynamic, tag:Dynamic):Dynamic;
+	overload public function initWithTitle_image_tag(title:NSString, image:Dynamic, tag:Dynamic):Dynamic;
 
 	@:native("initWithTitle:image:selectedImage")
-	overload public function initWithTitle(title:NSString, image:Dynamic, selectedImage:Dynamic):Dynamic;
+	overload public function initWithTitle_image_selectedImage(title:NSString, image:Dynamic, selectedImage:Dynamic):Dynamic;
 
 	@:native("initWithTabBarSystemItem:tag")
-	overload public function initWithTabBarSystemItem(systemItem:Dynamic, tag:Dynamic):Dynamic;
+	overload public function initWithTabBarSystemItem_tag(systemItem:Dynamic, tag:Dynamic):Dynamic;
 
 	@:native("selectedImage")
 	public var selectedImage:Dynamic;
@@ -34,7 +34,7 @@ extern class UITabBarItem{
 	public var badgeValue:NSString;
 
 	@:native("setFinishedSelectedImage:withFinishedUnselectedImage")
-	overload public function setFinishedSelectedImage(selectedImage:Dynamic, withFinishedUnselectedImage:Dynamic):Void;
+	overload public function setFinishedSelectedImage_withFinishedUnselectedImage(selectedImage:Dynamic, withFinishedUnselectedImage:Dynamic):Void;
 
 	@:native("finishedSelectedImage")
 	overload public function finishedSelectedImage():Dynamic;
@@ -49,7 +49,7 @@ extern class UITabBarItem{
 	public var badgeColor:Dynamic;
 
 	@:native("setBadgeTextAttributes:forState")
-	overload public function setBadgeTextAttributes(textAttributes:Dynamic, forState:Dynamic):Void;
+	overload public function setBadgeTextAttributes_forState(textAttributes:Dynamic, forState:Dynamic):Void;
 
 	@:native("badgeTextAttributesForState")
 	overload public function badgeTextAttributesForState(state:Dynamic):Dynamic;

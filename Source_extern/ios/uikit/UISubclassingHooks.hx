@@ -31,10 +31,10 @@ extern class UISubclassingHooks{
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("shouldInvalidateLayoutForBoundsChange")
 	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect):Bool;
@@ -43,13 +43,13 @@ extern class UISubclassingHooks{
 	overload public function invalidationContextForBoundsChange(newBounds:CGRect):Dynamic;
 
 	@:native("shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes(preferredAttributes:Dynamic, withOriginalAttributes:Dynamic):Bool;
+	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:Dynamic, withOriginalAttributes:Dynamic):Bool;
 
 	@:native("invalidationContextForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function invalidationContextForPreferredLayoutAttributes(preferredAttributes:Dynamic, withOriginalAttributes:Dynamic):Dynamic;
+	overload public function invalidationContextForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:Dynamic, withOriginalAttributes:Dynamic):Dynamic;
 
 	@:native("targetContentOffsetForProposedContentOffset:withScrollingVelocity")
-	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint):CGPoint;
+	overload public function targetContentOffsetForProposedContentOffset_withScrollingVelocity(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint):CGPoint;
 
 	@:native("targetContentOffsetForProposedContentOffset")
 	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint):CGPoint;

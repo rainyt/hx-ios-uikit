@@ -88,13 +88,13 @@ extern class UIListContentConfiguration{
 	public var prefersSideBySideTextAndSecondaryText:Bool;
 
 	@:native("imageToTextPadding")
-	public var imageToTextPadding:Dynamic;
+	public var imageToTextPadding:Float;
 
 	@:native("textToSecondaryTextHorizontalPadding")
-	public var textToSecondaryTextHorizontalPadding:Dynamic;
+	public var textToSecondaryTextHorizontalPadding:Float;
 
 	@:native("textToSecondaryTextVerticalPadding")
-	public var textToSecondaryTextVerticalPadding:Dynamic;
+	public var textToSecondaryTextVerticalPadding:Float;
 
 
 }

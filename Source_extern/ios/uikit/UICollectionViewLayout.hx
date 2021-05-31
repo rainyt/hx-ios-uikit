@@ -28,10 +28,10 @@ extern class UICollectionViewLayout{
 	overload public function invalidateLayoutWithContext(context:Dynamic):Void;
 
 	@:native("registerClass:forDecorationViewOfKind")
-	overload public function registerClass(viewClass:Dynamic, forDecorationViewOfKind:NSString):Void;
+	overload public function registerClass_forDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:NSString):Void;
 
 	@:native("registerNib:forDecorationViewOfKind")
-	overload public function registerNib(nib:Dynamic, forDecorationViewOfKind:NSString):Void;
+	overload public function registerNib_forDecorationViewOfKind(nib:Dynamic, forDecorationViewOfKind:NSString):Void;
 
 
 }

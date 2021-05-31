@@ -24,19 +24,19 @@ extern class UIViewHierarchy{
 	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
-	overload public function insertSubview(view:Dynamic, atIndex:Dynamic):Void;
+	overload public function insertSubview_atIndex(view:Dynamic, atIndex:Dynamic):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
-	overload public function exchangeSubviewAtIndex(index1:Dynamic, withSubviewAtIndex:Dynamic):Void;
+	overload public function exchangeSubviewAtIndex_withSubviewAtIndex(index1:Dynamic, withSubviewAtIndex:Dynamic):Void;
 
 	@:native("addSubview")
 	overload public function addSubview(view:Dynamic):Void;
 
 	@:native("insertSubview:belowSubview")
-	overload public function insertSubview(view:Dynamic, belowSubview:Dynamic):Void;
+	overload public function insertSubview_belowSubview(view:Dynamic, belowSubview:Dynamic):Void;
 
 	@:native("insertSubview:aboveSubview")
-	overload public function insertSubview(view:Dynamic, aboveSubview:Dynamic):Void;
+	overload public function insertSubview_aboveSubview(view:Dynamic, aboveSubview:Dynamic):Void;
 
 	@:native("bringSubviewToFront")
 	overload public function bringSubviewToFront(view:Dynamic):Void;

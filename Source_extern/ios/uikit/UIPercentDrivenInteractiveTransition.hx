@@ -12,13 +12,13 @@ extern class UIPercentDrivenInteractiveTransition{
 	overload public static function autorelease():UIPercentDrivenInteractiveTransition;
 
 	@:native("duration")
-	public var duration:Dynamic;
+	public var duration:Float;
 
 	@:native("percentComplete")
-	public var percentComplete:Dynamic;
+	public var percentComplete:Float;
 
 	@:native("completionSpeed")
-	public var completionSpeed:Dynamic;
+	public var completionSpeed:Float;
 
 	@:native("completionCurve")
 	public var completionCurve:Dynamic;
@@ -33,7 +33,7 @@ extern class UIPercentDrivenInteractiveTransition{
 	overload public function pauseInteractiveTransition():Void;
 
 	@:native("updateInteractiveTransition")
-	overload public function updateInteractiveTransition(percentComplete:Dynamic):Void;
+	overload public function updateInteractiveTransition(percentComplete:Float):Void;
 
 	@:native("cancelInteractiveTransition")
 	overload public function cancelInteractiveTransition():Void;

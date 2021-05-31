@@ -38,7 +38,7 @@ extern class UIApplication{
 	overload public function canOpenURL(url:Dynamic):Bool;
 
 	@:native("openURL:options:completionHandler")
-	overload public function openURL(url:Dynamic, options:Dynamic, completionHandler:Dynamic):Void;
+	overload public function openURL_options_completionHandler(url:Dynamic, options:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("sendEvent")
 	overload public function sendEvent(event:Dynamic):Void;
@@ -50,7 +50,7 @@ extern class UIApplication{
 	public var windows:Dynamic;
 
 	@:native("sendAction:to:from:forEvent")
-	overload public function sendAction(action:String, to:Dynamic, from:Dynamic, forEvent:Dynamic):Bool;
+	overload public function sendAction_to_from_forEvent(action:String, to:Dynamic, from:Dynamic, forEvent:Dynamic):Bool;
 
 	@:native("networkActivityIndicatorVisible")
 	public var networkActivityIndicatorVisible:Bool;
@@ -89,7 +89,7 @@ extern class UIApplication{
 	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic):NSUInteger;
 
 	@:native("beginBackgroundTaskWithName:expirationHandler")
-	overload public function beginBackgroundTaskWithName(taskName:NSString, expirationHandler:Dynamic):NSUInteger;
+	overload public function beginBackgroundTaskWithName_expirationHandler(taskName:NSString, expirationHandler:Dynamic):NSUInteger;
 
 	@:native("endBackgroundTask")
 	overload public function endBackgroundTask(identifier:NSUInteger):Void;
@@ -119,10 +119,10 @@ extern class UIApplication{
 	public var supportsMultipleScenes:Bool;
 
 	@:native("requestSceneSessionActivation:userActivity:options:errorHandler")
-	overload public function requestSceneSessionActivation(sceneSession:Dynamic, userActivity:Dynamic, options:Dynamic, errorHandler:Dynamic):Void;
+	overload public function requestSceneSessionActivation_userActivity_options_errorHandler(sceneSession:Dynamic, userActivity:Dynamic, options:Dynamic, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionDestruction:options:errorHandler")
-	overload public function requestSceneSessionDestruction(sceneSession:Dynamic, options:Dynamic, errorHandler:Dynamic):Void;
+	overload public function requestSceneSessionDestruction_options_errorHandler(sceneSession:Dynamic, options:Dynamic, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionRefresh")
 	overload public function requestSceneSessionRefresh(sceneSession:Dynamic):Void;

@@ -14,7 +14,7 @@ extern class UIPrintPaper{
 	overload public static function autorelease():UIPrintPaper;
 
 	@:native("bestPaperForPageSize:withPapersFromArray")
-	overload public static function bestPaperForPageSize(contentSize:CGSize, withPapersFromArray:Dynamic):Dynamic;
+	overload public static function bestPaperForPageSize_withPapersFromArray(contentSize:CGSize, withPapersFromArray:Dynamic):Dynamic;
 
 	@:native("paperSize")
 	public var paperSize:CGSize;

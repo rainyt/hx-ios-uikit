@@ -28,13 +28,13 @@ extern class UIGravityBehavior{
 	public var gravityDirection:CGVector;
 
 	@:native("angle")
-	public var angle:Dynamic;
+	public var angle:Float;
 
 	@:native("magnitude")
-	public var magnitude:Dynamic;
+	public var magnitude:Float;
 
 	@:native("setAngle:magnitude")
-	overload public function setAngle(angle:Dynamic, magnitude:Dynamic):Void;
+	overload public function setAngle_magnitude(angle:Float, magnitude:Float):Void;
 
 
 }

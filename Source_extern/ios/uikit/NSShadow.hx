@@ -22,7 +22,7 @@ extern class NSShadow{
 	public var shadowOffset:CGSize;
 
 	@:native("shadowBlurRadius")
-	public var shadowBlurRadius:Dynamic;
+	public var shadowBlurRadius:Float;
 
 	@:native("shadowColor")
 	public var shadowColor:Dynamic;

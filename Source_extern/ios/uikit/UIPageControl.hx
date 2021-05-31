@@ -43,7 +43,7 @@ extern class UIPageControl{
 	overload public function indicatorImageForPage(page:Dynamic):Dynamic;
 
 	@:native("setIndicatorImage:forPage")
-	overload public function setIndicatorImage(image:Dynamic, forPage:Dynamic):Void;
+	overload public function setIndicatorImage_forPage(image:Dynamic, forPage:Dynamic):Void;
 
 	@:native("sizeForNumberOfPages")
 	overload public function sizeForNumberOfPages(pageCount:Dynamic):CGSize;

@@ -21,7 +21,7 @@ extern class UIImageAsset{
 	overload public function imageWithConfiguration(configuration:Dynamic):Dynamic;
 
 	@:native("registerImage:withConfiguration")
-	overload public function registerImage(image:Dynamic, withConfiguration:Dynamic):Void;
+	overload public function registerImage_withConfiguration(image:Dynamic, withConfiguration:Dynamic):Void;
 
 	@:native("unregisterImageWithConfiguration")
 	overload public function unregisterImageWithConfiguration(configuration:Dynamic):Void;
@@ -30,7 +30,7 @@ extern class UIImageAsset{
 	overload public function imageWithTraitCollection(traitCollection:Dynamic):Dynamic;
 
 	@:native("registerImage:withTraitCollection")
-	overload public function registerImage(image:Dynamic, withTraitCollection:Dynamic):Void;
+	overload public function registerImage_withTraitCollection(image:Dynamic, withTraitCollection:Dynamic):Void;
 
 	@:native("unregisterImageWithTraitCollection")
 	overload public function unregisterImageWithTraitCollection(traitCollection:Dynamic):Void;

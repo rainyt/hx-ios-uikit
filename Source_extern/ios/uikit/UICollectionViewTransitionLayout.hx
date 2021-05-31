@@ -13,7 +13,7 @@ extern class UICollectionViewTransitionLayout{
 	overload public static function autorelease():UICollectionViewTransitionLayout;
 
 	@:native("transitionProgress")
-	public var transitionProgress:Dynamic;
+	public var transitionProgress:Float;
 
 	@:native("currentLayout")
 	public var currentLayout:Dynamic;
@@ -22,7 +22,7 @@ extern class UICollectionViewTransitionLayout{
 	public var nextLayout:Dynamic;
 
 	@:native("initWithCurrentLayout:nextLayout")
-	overload public function initWithCurrentLayout(currentLayout:Dynamic, nextLayout:Dynamic):Dynamic;
+	overload public function initWithCurrentLayout_nextLayout(currentLayout:Dynamic, nextLayout:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
@@ -31,10 +31,10 @@ extern class UICollectionViewTransitionLayout{
 	overload public function init():Dynamic;
 
 	@:native("updateValue:forAnimatedKey")
-	overload public function updateValue(value:Dynamic, forAnimatedKey:NSString):Void;
+	overload public function updateValue_forAnimatedKey(value:Float, forAnimatedKey:NSString):Void;
 
 	@:native("valueForAnimatedKey")
-	overload public function valueForAnimatedKey(key:NSString):Dynamic;
+	overload public function valueForAnimatedKey(key:NSString):Float;
 
 
 }

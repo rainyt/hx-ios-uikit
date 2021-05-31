@@ -12,16 +12,16 @@ extern class NSCollectionLayoutDimension{
 	overload public static function autorelease():NSCollectionLayoutDimension;
 
 	@:native("fractionalWidthDimension")
-	overload public static function fractionalWidthDimension(fractionalWidth:Dynamic):Dynamic;
+	overload public static function fractionalWidthDimension(fractionalWidth:Float):Dynamic;
 
 	@:native("fractionalHeightDimension")
-	overload public static function fractionalHeightDimension(fractionalHeight:Dynamic):Dynamic;
+	overload public static function fractionalHeightDimension(fractionalHeight:Float):Dynamic;
 
 	@:native("absoluteDimension")
-	overload public static function absoluteDimension(absoluteDimension:Dynamic):Dynamic;
+	overload public static function absoluteDimension(absoluteDimension:Float):Dynamic;
 
 	@:native("estimatedDimension")
-	overload public static function estimatedDimension(estimatedDimension:Dynamic):Dynamic;
+	overload public static function estimatedDimension(estimatedDimension:Float):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;
@@ -42,7 +42,7 @@ extern class NSCollectionLayoutDimension{
 	public var isEstimated:Bool;
 
 	@:native("dimension")
-	public var dimension:Dynamic;
+	public var dimension:Float;
 
 
 }

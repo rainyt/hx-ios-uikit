@@ -16,7 +16,7 @@ extern class UIGraphicsRenderer{
 	overload public function initWithBounds(bounds:CGRect):Dynamic;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds(bounds:CGRect, format:Dynamic):Dynamic;
+	overload public function initWithBounds_format(bounds:CGRect, format:Dynamic):Dynamic;
 
 	@:native("format")
 	public var format:Dynamic;

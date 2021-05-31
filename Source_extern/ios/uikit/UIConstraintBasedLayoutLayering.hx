@@ -41,13 +41,13 @@ extern class UIConstraintBasedLayoutLayering{
 	overload public function contentHuggingPriorityForAxis(axis:Dynamic):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority(priority:Dynamic, forAxis:Dynamic):Void;
+	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:Dynamic):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
 	overload public function contentCompressionResistancePriorityForAxis(axis:Dynamic):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority(priority:Dynamic, forAxis:Dynamic):Void;
+	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:Dynamic):Void;
 
 
 }

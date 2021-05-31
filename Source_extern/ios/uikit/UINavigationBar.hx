@@ -21,7 +21,7 @@ extern class UINavigationBar{
 	public var translucent:Bool;
 
 	@:native("pushNavigationItem:animated")
-	overload public function pushNavigationItem(item:Dynamic, animated:Bool):Void;
+	overload public function pushNavigationItem_animated(item:Dynamic, animated:Bool):Void;
 
 	@:native("popNavigationItemAnimated")
 	overload public function popNavigationItemAnimated(animated:Bool):Dynamic;
@@ -36,7 +36,7 @@ extern class UINavigationBar{
 	public var items:Dynamic;
 
 	@:native("setItems:animated")
-	overload public function setItems(items:Dynamic, animated:Bool):Void;
+	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
 
 	@:native("prefersLargeTitles")
 	public var prefersLargeTitles:Bool;
@@ -48,13 +48,13 @@ extern class UINavigationBar{
 	public var barTintColor:Dynamic;
 
 	@:native("setBackgroundImage:forBarPosition:barMetrics")
-	overload public function setBackgroundImage(backgroundImage:Dynamic, forBarPosition:Dynamic, barMetrics:Dynamic):Void;
+	overload public function setBackgroundImage_forBarPosition_barMetrics(backgroundImage:Dynamic, forBarPosition:Dynamic, barMetrics:Dynamic):Void;
 
 	@:native("backgroundImageForBarPosition:barMetrics")
-	overload public function backgroundImageForBarPosition(barPosition:Dynamic, barMetrics:Dynamic):Dynamic;
+	overload public function backgroundImageForBarPosition_barMetrics(barPosition:Dynamic, barMetrics:Dynamic):Dynamic;
 
 	@:native("setBackgroundImage:forBarMetrics")
-	overload public function setBackgroundImage(backgroundImage:Dynamic, forBarMetrics:Dynamic):Void;
+	overload public function setBackgroundImage_forBarMetrics(backgroundImage:Dynamic, forBarMetrics:Dynamic):Void;
 
 	@:native("backgroundImageForBarMetrics")
 	overload public function backgroundImageForBarMetrics(barMetrics:Dynamic):Dynamic;
@@ -69,10 +69,10 @@ extern class UINavigationBar{
 	public var largeTitleTextAttributes:Dynamic;
 
 	@:native("setTitleVerticalPositionAdjustment:forBarMetrics")
-	overload public function setTitleVerticalPositionAdjustment(adjustment:Dynamic, forBarMetrics:Dynamic):Void;
+	overload public function setTitleVerticalPositionAdjustment_forBarMetrics(adjustment:Float, forBarMetrics:Dynamic):Void;
 
 	@:native("titleVerticalPositionAdjustmentForBarMetrics")
-	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:Dynamic):Dynamic;
+	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:Dynamic):Float;
 
 	@:native("backIndicatorImage")
 	public var backIndicatorImage:Dynamic;

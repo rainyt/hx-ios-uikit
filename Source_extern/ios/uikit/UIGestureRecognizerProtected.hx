@@ -15,10 +15,10 @@ extern class UIGestureRecognizerProtected{
 	public var state:Dynamic;
 
 	@:native("ignoreTouch:forEvent")
-	overload public function ignoreTouch(touch:Dynamic, forEvent:Dynamic):Void;
+	overload public function ignoreTouch_forEvent(touch:Dynamic, forEvent:Dynamic):Void;
 
 	@:native("ignorePress:forEvent")
-	overload public function ignorePress(button:Dynamic, forEvent:Dynamic):Void;
+	overload public function ignorePress_forEvent(button:Dynamic, forEvent:Dynamic):Void;
 
 	@:native("reset")
 	overload public function reset():Void;
@@ -39,31 +39,31 @@ extern class UIGestureRecognizerProtected{
 	overload public function shouldReceiveEvent(event:Dynamic):Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBegan(touches:Dynamic, withEvent:Dynamic):Void;
+	overload public function touchesBegan_withEvent(touches:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMoved(touches:Dynamic, withEvent:Dynamic):Void;
+	overload public function touchesMoved_withEvent(touches:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEnded(touches:Dynamic, withEvent:Dynamic):Void;
+	overload public function touchesEnded_withEvent(touches:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelled(touches:Dynamic, withEvent:Dynamic):Void;
+	overload public function touchesCancelled_withEvent(touches:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
 	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBegan(presses:Dynamic, withEvent:Dynamic):Void;
+	overload public function pressesBegan_withEvent(presses:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChanged(presses:Dynamic, withEvent:Dynamic):Void;
+	overload public function pressesChanged_withEvent(presses:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEnded(presses:Dynamic, withEvent:Dynamic):Void;
+	overload public function pressesEnded_withEvent(presses:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelled(presses:Dynamic, withEvent:Dynamic):Void;
+	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:Dynamic):Void;
 
 
 }

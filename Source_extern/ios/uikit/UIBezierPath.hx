@@ -28,13 +28,13 @@ extern class UIBezierPath{
 	overload public static function bezierPathWithOvalInRect(rect:CGRect):Dynamic;
 
 	@:native("bezierPathWithRoundedRect:cornerRadius")
-	overload public static function bezierPathWithRoundedRect(rect:CGRect, cornerRadius:Dynamic):Dynamic;
+	overload public static function bezierPathWithRoundedRect_cornerRadius(rect:CGRect, cornerRadius:Float):Dynamic;
 
 	@:native("bezierPathWithRoundedRect:byRoundingCorners:cornerRadii")
-	overload public static function bezierPathWithRoundedRect(rect:CGRect, byRoundingCorners:Dynamic, cornerRadii:CGSize):Dynamic;
+	overload public static function bezierPathWithRoundedRect_byRoundingCorners_cornerRadii(rect:CGRect, byRoundingCorners:Dynamic, cornerRadii:CGSize):Dynamic;
 
 	@:native("bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise")
-	overload public static function bezierPathWithArcCenter(center:CGPoint, radius:Dynamic, startAngle:Dynamic, endAngle:Dynamic, clockwise:Bool):Dynamic;
+	overload public static function bezierPathWithArcCenter_radius_startAngle_endAngle_clockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):Dynamic;
 
 	@:native("bezierPathWithCGPath")
 	overload public static function bezierPathWithCGPath(CGPath:Dynamic):Dynamic;
@@ -58,13 +58,13 @@ extern class UIBezierPath{
 	overload public function addLineToPoint(point:CGPoint):Void;
 
 	@:native("addCurveToPoint:controlPoint1:controlPoint2")
-	overload public function addCurveToPoint(endPoint:CGPoint, controlPoint1:CGPoint, controlPoint2:CGPoint):Void;
+	overload public function addCurveToPoint_controlPoint1_controlPoint2(endPoint:CGPoint, controlPoint1:CGPoint, controlPoint2:CGPoint):Void;
 
 	@:native("addQuadCurveToPoint:controlPoint")
-	overload public function addQuadCurveToPoint(endPoint:CGPoint, controlPoint:CGPoint):Void;
+	overload public function addQuadCurveToPoint_controlPoint(endPoint:CGPoint, controlPoint:CGPoint):Void;
 
 	@:native("addArcWithCenter:radius:startAngle:endAngle:clockwise")
-	overload public function addArcWithCenter(center:CGPoint, radius:Dynamic, startAngle:Dynamic, endAngle:Dynamic, clockwise:Bool):Void;
+	overload public function addArcWithCenter_radius_startAngle_endAngle_clockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):Void;
 
 	@:native("closePath")
 	overload public function closePath():Void;
@@ -94,7 +94,7 @@ extern class UIBezierPath{
 	overload public function containsPoint(point:CGPoint):Bool;
 
 	@:native("lineWidth")
-	public var lineWidth:Dynamic;
+	public var lineWidth:Float;
 
 	@:native("lineCapStyle")
 	public var lineCapStyle:CGLineCap;
@@ -103,19 +103,19 @@ extern class UIBezierPath{
 	public var lineJoinStyle:CGLineJoin;
 
 	@:native("miterLimit")
-	public var miterLimit:Dynamic;
+	public var miterLimit:Float;
 
 	@:native("flatness")
-	public var flatness:Dynamic;
+	public var flatness:Float;
 
 	@:native("usesEvenOddFillRule")
 	public var usesEvenOddFillRule:Bool;
 
 	@:native("setLineDash:count:phase")
-	overload public function setLineDash(pattern:Dynamic, count:Dynamic, phase:Dynamic):Void;
+	overload public function setLineDash_count_phase(pattern:Dynamic, count:Dynamic, phase:Float):Void;
 
 	@:native("getLineDash:count:phase")
-	overload public function getLineDash(pattern:Dynamic, count:Dynamic, phase:Dynamic):Void;
+	overload public function getLineDash_count_phase(pattern:Float, count:Dynamic, phase:Float):Void;
 
 	@:native("fill")
 	overload public function fill():Void;
@@ -124,10 +124,10 @@ extern class UIBezierPath{
 	overload public function stroke():Void;
 
 	@:native("fillWithBlendMode:alpha")
-	overload public function fillWithBlendMode(blendMode:CGBlendMode, alpha:Dynamic):Void;
+	overload public function fillWithBlendMode_alpha(blendMode:CGBlendMode, alpha:Float):Void;
 
 	@:native("strokeWithBlendMode:alpha")
-	overload public function strokeWithBlendMode(blendMode:CGBlendMode, alpha:Dynamic):Void;
+	overload public function strokeWithBlendMode_alpha(blendMode:CGBlendMode, alpha:Float):Void;
 
 	@:native("addClip")
 	overload public function addClip():Void;

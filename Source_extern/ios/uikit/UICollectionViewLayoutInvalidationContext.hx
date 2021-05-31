@@ -24,10 +24,10 @@ extern class UICollectionViewLayoutInvalidationContext{
 	overload public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;
 
 	@:native("invalidateSupplementaryElementsOfKind:atIndexPaths")
-	overload public function invalidateSupplementaryElementsOfKind(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateSupplementaryElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
 
 	@:native("invalidateDecorationElementsOfKind:atIndexPaths")
-	overload public function invalidateDecorationElementsOfKind(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateDecorationElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
 
 	@:native("invalidatedItemIndexPaths")
 	public var invalidatedItemIndexPaths:Dynamic;

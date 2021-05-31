@@ -12,7 +12,7 @@ extern class UIPageViewController{
 	overload public static function autorelease():UIPageViewController;
 
 	@:native("initWithTransitionStyle:navigationOrientation:options")
-	overload public function initWithTransitionStyle(style:Dynamic, navigationOrientation:Dynamic, options:Dynamic):Dynamic;
+	overload public function initWithTransitionStyle_navigationOrientation_options(style:Dynamic, navigationOrientation:Dynamic, options:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
@@ -42,7 +42,7 @@ extern class UIPageViewController{
 	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:direction:animated:completion")
-	overload public function setViewControllers(viewControllers:Dynamic, direction:Dynamic, animated:Bool, completion:Dynamic):Void;
+	overload public function setViewControllers_direction_animated_completion(viewControllers:Dynamic, direction:Dynamic, animated:Bool, completion:Dynamic):Void;
 
 
 }

@@ -15,13 +15,13 @@ extern class UICollectionViewCompositionalLayout{
 	overload public function initWithSection(section:Dynamic):Dynamic;
 
 	@:native("initWithSection:configuration")
-	overload public function initWithSection(section:Dynamic, configuration:Dynamic):Dynamic;
+	overload public function initWithSection_configuration(section:Dynamic, configuration:Dynamic):Dynamic;
 
 	@:native("initWithSectionProvider")
 	overload public function initWithSectionProvider(sectionProvider:Dynamic):Dynamic;
 
 	@:native("initWithSectionProvider:configuration")
-	overload public function initWithSectionProvider(sectionProvider:Dynamic, configuration:Dynamic):Dynamic;
+	overload public function initWithSectionProvider_configuration(sectionProvider:Dynamic, configuration:Dynamic):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

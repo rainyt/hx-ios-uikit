@@ -225,11 +225,7 @@ class ExternBaseClass:
         return ", ".join([python_Boot.toString1(x1,'') for x1 in args])
 
     def toFuncName(self,_hx_str):
-        startIndex = None
-        if (((_hx_str.find(":") if ((startIndex is None)) else HxString.indexOfImpl(_hx_str,":",startIndex))) != -1):
-            startIndex = None
-            return HxString.substr(_hx_str,0,(_hx_str.find(":") if ((startIndex is None)) else HxString.indexOfImpl(_hx_str,":",startIndex)))
-        return _hx_str
+        return StringTools.replace(_hx_str,":","_")
 
 
 
@@ -896,6 +892,8 @@ class ObjcType:
                 return _hx_def.parentClassName
         t = StringTools.replace(t,"*","")
         t = StringTools.replace(t," ","")
+        if (t == "CGFloat"):
+            return "Float"
         i = ObjcImport.toImport(t)
         if (i is None):
             return "Dynamic"

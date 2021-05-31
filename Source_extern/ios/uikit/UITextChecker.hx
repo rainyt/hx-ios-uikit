@@ -13,13 +13,13 @@ extern class UITextChecker{
 	overload public static function autorelease():UITextChecker;
 
 	@:native("rangeOfMisspelledWordInString:range:startingAt:wrap:language")
-	overload public function rangeOfMisspelledWordInString(stringToCheck:NSString, range:Dynamic, startingAt:Dynamic, wrap:Bool, language:NSString):Dynamic;
+	overload public function rangeOfMisspelledWordInString_range_startingAt_wrap_language(stringToCheck:NSString, range:Dynamic, startingAt:Dynamic, wrap:Bool, language:NSString):Dynamic;
 
 	@:native("guessesForWordRange:inString:language")
-	overload public function guessesForWordRange(range:Dynamic, inString:NSString, language:NSString):Dynamic;
+	overload public function guessesForWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):Dynamic;
 
 	@:native("completionsForPartialWordRange:inString:language")
-	overload public function completionsForPartialWordRange(range:Dynamic, inString:NSString, language:NSString):Dynamic;
+	overload public function completionsForPartialWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):Dynamic;
 
 	@:native("ignoreWord")
 	overload public function ignoreWord(wordToIgnore:NSString):Void;

@@ -17,10 +17,10 @@ extern class UISearchBar{
 	overload public function init():Dynamic;
 
 	@:native("initWithFrame:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithFrame(frame:CGRect, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithFrame_NS_DESIGNATED_INITIALIZER(frame:CGRect, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithCoder(coder:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithCoder_NS_DESIGNATED_INITIALIZER(coder:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("barStyle")
 	public var barStyle:Dynamic;
@@ -53,7 +53,7 @@ extern class UISearchBar{
 	public var searchResultsButtonSelected:Bool;
 
 	@:native("setShowsCancelButton:animated")
-	overload public function setShowsCancelButton(showsCancelButton:Bool, animated:Bool):Void;
+	overload public function setShowsCancelButton_animated(showsCancelButton:Bool, animated:Bool):Void;
 
 	@:native("inputAssistantItem")
 	public var inputAssistantItem:Dynamic;
@@ -80,7 +80,7 @@ extern class UISearchBar{
 	public var showsScopeBar:Bool;
 
 	@:native("setShowsScopeBar:animated")
-	overload public function setShowsScopeBar(show:Bool, animated:Bool):Void;
+	overload public function setShowsScopeBar_animated(show:Bool, animated:Bool):Void;
 
 	@:native("inputAccessoryView")
 	public var inputAccessoryView:Dynamic;
@@ -92,37 +92,37 @@ extern class UISearchBar{
 	public var scopeBarBackgroundImage:Dynamic;
 
 	@:native("setBackgroundImage:forBarPosition:barMetrics")
-	overload public function setBackgroundImage(backgroundImage:Dynamic, forBarPosition:Dynamic, barMetrics:Dynamic):Void;
+	overload public function setBackgroundImage_forBarPosition_barMetrics(backgroundImage:Dynamic, forBarPosition:Dynamic, barMetrics:Dynamic):Void;
 
 	@:native("backgroundImageForBarPosition:barMetrics")
-	overload public function backgroundImageForBarPosition(barPosition:Dynamic, barMetrics:Dynamic):Dynamic;
+	overload public function backgroundImageForBarPosition_barMetrics(barPosition:Dynamic, barMetrics:Dynamic):Dynamic;
 
 	@:native("setSearchFieldBackgroundImage:forState")
-	overload public function setSearchFieldBackgroundImage(backgroundImage:Dynamic, forState:Dynamic):Void;
+	overload public function setSearchFieldBackgroundImage_forState(backgroundImage:Dynamic, forState:Dynamic):Void;
 
 	@:native("searchFieldBackgroundImageForState")
 	overload public function searchFieldBackgroundImageForState(state:Dynamic):Dynamic;
 
 	@:native("setImage:forSearchBarIcon:state")
-	overload public function setImage(iconImage:Dynamic, forSearchBarIcon:Dynamic, state:Dynamic):Void;
+	overload public function setImage_forSearchBarIcon_state(iconImage:Dynamic, forSearchBarIcon:Dynamic, state:Dynamic):Void;
 
 	@:native("imageForSearchBarIcon:state")
-	overload public function imageForSearchBarIcon(icon:Dynamic, state:Dynamic):Dynamic;
+	overload public function imageForSearchBarIcon_state(icon:Dynamic, state:Dynamic):Dynamic;
 
 	@:native("setScopeBarButtonBackgroundImage:forState")
-	overload public function setScopeBarButtonBackgroundImage(backgroundImage:Dynamic, forState:Dynamic):Void;
+	overload public function setScopeBarButtonBackgroundImage_forState(backgroundImage:Dynamic, forState:Dynamic):Void;
 
 	@:native("scopeBarButtonBackgroundImageForState")
 	overload public function scopeBarButtonBackgroundImageForState(state:Dynamic):Dynamic;
 
 	@:native("setScopeBarButtonDividerImage:forLeftSegmentState:rightSegmentState")
-	overload public function setScopeBarButtonDividerImage(dividerImage:Dynamic, forLeftSegmentState:Dynamic, rightSegmentState:Dynamic):Void;
+	overload public function setScopeBarButtonDividerImage_forLeftSegmentState_rightSegmentState(dividerImage:Dynamic, forLeftSegmentState:Dynamic, rightSegmentState:Dynamic):Void;
 
 	@:native("scopeBarButtonDividerImageForLeftSegmentState:rightSegmentState")
-	overload public function scopeBarButtonDividerImageForLeftSegmentState(leftState:Dynamic, rightSegmentState:Dynamic):Dynamic;
+	overload public function scopeBarButtonDividerImageForLeftSegmentState_rightSegmentState(leftState:Dynamic, rightSegmentState:Dynamic):Dynamic;
 
 	@:native("setScopeBarButtonTitleTextAttributes:forState")
-	overload public function setScopeBarButtonTitleTextAttributes(attributes:Dynamic, forState:Dynamic):Void;
+	overload public function setScopeBarButtonTitleTextAttributes_forState(attributes:Dynamic, forState:Dynamic):Void;
 
 	@:native("scopeBarButtonTitleTextAttributesForState")
 	overload public function scopeBarButtonTitleTextAttributesForState(state:Dynamic):Dynamic;
@@ -134,7 +134,7 @@ extern class UISearchBar{
 	public var searchTextPositionAdjustment:Dynamic;
 
 	@:native("setPositionAdjustment:forSearchBarIcon")
-	overload public function setPositionAdjustment(adjustment:Dynamic, forSearchBarIcon:Dynamic):Void;
+	overload public function setPositionAdjustment_forSearchBarIcon(adjustment:Dynamic, forSearchBarIcon:Dynamic):Void;
 
 	@:native("positionAdjustmentForSearchBarIcon")
 	overload public function positionAdjustmentForSearchBarIcon(icon:Dynamic):Dynamic;

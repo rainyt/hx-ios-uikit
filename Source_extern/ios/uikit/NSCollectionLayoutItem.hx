@@ -15,7 +15,7 @@ extern class NSCollectionLayoutItem{
 	overload public static function itemWithLayoutSize(layoutSize:Dynamic):Dynamic;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSize(layoutSize:Dynamic, supplementaryItems:Dynamic):Dynamic;
+	overload public static function itemWithLayoutSize_supplementaryItems(layoutSize:Dynamic, supplementaryItems:Dynamic):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

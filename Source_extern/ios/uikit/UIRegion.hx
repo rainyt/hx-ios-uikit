@@ -17,7 +17,7 @@ extern class UIRegion{
 	public var infiniteRegion:Dynamic;
 
 	@:native("initWithRadius")
-	overload public function initWithRadius(radius:Dynamic):Dynamic;
+	overload public function initWithRadius(radius:Float):Dynamic;
 
 	@:native("initWithSize")
 	overload public function initWithSize(size:CGSize):Dynamic;

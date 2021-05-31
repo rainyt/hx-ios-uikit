@@ -14,7 +14,7 @@ extern class NSDeprecatedKitAdditions{
 	overload public static function autorelease():NSDeprecatedKitAdditions;
 
 	@:native("readFromFileURL:options:documentAttributes:error")
-	overload public function readFromFileURL(url:Dynamic, options:NSDictionary, documentAttributes:Dynamic, error:NSError):Bool;
+	overload public function readFromFileURL_options_documentAttributes_error(url:Dynamic, options:NSDictionary, documentAttributes:Dynamic, error:NSError):Bool;
 
 
 }

@@ -12,7 +12,7 @@ extern class UIPopoverBackgroundView{
 	overload public static function autorelease():UIPopoverBackgroundView;
 
 	@:native("arrowOffset")
-	public var arrowOffset:Dynamic;
+	public var arrowOffset:Float;
 
 	@:native("arrowDirection")
 	public var arrowDirection:Dynamic;

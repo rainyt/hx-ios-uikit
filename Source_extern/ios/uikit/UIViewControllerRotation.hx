@@ -36,22 +36,22 @@ extern class UIViewControllerRotation{
 	public var interfaceOrientation:Dynamic;
 
 	@:native("willRotateToInterfaceOrientation:duration")
-	overload public function willRotateToInterfaceOrientation(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
+	overload public function willRotateToInterfaceOrientation_duration(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
 
 	@:native("didRotateFromInterfaceOrientation")
 	overload public function didRotateFromInterfaceOrientation(fromInterfaceOrientation:Dynamic):Void;
 
 	@:native("willAnimateRotationToInterfaceOrientation:duration")
-	overload public function willAnimateRotationToInterfaceOrientation(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
+	overload public function willAnimateRotationToInterfaceOrientation_duration(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
 
 	@:native("willAnimateFirstHalfOfRotationToInterfaceOrientation:duration")
-	overload public function willAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
+	overload public function willAnimateFirstHalfOfRotationToInterfaceOrientation_duration(toInterfaceOrientation:Dynamic, duration:Dynamic):Void;
 
 	@:native("didAnimateFirstHalfOfRotationToInterfaceOrientation")
 	overload public function didAnimateFirstHalfOfRotationToInterfaceOrientation(toInterfaceOrientation:Dynamic):Void;
 
 	@:native("willAnimateSecondHalfOfRotationFromInterfaceOrientation:duration")
-	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation(fromInterfaceOrientation:Dynamic, duration:Dynamic):Void;
+	overload public function willAnimateSecondHalfOfRotationFromInterfaceOrientation_duration(fromInterfaceOrientation:Dynamic, duration:Dynamic):Void;
 
 
 }

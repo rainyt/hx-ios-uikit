@@ -20,7 +20,7 @@ extern class NSDataAsset{
 	overload public function initWithName(name:NSString):Dynamic;
 
 	@:native("initWithName:bundle")
-	overload public function initWithName(name:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithName_bundle(name:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("name")
 	public var name:NSString;

@@ -22,10 +22,10 @@ extern class UICollectionReusableView{
 	overload public function applyLayoutAttributes(layoutAttributes:Dynamic):Void;
 
 	@:native("willTransitionFromLayout:toLayout")
-	overload public function willTransitionFromLayout(oldLayout:Dynamic, toLayout:Dynamic):Void;
+	overload public function willTransitionFromLayout_toLayout(oldLayout:Dynamic, toLayout:Dynamic):Void;
 
 	@:native("didTransitionFromLayout:toLayout")
-	overload public function didTransitionFromLayout(oldLayout:Dynamic, toLayout:Dynamic):Void;
+	overload public function didTransitionFromLayout_toLayout(oldLayout:Dynamic, toLayout:Dynamic):Void;
 
 	@:native("preferredLayoutAttributesFittingAttributes")
 	overload public function preferredLayoutAttributesFittingAttributes(layoutAttributes:Dynamic):Dynamic;

@@ -13,7 +13,7 @@ extern class DeprecatedAnimations{
 	overload public static function autorelease():DeprecatedAnimations;
 
 	@:native("beginAnimations:context")
-	overload public static function beginAnimations(animationID:NSString, context:Dynamic):Void;
+	overload public static function beginAnimations_context(animationID:NSString, context:Dynamic):Void;
 
 	@:native("commitAnimations")
 	overload public static function commitAnimations():Void;
@@ -49,7 +49,7 @@ extern class DeprecatedAnimations{
 	overload public static function setAnimationBeginsFromCurrentState(fromCurrentState:Bool):Void;
 
 	@:native("setAnimationTransition:forView:cache")
-	overload public static function setAnimationTransition(transition:Dynamic, forView:Dynamic, cache:Bool):Void;
+	overload public static function setAnimationTransition_forView_cache(transition:Dynamic, forView:Dynamic, cache:Bool):Void;
 
 
 }

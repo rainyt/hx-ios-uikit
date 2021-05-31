@@ -26,10 +26,10 @@ extern class UITouch{
 	public var type:Dynamic;
 
 	@:native("majorRadius")
-	public var majorRadius:Dynamic;
+	public var majorRadius:Float;
 
 	@:native("majorRadiusTolerance")
-	public var majorRadiusTolerance:Dynamic;
+	public var majorRadiusTolerance:Float;
 
 	@:native("window")
 	public var window:Dynamic;
@@ -53,19 +53,19 @@ extern class UITouch{
 	overload public function precisePreviousLocationInView(view:Dynamic):CGPoint;
 
 	@:native("force")
-	public var force:Dynamic;
+	public var force:Float;
 
 	@:native("maximumPossibleForce")
-	public var maximumPossibleForce:Dynamic;
+	public var maximumPossibleForce:Float;
 
 	@:native("azimuthAngleInView")
-	overload public function azimuthAngleInView(view:Dynamic):Dynamic;
+	overload public function azimuthAngleInView(view:Dynamic):Float;
 
 	@:native("azimuthUnitVectorInView")
 	overload public function azimuthUnitVectorInView(view:Dynamic):CGVector;
 
 	@:native("altitudeAngle")
-	public var altitudeAngle:Dynamic;
+	public var altitudeAngle:Float;
 
 	@:native("estimationUpdateIndex")
 	public var estimationUpdateIndex:Dynamic;

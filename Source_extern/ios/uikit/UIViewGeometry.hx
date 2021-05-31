@@ -32,7 +32,7 @@ extern class UIViewGeometry{
 	public var transform3D:CATransform3D;
 
 	@:native("contentScaleFactor")
-	public var contentScaleFactor:Dynamic;
+	public var contentScaleFactor:Float;
 
 	@:native("multipleTouchEnabled")
 	public var multipleTouchEnabled:Bool;
@@ -41,22 +41,22 @@ extern class UIViewGeometry{
 	public var exclusiveTouch:Bool;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest(point:CGPoint, withEvent:Dynamic):Dynamic;
+	overload public function hitTest_withEvent(point:CGPoint, withEvent:Dynamic):Dynamic;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside(point:CGPoint, withEvent:Dynamic):Bool;
+	overload public function pointInside_withEvent(point:CGPoint, withEvent:Dynamic):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint(point:CGPoint, toView:Dynamic):CGPoint;
+	overload public function convertPoint_toView(point:CGPoint, toView:Dynamic):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint(point:CGPoint, fromView:Dynamic):CGPoint;
+	overload public function convertPoint_fromView(point:CGPoint, fromView:Dynamic):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect(rect:CGRect, toView:Dynamic):CGRect;
+	overload public function convertRect_toView(rect:CGRect, toView:Dynamic):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect(rect:CGRect, fromView:Dynamic):CGRect;
+	overload public function convertRect_fromView(rect:CGRect, fromView:Dynamic):CGRect;
 
 	@:native("autoresizesSubviews")
 	public var autoresizesSubviews:Bool;

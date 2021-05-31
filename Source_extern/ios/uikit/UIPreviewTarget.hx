@@ -14,10 +14,10 @@ extern class UIPreviewTarget{
 	overload public static function autorelease():UIPreviewTarget;
 
 	@:native("initWithContainer:center:transform")
-	overload public function initWithContainer(container:Dynamic, center:CGPoint, transform:CGAffineTransform):Dynamic;
+	overload public function initWithContainer_center_transform(container:Dynamic, center:CGPoint, transform:CGAffineTransform):Dynamic;
 
 	@:native("initWithContainer:center")
-	overload public function initWithContainer(container:Dynamic, center:CGPoint):Dynamic;
+	overload public function initWithContainer_center(container:Dynamic, center:CGPoint):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

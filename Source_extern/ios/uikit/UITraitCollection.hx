@@ -42,10 +42,10 @@ extern class UITraitCollection{
 	public var layoutDirection:Dynamic;
 
 	@:native("traitCollectionWithDisplayScale")
-	overload public static function traitCollectionWithDisplayScale(scale:Dynamic):Dynamic;
+	overload public static function traitCollectionWithDisplayScale(scale:Float):Dynamic;
 
 	@:native("displayScale")
-	public var displayScale:Dynamic;
+	public var displayScale:Float;
 
 	@:native("traitCollectionWithHorizontalSizeClass")
 	overload public static function traitCollectionWithHorizontalSizeClass(horizontalSizeClass:Dynamic):Dynamic;

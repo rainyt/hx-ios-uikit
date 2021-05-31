@@ -53,16 +53,16 @@ extern class UIWindow{
 	overload public function sendEvent(event:Dynamic):Void;
 
 	@:native("convertPoint:toWindow")
-	overload public function convertPoint(point:CGPoint, toWindow:Dynamic):CGPoint;
+	overload public function convertPoint_toWindow(point:CGPoint, toWindow:Dynamic):CGPoint;
 
 	@:native("convertPoint:fromWindow")
-	overload public function convertPoint(point:CGPoint, fromWindow:Dynamic):CGPoint;
+	overload public function convertPoint_fromWindow(point:CGPoint, fromWindow:Dynamic):CGPoint;
 
 	@:native("convertRect:toWindow")
-	overload public function convertRect(rect:CGRect, toWindow:Dynamic):CGRect;
+	overload public function convertRect_toWindow(rect:CGRect, toWindow:Dynamic):CGRect;
 
 	@:native("convertRect:fromWindow")
-	overload public function convertRect(rect:CGRect, fromWindow:Dynamic):CGRect;
+	overload public function convertRect_fromWindow(rect:CGRect, fromWindow:Dynamic):CGRect;
 
 
 }

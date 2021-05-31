@@ -28,7 +28,7 @@ extern class UIViewRendering{
 	public var backgroundColor:Dynamic;
 
 	@:native("alpha")
-	public var alpha:Dynamic;
+	public var alpha:Float;
 
 	@:native("opaque")
 	public var opaque:Bool;

@@ -37,7 +37,7 @@ extern class UIInputViewController{
 	overload public function advanceToNextInputMode():Void;
 
 	@:native("handleInputModeListFromView:withEvent")
-	overload public function handleInputModeListFromView(view:Dynamic, withEvent:Dynamic):Void;
+	overload public function handleInputModeListFromView_withEvent(view:Dynamic, withEvent:Dynamic):Void;
 
 	@:native("requestSupplementaryLexiconWithCompletion")
 	overload public function requestSupplementaryLexiconWithCompletion(completionHandler:Dynamic):Void;

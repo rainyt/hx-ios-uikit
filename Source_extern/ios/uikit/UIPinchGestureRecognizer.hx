@@ -12,10 +12,10 @@ extern class UIPinchGestureRecognizer{
 	overload public static function autorelease():UIPinchGestureRecognizer;
 
 	@:native("scale")
-	public var scale:Dynamic;
+	public var scale:Float;
 
 	@:native("velocity")
-	public var velocity:Dynamic;
+	public var velocity:Float;
 
 
 }

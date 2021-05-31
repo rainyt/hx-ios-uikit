@@ -32,22 +32,22 @@ extern class UIFieldBehavior{
 	public var region:Dynamic;
 
 	@:native("strength")
-	public var strength:Dynamic;
+	public var strength:Float;
 
 	@:native("falloff")
-	public var falloff:Dynamic;
+	public var falloff:Float;
 
 	@:native("minimumRadius")
-	public var minimumRadius:Dynamic;
+	public var minimumRadius:Float;
 
 	@:native("direction")
 	public var direction:CGVector;
 
 	@:native("smoothness")
-	public var smoothness:Dynamic;
+	public var smoothness:Float;
 
 	@:native("animationSpeed")
-	public var animationSpeed:Dynamic;
+	public var animationSpeed:Float;
 
 	@:native("dragField")
 	overload public static function dragField():Dynamic;
@@ -65,10 +65,10 @@ extern class UIFieldBehavior{
 	overload public static function velocityFieldWithVector(direction:CGVector):Dynamic;
 
 	@:native("noiseFieldWithSmoothness:animationSpeed")
-	overload public static function noiseFieldWithSmoothness(smoothness:Dynamic, animationSpeed:Dynamic):Dynamic;
+	overload public static function noiseFieldWithSmoothness_animationSpeed(smoothness:Float, animationSpeed:Float):Dynamic;
 
 	@:native("turbulenceFieldWithSmoothness:animationSpeed")
-	overload public static function turbulenceFieldWithSmoothness(smoothness:Dynamic, animationSpeed:Dynamic):Dynamic;
+	overload public static function turbulenceFieldWithSmoothness_animationSpeed(smoothness:Float, animationSpeed:Float):Dynamic;
 
 	@:native("springField")
 	overload public static function springField():Dynamic;

@@ -13,10 +13,10 @@ extern class UISceneConfiguration{
 	overload public static function autorelease():UISceneConfiguration;
 
 	@:native("configurationWithName:sessionRole")
-	overload public static function configurationWithName(name:NSString, sessionRole:Dynamic):Dynamic;
+	overload public static function configurationWithName_sessionRole(name:NSString, sessionRole:Dynamic):Dynamic;
 
 	@:native("initWithName:sessionRole")
-	overload public function initWithName(name:NSString, sessionRole:Dynamic):Dynamic;
+	overload public function initWithName_sessionRole(name:NSString, sessionRole:Dynamic):Dynamic;
 
 	@:native("name")
 	public var name:NSString;

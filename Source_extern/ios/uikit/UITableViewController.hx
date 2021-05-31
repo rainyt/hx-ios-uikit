@@ -16,7 +16,7 @@ extern class UITableViewController{
 	overload public function initWithStyle(style:Dynamic):Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;

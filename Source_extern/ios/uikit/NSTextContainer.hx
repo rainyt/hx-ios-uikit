@@ -14,7 +14,7 @@ extern class NSTextContainer{
 	overload public static function autorelease():NSTextContainer;
 
 	@:native("initWithSize:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithSize(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithSize_NS_DESIGNATED_INITIALIZER(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
@@ -35,13 +35,13 @@ extern class NSTextContainer{
 	public var lineBreakMode:Dynamic;
 
 	@:native("lineFragmentPadding")
-	public var lineFragmentPadding:Dynamic;
+	public var lineFragmentPadding:Float;
 
 	@:native("maximumNumberOfLines")
 	public var maximumNumberOfLines:Dynamic;
 
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
-	overload public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:Dynamic, writingDirection:Dynamic, remainingRect:CGRect):CGRect;
+	overload public function lineFragmentRectForProposedRect_atIndex_writingDirection_remainingRect(proposedRect:CGRect, atIndex:Dynamic, writingDirection:Dynamic, remainingRect:CGRect):CGRect;
 
 	@:native("simpleRectangularTextContainer")
 	public var simpleRectangularTextContainer:Bool;

@@ -16,7 +16,7 @@ extern class NSCollectionLayoutGroupCustomItem{
 	overload public static function customItemWithFrame(frame:CGRect):Dynamic;
 
 	@:native("customItemWithFrame:zIndex")
-	overload public static function customItemWithFrame(frame:CGRect, zIndex:Dynamic):Dynamic;
+	overload public static function customItemWithFrame_zIndex(frame:CGRect, zIndex:Dynamic):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

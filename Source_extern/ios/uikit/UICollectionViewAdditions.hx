@@ -19,10 +19,10 @@ extern class UICollectionViewAdditions{
 	overload public function layoutAttributesForCellAtIndexPath(indexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind(kind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(kind:NSString, atIndexPath:Dynamic):Dynamic;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind(decorationViewKind:NSString, atIndexPath:Dynamic):Dynamic;
+	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(decorationViewKind:NSString, atIndexPath:Dynamic):Dynamic;
 
 
 }

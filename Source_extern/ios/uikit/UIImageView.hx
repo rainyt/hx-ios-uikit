@@ -15,7 +15,7 @@ extern class UIImageView{
 	overload public function initWithImage(image:Dynamic):Dynamic;
 
 	@:native("initWithImage:highlightedImage")
-	overload public function initWithImage(image:Dynamic, highlightedImage:Dynamic):Dynamic;
+	overload public function initWithImage_highlightedImage(image:Dynamic, highlightedImage:Dynamic):Dynamic;
 
 	@:native("image")
 	public var image:Dynamic;

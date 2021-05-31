@@ -16,13 +16,13 @@ extern class UIActivityViewController{
 	overload public function init():Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithActivityItems:applicationActivities")
-	overload public function initWithActivityItems(activityItems:Dynamic, applicationActivities:Dynamic):Dynamic;
+	overload public function initWithActivityItems_applicationActivities(activityItems:Dynamic, applicationActivities:Dynamic):Dynamic;
 
 	@:native("completionHandler")
 	public var completionHandler:Dynamic;

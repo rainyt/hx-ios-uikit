@@ -13,25 +13,25 @@ extern class UINavigationController{
 	overload public static function autorelease():UINavigationController;
 
 	@:native("initWithNavigationBarClass:toolbarClass:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithNavigationBarClass(navigationBarClass:Dynamic, toolbarClass:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithNavigationBarClass_toolbarClass_NS_DESIGNATED_INITIALIZER(navigationBarClass:Dynamic, toolbarClass:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("initWithRootViewController")
 	overload public function initWithRootViewController(rootViewController:Dynamic):Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(aDecoder:Dynamic):Dynamic;
 
 	@:native("pushViewController:animated")
-	overload public function pushViewController(viewController:Dynamic, animated:Bool):Void;
+	overload public function pushViewController_animated(viewController:Dynamic, animated:Bool):Void;
 
 	@:native("popViewControllerAnimated")
 	overload public function popViewControllerAnimated(animated:Bool):Dynamic;
 
 	@:native("popToViewController:animated")
-	overload public function popToViewController(viewController:Dynamic, animated:Bool):Dynamic;
+	overload public function popToViewController_animated(viewController:Dynamic, animated:Bool):Dynamic;
 
 	@:native("popToRootViewControllerAnimated")
 	overload public function popToRootViewControllerAnimated(animated:Bool):Dynamic;
@@ -46,13 +46,13 @@ extern class UINavigationController{
 	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:animated")
-	overload public function setViewControllers(viewControllers:Dynamic, animated:Bool):Void;
+	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;
 
 	@:native("navigationBarHidden")
 	public var navigationBarHidden:Bool;
 
 	@:native("setNavigationBarHidden:animated")
-	overload public function setNavigationBarHidden(hidden:Bool, animated:Bool):Void;
+	overload public function setNavigationBarHidden_animated(hidden:Bool, animated:Bool):Void;
 
 	@:native("navigationBar")
 	public var navigationBar:Dynamic;
@@ -61,7 +61,7 @@ extern class UINavigationController{
 	public var toolbarHidden:Bool;
 
 	@:native("setToolbarHidden:animated")
-	overload public function setToolbarHidden(hidden:Bool, animated:Bool):Void;
+	overload public function setToolbarHidden_animated(hidden:Bool, animated:Bool):Void;
 
 	@:native("toolbar")
 	public var toolbar:Dynamic;
@@ -73,7 +73,7 @@ extern class UINavigationController{
 	public var interactivePopGestureRecognizer:Dynamic;
 
 	@:native("showViewController:sender")
-	overload public function showViewController(vc:Dynamic, sender:Dynamic):Void;
+	overload public function showViewController_sender(vc:Dynamic, sender:Dynamic):Void;
 
 	@:native("hidesBarsWhenKeyboardAppears")
 	public var hidesBarsWhenKeyboardAppears:Bool;

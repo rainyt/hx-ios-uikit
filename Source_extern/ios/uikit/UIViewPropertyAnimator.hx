@@ -37,22 +37,22 @@ extern class UIViewPropertyAnimator{
 	public var pausesOnCompletion:Bool;
 
 	@:native("initWithDuration:timingParameters")
-	overload public function initWithDuration(duration:Dynamic, timingParameters:Dynamic):Dynamic;
+	overload public function initWithDuration_timingParameters(duration:Dynamic, timingParameters:Dynamic):Dynamic;
 
 	@:native("initWithDuration:curve:animations")
-	overload public function initWithDuration(duration:Dynamic, curve:Dynamic, animations:Dynamic):Dynamic;
+	overload public function initWithDuration_curve_animations(duration:Dynamic, curve:Dynamic, animations:Dynamic):Dynamic;
 
 	@:native("initWithDuration:controlPoint1:controlPoint2:animations")
-	overload public function initWithDuration(duration:Dynamic, controlPoint1:CGPoint, controlPoint2:CGPoint, animations:Dynamic):Dynamic;
+	overload public function initWithDuration_controlPoint1_controlPoint2_animations(duration:Dynamic, controlPoint1:CGPoint, controlPoint2:CGPoint, animations:Dynamic):Dynamic;
 
 	@:native("initWithDuration:dampingRatio:animations")
-	overload public function initWithDuration(duration:Dynamic, dampingRatio:Dynamic, animations:Dynamic):Dynamic;
+	overload public function initWithDuration_dampingRatio_animations(duration:Dynamic, dampingRatio:Float, animations:Dynamic):Dynamic;
 
 	@:native("")
 	overload public function ():Dynamic;
 
 	@:native("addAnimations:delayFactor")
-	overload public function addAnimations(animation:Dynamic, delayFactor:Dynamic):Void;
+	overload public function addAnimations_delayFactor(animation:Dynamic, delayFactor:Float):Void;
 
 	@:native("addAnimations")
 	overload public function addAnimations(animation:Dynamic):Void;
@@ -61,7 +61,7 @@ extern class UIViewPropertyAnimator{
 	overload public function addCompletion(completion:Dynamic):Void;
 
 	@:native("continueAnimationWithTimingParameters:durationFactor")
-	overload public function continueAnimationWithTimingParameters(parameters:Dynamic, durationFactor:Dynamic):Void;
+	overload public function continueAnimationWithTimingParameters_durationFactor(parameters:Dynamic, durationFactor:Float):Void;
 
 
 }

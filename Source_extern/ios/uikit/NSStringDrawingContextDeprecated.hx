@@ -12,10 +12,10 @@ extern class NSStringDrawingContextDeprecated{
 	overload public static function autorelease():NSStringDrawingContextDeprecated;
 
 	@:native("minimumTrackingAdjustment")
-	public var minimumTrackingAdjustment:Dynamic;
+	public var minimumTrackingAdjustment:Float;
 
 	@:native("actualTrackingAdjustment")
-	public var actualTrackingAdjustment:Dynamic;
+	public var actualTrackingAdjustment:Float;
 
 
 }

@@ -23,7 +23,7 @@ extern class UIFontDescriptor{
 	public var postscriptName:NSString;
 
 	@:native("pointSize")
-	public var pointSize:Dynamic;
+	public var pointSize:Float;
 
 	@:native("matrix")
 	public var matrix:CGAffineTransform;
@@ -44,16 +44,16 @@ extern class UIFontDescriptor{
 	overload public static function fontDescriptorWithFontAttributes(attributes:Dynamic):Dynamic;
 
 	@:native("fontDescriptorWithName:size")
-	overload public static function fontDescriptorWithName(fontName:NSString, size:Dynamic):Dynamic;
+	overload public static function fontDescriptorWithName_size(fontName:NSString, size:Float):Dynamic;
 
 	@:native("fontDescriptorWithName:matrix")
-	overload public static function fontDescriptorWithName(fontName:NSString, matrix:CGAffineTransform):Dynamic;
+	overload public static function fontDescriptorWithName_matrix(fontName:NSString, matrix:CGAffineTransform):Dynamic;
 
 	@:native("preferredFontDescriptorWithTextStyle")
 	overload public static function preferredFontDescriptorWithTextStyle(style:NSString):Dynamic;
 
 	@:native("preferredFontDescriptorWithTextStyle:compatibleWithTraitCollection")
-	overload public static function preferredFontDescriptorWithTextStyle(style:NSString, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public static function preferredFontDescriptorWithTextStyle_compatibleWithTraitCollection(style:NSString, compatibleWithTraitCollection:Dynamic):Dynamic;
 
 	@:native("initWithFontAttributes")
 	overload public function initWithFontAttributes(attributes:Dynamic):Dynamic;
@@ -62,7 +62,7 @@ extern class UIFontDescriptor{
 	overload public function fontDescriptorByAddingAttributes(attributes:Dynamic):Dynamic;
 
 	@:native("fontDescriptorWithSize")
-	overload public function fontDescriptorWithSize(newPointSize:Dynamic):Dynamic;
+	overload public function fontDescriptorWithSize(newPointSize:Float):Dynamic;
 
 	@:native("fontDescriptorWithMatrix")
 	overload public function fontDescriptorWithMatrix(matrix:CGAffineTransform):Dynamic;

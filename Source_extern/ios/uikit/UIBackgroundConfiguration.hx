@@ -48,7 +48,7 @@ extern class UIBackgroundConfiguration{
 	public var customView:Dynamic;
 
 	@:native("cornerRadius")
-	public var cornerRadius:Dynamic;
+	public var cornerRadius:Float;
 
 	@:native("backgroundInsets")
 	public var backgroundInsets:Dynamic;
@@ -78,10 +78,10 @@ extern class UIBackgroundConfiguration{
 	overload public function resolvedStrokeColorForTintColor(tintColor:Dynamic):Dynamic;
 
 	@:native("strokeWidth")
-	public var strokeWidth:Dynamic;
+	public var strokeWidth:Float;
 
 	@:native("strokeOutset")
-	public var strokeOutset:Dynamic;
+	public var strokeOutset:Float;
 
 
 }

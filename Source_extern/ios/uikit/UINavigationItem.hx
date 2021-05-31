@@ -37,7 +37,7 @@ extern class UINavigationItem{
 	public var hidesBackButton:Bool;
 
 	@:native("setHidesBackButton:animated")
-	overload public function setHidesBackButton(hidesBackButton:Bool, animated:Bool):Void;
+	overload public function setHidesBackButton_animated(hidesBackButton:Bool, animated:Bool):Void;
 
 	@:native("backButtonDisplayMode")
 	public var backButtonDisplayMode:Dynamic;
@@ -49,10 +49,10 @@ extern class UINavigationItem{
 	public var rightBarButtonItems:Dynamic;
 
 	@:native("setLeftBarButtonItems:animated")
-	overload public function setLeftBarButtonItems(items:Dynamic, animated:Bool):Void;
+	overload public function setLeftBarButtonItems_animated(items:Dynamic, animated:Bool):Void;
 
 	@:native("setRightBarButtonItems:animated")
-	overload public function setRightBarButtonItems(items:Dynamic, animated:Bool):Void;
+	overload public function setRightBarButtonItems_animated(items:Dynamic, animated:Bool):Void;
 
 	@:native("leftItemsSupplementBackButton")
 	public var leftItemsSupplementBackButton:Bool;
@@ -64,10 +64,10 @@ extern class UINavigationItem{
 	public var rightBarButtonItem:Dynamic;
 
 	@:native("setLeftBarButtonItem:animated")
-	overload public function setLeftBarButtonItem(item:Dynamic, animated:Bool):Void;
+	overload public function setLeftBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
 
 	@:native("setRightBarButtonItem:animated")
-	overload public function setRightBarButtonItem(item:Dynamic, animated:Bool):Void;
+	overload public function setRightBarButtonItem_animated(item:Dynamic, animated:Bool):Void;
 
 	@:native("largeTitleDisplayMode")
 	public var largeTitleDisplayMode:Dynamic;

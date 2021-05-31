@@ -16,7 +16,7 @@ extern class UIConstraintBasedLayoutFittingSize{
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
-	overload public function systemLayoutSizeFittingSize(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
+	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 
 }

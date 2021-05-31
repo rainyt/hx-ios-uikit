@@ -13,10 +13,10 @@ extern class NSLayoutConstraint{
 	overload public static function autorelease():NSLayoutConstraint;
 
 	@:native("constraintsWithVisualFormat:options:metrics:views")
-	overload public static function constraintsWithVisualFormat(format:NSString, options:Dynamic, metrics:Dynamic, views:Dynamic):Dynamic;
+	overload public static function constraintsWithVisualFormat_options_metrics_views(format:NSString, options:Dynamic, metrics:Dynamic, views:Dynamic):Dynamic;
 
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
-	overload public static function constraintWithItem(view1:Dynamic, attribute:Dynamic, relatedBy:Dynamic, toItem:Dynamic, attribute:Dynamic, multiplier:Dynamic, constant:Dynamic):Dynamic;
+	overload public static function constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant(view1:Dynamic, attribute:Dynamic, relatedBy:Dynamic, toItem:Dynamic, attribute:Dynamic, multiplier:Float, constant:Float):Dynamic;
 
 	@:native("priority")
 	public var priority:null;
@@ -49,7 +49,7 @@ extern class NSLayoutConstraint{
 	public var relation:Dynamic;
 
 	@:native("multiplier")
-	public var multiplier:Dynamic;
+	public var multiplier:Float;
 
 	@:native("constant")
 	public var constant:null;

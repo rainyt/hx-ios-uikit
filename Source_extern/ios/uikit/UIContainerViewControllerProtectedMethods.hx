@@ -21,10 +21,10 @@ extern class UIContainerViewControllerProtectedMethods{
 	overload public function removeFromParentViewController():Void;
 
 	@:native("transitionFromViewController:toViewController:duration:options:animations:completion")
-	overload public function transitionFromViewController(fromViewController:Dynamic, toViewController:Dynamic, duration:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public function transitionFromViewController_toViewController_duration_options_animations_completion(fromViewController:Dynamic, toViewController:Dynamic, duration:Dynamic, options:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginAppearanceTransition:animated")
-	overload public function beginAppearanceTransition(isAppearing:Bool, animated:Bool):Void;
+	overload public function beginAppearanceTransition_animated(isAppearing:Bool, animated:Bool):Void;
 
 	@:native("endAppearanceTransition")
 	overload public function endAppearanceTransition():Void;
@@ -36,7 +36,7 @@ extern class UIContainerViewControllerProtectedMethods{
 	public var childViewControllerForStatusBarHidden:Dynamic;
 
 	@:native("setOverrideTraitCollection:forChildViewController")
-	overload public function setOverrideTraitCollection(collection:Dynamic, forChildViewController:Dynamic):Void;
+	overload public function setOverrideTraitCollection_forChildViewController(collection:Dynamic, forChildViewController:Dynamic):Void;
 
 	@:native("overrideTraitCollectionForChildViewController")
 	overload public function overrideTraitCollectionForChildViewController(childViewController:Dynamic):Dynamic;

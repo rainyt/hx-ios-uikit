@@ -16,13 +16,13 @@ extern class UIGraphicsRendererProtected{
 	overload public static function rendererContextClass():Dynamic;
 
 	@:native("contextWithFormat:CF_RETURNS_RETAINED")
-	overload public static function contextWithFormat(format:Dynamic, CF_RETURNS_RETAINED:Dynamic):Dynamic;
+	overload public static function contextWithFormat_CF_RETURNS_RETAINED(format:Dynamic, CF_RETURNS_RETAINED:Dynamic):Dynamic;
 
 	@:native("prepareCGContext:withRendererContext")
-	overload public static function prepareCGContext(context:Dynamic, withRendererContext:Dynamic):Void;
+	overload public static function prepareCGContext_withRendererContext(context:Dynamic, withRendererContext:Dynamic):Void;
 
 	@:native("runDrawingActions:completionActions:error")
-	overload public function runDrawingActions(drawingActions:Dynamic, completionActions:Dynamic, error:NSError):Bool;
+	overload public function runDrawingActions_completionActions_error(drawingActions:Dynamic, completionActions:Dynamic, error:NSError):Bool;
 
 
 }

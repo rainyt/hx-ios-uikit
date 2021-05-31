@@ -16,10 +16,10 @@ extern class NSCollectionLayoutAnchor{
 	overload public static function layoutAnchorWithEdges(edges:Dynamic):Dynamic;
 
 	@:native("layoutAnchorWithEdges:absoluteOffset")
-	overload public static function layoutAnchorWithEdges(edges:Dynamic, absoluteOffset:CGPoint):Dynamic;
+	overload public static function layoutAnchorWithEdges_absoluteOffset(edges:Dynamic, absoluteOffset:CGPoint):Dynamic;
 
 	@:native("layoutAnchorWithEdges:fractionalOffset")
-	overload public static function layoutAnchorWithEdges(edges:Dynamic, fractionalOffset:CGPoint):Dynamic;
+	overload public static function layoutAnchorWithEdges_fractionalOffset(edges:Dynamic, fractionalOffset:CGPoint):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

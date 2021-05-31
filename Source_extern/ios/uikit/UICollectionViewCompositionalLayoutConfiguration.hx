@@ -15,7 +15,7 @@ extern class UICollectionViewCompositionalLayoutConfiguration{
 	public var scrollDirection:Dynamic;
 
 	@:native("interSectionSpacing")
-	public var interSectionSpacing:Dynamic;
+	public var interSectionSpacing:Float;
 
 	@:native("boundarySupplementaryItems")
 	public var boundarySupplementaryItems:Dynamic;

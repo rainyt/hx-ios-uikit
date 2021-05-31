@@ -44,7 +44,7 @@ extern class UISwitch{
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("setOn:animated")
-	overload public function setOn(on:Bool, animated:Bool):Void;
+	overload public function setOn_animated(on:Bool, animated:Bool):Void;
 
 
 }

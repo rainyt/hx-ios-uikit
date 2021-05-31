@@ -16,7 +16,7 @@ extern class UIColorNamedColors{
 	overload public static function colorNamed(name:NSString):Dynamic;
 
 	@:native("colorNamed:inBundle:compatibleWithTraitCollection")
-	overload public static function colorNamed(name:NSString, inBundle:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
+	overload public static function colorNamed_inBundle_compatibleWithTraitCollection(name:NSString, inBundle:Dynamic, compatibleWithTraitCollection:Dynamic):Dynamic;
 
 
 }

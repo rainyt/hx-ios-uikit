@@ -46,7 +46,7 @@ extern class UIBarItem{
 	public var tag:Dynamic;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes(attributes:Dynamic, forState:Dynamic):Void;
+	overload public function setTitleTextAttributes_forState(attributes:Dynamic, forState:Dynamic):Void;
 
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:Dynamic):Dynamic;

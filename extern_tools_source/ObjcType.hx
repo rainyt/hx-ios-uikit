@@ -16,11 +16,12 @@ class ObjcType {
 			var def = typedefs.get(t);
 			if (!def.createHaxeFile)
 				return def.parentClassName;
-			// return StringTools.replace(StringTools.replace((typedefs.exists(t) && !typedefs.get(t).createHaxeFile) ? typedefs.get(t).parentClassName : t, "*",
-			// ""), " ", "");
 		}
 		t = StringTools.replace(t, "*", "");
 		t = StringTools.replace(t, " ", "");
+
+		if (t == "CGFloat")
+			return "Float";
 
 		var i = ObjcImport.toImport(t);
 		if (i == null)

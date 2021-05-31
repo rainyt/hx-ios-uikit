@@ -13,10 +13,10 @@ extern class UICollectionViewFlowLayout{
 	overload public static function autorelease():UICollectionViewFlowLayout;
 
 	@:native("minimumLineSpacing")
-	public var minimumLineSpacing:Dynamic;
+	public var minimumLineSpacing:Float;
 
 	@:native("minimumInteritemSpacing")
-	public var minimumInteritemSpacing:Dynamic;
+	public var minimumInteritemSpacing:Float;
 
 	@:native("itemSize")
 	public var itemSize:CGSize;

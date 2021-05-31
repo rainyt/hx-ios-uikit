@@ -31,7 +31,7 @@ extern class UIStackView{
 	overload public function removeArrangedSubview(view:Dynamic):Void;
 
 	@:native("insertArrangedSubview:atIndex")
-	overload public function insertArrangedSubview(view:Dynamic, atIndex:Dynamic):Void;
+	overload public function insertArrangedSubview_atIndex(view:Dynamic, atIndex:Dynamic):Void;
 
 	@:native("axis")
 	public var axis:Dynamic;
@@ -43,13 +43,13 @@ extern class UIStackView{
 	public var alignment:Dynamic;
 
 	@:native("spacing")
-	public var spacing:Dynamic;
+	public var spacing:Float;
 
 	@:native("setCustomSpacing:afterView")
-	overload public function setCustomSpacing(spacing:Dynamic, afterView:Dynamic):Void;
+	overload public function setCustomSpacing_afterView(spacing:Float, afterView:Dynamic):Void;
 
 	@:native("customSpacingAfterView")
-	overload public function customSpacingAfterView(arrangedSubview:Dynamic):Dynamic;
+	overload public function customSpacingAfterView(arrangedSubview:Dynamic):Float;
 
 	@:native("baselineRelativeArrangement")
 	public var baselineRelativeArrangement:Bool;

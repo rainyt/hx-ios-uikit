@@ -23,10 +23,10 @@ extern class UIWebView{
 	overload public function loadRequest(request:Dynamic):Void;
 
 	@:native("loadHTMLString:baseURL")
-	overload public function loadHTMLString(string:NSString, baseURL:Dynamic):Void;
+	overload public function loadHTMLString_baseURL(string:NSString, baseURL:Dynamic):Void;
 
 	@:native("loadData:MIMEType:textEncodingName:baseURL")
-	overload public function loadData(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:Dynamic):Void;
+	overload public function loadData_MIMEType_textEncodingName_baseURL(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:Dynamic):Void;
 
 	@:native("request")
 	public var request:Dynamic;
@@ -86,10 +86,10 @@ extern class UIWebView{
 	public var paginationBreakingMode:Dynamic;
 
 	@:native("pageLength")
-	public var pageLength:Dynamic;
+	public var pageLength:Float;
 
 	@:native("gapBetweenPages")
-	public var gapBetweenPages:Dynamic;
+	public var gapBetweenPages:Float;
 
 	@:native("pageCount")
 	public var pageCount:Dynamic;

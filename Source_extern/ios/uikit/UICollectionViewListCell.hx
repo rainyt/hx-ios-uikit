@@ -18,7 +18,7 @@ extern class UICollectionViewListCell{
 	public var indentationLevel:Dynamic;
 
 	@:native("indentationWidth")
-	public var indentationWidth:Dynamic;
+	public var indentationWidth:Float;
 
 	@:native("indentsAccessories")
 	public var indentsAccessories:Bool;

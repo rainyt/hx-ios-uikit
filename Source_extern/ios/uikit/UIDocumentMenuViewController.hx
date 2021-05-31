@@ -13,16 +13,16 @@ extern class UIDocumentMenuViewController{
 	overload public static function autorelease():UIDocumentMenuViewController;
 
 	@:native("initWithDocumentTypes:inMode")
-	overload public function initWithDocumentTypes(allowedUTIs:Dynamic, inMode:Dynamic):Dynamic;
+	overload public function initWithDocumentTypes_inMode(allowedUTIs:Dynamic, inMode:Dynamic):Dynamic;
 
 	@:native("initWithURL:inMode")
-	overload public function initWithURL(url:Dynamic, inMode:Dynamic):Dynamic;
+	overload public function initWithURL_inMode(url:Dynamic, inMode:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("addOptionWithTitle:image:order:handler")
-	overload public function addOptionWithTitle(title:NSString, image:Dynamic, order:Dynamic, handler:Dynamic):Void;
+	overload public function addOptionWithTitle_image_order_handler(title:NSString, image:Dynamic, order:Dynamic, handler:Dynamic):Void;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

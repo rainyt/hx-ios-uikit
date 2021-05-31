@@ -12,40 +12,40 @@ extern class NSMutableParagraphStyle{
 	overload public static function autorelease():NSMutableParagraphStyle;
 
 	@:native("lineSpacing")
-	public var lineSpacing:Dynamic;
+	public var lineSpacing:Float;
 
 	@:native("paragraphSpacing")
-	public var paragraphSpacing:Dynamic;
+	public var paragraphSpacing:Float;
 
 	@:native("alignment")
 	public var alignment:Dynamic;
 
 	@:native("firstLineHeadIndent")
-	public var firstLineHeadIndent:Dynamic;
+	public var firstLineHeadIndent:Float;
 
 	@:native("headIndent")
-	public var headIndent:Dynamic;
+	public var headIndent:Float;
 
 	@:native("tailIndent")
-	public var tailIndent:Dynamic;
+	public var tailIndent:Float;
 
 	@:native("lineBreakMode")
 	public var lineBreakMode:Dynamic;
 
 	@:native("minimumLineHeight")
-	public var minimumLineHeight:Dynamic;
+	public var minimumLineHeight:Float;
 
 	@:native("maximumLineHeight")
-	public var maximumLineHeight:Dynamic;
+	public var maximumLineHeight:Float;
 
 	@:native("baseWritingDirection")
 	public var baseWritingDirection:Dynamic;
 
 	@:native("lineHeightMultiple")
-	public var lineHeightMultiple:Dynamic;
+	public var lineHeightMultiple:Float;
 
 	@:native("paragraphSpacingBefore")
-	public var paragraphSpacingBefore:Dynamic;
+	public var paragraphSpacingBefore:Float;
 
 	@:native("hyphenationFactor")
 	public var hyphenationFactor:Dynamic;
@@ -54,7 +54,7 @@ extern class NSMutableParagraphStyle{
 	public var tabStops:Dynamic;
 
 	@:native("defaultTabInterval")
-	public var defaultTabInterval:Dynamic;
+	public var defaultTabInterval:Float;
 
 	@:native("allowsDefaultTighteningForTruncation")
 	public var allowsDefaultTighteningForTruncation:Bool;

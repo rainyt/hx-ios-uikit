@@ -13,10 +13,10 @@ extern class UIPrintPageRenderer{
 	overload public static function autorelease():UIPrintPageRenderer;
 
 	@:native("headerHeight")
-	public var headerHeight:Dynamic;
+	public var headerHeight:Float;
 
 	@:native("footerHeight")
-	public var footerHeight:Dynamic;
+	public var footerHeight:Float;
 
 	@:native("paperRect")
 	public var paperRect:CGRect;
@@ -34,22 +34,22 @@ extern class UIPrintPageRenderer{
 	overload public function printFormattersForPageAtIndex(pageIndex:Dynamic):Dynamic;
 
 	@:native("addPrintFormatter:startingAtPageAtIndex")
-	overload public function addPrintFormatter(formatter:Dynamic, startingAtPageAtIndex:Dynamic):Void;
+	overload public function addPrintFormatter_startingAtPageAtIndex(formatter:Dynamic, startingAtPageAtIndex:Dynamic):Void;
 
 	@:native("prepareForDrawingPages")
 	overload public function prepareForDrawingPages(range:Dynamic):Void;
 
 	@:native("drawPageAtIndex:inRect")
-	overload public function drawPageAtIndex(pageIndex:Dynamic, inRect:CGRect):Void;
+	overload public function drawPageAtIndex_inRect(pageIndex:Dynamic, inRect:CGRect):Void;
 
 	@:native("drawPrintFormatter:forPageAtIndex")
-	overload public function drawPrintFormatter(printFormatter:Dynamic, forPageAtIndex:Dynamic):Void;
+	overload public function drawPrintFormatter_forPageAtIndex(printFormatter:Dynamic, forPageAtIndex:Dynamic):Void;
 
 	@:native("drawHeaderForPageAtIndex")
 	overload public function drawHeaderForPageAtIndex(pageIndex:Dynamic):Void;
 
 	@:native("drawContentForPageAtIndex:inRect")
-	overload public function drawContentForPageAtIndex(pageIndex:Dynamic, inRect:CGRect):Void;
+	overload public function drawContentForPageAtIndex_inRect(pageIndex:Dynamic, inRect:CGRect):Void;
 
 	@:native("drawFooterForPageAtIndex")
 	overload public function drawFooterForPageAtIndex(pageIndex:Dynamic):Void;

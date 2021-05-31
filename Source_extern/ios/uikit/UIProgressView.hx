@@ -40,7 +40,7 @@ extern class UIProgressView{
 	public var trackImage:Dynamic;
 
 	@:native("setProgress:animated")
-	overload public function setProgress(progress:Dynamic, animated:Bool):Void;
+	overload public function setProgress_animated(progress:Dynamic, animated:Bool):Void;
 
 	@:native("observedProgress")
 	public var observedProgress:Dynamic;

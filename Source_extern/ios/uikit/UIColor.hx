@@ -12,16 +12,16 @@ extern class UIColor{
 	overload public static function autorelease():UIColor;
 
 	@:native("colorWithWhite:alpha")
-	overload public static function colorWithWhite(white:Dynamic, alpha:Dynamic):Dynamic;
+	overload public static function colorWithWhite_alpha(white:Float, alpha:Float):Dynamic;
 
 	@:native("colorWithHue:saturation:brightness:alpha")
-	overload public static function colorWithHue(hue:Dynamic, saturation:Dynamic, brightness:Dynamic, alpha:Dynamic):Dynamic;
+	overload public static function colorWithHue_saturation_brightness_alpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):Dynamic;
 
 	@:native("colorWithRed:green:blue:alpha")
-	overload public static function colorWithRed(red:Dynamic, green:Dynamic, blue:Dynamic, alpha:Dynamic):Dynamic;
+	overload public static function colorWithRed_green_blue_alpha(red:Float, green:Float, blue:Float, alpha:Float):Dynamic;
 
 	@:native("colorWithDisplayP3Red:green:blue:alpha")
-	overload public static function colorWithDisplayP3Red(displayP3Red:Dynamic, green:Dynamic, blue:Dynamic, alpha:Dynamic):Dynamic;
+	overload public static function colorWithDisplayP3Red_green_blue_alpha(displayP3Red:Float, green:Float, blue:Float, alpha:Float):Dynamic;
 
 	@:native("colorWithCGColor")
 	overload public static function colorWithCGColor(cgColor:Dynamic):Dynamic;
@@ -33,16 +33,16 @@ extern class UIColor{
 	overload public static function colorWithCIColor(ciColor:Dynamic):Dynamic;
 
 	@:native("initWithWhite:alpha")
-	overload public function initWithWhite(white:Dynamic, alpha:Dynamic):Dynamic;
+	overload public function initWithWhite_alpha(white:Float, alpha:Float):Dynamic;
 
 	@:native("initWithHue:saturation:brightness:alpha")
-	overload public function initWithHue(hue:Dynamic, saturation:Dynamic, brightness:Dynamic, alpha:Dynamic):Dynamic;
+	overload public function initWithHue_saturation_brightness_alpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):Dynamic;
 
 	@:native("initWithRed:green:blue:alpha")
-	overload public function initWithRed(red:Dynamic, green:Dynamic, blue:Dynamic, alpha:Dynamic):Dynamic;
+	overload public function initWithRed_green_blue_alpha(red:Float, green:Float, blue:Float, alpha:Float):Dynamic;
 
 	@:native("initWithDisplayP3Red:green:blue:alpha")
-	overload public function initWithDisplayP3Red(displayP3Red:Dynamic, green:Dynamic, blue:Dynamic, alpha:Dynamic):Dynamic;
+	overload public function initWithDisplayP3Red_green_blue_alpha(displayP3Red:Float, green:Float, blue:Float, alpha:Float):Dynamic;
 
 	@:native("initWithCGColor")
 	overload public function initWithCGColor(cgColor:Dynamic):Dynamic;
@@ -108,16 +108,16 @@ extern class UIColor{
 	overload public function setStroke():Void;
 
 	@:native("getWhite:alpha")
-	overload public function getWhite(white:Dynamic, alpha:Dynamic):Bool;
+	overload public function getWhite_alpha(white:Float, alpha:Float):Bool;
 
 	@:native("getHue:saturation:brightness:alpha")
-	overload public function getHue(hue:Dynamic, saturation:Dynamic, brightness:Dynamic, alpha:Dynamic):Bool;
+	overload public function getHue_saturation_brightness_alpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):Bool;
 
 	@:native("getRed:green:blue:alpha")
-	overload public function getRed(red:Dynamic, green:Dynamic, blue:Dynamic, alpha:Dynamic):Bool;
+	overload public function getRed_green_blue_alpha(red:Float, green:Float, blue:Float, alpha:Float):Bool;
 
 	@:native("colorWithAlphaComponent")
-	overload public function colorWithAlphaComponent(alpha:Dynamic):Dynamic;
+	overload public function colorWithAlphaComponent(alpha:Float):Dynamic;
 
 	@:native("CGColor")
 	public var CGColor:Dynamic;

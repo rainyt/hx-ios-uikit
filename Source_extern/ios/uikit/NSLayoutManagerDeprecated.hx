@@ -13,7 +13,7 @@ extern class NSLayoutManagerDeprecated{
 	overload public static function autorelease():NSLayoutManagerDeprecated;
 
 	@:native("glyphAtIndex:isValidIndex")
-	overload public function glyphAtIndex(glyphIndex:Dynamic, isValidIndex:Dynamic):Dynamic;
+	overload public function glyphAtIndex_isValidIndex(glyphIndex:Dynamic, isValidIndex:Dynamic):Dynamic;
 
 	@:native("glyphAtIndex")
 	overload public function glyphAtIndex(glyphIndex:Dynamic):Dynamic;
@@ -22,7 +22,7 @@ extern class NSLayoutManagerDeprecated{
 	public var hyphenationFactor:null;
 
 	@:native("showCGGlyphs:positions:count:font:matrix:attributes:inContext")
-	overload public function showCGGlyphs(glyphs:Dynamic, positions:Dynamic, count:Dynamic, font:Dynamic, matrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
+	overload public function showCGGlyphs_positions_count_font_matrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Dynamic, font:Dynamic, matrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
 
 
 }

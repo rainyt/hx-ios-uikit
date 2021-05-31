@@ -13,10 +13,10 @@ extern class UITargetedPreview{
 	overload public static function autorelease():UITargetedPreview;
 
 	@:native("initWithView:parameters:target")
-	overload public function initWithView(view:Dynamic, parameters:Dynamic, target:Dynamic):Dynamic;
+	overload public function initWithView_parameters_target(view:Dynamic, parameters:Dynamic, target:Dynamic):Dynamic;
 
 	@:native("initWithView:parameters")
-	overload public function initWithView(view:Dynamic, parameters:Dynamic):Dynamic;
+	overload public function initWithView_parameters(view:Dynamic, parameters:Dynamic):Dynamic;
 
 	@:native("initWithView")
 	overload public function initWithView(view:Dynamic):Dynamic;

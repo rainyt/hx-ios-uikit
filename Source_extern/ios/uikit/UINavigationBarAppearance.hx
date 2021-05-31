@@ -36,7 +36,7 @@ extern class UINavigationBarAppearance{
 	public var backIndicatorTransitionMaskImage:Dynamic;
 
 	@:native("setBackIndicatorImage:transitionMaskImage")
-	overload public function setBackIndicatorImage(backIndicatorImage:Dynamic, transitionMaskImage:Dynamic):Void;
+	overload public function setBackIndicatorImage_transitionMaskImage(backIndicatorImage:Dynamic, transitionMaskImage:Dynamic):Void;
 
 
 }

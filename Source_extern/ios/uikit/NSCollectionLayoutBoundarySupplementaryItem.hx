@@ -14,10 +14,10 @@ extern class NSCollectionLayoutBoundarySupplementaryItem{
 	overload public static function autorelease():NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment")
-	overload public static function boundarySupplementaryItemWithLayoutSize(layoutSize:Dynamic, elementKind:NSString, alignment:Dynamic):Dynamic;
+	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment(layoutSize:Dynamic, elementKind:NSString, alignment:Dynamic):Dynamic;
 
 	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset")
-	overload public static function boundarySupplementaryItemWithLayoutSize(layoutSize:Dynamic, elementKind:NSString, alignment:Dynamic, absoluteOffset:CGPoint):Dynamic;
+	overload public static function boundarySupplementaryItemWithLayoutSize_elementKind_alignment_absoluteOffset(layoutSize:Dynamic, elementKind:NSString, alignment:Dynamic, absoluteOffset:CGPoint):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

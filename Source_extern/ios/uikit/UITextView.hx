@@ -62,7 +62,7 @@ extern class UITextView{
 	public var clearsOnInsertion:Bool;
 
 	@:native("initWithFrame:textContainer")
-	overload public function initWithFrame(frame:CGRect, textContainer:Dynamic):Dynamic;
+	overload public function initWithFrame_textContainer(frame:CGRect, textContainer:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;

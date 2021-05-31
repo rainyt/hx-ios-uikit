@@ -18,7 +18,7 @@ extern class UIImpactFeedbackGenerator{
 	overload public function impactOccurred():Void;
 
 	@:native("impactOccurredWithIntensity")
-	overload public function impactOccurredWithIntensity(intensity:Dynamic):Void;
+	overload public function impactOccurredWithIntensity(intensity:Float):Void;
 
 
 }

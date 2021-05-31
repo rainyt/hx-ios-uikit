@@ -22,7 +22,7 @@ extern class UIPanGestureRecognizer{
 	overload public function translationInView(view:Dynamic):CGPoint;
 
 	@:native("setTranslation:inView")
-	overload public function setTranslation(translation:CGPoint, inView:Dynamic):Void;
+	overload public function setTranslation_inView(translation:CGPoint, inView:Dynamic):Void;
 
 	@:native("velocityInView")
 	overload public function velocityInView(view:Dynamic):CGPoint;

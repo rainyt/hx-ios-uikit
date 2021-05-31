@@ -18,7 +18,7 @@ extern class UICellAccessory{
 	public var hidden:Bool;
 
 	@:native("reservedLayoutWidth")
-	public var reservedLayoutWidth:Dynamic;
+	public var reservedLayoutWidth:Float;
 
 	@:native("tintColor")
 	public var tintColor:Dynamic;

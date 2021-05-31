@@ -15,7 +15,7 @@ extern class UIDocument{
 	overload public static function autorelease():UIDocument;
 
 	@:native("initWithFileURL:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithFileURL(url:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
+	overload public function initWithFileURL_NS_DESIGNATED_INITIALIZER(url:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):Dynamic;
 
 	@:native("fileURL")
 	public var fileURL:Dynamic;
@@ -42,10 +42,10 @@ extern class UIDocument{
 	overload public function closeWithCompletionHandler(completionHandler:Dynamic):Void;
 
 	@:native("loadFromContents:ofType:error")
-	overload public function loadFromContents(contents:Dynamic, ofType:NSString, error:NSError):Bool;
+	overload public function loadFromContents_ofType_error(contents:Dynamic, ofType:NSString, error:NSError):Bool;
 
 	@:native("contentsForType:error")
-	overload public function contentsForType(typeName:NSString, error:NSError):Dynamic;
+	overload public function contentsForType_error(typeName:NSString, error:NSError):Dynamic;
 
 	@:native("disableEditing")
 	overload public function disableEditing():Void;
@@ -66,10 +66,10 @@ extern class UIDocument{
 	overload public function changeCountTokenForSaveOperation(saveOperation:Dynamic):Dynamic;
 
 	@:native("updateChangeCountWithToken:forSaveOperation")
-	overload public function updateChangeCountWithToken(changeCountToken:Dynamic, forSaveOperation:Dynamic):Void;
+	overload public function updateChangeCountWithToken_forSaveOperation(changeCountToken:Dynamic, forSaveOperation:Dynamic):Void;
 
 	@:native("saveToURL:forSaveOperation:completionHandler")
-	overload public function saveToURL(url:Dynamic, forSaveOperation:Dynamic, completionHandler:Dynamic):Void;
+	overload public function saveToURL_forSaveOperation_completionHandler(url:Dynamic, forSaveOperation:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("autosaveWithCompletionHandler")
 	overload public function autosaveWithCompletionHandler(completionHandler:Dynamic):Void;
@@ -78,34 +78,34 @@ extern class UIDocument{
 	public var savingFileType:NSString;
 
 	@:native("fileNameExtensionForType:saveOperation")
-	overload public function fileNameExtensionForType(typeName:NSString, saveOperation:Dynamic):NSString;
+	overload public function fileNameExtensionForType_saveOperation(typeName:NSString, saveOperation:Dynamic):NSString;
 
 	@:native("writeContents:andAttributes:safelyToURL:forSaveOperation:error")
-	overload public function writeContents(contents:Dynamic, andAttributes:NSDictionary, safelyToURL:Dynamic, forSaveOperation:Dynamic, error:NSError):Bool;
+	overload public function writeContents_andAttributes_safelyToURL_forSaveOperation_error(contents:Dynamic, andAttributes:NSDictionary, safelyToURL:Dynamic, forSaveOperation:Dynamic, error:NSError):Bool;
 
 	@:native("writeContents:toURL:forSaveOperation:originalContentsURL:error")
-	overload public function writeContents(contents:Dynamic, toURL:Dynamic, forSaveOperation:Dynamic, originalContentsURL:Dynamic, error:NSError):Bool;
+	overload public function writeContents_toURL_forSaveOperation_originalContentsURL_error(contents:Dynamic, toURL:Dynamic, forSaveOperation:Dynamic, originalContentsURL:Dynamic, error:NSError):Bool;
 
 	@:native("fileAttributesToWriteToURL:forSaveOperation:error")
-	overload public function fileAttributesToWriteToURL(url:Dynamic, forSaveOperation:Dynamic, error:NSError):NSDictionary;
+	overload public function fileAttributesToWriteToURL_forSaveOperation_error(url:Dynamic, forSaveOperation:Dynamic, error:NSError):NSDictionary;
 
 	@:native("readFromURL:error")
-	overload public function readFromURL(url:Dynamic, error:NSError):Bool;
+	overload public function readFromURL_error(url:Dynamic, error:NSError):Bool;
 
 	@:native("performAsynchronousFileAccessUsingBlock")
 	overload public function performAsynchronousFileAccessUsingBlock(block:Dynamic):Void;
 
 	@:native("handleError:userInteractionPermitted")
-	overload public function handleError(error:NSError, userInteractionPermitted:Bool):Void;
+	overload public function handleError_userInteractionPermitted(error:NSError, userInteractionPermitted:Bool):Void;
 
 	@:native("finishedHandlingError:recovered")
-	overload public function finishedHandlingError(error:NSError, recovered:Bool):Void;
+	overload public function finishedHandlingError_recovered(error:NSError, recovered:Bool):Void;
 
 	@:native("userInteractionNoLongerPermittedForError")
 	overload public function userInteractionNoLongerPermittedForError(error:NSError):Void;
 
 	@:native("revertToContentsOfURL:completionHandler")
-	overload public function revertToContentsOfURL(url:Dynamic, completionHandler:Dynamic):Void;
+	overload public function revertToContentsOfURL_completionHandler(url:Dynamic, completionHandler:Dynamic):Void;
 
 
 }

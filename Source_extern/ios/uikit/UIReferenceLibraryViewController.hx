@@ -22,7 +22,7 @@ extern class UIReferenceLibraryViewController{
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:Dynamic):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

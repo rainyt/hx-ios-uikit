@@ -30,19 +30,19 @@ extern class UIManagedDocument{
 	public var modelConfiguration:NSString;
 
 	@:native("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error")
-	overload public function configurePersistentStoreCoordinatorForURL(storeURL:Dynamic, ofType:NSString, modelConfiguration:NSString, storeOptions:NSDictionary, error:NSError):Bool;
+	overload public function configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error(storeURL:Dynamic, ofType:NSString, modelConfiguration:NSString, storeOptions:NSDictionary, error:NSError):Bool;
 
 	@:native("persistentStoreTypeForFileType")
 	overload public function persistentStoreTypeForFileType(fileType:NSString):NSString;
 
 	@:native("readAdditionalContentFromURL:error")
-	overload public function readAdditionalContentFromURL(absoluteURL:Dynamic, error:NSError):Bool;
+	overload public function readAdditionalContentFromURL_error(absoluteURL:Dynamic, error:NSError):Bool;
 
 	@:native("additionalContentForURL:error")
-	overload public function additionalContentForURL(absoluteURL:Dynamic, error:NSError):Dynamic;
+	overload public function additionalContentForURL_error(absoluteURL:Dynamic, error:NSError):Dynamic;
 
 	@:native("writeAdditionalContent:toURL:originalContentsURL:error")
-	overload public function writeAdditionalContent(content:Dynamic, toURL:Dynamic, originalContentsURL:Dynamic, error:NSError):Bool;
+	overload public function writeAdditionalContent_toURL_originalContentsURL_error(content:Dynamic, toURL:Dynamic, originalContentsURL:Dynamic, error:NSError):Bool;
 
 
 }

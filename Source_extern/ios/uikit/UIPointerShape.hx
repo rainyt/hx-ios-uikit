@@ -19,10 +19,10 @@ extern class UIPointerShape{
 	overload public static function shapeWithRoundedRect(rect:CGRect):Dynamic;
 
 	@:native("shapeWithRoundedRect:cornerRadius")
-	overload public static function shapeWithRoundedRect(rect:CGRect, cornerRadius:Dynamic):Dynamic;
+	overload public static function shapeWithRoundedRect_cornerRadius(rect:CGRect, cornerRadius:Float):Dynamic;
 
 	@:native("beamWithPreferredLength:axis")
-	overload public static function beamWithPreferredLength(length:Dynamic, axis:Dynamic):Dynamic;
+	overload public static function beamWithPreferredLength_axis(length:Float, axis:Dynamic):Dynamic;
 
 	@:native("init")
 	overload public function init():Dynamic;

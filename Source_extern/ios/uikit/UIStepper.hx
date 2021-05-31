@@ -33,25 +33,25 @@ extern class UIStepper{
 	public var stepValue:Dynamic;
 
 	@:native("setBackgroundImage:forState")
-	overload public function setBackgroundImage(image:Dynamic, forState:Dynamic):Void;
+	overload public function setBackgroundImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("backgroundImageForState")
 	overload public function backgroundImageForState(state:Dynamic):Dynamic;
 
 	@:native("setDividerImage:forLeftSegmentState:rightSegmentState")
-	overload public function setDividerImage(image:Dynamic, forLeftSegmentState:Dynamic, rightSegmentState:Dynamic):Void;
+	overload public function setDividerImage_forLeftSegmentState_rightSegmentState(image:Dynamic, forLeftSegmentState:Dynamic, rightSegmentState:Dynamic):Void;
 
 	@:native("dividerImageForLeftSegmentState:rightSegmentState")
-	overload public function dividerImageForLeftSegmentState(state:Dynamic, rightSegmentState:Dynamic):Dynamic;
+	overload public function dividerImageForLeftSegmentState_rightSegmentState(state:Dynamic, rightSegmentState:Dynamic):Dynamic;
 
 	@:native("setIncrementImage:forState")
-	overload public function setIncrementImage(image:Dynamic, forState:Dynamic):Void;
+	overload public function setIncrementImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("incrementImageForState")
 	overload public function incrementImageForState(state:Dynamic):Dynamic;
 
 	@:native("setDecrementImage:forState")
-	overload public function setDecrementImage(image:Dynamic, forState:Dynamic):Void;
+	overload public function setDecrementImage_forState(image:Dynamic, forState:Dynamic):Void;
 
 	@:native("decrementImageForState")
 	overload public function decrementImageForState(state:Dynamic):Dynamic;

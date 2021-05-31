@@ -14,7 +14,7 @@ extern class UIAlertView{
 	overload public static function autorelease():UIAlertView;
 
 	@:native("initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:...")
-	overload public function initWithTitle(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):Dynamic;
+	overload public function initWithTitle_message_delegate_cancelButtonTitle_otherButtonTitles_...(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):Dynamic;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):Dynamic;
@@ -53,7 +53,7 @@ extern class UIAlertView{
 	overload public function show():Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload public function dismissWithClickedButtonIndex(buttonIndex:Dynamic, animated:Bool):Void;
+	overload public function dismissWithClickedButtonIndex_animated(buttonIndex:Dynamic, animated:Bool):Void;
 
 	@:native("alertViewStyle")
 	public var alertViewStyle:Dynamic;

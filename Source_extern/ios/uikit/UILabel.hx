@@ -60,7 +60,7 @@ extern class UILabel{
 	public var baselineAdjustment:Dynamic;
 
 	@:native("minimumScaleFactor")
-	public var minimumScaleFactor:Dynamic;
+	public var minimumScaleFactor:Float;
 
 	@:native("allowsDefaultTighteningForTruncation")
 	public var allowsDefaultTighteningForTruncation:Bool;
@@ -69,19 +69,19 @@ extern class UILabel{
 	public var lineBreakStrategy:Dynamic;
 
 	@:native("textRectForBounds:limitedToNumberOfLines")
-	overload public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:Dynamic):CGRect;
+	overload public function textRectForBounds_limitedToNumberOfLines(bounds:CGRect, limitedToNumberOfLines:Dynamic):CGRect;
 
 	@:native("drawTextInRect")
 	overload public function drawTextInRect(rect:CGRect):Void;
 
 	@:native("preferredMaxLayoutWidth")
-	public var preferredMaxLayoutWidth:Dynamic;
+	public var preferredMaxLayoutWidth:Float;
 
 	@:native("enablesMarqueeWhenAncestorFocused")
 	public var enablesMarqueeWhenAncestorFocused:Bool;
 
 	@:native("minimumFontSize")
-	public var minimumFontSize:Dynamic;
+	public var minimumFontSize:Float;
 
 	@:native("adjustsLetterSpacingToFitWidth")
 	public var adjustsLetterSpacingToFitWidth:Bool;

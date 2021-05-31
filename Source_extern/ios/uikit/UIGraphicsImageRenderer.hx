@@ -18,10 +18,10 @@ extern class UIGraphicsImageRenderer{
 	overload public function initWithSize(size:CGSize):Dynamic;
 
 	@:native("initWithSize:format")
-	overload public function initWithSize(size:CGSize, format:Dynamic):Dynamic;
+	overload public function initWithSize_format(size:CGSize, format:Dynamic):Dynamic;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds(bounds:CGRect, format:Dynamic):Dynamic;
+	overload public function initWithBounds_format(bounds:CGRect, format:Dynamic):Dynamic;
 
 	@:native("imageWithActions")
 	overload public function imageWithActions(actions:Dynamic):Dynamic;
@@ -30,7 +30,7 @@ extern class UIGraphicsImageRenderer{
 	overload public function PNGDataWithActions(actions:Dynamic):NSData;
 
 	@:native("JPEGDataWithCompressionQuality:actions")
-	overload public function JPEGDataWithCompressionQuality(compressionQuality:Dynamic, actions:Dynamic):NSData;
+	overload public function JPEGDataWithCompressionQuality_actions(compressionQuality:Float, actions:Dynamic):NSData;
 
 
 }

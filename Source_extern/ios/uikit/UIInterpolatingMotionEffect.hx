@@ -13,7 +13,7 @@ extern class UIInterpolatingMotionEffect{
 	overload public static function autorelease():UIInterpolatingMotionEffect;
 
 	@:native("initWithKeyPath:type")
-	overload public function initWithKeyPath(keyPath:NSString, type:Dynamic):Dynamic;
+	overload public function initWithKeyPath_type(keyPath:NSString, type:Dynamic):Dynamic;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:Dynamic):Dynamic;
