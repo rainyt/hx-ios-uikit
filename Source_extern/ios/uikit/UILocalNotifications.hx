@@ -25,8 +25,8 @@ extern class UILocalNotifications{
 	@:native("cancelAllLocalNotifications")
 	overload public function cancelAllLocalNotifications():Void;
 
-	@:native("getPendingNotificationRequestsWithCompletionHandler:]",")
-	public var getPendingNotificationRequestsWithCompletionHandler:]",:-[UNUserNotificationCenter;
+	@:native("scheduledLocalNotifications")
+	public var scheduledLocalNotifications:Dynamic;
 
 
 }

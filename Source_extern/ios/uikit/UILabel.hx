@@ -16,17 +16,17 @@ extern class UILabel{
 	@:native("text")
 	public var text:NSString;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:font;
+	@:native("font")
+	public var font:UIFont;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:textColor;
+	@:native("textColor")
+	public var textColor:UIColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:shadowColor;
+	@:native("shadowColor")
+	public var shadowColor:UIColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:shadowOffset;
+	@:native("shadowOffset")
+	public var shadowOffset:CGSize;
 
 	@:native("textAlignment")
 	public var textAlignment:NSTextAlignment;
@@ -37,8 +37,8 @@ extern class UILabel{
 	@:native("attributedText")
 	public var attributedText:NSAttributedString;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:highlightedTextColor;
+	@:native("highlightedTextColor")
+	public var highlightedTextColor:UIColor;
 
 	@:native("highlighted")
 	public var highlighted:Bool;

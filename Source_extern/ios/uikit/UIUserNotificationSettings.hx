@@ -16,8 +16,8 @@ extern class UIUserNotificationSettings{
 	@:native("registerUserNotificationSettings")
 	overload public function registerUserNotificationSettings(notificationSettings:UIUserNotificationSettings):Void;
 
-	@:native("getNotificationCategoriesWithCompletionHandler:]",")
-	public var getNotificationCategoriesWithCompletionHandler:]",:-[UNUserNotificationCenter;
+	@:native("currentUserNotificationSettings")
+	public var currentUserNotificationSettings:UIUserNotificationSettings;
 
 
 }

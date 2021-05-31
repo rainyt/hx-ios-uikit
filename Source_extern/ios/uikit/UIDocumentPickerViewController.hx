@@ -40,8 +40,8 @@ extern class UIDocumentPickerViewController{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("initializers")
-	public var initializers:appropriate;
+	@:native("documentPickerMode")
+	public var documentPickerMode:UIDocumentPickerMode;
 
 	@:native("allowsMultipleSelection")
 	public var allowsMultipleSelection:Bool;

@@ -31,11 +31,11 @@ extern class UIDocumentBrowserViewController{
 	@:native("allowsPickingMultipleItems")
 	public var allowsPickingMultipleItems:Bool;
 
-	@:native("supported",")
-	public var supported",:longer;
+	@:native("allowedContentTypes")
+	public var allowedContentTypes:Dynamic;
 
-	@:native("instead",")
-	public var instead",:contentTypesForRecentDocuments;
+	@:native("recentDocumentsContentTypes")
+	public var recentDocumentsContentTypes:Dynamic;
 
 	@:native("contentTypesForRecentDocuments")
 	public var contentTypesForRecentDocuments:Dynamic;

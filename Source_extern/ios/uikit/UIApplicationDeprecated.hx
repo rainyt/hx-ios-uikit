@@ -19,20 +19,20 @@ extern class UIApplicationDeprecated{
 	@:native("setStatusBarHidden:animated")
 	overload public function setStatusBarHidden(hidden:Bool, animated:Bool):Void;
 
-	@:native("later",")
-	public var later",:and;
+	@:native("statusBarOrientation")
+	public var statusBarOrientation:UIInterfaceOrientation;
 
 	@:native("setStatusBarOrientation:animated")
 	overload public function setStatusBarOrientation(interfaceOrientation:UIInterfaceOrientation, animated:Bool):Void;
 
-	@:native("preferredStatusBarStyle]",")
-	public var preferredStatusBarStyle]",:-[UIViewController;
+	@:native("statusBarStyle")
+	public var statusBarStyle:UIStatusBarStyle;
 
 	@:native("setStatusBarStyle:animated")
 	overload public function setStatusBarStyle(statusBarStyle:UIStatusBarStyle, animated:Bool):Void;
 
-	@:native("prefersStatusBarHidden]",")
-	public var prefersStatusBarHidden]",:-[UIViewController;
+	@:native("statusBarHidden")
+	public var statusBarHidden:Bool;
 
 	@:native("setStatusBarHidden:withAnimation")
 	overload public function setStatusBarHidden(hidden:Bool, withAnimation:UIStatusBarAnimation):Void;

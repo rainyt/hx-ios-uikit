@@ -13,8 +13,8 @@ extern class UITableViewDropPlaceholder{
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDropPlaceholder;
 
-	@:native("_Nullable")
-	public var _Nullable:UIDragPreviewParameters;
+	@:native("__kindof UITableViewCell ")
+	public var __kindof UITableViewCell :Dynamic;
 
 
 }

@@ -40,7 +40,7 @@ class ObjcProperty {
 					skip = 1;
 				}
 			} else {
-				if (char == "<") {
+				if (char == "<" || char == "(") {
 					kend++;
 				} else if (char == ">")
 					kend--;
@@ -64,13 +64,8 @@ class ObjcProperty {
 			else
 				skip--;
 		}
-		for (index => value in p) {
-			if (value.indexOf("API_") != -1) {
-				trace(p);
-				break;
-			}
-		}
-		p = p.filter((f)->f.indexOf("API_") == -1 && f.indexOf("ios(") == -1);
+		p = p.filter((f) -> f.indexOf("API_") == -1 && f.indexOf("ios(") == -1 && f != "UI_APPEARANCE_SELECTOR");
+		trace(p);
 		return ({
 			name: p[p.length - 1],
 			type: ExternBaseClassType.PROPERTY,

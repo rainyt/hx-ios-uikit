@@ -25,11 +25,11 @@ extern class UIFontSystemFonts{
 	@:native("systemFontSize")
 	public var systemFontSize:CGFloat;
 
-	@:native("tvos,")
-	public var tvos,:ios,;
+	@:native("defaultFontSize")
+	public var defaultFontSize:CGFloat;
 
-	@:native("tvos,")
-	public var tvos,:ios,;
+	@:native("systemMinimumFontSize")
+	public var systemMinimumFontSize:CGFloat;
 
 
 }

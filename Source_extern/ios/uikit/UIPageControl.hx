@@ -49,8 +49,8 @@ extern class UIPageControl{
 	@:native("sizeForNumberOfPages")
 	overload public function sizeForNumberOfPages(pageCount:NSInteger):CGSize;
 
-	@:native("mode.",")
-	public var mode.",:interaction;
+	@:native("defersCurrentPageDisplay")
+	public var defersCurrentPageDisplay:Bool;
 
 	@:native("updateCurrentPageDisplay")
 	overload public function updateCurrentPageDisplay():Void;

@@ -22,8 +22,8 @@ extern class UIRefreshControl{
 	@:native("tintColor")
 	public var tintColor:UIColor;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:attributedTitle;
+	@:native("attributedTitle")
+	public var attributedTitle:NSAttributedString;
 
 	@:native("beginRefreshing")
 	overload public function beginRefreshing():Void;

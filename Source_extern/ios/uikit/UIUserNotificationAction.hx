@@ -28,8 +28,8 @@ extern class UIUserNotificationAction{
 	@:native("behavior")
 	public var behavior:UIUserNotificationActionBehavior;
 
-	@:native("parameters")
-	public var parameters:NSDictionary;
+	@:native("tvos")
+	public var tvos:parameters;
 
 	@:native("activationMode")
 	public var activationMode:UIUserNotificationActivationMode;

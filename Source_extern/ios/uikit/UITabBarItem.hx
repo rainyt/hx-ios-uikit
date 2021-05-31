@@ -55,8 +55,8 @@ extern class UITabBarItem{
 	@:native("badgeTextAttributesForState")
 	overload public function badgeTextAttributesForState(state:UIControlState):Dynamic;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:standardAppearance;
+	@:native("standardAppearance")
+	public var standardAppearance:UITabBarAppearance;
 
 
 }

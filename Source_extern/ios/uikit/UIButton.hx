@@ -34,8 +34,8 @@ extern class UIButton{
 	@:native("buttonWithType:primaryAction")
 	overload public static function buttonWithType(buttonType:UIButtonType, primaryAction:UIAction):UIButton;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:contentEdgeInsets;
+	@:native("contentEdgeInsets")
+	public var contentEdgeInsets:UIEdgeInsets;
 
 	@:native("titleEdgeInsets")
 	public var titleEdgeInsets:UIEdgeInsets;
@@ -67,8 +67,8 @@ extern class UIButton{
 	@:native("pointerInteractionEnabled")
 	public var pointerInteractionEnabled:Bool;
 
-	@:native("pointerStyleProvider")
-	public var pointerStyleProvider:Dynamic;
+	@:native("NS_REFINED_FOR_SWIFT")
+	public var NS_REFINED_FOR_SWIFT:Dynamic;
 
 	@:native("menu")
 	public var menu:UIMenu;

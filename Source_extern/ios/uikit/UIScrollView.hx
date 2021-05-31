@@ -151,8 +151,8 @@ extern class UIScrollView{
 	@:native("pinchGestureRecognizer")
 	public var pinchGestureRecognizer:UIPinchGestureRecognizer;
 
-	@:native("tvos(9.0,")
-	public var tvos(9.0,:useful.",;
+	@:native("directionalPressGestureRecognizer")
+	public var directionalPressGestureRecognizer:UIGestureRecognizer;
 
 	@:native("keyboardDismissMode")
 	public var keyboardDismissMode:UIScrollViewKeyboardDismissMode;

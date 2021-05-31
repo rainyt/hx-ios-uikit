@@ -13,8 +13,8 @@ extern class UIToolbar{
 	@:native("autorelease")
 	overload public static function autorelease():UIToolbar;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:barStyle;
+	@:native("barStyle")
+	public var barStyle:UIBarStyle;
 
 	@:native("items")
 	public var items:Dynamic;
@@ -43,11 +43,11 @@ extern class UIToolbar{
 	@:native("shadowImageForToolbarPosition")
 	overload public function shadowImageForToolbarPosition(topOrBottom:UIBarPosition):UIImage;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:standardAppearance;
+	@:native("standardAppearance")
+	public var standardAppearance:UIToolbarAppearance;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:compactAppearance;
+	@:native("compactAppearance")
+	public var compactAppearance:UIToolbarAppearance;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

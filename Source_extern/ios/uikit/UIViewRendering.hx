@@ -25,8 +25,8 @@ extern class UIViewRendering{
 	@:native("clipsToBounds")
 	public var clipsToBounds:Bool;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:backgroundColor;
+	@:native("backgroundColor")
+	public var backgroundColor:UIColor;
 
 	@:native("alpha")
 	public var alpha:CGFloat;

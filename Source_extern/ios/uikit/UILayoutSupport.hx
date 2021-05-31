@@ -13,11 +13,11 @@ extern class UILayoutSupport{
 	@:native("autorelease")
 	overload public static function autorelease():UILayoutSupport;
 
-	@:native("topLayoutGuide.bottomAnchor",")
-	public var topLayoutGuide.bottomAnchor",:of;
+	@:native("topLayoutGuide")
+	public var topLayoutGuide:Dynamic;
 
-	@:native("bottomLayoutGuide.topAnchor",")
-	public var bottomLayoutGuide.topAnchor",:of;
+	@:native("bottomLayoutGuide")
+	public var bottomLayoutGuide:Dynamic;
 
 	@:native("additionalSafeAreaInsets")
 	public var additionalSafeAreaInsets:UIEdgeInsets;

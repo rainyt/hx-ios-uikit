@@ -70,8 +70,8 @@ extern class UITabBar{
 	@:native("translucent")
 	public var translucent:Bool;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:standardAppearance;
+	@:native("standardAppearance")
+	public var standardAppearance:UITabBarAppearance;
 
 	@:native("leadingAccessoryView")
 	public var leadingAccessoryView:UIView;

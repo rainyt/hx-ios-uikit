@@ -19,8 +19,8 @@ extern class UIGraphicsImageRendererFormat{
 	@:native("opaque")
 	public var opaque:Bool;
 
-	@:native("instead",")
-	public var instead",:property;
+	@:native("prefersExtendedRange")
+	public var prefersExtendedRange:Bool;
 
 	@:native("preferredRange")
 	public var preferredRange:UIGraphicsImageRendererFormatRange;

@@ -17,7 +17,7 @@ extern class UICellAccessoryDelete{
 	public var backgroundColor:UIColor;
 
 	@:native("void")
-	public var void:nonatomic,copy,nullable;
+	public var void:Dynamic;
 
 
 }

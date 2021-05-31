@@ -13,8 +13,8 @@ extern class UICollectionViewDropPlaceholder{
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDropPlaceholder;
 
-	@:native("_Nullable")
-	public var _Nullable:UIDragPreviewParameters;
+	@:native("__kindof UICollectionViewCell ")
+	public var __kindof UICollectionViewCell :Dynamic;
 
 
 }

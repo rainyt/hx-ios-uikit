@@ -172,8 +172,8 @@ extern class UIViewController{
 	@:native("extendedLayoutIncludesOpaqueBars")
 	public var extendedLayoutIncludesOpaqueBars:Bool;
 
-	@:native("instead",")
-	public var instead",:contentInsetAdjustmentBehavior;
+	@:native("automaticallyAdjustsScrollViewInsets")
+	public var automaticallyAdjustsScrollViewInsets:Bool;
 
 	@:native("preferredContentSize")
 	public var preferredContentSize:CGSize;

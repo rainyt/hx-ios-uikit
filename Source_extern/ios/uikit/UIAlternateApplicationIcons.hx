@@ -13,14 +13,14 @@ extern class UIAlternateApplicationIcons{
 	@:native("autorelease")
 	overload public static function autorelease():UIAlternateApplicationIcons;
 
-	@:native("alternate")
-	public var alternate:have;
+	@:native("NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"")
+	public var NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":supportsAlternateIcons;
 
 	@:native("setAlternateIconName:completionHandler:NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"")
 	overload public function setAlternateIconName(alternateIconName:NSString, completionHandler:Dynamic, NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":Dynamic):Void;
 
-	@:native("alternate")
-	public var alternate:have;
+	@:native("NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons"")
+	public var NS_EXTENSION_UNAVAILABLE("Extensions may not have alternate icons":alternateIconName;
 
 
 }

@@ -31,8 +31,8 @@ class ObjcFun {
 		}
 		var c = returnClass.indexOf("instancetype") != -1 ? className : returnClass;
 		c = ObjcType.toType(c, typedefs);
-		if (funcName == "")
-			trace(line);
+		// if (funcName == "")
+		// trace(line);
 		return {
 			name: parsingFuncName(funcName, args),
 			type: ExternBaseClassType.FUNC,
@@ -123,8 +123,6 @@ class ObjcFun {
 			}
 		}
 		retargs = retargs.filter((f) -> f.indexOf("API_") == -1 && f.indexOf("ios(") == -1);
-
-		// trace(args.length, args, retargs);
 		return retargs;
 	}
 }

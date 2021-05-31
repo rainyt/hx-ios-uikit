@@ -13,8 +13,8 @@ extern class UIPreviewAction{
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewAction;
 
-	@:native("void")
-	public var void:nonatomic,copy,readonly;
+	@:native("id<UIPreviewActionItem> action, UIViewController previewViewController")
+	public var id<UIPreviewActionItem> action, UIViewController previewViewController:Dynamic;
 
 	@:native("actionWithTitle:style:handler")
 	overload public static function actionWithTitle(title:NSString, style:UIPreviewActionStyle, handler:Dynamic):UIPreviewAction;

@@ -19,8 +19,8 @@ extern class UIPickerView{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("later.",")
-	public var later.",:and;
+	@:native("showsSelectionIndicator")
+	public var showsSelectionIndicator:Bool;
 
 	@:native("numberOfComponents")
 	public var numberOfComponents:NSInteger;

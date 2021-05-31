@@ -37,8 +37,8 @@ extern class UISegmentedControl{
 	@:native("segmentIndexForActionIdentifier")
 	overload public function segmentIndexForActionIdentifier(actionIdentifier:UIActionIdentifier):NSInteger;
 
-	@:native("effect",")
-	public var effect",:any;
+	@:native("segmentedControlStyle")
+	public var segmentedControlStyle:UISegmentedControlStyle;
 
 	@:native("momentary")
 	public var momentary:Bool;

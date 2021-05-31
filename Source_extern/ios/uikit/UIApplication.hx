@@ -13,8 +13,8 @@ extern class UIApplication{
 	@:native("autorelease")
 	overload public static function autorelease():UIApplication;
 
-	@:native("appropriate")
-	public var appropriate:where;
+	@:native("NS_EXTENSION_UNAVAILABLE_IOS("Use view controller based solutions where appropriate instead."")
+	public var NS_EXTENSION_UNAVAILABLE_IOS("Use view controller based solutions where appropriate instead.":sharedApplication;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -25,8 +25,8 @@ extern class UIApplication{
 	@:native("endIgnoringInteractionEvents")
 	overload public function endIgnoringInteractionEvents():Void;
 
-	@:native("instead",")
-	public var instead",:property;
+	@:native("ignoringInteractionEvents")
+	public var ignoringInteractionEvents:Bool;
 
 	@:native("idleTimerDisabled")
 	public var idleTimerDisabled:Bool;
@@ -43,8 +43,8 @@ extern class UIApplication{
 	@:native("sendEvent")
 	overload public function sendEvent(event:UIEvent):Void;
 
-	@:native("scenes",")
-	public var scenes",:connected;
+	@:native("keyWindow")
+	public var keyWindow:UIWindow;
 
 	@:native("windows")
 	public var windows:Dynamic;

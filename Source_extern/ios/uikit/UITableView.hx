@@ -202,8 +202,8 @@ extern class UITableView{
 	@:native("separatorStyle")
 	public var separatorStyle:UITableViewCellSeparatorStyle;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:separatorColor;
+	@:native("separatorColor")
+	public var separatorColor:UIColor;
 
 	@:native("separatorEffect")
 	public var separatorEffect:UIVisualEffect;

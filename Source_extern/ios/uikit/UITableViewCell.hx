@@ -40,14 +40,14 @@ extern class UITableViewCell{
 	@:native("contentView")
 	public var contentView:UIView;
 
-	@:native("release.",")
-	public var release.",:future;
+	@:native("imageView")
+	public var imageView:UIImageView;
 
-	@:native("release.",")
-	public var release.",:future;
+	@:native("textLabel")
+	public var textLabel:UILabel;
 
-	@:native("release.",")
-	public var release.",:future;
+	@:native("detailTextLabel")
+	public var detailTextLabel:UILabel;
 
 	@:native("backgroundConfiguration")
 	public var backgroundConfiguration:UIBackgroundConfiguration;

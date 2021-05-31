@@ -22,8 +22,8 @@ extern class UICollectionViewPlaceholder{
 	@:native("new")
 	overload public static function new():UICollectionViewPlaceholder;
 
-	@:native("nonatomic, nullable, copy")
-	public var nonatomic, nullable, copy:null;
+	@:native("__kindof UICollectionViewCell ")
+	public var __kindof UICollectionViewCell :Dynamic;
 
 
 }

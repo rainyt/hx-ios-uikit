@@ -351,7 +351,6 @@ class ExternTools:
         haxefile = (HxOverrides.stringOrNull(HxString.substr(hfile,(pos + 1),None)) + "x")
         startIndex = None
         if (((haxefile.find("+") if ((startIndex is None)) else HxString.indexOfImpl(haxefile,"+",startIndex))) != -1):
-            print(str(("igone:" + ("null" if haxefile is None else haxefile))))
             return
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         c = ExternHFile(hfile)
@@ -559,8 +558,6 @@ class ObjcFun:
         startIndex = None
         c = (className if ((((returnClass.find("instancetype") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"instancetype",startIndex))) != -1)) else returnClass)
         c = ObjcType.toType(c,typedefs)
-        if (funcName == ""):
-            print(str(line))
         return _hx_AnonObject({'name': ObjcFun.parsingFuncName(funcName,args), 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
 
     @staticmethod
@@ -756,7 +753,7 @@ class ObjcProperty:
                 elif (char == " "):
                     isRead = True
                     skip = 1
-            elif (char == "<"):
+            elif ((char == "<") or ((char == "("))):
                 kend = (kend + 1)
             elif (char == ">"):
                 kend = (kend - 1)
@@ -776,26 +773,20 @@ class ObjcProperty:
                 read = (("null" if read is None else read) + ("null" if char is None else char))
             else:
                 skip = (skip - 1)
-        _g4_current = 0
-        _g4_array = p
-        while (_g4_current < len(_g4_array)):
-            _g5_value = (_g4_array[_g4_current] if _g4_current >= 0 and _g4_current < len(_g4_array) else None)
-            _g5_key = _g4_current
-            _g4_current = (_g4_current + 1)
-            index = _g5_key
-            value = _g5_value
-            startIndex = None
-            if (((value.find("API_") if ((startIndex is None)) else HxString.indexOfImpl(value,"API_",startIndex))) != -1):
-                print(str(p))
-                break
         def _hx_local_7(f):
+            p = None
             startIndex = None
             if (((f.find("API_") if ((startIndex is None)) else HxString.indexOfImpl(f,"API_",startIndex))) == -1):
                 startIndex = None
-                return (((f.find("ios(") if ((startIndex is None)) else HxString.indexOfImpl(f,"ios(",startIndex))) == -1)
+                p = (((f.find("ios(") if ((startIndex is None)) else HxString.indexOfImpl(f,"ios(",startIndex))) == -1)
+            else:
+                p = False
+            if p:
+                return (f != "UI_APPEARANCE_SELECTOR")
             else:
                 return False
         p = list(filter(_hx_local_7,p))
+        print(str(p))
         return _hx_AnonObject({'name': python_internal_ArrayImpl._get(p, (len(p) - 1)), 'type': "property", 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': False, 'args': None})
 
 

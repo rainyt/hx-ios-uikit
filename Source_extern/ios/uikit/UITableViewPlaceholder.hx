@@ -22,8 +22,8 @@ extern class UITableViewPlaceholder{
 	@:native("new")
 	overload public static function new():UITableViewPlaceholder;
 
-	@:native("nonatomic, nullable, copy")
-	public var nonatomic, nullable, copy:null;
+	@:native("__kindof UITableViewCell ")
+	public var __kindof UITableViewCell :Dynamic;
 
 
 }

@@ -28,8 +28,8 @@ extern class UIDragItem{
 	@:native("localObject")
 	public var localObject:Dynamic;
 
-	@:native("_Nullable")
-	public var _Nullable:UIDragPreview;
+	@:native("void")
+	public var void:Dynamic;
 
 
 }

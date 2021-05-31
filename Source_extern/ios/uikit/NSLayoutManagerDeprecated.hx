@@ -19,8 +19,8 @@ extern class NSLayoutManagerDeprecated{
 	@:native("glyphAtIndex")
 	overload public function glyphAtIndex(glyphIndex:NSUInteger):CGGlyph;
 
-	@:native("instead.",")
-	public var instead.",:hyphenationFactor];
+	@:native("hyphenationFactor")
+	public var hyphenationFactor:null;
 
 	@:native("showCGGlyphs:positions:count:font:matrix:attributes:inContext")
 	overload public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:NSUInteger, font:UIFont, matrix:CGAffineTransform, attributes:Dynamic, inContext:CGContextRef):Void;

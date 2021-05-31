@@ -17,7 +17,7 @@ extern class UICellAccessoryOutlineDisclosure{
 	public var style:UICellAccessoryOutlineDisclosureStyle;
 
 	@:native("void")
-	public var void:nonatomic,copy,nullable;
+	public var void:Dynamic;
 
 
 }

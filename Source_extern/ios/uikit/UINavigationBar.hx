@@ -13,8 +13,8 @@ extern class UINavigationBar{
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationBar;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:barStyle;
+	@:native("barStyle")
+	public var barStyle:UIBarStyle;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
@@ -40,8 +40,8 @@ extern class UINavigationBar{
 	@:native("setItems:animated")
 	overload public function setItems(items:Dynamic, animated:Bool):Void;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:prefersLargeTitles;
+	@:native("prefersLargeTitles")
+	public var prefersLargeTitles:Bool;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
@@ -67,8 +67,8 @@ extern class UINavigationBar{
 	@:native("titleTextAttributes")
 	public var titleTextAttributes:Dynamic;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:largeTitleTextAttributes;
+	@:native("largeTitleTextAttributes")
+	public var largeTitleTextAttributes:Dynamic;
 
 	@:native("setTitleVerticalPositionAdjustment:forBarMetrics")
 	overload public function setTitleVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics):Void;
@@ -82,14 +82,14 @@ extern class UINavigationBar{
 	@:native("backIndicatorTransitionMaskImage")
 	public var backIndicatorTransitionMaskImage:UIImage;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:standardAppearance;
+	@:native("standardAppearance")
+	public var standardAppearance:UINavigationBarAppearance;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:compactAppearance;
+	@:native("compactAppearance")
+	public var compactAppearance:UINavigationBarAppearance;
 
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:scrollEdgeAppearance;
+	@:native("scrollEdgeAppearance")
+	public var scrollEdgeAppearance:UINavigationBarAppearance;
 
 
 }
