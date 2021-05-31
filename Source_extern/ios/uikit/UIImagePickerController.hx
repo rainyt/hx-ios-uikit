@@ -19,11 +19,11 @@ extern class UIImagePickerController{
 	@:native("availableMediaTypesForSourceType")
 	overload public static function availableMediaTypesForSourceType(sourceType:Dynamic):Dynamic;
 
-	@:native("isCameraDeviceAvailable:::::::::")
-	overload public static function isCameraDeviceAvailable(cameraDevice:Dynamic, :Dynamic, :Dynamic, :Dynamic, :Dynamic, :Dynamic, :Dynamic, :Dynamic, :Dynamic, :Dynamic):Bool;
+	@:native("isCameraDeviceAvailable")
+	overload public static function isCameraDeviceAvailable(cameraDevice:Dynamic):Bool;
 
-	@:native("isFlashAvailableForCameraDevice:::::")
-	overload public static function isFlashAvailableForCameraDevice(cameraDevice:Dynamic, :Dynamic, :Dynamic, :Dynamic, :Dynamic, :Dynamic):Bool;
+	@:native("isFlashAvailableForCameraDevice")
+	overload public static function isFlashAvailableForCameraDevice(cameraDevice:Dynamic):Bool;
 
 	@:native("availableCaptureModesForCameraDevice")
 	overload public static function availableCaptureModesForCameraDevice(cameraDevice:Dynamic):Dynamic;

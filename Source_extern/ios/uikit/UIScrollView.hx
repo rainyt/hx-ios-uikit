@@ -84,7 +84,7 @@ extern class UIScrollView{
 	overload public function scrollIndicatorInsets():Dynamic;
 
 	@:native("decelerationRate")
-	public var decelerationRate:Dynamic;
+	public var decelerationRate:CGFloat;
 
 	@:native("indexDisplayMode")
 	public var indexDisplayMode:Dynamic;

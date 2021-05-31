@@ -45,14 +45,14 @@ extern class UIPrintPageRenderer{
 	@:native("drawPrintFormatter:forPageAtIndex")
 	overload public function drawPrintFormatter(printFormatter:Dynamic, forPageAtIndex:Dynamic):Void;
 
-	@:native("drawHeaderForPageAtIndex:")
-	overload public function drawHeaderForPageAtIndex(pageIndex:Dynamic, :Dynamic):Void;
+	@:native("drawHeaderForPageAtIndex")
+	overload public function drawHeaderForPageAtIndex(pageIndex:Dynamic):Void;
 
 	@:native("drawContentForPageAtIndex:inRect")
 	overload public function drawContentForPageAtIndex(pageIndex:Dynamic, inRect:CGRect):Void;
 
-	@:native("drawFooterForPageAtIndex:")
-	overload public function drawFooterForPageAtIndex(pageIndex:Dynamic, :Dynamic):Void;
+	@:native("drawFooterForPageAtIndex")
+	overload public function drawFooterForPageAtIndex(pageIndex:Dynamic):Void;
 
 
 }

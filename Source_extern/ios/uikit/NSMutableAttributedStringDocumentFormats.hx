@@ -13,8 +13,8 @@ extern class NSMutableAttributedStringDocumentFormats{
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableAttributedStringDocumentFormats;
 
-	@:native("readFromURL:options:documentAttributes:error:")
-	overload public function readFromURL(url:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:NSError, :Dynamic):Bool;
+	@:native("readFromURL:options:documentAttributes:error")
+	overload public function readFromURL(url:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:NSError):Bool;
 
 	@:native("readFromData:options:documentAttributes:error")
 	overload public function readFromData(data:NSData, options:Dynamic, documentAttributes:Dynamic, error:NSError):Bool;

@@ -85,14 +85,14 @@ extern class UIApplication{
 	@:native("backgroundTimeRemaining")
 	public var backgroundTimeRemaining:Dynamic;
 
-	@:native("beginBackgroundTaskWithExpirationHandler:")
-	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic, :Dynamic):Dynamic;
+	@:native("beginBackgroundTaskWithExpirationHandler")
+	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic):NSUInteger;
 
 	@:native("beginBackgroundTaskWithName:expirationHandler")
-	overload public function beginBackgroundTaskWithName(taskName:NSString, expirationHandler:Dynamic):Dynamic;
+	overload public function beginBackgroundTaskWithName(taskName:NSString, expirationHandler:Dynamic):NSUInteger;
 
 	@:native("endBackgroundTask")
-	overload public function endBackgroundTask(identifier:Dynamic):Void;
+	overload public function endBackgroundTask(identifier:NSUInteger):Void;
 
 	@:native("setMinimumBackgroundFetchInterval")
 	overload public function setMinimumBackgroundFetchInterval(minimumBackgroundFetchInterval:Dynamic):Void;

@@ -23,8 +23,8 @@ extern class UIStringDrawing{
 	@:native("drawAtPoint:withFont")
 	overload public function drawAtPoint(point:CGPoint, withFont:Dynamic):CGSize;
 
-	@:native("drawAtPoint:forWidth:withFont:lineBreakMode:")
-	overload public function drawAtPoint(point:CGPoint, forWidth:Dynamic, withFont:Dynamic, lineBreakMode:Dynamic, :Dynamic):CGSize;
+	@:native("drawAtPoint:forWidth:withFont:lineBreakMode")
+	overload public function drawAtPoint(point:CGPoint, forWidth:Dynamic, withFont:Dynamic, lineBreakMode:Dynamic):CGSize;
 
 	@:native("sizeWithFont:constrainedToSize")
 	overload public function sizeWithFont(font:Dynamic, constrainedToSize:CGSize):CGSize;

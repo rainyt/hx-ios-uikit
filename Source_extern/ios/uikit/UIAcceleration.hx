@@ -15,13 +15,13 @@ extern class UIAcceleration{
 	public var timestamp:Dynamic;
 
 	@:native("x")
-	public var x:Dynamic;
+	public var x:double;
 
 	@:native("y")
-	public var y:Dynamic;
+	public var y:double;
 
 	@:native("z")
-	public var z:Dynamic;
+	public var z:double;
 
 
 }

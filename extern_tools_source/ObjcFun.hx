@@ -34,6 +34,7 @@ class ObjcFun {
 		c = ObjcType.toType(c, typedefs);
 		// if (funcName == "")
 		// trace(line);
+		trace(funcName, args);
 		return {
 			name: parsingFuncName(funcName, args),
 			type: ExternBaseClassType.FUNC,
@@ -127,6 +128,8 @@ class ObjcFun {
 		var r:Array<ExternBaseClassFunPropertyArgs> = [];
 		for (index => value in retargs) {
 			var a = value.split(":");
+			if (a[0] == "")
+				continue;
 			r.push({
 				name: a[0],
 				type: a[1]

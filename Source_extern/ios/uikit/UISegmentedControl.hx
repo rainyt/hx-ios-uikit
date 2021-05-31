@@ -53,8 +53,8 @@ extern class UISegmentedControl{
 	@:native("insertSegmentWithTitle:atIndex:animated")
 	overload public function insertSegmentWithTitle(title:NSString, atIndex:Dynamic, animated:Bool):Void;
 
-	@:native("insertSegmentWithImage::NSUInteger")
-	overload public function insertSegmentWithImage(image:Dynamic, :Dynamic, NSUInteger:Dynamic):Void;
+	@:native("insertSegmentWithImage:NSUInteger")
+	overload public function insertSegmentWithImage(image:Dynamic, NSUInteger:Dynamic):Void;
 
 	@:native("removeSegmentAtIndex:animated")
 	overload public function removeSegmentAtIndex(segment:Dynamic, animated:Bool):Void;
@@ -107,8 +107,8 @@ extern class UISegmentedControl{
 	@:native("setDividerImage:forLeftSegmentState:rightSegmentState:barMetrics")
 	overload public function setDividerImage(dividerImage:Dynamic, forLeftSegmentState:Dynamic, rightSegmentState:Dynamic, barMetrics:Dynamic):Void;
 
-	@:native("dividerImageForLeftSegmentState:rightSegmentState:barMetrics:")
-	overload public function dividerImageForLeftSegmentState(leftState:Dynamic, rightSegmentState:Dynamic, barMetrics:Dynamic, :Dynamic):Dynamic;
+	@:native("dividerImageForLeftSegmentState:rightSegmentState:barMetrics")
+	overload public function dividerImageForLeftSegmentState(leftState:Dynamic, rightSegmentState:Dynamic, barMetrics:Dynamic):Dynamic;
 
 	@:native("setTitleTextAttributes:forState")
 	overload public function setTitleTextAttributes(attributes:Dynamic, forState:Dynamic):Void;
