@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAccessibilityElement")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UIAccessibilityElement{
 	public var accessibilityContainer:id;
 
 	@:native("isAccessibilityElement")
-	public var isAccessibilityElement:BOOL;
+	public var isAccessibilityElement:Bool;
 
 	@:native("accessibilityLabel")
 	public var accessibilityLabel:NSString;

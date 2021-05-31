@@ -1,7 +1,7 @@
 import ExternBaseClass.ExternBaseClassType;
 
 class ObjcProperty {
-	public static function parsing(typedefs:Map<String, String>, className:String, line:String):ExternBaseClass.ExternBaseClassFunProperty {
+	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClass.ExternBaseClassFunProperty {
 		line = StringTools.replace(line, "@property ", "");
 		line = StringTools.replace(line, "*", "");
 		var isRead = false;

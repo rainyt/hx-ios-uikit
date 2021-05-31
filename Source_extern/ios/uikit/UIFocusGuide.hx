@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIFocusGuide")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIFocusGuide{
 	overload extern inline public static function autorelease():UIFocusGuide;
 
 	@:native("enabled")
-	public var enabled:BOOL;
+	public var enabled:Bool;
 
 	@:native("preferredFocusEnvironments")
 	public var preferredFocusEnvironments:Dynamic;

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAccessibilityAdditions")
 @:include("UIKit/UIKit.h")
@@ -36,7 +38,7 @@ extern class UIAccessibilityAdditions{
 	overload extern inline public function accessibilityAttributedScrollStatusForScrollView(scrollView:UIScrollView):nullable NSAttributedString *;
 
 	@:native("accessibilityIgnoresInvertColors")
-	public var accessibilityIgnoresInvertColors:BOOL;
+	public var accessibilityIgnoresInvertColors:Bool;
 
 	@:native("accessibilityName")
 	public var accessibilityName:NSString;

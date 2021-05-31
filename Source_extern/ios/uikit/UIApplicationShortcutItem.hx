@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIApplicationShortcutItem")
 @:include("UIKit/UIKit.h")
@@ -24,7 +26,7 @@ extern class UIApplicationShortcutItem{
 	overload extern inline public function init():UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle:localizedSubtitle:icon:userInfo")
-	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:NSDictionary<NSString,id<NSSecureCoding>>):UIApplicationShortcutItem;
+	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:Dynamic):UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle")
 	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
@@ -42,7 +44,7 @@ extern class UIApplicationShortcutItem{
 	public var icon:UIApplicationShortcutIcon;
 
 	@:native("userInfo")
-	public var userInfo:NSDictionary<NSString,id<NSSecureCoding>>;
+	public var userInfo:Dynamic;
 
 	@:native("targetContentIdentifier")
 	public var targetContentIdentifier:id;
@@ -60,7 +62,7 @@ extern class UIApplicationShortcutItem{
 	public var icon:UIApplicationShortcutIcon;
 
 	@:native("userInfo")
-	public var userInfo:NSDictionary<NSString,id<NSSecureCoding>>;
+	public var userInfo:Dynamic;
 
 	@:native("targetContentIdentifier")
 	public var targetContentIdentifier:id;

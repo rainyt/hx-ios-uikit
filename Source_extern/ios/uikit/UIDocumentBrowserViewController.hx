@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")
@@ -21,13 +23,13 @@ extern class UIDocumentBrowserViewController{
 	overload extern inline public function initWithNibName(nibName:NSString, bundle:NSBundle):UIDocumentBrowserViewController;
 
 	@:native("delegate")
-	public var delegate:<UIDocumentBrowserViewControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("allowsDocumentCreation")
-	public var allowsDocumentCreation:BOOL;
+	public var allowsDocumentCreation:Bool;
 
 	@:native("allowsPickingMultipleItems")
-	public var allowsPickingMultipleItems:BOOL;
+	public var allowsPickingMultipleItems:Bool;
 
 	@:native("ios(11.0,")
 	public var ios(11.0,:supported",;
@@ -39,16 +41,16 @@ extern class UIDocumentBrowserViewController{
 	public var contentTypesForRecentDocuments:Dynamic;
 
 	@:native("shouldShowFileExtensions")
-	public var shouldShowFileExtensions:BOOL;
+	public var shouldShowFileExtensions:Bool;
 
 	@:native("additionalLeadingNavigationBarButtonItems")
-	public var additionalLeadingNavigationBarButtonItems:<UIBarButtonItem>;
+	public var additionalLeadingNavigationBarButtonItems:Dynamic;
 
 	@:native("additionalTrailingNavigationBarButtonItems")
-	public var additionalTrailingNavigationBarButtonItems:<UIBarButtonItem>;
+	public var additionalTrailingNavigationBarButtonItems:Dynamic;
 
 	@:native("revealDocumentAtURL:importIfNeeded:completion")
-	overload extern inline public function revealDocumentAtURL(url:NSURL, importIfNeeded:BOOL, completion:Dynamic):Void;
+	overload extern inline public function revealDocumentAtURL(url:NSURL, importIfNeeded:Bool, completion:Dynamic):Void;
 
 	@:native("importDocumentAtURL:nextToDocumentAtURL:mode:completionHandler")
 	overload extern inline public function importDocumentAtURL(documentURL:NSURL, nextToDocumentAtURL:NSURL, mode:UIDocumentBrowserImportMode, completionHandler:Dynamic):Void;
@@ -60,7 +62,7 @@ extern class UIDocumentBrowserViewController{
 	overload extern inline public function transitionControllerForDocumentURL(documentURL:NSURL):UIDocumentBrowserTransitionController *;
 
 	@:native("customActions")
-	public var customActions:<UIDocumentBrowserAction>;
+	public var customActions:Dynamic;
 
 	@:native("browserUserInterfaceStyle")
 	public var browserUserInterfaceStyle:UIDocumentBrowserUserInterfaceStyle;

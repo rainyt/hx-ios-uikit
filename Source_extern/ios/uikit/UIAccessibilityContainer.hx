@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAccessibilityContainer")
 @:include("UIKit/UIKit.h")
@@ -21,7 +23,7 @@ extern class UIAccessibilityContainer{
 	overload extern inline public function indexOfAccessibilityElement(element:id):NSInteger;
 
 	@:native("accessibilityElements")
-	public var accessibilityElements:Dynamic;
+	public var accessibilityElements:NSArray;
 
 	@:native("accessibilityContainerType")
 	public var accessibilityContainerType:UIAccessibilityContainerType;

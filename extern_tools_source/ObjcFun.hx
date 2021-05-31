@@ -1,7 +1,7 @@
 import ExternBaseClass.ExternBaseClassType;
 
 class ObjcFun {
-	public static function parsing(typedefs:Map<String, String>, className:String, line:String):ExternBaseClass.ExternBaseClassFunProperty {
+	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClass.ExternBaseClassFunProperty {
 		var isStatic = line.indexOf("+") == 0;
 		var returnClass = line.substr(0, line.indexOf(")"));
 		returnClass = returnClass.substr(returnClass.indexOf("(") + 1);
@@ -20,8 +20,8 @@ class ObjcFun {
 			}
 		}
 		var c = returnClass.indexOf("instancetype") != -1 ? className : returnClass;
-		if (typedefs.exists(c))
-			c = typedefs.get(c);
+		if (typedefs.exists(c) && !typedefs.get(c).createHaxeFile)
+			c = typedefs.get(c).parentClassName;
 		if (c == "void")
 			c = "Void";
 		return {
@@ -44,7 +44,7 @@ class ObjcFun {
 		return funcName;
 	}
 
-	public static function parsingArgs(typedefs:Map<String, String>, line:String):Array<Dynamic> {
+	public static function parsingArgs(typedefs:Map<String, ExternTypedefClass>, line:String):Array<Dynamic> {
 		var isRaed = false;
 		var args = [];
 		var read = "";
@@ -115,5 +115,4 @@ class ObjcFun {
 		// trace(args.length, args, retargs);
 		return retargs;
 	}
-
 }

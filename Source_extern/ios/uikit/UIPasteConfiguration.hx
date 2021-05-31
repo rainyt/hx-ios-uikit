@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPasteConfiguration")
 @:include("UIKit/UIKit.h")
@@ -24,10 +26,10 @@ extern class UIPasteConfiguration{
 	overload extern inline public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):Void;
 
 	@:native("initWithTypeIdentifiersForAcceptingClass")
-	overload extern inline public function initWithTypeIdentifiersForAcceptingClass(aClass:Class<NSItemProviderReading>):UIPasteConfiguration;
+	overload extern inline public function initWithTypeIdentifiersForAcceptingClass(aClass:Dynamic):UIPasteConfiguration;
 
 	@:native("addTypeIdentifiersForAcceptingClass")
-	overload extern inline public function addTypeIdentifiersForAcceptingClass(aClass:Class<NSItemProviderReading>):Void;
+	overload extern inline public function addTypeIdentifiersForAcceptingClass(aClass:Dynamic):Void;
 
 
 }

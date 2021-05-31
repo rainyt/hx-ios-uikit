@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIListContentImageProperties")
 @:include("UIKit/UIKit.h")
@@ -33,7 +35,7 @@ extern class UIListContentImageProperties{
 	public var reservedLayoutSize:CGSize;
 
 	@:native("accessibilityIgnoresInvertColors")
-	public var accessibilityIgnoresInvertColors:BOOL;
+	public var accessibilityIgnoresInvertColors:Bool;
 
 
 }

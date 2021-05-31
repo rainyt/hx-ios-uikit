@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UINavigationBar")
 @:include("UIKit/UIKit.h")
@@ -15,16 +17,16 @@ extern class UINavigationBar{
 	public var UI_APPEARANCE_SELECTOR:barStyle;
 
 	@:native("delegate")
-	public var delegate:id<UINavigationBarDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("translucent")
-	public var translucent:BOOL;
+	public var translucent:Bool;
 
 	@:native("pushNavigationItem:animated")
-	overload extern inline public function pushNavigationItem(item:UINavigationItem, animated:BOOL):Void;
+	overload extern inline public function pushNavigationItem(item:UINavigationItem, animated:Bool):Void;
 
 	@:native("popNavigationItemAnimated://:the:that")
-	overload extern inline public function popNavigationItemAnimated(animated:BOOL, //:Returns, the:item, that:was):nullable UINavigationItem *;
+	overload extern inline public function popNavigationItemAnimated(animated:Bool, //:Returns, the:item, that:was):nullable UINavigationItem *;
 
 	@:native("topItem")
 	public var topItem:UINavigationItem;
@@ -36,7 +38,7 @@ extern class UINavigationBar{
 	public var items:Dynamic;
 
 	@:native("setItems:animated://:animated:YES,:simulate:push:pop:on:the:top:was:in")
-	overload extern inline public function setItems(items:Dynamic, animated:BOOL, //:If, animated:is, YES,:then, simulate:a, push:or, pop:depending, on:whether, the:new, top:item, was:previously, in:the):Void;
+	overload extern inline public function setItems(items:Dynamic, animated:Bool, //:If, animated:is, YES,:then, simulate:a, push:or, pop:depending, on:whether, the:new, top:item, was:previously, in:the):Void;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:prefersLargeTitles;
@@ -63,7 +65,7 @@ extern class UINavigationBar{
 	public var shadowImage:UIImage;
 
 	@:native("titleTextAttributes")
-	public var titleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var titleTextAttributes:Dynamic;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:largeTitleTextAttributes;

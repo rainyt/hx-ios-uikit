@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIImagePickerController")
 @:include("UIKit/UIKit.h")
@@ -27,7 +29,7 @@ extern class UIImagePickerController{
 	overload extern inline public static function availableCaptureModesForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice, API_AVAILABLE(ios(4.0)://, returns:array, of:NSNumbers):nullable NSArray<NSNumber *> *;
 
 	@:native("delegate")
-	public var delegate:<UINavigationControllerDelegate,UIImagePickerControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("is")
 	public var is:value;
@@ -81,10 +83,10 @@ extern class UIImagePickerController{
 	public var :;
 
 	@:native("imagePickerController:didFinishPickingImage:editingInfo")
-	overload extern inline public function imagePickerController(picker:UIImagePickerController, didFinishPickingImage:UIImage, editingInfo:NSDictionary<UIImagePickerControllerInfoKey,id>):Void;
+	overload extern inline public function imagePickerController(picker:UIImagePickerController, didFinishPickingImage:UIImage, editingInfo:Dynamic):Void;
 
 	@:native("imagePickerController:didFinishPickingMediaWithInfo")
-	overload extern inline public function imagePickerController(picker:UIImagePickerController, didFinishPickingMediaWithInfo:NSDictionary<UIImagePickerControllerInfoKey,id>):Void;
+	overload extern inline public function imagePickerController(picker:UIImagePickerController, didFinishPickingMediaWithInfo:Dynamic):Void;
 
 	@:native("imagePickerControllerDidCancel")
 	overload extern inline public function imagePickerControllerDidCancel(picker:UIImagePickerController):Void;

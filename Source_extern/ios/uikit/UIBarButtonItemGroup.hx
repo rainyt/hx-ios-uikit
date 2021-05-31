@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIBarButtonItemGroup")
 @:include("UIKit/UIKit.h")
@@ -24,7 +26,7 @@ extern class UIBarButtonItemGroup{
 	public var representativeItem:UIBarButtonItem;
 
 	@:native("displayingRepresentativeItem")
-	public var displayingRepresentativeItem:BOOL;
+	public var displayingRepresentativeItem:Bool;
 
 	@:native("buttonGroup")
 	public var buttonGroup:UIBarButtonItemGroup;

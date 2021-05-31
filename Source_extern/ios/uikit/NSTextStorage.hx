@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")
@@ -30,7 +32,7 @@ extern class NSTextStorage{
 	public var changeInLength:NSInteger;
 
 	@:native("delegate")
-	public var delegate:<NSTextStorageDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("edited:range:changeInLength")
 	overload extern inline public function edited(editedMask:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
@@ -39,7 +41,7 @@ extern class NSTextStorage{
 	overload extern inline public function processEditing;():Void;
 
 	@:native("fixesAttributesLazily")
-	public var fixesAttributesLazily:BOOL;
+	public var fixesAttributesLazily:Bool;
 
 	@:native("invalidateAttributesInRange")
 	overload extern inline public function invalidateAttributesInRange(range:NSRange):Void;

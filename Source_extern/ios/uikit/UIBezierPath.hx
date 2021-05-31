@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIBezierPath")
 @:include("UIKit/UIKit.h")
@@ -27,7 +29,7 @@ extern class UIBezierPath{
 	overload extern inline public static function bezierPathWithRoundedRect(rect:CGRect, byRoundingCorners:UIRectCorner, cornerRadii:CGSize):UIBezierPath;
 
 	@:native("bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise")
-	overload extern inline public static function bezierPathWithArcCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, clockwise:BOOL):UIBezierPath;
+	overload extern inline public static function bezierPathWithArcCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, clockwise:Bool):UIBezierPath;
 
 	@:native("bezierPathWithCGPath")
 	overload extern inline public static function bezierPathWithCGPath(CGPath:CGPathRef):UIBezierPath;
@@ -57,7 +59,7 @@ extern class UIBezierPath{
 	overload extern inline public function addQuadCurveToPoint(endPoint:CGPoint, controlPoint:CGPoint):Void;
 
 	@:native("addArcWithCenter:radius:startAngle:endAngle:clockwise")
-	overload extern inline public function addArcWithCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, clockwise:BOOL):Void;
+	overload extern inline public function addArcWithCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, clockwise:Bool):Void;
 
 	@:native("closePath;")
 	overload extern inline public function closePath;():Void;
@@ -75,7 +77,7 @@ extern class UIBezierPath{
 	overload extern inline public function applyTransform(transform:CGAffineTransform):Void;
 
 	@:native("empty")
-	public var empty:BOOL;
+	public var empty:Bool;
 
 	@:native("bounds")
 	public var bounds:CGRect;

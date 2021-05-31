@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UICollectionViewListCell")
 @:include("UIKit/UIKit.h")
@@ -21,7 +23,7 @@ extern class UICollectionViewListCell{
 	public var indentationWidth:CGFloat;
 
 	@:native("indentsAccessories")
-	public var indentsAccessories:BOOL;
+	public var indentsAccessories:Bool;
 
 	@:native("accessories")
 	public var accessories:Dynamic;

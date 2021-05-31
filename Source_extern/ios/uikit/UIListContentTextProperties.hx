@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIListContentTextProperties")
 @:include("UIKit/UIKit.h")
@@ -33,16 +35,16 @@ extern class UIListContentTextProperties{
 	public var numberOfLines:NSInteger;
 
 	@:native("adjustsFontSizeToFitWidth")
-	public var adjustsFontSizeToFitWidth:BOOL;
+	public var adjustsFontSizeToFitWidth:Bool;
 
 	@:native("minimumScaleFactor")
 	public var minimumScaleFactor:CGFloat;
 
 	@:native("allowsDefaultTighteningForTruncation")
-	public var allowsDefaultTighteningForTruncation:BOOL;
+	public var allowsDefaultTighteningForTruncation:Bool;
 
 	@:native("adjustsFontForContentSizeCategory")
-	public var adjustsFontForContentSizeCategory:BOOL;
+	public var adjustsFontForContentSizeCategory:Bool;
 
 	@:native("transform")
 	public var transform:UIListContentTextTransform;

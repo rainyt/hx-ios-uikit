@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDragSession")
 @:include("UIKit/UIKit.h")
@@ -18,28 +20,28 @@ extern class UIDragSession{
 	overload extern inline public function locationInView(view:UIView):CGPoint;
 
 	@:native("allowsMoveOperation")
-	public var allowsMoveOperation:BOOL;
+	public var allowsMoveOperation:Bool;
 
 	@:native("restrictedToDraggingApplication")
-	public var restrictedToDraggingApplication:BOOL;
+	public var restrictedToDraggingApplication:Bool;
 
 	@:native("hasItemsConformingToTypeIdentifiers")
 	overload extern inline public function hasItemsConformingToTypeIdentifiers(typeIdentifiers:Dynamic):BOOL;
 
 	@:native("canLoadObjectsOfClass")
-	overload extern inline public function canLoadObjectsOfClass(aClass:Class<NSItemProviderReading>):BOOL;
+	overload extern inline public function canLoadObjectsOfClass(aClass:Dynamic):BOOL;
 
 	@:native("localContext")
 	public var localContext:id;
 
 	@:native("localDragSession")
-	public var localDragSession:id<UIDragSession>;
+	public var localDragSession:Dynamic;
 
 	@:native("progressIndicatorStyle")
 	public var progressIndicatorStyle:UIDropSessionProgressIndicatorStyle;
 
 	@:native("loadObjectsOfClass:completion")
-	overload extern inline public function loadObjectsOfClass(aClass:Class<NSItemProviderReading>, completion:Dynamic):NSProgress *;
+	overload extern inline public function loadObjectsOfClass(aClass:Dynamic, completion:Dynamic):NSProgress *;
 
 
 }

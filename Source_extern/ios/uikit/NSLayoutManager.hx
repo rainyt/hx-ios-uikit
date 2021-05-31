@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("NSLayoutManager")
 @:include("UIKit/UIKit.h")
@@ -39,22 +41,22 @@ extern class NSLayoutManager{
 	overload extern inline public function textContainerChangedGeometry(container:NSTextContainer):Void;
 
 	@:native("delegate")
-	public var delegate:<NSLayoutManagerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("showsInvisibleCharacters")
-	public var showsInvisibleCharacters:BOOL;
+	public var showsInvisibleCharacters:Bool;
 
 	@:native("showsControlCharacters")
-	public var showsControlCharacters:BOOL;
+	public var showsControlCharacters:Bool;
 
 	@:native("usesFontLeading")
-	public var usesFontLeading:BOOL;
+	public var usesFontLeading:Bool;
 
 	@:native("allowsNonContiguousLayout")
-	public var allowsNonContiguousLayout:BOOL;
+	public var allowsNonContiguousLayout:Bool;
 
 	@:native("hasNonContiguousLayout")
-	public var hasNonContiguousLayout:BOOL;
+	public var hasNonContiguousLayout:Bool;
 
 	@:native("limitsLayoutForSuspiciousContents")
 	public var limitsLayoutForSuspiciousContents:null;
@@ -135,10 +137,10 @@ extern class NSLayoutManager{
 	overload extern inline public function setLocation(location:CGPoint, forStartOfGlyphRange:NSRange):Void;
 
 	@:native("setNotShownAttribute:forGlyphAtIndex")
-	overload extern inline public function setNotShownAttribute(flag:BOOL, forGlyphAtIndex:NSUInteger):Void;
+	overload extern inline public function setNotShownAttribute(flag:Bool, forGlyphAtIndex:NSUInteger):Void;
 
 	@:native("setDrawsOutsideLineFragment:forGlyphAtIndex")
-	overload extern inline public function setDrawsOutsideLineFragment(flag:BOOL, forGlyphAtIndex:NSUInteger):Void;
+	overload extern inline public function setDrawsOutsideLineFragment(flag:Bool, forGlyphAtIndex:NSUInteger):Void;
 
 	@:native("setAttachmentSize:forGlyphRange")
 	overload extern inline public function setAttachmentSize(attachmentSize:CGSize, forGlyphRange:NSRange):Void;
@@ -156,7 +158,7 @@ extern class NSLayoutManager{
 	overload extern inline public function textContainerForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer):nullable NSTextContainer *;
 
 	@:native("textContainerForGlyphAtIndex:effectiveRange:withoutAdditionalLayout")
-	overload extern inline public function textContainerForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer, withoutAdditionalLayout:BOOL):nullable NSTextContainer *;
+	overload extern inline public function textContainerForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer, withoutAdditionalLayout:Bool):nullable NSTextContainer *;
 
 	@:native("usedRectForTextContainer")
 	overload extern inline public function usedRectForTextContainer(container:NSTextContainer):CGRect;
@@ -165,13 +167,13 @@ extern class NSLayoutManager{
 	overload extern inline public function lineFragmentRectForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer):CGRect;
 
 	@:native("lineFragmentRectForGlyphAtIndex:effectiveRange:withoutAdditionalLayout")
-	overload extern inline public function lineFragmentRectForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer, withoutAdditionalLayout:BOOL):CGRect;
+	overload extern inline public function lineFragmentRectForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer, withoutAdditionalLayout:Bool):CGRect;
 
 	@:native("lineFragmentUsedRectForGlyphAtIndex:effectiveRange")
 	overload extern inline public function lineFragmentUsedRectForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer):CGRect;
 
 	@:native("lineFragmentUsedRectForGlyphAtIndex:effectiveRange:withoutAdditionalLayout")
-	overload extern inline public function lineFragmentUsedRectForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer, withoutAdditionalLayout:BOOL):CGRect;
+	overload extern inline public function lineFragmentUsedRectForGlyphAtIndex(glyphIndex:NSUInteger, effectiveRange:NSRangePointer, withoutAdditionalLayout:Bool):CGRect;
 
 	@:native("extraLineFragmentRect")
 	public var extraLineFragmentRect:CGRect;
@@ -231,7 +233,7 @@ extern class NSLayoutManager{
 	overload extern inline public function characterIndexForPoint(point:CGPoint, inTextContainer:NSTextContainer, fractionOfDistanceBetweenInsertionPoints:CGFloat):NSUInteger;
 
 	@:native("getLineFragmentInsertionPointsForCharacterAtIndex:alternatePositions:inDisplayOrder:positions:characterIndexes")
-	overload extern inline public function getLineFragmentInsertionPointsForCharacterAtIndex(charIndex:NSUInteger, alternatePositions:BOOL, inDisplayOrder:BOOL, positions:CGFloat, characterIndexes:NSUInteger):NSUInteger;
+	overload extern inline public function getLineFragmentInsertionPointsForCharacterAtIndex(charIndex:NSUInteger, alternatePositions:Bool, inDisplayOrder:Bool, positions:CGFloat, characterIndexes:NSUInteger):NSUInteger;
 
 	@:native("enumerateLineFragmentsForGlyphRange:usingBlock")
 	overload extern inline public function enumerateLineFragmentsForGlyphRange(glyphRange:NSRange, usingBlock:Dynamic):Void;
@@ -246,7 +248,7 @@ extern class NSLayoutManager{
 	overload extern inline public function drawGlyphsForGlyphRange(glyphsToShow:NSRange, atPoint:CGPoint):Void;
 
 	@:native("showCGGlyphs:positions:count:font:textMatrix:attributes:inContext")
-	overload extern inline public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:NSInteger, font:UIFont, textMatrix:CGAffineTransform, attributes:NSDictionary<NSAttributedStringKey,id>, inContext:CGContextRef):Void;
+	overload extern inline public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:NSInteger, font:UIFont, textMatrix:CGAffineTransform, attributes:Dynamic, inContext:CGContextRef):Void;
 
 	@:native("fillBackgroundRectArray:count:forCharacterRange:color")
 	overload extern inline public function fillBackgroundRectArray(rectArray:constCGRect, count:NSUInteger, forCharacterRange:NSRange, color:UIColor):Void;
@@ -294,7 +296,7 @@ extern class NSLayoutManager{
 	overload extern inline public function layoutManagerDidInvalidateLayout(sender:NSLayoutManager):Void;
 
 	@:native("layoutManager:didCompleteLayoutForTextContainer:atEnd")
-	overload extern inline public function layoutManager(layoutManager:NSLayoutManager, didCompleteLayoutForTextContainer:NSTextContainer, atEnd:BOOL):Void;
+	overload extern inline public function layoutManager(layoutManager:NSLayoutManager, didCompleteLayoutForTextContainer:NSTextContainer, atEnd:Bool):Void;
 
 	@:native("layoutManager:textContainer:didChangeGeometryFromSize")
 	overload extern inline public function layoutManager(layoutManager:NSLayoutManager, textContainer:NSTextContainer, didChangeGeometryFromSize:CGSize):Void;
@@ -309,7 +311,7 @@ extern class NSLayoutManager{
 	public var instead.",:hyphenationFactor];
 
 	@:native("showCGGlyphs:positions:count:font:matrix:attributes:inContext:API_DEPRECATED_WITH_REPLACEMENT("showCGGlyphs")
-	overload extern inline public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:NSUInteger, font:UIFont, matrix:CGAffineTransform, attributes:NSDictionary<NSAttributedStringKey,id>, inContext:CGContextRef, API_DEPRECATED_WITH_REPLACEMENT("showCGGlyphs:positions:count:font:textMatrix:attributes:inContext:", macos(10.7,10.15), ios(7.0,13.0), watchos(2.0,6.0), tvos(9.0,13.0):Dynamic):Void;
+	overload extern inline public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:NSUInteger, font:UIFont, matrix:CGAffineTransform, attributes:Dynamic, inContext:CGContextRef, API_DEPRECATED_WITH_REPLACEMENT("showCGGlyphs:positions:count:font:textMatrix:attributes:inContext:", macos(10.7,10.15), ios(7.0,13.0), watchos(2.0,6.0), tvos(9.0,13.0):Dynamic):Void;
 
 
 }

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UINib")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UINib{
 	overload extern inline public static function nibWithData(data:NSData, bundle:NSBundle):UINib *;
 
 	@:native("instantiateWithOwner:options")
-	overload extern inline public function instantiateWithOwner(ownerOrNil:id, options:NSDictionary<UINibOptionsKey,id>):NSArray *;
+	overload extern inline public function instantiateWithOwner(ownerOrNil:id, options:Dynamic):NSArray *;
 
 
 }

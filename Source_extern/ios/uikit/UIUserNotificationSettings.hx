@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIUserNotificationSettings")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UIUserNotificationSettings{
 	public var types:UIUserNotificationType;
 
 	@:native("categories")
-	public var categories:NSSet<UIUserNotificationCategory>;
+	public var categories:Dynamic;
 
 	@:native("init")
 	overload extern inline public function init():UIUserNotificationSettings;
@@ -60,10 +62,10 @@ extern class UIUserNotificationSettings{
 	public var activationMode:UIUserNotificationActivationMode;
 
 	@:native("authenticationRequired")
-	public var authenticationRequired:BOOL;
+	public var authenticationRequired:Bool;
 
 	@:native("destructive")
-	public var destructive:BOOL;
+	public var destructive:Bool;
 
 	@:native("identifier")
 	public var identifier:NSString;
@@ -81,10 +83,10 @@ extern class UIUserNotificationSettings{
 	public var activationMode:UIUserNotificationActivationMode;
 
 	@:native("authenticationRequired")
-	public var authenticationRequired:BOOL;
+	public var authenticationRequired:Bool;
 
 	@:native("destructive")
-	public var destructive:BOOL;
+	public var destructive:Bool;
 
 
 }

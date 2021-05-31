@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIBarCommon")
 @:include("UIKit/UIKit.h")
@@ -15,7 +17,7 @@ extern class UIBarCommon{
 	public var barPosition:UIBarPosition;
 
 	@:native("positionForBar")
-	overload extern inline public function positionForBar(bar:id<UIBarPositioning>):UIBarPosition;
+	overload extern inline public function positionForBar(bar:Dynamic):UIBarPosition;
 
 
 }

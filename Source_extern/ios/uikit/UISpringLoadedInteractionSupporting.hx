@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISpringLoadedInteractionSupporting")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UISpringLoadedInteractionSupporting{
 	overload extern inline public static function autorelease():UISpringLoadedInteractionSupporting;
 
 	@:native("springLoaded")
-	public var springLoaded:BOOL;
+	public var springLoaded:Bool;
 
 
 }

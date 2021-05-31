@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIWindow")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UIWindow{
 	public var windowScene:UIWindowScene;
 
 	@:native("canResizeToFitContent")
-	public var canResizeToFitContent:BOOL;
+	public var canResizeToFitContent:Bool;
 
 	@:native("screen")
 	public var screen:UIScreen;
@@ -30,7 +32,7 @@ extern class UIWindow{
 	public var =:default;
 
 	@:native("keyWindow")
-	public var keyWindow:BOOL;
+	public var keyWindow:Bool;
 
 	@:native("becomeKeyWindow;")
 	overload extern inline public function becomeKeyWindow;():Void;

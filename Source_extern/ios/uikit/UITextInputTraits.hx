@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITextInputTraits")
 @:include("UIKit/UIKit.h")
@@ -57,7 +59,7 @@ extern class UITextInputTraits{
 	public var is:default;
 
 	@:native("textContentType")
-	public var textContentType:NSString;
+	public var textContentType:UITextContentType;
 
 	@:native("passwordRules")
 	public var passwordRules:UITextInputPasswordRules;

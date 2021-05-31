@@ -28,7 +28,7 @@ class ExternTools {
 		pkg = pkg.substr(0, pkg.indexOf("."));
 		var haxefile = hfile.substr(hfile.lastIndexOf("/") + 1) + "x";
 		if (haxefile.indexOf("+") != -1) {
-            trace("igone:"+haxefile);
+			trace("igone:" + haxefile);
 			return;
 		}
 		trace("parsing " + pkg + ":" + haxefile);
@@ -38,5 +38,10 @@ class ExternTools {
 			FileSystem.createDirectory(haxedir);
 		}
 		File.saveContent(haxedir + "/" + haxefile, c.toHaxeFile());
+		for (key => value in c.typedefs) {
+			if (value.createHaxeFile) {
+				File.saveContent(haxedir + "/" + value.className + ".hx", value.toHaxeFile("ios." + pkg.toLowerCase()));
+			}
+		}
 	}
 }

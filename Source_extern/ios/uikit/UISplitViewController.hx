@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISplitViewController")
 @:include("UIKit/UIKit.h")
@@ -24,10 +26,10 @@ extern class UISplitViewController{
 	public var style:UISplitViewControllerStyle;
 
 	@:native("delegate")
-	public var delegate:<UISplitViewControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("showsSecondaryOnlyButton")
-	public var showsSecondaryOnlyButton:BOOL;
+	public var showsSecondaryOnlyButton:Bool;
 
 	@:native("preferredSplitBehavior")
 	public var preferredSplitBehavior:UISplitViewControllerSplitBehavior;
@@ -54,7 +56,7 @@ extern class UISplitViewController{
 	public var column-style:for;
 
 	@:native("presentsWithGesture")
-	public var presentsWithGesture:BOOL;
+	public var presentsWithGesture:Bool;
 
 	@:native("")
 	public var :collapsed;

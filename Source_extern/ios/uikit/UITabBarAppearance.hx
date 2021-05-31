@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITabBarAppearance")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UITabBarAppearance{
 	overload extern inline public static function new():UITabBarAppearance;
 
 	@:native("titleTextAttributes")
-	public var titleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var titleTextAttributes:Dynamic;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:UIOffset;
@@ -33,7 +35,7 @@ extern class UITabBarAppearance{
 	public var badgeBackgroundColor:UIColor;
 
 	@:native("badgeTextAttributes")
-	public var badgeTextAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var badgeTextAttributes:Dynamic;
 
 	@:native("badgeTitlePositionAdjustment")
 	public var badgeTitlePositionAdjustment:UIOffset;

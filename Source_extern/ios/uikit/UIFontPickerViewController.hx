@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIFontPickerViewController")
 @:include("UIKit/UIKit.h")
@@ -24,7 +26,7 @@ extern class UIFontPickerViewController{
 	public var configuration:UIFontPickerViewControllerConfiguration;
 
 	@:native("delegate")
-	public var delegate:id<UIFontPickerViewControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("selectedFontDescriptor")
 	public var selectedFontDescriptor:UIFontDescriptor;

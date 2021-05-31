@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIMenu")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIMenu{
 	overload extern inline public static function autorelease():UIMenu;
 
 	@:native("identifier")
-	public var identifier:NSString;
+	public var identifier:UIMenuIdentifier;
 
 	@:native("options")
 	public var options:UIMenuOptions;

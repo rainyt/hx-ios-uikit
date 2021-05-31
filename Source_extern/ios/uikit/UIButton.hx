@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIButton")
 @:include("UIKit/UIKit.h")
@@ -63,7 +65,7 @@ extern class UIButton{
 	public var role:UIButtonRole;
 
 	@:native("pointerInteractionEnabled")
-	public var pointerInteractionEnabled:BOOL;
+	public var pointerInteractionEnabled:Bool;
 
 	@:native("pointerStyleProvider")
 	public var pointerStyleProvider:UIButtonPointerStyleProvider;

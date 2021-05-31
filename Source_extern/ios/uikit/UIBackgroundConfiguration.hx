@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIBackgroundConfiguration")
 @:include("UIKit/UIKit.h")
@@ -42,7 +44,7 @@ extern class UIBackgroundConfiguration{
 	overload extern inline public function init():UIBackgroundConfiguration;
 
 	@:native("updatedConfigurationForState")
-	overload extern inline public function updatedConfigurationForState(state:id<UIConfigurationState>):UIBackgroundConfiguration;
+	overload extern inline public function updatedConfigurationForState(state:Dynamic):UIBackgroundConfiguration;
 
 	@:native("customView")
 	public var customView:UIView;

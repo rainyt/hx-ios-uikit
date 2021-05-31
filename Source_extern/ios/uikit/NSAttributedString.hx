@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("NSAttributedString")
 @:include("UIKit/UIKit.h")
@@ -15,22 +17,22 @@ extern class NSAttributedString{
 	overload extern inline public function fixAttributesInRange(range:NSRange):Void;
 
 	@:native("initWithURL:options:documentAttributes:error")
-	overload extern inline public function initWithURL(url:NSURL, options:NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>____nullable, error:NSError):NSAttributedString;
+	overload extern inline public function initWithURL(url:NSURL, options:Dynamic, documentAttributes:Dynamic, error:NSError):NSAttributedString;
 
 	@:native("initWithData:options:documentAttributes:error")
-	overload extern inline public function initWithData(data:NSData, options:NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>____nullable, error:NSError):NSAttributedString;
+	overload extern inline public function initWithData(data:NSData, options:Dynamic, documentAttributes:Dynamic, error:NSError):NSAttributedString;
 
 	@:native("dataFromRange:documentAttributes:error")
-	overload extern inline public function dataFromRange(range:NSRange, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>, error:NSError):nullable NSData *;
+	overload extern inline public function dataFromRange(range:NSRange, documentAttributes:Dynamic, error:NSError):nullable NSData *;
 
 	@:native("fileWrapperFromRange:documentAttributes:error")
-	overload extern inline public function fileWrapperFromRange(range:NSRange, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>, error:NSError):nullable NSFileWrapper *;
+	overload extern inline public function fileWrapperFromRange(range:NSRange, documentAttributes:Dynamic, error:NSError):nullable NSFileWrapper *;
 
 	@:native("readFromURL:options:documentAttributes:error:")
-	overload extern inline public function readFromURL(url:NSURL, options:NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>____nullable, error:NSError, :Dynamic):BOOL;
+	overload extern inline public function readFromURL(url:NSURL, options:Dynamic, documentAttributes:Dynamic, error:NSError, :Dynamic):BOOL;
 
 	@:native("readFromData:options:documentAttributes:error")
-	overload extern inline public function readFromData(data:NSData, options:NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>____nullable, error:NSError):BOOL;
+	overload extern inline public function readFromData(data:NSData, options:Dynamic, documentAttributes:Dynamic, error:NSError):BOOL;
 
 	@:native("containsAttachmentsInRange")
 	overload extern inline public function containsAttachmentsInRange(range:NSRange):BOOL;

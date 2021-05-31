@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIInputViewController")
 @:include("UIKit/UIKit.h")
@@ -39,19 +41,19 @@ extern class UIInputViewController{
 	public var inputView:UIInputView;
 
 	@:native("textDocumentProxy")
-	public var textDocumentProxy:<UITextDocumentProxy>;
+	public var textDocumentProxy:Dynamic;
 
 	@:native("primaryLanguage")
 	public var primaryLanguage:NSString;
 
 	@:native("hasDictationKey")
-	public var hasDictationKey:BOOL;
+	public var hasDictationKey:Bool;
 
 	@:native("hasFullAccess")
-	public var hasFullAccess:BOOL;
+	public var hasFullAccess:Bool;
 
 	@:native("needsInputModeSwitchKey")
-	public var needsInputModeSwitchKey:BOOL;
+	public var needsInputModeSwitchKey:Bool;
 
 	@:native("dismissKeyboard;")
 	overload extern inline public function dismissKeyboard;():Void;

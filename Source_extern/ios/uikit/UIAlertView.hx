@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAlertView")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIAlertView{
 	overload extern inline public static function autorelease():UIAlertView;
 
 	@:native("initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:...")
-	overload extern inline public function initWithTitle(title:NSString, message:NSString, delegate:id/<UIAlertViewDelegate>/, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:NS_REQUIRES_NIL_TERMINATION):UIAlertView;
+	overload extern inline public function initWithTitle(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:NS_REQUIRES_NIL_TERMINATION):UIAlertView;
 
 	@:native("initWithFrame")
 	overload extern inline public function initWithFrame(frame:CGRect):id;
@@ -21,7 +23,7 @@ extern class UIAlertView{
 	overload extern inline public function ():UIAlertView;
 
 	@:native("delegate")
-	public var delegate:/<UIAlertViewDelegate>/;
+	public var delegate:Dynamic;
 
 	@:native("title")
 	public var title:NSString;
@@ -45,13 +47,13 @@ extern class UIAlertView{
 	public var not:initWithTitle:...;
 
 	@:native("visible")
-	public var visible:BOOL;
+	public var visible:Bool;
 
 	@:native("show;")
 	overload extern inline public function show;():Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:BOOL):Void;
+	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;
 
 	@:native("alertViewStyle")
 	public var alertViewStyle:UIAlertViewStyle;

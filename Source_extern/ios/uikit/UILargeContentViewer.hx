@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UILargeContentViewer")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UILargeContentViewer{
 	overload extern inline public static function autorelease():UILargeContentViewer;
 
 	@:native("showsLargeContentViewer")
-	public var showsLargeContentViewer:BOOL;
+	public var showsLargeContentViewer:Bool;
 
 	@:native("largeContentTitle")
 	public var largeContentTitle:NSString;
@@ -21,13 +23,13 @@ extern class UILargeContentViewer{
 	public var largeContentImage:UIImage;
 
 	@:native("scalesLargeContentImage")
-	public var scalesLargeContentImage:BOOL;
+	public var scalesLargeContentImage:Bool;
 
 	@:native("largeContentImageInsets")
 	public var largeContentImageInsets:UIEdgeInsets;
 
 	@:native("showsLargeContentViewer")
-	public var showsLargeContentViewer:BOOL;
+	public var showsLargeContentViewer:Bool;
 
 	@:native("largeContentTitle")
 	public var largeContentTitle:NSString;
@@ -36,25 +38,25 @@ extern class UILargeContentViewer{
 	public var largeContentImage:UIImage;
 
 	@:native("scalesLargeContentImage")
-	public var scalesLargeContentImage:BOOL;
+	public var scalesLargeContentImage:Bool;
 
 	@:native("largeContentImageInsets")
 	public var largeContentImageInsets:UIEdgeInsets;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:id<UILargeContentViewerInteractionDelegate>):UILargeContentViewer;
+	overload extern inline public function initWithDelegate(delegate:Dynamic):UILargeContentViewer;
 
 	@:native("delegate")
-	public var delegate:id<UILargeContentViewerInteractionDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("gestureRecognizerForExclusionRelationship")
 	public var gestureRecognizerForExclusionRelationship:UIGestureRecognizer;
 
 	@:native("enabled")
-	public var enabled:BOOL;
+	public var enabled:Bool;
 
 	@:native("largeContentViewerInteraction:didEndOnItem:atPoint")
-	overload extern inline public function largeContentViewerInteraction(interaction:UILargeContentViewerInteraction, didEndOnItem:id<UILargeContentViewerItem>, atPoint:CGPoint):Void;
+	overload extern inline public function largeContentViewerInteraction(interaction:UILargeContentViewerInteraction, didEndOnItem:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("largeContentViewerInteraction:itemAtPoint")
 	overload extern inline public function largeContentViewerInteraction(interaction:UILargeContentViewerInteraction, itemAtPoint:CGPoint):nullable id<UILargeContentViewerItem>;

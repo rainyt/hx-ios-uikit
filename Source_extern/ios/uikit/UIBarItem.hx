@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIBarItem")
 @:include("UIKit/UIKit.h")
@@ -45,7 +47,7 @@ extern class UIBarItem{
 	public var is:default;
 
 	@:native("setTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setTitleTextAttributes(attributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("titleTextAttributesForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function titleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;

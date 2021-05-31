@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDynamicItemBehavior")
 @:include("UIKit/UIKit.h")
@@ -15,10 +17,10 @@ extern class UIDynamicItemBehavior{
 	overload extern inline public function initWithItems(items:Dynamic):UIDynamicItemBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
+	overload extern inline public function addItem(item:Dynamic):Void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
+	overload extern inline public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
 	public var items:Dynamic;
@@ -42,22 +44,22 @@ extern class UIDynamicItemBehavior{
 	public var charge:CGFloat;
 
 	@:native("anchored")
-	public var anchored:BOOL;
+	public var anchored:Bool;
 
 	@:native("never")
 	public var never:to;
 
 	@:native("addLinearVelocity:forItem")
-	overload extern inline public function addLinearVelocity(velocity:CGPoint, forItem:id<UIDynamicItem>):Void;
+	overload extern inline public function addLinearVelocity(velocity:CGPoint, forItem:Dynamic):Void;
 
 	@:native("linearVelocityForItem")
-	overload extern inline public function linearVelocityForItem(item:id<UIDynamicItem>):CGPoint;
+	overload extern inline public function linearVelocityForItem(item:Dynamic):CGPoint;
 
 	@:native("addAngularVelocity:forItem")
-	overload extern inline public function addAngularVelocity(velocity:CGFloat, forItem:id<UIDynamicItem>):Void;
+	overload extern inline public function addAngularVelocity(velocity:CGFloat, forItem:Dynamic):Void;
 
 	@:native("angularVelocityForItem")
-	overload extern inline public function angularVelocityForItem(item:id<UIDynamicItem>):CGFloat;
+	overload extern inline public function angularVelocityForItem(item:Dynamic):CGFloat;
 
 
 }

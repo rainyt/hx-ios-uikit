@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIFontPickerViewControllerConfiguration")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIFontPickerViewControllerConfiguration{
 	overload extern inline public static function autorelease():UIFontPickerViewControllerConfiguration;
 
 	@:native("includeFaces")
-	public var includeFaces:BOOL;
+	public var includeFaces:Bool;
 
 	@:native("of")
 	public var of:instead;

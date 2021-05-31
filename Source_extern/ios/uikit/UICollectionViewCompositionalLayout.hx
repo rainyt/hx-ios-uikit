@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UICollectionViewCompositionalLayout")
 @:include("UIKit/UIKit.h")
@@ -69,7 +71,7 @@ extern class UICollectionViewCompositionalLayout{
 	public var boundarySupplementaryItems:Dynamic;
 
 	@:native("supplementariesFollowContentInsets")
-	public var supplementariesFollowContentInsets:BOOL;
+	public var supplementariesFollowContentInsets:Bool;
 
 	@:native("visibleItemsInvalidationHandler")
 	public var visibleItemsInvalidationHandler:NSCollectionLayoutSectionVisibleItemsInvalidationHandler;
@@ -171,16 +173,16 @@ extern class UICollectionViewCompositionalLayout{
 	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("isFractionalWidth")
-	public var isFractionalWidth:BOOL;
+	public var isFractionalWidth:Bool;
 
 	@:native("isFractionalHeight")
-	public var isFractionalHeight:BOOL;
+	public var isFractionalHeight:Bool;
 
 	@:native("isAbsolute")
-	public var isAbsolute:BOOL;
+	public var isAbsolute:Bool;
 
 	@:native("isEstimated")
-	public var isEstimated:BOOL;
+	public var isEstimated:Bool;
 
 	@:native("dimension")
 	public var dimension:CGFloat;
@@ -216,10 +218,10 @@ extern class UICollectionViewCompositionalLayout{
 	public var spacing:CGFloat;
 
 	@:native("isFlexibleSpacing")
-	public var isFlexibleSpacing:BOOL;
+	public var isFlexibleSpacing:Bool;
 
 	@:native("isFixedSpacing")
-	public var isFixedSpacing:BOOL;
+	public var isFixedSpacing:Bool;
 
 	@:native("spacingForLeading")
 	overload extern inline public static function spacingForLeading():UICollectionViewCompositionalLayout;
@@ -279,10 +281,10 @@ extern class UICollectionViewCompositionalLayout{
 	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("extendsBoundary")
-	public var extendsBoundary:BOOL;
+	public var extendsBoundary:Bool;
 
 	@:native("pinToVisibleBounds")
-	public var pinToVisibleBounds:BOOL;
+	public var pinToVisibleBounds:Bool;
 
 	@:native("alignment")
 	public var alignment:NSRectAlignment;
@@ -327,10 +329,10 @@ extern class UICollectionViewCompositionalLayout{
 	public var offset:CGPoint;
 
 	@:native("isAbsoluteOffset")
-	public var isAbsoluteOffset:BOOL;
+	public var isAbsoluteOffset:Bool;
 
 	@:native("isFractionalOffset")
-	public var isFractionalOffset:BOOL;
+	public var isFractionalOffset:Bool;
 
 	@:native("are")
 	public var are:insets;
@@ -345,7 +347,7 @@ extern class UICollectionViewCompositionalLayout{
 	public var unit:any;
 
 	@:native("container")
-	public var container:id<NSCollectionLayoutContainer>;
+	public var container:Dynamic;
 
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;
@@ -357,7 +359,7 @@ extern class UICollectionViewCompositionalLayout{
 	public var zIndex:NSInteger;
 
 	@:native("hidden")
-	public var hidden:BOOL;
+	public var hidden:Bool;
 
 	@:native("center")
 	public var center:CGPoint;

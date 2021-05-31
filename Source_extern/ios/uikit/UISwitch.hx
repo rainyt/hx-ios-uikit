@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISwitch")
 @:include("UIKit/UIKit.h")
@@ -33,7 +35,7 @@ extern class UISwitch{
 	public var preferredStyle:UISwitchStyle;
 
 	@:native("on")
-	public var on:BOOL;
+	public var on:Bool;
 
 	@:native("initWithFrame:NS_DESIGNATED_INITIALIZER::://:class:a:appropriate:the:and:the:size")
 	overload extern inline public function initWithFrame(frame:CGRect, NS_DESIGNATED_INITIALIZER:, :, :, //:This, class:enforces, a:size, appropriate:for, the:control,, and:so, the:frame, size:is):UISwitch;
@@ -42,7 +44,7 @@ extern class UISwitch{
 	overload extern inline public function initWithCoder(coder:NSCoder):UISwitch;
 
 	@:native("setOn:animated://:not")
-	overload extern inline public function setOn(on:BOOL, animated:BOOL, //:does, not:send):Void;
+	overload extern inline public function setOn(on:Bool, animated:Bool, //:does, not:send):Void;
 
 
 }

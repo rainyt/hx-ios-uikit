@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIContextMenuConfiguration")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIContextMenuConfiguration{
 	overload extern inline public static function autorelease():UIContextMenuConfiguration;
 
 	@:native("identifier")
-	public var identifier:id<NSCopying>;
+	public var identifier:Dynamic;
 
 	@:native("configurationWithIdentifier")
 	overload extern inline public static function configurationWithIdentifier():UIContextMenuConfiguration;

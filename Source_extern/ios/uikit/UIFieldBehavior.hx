@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIFieldBehavior")
 @:include("UIKit/UIKit.h")
@@ -15,10 +17,10 @@ extern class UIFieldBehavior{
 	overload extern inline public function init():UIFieldBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
+	overload extern inline public function addItem(item:Dynamic):Void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
+	overload extern inline public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
 	public var items:Dynamic;

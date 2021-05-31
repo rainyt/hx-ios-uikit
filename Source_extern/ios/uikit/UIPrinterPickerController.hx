@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPrinterPickerController")
 @:include("UIKit/UIKit.h")
@@ -39,19 +41,19 @@ extern class UIPrinterPickerController{
 	public var selectedPrinter:UIPrinter;
 
 	@:native("delegate")
-	public var delegate:id<UIPrinterPickerControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("presentAnimated:completionHandler::::::::::::::::::::::::")
-	overload extern inline public function presentAnimated(animated:BOOL, completionHandler:UIPrinterPickerCompletionHandler, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://):BOOL;
+	overload extern inline public function presentAnimated(animated:Bool, completionHandler:UIPrinterPickerCompletionHandler, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://):BOOL;
 
 	@:native("presentFromRect:inView:animated:completionHandler::")
-	overload extern inline public function presentFromRect(rect:CGRect, inView:UIView, animated:BOOL, completionHandler:UIPrinterPickerCompletionHandler, :, ://):BOOL;
+	overload extern inline public function presentFromRect(rect:CGRect, inView:UIView, animated:Bool, completionHandler:UIPrinterPickerCompletionHandler, :, ://):BOOL;
 
 	@:native("presentFromBarButtonItem:animated:completionHandler:::")
-	overload extern inline public function presentFromBarButtonItem(item:UIBarButtonItem, animated:BOOL, completionHandler:UIPrinterPickerCompletionHandler, :, :, ://):BOOL;
+	overload extern inline public function presentFromBarButtonItem(item:UIBarButtonItem, animated:Bool, completionHandler:UIPrinterPickerCompletionHandler, :, :, ://):BOOL;
 
 	@:native("dismissAnimated")
-	overload extern inline public function dismissAnimated(animated:BOOL):Void;
+	overload extern inline public function dismissAnimated(animated:Bool):Void;
 
 
 }

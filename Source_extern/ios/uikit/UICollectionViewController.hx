@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UICollectionViewController")
 @:include("UIKit/UIKit.h")
@@ -24,16 +26,16 @@ extern class UICollectionViewController{
 	public var collectionView:UICollectionView;
 
 	@:native("clearsSelectionOnViewWillAppear")
-	public var clearsSelectionOnViewWillAppear:BOOL;
+	public var clearsSelectionOnViewWillAppear:Bool;
 
 	@:native("useLayoutToLayoutNavigationTransitions")
-	public var useLayoutToLayoutNavigationTransitions:BOOL;
+	public var useLayoutToLayoutNavigationTransitions:Bool;
 
 	@:native("collectionViewLayout")
 	public var collectionViewLayout:UICollectionViewLayout;
 
 	@:native("installsStandardGestureForInteractiveMovement")
-	public var installsStandardGestureForInteractiveMovement:BOOL;
+	public var installsStandardGestureForInteractiveMovement:Bool;
 
 
 }

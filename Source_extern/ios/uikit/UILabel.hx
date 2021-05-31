@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UILabel")
 @:include("UIKit/UIKit.h")
@@ -60,7 +62,7 @@ extern class UILabel{
 	public var minimumScaleFactor:CGFloat;
 
 	@:native("allowsDefaultTighteningForTruncation")
-	public var allowsDefaultTighteningForTruncation:BOOL;
+	public var allowsDefaultTighteningForTruncation:Bool;
 
 	@:native("lineBreakStrategy")
 	public var lineBreakStrategy:NSLineBreakStrategy;
@@ -75,7 +77,7 @@ extern class UILabel{
 	public var preferredMaxLayoutWidth:CGFloat;
 
 	@:native("enablesMarqueeWhenAncestorFocused")
-	public var enablesMarqueeWhenAncestorFocused:BOOL;
+	public var enablesMarqueeWhenAncestorFocused:Bool;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:Dynamic;

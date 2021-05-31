@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIViewController")
 @:include("UIKit/UIKit.h")
@@ -15,19 +17,19 @@ extern class UIViewController{
 	public var preferredContentSize:CGSize;
 
 	@:native("preferredContentSizeDidChangeForChildContentContainer")
-	overload extern inline public function preferredContentSizeDidChangeForChildContentContainer(container:id<UIContentContainer>):Void;
+	overload extern inline public function preferredContentSizeDidChangeForChildContentContainer(container:Dynamic):Void;
 
 	@:native("systemLayoutFittingSizeDidChangeForChildContentContainer")
-	overload extern inline public function systemLayoutFittingSizeDidChangeForChildContentContainer(container:id<UIContentContainer>):Void;
+	overload extern inline public function systemLayoutFittingSizeDidChangeForChildContentContainer(container:Dynamic):Void;
 
 	@:native("sizeForChildContentContainer:withParentContainerSize")
-	overload extern inline public function sizeForChildContentContainer(container:id<UIContentContainer>, withParentContainerSize:CGSize):CGSize;
+	overload extern inline public function sizeForChildContentContainer(container:Dynamic, withParentContainerSize:CGSize):CGSize;
 
 	@:native("viewWillTransitionToSize:withTransitionCoordinator")
-	overload extern inline public function viewWillTransitionToSize(size:CGSize, withTransitionCoordinator:id<UIViewControllerTransitionCoordinator>):Void;
+	overload extern inline public function viewWillTransitionToSize(size:CGSize, withTransitionCoordinator:Dynamic):Void;
 
 	@:native("willTransitionToTraitCollection:withTransitionCoordinator")
-	overload extern inline public function willTransitionToTraitCollection(newCollection:UITraitCollection, withTransitionCoordinator:id<UIViewControllerTransitionCoordinator>):Void;
+	overload extern inline public function willTransitionToTraitCollection(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
 
 	@:native("initWithNibName:bundle")
 	overload extern inline public function initWithNibName(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
@@ -57,7 +59,7 @@ extern class UIViewController{
 	overload extern inline public function viewDidLoad;():Void;
 
 	@:native("viewLoaded")
-	public var viewLoaded:BOOL;
+	public var viewLoaded:Bool;
 
 	@:native("the")
 	public var the:instantiate;
@@ -99,16 +101,16 @@ extern class UIViewController{
 	overload extern inline public function segueForUnwindingToViewController(toViewController:UIViewController, fromViewController:UIViewController, identifier:NSString):nullable UIStoryboardSegue *;
 
 	@:native("viewWillAppear:::Called:the:is:to:visible.")
-	overload extern inline public function viewWillAppear(animated:BOOL, :, ://, Called:when, the:view, is:about, to:made, visible.:Default):Void;
+	overload extern inline public function viewWillAppear(animated:Bool, :, ://, Called:when, the:view, is:about, to:made, visible.:Default):Void;
 
 	@:native("viewDidAppear::://:when:view:been:transitioned:the:Default")
-	overload extern inline public function viewDidAppear(animated:BOOL, :, :, //:Called, when:the, view:has, been:fully, transitioned:onto, the:screen., Default:does):Void;
+	overload extern inline public function viewDidAppear(animated:Bool, :, :, //:Called, when:the, view:has, been:fully, transitioned:onto, the:screen., Default:does):Void;
 
 	@:native("viewWillDisappear://:when:view:dismissed,:or:hidden.")
-	overload extern inline public function viewWillDisappear(animated:BOOL, //:Called, when:the, view:is, dismissed,:covered, or:otherwise, hidden.:Default):Void;
+	overload extern inline public function viewWillDisappear(animated:Bool, //:Called, when:the, view:is, dismissed,:covered, or:otherwise, hidden.:Default):Void;
 
 	@:native("viewDidDisappear::Called:the:was:covered:otherwise:Default")
-	overload extern inline public function viewDidDisappear(animated:BOOL, ://, Called:after, the:view, was:dismissed,, covered:or, otherwise:hidden., Default:does):Void;
+	overload extern inline public function viewDidDisappear(animated:Bool, ://, Called:after, the:view, was:dismissed,, covered:or, otherwise:hidden., Default:does):Void;
 
 	@:native("viewWillLayoutSubviews")
 	overload extern inline public function viewWillLayoutSubviews():Void;
@@ -135,25 +137,25 @@ extern class UIViewController{
 	public var presentingViewController:UIViewController;
 
 	@:native("definesPresentationContext")
-	public var definesPresentationContext:BOOL;
+	public var definesPresentationContext:Bool;
 
 	@:native("providesPresentationContextTransitionStyle")
-	public var providesPresentationContextTransitionStyle:BOOL;
+	public var providesPresentationContextTransitionStyle:Bool;
 
 	@:native("restoresFocusAfterTransition")
-	public var restoresFocusAfterTransition:BOOL;
+	public var restoresFocusAfterTransition:Bool;
 
 	@:native("beingPresented")
-	public var beingPresented:BOOL;
+	public var beingPresented:Bool;
 
 	@:native("beingDismissed")
-	public var beingDismissed:BOOL;
+	public var beingDismissed:Bool;
 
 	@:native("movingToParentViewController")
-	public var movingToParentViewController:BOOL;
+	public var movingToParentViewController:Bool;
 
 	@:native("movingFromParentViewController")
-	public var movingFromParentViewController:BOOL;
+	public var movingFromParentViewController:Bool;
 
 	@:native("presentViewController:animated:completion")
 	overload extern inline public function presentViewController(viewControllerToPresent:UIViewController, animated:Dynamic, completion:Dynamic):Void;
@@ -162,10 +164,10 @@ extern class UIViewController{
 	overload extern inline public function dismissViewControllerAnimated(flag:Dynamic, completion:Dynamic):Void;
 
 	@:native("presentModalViewController:animated:API_DEPRECATED("", ios(2.0, 6.0)")
-	overload extern inline public function presentModalViewController(modalViewController:UIViewController, animated:BOOL, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Void;
+	overload extern inline public function presentModalViewController(modalViewController:UIViewController, animated:Bool, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Void;
 
 	@:native("dismissModalViewControllerAnimated:API_DEPRECATED("", ios(2.0, 6.0)")
-	overload extern inline public function dismissModalViewControllerAnimated(animated:BOOL, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Void;
+	overload extern inline public function dismissModalViewControllerAnimated(animated:Bool, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):Void;
 
 	@:native("modalTransitionStyle")
 	public var modalTransitionStyle:UIModalTransitionStyle;
@@ -174,10 +176,10 @@ extern class UIViewController{
 	public var modalPresentationStyle:UIModalPresentationStyle;
 
 	@:native("modalPresentationCapturesStatusBarAppearance")
-	public var modalPresentationCapturesStatusBarAppearance:BOOL;
+	public var modalPresentationCapturesStatusBarAppearance:Bool;
 
 	@:native("disablesAutomaticKeyboardDismissal")
-	public var disablesAutomaticKeyboardDismissal:BOOL;
+	public var disablesAutomaticKeyboardDismissal:Bool;
 
 	@:native("ios(3.0,")
 	public var ios(3.0,:Dynamic;
@@ -186,7 +188,7 @@ extern class UIViewController{
 	public var edgesForExtendedLayout:UIRectEdge;
 
 	@:native("extendedLayoutIncludesOpaqueBars")
-	public var extendedLayoutIncludesOpaqueBars:BOOL;
+	public var extendedLayoutIncludesOpaqueBars:Bool;
 
 	@:native("instead",")
 	public var instead",:contentInsetAdjustmentBehavior;
@@ -198,7 +200,7 @@ extern class UIViewController{
 	public var preferredStatusBarStyle:UIStatusBarStyle;
 
 	@:native("prefersStatusBarHidden")
-	public var prefersStatusBarHidden:BOOL;
+	public var prefersStatusBarHidden:Bool;
 
 	@:native("preferredStatusBarUpdateAnimation")
 	public var preferredStatusBarUpdateAnimation:UIStatusBarAnimation;
@@ -231,7 +233,7 @@ extern class UIViewController{
 	overload extern inline public function shouldAutorotateToInterfaceOrientation(toInterfaceOrientation:UIInterfaceOrientation, API_DEPRECATED("", ios(2.0, 6.0):Dynamic):BOOL;
 
 	@:native("shouldAutorotate")
-	public var shouldAutorotate:BOOL;
+	public var shouldAutorotate:Bool;
 
 	@:native("supportedInterfaceOrientations")
 	public var supportedInterfaceOrientations:UIInterfaceOrientationMask;
@@ -267,10 +269,10 @@ extern class UIViewController{
 	overload extern inline public function willAnimateSecondHalfOfRotationFromInterfaceOrientation(fromInterfaceOrientation:UIInterfaceOrientation, duration:NSTimeInterval, API_DEPRECATED("", ios(2.0, 5.0):Dynamic, //:A, this:point,, our:view, orientation:is, set:to, the:new):Void;
 
 	@:native("editing")
-	public var editing:BOOL;
+	public var editing:Bool;
 
 	@:native("setEditing:animated://:the:of:Edit|Done:item:necessary.:who:it:call")
-	overload extern inline public function setEditing(editing:BOOL, animated:BOOL, //:Updates, the:appearance, of:the, Edit|Done:button, item:as, necessary.:Clients, who:override, it:must, call:super):Void;
+	overload extern inline public function setEditing(editing:Bool, animated:Bool, //:Updates, the:appearance, of:the, Edit|Done:button, item:as, necessary.:Clients, who:override, it:must, call:super):Void;
 
 	@:native("with")
 	public var with:state;
@@ -291,7 +293,7 @@ extern class UIViewController{
 	overload extern inline public function transitionFromViewController(fromViewController:UIViewController, toViewController:UIViewController, duration:NSTimeInterval, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginAppearanceTransition:animated")
-	overload extern inline public function beginAppearanceTransition(isAppearing:BOOL, animated:BOOL):Void;
+	overload extern inline public function beginAppearanceTransition(isAppearing:Bool, animated:Bool):Void;
 
 	@:native("endAppearanceTransition")
 	overload extern inline public function endAppearanceTransition():Void;
@@ -318,7 +320,7 @@ extern class UIViewController{
 	overload extern inline public function shouldAutomaticallyForwardRotationMethods():BOOL;
 
 	@:native("shouldAutomaticallyForwardAppearanceMethods")
-	public var shouldAutomaticallyForwardAppearanceMethods:BOOL;
+	public var shouldAutomaticallyForwardAppearanceMethods:Bool;
 
 	@:native("willMoveToParentViewController")
 	overload extern inline public function willMoveToParentViewController(parent:UIViewController):Void;
@@ -330,7 +332,7 @@ extern class UIViewController{
 	public var restorationIdentifier:NSString;
 
 	@:native("restorationClass")
-	public var restorationClass:Class<UIViewControllerRestoration>;
+	public var restorationClass:Dynamic;
 
 	@:native("")
 	overload extern inline public function ():Void;
@@ -345,7 +347,7 @@ extern class UIViewController{
 	overload extern inline public function updateViewConstraints():Void;
 
 	@:native("transitioningDelegate")
-	public var transitioningDelegate:<UIViewControllerTransitioningDelegate>;
+	public var transitioningDelegate:Dynamic;
 
 	@:native("topLayoutGuide.bottomAnchor",")
 	public var topLayoutGuide.bottomAnchor",:of;
@@ -360,7 +362,7 @@ extern class UIViewController{
 	public var systemMinimumLayoutMargins:NSDirectionalEdgeInsets;
 
 	@:native("viewRespectsSystemMinimumLayoutMargins")
-	public var viewRespectsSystemMinimumLayoutMargins:BOOL;
+	public var viewRespectsSystemMinimumLayoutMargins:Bool;
 
 	@:native("viewLayoutMarginsDidChange")
 	overload extern inline public function viewLayoutMarginsDidChange():Void;
@@ -375,7 +377,7 @@ extern class UIViewController{
 	overload extern inline public function removeKeyCommand(keyCommand:UIKeyCommand):Void;
 
 	@:native("performsActionsWhilePresentingModally")
-	public var performsActionsWhilePresentingModally:BOOL;
+	public var performsActionsWhilePresentingModally:Bool;
 
 	@:native("extensionContext")
 	public var extensionContext:NSExtensionContext;
@@ -387,7 +389,7 @@ extern class UIViewController{
 	public var popoverPresentationController:UIPopoverPresentationController;
 
 	@:native("modalInPresentation")
-	public var modalInPresentation:BOOL;
+	public var modalInPresentation:Bool;
 
 	@:native("ios(9.0,")
 	public var ios(9.0,:Dynamic;
@@ -402,16 +404,16 @@ extern class UIViewController{
 	public var ios(9.0,:Dynamic;
 
 	@:native("previewingContext:viewControllerForLocation")
-	overload extern inline public function previewingContext(previewingContext:id<UIViewControllerPreviewing>, viewControllerForLocation:CGPoint):nullable UIViewController *;
+	overload extern inline public function previewingContext(previewingContext:Dynamic, viewControllerForLocation:CGPoint):nullable UIViewController *;
 
 	@:native("previewingContext:commitViewController")
-	overload extern inline public function previewingContext(previewingContext:id<UIViewControllerPreviewing>, commitViewController:UIViewController):Void;
+	overload extern inline public function previewingContext(previewingContext:Dynamic, commitViewController:UIViewController):Void;
 
 	@:native("registerForPreviewingWithDelegate:sourceView")
-	overload extern inline public function registerForPreviewingWithDelegate(delegate:id<UIViewControllerPreviewingDelegate>, sourceView:UIView):id <UIViewControllerPreviewing>;
+	overload extern inline public function registerForPreviewingWithDelegate(delegate:Dynamic, sourceView:UIView):id <UIViewControllerPreviewing>;
 
 	@:native("unregisterForPreviewingWithContext")
-	overload extern inline public function unregisterForPreviewingWithContext(previewing:id<UIViewControllerPreviewing>):Void;
+	overload extern inline public function unregisterForPreviewingWithContext(previewing:Dynamic):Void;
 
 	@:native("childViewControllerForScreenEdgesDeferringSystemGestures")
 	public var childViewControllerForScreenEdgesDeferringSystemGestures:UIViewController;
@@ -426,7 +428,7 @@ extern class UIViewController{
 	public var childViewControllerForHomeIndicatorAutoHidden:UIViewController;
 
 	@:native("prefersHomeIndicatorAutoHidden")
-	public var prefersHomeIndicatorAutoHidden:BOOL;
+	public var prefersHomeIndicatorAutoHidden:Bool;
 
 	@:native("setNeedsUpdateOfHomeIndicatorAutoHidden")
 	overload extern inline public function setNeedsUpdateOfHomeIndicatorAutoHidden():Void;
@@ -435,7 +437,7 @@ extern class UIViewController{
 	public var childViewControllerForPointerLock:UIViewController;
 
 	@:native("prefersPointerLocked")
-	public var prefersPointerLocked:BOOL;
+	public var prefersPointerLocked:Bool;
 
 	@:native("setNeedsUpdateOfPrefersPointerLocked")
 	overload extern inline public function setNeedsUpdateOfPrefersPointerLocked():Void;

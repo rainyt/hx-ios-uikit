@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIProgressView")
 @:include("UIKit/UIKit.h")
@@ -39,7 +41,7 @@ extern class UIProgressView{
 	public var :;
 
 	@:native("setProgress:animated")
-	overload extern inline public function setProgress(progress:float, animated:BOOL):Void;
+	overload extern inline public function setProgress(progress:float, animated:Bool):Void;
 
 	@:native("observedProgress")
 	public var observedProgress:NSProgress;

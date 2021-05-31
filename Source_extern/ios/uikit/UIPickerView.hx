@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPickerView")
 @:include("UIKit/UIKit.h")
@@ -39,7 +41,7 @@ extern class UIPickerView{
 	overload extern inline public function reloadComponent(component:NSInteger):Void;
 
 	@:native("selectRow:inComponent:animated::scrolls:specified")
-	overload extern inline public function selectRow(row:NSInteger, inComponent:NSInteger, animated:BOOL, ://, scrolls:the, specified:row):Void;
+	overload extern inline public function selectRow(row:NSInteger, inComponent:NSInteger, animated:Bool, ://, scrolls:the, specified:row):Void;
 
 	@:native("selectedRowInComponent:::::::::::::::::://:selected:-1")
 	overload extern inline public function selectedRowInComponent(component:NSInteger, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, //:returns, selected:row., -1:if):NSInteger;

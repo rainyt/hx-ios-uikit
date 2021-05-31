@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UINavigationBarAppearance")
 @:include("UIKit/UIKit.h")
@@ -12,13 +14,13 @@ extern class UINavigationBarAppearance{
 	overload extern inline public static function autorelease():UINavigationBarAppearance;
 
 	@:native("titleTextAttributes")
-	public var titleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var titleTextAttributes:Dynamic;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:UIOffset;
 
 	@:native("largeTitleTextAttributes")
-	public var largeTitleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var largeTitleTextAttributes:Dynamic;
 
 	@:native("buttonAppearance")
 	public var buttonAppearance:UIBarButtonItemAppearance;

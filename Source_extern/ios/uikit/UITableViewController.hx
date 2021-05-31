@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITableViewController")
 @:include("UIKit/UIKit.h")
@@ -24,7 +26,7 @@ extern class UITableViewController{
 	public var tableView:UITableView;
 
 	@:native("clearsSelectionOnViewWillAppear")
-	public var clearsSelectionOnViewWillAppear:BOOL;
+	public var clearsSelectionOnViewWillAppear:Bool;
 
 	@:native("refreshControl")
 	public var refreshControl:UIRefreshControl;

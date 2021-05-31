@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITableViewCell")
 @:include("UIKit/UIKit.h")
@@ -30,10 +32,10 @@ extern class UITableViewCell{
 	overload extern inline public function defaultContentConfiguration():UIListContentConfiguration *;
 
 	@:native("contentConfiguration")
-	public var contentConfiguration:id<UIContentConfiguration>;
+	public var contentConfiguration:Dynamic;
 
 	@:native("automaticallyUpdatesContentConfiguration")
-	public var automaticallyUpdatesContentConfiguration:BOOL;
+	public var automaticallyUpdatesContentConfiguration:Bool;
 
 	@:native("contentView")
 	public var contentView:UIView;
@@ -51,7 +53,7 @@ extern class UITableViewCell{
 	public var backgroundConfiguration:UIBackgroundConfiguration;
 
 	@:native("automaticallyUpdatesBackgroundConfiguration")
-	public var automaticallyUpdatesBackgroundConfiguration:BOOL;
+	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
 	@:native("backgroundView")
 	public var backgroundView:UIView;
@@ -78,10 +80,10 @@ extern class UITableViewCell{
 	public var image,:Dynamic;
 
 	@:native("setSelected:animated::::::::::://:between:and")
-	overload extern inline public function setSelected(selected:BOOL, animated:BOOL, :, :, :, :, :, :, :, :, :, :, //:animate, between:regular, and:selected):Void;
+	overload extern inline public function setSelected(selected:Bool, animated:Bool, :, :, :, :, :, :, :, :, :, :, //:animate, between:regular, and:selected):Void;
 
 	@:native("setHighlighted:animated:::::::://:between:and")
-	overload extern inline public function setHighlighted(highlighted:BOOL, animated:BOOL, :, :, :, :, :, :, :, //:animate, between:regular, and:highlighted):Void;
+	overload extern inline public function setHighlighted(highlighted:Bool, animated:Bool, :, :, :, :, :, :, :, //:animate, between:regular, and:highlighted):Void;
 
 	@:native("appearance")
 	public var appearance:their;
@@ -117,7 +119,7 @@ extern class UITableViewCell{
 	public var &:Dynamic;
 
 	@:native("setEditing:animated")
-	overload extern inline public function setEditing(editing:BOOL, animated:BOOL):Void;
+	overload extern inline public function setEditing(editing:Bool, animated:Bool):Void;
 
 	@:native(""Delete"")
 	public var "Delete":showing;
@@ -135,7 +137,7 @@ extern class UITableViewCell{
 	overload extern inline public function dragStateDidChange(dragState:UITableViewCellDragState, API_AVAILABLE(ios(11.0):Dynamic):Void;
 
 	@:native("userInteractionEnabledWhileDragging")
-	public var userInteractionEnabledWhileDragging:BOOL;
+	public var userInteractionEnabledWhileDragging:Bool;
 
 	@:native("initWithFrame:reuseIdentifier:API_DEPRECATED("", ios(2.0, 3.0)")
 	overload extern inline public function initWithFrame(frame:CGRect, reuseIdentifier:NSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):id;

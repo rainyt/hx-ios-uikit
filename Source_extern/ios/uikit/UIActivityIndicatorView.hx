@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIActivityIndicatorView")
 @:include("UIKit/UIKit.h")
@@ -36,7 +38,7 @@ extern class UIActivityIndicatorView{
 	overload extern inline public function stopAnimating;():Void;
 
 	@:native("animating")
-	public var animating:BOOL;
+	public var animating:Bool;
 
 
 }

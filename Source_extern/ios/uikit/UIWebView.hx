@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIWebView")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIWebView{
 	overload extern inline public static function autorelease():UIWebView;
 
 	@:native("delegate")
-	public var delegate:<UIWebViewDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("scrollView")
 	public var scrollView:UIScrollView;
@@ -42,19 +44,19 @@ extern class UIWebView{
 	overload extern inline public function goForward;():Void;
 
 	@:native("canGoBack")
-	public var canGoBack:BOOL;
+	public var canGoBack:Bool;
 
 	@:native("canGoForward")
-	public var canGoForward:BOOL;
+	public var canGoForward:Bool;
 
 	@:native("loading")
-	public var loading:BOOL;
+	public var loading:Bool;
 
 	@:native("stringByEvaluatingJavaScriptFromString")
 	overload extern inline public function stringByEvaluatingJavaScriptFromString(script:NSString):nullable NSString *;
 
 	@:native("scalesPageToFit")
-	public var scalesPageToFit:BOOL;
+	public var scalesPageToFit:Bool;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:Dynamic;
@@ -63,19 +65,19 @@ extern class UIWebView{
 	public var dataDetectorTypes:UIDataDetectorTypes;
 
 	@:native("allowsInlineMediaPlayback")
-	public var allowsInlineMediaPlayback:BOOL;
+	public var allowsInlineMediaPlayback:Bool;
 
 	@:native("mediaPlaybackRequiresUserAction")
-	public var mediaPlaybackRequiresUserAction:BOOL;
+	public var mediaPlaybackRequiresUserAction:Bool;
 
 	@:native("mediaPlaybackAllowsAirPlay")
-	public var mediaPlaybackAllowsAirPlay:BOOL;
+	public var mediaPlaybackAllowsAirPlay:Bool;
 
 	@:native("suppressesIncrementalRendering")
-	public var suppressesIncrementalRendering:BOOL;
+	public var suppressesIncrementalRendering:Bool;
 
 	@:native("keyboardDisplayRequiresUserAction")
-	public var keyboardDisplayRequiresUserAction:BOOL;
+	public var keyboardDisplayRequiresUserAction:Bool;
 
 	@:native("paginationMode")
 	public var paginationMode:UIWebPaginationMode;
@@ -93,10 +95,10 @@ extern class UIWebView{
 	public var pageCount:NSUInteger;
 
 	@:native("allowsPictureInPictureMediaPlayback")
-	public var allowsPictureInPictureMediaPlayback:BOOL;
+	public var allowsPictureInPictureMediaPlayback:Bool;
 
 	@:native("allowsLinkPreview")
-	public var allowsLinkPreview:BOOL;
+	public var allowsLinkPreview:Bool;
 
 	@:native("webView:shouldStartLoadWithRequest:navigationType")
 	overload extern inline public function webView(webView:UIWebView, shouldStartLoadWithRequest:NSURLRequest, navigationType:UIWebViewNavigationType):BOOL;

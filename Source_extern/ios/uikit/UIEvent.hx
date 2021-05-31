@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIEvent")
 @:include("UIKit/UIKit.h")
@@ -27,7 +29,7 @@ extern class UIEvent{
 	public var buttonMask:UIEventButtonMask;
 
 	@:native("allTouches")
-	public var allTouches:<UITouch>;
+	public var allTouches:Dynamic;
 
 	@:native("touchesForWindow")
 	overload extern inline public function touchesForWindow(window:UIWindow):nullable NSSet <UITouch *> *;

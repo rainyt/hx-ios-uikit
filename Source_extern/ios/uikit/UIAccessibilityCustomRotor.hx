@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAccessibilityCustomRotor")
 @:include("UIKit/UIKit.h")
@@ -42,10 +44,10 @@ extern class UIAccessibilityCustomRotor{
 	public var systemRotorType:UIAccessibilityCustomSystemRotorType;
 
 	@:native("initWithTargetElement:targetRange")
-	overload extern inline public function initWithTargetElement(targetElement:id<NSObject>, targetRange:UITextRange):UIAccessibilityCustomRotor;
+	overload extern inline public function initWithTargetElement(targetElement:Dynamic, targetRange:UITextRange):UIAccessibilityCustomRotor;
 
 	@:native("targetElement")
-	public var targetElement:id<NSObject>;
+	public var targetElement:Dynamic;
 
 	@:native("targetRange")
 	public var targetRange:UITextRange;

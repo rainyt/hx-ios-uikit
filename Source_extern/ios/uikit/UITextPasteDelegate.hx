@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITextPasteDelegate")
 @:include("UIKit/UIKit.h")
@@ -12,16 +14,16 @@ extern class UITextPasteDelegate{
 	overload extern inline public static function autorelease():UITextPasteDelegate;
 
 	@:native("textPasteConfigurationSupporting:transformPasteItem")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, transformPasteItem:id<UITextPasteItem>):Void;
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:Dynamic, transformPasteItem:Dynamic):Void;
 
 	@:native("textPasteConfigurationSupporting:combineItemAttributedStrings:forRange")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, combineItemAttributedStrings:Dynamic, forRange:UITextRange):NSAttributedString *;
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:Dynamic, combineItemAttributedStrings:Dynamic, forRange:UITextRange):NSAttributedString *;
 
 	@:native("textPasteConfigurationSupporting:performPasteOfAttributedString:toRange")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, performPasteOfAttributedString:NSAttributedString, toRange:UITextRange):UITextRange*;
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:Dynamic, performPasteOfAttributedString:NSAttributedString, toRange:UITextRange):UITextRange*;
 
 	@:native("textPasteConfigurationSupporting:shouldAnimatePasteOfAttributedString:toRange://")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, shouldAnimatePasteOfAttributedString:NSAttributedString, toRange:UITextRange, //:DEPRECATED):BOOL;
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:Dynamic, shouldAnimatePasteOfAttributedString:NSAttributedString, toRange:UITextRange, //:DEPRECATED):BOOL;
 
 	@:native("itemProvider")
 	public var itemProvider:NSItemProvider;
@@ -30,7 +32,7 @@ extern class UITextPasteDelegate{
 	public var localObject:id;
 
 	@:native("defaultAttributes")
-	public var defaultAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var defaultAttributes:Dynamic;
 
 	@:native("setStringResult")
 	overload extern inline public function setStringResult(string:NSString):Void;

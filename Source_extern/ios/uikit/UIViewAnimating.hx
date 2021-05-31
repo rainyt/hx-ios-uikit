@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIViewAnimating")
 @:include("UIKit/UIKit.h")
@@ -15,10 +17,10 @@ extern class UIViewAnimating{
 	public var state:UIViewAnimatingState;
 
 	@:native("running")
-	public var running:BOOL;
+	public var running:Bool;
 
 	@:native("reversed")
-	public var reversed:BOOL;
+	public var reversed:Bool;
 
 	@:native("")
 	public var :fractionComplete;
@@ -33,7 +35,7 @@ extern class UIViewAnimating{
 	overload extern inline public function pauseAnimation;():Void;
 
 	@:native("stopAnimation")
-	overload extern inline public function stopAnimation(withoutFinishing:BOOL):Void;
+	overload extern inline public function stopAnimation(withoutFinishing:Bool):Void;
 
 	@:native("finishAnimationAtPosition")
 	overload extern inline public function finishAnimationAtPosition(finalPosition:UIViewAnimatingPosition):Void;
@@ -48,7 +50,7 @@ extern class UIViewAnimating{
 	overload extern inline public function addCompletion(completion:Dynamic):Void;
 
 	@:native("continueAnimationWithTimingParameters:durationFactor")
-	overload extern inline public function continueAnimationWithTimingParameters(parameters:id<UITimingCurveProvider>, durationFactor:CGFloat):Void;
+	overload extern inline public function continueAnimationWithTimingParameters(parameters:Dynamic, durationFactor:CGFloat):Void;
 
 
 }

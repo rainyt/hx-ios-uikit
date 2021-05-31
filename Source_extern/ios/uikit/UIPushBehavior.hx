@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPushBehavior")
 @:include("UIKit/UIKit.h")
@@ -15,25 +17,25 @@ extern class UIPushBehavior{
 	overload extern inline public function initWithItems(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
+	overload extern inline public function addItem(item:Dynamic):Void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
+	overload extern inline public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
 	public var items:Dynamic;
 
 	@:native("targetOffsetFromCenterForItem")
-	overload extern inline public function targetOffsetFromCenterForItem(item:id<UIDynamicItem>):UIOffset;
+	overload extern inline public function targetOffsetFromCenterForItem(item:Dynamic):UIOffset;
 
 	@:native("setTargetOffsetFromCenter:forItem")
-	overload extern inline public function setTargetOffsetFromCenter(o:UIOffset, forItem:id<UIDynamicItem>):Void;
+	overload extern inline public function setTargetOffsetFromCenter(o:UIOffset, forItem:Dynamic):Void;
 
 	@:native("mode")
 	public var mode:UIPushBehaviorMode;
 
 	@:native("active")
-	public var active:BOOL;
+	public var active:Bool;
 
 	@:native("angle")
 	public var angle:CGFloat;

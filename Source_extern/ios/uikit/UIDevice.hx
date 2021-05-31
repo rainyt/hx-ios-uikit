@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDevice")
 @:include("UIKit/UIKit.h")
@@ -36,7 +38,7 @@ extern class UIDevice{
 	public var identifierForVendor:;
 
 	@:native("generatesDeviceOrientationNotifications")
-	public var generatesDeviceOrientationNotifications:BOOL;
+	public var generatesDeviceOrientationNotifications:Bool;
 
 	@:native("beginGeneratingDeviceOrientationNotifications")
 	overload extern inline public function beginGeneratingDeviceOrientationNotifications():Void;
@@ -45,7 +47,7 @@ extern class UIDevice{
 	overload extern inline public function endGeneratingDeviceOrientationNotifications():Void;
 
 	@:native("batteryMonitoringEnabled")
-	public var batteryMonitoringEnabled:BOOL;
+	public var batteryMonitoringEnabled:Bool;
 
 	@:native("batteryState")
 	public var batteryState:;
@@ -54,13 +56,13 @@ extern class UIDevice{
 	public var batteryLevel:;
 
 	@:native("proximityMonitoringEnabled")
-	public var proximityMonitoringEnabled:BOOL;
+	public var proximityMonitoringEnabled:Bool;
 
 	@:native("proximityState")
-	public var proximityState:BOOL;
+	public var proximityState:Bool;
 
 	@:native("multitaskingSupported")
-	public var multitaskingSupported:BOOL;
+	public var multitaskingSupported:Bool;
 
 	@:native("userInterfaceIdiom")
 	public var userInterfaceIdiom:UIUserInterfaceIdiom;

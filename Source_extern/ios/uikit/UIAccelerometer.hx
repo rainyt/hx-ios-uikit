@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAccelerometer")
 @:include("UIKit/UIKit.h")
@@ -15,13 +17,13 @@ extern class UIAccelerometer{
 	public var timestamp:NSTimeInterval;
 
 	@:native("x")
-	public var x:double;
+	public var x:UIAccelerationValue;
 
 	@:native("y")
-	public var y:double;
+	public var y:UIAccelerationValue;
 
 	@:native("z")
-	public var z:double;
+	public var z:UIAccelerationValue;
 
 	@:native("sharedAccelerometer;")
 	overload extern inline public static function sharedAccelerometer;():UIAccelerometer *;
@@ -30,7 +32,7 @@ extern class UIAccelerometer{
 	public var minimum:a;
 
 	@:native("delegate")
-	public var delegate:id<UIAccelerometerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("accelerometer:didAccelerate:API_DEPRECATED("", ios(2.0, 5.0)")
 	overload extern inline public function accelerometer(accelerometer:UIAccelerometer, didAccelerate:UIAcceleration, API_DEPRECATED("", ios(2.0, 5.0):):Void;

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")
@@ -39,7 +41,7 @@ extern class UIDatePicker{
 	public var is:max;
 
 	@:native("setDate:animated://:animated:YES,:the:of:to:the")
-	overload extern inline public function setDate(date:NSDate, animated:BOOL, //:if, animated:is, YES,:animate, the:wheels, of:time, to:display, the:new):Void;
+	overload extern inline public function setDate(date:NSDate, animated:Bool, //:if, animated:is, YES,:animate, the:wheels, of:time, to:display, the:new):Void;
 
 	@:native("preferredDatePickerStyle")
 	public var preferredDatePickerStyle:UIDatePickerStyle;

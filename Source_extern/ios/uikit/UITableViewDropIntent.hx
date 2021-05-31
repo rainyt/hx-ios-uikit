@@ -1,0 +1,27 @@
+package ios.uikit;
+
+import cpp.objc.NSString;
+import cpp.objc.NSData;
+@:objc
+@:enum
+@:native("UITableViewDropIntent")
+@:include("UIKit/UIKit.h")
+extern abstract UITableViewDropIntent(Int) from Int to Int {
+
+	@:native("//Tableviewwillacceptthedrop")
+	var //Tableviewwillacceptthedrop;
+
+	@:native("butthelocationisnotyetknownandwillbedeterminedlater.//Willnotopenagap.Youmaywishtoprovidesomevisualtreatmenttocommunicatethistotheuser.UITableViewDropIntentUnspecified")
+	var butthelocationisnotyetknownandwillbedeterminedlater.//Willnotopenagap.Youmaywishtoprovidesomevisualtreatmenttocommunicatethistotheuser.UITableViewDropIntentUnspecified;
+
+	@:native("//Thedropwillbeplacedinrow(s)insertedatthedestinationindexpath.//Opensagapatthespecifiedlocationsimulatingthefinaldroppedlayout.UITableViewDropIntentInsertAtDestinationIndexPath")
+	var //Thedropwillbeplacedinrow(s)insertedatthedestinationindexpath.//Opensagapatthespecifiedlocationsimulatingthefinaldroppedlayout.UITableViewDropIntentInsertAtDestinationIndexPath;
+
+	@:native("//Thedropwillbeplacedinsidetherowatthedestinationindexpath(e.g.therowisacontainerofotheritems).//Willnotopenagap.Tableviewwillhighlighttherowatthedestinationindexpath.UITableViewDropIntentInsertIntoDestinationIndexPath")
+	var //Thedropwillbeplacedinsidetherowatthedestinationindexpath(e.g.therowisacontainerofotheritems).//Willnotopenagap.Tableviewwillhighlighttherowatthedestinationindexpath.UITableViewDropIntentInsertIntoDestinationIndexPath;
+
+	@:native("//Thetableviewwillautomaticallychoosebetween.insertAtDestinationIndexPathand//.insertIntoDestinationIndexPathdependingonthepositionofthedrop.Thisshouldbeusedinstead//of.insertIntoDestinationIndexPathwhentheitembeingdroppedcaneitherbeplacedinsidetherow//atthedestinationindexpathorinsertedinanewrowattheindexpathofthecontainerrow.UITableViewDropIntentAutomatic")
+	var //Thetableviewwillautomaticallychoosebetween.insertAtDestinationIndexPathand//.insertIntoDestinationIndexPathdependingonthepositionofthedrop.Thisshouldbeusedinstead//of.insertIntoDestinationIndexPathwhentheitembeingdroppedcaneitherbeplacedinsidetherow//atthedestinationindexpathorinsertedinanewrowattheindexpathofthecontainerrow.UITableViewDropIntentAutomatic;
+
+
+}

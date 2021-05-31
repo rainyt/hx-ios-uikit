@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UINavigationItem")
 @:include("UIKit/UIKit.h")
@@ -33,10 +35,10 @@ extern class UINavigationItem{
 	public var backButtonTitle:NSString;
 
 	@:native("hidesBackButton")
-	public var hidesBackButton:BOOL;
+	public var hidesBackButton:Bool;
 
 	@:native("setHidesBackButton:animated")
-	overload extern inline public function setHidesBackButton(hidesBackButton:BOOL, animated:BOOL):Void;
+	overload extern inline public function setHidesBackButton(hidesBackButton:Bool, animated:Bool):Void;
 
 	@:native("backButtonDisplayMode")
 	public var backButtonDisplayMode:UINavigationItemBackButtonDisplayMode;
@@ -48,13 +50,13 @@ extern class UINavigationItem{
 	public var rightBarButtonItems:Dynamic;
 
 	@:native("setLeftBarButtonItems:animated")
-	overload extern inline public function setLeftBarButtonItems(items:Dynamic, animated:BOOL):Void;
+	overload extern inline public function setLeftBarButtonItems(items:Dynamic, animated:Bool):Void;
 
 	@:native("setRightBarButtonItems:animated")
-	overload extern inline public function setRightBarButtonItems(items:Dynamic, animated:BOOL):Void;
+	overload extern inline public function setRightBarButtonItems(items:Dynamic, animated:Bool):Void;
 
 	@:native("leftItemsSupplementBackButton")
-	public var leftItemsSupplementBackButton:BOOL;
+	public var leftItemsSupplementBackButton:Bool;
 
 	@:native("leftBarButtonItem")
 	public var leftBarButtonItem:UIBarButtonItem;
@@ -63,10 +65,10 @@ extern class UINavigationItem{
 	public var rightBarButtonItem:UIBarButtonItem;
 
 	@:native("setLeftBarButtonItem:animated")
-	overload extern inline public function setLeftBarButtonItem(item:UIBarButtonItem, animated:BOOL):Void;
+	overload extern inline public function setLeftBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
 
 	@:native("setRightBarButtonItem:animated")
-	overload extern inline public function setRightBarButtonItem(item:UIBarButtonItem, animated:BOOL):Void;
+	overload extern inline public function setRightBarButtonItem(item:UIBarButtonItem, animated:Bool):Void;
 
 	@:native("largeTitleDisplayMode")
 	public var largeTitleDisplayMode:UINavigationItemLargeTitleDisplayMode;
@@ -75,7 +77,7 @@ extern class UINavigationItem{
 	public var searchController:UISearchController;
 
 	@:native("hidesSearchBarWhenScrolling")
-	public var hidesSearchBarWhenScrolling:BOOL;
+	public var hidesSearchBarWhenScrolling:Bool;
 
 	@:native("standardAppearance")
 	public var standardAppearance:UINavigationBarAppearance;

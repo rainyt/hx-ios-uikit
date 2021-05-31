@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITextDragPreviewRenderer")
 @:include("UIKit/UIKit.h")
@@ -15,7 +17,7 @@ extern class UITextDragPreviewRenderer{
 	overload extern inline public function initWithLayoutManager(layoutManager:NSLayoutManager, range:NSRange):UITextDragPreviewRenderer;
 
 	@:native("initWithLayoutManager:range:unifyRects")
-	overload extern inline public function initWithLayoutManager(layoutManager:NSLayoutManager, range:NSRange, unifyRects:BOOL):UITextDragPreviewRenderer;
+	overload extern inline public function initWithLayoutManager(layoutManager:NSLayoutManager, range:NSRange, unifyRects:Bool):UITextDragPreviewRenderer;
 
 	@:native("new")
 	overload extern inline public static function new():UITextDragPreviewRenderer;

@@ -1,0 +1,39 @@
+package ios.uikit;
+
+import cpp.objc.NSString;
+import cpp.objc.NSData;
+@:objc
+@:enum
+@:native("UICollectionLayoutSectionOrthogonalScrollingBehavior")
+@:include("UIKit/UIKit.h")
+extern abstract UICollectionLayoutSectionOrthogonalScrollingBehavior(Int) from Int to Int {
+
+	@:native("//defaultbehavior.Sectionwilllayoutalongmainlayoutaxis(i.e.configuration.scrollDirection)UICollectionLayoutSectionOrthogonalScrollingBehaviorNone")
+	var //defaultbehavior.Sectionwilllayoutalongmainlayoutaxis(i.e.configuration.scrollDirection)UICollectionLayoutSectionOrthogonalScrollingBehaviorNone;
+
+	@:native("//NOTE:Foreachoftheremainingcases")
+	var //NOTE:Foreachoftheremainingcases;
+
+	@:native("thesectioncontentwilllayoutorthogonaltothemainlayoutaxis(e.g.mainlayoutaxis=")
+	var thesectioncontentwilllayoutorthogonaltothemainlayoutaxis(e.g.mainlayoutaxis=;
+
+	@:native("sectionwillscrollin.horizontalaxis)//Standardscrollviewbehavior:UIScrollViewDecelerationRateNormalUICollectionLayoutSectionOrthogonalScrollingBehaviorContinuous")
+	var sectionwillscrollin.horizontalaxis)//Standardscrollviewbehavior:UIScrollViewDecelerationRateNormalUICollectionLayoutSectionOrthogonalScrollingBehaviorContinuous;
+
+	@:native("//ScrollingwillcometorestontheleadingedgeofagroupboundaryUICollectionLayoutSectionOrthogonalScrollingBehaviorContinuousGroupLeadingBoundary")
+	var //ScrollingwillcometorestontheleadingedgeofagroupboundaryUICollectionLayoutSectionOrthogonalScrollingBehaviorContinuousGroupLeadingBoundary;
+
+	@:native("//Standardscrollviewpagingbehavior(UIScrollViewDecelerationRateFast)withpagesize=")
+	var //Standardscrollviewpagingbehavior(UIScrollViewDecelerationRateFast)withpagesize=;
+
+	@:native("//Fractionalsizepagingbehaviordeterminedbythesectionslayoutgroup'sdimensionUICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPaging")
+	var //Fractionalsizepagingbehaviordeterminedbythesectionslayoutgroup'sdimensionUICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPaging;
+
+	@:native("//Sameofgrouppagingwithadditionalleadingandtrailingcontentinsetstocentereachgroup'scontentsalongtheorthogonalaxisUICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPagingCentered")
+	var //Sameofgrouppagingwithadditionalleadingandtrailingcontentinsetstocentereachgroup'scontentsalongtheorthogonalaxisUICollectionLayoutSectionOrthogonalScrollingBehaviorGroupPagingCentered;
+
+	@:native("")
+	var ;
+
+
+}

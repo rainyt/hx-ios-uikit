@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIScene")
 @:include("UIKit/UIKit.h")
@@ -24,7 +26,7 @@ extern class UIScene{
 	public var session:UISceneSession;
 
 	@:native("delegate")
-	public var delegate:id<UISceneDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("activationState")
 	public var activationState:UISceneActivationState;
@@ -57,7 +59,7 @@ extern class UIScene{
 	overload extern inline public function sceneDidEnterBackground(scene:UIScene):Void;
 
 	@:native("scene:openURLContexts")
-	overload extern inline public function scene(scene:UIScene, openURLContexts:NSSet<UIOpenURLContext>):Void;
+	overload extern inline public function scene(scene:UIScene, openURLContexts:Dynamic):Void;
 
 	@:native("stateRestorationActivityForScene")
 	overload extern inline public function stateRestorationActivityForScene(scene:UIScene):nullable NSUserActivity *;

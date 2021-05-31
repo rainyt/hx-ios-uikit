@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UICollectionLayoutList")
 @:include("UIKit/UIKit.h")
@@ -24,7 +26,7 @@ extern class UICollectionLayoutList{
 	public var appearance:UICollectionLayoutListAppearance;
 
 	@:native("showsSeparators")
-	public var showsSeparators:BOOL;
+	public var showsSeparators:Bool;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
@@ -42,7 +44,7 @@ extern class UICollectionLayoutList{
 	public var footerMode:UICollectionLayoutListFooterMode;
 
 	@:native("sectionWithListConfiguration:layoutEnvironment")
-	overload extern inline public static function sectionWithListConfiguration(configuration:UICollectionLayoutListConfiguration, layoutEnvironment:id<NSCollectionLayoutEnvironment>):UICollectionLayoutList;
+	overload extern inline public static function sectionWithListConfiguration(configuration:UICollectionLayoutListConfiguration, layoutEnvironment:Dynamic):UICollectionLayoutList;
 
 	@:native("layoutWithListConfiguration")
 	overload extern inline public static function layoutWithListConfiguration(configuration:UICollectionLayoutListConfiguration):UICollectionLayoutList;

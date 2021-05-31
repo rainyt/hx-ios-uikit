@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIImage")
 @:include("UIKit/UIKit.h")
@@ -90,7 +92,7 @@ extern class UIImage{
 	public var scale:CGFloat;
 
 	@:native("symbolImage")
-	public var symbolImage:BOOL;
+	public var symbolImage:Bool;
 
 	@:native("animatedImageNamed:duration:API_AVAILABLE(ios(5.0)://:sequence:files:suffix:at")
 	overload extern inline public static function animatedImageNamed(name:NSString, duration:NSTimeInterval, API_AVAILABLE(ios(5.0):, //:read, sequence:of, files:with, suffix:starting, at:0):nullable UIImage *;
@@ -162,7 +164,7 @@ extern class UIImage{
 	overload extern inline public function imageFlippedForRightToLeftLayoutDirection():UIImage *;
 
 	@:native("flipsForRightToLeftLayoutDirection")
-	public var flipsForRightToLeftLayoutDirection:BOOL;
+	public var flipsForRightToLeftLayoutDirection:Bool;
 
 	@:native("imageWithHorizontallyFlippedOrientation")
 	overload extern inline public function imageWithHorizontallyFlippedOrientation():UIImage *;
@@ -171,7 +173,7 @@ extern class UIImage{
 	public var baselineOffsetFromBottom:CGFloat;
 
 	@:native("hasBaseline")
-	public var hasBaseline:BOOL;
+	public var hasBaseline:Bool;
 
 	@:native("imageWithBaselineOffsetFromBottom")
 	overload extern inline public function imageWithBaselineOffsetFromBottom(baselineOffset:CGFloat):UIImage *;
@@ -228,7 +230,7 @@ extern class UIImage{
 	overload extern inline public function initWithImage(image:UIImage):UIImage;
 
 	@:native("initWithImage:options")
-	overload extern inline public function initWithImage(image:UIImage, options:NSDictionary<CIImageOption,id>):UIImage;
+	overload extern inline public function initWithImage(image:UIImage, options:Dynamic):UIImage;
 
 
 }

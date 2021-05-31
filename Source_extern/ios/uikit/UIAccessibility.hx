@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAccessibility")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIAccessibility{
 	overload extern inline public static function autorelease():UIAccessibility;
 
 	@:native("isAccessibilityElement")
-	public var isAccessibilityElement:BOOL;
+	public var isAccessibilityElement:Bool;
 
 	@:native("accessibilityLabel")
 	public var accessibilityLabel:NSString;
@@ -48,19 +50,19 @@ extern class UIAccessibility{
 	public var accessibilityLanguage:NSString;
 
 	@:native("accessibilityElementsHidden")
-	public var accessibilityElementsHidden:BOOL;
+	public var accessibilityElementsHidden:Bool;
 
 	@:native("accessibilityViewIsModal")
-	public var accessibilityViewIsModal:BOOL;
+	public var accessibilityViewIsModal:Bool;
 
 	@:native("shouldGroupAccessibilityChildren")
-	public var shouldGroupAccessibilityChildren:BOOL;
+	public var shouldGroupAccessibilityChildren:Bool;
 
 	@:native("accessibilityNavigationStyle")
 	public var accessibilityNavigationStyle:UIAccessibilityNavigationStyle;
 
 	@:native("accessibilityRespondsToUserInteraction")
-	public var accessibilityRespondsToUserInteraction:BOOL;
+	public var accessibilityRespondsToUserInteraction:Bool;
 
 	@:native("accessibilityUserInputLabels")
 	public var accessibilityUserInputLabels:Dynamic;
@@ -69,7 +71,7 @@ extern class UIAccessibility{
 	public var accessibilityAttributedUserInputLabels:Dynamic;
 
 	@:native("accessibilityHeaderElements")
-	public var accessibilityHeaderElements:Dynamic;
+	public var accessibilityHeaderElements:NSArray;
 
 	@:native("accessibilityTextualContext")
 	public var accessibilityTextualContext:UIAccessibilityTextualContext;
@@ -105,7 +107,7 @@ extern class UIAccessibility{
 	overload extern inline public function accessibilityPerformMagicTap():BOOL;
 
 	@:native("accessibilityCustomActions")
-	public var accessibilityCustomActions:<UIAccessibilityCustomAction>;
+	public var accessibilityCustomActions:Dynamic;
 
 	@:native("accessibilityLineNumberForPoint")
 	overload extern inline public function accessibilityLineNumberForPoint(point:CGPoint):NSInteger;

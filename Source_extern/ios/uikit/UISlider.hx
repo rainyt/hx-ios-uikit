@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISlider")
 @:include("UIKit/UIKit.h")
@@ -39,7 +41,7 @@ extern class UISlider{
 	public var thumbTintColor:UIColor;
 
 	@:native("setValue:animated://:slider:fixed:(i.e. duration depends on distance:not")
-	overload extern inline public function setValue(value:float, animated:BOOL, //:move, slider:at, fixed:velocity, (i.e. duration depends on distance:does, not:send):Void;
+	overload extern inline public function setValue(value:float, animated:Bool, //:move, slider:at, fixed:velocity, (i.e. duration depends on distance:does, not:send):Void;
 
 	@:native("setThumbImage:forState")
 	overload extern inline public function setThumbImage(image:UIImage, forState:UIControlState):Void;

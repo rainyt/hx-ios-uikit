@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDocument")
 @:include("UIKit/UIKit.h")
@@ -54,7 +56,7 @@ extern class UIDocument{
 	public var undoManager:NSUndoManager;
 
 	@:native("hasUnsavedChanges")
-	public var hasUnsavedChanges:BOOL;
+	public var hasUnsavedChanges:Bool;
 
 	@:native("updateChangeCount")
 	overload extern inline public function updateChangeCount(change:UIDocumentChangeKind):Void;
@@ -93,10 +95,10 @@ extern class UIDocument{
 	overload extern inline public function performAsynchronousFileAccessUsingBlock(block:Dynamic):Void;
 
 	@:native("handleError:userInteractionPermitted")
-	overload extern inline public function handleError(error:NSError, userInteractionPermitted:BOOL):Void;
+	overload extern inline public function handleError(error:NSError, userInteractionPermitted:Bool):Void;
 
 	@:native("finishedHandlingError:recovered")
-	overload extern inline public function finishedHandlingError(error:NSError, recovered:BOOL):Void;
+	overload extern inline public function finishedHandlingError(error:NSError, recovered:Bool):Void;
 
 	@:native("userInteractionNoLongerPermittedForError")
 	overload extern inline public function userInteractionNoLongerPermittedForError(error:NSError):Void;

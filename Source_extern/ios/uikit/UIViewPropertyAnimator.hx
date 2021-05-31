@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIViewPropertyAnimator")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIViewPropertyAnimator{
 	overload extern inline public static function autorelease():UIViewPropertyAnimator;
 
 	@:native("timingParameters")
-	public var timingParameters:<UITimingCurveProvider>;
+	public var timingParameters:Dynamic;
 
 	@:native("duration")
 	public var duration:NSTimeInterval;
@@ -21,22 +23,22 @@ extern class UIViewPropertyAnimator{
 	public var delay:NSTimeInterval;
 
 	@:native("userInteractionEnabled")
-	public var userInteractionEnabled:BOOL;
+	public var userInteractionEnabled:Bool;
 
 	@:native("manualHitTestingEnabled")
-	public var manualHitTestingEnabled:BOOL;
+	public var manualHitTestingEnabled:Bool;
 
 	@:native("interruptible")
-	public var interruptible:BOOL;
+	public var interruptible:Bool;
 
 	@:native("scrubsLinearly")
-	public var scrubsLinearly:BOOL;
+	public var scrubsLinearly:Bool;
 
 	@:native("pausesOnCompletion")
-	public var pausesOnCompletion:BOOL;
+	public var pausesOnCompletion:Bool;
 
 	@:native("initWithDuration:timingParameters")
-	overload extern inline public function initWithDuration(duration:NSTimeInterval, timingParameters:id<UITimingCurveProvider>):UIViewPropertyAnimator;
+	overload extern inline public function initWithDuration(duration:NSTimeInterval, timingParameters:Dynamic):UIViewPropertyAnimator;
 
 	@:native("initWithDuration:curve:animations")
 	overload extern inline public function initWithDuration(duration:NSTimeInterval, curve:UIViewAnimationCurve, animations:Dynamic):UIViewPropertyAnimator;
@@ -60,7 +62,7 @@ extern class UIViewPropertyAnimator{
 	overload extern inline public function addCompletion(completion:Dynamic):Void;
 
 	@:native("continueAnimationWithTimingParameters:durationFactor")
-	overload extern inline public function continueAnimationWithTimingParameters(parameters:id<UITimingCurveProvider>, durationFactor:CGFloat):Void;
+	overload extern inline public function continueAnimationWithTimingParameters(parameters:Dynamic, durationFactor:CGFloat):Void;
 
 
 }

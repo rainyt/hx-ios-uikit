@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDynamicAnimator")
 @:include("UIKit/UIKit.h")
@@ -39,16 +41,16 @@ extern class UIDynamicAnimator{
 	overload extern inline public function itemsInRect(rect:CGRect):NSArray<id<UIDynamicItem>> *;
 
 	@:native("updateItemUsingCurrentState")
-	overload extern inline public function updateItemUsingCurrentState(item:id<UIDynamicItem>):Void;
+	overload extern inline public function updateItemUsingCurrentState(item:Dynamic):Void;
 
 	@:native("running")
-	public var running:BOOL;
+	public var running:Bool;
 
 	@:native("elapsedTime")
 	public var elapsedTime:NSTimeInterval;
 
 	@:native("delegate")
-	public var delegate:<UIDynamicAnimatorDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("initWithCollectionViewLayout")
 	overload extern inline public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UIDynamicAnimator;

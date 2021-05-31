@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDocumentInteractionController")
 @:include("UIKit/UIKit.h")
@@ -33,25 +35,25 @@ extern class UIDocumentInteractionController{
 	public var plist:a;
 
 	@:native("presentOptionsMenuFromRect:inView:animated")
-	overload extern inline public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:BOOL):BOOL;
+	overload extern inline public function presentOptionsMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;
 
 	@:native("presentOptionsMenuFromBarButtonItem:animated")
-	overload extern inline public function presentOptionsMenuFromBarButtonItem(item:UIBarButtonItem, animated:BOOL):BOOL;
+	overload extern inline public function presentOptionsMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):BOOL;
 
 	@:native("presentPreviewAnimated")
-	overload extern inline public function presentPreviewAnimated(animated:BOOL):BOOL;
+	overload extern inline public function presentPreviewAnimated(animated:Bool):BOOL;
 
 	@:native("presentOpenInMenuFromRect:inView:animated")
-	overload extern inline public function presentOpenInMenuFromRect(rect:CGRect, inView:UIView, animated:BOOL):BOOL;
+	overload extern inline public function presentOpenInMenuFromRect(rect:CGRect, inView:UIView, animated:Bool):BOOL;
 
 	@:native("presentOpenInMenuFromBarButtonItem:animated")
-	overload extern inline public function presentOpenInMenuFromBarButtonItem(item:UIBarButtonItem, animated:BOOL):BOOL;
+	overload extern inline public function presentOpenInMenuFromBarButtonItem(item:UIBarButtonItem, animated:Bool):BOOL;
 
 	@:native("dismissPreviewAnimated")
-	overload extern inline public function dismissPreviewAnimated(animated:BOOL):Void;
+	overload extern inline public function dismissPreviewAnimated(animated:Bool):Void;
 
 	@:native("dismissMenuAnimated")
-	overload extern inline public function dismissMenuAnimated(animated:BOOL):Void;
+	overload extern inline public function dismissMenuAnimated(animated:Bool):Void;
 
 	@:native("gestureRecognizers")
 	public var gestureRecognizers:Dynamic;

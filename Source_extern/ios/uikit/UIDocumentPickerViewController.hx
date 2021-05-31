@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDocumentPickerViewController")
 @:include("UIKit/UIKit.h")
@@ -24,7 +26,7 @@ extern class UIDocumentPickerViewController{
 	overload extern inline public function initWithDocumentTypes(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
 	@:native("initForOpeningContentTypes:asCopy:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initForOpeningContentTypes(contentTypes:Dynamic, asCopy:BOOL, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload extern inline public function initForOpeningContentTypes(contentTypes:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
 	@:native("initForOpeningContentTypes:API_AVAILABLE(ios(14.0)")
 	overload extern inline public function initForOpeningContentTypes(contentTypes:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIDocumentPickerViewController;
@@ -39,22 +41,22 @@ extern class UIDocumentPickerViewController{
 	overload extern inline public function initWithURLs(urls:Dynamic, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
 	@:native("initForExportingURLs:asCopy:NS_DESIGNATED_INITIALIZER")
-	overload extern inline public function initForExportingURLs(urls:Dynamic, asCopy:BOOL, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
+	overload extern inline public function initForExportingURLs(urls:Dynamic, asCopy:Bool, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
 	@:native("initForExportingURLs:API_AVAILABLE(ios(14.0)")
 	overload extern inline public function initForExportingURLs(urls:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):UIDocumentPickerViewController;
 
 	@:native("delegate")
-	public var delegate:id<UIDocumentPickerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("initializers")
 	public var initializers:appropriate;
 
 	@:native("allowsMultipleSelection")
-	public var allowsMultipleSelection:BOOL;
+	public var allowsMultipleSelection:Bool;
 
 	@:native("shouldShowFileExtensions")
-	public var shouldShowFileExtensions:BOOL;
+	public var shouldShowFileExtensions:Bool;
 
 	@:native("directoryURL")
 	public var directoryURL:NSURL;

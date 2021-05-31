@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIScreen")
 @:include("UIKit/UIKit.h")
@@ -45,19 +47,19 @@ extern class UIScreen{
 	public var mirroredScreen:UIScreen;
 
 	@:native("captured")
-	public var captured:BOOL;
+	public var captured:Bool;
 
 	@:native("brightness")
 	public var brightness:CGFloat;
 
 	@:native("wantsSoftwareDimming")
-	public var wantsSoftwareDimming:BOOL;
+	public var wantsSoftwareDimming:Bool;
 
 	@:native("coordinateSpace")
-	public var coordinateSpace:<UICoordinateSpace>;
+	public var coordinateSpace:Dynamic;
 
 	@:native("fixedCoordinateSpace")
-	public var fixedCoordinateSpace:<UICoordinateSpace>;
+	public var fixedCoordinateSpace:Dynamic;
 
 	@:native("nativeBounds")
 	public var nativeBounds:;
@@ -75,19 +77,19 @@ extern class UIScreen{
 	public var calibratedLatency:CFTimeInterval;
 
 	@:native("focusedItem")
-	public var focusedItem:id<UIFocusItem>;
+	public var focusedItem:Dynamic;
 
 	@:native("focusedView")
 	public var focusedView:UIView;
 
 	@:native("supportsFocus")
-	public var supportsFocus:BOOL;
+	public var supportsFocus:Bool;
 
 	@:native("ios(2.0,")
 	public var ios(2.0,:Dynamic;
 
 	@:native("snapshotViewAfterScreenUpdates")
-	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:BOOL):UIView *;
+	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView *;
 
 
 }

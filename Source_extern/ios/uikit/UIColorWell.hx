@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIColorWell")
 @:include("UIKit/UIKit.h")
@@ -15,7 +17,7 @@ extern class UIColorWell{
 	public var title:NSString;
 
 	@:native("supportsAlpha")
-	public var supportsAlpha:BOOL;
+	public var supportsAlpha:Bool;
 
 	@:native("selectedColor")
 	public var selectedColor:UIColor;

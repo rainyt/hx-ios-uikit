@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIInputView")
 @:include("UIKit/UIKit.h")
@@ -15,7 +17,7 @@ extern class UIInputView{
 	public var inputViewStyle:UIInputViewStyle;
 
 	@:native("allowsSelfSizing")
-	public var allowsSelfSizing:BOOL;
+	public var allowsSelfSizing:Bool;
 
 	@:native("initWithFrame:inputViewStyle")
 	overload extern inline public function initWithFrame(frame:CGRect, inputViewStyle:UIInputViewStyle):UIInputView;

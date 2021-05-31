@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISearchBar")
 @:include("UIKit/UIKit.h")
@@ -48,10 +50,10 @@ extern class UISearchBar{
 	public var showsSearchResultsButton:;
 
 	@:native("searchResultsButtonSelected")
-	public var searchResultsButtonSelected:BOOL;
+	public var searchResultsButtonSelected:Bool;
 
 	@:native("setShowsCancelButton:animated:API_AVAILABLE(ios(3.0)")
-	overload extern inline public function setShowsCancelButton(showsCancelButton:BOOL, animated:BOOL, API_AVAILABLE(ios(3.0):Dynamic):Void;
+	overload extern inline public function setShowsCancelButton(showsCancelButton:Bool, animated:Bool, API_AVAILABLE(ios(3.0):Dynamic):Void;
 
 	@:native("inputAssistantItem")
 	public var inputAssistantItem:UITextInputAssistantItem;
@@ -66,7 +68,7 @@ extern class UISearchBar{
 	public var searchBarStyle:UISearchBarStyle;
 
 	@:native("translucent")
-	public var translucent:BOOL;
+	public var translucent:Bool;
 
 	@:native("")
 	public var :;
@@ -78,7 +80,7 @@ extern class UISearchBar{
 	public var :;
 
 	@:native("setShowsScopeBar:animated")
-	overload extern inline public function setShowsScopeBar(show:BOOL, animated:BOOL):Void;
+	overload extern inline public function setShowsScopeBar(show:Bool, animated:Bool):Void;
 
 	@:native("inputAccessoryView")
 	public var inputAccessoryView:UIView;
@@ -120,7 +122,7 @@ extern class UISearchBar{
 	overload extern inline public function scopeBarButtonDividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("setScopeBarButtonTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setScopeBarButtonTitleTextAttributes(attributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setScopeBarButtonTitleTextAttributes(attributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("scopeBarButtonTitleTextAttributesForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function scopeBarButtonTitleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey, id> *;

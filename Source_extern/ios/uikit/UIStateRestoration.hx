@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIStateRestoration")
 @:include("UIKit/UIKit.h")
@@ -21,10 +23,10 @@ extern class UIStateRestoration{
 	overload extern inline public function ():nullable NSIndexPath *;
 
 	@:native("restorationParent")
-	public var restorationParent:id<UIStateRestoring>;
+	public var restorationParent:Dynamic;
 
 	@:native("objectRestorationClass")
-	public var objectRestorationClass:Class<UIObjectRestoration>;
+	public var objectRestorationClass:Dynamic;
 
 	@:native("")
 	overload extern inline public function ():Void;

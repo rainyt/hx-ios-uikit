@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIVideoEditorController")
 @:include("UIKit/UIKit.h")
@@ -15,7 +17,7 @@ extern class UIVideoEditorController{
 	overload extern inline public static function canEditVideoAtPath(videoPath:NSString):BOOL;
 
 	@:native("delegate")
-	public var delegate:<UINavigationControllerDelegate,UIVideoEditorControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("videoPath")
 	public var videoPath:;

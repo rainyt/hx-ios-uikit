@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UICollectionViewFlowLayout")
 @:include("UIKit/UIKit.h")
@@ -63,10 +65,10 @@ extern class UICollectionViewFlowLayout{
 	public var sectionInsetReference:UICollectionViewFlowLayoutSectionInsetReference;
 
 	@:native("sectionHeadersPinToVisibleBounds")
-	public var sectionHeadersPinToVisibleBounds:BOOL;
+	public var sectionHeadersPinToVisibleBounds:Bool;
 
 	@:native("sectionFootersPinToVisibleBounds")
-	public var sectionFootersPinToVisibleBounds:BOOL;
+	public var sectionFootersPinToVisibleBounds:Bool;
 
 
 }

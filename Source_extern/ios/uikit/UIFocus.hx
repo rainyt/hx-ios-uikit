@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIFocus")
 @:include("UIKit/UIKit.h")
@@ -15,10 +17,10 @@ extern class UIFocus{
 	public var preferredFocusEnvironments:Dynamic;
 
 	@:native("parentFocusEnvironment")
-	public var parentFocusEnvironment:id<UIFocusEnvironment>;
+	public var parentFocusEnvironment:Dynamic;
 
 	@:native("focusItemContainer")
-	public var focusItemContainer:id<UIFocusItemContainer>;
+	public var focusItemContainer:Dynamic;
 
 	@:native("setNeedsFocusUpdate;")
 	overload extern inline public function setNeedsFocusUpdate;():Void;
@@ -39,7 +41,7 @@ extern class UIFocus{
 	public var ios(9.0,:Dynamic;
 
 	@:native("canBecomeFocused")
-	public var canBecomeFocused:BOOL;
+	public var canBecomeFocused:Bool;
 
 	@:native("frame")
 	public var frame:CGRect;
@@ -48,7 +50,7 @@ extern class UIFocus{
 	overload extern inline public function didHintFocusMovement(hint:UIFocusMovementHint):Void;
 
 	@:native("coordinateSpace")
-	public var coordinateSpace:id<UICoordinateSpace>;
+	public var coordinateSpace:Dynamic;
 
 	@:native("focusItemsInRect")
 	overload extern inline public function focusItemsInRect(rect:CGRect):NSArray<id<UIFocusItem>> *;
@@ -63,10 +65,10 @@ extern class UIFocus{
 	public var visibleSize:CGSize;
 
 	@:native("previouslyFocusedItem")
-	public var previouslyFocusedItem:id<UIFocusItem>;
+	public var previouslyFocusedItem:Dynamic;
 
 	@:native("nextFocusedItem")
-	public var nextFocusedItem:id<UIFocusItem>;
+	public var nextFocusedItem:Dynamic;
 
 	@:native("previouslyFocusedView")
 	public var previouslyFocusedView:UIView;

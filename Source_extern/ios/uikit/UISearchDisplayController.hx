@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISearchDisplayController")
 @:include("UIKit/UIKit.h")
@@ -15,13 +17,13 @@ extern class UISearchDisplayController{
 	overload extern inline public function initWithSearchBar(searchBar:UISearchBar, contentsController:UIViewController):UISearchDisplayController;
 
 	@:native("delegate")
-	public var delegate:id<UISearchDisplayDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("is")
 	public var is:animated;
 
 	@:native("setActive:animated:::://:the:controller")
-	overload extern inline public function setActive(visible:BOOL, animated:BOOL, :, :, :, //:animate, the:view, controller:for):Void;
+	overload extern inline public function setActive(visible:Bool, animated:Bool, :, :, :, //:animate, the:view, controller:for):Void;
 
 	@:native("searchBar")
 	public var searchBar:;
@@ -42,7 +44,7 @@ extern class UISearchDisplayController{
 	public var searchResultsTitle:;
 
 	@:native("displaysSearchBarInNavigationBar")
-	public var displaysSearchBarInNavigationBar:BOOL;
+	public var displaysSearchBarInNavigationBar:Bool;
 
 	@:native("navigationItem")
 	public var navigationItem:UINavigationItem;

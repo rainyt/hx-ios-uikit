@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIImageView")
 @:include("UIKit/UIKit.h")
@@ -30,7 +32,7 @@ extern class UIImageView{
 	public var is:default;
 
 	@:native("highlighted")
-	public var highlighted:BOOL;
+	public var highlighted:Bool;
 
 	@:native("is")
 	public var is:default;
@@ -54,10 +56,10 @@ extern class UIImageView{
 	overload extern inline public function stopAnimating;():Void;
 
 	@:native("animating")
-	public var animating:BOOL;
+	public var animating:Bool;
 
 	@:native("adjustsImageWhenAncestorFocused")
-	public var adjustsImageWhenAncestorFocused:BOOL;
+	public var adjustsImageWhenAncestorFocused:Bool;
 
 	@:native("focusedFrameGuide")
 	public var focusedFrameGuide:UILayoutGuide;
@@ -66,7 +68,7 @@ extern class UIImageView{
 	public var overlayContentView:UIView;
 
 	@:native("masksFocusEffectToContents")
-	public var masksFocusEffectToContents:BOOL;
+	public var masksFocusEffectToContents:Bool;
 
 
 }

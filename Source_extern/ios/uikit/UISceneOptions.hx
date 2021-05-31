@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISceneOptions")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UISceneOptions{
 	overload extern inline public function init():UISceneOptions;
 
 	@:native("URLContexts")
-	public var URLContexts:NSSet<UIOpenURLContext>;
+	public var URLContexts:Dynamic;
 
 	@:native("sourceApplication")
 	public var sourceApplication:NSString;
@@ -27,7 +29,7 @@ extern class UISceneOptions{
 	public var handoffUserActivityType:NSString;
 
 	@:native("userActivities")
-	public var userActivities:NSSet<NSUserActivity>;
+	public var userActivities:Dynamic;
 
 	@:native("notificationResponse")
 	public var notificationResponse:UNNotificationResponse;
@@ -51,10 +53,10 @@ extern class UISceneOptions{
 	public var annotation:id;
 
 	@:native("openInPlace")
-	public var openInPlace:BOOL;
+	public var openInPlace:Bool;
 
 	@:native("universalLinksOnly")
-	public var universalLinksOnly:BOOL;
+	public var universalLinksOnly:Bool;
 
 	@:native("requestingScene")
 	public var requestingScene:UIScene;

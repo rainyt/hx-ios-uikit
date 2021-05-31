@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIView")
 @:include("UIKit/UIKit.h")
@@ -12,16 +14,16 @@ extern class UIView{
 	overload extern inline public static function autorelease():UIView;
 
 	@:native("convertPoint:toCoordinateSpace")
-	overload extern inline public function convertPoint(point:CGPoint, toCoordinateSpace:id<UICoordinateSpace>):CGPoint;
+	overload extern inline public function convertPoint(point:CGPoint, toCoordinateSpace:Dynamic):CGPoint;
 
 	@:native("convertPoint:fromCoordinateSpace")
-	overload extern inline public function convertPoint(point:CGPoint, fromCoordinateSpace:id<UICoordinateSpace>):CGPoint;
+	overload extern inline public function convertPoint(point:CGPoint, fromCoordinateSpace:Dynamic):CGPoint;
 
 	@:native("convertRect:toCoordinateSpace")
-	overload extern inline public function convertRect(rect:CGRect, toCoordinateSpace:id<UICoordinateSpace>):CGRect;
+	overload extern inline public function convertRect(rect:CGRect, toCoordinateSpace:Dynamic):CGRect;
 
 	@:native("convertRect:fromCoordinateSpace")
-	overload extern inline public function convertRect(rect:CGRect, fromCoordinateSpace:id<UICoordinateSpace>):CGRect;
+	overload extern inline public function convertRect(rect:CGRect, fromCoordinateSpace:Dynamic):CGRect;
 
 	@:native("bounds")
 	public var bounds:CGRect;
@@ -45,10 +47,10 @@ extern class UIView{
 	public var layer's:is;
 
 	@:native("canBecomeFocused")
-	public var canBecomeFocused:BOOL;
+	public var canBecomeFocused:Bool;
 
 	@:native("focused")
-	public var focused:BOOL;
+	public var focused:Bool;
 
 	@:native("focusGroupIdentifier")
 	public var focusGroupIdentifier:NSString;
@@ -84,7 +86,7 @@ extern class UIView{
 	public var contentScaleFactor:;
 
 	@:native("multipleTouchEnabled")
-	public var multipleTouchEnabled:BOOL;
+	public var multipleTouchEnabled:Bool;
 
 	@:native("exclusiveTouch")
 	public var exclusiveTouch:;
@@ -192,10 +194,10 @@ extern class UIView{
 	public var directionalLayoutMargins:NSDirectionalEdgeInsets;
 
 	@:native("preservesSuperviewLayoutMargins")
-	public var preservesSuperviewLayoutMargins:BOOL;
+	public var preservesSuperviewLayoutMargins:Bool;
 
 	@:native("insetsLayoutMarginsFromSafeArea")
-	public var insetsLayoutMarginsFromSafeArea:BOOL;
+	public var insetsLayoutMarginsFromSafeArea:Bool;
 
 	@:native("layoutMarginsDidChange")
 	overload extern inline public function layoutMarginsDidChange():Void;
@@ -261,10 +263,10 @@ extern class UIView{
 	overload extern inline public function tintColorDidChange():Void;
 
 	@:native("setAnimationsEnabled::::::::::::://:any:changes")
-	overload extern inline public static function setAnimationsEnabled(enabled:BOOL, :, :, :, :, :, :, :, :, :, :, :, :, //:ignore, any:attribute, changes:while):Void;
+	overload extern inline public static function setAnimationsEnabled(enabled:Bool, :, :, :, :, :, :, :, :, :, :, :, :, //:ignore, any:attribute, changes:while):Void;
 
 	@:native("areAnimationsEnabled")
-	public var areAnimationsEnabled:BOOL;
+	public var areAnimationsEnabled:Bool;
 
 	@:native("performWithoutAnimation")
 	overload extern inline public static function performWithoutAnimation(actionsWithoutAnimation:Dynamic):Void;
@@ -294,7 +296,7 @@ extern class UIView{
 	overload extern inline public static function performSystemAnimation(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
-	overload extern inline public static function modifyAnimationsWithRepeatCount(count:CGFloat, autoreverses:BOOL, animations:Dynamic):Void;
+	overload extern inline public static function modifyAnimationsWithRepeatCount(count:CGFloat, autoreverses:Bool, animations:Dynamic):Void;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
 	overload extern inline public static function animateKeyframesWithDuration(duration:NSTimeInterval, delay:NSTimeInterval, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
@@ -351,10 +353,10 @@ extern class UIView{
 	overload extern inline public function setNeedsUpdateConstraints():Void;
 
 	@:native("translatesAutoresizingMaskIntoConstraints")
-	public var translatesAutoresizingMaskIntoConstraints:BOOL;
+	public var translatesAutoresizingMaskIntoConstraints:Bool;
 
 	@:native("requiresConstraintBasedLayout")
-	public var requiresConstraintBasedLayout:BOOL;
+	public var requiresConstraintBasedLayout:Bool;
 
 	@:native("alignmentRectForFrame")
 	overload extern inline public function alignmentRectForFrame(frame:CGRect):CGRect;
@@ -447,7 +449,7 @@ extern class UIView{
 	overload extern inline public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray<__kindof NSLayoutConstraint *> *;
 
 	@:native("hasAmbiguousLayout")
-	public var hasAmbiguousLayout:BOOL;
+	public var hasAmbiguousLayout:Bool;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload extern inline public function exerciseAmbiguityInLayout():Void;
@@ -456,7 +458,7 @@ extern class UIView{
 	overload extern inline public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray<__kindof NSLayoutConstraint *> *;
 
 	@:native("hasAmbiguousLayout")
-	public var hasAmbiguousLayout:BOOL;
+	public var hasAmbiguousLayout:Bool;
 
 	@:native("restorationIdentifier")
 	public var restorationIdentifier:NSString;
@@ -468,13 +470,13 @@ extern class UIView{
 	overload extern inline public function ():Void;
 
 	@:native("snapshotViewAfterScreenUpdates")
-	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:BOOL):nullable UIView *;
+	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):nullable UIView *;
 
 	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets:API_AVAILABLE(ios(7.0)://:snapshots:default:stretching")
-	overload extern inline public function resizableSnapshotViewFromRect(rect:CGRect, afterScreenUpdates:BOOL, withCapInsets:UIEdgeInsets, API_AVAILABLE(ios(7.0):, //:Resizable, snapshots:will, default:to, stretching:the):nullable UIView *;
+	overload extern inline public function resizableSnapshotViewFromRect(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:UIEdgeInsets, API_AVAILABLE(ios(7.0):, //:Resizable, snapshots:will, default:to, stretching:the):nullable UIView *;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
-	overload extern inline public function drawViewHierarchyInRect(rect:CGRect, afterScreenUpdates:BOOL):BOOL;
+	overload extern inline public function drawViewHierarchyInRect(rect:CGRect, afterScreenUpdates:Bool):BOOL;
 
 	@:native("beginAnimations:context:::::::::::")
 	overload extern inline public static function beginAnimations(animationID:NSString, context:void, :, :, :, :, :, :, :, :, :, :, :):Void;
@@ -507,13 +509,13 @@ extern class UIView{
 	overload extern inline public static function setAnimationRepeatCount(repeatCount:float, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
 
 	@:native("setAnimationRepeatAutoreverses::::::::::::::::::::::::")
-	overload extern inline public static function setAnimationRepeatAutoreverses(repeatAutoreverses:BOOL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
+	overload extern inline public static function setAnimationRepeatAutoreverses(repeatAutoreverses:Bool, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
 
 	@:native("setAnimationBeginsFromCurrentState:::::::::::::::::::::::")
-	overload extern inline public static function setAnimationBeginsFromCurrentState(fromCurrentState:BOOL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
+	overload extern inline public static function setAnimationBeginsFromCurrentState(fromCurrentState:Bool, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
 
 	@:native("setAnimationTransition:forView:cache:")
-	overload extern inline public static function setAnimationTransition(transition:UIViewAnimationTransition, forView:UIView, cache:BOOL, :):Void;
+	overload extern inline public static function setAnimationTransition(transition:UIViewAnimationTransition, forView:UIView, cache:Bool, :):Void;
 
 	@:native("overrideUserInterfaceStyle")
 	public var overrideUserInterfaceStyle:UIUserInterfaceStyle;

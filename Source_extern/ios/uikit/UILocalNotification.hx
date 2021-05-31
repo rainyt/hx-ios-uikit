@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UILocalNotification")
 @:include("UIKit/UIKit.h")
@@ -33,7 +35,7 @@ extern class UILocalNotification{
 	public var region:CLRegion;
 
 	@:native("regionTriggersOnce")
-	public var regionTriggersOnce:BOOL;
+	public var regionTriggersOnce:Bool;
 
 	@:native("an")
 	public var an:show;

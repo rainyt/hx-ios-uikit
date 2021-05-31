@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIFocusDebugger")
 @:include("UIKit/UIKit.h")
@@ -18,10 +20,10 @@ extern class UIFocusDebugger{
 	overload extern inline public static function status;():id<UIFocusDebuggerOutput>;
 
 	@:native("checkFocusabilityForItem")
-	overload extern inline public static function checkFocusabilityForItem(item:id<UIFocusItem>):id<UIFocusDebuggerOutput>;
+	overload extern inline public static function checkFocusabilityForItem(item:Dynamic):id<UIFocusDebuggerOutput>;
 
 	@:native("simulateFocusUpdateRequestFromEnvironment")
-	overload extern inline public static function simulateFocusUpdateRequestFromEnvironment(environment:id<UIFocusEnvironment>):id<UIFocusDebuggerOutput>;
+	overload extern inline public static function simulateFocusUpdateRequestFromEnvironment(environment:Dynamic):id<UIFocusDebuggerOutput>;
 
 
 }

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDocumentMenuViewController")
 @:include("UIKit/UIKit.h")
@@ -30,7 +32,7 @@ extern class UIDocumentMenuViewController{
 	overload extern inline public function addOptionWithTitle(title:NSString, image:UIImage, order:UIDocumentMenuOrder, handler:Dynamic):Void;
 
 	@:native("delegate")
-	public var delegate:id<UIDocumentMenuDelegate>;
+	public var delegate:Dynamic;
 
 
 }

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIGraphicsPDFRenderer")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIGraphicsPDFRenderer{
 	overload extern inline public static function autorelease():UIGraphicsPDFRenderer;
 
 	@:native("documentInfo")
-	public var documentInfo:NSDictionary<NSString,id>;
+	public var documentInfo:Dynamic;
 
 	@:native("pdfContextBounds")
 	public var pdfContextBounds:CGRect;
@@ -21,7 +23,7 @@ extern class UIGraphicsPDFRenderer{
 	overload extern inline public function beginPage;():Void;
 
 	@:native("beginPageWithBounds:pageInfo")
-	overload extern inline public function beginPageWithBounds(bounds:CGRect, pageInfo:NSDictionary<NSString,id>):Void;
+	overload extern inline public function beginPageWithBounds(bounds:CGRect, pageInfo:Dynamic):Void;
 
 	@:native("setURL:forRect")
 	overload extern inline public function setURL(url:NSURL, forRect:CGRect):Void;

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("NSStringDrawing")
 @:include("UIKit/UIKit.h")
@@ -21,13 +23,13 @@ extern class NSStringDrawing{
 	public var totalBounds:CGRect;
 
 	@:native("sizeWithAttributes")
-	overload extern inline public function sizeWithAttributes(attrs:NSDictionary<NSAttributedStringKey,id>):CGSize;
+	overload extern inline public function sizeWithAttributes(attrs:Dynamic):CGSize;
 
 	@:native("drawAtPoint:withAttributes")
-	overload extern inline public function drawAtPoint(point:CGPoint, withAttributes:NSDictionary<NSAttributedStringKey,id>):Void;
+	overload extern inline public function drawAtPoint(point:CGPoint, withAttributes:Dynamic):Void;
 
 	@:native("drawInRect:withAttributes")
-	overload extern inline public function drawInRect(rect:CGRect, withAttributes:NSDictionary<NSAttributedStringKey,id>):Void;
+	overload extern inline public function drawInRect(rect:CGRect, withAttributes:Dynamic):Void;
 
 	@:native("size")
 	overload extern inline public function size():CGSize;
@@ -39,10 +41,10 @@ extern class NSStringDrawing{
 	overload extern inline public function drawInRect(rect:CGRect):Void;
 
 	@:native("drawWithRect:options:attributes:context")
-	overload extern inline public function drawWithRect(rect:CGRect, options:NSStringDrawingOptions, attributes:NSDictionary<NSAttributedStringKey,id>, context:NSStringDrawingContext):Void;
+	overload extern inline public function drawWithRect(rect:CGRect, options:NSStringDrawingOptions, attributes:Dynamic, context:NSStringDrawingContext):Void;
 
 	@:native("boundingRectWithSize:options:attributes:context")
-	overload extern inline public function boundingRectWithSize(size:CGSize, options:NSStringDrawingOptions, attributes:NSDictionary<NSAttributedStringKey,id>, context:NSStringDrawingContext):CGRect;
+	overload extern inline public function boundingRectWithSize(size:CGSize, options:NSStringDrawingOptions, attributes:Dynamic, context:NSStringDrawingContext):CGRect;
 
 	@:native("drawWithRect:options:context")
 	overload extern inline public function drawWithRect(rect:CGRect, options:NSStringDrawingOptions, context:NSStringDrawingContext):Void;

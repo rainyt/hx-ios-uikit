@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIScreenshotService")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UIScreenshotService{
 	overload extern inline public static function new():UIScreenshotService;
 
 	@:native("delegate")
-	public var delegate:id<UIScreenshotServiceDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("windowScene")
 	public var windowScene:UIWindowScene;

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAccessibilityContentSizeCategoryImageAdjusting")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIAccessibilityContentSizeCategoryImageAdjusting{
 	overload extern inline public static function autorelease():UIAccessibilityContentSizeCategoryImageAdjusting;
 
 	@:native("adjustsImageSizeForAccessibilityContentSizeCategory")
-	public var adjustsImageSizeForAccessibilityContentSizeCategory:BOOL;
+	public var adjustsImageSizeForAccessibilityContentSizeCategory:Bool;
 
 
 }

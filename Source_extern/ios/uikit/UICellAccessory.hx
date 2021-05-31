@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UICellAccessory")
 @:include("UIKit/UIKit.h")
@@ -15,7 +17,7 @@ extern class UICellAccessory{
 	public var displayedState:UICellAccessoryDisplayedState;
 
 	@:native("hidden")
-	public var hidden:BOOL;
+	public var hidden:Bool;
 
 	@:native("reservedLayoutWidth")
 	public var reservedLayoutWidth:CGFloat;
@@ -42,7 +44,7 @@ extern class UICellAccessory{
 	public var void:nonatomic,copy,nullable;
 
 	@:native("showsVerticalSeparator")
-	public var showsVerticalSeparator:BOOL;
+	public var showsVerticalSeparator:Bool;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
@@ -63,7 +65,7 @@ extern class UICellAccessory{
 	public var font:UIFont;
 
 	@:native("adjustsFontForContentSizeCategory")
-	public var adjustsFontForContentSizeCategory:BOOL;
+	public var adjustsFontForContentSizeCategory:Bool;
 
 	@:native("initWithCoder")
 	overload extern inline public function initWithCoder(coder:NSCoder):UICellAccessory;
@@ -84,7 +86,7 @@ extern class UICellAccessory{
 	public var placement:UICellAccessoryPlacement;
 
 	@:native("maintainsFixedSize")
-	public var maintainsFixedSize:BOOL;
+	public var maintainsFixedSize:Bool;
 
 	@:native("position")
 	public var position:UICellAccessoryPosition;

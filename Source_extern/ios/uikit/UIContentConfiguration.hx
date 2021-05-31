@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIContentConfiguration")
 @:include("UIKit/UIKit.h")
@@ -15,10 +17,10 @@ extern class UIContentConfiguration{
 	overload extern inline public function makeContentView;():__kindof UIView<UIContentView> *;
 
 	@:native("updatedConfigurationForState")
-	overload extern inline public function updatedConfigurationForState(state:id<UIConfigurationState>):UIContentConfiguration;
+	overload extern inline public function updatedConfigurationForState(state:Dynamic):UIContentConfiguration;
 
 	@:native("configuration")
-	public var configuration:id<UIContentConfiguration>;
+	public var configuration:Dynamic;
 
 
 }

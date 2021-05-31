@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIMenuController")
 @:include("UIKit/UIKit.h")
@@ -18,10 +20,10 @@ extern class UIMenuController{
 	public var is:default;
 
 	@:native("setMenuVisible")
-	overload extern inline public function setMenuVisible(menuVisible:BOOL):Void;
+	overload extern inline public function setMenuVisible(menuVisible:Bool):Void;
 
 	@:native("setMenuVisible:animated")
-	overload extern inline public function setMenuVisible(menuVisible:BOOL, animated:BOOL):Void;
+	overload extern inline public function setMenuVisible(menuVisible:Bool, animated:Bool):Void;
 
 	@:native("setTargetRect:inView")
 	overload extern inline public function setTargetRect(targetRect:CGRect, inView:UIView):Void;

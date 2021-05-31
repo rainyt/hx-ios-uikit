@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISegmentedControl")
 @:include("UIKit/UIKit.h")
@@ -18,13 +20,13 @@ extern class UISegmentedControl{
 	overload extern inline public function initWithCoder(coder:NSCoder):UISegmentedControl;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(items:Dynamic):UISegmentedControl;
+	overload extern inline public function initWithItems(items:NSArray):UISegmentedControl;
 
 	@:native("initWithFrame:actions")
 	overload extern inline public function initWithFrame(frame:CGRect, actions:Dynamic):UISegmentedControl;
 
 	@:native("insertSegmentWithAction:atIndex:animated")
-	overload extern inline public function insertSegmentWithAction(action:UIAction, atIndex:NSUInteger, animated:BOOL):Void;
+	overload extern inline public function insertSegmentWithAction(action:UIAction, atIndex:NSUInteger, animated:Bool):Void;
 
 	@:native("setAction:forSegmentAtIndex")
 	overload extern inline public function setAction(action:UIAction, forSegmentAtIndex:NSUInteger):Void;
@@ -45,16 +47,16 @@ extern class UISegmentedControl{
 	public var numberOfSegments:NSUInteger;
 
 	@:native("apportionsSegmentWidthsByContent")
-	public var apportionsSegmentWidthsByContent:BOOL;
+	public var apportionsSegmentWidthsByContent:Bool;
 
 	@:native("insertSegmentWithTitle:atIndex:animated://:before:number.")
-	overload extern inline public function insertSegmentWithTitle(title:NSString, atIndex:NSUInteger, animated:BOOL, //:insert, before:segment, number.:0..#segments.):Void;
+	overload extern inline public function insertSegmentWithTitle(title:NSString, atIndex:NSUInteger, animated:Bool, //:insert, before:segment, number.:0..#segments.):Void;
 
 	@:native("insertSegmentWithImage::NSUInteger")
 	overload extern inline public function insertSegmentWithImage(image:UIImage, :atIndex, NSUInteger:animated):Void;
 
 	@:native("removeSegmentAtIndex:animated")
-	overload extern inline public function removeSegmentAtIndex(segment:NSUInteger, animated:BOOL):Void;
+	overload extern inline public function removeSegmentAtIndex(segment:NSUInteger, animated:Bool):Void;
 
 	@:native("removeAllSegments;")
 	overload extern inline public function removeAllSegments;():Void;
@@ -84,7 +86,7 @@ extern class UISegmentedControl{
 	overload extern inline public function contentOffsetForSegmentAtIndex(segment:NSUInteger):CGSize;
 
 	@:native("setEnabled:forSegmentAtIndex:::::default")
-	overload extern inline public function setEnabled(enabled:BOOL, forSegmentAtIndex:NSUInteger, :, :, :, ://, default:is):Void;
+	overload extern inline public function setEnabled(enabled:Bool, forSegmentAtIndex:NSUInteger, :, :, :, ://, default:is):Void;
 
 	@:native("isEnabledForSegmentAtIndex")
 	overload extern inline public function isEnabledForSegmentAtIndex(segment:NSUInteger):BOOL;
@@ -108,7 +110,7 @@ extern class UISegmentedControl{
 	overload extern inline public function dividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics, :Dynamic):nullable UIImage *;
 
 	@:native("setTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
-	overload extern inline public function setTitleTextAttributes(attributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("titleTextAttributesForState:API_AVAILABLE(ios(5.0)")
 	overload extern inline public function titleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;

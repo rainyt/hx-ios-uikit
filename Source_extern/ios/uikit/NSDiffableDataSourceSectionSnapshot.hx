@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("NSDiffableDataSourceSectionSnapshot")
 @:include("UIKit/UIKit.h")
@@ -39,13 +41,13 @@ extern class NSDiffableDataSourceSectionSnapshot{
 	overload extern inline public function collapseItems(items:Dynamic, :, :, :, ://, will:log, if:item, is:not):Void;
 
 	@:native("replaceChildrenOfParentItem:withSnapshot")
-	overload extern inline public function replaceChildrenOfParentItem(parentItem:ItemIdentifierType, withSnapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>):Void;
+	overload extern inline public function replaceChildrenOfParentItem(parentItem:ItemIdentifierType, withSnapshot:Dynamic):Void;
 
 	@:native("insertSnapshot:beforeItem")
-	overload extern inline public function insertSnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, beforeItem:ItemIdentifierType):Void;
+	overload extern inline public function insertSnapshot(snapshot:Dynamic, beforeItem:ItemIdentifierType):Void;
 
 	@:native("insertSnapshot:afterItem")
-	overload extern inline public function insertSnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, afterItem:ItemIdentifierType):ItemIdentifierType;
+	overload extern inline public function insertSnapshot(snapshot:Dynamic, afterItem:ItemIdentifierType):ItemIdentifierType;
 
 	@:native("isExpanded")
 	overload extern inline public function isExpanded(item:ItemIdentifierType):BOOL;
@@ -75,7 +77,7 @@ extern class NSDiffableDataSourceSectionSnapshot{
 	overload extern inline public function snapshotOfParentItem(parentItem:ItemIdentifierType, :, :, :, ://, snapshot:will, not:include):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
 
 	@:native("snapshotOfParentItem:includingParentItem")
-	overload extern inline public function snapshotOfParentItem(parentItem:ItemIdentifierType, includingParentItem:BOOL):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
+	overload extern inline public function snapshotOfParentItem(parentItem:ItemIdentifierType, includingParentItem:Bool):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
 
 	@:native("items")
 	public var items:Dynamic;

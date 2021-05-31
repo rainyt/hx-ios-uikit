@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPress")
 @:include("UIKit/UIKit.h")
@@ -27,7 +29,7 @@ extern class UIPress{
 	public var responder:;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:<UIGestureRecognizer>;
+	public var gestureRecognizers:Dynamic;
 
 	@:native("force")
 	public var force:CGFloat;

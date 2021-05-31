@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPointerLockState")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UIPointerLockState{
 	overload extern inline public static function new():UIPointerLockState;
 
 	@:native("locked")
-	public var locked:BOOL;
+	public var locked:Bool;
 
 	@:native("pointerLockState")
 	public var pointerLockState:UIPointerLockState;

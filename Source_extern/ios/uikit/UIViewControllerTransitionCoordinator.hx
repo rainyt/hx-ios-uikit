@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIViewControllerTransitionCoordinator")
 @:include("UIKit/UIKit.h")
@@ -12,22 +14,22 @@ extern class UIViewControllerTransitionCoordinator{
 	overload extern inline public static function autorelease():UIViewControllerTransitionCoordinator;
 
 	@:native("animated")
-	public var animated:BOOL;
+	public var animated:Bool;
 
 	@:native("presentationStyle")
 	public var presentationStyle:UIModalPresentationStyle;
 
 	@:native("initiallyInteractive")
-	public var initiallyInteractive:BOOL;
+	public var initiallyInteractive:Bool;
 
 	@:native("isInterruptible")
-	public var isInterruptible:BOOL;
+	public var isInterruptible:Bool;
 
 	@:native("interactive")
-	public var interactive:BOOL;
+	public var interactive:Bool;
 
 	@:native("cancelled")
-	public var cancelled:BOOL;
+	public var cancelled:Bool;
 
 	@:native("transitionDuration")
 	public var transitionDuration:NSTimeInterval;
@@ -42,10 +44,10 @@ extern class UIViewControllerTransitionCoordinator{
 	public var completionCurve:UIViewAnimationCurve;
 
 	@:native("viewControllerForKey")
-	overload extern inline public function viewControllerForKey(key:NSString):nullable __kindof UIViewController *;
+	overload extern inline public function viewControllerForKey(key:UITransitionContextViewControllerKey):nullable __kindof UIViewController *;
 
 	@:native("viewForKey")
-	overload extern inline public function viewForKey(key:NSString):nullable __kindof UIView *;
+	overload extern inline public function viewForKey(key:UITransitionContextViewKey):nullable __kindof UIView *;
 
 	@:native("containerView")
 	public var containerView:UIView;
@@ -66,7 +68,7 @@ extern class UIViewControllerTransitionCoordinator{
 	overload extern inline public function notifyWhenInteractionChangesUsingBlock(handler:Dynamic):Void;
 
 	@:native("transitionCoordinator")
-	public var transitionCoordinator:<UIViewControllerTransitionCoordinator>;
+	public var transitionCoordinator:Dynamic;
 
 
 }

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPresentationController")
 @:include("UIKit/UIKit.h")
@@ -21,7 +23,7 @@ extern class UIPresentationController{
 	overload extern inline public function presentationController(controller:UIPresentationController, viewControllerForAdaptivePresentationStyle:UIModalPresentationStyle):nullable UIViewController *;
 
 	@:native("presentationController:willPresentWithAdaptiveStyle:transitionCoordinator")
-	overload extern inline public function presentationController(presentationController:UIPresentationController, willPresentWithAdaptiveStyle:UIModalPresentationStyle, transitionCoordinator:id<UIViewControllerTransitionCoordinator>):Void;
+	overload extern inline public function presentationController(presentationController:UIPresentationController, willPresentWithAdaptiveStyle:UIModalPresentationStyle, transitionCoordinator:Dynamic):Void;
 
 	@:native("presentationControllerShouldDismiss")
 	overload extern inline public function presentationControllerShouldDismiss(presentationController:UIPresentationController):BOOL;
@@ -48,7 +50,7 @@ extern class UIPresentationController{
 	public var containerView:UIView;
 
 	@:native("delegate")
-	public var delegate:<UIAdaptivePresentationControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("initWithPresentedViewController:presentingViewController")
 	overload extern inline public function initWithPresentedViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPresentationController;
@@ -75,22 +77,22 @@ extern class UIPresentationController{
 	public var frameOfPresentedViewInContainerView:CGRect;
 
 	@:native("shouldPresentInFullscreen")
-	public var shouldPresentInFullscreen:BOOL;
+	public var shouldPresentInFullscreen:Bool;
 
 	@:native("shouldRemovePresentersView")
-	public var shouldRemovePresentersView:BOOL;
+	public var shouldRemovePresentersView:Bool;
 
 	@:native("presentationTransitionWillBegin;")
 	overload extern inline public function presentationTransitionWillBegin;():Void;
 
 	@:native("presentationTransitionDidEnd")
-	overload extern inline public function presentationTransitionDidEnd(completed:BOOL):Void;
+	overload extern inline public function presentationTransitionDidEnd(completed:Bool):Void;
 
 	@:native("dismissalTransitionWillBegin;")
 	overload extern inline public function dismissalTransitionWillBegin;():Void;
 
 	@:native("dismissalTransitionDidEnd")
-	overload extern inline public function dismissalTransitionDidEnd(completed:BOOL):Void;
+	overload extern inline public function dismissalTransitionDidEnd(completed:Bool):Void;
 
 	@:native("overrideTraitCollection")
 	public var overrideTraitCollection:UITraitCollection;

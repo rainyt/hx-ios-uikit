@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIStatusBarManager")
 @:include("UIKit/UIKit.h")
@@ -21,7 +23,7 @@ extern class UIStatusBarManager{
 	public var statusBarStyle:UIStatusBarStyle;
 
 	@:native("statusBarHidden")
-	public var statusBarHidden:BOOL;
+	public var statusBarHidden:Bool;
 
 	@:native("is")
 	public var is:bar;

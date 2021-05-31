@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPageControl")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UIPageControl{
 	public var currentPage:NSInteger;
 
 	@:native("hidesForSinglePage")
-	public var hidesForSinglePage:BOOL;
+	public var hidesForSinglePage:Bool;
 
 	@:native("pageIndicatorTintColor")
 	public var pageIndicatorTintColor:UIColor;
@@ -33,7 +35,7 @@ extern class UIPageControl{
 	public var interactionState:UIPageControlInteractionState;
 
 	@:native("allowsContinuousInteraction")
-	public var allowsContinuousInteraction:BOOL;
+	public var allowsContinuousInteraction:Bool;
 
 	@:native("preferredIndicatorImage")
 	public var preferredIndicatorImage:UIImage;

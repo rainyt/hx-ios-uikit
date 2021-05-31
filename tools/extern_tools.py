@@ -6,6 +6,8 @@ import math as python_lib_Math
 import math as Math
 from os import path as python_lib_os_Path
 import inspect as python_lib_Inspect
+import sys as python_lib_Sys
+import traceback as python_lib_Traceback
 import builtins as python_lib_Builtins
 import os as python_lib_Os
 
@@ -61,12 +63,13 @@ class Class: pass
 
 class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
-    __slots__ = ("pkg", "classname", "typedefs", "_hdata", "funcAndAttr")
-    _hx_fields = ["pkg", "classname", "typedefs", "_hdata", "funcAndAttr"]
+    __slots__ = ("pkg", "classname", "typedefs", "imports", "_hdata", "funcAndAttr")
+    _hx_fields = ["pkg", "classname", "typedefs", "imports", "_hdata", "funcAndAttr"]
     _hx_methods = ["toHaxeFile", "toFuncName"]
 
     def __init__(self,classname,pkg,file):
         self.funcAndAttr = []
+        self.imports = []
         self.typedefs = haxe_ds_StringMap()
         self.pkg = pkg
         startIndex1 = None
@@ -86,6 +89,8 @@ class ExternBaseClass:
         _this = self.funcAndAttr
         x = _hx_AnonObject({'type': "func", 'name': "autorelease", 'returnClass': self.classname, 'isStatic': True, 'args': None})
         _this.append(x)
+        isTypedef = False
+        read = ""
         _this = self._hdata
         harray = _this.split("\n")
         _g_current = 0
@@ -96,46 +101,44 @@ class ExternBaseClass:
             _g_current = (_g_current + 1)
             index = _g1_key
             value = _g1_value
-            startIndex = None
-            if (((value.find("typedef") if ((startIndex is None)) else HxString.indexOfImpl(value,"typedef",startIndex))) == 0):
-                value = StringTools.replace(value,"*","")
-                t = value.split(" ")
-                t2 = ""
-                _g2_current = 0
-                _g2_array = t
-                while (_g2_current < len(_g2_array)):
-                    _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
-                    _g3_key = _g2_current
-                    _g2_current = (_g2_current + 1)
-                    index1 = _g3_key
-                    tv = _g3_value
-                    if (index1 < 2):
-                        continue
-                    if (len(tv) > 0):
-                        t2 = tv
-                        break
-                self.typedefs.h[t2] = (t[1] if 1 < len(t) else None)
+            tmp = None
+            if (not isTypedef):
+                startIndex = None
+                tmp = (((value.find("typedef") if ((startIndex is None)) else HxString.indexOfImpl(value,"typedef",startIndex))) == 0)
             else:
+                tmp = True
+            if tmp:
+                isTypedef = True
+                read = (("null" if read is None else read) + ("null" if value is None else value))
                 startIndex1 = None
-                if (((value.find("@property") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"@property",startIndex1))) == 0):
+                if (((read.find(";") if ((startIndex1 is None)) else HxString.indexOfImpl(read,";",startIndex1))) != -1):
+                    isTypedef = False
+                    t = ExternTypedefClass(read)
+                    self.typedefs.h[t.className] = t
+                    read = ""
+            else:
+                startIndex2 = None
+                if (((value.find("@property") if ((startIndex2 is None)) else HxString.indexOfImpl(value,"@property",startIndex2))) == 0):
                     _this = self.funcAndAttr
                     x = ObjcProperty.parsing(self.typedefs,self.classname,value)
                     _this.append(x)
                 else:
-                    tmp = None
-                    startIndex2 = None
-                    if (((value.find("-") if ((startIndex2 is None)) else HxString.indexOfImpl(value,"-",startIndex2))) != 0):
-                        startIndex3 = None
-                        tmp = (((value.find("+") if ((startIndex3 is None)) else HxString.indexOfImpl(value,"+",startIndex3))) == 0)
+                    tmp1 = None
+                    startIndex3 = None
+                    if (((value.find("-") if ((startIndex3 is None)) else HxString.indexOfImpl(value,"-",startIndex3))) != 0):
+                        startIndex4 = None
+                        tmp1 = (((value.find("+") if ((startIndex4 is None)) else HxString.indexOfImpl(value,"+",startIndex4))) == 0)
                     else:
-                        tmp = True
-                    if tmp:
+                        tmp1 = True
+                    if tmp1:
                         _this1 = self.funcAndAttr
                         x1 = ObjcFun.parsing(self.typedefs,self.classname,value)
                         _this1.append(x1)
 
     def toHaxeFile(self):
         haxe = (("package " + HxOverrides.stringOrNull(self.pkg)) + ";\n\n")
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSString"))) + ";\n"))))
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSData"))) + ";\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.classname)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
@@ -149,8 +152,8 @@ class ExternBaseClass:
             index = _g1_key
             value = _g1_value
             _g = value.type
-            _hx_local_4 = len(_g)
-            if (_hx_local_4 == 4):
+            _hx_local_6 = len(_g)
+            if (_hx_local_6 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe1 = (((("\toverload extern inline public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(")
@@ -161,7 +164,7 @@ class ExternBaseClass:
                     else:
                         haxe2 = ""
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull((((((("null" if haxe1 is None else haxe1) + ("null" if haxe2 is None else haxe2)) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
-            elif (_hx_local_4 == 8):
+            elif (_hx_local_6 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
@@ -248,6 +251,106 @@ class ExternTools:
         if (not sys_FileSystem.exists(haxedir)):
             sys_FileSystem.createDirectory(haxedir)
         sys_io_File.saveContent(((("null" if haxedir is None else haxedir) + "/") + ("null" if haxefile is None else haxefile)),c.toHaxeFile())
+        _hx_map = c.typedefs
+        _g_map = _hx_map
+        _g_keys = _hx_map.keys()
+        while _g_keys.hasNext():
+            key = _g_keys.next()
+            _g1_value = _g_map.get(key)
+            _g1_key = key
+            key1 = _g1_key
+            value = _g1_value
+            if value.createHaxeFile:
+                sys_io_File.saveContent((((("null" if haxedir is None else haxedir) + "/") + HxOverrides.stringOrNull(value.className)) + ".hx"),value.toHaxeFile(("ios." + HxOverrides.stringOrNull(pkg.lower()))))
+
+
+class ExternTypedefClass:
+    _hx_class_name = "ExternTypedefClass"
+    __slots__ = ("parentClassName", "createHaxeFile", "className", "enums")
+    _hx_fields = ["parentClassName", "createHaxeFile", "className", "enums"]
+    _hx_methods = ["toHaxeFile"]
+
+    def __init__(self,value):
+        self.parentClassName = None
+        self.enums = []
+        self.className = None
+        self.createHaxeFile = False
+        startIndex = None
+        self.createHaxeFile = (((value.find("typedef NS_ENUM") if ((startIndex is None)) else HxString.indexOfImpl(value,"typedef NS_ENUM",startIndex))) == 0)
+        if self.createHaxeFile:
+            startIndex = None
+            cContent = HxString.substr(value,(((value.find("(") if ((startIndex is None)) else HxString.indexOfImpl(value,"(",startIndex))) + 1),None)
+            startIndex = None
+            cContent = HxString.substr(cContent,0,(cContent.find(")") if ((startIndex is None)) else HxString.indexOfImpl(cContent,")",startIndex)))
+            print(str(cContent))
+            cContent = StringTools.replace(cContent," ","")
+            carr = cContent.split(",")
+            self.className = (carr[1] if 1 < len(carr) else None)
+            self.parentClassName = (carr[0] if 0 < len(carr) else None)
+            enumContent = StringTools.replace(value,"\n","")
+            enumContent = StringTools.replace(enumContent,"\t","")
+            startIndex = None
+            enumContent = HxString.substr(enumContent,(((enumContent.find("{") if ((startIndex is None)) else HxString.indexOfImpl(enumContent,"{",startIndex))) + 1),None)
+            startIndex1 = None
+            _hx_len = None
+            if (startIndex1 is None):
+                _hx_len = enumContent.rfind("}", 0, len(enumContent))
+            else:
+                i = enumContent.rfind("}", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("}"))) if ((i == -1)) else (i + 1))
+                check = enumContent.find("}", startLeft, len(enumContent))
+                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            enumContent = HxString.substr(enumContent,0,_hx_len)
+            e = enumContent.split(",")
+            _g_current = 0
+            _g_array = e
+            while (_g_current < len(_g_array)):
+                _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+                _g1_key = _g_current
+                _g_current = (_g_current + 1)
+                index = _g1_key
+                e2 = _g1_value
+                e2 = StringTools.replace(e2," ","")
+                startIndex = None
+                if (((e2.find("=") if ((startIndex is None)) else HxString.indexOfImpl(e2,"=",startIndex))) != -1):
+                    startIndex1 = None
+                    _hx_len = None
+                    if (startIndex1 is None):
+                        _hx_len = e2.rfind("=", 0, len(e2))
+                    else:
+                        i = e2.rfind("=", 0, (startIndex1 + 1))
+                        startLeft = (max(0,((startIndex1 + 1) - len("="))) if ((i == -1)) else (i + 1))
+                        check = e2.find("=", startLeft, len(e2))
+                        _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+                    e2 = HxString.substr(e2,0,_hx_len)
+                _this = self.enums
+                _this.append(e2)
+            print(str(self.enums))
+
+    def toHaxeFile(self,pkg):
+        if (not self.createHaxeFile):
+            return None
+        haxe = (("package " + ("null" if pkg is None else pkg)) + ";\n\n")
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSString"))) + ";\n"))))
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + HxOverrides.stringOrNull(ObjcImport.toImport("NSData"))) + ";\n"))))
+        haxe = (("null" if haxe is None else haxe) + "@:objc\n")
+        haxe = (("null" if haxe is None else haxe) + "@:enum\n")
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
+        haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("extern abstract " + HxOverrides.stringOrNull(self.className)) + "(Int) from Int to Int {\n\n"))))
+        _g_current = 0
+        _g_array = self.enums
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + ("null" if value is None else value)) + "\")\n"))))
+            haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\tvar " + ("null" if value is None else value)) + ";\n\n"))))
+        haxe = (("null" if haxe is None else haxe) + "\n}")
+        return haxe
+
 
 
 class ObjcFun:
@@ -280,8 +383,8 @@ class ObjcFun:
                 funcName = HxString.substr(funcName,0,i)
         startIndex = None
         c = (className if ((((returnClass.find("instancetype") if ((startIndex is None)) else HxString.indexOfImpl(returnClass,"instancetype",startIndex))) != -1)) else returnClass)
-        if (c in typedefs.h):
-            c = typedefs.h.get(c,None)
+        if ((c in typedefs.h) and (not typedefs.h.get(c,None).createHaxeFile)):
+            c = typedefs.h.get(c,None).parentClassName
         if (c == "void"):
             c = "Void"
         return _hx_AnonObject({'name': ObjcFun.parsingFuncName(funcName,args), 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args})
@@ -382,6 +485,39 @@ class ObjcFun:
         return retargs
 
 
+class ObjcImport:
+    _hx_class_name = "ObjcImport"
+    __slots__ = ()
+    _hx_statics = ["toImport"]
+
+    @staticmethod
+    def toImport(_hx_type):
+        type1 = _hx_type
+        _hx_local_0 = len(type1)
+        if (_hx_local_0 == 9):
+            if (type1 == "ObjcBlock"):
+                return "cpp.objc.ObjcBlock"
+        elif (_hx_local_0 == 12):
+            if (type1 == "NSDictionary"):
+                return "cpp.objc.NSDictionary"
+        elif (_hx_local_0 == 7):
+            if (type1 == "NSError"):
+                return "cpp.objc.NSError"
+        elif (_hx_local_0 == 8):
+            if (type1 == "NSObject"):
+                return "cpp.objc.NSObject"
+            elif (type1 == "NSString"):
+                return "cpp.objc.NSString"
+            elif (type1 == "Protocol"):
+                return "cpp.objc.Protocol"
+        elif (_hx_local_0 == 6):
+            if (type1 == "NSData"):
+                return "cpp.objc.NSData"
+        else:
+            pass
+        return None
+
+
 class ObjcProperty:
     _hx_class_name = "ObjcProperty"
     __slots__ = ()
@@ -446,19 +582,21 @@ class ObjcType:
         startIndex = None
         if (((t.find("(") if ((startIndex is None)) else HxString.indexOfImpl(t,"(",startIndex))) == -1):
             startIndex = None
-            tmp = (((t.find("NSArray") if ((startIndex is None)) else HxString.indexOfImpl(t,"NSArray",startIndex))) != -1)
+            tmp = (((t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex))) != -1)
         else:
             tmp = True
         if tmp:
             return "Dynamic"
+        if (t == "BOOL"):
+            return "Bool"
         t = StringTools.replace(t,"nullable ","")
-        return StringTools.replace(StringTools.replace((typedefs.h.get(t,None) if ((t in typedefs.h)) else t),"*","")," ","")
+        return StringTools.replace(StringTools.replace((typedefs.h.get(t,None).parentClassName if (((t in typedefs.h) and (not typedefs.h.get(t,None).createHaxeFile))) else t),"*","")," ","")
 
 
 class Std:
     _hx_class_name = "Std"
     __slots__ = ()
-    _hx_statics = ["is", "isOfType"]
+    _hx_statics = ["is", "isOfType", "string"]
 
     @staticmethod
     def _hx_is(v,t):
@@ -548,6 +686,10 @@ class Std:
         else:
             return False
 
+    @staticmethod
+    def string(s):
+        return python_Boot.toString1(s,"")
+
 
 class Float: pass
 
@@ -611,16 +753,105 @@ class Sys:
 class haxe_IMap:
     _hx_class_name = "haxe.IMap"
     __slots__ = ()
+    _hx_methods = ["get", "keys"]
+
+
+class haxe_Exception(Exception):
+    _hx_class_name = "haxe.Exception"
+    __slots__ = ("_hx___nativeStack", "_hx___nativeException", "_hx___previousException")
+    _hx_fields = ["__nativeStack", "__nativeException", "__previousException"]
+    _hx_methods = ["unwrap"]
+    _hx_statics = ["caught"]
+    _hx_interfaces = []
+    _hx_super = Exception
+
+
+    def __init__(self,message,previous = None,native = None):
+        self._hx___previousException = None
+        self._hx___nativeException = None
+        self._hx___nativeStack = None
+        super().__init__(message)
+        self._hx___previousException = previous
+        if ((native is not None) and Std.isOfType(native,BaseException)):
+            self._hx___nativeException = native
+            self._hx___nativeStack = haxe_NativeStackTrace.exceptionStack()
+        else:
+            self._hx___nativeException = self
+            infos = python_lib_Traceback.extract_stack()
+            if (len(infos) != 0):
+                infos.pop()
+            infos.reverse()
+            self._hx___nativeStack = infos
+
+    def unwrap(self):
+        return self._hx___nativeException
+
+    @staticmethod
+    def caught(value):
+        if Std.isOfType(value,haxe_Exception):
+            return value
+        elif Std.isOfType(value,BaseException):
+            return haxe_Exception(str(value),None,value)
+        else:
+            return haxe_ValueException(value,None,value)
+
+
+
+class haxe_NativeStackTrace:
+    _hx_class_name = "haxe.NativeStackTrace"
+    __slots__ = ()
+    _hx_statics = ["saveStack", "exceptionStack"]
+
+    @staticmethod
+    def saveStack(exception):
+        pass
+
+    @staticmethod
+    def exceptionStack():
+        exc = python_lib_Sys.exc_info()
+        if (exc[2] is not None):
+            infos = python_lib_Traceback.extract_tb(exc[2])
+            infos.reverse()
+            return infos
+        else:
+            return []
+
+
+class haxe_ValueException(haxe_Exception):
+    _hx_class_name = "haxe.ValueException"
+    __slots__ = ("value",)
+    _hx_fields = ["value"]
+    _hx_methods = ["unwrap"]
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = haxe_Exception
+
+
+    def __init__(self,value,previous = None,native = None):
+        self.value = None
+        super().__init__(Std.string(value),previous,native)
+        self.value = value
+
+    def unwrap(self):
+        return self.value
+
 
 
 class haxe_ds_StringMap:
     _hx_class_name = "haxe.ds.StringMap"
     __slots__ = ("h",)
     _hx_fields = ["h"]
+    _hx_methods = ["get", "keys"]
     _hx_interfaces = [haxe_IMap]
 
     def __init__(self):
         self.h = dict()
+
+    def get(self,key):
+        return self.h.get(key,None)
+
+    def keys(self):
+        return python_HaxeIterator(iter(self.h.keys()))
 
 
 
@@ -860,6 +1091,40 @@ class python_Boot:
             if (real in python_Boot.keywords):
                 return real
         return name
+
+
+class python_HaxeIterator:
+    _hx_class_name = "python.HaxeIterator"
+    __slots__ = ("it", "x", "has", "checked")
+    _hx_fields = ["it", "x", "has", "checked"]
+    _hx_methods = ["next", "hasNext"]
+
+    def __init__(self,it):
+        self.checked = False
+        self.has = False
+        self.x = None
+        self.it = it
+
+    def next(self):
+        if (not self.checked):
+            self.hasNext()
+        self.checked = False
+        return self.x
+
+    def hasNext(self):
+        if (not self.checked):
+            try:
+                self.x = self.it.__next__()
+                self.has = True
+            except BaseException as _g:
+                if Std.isOfType(haxe_Exception.caught(_g).unwrap(),StopIteration):
+                    self.has = False
+                    self.x = None
+                else:
+                    raise _g
+            self.checked = True
+        return self.has
+
 
 
 class HxString:

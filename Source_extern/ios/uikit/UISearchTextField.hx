@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISearchTextField")
 @:include("UIKit/UIKit.h")
@@ -36,10 +38,10 @@ extern class UISearchTextField{
 	public var tokenBackgroundColor:UIColor;
 
 	@:native("allowsDeletingTokens")
-	public var allowsDeletingTokens:BOOL;
+	public var allowsDeletingTokens:Bool;
 
 	@:native("allowsCopyingTokens")
-	public var allowsCopyingTokens:BOOL;
+	public var allowsCopyingTokens:Bool;
 
 	@:native("init")
 	overload extern inline public function init():UISearchTextField;

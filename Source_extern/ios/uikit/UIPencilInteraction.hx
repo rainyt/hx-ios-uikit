@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPencilInteraction")
 @:include("UIKit/UIKit.h")
@@ -15,13 +17,13 @@ extern class UIPencilInteraction{
 	public var preferredTapAction:UIPencilPreferredAction;
 
 	@:native("prefersPencilOnlyDrawing")
-	public var prefersPencilOnlyDrawing:BOOL;
+	public var prefersPencilOnlyDrawing:Bool;
 
 	@:native("delegate")
-	public var delegate:<UIPencilInteractionDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("enabled")
-	public var enabled:BOOL;
+	public var enabled:Bool;
 
 	@:native("pencilInteractionDidTap")
 	overload extern inline public function pencilInteractionDidTap(interaction:UIPencilInteraction):Void;

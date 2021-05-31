@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPressesEvent")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UIPressesEvent{
 	overload extern inline public static function autorelease():UIPressesEvent;
 
 	@:native("allPresses")
-	public var allPresses:<UIPress>;
+	public var allPresses:Dynamic;
 
 	@:native("pressesForGestureRecognizer")
 	overload extern inline public function pressesForGestureRecognizer(gesture:UIGestureRecognizer):NSSet <UIPress *> *;

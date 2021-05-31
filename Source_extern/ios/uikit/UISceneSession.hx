@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")
@@ -54,7 +56,7 @@ extern class UISceneSession{
 	public var stateRestorationActivity:NSUserActivity;
 
 	@:native("userInfo")
-	public var userInfo:NSDictionary<NSString,id>;
+	public var userInfo:Dynamic;
 
 
 }

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIContextMenuInteraction")
 @:include("UIKit/UIKit.h")
@@ -12,13 +14,13 @@ extern class UIContextMenuInteraction{
 	overload extern inline public static function autorelease():UIContextMenuInteraction;
 
 	@:native("delegate")
-	public var delegate:id<UIContextMenuInteractionDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("menuAppearance")
 	public var menuAppearance:UIContextMenuInteractionAppearance;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:id<UIContextMenuInteractionDelegate>):UIContextMenuInteraction;
+	overload extern inline public function initWithDelegate(delegate:Dynamic):UIContextMenuInteraction;
 
 	@:native("init")
 	overload extern inline public function init():UIContextMenuInteraction;
@@ -57,13 +59,13 @@ extern class UIContextMenuInteraction{
 	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
 
 	@:native("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionCommitAnimating>):Void;
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>):Void;
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("contextMenuInteraction:willEndForConfiguration:animator")
-	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>):Void;
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 
 }

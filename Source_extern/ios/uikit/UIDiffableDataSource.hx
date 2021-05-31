@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDiffableDataSource")
 @:include("UIKit/UIKit.h")
@@ -66,7 +68,7 @@ extern class UIDiffableDataSource{
 	overload extern inline public function reloadItemsWithIdentifiers(identifiers:Dynamic):Void;
 
 	@:native("appendSectionsWithIdentifiers")
-	overload extern inline public function appendSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;
+	overload extern inline public function appendSectionsWithIdentifiers(sectionIdentifiers:NSArray):Void;
 
 	@:native("insertSectionsWithIdentifiers:beforeSectionWithIdentifier")
 	overload extern inline public function insertSectionsWithIdentifiers(sectionIdentifiers:Dynamic, beforeSectionWithIdentifier:SectionIdentifierType):Void;
@@ -90,22 +92,22 @@ extern class UIDiffableDataSource{
 	public var sectionIdentifier:SectionIdentifierType;
 
 	@:native("initialSnapshot")
-	public var initialSnapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>;
+	public var initialSnapshot:Dynamic;
 
 	@:native("finalSnapshot")
-	public var finalSnapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>;
+	public var finalSnapshot:Dynamic;
 
 	@:native("difference")
-	public var difference:NSOrderedCollectionDifference<ItemIdentifierType>;
+	public var difference:Dynamic;
 
 	@:native("initialSnapshot")
-	public var initialSnapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>;
+	public var initialSnapshot:Dynamic;
 
 	@:native("finalSnapshot")
-	public var finalSnapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>;
+	public var finalSnapshot:Dynamic;
 
 	@:native("difference")
-	public var difference:NSOrderedCollectionDifference<ItemIdentifierType>;
+	public var difference:Dynamic;
 
 	@:native("sectionTransactions")
 	public var sectionTransactions:Dynamic;
@@ -150,10 +152,10 @@ extern class UIDiffableDataSource{
 	overload extern inline public function snapshot;():NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>*;
 
 	@:native("applySnapshot:animatingDifferences")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL):Void;
+	overload extern inline public function applySnapshot(snapshot:Dynamic, animatingDifferences:Bool):Void;
 
 	@:native("applySnapshot:animatingDifferences:completion")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL, completion:Dynamic):Void;
+	overload extern inline public function applySnapshot(snapshot:Dynamic, animatingDifferences:Bool, completion:Dynamic):Void;
 
 	@:native("itemIdentifierForIndexPath")
 	overload extern inline public function itemIdentifierForIndexPath(indexPath:NSIndexPath):nullable ItemIdentifierType;
@@ -162,19 +164,19 @@ extern class UIDiffableDataSource{
 	overload extern inline public function indexPathForItemIdentifier(identifier:ItemIdentifierType):nullable NSIndexPath*;
 
 	@:native("reorderingHandlers")
-	public var reorderingHandlers:UICollectionViewDiffableDataSourceReorderingHandlers<SectionIdentifierType,ItemIdentifierType>;
+	public var reorderingHandlers:Dynamic;
 
 	@:native("applySnapshot:toSection:animatingDifferences")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, toSection:SectionIdentifierType, animatingDifferences:BOOL):Void;
+	overload extern inline public function applySnapshot(snapshot:Dynamic, toSection:SectionIdentifierType, animatingDifferences:Bool):Void;
 
 	@:native("applySnapshot:toSection:animatingDifferences:completion")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, toSection:SectionIdentifierType, animatingDifferences:BOOL, completion:Dynamic):Void;
+	overload extern inline public function applySnapshot(snapshot:Dynamic, toSection:SectionIdentifierType, animatingDifferences:Bool, completion:Dynamic):Void;
 
 	@:native("snapshotForSection")
 	overload extern inline public function snapshotForSection(section:SectionIdentifierType):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
 
 	@:native("sectionSnapshotHandlers")
-	public var sectionSnapshotHandlers:UICollectionViewDiffableDataSourceSectionSnapshotHandlers<ItemIdentifierType>;
+	public var sectionSnapshotHandlers:Dynamic;
 
 	@:native("initWithTableView:cellProvider")
 	overload extern inline public function initWithTableView(tableView:UITableView, cellProvider:UITableViewDiffableDataSourceCellProvider):UIDiffableDataSource;
@@ -189,10 +191,10 @@ extern class UIDiffableDataSource{
 	overload extern inline public function snapshot;():NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>*;
 
 	@:native("applySnapshot:animatingDifferences")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL):Void;
+	overload extern inline public function applySnapshot(snapshot:Dynamic, animatingDifferences:Bool):Void;
 
 	@:native("applySnapshot:animatingDifferences:completion")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL, completion:Dynamic):Void;
+	overload extern inline public function applySnapshot(snapshot:Dynamic, animatingDifferences:Bool, completion:Dynamic):Void;
 
 	@:native("itemIdentifierForIndexPath")
 	overload extern inline public function itemIdentifierForIndexPath(indexPath:NSIndexPath):nullable ItemIdentifierType;

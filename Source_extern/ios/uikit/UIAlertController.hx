@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAlertController")
 @:include("UIKit/UIKit.h")
@@ -21,7 +23,7 @@ extern class UIAlertController{
 	public var style:UIAlertActionStyle;
 
 	@:native("enabled")
-	public var enabled:BOOL;
+	public var enabled:Bool;
 
 	@:native("alertControllerWithTitle:message:preferredStyle")
 	overload extern inline public static function alertControllerWithTitle(title:NSString, message:NSString, preferredStyle:UIAlertControllerStyle):UIAlertController;

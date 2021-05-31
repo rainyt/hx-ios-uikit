@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITableView")
 @:include("UIKit/UIKit.h")
@@ -153,7 +155,7 @@ extern class UITableView{
 	overload extern inline public function indexPathForPreferredFocusedViewInTableView(tableView:UITableView):nullable NSIndexPath *;
 
 	@:native("tableView:shouldSpringLoadRowAtIndexPath:withContext:API_AVAILABLE(ios(11.0)")
-	overload extern inline public function tableView(tableView:UITableView, shouldSpringLoadRowAtIndexPath:NSIndexPath, withContext:id<UISpringLoadedInteractionContext>, API_AVAILABLE(ios(11.0):Dynamic):BOOL;
+	overload extern inline public function tableView(tableView:UITableView, shouldSpringLoadRowAtIndexPath:NSIndexPath, withContext:Dynamic, API_AVAILABLE(ios(11.0):Dynamic):BOOL;
 
 	@:native("tableView:shouldBeginMultipleSelectionInteractionAtIndexPath:API_AVAILABLE(ios(13.0)")
 	overload extern inline public function tableView(tableView:UITableView, shouldBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath, API_AVAILABLE(ios(13.0):Dynamic):BOOL;
@@ -174,13 +176,13 @@ extern class UITableView{
 	overload extern inline public function tableView(tableView:UITableView, previewForDismissingContextMenuWithConfiguration:UIContextMenuConfiguration, API_AVAILABLE(ios(13.0):Dynamic):nullable UITargetedPreview *;
 
 	@:native("tableView:willPerformPreviewActionForMenuWithConfiguration:animator:API_AVAILABLE(ios(13.0)")
-	overload extern inline public function tableView(tableView:UITableView, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionCommitAnimating>, API_AVAILABLE(ios(13.0):Dynamic):Void;
+	overload extern inline public function tableView(tableView:UITableView, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic, API_AVAILABLE(ios(13.0):Dynamic):Void;
 
 	@:native("tableView:willDisplayContextMenuWithConfiguration:animator:API_AVAILABLE(ios(14.0)")
-	overload extern inline public function tableView(tableView:UITableView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(14.0):Dynamic):Void;
+	overload extern inline public function tableView(tableView:UITableView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):Void;
 
 	@:native("tableView:willEndContextMenuInteractionWithConfiguration:animator:API_AVAILABLE(ios(14.0)")
-	overload extern inline public function tableView(tableView:UITableView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(14.0):Dynamic):Void;
+	overload extern inline public function tableView(tableView:UITableView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:Dynamic, API_AVAILABLE(ios(14.0):Dynamic):Void;
 
 	@:native("initWithFrame:style:NS_DESIGNATED_INITIALIZER:must:style:creation.:calls")
 	overload extern inline public function initWithFrame(frame:CGRect, style:UITableViewStyle, NS_DESIGNATED_INITIALIZER://, must:specify, style:at, creation.:-initWithFrame, calls:this):UITableView;
@@ -192,19 +194,19 @@ extern class UITableView{
 	public var style:UITableViewStyle;
 
 	@:native("dataSource")
-	public var dataSource:<UITableViewDataSource>;
+	public var dataSource:Dynamic;
 
 	@:native("delegate")
-	public var delegate:<UITableViewDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("prefetchDataSource")
-	public var prefetchDataSource:<UITableViewDataSourcePrefetching>;
+	public var prefetchDataSource:Dynamic;
 
 	@:native("dragDelegate")
-	public var dragDelegate:<UITableViewDragDelegate>;
+	public var dragDelegate:Dynamic;
 
 	@:native("dropDelegate")
-	public var dropDelegate:<UITableViewDropDelegate>;
+	public var dropDelegate:Dynamic;
 
 	@:native("is")
 	public var is:default;
@@ -279,10 +281,10 @@ extern class UITableView{
 	overload extern inline public function footerViewForSection(section:NSInteger):nullable UITableViewHeaderFooterView *;
 
 	@:native("scrollToRowAtIndexPath:atScrollPosition:animated")
-	overload extern inline public function scrollToRowAtIndexPath(indexPath:NSIndexPath, atScrollPosition:UITableViewScrollPosition, animated:BOOL):Void;
+	overload extern inline public function scrollToRowAtIndexPath(indexPath:NSIndexPath, atScrollPosition:UITableViewScrollPosition, animated:Bool):Void;
 
 	@:native("scrollToNearestSelectedRowAtScrollPosition:animated")
-	overload extern inline public function scrollToNearestSelectedRowAtScrollPosition(scrollPosition:UITableViewScrollPosition, animated:BOOL):Void;
+	overload extern inline public function scrollToNearestSelectedRowAtScrollPosition(scrollPosition:UITableViewScrollPosition, animated:Bool):Void;
 
 	@:native("performBatchUpdates:completion")
 	overload extern inline public function performBatchUpdates(updates:Dynamic, completion:Dynamic):Void;
@@ -318,7 +320,7 @@ extern class UITableView{
 	overload extern inline public function moveRowAtIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("hasUncommittedUpdates")
-	public var hasUncommittedUpdates:BOOL;
+	public var hasUncommittedUpdates:Bool;
 
 	@:native("reloadData;")
 	overload extern inline public function reloadData;():Void;
@@ -330,19 +332,19 @@ extern class UITableView{
 	public var not:is;
 
 	@:native("setEditing:animated")
-	overload extern inline public function setEditing(editing:BOOL, animated:BOOL):Void;
+	overload extern inline public function setEditing(editing:Bool, animated:Bool):Void;
 
 	@:native("allowsSelection")
-	public var allowsSelection:BOOL;
+	public var allowsSelection:Bool;
 
 	@:native("editing")
 	public var editing:in;
 
 	@:native("allowsMultipleSelection")
-	public var allowsMultipleSelection:BOOL;
+	public var allowsMultipleSelection:Bool;
 
 	@:native("allowsMultipleSelectionDuringEditing")
-	public var allowsMultipleSelectionDuringEditing:BOOL;
+	public var allowsMultipleSelectionDuringEditing:Bool;
 
 	@:native("of")
 	public var of:row;
@@ -351,10 +353,10 @@ extern class UITableView{
 	public var indexPathsForSelectedRows:Dynamic;
 
 	@:native("selectRowAtIndexPath:animated:scrollPosition")
-	overload extern inline public function selectRowAtIndexPath(indexPath:NSIndexPath, animated:BOOL, scrollPosition:UITableViewScrollPosition):Void;
+	overload extern inline public function selectRowAtIndexPath(indexPath:NSIndexPath, animated:Bool, scrollPosition:UITableViewScrollPosition):Void;
 
 	@:native("deselectRowAtIndexPath:animated")
-	overload extern inline public function deselectRowAtIndexPath(indexPath:NSIndexPath, animated:BOOL):Void;
+	overload extern inline public function deselectRowAtIndexPath(indexPath:NSIndexPath, animated:Bool):Void;
 
 	@:native("is")
 	public var is:default;
@@ -378,10 +380,10 @@ extern class UITableView{
 	public var separatorEffect:UIVisualEffect;
 
 	@:native("cellLayoutMarginsFollowReadableWidth")
-	public var cellLayoutMarginsFollowReadableWidth:BOOL;
+	public var cellLayoutMarginsFollowReadableWidth:Bool;
 
 	@:native("insetsContentViewsToSafeArea")
-	public var insetsContentViewsToSafeArea:BOOL;
+	public var insetsContentViewsToSafeArea:Bool;
 
 	@:native("section")
 	public var section:with;
@@ -411,19 +413,19 @@ extern class UITableView{
 	overload extern inline public function registerClass(aClass:Class, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("remembersLastFocusedIndexPath")
-	public var remembersLastFocusedIndexPath:BOOL;
+	public var remembersLastFocusedIndexPath:Bool;
 
 	@:native("selectionFollowsFocus")
-	public var selectionFollowsFocus:BOOL;
+	public var selectionFollowsFocus:Bool;
 
 	@:native("dragInteractionEnabled")
-	public var dragInteractionEnabled:BOOL;
+	public var dragInteractionEnabled:Bool;
 
 	@:native("hasActiveDrag")
-	public var hasActiveDrag:BOOL;
+	public var hasActiveDrag:Bool;
 
 	@:native("hasActiveDrop")
-	public var hasActiveDrop:BOOL;
+	public var hasActiveDrop:Bool;
 
 	@:native("tableView:numberOfRowsInSection")
 	overload extern inline public function tableView(tableView:UITableView, numberOfRowsInSection:NSInteger):NSInteger;
@@ -465,43 +467,43 @@ extern class UITableView{
 	overload extern inline public function tableView(tableView:UITableView, cancelPrefetchingForRowsAtIndexPaths:Dynamic):Void;
 
 	@:native("tableView:itemsForBeginningDragSession:atIndexPath")
-	overload extern inline public function tableView(tableView:UITableView, itemsForBeginningDragSession:id<UIDragSession>, atIndexPath:NSIndexPath):NSArray<UIDragItem *> *;
+	overload extern inline public function tableView(tableView:UITableView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):NSArray<UIDragItem *> *;
 
 	@:native("tableView:itemsForAddingToDragSession:atIndexPath:point")
-	overload extern inline public function tableView(tableView:UITableView, itemsForAddingToDragSession:id<UIDragSession>, atIndexPath:NSIndexPath, point:CGPoint):NSArray<UIDragItem *> *;
+	overload extern inline public function tableView(tableView:UITableView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):NSArray<UIDragItem *> *;
 
 	@:native("tableView:dragPreviewParametersForRowAtIndexPath")
 	overload extern inline public function tableView(tableView:UITableView, dragPreviewParametersForRowAtIndexPath:NSIndexPath):nullable UIDragPreviewParameters *;
 
 	@:native("tableView:dragSessionWillBegin")
-	overload extern inline public function tableView(tableView:UITableView, dragSessionWillBegin:id<UIDragSession>):Void;
+	overload extern inline public function tableView(tableView:UITableView, dragSessionWillBegin:Dynamic):Void;
 
 	@:native("tableView:dragSessionDidEnd")
-	overload extern inline public function tableView(tableView:UITableView, dragSessionDidEnd:id<UIDragSession>):Void;
+	overload extern inline public function tableView(tableView:UITableView, dragSessionDidEnd:Dynamic):Void;
 
 	@:native("tableView:dragSessionAllowsMoveOperation")
-	overload extern inline public function tableView(tableView:UITableView, dragSessionAllowsMoveOperation:id<UIDragSession>):BOOL;
+	overload extern inline public function tableView(tableView:UITableView, dragSessionAllowsMoveOperation:Dynamic):BOOL;
 
 	@:native("tableView:dragSessionIsRestrictedToDraggingApplication")
-	overload extern inline public function tableView(tableView:UITableView, dragSessionIsRestrictedToDraggingApplication:id<UIDragSession>):BOOL;
+	overload extern inline public function tableView(tableView:UITableView, dragSessionIsRestrictedToDraggingApplication:Dynamic):BOOL;
 
 	@:native("tableView:performDropWithCoordinator")
-	overload extern inline public function tableView(tableView:UITableView, performDropWithCoordinator:id<UITableViewDropCoordinator>):Void;
+	overload extern inline public function tableView(tableView:UITableView, performDropWithCoordinator:Dynamic):Void;
 
 	@:native("tableView:canHandleDropSession")
-	overload extern inline public function tableView(tableView:UITableView, canHandleDropSession:id<UIDropSession>):BOOL;
+	overload extern inline public function tableView(tableView:UITableView, canHandleDropSession:Dynamic):BOOL;
 
 	@:native("tableView:dropSessionDidEnter")
-	overload extern inline public function tableView(tableView:UITableView, dropSessionDidEnter:id<UIDropSession>):Void;
+	overload extern inline public function tableView(tableView:UITableView, dropSessionDidEnter:Dynamic):Void;
 
 	@:native("tableView:dropSessionDidUpdate:withDestinationIndexPath")
-	overload extern inline public function tableView(tableView:UITableView, dropSessionDidUpdate:id<UIDropSession>, withDestinationIndexPath:NSIndexPath):UITableViewDropProposal *;
+	overload extern inline public function tableView(tableView:UITableView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:NSIndexPath):UITableViewDropProposal *;
 
 	@:native("tableView:dropSessionDidExit")
-	overload extern inline public function tableView(tableView:UITableView, dropSessionDidExit:id<UIDropSession>):Void;
+	overload extern inline public function tableView(tableView:UITableView, dropSessionDidExit:Dynamic):Void;
 
 	@:native("tableView:dropSessionDidEnd")
-	overload extern inline public function tableView(tableView:UITableView, dropSessionDidEnd:id<UIDropSession>):Void;
+	overload extern inline public function tableView(tableView:UITableView, dropSessionDidEnd:Dynamic):Void;
 
 	@:native("tableView:dropPreviewParametersForRowAtIndexPath")
 	overload extern inline public function tableView(tableView:UITableView, dropPreviewParametersForRowAtIndexPath:NSIndexPath):nullable UIDragPreviewParameters *;
@@ -522,7 +524,7 @@ extern class UITableView{
 	public var proposal:UITableViewDropProposal;
 
 	@:native("session")
-	public var session:id<UIDropSession>;
+	public var session:Dynamic;
 
 	@:native("dropItem:toPlaceholder")
 	overload extern inline public function dropItem(dragItem:UIDragItem, toPlaceholder:UITableViewDropPlaceholder):id<UITableViewDropPlaceholderContext>;

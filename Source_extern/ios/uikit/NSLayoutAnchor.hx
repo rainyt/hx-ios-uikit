@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("NSLayoutAnchor")
 @:include("UIKit/UIKit.h")
@@ -12,22 +14,22 @@ extern class NSLayoutAnchor{
 	overload extern inline public static function autorelease():NSLayoutAnchor;
 
 	@:native("constraintEqualToAnchor")
-	overload extern inline public function constraintEqualToAnchor(anchor:NSLayoutAnchor<AnchorType>):NSLayoutConstraint *;
+	overload extern inline public function constraintEqualToAnchor(anchor:Dynamic):NSLayoutConstraint *;
 
 	@:native("constraintGreaterThanOrEqualToAnchor")
-	overload extern inline public function constraintGreaterThanOrEqualToAnchor(anchor:NSLayoutAnchor<AnchorType>):NSLayoutConstraint *;
+	overload extern inline public function constraintGreaterThanOrEqualToAnchor(anchor:Dynamic):NSLayoutConstraint *;
 
 	@:native("constraintLessThanOrEqualToAnchor")
-	overload extern inline public function constraintLessThanOrEqualToAnchor(anchor:NSLayoutAnchor<AnchorType>):NSLayoutConstraint *;
+	overload extern inline public function constraintLessThanOrEqualToAnchor(anchor:Dynamic):NSLayoutConstraint *;
 
 	@:native("constraintEqualToAnchor:constant")
-	overload extern inline public function constraintEqualToAnchor(anchor:NSLayoutAnchor<AnchorType>, constant:CGFloat):NSLayoutConstraint *;
+	overload extern inline public function constraintEqualToAnchor(anchor:Dynamic, constant:CGFloat):NSLayoutConstraint *;
 
 	@:native("constraintGreaterThanOrEqualToAnchor:constant")
-	overload extern inline public function constraintGreaterThanOrEqualToAnchor(anchor:NSLayoutAnchor<AnchorType>, constant:CGFloat):NSLayoutConstraint *;
+	overload extern inline public function constraintGreaterThanOrEqualToAnchor(anchor:Dynamic, constant:CGFloat):NSLayoutConstraint *;
 
 	@:native("constraintLessThanOrEqualToAnchor:constant")
-	overload extern inline public function constraintLessThanOrEqualToAnchor(anchor:NSLayoutAnchor<AnchorType>, constant:CGFloat):NSLayoutConstraint *;
+	overload extern inline public function constraintLessThanOrEqualToAnchor(anchor:Dynamic, constant:CGFloat):NSLayoutConstraint *;
 
 	@:native("name")
 	public var name:NSString;
@@ -36,7 +38,7 @@ extern class NSLayoutAnchor{
 	public var item:id;
 
 	@:native("hasAmbiguousLayout")
-	public var hasAmbiguousLayout:BOOL;
+	public var hasAmbiguousLayout:Bool;
 
 	@:native("constraintsAffectingLayout")
 	public var constraintsAffectingLayout:Dynamic;

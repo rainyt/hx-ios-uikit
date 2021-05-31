@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIViewConfigurationState")
 @:include("UIKit/UIKit.h")
@@ -27,16 +29,16 @@ extern class UIViewConfigurationState{
 	public var traitCollection:UITraitCollection;
 
 	@:native("disabled")
-	public var disabled:BOOL;
+	public var disabled:Bool;
 
 	@:native("highlighted")
-	public var highlighted:BOOL;
+	public var highlighted:Bool;
 
 	@:native("selected")
-	public var selected:BOOL;
+	public var selected:Bool;
 
 	@:native("focused")
-	public var focused:BOOL;
+	public var focused:Bool;
 
 
 }

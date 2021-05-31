@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("NSTextContainer")
 @:include("UIKit/UIKit.h")
@@ -42,13 +44,13 @@ extern class NSTextContainer{
 	overload extern inline public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
 
 	@:native("simpleRectangularTextContainer")
-	public var simpleRectangularTextContainer:BOOL;
+	public var simpleRectangularTextContainer:Bool;
 
 	@:native("widthTracksTextView")
-	public var widthTracksTextView:BOOL;
+	public var widthTracksTextView:Bool;
 
 	@:native("heightTracksTextView")
-	public var heightTracksTextView:BOOL;
+	public var heightTracksTextView:Bool;
 
 
 }

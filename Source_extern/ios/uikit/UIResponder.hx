@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIResponder")
 @:include("UIKit/UIKit.h")
@@ -69,34 +71,34 @@ extern class UIResponder{
 	overload extern inline public function resignFirstResponder;():BOOL;
 
 	@:native("isFirstResponder")
-	public var isFirstResponder:BOOL;
+	public var isFirstResponder:Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload extern inline public function touchesBegan(touches:NSSet<UITouch>, withEvent:UIEvent):Void;
+	overload extern inline public function touchesBegan(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload extern inline public function touchesMoved(touches:NSSet<UITouch>, withEvent:UIEvent):Void;
+	overload extern inline public function touchesMoved(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload extern inline public function touchesEnded(touches:NSSet<UITouch>, withEvent:UIEvent):Void;
+	overload extern inline public function touchesEnded(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload extern inline public function touchesCancelled(touches:NSSet<UITouch>, withEvent:UIEvent):Void;
+	overload extern inline public function touchesCancelled(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload extern inline public function touchesEstimatedPropertiesUpdated(touches:NSSet<UITouch>):Void;
+	overload extern inline public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload extern inline public function pressesBegan(presses:NSSet<UIPress>, withEvent:UIPressesEvent):Void;
+	overload extern inline public function pressesBegan(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload extern inline public function pressesChanged(presses:NSSet<UIPress>, withEvent:UIPressesEvent):Void;
+	overload extern inline public function pressesChanged(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload extern inline public function pressesEnded(presses:NSSet<UIPress>, withEvent:UIPressesEvent):Void;
+	overload extern inline public function pressesEnded(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload extern inline public function pressesCancelled(presses:NSSet<UIPress>, withEvent:UIPressesEvent):Void;
+	overload extern inline public function pressesCancelled(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
 	overload extern inline public function motionBegan(motion:UIEventSubtype, withEvent:UIEvent):Void;
@@ -117,7 +119,7 @@ extern class UIResponder{
 	overload extern inline public function targetForAction(action:SEL, withSender:id):nullable id;
 
 	@:native("buildMenuWithBuilder")
-	overload extern inline public function buildMenuWithBuilder(builder:id<UIMenuBuilder>):Void;
+	overload extern inline public function buildMenuWithBuilder(builder:Dynamic):Void;
 
 	@:native("validateCommand")
 	overload extern inline public function validateCommand(command:UICommand):Void;

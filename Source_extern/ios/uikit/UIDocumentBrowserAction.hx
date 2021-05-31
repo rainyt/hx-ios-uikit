@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIDocumentBrowserAction")
 @:include("UIKit/UIKit.h")
@@ -33,7 +35,7 @@ extern class UIDocumentBrowserAction{
 	public var supportedContentTypes:Dynamic;
 
 	@:native("supportsMultipleItems")
-	public var supportsMultipleItems:BOOL;
+	public var supportsMultipleItems:Bool;
 
 
 }

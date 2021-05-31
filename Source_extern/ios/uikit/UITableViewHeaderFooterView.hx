@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITableViewHeaderFooterView")
 @:include("UIKit/UIKit.h")
@@ -30,10 +32,10 @@ extern class UITableViewHeaderFooterView{
 	overload extern inline public function defaultContentConfiguration():UIListContentConfiguration *;
 
 	@:native("contentConfiguration")
-	public var contentConfiguration:id<UIContentConfiguration>;
+	public var contentConfiguration:Dynamic;
 
 	@:native("automaticallyUpdatesContentConfiguration")
-	public var automaticallyUpdatesContentConfiguration:BOOL;
+	public var automaticallyUpdatesContentConfiguration:Bool;
 
 	@:native("contentView")
 	public var contentView:UIView;
@@ -48,7 +50,7 @@ extern class UITableViewHeaderFooterView{
 	public var backgroundConfiguration:UIBackgroundConfiguration;
 
 	@:native("automaticallyUpdatesBackgroundConfiguration")
-	public var automaticallyUpdatesBackgroundConfiguration:BOOL;
+	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
 	@:native("backgroundView")
 	public var backgroundView:UIView;

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITextField")
 @:include("UIKit/UIKit.h")
@@ -30,7 +32,7 @@ extern class UITextField{
 	public var are:images;
 
 	@:native("defaultTextAttributes")
-	public var defaultTextAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var defaultTextAttributes:Dynamic;
 
 	@:native("70%")
 	public var 70%:drawn;
@@ -57,13 +59,13 @@ extern class UITextField{
 	public var be:should;
 
 	@:native("editing")
-	public var editing:BOOL;
+	public var editing:Bool;
 
 	@:native("allowsEditingTextAttributes")
-	public var allowsEditingTextAttributes:BOOL;
+	public var allowsEditingTextAttributes:Bool;
 
 	@:native("typingAttributes")
-	public var typingAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var typingAttributes:Dynamic;
 
 	@:native("is")
 	public var is:default;
@@ -114,10 +116,10 @@ extern class UITextField{
 	public var inputAccessoryView:UIView;
 
 	@:native("clearsOnInsertion")
-	public var clearsOnInsertion:BOOL;
+	public var clearsOnInsertion:Bool;
 
 	@:native("endEditing:::use:make:view:any:that:the:responder")
-	overload extern inline public function endEditing(force:BOOL, :, ://, use:to, make:the, view:or, any:subview, that:is, the:first, responder:resign):BOOL;
+	overload extern inline public function endEditing(force:Bool, :, ://, use:to, make:the, view:or, any:subview, that:is, the:first, responder:resign):BOOL;
 
 	@:native("textFieldShouldBeginEditing:::::return:to")
 	overload extern inline public function textFieldShouldBeginEditing(textField:UITextField, :, :, :, ://, return:NO, to:disallow):BOOL;

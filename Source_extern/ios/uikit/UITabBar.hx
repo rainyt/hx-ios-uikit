@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITabBar")
 @:include("UIKit/UIKit.h")
@@ -21,16 +23,16 @@ extern class UITabBar{
 	public var is:default;
 
 	@:native("setItems:animated:://:fade:or:or:and")
-	overload extern inline public function setItems(items:Dynamic, animated:BOOL, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
+	overload extern inline public function setItems(items:Dynamic, animated:Bool, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
 
 	@:native("beginCustomizingItems:API_UNAVAILABLE(tvos::list:items:can:reordered.:animates:sheet:visible:not:are")
 	overload extern inline public function beginCustomizingItems(items:Dynamic, API_UNAVAILABLE(tvos:, ://, list:all, items:that, can:be, reordered.:always, animates:a, sheet:up., visible:items, not:listed, are:fixed):Void;
 
 	@:native("endCustomizingAnimated:API_UNAVAILABLE(tvos:://:customization:normally:should:the:do:check:of:to:new:returns:if")
-	overload extern inline public function endCustomizingAnimated(animated:BOOL, API_UNAVAILABLE(tvos:, :, //:hide, customization:sheet., normally:you, should:let, the:user, do:it., check:list, of:items, to:see, new:layout., returns:YES, if:layout):BOOL;
+	overload extern inline public function endCustomizingAnimated(animated:Bool, API_UNAVAILABLE(tvos:, :, //:hide, customization:sheet., normally:you, should:let, the:user, do:it., check:list, of:items, to:see, new:layout., returns:YES, if:layout):BOOL;
 
 	@:native("customizing")
-	public var customizing:BOOL;
+	public var customizing:Bool;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
@@ -66,7 +68,7 @@ extern class UITabBar{
 	public var barStyle:UIBarStyle;
 
 	@:native("translucent")
-	public var translucent:BOOL;
+	public var translucent:Bool;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:standardAppearance;
@@ -87,10 +89,10 @@ extern class UITabBar{
 	overload extern inline public function tabBar(tabBar:UITabBar, didBeginCustomizingItems:Dynamic, API_UNAVAILABLE(tvos:, :, :, :, :, :, :, :, :, :, :, //:called, after:customize, sheet:is, shown.:items, is:current):Void;
 
 	@:native("tabBar:willEndCustomizingItems:changed:API_UNAVAILABLE(tvos:called:customize:is:items:new")
-	overload extern inline public function tabBar(tabBar:UITabBar, willEndCustomizingItems:Dynamic, changed:BOOL, API_UNAVAILABLE(tvos://, called:before, customize:sheet, is:hidden., items:is, new:item):Void;
+	overload extern inline public function tabBar(tabBar:UITabBar, willEndCustomizingItems:Dynamic, changed:Bool, API_UNAVAILABLE(tvos://, called:before, customize:sheet, is:hidden., items:is, new:item):Void;
 
 	@:native("tabBar:didEndCustomizingItems:changed:API_UNAVAILABLE(tvos://:after:sheet:hidden.:is")
-	overload extern inline public function tabBar(tabBar:UITabBar, didEndCustomizingItems:Dynamic, changed:BOOL, API_UNAVAILABLE(tvos:, //:called, after:customize, sheet:is, hidden.:items, is:new):Void;
+	overload extern inline public function tabBar(tabBar:UITabBar, didEndCustomizingItems:Dynamic, changed:Bool, API_UNAVAILABLE(tvos:, //:called, after:customize, sheet:is, hidden.:items, is:new):Void;
 
 
 }

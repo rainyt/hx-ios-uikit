@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UICloudSharingController")
 @:include("UIKit/UIKit.h")
@@ -42,7 +44,7 @@ extern class UICloudSharingController{
 	overload extern inline public function initWithShare(share:CKShare, container:CKContainer):UICloudSharingController;
 
 	@:native("delegate")
-	public var delegate:id<UICloudSharingControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("share")
 	public var share:CKShare;

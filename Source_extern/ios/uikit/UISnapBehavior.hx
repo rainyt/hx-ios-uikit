@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISnapBehavior")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UISnapBehavior{
 	overload extern inline public static function autorelease():UISnapBehavior;
 
 	@:native("initWithItem:snapToPoint")
-	overload extern inline public function initWithItem(item:id<UIDynamicItem>, snapToPoint:CGPoint):UISnapBehavior;
+	overload extern inline public function initWithItem(item:Dynamic, snapToPoint:CGPoint):UISnapBehavior;
 
 	@:native("snapPoint")
 	public var snapPoint:CGPoint;

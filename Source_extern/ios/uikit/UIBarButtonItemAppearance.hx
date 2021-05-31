@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIBarButtonItemAppearance")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UIBarButtonItemAppearance{
 	overload extern inline public static function new():UIBarButtonItemAppearance;
 
 	@:native("titleTextAttributes")
-	public var titleTextAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var titleTextAttributes:Dynamic;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:UIOffset;

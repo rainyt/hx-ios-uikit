@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIToolbar")
 @:include("UIKit/UIKit.h")
@@ -18,10 +20,10 @@ extern class UIToolbar{
 	public var in:shown;
 
 	@:native("translucent")
-	public var translucent:BOOL;
+	public var translucent:Bool;
 
 	@:native("setItems:animated:://:fade:or:or:and")
-	overload extern inline public function setItems(items:Dynamic, animated:BOOL, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
+	overload extern inline public function setItems(items:Dynamic, animated:Bool, :, //:will, fade:in, or:out, or:reorder, and:adjust):Void;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;
@@ -48,7 +50,7 @@ extern class UIToolbar{
 	public var UI_APPEARANCE_SELECTOR:compactAppearance;
 
 	@:native("delegate")
-	public var delegate:id<UIToolbarDelegate>;
+	public var delegate:Dynamic;
 
 
 }

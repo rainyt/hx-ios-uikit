@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITouch")
 @:include("UIKit/UIKit.h")
@@ -36,7 +38,7 @@ extern class UITouch{
 	public var view:;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:<UIGestureRecognizer>;
+	public var gestureRecognizers:Dynamic;
 
 	@:native("locationInView")
 	overload extern inline public function locationInView(view:UIView):CGPoint;

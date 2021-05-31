@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UISearchController")
 @:include("UIKit/UIKit.h")
@@ -30,7 +32,7 @@ extern class UISearchController{
 	overload extern inline public function updateSearchResultsForSearchController(searchController:UISearchController):Void;
 
 	@:native("updateSearchResultsForSearchController:selectingSearchSuggestion:API_AVAILABLE(tvos(14.0)")
-	overload extern inline public function updateSearchResultsForSearchController(searchController:nonnullUISearchController, selectingSearchSuggestion:nonnullid<UISearchSuggestion>, API_AVAILABLE(tvos(14.0):Dynamic):Void;
+	overload extern inline public function updateSearchResultsForSearchController(searchController:nonnullUISearchController, selectingSearchSuggestion:Dynamic, API_AVAILABLE(tvos(14.0):Dynamic):Void;
 
 	@:native("initWithSearchResultsController")
 	overload extern inline public function initWithSearchResultsController(searchResultsController:UIViewController):UISearchController;
@@ -42,19 +44,19 @@ extern class UISearchController{
 	overload extern inline public function initWithCoder(coder:NSCoder):UISearchController;
 
 	@:native("searchResultsUpdater")
-	public var searchResultsUpdater:<UISearchResultsUpdating>;
+	public var searchResultsUpdater:Dynamic;
 
 	@:native("active")
-	public var active:BOOL;
+	public var active:Bool;
 
 	@:native("delegate")
-	public var delegate:<UISearchControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("dimsBackgroundDuringPresentation")
-	public var dimsBackgroundDuringPresentation:BOOL;
+	public var dimsBackgroundDuringPresentation:Bool;
 
 	@:native("obscuresBackgroundDuringPresentation")
-	public var obscuresBackgroundDuringPresentation:BOOL;
+	public var obscuresBackgroundDuringPresentation:Bool;
 
 	@:native("is")
 	public var is:default;
@@ -66,16 +68,16 @@ extern class UISearchController{
 	public var searchBar:UISearchBar;
 
 	@:native("automaticallyShowsSearchResultsController")
-	public var automaticallyShowsSearchResultsController:BOOL;
+	public var automaticallyShowsSearchResultsController:Bool;
 
 	@:native("showsSearchResultsController")
-	public var showsSearchResultsController:BOOL;
+	public var showsSearchResultsController:Bool;
 
 	@:native("automaticallyShowsCancelButton")
-	public var automaticallyShowsCancelButton:BOOL;
+	public var automaticallyShowsCancelButton:Bool;
 
 	@:native("automaticallyShowsScopeBar")
-	public var automaticallyShowsScopeBar:BOOL;
+	public var automaticallyShowsScopeBar:Bool;
 
 	@:native("searchSuggestions")
 	public var searchSuggestions:Dynamic;

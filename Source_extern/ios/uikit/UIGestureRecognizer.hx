@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIGestureRecognizer")
 @:include("UIKit/UIKit.h")
@@ -54,7 +56,7 @@ extern class UIGestureRecognizer{
 	public var allowedPressTypes:Dynamic;
 
 	@:native("requiresExclusiveTouchType")
-	public var requiresExclusiveTouchType:BOOL;
+	public var requiresExclusiveTouchType:Bool;
 
 	@:native("requireGestureRecognizerToFail")
 	overload extern inline public function requireGestureRecognizerToFail(otherGestureRecognizer:UIGestureRecognizer):Void;

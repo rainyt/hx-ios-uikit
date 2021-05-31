@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIStackView")
 @:include("UIKit/UIKit.h")
@@ -51,7 +53,7 @@ extern class UIStackView{
 	overload extern inline public function customSpacingAfterView(arrangedSubview:UIView):CGFloat;
 
 	@:native("baselineRelativeArrangement")
-	public var baselineRelativeArrangement:BOOL;
+	public var baselineRelativeArrangement:Bool;
 
 	@:native("")
 	public var :;

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPopoverPresentationController")
 @:include("UIKit/UIKit.h")
@@ -24,7 +26,7 @@ extern class UIPopoverPresentationController{
 	overload extern inline public function popoverPresentationController(popoverPresentationController:UIPopoverPresentationController, willRepositionPopoverToRect:inoutCGRect, inView:inoutUIView__nonnull__nonnull):Void;
 
 	@:native("delegate")
-	public var delegate:<UIPopoverPresentationControllerDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("permittedArrowDirections")
 	public var permittedArrowDirections:UIPopoverArrowDirection;
@@ -36,7 +38,7 @@ extern class UIPopoverPresentationController{
 	public var sourceRect:CGRect;
 
 	@:native("canOverlapSourceViewRect")
-	public var canOverlapSourceViewRect:BOOL;
+	public var canOverlapSourceViewRect:Bool;
 
 	@:native("barButtonItem")
 	public var barButtonItem:UIBarButtonItem;
@@ -54,7 +56,7 @@ extern class UIPopoverPresentationController{
 	public var popoverLayoutMargins:UIEdgeInsets;
 
 	@:native("popoverBackgroundViewClass")
-	public var popoverBackgroundViewClass:<UIPopoverBackgroundViewMethods>;
+	public var popoverBackgroundViewClass:Dynamic;
 
 
 }

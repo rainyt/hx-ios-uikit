@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("NSLayoutConstraint")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class NSLayoutConstraint{
 	overload extern inline public static function autorelease():NSLayoutConstraint;
 
 	@:native("constraintsWithVisualFormat:options:metrics:views")
-	overload extern inline public static function constraintsWithVisualFormat(format:NSString, options:NSLayoutFormatOptions, metrics:NSDictionary<NSString,id>, views:NSDictionary<NSString,id>):NSArray<NSLayoutConstraint *> *;
+	overload extern inline public static function constraintsWithVisualFormat(format:NSString, options:NSLayoutFormatOptions, metrics:Dynamic, views:Dynamic):NSArray<NSLayoutConstraint *> *;
 
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
 	overload extern inline public static function constraintWithItem(view1:id, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:id, attribute:NSLayoutAttribute, multiplier:CGFloat, constant:CGFloat):NSLayoutConstraint;
@@ -54,7 +56,7 @@ extern class NSLayoutConstraint{
 	public var constant:null;
 
 	@:native("active")
-	public var active:BOOL;
+	public var active:Bool;
 
 	@:native("activateConstraints")
 	overload extern inline public static function activateConstraints(constraints:Dynamic):Void;

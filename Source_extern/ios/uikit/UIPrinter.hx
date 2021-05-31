@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPrinter")
 @:include("UIKit/UIKit.h")
@@ -30,10 +32,10 @@ extern class UIPrinter{
 	public var makeAndModel:NSString;
 
 	@:native("supportsColor")
-	public var supportsColor:BOOL;
+	public var supportsColor:Bool;
 
 	@:native("supportsDuplex")
-	public var supportsDuplex:BOOL;
+	public var supportsDuplex:Bool;
 
 	@:native("contactPrinter")
 	overload extern inline public function contactPrinter(completionHandler:Dynamic):Void;

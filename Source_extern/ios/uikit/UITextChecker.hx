@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITextChecker")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class UITextChecker{
 	overload extern inline public static function autorelease():UITextChecker;
 
 	@:native("rangeOfMisspelledWordInString:range:startingAt:wrap:language")
-	overload extern inline public function rangeOfMisspelledWordInString(stringToCheck:NSString, range:NSRange, startingAt:NSInteger, wrap:BOOL, language:NSString):NSRange;
+	overload extern inline public function rangeOfMisspelledWordInString(stringToCheck:NSString, range:NSRange, startingAt:NSInteger, wrap:Bool, language:NSString):NSRange;
 
 	@:native("guessesForWordRange:inString:language")
 	overload extern inline public function guessesForWordRange(range:NSRange, inString:NSString, language:NSString):nullable NSArray<NSString *> *;

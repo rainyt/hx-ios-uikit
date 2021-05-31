@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")
@@ -84,7 +86,7 @@ extern class UIListContentConfiguration{
 	public var directionalLayoutMargins:NSDirectionalEdgeInsets;
 
 	@:native("prefersSideBySideTextAndSecondaryText")
-	public var prefersSideBySideTextAndSecondaryText:BOOL;
+	public var prefersSideBySideTextAndSecondaryText:Bool;
 
 	@:native("imageToTextPadding")
 	public var imageToTextPadding:CGFloat;

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIAction")
 @:include("UIKit/UIKit.h")
@@ -21,7 +23,7 @@ extern class UIAction{
 	public var discoverabilityTitle:NSString;
 
 	@:native("identifier")
-	public var identifier:NSString;
+	public var identifier:UIActionIdentifier;
 
 	@:native("attributes")
 	public var attributes:UIMenuElementAttributes;

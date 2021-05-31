@@ -1,15 +1,24 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
+@:enum
 @:native("UITextItemInteraction")
 @:include("UIKit/UIKit.h")
-extern class UITextItemInteraction{
+extern abstract UITextItemInteraction(Int) from Int to Int {
 
-	@:native("alloc")
-	overload extern inline public static function alloc():UITextItemInteraction;
+	@:native("UITextItemInteractionInvokeDefaultAction")
+	var UITextItemInteractionInvokeDefaultAction;
 
-	@:native("autorelease")
-	overload extern inline public static function autorelease():UITextItemInteraction;
+	@:native("UITextItemInteractionPresentActions")
+	var UITextItemInteractionPresentActions;
+
+	@:native("UITextItemInteractionPreview")
+	var UITextItemInteractionPreview;
+
+	@:native("")
+	var ;
 
 
 }

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITextView")
 @:include("UIKit/UIKit.h")
@@ -45,7 +47,7 @@ extern class UITextView{
 	overload extern inline public function textView(textView:UITextView, shouldInteractWithTextAttachment:NSTextAttachment, inRange:NSRange):BOOL;
 
 	@:native("delegate")
-	public var delegate:id<UITextViewDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("text")
 	public var text:NSString;
@@ -63,22 +65,22 @@ extern class UITextView{
 	public var selectedRange:NSRange;
 
 	@:native("editable")
-	public var editable:BOOL;
+	public var editable:Bool;
 
 	@:native("selectable")
-	public var selectable:BOOL;
+	public var selectable:Bool;
 
 	@:native("dataDetectorTypes")
 	public var dataDetectorTypes:UIDataDetectorTypes;
 
 	@:native("allowsEditingTextAttributes")
-	public var allowsEditingTextAttributes:BOOL;
+	public var allowsEditingTextAttributes:Bool;
 
 	@:native("attributedText")
 	public var attributedText:NSAttributedString;
 
 	@:native("typingAttributes")
-	public var typingAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var typingAttributes:Dynamic;
 
 	@:native("scrollRangeToVisible")
 	overload extern inline public function scrollRangeToVisible(range:NSRange):Void;
@@ -90,7 +92,7 @@ extern class UITextView{
 	public var inputAccessoryView:UIView;
 
 	@:native("clearsOnInsertion")
-	public var clearsOnInsertion:BOOL;
+	public var clearsOnInsertion:Bool;
 
 	@:native("initWithFrame:textContainer:API_AVAILABLE(ios(7.0)")
 	overload extern inline public function initWithFrame(frame:CGRect, textContainer:NSTextContainer, API_AVAILABLE(ios(7.0):NS_DESIGNATED_INITIALIZER):UITextView;
@@ -111,10 +113,10 @@ extern class UITextView{
 	public var textStorage:NSTextStorage;
 
 	@:native("linkTextAttributes")
-	public var linkTextAttributes:NSDictionary<NSAttributedStringKey,id>;
+	public var linkTextAttributes:Dynamic;
 
 	@:native("usesStandardTextScaling")
-	public var usesStandardTextScaling:BOOL;
+	public var usesStandardTextScaling:Bool;
 
 
 }

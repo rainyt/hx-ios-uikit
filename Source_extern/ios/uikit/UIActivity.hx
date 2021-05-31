@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIActivity")
 @:include("UIKit/UIKit.h")
@@ -24,10 +26,10 @@ extern class UIActivity{
 	public var non-nil:return;
 
 	@:native("canPerformWithActivityItems:://:this:return:of:based:items.")
-	overload extern inline public function canPerformWithActivityItems(activityItems:Dynamic, :, //:override, this:to, return:availability, of:activity, based:on, items.:default):BOOL;
+	overload extern inline public function canPerformWithActivityItems(activityItems:NSArray, :, //:override, this:to, return:availability, of:activity, based:on, items.:default):BOOL;
 
 	@:native("prepareWithActivityItems::::override:extract:and:up:HI.")
-	overload extern inline public function prepareWithActivityItems(activityItems:Dynamic, :, :, ://, override:to, extract:items, and:set, up:your, HI.:default):Void;
+	overload extern inline public function prepareWithActivityItems(activityItems:NSArray, :, :, ://, override:to, extract:items, and:set, up:your, HI.:default):Void;
 
 	@:native("returns")
 	public var returns:default;
@@ -36,7 +38,7 @@ extern class UIActivity{
 	overload extern inline public function performActivity;():Void;
 
 	@:native("activityDidFinish:://:must:this:activity")
-	overload extern inline public function activityDidFinish(completed:BOOL, :, //:activity, must:call, this:when, activity:is):Void;
+	overload extern inline public function activityDidFinish(completed:Bool, :, //:activity, must:call, this:when, activity:is):Void;
 
 
 }

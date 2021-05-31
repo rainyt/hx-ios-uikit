@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIWindowScene")
 @:include("UIKit/UIKit.h")
@@ -18,7 +20,7 @@ extern class UIWindowScene{
 	public var interfaceOrientation:UIInterfaceOrientation;
 
 	@:native("coordinateSpace")
-	public var coordinateSpace:id<UICoordinateSpace>;
+	public var coordinateSpace:Dynamic;
 
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;
@@ -33,7 +35,7 @@ extern class UIWindowScene{
 	public var window:UIWindow;
 
 	@:native("windowScene:didUpdateCoordinateSpace:interfaceOrientation:traitCollection")
-	overload extern inline public function windowScene(windowScene:UIWindowScene, didUpdateCoordinateSpace:id<UICoordinateSpace>, interfaceOrientation:UIInterfaceOrientation, traitCollection:UITraitCollection):Void;
+	overload extern inline public function windowScene(windowScene:UIWindowScene, didUpdateCoordinateSpace:Dynamic, interfaceOrientation:UIInterfaceOrientation, traitCollection:UITraitCollection):Void;
 
 	@:native("windowScene:performActionForShortcutItem:completionHandler")
 	overload extern inline public function windowScene(windowScene:UIWindowScene, performActionForShortcutItem:UIApplicationShortcutItem, completionHandler:Dynamic):Void;

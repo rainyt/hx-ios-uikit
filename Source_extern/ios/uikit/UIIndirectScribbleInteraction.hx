@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIIndirectScribbleInteraction")
 @:include("UIKit/UIKit.h")
@@ -18,13 +20,13 @@ extern class UIIndirectScribbleInteraction{
 	overload extern inline public static function new():UIIndirectScribbleInteraction;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:id<UIIndirectScribbleInteractionDelegate>):UIIndirectScribbleInteraction;
+	overload extern inline public function initWithDelegate(delegate:Dynamic):UIIndirectScribbleInteraction;
 
 	@:native("delegate")
-	public var delegate:id<UIIndirectScribbleInteractionDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("handlingWriting")
-	public var handlingWriting:BOOL;
+	public var handlingWriting:Bool;
 
 	@:native("indirectScribbleInteraction:requestElementsInRect:completion")
 	overload extern inline public function indirectScribbleInteraction(interaction:UIIndirectScribbleInteraction, requestElementsInRect:CGRect, completion:Dynamic):Void;

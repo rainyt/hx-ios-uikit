@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UICollectionView")
 @:include("UIKit/UIKit.h")
@@ -114,7 +116,7 @@ extern class UICollectionView{
 	overload extern inline public function collectionView(collectionView:UICollectionView, canEditItemAtIndexPath:NSIndexPath):BOOL;
 
 	@:native("collectionView:shouldSpringLoadItemAtIndexPath:withContext:API_AVAILABLE(ios(11.0)")
-	overload extern inline public function collectionView(collectionView:UICollectionView, shouldSpringLoadItemAtIndexPath:NSIndexPath, withContext:id<UISpringLoadedInteractionContext>, API_AVAILABLE(ios(11.0):Dynamic):BOOL;
+	overload extern inline public function collectionView(collectionView:UICollectionView, shouldSpringLoadItemAtIndexPath:NSIndexPath, withContext:Dynamic, API_AVAILABLE(ios(11.0):Dynamic):BOOL;
 
 	@:native("collectionView:shouldBeginMultipleSelectionInteractionAtIndexPath:API_AVAILABLE(ios(13.0)")
 	overload extern inline public function collectionView(collectionView:UICollectionView, shouldBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath, API_AVAILABLE(ios(13.0):Dynamic):BOOL;
@@ -135,13 +137,13 @@ extern class UICollectionView{
 	overload extern inline public function collectionView(collectionView:UICollectionView, previewForDismissingContextMenuWithConfiguration:UIContextMenuConfiguration, API_AVAILABLE(ios(13.0):Dynamic):nullable UITargetedPreview *;
 
 	@:native("collectionView:willPerformPreviewActionForMenuWithConfiguration:animator:API_AVAILABLE(ios(13.0)")
-	overload extern inline public function collectionView(collectionView:UICollectionView, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionCommitAnimating>, API_AVAILABLE(ios(13.0):Dynamic):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic, API_AVAILABLE(ios(13.0):Dynamic):Void;
 
 	@:native("collectionView:willDisplayContextMenuWithConfiguration:animator:API_AVAILABLE(ios(13.2)")
-	overload extern inline public function collectionView(collectionView:UICollectionView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(13.2):Dynamic):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic, API_AVAILABLE(ios(13.2):Dynamic):Void;
 
 	@:native("collectionView:willEndContextMenuInteractionWithConfiguration:animator:API_AVAILABLE(ios(13.2)")
-	overload extern inline public function collectionView(collectionView:UICollectionView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionAnimating>, API_AVAILABLE(ios(13.2):Dynamic):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:Dynamic, API_AVAILABLE(ios(13.2):Dynamic):Void;
 
 	@:native("initWithFrame:collectionViewLayout")
 	overload extern inline public function initWithFrame(frame:CGRect, collectionViewLayout:UICollectionViewLayout):UICollectionView;
@@ -153,25 +155,25 @@ extern class UICollectionView{
 	public var collectionViewLayout:UICollectionViewLayout;
 
 	@:native("delegate")
-	public var delegate:<UICollectionViewDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("dataSource")
-	public var dataSource:<UICollectionViewDataSource>;
+	public var dataSource:Dynamic;
 
 	@:native("prefetchDataSource")
-	public var prefetchDataSource:id<UICollectionViewDataSourcePrefetching>;
+	public var prefetchDataSource:Dynamic;
 
 	@:native("prefetchingEnabled")
-	public var prefetchingEnabled:BOOL;
+	public var prefetchingEnabled:Bool;
 
 	@:native("dragDelegate")
-	public var dragDelegate:<UICollectionViewDragDelegate>;
+	public var dragDelegate:Dynamic;
 
 	@:native("dropDelegate")
-	public var dropDelegate:<UICollectionViewDropDelegate>;
+	public var dropDelegate:Dynamic;
 
 	@:native("dragInteractionEnabled")
-	public var dragInteractionEnabled:BOOL;
+	public var dragInteractionEnabled:Bool;
 
 	@:native("contextMenuInteraction")
 	public var contextMenuInteraction:UIContextMenuInteraction;
@@ -216,22 +218,22 @@ extern class UICollectionView{
 	public var index:selected;
 
 	@:native("selectItemAtIndexPath:animated:scrollPosition")
-	overload extern inline public function selectItemAtIndexPath(indexPath:NSIndexPath, animated:BOOL, scrollPosition:UICollectionViewScrollPosition):Void;
+	overload extern inline public function selectItemAtIndexPath(indexPath:NSIndexPath, animated:Bool, scrollPosition:UICollectionViewScrollPosition):Void;
 
 	@:native("deselectItemAtIndexPath:animated")
-	overload extern inline public function deselectItemAtIndexPath(indexPath:NSIndexPath, animated:BOOL):Void;
+	overload extern inline public function deselectItemAtIndexPath(indexPath:NSIndexPath, animated:Bool):Void;
 
 	@:native("hasUncommittedUpdates")
-	public var hasUncommittedUpdates:BOOL;
+	public var hasUncommittedUpdates:Bool;
 
 	@:native("reloadData;")
 	overload extern inline public function reloadData;():Void;
 
 	@:native("setCollectionViewLayout:animated://:from:layout")
-	overload extern inline public function setCollectionViewLayout(layout:UICollectionViewLayout, animated:BOOL, //:transition, from:one, layout:to):Void;
+	overload extern inline public function setCollectionViewLayout(layout:UICollectionViewLayout, animated:Bool, //:transition, from:one, layout:to):Void;
 
 	@:native("setCollectionViewLayout:animated:completion")
-	overload extern inline public function setCollectionViewLayout(layout:UICollectionViewLayout, animated:BOOL, completion:Dynamic):Void;
+	overload extern inline public function setCollectionViewLayout(layout:UICollectionViewLayout, animated:Bool, completion:Dynamic):Void;
 
 	@:native("startInteractiveTransitionToCollectionViewLayout:completion")
 	overload extern inline public function startInteractiveTransitionToCollectionViewLayout(layout:UICollectionViewLayout, completion:UICollectionViewLayoutInteractiveTransitionCompletion):UICollectionViewTransitionLayout *;
@@ -279,7 +281,7 @@ extern class UICollectionView{
 	overload extern inline public function indexPathsForVisibleSupplementaryElementsOfKind(elementKind:NSString):NSArray<NSIndexPath *> *;
 
 	@:native("scrollToItemAtIndexPath:atScrollPosition:animated")
-	overload extern inline public function scrollToItemAtIndexPath(indexPath:NSIndexPath, atScrollPosition:UICollectionViewScrollPosition, animated:BOOL):Void;
+	overload extern inline public function scrollToItemAtIndexPath(indexPath:NSIndexPath, atScrollPosition:UICollectionViewScrollPosition, animated:Bool):Void;
 
 	@:native("insertSections")
 	overload extern inline public function insertSections(sections:NSIndexSet):Void;
@@ -321,64 +323,64 @@ extern class UICollectionView{
 	overload extern inline public function cancelInteractiveMovement():Void;
 
 	@:native("remembersLastFocusedIndexPath")
-	public var remembersLastFocusedIndexPath:BOOL;
+	public var remembersLastFocusedIndexPath:Bool;
 
 	@:native("selectionFollowsFocus")
-	public var selectionFollowsFocus:BOOL;
+	public var selectionFollowsFocus:Bool;
 
 	@:native("hasActiveDrag")
-	public var hasActiveDrag:BOOL;
+	public var hasActiveDrag:Bool;
 
 	@:native("hasActiveDrop")
-	public var hasActiveDrop:BOOL;
+	public var hasActiveDrop:Bool;
 
 	@:native("editing")
-	public var editing:BOOL;
+	public var editing:Bool;
 
 	@:native("allowsSelectionDuringEditing")
-	public var allowsSelectionDuringEditing:BOOL;
+	public var allowsSelectionDuringEditing:Bool;
 
 	@:native("allowsMultipleSelectionDuringEditing")
-	public var allowsMultipleSelectionDuringEditing:BOOL;
+	public var allowsMultipleSelectionDuringEditing:Bool;
 
 	@:native("collectionView:itemsForBeginningDragSession:atIndexPath")
-	overload extern inline public function collectionView(collectionView:UICollectionView, itemsForBeginningDragSession:id<UIDragSession>, atIndexPath:NSIndexPath):NSArray<UIDragItem *> *;
+	overload extern inline public function collectionView(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):NSArray<UIDragItem *> *;
 
 	@:native("collectionView:itemsForAddingToDragSession:atIndexPath:point")
-	overload extern inline public function collectionView(collectionView:UICollectionView, itemsForAddingToDragSession:id<UIDragSession>, atIndexPath:NSIndexPath, point:CGPoint):NSArray<UIDragItem *> *;
+	overload extern inline public function collectionView(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):NSArray<UIDragItem *> *;
 
 	@:native("collectionView:dragPreviewParametersForItemAtIndexPath")
 	overload extern inline public function collectionView(collectionView:UICollectionView, dragPreviewParametersForItemAtIndexPath:NSIndexPath):nullable UIDragPreviewParameters *;
 
 	@:native("collectionView:dragSessionWillBegin")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dragSessionWillBegin:id<UIDragSession>):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dragSessionWillBegin:Dynamic):Void;
 
 	@:native("collectionView:dragSessionDidEnd")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dragSessionDidEnd:id<UIDragSession>):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dragSessionDidEnd:Dynamic):Void;
 
 	@:native("collectionView:dragSessionAllowsMoveOperation")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dragSessionAllowsMoveOperation:id<UIDragSession>):BOOL;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dragSessionAllowsMoveOperation:Dynamic):BOOL;
 
 	@:native("collectionView:dragSessionIsRestrictedToDraggingApplication")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dragSessionIsRestrictedToDraggingApplication:id<UIDragSession>):BOOL;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dragSessionIsRestrictedToDraggingApplication:Dynamic):BOOL;
 
 	@:native("collectionView:performDropWithCoordinator")
-	overload extern inline public function collectionView(collectionView:UICollectionView, performDropWithCoordinator:id<UICollectionViewDropCoordinator>):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, performDropWithCoordinator:Dynamic):Void;
 
 	@:native("collectionView:canHandleDropSession")
-	overload extern inline public function collectionView(collectionView:UICollectionView, canHandleDropSession:id<UIDropSession>):BOOL;
+	overload extern inline public function collectionView(collectionView:UICollectionView, canHandleDropSession:Dynamic):BOOL;
 
 	@:native("collectionView:dropSessionDidEnter")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidEnter:id<UIDropSession>):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidEnter:Dynamic):Void;
 
 	@:native("collectionView:dropSessionDidUpdate:withDestinationIndexPath")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidUpdate:id<UIDropSession>, withDestinationIndexPath:NSIndexPath):UICollectionViewDropProposal *;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:NSIndexPath):UICollectionViewDropProposal *;
 
 	@:native("collectionView:dropSessionDidExit")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidExit:id<UIDropSession>):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidExit:Dynamic):Void;
 
 	@:native("collectionView:dropSessionDidEnd")
-	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidEnd:id<UIDropSession>):Void;
+	overload extern inline public function collectionView(collectionView:UICollectionView, dropSessionDidEnd:Dynamic):Void;
 
 	@:native("collectionView:dropPreviewParametersForItemAtIndexPath")
 	overload extern inline public function collectionView(collectionView:UICollectionView, dropPreviewParametersForItemAtIndexPath:NSIndexPath):nullable UIDragPreviewParameters *;
@@ -399,7 +401,7 @@ extern class UICollectionView{
 	public var proposal:UICollectionViewDropProposal;
 
 	@:native("session")
-	public var session:id<UIDropSession>;
+	public var session:Dynamic;
 
 	@:native("dropItem:toPlaceholder")
 	overload extern inline public function dropItem(dragItem:UIDragItem, toPlaceholder:UICollectionViewDropPlaceholder):id<UICollectionViewDropPlaceholderContext>;

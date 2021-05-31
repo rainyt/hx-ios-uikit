@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITextInteraction")
 @:include("UIKit/UIKit.h")
@@ -21,16 +23,16 @@ extern class UITextInteraction{
 	overload extern inline public function interactionDidEnd(interaction:UITextInteraction):Void;
 
 	@:native("delegate")
-	public var delegate:<UITextInteractionDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("textInput")
-	public var textInput:<UITextInput>;
+	public var textInput:Dynamic;
 
 	@:native("textInteractionMode")
 	public var textInteractionMode:UITextInteractionMode;
 
 	@:native("gesturesForFailureRequirements")
-	public var gesturesForFailureRequirements:<UIGestureRecognizer>;
+	public var gesturesForFailureRequirements:Dynamic;
 
 	@:native("textInteractionForMode")
 	overload extern inline public static function textInteractionForMode(mode:UITextInteractionMode):UITextInteraction;

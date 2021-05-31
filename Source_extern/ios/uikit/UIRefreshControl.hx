@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIRefreshControl")
 @:include("UIKit/UIKit.h")
@@ -15,7 +17,7 @@ extern class UIRefreshControl{
 	overload extern inline public function init;():UIRefreshControl;
 
 	@:native("refreshing")
-	public var refreshing:BOOL;
+	public var refreshing:Bool;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UIPointerInteraction")
 @:include("UIKit/UIKit.h")
@@ -12,13 +14,13 @@ extern class UIPointerInteraction{
 	overload extern inline public static function autorelease():UIPointerInteraction;
 
 	@:native("delegate")
-	public var delegate:id<UIPointerInteractionDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("enabled")
-	public var enabled:BOOL;
+	public var enabled:Bool;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(delegate:id<UIPointerInteractionDelegate>):UIPointerInteraction;
+	overload extern inline public function initWithDelegate(delegate:Dynamic):UIPointerInteraction;
 
 	@:native("invalidate;")
 	overload extern inline public function invalidate;():Void;
@@ -30,10 +32,10 @@ extern class UIPointerInteraction{
 	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, styleForRegion:UIPointerRegion):nullable UIPointerStyle *;
 
 	@:native("pointerInteraction:willEnterRegion:animator")
-	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, willEnterRegion:UIPointerRegion, animator:id<UIPointerInteractionAnimating>):Void;
+	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, willEnterRegion:UIPointerRegion, animator:Dynamic):Void;
 
 	@:native("pointerInteraction:willExitRegion:animator")
-	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, willExitRegion:UIPointerRegion, animator:id<UIPointerInteractionAnimating>):Void;
+	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, willExitRegion:UIPointerRegion, animator:Dynamic):Void;
 
 	@:native("location")
 	public var location:CGPoint;

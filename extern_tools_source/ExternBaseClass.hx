@@ -17,7 +17,12 @@ class ExternBaseClass {
 	/**
 	 * 定义识别
 	 */
-	public var typedefs:Map<String, String> = [];
+	public var typedefs:Map<String, ExternTypedefClass> = [];
+
+	/**
+	 * Import引入
+	 */
+	public var imports:Array<String> = [];
 
 	/**
 	 * H的文件
@@ -47,22 +52,19 @@ class ExternBaseClass {
 			isStatic: true,
 			args: null
 		});
+		var isTypedef = false;
+		var read = "";
 		var harray = _hdata.split("\n");
 		for (index => value in harray) {
-			// trace(value);
-			if (value.indexOf("typedef") == 0) {
-				value = StringTools.replace(value, "*", "");
-				var t = value.split(" ");
-				var t2 = "";
-				for (index => tv in t) {
-					if (index < 2)
-						continue;
-					if (tv.length > 0) {
-						t2 = tv;
-						break;
-					}
+			if (isTypedef || value.indexOf("typedef") == 0) {
+				isTypedef = true;
+				read += value;
+				if (read.indexOf(";") != -1) {
+					isTypedef = false;
+					var t = new ExternTypedefClass(read);
+					typedefs.set(t.className, t);
+					read = "";
 				}
-				typedefs.set(t2, t[1]);
 			} else if (value.indexOf("@property") == 0) {
 				// 属性解析
 				funcAndAttr.push(ObjcProperty.parsing(typedefs, this.classname, value));
@@ -79,6 +81,9 @@ class ExternBaseClass {
 	 */
 	public function toHaxeFile():String {
 		var haxe = "package " + pkg + ";\n\n";
+		// 统一引入
+		haxe += "import " + ObjcImport.toImport("NSString") + ";\n";
+		haxe += "import " + ObjcImport.toImport("NSData") + ";\n";
 		haxe += "@:objc\n";
 		haxe += "@:native(\"" + classname + "\")\n";
 		haxe += "@:include(\"UIKit/UIKit.h\")\n";

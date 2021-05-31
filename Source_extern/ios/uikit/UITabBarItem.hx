@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITabBarItem")
 @:include("UIKit/UIKit.h")
@@ -48,7 +50,7 @@ extern class UITabBarItem{
 	public var badgeColor:UIColor;
 
 	@:native("setBadgeTextAttributes:forState:API_AVAILABLE(ios(10.0)")
-	overload extern inline public function setBadgeTextAttributes(textAttributes:NSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):Void;
+	overload extern inline public function setBadgeTextAttributes(textAttributes:Dynamic, forState:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):Void;
 
 	@:native("badgeTextAttributesForState:API_AVAILABLE(ios(10.0)")
 	overload extern inline public function badgeTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;

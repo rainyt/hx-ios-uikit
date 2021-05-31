@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import cpp.objc.NSData;
 @:objc
 @:native("UITextFormattingCoordinator")
 @:include("UIKit/UIKit.h")
@@ -15,10 +17,10 @@ extern class UITextFormattingCoordinator{
 	overload extern inline public function updateTextAttributesWithConversionHandler(conversionHandler:NS_NOESCAPEUITextAttributesConversionHandler_Nonnull):Void;
 
 	@:native("delegate")
-	public var delegate:id<UITextFormattingCoordinatorDelegate>;
+	public var delegate:Dynamic;
 
 	@:native("fontPanelVisible")
-	public var fontPanelVisible:BOOL;
+	public var fontPanelVisible:Bool;
 
 	@:native("textFormattingCoordinatorForWindowScene")
 	overload extern inline public static function textFormattingCoordinatorForWindowScene(windowScene:UIWindowScene):UITextFormattingCoordinator;
