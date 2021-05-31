@@ -53,7 +53,7 @@ class ExternBaseClass {
 	public function new(_hdata:String, hextern:ExternHFile, defcall:ExternBaseClass->Void) {
 		var harray = _hdata.split("\n");
 		var pclassName = harray[0];
-		isProtocol = Std.isOfType(this,ExternProtocolClass);
+		isProtocol = Std.isOfType(this, ExternProtocolClass);
 		pclassName = pclassName.substr(pclassName.indexOf("@interface") + 10);
 		if (pclassName.indexOf("(") != -1) {
 			// 只有分类关系，没有继承关系

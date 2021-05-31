@@ -51,7 +51,8 @@ class ExternTypedefClass {
 				if (e3 == null || e3.indexOf("//") != -1 || e3.indexOf("#") != -1)
 					continue;
 				e3 = StringTools.replace(e3, ",", "");
-				enums.push(e3);
+				if(enums.indexOf(e3) == -1)
+					enums.push(e3);
 			}
 		} else {
 			value = StringTools.replace(value, "*", "");

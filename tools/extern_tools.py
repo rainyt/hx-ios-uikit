@@ -637,8 +637,9 @@ class ExternTypedefClass:
                 if tmp:
                     continue
                 e3 = StringTools.replace(e3,",","")
-                _this = self.enums
-                _this.append(e3)
+                if (python_internal_ArrayImpl.indexOf(self.enums,e3,None) == -1):
+                    _this = self.enums
+                    _this.append(e3)
         else:
             value = StringTools.replace(value,"*","")
             t = value.split(" ")

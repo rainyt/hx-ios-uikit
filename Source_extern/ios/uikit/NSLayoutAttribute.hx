@@ -44,9 +44,6 @@ extern abstract NSLayoutAttribute(Int) from Int to Int {
 	@:native("NSLayoutAttributeBaseline")
 	var NSLayoutAttributeBaseline;
 
-	@:native("NSLayoutAttributeBaseline")
-	var NSLayoutAttributeBaseline;
-
 	@:native("NSLayoutAttributeFirstBaseline")
 	var NSLayoutAttributeFirstBaseline;
 
