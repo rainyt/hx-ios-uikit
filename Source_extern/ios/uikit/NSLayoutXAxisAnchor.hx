@@ -14,14 +14,14 @@ extern class NSLayoutXAxisAnchor{
 	@:native("anchorWithOffsetToAnchor")
 	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutXAxisAnchor):NSLayoutDimension;
 
-	@:native("constraintEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint;
+	@:native("constraintEqualToSystemSpacingAfterAnchor:multiplier")
+	overload public function constraintEqualToSystemSpacingAfterAnchor_multiplier(anchor:NSLayoutXAxisAnchor, multiplier:Float):NSLayoutConstraint;
 
-	@:native("constraintGreaterThanOrEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintGreaterThanOrEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint;
+	@:native("constraintGreaterThanOrEqualToSystemSpacingAfterAnchor:multiplier")
+	overload public function constraintGreaterThanOrEqualToSystemSpacingAfterAnchor_multiplier(anchor:NSLayoutXAxisAnchor, multiplier:Float):NSLayoutConstraint;
 
-	@:native("constraintLessThanOrEqualToSystemSpacingAfterAnchor:multiplier:__attribute__((warn_unused_result)")
-	overload public function constraintLessThanOrEqualToSystemSpacingAfterAnchor_multiplier___attribute__((warn_unused_result)(anchor:NSLayoutXAxisAnchor, multiplier:Float, __attribute__((warn_unused_result):Dynamic):NSLayoutConstraint;
+	@:native("constraintLessThanOrEqualToSystemSpacingAfterAnchor:multiplier")
+	overload public function constraintLessThanOrEqualToSystemSpacingAfterAnchor_multiplier(anchor:NSLayoutXAxisAnchor, multiplier:Float):NSLayoutConstraint;
 
 
 }

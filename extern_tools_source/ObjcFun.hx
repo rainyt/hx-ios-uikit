@@ -3,8 +3,8 @@ import ExternBaseClass.ExternBaseClassType;
 
 class ObjcFun {
 	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClassFunProperty {
-		if(line.indexOf("API_DEPRECATED") != -1){
-			//意味着该API已经被弃用
+		if (line.indexOf("API_DEPRECATED") != -1) {
+			// 意味着该API已经被弃用
 			return null;
 		}
 		line = line.substr(0, line.lastIndexOf(";") + 1);
@@ -126,8 +126,8 @@ class ObjcFun {
 				ret += value;
 			}
 		}
-		retargs = retargs.filter((f) -> f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("API_") == -1 && f.indexOf("ios(") == -1
-			&& f != "UI_APPEARANCE_SELECTOR");
+		retargs = retargs.filter((f) -> f.indexOf("__attribute__") == -1 && f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("API_") == -1
+			&& f.indexOf("ios(") == -1 && f != "UI_APPEARANCE_SELECTOR");
 		var r:Array<ExternBaseClassFunPropertyArgs> = [];
 		for (index => value in retargs) {
 			var a = value.split(":");
@@ -138,6 +138,8 @@ class ObjcFun {
 				type: a[1]
 			});
 		}
+
+		trace(r);
 		return r;
 	}
 }

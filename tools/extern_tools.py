@@ -767,8 +767,14 @@ class ObjcFun:
             retargs = None
             retargs1 = None
             retargs2 = None
+            retargs3 = None
             startIndex = None
-            if (((f.find("UIKIT_") if ((startIndex is None)) else HxString.indexOfImpl(f,"UIKIT_",startIndex))) == -1):
+            if (((f.find("__attribute__") if ((startIndex is None)) else HxString.indexOfImpl(f,"__attribute__",startIndex))) == -1):
+                startIndex = None
+                retargs3 = (((f.find("UIKIT_") if ((startIndex is None)) else HxString.indexOfImpl(f,"UIKIT_",startIndex))) == -1)
+            else:
+                retargs3 = False
+            if retargs3:
                 startIndex = None
                 retargs2 = (((f.find("NS_") if ((startIndex is None)) else HxString.indexOfImpl(f,"NS_",startIndex))) == -1)
             else:
@@ -801,6 +807,7 @@ class ObjcFun:
             if ((a[0] if 0 < len(a) else None) == ""):
                 continue
             r.append(_hx_AnonObject({'name': (a[0] if 0 < len(a) else None), 'type': (a[1] if 1 < len(a) else None)}))
+        print(str(r))
         return r
 
 
