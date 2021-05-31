@@ -41,8 +41,8 @@ extern abstract NSLayoutFormatOptions(Int) from Int to Int {
 	@:native("NSLayoutFormatAlignAllBaseline")
 	var NSLayoutFormatAlignAllBaseline;
 
-	// @:native("NSLayoutFormatAlignAllBaseline")
-	// var NSLayoutFormatAlignAllBaseline;
+	@:native("NSLayoutFormatAlignAllBaseline")
+	var NSLayoutFormatAlignAllBaseline;
 
 	@:native("NSLayoutFormatAlignmentMask")
 	var NSLayoutFormatAlignmentMask;

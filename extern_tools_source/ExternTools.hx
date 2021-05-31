@@ -10,6 +10,11 @@ class ExternTools {
 	public static var classDefine:Map<String, ExternBaseClass> = [];
 
 	/**
+	 * 全局协议定义
+	 */
+	public static var protocol:Map<String, ExternProtocolClass> = [];
+
+	/**
 	 * 扩展目录
 	 */
 	public static var externDir:String;
@@ -23,6 +28,9 @@ class ExternTools {
 	public static function parsingFrameworkDir(indir:String, out:String):Void {
 		parsingFramework(indir, out);
 		for (key => value in ExternTools.classDefine) {
+			File.saveContent(value.saveFile, value.toHaxeFile());
+		}
+		for (key => value in ExternTools.protocol) {
 			File.saveContent(value.saveFile, value.toHaxeFile());
 		}
 	}

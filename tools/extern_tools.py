@@ -63,8 +63,8 @@ class Class: pass
 
 class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
-    __slots__ = ("pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys")
-    _hx_fields = ["pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys"]
+    __slots__ = ("isProtocol", "pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys")
+    _hx_fields = ["isProtocol", "pkg", "saveFile", "className", "extendClassName", "_imported", "_hdata", "funcAndAttr", "_propertys"]
     _hx_methods = ["putClass", "hasFuncOrAttr", "hasFuncExtendsOrAttr", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
 
     def __init__(self,_hdata,hextern,defcall):
@@ -76,6 +76,7 @@ class ExternBaseClass:
         self._propertys = haxe_ds_StringMap()
         self.funcAndAttr = []
         self._imported = []
+        self.isProtocol = False
         harray = _hdata.split("\n")
         pclassName = (harray[0] if 0 < len(harray) else None)
         startIndex = None
@@ -127,7 +128,8 @@ class ExternBaseClass:
             self.className = None
             return
         self.className = StringTools.replace(pclassName," ","")
-        defcall(self)
+        if (defcall is not None):
+            defcall(self)
         _this = self.funcAndAttr
         x = _hx_AnonObject({'type': "func", 'name': "alloc", 'returnClass': self.className, 'isStatic': True, 'args': None})
         _this.append(x)
@@ -294,7 +296,7 @@ class ExternHFile:
     _hx_class_name = "ExternHFile"
     __slots__ = ("haxeSaveDir", "haxePkg", "typedefs")
     _hx_fields = ["haxeSaveDir", "haxePkg", "typedefs"]
-    _hx_methods = ["defClass", "defTypedef"]
+    _hx_methods = ["defProtocol", "defClass", "defTypedef"]
 
     def __init__(self,file,haxeSaveDir,haxePkg):
         self.typedefs = haxe_ds_StringMap()
@@ -307,6 +309,7 @@ class ExternHFile:
         isTypedef = False
         isInterface = False
         isMacro = False
+        isProtocol = False
         _g_current = 0
         _g_array = contents
         while (_g_current < len(_g_array)):
@@ -323,61 +326,90 @@ class ExternHFile:
                 else:
                     tmp = False
                 if (not tmp):
+                    tmp1 = None
                     startIndex1 = None
-                    if (((value.find("@interface") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"@interface",startIndex1))) != -1):
-                        isInterface = True
+                    if (((value.find("@protocol") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"@protocol",startIndex1))) != -1):
+                        startIndex2 = None
+                        tmp1 = (((value.find(";") if ((startIndex2 is None)) else HxString.indexOfImpl(value,";",startIndex2))) == -1)
+                    else:
+                        tmp1 = False
+                    if tmp1:
+                        isProtocol = True
                         isRead = True
                         read.append(value)
-                        startIndex2 = None
-                        if (((value.find("@end") if ((startIndex2 is None)) else HxString.indexOfImpl(value,"@end",startIndex2))) != -1):
+                        startIndex3 = None
+                        if (((value.find("@end") if ((startIndex3 is None)) else HxString.indexOfImpl(value,"@end",startIndex3))) != -1):
                             isRead = False
-                            isInterface = False
+                            isProtocol = False
                             self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
                             read = []
                     else:
-                        startIndex3 = None
-                        if (((value.find("typedef ") if ((startIndex3 is None)) else HxString.indexOfImpl(value,"typedef ",startIndex3))) != -1):
-                            isTypedef = True
+                        startIndex4 = None
+                        if (((value.find("@interface") if ((startIndex4 is None)) else HxString.indexOfImpl(value,"@interface",startIndex4))) != -1):
+                            isInterface = True
                             isRead = True
                             read.append(value)
-                            startIndex4 = None
-                            if (((value.find(";") if ((startIndex4 is None)) else HxString.indexOfImpl(value,";",startIndex4))) != -1):
+                            startIndex5 = None
+                            if (((value.find("@end") if ((startIndex5 is None)) else HxString.indexOfImpl(value,"@end",startIndex5))) != -1):
                                 isRead = False
-                                isTypedef = False
-                                self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                isInterface = False
+                                self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
                                 read = []
+                        else:
+                            startIndex6 = None
+                            if (((value.find("typedef ") if ((startIndex6 is None)) else HxString.indexOfImpl(value,"typedef ",startIndex6))) != -1):
+                                isTypedef = True
+                                isRead = True
+                                read.append(value)
+                                startIndex7 = None
+                                if (((value.find(";") if ((startIndex7 is None)) else HxString.indexOfImpl(value,";",startIndex7))) != -1):
+                                    isRead = False
+                                    isTypedef = False
+                                    self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                    read = []
             else:
                 read.append(value)
-                tmp1 = None
+                tmp2 = None
                 if isMacro:
-                    startIndex5 = None
-                    tmp1 = (((value.find("#endif") if ((startIndex5 is None)) else HxString.indexOfImpl(value,"#endif",startIndex5))) != -1)
+                    startIndex8 = None
+                    tmp2 = (((value.find("#endif") if ((startIndex8 is None)) else HxString.indexOfImpl(value,"#endif",startIndex8))) != -1)
                 else:
-                    tmp1 = False
-                if (not tmp1):
-                    tmp2 = None
+                    tmp2 = False
+                if (not tmp2):
+                    tmp3 = None
                     if isTypedef:
-                        startIndex6 = None
-                        tmp2 = (((value.find(";") if ((startIndex6 is None)) else HxString.indexOfImpl(value,";",startIndex6))) != -1)
+                        startIndex9 = None
+                        tmp3 = (((value.find(";") if ((startIndex9 is None)) else HxString.indexOfImpl(value,";",startIndex9))) != -1)
                     else:
-                        tmp2 = False
-                    if tmp2:
+                        tmp3 = False
+                    if tmp3:
                         isRead = False
                         isTypedef = False
                         self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
                         read = []
                     else:
-                        tmp3 = None
-                        if isInterface:
-                            startIndex7 = None
-                            tmp3 = (((value.find("@end") if ((startIndex7 is None)) else HxString.indexOfImpl(value,"@end",startIndex7))) != -1)
+                        tmp4 = None
+                        if (isInterface or isProtocol):
+                            startIndex10 = None
+                            tmp4 = (((value.find("@end") if ((startIndex10 is None)) else HxString.indexOfImpl(value,"@end",startIndex10))) != -1)
                         else:
-                            tmp3 = False
-                        if tmp3:
-                            isRead = False
-                            isInterface = False
-                            self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                            tmp4 = False
+                        if tmp4:
+                            if isInterface:
+                                isRead = False
+                                isInterface = False
+                                self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                            if isProtocol:
+                                isRead = False
+                                isProtocol = False
+                                self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
                             read = []
+
+    def defProtocol(self,data):
+        t = ExternProtocolClass(data,self)
+        t.saveFile = (((HxOverrides.stringOrNull(self.haxeSaveDir) + "/") + HxOverrides.stringOrNull(t.className)) + ".hx")
+        t.pkg = self.haxePkg
+        ExternTools.protocol.h[t.className] = t
 
     def defClass(self,data):
         _gthis = self
@@ -401,10 +433,25 @@ class ExternHFile:
 
 
 
+class ExternProtocolClass(ExternBaseClass):
+    _hx_class_name = "ExternProtocolClass"
+    __slots__ = ()
+    _hx_fields = []
+    _hx_methods = []
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = ExternBaseClass
+
+
+    def __init__(self,data,hextern):
+        self.isProtocol = True
+        super().__init__(data,hextern,None)
+
+
 class ExternTools:
     _hx_class_name = "ExternTools"
     __slots__ = ()
-    _hx_statics = ["classDefine", "externDir", "main", "parsingFrameworkDir", "parsingFramework", "parsingHFile"]
+    _hx_statics = ["classDefine", "protocol", "externDir", "main", "parsingFrameworkDir", "parsingFramework", "parsingHFile"]
     externDir = None
 
     @staticmethod
@@ -417,6 +464,16 @@ class ExternTools:
     def parsingFrameworkDir(indir,out):
         ExternTools.parsingFramework(indir,out)
         _hx_map = ExternTools.classDefine
+        _g_map = _hx_map
+        _g_keys = _hx_map.keys()
+        while _g_keys.hasNext():
+            key = _g_keys.next()
+            _g1_value = _g_map.get(key)
+            _g1_key = key
+            key1 = _g1_key
+            value = _g1_value
+            sys_io_File.saveContent(value.saveFile,value.toHaxeFile())
+        _hx_map = ExternTools.protocol
         _g_map = _hx_map
         _g_keys = _hx_map.keys()
         while _g_keys.hasNext():
@@ -987,7 +1044,6 @@ class ObjcProperty:
             else:
                 return False
         p = list(filter(_hx_local_7,p))
-        print(str(p))
         return _hx_AnonObject({'name': python_internal_ArrayImpl._get(p, (len(p) - 1)), 'type': ("func" if isClass else "property"), 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': isClass, 'args': None})
 
 
@@ -1734,6 +1790,7 @@ Math.PI = python_lib_Math.pi
 ExternBaseClassType.FUNC = "func"
 ExternBaseClassType.PROPERTY = "property"
 ExternTools.classDefine = haxe_ds_StringMap()
+ExternTools.protocol = haxe_ds_StringMap()
 Sys._programPath = sys_FileSystem.fullPath(python_lib_Inspect.getsourcefile(Sys))
 python_Boot.keywords = set(["and", "del", "from", "not", "with", "as", "elif", "global", "or", "yield", "assert", "else", "if", "pass", "None", "break", "except", "import", "raise", "True", "class", "exec", "in", "return", "False", "continue", "finally", "is", "try", "def", "for", "lambda", "while"])
 python_Boot.prefixLength = len("_hx_")

@@ -6,6 +6,11 @@ import sys.io.File;
  */
 class ExternBaseClass {
 	/**
+	 * 是否为协议类型
+	 */
+	public var isProtocol:Bool = false;
+
+	/**
 	 * 包名
 	 */
 	public var pkg:String;
@@ -38,7 +43,7 @@ class ExternBaseClass {
 	/**
 	 * 方法与属性
 	 */
-	private var funcAndAttr:Array<ExternBaseClassFunProperty> = [];
+	public var funcAndAttr:Array<ExternBaseClassFunProperty> = [];
 
 	/**
 	 * 已定义的属性
@@ -76,7 +81,8 @@ class ExternBaseClass {
 			return;
 		}
 		this.className = StringTools.replace(pclassName, " ", "");
-		defcall(this);
+		if (defcall != null)
+			defcall(this);
 		funcAndAttr.push({
 			type: ExternBaseClassType.FUNC,
 			name: "alloc",
