@@ -15,10 +15,10 @@ extern class NSTextStorage{
 	public var layoutManagers:>;
 
 	@:native("addLayoutManager")
-	overload extern inline public function addLayoutManager(NSLayoutManager:null:):void;
+	overload extern inline public function addLayoutManager(aLayoutManager:NSLayoutManager):Void;
 
 	@:native("removeLayoutManager")
-	overload extern inline public function removeLayoutManager(NSLayoutManager:null:):void;
+	overload extern inline public function removeLayoutManager(aLayoutManager:NSLayoutManager):Void;
 
 	@:native("editedMask")
 	public var editedMask:NSTextStorageEditActions;
@@ -32,26 +32,26 @@ extern class NSTextStorage{
 	@:native("delegate")
 	public var delegate:<NSTextStorageDelegate>;
 
-	@:native("edited:range")
-	overload extern inline public function edited(editedMask:NSTextStorageEditActions, range:NSRange:NSInteger):void;
+	@:native("edited:range:changeInLength")
+	overload extern inline public function edited(editedMask:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
 
 	@:native("processEditing;")
-	overload extern inline public function processEditing;():void;
+	overload extern inline public function processEditing;():Void;
 
 	@:native("fixesAttributesLazily")
 	public var fixesAttributesLazily:BOOL;
 
 	@:native("invalidateAttributesInRange")
-	overload extern inline public function invalidateAttributesInRange(range:NSRange):void;
+	overload extern inline public function invalidateAttributesInRange(range:NSRange):Void;
 
 	@:native("ensureAttributesAreFixedInRange")
-	overload extern inline public function ensureAttributesAreFixedInRange(range:NSRange):void;
+	overload extern inline public function ensureAttributesAreFixedInRange(range:NSRange):Void;
 
-	@:native("textStorage")
-	overload extern inline public function textStorage(NSTextStorage:null::NSTextStorageEditActions:NSRange:NSInteger:macos(10.11:7.0):void;
+	@:native("textStorage:willProcessEditing:range:changeInLength")
+	overload extern inline public function textStorage(textStorage:NSTextStorage, willProcessEditing:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
 
-	@:native("textStorage")
-	overload extern inline public function textStorage(NSTextStorage:null::NSTextStorageEditActions:NSRange:NSInteger:macos(10.11:7.0):void;
+	@:native("textStorage:didProcessEditing:range:changeInLength")
+	overload extern inline public function textStorage(textStorage:NSTextStorage, didProcessEditing:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
 
 
 }

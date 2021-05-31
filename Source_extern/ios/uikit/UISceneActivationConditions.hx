@@ -15,7 +15,7 @@ extern class UISceneActivationConditions{
 	overload extern inline public function init():UISceneActivationConditions;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UISceneActivationConditions;
+	overload extern inline public function initWithCoder(aDecoder:NSCoder):UISceneActivationConditions;
 
 	@:native("predicateWithValue:YES]")
 	public var predicateWithValue:YES]:[NSPredicate;

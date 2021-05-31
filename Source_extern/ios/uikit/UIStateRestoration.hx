@@ -12,6 +12,9 @@ extern class UIStateRestoration{
 	overload extern inline public static function autorelease():UIStateRestoration;
 
 	@:native("")
+	overload extern inline public static function ():nullable UIViewController *;
+
+	@:native("")
 	overload extern inline public function ():nullable NSString *;
 
 	@:native("")
@@ -24,13 +27,16 @@ extern class UIStateRestoration{
 	public var objectRestorationClass:Class<UIObjectRestoration>;
 
 	@:native("")
-	overload extern inline public function ():void;
+	overload extern inline public function ():Void;
 
 	@:native("")
-	overload extern inline public function ():void;
+	overload extern inline public function ():Void;
 
 	@:native("")
-	overload extern inline public function ():void;
+	overload extern inline public function ():Void;
+
+	@:native("")
+	overload extern inline public static function ():nullable id<UIStateRestoring>;
 
 
 }

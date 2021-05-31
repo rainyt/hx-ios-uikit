@@ -11,6 +11,9 @@ extern class UISwipeActionsConfiguration{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISwipeActionsConfiguration;
 
+	@:native("configurationWithActions")
+	overload extern inline public static function configurationWithActions(actions:NSArray<UIContextualAction>):UISwipeActionsConfiguration;
+
 	@:native("actions")
 	public var actions:>;
 

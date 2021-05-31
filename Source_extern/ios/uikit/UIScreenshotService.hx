@@ -14,6 +14,9 @@ extern class UIScreenshotService{
 	@:native("init")
 	overload extern inline public function init():UIScreenshotService;
 
+	@:native("new")
+	overload extern inline public static function new():UIScreenshotService;
+
 	@:native("delegate")
 	public var delegate:id<UIScreenshotServiceDelegate>;
 
@@ -23,8 +26,8 @@ extern class UIScreenshotService{
 	@:native("screenshotService")
 	public var screenshotService:UIScreenshotService;
 
-	@:native("screenshotService")
-	overload extern inline public function screenshotService(UIScreenshotService:null::void(^:NSData_NullablePDFData,NSIntegerindexOfCurrentPage,CGRectrectInCurrentPage):void;
+	@:native("screenshotService:generatePDFRepresentationWithCompletion")
+	overload extern inline public function screenshotService(screenshotService:UIScreenshotService, generatePDFRepresentationWithCompletion:Dynamic):Void;
 
 
 }

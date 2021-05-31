@@ -32,59 +32,59 @@ extern class UIDiffableDataSource{
 	@:native("sectionIdentifierForSectionContainingItemIdentifier")
 	overload extern inline public function sectionIdentifierForSectionContainingItemIdentifier(itemIdentifier:ItemIdentifierType):nullable SectionIdentifierType;
 
-	@:native("indexOfItemIdentifier")
-	overload extern inline public function indexOfItemIdentifier(itemIdentifier:ItemIdentifierType):NSInteger;
+	@:native("indexOfItemIdentifier::::::://:item:is:present")
+	overload extern inline public function indexOfItemIdentifier(itemIdentifier:ItemIdentifierType, :, :, :, :, :, :, //:If, item:identifier, is:not, present:returns):NSInteger;
 
-	@:native("indexOfSectionIdentifier")
-	overload extern inline public function indexOfSectionIdentifier(sectionIdentifier:SectionIdentifierType):NSInteger;
+	@:native("indexOfSectionIdentifier:::If:identifier:not")
+	overload extern inline public function indexOfSectionIdentifier(sectionIdentifier:SectionIdentifierType, :, ://, If:section, identifier:is, not:present):NSInteger;
 
-	@:native("appendItemsWithIdentifiers")
-	overload extern inline public function appendItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>):void;
+	@:native("appendItemsWithIdentifiers::://:appends")
+	overload extern inline public function appendItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>, :, :, //:convenience, appends:into):Void;
 
 	@:native("appendItemsWithIdentifiers:intoSectionWithIdentifier")
-	overload extern inline public function appendItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>, intoSectionWithIdentifier:SectionIdentifierType):void;
+	overload extern inline public function appendItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>, intoSectionWithIdentifier:SectionIdentifierType):Void;
 
 	@:native("insertItemsWithIdentifiers:beforeItemWithIdentifier")
-	overload extern inline public function insertItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>, beforeItemWithIdentifier:ItemIdentifierType):void;
+	overload extern inline public function insertItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>, beforeItemWithIdentifier:ItemIdentifierType):Void;
 
 	@:native("insertItemsWithIdentifiers:afterItemWithIdentifier")
-	overload extern inline public function insertItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>, afterItemWithIdentifier:ItemIdentifierType):void;
+	overload extern inline public function insertItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>, afterItemWithIdentifier:ItemIdentifierType):Void;
 
 	@:native("deleteItemsWithIdentifiers")
-	overload extern inline public function deleteItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>):void;
+	overload extern inline public function deleteItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>):Void;
 
 	@:native("deleteAllItems;")
-	overload extern inline public function deleteAllItems;():void;
+	overload extern inline public function deleteAllItems;():Void;
 
 	@:native("moveItemWithIdentifier:beforeItemWithIdentifier")
-	overload extern inline public function moveItemWithIdentifier(fromIdentifier:ItemIdentifierType, beforeItemWithIdentifier:ItemIdentifierType):void;
+	overload extern inline public function moveItemWithIdentifier(fromIdentifier:ItemIdentifierType, beforeItemWithIdentifier:ItemIdentifierType):Void;
 
 	@:native("moveItemWithIdentifier:afterItemWithIdentifier")
-	overload extern inline public function moveItemWithIdentifier(fromIdentifier:ItemIdentifierType, afterItemWithIdentifier:ItemIdentifierType):void;
+	overload extern inline public function moveItemWithIdentifier(fromIdentifier:ItemIdentifierType, afterItemWithIdentifier:ItemIdentifierType):Void;
 
 	@:native("reloadItemsWithIdentifiers")
-	overload extern inline public function reloadItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>):void;
+	overload extern inline public function reloadItemsWithIdentifiers(identifiers:NSArray<ItemIdentifierType>):Void;
 
 	@:native("appendSectionsWithIdentifiers")
-	overload extern inline public function appendSectionsWithIdentifiers(sectionIdentifiers:NSArray):void;
+	overload extern inline public function appendSectionsWithIdentifiers(sectionIdentifiers:NSArray):Void;
 
 	@:native("insertSectionsWithIdentifiers:beforeSectionWithIdentifier")
-	overload extern inline public function insertSectionsWithIdentifiers(sectionIdentifiers:NSArray<SectionIdentifierType>, beforeSectionWithIdentifier:SectionIdentifierType):void;
+	overload extern inline public function insertSectionsWithIdentifiers(sectionIdentifiers:NSArray<SectionIdentifierType>, beforeSectionWithIdentifier:SectionIdentifierType):Void;
 
 	@:native("insertSectionsWithIdentifiers:afterSectionWithIdentifier")
-	overload extern inline public function insertSectionsWithIdentifiers(sectionIdentifiers:NSArray<SectionIdentifierType>, afterSectionWithIdentifier:SectionIdentifierType):void;
+	overload extern inline public function insertSectionsWithIdentifiers(sectionIdentifiers:NSArray<SectionIdentifierType>, afterSectionWithIdentifier:SectionIdentifierType):Void;
 
 	@:native("deleteSectionsWithIdentifiers")
-	overload extern inline public function deleteSectionsWithIdentifiers(sectionIdentifiers:NSArray<SectionIdentifierType>):void;
+	overload extern inline public function deleteSectionsWithIdentifiers(sectionIdentifiers:NSArray<SectionIdentifierType>):Void;
 
 	@:native("moveSectionWithIdentifier:beforeSectionWithIdentifier")
-	overload extern inline public function moveSectionWithIdentifier(fromSectionIdentifier:SectionIdentifierType, beforeSectionWithIdentifier:SectionIdentifierType):void;
+	overload extern inline public function moveSectionWithIdentifier(fromSectionIdentifier:SectionIdentifierType, beforeSectionWithIdentifier:SectionIdentifierType):Void;
 
 	@:native("moveSectionWithIdentifier:afterSectionWithIdentifier")
-	overload extern inline public function moveSectionWithIdentifier(fromSectionIdentifier:SectionIdentifierType, afterSectionWithIdentifier:SectionIdentifierType):void;
+	overload extern inline public function moveSectionWithIdentifier(fromSectionIdentifier:SectionIdentifierType, afterSectionWithIdentifier:SectionIdentifierType):Void;
 
 	@:native("reloadSectionsWithIdentifiers")
-	overload extern inline public function reloadSectionsWithIdentifiers(sectionIdentifiers:NSArray<SectionIdentifierType>):void;
+	overload extern inline public function reloadSectionsWithIdentifiers(sectionIdentifiers:NSArray<SectionIdentifierType>):Void;
 
 	@:native("sectionIdentifier")
 	public var sectionIdentifier:SectionIdentifierType;
@@ -140,6 +140,9 @@ extern class UIDiffableDataSource{
 	@:native("init")
 	overload extern inline public function init():UIDiffableDataSource;
 
+	@:native("new")
+	overload extern inline public static function new():UIDiffableDataSource;
+
 	@:native("supplementaryViewProvider")
 	public var supplementaryViewProvider:UICollectionViewDiffableDataSourceSupplementaryViewProvider;
 
@@ -147,10 +150,10 @@ extern class UIDiffableDataSource{
 	overload extern inline public function snapshot;():NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>*;
 
 	@:native("applySnapshot:animatingDifferences")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL):void;
+	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL):Void;
 
-	@:native("applySnapshot:animatingDifferences")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL:void(^_Nullable:void):void;
+	@:native("applySnapshot:animatingDifferences:completion")
+	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL, completion:Dynamic):Void;
 
 	@:native("itemIdentifierForIndexPath")
 	overload extern inline public function itemIdentifierForIndexPath(indexPath:NSIndexPath):nullable ItemIdentifierType;
@@ -161,14 +164,14 @@ extern class UIDiffableDataSource{
 	@:native("API_AVAILABLE(ios(14.0),tvos(14.0))")
 	public var API_AVAILABLE(ios(14.0),tvos(14.0)):reorderingHandlers;
 
-	@:native("applySnapshot:toSection")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, toSection:SectionIdentifierType:BOOL:ios(14.0:14.0):void;
+	@:native("applySnapshot:toSection:animatingDifferences")
+	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, toSection:SectionIdentifierType, animatingDifferences:BOOL):Void;
 
-	@:native("applySnapshot:toSection")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, toSection:SectionIdentifierType:BOOL:void(^_Nullable:void:ios(14.0:14.0):void;
+	@:native("applySnapshot:toSection:animatingDifferences:completion")
+	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>, toSection:SectionIdentifierType, animatingDifferences:BOOL, completion:Dynamic):Void;
 
 	@:native("snapshotForSection")
-	overload extern inline public function snapshotForSection(section:SectionIdentifierType:API_AVAILABLE(ios(14.0:14.0):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
+	overload extern inline public function snapshotForSection(section:SectionIdentifierType):NSDiffableDataSourceSectionSnapshot<ItemIdentifierType>*;
 
 	@:native("API_AVAILABLE(ios(14.0),tvos(14.0))")
 	public var API_AVAILABLE(ios(14.0),tvos(14.0)):sectionSnapshotHandlers;
@@ -179,14 +182,17 @@ extern class UIDiffableDataSource{
 	@:native("init")
 	overload extern inline public function init():UIDiffableDataSource;
 
+	@:native("new")
+	overload extern inline public static function new():UIDiffableDataSource;
+
 	@:native("snapshot;")
 	overload extern inline public function snapshot;():NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>*;
 
 	@:native("applySnapshot:animatingDifferences")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL):void;
+	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL):Void;
 
-	@:native("applySnapshot:animatingDifferences")
-	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL:void(^_Nullable:void):void;
+	@:native("applySnapshot:animatingDifferences:completion")
+	overload extern inline public function applySnapshot(snapshot:NSDiffableDataSourceSnapshot<SectionIdentifierType,ItemIdentifierType>, animatingDifferences:BOOL, completion:Dynamic):Void;
 
 	@:native("itemIdentifierForIndexPath")
 	overload extern inline public function itemIdentifierForIndexPath(indexPath:NSIndexPath):nullable ItemIdentifierType;

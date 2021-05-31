@@ -11,6 +11,9 @@ extern class UIUserNotificationSettings{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIUserNotificationSettings;
 
+	@:native("settingsForTypes")
+	overload extern inline public static function settingsForTypes():UIUserNotificationSettings;
+
 	@:native("types")
 	public var types:UIUserNotificationType;
 
@@ -20,26 +23,26 @@ extern class UIUserNotificationSettings{
 	@:native("init")
 	overload extern inline public function init():UIUserNotificationSettings;
 
-	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null::tvos):UIUserNotificationSettings;
+	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationSettings;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):identifier;
 
 	@:native("actionsForContext")
-	overload extern inline public function actionsForContext(context:UIUserNotificationActionContext:API_UNAVAILABLE(tvos):nullable NSArray<UIUserNotificationAction *> *;
+	overload extern inline public function actionsForContext(context:UIUserNotificationActionContext):nullable NSArray<UIUserNotificationAction *> *;
 
 	@:native("identifier")
 	public var identifier:NSString;
 
-	@:native("setActions")
-	overload extern inline public function setActions(nullable:null:NSArray<UIUserNotificationAction>:UIUserNotificationActionContext):void;
+	@:native("setActions:forContext")
+	overload extern inline public function setActions(actions:nullableNSArray<UIUserNotificationAction>, forContext:UIUserNotificationActionContext):Void;
 
 	@:native("init")
 	overload extern inline public function init():UIUserNotificationSettings;
 
-	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null::tvos):UIUserNotificationSettings;
+	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UIUserNotificationSettings;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):identifier;

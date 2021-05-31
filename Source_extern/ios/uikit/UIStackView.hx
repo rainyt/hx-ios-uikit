@@ -15,22 +15,22 @@ extern class UIStackView{
 	overload extern inline public function initWithFrame(frame:CGRect):UIStackView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIStackView;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIStackView;
 
-	@:native("initWithArrangedSubviews")
-	overload extern inline public function initWithArrangedSubviews(NSArray<__kindof:null:UIView>):UIStackView;
+	@:native("initWithArrangedSubviews://:views:subviews")
+	overload extern inline public function initWithArrangedSubviews(views:NSArray<__kindofUIView>, //:Adds, views:as, subviews:of):UIStackView;
 
 	@:native("arrangedSubviews")
 	public var arrangedSubviews:>;
 
 	@:native("addArrangedSubview")
-	overload extern inline public function addArrangedSubview(UIView:null:):void;
+	overload extern inline public function addArrangedSubview(view:UIView):Void;
 
 	@:native("removeArrangedSubview")
-	overload extern inline public function removeArrangedSubview(UIView:null:):void;
+	overload extern inline public function removeArrangedSubview(view:UIView):Void;
 
-	@:native("insertArrangedSubview")
-	overload extern inline public function insertArrangedSubview(UIView:null::NSUInteger):void;
+	@:native("insertArrangedSubview:atIndex")
+	overload extern inline public function insertArrangedSubview(view:UIView, atIndex:NSUInteger):Void;
 
 	@:native("axis")
 	public var axis:UILayoutConstraintAxis;
@@ -45,10 +45,10 @@ extern class UIStackView{
 	public var spacing:CGFloat;
 
 	@:native("setCustomSpacing:afterView")
-	overload extern inline public function setCustomSpacing(spacing:CGFloat, afterView:UIView:ios(11.0:11.0):void;
+	overload extern inline public function setCustomSpacing(spacing:CGFloat, afterView:UIView):Void;
 
 	@:native("customSpacingAfterView")
-	overload extern inline public function customSpacingAfterView(UIView:null::ios(11.0:11.0):CGFloat;
+	overload extern inline public function customSpacingAfterView(arrangedSubview:UIView):CGFloat;
 
 	@:native("baselineRelativeArrangement")
 	public var baselineRelativeArrangement:BOOL;

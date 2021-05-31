@@ -23,20 +23,20 @@ extern class UIActivity{
 	@:native("value")
 	public var value:non-nil;
 
-	@:native("canPerformWithActivityItems")
-	overload extern inline public function canPerformWithActivityItems(NSArray:null:):BOOL;
+	@:native("canPerformWithActivityItems:://:this:return:of:based:items.")
+	overload extern inline public function canPerformWithActivityItems(activityItems:NSArray, :, //:override, this:to, return:availability, of:activity, based:on, items.:default):BOOL;
 
-	@:native("prepareWithActivityItems")
-	overload extern inline public function prepareWithActivityItems(NSArray:null:):void;
+	@:native("prepareWithActivityItems::::override:extract:and:up:HI.")
+	overload extern inline public function prepareWithActivityItems(activityItems:NSArray, :, :, ://, override:to, extract:items, and:set, up:your, HI.:default):Void;
 
 	@:native("nil")
 	public var nil:returns;
 
 	@:native("performActivity;")
-	overload extern inline public function performActivity;():void;
+	overload extern inline public function performActivity;():Void;
 
-	@:native("activityDidFinish")
-	overload extern inline public function activityDidFinish(completed:BOOL):void;
+	@:native("activityDidFinish:://:must:this:activity")
+	overload extern inline public function activityDidFinish(completed:BOOL, :, //:activity, must:call, this:when, activity:is):Void;
 
 
 }

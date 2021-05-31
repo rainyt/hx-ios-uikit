@@ -14,6 +14,9 @@ extern class UIScribbleInteraction{
 	@:native("init")
 	overload extern inline public function init():UIScribbleInteraction;
 
+	@:native("new")
+	overload extern inline public static function new():UIScribbleInteraction;
+
 	@:native("initWithDelegate")
 	overload extern inline public function initWithDelegate(delegate:id<UIScribbleInteractionDelegate>):UIScribbleInteraction;
 
@@ -26,17 +29,17 @@ extern class UIScribbleInteraction{
 	@:native("pencilInputExpected")
 	public var pencilInputExpected:BOOL;
 
-	@:native("scribbleInteraction:scribbleInteraction(_")
-	overload extern inline public function scribbleInteraction(UIScribbleInteraction:null::CGPoint, scribbleInteraction(_):BOOL;
+	@:native("scribbleInteraction:shouldBeginAtLocation")
+	overload extern inline public function scribbleInteraction(interaction:UIScribbleInteraction, shouldBeginAtLocation:CGPoint):BOOL;
 
 	@:native("scribbleInteractionShouldDelayFocus")
-	overload extern inline public function scribbleInteractionShouldDelayFocus(UIScribbleInteraction:null:):BOOL;
+	overload extern inline public function scribbleInteractionShouldDelayFocus(interaction:UIScribbleInteraction):BOOL;
 
 	@:native("scribbleInteractionWillBeginWriting")
-	overload extern inline public function scribbleInteractionWillBeginWriting(UIScribbleInteraction:null:):void;
+	overload extern inline public function scribbleInteractionWillBeginWriting(interaction:UIScribbleInteraction):Void;
 
 	@:native("scribbleInteractionDidFinishWriting")
-	overload extern inline public function scribbleInteractionDidFinishWriting(UIScribbleInteraction:null:):void;
+	overload extern inline public function scribbleInteractionDidFinishWriting(interaction:UIScribbleInteraction):Void;
 
 
 }

@@ -11,6 +11,9 @@ extern class UISceneOptions{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISceneOptions;
 
+	@:native("new")
+	overload extern inline public static function new():UISceneOptions;
+
 	@:native("init")
 	overload extern inline public function init():UISceneOptions;
 
@@ -34,6 +37,9 @@ extern class UISceneOptions{
 
 	@:native("cloudKitShareMetadata")
 	public var cloudKitShareMetadata:CKShareMetadata;
+
+	@:native("new")
+	overload extern inline public static function new():UISceneOptions;
 
 	@:native("init")
 	overload extern inline public function init():UISceneOptions;

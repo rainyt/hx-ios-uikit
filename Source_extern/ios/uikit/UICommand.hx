@@ -20,11 +20,17 @@ extern class UICommand{
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;
 
+	@:native("alternateWithTitle")
+	overload extern inline public static function alternateWithTitle():UICommand;
+
+	@:native("new")
+	overload extern inline public static function new():UICommand;
+
 	@:native("init")
 	overload extern inline public function init():UICommand;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UICommand;
+	overload extern inline public function initWithCoder(coder:NSCoder):UICommand;
 
 	@:native("title")
 	public var title:NSString;
@@ -50,11 +56,20 @@ extern class UICommand{
 	@:native("alternates")
 	public var alternates:>;
 
+	@:native("commandWithTitle")
+	overload extern inline public static function commandWithTitle():UICommand;
+
+	@:native("commandWithTitle")
+	overload extern inline public static function commandWithTitle():UICommand;
+
+	@:native("new")
+	overload extern inline public static function new():UICommand;
+
 	@:native("init")
 	overload extern inline public function init():UICommand;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UICommand;
+	overload extern inline public function initWithCoder(coder:NSCoder):UICommand;
 
 
 }

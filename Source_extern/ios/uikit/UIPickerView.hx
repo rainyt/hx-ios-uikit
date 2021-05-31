@@ -33,40 +33,40 @@ extern class UIPickerView{
 	overload extern inline public function viewForRow(row:NSInteger, forComponent:NSInteger):nullable UIView *;
 
 	@:native("reloadAllComponents;")
-	overload extern inline public function reloadAllComponents;():void;
+	overload extern inline public function reloadAllComponents;():Void;
 
 	@:native("reloadComponent")
-	overload extern inline public function reloadComponent(component:NSInteger):void;
+	overload extern inline public function reloadComponent(component:NSInteger):Void;
 
-	@:native("selectRow:inComponent")
-	overload extern inline public function selectRow(row:NSInteger, inComponent:NSInteger:BOOL):void;
+	@:native("selectRow:inComponent:animated::scrolls:specified")
+	overload extern inline public function selectRow(row:NSInteger, inComponent:NSInteger, animated:BOOL, ://, scrolls:the, specified:row):Void;
 
-	@:native("selectedRowInComponent")
-	overload extern inline public function selectedRowInComponent(component:NSInteger):NSInteger;
+	@:native("selectedRowInComponent:::::::::::::::::://:selected:-1")
+	overload extern inline public function selectedRowInComponent(component:NSInteger, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, //:returns, selected:row., -1:if):NSInteger;
 
 	@:native("numberOfComponentsInPickerView")
-	overload extern inline public function numberOfComponentsInPickerView(UIPickerView:null:):NSInteger;
+	overload extern inline public function numberOfComponentsInPickerView(pickerView:UIPickerView):NSInteger;
 
-	@:native("pickerView")
-	overload extern inline public function pickerView(UIPickerView:null::NSInteger):NSInteger;
+	@:native("pickerView:numberOfRowsInComponent")
+	overload extern inline public function pickerView(pickerView:UIPickerView, numberOfRowsInComponent:NSInteger):NSInteger;
 
-	@:native("pickerView")
-	overload extern inline public function pickerView(UIPickerView:null::NSInteger:tvos):CGFloat;
+	@:native("pickerView:widthForComponent")
+	overload extern inline public function pickerView(pickerView:UIPickerView, widthForComponent:NSInteger):CGFloat;
 
-	@:native("pickerView")
-	overload extern inline public function pickerView(UIPickerView:null::NSInteger:tvos):CGFloat;
+	@:native("pickerView:rowHeightForComponent")
+	overload extern inline public function pickerView(pickerView:UIPickerView, rowHeightForComponent:NSInteger):CGFloat;
 
-	@:native("pickerView")
-	overload extern inline public function pickerView(UIPickerView:null::NSInteger:NSInteger:tvos):nullable NSString *;
+	@:native("pickerView:titleForRow:forComponent")
+	overload extern inline public function pickerView(pickerView:UIPickerView, titleForRow:NSInteger, forComponent:NSInteger):nullable NSString *;
 
-	@:native("pickerView")
-	overload extern inline public function pickerView(UIPickerView:null::NSInteger:NSInteger:ios(6.0:tvos):nullable NSAttributedString *;
+	@:native("pickerView:attributedTitleForRow:forComponent:API_AVAILABLE(ios(6.0)://:title:favored:both")
+	overload extern inline public function pickerView(pickerView:UIPickerView, attributedTitleForRow:NSInteger, forComponent:NSInteger, API_AVAILABLE(ios(6.0):Dynamic, //:attributed, title:is, favored:if, both:methods):nullable NSAttributedString *;
 
-	@:native("pickerView")
-	overload extern inline public function pickerView(UIPickerView:null::NSInteger:NSInteger:nullableUIView:tvos):UIView *;
+	@:native("pickerView:viewForRow:forComponent:reusingView")
+	overload extern inline public function pickerView(pickerView:UIPickerView, viewForRow:NSInteger, forComponent:NSInteger, reusingView:nullableUIView):UIView *;
 
-	@:native("pickerView")
-	overload extern inline public function pickerView(UIPickerView:null::NSInteger:NSInteger:tvos):void;
+	@:native("pickerView:didSelectRow:inComponent")
+	overload extern inline public function pickerView(pickerView:UIPickerView, didSelectRow:NSInteger, inComponent:NSInteger):Void;
 
 
 }

@@ -12,37 +12,37 @@ extern class UITextView{
 	overload extern inline public static function autorelease():UITextView;
 
 	@:native("textViewShouldBeginEditing")
-	overload extern inline public function textViewShouldBeginEditing(UITextView:null:):BOOL;
+	overload extern inline public function textViewShouldBeginEditing(textView:UITextView):BOOL;
 
 	@:native("textViewShouldEndEditing")
-	overload extern inline public function textViewShouldEndEditing(UITextView:null:):BOOL;
+	overload extern inline public function textViewShouldEndEditing(textView:UITextView):BOOL;
 
 	@:native("textViewDidBeginEditing")
-	overload extern inline public function textViewDidBeginEditing(UITextView:null:):void;
+	overload extern inline public function textViewDidBeginEditing(textView:UITextView):Void;
 
 	@:native("textViewDidEndEditing")
-	overload extern inline public function textViewDidEndEditing(UITextView:null:):void;
+	overload extern inline public function textViewDidEndEditing(textView:UITextView):Void;
 
-	@:native("textView")
-	overload extern inline public function textView(UITextView:null::NSRange:NSString):BOOL;
+	@:native("textView:shouldChangeTextInRange:replacementText")
+	overload extern inline public function textView(textView:UITextView, shouldChangeTextInRange:NSRange, replacementText:NSString):BOOL;
 
 	@:native("textViewDidChange")
-	overload extern inline public function textViewDidChange(UITextView:null:):void;
+	overload extern inline public function textViewDidChange(textView:UITextView):Void;
 
 	@:native("textViewDidChangeSelection")
-	overload extern inline public function textViewDidChangeSelection(UITextView:null:):void;
+	overload extern inline public function textViewDidChangeSelection(textView:UITextView):Void;
 
-	@:native("textView")
-	overload extern inline public function textView(UITextView:null::NSURL:NSRange:UITextItemInteraction:ios(10.0):BOOL;
+	@:native("textView:shouldInteractWithURL:inRange:interaction")
+	overload extern inline public function textView(textView:UITextView, shouldInteractWithURL:NSURL, inRange:NSRange, interaction:UITextItemInteraction):BOOL;
 
-	@:native("textView")
-	overload extern inline public function textView(UITextView:null::NSTextAttachment:NSRange:UITextItemInteraction:ios(10.0):BOOL;
+	@:native("textView:shouldInteractWithTextAttachment:inRange:interaction")
+	overload extern inline public function textView(textView:UITextView, shouldInteractWithTextAttachment:NSTextAttachment, inRange:NSRange, interaction:UITextItemInteraction):BOOL;
 
-	@:native("textView:"textView")
-	overload extern inline public function textView(UITextView:null::NSURL:NSRange, "textView:7.0,10.0):BOOL;
+	@:native("textView:shouldInteractWithURL:inRange")
+	overload extern inline public function textView(textView:UITextView, shouldInteractWithURL:NSURL, inRange:NSRange):BOOL;
 
-	@:native("textView:"textView")
-	overload extern inline public function textView(UITextView:null::NSTextAttachment:NSRange, "textView:7.0,10.0):BOOL;
+	@:native("textView:shouldInteractWithTextAttachment:inRange")
+	overload extern inline public function textView(textView:UITextView, shouldInteractWithTextAttachment:NSTextAttachment, inRange:NSRange):BOOL;
 
 	@:native("delegate")
 	public var delegate:id<UITextViewDelegate>;
@@ -81,7 +81,7 @@ extern class UITextView{
 	public var changes:selection;
 
 	@:native("scrollRangeToVisible")
-	overload extern inline public function scrollRangeToVisible(range:NSRange):void;
+	overload extern inline public function scrollRangeToVisible(range:NSRange):Void;
 
 	@:native("")
 	public var :;
@@ -92,11 +92,11 @@ extern class UITextView{
 	@:native("NO.")
 	public var NO.:to;
 
-	@:native("initWithFrame:textContainer")
-	overload extern inline public function initWithFrame(frame:CGRect, textContainer:nullableNSTextContainer:ios(7.0):UITextView;
+	@:native("initWithFrame:textContainer:API_AVAILABLE(ios(7.0)")
+	overload extern inline public function initWithFrame(frame:CGRect, textContainer:nullableNSTextContainer, API_AVAILABLE(ios(7.0):NS_DESIGNATED_INITIALIZER):UITextView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UITextView;
+	overload extern inline public function initWithCoder(coder:NSCoder):UITextView;
 
 	@:native("API_AVAILABLE(ios(7.0))")
 	public var API_AVAILABLE(ios(7.0)):textContainer;

@@ -11,6 +11,9 @@ extern class UIAlertController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIAlertController;
 
+	@:native("actionWithTitle:style:handler")
+	overload extern inline public static function actionWithTitle(title:nullableNSString, style:UIAlertActionStyle, handler:Dynamic):UIAlertController;
+
 	@:native("title")
 	public var title:NSString;
 
@@ -20,8 +23,11 @@ extern class UIAlertController{
 	@:native("enabled")
 	public var enabled:BOOL;
 
+	@:native("alertControllerWithTitle:message:preferredStyle")
+	overload extern inline public static function alertControllerWithTitle(title:nullableNSString, message:nullableNSString, preferredStyle:UIAlertControllerStyle):UIAlertController;
+
 	@:native("addAction")
-	overload extern inline public function addAction(UIAlertAction:null:):void;
+	overload extern inline public function addAction(action:UIAlertAction):Void;
 
 	@:native("actions")
 	public var actions:>;
@@ -30,7 +36,7 @@ extern class UIAlertController{
 	public var API_AVAILABLE(ios(9.0)):preferredAction;
 
 	@:native("addTextFieldWithConfigurationHandler")
-	overload extern inline public function addTextFieldWithConfigurationHandler(void:null:(^__nullable:UITextFieldtextField):void;
+	overload extern inline public function addTextFieldWithConfigurationHandler(configurationHandler:Dynamic):Void;
 
 	@:native("textFields")
 	public var textFields:>;

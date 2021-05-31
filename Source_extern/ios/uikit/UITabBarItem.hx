@@ -15,13 +15,13 @@ extern class UITabBarItem{
 	overload extern inline public function init():UITabBarItem;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UITabBarItem;
+	overload extern inline public function initWithCoder(coder:NSCoder):UITabBarItem;
 
-	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(nullable:null:NSString:nullableUIImage:NSInteger):UITabBarItem;
+	@:native("initWithTitle:image:tag")
+	overload extern inline public function initWithTitle(title:nullableNSString, image:nullableUIImage, tag:NSInteger):UITabBarItem;
 
-	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(nullable:null:NSString:nullableUIImage:nullableUIImage:ios(7.0):UITabBarItem;
+	@:native("initWithTitle:image:selectedImage")
+	overload extern inline public function initWithTitle(title:nullableNSString, image:nullableUIImage, selectedImage:nullableUIImage):UITabBarItem;
 
 	@:native("initWithTabBarSystemItem:tag")
 	overload extern inline public function initWithTabBarSystemItem(systemItem:UITabBarSystemItem, tag:NSInteger):UITabBarItem;
@@ -32,8 +32,8 @@ extern class UITabBarItem{
 	@:native("nil")
 	public var nil:is;
 
-	@:native("setFinishedSelectedImage:"UseinitWithTitle")
-	overload extern inline public function setFinishedSelectedImage(nullable:null:UIImage:nullableUIImage, "UseinitWithTitle:5.0,7.0:tvos):void;
+	@:native("setFinishedSelectedImage:withFinishedUnselectedImage:API_DEPRECATED("Use initWithTitle")
+	overload extern inline public function setFinishedSelectedImage(selectedImage:nullableUIImage, withFinishedUnselectedImage:nullableUIImage, API_DEPRECATED("Use initWithTitle:image:selectedImage: or the image and selectedImage properties along with UIImageRenderingModeAlwaysOriginal", ios(5.0, 7.0):Dynamic):Void;
 
 	@:native("finishedSelectedImage")
 	overload extern inline public function finishedSelectedImage():nullable UIImage *;
@@ -47,11 +47,11 @@ extern class UITabBarItem{
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(10.0));
 
-	@:native("setBadgeTextAttributes")
-	overload extern inline public function setBadgeTextAttributes(nullable:null:NSDictionary<NSAttributedStringKey,id>:UIControlState:ios(10.0):void;
+	@:native("setBadgeTextAttributes:forState:API_AVAILABLE(ios(10.0)")
+	overload extern inline public function setBadgeTextAttributes(textAttributes:nullableNSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("badgeTextAttributesForState")
-	overload extern inline public function badgeTextAttributesForState(state:UIControlState:API_AVAILABLE(ios(10.0):nullable NSDictionary<NSAttributedStringKey,id> *;
+	@:native("badgeTextAttributesForState:API_AVAILABLE(ios(10.0)")
+	overload extern inline public function badgeTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(10.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey,id> *;
 
 	@:native("tvos(13.0))")
 	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;

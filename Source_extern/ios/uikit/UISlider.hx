@@ -38,17 +38,17 @@ extern class UISlider{
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
 
-	@:native("setValue:animated")
-	overload extern inline public function setValue(value:float, animated:BOOL:i.e.durationdependsondistance):void;
+	@:native("setValue:animated://:slider:fixed:(i.e. duration depends on distance:not")
+	overload extern inline public function setValue(value:float, animated:BOOL, //:move, slider:at, fixed:velocity, (i.e. duration depends on distance:does, not:send):Void;
 
-	@:native("setThumbImage")
-	overload extern inline public function setThumbImage(nullable:null:UIImage:UIControlState):void;
+	@:native("setThumbImage:forState")
+	overload extern inline public function setThumbImage(image:nullableUIImage, forState:UIControlState):Void;
 
-	@:native("setMinimumTrackImage")
-	overload extern inline public function setMinimumTrackImage(nullable:null:UIImage:UIControlState):void;
+	@:native("setMinimumTrackImage:forState")
+	overload extern inline public function setMinimumTrackImage(image:nullableUIImage, forState:UIControlState):Void;
 
-	@:native("setMaximumTrackImage")
-	overload extern inline public function setMaximumTrackImage(nullable:null:UIImage:UIControlState):void;
+	@:native("setMaximumTrackImage:forState")
+	overload extern inline public function setMaximumTrackImage(image:nullableUIImage, forState:UIControlState):Void;
 
 	@:native("thumbImageForState")
 	overload extern inline public function thumbImageForState(state:UIControlState):nullable UIImage *;
@@ -77,8 +77,8 @@ extern class UISlider{
 	@:native("trackRectForBounds")
 	overload extern inline public function trackRectForBounds(bounds:CGRect):CGRect;
 
-	@:native("thumbRectForBounds:trackRect")
-	overload extern inline public function thumbRectForBounds(bounds:CGRect, trackRect:CGRect:float):CGRect;
+	@:native("thumbRectForBounds:trackRect:value")
+	overload extern inline public function thumbRectForBounds(bounds:CGRect, trackRect:CGRect, value:float):CGRect;
 
 
 }

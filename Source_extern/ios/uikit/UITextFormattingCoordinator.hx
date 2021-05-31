@@ -12,7 +12,7 @@ extern class UITextFormattingCoordinator{
 	overload extern inline public static function autorelease():UITextFormattingCoordinator;
 
 	@:native("updateTextAttributesWithConversionHandler")
-	overload extern inline public function updateTextAttributesWithConversionHandler(NS_NOESCAPE:null:UITextAttributesConversionHandler_Nonnull:ios(13.0):void;
+	overload extern inline public function updateTextAttributesWithConversionHandler(conversionHandler:NS_NOESCAPEUITextAttributesConversionHandler_Nonnull):Void;
 
 	@:native("delegate")
 	public var delegate:id<UITextFormattingCoordinatorDelegate>;
@@ -20,14 +20,20 @@ extern class UITextFormattingCoordinator{
 	@:native("fontPanelVisible")
 	public var fontPanelVisible:BOOL;
 
+	@:native("textFormattingCoordinatorForWindowScene")
+	overload extern inline public static function textFormattingCoordinatorForWindowScene(windowScene:UIWindowScene):UITextFormattingCoordinator;
+
 	@:native("initWithWindowScene")
-	overload extern inline public function initWithWindowScene(UIWindowScene:null:):UITextFormattingCoordinator;
+	overload extern inline public function initWithWindowScene(windowScene:UIWindowScene):UITextFormattingCoordinator;
 
 	@:native("init")
 	overload extern inline public function init():UITextFormattingCoordinator;
 
 	@:native("setSelectedAttributes")
-	overload extern inline public function setSelectedAttributes(NSDictionary<NSAttributedStringKey,:null:id>):void;
+	overload extern inline public function setSelectedAttributes():Void;
+
+	@:native("toggleFontPanel")
+	overload extern inline public static function toggleFontPanel(sender:id):Void;
 
 
 }

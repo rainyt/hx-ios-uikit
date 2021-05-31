@@ -12,13 +12,13 @@ extern class UIFontPickerViewController{
 	overload extern inline public static function autorelease():UIFontPickerViewController;
 
 	@:native("fontPickerViewControllerDidCancel")
-	overload extern inline public function fontPickerViewControllerDidCancel(UIFontPickerViewController:null:):void;
+	overload extern inline public function fontPickerViewControllerDidCancel(viewController:UIFontPickerViewController):Void;
 
 	@:native("fontPickerViewControllerDidPickFont")
-	overload extern inline public function fontPickerViewControllerDidPickFont(UIFontPickerViewController:null:):void;
+	overload extern inline public function fontPickerViewControllerDidPickFont(viewController:UIFontPickerViewController):Void;
 
 	@:native("initWithConfiguration")
-	overload extern inline public function initWithConfiguration(UIFontPickerViewControllerConfiguration:null:):UIFontPickerViewController;
+	overload extern inline public function initWithConfiguration(configuration:UIFontPickerViewControllerConfiguration):UIFontPickerViewController;
 
 	@:native("configuration")
 	public var configuration:UIFontPickerViewControllerConfiguration;
@@ -29,8 +29,8 @@ extern class UIFontPickerViewController{
 	@:native("selectedFontDescriptor")
 	public var selectedFontDescriptor:UIFontDescriptor;
 
-	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UIFontPickerViewController;
+	@:native("initWithNibName:bundle")
+	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UIFontPickerViewController;
 
 
 }

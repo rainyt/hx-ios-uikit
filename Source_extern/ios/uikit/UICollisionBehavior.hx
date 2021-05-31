@@ -11,26 +11,26 @@ extern class UICollisionBehavior{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UICollisionBehavior;
 
-	@:native("collisionBehavior")
-	overload extern inline public function collisionBehavior(UICollisionBehavior:null::id<UIDynamicItem>:id<UIDynamicItem>:CGPoint):void;
+	@:native("collisionBehavior:beganContactForItem:withItem:atPoint")
+	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, beganContactForItem:id<UIDynamicItem>, withItem:id<UIDynamicItem>, atPoint:CGPoint):Void;
 
-	@:native("collisionBehavior")
-	overload extern inline public function collisionBehavior(UICollisionBehavior:null::id<UIDynamicItem>:id<UIDynamicItem>):void;
+	@:native("collisionBehavior:endedContactForItem:withItem")
+	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:id<UIDynamicItem>, withItem:id<UIDynamicItem>):Void;
 
-	@:native("collisionBehavior:beganContactForItem")
-	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, beganContactForItem:id<UIDynamicItem>:nullableid<NSCopying>:CGPoint):void;
+	@:native("collisionBehavior:beganContactForItem:withBoundaryIdentifier:atPoint")
+	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, beganContactForItem:id<UIDynamicItem>, withBoundaryIdentifier:nullableid<NSCopying>, atPoint:CGPoint):Void;
 
-	@:native("collisionBehavior:endedContactForItem")
-	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:id<UIDynamicItem>:nullableid<NSCopying>):void;
+	@:native("collisionBehavior:endedContactForItem:withBoundaryIdentifier")
+	overload extern inline public function collisionBehavior(behavior:UICollisionBehavior, endedContactForItem:id<UIDynamicItem>, withBoundaryIdentifier:nullableid<NSCopying>):Void;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(NSArray<id:null:<UIDynamicItem>>):UICollisionBehavior;
+	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>):UICollisionBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(id:null:<UIDynamicItem>):void;
+	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(id:null:<UIDynamicItem>):void;
+	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
 
 	@:native("items")
 	public var items:<UIDynamicItem>>;
@@ -42,25 +42,25 @@ extern class UICollisionBehavior{
 	public var translatesReferenceBoundsIntoBoundary:BOOL;
 
 	@:native("setTranslatesReferenceBoundsIntoBoundaryWithInsets")
-	overload extern inline public function setTranslatesReferenceBoundsIntoBoundaryWithInsets(insets:UIEdgeInsets):void;
+	overload extern inline public function setTranslatesReferenceBoundsIntoBoundaryWithInsets(insets:UIEdgeInsets):Void;
 
-	@:native("addBoundaryWithIdentifier")
-	overload extern inline public function addBoundaryWithIdentifier(id:null:<NSCopying>:UIBezierPath):void;
+	@:native("addBoundaryWithIdentifier:forPath")
+	overload extern inline public function addBoundaryWithIdentifier(identifier:id<NSCopying>, forPath:UIBezierPath):Void;
 
-	@:native("addBoundaryWithIdentifier")
-	overload extern inline public function addBoundaryWithIdentifier(id:null:<NSCopying>:CGPoint:CGPoint):void;
+	@:native("addBoundaryWithIdentifier:fromPoint:toPoint")
+	overload extern inline public function addBoundaryWithIdentifier(identifier:id<NSCopying>, fromPoint:CGPoint, toPoint:CGPoint):Void;
 
 	@:native("boundaryWithIdentifier")
-	overload extern inline public function boundaryWithIdentifier(id:null:<NSCopying>):nullable UIBezierPath *;
+	overload extern inline public function boundaryWithIdentifier(identifier:id<NSCopying>):nullable UIBezierPath *;
 
 	@:native("removeBoundaryWithIdentifier")
-	overload extern inline public function removeBoundaryWithIdentifier(id:null:<NSCopying>):void;
+	overload extern inline public function removeBoundaryWithIdentifier(identifier:id<NSCopying>):Void;
 
 	@:native("boundaryIdentifiers")
 	public var boundaryIdentifiers:<NSCopying>>;
 
 	@:native("removeAllBoundaries;")
-	overload extern inline public function removeAllBoundaries;():void;
+	overload extern inline public function removeAllBoundaries;():Void;
 
 	@:native("collisionDelegate")
 	public var collisionDelegate:<UICollisionBehaviorDelegate>;

@@ -17,14 +17,17 @@ extern class UIMenuSystem{
 	@:native("contextSystem")
 	public var contextSystem:UIMenuSystem;
 
+	@:native("new")
+	overload extern inline public static function new():UIMenuSystem;
+
 	@:native("init")
 	overload extern inline public function init():UIMenuSystem;
 
 	@:native("setNeedsRebuild;")
-	overload extern inline public function setNeedsRebuild;():void;
+	overload extern inline public function setNeedsRebuild;():Void;
 
 	@:native("setNeedsRevalidate;")
-	overload extern inline public function setNeedsRevalidate;():void;
+	overload extern inline public function setNeedsRevalidate;():Void;
 
 
 }

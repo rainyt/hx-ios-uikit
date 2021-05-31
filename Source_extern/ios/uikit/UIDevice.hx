@@ -39,10 +39,10 @@ extern class UIDevice{
 	public var API_UNAVAILABLE(tvos):generatesDeviceOrientationNotifications;
 
 	@:native("beginGeneratingDeviceOrientationNotifications")
-	overload extern inline public function beginGeneratingDeviceOrientationNotifications():void;
+	overload extern inline public function beginGeneratingDeviceOrientationNotifications():Void;
 
 	@:native("endGeneratingDeviceOrientationNotifications")
-	overload extern inline public function endGeneratingDeviceOrientationNotifications():void;
+	overload extern inline public function endGeneratingDeviceOrientationNotifications():Void;
 
 	@:native("NO")
 	public var NO:is;
@@ -66,7 +66,7 @@ extern class UIDevice{
 	public var API_AVAILABLE(ios(3.2)):userInterfaceIdiom;
 
 	@:native("playInputClick")
-	overload extern inline public function playInputClick():void;
+	overload extern inline public function playInputClick():Void;
 
 	@:native("playInputClick.")
 	public var playInputClick.:enable;

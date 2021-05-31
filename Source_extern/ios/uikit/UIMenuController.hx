@@ -17,23 +17,23 @@ extern class UIMenuController{
 	@:native("NO")
 	public var NO:is;
 
-	@:native("setMenuVisible:API_DEPRECATED("UseshowMenuFromView")
-	overload extern inline public function setMenuVisible(menuVisible:BOOL, API_DEPRECATED("UseshowMenuFromView:3.0,13.0):void;
+	@:native("setMenuVisible")
+	overload extern inline public function setMenuVisible(menuVisible:BOOL):Void;
 
-	@:native("setMenuVisible:animated:"UseshowMenuFromView")
-	overload extern inline public function setMenuVisible:animated(menuVisible:BOOL, animated:BOOL, "UseshowMenuFromView:3.0,13.0):void;
+	@:native("setMenuVisible:animated")
+	overload extern inline public function setMenuVisible(menuVisible:BOOL, animated:BOOL):Void;
 
-	@:native("setTargetRect:inView:"UseshowMenuFromView")
-	overload extern inline public function setTargetRect:inView(targetRect:CGRect, inView:UIView, "UseshowMenuFromView:3.0,13.0):void;
+	@:native("setTargetRect:inView")
+	overload extern inline public function setTargetRect(targetRect:CGRect, inView:UIView):Void;
 
-	@:native("showMenuFromView")
-	overload extern inline public function showMenuFromView(UIView:null::CGRect:ios(13.0):void;
+	@:native("showMenuFromView:rect")
+	overload extern inline public function showMenuFromView(targetView:UIView, rect:CGRect):Void;
 
 	@:native("hideMenuFromView")
-	overload extern inline public function hideMenuFromView(UIView:null::ios(13.0):void;
+	overload extern inline public function hideMenuFromView(targetView:UIView):Void;
 
 	@:native("hideMenu")
-	overload extern inline public function hideMenu():void;
+	overload extern inline public function hideMenu():Void;
 
 	@:native("UIMenuControllerArrowDefault")
 	public var UIMenuControllerArrowDefault:is;
@@ -42,13 +42,13 @@ extern class UIMenuController{
 	public var items:standard;
 
 	@:native("update;	")
-	overload extern inline public function update;	():void;
+	overload extern inline public function update;	():Void;
 
 	@:native("menuFrame")
 	public var menuFrame:CGRect;
 
-	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(NSString:null::SEL):UIMenuController;
+	@:native("initWithTitle:action")
+	overload extern inline public function initWithTitle(title:NSString, action:SEL):UIMenuController;
 
 	@:native("title")
 	public var title:NSString;

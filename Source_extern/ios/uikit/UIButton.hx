@@ -15,10 +15,22 @@ extern class UIButton{
 	overload extern inline public function initWithFrame(frame:CGRect):UIButton;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIButton;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIButton;
 
 	@:native("initWithFrame:primaryAction")
-	overload extern inline public function initWithFrame(frame:CGRect, primaryAction:nullableUIAction:ios(14.0):UIButton;
+	overload extern inline public function initWithFrame(frame:CGRect, primaryAction:nullableUIAction):UIButton;
+
+	@:native("buttonWithType")
+	overload extern inline public static function buttonWithType(buttonType:UIButtonType):UIButton;
+
+	@:native("systemButtonWithImage:target:action")
+	overload extern inline public static function systemButtonWithImage(image:UIImage, target:nullableid, action:nullableSEL):UIButton;
+
+	@:native("systemButtonWithPrimaryAction")
+	overload extern inline public static function systemButtonWithPrimaryAction(primaryAction:nullableUIAction):UIButton;
+
+	@:native("buttonWithType:primaryAction")
+	overload extern inline public static function buttonWithType(buttonType:UIButtonType, primaryAction:nullableUIAction):UIButton;
 
 	@:native("buttons.")
 	public var buttons.:custom;
@@ -59,29 +71,29 @@ extern class UIButton{
 	@:native("tvos)")
 	public var tvos):API_UNAVAILABLE(watchos,;
 
-	@:native("setTitle")
-	overload extern inline public function setTitle(nullable:null:NSString:UIControlState):void;
+	@:native("setTitle:forState::::::::::://:is:title:assumed:be")
+	overload extern inline public function setTitle(title:nullableNSString, forState:UIControlState, :, :, :, :, :, :, :, :, :, :, //:default, is:nil., title:is, assumed:to, be:single):Void;
 
-	@:native("setTitleColor")
-	overload extern inline public function setTitleColor(nullable:null:UIColor:UIControlState):void;
+	@:native("setTitleColor:forState:UI_APPEARANCE_SELECTOR:default:nil.")
+	overload extern inline public function setTitleColor(color:nullableUIColor, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is, nil.:use):Void;
 
-	@:native("setTitleShadowColor")
-	overload extern inline public function setTitleShadowColor(nullable:null:UIColor:UIControlState):void;
+	@:native("setTitleShadowColor:forState:UI_APPEARANCE_SELECTOR:default:nil.")
+	overload extern inline public function setTitleShadowColor(color:nullableUIColor, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is, nil.:use):Void;
 
-	@:native("setImage")
-	overload extern inline public function setImage(nullable:null:UIImage:UIControlState):void;
+	@:native("setImage:forState::::::::::::default:nil.:be:size:different")
+	overload extern inline public function setImage(image:nullableUIImage, forState:UIControlState, :, :, :, :, :, :, :, :, :, :, ://, default:is, nil.:should, be:same, size:if, different:for):Void;
 
-	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIControlState):void;
+	@:native("setBackgroundImage:forState:UI_APPEARANCE_SELECTOR:default")
+	overload extern inline public function setBackgroundImage(image:nullableUIImage, forState:UIControlState, UI_APPEARANCE_SELECTOR://, default:is):Void;
 
-	@:native("setPreferredSymbolConfiguration")
-	overload extern inline public function setPreferredSymbolConfiguration(nullable:null:UIImageSymbolConfiguration:UIControlState:ios(13.0:13.0:6.0):void;
+	@:native("setPreferredSymbolConfiguration:forImageInState:UI_APPEARANCE_SELECTOR")
+	overload extern inline public function setPreferredSymbolConfiguration(configuration:nullableUIImageSymbolConfiguration, forImageInState:UIControlState, UI_APPEARANCE_SELECTOR:Dynamic):Void;
 
-	@:native("setAttributedTitle")
-	overload extern inline public function setAttributedTitle(nullable:null:NSAttributedString:UIControlState:ios(6.0):void;
+	@:native("setAttributedTitle:forState:API_AVAILABLE(ios(6.0):default:nil.:is:to")
+	overload extern inline public function setAttributedTitle(title:nullableNSAttributedString, forState:UIControlState, API_AVAILABLE(ios(6.0)://, default:is, nil.:title, is:assumed, to:be):Void;
 
-	@:native("titleForState")
-	overload extern inline public function titleForState(state:UIControlState):nullable NSString *;
+	@:native("titleForState::::::these:only:a")
+	overload extern inline public function titleForState(state:UIControlState, :, :, :, :, ://, these:getters, only:take, a:single):nullable NSString *;
 
 	@:native("titleColorForState")
 	overload extern inline public function titleColorForState(state:UIControlState):nullable UIColor *;
@@ -96,10 +108,10 @@ extern class UIButton{
 	overload extern inline public function backgroundImageForState(state:UIControlState):nullable UIImage *;
 
 	@:native("preferredSymbolConfigurationForImageInState")
-	overload extern inline public function preferredSymbolConfigurationForImageInState(state:UIControlState:API_AVAILABLE(ios(13.0:13.0:6.0):nullable UIImageSymbolConfiguration *;
+	overload extern inline public function preferredSymbolConfigurationForImageInState(state:UIControlState):nullable UIImageSymbolConfiguration *;
 
 	@:native("attributedTitleForState")
-	overload extern inline public function attributedTitleForState(state:UIControlState:API_AVAILABLE(ios(6.0):nullable NSAttributedString *;
+	overload extern inline public function attributedTitleForState(state:UIControlState):nullable NSAttributedString *;
 
 	@:native("nil")
 	public var nil:return;

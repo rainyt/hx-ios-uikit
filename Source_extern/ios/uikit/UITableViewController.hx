@@ -14,11 +14,11 @@ extern class UITableViewController{
 	@:native("initWithStyle")
 	overload extern inline public function initWithStyle(style:UITableViewStyle):UITableViewController;
 
-	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UITableViewController;
+	@:native("initWithNibName:bundle")
+	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UITableViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UITableViewController;
+	overload extern inline public function initWithCoder(coder:NSCoder):UITableViewController;
 
 	@:native("tableView")
 	public var tableView:UITableView;

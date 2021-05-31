@@ -15,25 +15,25 @@ extern class UIImageAsset{
 	overload extern inline public function init():UIImageAsset;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIImageAsset;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIImageAsset;
 
-	@:native("imageWithConfiguration")
-	overload extern inline public function imageWithConfiguration(UIImageConfiguration:null:):UIImage *;
+	@:native("imageWithConfiguration://:returned:a:reference:the:that")
+	overload extern inline public function imageWithConfiguration(configuration:UIImageConfiguration, //:Images, returned:hold, a:strong, reference:to, the:asset, that:created):UIImage *;
 
-	@:native("registerImage")
-	overload extern inline public function registerImage(UIImage:null::UIImageConfiguration):void;
+	@:native("registerImage:withConfiguration")
+	overload extern inline public function registerImage(image:UIImage, withConfiguration:UIImageConfiguration):Void;
 
-	@:native("unregisterImageWithConfiguration")
-	overload extern inline public function unregisterImageWithConfiguration(UIImageConfiguration:null:):void;
+	@:native("unregisterImageWithConfiguration://:only:images:with")
+	overload extern inline public function unregisterImageWithConfiguration(configuration:UIImageConfiguration, //:removes, only:those, images:added, with:registerImage):Void;
 
-	@:native("imageWithTraitCollection")
-	overload extern inline public function imageWithTraitCollection(UITraitCollection:null:):UIImage *;
+	@:native("imageWithTraitCollection://:returned:a:reference:the:that")
+	overload extern inline public function imageWithTraitCollection(traitCollection:UITraitCollection, //:Images, returned:hold, a:strong, reference:to, the:asset, that:created):UIImage *;
 
-	@:native("registerImage")
-	overload extern inline public function registerImage(UIImage:null::UITraitCollection:suchasforceTouchCapability):void;
+	@:native("registerImage:withTraitCollection://:a:variation:this:asset:is:for:provided:Any:not:by:catalogs")
+	overload extern inline public function registerImage(image:UIImage, withTraitCollection:UITraitCollection, //:Adds, a:new, variation:to, this:image, asset:that, is:appropriate, for:the, provided:traits., Any:traits, not:exposed, by:asset, catalogs:Dynamic):Void;
 
-	@:native("unregisterImageWithTraitCollection")
-	overload extern inline public function unregisterImageWithTraitCollection(UITraitCollection:null:):void;
+	@:native("unregisterImageWithTraitCollection://:only:images:with")
+	overload extern inline public function unregisterImageWithTraitCollection(traitCollection:UITraitCollection, //:removes, only:those, images:added, with:registerImage):Void;
 
 
 }

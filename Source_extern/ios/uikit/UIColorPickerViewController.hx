@@ -12,10 +12,10 @@ extern class UIColorPickerViewController{
 	overload extern inline public static function autorelease():UIColorPickerViewController;
 
 	@:native("colorPickerViewControllerDidSelectColor")
-	overload extern inline public function colorPickerViewControllerDidSelectColor(UIColorPickerViewController:null:):void;
+	overload extern inline public function colorPickerViewControllerDidSelectColor(viewController:UIColorPickerViewController):Void;
 
 	@:native("colorPickerViewControllerDidFinish")
-	overload extern inline public function colorPickerViewControllerDidFinish(UIColorPickerViewController:null:):void;
+	overload extern inline public function colorPickerViewControllerDidFinish(viewController:UIColorPickerViewController):Void;
 
 	@:native("delegate")
 	public var delegate:id<UIColorPickerViewControllerDelegate>;
@@ -26,8 +26,8 @@ extern class UIColorPickerViewController{
 	@:native("supportsAlpha")
 	public var supportsAlpha:BOOL;
 
-	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UIColorPickerViewController;
+	@:native("initWithNibName:bundle")
+	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UIColorPickerViewController;
 
 	@:native("init")
 	overload extern inline public function init():UIColorPickerViewController;

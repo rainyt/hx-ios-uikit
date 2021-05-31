@@ -20,14 +20,23 @@ extern class UISearchSuggestion{
 	@:native("iconImage")
 	public var iconImage:UIImage;
 
-	@:native("initWithLocalizedSuggestion")
-	overload extern inline public function initWithLocalizedSuggestion(NSString:null:):UISearchSuggestion;
+	@:native("suggestionWithLocalizedSuggestion")
+	overload extern inline public static function suggestionWithLocalizedSuggestion(suggestion:NSString):UISearchSuggestion;
+
+	@:native("suggestionWithLocalizedSuggestion:descriptionString")
+	overload extern inline public static function suggestionWithLocalizedSuggestion(suggestion:NSString, descriptionString:nullableNSString):UISearchSuggestion;
+
+	@:native("suggestionWithLocalizedSuggestion:descriptionString:iconImage")
+	overload extern inline public static function suggestionWithLocalizedSuggestion(suggestion:NSString, descriptionString:nullableNSString, iconImage:nullableUIImage):UISearchSuggestion;
 
 	@:native("initWithLocalizedSuggestion")
-	overload extern inline public function initWithLocalizedSuggestion(NSString:null::nullableNSString):UISearchSuggestion;
+	overload extern inline public function initWithLocalizedSuggestion(suggestion:NSString):UISearchSuggestion;
 
-	@:native("initWithLocalizedSuggestion")
-	overload extern inline public function initWithLocalizedSuggestion(NSString:null::nullableNSString:nullableUIImage):UISearchSuggestion;
+	@:native("initWithLocalizedSuggestion:localizedDescription")
+	overload extern inline public function initWithLocalizedSuggestion(suggestion:NSString, localizedDescription:nullableNSString):UISearchSuggestion;
+
+	@:native("initWithLocalizedSuggestion:localizedDescription:iconImage")
+	overload extern inline public function initWithLocalizedSuggestion(suggestion:NSString, localizedDescription:nullableNSString, iconImage:nullableUIImage):UISearchSuggestion;
 
 	@:native("localizedSuggestion")
 	public var localizedSuggestion:NSString;

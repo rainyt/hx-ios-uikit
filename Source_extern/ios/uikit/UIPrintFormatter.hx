@@ -15,7 +15,7 @@ extern class UIPrintFormatter{
 	public var renderer:page;
 
 	@:native("removeFromPrintPageRenderer")
-	overload extern inline public function removeFromPrintPageRenderer():void;
+	overload extern inline public function removeFromPrintPageRenderer():Void;
 
 	@:native("width")
 	public var width:to;
@@ -35,17 +35,17 @@ extern class UIPrintFormatter{
 	@:native("calculated")
 	public var calculated://;
 
-	@:native("rectForPageAtIndex")
-	overload extern inline public function rectForPageAtIndex(pageIndex:NSInteger:API_UNAVAILABLE(tvos):CGRect;
+	@:native("rectForPageAtIndex:API_UNAVAILABLE(tvos:::::::::::returns:rect:index")
+	overload extern inline public function rectForPageAtIndex(pageIndex:NSInteger, API_UNAVAILABLE(tvos:, :, :, :, :, :, :, :, :, :, ://, returns:empty, rect:if, index:out):CGRect;
 
-	@:native("drawInRect:forPageAtIndex")
-	overload extern inline public function drawInRect(rect:CGRect, forPageAtIndex:NSInteger:tvos):void;
+	@:native("drawInRect:forPageAtIndex:API_UNAVAILABLE(tvos::override:to")
+	overload extern inline public function drawInRect(rect:CGRect, forPageAtIndex:NSInteger, API_UNAVAILABLE(tvos:, ://, override:point, to:add):Void;
 
 	@:native("initWithText")
-	overload extern inline public function initWithText(NSString:null:):UIPrintFormatter;
+	overload extern inline public function initWithText(text:NSString):UIPrintFormatter;
 
 	@:native("initWithAttributedText")
-	overload extern inline public function initWithAttributedText(NSAttributedString:null::ios(7.0):UIPrintFormatter;
+	overload extern inline public function initWithAttributedText(attributedText:NSAttributedString):UIPrintFormatter;
 
 	@:native("started")
 	public var started:drawing;
@@ -63,7 +63,7 @@ extern class UIPrintFormatter{
 	public var textAlignment:NSTextAlignment;
 
 	@:native("initWithMarkupText")
-	overload extern inline public function initWithMarkupText(NSString:null:):UIPrintFormatter;
+	overload extern inline public function initWithMarkupText(markupText:NSString):UIPrintFormatter;
 
 	@:native("started")
 	public var started:drawing;
@@ -74,8 +74,8 @@ extern class UIPrintFormatter{
 	@:native("viewPrintFormatter")
 	overload extern inline public function viewPrintFormatter():UIViewPrintFormatter *;
 
-	@:native("drawRect:forViewPrintFormatter")
-	overload extern inline public function drawRect(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter:tvos):void;
+	@:native("drawRect:forViewPrintFormatter:API_UNAVAILABLE(tvos:::default")
+	overload extern inline public function drawRect(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter, API_UNAVAILABLE(tvos:, :, ://, default:calls):Void;
 
 
 }

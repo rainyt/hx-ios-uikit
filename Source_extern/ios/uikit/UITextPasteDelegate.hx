@@ -12,16 +12,16 @@ extern class UITextPasteDelegate{
 	overload extern inline public static function autorelease():UITextPasteDelegate;
 
 	@:native("textPasteConfigurationSupporting:transformPasteItem")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, transformPasteItem:id<UITextPasteItem>):void;
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, transformPasteItem:id<UITextPasteItem>):Void;
 
-	@:native("textPasteConfigurationSupporting:combineItemAttributedStrings")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, combineItemAttributedStrings:NSArray<NSAttributedString>:UITextRange):NSAttributedString *;
+	@:native("textPasteConfigurationSupporting:combineItemAttributedStrings:forRange")
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, combineItemAttributedStrings:NSArray<NSAttributedString>, forRange:UITextRange):NSAttributedString *;
 
-	@:native("textPasteConfigurationSupporting:performPasteOfAttributedString")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, performPasteOfAttributedString:NSAttributedString:UITextRange):UITextRange*;
+	@:native("textPasteConfigurationSupporting:performPasteOfAttributedString:toRange")
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, performPasteOfAttributedString:NSAttributedString, toRange:UITextRange):UITextRange*;
 
-	@:native("textPasteConfigurationSupporting:shouldAnimatePasteOfAttributedString")
-	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, shouldAnimatePasteOfAttributedString:NSAttributedString:UITextRange):BOOL;
+	@:native("textPasteConfigurationSupporting:shouldAnimatePasteOfAttributedString:toRange://")
+	overload extern inline public function textPasteConfigurationSupporting(textPasteConfigurationSupporting:id<UITextPasteConfigurationSupporting>, shouldAnimatePasteOfAttributedString:NSAttributedString, toRange:UITextRange, //:DEPRECATED):BOOL;
 
 	@:native("itemProvider")
 	public var itemProvider:NSItemProvider;
@@ -33,19 +33,19 @@ extern class UITextPasteDelegate{
 	public var defaultAttributes:id>;
 
 	@:native("setStringResult")
-	overload extern inline public function setStringResult(string:NSString):void;
+	overload extern inline public function setStringResult(string:NSString):Void;
 
 	@:native("setAttributedStringResult")
-	overload extern inline public function setAttributedStringResult(string:NSAttributedString):void;
+	overload extern inline public function setAttributedStringResult(string:NSAttributedString):Void;
 
 	@:native("setAttachmentResult")
-	overload extern inline public function setAttachmentResult(textAttachment:NSTextAttachment):void;
+	overload extern inline public function setAttachmentResult(textAttachment:NSTextAttachment):Void;
 
 	@:native("setNoResult;")
-	overload extern inline public function setNoResult;():void;
+	overload extern inline public function setNoResult;():Void;
 
 	@:native("setDefaultResult;")
-	overload extern inline public function setDefaultResult;():void;
+	overload extern inline public function setDefaultResult;():Void;
 
 
 }

@@ -15,10 +15,10 @@ extern class UIProgressView{
 	overload extern inline public function initWithFrame(frame:CGRect):UIProgressView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIProgressView;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIProgressView;
 
-	@:native("initWithProgressViewStyle")
-	overload extern inline public function initWithProgressViewStyle(style:UIProgressViewStyle):UIProgressView;
+	@:native("initWithProgressViewStyle://:the:height:to")
+	overload extern inline public function initWithProgressViewStyle(style:UIProgressViewStyle, //:sets, the:view, height:according, to:the):UIProgressView;
 
 	@:native("UIProgressViewStyleDefault")
 	public var UIProgressViewStyleDefault:is;
@@ -39,7 +39,7 @@ extern class UIProgressView{
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
 
 	@:native("setProgress:animated")
-	overload extern inline public function setProgress(progress:float, animated:BOOL:ios(5.0):void;
+	overload extern inline public function setProgress(progress:float, animated:BOOL):Void;
 
 	@:native("API_AVAILABLE(ios(9.0))")
 	public var API_AVAILABLE(ios(9.0)):observedProgress;

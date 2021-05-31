@@ -14,23 +14,23 @@ extern class UISearchTextField{
 	@:native("tokens")
 	public var tokens:>;
 
-	@:native("insertToken")
-	overload extern inline public function insertToken(UISearchToken:null::NSInteger):void;
+	@:native("insertToken:atIndex")
+	overload extern inline public function insertToken(token:UISearchToken, atIndex:NSInteger):Void;
 
 	@:native("removeTokenAtIndex")
-	overload extern inline public function removeTokenAtIndex(tokenIndex:NSInteger):void;
+	overload extern inline public function removeTokenAtIndex(tokenIndex:NSInteger):Void;
 
 	@:native("positionOfTokenAtIndex")
 	overload extern inline public function positionOfTokenAtIndex(tokenIndex:NSInteger):UITextPosition *;
 
 	@:native("tokensInRange")
-	overload extern inline public function tokensInRange(UITextRange:null:):NSArray<UISearchToken *> *;
+	overload extern inline public function tokensInRange(textRange:UITextRange):NSArray<UISearchToken *> *;
 
 	@:native("textualRange")
 	public var textualRange:UITextRange;
 
-	@:native("replaceTextualPortionOfRange")
-	overload extern inline public function replaceTextualPortionOfRange(UITextRange:null::UISearchToken:NSUInteger):void;
+	@:native("replaceTextualPortionOfRange:withToken:atIndex")
+	overload extern inline public function replaceTextualPortionOfRange(textRange:UITextRange, withToken:UISearchToken, atIndex:NSUInteger):Void;
 
 	@:native("tokenBackgroundColor")
 	public var tokenBackgroundColor:UIColor;
@@ -44,14 +44,20 @@ extern class UISearchTextField{
 	@:native("init")
 	overload extern inline public function init():UISearchTextField;
 
+	@:native("new")
+	overload extern inline public static function new():UISearchTextField;
+
+	@:native("tokenWithIcon:text")
+	overload extern inline public static function tokenWithIcon(icon:nullableUIImage, text:NSString):UISearchToken *;
+
 	@:native("representedObject")
 	public var representedObject:id;
 
-	@:native("searchTextField")
-	overload extern inline public function searchTextField(UISearchTextField:null::UISearchToken):NSItemProvider *;
+	@:native("searchTextField:itemProviderForCopyingToken")
+	overload extern inline public function searchTextField(searchTextField:UISearchTextField, itemProviderForCopyingToken:UISearchToken):NSItemProvider *;
 
 	@:native("setSearchTokenResult")
-	overload extern inline public function setSearchTokenResult(UISearchToken:null:):void;
+	overload extern inline public function setSearchTokenResult(token:UISearchToken):Void;
 
 
 }

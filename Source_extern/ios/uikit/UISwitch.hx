@@ -35,14 +35,14 @@ extern class UISwitch{
 	@:native("on")
 	public var on:BOOL;
 
-	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect):UISwitch;
+	@:native("initWithFrame:NS_DESIGNATED_INITIALIZER::://:class:a:appropriate:the:and:the:size")
+	overload extern inline public function initWithFrame(frame:CGRect, NS_DESIGNATED_INITIALIZER:, :, :, //:This, class:enforces, a:size, appropriate:for, the:control,, and:so, the:frame, size:is):UISwitch;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UISwitch;
+	overload extern inline public function initWithCoder(coder:NSCoder):UISwitch;
 
-	@:native("setOn:animated")
-	overload extern inline public function setOn(on:BOOL, animated:BOOL):void;
+	@:native("setOn:animated://:not")
+	overload extern inline public function setOn(on:BOOL, animated:BOOL, //:does, not:send):Void;
 
 
 }

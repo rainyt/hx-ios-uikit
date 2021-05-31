@@ -11,6 +11,9 @@ extern class UIVideoEditorController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIVideoEditorController;
 
+	@:native("canEditVideoAtPath")
+	overload extern inline public static function canEditVideoAtPath(videoPath:NSString):BOOL;
+
 	@:native("delegate")
 	public var delegate:UIVideoEditorControllerDelegate>;
 
@@ -23,14 +26,14 @@ extern class UIVideoEditorController{
 	@:native("UIImagePickerControllerQualityTypeMedium")
 	public var UIImagePickerControllerQualityTypeMedium:is;
 
-	@:native("videoEditorController")
-	overload extern inline public function videoEditorController(UIVideoEditorController:null::NSString):void;
+	@:native("videoEditorController:didSaveEditedVideoToPath://:video:saved:a:in")
+	overload extern inline public function videoEditorController(editor:UIVideoEditorController, didSaveEditedVideoToPath:NSString, //:edited, video:is, saved:to, a:path, in:app's):Void;
 
-	@:native("videoEditorController")
-	overload extern inline public function videoEditorController(UIVideoEditorController:null::NSError):void;
+	@:native("videoEditorController:didFailWithError")
+	overload extern inline public function videoEditorController(editor:UIVideoEditorController, didFailWithError:NSError):Void;
 
 	@:native("videoEditorControllerDidCancel")
-	overload extern inline public function videoEditorControllerDidCancel(UIVideoEditorController:null:):void;
+	overload extern inline public function videoEditorControllerDidCancel(editor:UIVideoEditorController):Void;
 
 
 }

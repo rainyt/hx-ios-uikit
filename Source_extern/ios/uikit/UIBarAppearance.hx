@@ -21,22 +21,22 @@ extern class UIBarAppearance{
 	public var idiom:UIUserInterfaceIdiom;
 
 	@:native("initWithBarAppearance")
-	overload extern inline public function initWithBarAppearance(UIBarAppearance:null:):UIBarAppearance;
+	overload extern inline public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIBarAppearance;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIBarAppearance;
 
 	@:native("copy;")
 	overload extern inline public function copy;():UIBarAppearance;
 
 	@:native("configureWithDefaultBackground;")
-	overload extern inline public function configureWithDefaultBackground;():void;
+	overload extern inline public function configureWithDefaultBackground;():Void;
 
 	@:native("configureWithOpaqueBackground;")
-	overload extern inline public function configureWithOpaqueBackground;():void;
+	overload extern inline public function configureWithOpaqueBackground;():Void;
 
 	@:native("configureWithTransparentBackground;")
-	overload extern inline public function configureWithTransparentBackground;():void;
+	overload extern inline public function configureWithTransparentBackground;():Void;
 
 	@:native("backgroundEffect")
 	public var backgroundEffect:UIBlurEffect;

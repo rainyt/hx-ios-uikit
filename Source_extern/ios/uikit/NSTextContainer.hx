@@ -11,17 +11,17 @@ extern class NSTextContainer{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():NSTextContainer;
 
-	@:native("initWithSize")
-	overload extern inline public function initWithSize(size:CGSize:NS_DESIGNATED_INITIALIZERAPI_AVAILABLE(macos(10.11:7.0):NSTextContainer;
+	@:native("initWithSize:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithSize(size:CGSize, NS_DESIGNATED_INITIALIZER:Dynamic):NSTextContainer;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):NSTextContainer;
+	overload extern inline public function initWithCoder(coder:NSCoder):NSTextContainer;
 
 	@:native("layoutManager")
 	public var layoutManager:NSLayoutManager;
 
 	@:native("replaceLayoutManager")
-	overload extern inline public function replaceLayoutManager(NSLayoutManager:null::macos(10.0:9.0):void;
+	overload extern inline public function replaceLayoutManager(newLayoutManager:NSLayoutManager):Void;
 
 	@:native("ios(7.0))")
 	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
@@ -38,8 +38,8 @@ extern class NSTextContainer{
 	@:native("ios(7.0))")
 	public var ios(7.0)):API_AVAILABLE(macos(10.11),;
 
-	@:native("lineFragmentRectForProposedRect:atIndex")
-	overload extern inline public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger:NSWritingDirection:nullableCGRect:macos(10.11:7.0):CGRect;
+	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
+	overload extern inline public function lineFragmentRectForProposedRect(proposedRect:CGRect, atIndex:NSUInteger, writingDirection:NSWritingDirection, remainingRect:nullableCGRect):CGRect;
 
 	@:native("ios(9.0))")
 	public var ios(9.0)):API_AVAILABLE(macos(10.0),;

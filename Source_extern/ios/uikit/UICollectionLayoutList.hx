@@ -11,6 +11,9 @@ extern class UICollectionLayoutList{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UICollectionLayoutList;
 
+	@:native("new")
+	overload extern inline public static function new():UICollectionLayoutList;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionLayoutList;
 
@@ -37,6 +40,12 @@ extern class UICollectionLayoutList{
 
 	@:native("footerMode")
 	public var footerMode:UICollectionLayoutListFooterMode;
+
+	@:native("sectionWithListConfiguration:layoutEnvironment")
+	overload extern inline public static function sectionWithListConfiguration(configuration:UICollectionLayoutListConfiguration, layoutEnvironment:id<NSCollectionLayoutEnvironment>):UICollectionLayoutList;
+
+	@:native("layoutWithListConfiguration")
+	overload extern inline public static function layoutWithListConfiguration(configuration:UICollectionLayoutListConfiguration):UICollectionLayoutList;
 
 
 }

@@ -14,14 +14,14 @@ extern class UIGuidedAccess{
 	@:native("guidedAccessRestrictionIdentifiers")
 	public var guidedAccessRestrictionIdentifiers:>;
 
-	@:native("guidedAccessRestrictionWithIdentifier")
-	overload extern inline public function guidedAccessRestrictionWithIdentifier(NSString:null::UIGuidedAccessRestrictionState):void;
+	@:native("guidedAccessRestrictionWithIdentifier:didChangeState")
+	overload extern inline public function guidedAccessRestrictionWithIdentifier(restrictionIdentifier:NSString, didChangeState:UIGuidedAccessRestrictionState):Void;
 
 	@:native("textForGuidedAccessRestrictionWithIdentifier")
-	overload extern inline public function textForGuidedAccessRestrictionWithIdentifier(NSString:null:):nullable NSString *;
+	overload extern inline public function textForGuidedAccessRestrictionWithIdentifier(restrictionIdentifier:NSString):nullable NSString *;
 
 	@:native("detailTextForGuidedAccessRestrictionWithIdentifier")
-	overload extern inline public function detailTextForGuidedAccessRestrictionWithIdentifier(NSString:null:):nullable NSString *;
+	overload extern inline public function detailTextForGuidedAccessRestrictionWithIdentifier(restrictionIdentifier:NSString):nullable NSString *;
 
 
 }

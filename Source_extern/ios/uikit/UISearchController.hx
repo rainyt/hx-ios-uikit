@@ -12,34 +12,34 @@ extern class UISearchController{
 	overload extern inline public static function autorelease():UISearchController;
 
 	@:native("willPresentSearchController")
-	overload extern inline public function willPresentSearchController(UISearchController:null:):void;
+	overload extern inline public function willPresentSearchController(searchController:UISearchController):Void;
 
 	@:native("didPresentSearchController")
-	overload extern inline public function didPresentSearchController(UISearchController:null:):void;
+	overload extern inline public function didPresentSearchController(searchController:UISearchController):Void;
 
 	@:native("willDismissSearchController")
-	overload extern inline public function willDismissSearchController(UISearchController:null:):void;
+	overload extern inline public function willDismissSearchController(searchController:UISearchController):Void;
 
 	@:native("didDismissSearchController")
-	overload extern inline public function didDismissSearchController(UISearchController:null:):void;
+	overload extern inline public function didDismissSearchController(searchController:UISearchController):Void;
 
 	@:native("presentSearchController")
-	overload extern inline public function presentSearchController(UISearchController:null:):void;
+	overload extern inline public function presentSearchController(searchController:UISearchController):Void;
 
 	@:native("updateSearchResultsForSearchController")
-	overload extern inline public function updateSearchResultsForSearchController(UISearchController:null:):void;
+	overload extern inline public function updateSearchResultsForSearchController(searchController:UISearchController):Void;
 
-	@:native("updateSearchResultsForSearchController")
-	overload extern inline public function updateSearchResultsForSearchController(nonnull:null:UISearchController:nonnullid<UISearchSuggestion>:tvos(14.0:ios,watchos):void;
+	@:native("updateSearchResultsForSearchController:selectingSearchSuggestion:API_AVAILABLE(tvos(14.0)")
+	overload extern inline public function updateSearchResultsForSearchController(searchController:nonnullUISearchController, selectingSearchSuggestion:nonnullid<UISearchSuggestion>, API_AVAILABLE(tvos(14.0):Dynamic):Void;
 
 	@:native("initWithSearchResultsController")
-	overload extern inline public function initWithSearchResultsController(nullable:null:UIViewController):UISearchController;
+	overload extern inline public function initWithSearchResultsController(searchResultsController:nullableUIViewController):UISearchController;
 
-	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UISearchController;
+	@:native("initWithNibName:bundle")
+	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UISearchController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UISearchController;
+	overload extern inline public function initWithCoder(coder:NSCoder):UISearchController;
 
 	@:native("searchResultsUpdater")
 	public var searchResultsUpdater:<UISearchResultsUpdating>;

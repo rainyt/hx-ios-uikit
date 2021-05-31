@@ -11,8 +11,8 @@ extern class UIActionSheet{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIActionSheet;
 
-	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(nullable:null:NSString:nullableid<UIActionSheetDelegate>:nullableNSString:nullableNSString:nullableNSString:"UseUIAlertControllerinstead."):UIActionSheet;
+	@:native("initWithTitle:delegate:cancelButtonTitle:destructiveButtonTitle:otherButtonTitles:...")
+	overload extern inline public function initWithTitle(title:nullableNSString, delegate:nullableid<UIActionSheetDelegate>, cancelButtonTitle:nullableNSString, destructiveButtonTitle:nullableNSString, otherButtonTitles:nullableNSString, ...:NS_REQUIRES_NIL_TERMINATION):UIActionSheet;
 
 	@:native("delegate")
 	public var delegate:id<UIActionSheetDelegate>;
@@ -23,8 +23,8 @@ extern class UIActionSheet{
 	@:native("visible")
 	public var visible:is;
 
-	@:native("addButtonWithTitle")
-	overload extern inline public function addButtonWithTitle(nullable:null:NSString):NSInteger;
+	@:native("addButtonWithTitle:::returns:of")
+	overload extern inline public function addButtonWithTitle(title:nullableNSString, :, ://, returns:index, of:button.):NSInteger;
 
 	@:native("buttonTitleAtIndex")
 	overload extern inline public function buttonTitleAtIndex(buttonIndex:NSInteger):nullable NSString *;
@@ -45,40 +45,40 @@ extern class UIActionSheet{
 	public var visible:BOOL;
 
 	@:native("showFromToolbar")
-	overload extern inline public function showFromToolbar(UIToolbar:null:):void;
+	overload extern inline public function showFromToolbar(view:UIToolbar):Void;
 
 	@:native("showFromTabBar")
-	overload extern inline public function showFromTabBar(UITabBar:null:):void;
+	overload extern inline public function showFromTabBar(view:UITabBar):Void;
 
-	@:native("showFromBarButtonItem")
-	overload extern inline public function showFromBarButtonItem(UIBarButtonItem:null::BOOL:ios(3.2):void;
+	@:native("showFromBarButtonItem:animated")
+	overload extern inline public function showFromBarButtonItem(item:UIBarButtonItem, animated:BOOL):Void;
 
-	@:native("showFromRect:inView")
-	overload extern inline public function showFromRect(rect:CGRect, inView:UIView:BOOL:ios(3.2):void;
+	@:native("showFromRect:inView:animated")
+	overload extern inline public function showFromRect(rect:CGRect, inView:UIView, animated:BOOL):Void;
 
 	@:native("showInView")
-	overload extern inline public function showInView(UIView:null:):void;
+	overload extern inline public function showInView(view:UIView):Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:BOOL):void;
+	overload extern inline public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:BOOL):Void;
 
-	@:native("actionSheet")
-	overload extern inline public function actionSheet(UIActionSheet:null::NSInteger:"UseUIAlertControllerinstead.",ios(2.0,8.3:tvos):void;
+	@:native("actionSheet:clickedButtonAtIndex:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3)")
+	overload extern inline public function actionSheet(actionSheet:UIActionSheet, clickedButtonAtIndex:NSInteger, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic):Void;
 
-	@:native("actionSheetCancel")
-	overload extern inline public function actionSheetCancel(UIActionSheet:null::"UseUIAlertControllerinstead.",ios(2.0,8.3:tvos):void;
+	@:native("actionSheetCancel:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3)")
+	overload extern inline public function actionSheetCancel(actionSheet:UIActionSheet, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic):Void;
 
-	@:native("willPresentActionSheet")
-	overload extern inline public function willPresentActionSheet(UIActionSheet:null::"UseUIAlertControllerinstead.",ios(2.0,8.3:tvos):void;
+	@:native("willPresentActionSheet:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3)::before:and")
+	overload extern inline public function willPresentActionSheet(actionSheet:UIActionSheet, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic, ://, before:animation, and:showing):Void;
 
-	@:native("didPresentActionSheet")
-	overload extern inline public function didPresentActionSheet(UIActionSheet:null::"UseUIAlertControllerinstead.",ios(2.0,8.3:tvos):void;
+	@:native("didPresentActionSheet:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):")
+	overload extern inline public function didPresentActionSheet(actionSheet:UIActionSheet, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic, ://):Void;
 
-	@:native("actionSheet")
-	overload extern inline public function actionSheet(UIActionSheet:null::NSInteger:"UseUIAlertControllerinstead.",ios(2.0,8.3:tvos):void;
+	@:native("actionSheet:willDismissWithButtonIndex:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3)://:animation")
+	overload extern inline public function actionSheet(actionSheet:UIActionSheet, willDismissWithButtonIndex:NSInteger, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic, //:before, animation:and):Void;
 
-	@:native("actionSheet")
-	overload extern inline public function actionSheet(UIActionSheet:null::NSInteger:"UseUIAlertControllerinstead.",ios(2.0,8.3:tvos):void;
+	@:native("actionSheet:didDismissWithButtonIndex:API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):")
+	overload extern inline public function actionSheet(actionSheet:UIActionSheet, didDismissWithButtonIndex:NSInteger, API_DEPRECATED("Use UIAlertController instead.", ios(2.0, 8.3):Dynamic, ://):Void;
 
 
 }

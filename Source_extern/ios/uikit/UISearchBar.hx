@@ -14,11 +14,11 @@ extern class UISearchBar{
 	@:native("init")
 	overload extern inline public function init():UISearchBar;
 
-	@:native("initWithFrame")
-	overload extern inline public function initWithFrame(frame:CGRect:NS_DESIGNATED_INITIALIZERAPI_UNAVAILABLE(tvos):UISearchBar;
+	@:native("initWithFrame:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithFrame(frame:CGRect, NS_DESIGNATED_INITIALIZER:Dynamic):UISearchBar;
 
-	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null::tvos):UISearchBar;
+	@:native("initWithCoder:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithCoder(coder:NSCoder, NS_DESIGNATED_INITIALIZER:Dynamic):UISearchBar;
 
 	@:native("(blue)")
 	public var (blue):UIBarStyleDefault;
@@ -50,8 +50,8 @@ extern class UISearchBar{
 	@:native("NO")
 	public var NO:is;
 
-	@:native("setShowsCancelButton:animated")
-	overload extern inline public function setShowsCancelButton(showsCancelButton:BOOL, animated:BOOL:ios(3.0:tvos):void;
+	@:native("setShowsCancelButton:animated:API_AVAILABLE(ios(3.0)")
+	overload extern inline public function setShowsCancelButton(showsCancelButton:BOOL, animated:BOOL, API_AVAILABLE(ios(3.0):Dynamic):Void;
 
 	@:native("API_UNAVAILABLE(watchos)")
 	public var API_UNAVAILABLE(watchos):API_UNAVAILABLE(tvos);
@@ -78,7 +78,7 @@ extern class UISearchBar{
 	public var frame:update;
 
 	@:native("setShowsScopeBar:animated")
-	overload extern inline public function setShowsScopeBar(show:BOOL, animated:BOOL:ios(13.0):void;
+	overload extern inline public function setShowsScopeBar(show:BOOL, animated:BOOL):Void;
 
 	@:native("inputAccessoryView")
 	public var inputAccessoryView:UIView;
@@ -89,86 +89,86 @@ extern class UISearchBar{
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
 
-	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIBarPosition:UIBarMetrics:ios(7.0):void;
+	@:native("setBackgroundImage:forBarPosition:barMetrics:API_AVAILABLE(ios(7.0)::Use:to:a:backgroundImage:a:bar")
+	overload extern inline public function setBackgroundImage(backgroundImage:nullableUIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR, ://, Use:UIBarMetricsDefaultPrompt, to:set, a:separate, backgroundImage:for, a:search, bar:with):Void;
 
-	@:native("backgroundImageForBarPosition:barMetrics")
-	overload extern inline public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics:ios(7.0):nullable UIImage *;
+	@:native("backgroundImageForBarPosition:barMetrics:API_AVAILABLE(ios(7.0)")
+	overload extern inline public function backgroundImageForBarPosition(barPosition:UIBarPosition, barMetrics:UIBarMetrics, API_AVAILABLE(ios(7.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("setSearchFieldBackgroundImage")
-	overload extern inline public function setSearchFieldBackgroundImage(nullable:null:UIImage:UIControlState:ios(5.0):void;
+	@:native("setSearchFieldBackgroundImage:forState:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setSearchFieldBackgroundImage(backgroundImage:nullableUIImage, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("searchFieldBackgroundImageForState")
-	overload extern inline public function searchFieldBackgroundImageForState(state:UIControlState:API_AVAILABLE(ios(5.0):nullable UIImage *;
+	@:native("searchFieldBackgroundImageForState:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function searchFieldBackgroundImageForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("setImage")
-	overload extern inline public function setImage(nullable:null:UIImage:UISearchBarIcon:UIControlState:ios(5.0):void;
+	@:native("setImage:forSearchBarIcon:state:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setImage(iconImage:nullableUIImage, forSearchBarIcon:UISearchBarIcon, state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("imageForSearchBarIcon:state")
-	overload extern inline public function imageForSearchBarIcon(icon:UISearchBarIcon, state:UIControlState:ios(5.0):nullable UIImage *;
+	@:native("imageForSearchBarIcon:state:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function imageForSearchBarIcon(icon:UISearchBarIcon, state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("setScopeBarButtonBackgroundImage")
-	overload extern inline public function setScopeBarButtonBackgroundImage(nullable:null:UIImage:UIControlState:ios(5.0):void;
+	@:native("setScopeBarButtonBackgroundImage:forState:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setScopeBarButtonBackgroundImage(backgroundImage:nullableUIImage, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("scopeBarButtonBackgroundImageForState")
-	overload extern inline public function scopeBarButtonBackgroundImageForState(state:UIControlState:API_AVAILABLE(ios(5.0):nullable UIImage *;
+	@:native("scopeBarButtonBackgroundImageForState:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function scopeBarButtonBackgroundImageForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("setScopeBarButtonDividerImage")
-	overload extern inline public function setScopeBarButtonDividerImage(nullable:null:UIImage:UIControlState:UIControlState:ios(5.0):void;
+	@:native("setScopeBarButtonDividerImage:forLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setScopeBarButtonDividerImage(dividerImage:nullableUIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("scopeBarButtonDividerImageForLeftSegmentState:rightSegmentState")
-	overload extern inline public function scopeBarButtonDividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState:ios(5.0):nullable UIImage *;
+	@:native("scopeBarButtonDividerImageForLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function scopeBarButtonDividerImageForLeftSegmentState(leftState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("setScopeBarButtonTitleTextAttributes")
-	overload extern inline public function setScopeBarButtonTitleTextAttributes(nullable:null:NSDictionary<NSAttributedStringKey,id>:UIControlState:ios(5.0):void;
+	@:native("setScopeBarButtonTitleTextAttributes:forState:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setScopeBarButtonTitleTextAttributes(attributes:nullableNSDictionary<NSAttributedStringKey,id>, forState:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("scopeBarButtonTitleTextAttributesForState")
-	overload extern inline public function scopeBarButtonTitleTextAttributesForState(state:UIControlState:API_AVAILABLE(ios(5.0):nullable NSDictionary<NSAttributedStringKey, id> *;
-
-	@:native("UI_APPEARANCE_SELECTOR")
-	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
+	@:native("scopeBarButtonTitleTextAttributesForState:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function scopeBarButtonTitleTextAttributesForState(state:UIControlState, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable NSDictionary<NSAttributedStringKey, id> *;
 
 	@:native("UI_APPEARANCE_SELECTOR")
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
 
-	@:native("setPositionAdjustment:forSearchBarIcon")
-	overload extern inline public function setPositionAdjustment(adjustment:UIOffset, forSearchBarIcon:UISearchBarIcon:ios(5.0):void;
+	@:native("UI_APPEARANCE_SELECTOR")
+	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(5.0));
 
-	@:native("positionAdjustmentForSearchBarIcon")
-	overload extern inline public function positionAdjustmentForSearchBarIcon(icon:UISearchBarIcon:API_AVAILABLE(ios(5.0):UIOffset;
+	@:native("setPositionAdjustment:forSearchBarIcon:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setPositionAdjustment(adjustment:UIOffset, forSearchBarIcon:UISearchBarIcon, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("searchBarShouldBeginEditing")
-	overload extern inline public function searchBarShouldBeginEditing(UISearchBar:null:):BOOL;
+	@:native("positionAdjustmentForSearchBarIcon:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function positionAdjustmentForSearchBarIcon(icon:UISearchBarIcon, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIOffset;
 
-	@:native("searchBarTextDidBeginEditing")
-	overload extern inline public function searchBarTextDidBeginEditing(UISearchBar:null:):void;
+	@:native("searchBarShouldBeginEditing::::::::::::return:to:become")
+	overload extern inline public function searchBarShouldBeginEditing(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, ://, return:NO, to:not, become:first):BOOL;
 
-	@:native("searchBarShouldEndEditing")
-	overload extern inline public function searchBarShouldEndEditing(UISearchBar:null:):BOOL;
+	@:native("searchBarTextDidBeginEditing::::::::::://:when")
+	overload extern inline public function searchBarTextDidBeginEditing(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, //:called, when:text):Void;
 
-	@:native("searchBarTextDidEndEditing")
-	overload extern inline public function searchBarTextDidEndEditing(UISearchBar:null:):void;
+	@:native("searchBarShouldEndEditing:::::::::::::return:to:resign")
+	overload extern inline public function searchBarShouldEndEditing(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, :, ://, return:NO, to:not, resign:first):BOOL;
 
-	@:native("searchBar")
-	overload extern inline public function searchBar(UISearchBar:null::NSString:includingclear):void;
+	@:native("searchBarTextDidEndEditing:::::::::::://:when")
+	overload extern inline public function searchBarTextDidEndEditing(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, :, //:called, when:text):Void;
 
-	@:native("searchBar")
-	overload extern inline public function searchBar(UISearchBar:null::NSRange:NSString:ios(3.0):BOOL;
+	@:native("searchBar:textDidChange:://:when:changes")
+	overload extern inline public function searchBar(searchBar:UISearchBar, textDidChange:NSString, :, //:called, when:text, changes:Dynamic):Void;
 
-	@:native("searchBarSearchButtonClicked")
-	overload extern inline public function searchBarSearchButtonClicked(UISearchBar:null:):void;
+	@:native("searchBar:shouldChangeTextInRange:replacementText:API_AVAILABLE(ios(3.0):called")
+	overload extern inline public function searchBar(searchBar:UISearchBar, shouldChangeTextInRange:NSRange, replacementText:NSString, API_AVAILABLE(ios(3.0)://, called:before):BOOL;
 
-	@:native("searchBarBookmarkButtonClicked")
-	overload extern inline public function searchBarBookmarkButtonClicked(UISearchBar:null::tvos):void;
+	@:native("searchBarSearchButtonClicked::::::::::://:when:search")
+	overload extern inline public function searchBarSearchButtonClicked(searchBar:UISearchBar, :, :, :, :, :, :, :, :, :, :, //:called, when:keyboard, search:button):Void;
 
-	@:native("searchBarCancelButtonClicked")
-	overload extern inline public function searchBarCancelButtonClicked(UISearchBar:null::tvos):void;
+	@:native("searchBarBookmarkButtonClicked:API_UNAVAILABLE(tvos:called:bookmark")
+	overload extern inline public function searchBarBookmarkButtonClicked(searchBar:UISearchBar, API_UNAVAILABLE(tvos://, called:when, bookmark:button):Void;
 
-	@:native("searchBarResultsListButtonClicked")
-	overload extern inline public function searchBarResultsListButtonClicked(UISearchBar:null::ios(3.2:tvos):void;
+	@:native("searchBarCancelButtonClicked:API_UNAVAILABLE(tvos::called:cancel")
+	overload extern inline public function searchBarCancelButtonClicked(searchBar:UISearchBar, API_UNAVAILABLE(tvos:, ://, called:when, cancel:button):Void;
 
-	@:native("searchBar")
-	overload extern inline public function searchBar(UISearchBar:null::NSInteger:ios(3.0):void;
+	@:native("searchBarResultsListButtonClicked:API_AVAILABLE(ios(3.2)://:when:results")
+	overload extern inline public function searchBarResultsListButtonClicked(searchBar:UISearchBar, API_AVAILABLE(ios(3.2):Dynamic, //:called, when:search, results:button):Void;
+
+	@:native("searchBar:selectedScopeButtonIndexDidChange")
+	overload extern inline public function searchBar(searchBar:UISearchBar, selectedScopeButtonIndexDidChange:NSInteger):Void;
 
 
 }

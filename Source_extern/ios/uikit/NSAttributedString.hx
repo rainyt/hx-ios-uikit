@@ -12,34 +12,34 @@ extern class NSAttributedString{
 	overload extern inline public static function autorelease():NSAttributedString;
 
 	@:native("fixAttributesInRange")
-	overload extern inline public function fixAttributesInRange(range:NSRange:API_AVAILABLE(macos(10.0:7.0):void;
+	overload extern inline public function fixAttributesInRange(range:NSRange):Void;
 
-	@:native("initWithURL")
-	overload extern inline public function initWithURL(NSURL:null::NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>:NSDictionary<NSAttributedStringDocumentAttributeKey,id>__nullable__nullable:NSError:macos(10.4:9.0):NSAttributedString;
+	@:native("initWithURL:options:documentAttributes:error")
+	overload extern inline public function initWithURL(url:NSURL, options:NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>__nullable__nullable, error:NSError):NSAttributedString;
 
-	@:native("initWithData")
-	overload extern inline public function initWithData(NSData:null::NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>:NSDictionary<NSAttributedStringDocumentAttributeKey,id>__nullable__nullable:NSError:macos(10.0:7.0):NSAttributedString;
+	@:native("initWithData:options:documentAttributes:error")
+	overload extern inline public function initWithData(data:NSData, options:NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>__nullable__nullable, error:NSError):NSAttributedString;
 
-	@:native("dataFromRange:documentAttributes")
-	overload extern inline public function dataFromRange(range:NSRange, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>:NSError:macos(10.0:7.0):nullable NSData *;
+	@:native("dataFromRange:documentAttributes:error")
+	overload extern inline public function dataFromRange(range:NSRange, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>, error:NSError):nullable NSData *;
 
-	@:native("fileWrapperFromRange:documentAttributes")
-	overload extern inline public function fileWrapperFromRange(range:NSRange, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>:NSError:macos(10.0:7.0):nullable NSFileWrapper *;
+	@:native("fileWrapperFromRange:documentAttributes:error")
+	overload extern inline public function fileWrapperFromRange(range:NSRange, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>, error:NSError):nullable NSFileWrapper *;
 
-	@:native("readFromURL")
-	overload extern inline public function readFromURL(NSURL:null::NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>:NSDictionary<NSAttributedStringDocumentAttributeKey,id>__nullable__nullable:NSError:macosx(10.5:9.0:2.0:9.0):BOOL;
+	@:native("readFromURL:options:documentAttributes:error:")
+	overload extern inline public function readFromURL(url:NSURL, options:NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>__nullable__nullable, error:NSError, :Dynamic):BOOL;
 
-	@:native("readFromData")
-	overload extern inline public function readFromData(NSData:null::NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>:NSDictionary<NSAttributedStringDocumentAttributeKey,id>__nullable__nullable:NSError:macos(10.0:7.0):BOOL;
+	@:native("readFromData:options:documentAttributes:error")
+	overload extern inline public function readFromData(data:NSData, options:NSDictionary<NSAttributedStringDocumentReadingOptionKey,id>, documentAttributes:NSDictionary<NSAttributedStringDocumentAttributeKey,id>__nullable__nullable, error:NSError):BOOL;
 
 	@:native("containsAttachmentsInRange")
-	overload extern inline public function containsAttachmentsInRange(range:NSRange:API_AVAILABLE(macos(10.11:9.0):BOOL;
+	overload extern inline public function containsAttachmentsInRange(range:NSRange):BOOL;
 
-	@:native("initWithFileURL:"initWithURL")
-	overload extern inline public function initWithFileURL(NSURL:null::NSDictionary:NSDictionary__nullable__nullable:NSError, "initWithURL:7.0,9.0:tvos):NSAttributedString;
+	@:native("initWithFileURL:options:documentAttributes:error:API_DEPRECATED_WITH_REPLACEMENT("initWithURL")
+	overload extern inline public function initWithFileURL(url:NSURL, options:NSDictionary, documentAttributes:NSDictionary__nullable__nullable, error:NSError, API_DEPRECATED_WITH_REPLACEMENT("initWithURL:options:documentAttributes:error:", ios(7.0, 9.0):Dynamic):NSAttributedString;
 
-	@:native("readFromFileURL:"readFromURL")
-	overload extern inline public function readFromFileURL(NSURL:null::NSDictionary:NSDictionary__nullable__nullable:NSError, "readFromURL:7.0,9.0:tvos):BOOL;
+	@:native("readFromFileURL:options:documentAttributes:error:API_DEPRECATED_WITH_REPLACEMENT("readFromURL")
+	overload extern inline public function readFromFileURL(url:NSURL, options:NSDictionary, documentAttributes:NSDictionary__nullable__nullable, error:NSError, API_DEPRECATED_WITH_REPLACEMENT("readFromURL:options:documentAttributes:error:", ios(7.0, 9.0):Dynamic):BOOL;
 
 
 }

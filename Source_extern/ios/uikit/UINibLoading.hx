@@ -11,14 +11,14 @@ extern class UINibLoading{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UINibLoading;
 
-	@:native("loadNibNamed")
-	overload extern inline public function loadNibNamed(NSString:null::nullableid:nullableNSDictionary<UINibOptionsKey,id>):nullable NSArray *;
+	@:native("loadNibNamed:owner:options")
+	overload extern inline public function loadNibNamed(name:NSString, owner:nullableid, options:nullableNSDictionary<UINibOptionsKey,id>):nullable NSArray *;
 
 	@:native("awakeFromNib")
-	overload extern inline public function awakeFromNib():void;
+	overload extern inline public function awakeFromNib():Void;
 
 	@:native("prepareForInterfaceBuilder")
-	overload extern inline public function prepareForInterfaceBuilder():void;
+	overload extern inline public function prepareForInterfaceBuilder():Void;
 
 
 }

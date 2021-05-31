@@ -11,14 +11,23 @@ extern class UIApplicationShortcutItem{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIApplicationShortcutItem;
 
+	@:native("iconWithType")
+	overload extern inline public static function iconWithType(type:UIApplicationShortcutIconType):UIApplicationShortcutItem;
+
+	@:native("iconWithTemplateImageName")
+	overload extern inline public static function iconWithTemplateImageName(templateImageName:NSString):UIApplicationShortcutItem;
+
+	@:native("iconWithSystemImageName")
+	overload extern inline public static function iconWithSystemImageName(systemImageName:NSString):UIApplicationShortcutItem;
+
 	@:native("init")
 	overload extern inline public function init():UIApplicationShortcutItem;
 
-	@:native("initWithType")
-	overload extern inline public function initWithType(NSString:null::NSString:nullableNSString:nullableUIApplicationShortcutIcon:nullableNSDictionary<NSString,id<NSSecureCoding>>):UIApplicationShortcutItem;
+	@:native("initWithType:localizedTitle:localizedSubtitle:icon:userInfo")
+	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString, localizedSubtitle:nullableNSString, icon:nullableUIApplicationShortcutIcon, userInfo:nullableNSDictionary<NSString,id<NSSecureCoding>>):UIApplicationShortcutItem;
 
-	@:native("initWithType")
-	overload extern inline public function initWithType(NSString:null::NSString):UIApplicationShortcutItem;
+	@:native("initWithType:localizedTitle")
+	overload extern inline public function initWithType(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
 
 	@:native("type")
 	public var type:NSString;

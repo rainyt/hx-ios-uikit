@@ -14,14 +14,14 @@ extern class UIActivityViewController{
 	@:native("init")
 	overload extern inline public function init():UIActivityViewController;
 
-	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UIActivityViewController;
+	@:native("initWithNibName:bundle")
+	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UIActivityViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIActivityViewController;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIActivityViewController;
 
-	@:native("initWithActivityItems")
-	overload extern inline public function initWithActivityItems(NSArray:null::nullableNSArray<__kindofUIActivity>):UIActivityViewController;
+	@:native("initWithActivityItems:applicationActivities")
+	overload extern inline public function initWithActivityItems(activityItems:NSArray, applicationActivities:nullableNSArray<__kindofUIActivity>):UIActivityViewController;
 
 	@:native("dismissed")
 	public var dismissed:is;
@@ -32,8 +32,8 @@ extern class UIActivityViewController{
 	@:native("displayed")
 	public var displayed:be;
 
-	@:native("initWithActivityItemsConfiguration")
-	overload extern inline public function initWithActivityItemsConfiguration(activityItemsConfiguration:id<UIActivityItemsConfigurationReading>:API_AVAILABLE(ios(14.0:tvos,watchos):UIActivityViewController;
+	@:native("initWithActivityItemsConfiguration:API_AVAILABLE(ios(14.0)")
+	overload extern inline public function initWithActivityItemsConfiguration(activityItemsConfiguration:id<UIActivityItemsConfigurationReading>, API_AVAILABLE(ios(14.0):Dynamic):UIActivityViewController;
 
 
 }

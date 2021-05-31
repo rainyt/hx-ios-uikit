@@ -12,25 +12,28 @@ extern class UIPrinterPickerController{
 	overload extern inline public static function autorelease():UIPrinterPickerController;
 
 	@:native("printerPickerControllerParentViewController")
-	overload extern inline public function printerPickerControllerParentViewController(UIPrinterPickerController:null:):nullable UIViewController *;
+	overload extern inline public function printerPickerControllerParentViewController(printerPickerController:UIPrinterPickerController):nullable UIViewController *;
 
-	@:native("printerPickerController")
-	overload extern inline public function printerPickerController(UIPrinterPickerController:null::UIPrinter):BOOL;
+	@:native("printerPickerController:shouldShowPrinter")
+	overload extern inline public function printerPickerController(printerPickerController:UIPrinterPickerController, shouldShowPrinter:UIPrinter):BOOL;
 
 	@:native("printerPickerControllerWillPresent")
-	overload extern inline public function printerPickerControllerWillPresent(UIPrinterPickerController:null:):void;
+	overload extern inline public function printerPickerControllerWillPresent(printerPickerController:UIPrinterPickerController):Void;
 
 	@:native("printerPickerControllerDidPresent")
-	overload extern inline public function printerPickerControllerDidPresent(UIPrinterPickerController:null:):void;
+	overload extern inline public function printerPickerControllerDidPresent(printerPickerController:UIPrinterPickerController):Void;
 
 	@:native("printerPickerControllerWillDismiss")
-	overload extern inline public function printerPickerControllerWillDismiss(UIPrinterPickerController:null:):void;
+	overload extern inline public function printerPickerControllerWillDismiss(printerPickerController:UIPrinterPickerController):Void;
 
 	@:native("printerPickerControllerDidDismiss")
-	overload extern inline public function printerPickerControllerDidDismiss(UIPrinterPickerController:null:):void;
+	overload extern inline public function printerPickerControllerDidDismiss(printerPickerController:UIPrinterPickerController):Void;
 
 	@:native("printerPickerControllerDidSelectPrinter")
-	overload extern inline public function printerPickerControllerDidSelectPrinter(UIPrinterPickerController:null:):void;
+	overload extern inline public function printerPickerControllerDidSelectPrinter(printerPickerController:UIPrinterPickerController):Void;
+
+	@:native("printerPickerControllerWithInitiallySelectedPrinter")
+	overload extern inline public static function printerPickerControllerWithInitiallySelectedPrinter(printer:nullableUIPrinter):UIPrinterPickerController *;
 
 	@:native("selectedPrinter")
 	public var selectedPrinter:UIPrinter;
@@ -38,17 +41,17 @@ extern class UIPrinterPickerController{
 	@:native("delegate")
 	public var delegate:id<UIPrinterPickerControllerDelegate>;
 
-	@:native("presentAnimated:completionHandler")
-	overload extern inline public function presentAnimated(animated:BOOL, completionHandler:nullableUIPrinterPickerCompletionHandler):BOOL;
+	@:native("presentAnimated:completionHandler::::::::::::::::::::::::")
+	overload extern inline public function presentAnimated(animated:BOOL, completionHandler:nullableUIPrinterPickerCompletionHandler, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, ://):BOOL;
 
-	@:native("presentFromRect:inView")
-	overload extern inline public function presentFromRect(rect:CGRect, inView:UIView:BOOL:nullableUIPrinterPickerCompletionHandler):BOOL;
+	@:native("presentFromRect:inView:animated:completionHandler::")
+	overload extern inline public function presentFromRect(rect:CGRect, inView:UIView, animated:BOOL, completionHandler:nullableUIPrinterPickerCompletionHandler, :, ://):BOOL;
 
-	@:native("presentFromBarButtonItem")
-	overload extern inline public function presentFromBarButtonItem(UIBarButtonItem:null::BOOL:nullableUIPrinterPickerCompletionHandler):BOOL;
+	@:native("presentFromBarButtonItem:animated:completionHandler:::")
+	overload extern inline public function presentFromBarButtonItem(item:UIBarButtonItem, animated:BOOL, completionHandler:nullableUIPrinterPickerCompletionHandler, :, :, ://):BOOL;
 
 	@:native("dismissAnimated")
-	overload extern inline public function dismissAnimated(animated:BOOL):void;
+	overload extern inline public function dismissAnimated(animated:BOOL):Void;
 
 
 }

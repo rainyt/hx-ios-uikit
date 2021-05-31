@@ -23,6 +23,9 @@ extern class UIGraphicsImageRenderer{
 	@:native("API_AVAILABLE(ios(12.0))")
 	public var API_AVAILABLE(ios(12.0)):preferredRange;
 
+	@:native("formatForTraitCollection")
+	overload extern inline public static function formatForTraitCollection(traitCollection:UITraitCollection):UIGraphicsImageRenderer;
+
 	@:native("CGContext")
 	public var CGContext:renderer's;
 
@@ -36,10 +39,10 @@ extern class UIGraphicsImageRenderer{
 	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("imageWithActions")
-	overload extern inline public function imageWithActions(NS_NOESCAPE:null:UIGraphicsImageDrawingActions):UIImage *;
+	overload extern inline public function imageWithActions(actions:NS_NOESCAPEUIGraphicsImageDrawingActions):UIImage *;
 
 	@:native("PNGDataWithActions")
-	overload extern inline public function PNGDataWithActions(NS_NOESCAPE:null:UIGraphicsImageDrawingActions):NSData *;
+	overload extern inline public function PNGDataWithActions(actions:NS_NOESCAPEUIGraphicsImageDrawingActions):NSData *;
 
 	@:native("JPEGDataWithCompressionQuality:actions")
 	overload extern inline public function JPEGDataWithCompressionQuality(compressionQuality:CGFloat, actions:NS_NOESCAPEUIGraphicsImageDrawingActions):NSData *;

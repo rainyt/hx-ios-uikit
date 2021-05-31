@@ -14,6 +14,9 @@ extern class UITabBarAppearance{
 	@:native("init")
 	overload extern inline public function init():UITabBarAppearance;
 
+	@:native("new")
+	overload extern inline public static function new():UITabBarAppearance;
+
 	@:native("titleTextAttributes")
 	public var titleTextAttributes:id>;
 
@@ -42,13 +45,13 @@ extern class UITabBarAppearance{
 	overload extern inline public function initWithStyle(style:UITabBarItemAppearanceStyle):UITabBarAppearance;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UITabBarAppearance;
+	overload extern inline public function initWithCoder(coder:NSCoder):UITabBarAppearance;
 
 	@:native("copy;")
 	overload extern inline public function copy;():UITabBarAppearance;
 
 	@:native("configureWithDefaultForStyle")
-	overload extern inline public function configureWithDefaultForStyle(style:UITabBarItemAppearanceStyle):void;
+	overload extern inline public function configureWithDefaultForStyle(style:UITabBarItemAppearanceStyle):Void;
 
 	@:native("normal")
 	public var normal:UITabBarItemStateAppearance;

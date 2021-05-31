@@ -12,7 +12,7 @@ extern class UIConfigurationState{
 	overload extern inline public static function autorelease():UIConfigurationState;
 
 	@:native("initWithTraitCollection")
-	overload extern inline public function initWithTraitCollection(UITraitCollection:null:):UIConfigurationState;
+	overload extern inline public function initWithTraitCollection(traitCollection:UITraitCollection):UIConfigurationState;
 
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;
@@ -20,14 +20,14 @@ extern class UIConfigurationState{
 	@:native("customStateForKey")
 	overload extern inline public function customStateForKey(key:NSString):nullable id;
 
-	@:native("setCustomState")
-	overload extern inline public function setCustomState(nullable:null:id:NSString):void;
+	@:native("setCustomState:forKey")
+	overload extern inline public function setCustomState(customState:nullableid, forKey:NSString):Void;
 
 	@:native("objectForKeyedSubscript")
 	overload extern inline public function objectForKeyedSubscript(key:NSString):nullable id;
 
-	@:native("setObject")
-	overload extern inline public function setObject(nullable:null:id:NSString):void;
+	@:native("setObject:forKeyedSubscript")
+	overload extern inline public function setObject(obj:nullableid, forKeyedSubscript:NSString):Void;
 
 
 }

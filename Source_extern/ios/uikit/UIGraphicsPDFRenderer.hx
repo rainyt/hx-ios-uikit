@@ -18,28 +18,28 @@ extern class UIGraphicsPDFRenderer{
 	public var pdfContextBounds:CGRect;
 
 	@:native("beginPage;")
-	overload extern inline public function beginPage;():void;
+	overload extern inline public function beginPage;():Void;
 
 	@:native("beginPageWithBounds:pageInfo")
-	overload extern inline public function beginPageWithBounds(bounds:CGRect, pageInfo:NSDictionary<NSString,id>):void;
+	overload extern inline public function beginPageWithBounds(bounds:CGRect, pageInfo:NSDictionary<NSString,id>):Void;
 
-	@:native("setURL")
-	overload extern inline public function setURL(NSURL:null::CGRect):void;
+	@:native("setURL:forRect")
+	overload extern inline public function setURL(url:NSURL, forRect:CGRect):Void;
 
-	@:native("addDestinationWithName")
-	overload extern inline public function addDestinationWithName(NSString:null::CGPoint):void;
+	@:native("addDestinationWithName:atPoint")
+	overload extern inline public function addDestinationWithName(name:NSString, atPoint:CGPoint):Void;
 
-	@:native("setDestinationWithName")
-	overload extern inline public function setDestinationWithName(NSString:null::CGRect):void;
+	@:native("setDestinationWithName:forRect")
+	overload extern inline public function setDestinationWithName(name:NSString, forRect:CGRect):Void;
 
 	@:native("initWithBounds:format")
 	overload extern inline public function initWithBounds(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
 
-	@:native("writePDFToURL")
-	overload extern inline public function writePDFToURL(NSURL:null::NS_NOESCAPEUIGraphicsPDFDrawingActions:NSError):BOOL;
+	@:native("writePDFToURL:withActions:error")
+	overload extern inline public function writePDFToURL(url:NSURL, withActions:NS_NOESCAPEUIGraphicsPDFDrawingActions, error:NSError):BOOL;
 
 	@:native("PDFDataWithActions")
-	overload extern inline public function PDFDataWithActions(NS_NOESCAPE:null:UIGraphicsPDFDrawingActions):NSData *;
+	overload extern inline public function PDFDataWithActions(actions:NS_NOESCAPEUIGraphicsPDFDrawingActions):NSData *;
 
 
 }

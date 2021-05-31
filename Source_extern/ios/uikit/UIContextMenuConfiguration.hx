@@ -14,5 +14,8 @@ extern class UIContextMenuConfiguration{
 	@:native("identifier")
 	public var identifier:id<NSCopying>;
 
+	@:native("configurationWithIdentifier")
+	overload extern inline public static function configurationWithIdentifier():UIContextMenuConfiguration;
+
 
 }

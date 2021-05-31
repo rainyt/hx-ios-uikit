@@ -26,20 +26,20 @@ extern class UIManagedDocument{
 	@:native("modelConfiguration")
 	public var modelConfiguration:NSString;
 
-	@:native("configurePersistentStoreCoordinatorForURL")
-	overload extern inline public function configurePersistentStoreCoordinatorForURL(NSURL:null::NSString:nullableNSString:nullableNSDictionary:NSError):BOOL;
+	@:native("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error")
+	overload extern inline public function configurePersistentStoreCoordinatorForURL(storeURL:NSURL, ofType:NSString, modelConfiguration:nullableNSString, storeOptions:nullableNSDictionary, error:NSError):BOOL;
 
 	@:native("persistentStoreTypeForFileType")
-	overload extern inline public function persistentStoreTypeForFileType(NSString:null:):NSString *;
+	overload extern inline public function persistentStoreTypeForFileType(fileType:NSString):NSString *;
 
-	@:native("readAdditionalContentFromURL")
-	overload extern inline public function readAdditionalContentFromURL(NSURL:null::NSError):BOOL;
+	@:native("readAdditionalContentFromURL:error")
+	overload extern inline public function readAdditionalContentFromURL(absoluteURL:NSURL, error:NSError):BOOL;
 
-	@:native("additionalContentForURL")
-	overload extern inline public function additionalContentForURL(NSURL:null::NSError):nullable id;
+	@:native("additionalContentForURL:error")
+	overload extern inline public function additionalContentForURL(absoluteURL:NSURL, error:NSError):nullable id;
 
-	@:native("writeAdditionalContent:toURL")
-	overload extern inline public function writeAdditionalContent(content:id, toURL:NSURL:nullableNSURL:NSError):BOOL;
+	@:native("writeAdditionalContent:toURL:originalContentsURL:error")
+	overload extern inline public function writeAdditionalContent(content:id, toURL:NSURL, originalContentsURL:nullableNSURL, error:NSError):BOOL;
 
 
 }

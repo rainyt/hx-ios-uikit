@@ -11,38 +11,38 @@ extern class UIDocumentPickerViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDocumentPickerViewController;
 
-	@:native("documentPicker")
-	overload extern inline public function documentPicker(UIDocumentPickerViewController:null::NSArray<NSURL>:ios(11.0):void;
+	@:native("documentPicker:didPickDocumentsAtURLs")
+	overload extern inline public function documentPicker(controller:UIDocumentPickerViewController, didPickDocumentsAtURLs:NSArray<NSURL>):Void;
 
 	@:native("documentPickerWasCancelled")
-	overload extern inline public function documentPickerWasCancelled(UIDocumentPickerViewController:null:):void;
+	overload extern inline public function documentPickerWasCancelled(controller:UIDocumentPickerViewController):Void;
 
-	@:native("documentPicker:"documentPicker")
-	overload extern inline public function documentPicker(UIDocumentPickerViewController:null::NSURL, "documentPicker:8.0,11.0):void;
+	@:native("documentPicker:didPickDocumentAtURL")
+	overload extern inline public function documentPicker(controller:UIDocumentPickerViewController, didPickDocumentAtURL:NSURL):Void;
 
-	@:native("initWithDocumentTypes:"useinitForOpeningContentTypes")
-	overload extern inline public function initWithDocumentTypes(NSArray:null:<NSString>:UIDocumentPickerMode, "useinitForOpeningContentTypes:8.0,14.0:tvos):UIDocumentPickerViewController;
+	@:native("initWithDocumentTypes:inMode:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithDocumentTypes(allowedUTIs:NSArray<NSString>, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
-	@:native("initForOpeningContentTypes")
-	overload extern inline public function initForOpeningContentTypes(NSArray:null:<UTType>:BOOL:ios(14.0:tvos):UIDocumentPickerViewController;
+	@:native("initForOpeningContentTypes:asCopy:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initForOpeningContentTypes(contentTypes:NSArray<UTType>, asCopy:BOOL, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
-	@:native("initForOpeningContentTypes")
-	overload extern inline public function initForOpeningContentTypes(NSArray:null:<UTType>:ios(14.0:tvos):UIDocumentPickerViewController;
+	@:native("initForOpeningContentTypes:API_AVAILABLE(ios(14.0)")
+	overload extern inline public function initForOpeningContentTypes(contentTypes:NSArray<UTType>, API_AVAILABLE(ios(14.0):Dynamic):UIDocumentPickerViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIDocumentPickerViewController;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIDocumentPickerViewController;
 
-	@:native("initWithURL:"useinitForExportingURLs")
-	overload extern inline public function initWithURL(NSURL:null::UIDocumentPickerMode, "useinitForExportingURLs:8.0,14.0:tvos):UIDocumentPickerViewController;
+	@:native("initWithURL:inMode:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithURL(url:NSURL, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
-	@:native("initWithURLs:"useinitForExportinitForExportingURLsingURLs")
-	overload extern inline public function initWithURLs(NSArray:null:<NSURL>:UIDocumentPickerMode, "useinitForExportinitForExportingURLsingURLs:11.0,14.0:tvos):UIDocumentPickerViewController;
+	@:native("initWithURLs:inMode:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithURLs(urls:NSArray<NSURL>, inMode:UIDocumentPickerMode, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
-	@:native("initForExportingURLs")
-	overload extern inline public function initForExportingURLs(NSArray:null:<NSURL>:BOOL:ios(14.0:tvos):UIDocumentPickerViewController;
+	@:native("initForExportingURLs:asCopy:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initForExportingURLs(urls:NSArray<NSURL>, asCopy:BOOL, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocumentPickerViewController;
 
-	@:native("initForExportingURLs")
-	overload extern inline public function initForExportingURLs(NSArray:null:<NSURL>:ios(14.0:tvos):UIDocumentPickerViewController;
+	@:native("initForExportingURLs:API_AVAILABLE(ios(14.0)")
+	overload extern inline public function initForExportingURLs(urls:NSArray<NSURL>, API_AVAILABLE(ios(14.0):Dynamic):UIDocumentPickerViewController;
 
 	@:native("delegate")
 	public var delegate:id<UIDocumentPickerDelegate>;

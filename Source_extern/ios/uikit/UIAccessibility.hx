@@ -75,10 +75,10 @@ extern class UIAccessibility{
 	public var tvos(13.0)):API_AVAILABLE(ios(13.0),;
 
 	@:native("accessibilityElementDidBecomeFocused")
-	overload extern inline public function accessibilityElementDidBecomeFocused():void;
+	overload extern inline public function accessibilityElementDidBecomeFocused():Void;
 
 	@:native("accessibilityElementDidLoseFocus")
-	overload extern inline public function accessibilityElementDidLoseFocus():void;
+	overload extern inline public function accessibilityElementDidLoseFocus():Void;
 
 	@:native("accessibilityElementIsFocused")
 	overload extern inline public function accessibilityElementIsFocused():BOOL;
@@ -90,13 +90,13 @@ extern class UIAccessibility{
 	overload extern inline public function accessibilityActivate():BOOL;
 
 	@:native("accessibilityIncrement")
-	overload extern inline public function accessibilityIncrement():void;
+	overload extern inline public function accessibilityIncrement():Void;
 
 	@:native("accessibilityDecrement")
-	overload extern inline public function accessibilityDecrement():void;
+	overload extern inline public function accessibilityDecrement():Void;
 
 	@:native("accessibilityScroll")
-	overload extern inline public function accessibilityScroll(direction:UIAccessibilityScrollDirection:API_AVAILABLE(ios(4.2):BOOL;
+	overload extern inline public function accessibilityScroll(direction:UIAccessibilityScrollDirection):BOOL;
 
 	@:native("accessibilityPerformEscape")
 	overload extern inline public function accessibilityPerformEscape():BOOL;
@@ -108,19 +108,19 @@ extern class UIAccessibility{
 	public var API_AVAILABLE(ios(8.0)):accessibilityCustomActions;
 
 	@:native("accessibilityLineNumberForPoint")
-	overload extern inline public function accessibilityLineNumberForPoint(point:CGPoint:API_AVAILABLE(ios(5.0):NSInteger;
+	overload extern inline public function accessibilityLineNumberForPoint(point:CGPoint):NSInteger;
 
 	@:native("accessibilityContentForLineNumber")
-	overload extern inline public function accessibilityContentForLineNumber(lineNumber:NSInteger:API_AVAILABLE(ios(5.0):nullable NSString *;
+	overload extern inline public function accessibilityContentForLineNumber(lineNumber:NSInteger):nullable NSString *;
 
 	@:native("accessibilityFrameForLineNumber")
-	overload extern inline public function accessibilityFrameForLineNumber(lineNumber:NSInteger:API_AVAILABLE(ios(5.0):CGRect;
+	overload extern inline public function accessibilityFrameForLineNumber(lineNumber:NSInteger):CGRect;
 
 	@:native("accessibilityPageContent")
 	overload extern inline public function accessibilityPageContent():nullable NSString *;
 
 	@:native("accessibilityAttributedContentForLineNumber")
-	overload extern inline public function accessibilityAttributedContentForLineNumber(lineNumber:NSInteger:API_AVAILABLE(ios(11.0:11.0):nullable NSAttributedString *;
+	overload extern inline public function accessibilityAttributedContentForLineNumber(lineNumber:NSInteger):nullable NSAttributedString *;
 
 	@:native("accessibilityAttributedPageContent")
 	overload extern inline public function accessibilityAttributedPageContent():nullable NSAttributedString *;

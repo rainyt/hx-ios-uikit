@@ -24,7 +24,7 @@ extern class UICellAccessory{
 	public var tintColor:UIColor;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UICellAccessory;
+	overload extern inline public function initWithCoder(coder:NSCoder):UICellAccessory;
 
 	@:native("init")
 	overload extern inline public function init():UICellAccessory;
@@ -54,7 +54,7 @@ extern class UICellAccessory{
 	public var (^actionHandler)(void):void;
 
 	@:native("initWithText")
-	overload extern inline public function initWithText(NSString:null:):UICellAccessory;
+	overload extern inline public function initWithText(text:NSString):UICellAccessory;
 
 	@:native("text")
 	public var text:NSString;
@@ -66,13 +66,16 @@ extern class UICellAccessory{
 	public var adjustsFontForContentSizeCategory:BOOL;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UICellAccessory;
+	overload extern inline public function initWithCoder(coder:NSCoder):UICellAccessory;
 
 	@:native("init")
 	overload extern inline public function init():UICellAccessory;
 
-	@:native("initWithCustomView")
-	overload extern inline public function initWithCustomView(UIView:null::UICellAccessoryPlacement):UICellAccessory;
+	@:native("new")
+	overload extern inline public static function new():UICellAccessory;
+
+	@:native("initWithCustomView:placement")
+	overload extern inline public function initWithCustomView(customView:UIView, placement:UICellAccessoryPlacement):UICellAccessory;
 
 	@:native("customView")
 	public var customView:UIView;
@@ -87,10 +90,13 @@ extern class UICellAccessory{
 	public var position:UICellAccessoryPosition;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UICellAccessory;
+	overload extern inline public function initWithCoder(coder:NSCoder):UICellAccessory;
 
 	@:native("init")
 	overload extern inline public function init():UICellAccessory;
+
+	@:native("new")
+	overload extern inline public static function new():UICellAccessory;
 
 
 }

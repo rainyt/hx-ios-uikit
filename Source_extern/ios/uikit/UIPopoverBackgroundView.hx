@@ -11,6 +11,15 @@ extern class UIPopoverBackgroundView{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPopoverBackgroundView;
 
+	@:native("arrowBase;")
+	overload extern inline public static function arrowBase;():CGFloat;
+
+	@:native("contentViewInsets;")
+	overload extern inline public static function contentViewInsets;():UIEdgeInsets;
+
+	@:native("arrowHeight;")
+	overload extern inline public static function arrowHeight;():CGFloat;
+
 	@:native("arrowOffset")
 	public var arrowOffset:CGFloat;
 

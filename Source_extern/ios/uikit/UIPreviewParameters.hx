@@ -15,7 +15,7 @@ extern class UIPreviewParameters{
 	overload extern inline public function init():UIPreviewParameters;
 
 	@:native("initWithTextLineRects")
-	overload extern inline public function initWithTextLineRects(NSArray<NSValue:null:/CGRect/>):UIPreviewParameters;
+	overload extern inline public function initWithTextLineRects(textLineRects:NSArray<NSValue/CGRect/>):UIPreviewParameters;
 
 	@:native("visiblePath")
 	public var visiblePath:UIBezierPath;

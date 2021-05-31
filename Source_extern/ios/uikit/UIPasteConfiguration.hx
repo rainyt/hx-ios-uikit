@@ -18,16 +18,16 @@ extern class UIPasteConfiguration{
 	overload extern inline public function init():UIPasteConfiguration;
 
 	@:native("initWithAcceptableTypeIdentifiers")
-	overload extern inline public function initWithAcceptableTypeIdentifiers(NSArray<NSString:null:>):UIPasteConfiguration;
+	overload extern inline public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:NSArray<NSString>):UIPasteConfiguration;
 
 	@:native("addAcceptableTypeIdentifiers")
-	overload extern inline public function addAcceptableTypeIdentifiers(NSArray<NSString:null:>):void;
+	overload extern inline public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:NSArray<NSString>):Void;
 
 	@:native("initWithTypeIdentifiersForAcceptingClass")
 	overload extern inline public function initWithTypeIdentifiersForAcceptingClass(aClass:Class<NSItemProviderReading>):UIPasteConfiguration;
 
 	@:native("addTypeIdentifiersForAcceptingClass")
-	overload extern inline public function addTypeIdentifiersForAcceptingClass(aClass:Class<NSItemProviderReading>):void;
+	overload extern inline public function addTypeIdentifiersForAcceptingClass(aClass:Class<NSItemProviderReading>):Void;
 
 
 }

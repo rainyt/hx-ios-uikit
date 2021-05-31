@@ -14,35 +14,35 @@ extern class UIMenuBuilder{
 	@:native("system")
 	public var system:UIMenuSystem;
 
-	@:native("menuForIdentifier:NS_SWIFT_NAME(menu(for")
-	overload extern inline public function menuForIdentifier(identifier:UIMenuIdentifier, NS_SWIFT_NAME(menu(for):nullable UIMenu *;
+	@:native("menuForIdentifier")
+	overload extern inline public function menuForIdentifier(identifier:UIMenuIdentifier):nullable UIMenu *;
 
-	@:native("actionForIdentifier:NS_SWIFT_NAME(action(for")
-	overload extern inline public function actionForIdentifier(identifier:UIActionIdentifier, NS_SWIFT_NAME(action(for):nullable UIAction *;
+	@:native("actionForIdentifier")
+	overload extern inline public function actionForIdentifier(identifier:UIActionIdentifier):nullable UIAction *;
 
 	@:native("commandForAction:propertyList")
 	overload extern inline public function commandForAction(action:SEL, propertyList:nullableid):nullable UICommand *;
 
-	@:native("replaceMenuForIdentifier:withMenu:replace(menu")
-	overload extern inline public function replaceMenuForIdentifier:withMenu(replacedIdentifier:UIMenuIdentifier, withMenu:UIMenu, replace(menu):void;
+	@:native("replaceMenuForIdentifier:withMenu")
+	overload extern inline public function replaceMenuForIdentifier(replacedIdentifier:UIMenuIdentifier, withMenu:UIMenu):Void;
 
 	@:native("replaceChildrenOfMenuForIdentifier")
-	overload extern inline public function replaceChildrenOfMenuForIdentifier(UIMenuIdentifier):void;
+	overload extern inline public function replaceChildrenOfMenuForIdentifier():Void;
 
-	@:native("insertSiblingMenu:insertSibling(_")
-	overload extern inline public function insertSiblingMenu(UIMenu:null::UIMenuIdentifier, insertSibling(_):void;
+	@:native("insertSiblingMenu:beforeMenuForIdentifier")
+	overload extern inline public function insertSiblingMenu(siblingMenu:UIMenu, beforeMenuForIdentifier:UIMenuIdentifier):Void;
 
-	@:native("insertSiblingMenu:insertSibling(_")
-	overload extern inline public function insertSiblingMenu(UIMenu:null::UIMenuIdentifier, insertSibling(_):void;
+	@:native("insertSiblingMenu:afterMenuForIdentifier")
+	overload extern inline public function insertSiblingMenu(siblingMenu:UIMenu, afterMenuForIdentifier:UIMenuIdentifier):Void;
 
-	@:native("insertChildMenu:insertChild(_")
-	overload extern inline public function insertChildMenu(UIMenu:null::UIMenuIdentifier, insertChild(_):void;
+	@:native("insertChildMenu:atStartOfMenuForIdentifier")
+	overload extern inline public function insertChildMenu(childMenu:UIMenu, atStartOfMenuForIdentifier:UIMenuIdentifier):Void;
 
-	@:native("insertChildMenu:insertChild(_")
-	overload extern inline public function insertChildMenu(UIMenu:null::UIMenuIdentifier, insertChild(_):void;
+	@:native("insertChildMenu:atEndOfMenuForIdentifier")
+	overload extern inline public function insertChildMenu(childMenu:UIMenu, atEndOfMenuForIdentifier:UIMenuIdentifier):Void;
 
-	@:native("removeMenuForIdentifier:NS_SWIFT_NAME(remove(menu")
-	overload extern inline public function removeMenuForIdentifier(removedIdentifier:UIMenuIdentifier, NS_SWIFT_NAME(remove(menu):void;
+	@:native("removeMenuForIdentifier")
+	overload extern inline public function removeMenuForIdentifier(removedIdentifier:UIMenuIdentifier):Void;
 
 
 }

@@ -20,20 +20,20 @@ extern class UICollectionViewTransitionLayout{
 	@:native("nextLayout")
 	public var nextLayout:UICollectionViewLayout;
 
-	@:native("initWithCurrentLayout")
-	overload extern inline public function initWithCurrentLayout(UICollectionViewLayout:null::UICollectionViewLayout):UICollectionViewTransitionLayout;
+	@:native("initWithCurrentLayout:nextLayout")
+	overload extern inline public function initWithCurrentLayout(currentLayout:UICollectionViewLayout, nextLayout:UICollectionViewLayout):UICollectionViewTransitionLayout;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UICollectionViewTransitionLayout;
+	overload extern inline public function initWithCoder(coder:NSCoder):UICollectionViewTransitionLayout;
 
 	@:native("init")
 	overload extern inline public function init():UICollectionViewTransitionLayout;
 
 	@:native("updateValue:forAnimatedKey")
-	overload extern inline public function updateValue(value:CGFloat, forAnimatedKey:NSString):void;
+	overload extern inline public function updateValue(value:CGFloat, forAnimatedKey:NSString):Void;
 
 	@:native("valueForAnimatedKey")
-	overload extern inline public function valueForAnimatedKey(NSString:null:):CGFloat;
+	overload extern inline public function valueForAnimatedKey(key:NSString):CGFloat;
 
 
 }

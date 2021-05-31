@@ -11,5 +11,8 @@ extern class UIDeferredMenuElement{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDeferredMenuElement;
 
+	@:native("elementWithProvider")
+	overload extern inline public static function elementWithProvider(elementProvider:Dynamic):UIDeferredMenuElement;
+
 
 }

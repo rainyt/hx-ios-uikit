@@ -15,37 +15,43 @@ extern class UIBarButtonItem{
 	overload extern inline public function init():UIBarButtonItem;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIBarButtonItem;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIBarButtonItem;
 
-	@:native("initWithImage")
-	overload extern inline public function initWithImage(nullable:null:UIImage:UIBarButtonItemStyle:nullableid:nullableSEL):UIBarButtonItem;
+	@:native("initWithImage:style:target:action")
+	overload extern inline public function initWithImage(image:nullableUIImage, style:UIBarButtonItemStyle, target:nullableid, action:nullableSEL):UIBarButtonItem;
 
-	@:native("initWithImage")
-	overload extern inline public function initWithImage(nullable:null:UIImage:nullableUIImage:UIBarButtonItemStyle:nullableid:nullableSEL:ios(5.0):UIBarButtonItem;
+	@:native("initWithImage:landscapeImagePhone:style:target:action:API_AVAILABLE(ios(5.0):landscapeImagePhone:be:for:bar:image:the:has:or")
+	overload extern inline public function initWithImage(image:nullableUIImage, landscapeImagePhone:nullableUIImage, style:UIBarButtonItemStyle, target:nullableid, action:nullableSEL, API_AVAILABLE(ios(5.0)://, landscapeImagePhone:will, be:used, for:the, bar:button, image:when, the:bar, has:Compact, or:Condensed):UIBarButtonItem;
 
-	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(nullable:null:NSString:UIBarButtonItemStyle:nullableid:nullableSEL):UIBarButtonItem;
+	@:native("initWithTitle:style:target:action")
+	overload extern inline public function initWithTitle(title:nullableNSString, style:UIBarButtonItemStyle, target:nullableid, action:nullableSEL):UIBarButtonItem;
 
-	@:native("initWithBarButtonSystemItem:target")
-	overload extern inline public function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, target:nullableid:nullableSEL):UIBarButtonItem;
+	@:native("initWithBarButtonSystemItem:target:action")
+	overload extern inline public function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, target:nullableid, action:nullableSEL):UIBarButtonItem;
 
 	@:native("initWithCustomView")
-	overload extern inline public function initWithCustomView(UIView:null:):UIBarButtonItem;
+	overload extern inline public function initWithCustomView(customView:UIView):UIBarButtonItem;
 
 	@:native("initWithBarButtonSystemItem:primaryAction")
-	overload extern inline public function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, primaryAction:nullableUIAction:ios(14.0):UIBarButtonItem;
+	overload extern inline public function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, primaryAction:nullableUIAction):UIBarButtonItem;
 
 	@:native("initWithPrimaryAction")
-	overload extern inline public function initWithPrimaryAction(nullable:null:UIAction:ios(14.0):UIBarButtonItem;
+	overload extern inline public function initWithPrimaryAction(primaryAction:nullableUIAction):UIBarButtonItem;
 
 	@:native("initWithBarButtonSystemItem:menu")
-	overload extern inline public function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, menu:nullableUIMenu:ios(14.0):UIBarButtonItem;
+	overload extern inline public function initWithBarButtonSystemItem(systemItem:UIBarButtonSystemItem, menu:nullableUIMenu):UIBarButtonItem;
 
-	@:native("initWithTitle")
-	overload extern inline public function initWithTitle(nullable:null:NSString:nullableUIMenu:ios(14.0):UIBarButtonItem;
+	@:native("initWithTitle:menu")
+	overload extern inline public function initWithTitle(title:nullableNSString, menu:nullableUIMenu):UIBarButtonItem;
 
-	@:native("initWithImage")
-	overload extern inline public function initWithImage(nullable:null:UIImage:nullableUIMenu:ios(14.0):UIBarButtonItem;
+	@:native("initWithImage:menu")
+	overload extern inline public function initWithImage(image:nullableUIImage, menu:nullableUIMenu):UIBarButtonItem;
+
+	@:native("fixedSpaceItemOfWidth")
+	overload extern inline public static function fixedSpaceItemOfWidth(width:CGFloat):UIBarButtonItem;
+
+	@:native("flexibleSpaceItem")
+	overload extern inline public static function flexibleSpaceItem():UIBarButtonItem;
 
 	@:native("UIBarButtonItemStylePlain")
 	public var UIBarButtonItemStylePlain:is;
@@ -71,50 +77,50 @@ extern class UIBarButtonItem{
 	@:native("tvos)")
 	public var tvos):API_UNAVAILABLE(watchos,;
 
-	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIControlState:UIBarMetrics:ios(5.0):void;
+	@:native("setBackgroundImage:forState:barMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setBackgroundImage(backgroundImage:nullableUIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("backgroundImageForState:barMetrics")
-	overload extern inline public function backgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics:ios(5.0):nullable UIImage *;
+	@:native("backgroundImageForState:barMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function backgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIControlState:UIBarButtonItemStyle:UIBarMetrics:ios(6.0):void;
+	@:native("setBackgroundImage:forState:style:barMetrics:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function setBackgroundImage(backgroundImage:nullableUIImage, forState:UIControlState, style:UIBarButtonItemStyle, barMetrics:UIBarMetrics, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("backgroundImageForState:style")
-	overload extern inline public function backgroundImageForState(state:UIControlState, style:UIBarButtonItemStyle:UIBarMetrics:ios(6.0):nullable UIImage *;
+	@:native("backgroundImageForState:style:barMetrics:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function backgroundImageForState(state:UIControlState, style:UIBarButtonItemStyle, barMetrics:UIBarMetrics, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 	@:native("API_AVAILABLE(ios(5.0))")
 	public var API_AVAILABLE(ios(5.0)):tintColor;
 
-	@:native("setBackgroundVerticalPositionAdjustment:forBarMetrics")
-	overload extern inline public function setBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics:ios(5.0):void;
+	@:native("setBackgroundVerticalPositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("backgroundVerticalPositionAdjustmentForBarMetrics")
-	overload extern inline public function backgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics:API_AVAILABLE(ios(5.0):CGFloat;
+	@:native("backgroundVerticalPositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function backgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):CGFloat;
 
-	@:native("setTitlePositionAdjustment:forBarMetrics")
-	overload extern inline public function setTitlePositionAdjustment(adjustment:UIOffset, forBarMetrics:UIBarMetrics:ios(5.0):void;
+	@:native("setTitlePositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setTitlePositionAdjustment(adjustment:UIOffset, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("titlePositionAdjustmentForBarMetrics")
-	overload extern inline public function titlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics:API_AVAILABLE(ios(5.0):UIOffset;
+	@:native("titlePositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function titlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIOffset;
 
-	@:native("setBackButtonBackgroundImage")
-	overload extern inline public function setBackButtonBackgroundImage(nullable:null:UIImage:UIControlState:UIBarMetrics:ios(5.0:tvos):void;
+	@:native("setBackButtonBackgroundImage:forState:barMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setBackButtonBackgroundImage(backgroundImage:nullableUIImage, forState:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("backButtonBackgroundImageForState:barMetrics")
-	overload extern inline public function backButtonBackgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics:ios(5.0:tvos):nullable UIImage *;
+	@:native("backButtonBackgroundImageForState:barMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function backButtonBackgroundImageForState(state:UIControlState, barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("setBackButtonTitlePositionAdjustment:forBarMetrics")
-	overload extern inline public function setBackButtonTitlePositionAdjustment(adjustment:UIOffset, forBarMetrics:UIBarMetrics:ios(5.0:tvos):void;
+	@:native("setBackButtonTitlePositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setBackButtonTitlePositionAdjustment(adjustment:UIOffset, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("backButtonTitlePositionAdjustmentForBarMetrics")
-	overload extern inline public function backButtonTitlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics:API_AVAILABLE(ios(5.0:tvos):UIOffset;
+	@:native("backButtonTitlePositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function backButtonTitlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):UIOffset;
 
-	@:native("setBackButtonBackgroundVerticalPositionAdjustment:forBarMetrics")
-	overload extern inline public function setBackButtonBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics:ios(5.0:tvos):void;
+	@:native("setBackButtonBackgroundVerticalPositionAdjustment:forBarMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function setBackButtonBackgroundVerticalPositionAdjustment(adjustment:CGFloat, forBarMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("backButtonBackgroundVerticalPositionAdjustmentForBarMetrics")
-	overload extern inline public function backButtonBackgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics:API_AVAILABLE(ios(5.0:tvos):CGFloat;
+	@:native("backButtonBackgroundVerticalPositionAdjustmentForBarMetrics:API_AVAILABLE(ios(5.0)")
+	overload extern inline public function backButtonBackgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics, API_AVAILABLE(ios(5.0):UI_APPEARANCE_SELECTOR):CGFloat;
 
 
 }

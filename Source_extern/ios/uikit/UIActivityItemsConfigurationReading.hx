@@ -14,17 +14,17 @@ extern class UIActivityItemsConfigurationReading{
 	@:native("itemProvidersForActivityItemsConfiguration")
 	public var itemProvidersForActivityItemsConfiguration:>;
 
-	@:native("activityItemsConfigurationSupportsInteraction:NS_SWIFT_NAME(activityItemsConfigurationSupports(interaction")
-	overload extern inline public function activityItemsConfigurationSupportsInteraction(interaction:NSString, NS_SWIFT_NAME(activityItemsConfigurationSupports(interaction):BOOL;
+	@:native("activityItemsConfigurationSupportsInteraction:NS_SWIFT_NAME(activityItemsConfigurationSupports(interaction:If:implemented,")
+	overload extern inline public function activityItemsConfigurationSupportsInteraction(interaction:NSString, NS_SWIFT_NAME(activityItemsConfigurationSupports(interaction:)://, If:not, implemented,:defaults):BOOL;
 
-	@:native("activityItemsConfigurationMetadataForKey:NS_SWIFT_NAME(activityItemsConfigurationMetadata(key")
-	overload extern inline public function activityItemsConfigurationMetadataForKey(key:NSString, NS_SWIFT_NAME(activityItemsConfigurationMetadata(key):nullable id;
+	@:native("activityItemsConfigurationMetadataForKey")
+	overload extern inline public function activityItemsConfigurationMetadataForKey(key:NSString):nullable id;
 
 	@:native("activityItemsConfigurationMetadataForItemAtIndex:key")
 	overload extern inline public function activityItemsConfigurationMetadataForItemAtIndex(index:NSInteger, key:NSString):nullable id;
 
-	@:native("activityItemsConfigurationPreviewForItemAtIndex:intent")
-	overload extern inline public function activityItemsConfigurationPreviewForItemAtIndex(index:NSInteger, intent:NSString:CGSize):nullable NSItemProvider *;
+	@:native("activityItemsConfigurationPreviewForItemAtIndex:intent:suggestedSize")
+	overload extern inline public function activityItemsConfigurationPreviewForItemAtIndex(index:NSInteger, intent:NSString, suggestedSize:CGSize):nullable NSItemProvider *;
 
 	@:native("applicationActivitiesForActivityItemsConfiguration")
 	public var applicationActivitiesForActivityItemsConfiguration:>;

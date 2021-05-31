@@ -12,10 +12,10 @@ extern class UIImageView{
 	overload extern inline public static function autorelease():UIImageView;
 
 	@:native("initWithImage")
-	overload extern inline public function initWithImage(nullable:null:UIImage):UIImageView;
+	overload extern inline public function initWithImage(image:nullableUIImage):UIImageView;
 
-	@:native("initWithImage")
-	overload extern inline public function initWithImage(nullable:null:UIImage:nullableUIImage:ios(3.0):UIImageView;
+	@:native("initWithImage:highlightedImage")
+	overload extern inline public function initWithImage(image:nullableUIImage, highlightedImage:nullableUIImage):UIImageView;
 
 	@:native("nil")
 	public var nil:is;
@@ -48,10 +48,10 @@ extern class UIImageView{
 	public var API_AVAILABLE(ios(7.0)):tintColor;
 
 	@:native("startAnimating;")
-	overload extern inline public function startAnimating;():void;
+	overload extern inline public function startAnimating;():Void;
 
 	@:native("stopAnimating;")
-	overload extern inline public function stopAnimating;():void;
+	overload extern inline public function stopAnimating;():Void;
 
 	@:native("animating")
 	public var animating:BOOL;

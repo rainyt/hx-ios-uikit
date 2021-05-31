@@ -12,16 +12,16 @@ extern class UIView{
 	overload extern inline public static function autorelease():UIView;
 
 	@:native("convertPoint:toCoordinateSpace")
-	overload extern inline public function convertPoint(point:CGPoint, toCoordinateSpace:id<UICoordinateSpace>:ios(8.0):CGPoint;
+	overload extern inline public function convertPoint(point:CGPoint, toCoordinateSpace:id<UICoordinateSpace>):CGPoint;
 
 	@:native("convertPoint:fromCoordinateSpace")
-	overload extern inline public function convertPoint(point:CGPoint, fromCoordinateSpace:id<UICoordinateSpace>:ios(8.0):CGPoint;
+	overload extern inline public function convertPoint(point:CGPoint, fromCoordinateSpace:id<UICoordinateSpace>):CGPoint;
 
 	@:native("convertRect:toCoordinateSpace")
-	overload extern inline public function convertRect(rect:CGRect, toCoordinateSpace:id<UICoordinateSpace>:ios(8.0):CGRect;
+	overload extern inline public function convertRect(rect:CGRect, toCoordinateSpace:id<UICoordinateSpace>):CGRect;
 
 	@:native("convertRect:fromCoordinateSpace")
-	overload extern inline public function convertRect(rect:CGRect, fromCoordinateSpace:id<UICoordinateSpace>:ios(8.0):CGRect;
+	overload extern inline public function convertRect(rect:CGRect, fromCoordinateSpace:id<UICoordinateSpace>):CGRect;
 
 	@:native("API_AVAILABLE(ios(8.0))")
 	public var API_AVAILABLE(ios(8.0)):bounds;
@@ -33,7 +33,7 @@ extern class UIView{
 	overload extern inline public function initWithFrame(frame:CGRect):UIView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIView;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIView;
 
 	@:native("queue.")
 	public var queue.:event;
@@ -55,6 +55,12 @@ extern class UIView{
 
 	@:native("API_AVAILABLE(ios(9.0))")
 	public var API_AVAILABLE(ios(9.0)):semanticContentAttribute;
+
+	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
+	overload extern inline public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
+
+	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
+	overload extern inline public static function userInterfaceLayoutDirectionForSemanticContentAttribute(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("API_AVAILABLE(ios(10.0))")
 	public var API_AVAILABLE(ios(10.0)):effectiveUserInterfaceLayoutDirection;
@@ -83,11 +89,11 @@ extern class UIView{
 	@:native("NO")
 	public var NO:is;
 
-	@:native("hitTest:withEvent")
-	overload extern inline public function hitTest(point:CGPoint, withEvent:nullableUIEvent):nullable UIView *;
+	@:native("hitTest:withEvent:://:calls:point:in:receiver's")
+	overload extern inline public function hitTest(point:CGPoint, withEvent:nullableUIEvent, :, //:recursively, calls:-pointInside, point:is, in:the, receiver's:coordinate):nullable UIView *;
 
-	@:native("pointInside:withEvent")
-	overload extern inline public function pointInside(point:CGPoint, withEvent:nullableUIEvent):BOOL;
+	@:native("pointInside:withEvent:://:returns:if:is")
+	overload extern inline public function pointInside(point:CGPoint, withEvent:nullableUIEvent, :, //:default, returns:YES, if:point, is:in):BOOL;
 
 	@:native("convertPoint:toView")
 	overload extern inline public function convertPoint(point:CGPoint, toView:nullableUIView):CGPoint;
@@ -107,11 +113,11 @@ extern class UIView{
 	@:native("UIViewAutoresizingNone")
 	public var UIViewAutoresizingNone:is;
 
-	@:native("sizeThatFits")
-	overload extern inline public function sizeThatFits(size:CGSize):CGSize;
+	@:native("sizeThatFits::://:'best':to:given:does:actually:view.:is:existing")
+	overload extern inline public function sizeThatFits(size:CGSize, :, :, //:return, 'best':size, to:fit, given:size., does:not, actually:resize, view.:Default, is:return, existing:view):CGSize;
 
 	@:native("sizeToFit;")
-	overload extern inline public function sizeToFit;():void;
+	overload extern inline public function sizeToFit;():Void;
 
 	@:native("superview")
 	public var superview:;
@@ -123,61 +129,61 @@ extern class UIView{
 	public var window:;
 
 	@:native("removeFromSuperview;")
-	overload extern inline public function removeFromSuperview;():void;
+	overload extern inline public function removeFromSuperview;():Void;
 
-	@:native("insertSubview")
-	overload extern inline public function insertSubview(UIView:null::NSInteger):void;
+	@:native("insertSubview:atIndex")
+	overload extern inline public function insertSubview(view:UIView, atIndex:NSInteger):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
-	overload extern inline public function exchangeSubviewAtIndex(index1:NSInteger, withSubviewAtIndex:NSInteger):void;
+	overload extern inline public function exchangeSubviewAtIndex(index1:NSInteger, withSubviewAtIndex:NSInteger):Void;
 
 	@:native("addSubview")
-	overload extern inline public function addSubview(UIView:null:):void;
+	overload extern inline public function addSubview(view:UIView):Void;
 
-	@:native("insertSubview")
-	overload extern inline public function insertSubview(UIView:null::UIView):void;
+	@:native("insertSubview:belowSubview")
+	overload extern inline public function insertSubview(view:UIView, belowSubview:UIView):Void;
 
-	@:native("insertSubview")
-	overload extern inline public function insertSubview(UIView:null::UIView):void;
+	@:native("insertSubview:aboveSubview")
+	overload extern inline public function insertSubview(view:UIView, aboveSubview:UIView):Void;
 
 	@:native("bringSubviewToFront")
-	overload extern inline public function bringSubviewToFront(UIView:null:):void;
+	overload extern inline public function bringSubviewToFront(view:UIView):Void;
 
 	@:native("sendSubviewToBack")
-	overload extern inline public function sendSubviewToBack(UIView:null:):void;
+	overload extern inline public function sendSubviewToBack(view:UIView):Void;
 
 	@:native("didAddSubview")
-	overload extern inline public function didAddSubview(UIView:null:):void;
+	overload extern inline public function didAddSubview(subview:UIView):Void;
 
 	@:native("willRemoveSubview")
-	overload extern inline public function willRemoveSubview(UIView:null:):void;
+	overload extern inline public function willRemoveSubview(subview:UIView):Void;
 
 	@:native("willMoveToSuperview")
-	overload extern inline public function willMoveToSuperview(nullable:null:UIView):void;
+	overload extern inline public function willMoveToSuperview(newSuperview:nullableUIView):Void;
 
 	@:native("didMoveToSuperview;")
-	overload extern inline public function didMoveToSuperview;():void;
+	overload extern inline public function didMoveToSuperview;():Void;
 
 	@:native("willMoveToWindow")
-	overload extern inline public function willMoveToWindow(nullable:null:UIWindow):void;
+	overload extern inline public function willMoveToWindow(newWindow:nullableUIWindow):Void;
 
 	@:native("didMoveToWindow;")
-	overload extern inline public function didMoveToWindow;():void;
+	overload extern inline public function didMoveToWindow;():Void;
 
-	@:native("isDescendantOfView")
-	overload extern inline public function isDescendantOfView(UIView:null:):BOOL;
+	@:native("isDescendantOfView::returns")
+	overload extern inline public function isDescendantOfView(view:UIView, ://, returns:YES):BOOL;
 
-	@:native("viewWithTag")
-	overload extern inline public function viewWithTag(tag:NSInteger):nullable __kindof UIView *;
+	@:native("viewWithTag://:search.")
+	overload extern inline public function viewWithTag(tag:NSInteger, //:recursive, search.:includes):nullable __kindof UIView *;
 
 	@:native("setNeedsLayout;")
-	overload extern inline public function setNeedsLayout;():void;
+	overload extern inline public function setNeedsLayout;():Void;
 
 	@:native("layoutIfNeeded;")
-	overload extern inline public function layoutIfNeeded;():void;
+	overload extern inline public function layoutIfNeeded;():Void;
 
 	@:native("layoutSubviews;")
-	overload extern inline public function layoutSubviews;():void;
+	overload extern inline public function layoutSubviews;():Void;
 
 	@:native("API_AVAILABLE(ios(8.0))")
 	public var API_AVAILABLE(ios(8.0)):layoutMargins;
@@ -192,13 +198,13 @@ extern class UIView{
 	public var YES:Default:;
 
 	@:native("layoutMarginsDidChange")
-	overload extern inline public function layoutMarginsDidChange():void;
+	overload extern inline public function layoutMarginsDidChange():Void;
 
 	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
 	public var API_AVAILABLE(ios(11.0),tvos(11.0)):safeAreaInsets;
 
 	@:native("safeAreaInsetsDidChange")
-	overload extern inline public function safeAreaInsetsDidChange():void;
+	overload extern inline public function safeAreaInsetsDidChange():Void;
 
 	@:native("API_AVAILABLE(ios(9.0))")
 	public var API_AVAILABLE(ios(9.0)):layoutMarginsGuide;
@@ -210,13 +216,13 @@ extern class UIView{
 	public var API_AVAILABLE(ios(11.0),tvos(11.0)):safeAreaLayoutGuide;
 
 	@:native("drawRect")
-	overload extern inline public function drawRect(rect:CGRect):void;
+	overload extern inline public function drawRect(rect:CGRect):Void;
 
 	@:native("setNeedsDisplay;")
-	overload extern inline public function setNeedsDisplay;():void;
+	overload extern inline public function setNeedsDisplay;():Void;
 
 	@:native("setNeedsDisplayInRect")
-	overload extern inline public function setNeedsDisplayInRect(rect:CGRect):void;
+	overload extern inline public function setNeedsDisplayInRect(rect:CGRect):Void;
 
 	@:native("NO.")
 	public var NO.:is;
@@ -252,31 +258,67 @@ extern class UIView{
 	public var API_AVAILABLE(ios(7.0)):tintAdjustmentMode;
 
 	@:native("tintColorDidChange")
-	overload extern inline public function tintColorDidChange():void;
+	overload extern inline public function tintColorDidChange():Void;
+
+	@:native("setAnimationsEnabled::::::::::::://:any:changes")
+	overload extern inline public static function setAnimationsEnabled(enabled:BOOL, :, :, :, :, :, :, :, :, :, :, :, :, //:ignore, any:attribute, changes:while):Void;
 
 	@:native("areAnimationsEnabled")
 	public var areAnimationsEnabled:BOOL;
 
+	@:native("performWithoutAnimation")
+	overload extern inline public static function performWithoutAnimation(actionsWithoutAnimation:Dynamic):Void;
+
 	@:native("API_AVAILABLE(ios(9.0))")
 	public var API_AVAILABLE(ios(9.0)):inheritedAnimationDuration;
+
+	@:native("animateWithDuration:delay:options:animations:completion")
+	overload extern inline public static function animateWithDuration(duration:NSTimeInterval, delay:NSTimeInterval, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+
+	@:native("animateWithDuration:animations:completion:API_AVAILABLE(ios(4.0):delay:0.0,")
+	overload extern inline public static function animateWithDuration(duration:NSTimeInterval, animations:Dynamic, completion:Dynamic, API_AVAILABLE(ios(4.0)://, delay:=, 0.0,:options):Void;
+
+	@:native("animateWithDuration:animations:API_AVAILABLE(ios(4.0):delay:0.0,:=:completion")
+	overload extern inline public static function animateWithDuration(duration:NSTimeInterval, animations:Dynamic, API_AVAILABLE(ios(4.0)://, delay:=, 0.0,:options, =:0,, completion:=):Void;
+
+	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
+	overload extern inline public static function animateWithDuration(duration:NSTimeInterval, delay:NSTimeInterval, usingSpringWithDamping:CGFloat, initialSpringVelocity:CGFloat, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+
+	@:native("transitionWithView:duration:options:animations:completion")
+	overload extern inline public static function transitionWithView(view:UIView, duration:NSTimeInterval, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+
+	@:native("transitionFromView:toView:duration:options:completion:API_AVAILABLE(ios(4.0):toView:to:fromView:from")
+	overload extern inline public static function transitionFromView(fromView:UIView, toView:UIView, duration:NSTimeInterval, options:UIViewAnimationOptions, completion:Dynamic, API_AVAILABLE(ios(4.0)://, toView:added, to:fromView.superview,, fromView:removed, from:its):Void;
+
+	@:native("performSystemAnimation:onViews:options:animations:completion")
+	overload extern inline public static function performSystemAnimation(animation:UISystemAnimation, onViews:NSArray<__kindofUIView>, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+
+	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
+	overload extern inline public static function modifyAnimationsWithRepeatCount(count:CGFloat, autoreverses:BOOL, animations:Dynamic):Void;
+
+	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
+	overload extern inline public static function animateKeyframesWithDuration(duration:NSTimeInterval, delay:NSTimeInterval, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+
+	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations:API_AVAILABLE(ios(7.0):start:and:are:between:and:specifying:and:relative:the:time:the")
+	overload extern inline public static function addKeyframeWithRelativeStartTime(frameStartTime:double, relativeDuration:double, animations:Dynamic, API_AVAILABLE(ios(7.0)://, start:time, and:duration, are:values, between:0.0, and:1.0, specifying:time, and:duration, relative:to, the:overall, time:of, the:keyframe):Void;
 
 	@:native("API_AVAILABLE(ios(3.2))")
 	public var API_AVAILABLE(ios(3.2)):gestureRecognizers;
 
 	@:native("addGestureRecognizer")
-	overload extern inline public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer:API_AVAILABLE(ios(3.2):void;
+	overload extern inline public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("removeGestureRecognizer")
-	overload extern inline public function removeGestureRecognizer(gestureRecognizer:UIGestureRecognizer:API_AVAILABLE(ios(3.2):void;
+	overload extern inline public function removeGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
 
 	@:native("gestureRecognizerShouldBegin")
-	overload extern inline public function gestureRecognizerShouldBegin(UIGestureRecognizer:null::ios(6.0):BOOL;
+	overload extern inline public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):BOOL;
 
 	@:native("addMotionEffect")
-	overload extern inline public function addMotionEffect(UIMotionEffect:null::ios(7.0):void;
+	overload extern inline public function addMotionEffect(effect:UIMotionEffect):Void;
 
 	@:native("removeMotionEffect")
-	overload extern inline public function removeMotionEffect(UIMotionEffect:null::ios(7.0):void;
+	overload extern inline public function removeMotionEffect(effect:UIMotionEffect):Void;
 
 	@:native("API_AVAILABLE(ios(7.0))")
 	public var API_AVAILABLE(ios(7.0)):motionEffects;
@@ -284,29 +326,29 @@ extern class UIView{
 	@:native("API_AVAILABLE(ios(6.0))")
 	public var API_AVAILABLE(ios(6.0)):constraints;
 
-	@:native("addConstraint")
-	overload extern inline public function addConstraint(NSLayoutConstraint:null::ios(6.0):void;
+	@:native("addConstraint:API_AVAILABLE(ios(6.0):This:will:deprecated:a:release:should:avoided. :set:active")
+	overload extern inline public function addConstraint(constraint:NSLayoutConstraint, API_AVAILABLE(ios(6.0)://, This:method, will:be, deprecated:in, a:future, release:and, should:be, avoided. :Instead,, set:NSLayoutConstraint's, active:property):Void;
 
-	@:native("addConstraints")
-	overload extern inline public function addConstraints(NSArray<__kindof:null:NSLayoutConstraint>:ios(6.0):void;
+	@:native("addConstraints:API_AVAILABLE(ios(6.0):This:will:deprecated:a:release:should:avoided. :use")
+	overload extern inline public function addConstraints(constraints:NSArray<__kindofNSLayoutConstraint>, API_AVAILABLE(ios(6.0)://, This:method, will:be, deprecated:in, a:future, release:and, should:be, avoided. :Instead, use:+[NSLayoutConstraint):Void;
 
-	@:native("removeConstraint")
-	overload extern inline public function removeConstraint(NSLayoutConstraint:null::ios(6.0):void;
+	@:native("removeConstraint:API_AVAILABLE(ios(6.0):This:will:deprecated:a:release:should:avoided. :set:active")
+	overload extern inline public function removeConstraint(constraint:NSLayoutConstraint, API_AVAILABLE(ios(6.0)://, This:method, will:be, deprecated:in, a:future, release:and, should:be, avoided. :Instead, set:NSLayoutConstraint's, active:property):Void;
 
-	@:native("removeConstraints")
-	overload extern inline public function removeConstraints(NSArray<__kindof:null:NSLayoutConstraint>:ios(6.0):void;
+	@:native("removeConstraints:API_AVAILABLE(ios(6.0):This:will:deprecated:a:release:should:avoided. :use")
+	overload extern inline public function removeConstraints(constraints:NSArray<__kindofNSLayoutConstraint>, API_AVAILABLE(ios(6.0)://, This:method, will:be, deprecated:in, a:future, release:and, should:be, avoided. :Instead, use:+[NSLayoutConstraint):Void;
 
 	@:native("updateConstraintsIfNeeded")
-	overload extern inline public function updateConstraintsIfNeeded():void;
+	overload extern inline public function updateConstraintsIfNeeded():Void;
 
 	@:native("updateConstraints")
-	overload extern inline public function updateConstraints():void;
+	overload extern inline public function updateConstraints():Void;
 
 	@:native("needsUpdateConstraints")
 	overload extern inline public function needsUpdateConstraints():BOOL;
 
 	@:native("setNeedsUpdateConstraints")
-	overload extern inline public function setNeedsUpdateConstraints():void;
+	overload extern inline public function setNeedsUpdateConstraints():Void;
 
 	@:native("YES")
 	public var YES:Default;
@@ -315,10 +357,10 @@ extern class UIView{
 	public var API_AVAILABLE(ios(6.0)):requiresConstraintBasedLayout;
 
 	@:native("alignmentRectForFrame")
-	overload extern inline public function alignmentRectForFrame(frame:CGRect:API_AVAILABLE(ios(6.0):CGRect;
+	overload extern inline public function alignmentRectForFrame(frame:CGRect):CGRect;
 
 	@:native("frameForAlignmentRect")
-	overload extern inline public function frameForAlignmentRect(alignmentRect:CGRect:API_AVAILABLE(ios(6.0):CGRect;
+	overload extern inline public function frameForAlignmentRect(alignmentRect:CGRect):CGRect;
 
 	@:native("API_AVAILABLE(ios(6.0))")
 	public var API_AVAILABLE(ios(6.0)):alignmentRectInsets;
@@ -336,34 +378,34 @@ extern class UIView{
 	public var API_AVAILABLE(ios(6.0)):intrinsicContentSize;
 
 	@:native("invalidateIntrinsicContentSize")
-	overload extern inline public function invalidateIntrinsicContentSize():void;
+	overload extern inline public function invalidateIntrinsicContentSize():Void;
 
 	@:native("contentHuggingPriorityForAxis")
-	overload extern inline public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis:API_AVAILABLE(ios(6.0):UILayoutPriority;
+	overload extern inline public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):UILayoutPriority;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload extern inline public function setContentHuggingPriority(priority:UILayoutPriority, forAxis:UILayoutConstraintAxis:ios(6.0):void;
+	overload extern inline public function setContentHuggingPriority(priority:UILayoutPriority, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
-	overload extern inline public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis:API_AVAILABLE(ios(6.0):UILayoutPriority;
+	overload extern inline public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):UILayoutPriority;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload extern inline public function setContentCompressionResistancePriority(priority:UILayoutPriority, forAxis:UILayoutConstraintAxis:ios(6.0):void;
+	overload extern inline public function setContentCompressionResistancePriority(priority:UILayoutPriority, forAxis:UILayoutConstraintAxis):Void;
 
-	@:native("systemLayoutSizeFittingSize")
-	overload extern inline public function systemLayoutSizeFittingSize(targetSize:CGSize:API_AVAILABLE(ios(6.0):CGSize;
+	@:native("systemLayoutSizeFittingSize:API_AVAILABLE(ios(6.0):Equivalent:sending:with:for")
+	overload extern inline public function systemLayoutSizeFittingSize(targetSize:CGSize, API_AVAILABLE(ios(6.0)://, Equivalent:to, sending:-systemLayoutSizeFittingSize, with:UILayoutPriorityFittingSizeLevel, for:both):CGSize;
 
-	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority")
-	overload extern inline public function systemLayoutSizeFittingSize(targetSize:CGSize, withHorizontalFittingPriority:UILayoutPriority:UILayoutPriority:ios(8.0):CGSize;
+	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
+	overload extern inline public function systemLayoutSizeFittingSize(targetSize:CGSize, withHorizontalFittingPriority:UILayoutPriority, verticalFittingPriority:UILayoutPriority):CGSize;
 
 	@:native("API_AVAILABLE(ios(9.0))")
 	public var API_AVAILABLE(ios(9.0)):layoutGuides;
 
 	@:native("addLayoutGuide")
-	overload extern inline public function addLayoutGuide(UILayoutGuide:null::ios(9.0):void;
+	overload extern inline public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("removeLayoutGuide")
-	overload extern inline public function removeLayoutGuide(UILayoutGuide:null::ios(9.0):void;
+	overload extern inline public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("API_AVAILABLE(ios(9.0))")
 	public var API_AVAILABLE(ios(9.0)):leadingAnchor;
@@ -402,16 +444,16 @@ extern class UIView{
 	public var API_AVAILABLE(ios(9.0)):lastBaselineAnchor;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload extern inline public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis:API_AVAILABLE(ios(6.0):NSArray<__kindof NSLayoutConstraint *> *;
+	overload extern inline public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray<__kindof NSLayoutConstraint *> *;
 
 	@:native("API_AVAILABLE(ios(6.0))")
 	public var API_AVAILABLE(ios(6.0)):hasAmbiguousLayout;
 
 	@:native("exerciseAmbiguityInLayout")
-	overload extern inline public function exerciseAmbiguityInLayout():void;
+	overload extern inline public function exerciseAmbiguityInLayout():Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload extern inline public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis:API_AVAILABLE(ios(10.0):NSArray<__kindof NSLayoutConstraint *> *;
+	overload extern inline public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray<__kindof NSLayoutConstraint *> *;
 
 	@:native("API_AVAILABLE(ios(10.0))")
 	public var API_AVAILABLE(ios(10.0)):hasAmbiguousLayout;
@@ -420,19 +462,58 @@ extern class UIView{
 	public var API_AVAILABLE(ios(6.0)):restorationIdentifier;
 
 	@:native("")
-	overload extern inline public function ():void;
+	overload extern inline public function ():Void;
 
 	@:native("")
-	overload extern inline public function ():void;
+	overload extern inline public function ():Void;
 
 	@:native("snapshotViewAfterScreenUpdates")
-	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:BOOL:API_AVAILABLE(ios(7.0):nullable UIView *;
+	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:BOOL):nullable UIView *;
 
-	@:native("resizableSnapshotViewFromRect:afterScreenUpdates")
-	overload extern inline public function resizableSnapshotViewFromRect(rect:CGRect, afterScreenUpdates:BOOL:UIEdgeInsets:ios(7.0):nullable UIView *;
+	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets:API_AVAILABLE(ios(7.0)://:snapshots:default:stretching")
+	overload extern inline public function resizableSnapshotViewFromRect(rect:CGRect, afterScreenUpdates:BOOL, withCapInsets:UIEdgeInsets, API_AVAILABLE(ios(7.0):, //:Resizable, snapshots:will, default:to, stretching:the):nullable UIView *;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
-	overload extern inline public function drawViewHierarchyInRect(rect:CGRect, afterScreenUpdates:BOOL:ios(7.0):BOOL;
+	overload extern inline public function drawViewHierarchyInRect(rect:CGRect, afterScreenUpdates:BOOL):BOOL;
+
+	@:native("beginAnimations:context:::::::::::")
+	overload extern inline public static function beginAnimations(animationID:nullableNSString, context:nullablevoid, :, :, :, :, :, :, :, :, :, :, :):Void;
+
+	@:native("commitAnimations")
+	overload extern inline public static function commitAnimations():Void;
+
+	@:native("setAnimationDelegate:::::::::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationDelegate(delegate:nullableid, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+
+	@:native("setAnimationWillStartSelector::::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationWillStartSelector(selector:nullableSEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+
+	@:native("setAnimationDidStopSelector:::::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationDidStopSelector(selector:nullableSEL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+
+	@:native("setAnimationDuration:::::::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationDuration(duration:NSTimeInterval, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
+
+	@:native("setAnimationDelay::::::::::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationDelay(delay:NSTimeInterval, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
+
+	@:native("setAnimationStartDate:::::::::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationStartDate(startDate:NSDate, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
+
+	@:native("setAnimationCurve:::::::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationCurve(curve:UIViewAnimationCurve, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
+
+	@:native("setAnimationRepeatCount:::::::::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationRepeatCount(repeatCount:float, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :Dynamic):Void;
+
+	@:native("setAnimationRepeatAutoreverses::::::::::::::::::::::::")
+	overload extern inline public static function setAnimationRepeatAutoreverses(repeatAutoreverses:BOOL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
+
+	@:native("setAnimationBeginsFromCurrentState:::::::::::::::::::::::")
+	overload extern inline public static function setAnimationBeginsFromCurrentState(fromCurrentState:BOOL, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :):Void;
+
+	@:native("setAnimationTransition:forView:cache:")
+	overload extern inline public static function setAnimationTransition(transition:UIViewAnimationTransition, forView:UIView, cache:BOOL, :):Void;
 
 	@:native("API_UNAVAILABLE(watchos)")
 	public var API_UNAVAILABLE(watchos):tvos(13.0));

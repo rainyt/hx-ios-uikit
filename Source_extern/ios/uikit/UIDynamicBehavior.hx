@@ -27,16 +27,16 @@ extern class UIDynamicBehavior{
 	public var API_AVAILABLE(ios(9.0)):collisionBoundingPath;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(NSArray<id:null:<UIDynamicItem>>):UIDynamicBehavior;
+	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>):UIDynamicBehavior;
 
 	@:native("items")
 	public var items:<UIDynamicItem>>;
 
 	@:native("addChildBehavior")
-	overload extern inline public function addChildBehavior(UIDynamicBehavior:null:):void;
+	overload extern inline public function addChildBehavior(behavior:UIDynamicBehavior):Void;
 
 	@:native("removeChildBehavior")
-	overload extern inline public function removeChildBehavior(UIDynamicBehavior:null:):void;
+	overload extern inline public function removeChildBehavior(behavior:UIDynamicBehavior):Void;
 
 	@:native("childBehaviors")
 	public var childBehaviors:>;
@@ -44,8 +44,8 @@ extern class UIDynamicBehavior{
 	@:native("(^action)(void)")
 	public var (^action)(void):void;
 
-	@:native("willMoveToAnimator")
-	overload extern inline public function willMoveToAnimator(nullable:null:UIDynamicAnimator):void;
+	@:native("willMoveToAnimator://:when:removed")
+	overload extern inline public function willMoveToAnimator(dynamicAnimator:nullableUIDynamicAnimator, //:nil, when:being, removed:from):Void;
 
 	@:native("dynamicAnimator")
 	public var dynamicAnimator:UIDynamicAnimator;

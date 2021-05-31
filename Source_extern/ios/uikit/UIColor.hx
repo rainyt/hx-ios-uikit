@@ -11,17 +11,38 @@ extern class UIColor{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIColor;
 
+	@:native("colorWithWhite:alpha")
+	overload extern inline public static function colorWithWhite(white:CGFloat, alpha:CGFloat):UIColor *;
+
+	@:native("colorWithHue:saturation:brightness:alpha")
+	overload extern inline public static function colorWithHue(hue:CGFloat, saturation:CGFloat, brightness:CGFloat, alpha:CGFloat):UIColor *;
+
+	@:native("colorWithRed:green:blue:alpha")
+	overload extern inline public static function colorWithRed(red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat):UIColor *;
+
+	@:native("colorWithDisplayP3Red:green:blue:alpha")
+	overload extern inline public static function colorWithDisplayP3Red(displayP3Red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat):UIColor *;
+
+	@:native("colorWithCGColor")
+	overload extern inline public static function colorWithCGColor(cgColor:CGColorRef):UIColor *;
+
+	@:native("colorWithPatternImage")
+	overload extern inline public static function colorWithPatternImage(image:UIImage):UIColor *;
+
+	@:native("colorWithCIColor")
+	overload extern inline public static function colorWithCIColor(ciColor:CIColor):UIColor *;
+
 	@:native("initWithWhite:alpha")
 	overload extern inline public function initWithWhite(white:CGFloat, alpha:CGFloat):UIColor *;
 
-	@:native("initWithHue:saturation")
-	overload extern inline public function initWithHue(hue:CGFloat, saturation:CGFloat:CGFloat:CGFloat):UIColor *;
+	@:native("initWithHue:saturation:brightness:alpha")
+	overload extern inline public function initWithHue(hue:CGFloat, saturation:CGFloat, brightness:CGFloat, alpha:CGFloat):UIColor *;
 
-	@:native("initWithRed:green")
-	overload extern inline public function initWithRed(red:CGFloat, green:CGFloat:CGFloat:CGFloat):UIColor *;
+	@:native("initWithRed:green:blue:alpha")
+	overload extern inline public function initWithRed(red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat):UIColor *;
 
-	@:native("initWithDisplayP3Red:green")
-	overload extern inline public function initWithDisplayP3Red(displayP3Red:CGFloat, green:CGFloat:CGFloat:CGFloat:ios(10.0):UIColor *;
+	@:native("initWithDisplayP3Red:green:blue:alpha")
+	overload extern inline public function initWithDisplayP3Red(displayP3Red:CGFloat, green:CGFloat, blue:CGFloat, alpha:CGFloat):UIColor *;
 
 	@:native("initWithCGColor")
 	overload extern inline public function initWithCGColor(cgColor:CGColorRef):UIColor *;
@@ -30,7 +51,7 @@ extern class UIColor{
 	overload extern inline public function initWithPatternImage(image:UIImage):UIColor *;
 
 	@:native("initWithCIColor")
-	overload extern inline public function initWithCIColor(CIColor:null::ios(5.0):UIColor *;
+	overload extern inline public function initWithCIColor(ciColor:CIColor):UIColor *;
 
 	@:native("white")
 	public var white:0.0;
@@ -78,22 +99,22 @@ extern class UIColor{
 	public var alpha:0.0;
 
 	@:native("set;")
-	overload extern inline public function set;():void;
+	overload extern inline public function set;():Void;
 
 	@:native("setFill;")
-	overload extern inline public function setFill;():void;
+	overload extern inline public function setFill;():Void;
 
 	@:native("setStroke;")
-	overload extern inline public function setStroke;():void;
+	overload extern inline public function setStroke;():Void;
 
-	@:native("getWhite")
-	overload extern inline public function getWhite(nullable:null:CGFloat:nullableCGFloat:ios(5.0):BOOL;
+	@:native("getWhite:alpha")
+	overload extern inline public function getWhite(white:nullableCGFloat, alpha:nullableCGFloat):BOOL;
 
-	@:native("getHue")
-	overload extern inline public function getHue(nullable:null:CGFloat:nullableCGFloat:nullableCGFloat:nullableCGFloat:ios(5.0):BOOL;
+	@:native("getHue:saturation:brightness:alpha")
+	overload extern inline public function getHue(hue:nullableCGFloat, saturation:nullableCGFloat, brightness:nullableCGFloat, alpha:nullableCGFloat):BOOL;
 
-	@:native("getRed")
-	overload extern inline public function getRed(nullable:null:CGFloat:nullableCGFloat:nullableCGFloat:nullableCGFloat:ios(5.0):BOOL;
+	@:native("getRed:green:blue:alpha")
+	overload extern inline public function getRed(red:nullableCGFloat, green:nullableCGFloat, blue:nullableCGFloat, alpha:nullableCGFloat):BOOL;
 
 	@:native("colorWithAlphaComponent")
 	overload extern inline public function colorWithAlphaComponent(alpha:CGFloat):UIColor *;
@@ -108,13 +129,22 @@ extern class UIColor{
 	public var API_AVAILABLE(ios(5.0)):CIColor;
 
 	@:native("initWithColor")
-	overload extern inline public function initWithColor(UIColor:null::ios(5.0):UIColor;
+	overload extern inline public function initWithColor(color:UIColor):UIColor;
 
-	@:native("initWithDynamicProvider")
-	overload extern inline public function initWithDynamicProvider(UIColor:null:(^:UITraitCollectiontraitCollection:ios(13.0:13.0:watchos):UIColor *;
+	@:native("colorNamed:API_AVAILABLE(ios(11.0)::://:from")
+	overload extern inline public static function colorNamed(name:NSString, API_AVAILABLE(ios(11.0):, :, :, //:load, from:main):nullable UIColor *;
 
-	@:native("resolvedColorWithTraitCollection")
-	overload extern inline public function resolvedColorWithTraitCollection(UITraitCollection:null::ios(13.0:13.0:watchos):UIColor *;
+	@:native("colorNamed:inBundle:compatibleWithTraitCollection")
+	overload extern inline public static function colorNamed(name:NSString, inBundle:nullableNSBundle, compatibleWithTraitCollection:nullableUITraitCollection):nullable UIColor *;
+
+	@:native("colorWithDynamicProvider:API_AVAILABLE(ios(13.0), tvos(13.0)")
+	overload extern inline public static function colorWithDynamicProvider(dynamicProvider:Dynamic, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UIColor *;
+
+	@:native("initWithDynamicProvider:API_AVAILABLE(ios(13.0), tvos(13.0)")
+	overload extern inline public function initWithDynamicProvider(dynamicProvider:Dynamic, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UIColor *;
+
+	@:native("resolvedColorWithTraitCollection:API_AVAILABLE(ios(13.0), tvos(13.0)")
+	overload extern inline public function resolvedColorWithTraitCollection(traitCollection:UITraitCollection, API_AVAILABLE(ios(13.0), tvos(13.0):Dynamic):UIColor *;
 
 
 }

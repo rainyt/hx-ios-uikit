@@ -12,7 +12,13 @@ extern class UIPrintInfo{
 	overload extern inline public static function autorelease():UIPrintInfo;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIPrintInfo;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIPrintInfo;
+
+	@:native("printInfo;")
+	overload extern inline public static function printInfo;():UIPrintInfo *;
+
+	@:native("printInfoWithDictionary")
+	overload extern inline public static function printInfoWithDictionary(dictionary:nullableNSDictionary):UIPrintInfo *;
 
 	@:native("printer")
 	public var printer:selects;

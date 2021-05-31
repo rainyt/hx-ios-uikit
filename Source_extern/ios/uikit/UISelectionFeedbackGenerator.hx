@@ -12,7 +12,7 @@ extern class UISelectionFeedbackGenerator{
 	overload extern inline public static function autorelease():UISelectionFeedbackGenerator;
 
 	@:native("selectionChanged;")
-	overload extern inline public function selectionChanged;():void;
+	overload extern inline public function selectionChanged;():Void;
 
 
 }

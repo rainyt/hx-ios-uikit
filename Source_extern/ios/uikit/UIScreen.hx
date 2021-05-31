@@ -66,7 +66,7 @@ extern class UIScreen{
 	public var screen:physical;
 
 	@:native("displayLinkWithTarget:selector")
-	overload extern inline public function displayLinkWithTarget(target:id, selector:SEL:ios(4.0):nullable CADisplayLink *;
+	overload extern inline public function displayLinkWithTarget(target:id, selector:SEL):nullable CADisplayLink *;
 
 	@:native("of")
 	public var of:capable;
@@ -87,7 +87,7 @@ extern class UIScreen{
 	public var API_UNAVAILABLE(tvos):9.0));
 
 	@:native("snapshotViewAfterScreenUpdates")
-	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:BOOL:API_AVAILABLE(ios(7.0):UIView *;
+	overload extern inline public function snapshotViewAfterScreenUpdates(afterUpdates:BOOL):UIView *;
 
 
 }

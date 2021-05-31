@@ -29,14 +29,23 @@ extern class UIActivityItemsConfiguration{
 	@:native("(^applicationActivitiesProvider)(void)")
 	public var (^applicationActivitiesProvider)(void):>;
 
-	@:native("initWithObjects")
-	overload extern inline public function initWithObjects(NSArray<id<NSItemProviderWriting>:null:>):UIActivityItemsConfiguration;
+	@:native("activityItemsConfigurationWithObjects://:data")
+	overload extern inline public static function activityItemsConfigurationWithObjects(objects:NSArray<id<NSItemProviderWriting>>, //:Provide, data:up):UIActivityItemsConfiguration;
 
-	@:native("initWithItemProviders")
-	overload extern inline public function initWithItemProviders(NSArray<NSItemProvider:null:>):UIActivityItemsConfiguration;
+	@:native("activityItemsConfigurationWithItemProviders://")
+	overload extern inline public static function activityItemsConfigurationWithItemProviders(itemProviders:NSArray<NSItemProvider>, //:Provide):UIActivityItemsConfiguration;
+
+	@:native("initWithObjects:NS_DESIGNATED_INITIALIZER:Provide")
+	overload extern inline public function initWithObjects(objects:NSArray<id<NSItemProviderWriting>>, NS_DESIGNATED_INITIALIZER://, Provide:data):UIActivityItemsConfiguration;
+
+	@:native("initWithItemProviders:NS_DESIGNATED_INITIALIZER:Provide")
+	overload extern inline public function initWithItemProviders(itemProviders:NSArray<NSItemProvider>, NS_DESIGNATED_INITIALIZER://, Provide:promised):UIActivityItemsConfiguration;
 
 	@:native("init")
 	overload extern inline public function init():UIActivityItemsConfiguration;
+
+	@:native("new")
+	overload extern inline public static function new():UIActivityItemsConfiguration;
 
 
 }

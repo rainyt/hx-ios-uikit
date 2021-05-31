@@ -12,7 +12,7 @@ extern class UIWindow{
 	overload extern inline public static function autorelease():UIWindow;
 
 	@:native("initWithWindowScene")
-	overload extern inline public function initWithWindowScene(UIWindowScene:null::ios(13.0):UIWindow;
+	overload extern inline public function initWithWindowScene(windowScene:UIWindowScene):UIWindow;
 
 	@:native("API_AVAILABLE(ios(13.0))")
 	public var API_AVAILABLE(ios(13.0)):windowScene;
@@ -23,8 +23,8 @@ extern class UIWindow{
 	@:native("code")
 	public var code:performance-sensitive;
 
-	@:native("setScreen:"setWindowScene")
-	overload extern inline public function setScreen(UIScreen:null:, "setWindowScene:3.2,13.0):void;
+	@:native("setScreen")
+	overload extern inline public function setScreen(screen:UIScreen):Void;
 
 	@:native("0.0")
 	public var 0.0:=;
@@ -33,28 +33,28 @@ extern class UIWindow{
 	public var keyWindow:BOOL;
 
 	@:native("becomeKeyWindow;")
-	overload extern inline public function becomeKeyWindow;():void;
+	overload extern inline public function becomeKeyWindow;():Void;
 
 	@:native("resignKeyWindow;")
-	overload extern inline public function resignKeyWindow;():void;
+	overload extern inline public function resignKeyWindow;():Void;
 
 	@:native("makeKeyWindow;")
-	overload extern inline public function makeKeyWindow;():void;
+	overload extern inline public function makeKeyWindow;():Void;
 
 	@:native("makeKeyAndVisible;")
-	overload extern inline public function makeKeyAndVisible;():void;
+	overload extern inline public function makeKeyAndVisible;():Void;
 
 	@:native("nil")
 	public var nil:is;
 
-	@:native("sendEvent")
-	overload extern inline public function sendEvent(UIEvent:null:):void;
+	@:native("sendEvent:::::::::::called:UIApplication:dispatch:to:inside")
+	overload extern inline public function sendEvent(event:UIEvent, :, :, :, :, :, :, :, :, :, ://, called:by, UIApplication:to, dispatch:events, to:views, inside:the):Void;
 
-	@:native("convertPoint:toWindow")
-	overload extern inline public function convertPoint(point:CGPoint, toWindow:nullableUIWindow):CGPoint;
+	@:native("convertPoint:toWindow:::can:used:convert")
+	overload extern inline public function convertPoint(point:CGPoint, toWindow:nullableUIWindow, :, ://, can:be, used:to, convert:to):CGPoint;
 
-	@:native("convertPoint:fromWindow")
-	overload extern inline public function convertPoint(point:CGPoint, fromWindow:nullableUIWindow):CGPoint;
+	@:native("convertPoint:fromWindow::pass:nil")
+	overload extern inline public function convertPoint(point:CGPoint, fromWindow:nullableUIWindow, ://, pass:in, nil:to):CGPoint;
 
 	@:native("convertRect:toWindow")
 	overload extern inline public function convertRect(rect:CGRect, toWindow:nullableUIWindow):CGRect;

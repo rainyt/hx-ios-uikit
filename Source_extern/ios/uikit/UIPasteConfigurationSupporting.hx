@@ -15,10 +15,10 @@ extern class UIPasteConfigurationSupporting{
 	public var pasteConfiguration:UIPasteConfiguration;
 
 	@:native("pasteItemProviders")
-	overload extern inline public function pasteItemProviders(NSArray<NSItemProvider:null:>):void;
+	overload extern inline public function pasteItemProviders(itemProviders:NSArray<NSItemProvider>):Void;
 
 	@:native("canPasteItemProviders")
-	overload extern inline public function canPasteItemProviders(NSArray<NSItemProvider:null:>):BOOL;
+	overload extern inline public function canPasteItemProviders(itemProviders:NSArray<NSItemProvider>):BOOL;
 
 
 }

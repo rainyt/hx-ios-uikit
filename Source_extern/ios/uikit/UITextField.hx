@@ -102,10 +102,10 @@ extern class UITextField{
 	overload extern inline public function rightViewRectForBounds(bounds:CGRect):CGRect;
 
 	@:native("drawTextInRect")
-	overload extern inline public function drawTextInRect(rect:CGRect):void;
+	overload extern inline public function drawTextInRect(rect:CGRect):Void;
 
 	@:native("drawPlaceholderInRect")
-	overload extern inline public function drawPlaceholderInRect(rect:CGRect):void;
+	overload extern inline public function drawPlaceholderInRect(rect:CGRect):Void;
 
 	@:native("")
 	public var :;
@@ -116,35 +116,35 @@ extern class UITextField{
 	@:native("NO.")
 	public var NO.:to;
 
-	@:native("endEditing")
-	overload extern inline public function endEditing(force:BOOL:optionallyforce):BOOL;
+	@:native("endEditing:::use:make:view:any:that:the:responder")
+	overload extern inline public function endEditing(force:BOOL, :, ://, use:to, make:the, view:or, any:subview, that:is, the:first, responder:resign):BOOL;
 
-	@:native("textFieldShouldBeginEditing")
-	overload extern inline public function textFieldShouldBeginEditing(UITextField:null:):BOOL;
+	@:native("textFieldShouldBeginEditing:::::return:to")
+	overload extern inline public function textFieldShouldBeginEditing(textField:UITextField, :, :, :, ://, return:NO, to:disallow):BOOL;
 
-	@:native("textFieldDidBeginEditing")
-	overload extern inline public function textFieldDidBeginEditing(UITextField:null:):void;
+	@:native("textFieldDidBeginEditing:::::://")
+	overload extern inline public function textFieldDidBeginEditing(textField:UITextField, :, :, :, :, :, //:became):Void;
 
-	@:native("textFieldShouldEndEditing")
-	overload extern inline public function textFieldShouldEndEditing(UITextField:null:):BOOL;
+	@:native("textFieldShouldEndEditing::::::return:to:editing:stop:to:first:status.:to:the:session")
+	overload extern inline public function textFieldShouldEndEditing(textField:UITextField, :, :, :, :, ://, return:YES, to:allow, editing:to, stop:and, to:resign, first:responder, status.:NO, to:disallow, the:editing, session:to):BOOL;
 
-	@:native("textFieldDidEndEditing")
-	overload extern inline public function textFieldDidEndEditing(UITextField:null::e.g.viewremovedfromwindow):void;
+	@:native("textFieldDidEndEditing::::::://:be:if:even:shouldEndEditing:NO:or")
+	overload extern inline public function textFieldDidEndEditing(textField:UITextField, :, :, :, :, :, :, //:may, be:called, if:forced, even:if, shouldEndEditing:returns, NO:Dynamic, or:endEditing):Void;
 
-	@:native("textFieldDidEndEditing")
-	overload extern inline public function textFieldDidEndEditing(UITextField:null::UITextFieldDidEndEditingReason:ios(10.0):void;
+	@:native("textFieldDidEndEditing:reason:API_AVAILABLE(ios(10.0):if:called:place")
+	overload extern inline public function textFieldDidEndEditing(textField:UITextField, reason:UITextFieldDidEndEditingReason, API_AVAILABLE(ios(10.0)://, if:implemented,, called:in, place:of):Void;
 
-	@:native("textField")
-	overload extern inline public function textField(UITextField:null::NSRange:NSString):BOOL;
+	@:native("textField:shouldChangeCharactersInRange:replacementString:://:NO:not")
+	overload extern inline public function textField(textField:UITextField, shouldChangeCharactersInRange:NSRange, replacementString:NSString, :, //:return, NO:to, not:change):BOOL;
 
 	@:native("textFieldDidChangeSelection")
-	overload extern inline public function textFieldDidChangeSelection(UITextField:null::ios(13.0:13.0):void;
+	overload extern inline public function textFieldDidChangeSelection(textField:UITextField):Void;
 
-	@:native("textFieldShouldClear")
-	overload extern inline public function textFieldShouldClear(UITextField:null::nonotifications):BOOL;
+	@:native("textFieldShouldClear:::::::://:when:button:return:to")
+	overload extern inline public function textFieldShouldClear(textField:UITextField, :, :, :, :, :, :, :, //:called, when:clear, button:pressed., return:NO, to:ignore):BOOL;
 
-	@:native("textFieldShouldReturn")
-	overload extern inline public function textFieldShouldReturn(UITextField:null:):BOOL;
+	@:native("textFieldShouldReturn::::::::called:'return':pressed.:NO")
+	overload extern inline public function textFieldShouldReturn(textField:UITextField, :, :, :, :, :, :, ://, called:when, 'return':key, pressed.:return, NO:to):BOOL;
 
 
 }

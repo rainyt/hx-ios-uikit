@@ -17,6 +17,12 @@ extern class UITextInputTraits{
 	@:native("init")
 	overload extern inline public function init():UITextInputTraits;
 
+	@:native("new")
+	overload extern inline public static function new():UITextInputTraits;
+
+	@:native("passwordRulesWithDescriptor")
+	overload extern inline public static function passwordRulesWithDescriptor(passwordRulesDescriptor:NSString):UITextInputTraits;
+
 	@:native("UITextAutocapitalizationTypeSentences")
 	public var UITextAutocapitalizationTypeSentences:is;
 

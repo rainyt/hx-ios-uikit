@@ -11,6 +11,12 @@ extern class NSLayoutConstraint{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():NSLayoutConstraint;
 
+	@:native("constraintsWithVisualFormat:options:metrics:views")
+	overload extern inline public static function constraintsWithVisualFormat(format:NSString, options:NSLayoutFormatOptions, metrics:nullableNSDictionary<NSString,id>, views:NSDictionary<NSString,id>):NSArray<NSLayoutConstraint *> *;
+
+	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
+	overload extern inline public static function constraintWithItem(view1:id, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:nullableid, attribute:NSLayoutAttribute, multiplier:CGFloat, constant:CGFloat):NSLayoutConstraint;
+
 	@:native("priority")
 	public var priority:UILayoutPriority;
 
@@ -49,6 +55,12 @@ extern class NSLayoutConstraint{
 
 	@:native("ios(8.0))")
 	public var ios(8.0)):API_AVAILABLE(macos(10.10),;
+
+	@:native("activateConstraints")
+	overload extern inline public static function activateConstraints(constraints:NSArray<NSLayoutConstraint>):Void;
+
+	@:native("deactivateConstraints")
+	overload extern inline public static function deactivateConstraints(constraints:NSArray<NSLayoutConstraint>):Void;
 
 	@:native("ios(7.0))")
 	public var ios(7.0)):API_AVAILABLE(macos(10.7),;

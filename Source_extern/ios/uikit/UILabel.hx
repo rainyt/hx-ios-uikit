@@ -69,7 +69,7 @@ extern class UILabel{
 	overload extern inline public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:NSInteger):CGRect;
 
 	@:native("drawTextInRect")
-	overload extern inline public function drawTextInRect(rect:CGRect):void;
+	overload extern inline public function drawTextInRect(rect:CGRect):Void;
 
 	@:native("API_AVAILABLE(ios(6.0))")
 	public var API_AVAILABLE(ios(6.0)):preferredMaxLayoutWidth;

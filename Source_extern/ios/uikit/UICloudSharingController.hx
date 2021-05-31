@@ -11,35 +11,35 @@ extern class UICloudSharingController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UICloudSharingController;
 
-	@:native("cloudSharingController")
-	overload extern inline public function cloudSharingController(UICloudSharingController:null::NSError):void;
+	@:native("cloudSharingController:failedToSaveShareWithError")
+	overload extern inline public function cloudSharingController(csc:UICloudSharingController, failedToSaveShareWithError:NSError):Void;
 
 	@:native("itemTitleForCloudSharingController")
-	overload extern inline public function itemTitleForCloudSharingController(UICloudSharingController:null:):nullable NSString *;
+	overload extern inline public function itemTitleForCloudSharingController(csc:UICloudSharingController):nullable NSString *;
 
 	@:native("itemThumbnailDataForCloudSharingController")
-	overload extern inline public function itemThumbnailDataForCloudSharingController(UICloudSharingController:null:):nullable NSData *;
+	overload extern inline public function itemThumbnailDataForCloudSharingController(csc:UICloudSharingController):nullable NSData *;
 
 	@:native("itemTypeForCloudSharingController")
-	overload extern inline public function itemTypeForCloudSharingController(UICloudSharingController:null:):nullable NSString *;
+	overload extern inline public function itemTypeForCloudSharingController(csc:UICloudSharingController):nullable NSString *;
 
 	@:native("cloudSharingControllerDidSaveShare")
-	overload extern inline public function cloudSharingControllerDidSaveShare(UICloudSharingController:null:):void;
+	overload extern inline public function cloudSharingControllerDidSaveShare(csc:UICloudSharingController):Void;
 
 	@:native("cloudSharingControllerDidStopSharing")
-	overload extern inline public function cloudSharingControllerDidStopSharing(UICloudSharingController:null:):void;
+	overload extern inline public function cloudSharingControllerDidStopSharing(csc:UICloudSharingController):Void;
 
-	@:native("initWithNibName")
-	overload extern inline public function initWithNibName(nullable:null:NSString:nullableNSBundle):UICloudSharingController;
+	@:native("initWithNibName:bundle")
+	overload extern inline public function initWithNibName(nibNameOrNil:nullableNSString, bundle:nullableNSBundle):UICloudSharingController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UICloudSharingController;
+	overload extern inline public function initWithCoder(coder:NSCoder):UICloudSharingController;
 
 	@:native("initWithPreparationHandler")
-	overload extern inline public function initWithPreparationHandler(void:null:(^:UICloudSharingControllercontroller,void(^preparationCompletionHandler:CKShare_Nullable,CKContainer_Nullable,NSError_Nullable):UICloudSharingController;
+	overload extern inline public function initWithPreparationHandler(preparationHandler:Dynamic):UICloudSharingController;
 
-	@:native("initWithShare")
-	overload extern inline public function initWithShare(CKShare:null::CKContainer):UICloudSharingController;
+	@:native("initWithShare:container")
+	overload extern inline public function initWithShare(share:CKShare, container:CKContainer):UICloudSharingController;
 
 	@:native("delegate")
 	public var delegate:id<UICloudSharingControllerDelegate>;

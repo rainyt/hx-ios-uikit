@@ -18,28 +18,28 @@ extern class UIWebView{
 	public var API_AVAILABLE(ios(5.0)):scrollView;
 
 	@:native("loadRequest")
-	overload extern inline public function loadRequest(NSURLRequest:null:):void;
+	overload extern inline public function loadRequest(request:NSURLRequest):Void;
 
-	@:native("loadHTMLString")
-	overload extern inline public function loadHTMLString(NSString:null::nullableNSURL):void;
+	@:native("loadHTMLString:baseURL")
+	overload extern inline public function loadHTMLString(string:NSString, baseURL:nullableNSURL):Void;
 
-	@:native("loadData")
-	overload extern inline public function loadData(NSData:null::NSString:NSString:NSURL):void;
+	@:native("loadData:MIMEType:textEncodingName:baseURL")
+	overload extern inline public function loadData(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:NSURL):Void;
 
 	@:native("request")
 	public var request:NSURLRequest;
 
 	@:native("reload;")
-	overload extern inline public function reload;():void;
+	overload extern inline public function reload;():Void;
 
 	@:native("stopLoading;")
-	overload extern inline public function stopLoading;():void;
+	overload extern inline public function stopLoading;():Void;
 
 	@:native("goBack;")
-	overload extern inline public function goBack;():void;
+	overload extern inline public function goBack;():Void;
 
 	@:native("goForward;")
-	overload extern inline public function goForward;():void;
+	overload extern inline public function goForward;():Void;
 
 	@:native("canGoBack")
 	public var canGoBack:BOOL;
@@ -51,7 +51,7 @@ extern class UIWebView{
 	public var loading:BOOL;
 
 	@:native("stringByEvaluatingJavaScriptFromString")
-	overload extern inline public function stringByEvaluatingJavaScriptFromString(NSString:null:):nullable NSString *;
+	overload extern inline public function stringByEvaluatingJavaScriptFromString(script:NSString):nullable NSString *;
 
 	@:native("scalesPageToFit")
 	public var scalesPageToFit:BOOL;
@@ -98,17 +98,17 @@ extern class UIWebView{
 	@:native("NO")
 	public var NO:is;
 
-	@:native("webView")
-	overload extern inline public function webView(UIWebView:null::NSURLRequest:UIWebViewNavigationType:"Nolongersupported.",ios(2.0,12.0):BOOL;
+	@:native("webView:shouldStartLoadWithRequest:navigationType")
+	overload extern inline public function webView(webView:UIWebView, shouldStartLoadWithRequest:NSURLRequest, navigationType:UIWebViewNavigationType):BOOL;
 
 	@:native("webViewDidStartLoad")
-	overload extern inline public function webViewDidStartLoad(UIWebView:null::"Nolongersupported.",ios(2.0,12.0):void;
+	overload extern inline public function webViewDidStartLoad(webView:UIWebView):Void;
 
 	@:native("webViewDidFinishLoad")
-	overload extern inline public function webViewDidFinishLoad(UIWebView:null::"Nolongersupported.",ios(2.0,12.0):void;
+	overload extern inline public function webViewDidFinishLoad(webView:UIWebView):Void;
 
-	@:native("webView")
-	overload extern inline public function webView(UIWebView:null::NSError:"Nolongersupported.",ios(2.0,12.0):void;
+	@:native("webView:didFailLoadWithError")
+	overload extern inline public function webView(webView:UIWebView, didFailLoadWithError:NSError):Void;
 
 
 }

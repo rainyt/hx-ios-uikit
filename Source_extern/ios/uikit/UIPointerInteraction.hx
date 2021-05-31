@@ -18,22 +18,22 @@ extern class UIPointerInteraction{
 	public var enabled:BOOL;
 
 	@:native("initWithDelegate")
-	overload extern inline public function initWithDelegate(nullable:null:id<UIPointerInteractionDelegate>):UIPointerInteraction;
+	overload extern inline public function initWithDelegate(delegate:nullableid<UIPointerInteractionDelegate>):UIPointerInteraction;
 
 	@:native("invalidate;")
-	overload extern inline public function invalidate;():void;
+	overload extern inline public function invalidate;():Void;
 
-	@:native("pointerInteraction")
-	overload extern inline public function pointerInteraction(UIPointerInteraction:null::UIPointerRegionRequest:UIPointerRegion):nullable UIPointerRegion *;
+	@:native("pointerInteraction:regionForRequest:defaultRegion")
+	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, regionForRequest:UIPointerRegionRequest, defaultRegion:UIPointerRegion):nullable UIPointerRegion *;
 
-	@:native("pointerInteraction")
-	overload extern inline public function pointerInteraction(UIPointerInteraction:null::UIPointerRegion):nullable UIPointerStyle *;
+	@:native("pointerInteraction:styleForRegion")
+	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, styleForRegion:UIPointerRegion):nullable UIPointerStyle *;
 
-	@:native("pointerInteraction")
-	overload extern inline public function pointerInteraction(UIPointerInteraction:null::UIPointerRegion:id<UIPointerInteractionAnimating>):void;
+	@:native("pointerInteraction:willEnterRegion:animator")
+	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, willEnterRegion:UIPointerRegion, animator:id<UIPointerInteractionAnimating>):Void;
 
-	@:native("pointerInteraction:pointerInteraction(_")
-	overload extern inline public function pointerInteraction(UIPointerInteraction:null::UIPointerRegion:id<UIPointerInteractionAnimating>, pointerInteraction(_):void;
+	@:native("pointerInteraction:willExitRegion:animator")
+	overload extern inline public function pointerInteraction(interaction:UIPointerInteraction, willExitRegion:UIPointerRegion, animator:id<UIPointerInteractionAnimating>):Void;
 
 	@:native("location")
 	public var location:CGPoint;
@@ -42,10 +42,10 @@ extern class UIPointerInteraction{
 	public var modifiers:UIKeyModifierFlags;
 
 	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null:(^:void):void;
+	overload extern inline public function addAnimations(animations:Dynamic):Void;
 
 	@:native("addCompletion")
-	overload extern inline public function addCompletion(void:null:(^:BOOLfinished):void;
+	overload extern inline public function addCompletion(completion:Dynamic):Void;
 
 
 }

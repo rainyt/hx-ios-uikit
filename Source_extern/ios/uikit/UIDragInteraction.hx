@@ -12,16 +12,19 @@ extern class UIDragInteraction{
 	overload extern inline public static function autorelease():UIDragInteraction;
 
 	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null:(^:void):void;
+	overload extern inline public function addAnimations(animations:Dynamic):Void;
 
 	@:native("addCompletion")
-	overload extern inline public function addCompletion(void:null:(^:UIViewAnimatingPositionfinalPosition):void;
+	overload extern inline public function addCompletion(completion:Dynamic):Void;
 
 	@:native("initWithDelegate")
 	overload extern inline public function initWithDelegate(delegate:id<UIDragInteractionDelegate>):UIDragInteraction;
 
 	@:native("init")
 	overload extern inline public function init():UIDragInteraction;
+
+	@:native("new")
+	overload extern inline public static function new():UIDragInteraction;
 
 	@:native("delegate")
 	public var delegate:id<UIDragInteractionDelegate>;
@@ -35,53 +38,53 @@ extern class UIDragInteraction{
 	@:native("enabledByDefault")
 	public var enabledByDefault:BOOL;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>):NSArray<UIDragItem *> *;
+	@:native("dragInteraction:itemsForBeginningSession")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, itemsForBeginningSession:id<UIDragSession>):NSArray<UIDragItem *> *;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::UIDragItem:id<UIDragSession>):nullable UITargetedDragPreview *;
+	@:native("dragInteraction:previewForLiftingItem:session")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, previewForLiftingItem:UIDragItem, session:id<UIDragSession>):nullable UITargetedDragPreview *;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragAnimating>:id<UIDragSession>):void;
+	@:native("dragInteraction:willAnimateLiftWithAnimator:session")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, willAnimateLiftWithAnimator:id<UIDragAnimating>, session:id<UIDragSession>):Void;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>):void;
+	@:native("dragInteraction:sessionWillBegin")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, sessionWillBegin:id<UIDragSession>):Void;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>):BOOL;
+	@:native("dragInteraction:sessionAllowsMoveOperation")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, sessionAllowsMoveOperation:id<UIDragSession>):BOOL;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>):BOOL;
+	@:native("dragInteraction:sessionIsRestrictedToDraggingApplication")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, sessionIsRestrictedToDraggingApplication:id<UIDragSession>):BOOL;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>):BOOL;
+	@:native("dragInteraction:prefersFullSizePreviewsForSession")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, prefersFullSizePreviewsForSession:id<UIDragSession>):BOOL;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>):void;
+	@:native("dragInteraction:sessionDidMove")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, sessionDidMove:id<UIDragSession>):Void;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>:UIDropOperation):void;
+	@:native("dragInteraction:session:willEndWithOperation")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, session:id<UIDragSession>, willEndWithOperation:UIDropOperation):Void;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>:UIDropOperation):void;
+	@:native("dragInteraction:session:didEndWithOperation")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, session:id<UIDragSession>, didEndWithOperation:UIDropOperation):Void;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>):void;
+	@:native("dragInteraction:sessionDidTransferItems")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, sessionDidTransferItems:id<UIDragSession>):Void;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>:CGPoint):NSArray<UIDragItem *> *;
+	@:native("dragInteraction:itemsForAddingToSession:withTouchAtPoint")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, itemsForAddingToSession:id<UIDragSession>, withTouchAtPoint:CGPoint):NSArray<UIDragItem *> *;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::NSArray<id<UIDragSession>>:CGPoint):nullable id<UIDragSession>;
+	@:native("dragInteraction:sessionForAddingItems:withTouchAtPoint")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, sessionForAddingItems:NSArray<id<UIDragSession>>, withTouchAtPoint:CGPoint):nullable id<UIDragSession>;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::id<UIDragSession>:NSArray<UIDragItem>:UIDragInteraction):void;
+	@:native("dragInteraction:session:willAddItems:forInteraction")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, session:id<UIDragSession>, willAddItems:NSArray<UIDragItem>, forInteraction:UIDragInteraction):Void;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::UIDragItem:UITargetedDragPreview):nullable UITargetedDragPreview *;
+	@:native("dragInteraction:previewForCancellingItem:withDefault")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, previewForCancellingItem:UIDragItem, withDefault:UITargetedDragPreview):nullable UITargetedDragPreview *;
 
-	@:native("dragInteraction")
-	overload extern inline public function dragInteraction(UIDragInteraction:null::UIDragItem:id<UIDragAnimating>):void;
+	@:native("dragInteraction:item:willAnimateCancelWithAnimator")
+	overload extern inline public function dragInteraction(interaction:UIDragInteraction, item:UIDragItem, willAnimateCancelWithAnimator:id<UIDragAnimating>):Void;
 
 
 }

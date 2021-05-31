@@ -11,6 +11,9 @@ extern class UIImageConfiguration{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIImageConfiguration;
 
+	@:native("new")
+	overload extern inline public static function new():UIImageConfiguration;
+
 	@:native("init")
 	overload extern inline public function init():UIImageConfiguration;
 
@@ -18,10 +21,10 @@ extern class UIImageConfiguration{
 	public var traitCollection:UITraitCollection;
 
 	@:native("configurationWithTraitCollection")
-	overload extern inline public function configurationWithTraitCollection(nullable:null:UITraitCollection):UIImageConfiguration;
+	overload extern inline public function configurationWithTraitCollection(traitCollection:nullableUITraitCollection):UIImageConfiguration;
 
 	@:native("configurationByApplyingConfiguration")
-	overload extern inline public function configurationByApplyingConfiguration(nullable:null:UIImageConfiguration):UIImageConfiguration;
+	overload extern inline public function configurationByApplyingConfiguration(otherConfiguration:nullableUIImageConfiguration):UIImageConfiguration;
 
 
 }

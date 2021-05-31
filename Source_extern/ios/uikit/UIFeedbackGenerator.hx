@@ -12,7 +12,7 @@ extern class UIFeedbackGenerator{
 	overload extern inline public static function autorelease():UIFeedbackGenerator;
 
 	@:native("prepare;")
-	overload extern inline public function prepare;():void;
+	overload extern inline public function prepare;():Void;
 
 
 }

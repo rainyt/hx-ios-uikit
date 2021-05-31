@@ -18,10 +18,13 @@ extern class UIMenuElement{
 	public var image:UIImage;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIMenuElement;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIMenuElement;
 
 	@:native("init")
 	overload extern inline public function init():UIMenuElement;
+
+	@:native("new")
+	overload extern inline public static function new():UIMenuElement;
 
 
 }

@@ -32,29 +32,29 @@ extern class UIStepper{
 	@:native("0")
 	public var 0:than;
 
-	@:native("setBackgroundImage")
-	overload extern inline public function setBackgroundImage(nullable:null:UIImage:UIControlState:ios(6.0):void;
+	@:native("setBackgroundImage:forState:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function setBackgroundImage(image:nullableUIImage, forState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("backgroundImageForState")
-	overload extern inline public function backgroundImageForState(state:UIControlState:API_AVAILABLE(ios(6.0):nullable UIImage*;
+	@:native("backgroundImageForState:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function backgroundImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage*;
 
-	@:native("setDividerImage")
-	overload extern inline public function setDividerImage(nullable:null:UIImage:UIControlState:UIControlState:ios(6.0):void;
+	@:native("setDividerImage:forLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function setDividerImage(image:nullableUIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("dividerImageForLeftSegmentState:rightSegmentState")
-	overload extern inline public function dividerImageForLeftSegmentState(state:UIControlState, rightSegmentState:UIControlState:ios(6.0):nullable UIImage*;
+	@:native("dividerImageForLeftSegmentState:rightSegmentState:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function dividerImageForLeftSegmentState(state:UIControlState, rightSegmentState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage*;
 
-	@:native("setIncrementImage")
-	overload extern inline public function setIncrementImage(nullable:null:UIImage:UIControlState:ios(6.0):void;
+	@:native("setIncrementImage:forState:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function setIncrementImage(image:nullableUIImage, forState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("incrementImageForState")
-	overload extern inline public function incrementImageForState(state:UIControlState:API_AVAILABLE(ios(6.0):nullable UIImage *;
+	@:native("incrementImageForState:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function incrementImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
-	@:native("setDecrementImage")
-	overload extern inline public function setDecrementImage(nullable:null:UIImage:UIControlState:ios(6.0):void;
+	@:native("setDecrementImage:forState:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function setDecrementImage(image:nullableUIImage, forState:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):Void;
 
-	@:native("decrementImageForState")
-	overload extern inline public function decrementImageForState(state:UIControlState:API_AVAILABLE(ios(6.0):nullable UIImage *;
+	@:native("decrementImageForState:API_AVAILABLE(ios(6.0)")
+	overload extern inline public function decrementImageForState(state:UIControlState, API_AVAILABLE(ios(6.0):UI_APPEARANCE_SELECTOR):nullable UIImage *;
 
 
 }

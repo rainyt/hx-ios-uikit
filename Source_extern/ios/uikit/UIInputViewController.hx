@@ -27,13 +27,13 @@ extern class UIInputViewController{
 	public var API_AVAILABLE(ios(11.0)):documentIdentifier;
 
 	@:native("adjustTextPositionByCharacterOffset")
-	overload extern inline public function adjustTextPositionByCharacterOffset(offset:NSInteger):void;
+	overload extern inline public function adjustTextPositionByCharacterOffset(offset:NSInteger):Void;
 
-	@:native("setMarkedText")
-	overload extern inline public function setMarkedText(NSString:null::NSRange:ios(13.0):void;
+	@:native("setMarkedText:selectedRange")
+	overload extern inline public function setMarkedText(markedText:NSString, selectedRange:NSRange):Void;
 
 	@:native("unmarkText")
-	overload extern inline public function unmarkText():void;
+	overload extern inline public function unmarkText():Void;
 
 	@:native("inputView")
 	public var inputView:UIInputView;
@@ -54,16 +54,16 @@ extern class UIInputViewController{
 	public var API_AVAILABLE(ios(11.0)):needsInputModeSwitchKey;
 
 	@:native("dismissKeyboard;")
-	overload extern inline public function dismissKeyboard;():void;
+	overload extern inline public function dismissKeyboard;():Void;
 
 	@:native("advanceToNextInputMode;")
-	overload extern inline public function advanceToNextInputMode;():void;
+	overload extern inline public function advanceToNextInputMode;():Void;
 
-	@:native("handleInputModeListFromView")
-	overload extern inline public function handleInputModeListFromView(nonnull:null:UIView:nonnullUIEvent:ios(10.0):void;
+	@:native("handleInputModeListFromView:withEvent")
+	overload extern inline public function handleInputModeListFromView(view:nonnullUIView, withEvent:nonnullUIEvent):Void;
 
 	@:native("requestSupplementaryLexiconWithCompletion")
-	overload extern inline public function requestSupplementaryLexiconWithCompletion(void:null:(^:UILexicon):void;
+	overload extern inline public function requestSupplementaryLexiconWithCompletion(completionHandler:Dynamic):Void;
 
 
 }

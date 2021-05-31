@@ -11,8 +11,8 @@ extern class UIDocument{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDocument;
 
-	@:native("initWithFileURL")
-	overload extern inline public function initWithFileURL(NSURL:null::tvos):UIDocument;
+	@:native("initWithFileURL:NS_DESIGNATED_INITIALIZER")
+	overload extern inline public function initWithFileURL(url:NSURL, NS_DESIGNATED_INITIALIZER:Dynamic):UIDocument;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):fileURL;
@@ -33,22 +33,22 @@ extern class UIDocument{
 	public var set.:is;
 
 	@:native("openWithCompletionHandler")
-	overload extern inline public function openWithCompletionHandler(void:null:(^__nullable:BOOLsuccess:tvos):void;
+	overload extern inline public function openWithCompletionHandler(completionHandler:Dynamic):Void;
 
 	@:native("closeWithCompletionHandler")
-	overload extern inline public function closeWithCompletionHandler(void:null:(^__nullable:BOOLsuccess:tvos):void;
+	overload extern inline public function closeWithCompletionHandler(completionHandler:Dynamic):Void;
 
-	@:native("loadFromContents:ofType")
-	overload extern inline public function loadFromContents(contents:id, ofType:nullableNSString:NSError:tvos):BOOL;
+	@:native("loadFromContents:ofType:error")
+	overload extern inline public function loadFromContents(contents:id, ofType:nullableNSString, error:NSError):BOOL;
 
-	@:native("contentsForType")
-	overload extern inline public function contentsForType(NSString:null::NSError:tvos):nullable id;
+	@:native("contentsForType:error")
+	overload extern inline public function contentsForType(typeName:NSString, error:NSError):nullable id;
 
 	@:native("disableEditing")
-	overload extern inline public function disableEditing():void;
+	overload extern inline public function disableEditing():Void;
 
 	@:native("enableEditing")
-	overload extern inline public function enableEditing():void;
+	overload extern inline public function enableEditing():Void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):undoManager;
@@ -57,61 +57,61 @@ extern class UIDocument{
 	public var API_UNAVAILABLE(tvos):hasUnsavedChanges;
 
 	@:native("updateChangeCount")
-	overload extern inline public function updateChangeCount(change:UIDocumentChangeKind:API_UNAVAILABLE(tvos):void;
+	overload extern inline public function updateChangeCount(change:UIDocumentChangeKind):Void;
 
 	@:native("changeCountTokenForSaveOperation")
-	overload extern inline public function changeCountTokenForSaveOperation(saveOperation:UIDocumentSaveOperation:API_UNAVAILABLE(tvos):id;
+	overload extern inline public function changeCountTokenForSaveOperation(saveOperation:UIDocumentSaveOperation):id;
 
 	@:native("updateChangeCountWithToken:forSaveOperation")
-	overload extern inline public function updateChangeCountWithToken(changeCountToken:id, forSaveOperation:UIDocumentSaveOperation:tvos):void;
+	overload extern inline public function updateChangeCountWithToken(changeCountToken:id, forSaveOperation:UIDocumentSaveOperation):Void;
 
-	@:native("saveToURL")
-	overload extern inline public function saveToURL(NSURL:null::UIDocumentSaveOperation:void(^__nullable:BOOLsuccess:tvos):void;
+	@:native("saveToURL:forSaveOperation:completionHandler")
+	overload extern inline public function saveToURL(url:NSURL, forSaveOperation:UIDocumentSaveOperation, completionHandler:Dynamic):Void;
 
 	@:native("autosaveWithCompletionHandler")
-	overload extern inline public function autosaveWithCompletionHandler(void:null:(^__nullable:BOOLsuccess:tvos):void;
+	overload extern inline public function autosaveWithCompletionHandler(completionHandler:Dynamic):Void;
 
 	@:native("type.")
 	public var type.:new;
 
-	@:native("fileNameExtensionForType")
-	overload extern inline public function fileNameExtensionForType(nullable:null:NSString:UIDocumentSaveOperation:tvos):NSString *;
+	@:native("fileNameExtensionForType:saveOperation:API_UNAVAILABLE(tvos:For:specified:and:particular:of:operation,:a:name:that:be:to:base")
+	overload extern inline public function fileNameExtensionForType(typeName:nullableNSString, saveOperation:UIDocumentSaveOperation, API_UNAVAILABLE(tvos://, For:a, specified:type,, and:a, particular:kind, of:save, operation,:return, a:file, name:extension, that:can, be:appended, to:a, base:file):NSString *;
 
-	@:native("writeContents:andAttributes")
-	overload extern inline public function writeContents(contents:id, andAttributes:nullableNSDictionary:NSURL:UIDocumentSaveOperation:NSError:tvos):BOOL;
+	@:native("writeContents:andAttributes:safelyToURL:forSaveOperation:error")
+	overload extern inline public function writeContents(contents:id, andAttributes:nullableNSDictionary, safelyToURL:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):BOOL;
 
-	@:native("writeContents:toURL")
-	overload extern inline public function writeContents(contents:id, toURL:NSURL:UIDocumentSaveOperation:nullableNSURL:NSError:tvos):BOOL;
+	@:native("writeContents:toURL:forSaveOperation:originalContentsURL:error")
+	overload extern inline public function writeContents(contents:id, toURL:NSURL, forSaveOperation:UIDocumentSaveOperation, originalContentsURL:nullableNSURL, error:NSError):BOOL;
 
-	@:native("fileAttributesToWriteToURL")
-	overload extern inline public function fileAttributesToWriteToURL(NSURL:null::UIDocumentSaveOperation:NSError:tvos):nullable NSDictionary *;
+	@:native("fileAttributesToWriteToURL:forSaveOperation:error")
+	overload extern inline public function fileAttributesToWriteToURL(url:NSURL, forSaveOperation:UIDocumentSaveOperation, error:NSError):nullable NSDictionary *;
 
-	@:native("readFromURL")
-	overload extern inline public function readFromURL(NSURL:null::NSError:tvos):BOOL;
+	@:native("readFromURL:error")
+	overload extern inline public function readFromURL(url:NSURL, error:NSError):BOOL;
 
 	@:native("performAsynchronousFileAccessUsingBlock")
-	overload extern inline public function performAsynchronousFileAccessUsingBlock(void:null:(^:void:tvos):void;
+	overload extern inline public function performAsynchronousFileAccessUsingBlock(block:Dynamic):Void;
 
-	@:native("handleError")
-	overload extern inline public function handleError(NSError:null::BOOL:tvos):void;
+	@:native("handleError:userInteractionPermitted")
+	overload extern inline public function handleError(error:NSError, userInteractionPermitted:BOOL):Void;
 
-	@:native("finishedHandlingError")
-	overload extern inline public function finishedHandlingError(NSError:null::BOOL:tvos):void;
+	@:native("finishedHandlingError:recovered")
+	overload extern inline public function finishedHandlingError(error:NSError, recovered:BOOL):Void;
 
 	@:native("userInteractionNoLongerPermittedForError")
-	overload extern inline public function userInteractionNoLongerPermittedForError(NSError:null::tvos):void;
+	overload extern inline public function userInteractionNoLongerPermittedForError(error:NSError):Void;
 
-	@:native("revertToContentsOfURL")
-	overload extern inline public function revertToContentsOfURL(NSURL:null::void(^__nullable:BOOLsuccess:tvos):void;
+	@:native("revertToContentsOfURL:completionHandler")
+	overload extern inline public function revertToContentsOfURL(url:NSURL, completionHandler:Dynamic):Void;
 
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(8.0));
 
-	@:native("updateUserActivityState")
-	overload extern inline public function updateUserActivityState(NSUserActivity:null::ios(8.0:tvos):void;
+	@:native("updateUserActivityState:API_AVAILABLE(ios(8.0)")
+	overload extern inline public function updateUserActivityState(userActivity:NSUserActivity, API_AVAILABLE(ios(8.0):Dynamic):Void;
 
-	@:native("restoreUserActivityState")
-	overload extern inline public function restoreUserActivityState(NSUserActivity:null::ios(8.0:tvos):void;
+	@:native("restoreUserActivityState:API_AVAILABLE(ios(8.0)")
+	overload extern inline public function restoreUserActivityState(userActivity:NSUserActivity, API_AVAILABLE(ios(8.0):Dynamic):Void;
 
 
 }

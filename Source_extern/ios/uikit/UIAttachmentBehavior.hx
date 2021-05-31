@@ -11,17 +11,32 @@ extern class UIAttachmentBehavior{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIAttachmentBehavior;
 
-	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:CGPoint):UIAttachmentBehavior;
+	@:native("initWithItem:attachedToAnchor")
+	overload extern inline public function initWithItem(item:id<UIDynamicItem>, attachedToAnchor:CGPoint):UIAttachmentBehavior;
 
-	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:UIOffset:CGPoint):UIAttachmentBehavior;
+	@:native("initWithItem:offsetFromCenter:attachedToAnchor")
+	overload extern inline public function initWithItem(item:id<UIDynamicItem>, offsetFromCenter:UIOffset, attachedToAnchor:CGPoint):UIAttachmentBehavior;
 
-	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:id<UIDynamicItem>):UIAttachmentBehavior;
+	@:native("initWithItem:attachedToItem")
+	overload extern inline public function initWithItem(item1:id<UIDynamicItem>, attachedToItem:id<UIDynamicItem>):UIAttachmentBehavior;
 
-	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:UIOffset:id<UIDynamicItem>:UIOffset):UIAttachmentBehavior;
+	@:native("initWithItem:offsetFromCenter:attachedToItem:offsetFromCenter")
+	overload extern inline public function initWithItem(item1:id<UIDynamicItem>, offsetFromCenter:UIOffset, attachedToItem:id<UIDynamicItem>, offsetFromCenter:UIOffset):UIAttachmentBehavior;
+
+	@:native("slidingAttachmentWithItem:attachedToItem:attachmentAnchor:axisOfTranslation")
+	overload extern inline public static function slidingAttachmentWithItem(item1:id<UIDynamicItem>, attachedToItem:id<UIDynamicItem>, attachmentAnchor:CGPoint, axisOfTranslation:CGVector):UIAttachmentBehavior;
+
+	@:native("slidingAttachmentWithItem:attachmentAnchor:axisOfTranslation")
+	overload extern inline public static function slidingAttachmentWithItem(item:id<UIDynamicItem>, attachmentAnchor:CGPoint, axisOfTranslation:CGVector):UIAttachmentBehavior;
+
+	@:native("limitAttachmentWithItem:offsetFromCenter:attachedToItem:offsetFromCenter")
+	overload extern inline public static function limitAttachmentWithItem(item1:id<UIDynamicItem>, offsetFromCenter:UIOffset, attachedToItem:id<UIDynamicItem>, offsetFromCenter:UIOffset):UIAttachmentBehavior;
+
+	@:native("fixedAttachmentWithItem:attachedToItem:attachmentAnchor")
+	overload extern inline public static function fixedAttachmentWithItem(item1:id<UIDynamicItem>, attachedToItem:id<UIDynamicItem>, attachmentAnchor:CGPoint):UIAttachmentBehavior;
+
+	@:native("pinAttachmentWithItem:attachedToItem:attachmentAnchor")
+	overload extern inline public static function pinAttachmentWithItem(item1:id<UIDynamicItem>, attachedToItem:id<UIDynamicItem>, attachmentAnchor:CGPoint):UIAttachmentBehavior;
 
 	@:native("items")
 	public var items:<UIDynamicItem>>;

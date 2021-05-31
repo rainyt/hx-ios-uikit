@@ -21,19 +21,19 @@ extern class UIFocus{
 	public var ios(12.0)):API_AVAILABLE(tvos(12.0),;
 
 	@:native("setNeedsFocusUpdate;")
-	overload extern inline public function setNeedsFocusUpdate;():void;
+	overload extern inline public function setNeedsFocusUpdate;():Void;
 
 	@:native("updateFocusIfNeeded;")
-	overload extern inline public function updateFocusIfNeeded;():void;
+	overload extern inline public function updateFocusIfNeeded;():Void;
 
 	@:native("shouldUpdateFocusInContext")
-	overload extern inline public function shouldUpdateFocusInContext(UIFocusUpdateContext:null:):BOOL;
+	overload extern inline public function shouldUpdateFocusInContext(context:UIFocusUpdateContext):BOOL;
 
-	@:native("didUpdateFocusInContext")
-	overload extern inline public function didUpdateFocusInContext(UIFocusUpdateContext:null::UIFocusAnimationCoordinator):void;
+	@:native("didUpdateFocusInContext:withAnimationCoordinator")
+	overload extern inline public function didUpdateFocusInContext(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
 
-	@:native("soundIdentifierForFocusUpdateInContext")
-	overload extern inline public function soundIdentifierForFocusUpdateInContext(UIFocusUpdateContext:null::tvos(11.0:ios,watchos):nullable UIFocusSoundIdentifier;
+	@:native("soundIdentifierForFocusUpdateInContext:API_AVAILABLE(tvos(11.0)")
+	overload extern inline public function soundIdentifierForFocusUpdateInContext(context:UIFocusUpdateContext, API_AVAILABLE(tvos(11.0):Dynamic):nullable UIFocusSoundIdentifier;
 
 	@:native("10.0))")
 	public var 10.0)):ios(9.0,;
@@ -45,7 +45,7 @@ extern class UIFocus{
 	public var ios(12.0)):API_AVAILABLE(tvos(12.0),;
 
 	@:native("didHintFocusMovement")
-	overload extern inline public function didHintFocusMovement(UIFocusMovementHint:null::ios(12.0):void;
+	overload extern inline public function didHintFocusMovement(hint:UIFocusMovementHint):Void;
 
 	@:native("coordinateSpace")
 	public var coordinateSpace:id<UICoordinateSpace>;

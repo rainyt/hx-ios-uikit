@@ -22,6 +22,8 @@ class ObjcFun {
 		var c = returnClass.indexOf("instancetype") != -1 ? className : returnClass;
 		if (typedefs.exists(c))
 			c = typedefs.get(c);
+		if (c == "void")
+			c = "Void";
 		return {
 			name: parsingFuncName(funcName, args),
 			type: ExternBaseClassType.FUNC,
@@ -43,47 +45,44 @@ class ObjcFun {
 	}
 
 	public static function parsingArgs(typedefs:Map<String, String>, line:String):Array<Dynamic> {
-		var start = true;
 		var isRaed = false;
 		var args = [];
 		var read = "";
 		var skin = 0;
+		var kend = 0;
+		var start = true;
+
 		for (i in 0...line.length) {
 			var char = line.charAt(i);
-			if (start) {
-				if (char == "(") {
-					isRaed = true;
+			if (!isRaed) {
+				if (char == " ") {
 					skin = 1;
-				} else if (char == ")") {
-					isRaed = false;
-					// 类型读取完毕
-					read = StringTools.replace(read, "*", "");
-					read = StringTools.replace(read, " ", "");
-					args.push(read);
-					read = "";
-					// 开始读取变量名
 					isRaed = true;
+					kend = 0;
+				} else if (char == "(") {
 					skin = 1;
-				} else if (char == " " || char == ";") {
-					isRaed = char == " ";
+					isRaed = true;
+					kend++;
+				} else if (char != " " && start) {
+					isRaed = true;
+					kend = 0;
 					start = false;
-					args[0] = read + ":" + toType(args[0], typedefs);
-					read = "";
 				}
 			} else {
-				if (isRaed && char == ":") {
-					// 参数名读取结束
-					isRaed = false;
-					args.push(StringTools.replace(read, " ", ""));
-					read = "";
-				} else if (!isRaed && char == "(") {
-					// 开始读取类型
-					isRaed = true;
-					skin = 1;
-				} else if (isRaed && char == ")") {
-					// 参数名读取结束
-					isRaed = false;
-					args[args.length - 1] = args[args.length - 1] + ":" + toType(read, typedefs);
+				if (char == "(") {
+					kend++;
+				} else if (char == ")") {
+					kend--;
+					if (kend == 0) {
+						isRaed = false;
+						args.push(read);
+						read = "";
+					}
+				} else if (kend == 0 && (char == " " || char == ":" || char == ";")) {
+					isRaed = char == " ";
+					if (isRaed)
+						skin = 1;
+					args.push(read);
 					read = "";
 				}
 			}
@@ -92,12 +91,36 @@ class ObjcFun {
 			} else
 				skin--;
 		}
-		return args;
+
+		if (args.length >= 2) {
+			var c = args[0];
+			args[0] = args[1];
+			args[1] = c;
+		}
+
+		var ret = "";
+		var retcount = 0;
+		var retargs = [];
+		for (index => value in args) {
+			retcount++;
+			if (retcount == 2) {
+				ret += ":" + toType(value, typedefs);
+				retcount = 0;
+				retargs.push(ret);
+				ret = "";
+			} else {
+				ret += value;
+			}
+		}
+		trace(args.length, args, retargs);
+		return retargs;
 	}
 
 	public static function toType(t:String, typedefs:Map<String, String>):String {
 		if (t == null)
 			return t;
+		if (t.indexOf("(") != -1)
+			return "Dynamic";
 		return StringTools.replace(StringTools.replace(typedefs.exists(t) ? typedefs.get(t) : t, "*", ""), " ", "");
 	}
 }

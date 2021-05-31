@@ -24,10 +24,10 @@ extern class UIRefreshControl{
 	public var UI_APPEARANCE_SELECTOR:attributedTitle;
 
 	@:native("beginRefreshing")
-	overload extern inline public function beginRefreshing():void;
+	overload extern inline public function beginRefreshing():Void;
 
 	@:native("endRefreshing")
-	overload extern inline public function endRefreshing():void;
+	overload extern inline public function endRefreshing():Void;
 
 
 }

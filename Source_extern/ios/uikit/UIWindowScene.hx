@@ -32,20 +32,23 @@ extern class UIWindowScene{
 	@:native("window")
 	public var window:UIWindow;
 
-	@:native("windowScene")
-	overload extern inline public function windowScene(UIWindowScene:null::id<UICoordinateSpace>:UIInterfaceOrientation:UITraitCollection:tvos):void;
+	@:native("windowScene:didUpdateCoordinateSpace:interfaceOrientation:traitCollection")
+	overload extern inline public function windowScene(windowScene:UIWindowScene, didUpdateCoordinateSpace:id<UICoordinateSpace>, interfaceOrientation:UIInterfaceOrientation, traitCollection:UITraitCollection):Void;
 
-	@:native("windowScene")
-	overload extern inline public function windowScene(UIWindowScene:null::UIApplicationShortcutItem:void(^:BOOLsucceeded:tvos):void;
+	@:native("windowScene:performActionForShortcutItem:completionHandler")
+	overload extern inline public function windowScene(windowScene:UIWindowScene, performActionForShortcutItem:UIApplicationShortcutItem, completionHandler:Dynamic):Void;
 
-	@:native("windowScene")
-	overload extern inline public function windowScene(UIWindowScene:null::CKShareMetadata):void;
+	@:native("windowScene:userDidAcceptCloudKitShareWithMetadata")
+	overload extern inline public function windowScene(windowScene:UIWindowScene, userDidAcceptCloudKitShareWithMetadata:CKShareMetadata):Void;
 
 	@:native("windowDismissalAnimation")
 	public var windowDismissalAnimation:UIWindowSceneDismissalAnimation;
 
 	@:native("init")
 	overload extern inline public function init():UIWindowScene;
+
+	@:native("new")
+	overload extern inline public static function new():UIWindowScene;
 
 	@:native("minimumSize")
 	public var minimumSize:CGSize;

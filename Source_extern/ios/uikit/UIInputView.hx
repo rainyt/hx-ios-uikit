@@ -21,7 +21,7 @@ extern class UIInputView{
 	overload extern inline public function initWithFrame(frame:CGRect, inputViewStyle:UIInputViewStyle):UIInputView;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIInputView;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIInputView;
 
 
 }

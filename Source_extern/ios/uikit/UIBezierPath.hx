@@ -11,11 +11,32 @@ extern class UIBezierPath{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIBezierPath;
 
+	@:native("bezierPath;")
+	overload extern inline public static function bezierPath;():UIBezierPath;
+
+	@:native("bezierPathWithRect")
+	overload extern inline public static function bezierPathWithRect(rect:CGRect):UIBezierPath;
+
+	@:native("bezierPathWithOvalInRect")
+	overload extern inline public static function bezierPathWithOvalInRect(rect:CGRect):UIBezierPath;
+
+	@:native("bezierPathWithRoundedRect:cornerRadius://:all:with:same:and")
+	overload extern inline public static function bezierPathWithRoundedRect(rect:CGRect, cornerRadius:CGFloat, //:rounds, all:corners, with:the, same:horizontal, and:vertical):UIBezierPath;
+
+	@:native("bezierPathWithRoundedRect:byRoundingCorners:cornerRadii")
+	overload extern inline public static function bezierPathWithRoundedRect(rect:CGRect, byRoundingCorners:UIRectCorner, cornerRadii:CGSize):UIBezierPath;
+
+	@:native("bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise")
+	overload extern inline public static function bezierPathWithArcCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, clockwise:BOOL):UIBezierPath;
+
+	@:native("bezierPathWithCGPath")
+	overload extern inline public static function bezierPathWithCGPath(CGPath:CGPathRef):UIBezierPath;
+
 	@:native("init")
 	overload extern inline public function init():UIBezierPath;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIBezierPath;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIBezierPath;
 
 	@:native("CGPath")
 	public var CGPath:CGPathRef;
@@ -24,34 +45,34 @@ extern class UIBezierPath{
 	overload extern inline public function CGPath():CGPathRef;
 
 	@:native("moveToPoint")
-	overload extern inline public function moveToPoint(point:CGPoint):void;
+	overload extern inline public function moveToPoint(point:CGPoint):Void;
 
 	@:native("addLineToPoint")
-	overload extern inline public function addLineToPoint(point:CGPoint):void;
+	overload extern inline public function addLineToPoint(point:CGPoint):Void;
 
-	@:native("addCurveToPoint:controlPoint1")
-	overload extern inline public function addCurveToPoint(endPoint:CGPoint, controlPoint1:CGPoint:CGPoint):void;
+	@:native("addCurveToPoint:controlPoint1:controlPoint2")
+	overload extern inline public function addCurveToPoint(endPoint:CGPoint, controlPoint1:CGPoint, controlPoint2:CGPoint):Void;
 
 	@:native("addQuadCurveToPoint:controlPoint")
-	overload extern inline public function addQuadCurveToPoint(endPoint:CGPoint, controlPoint:CGPoint):void;
+	overload extern inline public function addQuadCurveToPoint(endPoint:CGPoint, controlPoint:CGPoint):Void;
 
-	@:native("addArcWithCenter:radius")
-	overload extern inline public function addArcWithCenter(center:CGPoint, radius:CGFloat:CGFloat:CGFloat:BOOL:ios(4.0):void;
+	@:native("addArcWithCenter:radius:startAngle:endAngle:clockwise")
+	overload extern inline public function addArcWithCenter(center:CGPoint, radius:CGFloat, startAngle:CGFloat, endAngle:CGFloat, clockwise:BOOL):Void;
 
 	@:native("closePath;")
-	overload extern inline public function closePath;():void;
+	overload extern inline public function closePath;():Void;
 
 	@:native("removeAllPoints;")
-	overload extern inline public function removeAllPoints;():void;
+	overload extern inline public function removeAllPoints;():Void;
 
 	@:native("appendPath")
-	overload extern inline public function appendPath(UIBezierPath:null:):void;
+	overload extern inline public function appendPath(bezierPath:UIBezierPath):Void;
 
 	@:native("bezierPathByReversingPath")
 	overload extern inline public function bezierPathByReversingPath():UIBezierPath *;
 
 	@:native("applyTransform")
-	overload extern inline public function applyTransform(transform:CGAffineTransform):void;
+	overload extern inline public function applyTransform(transform:CGAffineTransform):Void;
 
 	@:native("empty")
 	public var empty:BOOL;
@@ -83,26 +104,26 @@ extern class UIBezierPath{
 	@:native("testing.")
 	public var testing.:hit;
 
-	@:native("setLineDash")
-	overload extern inline public function setLineDash(nullable:null:constCGFloat:NSInteger:CGFloat):void;
+	@:native("setLineDash:count:phase")
+	overload extern inline public function setLineDash(pattern:nullableconstCGFloat, count:NSInteger, phase:CGFloat):Void;
 
-	@:native("getLineDash")
-	overload extern inline public function getLineDash(nullable:null:CGFloat:nullableNSInteger:nullableCGFloat):void;
+	@:native("getLineDash:count:phase")
+	overload extern inline public function getLineDash(pattern:nullableCGFloat, count:nullableNSInteger, phase:nullableCGFloat):Void;
 
 	@:native("fill;")
-	overload extern inline public function fill;():void;
+	overload extern inline public function fill;():Void;
 
 	@:native("stroke;")
-	overload extern inline public function stroke;():void;
+	overload extern inline public function stroke;():Void;
 
 	@:native("fillWithBlendMode:alpha")
-	overload extern inline public function fillWithBlendMode(blendMode:CGBlendMode, alpha:CGFloat):void;
+	overload extern inline public function fillWithBlendMode(blendMode:CGBlendMode, alpha:CGFloat):Void;
 
 	@:native("strokeWithBlendMode:alpha")
-	overload extern inline public function strokeWithBlendMode(blendMode:CGBlendMode, alpha:CGFloat):void;
+	overload extern inline public function strokeWithBlendMode(blendMode:CGBlendMode, alpha:CGFloat):Void;
 
 	@:native("addClip;")
-	overload extern inline public function addClip;():void;
+	overload extern inline public function addClip;():Void;
 
 
 }

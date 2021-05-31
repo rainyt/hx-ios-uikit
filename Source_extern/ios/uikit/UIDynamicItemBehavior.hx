@@ -12,13 +12,13 @@ extern class UIDynamicItemBehavior{
 	overload extern inline public static function autorelease():UIDynamicItemBehavior;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(NSArray<id:null:<UIDynamicItem>>):UIDynamicItemBehavior;
+	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>):UIDynamicItemBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(id:null:<UIDynamicItem>):void;
+	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(id:null:<UIDynamicItem>):void;
+	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
 
 	@:native("items")
 	public var items:<UIDynamicItem>>;
@@ -48,16 +48,16 @@ extern class UIDynamicItemBehavior{
 	public var rotate:never;
 
 	@:native("addLinearVelocity:forItem")
-	overload extern inline public function addLinearVelocity(velocity:CGPoint, forItem:id<UIDynamicItem>):void;
+	overload extern inline public function addLinearVelocity(velocity:CGPoint, forItem:id<UIDynamicItem>):Void;
 
 	@:native("linearVelocityForItem")
-	overload extern inline public function linearVelocityForItem(id:null:<UIDynamicItem>):CGPoint;
+	overload extern inline public function linearVelocityForItem(item:id<UIDynamicItem>):CGPoint;
 
 	@:native("addAngularVelocity:forItem")
-	overload extern inline public function addAngularVelocity(velocity:CGFloat, forItem:id<UIDynamicItem>):void;
+	overload extern inline public function addAngularVelocity(velocity:CGFloat, forItem:id<UIDynamicItem>):Void;
 
 	@:native("angularVelocityForItem")
-	overload extern inline public function angularVelocityForItem(id:null:<UIDynamicItem>):CGFloat;
+	overload extern inline public function angularVelocityForItem(item:id<UIDynamicItem>):CGFloat;
 
 
 }

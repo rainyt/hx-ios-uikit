@@ -11,8 +11,8 @@ extern class UISnapBehavior{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISnapBehavior;
 
-	@:native("initWithItem")
-	overload extern inline public function initWithItem(id:null:<UIDynamicItem>:CGPoint):UISnapBehavior;
+	@:native("initWithItem:snapToPoint")
+	overload extern inline public function initWithItem(item:id<UIDynamicItem>, snapToPoint:CGPoint):UISnapBehavior;
 
 	@:native("API_AVAILABLE(ios(9.0))")
 	public var API_AVAILABLE(ios(9.0)):snapPoint;

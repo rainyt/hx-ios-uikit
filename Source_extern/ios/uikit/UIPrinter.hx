@@ -11,6 +11,9 @@ extern class UIPrinter{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPrinter;
 
+	@:native("printerWithURL")
+	overload extern inline public static function printerWithURL(url:NSURL):UIPrinter *;
+
 	@:native("URL")
 	public var URL:NSURL;
 
@@ -33,7 +36,7 @@ extern class UIPrinter{
 	public var supportsDuplex:BOOL;
 
 	@:native("contactPrinter")
-	overload extern inline public function contactPrinter(void^:null:__nullable:BOOLavailable):void;
+	overload extern inline public function contactPrinter(completionHandler:Dynamic):Void;
 
 
 }

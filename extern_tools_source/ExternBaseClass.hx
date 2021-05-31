@@ -73,7 +73,7 @@ class ExternBaseClass {
 					isStatic: false,
 					args: null
 				});
-			} else if (value.indexOf("-") == 0) {
+			} else if (value.indexOf("-") == 0 || value.indexOf("+") == 0) {
 				// 对象方法
 				funcAndAttr.push(ObjcFun.parsing(typedefs, this.classname, value));
 			}
@@ -107,7 +107,7 @@ class ExternBaseClass {
 
 	public function toFuncName(str:String):String {
 		if (str.indexOf(":") != -1)
-			return str.substr(0, str.lastIndexOf(":"));
+			return str.substr(0, str.indexOf(":"));
 		return str;
 	}
 }

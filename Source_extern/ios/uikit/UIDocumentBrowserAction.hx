@@ -14,8 +14,8 @@ extern class UIDocumentBrowserAction{
 	@:native("init")
 	overload extern inline public function init():UIDocumentBrowserAction;
 
-	@:native("initWithIdentifier")
-	overload extern inline public function initWithIdentifier(NSString:null::NSString:UIDocumentBrowserActionAvailability:void(^:NSArray<NSURL>):UIDocumentBrowserAction;
+	@:native("initWithIdentifier:localizedTitle:availability:handler")
+	overload extern inline public function initWithIdentifier(identifier:NSString, localizedTitle:NSString, availability:UIDocumentBrowserActionAvailability, handler:Dynamic):UIDocumentBrowserAction;
 
 	@:native("identifier")
 	public var identifier:NSString;

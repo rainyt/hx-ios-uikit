@@ -14,8 +14,8 @@ extern class UITabBarController{
 	@:native("viewControllers")
 	public var viewControllers:>;
 
-	@:native("setViewControllers")
-	overload extern inline public function setViewControllers(NSArray<__kindof:null:UIViewController>__nullable:BOOL):void;
+	@:native("setViewControllers:animated")
+	overload extern inline public function setViewControllers(viewControllers:NSArray<__kindofUIViewController>__nullable, animated:BOOL):Void;
 
 	@:native("exists.")
 	public var exists.:it;
@@ -35,32 +35,32 @@ extern class UITabBarController{
 	@:native("delegate")
 	public var delegate:id<UITabBarControllerDelegate>;
 
-	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null::UIViewController:ios(3.0):BOOL;
+	@:native("tabBarController:shouldSelectViewController")
+	overload extern inline public function tabBarController(tabBarController:UITabBarController, shouldSelectViewController:UIViewController):BOOL;
+
+	@:native("tabBarController:didSelectViewController")
+	overload extern inline public function tabBarController(tabBarController:UITabBarController, didSelectViewController:UIViewController):Void;
+
+	@:native("tabBarController:willBeginCustomizingViewControllers:API_AVAILABLE(ios(3.0)")
+	overload extern inline public function tabBarController(tabBarController:UITabBarController, willBeginCustomizingViewControllers:NSArray<__kindofUIViewController>, API_AVAILABLE(ios(3.0):Dynamic):Void;
+
+	@:native("tabBarController:willEndCustomizingViewControllers:changed:API_AVAILABLE(ios(3.0)")
+	overload extern inline public function tabBarController(tabBarController:UITabBarController, willEndCustomizingViewControllers:NSArray<__kindofUIViewController>, changed:BOOL, API_AVAILABLE(ios(3.0):Dynamic):Void;
+
+	@:native("tabBarController:didEndCustomizingViewControllers:changed")
+	overload extern inline public function tabBarController(tabBarController:UITabBarController, didEndCustomizingViewControllers:NSArray<__kindofUIViewController>, changed:BOOL):Void;
+
+	@:native("tabBarControllerSupportedInterfaceOrientations:API_AVAILABLE(ios(7.0)")
+	overload extern inline public function tabBarControllerSupportedInterfaceOrientations(tabBarController:UITabBarController, API_AVAILABLE(ios(7.0):Dynamic):UIInterfaceOrientationMask;
+
+	@:native("tabBarControllerPreferredInterfaceOrientationForPresentation:API_AVAILABLE(ios(7.0)")
+	overload extern inline public function tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController:UITabBarController, API_AVAILABLE(ios(7.0):Dynamic):UIInterfaceOrientation;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null::UIViewController):void;
+	overload extern inline public function tabBarController():nullable id <UIViewControllerInteractiveTransitioning>;
 
 	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null::NSArray<__kindofUIViewController>:ios(3.0:tvos):void;
-
-	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null::NSArray<__kindofUIViewController>:BOOL:ios(3.0:tvos):void;
-
-	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null::NSArray<__kindofUIViewController>:BOOL:tvos):void;
-
-	@:native("tabBarControllerSupportedInterfaceOrientations")
-	overload extern inline public function tabBarControllerSupportedInterfaceOrientations(UITabBarController:null::ios(7.0:tvos):UIInterfaceOrientationMask;
-
-	@:native("tabBarControllerPreferredInterfaceOrientationForPresentation")
-	overload extern inline public function tabBarControllerPreferredInterfaceOrientationForPresentation(UITabBarController:null::ios(7.0:tvos):UIInterfaceOrientation;
-
-	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null:):nullable id <UIViewControllerInteractiveTransitioning>;
-
-	@:native("tabBarController")
-	overload extern inline public function tabBarController(UITabBarController:null:):nullable id <UIViewControllerAnimatedTransitioning>;
+	overload extern inline public function tabBarController():nullable id <UIViewControllerAnimatedTransitioning>;
 
 	@:native("explicitly.")
 	public var explicitly.:set;

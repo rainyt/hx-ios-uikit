@@ -15,7 +15,7 @@ extern class UIKeyCommand{
 	overload extern inline public function init():UIKeyCommand;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIKeyCommand;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIKeyCommand;
 
 	@:native("API_AVAILABLE(ios(13.0))")
 	public var API_AVAILABLE(ios(13.0)):title;
@@ -46,6 +46,24 @@ extern class UIKeyCommand{
 
 	@:native("API_AVAILABLE(ios(13.0))")
 	public var API_AVAILABLE(ios(13.0)):alternates;
+
+	@:native("commandWithTitle")
+	overload extern inline public static function commandWithTitle():UIKeyCommand;
+
+	@:native("commandWithTitle")
+	overload extern inline public static function commandWithTitle():UIKeyCommand;
+
+	@:native("keyCommandWithInput:modifierFlags:action")
+	overload extern inline public static function keyCommandWithInput(input:NSString, modifierFlags:UIKeyModifierFlags, action:SEL):UIKeyCommand;
+
+	@:native("keyCommandWithInput:modifierFlags:action:discoverabilityTitle")
+	overload extern inline public static function keyCommandWithInput(input:NSString, modifierFlags:UIKeyModifierFlags, action:SEL, discoverabilityTitle:NSString):UIKeyCommand;
+
+	@:native("commandWithTitle")
+	overload extern inline public static function commandWithTitle():UIKeyCommand;
+
+	@:native("commandWithTitle")
+	overload extern inline public static function commandWithTitle():UIKeyCommand;
 
 
 }

@@ -12,16 +12,16 @@ extern class UIPopoverPresentationController{
 	overload extern inline public static function autorelease():UIPopoverPresentationController;
 
 	@:native("prepareForPopoverPresentation")
-	overload extern inline public function prepareForPopoverPresentation(UIPopoverPresentationController:null:):void;
+	overload extern inline public function prepareForPopoverPresentation(popoverPresentationController:UIPopoverPresentationController):Void;
 
-	@:native("popoverPresentationControllerShouldDismissPopover:"presentationControllerShouldDismiss")
-	overload extern inline public function popoverPresentationControllerShouldDismissPopover(UIPopoverPresentationController:null:, "presentationControllerShouldDismiss:8.0,13.0):BOOL;
+	@:native("popoverPresentationControllerShouldDismissPopover")
+	overload extern inline public function popoverPresentationControllerShouldDismissPopover(popoverPresentationController:UIPopoverPresentationController):BOOL;
 
-	@:native("popoverPresentationControllerDidDismissPopover:"presentationControllerDidDismiss")
-	overload extern inline public function popoverPresentationControllerDidDismissPopover(UIPopoverPresentationController:null:, "presentationControllerDidDismiss:8.0,13.0):void;
+	@:native("popoverPresentationControllerDidDismissPopover")
+	overload extern inline public function popoverPresentationControllerDidDismissPopover(popoverPresentationController:UIPopoverPresentationController):Void;
 
-	@:native("popoverPresentationController")
-	overload extern inline public function popoverPresentationController(UIPopoverPresentationController:null::inoutCGRect:inoutUIView__nonnull__nonnull):void;
+	@:native("popoverPresentationController:willRepositionPopoverToRect:inView")
+	overload extern inline public function popoverPresentationController(popoverPresentationController:UIPopoverPresentationController, willRepositionPopoverToRect:inoutCGRect, inView:inoutUIView__nonnull__nonnull):Void;
 
 	@:native("delegate")
 	public var delegate:<UIPopoverPresentationControllerDelegate>;

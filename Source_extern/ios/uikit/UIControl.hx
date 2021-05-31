@@ -15,10 +15,10 @@ extern class UIControl{
 	overload extern inline public function initWithFrame(frame:CGRect):UIControl;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIControl;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIControl;
 
 	@:native("initWithFrame:primaryAction")
-	overload extern inline public function initWithFrame(frame:CGRect, primaryAction:nullableUIAction:ios(14.0):UIControl;
+	overload extern inline public function initWithFrame(frame:CGRect, primaryAction:nullableUIAction):UIControl;
 
 	@:native("differently")
 	public var differently:draw;
@@ -47,32 +47,32 @@ extern class UIControl{
 	@:native("only")
 	public var only:tracking;
 
-	@:native("beginTrackingWithTouch")
-	overload extern inline public function beginTrackingWithTouch(UITouch:null::nullableUIEvent):BOOL;
+	@:native("beginTrackingWithTouch:withEvent")
+	overload extern inline public function beginTrackingWithTouch(touch:UITouch, withEvent:nullableUIEvent):BOOL;
 
-	@:native("continueTrackingWithTouch")
-	overload extern inline public function continueTrackingWithTouch(UITouch:null::nullableUIEvent):BOOL;
+	@:native("continueTrackingWithTouch:withEvent")
+	overload extern inline public function continueTrackingWithTouch(touch:UITouch, withEvent:nullableUIEvent):BOOL;
 
-	@:native("endTrackingWithTouch")
-	overload extern inline public function endTrackingWithTouch(nullable:null:UITouch:nullableUIEvent):void;
+	@:native("endTrackingWithTouch:withEvent://:is:nil:cancelTracking:through")
+	overload extern inline public function endTrackingWithTouch(touch:nullableUITouch, withEvent:nullableUIEvent, //:touch, is:sometimes, nil:if, cancelTracking:calls, through:to):Void;
 
-	@:native("cancelTrackingWithEvent")
-	overload extern inline public function cancelTrackingWithEvent(nullable:null:UIEvent):void;
+	@:native("cancelTrackingWithEvent:://:may:nil:cancelled:non-event:e.g.")
+	overload extern inline public function cancelTrackingWithEvent(event:nullableUIEvent, :, //:event, may:be, nil:if, cancelled:for, non-event:reasons,, e.g.:removed):Void;
 
-	@:native("addTarget")
-	overload extern inline public function addTarget(nullable:null:id:SEL:UIControlEvents):void;
+	@:native("addTarget:action:forControlEvents")
+	overload extern inline public function addTarget(target:nullableid, action:SEL, forControlEvents:UIControlEvents):Void;
 
-	@:native("removeTarget")
-	overload extern inline public function removeTarget(nullable:null:id:nullableSEL:UIControlEvents):void;
+	@:native("removeTarget:action:forControlEvents")
+	overload extern inline public function removeTarget(target:nullableid, action:nullableSEL, forControlEvents:UIControlEvents):Void;
 
-	@:native("addAction")
-	overload extern inline public function addAction(UIAction:null::UIControlEvents:ios(14.0):void;
+	@:native("addAction:forControlEvents")
+	overload extern inline public function addAction(action:UIAction, forControlEvents:UIControlEvents):Void;
 
-	@:native("removeAction")
-	overload extern inline public function removeAction(UIAction:null::UIControlEvents:ios(14.0):void;
+	@:native("removeAction:forControlEvents")
+	overload extern inline public function removeAction(action:UIAction, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeActionForIdentifier:forControlEvents")
-	overload extern inline public function removeActionForIdentifier(actionIdentifier:UIActionIdentifier, forControlEvents:UIControlEvents:ios(14.0):void;
+	overload extern inline public function removeActionForIdentifier(actionIdentifier:UIActionIdentifier, forControlEvents:UIControlEvents):Void;
 
 	@:native("target")
 	public var target:nil;
@@ -80,20 +80,20 @@ extern class UIControl{
 	@:native("action")
 	public var action:one;
 
-	@:native("actionsForTarget")
-	overload extern inline public function actionsForTarget(nullable:null:id:UIControlEvents):nullable NSArray<NSString *> *;
+	@:native("actionsForTarget:forControlEvent:::single:returns:of:selector:returns")
+	overload extern inline public function actionsForTarget(target:nullableid, forControlEvent:UIControlEvents, :, ://, single:event., returns:NSArray, of:NSString, selector:names., returns:nil):nullable NSArray<NSString *> *;
 
 	@:native("enumerateEventHandlers")
-	overload extern inline public function enumerateEventHandlers(void:null:(NS_NOESCAPE^:UIAction_NullableactionHandler,id_Nullabletarget,SEL_Nullableaction,UIControlEventscontrolEvents,BOOLstop:ios(14.0):void;
+	overload extern inline public function enumerateEventHandlers(iterator:Dynamic):Void;
 
-	@:native("sendAction:to")
-	overload extern inline public function sendAction(action:SEL, to:nullableid:nullableUIEvent):void;
+	@:native("sendAction:to:forEvent")
+	overload extern inline public function sendAction(action:SEL, to:nullableid, forEvent:nullableUIEvent):Void;
 
 	@:native("sendAction")
-	overload extern inline public function sendAction(UIAction:null::ios(14.0):void;
+	overload extern inline public function sendAction(action:UIAction):Void;
 
 	@:native("sendActionsForControlEvents")
-	overload extern inline public function sendActionsForControlEvents(controlEvents:UIControlEvents):void;
+	overload extern inline public function sendActionsForControlEvents(controlEvents:UIControlEvents):Void;
 
 	@:native("tvos)")
 	public var tvos):API_UNAVAILABLE(watchos,;
@@ -104,26 +104,26 @@ extern class UIControl{
 	@:native("tvos)")
 	public var tvos):API_UNAVAILABLE(watchos,;
 
-	@:native("menuAttachmentPointForConfiguration")
-	overload extern inline public function menuAttachmentPointForConfiguration(UIContextMenuConfiguration:null::ios(14.0:watchos,tvos):CGPoint;
+	@:native("menuAttachmentPointForConfiguration:API_AVAILABLE(ios(14.0)")
+	overload extern inline public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration, API_AVAILABLE(ios(14.0):Dynamic):CGPoint;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::CGPoint:ios(14.0):nullable UIContextMenuConfiguration *;
+	@:native("contextMenuInteraction:configurationForMenuAtLocation")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):nullable UIContextMenuConfiguration *;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:ios(14.0):nullable UITargetedPreview *;
+	@:native("contextMenuInteraction:previewForHighlightingMenuWithConfiguration")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:ios(14.0):nullable UITargetedPreview *;
+	@:native("contextMenuInteraction:previewForDismissingMenuWithConfiguration")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:nullableid<UIContextMenuInteractionAnimating>:ios(14.0):void;
+	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator:NS_REQUIRES_SUPER")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>, NS_REQUIRES_SUPER:Dynamic):Void;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:nullableid<UIContextMenuInteractionAnimating>:ios(14.0):void;
+	@:native("contextMenuInteraction:willEndForConfiguration:animator:NS_REQUIRES_SUPER")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>, NS_REQUIRES_SUPER:Dynamic):Void;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:id<UIContextMenuInteractionCommitAnimating>):void;
+	@:native("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionCommitAnimating>):Void;
 
 
 }

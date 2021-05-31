@@ -12,13 +12,13 @@ extern class UIGravityBehavior{
 	overload extern inline public static function autorelease():UIGravityBehavior;
 
 	@:native("initWithItems")
-	overload extern inline public function initWithItems(NSArray<id:null:<UIDynamicItem>>):UIGravityBehavior;
+	overload extern inline public function initWithItems(items:NSArray<id<UIDynamicItem>>):UIGravityBehavior;
 
 	@:native("addItem")
-	overload extern inline public function addItem(id:null:<UIDynamicItem>):void;
+	overload extern inline public function addItem(item:id<UIDynamicItem>):Void;
 
 	@:native("removeItem")
-	overload extern inline public function removeItem(id:null:<UIDynamicItem>):void;
+	overload extern inline public function removeItem(item:id<UIDynamicItem>):Void;
 
 	@:native("items")
 	public var items:<UIDynamicItem>>;
@@ -33,7 +33,7 @@ extern class UIGravityBehavior{
 	public var magnitude:CGFloat;
 
 	@:native("setAngle:magnitude")
-	overload extern inline public function setAngle(angle:CGFloat, magnitude:CGFloat):void;
+	overload extern inline public function setAngle(angle:CGFloat, magnitude:CGFloat):Void;
 
 
 }

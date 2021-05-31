@@ -14,6 +14,9 @@ extern class UIStatusBarManager{
 	@:native("init")
 	overload extern inline public function init():UIStatusBarManager;
 
+	@:native("new")
+	overload extern inline public static function new():UIStatusBarManager;
+
 	@:native("statusBarStyle")
 	public var statusBarStyle:UIStatusBarStyle;
 

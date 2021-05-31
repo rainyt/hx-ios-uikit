@@ -11,14 +11,32 @@ extern class UIPointerStyle{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIPointerStyle;
 
+	@:native("styleWithEffect:shape")
+	overload extern inline public static function styleWithEffect(effect:UIPointerEffect, shape:nullableUIPointerShape):UIPointerStyle;
+
+	@:native("styleWithShape:constrainedAxes")
+	overload extern inline public static function styleWithShape(shape:UIPointerShape, constrainedAxes:UIAxis):UIPointerStyle;
+
+	@:native("hiddenPointerStyle;")
+	overload extern inline public static function hiddenPointerStyle;():UIPointerStyle;
+
 	@:native("init")
 	overload extern inline public function init():UIPointerStyle;
+
+	@:native("new")
+	overload extern inline public static function new():UIPointerStyle;
 
 	@:native("preview")
 	public var preview:UITargetedPreview;
 
+	@:native("effectWithPreview")
+	overload extern inline public static function effectWithPreview(preview:UITargetedPreview):UIPointerStyle;
+
 	@:native("init")
 	overload extern inline public function init():UIPointerStyle;
+
+	@:native("new")
+	overload extern inline public static function new():UIPointerStyle;
 
 	@:native("UIPointerEffectTintModeOverlay")
 	public var UIPointerEffectTintModeOverlay:to;
@@ -29,8 +47,23 @@ extern class UIPointerStyle{
 	@:native("YES")
 	public var YES:to;
 
+	@:native("shapeWithPath")
+	overload extern inline public static function shapeWithPath(path:UIBezierPath):UIPointerStyle;
+
+	@:native("shapeWithRoundedRect")
+	overload extern inline public static function shapeWithRoundedRect(rect:CGRect):UIPointerStyle;
+
+	@:native("shapeWithRoundedRect:cornerRadius")
+	overload extern inline public static function shapeWithRoundedRect(rect:CGRect, cornerRadius:CGFloat):UIPointerStyle;
+
+	@:native("beamWithPreferredLength:axis")
+	overload extern inline public static function beamWithPreferredLength(length:CGFloat, axis:UIAxis):UIPointerStyle;
+
 	@:native("init")
 	overload extern inline public function init():UIPointerStyle;
+
+	@:native("new")
+	overload extern inline public static function new():UIPointerStyle;
 
 
 }

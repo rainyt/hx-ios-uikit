@@ -15,28 +15,28 @@ extern class UICollectionViewCell{
 	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
-	overload extern inline public function prepareForReuse():void;
+	overload extern inline public function prepareForReuse():Void;
 
 	@:native("applyLayoutAttributes")
-	overload extern inline public function applyLayoutAttributes(UICollectionViewLayoutAttributes:null:):void;
+	overload extern inline public function applyLayoutAttributes(layoutAttributes:UICollectionViewLayoutAttributes):Void;
 
-	@:native("willTransitionFromLayout")
-	overload extern inline public function willTransitionFromLayout(UICollectionViewLayout:null::UICollectionViewLayout):void;
+	@:native("willTransitionFromLayout:toLayout")
+	overload extern inline public function willTransitionFromLayout(oldLayout:UICollectionViewLayout, toLayout:UICollectionViewLayout):Void;
 
-	@:native("didTransitionFromLayout")
-	overload extern inline public function didTransitionFromLayout(UICollectionViewLayout:null::UICollectionViewLayout):void;
+	@:native("didTransitionFromLayout:toLayout")
+	overload extern inline public function didTransitionFromLayout(oldLayout:UICollectionViewLayout, toLayout:UICollectionViewLayout):Void;
 
 	@:native("preferredLayoutAttributesFittingAttributes")
-	overload extern inline public function preferredLayoutAttributesFittingAttributes(UICollectionViewLayoutAttributes:null::ios(8.0):UICollectionViewLayoutAttributes *;
+	overload extern inline public function preferredLayoutAttributesFittingAttributes(layoutAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutAttributes *;
 
 	@:native("watchos(7.0))")
 	public var watchos(7.0)):tvos(14.0),;
 
 	@:native("setNeedsUpdateConfiguration")
-	overload extern inline public function setNeedsUpdateConfiguration():void;
+	overload extern inline public function setNeedsUpdateConfiguration():Void;
 
 	@:native("updateConfigurationUsingState")
-	overload extern inline public function updateConfigurationUsingState(UICellConfigurationState:null::ios(14.0:14.0:7.0):void;
+	overload extern inline public function updateConfigurationUsingState(state:UICellConfigurationState):Void;
 
 	@:native("watchos(7.0))")
 	public var watchos(7.0)):tvos(14.0),;
@@ -53,8 +53,8 @@ extern class UICollectionViewCell{
 	@:native("highlighted")
 	public var highlighted:BOOL;
 
-	@:native("dragStateDidChange")
-	overload extern inline public function dragStateDidChange(dragState:UICollectionViewCellDragState:API_AVAILABLE(ios(11.0:tvos,watchos):void;
+	@:native("dragStateDidChange:API_AVAILABLE(ios(11.0)")
+	overload extern inline public function dragStateDidChange(dragState:UICollectionViewCellDragState, API_AVAILABLE(ios(11.0):Dynamic):Void;
 
 	@:native("watchos(7.0))")
 	public var watchos(7.0)):tvos(14.0),;

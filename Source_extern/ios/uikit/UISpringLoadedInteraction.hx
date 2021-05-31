@@ -11,14 +11,17 @@ extern class UISpringLoadedInteraction{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UISpringLoadedInteraction;
 
+	@:native("new")
+	overload extern inline public static function new():UISpringLoadedInteraction;
+
 	@:native("init")
 	overload extern inline public function init():UISpringLoadedInteraction;
 
-	@:native("initWithInteractionBehavior")
-	overload extern inline public function initWithInteractionBehavior(nullable:null:id<UISpringLoadedInteractionBehavior>:nullableid<UISpringLoadedInteractionEffect>:void(^:UISpringLoadedInteractioninteraction,id<UISpringLoadedInteractionContext>context):UISpringLoadedInteraction;
+	@:native("initWithInteractionBehavior:interactionEffect:activationHandler")
+	overload extern inline public function initWithInteractionBehavior(interactionBehavior:nullableid<UISpringLoadedInteractionBehavior>, interactionEffect:nullableid<UISpringLoadedInteractionEffect>, activationHandler:Dynamic):UISpringLoadedInteraction;
 
 	@:native("initWithActivationHandler")
-	overload extern inline public function initWithActivationHandler(UISpringLoadedInteraction:void^:interaction,id<UISpringLoadedInteractionContext>context):UISpringLoadedInteraction;
+	overload extern inline public function initWithActivationHandler(handler:Dynamic):UISpringLoadedInteraction;
 
 	@:native("interactionBehavior")
 	public var interactionBehavior:id<UISpringLoadedInteractionBehavior>;
@@ -26,14 +29,14 @@ extern class UISpringLoadedInteraction{
 	@:native("interactionEffect")
 	public var interactionEffect:id<UISpringLoadedInteractionEffect>;
 
-	@:native("shouldAllowInteraction")
-	overload extern inline public function shouldAllowInteraction(UISpringLoadedInteraction:null::id<UISpringLoadedInteractionContext>):BOOL;
+	@:native("shouldAllowInteraction:withContext")
+	overload extern inline public function shouldAllowInteraction(interaction:UISpringLoadedInteraction, withContext:id<UISpringLoadedInteractionContext>):BOOL;
 
 	@:native("interactionDidFinish")
-	overload extern inline public function interactionDidFinish(UISpringLoadedInteraction:null:):void;
+	overload extern inline public function interactionDidFinish(interaction:UISpringLoadedInteraction):Void;
 
-	@:native("interaction")
-	overload extern inline public function interaction(UISpringLoadedInteraction:null::id<UISpringLoadedInteractionContext>):void;
+	@:native("interaction:didChangeWithContext")
+	overload extern inline public function interaction(interaction:UISpringLoadedInteraction, didChangeWithContext:id<UISpringLoadedInteractionContext>):Void;
 
 	@:native("state")
 	public var state:UISpringLoadedInteractionEffectState;
@@ -45,7 +48,7 @@ extern class UISpringLoadedInteraction{
 	public var targetItem:id;
 
 	@:native("locationInView")
-	overload extern inline public function locationInView(nullable:null:UIView):CGPoint;
+	overload extern inline public function locationInView(view:nullableUIView):CGPoint;
 
 
 }

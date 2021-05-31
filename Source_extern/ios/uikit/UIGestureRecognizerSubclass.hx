@@ -14,56 +14,56 @@ extern class UIGestureRecognizerSubclass{
 	@:native("consumers")
 	public var consumers:by;
 
-	@:native("ignoreTouch:forEvent")
-	overload extern inline public function ignoreTouch(touch:UITouch, forEvent:UIEvent):void;
+	@:native("ignoreTouch:forEvent://:a:isn't:of:gesture:can:passed:this:to:ignored.:touches:be:on:view:if")
+	overload extern inline public function ignoreTouch(touch:UITouch, forEvent:UIEvent, //:if, a:touch, isn't:part, of:this, gesture:it, can:be, passed:to, this:method, to:be, ignored.:ignored, touches:won't, be:cancelled, on:the, view:even, if:cancelsTouchesInView):Void;
 
-	@:native("ignorePress")
-	overload extern inline public function ignorePress(UIPress:null::UIPressesEvent:ios(9.0):void;
+	@:native("ignorePress:forEvent")
+	overload extern inline public function ignorePress(button:UIPress, forEvent:UIPressesEvent):Void;
 
 	@:native("reset;")
-	overload extern inline public function reset;():void;
+	overload extern inline public function reset;():Void;
 
 	@:native("canPreventGestureRecognizer")
-	overload extern inline public function canPreventGestureRecognizer(UIGestureRecognizer:null:):BOOL;
+	overload extern inline public function canPreventGestureRecognizer(preventedGestureRecognizer:UIGestureRecognizer):BOOL;
 
 	@:native("canBePreventedByGestureRecognizer")
-	overload extern inline public function canBePreventedByGestureRecognizer(UIGestureRecognizer:null:):BOOL;
+	overload extern inline public function canBePreventedByGestureRecognizer(preventingGestureRecognizer:UIGestureRecognizer):BOOL;
 
 	@:native("shouldRequireFailureOfGestureRecognizer")
-	overload extern inline public function shouldRequireFailureOfGestureRecognizer(UIGestureRecognizer:null::ios(7.0):BOOL;
+	overload extern inline public function shouldRequireFailureOfGestureRecognizer(otherGestureRecognizer:UIGestureRecognizer):BOOL;
 
 	@:native("shouldBeRequiredToFailByGestureRecognizer")
-	overload extern inline public function shouldBeRequiredToFailByGestureRecognizer(UIGestureRecognizer:null::ios(7.0):BOOL;
+	overload extern inline public function shouldBeRequiredToFailByGestureRecognizer(otherGestureRecognizer:UIGestureRecognizer):BOOL;
 
-	@:native("shouldReceiveEvent")
-	overload extern inline public function shouldReceiveEvent(UIEvent:null::ios(13.4:13.4:watchos):BOOL;
+	@:native("shouldReceiveEvent:API_AVAILABLE(ios(13.4), tvos(13.4)")
+	overload extern inline public function shouldReceiveEvent(event:UIEvent, API_AVAILABLE(ios(13.4), tvos(13.4):Dynamic):BOOL;
 
-	@:native("touchesBegan")
-	overload extern inline public function touchesBegan(NSSet<UITouch:null:>:UIEvent):void;
+	@:native("touchesBegan:withEvent")
+	overload extern inline public function touchesBegan(touches:NSSet<UITouch>, withEvent:UIEvent):Void;
 
-	@:native("touchesMoved")
-	overload extern inline public function touchesMoved(NSSet<UITouch:null:>:UIEvent):void;
+	@:native("touchesMoved:withEvent")
+	overload extern inline public function touchesMoved(touches:NSSet<UITouch>, withEvent:UIEvent):Void;
 
-	@:native("touchesEnded")
-	overload extern inline public function touchesEnded(NSSet<UITouch:null:>:UIEvent):void;
+	@:native("touchesEnded:withEvent")
+	overload extern inline public function touchesEnded(touches:NSSet<UITouch>, withEvent:UIEvent):Void;
 
-	@:native("touchesCancelled")
-	overload extern inline public function touchesCancelled(NSSet<UITouch:null:>:UIEvent):void;
+	@:native("touchesCancelled:withEvent")
+	overload extern inline public function touchesCancelled(touches:NSSet<UITouch>, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload extern inline public function touchesEstimatedPropertiesUpdated(NSSet<UITouch:null:>:ios(9.1):void;
+	overload extern inline public function touchesEstimatedPropertiesUpdated(touches:NSSet<UITouch>):Void;
 
-	@:native("pressesBegan")
-	overload extern inline public function pressesBegan(NSSet<UIPress:null:>:UIPressesEvent:ios(9.0):void;
+	@:native("pressesBegan:withEvent")
+	overload extern inline public function pressesBegan(presses:NSSet<UIPress>, withEvent:UIPressesEvent):Void;
 
-	@:native("pressesChanged")
-	overload extern inline public function pressesChanged(NSSet<UIPress:null:>:UIPressesEvent:ios(9.0):void;
+	@:native("pressesChanged:withEvent")
+	overload extern inline public function pressesChanged(presses:NSSet<UIPress>, withEvent:UIPressesEvent):Void;
 
-	@:native("pressesEnded")
-	overload extern inline public function pressesEnded(NSSet<UIPress:null:>:UIPressesEvent:ios(9.0):void;
+	@:native("pressesEnded:withEvent")
+	overload extern inline public function pressesEnded(presses:NSSet<UIPress>, withEvent:UIPressesEvent):Void;
 
-	@:native("pressesCancelled")
-	overload extern inline public function pressesCancelled(NSSet<UIPress:null:>:UIPressesEvent:ios(9.0):void;
+	@:native("pressesCancelled:withEvent")
+	overload extern inline public function pressesCancelled(presses:NSSet<UIPress>, withEvent:UIPressesEvent):Void;
 
 
 }

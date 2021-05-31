@@ -15,7 +15,7 @@ extern class NSShadow{
 	overload extern inline public function init():NSShadow;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):NSShadow;
+	overload extern inline public function initWithCoder(coder:NSCoder):NSShadow;
 
 	@:native("drawing")
 	public var drawing:original;

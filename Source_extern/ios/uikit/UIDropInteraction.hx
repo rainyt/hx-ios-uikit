@@ -17,6 +17,9 @@ extern class UIDropInteraction{
 	@:native("init")
 	overload extern inline public function init():UIDropInteraction;
 
+	@:native("new")
+	overload extern inline public static function new():UIDropInteraction;
+
 	@:native("delegate")
 	public var delegate:id<UIDropInteractionDelegate>;
 
@@ -29,6 +32,9 @@ extern class UIDropInteraction{
 	@:native("init")
 	overload extern inline public function init():UIDropInteraction;
 
+	@:native("new")
+	overload extern inline public static function new():UIDropInteraction;
+
 	@:native("operation")
 	public var operation:UIDropOperation;
 
@@ -38,32 +44,32 @@ extern class UIDropInteraction{
 	@:native("prefersFullSizePreview")
 	public var prefersFullSizePreview:BOOL;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):BOOL;
+	@:native("dropInteraction:canHandleSession")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, canHandleSession:id<UIDropSession>):BOOL;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
+	@:native("dropInteraction:sessionDidEnter")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, sessionDidEnter:id<UIDropSession>):Void;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):UIDropProposal *;
+	@:native("dropInteraction:sessionDidUpdate")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, sessionDidUpdate:id<UIDropSession>):UIDropProposal *;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
+	@:native("dropInteraction:sessionDidExit")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, sessionDidExit:id<UIDropSession>):Void;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
+	@:native("dropInteraction:performDrop")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, performDrop:id<UIDropSession>):Void;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
+	@:native("dropInteraction:concludeDrop")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, concludeDrop:id<UIDropSession>):Void;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::id<UIDropSession>):void;
+	@:native("dropInteraction:sessionDidEnd")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, sessionDidEnd:id<UIDropSession>):Void;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::UIDragItem:UITargetedDragPreview):nullable UITargetedDragPreview *;
+	@:native("dropInteraction:previewForDroppingItem:withDefault")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, previewForDroppingItem:UIDragItem, withDefault:UITargetedDragPreview):nullable UITargetedDragPreview *;
 
-	@:native("dropInteraction")
-	overload extern inline public function dropInteraction(UIDropInteraction:null::UIDragItem:id<UIDragAnimating>):void;
+	@:native("dropInteraction:item:willAnimateDropWithAnimator")
+	overload extern inline public function dropInteraction(interaction:UIDropInteraction, item:UIDragItem, willAnimateDropWithAnimator:id<UIDragAnimating>):Void;
 
 
 }

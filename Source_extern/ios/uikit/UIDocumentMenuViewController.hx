@@ -11,23 +11,23 @@ extern class UIDocumentMenuViewController{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIDocumentMenuViewController;
 
-	@:native("documentMenu")
-	overload extern inline public function documentMenu(UIDocumentMenuViewController:null::UIDocumentPickerViewController):void;
+	@:native("documentMenu:didPickDocumentPicker")
+	overload extern inline public function documentMenu(documentMenu:UIDocumentMenuViewController, didPickDocumentPicker:UIDocumentPickerViewController):Void;
 
 	@:native("documentMenuWasCancelled")
-	overload extern inline public function documentMenuWasCancelled(UIDocumentMenuViewController:null:):void;
+	overload extern inline public function documentMenuWasCancelled(documentMenu:UIDocumentMenuViewController):Void;
 
-	@:native("initWithDocumentTypes")
-	overload extern inline public function initWithDocumentTypes(NSArray:null:<NSString>:UIDocumentPickerMode):UIDocumentMenuViewController;
+	@:native("initWithDocumentTypes:inMode")
+	overload extern inline public function initWithDocumentTypes(allowedUTIs:NSArray<NSString>, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
 
-	@:native("initWithURL")
-	overload extern inline public function initWithURL(NSURL:null::UIDocumentPickerMode):UIDocumentMenuViewController;
+	@:native("initWithURL:inMode")
+	overload extern inline public function initWithURL(url:NSURL, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIDocumentMenuViewController;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIDocumentMenuViewController;
 
-	@:native("addOptionWithTitle")
-	overload extern inline public function addOptionWithTitle(NSString:null::nullableUIImage:UIDocumentMenuOrder:void(^:void):void;
+	@:native("addOptionWithTitle:image:order:handler")
+	overload extern inline public function addOptionWithTitle(title:NSString, image:nullableUIImage, order:UIDocumentMenuOrder, handler:Dynamic):Void;
 
 	@:native("delegate")
 	public var delegate:id<UIDocumentMenuDelegate>;

@@ -12,7 +12,7 @@ extern class UINotificationFeedbackGenerator{
 	overload extern inline public static function autorelease():UINotificationFeedbackGenerator;
 
 	@:native("notificationOccurred")
-	overload extern inline public function notificationOccurred(notificationType:UINotificationFeedbackType):void;
+	overload extern inline public function notificationOccurred(notificationType:UINotificationFeedbackType):Void;
 
 
 }

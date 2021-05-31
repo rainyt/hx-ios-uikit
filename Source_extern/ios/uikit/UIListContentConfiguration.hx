@@ -11,6 +11,45 @@ extern class UIListContentConfiguration{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UIListContentConfiguration;
 
+	@:native("cellConfiguration;")
+	overload extern inline public static function cellConfiguration;():UIListContentConfiguration;
+
+	@:native("subtitleCellConfiguration;")
+	overload extern inline public static function subtitleCellConfiguration;():UIListContentConfiguration;
+
+	@:native("valueCellConfiguration;")
+	overload extern inline public static function valueCellConfiguration;():UIListContentConfiguration;
+
+	@:native("plainHeaderConfiguration;")
+	overload extern inline public static function plainHeaderConfiguration;():UIListContentConfiguration;
+
+	@:native("plainFooterConfiguration;")
+	overload extern inline public static function plainFooterConfiguration;():UIListContentConfiguration;
+
+	@:native("groupedHeaderConfiguration;")
+	overload extern inline public static function groupedHeaderConfiguration;():UIListContentConfiguration;
+
+	@:native("groupedFooterConfiguration;")
+	overload extern inline public static function groupedFooterConfiguration;():UIListContentConfiguration;
+
+	@:native("sidebarCellConfiguration")
+	overload extern inline public static function sidebarCellConfiguration():UIListContentConfiguration;
+
+	@:native("sidebarSubtitleCellConfiguration")
+	overload extern inline public static function sidebarSubtitleCellConfiguration():UIListContentConfiguration;
+
+	@:native("accompaniedSidebarCellConfiguration")
+	overload extern inline public static function accompaniedSidebarCellConfiguration():UIListContentConfiguration;
+
+	@:native("accompaniedSidebarSubtitleCellConfiguration")
+	overload extern inline public static function accompaniedSidebarSubtitleCellConfiguration():UIListContentConfiguration;
+
+	@:native("sidebarHeaderConfiguration")
+	overload extern inline public static function sidebarHeaderConfiguration():UIListContentConfiguration;
+
+	@:native("new")
+	overload extern inline public static function new():UIListContentConfiguration;
+
 	@:native("init")
 	overload extern inline public function init():UIListContentConfiguration;
 
@@ -57,16 +96,19 @@ extern class UIListContentConfiguration{
 	public var textToSecondaryTextVerticalPadding:CGFloat;
 
 	@:native("initWithConfiguration")
-	overload extern inline public function initWithConfiguration(UIListContentConfiguration:null:):UIListContentConfiguration;
+	overload extern inline public function initWithConfiguration(configuration:UIListContentConfiguration):UIListContentConfiguration;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UIListContentConfiguration;
+	overload extern inline public function initWithCoder(coder:NSCoder):UIListContentConfiguration;
 
 	@:native("initWithFrame")
 	overload extern inline public function initWithFrame(frame:CGRect):UIListContentConfiguration;
 
 	@:native("init")
 	overload extern inline public function init():UIListContentConfiguration;
+
+	@:native("new")
+	overload extern inline public static function new():UIListContentConfiguration;
 
 	@:native("configuration")
 	public var configuration:UIListContentConfiguration;

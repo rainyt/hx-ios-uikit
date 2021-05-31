@@ -23,44 +23,47 @@ extern class UIContextMenuInteraction{
 	@:native("init")
 	overload extern inline public function init():UIContextMenuInteraction;
 
+	@:native("new")
+	overload extern inline public static function new():UIContextMenuInteraction;
+
 	@:native("locationInView")
-	overload extern inline public function locationInView(nullable:null:UIView):CGPoint;
+	overload extern inline public function locationInView(view:nullableUIView):CGPoint;
 
 	@:native("updateVisibleMenuWithBlock")
-	overload extern inline public function updateVisibleMenuWithBlock(UIMenu:null:(NS_NOESCAPE^:UIMenuvisibleMenu:ios(14.0):void;
+	overload extern inline public function updateVisibleMenuWithBlock(block:Dynamic):Void;
 
 	@:native("dismissMenu;")
-	overload extern inline public function dismissMenu;():void;
+	overload extern inline public function dismissMenu;():Void;
 
 	@:native("previewViewController")
 	public var previewViewController:UIViewController;
 
 	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null:(^:void):void;
+	overload extern inline public function addAnimations(animations:Dynamic):Void;
 
 	@:native("addCompletion")
-	overload extern inline public function addCompletion(void:null:(^:void):void;
+	overload extern inline public function addCompletion(completion:Dynamic):Void;
 
 	@:native("preferredCommitStyle")
 	public var preferredCommitStyle:UIContextMenuInteractionCommitStyle;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::CGPoint):nullable UIContextMenuConfiguration *;
+	@:native("contextMenuInteraction:configurationForMenuAtLocation")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):nullable UIContextMenuConfiguration *;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration):nullable UITargetedPreview *;
+	@:native("contextMenuInteraction:previewForHighlightingMenuWithConfiguration")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration):nullable UITargetedPreview *;
+	@:native("contextMenuInteraction:previewForDismissingMenuWithConfiguration")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):nullable UITargetedPreview *;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:id<UIContextMenuInteractionCommitAnimating>):void;
+	@:native("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:id<UIContextMenuInteractionCommitAnimating>):Void;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:nullableid<UIContextMenuInteractionAnimating>):void;
+	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>):Void;
 
-	@:native("contextMenuInteraction")
-	overload extern inline public function contextMenuInteraction(UIContextMenuInteraction:null::UIContextMenuConfiguration:nullableid<UIContextMenuInteractionAnimating>):void;
+	@:native("contextMenuInteraction:willEndForConfiguration:animator")
+	overload extern inline public function contextMenuInteraction(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:nullableid<UIContextMenuInteractionAnimating>):Void;
 
 
 }

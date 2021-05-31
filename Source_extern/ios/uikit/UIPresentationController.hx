@@ -12,28 +12,28 @@ extern class UIPresentationController{
 	overload extern inline public static function autorelease():UIPresentationController;
 
 	@:native("adaptivePresentationStyleForPresentationController")
-	overload extern inline public function adaptivePresentationStyleForPresentationController(UIPresentationController:null:):UIModalPresentationStyle;
+	overload extern inline public function adaptivePresentationStyleForPresentationController(controller:UIPresentationController):UIModalPresentationStyle;
 
-	@:native("adaptivePresentationStyleForPresentationController")
-	overload extern inline public function adaptivePresentationStyleForPresentationController(UIPresentationController:null::UITraitCollection:ios(8.3):UIModalPresentationStyle;
+	@:native("adaptivePresentationStyleForPresentationController:traitCollection")
+	overload extern inline public function adaptivePresentationStyleForPresentationController(controller:UIPresentationController, traitCollection:UITraitCollection):UIModalPresentationStyle;
 
-	@:native("presentationController")
-	overload extern inline public function presentationController(UIPresentationController:null::UIModalPresentationStyle):nullable UIViewController *;
+	@:native("presentationController:viewControllerForAdaptivePresentationStyle")
+	overload extern inline public function presentationController(controller:UIPresentationController, viewControllerForAdaptivePresentationStyle:UIModalPresentationStyle):nullable UIViewController *;
 
-	@:native("presentationController")
-	overload extern inline public function presentationController(UIPresentationController:null::UIModalPresentationStyle:nullableid<UIViewControllerTransitionCoordinator>:ios(8.3):void;
+	@:native("presentationController:willPresentWithAdaptiveStyle:transitionCoordinator")
+	overload extern inline public function presentationController(presentationController:UIPresentationController, willPresentWithAdaptiveStyle:UIModalPresentationStyle, transitionCoordinator:nullableid<UIViewControllerTransitionCoordinator>):Void;
 
 	@:native("presentationControllerShouldDismiss")
-	overload extern inline public function presentationControllerShouldDismiss(UIPresentationController:null::ios(13.0):BOOL;
+	overload extern inline public function presentationControllerShouldDismiss(presentationController:UIPresentationController):BOOL;
 
 	@:native("presentationControllerWillDismiss")
-	overload extern inline public function presentationControllerWillDismiss(UIPresentationController:null::ios(13.0):void;
+	overload extern inline public function presentationControllerWillDismiss(presentationController:UIPresentationController):Void;
 
 	@:native("presentationControllerDidDismiss")
-	overload extern inline public function presentationControllerDidDismiss(UIPresentationController:null::ios(13.0):void;
+	overload extern inline public function presentationControllerDidDismiss(presentationController:UIPresentationController):Void;
 
 	@:native("presentationControllerDidAttemptToDismiss")
-	overload extern inline public function presentationControllerDidAttemptToDismiss(UIPresentationController:null::ios(13.0):void;
+	overload extern inline public function presentationControllerDidAttemptToDismiss(presentationController:UIPresentationController):Void;
 
 	@:native("presentingViewController")
 	public var presentingViewController:UIViewController;
@@ -50,8 +50,8 @@ extern class UIPresentationController{
 	@:native("delegate")
 	public var delegate:<UIAdaptivePresentationControllerDelegate>;
 
-	@:native("initWithPresentedViewController")
-	overload extern inline public function initWithPresentedViewController(UIViewController:null::nullableUIViewController):UIPresentationController;
+	@:native("initWithPresentedViewController:presentingViewController")
+	overload extern inline public function initWithPresentedViewController(presentedViewController:UIViewController, presentingViewController:nullableUIViewController):UIPresentationController;
 
 	@:native("init")
 	overload extern inline public function init():UIPresentationController;
@@ -60,13 +60,13 @@ extern class UIPresentationController{
 	public var adaptivePresentationStyle:UIModalPresentationStyle;
 
 	@:native("adaptivePresentationStyleForTraitCollection")
-	overload extern inline public function adaptivePresentationStyleForTraitCollection(UITraitCollection:null::ios(8.3):UIModalPresentationStyle;
+	overload extern inline public function adaptivePresentationStyleForTraitCollection(traitCollection:UITraitCollection):UIModalPresentationStyle;
 
 	@:native("containerViewWillLayoutSubviews;")
-	overload extern inline public function containerViewWillLayoutSubviews;():void;
+	overload extern inline public function containerViewWillLayoutSubviews;():Void;
 
 	@:native("containerViewDidLayoutSubviews;")
-	overload extern inline public function containerViewDidLayoutSubviews;():void;
+	overload extern inline public function containerViewDidLayoutSubviews;():Void;
 
 	@:native("presentedView")
 	public var presentedView:UIView;
@@ -81,16 +81,16 @@ extern class UIPresentationController{
 	public var shouldRemovePresentersView:BOOL;
 
 	@:native("presentationTransitionWillBegin;")
-	overload extern inline public function presentationTransitionWillBegin;():void;
+	overload extern inline public function presentationTransitionWillBegin;():Void;
 
 	@:native("presentationTransitionDidEnd")
-	overload extern inline public function presentationTransitionDidEnd(completed:BOOL):void;
+	overload extern inline public function presentationTransitionDidEnd(completed:BOOL):Void;
 
 	@:native("dismissalTransitionWillBegin;")
-	overload extern inline public function dismissalTransitionWillBegin;():void;
+	overload extern inline public function dismissalTransitionWillBegin;():Void;
 
 	@:native("dismissalTransitionDidEnd")
-	overload extern inline public function dismissalTransitionDidEnd(completed:BOOL):void;
+	overload extern inline public function dismissalTransitionDidEnd(completed:BOOL):Void;
 
 	@:native("overrideTraitCollection")
 	public var overrideTraitCollection:UITraitCollection;

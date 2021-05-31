@@ -23,20 +23,20 @@ extern class UITextDragging{
 	@:native("textDragOptions")
 	public var textDragOptions:UITextDragOptions;
 
-	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::id<UITextDragRequest>):NSArray<UIDragItem *> *;
+	@:native("textDraggableView:itemsForDrag")
+	overload extern inline public function textDraggableView(textDraggableView:UIView<UITextDraggable>, itemsForDrag:id<UITextDragRequest>):NSArray<UIDragItem *> *;
 
-	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::UIDragItem:id<UIDragSession>):nullable UITargetedDragPreview *;
+	@:native("textDraggableView:dragPreviewForLiftingItem:session")
+	overload extern inline public function textDraggableView(textDraggableView:UIView<UITextDraggable>, dragPreviewForLiftingItem:UIDragItem, session:id<UIDragSession>):nullable UITargetedDragPreview *;
 
-	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::id<UIDragAnimating>:id<UIDragSession>):void;
+	@:native("textDraggableView:willAnimateLiftWithAnimator:session")
+	overload extern inline public function textDraggableView(textDraggableView:UIView<UITextDraggable>, willAnimateLiftWithAnimator:id<UIDragAnimating>, session:id<UIDragSession>):Void;
 
-	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::id<UIDragSession>):void;
+	@:native("textDraggableView:dragSessionWillBegin")
+	overload extern inline public function textDraggableView(textDraggableView:UIView<UITextDraggable>, dragSessionWillBegin:id<UIDragSession>):Void;
 
-	@:native("textDraggableView")
-	overload extern inline public function textDraggableView(UIView<UITextDraggable>:null::id<UIDragSession>:UIDropOperation):void;
+	@:native("textDraggableView:dragSessionDidEnd:withOperation")
+	overload extern inline public function textDraggableView(textDraggableView:UIView<UITextDraggable>, dragSessionDidEnd:id<UIDragSession>, withOperation:UIDropOperation):Void;
 
 	@:native("dragRange")
 	public var dragRange:UITextRange;

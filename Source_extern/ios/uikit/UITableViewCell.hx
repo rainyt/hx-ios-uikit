@@ -11,20 +11,20 @@ extern class UITableViewCell{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():UITableViewCell;
 
-	@:native("initWithStyle:reuseIdentifier")
-	overload extern inline public function initWithStyle(style:UITableViewCellStyle, reuseIdentifier:nullableNSString:ios(3.0):UITableViewCell;
+	@:native("initWithStyle:reuseIdentifier:API_AVAILABLE(ios(3.0)")
+	overload extern inline public function initWithStyle(style:UITableViewCellStyle, reuseIdentifier:nullableNSString, API_AVAILABLE(ios(3.0):NS_DESIGNATED_INITIALIZER):UITableViewCell;
 
 	@:native("initWithCoder")
-	overload extern inline public function initWithCoder(NSCoder:null:):UITableViewCell;
+	overload extern inline public function initWithCoder(coder:NSCoder):UITableViewCell;
 
 	@:native("watchos(7.0))")
 	public var watchos(7.0)):tvos(14.0),;
 
 	@:native("setNeedsUpdateConfiguration")
-	overload extern inline public function setNeedsUpdateConfiguration():void;
+	overload extern inline public function setNeedsUpdateConfiguration():Void;
 
 	@:native("updateConfigurationUsingState")
-	overload extern inline public function updateConfigurationUsingState(UICellConfigurationState:null::ios(14.0:14.0:7.0):void;
+	overload extern inline public function updateConfigurationUsingState(state:UICellConfigurationState):Void;
 
 	@:native("defaultContentConfiguration")
 	overload extern inline public function defaultContentConfiguration():UIListContentConfiguration *;
@@ -66,7 +66,7 @@ extern class UITableViewCell{
 	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
-	overload extern inline public function prepareForReuse():void;
+	overload extern inline public function prepareForReuse():Void;
 
 	@:native("UITableViewCellSelectionStyleDefault.")
 	public var UITableViewCellSelectionStyleDefault.:is;
@@ -77,11 +77,11 @@ extern class UITableViewCell{
 	@:native("NO")
 	public var NO:is;
 
-	@:native("setSelected:animated")
-	overload extern inline public function setSelected(selected:BOOL, animated:BOOL):void;
+	@:native("setSelected:animated::::::::::://:between:and")
+	overload extern inline public function setSelected(selected:BOOL, animated:BOOL, :, :, :, :, :, :, :, :, :, :, //:animate, between:regular, and:selected):Void;
 
-	@:native("setHighlighted:animated")
-	overload extern inline public function setHighlighted(highlighted:BOOL, animated:BOOL):void;
+	@:native("setHighlighted:animated:::::::://:between:and")
+	overload extern inline public function setHighlighted(highlighted:BOOL, animated:BOOL, :, :, :, :, :, :, :, //:animate, between:regular, and:highlighted):Void;
 
 	@:native("accordingly.")
 	public var accordingly.:appearance;
@@ -117,7 +117,7 @@ extern class UITableViewCell{
 	public var animated.:for;
 
 	@:native("setEditing:animated")
-	overload extern inline public function setEditing(editing:BOOL, animated:BOOL):void;
+	overload extern inline public function setEditing(editing:BOOL, animated:BOOL):Void;
 
 	@:native("button")
 	public var button:"Delete";
@@ -126,19 +126,19 @@ extern class UITableViewCell{
 	public var UI_APPEARANCE_SELECTOR:API_AVAILABLE(ios(9.0));
 
 	@:native("willTransitionToState")
-	overload extern inline public function willTransitionToState(state:UITableViewCellStateMask:API_AVAILABLE(ios(3.0):void;
+	overload extern inline public function willTransitionToState(state:UITableViewCellStateMask):Void;
 
 	@:native("didTransitionToState")
-	overload extern inline public function didTransitionToState(state:UITableViewCellStateMask:API_AVAILABLE(ios(3.0):void;
+	overload extern inline public function didTransitionToState(state:UITableViewCellStateMask):Void;
 
-	@:native("dragStateDidChange")
-	overload extern inline public function dragStateDidChange(dragState:UITableViewCellDragState:API_AVAILABLE(ios(11.0:tvos,watchos):void;
+	@:native("dragStateDidChange:API_AVAILABLE(ios(11.0)")
+	overload extern inline public function dragStateDidChange(dragState:UITableViewCellDragState, API_AVAILABLE(ios(11.0):Dynamic):Void;
 
 	@:native("watchos)")
 	public var watchos):API_UNAVAILABLE(tvos,;
 
-	@:native("initWithFrame:reuseIdentifier")
-	overload extern inline public function initWithFrame(frame:CGRect, reuseIdentifier:nullableNSString:"",ios(2.0,3.0:tvos):id;
+	@:native("initWithFrame:reuseIdentifier:API_DEPRECATED("", ios(2.0, 3.0)")
+	overload extern inline public function initWithFrame(frame:CGRect, reuseIdentifier:nullableNSString, API_DEPRECATED("", ios(2.0, 3.0):Dynamic):id;
 
 	@:native("nil")
 	public var nil:is;

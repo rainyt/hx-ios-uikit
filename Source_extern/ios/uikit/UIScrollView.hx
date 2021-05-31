@@ -24,7 +24,7 @@ extern class UIScrollView{
 	public var API_AVAILABLE(ios(11.0),tvos(11.0)):adjustedContentInset;
 
 	@:native("adjustedContentInsetDidChange")
-	overload extern inline public function adjustedContentInsetDidChange():void;
+	overload extern inline public function adjustedContentInsetDidChange():Void;
 
 	@:native("API_AVAILABLE(ios(11.0),tvos(11.0))")
 	public var API_AVAILABLE(ios(11.0),tvos(11.0)):contentInsetAdjustmentBehavior;
@@ -86,14 +86,14 @@ extern class UIScrollView{
 	@:native("API_AVAILABLE(tvos(10.2))")
 	public var API_AVAILABLE(tvos(10.2)):indexDisplayMode;
 
-	@:native("setContentOffset:animated")
-	overload extern inline public function setContentOffset(contentOffset:CGPoint, animated:BOOL):void;
+	@:native("setContentOffset:animated::animate:constant:to")
+	overload extern inline public function setContentOffset(contentOffset:CGPoint, animated:BOOL, ://, animate:at, constant:velocity, to:new):Void;
 
-	@:native("scrollRectToVisible:animated")
-	overload extern inline public function scrollRectToVisible(rect:CGRect, animated:BOOL:nearestedges):void;
+	@:native("scrollRectToVisible:animated::::://:so:is:visible:nothing:rect")
+	overload extern inline public function scrollRectToVisible(rect:CGRect, animated:BOOL, :, :, :, :, //:scroll, so:rect, is:just, visible:Dynamic, nothing:if, rect:completely):Void;
 
 	@:native("flashScrollIndicators;")
-	overload extern inline public function flashScrollIndicators;():void;
+	overload extern inline public function flashScrollIndicators;():Void;
 
 	@:native("dragging")
 	public var dragging:started;
@@ -110,11 +110,11 @@ extern class UIScrollView{
 	@:native("presses")
 	public var presses:on;
 
-	@:native("touchesShouldBegin")
-	overload extern inline public function touchesShouldBegin(NSSet<UITouch:null:>:nullableUIEvent:UIView):BOOL;
+	@:native("touchesShouldBegin:withEvent:inContentView")
+	overload extern inline public function touchesShouldBegin(touches:NSSet<UITouch>, withEvent:nullableUIEvent, inContentView:UIView):BOOL;
 
 	@:native("touchesShouldCancelInContentView")
-	overload extern inline public function touchesShouldCancelInContentView(UIView:null:):BOOL;
+	overload extern inline public function touchesShouldCancelInContentView(view:UIView):BOOL;
 
 	@:native("1.0")
 	public var 1.0:is;
@@ -126,10 +126,10 @@ extern class UIScrollView{
 	public var 1.0:is;
 
 	@:native("setZoomScale:animated")
-	overload extern inline public function setZoomScale(scale:CGFloat, animated:BOOL:ios(3.0):void;
+	overload extern inline public function setZoomScale(scale:CGFloat, animated:BOOL):Void;
 
 	@:native("zoomToRect:animated")
-	overload extern inline public function zoomToRect(rect:CGRect, animated:BOOL:ios(3.0):void;
+	overload extern inline public function zoomToRect(rect:CGRect, animated:BOOL):Void;
 
 	@:native("end")
 	public var end:gesture;
@@ -158,47 +158,47 @@ extern class UIScrollView{
 	@:native("API_UNAVAILABLE(tvos)")
 	public var API_UNAVAILABLE(tvos):API_AVAILABLE(ios(10.0));
 
-	@:native("scrollViewDidScroll")
-	overload extern inline public function scrollViewDidScroll(UIScrollView:null:):void;
+	@:native("scrollViewDidScroll:::::::::::::::::::::::://")
+	overload extern inline public function scrollViewDidScroll(scrollView:UIScrollView, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, :, //:any):Void;
 
-	@:native("scrollViewDidZoom")
-	overload extern inline public function scrollViewDidZoom(UIScrollView:null::ios(3.2):void;
+	@:native("scrollViewDidZoom:API_AVAILABLE(ios(3.2):any")
+	overload extern inline public function scrollViewDidZoom(scrollView:UIScrollView, API_AVAILABLE(ios(3.2)://, any:zoom):Void;
 
 	@:native("scrollViewWillBeginDragging")
-	overload extern inline public function scrollViewWillBeginDragging(UIScrollView:null:):void;
+	overload extern inline public function scrollViewWillBeginDragging(scrollView:UIScrollView):Void;
 
-	@:native("scrollViewWillEndDragging")
-	overload extern inline public function scrollViewWillEndDragging(UIScrollView:null::CGPoint:inoutCGPoint:ios(5.0):void;
+	@:native("scrollViewWillEndDragging:withVelocity:targetContentOffset")
+	overload extern inline public function scrollViewWillEndDragging(scrollView:UIScrollView, withVelocity:CGPoint, targetContentOffset:inoutCGPoint):Void;
 
-	@:native("scrollViewDidEndDragging")
-	overload extern inline public function scrollViewDidEndDragging(UIScrollView:null::BOOL):void;
+	@:native("scrollViewDidEndDragging:willDecelerate")
+	overload extern inline public function scrollViewDidEndDragging(scrollView:UIScrollView, willDecelerate:BOOL):Void;
 
-	@:native("scrollViewWillBeginDecelerating")
-	overload extern inline public function scrollViewWillBeginDecelerating(UIScrollView:null:):void;
+	@:native("scrollViewWillBeginDecelerating:://:on:up:we")
+	overload extern inline public function scrollViewWillBeginDecelerating(scrollView:UIScrollView, :, //:called, on:finger, up:as, we:are):Void;
 
-	@:native("scrollViewDidEndDecelerating")
-	overload extern inline public function scrollViewDidEndDecelerating(UIScrollView:null:):void;
+	@:native("scrollViewDidEndDecelerating::::called:scroll:grinds")
+	overload extern inline public function scrollViewDidEndDecelerating(scrollView:UIScrollView, :, :, ://, called:when, scroll:view, grinds:to):Void;
 
-	@:native("scrollViewDidEndScrollingAnimation")
-	overload extern inline public function scrollViewDidEndScrollingAnimation(UIScrollView:null:):void;
+	@:native("scrollViewDidEndScrollingAnimation://:when:finishes.:called")
+	overload extern inline public function scrollViewDidEndScrollingAnimation(scrollView:UIScrollView, //:called, when:setContentOffset/scrollRectVisible, finishes.:not, called:if):Void;
 
-	@:native("viewForZoomingInScrollView")
-	overload extern inline public function viewForZoomingInScrollView(UIScrollView:null:):nullable UIView *;
+	@:native("viewForZoomingInScrollView::://:a:that:be:if:returns")
+	overload extern inline public function viewForZoomingInScrollView(scrollView:UIScrollView, :, :, //:return, a:view, that:will, be:scaled., if:delegate, returns:nil,):nullable UIView *;
 
-	@:native("scrollViewWillBeginZooming")
-	overload extern inline public function scrollViewWillBeginZooming(UIScrollView:null::nullableUIView:ios(3.2):void;
+	@:native("scrollViewWillBeginZooming:withView:API_AVAILABLE(ios(3.2):called:the:view:zooming")
+	overload extern inline public function scrollViewWillBeginZooming(scrollView:UIScrollView, withView:nullableUIView, API_AVAILABLE(ios(3.2)://, called:before, the:scroll, view:begins, zooming:its):Void;
 
-	@:native("scrollViewDidEndZooming")
-	overload extern inline public function scrollViewDidEndZooming(UIScrollView:null::nullableUIView:CGFloat):void;
+	@:native("scrollViewDidEndZooming:withView:atScale://:between:and:called:any")
+	overload extern inline public function scrollViewDidEndZooming(scrollView:UIScrollView, withView:nullableUIView, atScale:CGFloat, //:scale, between:minimum, and:maximum., called:after, any:'bounce'):Void;
 
-	@:native("scrollViewShouldScrollToTop")
-	overload extern inline public function scrollViewShouldScrollToTop(UIScrollView:null:):BOOL;
+	@:native("scrollViewShouldScrollToTop:://:a:if:want:scroll:the:if:defined,")
+	overload extern inline public function scrollViewShouldScrollToTop(scrollView:UIScrollView, :, //:return, a:yes, if:you, want:to, scroll:to, the:top., if:not, defined,:assumes):BOOL;
 
-	@:native("scrollViewDidScrollToTop")
-	overload extern inline public function scrollViewDidScrollToTop(UIScrollView:null:):void;
+	@:native("scrollViewDidScrollToTop::::called:scrolling:finished.:be:immediately:already")
+	overload extern inline public function scrollViewDidScrollToTop(scrollView:UIScrollView, :, :, ://, called:when, scrolling:animation, finished.:may, be:called, immediately:if, already:at):Void;
 
 	@:native("scrollViewDidChangeAdjustedContentInset")
-	overload extern inline public function scrollViewDidChangeAdjustedContentInset(UIScrollView:null::ios(11.0:11.0):void;
+	overload extern inline public function scrollViewDidChangeAdjustedContentInset(scrollView:UIScrollView):Void;
 
 
 }

@@ -11,8 +11,11 @@ extern class NSParagraphStyle{
 	@:native("autorelease")
 	overload extern inline public static function autorelease():NSParagraphStyle;
 
-	@:native("initWithTextAlignment:location")
-	overload extern inline public function initWithTextAlignment(alignment:NSTextAlignment, location:CGFloat:NSDictionary<NSTextTabOptionKey,id>):NSParagraphStyle;
+	@:native("columnTerminatorsForLocale:API_AVAILABLE(macos(10.11), ios(7.0):Returns:column:for:Passing:returns:instance:to:systemLocale].:matching:formatting:pass:currentLocale].:be:as:value:NSTabColumnTerminatorsAttributeName:make:decimal")
+	overload extern inline public static function columnTerminatorsForLocale(aLocale:nullableNSLocale, API_AVAILABLE(macos(10.11), ios(7.0)://, Returns:the, column:terminators, for:locale., Passing:nil, returns:an, instance:corresponding, to:+[NSLocale, systemLocale].:For, matching:user's, formatting:preferences,, pass:+[NSLocale, currentLocale].:Can, be:used, as:the, value:for, NSTabColumnTerminatorsAttributeName:to, make:a, decimal:tab):NSCharacterSet *;
+
+	@:native("initWithTextAlignment:location:options:NS_DESIGNATED_INITIALIZER:Initializes:text:with:text:location,:options.:The:alignment:used:determine:position:text:the")
+	overload extern inline public function initWithTextAlignment(alignment:NSTextAlignment, location:CGFloat, options:NSDictionary<NSTextTabOptionKey,id>, NS_DESIGNATED_INITIALIZER://, Initializes:a, text:tab, with:the, text:alignment,, location,:and, options.:, The:text, alignment:is, used:to, determine:the, position:of, text:inside, the:tab):NSParagraphStyle;
 
 	@:native("language.")
 	public var language.:preferred;
@@ -25,6 +28,9 @@ extern class NSParagraphStyle{
 
 	@:native("init].")
 	public var init].:alloc];
+
+	@:native("defaultWritingDirectionForLanguage::languageName:in:lang")
+	overload extern inline public static function defaultWritingDirectionForLanguage(languageName:nullableNSString, ://, languageName:is, in:ISO, lang:region):NSWritingDirection;
 
 	@:native("manager.")
 	public var manager.:layout;
@@ -129,13 +135,13 @@ extern class NSParagraphStyle{
 	public var ios(9.0)):API_AVAILABLE(macos(10.11),;
 
 	@:native("addTabStop")
-	overload extern inline public function addTabStop(NSTextTab:null::macos(10.0:9.0):void;
+	overload extern inline public function addTabStop(anObject:NSTextTab):Void;
 
 	@:native("removeTabStop")
-	overload extern inline public function removeTabStop(NSTextTab:null::macos(10.0:9.0):void;
+	overload extern inline public function removeTabStop(anObject:NSTextTab):Void;
 
 	@:native("setParagraphStyle")
-	overload extern inline public function setParagraphStyle(NSParagraphStyle:null::macos(10.0:9.0):void;
+	overload extern inline public function setParagraphStyle(obj:NSParagraphStyle):Void;
 
 
 }

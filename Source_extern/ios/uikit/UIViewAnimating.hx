@@ -24,31 +24,31 @@ extern class UIViewAnimating{
 	public var :;
 
 	@:native("startAnimation;")
-	overload extern inline public function startAnimation;():void;
+	overload extern inline public function startAnimation;():Void;
 
 	@:native("startAnimationAfterDelay")
-	overload extern inline public function startAnimationAfterDelay(delay:NSTimeInterval):void;
+	overload extern inline public function startAnimationAfterDelay(delay:NSTimeInterval):Void;
 
 	@:native("pauseAnimation;")
-	overload extern inline public function pauseAnimation;():void;
+	overload extern inline public function pauseAnimation;():Void;
 
 	@:native("stopAnimation")
-	overload extern inline public function stopAnimation(:BOOL):void;
+	overload extern inline public function stopAnimation(withoutFinishing:BOOL):Void;
 
 	@:native("finishAnimationAtPosition")
-	overload extern inline public function finishAnimationAtPosition(finalPosition:UIViewAnimatingPosition):void;
+	overload extern inline public function finishAnimationAtPosition(finalPosition:UIViewAnimatingPosition):Void;
+
+	@:native("addAnimations:delayFactor")
+	overload extern inline public function addAnimations(animation:Dynamic, delayFactor:CGFloat):Void;
 
 	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null:(^:void:CGFloat):void;
-
-	@:native("addAnimations")
-	overload extern inline public function addAnimations(void:null:(^:void):void;
+	overload extern inline public function addAnimations(animation:Dynamic):Void;
 
 	@:native("addCompletion")
-	overload extern inline public function addCompletion(void:null:(^:UIViewAnimatingPositionfinalPosition):void;
+	overload extern inline public function addCompletion(completion:Dynamic):Void;
 
-	@:native("continueAnimationWithTimingParameters")
-	overload extern inline public function continueAnimationWithTimingParameters(nullable:null:id<UITimingCurveProvider>:CGFloat):void;
+	@:native("continueAnimationWithTimingParameters:durationFactor")
+	overload extern inline public function continueAnimationWithTimingParameters(parameters:nullableid<UITimingCurveProvider>, durationFactor:CGFloat):Void;
 
 
 }

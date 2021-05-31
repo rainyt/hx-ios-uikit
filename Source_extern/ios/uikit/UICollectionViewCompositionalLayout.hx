@@ -38,11 +38,20 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
 
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
+
 	@:native("configuration")
 	public var configuration:UICollectionViewCompositionalLayoutConfiguration;
 
+	@:native("sectionWithGroup")
+	overload extern inline public static function sectionWithGroup(group:NSCollectionLayoutGroup):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("contentInsets")
 	public var contentInsets:NSDirectionalEdgeInsets;
@@ -68,8 +77,17 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("decorationItems")
 	public var decorationItems:NSArray<NSCollectionLayoutDecorationItem>;
 
+	@:native("itemWithLayoutSize")
+	overload extern inline public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):UICollectionViewCompositionalLayout;
+
+	@:native("itemWithLayoutSize:supplementaryItems")
+	overload extern inline public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize, supplementaryItems:NSArray<NSCollectionLayoutSupplementaryItem>):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("contentInsets")
 	public var contentInsets:NSDirectionalEdgeInsets;
@@ -83,8 +101,17 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("supplementaryItems")
 	public var supplementaryItems:NSArray<NSCollectionLayoutSupplementaryItem>;
 
+	@:native("customItemWithFrame")
+	overload extern inline public static function customItemWithFrame(frame:CGRect):UICollectionViewCompositionalLayout;
+
+	@:native("customItemWithFrame:zIndex")
+	overload extern inline public static function customItemWithFrame(frame:CGRect, zIndex:NSInteger):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("frame")
 	public var frame:CGRect;
@@ -92,8 +119,26 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("zIndex")
 	public var zIndex:NSInteger;
 
+	@:native("horizontalGroupWithLayoutSize:subitem:count")
+	overload extern inline public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):UICollectionViewCompositionalLayout;
+
+	@:native("horizontalGroupWithLayoutSize:subitems")
+	overload extern inline public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:NSArray<NSCollectionLayoutItem>):UICollectionViewCompositionalLayout;
+
+	@:native("verticalGroupWithLayoutSize:subitem:count")
+	overload extern inline public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):UICollectionViewCompositionalLayout;
+
+	@:native("verticalGroupWithLayoutSize:subitems")
+	overload extern inline public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:NSArray<NSCollectionLayoutItem>):UICollectionViewCompositionalLayout;
+
+	@:native("customGroupWithLayoutSize:itemProvider")
+	overload extern inline public static function customGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, itemProvider:NSCollectionLayoutGroupCustomItemProvider):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("supplementaryItems")
 	public var supplementaryItems:NSArray<NSCollectionLayoutSupplementaryItem>;
@@ -107,8 +152,23 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("visualDescription;")
 	overload extern inline public function visualDescription;():NSString*;
 
+	@:native("fractionalWidthDimension")
+	overload extern inline public static function fractionalWidthDimension(fractionalWidth:CGFloat):UICollectionViewCompositionalLayout;
+
+	@:native("fractionalHeightDimension")
+	overload extern inline public static function fractionalHeightDimension(fractionalHeight:CGFloat):UICollectionViewCompositionalLayout;
+
+	@:native("absoluteDimension")
+	overload extern inline public static function absoluteDimension(absoluteDimension:CGFloat):UICollectionViewCompositionalLayout;
+
+	@:native("estimatedDimension")
+	overload extern inline public static function estimatedDimension(estimatedDimension:CGFloat):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("isFractionalWidth")
 	public var isFractionalWidth:BOOL;
@@ -125,8 +185,14 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("dimension")
 	public var dimension:CGFloat;
 
+	@:native("sizeWithWidthDimension:heightDimension")
+	overload extern inline public static function sizeWithWidthDimension(width:NSCollectionLayoutDimension, heightDimension:NSCollectionLayoutDimension):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("widthDimension")
 	public var widthDimension:NSCollectionLayoutDimension;
@@ -134,8 +200,17 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("heightDimension")
 	public var heightDimension:NSCollectionLayoutDimension;
 
+	@:native("flexibleSpacing:")
+	overload extern inline public static function flexibleSpacing(flexibleSpacing:CGFloat, ://):UICollectionViewCompositionalLayout;
+
+	@:native("fixedSpacing::::")
+	overload extern inline public static function fixedSpacing(fixedSpacing:CGFloat, :, :, :, ://):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("spacing")
 	public var spacing:CGFloat;
@@ -146,8 +221,14 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("isFixedSpacing")
 	public var isFixedSpacing:BOOL;
 
+	@:native("spacingForLeading")
+	overload extern inline public static function spacingForLeading():UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("leading")
 	public var leading:NSCollectionLayoutSpacing;
@@ -161,8 +242,17 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("bottom")
 	public var bottom:NSCollectionLayoutSpacing;
 
+	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor")
+	overload extern inline public static function supplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:NSCollectionLayoutAnchor):UICollectionViewCompositionalLayout;
+
+	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor")
+	overload extern inline public static function supplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:NSCollectionLayoutAnchor, itemAnchor:NSCollectionLayoutAnchor):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("zIndex")
 	public var zIndex:NSInteger;
@@ -176,8 +266,17 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("itemAnchor")
 	public var itemAnchor:NSCollectionLayoutAnchor;
 
+	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment")
+	overload extern inline public static function boundarySupplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment):UICollectionViewCompositionalLayout;
+
+	@:native("boundarySupplementaryItemWithLayoutSize:elementKind:alignment:absoluteOffset")
+	overload extern inline public static function boundarySupplementaryItemWithLayoutSize(layoutSize:NSCollectionLayoutSize, elementKind:NSString, alignment:NSRectAlignment, absoluteOffset:CGPoint):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("extendsBoundary")
 	public var extendsBoundary:BOOL;
@@ -191,8 +290,14 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("offset")
 	public var offset:CGPoint;
 
+	@:native("backgroundDecorationItemWithElementKind")
+	overload extern inline public static function backgroundDecorationItemWithElementKind(elementKind:NSString):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("zIndex=1")
 	public var zIndex=1:to;
@@ -200,8 +305,20 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("elementKind")
 	public var elementKind:NSString;
 
+	@:native("layoutAnchorWithEdges")
+	overload extern inline public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge):UICollectionViewCompositionalLayout;
+
+	@:native("layoutAnchorWithEdges:absoluteOffset")
+	overload extern inline public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge, absoluteOffset:CGPoint):UICollectionViewCompositionalLayout;
+
+	@:native("layoutAnchorWithEdges:fractionalOffset")
+	overload extern inline public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge, fractionalOffset:CGPoint):UICollectionViewCompositionalLayout;
+
 	@:native("init")
 	overload extern inline public function init():UICollectionViewCompositionalLayout;
+
+	@:native("new")
+	overload extern inline public static function new():UICollectionViewCompositionalLayout;
 
 	@:native("edges")
 	public var edges:NSDirectionalRectEdge;
