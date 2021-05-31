@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewTransitionLayout")
 @:include("UIKit/UIKit.h")

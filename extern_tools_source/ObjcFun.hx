@@ -1,7 +1,8 @@
+import ExternBaseClassFunProperty.ExternBaseClassFunPropertyArgs;
 import ExternBaseClass.ExternBaseClassType;
 
 class ObjcFun {
-	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClass.ExternBaseClassFunProperty {
+	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClassFunProperty {
 		line = line.substr(0, line.lastIndexOf(";") + 1);
 		var isStatic = line.indexOf("+") == 0;
 		var returnClass = line.substr(0, line.indexOf(")"));
@@ -14,7 +15,7 @@ class ObjcFun {
 				break;
 			}
 		}
-		var args:Array<Dynamic> = null;
+		var args:Array<ExternBaseClassFunPropertyArgs> = null;
 		for (i in 0...funcName.length) {
 			var end = funcName.charAt(i);
 			if (end == " ") {
@@ -42,19 +43,19 @@ class ObjcFun {
 		};
 	}
 
-	public static function parsingFuncName(funcName:String, args:Array<Dynamic>):String {
+	public static function parsingFuncName(funcName:String, args:Array<ExternBaseClassFunPropertyArgs>):String {
 		funcName = StringTools.replace(funcName, ";", "");
 		if (args == null)
 			return funcName;
 		for (index => value in args) {
 			if (index == 0)
 				continue;
-			funcName += ":" + cast(value, String).split(":")[0];
+			funcName += ":" + value.name;
 		}
 		return funcName;
 	}
 
-	public static function parsingArgs(typedefs:Map<String, ExternTypedefClass>, line:String):Array<Dynamic> {
+	public static function parsingArgs(typedefs:Map<String, ExternTypedefClass>, line:String):Array<ExternBaseClassFunPropertyArgs> {
 		var isRaed = false;
 		var args = [];
 		var read = "";
@@ -123,6 +124,14 @@ class ObjcFun {
 			}
 		}
 		retargs = retargs.filter((f) -> f.indexOf("API_") == -1 && f.indexOf("ios(") == -1);
-		return retargs;
+		var r:Array<ExternBaseClassFunPropertyArgs> = [];
+		for (index => value in retargs) {
+			var a = value.split(":");
+			r.push({
+				name: a[0],
+				type: a[1]
+			});
+		}
+		return r;
 	}
 }

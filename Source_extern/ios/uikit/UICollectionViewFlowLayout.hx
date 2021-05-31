@@ -1,9 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewFlowLayout")
 @:include("UIKit/UIKit.h")

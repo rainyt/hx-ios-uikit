@@ -1,9 +1,12 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.CGSize;
 import ios.objc.CGPoint;
+import ios.objc.CGAffineTransform;
 import ios.objc.CGLineCap;
 import ios.objc.CGLineJoin;
+import ios.objc.CGBlendMode;
 @:objc
 @:native("UIBezierPath")
 @:include("UIKit/UIKit.h")

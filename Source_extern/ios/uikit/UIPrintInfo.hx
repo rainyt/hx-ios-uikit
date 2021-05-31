@@ -1,8 +1,7 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
-import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
+import cpp.objc.NSString;
 @:objc
 @:native("UIPrintInfo")
 @:include("UIKit/UIKit.h")

@@ -1,8 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
+import ios.objc.CGPoint;
 @:objc
 @:native("UITextDragPreviewRenderer")
 @:include("UIKit/UIKit.h")

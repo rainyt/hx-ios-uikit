@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import cpp.objc.NSString;
 @:objc
 @:native("UISearchSuggestionItem")
 @:include("UIKit/UIKit.h")

@@ -63,13 +63,14 @@ class Class: pass
 
 class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
-    __slots__ = ("className", "_hdata", "funcAndAttr")
-    _hx_fields = ["className", "_hdata", "funcAndAttr"]
-    _hx_methods = ["toHaxeFile", "toFuncName"]
+    __slots__ = ("className", "_imported", "_hdata", "funcAndAttr")
+    _hx_fields = ["className", "_imported", "_hdata", "funcAndAttr"]
+    _hx_methods = ["toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
 
     def __init__(self,_hdata,hextern):
         self._hdata = None
         self.funcAndAttr = []
+        self._imported = []
         harray = _hdata.split("\n")
         pclassName = (harray[0] if 0 < len(harray) else None)
         startIndex = None
@@ -153,12 +154,24 @@ class ExternBaseClass:
             _g_current = (_g_current + 1)
             index = _g1_key
             value = _g1_value
-            c = ObjcImport.toImport(value.type)
+            c = self._importType(value.type)
             if (c is not None):
                 haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c is None else c)) + ";\n"))))
-            c2 = ObjcImport.toImport(value.returnClass)
+            c2 = self._importType(value.returnClass)
             if (c2 is not None):
                 haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c2 is None else c2)) + ";\n"))))
+            if (value.args is not None):
+                _g2_current = 0
+                _g2_array = value.args
+                while (_g2_current < len(_g2_array)):
+                    _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
+                    _g3_key = _g2_current
+                    _g2_current = (_g2_current + 1)
+                    index1 = _g3_key
+                    a = _g3_value
+                    c3 = self._importType(a.type)
+                    if (c3 is not None):
+                        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c3 is None else c3)) + ";\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
@@ -172,19 +185,12 @@ class ExternBaseClass:
             index = _g1_key
             value = _g1_value
             _g = value.type
-            _hx_local_6 = len(_g)
-            if (_hx_local_6 == 4):
+            _hx_local_7 = len(_g)
+            if (_hx_local_7 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
-                    haxe1 = (((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(")
-                    haxe2 = None
-                    if (value.args is not None):
-                        _this = value.args
-                        haxe2 = ", ".join([python_Boot.toString1(x1,'') for x1 in _this])
-                    else:
-                        haxe2 = ""
-                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull((((((("null" if haxe1 is None else haxe1) + ("null" if haxe2 is None else haxe2)) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
-            elif (_hx_local_6 == 8):
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((((((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(") + HxOverrides.stringOrNull(((self.toFuncArgs(value.args) if ((value.args is not None)) else "")))) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
+            elif (_hx_local_7 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
@@ -192,6 +198,30 @@ class ExternBaseClass:
                 pass
         haxe = (("null" if haxe is None else haxe) + "\n}")
         return haxe
+
+    def _importType(self,_hx_type):
+        if (python_internal_ArrayImpl.indexOf(self._imported,_hx_type,None) != -1):
+            return None
+        c = ObjcImport.toImport(_hx_type)
+        if (c is None):
+            return None
+        _this = self._imported
+        _this.append(_hx_type)
+        return c
+
+    def toFuncArgs(self,array):
+        args = []
+        _g_current = 0
+        _g_array = array
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            x = ((HxOverrides.stringOrNull(value.name) + ":") + HxOverrides.stringOrNull(value.type))
+            args.append(x)
+        return ", ".join([python_Boot.toString1(x1,'') for x1 in args])
 
     def toFuncName(self,_hx_str):
         startIndex = None
@@ -597,15 +627,7 @@ class ObjcFun:
             value = _g1_value
             if (index == 0):
                 continue
-            def _hx_local_1():
-                _hx_local_0 = value
-                if (Std.isOfType(_hx_local_0,str) or ((_hx_local_0 is None))):
-                    _hx_local_0
-                else:
-                    raise "Class cast error"
-                return _hx_local_0
-            _this = _hx_local_1()
-            funcName = (("null" if funcName is None else funcName) + HxOverrides.stringOrNull(((":" + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(_this.split(":"), 0))))))
+            funcName = (("null" if funcName is None else funcName) + HxOverrides.stringOrNull(((":" + HxOverrides.stringOrNull(value.name)))))
         return funcName
 
     @staticmethod
@@ -684,7 +706,18 @@ class ObjcFun:
             else:
                 return False
         retargs = list(filter(_hx_local_8,retargs))
-        return retargs
+        r = []
+        _g2_current = 0
+        _g2_array = retargs
+        while (_g2_current < len(_g2_array)):
+            _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
+            _g3_key = _g2_current
+            _g2_current = (_g2_current + 1)
+            index = _g3_key
+            value = _g3_value
+            a = value.split(":")
+            r.append(_hx_AnonObject({'name': (a[0] if 0 < len(a) else None), 'type': (a[1] if 1 < len(a) else None)}))
+        return r
 
 
 class ObjcImport:
@@ -721,7 +754,6 @@ class ObjcImport:
                 return "cpp.objc.NSData"
         else:
             pass
-        print(str((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/objc/") + ("null" if _hx_type is None else _hx_type)) + ".hx")))
         if sys_FileSystem.exists((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/objc/") + ("null" if _hx_type is None else _hx_type)) + ".hx")):
             return ("ios.objc." + ("null" if _hx_type is None else _hx_type))
         return None
@@ -856,11 +888,7 @@ class ObjcType:
 class Std:
     _hx_class_name = "Std"
     __slots__ = ()
-    _hx_statics = ["is", "isOfType", "string"]
-
-    @staticmethod
-    def _hx_is(v,t):
-        return Std.isOfType(v,t)
+    _hx_statics = ["isOfType", "string"]
 
     @staticmethod
     def isOfType(v,t):
@@ -1452,7 +1480,22 @@ class HxString:
 class python_internal_ArrayImpl:
     _hx_class_name = "python.internal.ArrayImpl"
     __slots__ = ()
-    _hx_statics = ["_get", "_set"]
+    _hx_statics = ["indexOf", "_get", "_set"]
+
+    @staticmethod
+    def indexOf(a,x,fromIndex = None):
+        _hx_len = len(a)
+        l = (0 if ((fromIndex is None)) else ((_hx_len + fromIndex) if ((fromIndex < 0)) else fromIndex))
+        if (l < 0):
+            l = 0
+        _g = l
+        _g1 = _hx_len
+        while (_g < _g1):
+            i = _g
+            _g = (_g + 1)
+            if HxOverrides.eq(a[i],x):
+                return i
+        return -1
 
     @staticmethod
     def _get(x,idx):

@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.CGRect;
 @:objc
 @:native("UISwitch")
 @:include("UIKit/UIKit.h")

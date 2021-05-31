@@ -1,15 +1,9 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
-import ios.objc.CGRect;
+import ios.objc.CGAffineTransform;
 @:objc
 @:native("NSLayoutManager")
 @:include("UIKit/UIKit.h")

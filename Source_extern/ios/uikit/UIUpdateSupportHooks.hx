@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
+import cpp.objc.NSString;
 @:objc
 @:native("UIUpdateSupportHooks")
 @:include("UIKit/UIKit.h")

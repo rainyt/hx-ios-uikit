@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSDictionary;
+import cpp.objc.NSError;
 @:objc
 @:native("NSDeprecatedKitAdditions")
 @:include("UIKit/UIKit.h")

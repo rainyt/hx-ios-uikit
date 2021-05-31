@@ -1,7 +1,6 @@
 package ios.uikit;
 
-import cpp.objc.NSString;
-import cpp.objc.NSString;
+import ios.objc.CGRect;
 import cpp.objc.NSString;
 @:objc
 @:native("UISearchBar")

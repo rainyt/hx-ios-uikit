@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
+import cpp.objc.NSString;
+import ios.objc.CGPoint;
 @:objc
 @:native("UICollectionView")
 @:include("UIKit/UIKit.h")

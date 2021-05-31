@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGSize;
+import ios.objc.CGPoint;
 @:objc
 @:native("UIRegion")
 @:include("UIKit/UIKit.h")

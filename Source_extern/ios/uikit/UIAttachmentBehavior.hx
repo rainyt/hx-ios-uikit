@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGPoint;
+import ios.objc.CGVector;
 @:objc
 @:native("UIAttachmentBehavior")
 @:include("UIKit/UIKit.h")

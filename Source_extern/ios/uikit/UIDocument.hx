@@ -1,9 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import cpp.objc.NSString;
-import cpp.objc.NSString;
-import cpp.objc.NSString;
+import cpp.objc.NSError;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIDocument")

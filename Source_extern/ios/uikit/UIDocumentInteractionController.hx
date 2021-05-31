@@ -1,7 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import cpp.objc.NSString;
+import ios.objc.CGRect;
 @:objc
 @:native("UIDocumentInteractionController")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGAffineTransform;
 @:objc
 @:native("NSLayoutManagerDeprecated")
 @:include("UIKit/UIKit.h")

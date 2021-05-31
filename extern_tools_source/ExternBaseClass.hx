@@ -1,3 +1,4 @@
+import ExternBaseClassFunProperty.ExternBaseClassFunPropertyArgs;
 import sys.io.File;
 
 /**
@@ -8,6 +9,11 @@ class ExternBaseClass {
 	 * 类名
 	 */
 	public var className:String;
+
+	/**
+	 * 已导入的Import
+	 */
+	private var _imported:Array<String> = [];
 
 	/**
 	 * H的文件
@@ -83,12 +89,19 @@ class ExternBaseClass {
 		// haxe += "import " + ObjcImport.toImport("NSBundle") + ";\n";
 
 		for (index => value in funcAndAttr) {
-			var c = ObjcImport.toImport(value.type);
+			var c = _importType(value.type);
 			if (c != null)
 				haxe += "import " + c + ";\n";
-			var c2 = ObjcImport.toImport(value.returnClass);
+			var c2 = _importType(value.returnClass);
 			if (c2 != null)
 				haxe += "import " + c2 + ";\n";
+			if (value.args != null) {
+				for (index => a in value.args) {
+					var c3 = _importType(a.type);
+					if (c3 != null)
+						haxe += "import " + c3 + ";\n";
+				}
+			}
 		}
 
 		haxe += "@:objc\n";
@@ -101,7 +114,7 @@ class ExternBaseClass {
 					haxe += "\t@:native(\"" + value.name + "\")\n";
 					// No need `extern inline`?
 					haxe += "\toverload public" + (value.isStatic ? " static" : "") + " function " + toFuncName(value.name) + "("
-						+ (value.args != null ? value.args.join(", ") : "") + "):" + value.returnClass + ";\n\n";
+						+ (value.args != null ? toFuncArgs(value.args) : "") + "):" + value.returnClass + ";\n\n";
 				case ExternBaseClassType.PROPERTY:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
 					haxe += "\tpublic var " + value.name + ":" + value.returnClass + ";\n\n";
@@ -111,19 +124,29 @@ class ExternBaseClass {
 		return haxe;
 	}
 
+	private function _importType(type:String):String {
+		if (_imported.indexOf(type) != -1)
+			return null;
+		var c = ObjcImport.toImport(type);
+		if (c == null)
+			return null;
+		_imported.push(type);
+		return c;
+	}
+
+	public function toFuncArgs(array:Array<ExternBaseClassFunPropertyArgs>):String {
+		var args = [];
+		for (index => value in array) {
+			args.push(value.name + ":" + value.type);
+		}
+		return args.join(", ");
+	}
+
 	public function toFuncName(str:String):String {
 		if (str.indexOf(":") != -1)
 			return str.substr(0, str.indexOf(":"));
 		return str;
 	}
-}
-
-typedef ExternBaseClassFunProperty = {
-	name:String,
-	type:String,
-	returnClass:String,
-	isStatic:Bool,
-	args:Array<Dynamic>
 }
 
 class ExternBaseClassType {

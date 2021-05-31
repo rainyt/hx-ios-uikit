@@ -1,7 +1,7 @@
 import ExternBaseClass.ExternBaseClassType;
 
 class ObjcProperty {
-	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClass.ExternBaseClassFunProperty {
+	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClassFunProperty {
 		line = StringTools.replace(line, "@property ", "");
 		line = StringTools.replace(line, "*", "");
 		// 移除注释

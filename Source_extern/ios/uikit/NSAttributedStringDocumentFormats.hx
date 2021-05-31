@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSError;
 import cpp.objc.NSData;
 @:objc
 @:native("NSAttributedStringDocumentFormats")

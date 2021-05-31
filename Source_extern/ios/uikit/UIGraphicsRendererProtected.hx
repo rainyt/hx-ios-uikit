@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSError;
 @:objc
 @:native("UIGraphicsRendererProtected")
 @:include("UIKit/UIKit.h")

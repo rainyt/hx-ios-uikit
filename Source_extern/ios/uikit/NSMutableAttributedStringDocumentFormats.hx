@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSError;
+import cpp.objc.NSData;
 @:objc
 @:native("NSMutableAttributedStringDocumentFormats")
 @:include("UIKit/UIKit.h")

@@ -1,8 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import cpp.objc.NSString;
-import cpp.objc.NSString;
+import ios.objc.CGRect;
 @:objc
 @:native("UIAlertView")
 @:include("UIKit/UIKit.h")

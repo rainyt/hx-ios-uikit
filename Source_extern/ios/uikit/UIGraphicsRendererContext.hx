@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
+import ios.objc.CGBlendMode;
 @:objc
 @:native("UIGraphicsRendererContext")
 @:include("UIKit/UIKit.h")

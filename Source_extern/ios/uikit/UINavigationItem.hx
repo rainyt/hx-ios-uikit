@@ -1,8 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import cpp.objc.NSString;
-import cpp.objc.NSString;
 @:objc
 @:native("UINavigationItem")
 @:include("UIKit/UIKit.h")

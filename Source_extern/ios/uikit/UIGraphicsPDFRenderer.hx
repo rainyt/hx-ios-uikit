@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
+import cpp.objc.NSError;
 import cpp.objc.NSData;
 @:objc
 @:native("UIGraphicsPDFRenderer")

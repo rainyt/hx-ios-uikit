@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSData;
+import ios.objc.CGRect;
 @:objc
 @:native("UIPrintInteractionController")
 @:include("UIKit/UIKit.h")

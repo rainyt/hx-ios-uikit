@@ -2,7 +2,6 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.NSBundle;
-import cpp.objc.NSString;
 import ios.objc.CGSize;
 @:objc
 @:native("UIViewController")

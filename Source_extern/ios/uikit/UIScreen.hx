@@ -1,8 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
 @:objc
 @:native("UIScreen")
 @:include("UIKit/UIKit.h")

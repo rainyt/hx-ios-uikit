@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import ios.objc.NSBundle;
+import cpp.objc.NSData;
 @:objc
 @:native("UINib")
 @:include("UIKit/UIKit.h")

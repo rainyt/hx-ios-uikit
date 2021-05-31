@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGPoint;
-import ios.objc.CGPoint;
 import cpp.objc.NSString;
 @:objc
 @:native("UIGestureRecognizer")

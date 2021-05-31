@@ -1,9 +1,8 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
+import ios.objc.CGPoint;
+import cpp.objc.NSString;
 @:objc
 @:native("UITableView")
 @:include("UIKit/UIKit.h")

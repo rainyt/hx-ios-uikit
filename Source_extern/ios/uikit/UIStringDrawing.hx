@@ -1,17 +1,8 @@
 package ios.uikit;
 
 import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
-import ios.objc.CGSize;
+import ios.objc.CGPoint;
+import ios.objc.CGRect;
 @:objc
 @:native("UIStringDrawing")
 @:include("UIKit/UIKit.h")

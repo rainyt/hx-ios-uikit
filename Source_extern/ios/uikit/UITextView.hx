@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.CGRect;
 @:objc
 @:native("UITextView")
 @:include("UIKit/UIKit.h")

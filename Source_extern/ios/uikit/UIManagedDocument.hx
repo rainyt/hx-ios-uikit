@@ -2,8 +2,7 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
-import cpp.objc.NSString;
-import cpp.objc.NSString;
+import cpp.objc.NSError;
 @:objc
 @:native("UIManagedDocument")
 @:include("UIKit/UIKit.h")

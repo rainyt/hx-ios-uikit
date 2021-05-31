@@ -1,6 +1,7 @@
 package ios.uikit;
 
-import cpp.objc.NSData;
+import ios.objc.CGSize;
+import ios.objc.CGRect;
 import cpp.objc.NSData;
 @:objc
 @:native("UIGraphicsImageRenderer")

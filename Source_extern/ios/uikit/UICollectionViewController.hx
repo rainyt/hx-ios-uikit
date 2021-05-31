@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import cpp.objc.NSString;
+import ios.objc.NSBundle;
 @:objc
 @:native("UICollectionViewController")
 @:include("UIKit/UIKit.h")

@@ -1,11 +1,7 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
 import cpp.objc.NSString;
-import cpp.objc.NSString;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
-import ios.objc.CGRect;
 @:objc
 @:native("UIButton")
 @:include("UIKit/UIKit.h")

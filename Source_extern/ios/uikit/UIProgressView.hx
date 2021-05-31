@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.CGRect;
 @:objc
 @:native("UIProgressView")
 @:include("UIKit/UIKit.h")
