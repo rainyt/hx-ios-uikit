@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSLayoutConstraint;
 @:objc
 @:native("UIConstraintBasedLayoutInstallingConstraints")
 @:include("UIKit/UIKit.h")

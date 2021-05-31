@@ -5,6 +5,7 @@ import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CATransform3D;
 import ios.objc.CGAffineTransform;
+import ios.objc.NSIndexPath;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewLayoutAttributes")

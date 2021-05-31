@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSLineBreakMode;
 @:objc
 @:native("UIListContentTextProperties")
 @:include("UIKit/UIKit.h")

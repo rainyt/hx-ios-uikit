@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.NSCoder;
 @:objc
 @:native("UIInterpolatingMotionEffect")
 @:include("UIKit/UIKit.h")

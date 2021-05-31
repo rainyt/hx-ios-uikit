@@ -1,6 +1,8 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.NSCoder;
+import ios.objc.NSArray;
 import cpp.objc.NSString;
 import ios.objc.CGSize;
 @:objc

@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.objc.NSParagraphStyle;
+import ios.objc.NSWritingDirection;
 import cpp.objc.NSString;
+import ios.objc.NSTextAlignment;
+import ios.objc.NSLineBreakMode;
 @:objc
 @:native("NSParagraphStyle")
 @:include("UIKit/UIKit.h")

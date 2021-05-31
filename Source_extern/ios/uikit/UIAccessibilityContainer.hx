@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSArray;
 @:objc
 @:native("UIAccessibilityContainer")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSDataAsset;
 import cpp.objc.NSString;
 import ios.objc.NSBundle;
 import cpp.objc.NSData;

@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.NSCoder;
 @:objc
 @:native("UIStackView")
 @:include("UIKit/UIKit.h")

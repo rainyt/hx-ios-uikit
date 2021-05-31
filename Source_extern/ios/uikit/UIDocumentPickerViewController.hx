@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.NSCoder;
+import ios.objc.NSURL;
 @:objc
 @:native("UIDocumentPickerViewController")
 @:include("UIKit/UIKit.h")

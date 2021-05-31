@@ -1,9 +1,16 @@
 package ios.uikit;
 
+import ios.objc.NSLayoutManager;
+import ios.objc.NSCoder;
+import ios.objc.NSTextStorage;
+import ios.objc.NSTextContainer;
+import ios.objc.NSTextStorageEditActions;
 import ios.objc.CGRect;
+import ios.objc.NSGlyphProperty;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CGAffineTransform;
+import ios.objc.NSUnderlineStyle;
 @:objc
 @:native("NSLayoutManager")
 @:include("UIKit/UIKit.h")

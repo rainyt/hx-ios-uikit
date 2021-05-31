@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.NSArray;
 @:objc
 @:native("UIActivity")
 @:include("UIKit/UIKit.h")

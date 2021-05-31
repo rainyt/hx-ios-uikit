@@ -1,7 +1,9 @@
 package ios.uikit;
 
+import ios.objc.NSURL;
 import ios.objc.CGRect;
 import cpp.objc.NSString;
+import ios.objc.NSUserActivity;
 @:objc
 @:native("UIApplication")
 @:include("UIKit/UIKit.h")

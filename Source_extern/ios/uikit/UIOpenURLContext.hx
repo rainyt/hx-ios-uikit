@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSURL;
 @:objc
 @:native("UIOpenURLContext")
 @:include("UIKit/UIKit.h")

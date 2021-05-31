@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSIndexPath;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewPlaceholder")

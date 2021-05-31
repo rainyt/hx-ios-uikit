@@ -1,8 +1,10 @@
 package ios.uikit;
 
 import ios.objc.CGSize;
+import ios.objc.NSLineBreakMode;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
+import ios.objc.NSTextAlignment;
 @:objc
 @:native("UIStringDrawing")
 @:include("UIKit/UIKit.h")

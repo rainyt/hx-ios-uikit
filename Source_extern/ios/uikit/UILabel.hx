@@ -2,6 +2,9 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.CGSize;
+import ios.objc.NSTextAlignment;
+import ios.objc.NSLineBreakMode;
+import ios.objc.NSAttributedString;
 import ios.objc.CGRect;
 @:objc
 @:native("UILabel")

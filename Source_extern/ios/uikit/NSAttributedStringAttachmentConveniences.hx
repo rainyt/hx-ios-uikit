@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.NSAttributedString;
+import ios.objc.NSTextAttachment;
 @:objc
 @:native("NSAttributedStringAttachmentConveniences")
 @:include("UIKit/UIKit.h")

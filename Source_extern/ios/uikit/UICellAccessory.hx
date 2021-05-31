@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoder;
 @:objc
 @:native("UICellAccessory")
 @:include("UIKit/UIKit.h")

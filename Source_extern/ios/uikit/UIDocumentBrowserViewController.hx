@@ -2,6 +2,7 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.NSBundle;
+import ios.objc.NSURL;
 @:objc
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")

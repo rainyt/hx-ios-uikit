@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.objc.NSTextTab;
+import ios.objc.NSCharacterSet;
+import ios.objc.NSLocale;
+import ios.objc.NSTextAlignment;
 @:objc
 @:native("NSTextTab")
 @:include("UIKit/UIKit.h")

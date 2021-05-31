@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.objc.NSTextStorage;
+import ios.objc.NSLayoutManager;
+import ios.objc.NSTextStorageEditActions;
 @:objc
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")

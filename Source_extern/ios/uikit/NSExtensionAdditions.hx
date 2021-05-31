@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSExtensionContext;
 @:objc
 @:native("NSExtensionAdditions")
 @:include("UIKit/UIKit.h")

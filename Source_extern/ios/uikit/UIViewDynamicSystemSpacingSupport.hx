@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.NSLayoutConstraint;
+import ios.objc.NSLayoutYAxisAnchor;
 @:objc
 @:native("UIViewDynamicSystemSpacingSupport")
 @:include("UIKit/UIKit.h")

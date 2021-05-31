@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.objc.NSLayoutXAxisAnchor;
+import ios.objc.NSLayoutYAxisAnchor;
+import ios.objc.NSLayoutDimension;
 @:objc
 @:native("UIViewLayoutConstraintCreation")
 @:include("UIKit/UIKit.h")

@@ -2,6 +2,9 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import cpp.objc.NSData;
+import ios.objc.NSIndexSet;
+import ios.objc.NSArray;
+import ios.objc.NSURL;
 @:objc
 @:native("UIPasteboard")
 @:include("UIKit/UIKit.h")

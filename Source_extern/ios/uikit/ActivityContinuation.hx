@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSUserActivity;
 @:objc
 @:native("ActivityContinuation")
 @:include("UIKit/UIKit.h")

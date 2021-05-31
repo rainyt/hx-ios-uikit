@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSItemProvider;
 @:objc
 @:native("NSItemProvider")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSUndoManager;
 @:objc
 @:native("UIResponder")
 @:include("UIKit/UIKit.h")

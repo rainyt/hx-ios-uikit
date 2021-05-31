@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.objc.NSURL;
 import cpp.objc.NSData;
+import ios.objc.NSArray;
 import ios.objc.CGRect;
 @:objc
 @:native("UIPrintInteractionController")

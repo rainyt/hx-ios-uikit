@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSTextAttachment;
 @:objc
 @:native("UIImage")
 @:include("UIKit/UIKit.h")

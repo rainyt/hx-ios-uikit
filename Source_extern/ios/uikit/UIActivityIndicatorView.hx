@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.NSCoder;
 @:objc
 @:native("UIActivityIndicatorView")
 @:include("UIKit/UIKit.h")

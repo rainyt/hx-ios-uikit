@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.objc.NSLayoutXAxisAnchor;
+import ios.objc.NSLayoutDimension;
 @:objc
 @:native("NSLayoutXAxisAnchor")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.objc.NSCoder;
+import ios.objc.NSDate;
+import ios.objc.NSTimeZone;
+import ios.objc.NSCalendarUnit;
+import ios.objc.NSCalendar;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 @:objc

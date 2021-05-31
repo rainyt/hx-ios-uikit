@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGPoint;
+import ios.objc.NSCoder;
 @:objc
 @:native("UICubicTimingParameters")
 @:include("UIKit/UIKit.h")

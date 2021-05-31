@@ -1,7 +1,9 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.NSCoder;
 import cpp.objc.NSString;
+import ios.objc.NSAttributedString;
 @:objc
 @:native("UIButton")
 @:include("UIKit/UIKit.h")

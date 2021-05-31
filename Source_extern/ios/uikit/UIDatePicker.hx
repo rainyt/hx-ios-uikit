@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.objc.NSLocale;
+import ios.objc.NSCalendar;
+import ios.objc.NSTimeZone;
+import ios.objc.NSDate;
 @:objc
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")

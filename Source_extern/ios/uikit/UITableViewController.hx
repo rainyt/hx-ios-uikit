@@ -2,6 +2,7 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.NSBundle;
+import ios.objc.NSCoder;
 @:objc
 @:native("UITableViewController")
 @:include("UIKit/UIKit.h")

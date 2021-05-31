@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.NSUserActivity;
 @:objc
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")

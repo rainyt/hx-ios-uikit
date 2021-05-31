@@ -3,6 +3,7 @@ package ios.uikit;
 import cpp.objc.NSString;
 import ios.objc.NSBundle;
 import cpp.objc.NSData;
+import ios.objc.NSArray;
 @:objc
 @:native("UINib")
 @:include("UIKit/UIKit.h")

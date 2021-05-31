@@ -1,7 +1,10 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.NSCoder;
+import ios.objc.NSIndexPath;
 import ios.objc.CGPoint;
+import ios.objc.NSIndexSet;
 import cpp.objc.NSString;
 @:objc
 @:native("UITableView")

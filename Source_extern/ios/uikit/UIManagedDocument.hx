@@ -1,7 +1,10 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.NSManagedObjectContext;
+import ios.objc.NSManagedObjectModel;
 import cpp.objc.NSDictionary;
+import ios.objc.NSURL;
 import cpp.objc.NSError;
 @:objc
 @:native("UIManagedDocument")

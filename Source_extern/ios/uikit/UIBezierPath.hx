@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.objc.CGRect;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
+import ios.objc.NSCoder;
 import ios.objc.CGAffineTransform;
 import ios.objc.CGLineCap;
 import ios.objc.CGLineJoin;

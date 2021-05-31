@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.NSCoder;
 import ios.objc.CALayer;
 import cpp.objc.NSString;
 @:objc

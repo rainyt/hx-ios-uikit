@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import ios.objc.NSDate;
 @:objc
 @:native("DeprecatedAnimations")
 @:include("UIKit/UIKit.h")

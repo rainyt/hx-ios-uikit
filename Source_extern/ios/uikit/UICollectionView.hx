@@ -1,8 +1,11 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.NSCoder;
 import cpp.objc.NSString;
+import ios.objc.NSIndexPath;
 import ios.objc.CGPoint;
+import ios.objc.NSIndexSet;
 @:objc
 @:native("UICollectionView")
 @:include("UIKit/UIKit.h")

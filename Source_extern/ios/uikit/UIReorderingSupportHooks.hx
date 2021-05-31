@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSIndexPath;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIReorderingSupportHooks")

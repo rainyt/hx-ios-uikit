@@ -1,8 +1,10 @@
 package ios.uikit;
 
+import ios.objc.NSTextAttachment;
 import cpp.objc.NSData;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
+import ios.objc.NSFileWrapper;
 @:objc
 @:native("NSTextAttachment")
 @:include("UIKit/UIKit.h")

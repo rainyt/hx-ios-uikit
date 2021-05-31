@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import ios.objc.NSWritingDirection;
 @:objc
 @:native("UITextSelectionRect")
 @:include("UIKit/UIKit.h")
