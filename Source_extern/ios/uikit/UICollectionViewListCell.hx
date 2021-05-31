@@ -15,7 +15,7 @@ extern class UICollectionViewListCell{
 	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
 	@:native("indentationLevel")
-	public var indentationLevel:Int;
+	public var indentationLevel:NSInteger;
 
 	@:native("indentationWidth")
 	public var indentationWidth:CGFloat;

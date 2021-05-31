@@ -1,11 +1,7 @@
 package ios.uikit;
 
-import ios.objc.NSURL;
 import cpp.objc.NSString;
-import ios.objc.NSDate;
-import ios.objc.NSProgress;
 import cpp.objc.NSError;
-import ios.objc.NSUndoManager;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIDocument")

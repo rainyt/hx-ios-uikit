@@ -1,8 +1,6 @@
 package ios.uikit;
 
-import ios.objc.NSURLRequest;
 import cpp.objc.NSString;
-import ios.objc.NSURL;
 import cpp.objc.NSData;
 @:objc
 @:native("UIWebView")

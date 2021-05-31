@@ -2,7 +2,6 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.NSBundle;
-import ios.objc.NSCoder;
 @:objc
 @:native("UINavigationController")
 @:include("UIKit/UIKit.h")
@@ -15,7 +14,7 @@ extern class UINavigationController{
 	overload public static function autorelease():UINavigationController;
 
 	@:native("initWithNavigationBarClass:toolbarClass:NS_DESIGNATED_INITIALIZER")
-	overload public function initWithNavigationBarClass(navigationBarClass:Dynamic, toolbarClass:Dynamic, NS_DESIGNATED_INITIALIZER:Dynamic):UINavigationController;
+	overload public function initWithNavigationBarClass(navigationBarClass:Class, toolbarClass:Class, NS_DESIGNATED_INITIALIZER:Dynamic):UINavigationController;
 
 	@:native("initWithRootViewController")
 	overload public function initWithRootViewController(rootViewController:UIViewController):UINavigationController;

@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSCoder;
 import cpp.objc.NSString;
 @:objc
 @:native("UIUserNotificationAction")

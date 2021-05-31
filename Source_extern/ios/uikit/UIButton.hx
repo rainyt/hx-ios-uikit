@@ -1,9 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSCoder;
 import cpp.objc.NSString;
-import ios.objc.NSAttributedString;
 @:objc
 @:native("UIButton")
 @:include("UIKit/UIKit.h")
@@ -28,7 +26,7 @@ extern class UIButton{
 	overload public static function buttonWithType(buttonType:UIButtonType):UIButton;
 
 	@:native("systemButtonWithImage:target:action")
-	overload public static function systemButtonWithImage(image:UIImage, target:Dynamic, action:String):UIButton;
+	overload public static function systemButtonWithImage(image:UIImage, target:Dynamic, action:SEL):UIButton;
 
 	@:native("systemButtonWithPrimaryAction")
 	overload public static function systemButtonWithPrimaryAction(primaryAction:UIAction):UIButton;

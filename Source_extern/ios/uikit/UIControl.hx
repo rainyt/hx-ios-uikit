@@ -1,8 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSCoder;
-import ios.objc.NSSet;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIControl")
@@ -67,7 +65,7 @@ extern class UIControl{
 	overload public function addTarget(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeTarget:action:forControlEvents")
-	overload public function removeTarget(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
+	overload public function removeTarget(target:Dynamic, action:SEL, forControlEvents:UIControlEvents):Void;
 
 	@:native("addAction:forControlEvents")
 	overload public function addAction(action:UIAction, forControlEvents:UIControlEvents):Void;

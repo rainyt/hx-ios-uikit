@@ -2,7 +2,6 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
-import ios.objc.NSAttributedString;
 @:objc
 @:native("UIAccessibilityLocationDescriptor")
 @:include("UIKit/UIKit.h")

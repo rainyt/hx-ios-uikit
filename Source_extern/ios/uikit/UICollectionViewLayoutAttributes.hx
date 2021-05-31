@@ -5,7 +5,6 @@ import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CATransform3D;
 import ios.objc.CGAffineTransform;
-import ios.objc.NSIndexPath;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewLayoutAttributes")
@@ -40,7 +39,7 @@ extern class UICollectionViewLayoutAttributes{
 	public var alpha:CGFloat;
 
 	@:native("zIndex")
-	public var zIndex:Int;
+	public var zIndex:NSInteger;
 
 	@:native("hidden")
 	public var hidden:Bool;

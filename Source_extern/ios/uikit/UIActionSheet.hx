@@ -26,22 +26,22 @@ extern class UIActionSheet{
 	public var actionSheetStyle:UIActionSheetStyle;
 
 	@:native("addButtonWithTitle")
-	overload public function addButtonWithTitle(title:NSString):Int;
+	overload public function addButtonWithTitle(title:NSString):NSInteger;
 
 	@:native("buttonTitleAtIndex")
-	overload public function buttonTitleAtIndex(buttonIndex:Int):NSString;
+	overload public function buttonTitleAtIndex(buttonIndex:NSInteger):NSString;
 
 	@:native("numberOfButtons")
-	public var numberOfButtons:Int;
+	public var numberOfButtons:NSInteger;
 
 	@:native("cancelButtonIndex")
-	public var cancelButtonIndex:Int;
+	public var cancelButtonIndex:NSInteger;
 
 	@:native("destructiveButtonIndex")
-	public var destructiveButtonIndex:Int;
+	public var destructiveButtonIndex:NSInteger;
 
 	@:native("firstOtherButtonIndex")
-	public var firstOtherButtonIndex:Int;
+	public var firstOtherButtonIndex:NSInteger;
 
 	@:native("visible")
 	public var visible:Bool;
@@ -62,7 +62,7 @@ extern class UIActionSheet{
 	overload public function showInView(view:UIView):Void;
 
 	@:native("dismissWithClickedButtonIndex:animated")
-	overload public function dismissWithClickedButtonIndex(buttonIndex:Int, animated:Bool):Void;
+	overload public function dismissWithClickedButtonIndex(buttonIndex:NSInteger, animated:Bool):Void;
 
 
 }

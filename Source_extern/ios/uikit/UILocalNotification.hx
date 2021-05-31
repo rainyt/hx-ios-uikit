@@ -1,10 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSCoder;
-import ios.objc.NSDate;
-import ios.objc.NSTimeZone;
-import ios.objc.NSCalendarUnit;
-import ios.objc.NSCalendar;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 @:objc
@@ -61,7 +56,7 @@ extern class UILocalNotification{
 	public var soundName:NSString;
 
 	@:native("applicationIconBadgeNumber")
-	public var applicationIconBadgeNumber:Int;
+	public var applicationIconBadgeNumber:NSInteger;
 
 	@:native("userInfo")
 	public var userInfo:NSDictionary;

@@ -3,7 +3,6 @@ package ios.uikit;
 import ios.objc.CGRect;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
-import ios.objc.NSCoder;
 import ios.objc.CGAffineTransform;
 import ios.objc.CGLineCap;
 import ios.objc.CGLineJoin;
@@ -113,10 +112,10 @@ extern class UIBezierPath{
 	public var usesEvenOddFillRule:Bool;
 
 	@:native("setLineDash:count:phase")
-	overload public function setLineDash(pattern:constCGFloat, count:Int, phase:CGFloat):Void;
+	overload public function setLineDash(pattern:constCGFloat, count:NSInteger, phase:CGFloat):Void;
 
 	@:native("getLineDash:count:phase")
-	overload public function getLineDash(pattern:CGFloat, count:Int, phase:CGFloat):Void;
+	overload public function getLineDash(pattern:CGFloat, count:NSInteger, phase:CGFloat):Void;
 
 	@:native("fill")
 	overload public function fill():Void;

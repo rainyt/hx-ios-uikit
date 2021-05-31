@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSURL;
 import cpp.objc.NSError;
 import cpp.objc.NSData;
 @:objc

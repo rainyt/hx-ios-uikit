@@ -15,13 +15,13 @@ extern class UISearchTextField{
 	public var tokens:Dynamic;
 
 	@:native("insertToken:atIndex")
-	overload public function insertToken(token:UISearchToken, atIndex:Int):Void;
+	overload public function insertToken(token:UISearchToken, atIndex:NSInteger):Void;
 
 	@:native("removeTokenAtIndex")
-	overload public function removeTokenAtIndex(tokenIndex:Int):Void;
+	overload public function removeTokenAtIndex(tokenIndex:NSInteger):Void;
 
 	@:native("positionOfTokenAtIndex")
-	overload public function positionOfTokenAtIndex(tokenIndex:Int):UITextPosition;
+	overload public function positionOfTokenAtIndex(tokenIndex:NSInteger):UITextPosition;
 
 	@:native("tokensInRange")
 	overload public function tokensInRange(textRange:UITextRange):Dynamic;

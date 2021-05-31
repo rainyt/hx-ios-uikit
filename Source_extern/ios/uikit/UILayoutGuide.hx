@@ -2,9 +2,6 @@ package ios.uikit;
 
 import ios.objc.CGRect;
 import cpp.objc.NSString;
-import ios.objc.NSLayoutXAxisAnchor;
-import ios.objc.NSLayoutYAxisAnchor;
-import ios.objc.NSLayoutDimension;
 @:objc
 @:native("UILayoutGuide")
 @:include("UIKit/UIKit.h")

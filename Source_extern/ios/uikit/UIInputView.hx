@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSCoder;
 @:objc
 @:native("UIInputView")
 @:include("UIKit/UIKit.h")

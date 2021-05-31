@@ -2,8 +2,6 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.NSBundle;
-import ios.objc.NSCoder;
-import ios.objc.NSArray;
 @:objc
 @:native("UIActivityViewController")
 @:include("UIKit/UIKit.h")

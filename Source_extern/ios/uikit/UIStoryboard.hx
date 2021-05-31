@@ -20,13 +20,13 @@ extern class UIStoryboard{
 	overload public function instantiateInitialViewController():UIViewController;
 
 	@:native("instantiateInitialViewControllerWithCreator")
-	overload public function instantiateInitialViewControllerWithCreator(block:Dynamic):UIViewController;
+	overload public function instantiateInitialViewControllerWithCreator(block:NS_NOESCAPEUIStoryboardViewControllerCreator):UIViewController;
 
 	@:native("instantiateViewControllerWithIdentifier")
 	overload public function instantiateViewControllerWithIdentifier(identifier:NSString):UIViewController;
 
 	@:native("instantiateViewControllerWithIdentifier:creator")
-	overload public function instantiateViewControllerWithIdentifier(identifier:NSString, creator:Dynamic):UIViewController;
+	overload public function instantiateViewControllerWithIdentifier(identifier:NSString, creator:NS_NOESCAPEUIStoryboardViewControllerCreator):UIViewController;
 
 
 }

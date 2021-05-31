@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSCoder;
 @:objc
 @:native("UICellAccessoryCustomView")
 @:include("UIKit/UIKit.h")

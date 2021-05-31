@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSIndexPath;
 @:objc
 @:native("UICollectionViewUpdateItem")
 @:include("UIKit/UIKit.h")

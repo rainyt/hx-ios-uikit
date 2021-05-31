@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSCoder;
 import cpp.objc.NSString;
 @:objc
 @:native("UITabBarItem")
@@ -20,13 +19,13 @@ extern class UITabBarItem{
 	overload public function initWithCoder(coder:NSCoder):UITabBarItem;
 
 	@:native("initWithTitle:image:tag")
-	overload public function initWithTitle(title:NSString, image:UIImage, tag:Int):UITabBarItem;
+	overload public function initWithTitle(title:NSString, image:UIImage, tag:NSInteger):UITabBarItem;
 
 	@:native("initWithTitle:image:selectedImage")
 	overload public function initWithTitle(title:NSString, image:UIImage, selectedImage:UIImage):UITabBarItem;
 
 	@:native("initWithTabBarSystemItem:tag")
-	overload public function initWithTabBarSystemItem(systemItem:UITabBarSystemItem, tag:Int):UITabBarItem;
+	overload public function initWithTabBarSystemItem(systemItem:UITabBarSystemItem, tag:NSInteger):UITabBarItem;
 
 	@:native("selectedImage")
 	public var selectedImage:UIImage;

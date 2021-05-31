@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSAttributedString;
 @:objc
 @:native("UIAccessibilityCustomRotor")
 @:include("UIKit/UIKit.h")

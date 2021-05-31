@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSURL;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
 @:objc

@@ -2,9 +2,6 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import cpp.objc.NSData;
-import ios.objc.NSIndexSet;
-import ios.objc.NSArray;
-import ios.objc.NSURL;
 @:objc
 @:native("UIPasteboard")
 @:include("UIKit/UIKit.h")
@@ -38,7 +35,7 @@ extern class UIPasteboard{
 	overload public function setPersistent(persistent:Bool):Void;
 
 	@:native("changeCount")
-	public var changeCount:Int;
+	public var changeCount:NSInteger;
 
 	@:native("itemProviders")
 	public var itemProviders:Dynamic;
@@ -71,7 +68,7 @@ extern class UIPasteboard{
 	overload public function setData(data:NSData, forPasteboardType:NSString):Void;
 
 	@:native("numberOfItems")
-	public var numberOfItems:Int;
+	public var numberOfItems:NSInteger;
 
 	@:native("pasteboardTypesForItemSet")
 	overload public function pasteboardTypesForItemSet(itemSet:NSIndexSet):Dynamic;

@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSProgress;
 @:objc
 @:native("UIDocumentBrowserTransitionController")
 @:include("UIKit/UIKit.h")

@@ -1,7 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSLayoutDimension;
-import ios.objc.NSLayoutConstraint;
 @:objc
 @:native("NSLayoutDimension")
 @:include("UIKit/UIKit.h")

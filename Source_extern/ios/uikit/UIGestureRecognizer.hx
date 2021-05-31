@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSCoder;
 import ios.objc.CGPoint;
 import cpp.objc.NSString;
 @:objc
@@ -15,7 +14,7 @@ extern class UIGestureRecognizer{
 	overload public static function autorelease():UIGestureRecognizer;
 
 	@:native("initWithTarget:action")
-	overload public function initWithTarget(target:Dynamic, action:String):UIGestureRecognizer;
+	overload public function initWithTarget(target:Dynamic, action:SEL):UIGestureRecognizer;
 
 	@:native("init")
 	overload public function init():UIGestureRecognizer;
@@ -27,7 +26,7 @@ extern class UIGestureRecognizer{
 	overload public function addTarget(target:Dynamic, action:String):Void;
 
 	@:native("removeTarget:action")
-	overload public function removeTarget(target:Dynamic, action:String):Void;
+	overload public function removeTarget(target:Dynamic, action:SEL):Void;
 
 	@:native("state")
 	public var state:UIGestureRecognizerState;

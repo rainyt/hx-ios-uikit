@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSArray;
 @:objc
 @:native("UIAccessibilityContainer")
 @:include("UIKit/UIKit.h")
@@ -13,13 +12,13 @@ extern class UIAccessibilityContainer{
 	overload public static function autorelease():UIAccessibilityContainer;
 
 	@:native("accessibilityElementCount")
-	overload public function accessibilityElementCount():Int;
+	overload public function accessibilityElementCount():NSInteger;
 
 	@:native("accessibilityElementAtIndex")
-	overload public function accessibilityElementAtIndex(index:Int):Dynamic;
+	overload public function accessibilityElementAtIndex(index:NSInteger):Dynamic;
 
 	@:native("indexOfAccessibilityElement")
-	overload public function indexOfAccessibilityElement(element:Dynamic):Int;
+	overload public function indexOfAccessibilityElement(element:Dynamic):NSInteger;
 
 	@:native("accessibilityElements")
 	public var accessibilityElements:NSArray;

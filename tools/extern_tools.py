@@ -716,8 +716,7 @@ class ObjcFun:
             index = _g3_key
             value = _g3_value
             a = value.split(":")
-            x = _hx_AnonObject({'name': (a[0] if 0 < len(a) else None), 'type': ObjcType.toType((a[1] if 1 < len(a) else None),typedefs)})
-            r.append(x)
+            r.append(_hx_AnonObject({'name': (a[0] if 0 < len(a) else None), 'type': (a[1] if 1 < len(a) else None)}))
         return r
 
 
@@ -860,10 +859,6 @@ class ObjcType:
     def toType(t,typedefs):
         if (t is None):
             return t
-        if ((t == "Class") or ((t == "UIStoryboardViewControllerCreator"))):
-            return "Dynamic"
-        if (t == "NSInteger"):
-            return "Int"
         if (t == "SEL"):
             return "String"
         if (t == "BOOL"):
@@ -887,7 +882,6 @@ class ObjcType:
             return "Dynamic"
         t = StringTools.replace(t,"nullable ","")
         t = StringTools.replace(t,"__kindof ","")
-        t = StringTools.replace(t,"NS_NOESCAPE ","")
         return StringTools.replace(StringTools.replace((typedefs.h.get(t,None).parentClassName if (((t in typedefs.h) and (not typedefs.h.get(t,None).createHaxeFile))) else t),"*","")," ","")
 
 

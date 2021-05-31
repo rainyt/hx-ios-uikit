@@ -1,11 +1,8 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSCoder;
 import cpp.objc.NSString;
-import ios.objc.NSIndexPath;
 import ios.objc.CGPoint;
-import ios.objc.NSIndexSet;
 @:objc
 @:native("UICollectionView")
 @:include("UIKit/UIKit.h")
@@ -57,13 +54,13 @@ extern class UICollectionView{
 	public var backgroundView:UIView;
 
 	@:native("registerClass:forCellWithReuseIdentifier")
-	overload public function registerClass(cellClass:Dynamic, forCellWithReuseIdentifier:NSString):Void;
+	overload public function registerClass(cellClass:Class, forCellWithReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forCellWithReuseIdentifier")
 	overload public function registerNib(nib:UINib, forCellWithReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forSupplementaryViewOfKind:withReuseIdentifier")
-	overload public function registerClass(viewClass:Dynamic, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
+	overload public function registerClass(viewClass:Class, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forSupplementaryViewOfKind:withReuseIdentifier")
 	overload public function registerNib(nib:UINib, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
@@ -117,10 +114,10 @@ extern class UICollectionView{
 	overload public function cancelInteractiveTransition():Void;
 
 	@:native("numberOfSections")
-	public var numberOfSections:Int;
+	public var numberOfSections:NSInteger;
 
 	@:native("numberOfItemsInSection")
-	overload public function numberOfItemsInSection(section:Int):Int;
+	overload public function numberOfItemsInSection(section:NSInteger):NSInteger;
 
 	@:native("layoutAttributesForItemAtIndexPath")
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
@@ -165,7 +162,7 @@ extern class UICollectionView{
 	overload public function reloadSections(sections:NSIndexSet):Void;
 
 	@:native("moveSection:toSection")
-	overload public function moveSection(section:Int, toSection:Int):Void;
+	overload public function moveSection(section:NSInteger, toSection:NSInteger):Void;
 
 	@:native("insertItemsAtIndexPaths")
 	overload public function insertItemsAtIndexPaths(indexPaths:Dynamic):Void;

@@ -1,7 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSShadow;
-import ios.objc.NSCoder;
 import ios.objc.CGSize;
 @:objc
 @:native("NSShadow")

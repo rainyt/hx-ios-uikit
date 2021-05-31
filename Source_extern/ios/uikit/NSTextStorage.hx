@@ -1,8 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSTextStorage;
-import ios.objc.NSLayoutManager;
-import ios.objc.NSTextStorageEditActions;
 @:objc
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")
@@ -30,13 +27,13 @@ extern class NSTextStorage{
 	public var editedRange:NSRange;
 
 	@:native("changeInLength")
-	public var changeInLength:Int;
+	public var changeInLength:NSInteger;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("edited:range:changeInLength")
-	overload public function edited(editedMask:NSTextStorageEditActions, range:NSRange, changeInLength:Int):Void;
+	overload public function edited(editedMask:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger):Void;
 
 	@:native("processEditing")
 	overload public function processEditing():Void;

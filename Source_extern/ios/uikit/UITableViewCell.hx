@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSCoder;
 @:objc
 @:native("UITableViewCell")
 @:include("UIKit/UIKit.h")
@@ -107,7 +106,7 @@ extern class UITableViewCell{
 	public var editingAccessoryView:UIView;
 
 	@:native("indentationLevel")
-	public var indentationLevel:Int;
+	public var indentationLevel:NSInteger;
 
 	@:native("indentationWidth")
 	public var indentationWidth:CGFloat;

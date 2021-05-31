@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSCoder;
 @:objc
 @:native("UIMotionEffect")
 @:include("UIKit/UIKit.h")

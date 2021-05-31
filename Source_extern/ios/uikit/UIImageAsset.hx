@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSCoder;
 @:objc
 @:native("UIImageAsset")
 @:include("UIKit/UIKit.h")

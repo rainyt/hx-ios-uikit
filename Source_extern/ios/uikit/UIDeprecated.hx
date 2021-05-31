@@ -2,8 +2,6 @@ package ios.uikit;
 
 import ios.objc.CGRect;
 import cpp.objc.NSString;
-import ios.objc.NSTextAlignment;
-import ios.objc.NSLineBreakMode;
 @:objc
 @:native("UIDeprecated")
 @:include("UIKit/UIKit.h")

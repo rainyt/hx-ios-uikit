@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSLineBreakMode;
 @:objc
 @:native("UIListContentTextProperties")
 @:include("UIKit/UIKit.h")
@@ -31,7 +30,7 @@ extern class UIListContentTextProperties{
 	public var lineBreakMode:NSLineBreakMode;
 
 	@:native("numberOfLines")
-	public var numberOfLines:Int;
+	public var numberOfLines:NSInteger;
 
 	@:native("adjustsFontSizeToFitWidth")
 	public var adjustsFontSizeToFitWidth:Bool;

@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSURL;
 @:objc
 @:native("URLPreviews")
 @:include("UIKit/UIKit.h")

@@ -42,7 +42,7 @@ extern class UIImageView{
 	public var animationDuration:NSTimeInterval;
 
 	@:native("animationRepeatCount")
-	public var animationRepeatCount:Int;
+	public var animationRepeatCount:NSInteger;
 
 	@:native("tintColor")
 	public var tintColor:UIColor;

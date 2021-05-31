@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSCoder;
 import cpp.objc.NSString;
 @:objc
 @:native("UIBarItem")
@@ -44,7 +43,7 @@ extern class UIBarItem{
 	public var largeContentSizeImageInsets:UIEdgeInsets;
 
 	@:native("tag")
-	public var tag:Int;
+	public var tag:NSInteger;
 
 	@:native("setTitleTextAttributes:forState")
 	overload public function setTitleTextAttributes(attributes:Dynamic, forState:UIControlState):Void;

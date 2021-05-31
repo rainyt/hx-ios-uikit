@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSCoder;
 import cpp.objc.NSString;
 @:objc
 @:native("UISearchBar")
@@ -75,7 +74,7 @@ extern class UISearchBar{
 	public var scopeButtonTitles:Dynamic;
 
 	@:native("selectedScopeButtonIndex")
-	public var selectedScopeButtonIndex:Int;
+	public var selectedScopeButtonIndex:NSInteger;
 
 	@:native("showsScopeBar")
 	public var showsScopeBar:Bool;

@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSIndexPath;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
@@ -17,10 +16,10 @@ extern class UISubclassingHooks{
 	overload public static function autorelease():UISubclassingHooks;
 
 	@:native("layoutAttributesClass")
-	public var layoutAttributesClass:Dynamic;
+	public var layoutAttributesClass:Class;
 
 	@:native("invalidationContextClass")
-	public var invalidationContextClass:Dynamic;
+	public var invalidationContextClass:Class;
 
 	@:native("prepareLayout")
 	overload public function prepareLayout():Void;

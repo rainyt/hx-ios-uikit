@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSIndexPath;
 @:objc
 @:native("UITableViewFocusUpdateContext")
 @:include("UIKit/UIKit.h")

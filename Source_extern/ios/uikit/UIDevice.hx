@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSUUID;
 @:objc
 @:native("UIDevice")
 @:include("UIKit/UIKit.h")

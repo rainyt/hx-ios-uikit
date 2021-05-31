@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSPredicate;
 @:objc
 @:native("UIFontPickerViewControllerConfiguration")
 @:include("UIKit/UIKit.h")

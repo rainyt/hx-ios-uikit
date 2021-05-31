@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSIndexPath;
 import cpp.objc.NSString;
 @:objc
 @:native("UIUpdateSupportHooks")

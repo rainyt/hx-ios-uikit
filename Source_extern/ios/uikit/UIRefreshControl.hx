@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSAttributedString;
 @:objc
 @:native("UIRefreshControl")
 @:include("UIKit/UIKit.h")

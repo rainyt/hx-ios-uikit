@@ -1,8 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSAttributedString;
-import ios.objc.NSTextAlignment;
 @:objc
 @:native("UISimpleTextPrintFormatter")
 @:include("UIKit/UIKit.h")

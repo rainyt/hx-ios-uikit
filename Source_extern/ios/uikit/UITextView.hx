@@ -1,13 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSTextAlignment;
-import ios.objc.NSAttributedString;
 import ios.objc.CGRect;
-import ios.objc.NSTextContainer;
-import ios.objc.NSCoder;
-import ios.objc.NSLayoutManager;
-import ios.objc.NSTextStorage;
 @:objc
 @:native("UITextView")
 @:include("UIKit/UIKit.h")

@@ -1,16 +1,9 @@
 package ios.uikit;
 
-import ios.objc.NSLayoutManager;
-import ios.objc.NSCoder;
-import ios.objc.NSTextStorage;
-import ios.objc.NSTextContainer;
-import ios.objc.NSTextStorageEditActions;
 import ios.objc.CGRect;
-import ios.objc.NSGlyphProperty;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CGAffineTransform;
-import ios.objc.NSUnderlineStyle;
 @:objc
 @:native("NSLayoutManager")
 @:include("UIKit/UIKit.h")
@@ -71,7 +64,7 @@ extern class NSLayoutManager{
 	public var usesDefaultHyphenation:null;
 
 	@:native("invalidateGlyphsForCharacterRange:changeInLength:actualCharacterRange")
-	overload public function invalidateGlyphsForCharacterRange(charRange:NSRange, changeInLength:Int, actualCharacterRange:NSRangePointer):Void;
+	overload public function invalidateGlyphsForCharacterRange(charRange:NSRange, changeInLength:NSInteger, actualCharacterRange:NSRangePointer):Void;
 
 	@:native("invalidateLayoutForCharacterRange:actualCharacterRange")
 	overload public function invalidateLayoutForCharacterRange(charRange:NSRange, actualCharacterRange:NSRangePointer):Void;
@@ -83,7 +76,7 @@ extern class NSLayoutManager{
 	overload public function invalidateDisplayForGlyphRange(glyphRange:NSRange):Void;
 
 	@:native("processEditingForTextStorage:edited:range:changeInLength:invalidatedRange")
-	overload public function processEditingForTextStorage(textStorage:NSTextStorage, edited:NSTextStorageEditActions, range:NSRange, changeInLength:Int, invalidatedRange:NSRange):Void;
+	overload public function processEditingForTextStorage(textStorage:NSTextStorage, edited:NSTextStorageEditActions, range:NSRange, changeInLength:NSInteger, invalidatedRange:NSRange):Void;
 
 	@:native("ensureGlyphsForCharacterRange")
 	overload public function ensureGlyphsForCharacterRange(charRange:NSRange):Void;
@@ -110,7 +103,7 @@ extern class NSLayoutManager{
 	public var numberOfGlyphs:NSUInteger;
 
 	@:native("CGGlyphAtIndex:isValidIndex")
-	overload public function CGGlyphAtIndex(glyphIndex:NSUInteger, isValidIndex:Bool):CGGlyph;
+	overload public function CGGlyphAtIndex(glyphIndex:NSUInteger, isValidIndex:BOOL):CGGlyph;
 
 	@:native("CGGlyphAtIndex")
 	overload public function CGGlyphAtIndex(glyphIndex:NSUInteger):CGGlyph;
@@ -254,7 +247,7 @@ extern class NSLayoutManager{
 	overload public function drawGlyphsForGlyphRange(glyphsToShow:NSRange, atPoint:CGPoint):Void;
 
 	@:native("showCGGlyphs:positions:count:font:textMatrix:attributes:inContext")
-	overload public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:Int, font:UIFont, textMatrix:CGAffineTransform, attributes:Dynamic, inContext:CGContextRef):Void;
+	overload public function showCGGlyphs(glyphs:constCGGlyph, positions:constCGPoint, count:NSInteger, font:UIFont, textMatrix:CGAffineTransform, attributes:Dynamic, inContext:CGContextRef):Void;
 
 	@:native("fillBackgroundRectArray:count:forCharacterRange:color")
 	overload public function fillBackgroundRectArray(rectArray:constCGRect, count:NSUInteger, forCharacterRange:NSRange, color:UIColor):Void;

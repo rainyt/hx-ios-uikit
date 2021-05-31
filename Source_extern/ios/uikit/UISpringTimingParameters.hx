@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGVector;
-import ios.objc.NSCoder;
 @:objc
 @:native("UISpringTimingParameters")
 @:include("UIKit/UIKit.h")

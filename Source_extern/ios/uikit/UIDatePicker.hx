@@ -1,9 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSLocale;
-import ios.objc.NSCalendar;
-import ios.objc.NSTimeZone;
-import ios.objc.NSDate;
 @:objc
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")
@@ -40,7 +36,7 @@ extern class UIDatePicker{
 	public var countDownDuration:NSTimeInterval;
 
 	@:native("minuteInterval")
-	public var minuteInterval:Int;
+	public var minuteInterval:NSInteger;
 
 	@:native("setDate:animated")
 	overload public function setDate(date:NSDate, animated:Bool):Void;

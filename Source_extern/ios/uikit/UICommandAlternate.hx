@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.NSCoder;
 @:objc
 @:native("UICommandAlternate")
 @:include("UIKit/UIKit.h")

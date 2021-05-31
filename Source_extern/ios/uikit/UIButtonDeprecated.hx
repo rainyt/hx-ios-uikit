@@ -1,6 +1,5 @@
 package ios.uikit;
 
-import ios.objc.NSLineBreakMode;
 import ios.objc.CGSize;
 @:objc
 @:native("UIButtonDeprecated")

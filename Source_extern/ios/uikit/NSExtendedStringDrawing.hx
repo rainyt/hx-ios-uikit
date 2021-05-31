@@ -1,8 +1,6 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
-import ios.objc.NSStringDrawingOptions;
-import ios.objc.NSStringDrawingContext;
 import ios.objc.CGSize;
 @:objc
 @:native("NSExtendedStringDrawing")

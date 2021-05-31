@@ -13,13 +13,13 @@ extern class NSCollectionLayoutGroup{
 	overload public static function autorelease():NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitem:count")
-	overload public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
+	overload public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitems")
 	overload public static function horizontalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitem:count")
-	overload public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
+	overload public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:NSInteger):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitems")
 	overload public static function verticalGroupWithLayoutSize(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;

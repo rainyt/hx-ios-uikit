@@ -2,9 +2,6 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.CGSize;
-import ios.objc.NSTextAlignment;
-import ios.objc.NSLineBreakMode;
-import ios.objc.NSAttributedString;
 import ios.objc.CGRect;
 @:objc
 @:native("UILabel")
@@ -54,7 +51,7 @@ extern class UILabel{
 	public var enabled:Bool;
 
 	@:native("numberOfLines")
-	public var numberOfLines:Int;
+	public var numberOfLines:NSInteger;
 
 	@:native("adjustsFontSizeToFitWidth")
 	public var adjustsFontSizeToFitWidth:Bool;
@@ -72,7 +69,7 @@ extern class UILabel{
 	public var lineBreakStrategy:NSLineBreakStrategy;
 
 	@:native("textRectForBounds:limitedToNumberOfLines")
-	overload public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:Int):CGRect;
+	overload public function textRectForBounds(bounds:CGRect, limitedToNumberOfLines:NSInteger):CGRect;
 
 	@:native("drawTextInRect")
 	overload public function drawTextInRect(rect:CGRect):Void;
