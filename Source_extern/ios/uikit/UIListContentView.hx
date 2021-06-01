@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIListContentView;
 import ios.uikit.UIContentView;
 import ios.uikit.UIListContentConfiguration;
@@ -9,7 +10,6 @@ import ios.uikit.UILayoutGuide;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;
-import ios.uikit.UIView;
 import ios.objc.CGPoint;
 import ios.uikit.UIEvent;
 import ios.objc.CGSize;

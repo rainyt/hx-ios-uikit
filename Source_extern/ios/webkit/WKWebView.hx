@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.uikit.UIView;
 import ios.webkit.WKWebView;
 import ios.webkit.WKBackForwardList;
 import ios.objc.CGRect;
@@ -17,7 +18,6 @@ import ios.uikit.UIScrollView;
 import ios.objc.CGPoint;
 import ios.webkit.WKFindConfiguration;
 import ios.uikit.UIViewPrintFormatter;
-import ios.uikit.UIView;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;
 import ios.uikit.UIEvent;
@@ -33,7 +33,7 @@ import ios.uikit.UILayoutConstraintAxis;
 import ios.uikit.UILayoutGuide;
 @:objc
 @:native("WKWebView")
-@:include("UIKit/UIKit.h")
+@:include("WebKit/WebKit.h")
 extern class WKWebView extends UIView{
 
 	@:native("alloc")
@@ -114,8 +114,8 @@ extern class WKWebView extends UIView{
 	@:native("callAsyncJavaScript:arguments:inFrame:inContentWorld:completionHandler")
 	overload public function callAsyncJavaScript_arguments_inFrame_inContentWorld_completionHandler(functionBody:NSString, arguments:NSDictionary, inFrame:WKFrameInfo, inContentWorld:WKContentWorld, completionHandler:Dynamic):Void;
 
-	@:native("takeSnapshotWithConfiguration:completionHandler")
-	overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;
+	// @:native("takeSnapshotWithConfiguration:completionHandler")
+	// overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;
 
 	@:native("takeSnapshotWithConfiguration:completionHandler")
 	overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;

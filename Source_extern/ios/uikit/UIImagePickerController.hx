@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UINavigationController;
 import ios.uikit.UIImagePickerController;
 import ios.objc.NSCoding;
 import ios.uikit.UIImagePickerControllerSourceType;
@@ -10,7 +11,6 @@ import ios.uikit.UIView;
 import ios.objc.CGAffineTransform;
 import ios.uikit.UIImagePickerControllerCameraCaptureMode;
 import ios.uikit.UIImagePickerControllerCameraFlashMode;
-import ios.uikit.UINavigationController;
 import ios.uikit.UIViewController;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;

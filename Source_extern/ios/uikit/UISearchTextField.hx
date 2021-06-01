@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextField;
 import ios.uikit.UISearchTextField;
 import ios.uikit.UISearchToken;
 import ios.uikit.UITextPosition;

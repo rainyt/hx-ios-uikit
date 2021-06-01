@@ -150,6 +150,8 @@ class ExternBaseClass:
                 _this = self.extendClassName
                 startIndex = None
                 self.extendClassName = HxString.substr(self.extendClassName,0,(_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex)))
+        if (self.extendClassName == "NSObject"):
+            self.extendClassName = None
         if (defcall is not None):
             defcall(self)
         _this = self.funcAndAttr
@@ -257,6 +259,9 @@ class ExternBaseClass:
     def toHaxeFile(self):
         self.externParentFuncProperty(self)
         haxe = (("package " + HxOverrides.stringOrNull(self.pkg)) + ";\n\n")
+        ex = self._importType(self.extendClassName)
+        if (ex is not None):
+            haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if ex is None else ex)) + ";\n"))))
         _g_current = 0
         _g_array = self.funcAndAttr
         while (_g_current < len(_g_array)):
@@ -297,7 +302,7 @@ class ExternBaseClass:
                         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c4 is None else c4)) + ";\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
-        haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
+        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:include(\"" + HxOverrides.stringOrNull(self.hextern.hfile)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("extern " + HxOverrides.stringOrNull((("interface" if (self.isProtocol) else "class")))) + " ") + HxOverrides.stringOrNull(self.className)) + HxOverrides.stringOrNull((((" extends " + HxOverrides.stringOrNull(self.extendClassName)) if ((self.extendClassName is not None)) else "")))))))
         if (self.protocols is not None):
             haxe = (("null" if haxe is None else haxe) + "\n")
@@ -323,14 +328,14 @@ class ExternBaseClass:
             if ((value.type == "property") and self.hasFuncExtendsOrAttr(value)):
                 continue
             _g = value.type
-            _hx_local_10 = len(_g)
-            if (_hx_local_10 == 4):
+            _hx_local_11 = len(_g)
+            if (_hx_local_11 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((((((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(") + HxOverrides.stringOrNull(((self.toFuncArgs(value.args) if ((value.args is not None)) else "")))) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
                 elif (_g == "haxe"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t/** Haxe Protocol */" + HxOverrides.stringOrNull(value.haxe)) + "\n\n"))))
-            elif (_hx_local_10 == 8):
+            elif (_hx_local_11 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
@@ -403,13 +408,15 @@ class ExternBaseClassType:
 
 class ExternHFile:
     _hx_class_name = "ExternHFile"
-    __slots__ = ("haxeSaveDir", "haxePkg", "typedefs")
-    _hx_fields = ["haxeSaveDir", "haxePkg", "typedefs"]
+    __slots__ = ("haxeSaveDir", "haxePkg", "typedefs", "hfile")
+    _hx_fields = ["haxeSaveDir", "haxePkg", "typedefs", "hfile"]
     _hx_methods = ["defProtocol", "defClass", "defTypedef"]
 
-    def __init__(self,file,haxeSaveDir,haxePkg):
+    def __init__(self,file,haxeSaveDir,hfile,haxePkg):
+        self.hfile = ""
         self.typedefs = haxe_ds_StringMap()
         self.haxeSaveDir = haxeSaveDir
+        self.hfile = hfile
         self.haxePkg = haxePkg
         _this = sys_io_File.getContent(file)
         contents = _this.split("\n")
@@ -722,7 +729,8 @@ class ExternTools:
             return
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
-        c = ExternHFile(hfile,haxedir,classpkg)
+        hlibsfile = (((("null" if pkg is None else pkg) + "/") + ("null" if pkg is None else pkg)) + ".h")
+        c = ExternHFile(hfile,haxedir,hlibsfile,classpkg)
         if (not sys_FileSystem.exists(haxedir)):
             sys_FileSystem.createDirectory(haxedir)
         _hx_map = c.typedefs

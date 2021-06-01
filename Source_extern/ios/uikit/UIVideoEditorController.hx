@@ -1,9 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UINavigationController;
 import ios.uikit.UIVideoEditorController;
 import cpp.objc.NSString;
 import ios.uikit.UIImagePickerControllerQualityType;
-import ios.uikit.UINavigationController;
 import ios.uikit.UIViewController;
 import ios.uikit.NSBundle;
 import ios.uikit.NSCoder;

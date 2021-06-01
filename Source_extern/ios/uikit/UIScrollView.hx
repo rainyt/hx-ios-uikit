@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIScrollView;
 import ios.objc.NSCoding;
 import ios.uikit.UIFocusItemScrollableContainer;
@@ -11,7 +12,6 @@ import ios.uikit.UIScrollViewIndicatorStyle;
 import ios.uikit.UIScrollViewIndexDisplayMode;
 import ios.objc.CGRect;
 import ios.uikit.UIEvent;
-import ios.uikit.UIView;
 import ios.uikit.UIPanGestureRecognizer;
 import ios.uikit.UIPinchGestureRecognizer;
 import ios.uikit.UIGestureRecognizer;

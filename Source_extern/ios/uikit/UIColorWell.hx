@@ -1,8 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIControl;
 import ios.uikit.UIColorWell;
 import ios.uikit.UIColor;
-import ios.uikit.UIControl;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
 import ios.uikit.UIAction;

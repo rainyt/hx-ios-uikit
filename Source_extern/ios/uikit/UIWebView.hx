@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIWebView;
 import ios.objc.NSCoding;
 import ios.uikit.UIScrollViewDelegate;
@@ -9,7 +10,6 @@ import ios.uikit.UIDataDetectorTypes;
 import ios.uikit.UIWebPaginationMode;
 import ios.uikit.UIWebPaginationBreakingMode;
 import ios.objc.CGPoint;
-import ios.uikit.UIView;
 import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;

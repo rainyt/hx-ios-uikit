@@ -52,13 +52,14 @@ class ExternTools {
 		var pkg = hfile.substring(hfile.lastIndexOf("/framework/") + 11);
 		pkg = pkg.substr(0, pkg.indexOf("."));
 		var haxefile = hfile.substr(hfile.lastIndexOf("/") + 1) + "x";
-		if (haxefile.indexOf("+") != -1) {
-			trace("igone:" + haxefile);
-			return;
-		}
+		// if (haxefile.indexOf("+") != -1) {
+		// trace("igone:" + haxefile);
+		// return;
+		// }
 		var classpkg = "ios." + pkg.toLowerCase();
 		var haxedir = out + "/ios/" + pkg.toLowerCase();
-		var c = new ExternHFile(hfile, haxedir, classpkg);
+		var hlibsfile = pkg + "/" + pkg + ".h";
+		var c = new ExternHFile(hfile, haxedir, hlibsfile, classpkg);
 		if (!FileSystem.exists(haxedir)) {
 			FileSystem.createDirectory(haxedir);
 		}

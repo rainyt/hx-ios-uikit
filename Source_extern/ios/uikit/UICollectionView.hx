@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIScrollView;
 import ios.uikit.UICollectionView;
 import ios.uikit.UIDataSourceTranslating;
 import ios.objc.CGRect;

@@ -3,7 +3,7 @@ package ios.webkit;
 import ios.webkit.WKPreviewActionItem;
 @:objc
 @:native("WKPreviewActionItem")
-@:include("UIKit/UIKit.h")
+@:include("WebKit/WebKit.h")
 extern interface WKPreviewActionItem{
 
 	@:native("alloc")

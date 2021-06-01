@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIViewController;
 import ios.uikit.UITableViewController;
 import ios.uikit.UITableViewDelegate;
 import ios.uikit.UITableViewDataSource;
@@ -19,7 +20,6 @@ import ios.uikit.UIContextMenuConfiguration;
 import ios.objc.CGPoint;
 import ios.uikit.UITargetedPreview;
 import ios.uikit.UIStoryboardSegue;
-import ios.uikit.UIViewController;
 import ios.uikit.UIStoryboardUnwindSegueSource;
 import ios.uikit.UIViewAnimationOptions;
 import ios.uikit.UITraitCollection;

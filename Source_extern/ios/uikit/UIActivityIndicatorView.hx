@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIActivityIndicatorView;
 import ios.objc.NSCoding;
 import ios.uikit.UIActivityIndicatorViewStyle;
@@ -8,7 +9,6 @@ import ios.uikit.NSCoder;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;
-import ios.uikit.UIView;
 import ios.objc.CGPoint;
 import ios.uikit.UIEvent;
 import ios.objc.CGSize;

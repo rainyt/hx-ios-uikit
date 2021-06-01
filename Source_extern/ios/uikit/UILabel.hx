@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UILabel;
 import ios.objc.NSCoding;
 import ios.uikit.UIContentSizeCategoryAdjusting;
@@ -12,7 +13,6 @@ import ios.uikit.UIBaselineAdjustment;
 import ios.uikit.NSLineBreakStrategy;
 import ios.objc.CGRect;
 import ios.uikit.UIViewPrintFormatter;
-import ios.uikit.UIView;
 import ios.uikit.NSCoder;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;

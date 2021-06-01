@@ -1,11 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIControl;
 import ios.uikit.UISwitch;
 import ios.objc.NSCoding;
 import ios.uikit.UISwitchStyle;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
-import ios.uikit.UIControl;
 import ios.uikit.UIAction;
 import ios.uikit.UITouch;
 import ios.uikit.UIEvent;

@@ -1,11 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIControl;
 import ios.uikit.UISlider;
 import ios.objc.NSCoding;
 import ios.uikit.UIImage;
 import ios.uikit.UIControlState;
 import ios.objc.CGRect;
-import ios.uikit.UIControl;
 import ios.uikit.NSCoder;
 import ios.uikit.UIAction;
 import ios.uikit.UITouch;

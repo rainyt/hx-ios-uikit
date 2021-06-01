@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSMutableAttributedString;
 import ios.uikit.NSTextStorage;
 import ios.objc.NSSecureCoding;
 import ios.uikit.NSLayoutManager;

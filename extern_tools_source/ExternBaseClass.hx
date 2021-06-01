@@ -105,6 +105,8 @@ class ExternBaseClass {
 				extendClassName = extendClassName.substr(0, extendClassName.indexOf("<"));
 			}
 		}
+		if (extendClassName == "NSObject")
+			extendClassName = null;
 		if (defcall != null)
 			defcall(this);
 		funcAndAttr.push({
@@ -213,6 +215,9 @@ class ExternBaseClass {
 		// haxe += "import " + ObjcImport.toImport("NSData") + ";\n";
 		// haxe += "import " + ObjcImport.toImport("NSBundle") + ";\n";
 
+		var ex = _importType(extendClassName);
+		if (ex != null)
+			haxe += "import " + ex + ";\n";
 		for (index => value in funcAndAttr) {
 			var c = _importType(value.type);
 			if (c != null)
@@ -238,7 +243,7 @@ class ExternBaseClass {
 
 		haxe += "@:objc\n";
 		haxe += "@:native(\"" + className + "\")\n";
-		haxe += "@:include(\"UIKit/UIKit.h\")\n";
+		haxe += "@:include(\"" + hextern.hfile + "\")\n";
 		haxe += "extern "
 			+ (isProtocol ? "interface" : "class")
 			+ " "

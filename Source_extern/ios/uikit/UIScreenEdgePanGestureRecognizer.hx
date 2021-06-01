@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPanGestureRecognizer;
 import ios.uikit.UIScreenEdgePanGestureRecognizer;
 import ios.uikit.UIRectEdge;
 import ios.objc.CGPoint;

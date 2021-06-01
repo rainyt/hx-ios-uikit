@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIToolbar;
 import ios.uikit.UIBarPositioning;
 import ios.uikit.UIBarStyle;
@@ -9,7 +10,6 @@ import ios.uikit.UIBarPosition;
 import ios.uikit.UIBarMetrics;
 import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
-import ios.uikit.UIView;
 import ios.uikit.NSCoder;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;

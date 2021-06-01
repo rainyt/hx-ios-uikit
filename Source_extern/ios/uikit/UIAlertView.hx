@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIAlertView;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
@@ -9,7 +10,6 @@ import ios.uikit.UITextField;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;
-import ios.uikit.UIView;
 import ios.objc.CGPoint;
 import ios.uikit.UIEvent;
 import ios.objc.CGSize;

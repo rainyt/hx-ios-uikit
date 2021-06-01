@@ -1,9 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIViewController;
 import ios.uikit.UISearchController;
 import ios.uikit.UIViewControllerTransitioningDelegate;
 import ios.uikit.UIViewControllerAnimatedTransitioning;
-import ios.uikit.UIViewController;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
 import ios.uikit.NSCoder;

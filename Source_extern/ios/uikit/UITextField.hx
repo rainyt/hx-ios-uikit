@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIControl;
 import ios.uikit.UITextField;
 import ios.uikit.UITextInput;
 import ios.objc.NSCoding;
@@ -24,7 +25,6 @@ import ios.uikit.UITextAlternativeStyle;
 import ios.uikit.NSAttributedString;
 import ios.uikit.UITextPlaceholder;
 import ios.objc.CGSize;
-import ios.uikit.UIControl;
 import ios.uikit.NSCoder;
 import ios.uikit.UIAction;
 import ios.uikit.UITouch;

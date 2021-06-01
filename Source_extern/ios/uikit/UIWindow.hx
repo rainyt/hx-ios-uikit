@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIWindow;
 import ios.uikit.UIWindowScene;
 import ios.uikit.UIScreen;
@@ -8,7 +9,6 @@ import ios.uikit.UIEvent;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
 import ios.uikit.UIViewPrintFormatter;
-import ios.uikit.UIView;
 import ios.uikit.NSCoder;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;

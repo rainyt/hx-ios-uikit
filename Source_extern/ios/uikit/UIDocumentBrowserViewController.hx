@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIViewController;
 import ios.uikit.UIDocumentBrowserViewController;
 import ios.objc.NSCoding;
 import cpp.objc.NSString;
@@ -7,7 +8,6 @@ import ios.uikit.NSBundle;
 import ios.uikit.UIDocumentBrowserImportMode;
 import ios.uikit.UIDocumentBrowserTransitionController;
 import ios.uikit.UIDocumentBrowserUserInterfaceStyle;
-import ios.uikit.UIViewController;
 import ios.uikit.NSCoder;
 import ios.uikit.UIStoryboardSegue;
 import ios.uikit.UIStoryboardUnwindSegueSource;

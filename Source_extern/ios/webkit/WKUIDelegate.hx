@@ -11,7 +11,7 @@ import ios.webkit.WKContextMenuElementInfo;
 import ios.webkit.WKOpenPanelParameters;
 @:objc
 @:native("WKUIDelegate")
-@:include("UIKit/UIKit.h")
+@:include("WebKit/WebKit.h")
 extern interface WKUIDelegate{
 
 	@:native("alloc")

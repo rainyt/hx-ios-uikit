@@ -4,7 +4,7 @@ import ios.webkit.WKURLSchemeHandler;
 import ios.webkit.WKWebView;
 @:objc
 @:native("WKURLSchemeHandler")
-@:include("UIKit/UIKit.h")
+@:include("WebKit/WebKit.h")
 extern interface WKURLSchemeHandler{
 
 	@:native("alloc")

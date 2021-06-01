@@ -3,7 +3,7 @@ package ios.webkit;
 import ios.webkit.WKURLSchemeTask;
 @:objc
 @:native("WKURLSchemeTask")
-@:include("UIKit/UIKit.h")
+@:include("WebKit/WebKit.h")
 extern interface WKURLSchemeTask{
 
 	@:native("alloc")

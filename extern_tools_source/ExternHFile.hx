@@ -23,9 +23,11 @@ class ExternHFile {
 	 * 类型的定义
 	 */
 	// public var classdefs:Map<String, ExternBaseClass> = [];
+	public var hfile:String = "";
 
-	public function new(file:String, haxeSaveDir:String, haxePkg:String) {
+	public function new(file:String, haxeSaveDir:String, hfile:String, haxePkg:String) {
 		this.haxeSaveDir = haxeSaveDir;
+		this.hfile = hfile;
 		this.haxePkg = haxePkg;
 		var contents = File.getContent(file).split("\n");
 		// trace(contents);

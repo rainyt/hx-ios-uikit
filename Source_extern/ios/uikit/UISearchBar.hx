@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UISearchBar;
 import ios.uikit.UIBarPositioning;
 import ios.uikit.UITextInputTraits;
@@ -10,7 +11,6 @@ import ios.uikit.UISearchTextField;
 import ios.uikit.UITextInputAssistantItem;
 import ios.uikit.UIColor;
 import ios.uikit.UISearchBarStyle;
-import ios.uikit.UIView;
 import ios.uikit.UIImage;
 import ios.uikit.UIBarPosition;
 import ios.uikit.UIBarMetrics;

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIScrollView;
 import ios.uikit.UITableView;
 import ios.objc.NSCoding;
 import ios.uikit.UIDataSourceTranslating;

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIActionSheet;
 import cpp.objc.NSString;
 import ios.uikit.UIActionSheetStyle;
@@ -7,7 +8,6 @@ import ios.uikit.UIToolbar;
 import ios.uikit.UITabBar;
 import ios.uikit.UIBarButtonItem;
 import ios.objc.CGRect;
-import ios.uikit.UIView;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.NSCoder;
 import ios.uikit.UIUserInterfaceLayoutDirection;

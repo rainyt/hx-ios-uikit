@@ -1,9 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIControl;
 import ios.uikit.UIStepper;
 import ios.uikit.UIImage;
 import ios.uikit.UIControlState;
-import ios.uikit.UIControl;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
 import ios.uikit.UIAction;

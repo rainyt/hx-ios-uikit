@@ -5,7 +5,7 @@ import ios.webkit.WKUserContentController;
 import ios.webkit.WKScriptMessage;
 @:objc
 @:native("WKScriptMessageHandlerWithReply")
-@:include("UIKit/UIKit.h")
+@:include("WebKit/WebKit.h")
 extern interface WKScriptMessageHandlerWithReply{
 
 	@:native("alloc")

@@ -1,10 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIControl;
 import ios.uikit.UIDatePicker;
 import ios.objc.NSCoding;
 import ios.uikit.UIDatePickerMode;
 import ios.uikit.UIDatePickerStyle;
-import ios.uikit.UIControl;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
 import ios.uikit.UIAction;

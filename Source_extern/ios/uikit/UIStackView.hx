@@ -1,9 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIStackView;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
-import ios.uikit.UIView;
 import ios.uikit.UILayoutConstraintAxis;
 import ios.uikit.UIStackViewDistribution;
 import ios.uikit.UIStackViewAlignment;

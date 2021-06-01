@@ -7,7 +7,7 @@ import ios.webkit.WKWebpagePreferences;
 import ios.webkit.WKNavigationResponse;
 @:objc
 @:native("WKNavigationDelegate")
-@:include("UIKit/UIKit.h")
+@:include("WebKit/WebKit.h")
 extern interface WKNavigationDelegate{
 
 	@:native("alloc")

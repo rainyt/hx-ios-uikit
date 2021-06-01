@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UIControl;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
@@ -17,7 +18,6 @@ import ios.uikit.UITargetedPreview;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;
-import ios.uikit.UIView;
 import ios.objc.CGSize;
 import ios.uikit.UIWindow;
 import ios.uikit.UIViewAnimationOptions;

@@ -1,12 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UIGestureRecognizer;
 import ios.uikit.UISwipeGestureRecognizer;
 import ios.uikit.UISwipeGestureRecognizerDirection;
 import ios.uikit.UITouch;
 import ios.uikit.UIEvent;
 import ios.uikit.UIPress;
 import ios.uikit.UIPressesEvent;
-import ios.uikit.UIGestureRecognizer;
 import ios.uikit.NSCoder;
 import ios.objc.CGPoint;
 import ios.uikit.UIView;

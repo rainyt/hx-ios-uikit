@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIResponder;
 import ios.uikit.UIAccessibilityElement;
 import ios.uikit.UIAccessibilityIdentification;
 import cpp.objc.NSString;
@@ -27,6 +28,9 @@ extern class UIAccessibilityElement extends UIResponder
 	@:native("accessibilityContainer")
 	public var accessibilityContainer:Dynamic;
 
+	@:native("isAccessibilityElement")
+	public var isAccessibilityElement:Bool;
+
 	@:native("accessibilityLabel")
 	public var accessibilityLabel:NSString;
 
@@ -35,6 +39,12 @@ extern class UIAccessibilityElement extends UIResponder
 
 	@:native("accessibilityValue")
 	public var accessibilityValue:NSString;
+
+	@:native("accessibilityFrame")
+	public var accessibilityFrame:CGRect;
+
+	@:native("accessibilityTraits")
+	public var accessibilityTraits:Dynamic;
 
 	@:native("accessibilityFrameInContainerSpace")
 	public var accessibilityFrameInContainerSpace:CGRect;
@@ -149,51 +159,6 @@ extern class UIAccessibilityElement extends UIResponder
 
 	@:native("updateTextAttributesWithConversionHandler")
 	overload public function updateTextAttributesWithConversionHandler(conversionHandler:Dynamic):Void;
-
-	@:native("accessibilityElementDidBecomeFocused")
-	overload public function accessibilityElementDidBecomeFocused():Void;
-
-	@:native("accessibilityElementDidLoseFocus")
-	overload public function accessibilityElementDidLoseFocus():Void;
-
-	@:native("accessibilityElementIsFocused")
-	overload public function accessibilityElementIsFocused():Bool;
-
-	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
-
-	@:native("accessibilityActivate")
-	overload public function accessibilityActivate():Bool;
-
-	@:native("accessibilityIncrement")
-	overload public function accessibilityIncrement():Void;
-
-	@:native("accessibilityDecrement")
-	overload public function accessibilityDecrement():Void;
-
-	@:native("accessibilityScroll")
-	overload public function accessibilityScroll(direction:Dynamic):Bool;
-
-	@:native("accessibilityPerformEscape")
-	overload public function accessibilityPerformEscape():Bool;
-
-	@:native("accessibilityPerformMagicTap")
-	overload public function accessibilityPerformMagicTap():Bool;
-
-	@:native("accessibilityElementCount")
-	overload public function accessibilityElementCount():Int;
-
-	@:native("accessibilityElementAtIndex")
-	overload public function accessibilityElementAtIndex(index:Int):Dynamic;
-
-	@:native("indexOfAccessibilityElement")
-	overload public function indexOfAccessibilityElement(element:Dynamic):Int;
-
-	@:native("awakeFromNib")
-	overload public function awakeFromNib():Void;
-
-	@:native("prepareForInterfaceBuilder")
-	overload public function prepareForInterfaceBuilder():Void;
 
 
 }

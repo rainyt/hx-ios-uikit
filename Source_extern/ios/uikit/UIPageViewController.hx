@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIViewController;
 import ios.uikit.UIPageViewController;
 import ios.uikit.UIPageViewControllerTransitionStyle;
 import ios.uikit.UIPageViewControllerNavigationOrientation;
@@ -7,7 +8,6 @@ import cpp.objc.NSDictionary;
 import ios.uikit.NSCoder;
 import ios.uikit.UIPageViewControllerSpineLocation;
 import ios.uikit.UIPageViewControllerNavigationDirection;
-import ios.uikit.UIViewController;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
 import ios.uikit.UIStoryboardSegue;

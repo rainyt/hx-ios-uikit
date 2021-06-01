@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIScrollView;
 import ios.uikit.UITextView;
 import ios.uikit.UITextInput;
 import ios.uikit.UIContentSizeCategoryAdjusting;

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIControl;
 import ios.uikit.UISegmentedControl;
 import ios.objc.NSCoding;
 import ios.objc.CGRect;
@@ -13,7 +14,6 @@ import ios.uikit.UIControlState;
 import ios.uikit.UIBarMetrics;
 import cpp.objc.NSDictionary;
 import ios.uikit.UISegmentedControlSegment;
-import ios.uikit.UIControl;
 import ios.uikit.UITouch;
 import ios.uikit.UIEvent;
 import ios.uikit.UIControlEvents;

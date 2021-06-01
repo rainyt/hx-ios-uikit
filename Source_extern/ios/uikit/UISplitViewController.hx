@@ -1,12 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UIViewController;
 import ios.uikit.UISplitViewController;
 import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
 import ios.uikit.UISplitViewControllerStyle;
 import ios.uikit.UISplitViewControllerSplitBehavior;
-import ios.uikit.UIViewController;
 import ios.uikit.UISplitViewControllerColumn;
 import ios.uikit.UISplitViewControllerDisplayMode;
 import ios.uikit.UIBarButtonItem;

@@ -4,7 +4,7 @@ import ios.webkit.WKHTTPCookieStoreObserver;
 import ios.webkit.WKHTTPCookieStore;
 @:objc
 @:native("WKHTTPCookieStoreObserver")
-@:include("UIKit/UIKit.h")
+@:include("WebKit/WebKit.h")
 extern interface WKHTTPCookieStoreObserver{
 
 	@:native("alloc")

@@ -1,11 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIControl;
 import ios.uikit.UIPageControl;
 import ios.uikit.UIPageControlBackgroundStyle;
 import ios.uikit.UIPageControlInteractionState;
 import ios.uikit.UIImage;
 import ios.objc.CGSize;
-import ios.uikit.UIControl;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
 import ios.uikit.UIAction;

@@ -1,9 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UITabBar;
 import ios.uikit.UITabBarItem;
 import ios.uikit.UIColor;
-import ios.uikit.UIView;
 import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;

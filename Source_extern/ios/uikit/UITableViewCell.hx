@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
 import ios.uikit.UITableViewCell;
 import ios.objc.NSCoding;
 import ios.uikit.UIGestureRecognizerDelegate;
@@ -8,7 +9,6 @@ import cpp.objc.NSString;
 import ios.uikit.NSCoder;
 import ios.uikit.UICellConfigurationState;
 import ios.uikit.UIListContentConfiguration;
-import ios.uikit.UIView;
 import ios.uikit.UIImageView;
 import ios.uikit.UILabel;
 import ios.uikit.UITableViewCellSelectionStyle;
