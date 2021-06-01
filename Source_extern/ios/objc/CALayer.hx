@@ -47,7 +47,7 @@ extern class CALayer
   @:native("convertRect:toLayer") public function convertRect_toLayer(r:CGRect, l:CALayer):CGRect;
   @:native("convertTime:fromLayer") public function convertTime_fromLayer(t:Float, l:CALayer):Float;
   @:native("convertTime:toLayer") public function convertTime_toLayer(t:Float, l:CALayer):Float;
-  @:native("cornerRadius") public function cornerRadius():Float;
+  @:native("cornerRadius") public var cornerRadius:Float;
   @:native("defaultActionForKey") public static function defaultActionForKey(event:NSString):CAAction;
   @:native("defaultValueForKey") public static function defaultValueForKey(key:NSString):Dynamic;
   @:native("delegate") public function delegate():CALayerDelegate;

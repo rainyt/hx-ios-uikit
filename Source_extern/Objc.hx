@@ -21,3 +21,9 @@ macro function CGRectMake(x:Dynamic, y:Dynamic, width:Dynamic, height:Dynamic):D
 		untyped __cpp__("CGRectMake({0}, {1}, {2}, {3})", ${x}, ${y}, ${width}, ${height});
 	}
 }
+
+macro function CGPointMake(x:Dynamic, y:Dynamic):Dynamic {
+	return macro {
+		untyped __cpp__("CGPointMake({0}, {1})", ${x}, ${y});
+	}
+}
