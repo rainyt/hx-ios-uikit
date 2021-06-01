@@ -4,6 +4,7 @@ package ios.uikit;
 @:native("NSLayoutDimension")
 @:include("UIKit/UIKit.h")
 extern class NSLayoutDimension extends NSLayoutAnchor
+implements cpp.objc.Protocol<NSLayoutDimension*>
 {
 
 	@:native("alloc")

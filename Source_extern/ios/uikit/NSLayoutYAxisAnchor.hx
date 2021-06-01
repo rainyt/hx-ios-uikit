@@ -4,6 +4,7 @@ package ios.uikit;
 @:native("NSLayoutYAxisAnchor")
 @:include("UIKit/UIKit.h")
 extern class NSLayoutYAxisAnchor extends NSLayoutAnchor
+implements cpp.objc.Protocol<NSLayoutYAxisAnchor*>
 {
 
 	@:native("alloc")
