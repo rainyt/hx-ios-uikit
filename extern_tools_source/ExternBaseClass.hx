@@ -212,11 +212,6 @@ class ExternBaseClass {
 	public function toHaxeFile():String {
 		this.externParentFuncProperty(this);
 		var haxe = "package " + pkg + ";\n\n";
-		// 统一引入
-		// haxe += "import " + ObjcImport.toImport("NSString") + ";\n";
-		// haxe += "import " + ObjcImport.toImport("NSData") + ";\n";
-		// haxe += "import " + ObjcImport.toImport("NSBundle") + ";\n";
-
 		var ex = _importType(extendClassName);
 		if (ex != null)
 			haxe += "import " + ex + ";\n";
@@ -252,17 +247,18 @@ class ExternBaseClass {
 			+ className
 			+ (extendClassName != null ? " extends " + extendClassName : "");
 		if (protocols != null) {
+			// 这里的实现暂时注释掉，如果启动implements关系，会编译不过
 			haxe += "\n";
-			for (index => value in protocols) {
-				var t = ExternTools.protocol.get(value);
-				if (t != null) {
-					// implements cpp.objc.Protocol<UITextInput>
-					// haxe += "implements cpp.objc.Protocol<" + t.className + ">\n";
-				} else {
-					// haxe += "implements cpp.objc.Protocol<" + value + ">\n";
-					// trace("协议类型不存在：" + value);
-				}
-			}
+			// for (index => value in protocols) {
+			// 	var t = ExternTools.protocol.get(value);
+			// 	if (t != null) {
+			// implements cpp.objc.Protocol<UITextInput>
+			// haxe += "implements cpp.objc.Protocol<" + t.className + ">\n";
+			// } else {
+			// haxe += "implements cpp.objc.Protocol<" + value + ">\n";
+			// trace("协议类型不存在：" + value);
+			// }
+			// }
 		}
 		haxe += "{\n\n";
 		for (index => value in funcAndAttr) {
@@ -271,19 +267,45 @@ class ExternBaseClass {
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
-					// No need `extern inline`?
 					haxe += "\toverload public" + (value.isStatic ? " static" : "") + " function " + toFuncName(value.name) + "("
-						+ (value.args != null ? toFuncArgs(value.args) : "") + "):" + value.returnClass + ";\n\n";
+						+ (value.args != null ? toFuncArgs(value.args) : "") + "):" + _toReturnClass(value) + ";\n\n";
 				case ExternBaseClassType.PROPERTY:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
-					haxe += "\tpublic var " + value.name + ":" + value.returnClass + ";\n\n";
+					haxe += "\tpublic var " + value.name + ":" + _toReturnClass(value) + ";\n\n";
 				case ExternBaseClassType.HAXE:
 					haxe += "\t/** Haxe Protocol */" + value.haxe + "\n\n";
 			}
 		}
-
 		haxe += "\n}";
 		return haxe;
+	}
+
+	/**
+	 * 返回类型，如果是继承关系的类，将会直接返回当前类
+	 * @param type 
+	 * @return String
+	 */
+	private function _toReturnClass(type:ExternBaseClassFunProperty):String {
+		if (type.isStatic && isExtendClass(type.returnClass))
+			return this.className;
+		return type.returnClass;
+	}
+
+	/**
+	 * 类型是否被此类继承
+	 * @param type 
+	 * @return Bool
+	 */
+	public function isExtendClass(type:String):Bool {
+		if (extendClassName == type) {
+			return true;
+		}
+		if (extendClassName != null) {
+			var t = ExternTools.classDefine.get(extendClassName);
+			if (t != null)
+				return t.isExtendClass(type);
+		}
+		return false;
 	}
 
 	private function _importType(type:String):String {

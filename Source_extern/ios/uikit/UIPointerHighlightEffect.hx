@@ -15,7 +15,7 @@ extern class UIPointerHighlightEffect extends UIPointerEffect{
 	overload public static function autorelease():UIPointerHighlightEffect;
 
 	@:native("effectWithPreview")
-	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerEffect;
+	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerHighlightEffect;
 
 	@:native("init")
 	overload public function init():UIPointerEffect;

@@ -15,7 +15,7 @@ extern class UIPointerLiftEffect extends UIPointerEffect{
 	overload public static function autorelease():UIPointerLiftEffect;
 
 	@:native("effectWithPreview")
-	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerEffect;
+	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerLiftEffect;
 
 	@:native("init")
 	overload public function init():UIPointerEffect;

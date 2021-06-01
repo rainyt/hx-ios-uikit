@@ -25,7 +25,7 @@ extern class UIPointerHoverEffect extends UIPointerEffect{
 	public var prefersScaledContent:Bool;
 
 	@:native("effectWithPreview")
-	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerEffect;
+	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerHoverEffect;
 
 	@:native("init")
 	overload public function init():UIPointerEffect;

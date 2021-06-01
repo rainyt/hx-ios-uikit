@@ -31,7 +31,7 @@ extern class UIGraphicsImageRendererFormat extends UIGraphicsRendererFormat{
 	overload public static function formatForTraitCollection(traitCollection:UITraitCollection):UIGraphicsImageRendererFormat;
 
 	@:native("preferredFormat")
-	overload public static function preferredFormat():UIGraphicsRendererFormat;
+	overload public static function preferredFormat():UIGraphicsImageRendererFormat;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

@@ -65,7 +65,7 @@ class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
     __slots__ = ("isProtocol", "hextern", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys")
     _hx_fields = ["isProtocol", "hextern", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys"]
-    _hx_methods = ["putClass", "putExternClass", "hasFuncOrAttr", "hasFuncExtendsOrAttr", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName", "externParentFuncProperty"]
+    _hx_methods = ["putClass", "putExternClass", "hasFuncOrAttr", "hasFuncExtendsOrAttr", "toHaxeFile", "_toReturnClass", "isExtendClass", "_importType", "toFuncArgs", "toFuncName", "externParentFuncProperty"]
 
     def __init__(self,_hdata,hextern,defcall):
         self._hdata = None
@@ -307,16 +307,6 @@ class ExternBaseClass:
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("extern " + HxOverrides.stringOrNull((("interface" if (self.isProtocol) else "class")))) + " ") + HxOverrides.stringOrNull(self.className)) + HxOverrides.stringOrNull((((" extends " + HxOverrides.stringOrNull(self.extendClassName)) if ((self.extendClassName is not None)) else "")))))))
         if (self.protocols is not None):
             haxe = (("null" if haxe is None else haxe) + "\n")
-            _g_current = 0
-            _g_array = self.protocols
-            while (_g_current < len(_g_array)):
-                _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
-                _g1_key = _g_current
-                _g_current = (_g_current + 1)
-                index = _g1_key
-                value = _g1_value
-                t = ExternTools.protocol.h.get(value,None)
-                tmp = (t is not None)
         haxe = (("null" if haxe is None else haxe) + "{\n\n")
         _g_current = 0
         _g_array = self.funcAndAttr
@@ -333,17 +323,31 @@ class ExternBaseClass:
             if (_hx_local_11 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
-                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((((((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(") + HxOverrides.stringOrNull(((self.toFuncArgs(value.args) if ((value.args is not None)) else "")))) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((((((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(") + HxOverrides.stringOrNull(((self.toFuncArgs(value.args) if ((value.args is not None)) else "")))) + "):") + HxOverrides.stringOrNull(self._toReturnClass(value))) + ";\n\n"))))
                 elif (_g == "haxe"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t/** Haxe Protocol */" + HxOverrides.stringOrNull(value.haxe)) + "\n\n"))))
             elif (_hx_local_11 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
-                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(self._toReturnClass(value))) + ";\n\n"))))
             else:
                 pass
         haxe = (("null" if haxe is None else haxe) + "\n}")
         return haxe
+
+    def _toReturnClass(self,_hx_type):
+        if (_hx_type.isStatic and self.isExtendClass(_hx_type.returnClass)):
+            return self.className
+        return _hx_type.returnClass
+
+    def isExtendClass(self,_hx_type):
+        if (self.extendClassName == _hx_type):
+            return True
+        if (self.extendClassName is not None):
+            t = ExternTools.classDefine.h.get(self.extendClassName,None)
+            if (t is not None):
+                return t.isExtendClass(_hx_type)
+        return False
 
     def _importType(self,_hx_type):
         if (python_internal_ArrayImpl.indexOf(self._imported,_hx_type,None) != -1):

@@ -14,7 +14,7 @@ extern class UIGraphicsPDFRendererFormat extends UIGraphicsRendererFormat{
 	overload public static function autorelease():UIGraphicsPDFRendererFormat;
 
 	@:native("preferredFormat")
-	overload public static function preferredFormat():UIGraphicsRendererFormat;
+	overload public static function preferredFormat():UIGraphicsPDFRendererFormat;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
