@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("UITabBarItem")
 @:include("UIKit/UIKit.h")
@@ -34,28 +35,28 @@ extern class UITabBarItem extends UIBarItem{
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
 	@:native("setBadgeTextAttributes:forState")
-	overload public function setBadgeTextAttributes_forState(textAttributes:Dynamic, forState:UIControlState):Void;
+	overload public function setBadgeTextAttributes_forState(textAttributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("badgeTextAttributesForState")
-	overload public function badgeTextAttributesForState(state:UIControlState):Dynamic;
+	overload public function badgeTextAttributesForState(state:UIControlState):NSDictionary;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes_forState(attributes:Dynamic, forState:UIControlState):Void;
+	overload public function setTitleTextAttributes_forState(attributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("titleTextAttributesForState")
-	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
+	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
 
 	@:native("appearance")
 	overload public static function appearance():UIAppearance;
 
 	@:native("appearanceWhenContainedInInstancesOfClasses")
-	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:Dynamic):UIAppearance;
+	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIAppearance;
 
 	@:native("appearanceForTraitCollection")
 	overload public static function appearanceForTraitCollection(trait:UITraitCollection):UIAppearance;
 
 	@:native("appearanceForTraitCollection:whenContainedInInstancesOfClasses")
-	overload public static function appearanceForTraitCollection_whenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
+	overload public static function appearanceForTraitCollection_whenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:NSArray):UIAppearance;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -67,7 +68,7 @@ extern class UITabBarItem extends UIBarItem{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

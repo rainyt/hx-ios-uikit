@@ -22,7 +22,7 @@ extern class UIPreviewInteraction extends NSObject{
 	overload public function init():UIPreviewInteraction;
 
 	@:native("delegate")
-	public var delegate:Dynamic;
+	public var delegate:;
 
 	@:native("locationInCoordinateSpace")
 	overload public function locationInCoordinateSpace(coordinateSpace:Dynamic):CGPoint;
@@ -40,7 +40,7 @@ extern class UIPreviewInteraction extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

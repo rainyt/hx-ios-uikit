@@ -12,28 +12,28 @@ extern interface UITextDropDelegate{
 	overload public static function autorelease():UITextDropDelegate;
 
 	@:native("textDroppableView:willBecomeEditableForDrop")
-	overload public function textDroppableView_willBecomeEditableForDrop(textDroppableView:Dynamic, willBecomeEditableForDrop:Dynamic):UITextDropEditability;
+	overload public function textDroppableView_willBecomeEditableForDrop(textDroppableView:UIView, willBecomeEditableForDrop:Dynamic):UITextDropEditability;
 
 	@:native("textDroppableView:proposalForDrop")
-	overload public function textDroppableView_proposalForDrop(textDroppableView:Dynamic, proposalForDrop:Dynamic):UITextDropProposal;
+	overload public function textDroppableView_proposalForDrop(textDroppableView:UIView, proposalForDrop:Dynamic):UITextDropProposal;
 
 	@:native("textDroppableView:willPerformDrop")
-	overload public function textDroppableView_willPerformDrop(textDroppableView:Dynamic, willPerformDrop:Dynamic):Void;
+	overload public function textDroppableView_willPerformDrop(textDroppableView:UIView, willPerformDrop:Dynamic):Void;
 
 	@:native("textDroppableView:previewForDroppingAllItemsWithDefault")
-	overload public function textDroppableView_previewForDroppingAllItemsWithDefault(textDroppableView:Dynamic, previewForDroppingAllItemsWithDefault:UITargetedDragPreview):UITargetedDragPreview;
+	overload public function textDroppableView_previewForDroppingAllItemsWithDefault(textDroppableView:UIView, previewForDroppingAllItemsWithDefault:UITargetedDragPreview):UITargetedDragPreview;
 
 	@:native("textDroppableView:dropSessionDidEnter")
-	overload public function textDroppableView_dropSessionDidEnter(textDroppableView:Dynamic, dropSessionDidEnter:Dynamic):Void;
+	overload public function textDroppableView_dropSessionDidEnter(textDroppableView:UIView, dropSessionDidEnter:Dynamic):Void;
 
 	@:native("textDroppableView:dropSessionDidUpdate")
-	overload public function textDroppableView_dropSessionDidUpdate(textDroppableView:Dynamic, dropSessionDidUpdate:Dynamic):Void;
+	overload public function textDroppableView_dropSessionDidUpdate(textDroppableView:UIView, dropSessionDidUpdate:Dynamic):Void;
 
 	@:native("textDroppableView:dropSessionDidExit")
-	overload public function textDroppableView_dropSessionDidExit(textDroppableView:Dynamic, dropSessionDidExit:Dynamic):Void;
+	overload public function textDroppableView_dropSessionDidExit(textDroppableView:UIView, dropSessionDidExit:Dynamic):Void;
 
 	@:native("textDroppableView:dropSessionDidEnd")
-	overload public function textDroppableView_dropSessionDidEnd(textDroppableView:Dynamic, dropSessionDidEnd:Dynamic):Void;
+	overload public function textDroppableView_dropSessionDidEnd(textDroppableView:UIView, dropSessionDidEnd:Dynamic):Void;
 
 
 }

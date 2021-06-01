@@ -189,7 +189,7 @@ extern class UICollectionReusableView extends UIView{
 	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -219,13 +219,13 @@ extern class UICollectionReusableView extends UIView{
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:Dynamic):Void;
+	overload public function addConstraints(constraints:NSArray):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:Dynamic):Void;
+	overload public function removeConstraints(constraints:NSArray):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -270,13 +270,13 @@ extern class UICollectionReusableView extends UIView{
 	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
-	overload public function addLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("removeLayoutGuide")
-	overload public function removeLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;

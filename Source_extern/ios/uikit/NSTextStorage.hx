@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSDictionary;
 @:objc
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")
@@ -28,7 +29,7 @@ extern class NSTextStorage extends NSMutableAttributedString
 	public var changeInLength:Int;
 
 	@:native("delegate")
-	public var delegate:Dynamic;
+	public var delegate:;
 
 	@:native("edited:range:changeInLength")
 	overload public function edited_range_changeInLength(editedMask:NSTextStorageEditActions, range:Dynamic, changeInLength:Int):Void;
@@ -49,10 +50,10 @@ extern class NSTextStorage extends NSMutableAttributedString
 	overload public function fixAttributesInRange(range:Dynamic):Void;
 
 	@:native("readFromURL:options:documentAttributes:error")
-	overload public function readFromURL_options_documentAttributes_error(url:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):Bool;
+	overload public function readFromURL_options_documentAttributes_error(url:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):Bool;
 
 	@:native("readFromData:options:documentAttributes:error")
-	overload public function readFromData_options_documentAttributes_error(data:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):Bool;
+	overload public function readFromData_options_documentAttributes_error(data:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):Bool;
 
 
 }

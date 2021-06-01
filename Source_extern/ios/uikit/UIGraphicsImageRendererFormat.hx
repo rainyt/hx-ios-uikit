@@ -39,7 +39,7 @@ extern class UIGraphicsImageRendererFormat extends UIGraphicsRendererFormat{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

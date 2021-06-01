@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
 @:objc
 @:native("UITextPasteItem")
@@ -19,7 +20,7 @@ extern interface UITextPasteItem{
 	public var localObject:Dynamic;
 
 	@:native("defaultAttributes")
-	public var defaultAttributes:Dynamic;
+	public var defaultAttributes:NSDictionary;
 
 	@:native("setStringResult")
 	overload public function setStringResult(string:NSString):Void;

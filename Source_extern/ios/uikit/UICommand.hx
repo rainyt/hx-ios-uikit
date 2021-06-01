@@ -24,7 +24,7 @@ extern class UICommand extends UIMenuElement{
 	public var state:UIMenuElementState;
 
 	@:native("alternates")
-	public var alternates:Dynamic;
+	public var alternates:NSArray;
 
 	@:native("init")
 	overload public function init():UICommand;
@@ -42,7 +42,7 @@ extern class UICommand extends UIMenuElement{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

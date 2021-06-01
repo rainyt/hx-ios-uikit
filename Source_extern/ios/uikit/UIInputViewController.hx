@@ -18,7 +18,7 @@ implements cpp.objc.Protocol<UITextInputDelegate>
 	public var inputView:UIInputView;
 
 	@:native("textDocumentProxy")
-	public var textDocumentProxy:Dynamic;
+	public var textDocumentProxy:;
 
 	@:native("hasDictationKey")
 	public var hasDictationKey:Bool;
@@ -81,7 +81,7 @@ implements cpp.objc.Protocol<UITextInputDelegate>
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -198,7 +198,7 @@ implements cpp.objc.Protocol<UITextInputDelegate>
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

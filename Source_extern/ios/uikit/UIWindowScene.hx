@@ -30,7 +30,7 @@ extern class UIWindowScene{
 	public var sizeRestrictions:UISceneSizeRestrictions;
 
 	@:native("windows")
-	public var windows:Dynamic;
+	public var windows:NSArray;
 
 	@:native("statusBarManager")
 	public var statusBarManager:UIStatusBarManager;

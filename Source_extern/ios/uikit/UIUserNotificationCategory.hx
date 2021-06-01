@@ -19,7 +19,7 @@ extern class UIUserNotificationCategory extends NSObject
 	overload public function initWithCoder(coder:NSCoder):UIUserNotificationCategory;
 
 	@:native("actionsForContext")
-	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;
+	overload public function actionsForContext(context:UIUserNotificationActionContext):NSArray;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -31,7 +31,7 @@ extern class UIUserNotificationCategory extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

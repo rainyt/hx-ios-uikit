@@ -46,7 +46,7 @@ extern class NSObject{
 	public var accessibilityRespondsToUserInteraction:Bool;
 
 	@:native("accessibilityUserInputLabels")
-	public var accessibilityUserInputLabels:Dynamic;
+	public var accessibilityUserInputLabels:NSArray;
 
 	@:native("accessibilityTextualContext")
 	public var accessibilityTextualContext:Dynamic;
@@ -61,7 +61,7 @@ extern class NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;
@@ -82,10 +82,10 @@ extern class NSObject{
 	overload public function accessibilityPerformMagicTap():Bool;
 
 	@:native("accessibilityCustomActions")
-	public var accessibilityCustomActions:Dynamic;
+	public var accessibilityCustomActions:;
 
 	@:native("accessibilityCustomRotors")
-	public var accessibilityCustomRotors:Dynamic;
+	public var accessibilityCustomRotors:NSArray;
 
 	@:native("accessibilityElementCount")
 	overload public function accessibilityElementCount():Int;

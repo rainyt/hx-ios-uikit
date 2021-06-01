@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("UIInterpolatingMotionEffect")
 @:include("UIKit/UIKit.h")
@@ -34,7 +35,7 @@ extern class UIInterpolatingMotionEffect extends UIMotionEffect{
 	overload public function init():UIMotionEffect;
 
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
-	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:Dynamic):Dynamic;
+	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:Dynamic):NSDictionary;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -46,7 +47,7 @@ extern class UIInterpolatingMotionEffect extends UIMotionEffect{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

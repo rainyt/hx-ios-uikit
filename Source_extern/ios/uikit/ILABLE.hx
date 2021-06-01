@@ -13,13 +13,13 @@ extern interface ILABLE{
 	overload public static function autorelease():ILABLE;
 
 	@:native("videoEditorController:didSaveEditedVideoToPath")
-	overload public function videoEditorController_didSaveEditedVideoToPath(editor:Dynamic, didSaveEditedVideoToPath:NSString):Void;
+	overload public function videoEditorController_didSaveEditedVideoToPath(editor:UIVideoEditorController, didSaveEditedVideoToPath:NSString):Void;
 
 	@:native("videoEditorController:didFailWithError")
-	overload public function videoEditorController_didFailWithError(editor:Dynamic, didFailWithError:Dynamic):Void;
+	overload public function videoEditorController_didFailWithError(editor:UIVideoEditorController, didFailWithError:Dynamic):Void;
 
 	@:native("videoEditorControllerDidCancel")
-	overload public function videoEditorControllerDidCancel(editor:Dynamic):Void;
+	overload public function videoEditorControllerDidCancel(editor:UIVideoEditorController):Void;
 
 
 }

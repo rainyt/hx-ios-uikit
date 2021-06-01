@@ -19,7 +19,7 @@ extern interface UIPickerViewAccessibilityDelegate{
 	overload public function pickerView_accessibilityHintForComponent(pickerView:UIPickerView, accessibilityHintForComponent:Int):NSString;
 
 	@:native("pickerView:accessibilityUserInputLabelsForComponent")
-	overload public function pickerView_accessibilityUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityUserInputLabelsForComponent:Int):Dynamic;
+	overload public function pickerView_accessibilityUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityUserInputLabelsForComponent:Int):NSArray;
 
 	@:native("pickerView:accessibilityAttributedLabelForComponent")
 	overload public function pickerView_accessibilityAttributedLabelForComponent(pickerView:UIPickerView, accessibilityAttributedLabelForComponent:Int):NSAttributedString;
@@ -28,7 +28,7 @@ extern interface UIPickerViewAccessibilityDelegate{
 	overload public function pickerView_accessibilityAttributedHintForComponent(pickerView:UIPickerView, accessibilityAttributedHintForComponent:Int):NSAttributedString;
 
 	@:native("pickerView:accessibilityAttributedUserInputLabelsForComponent")
-	overload public function pickerView_accessibilityAttributedUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityAttributedUserInputLabelsForComponent:Int):Dynamic;
+	overload public function pickerView_accessibilityAttributedUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityAttributedUserInputLabelsForComponent:Int):NSArray;
 
 
 }

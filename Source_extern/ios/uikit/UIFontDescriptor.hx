@@ -2,6 +2,7 @@ package ios.uikit;
 
 import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("UIFontDescriptor")
 @:include("UIKit/UIKit.h")
@@ -36,13 +37,13 @@ extern class UIFontDescriptor extends NSObject
 	overload public function objectForKey(anAttribute:NSString):Dynamic;
 
 	@:native("fontAttributes")
-	public var fontAttributes:Dynamic;
+	public var fontAttributes:NSDictionary;
 
 	@:native("matchingFontDescriptorsWithMandatoryKeys")
-	overload public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:Dynamic):Dynamic;
+	overload public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:NSSet):NSArray;
 
 	@:native("fontDescriptorWithFontAttributes")
-	overload public static function fontDescriptorWithFontAttributes(attributes:Dynamic):UIFontDescriptor;
+	overload public static function fontDescriptorWithFontAttributes(attributes:NSDictionary):UIFontDescriptor;
 
 	@:native("fontDescriptorWithName:size")
 	overload public static function fontDescriptorWithName_size(fontName:NSString, size:Float):UIFontDescriptor;
@@ -57,10 +58,10 @@ extern class UIFontDescriptor extends NSObject
 	overload public static function preferredFontDescriptorWithTextStyle_compatibleWithTraitCollection(style:NSString, compatibleWithTraitCollection:UITraitCollection):UIFontDescriptor;
 
 	@:native("initWithFontAttributes")
-	overload public function initWithFontAttributes(attributes:Dynamic):UIFontDescriptor;
+	overload public function initWithFontAttributes(attributes:NSDictionary):UIFontDescriptor;
 
 	@:native("fontDescriptorByAddingAttributes")
-	overload public function fontDescriptorByAddingAttributes(attributes:Dynamic):UIFontDescriptor;
+	overload public function fontDescriptorByAddingAttributes(attributes:NSDictionary):UIFontDescriptor;
 
 	@:native("fontDescriptorWithSize")
 	overload public function fontDescriptorWithSize(newPointSize:Float):UIFontDescriptor;
@@ -90,7 +91,7 @@ extern class UIFontDescriptor extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

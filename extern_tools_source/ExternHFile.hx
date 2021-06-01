@@ -117,7 +117,11 @@ class ExternHFile {
 			d.parentClassName = t2.className;
 			typedefs.set(t2.className, d);
 		});
-		t.saveFile = haxeSaveDir + "/" + t.className + ".hx";
+		if (t.className.indexOf("<") != -1)
+			throw "异常" + t.className;
+		// 	t.saveFile = haxeSaveDir + "/" + t.className.substr(0, t.className.lastIndexOf("<"));
+		// else
+			t.saveFile = haxeSaveDir + "/" + t.className + ".hx";
 		t.pkg = haxePkg;
 		if (t.className != null) {
 			if (ExternTools.classDefine.exists(t.className)) {

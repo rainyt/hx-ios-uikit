@@ -14,7 +14,7 @@ extern class UIPrintPaper extends NSObject{
 	overload public static function autorelease():UIPrintPaper;
 
 	@:native("bestPaperForPageSize:withPapersFromArray")
-	overload public static function bestPaperForPageSize_withPapersFromArray(contentSize:CGSize, withPapersFromArray:Dynamic):UIPrintPaper;
+	overload public static function bestPaperForPageSize_withPapersFromArray(contentSize:CGSize, withPapersFromArray:NSArray):UIPrintPaper;
 
 	@:native("paperSize")
 	public var paperSize:CGSize;
@@ -35,7 +35,7 @@ extern class UIPrintPaper extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

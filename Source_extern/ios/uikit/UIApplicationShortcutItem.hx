@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("UIApplicationShortcutItem")
 @:include("UIKit/UIKit.h")
@@ -17,7 +18,7 @@ extern class UIApplicationShortcutItem extends NSObject
 	overload public function init():UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle:localizedSubtitle:icon:userInfo")
-	overload public function initWithType_localizedTitle_localizedSubtitle_icon_userInfo(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:Dynamic):UIApplicationShortcutItem;
+	overload public function initWithType_localizedTitle_localizedSubtitle_icon_userInfo(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:NSDictionary):UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle")
 	overload public function initWithType_localizedTitle(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
@@ -32,7 +33,7 @@ extern class UIApplicationShortcutItem extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

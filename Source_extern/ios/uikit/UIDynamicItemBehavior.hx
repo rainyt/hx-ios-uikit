@@ -13,7 +13,7 @@ extern class UIDynamicItemBehavior extends UIDynamicBehavior{
 	overload public static function autorelease():UIDynamicItemBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):UIDynamicItemBehavior;
+	overload public function initWithItems(items:NSArray):UIDynamicItemBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -76,7 +76,7 @@ extern class UIDynamicItemBehavior extends UIDynamicBehavior{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

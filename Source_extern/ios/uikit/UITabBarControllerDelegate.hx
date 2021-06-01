@@ -18,13 +18,13 @@ extern interface UITabBarControllerDelegate{
 	overload public function tabBarController_didSelectViewController(tabBarController:UITabBarController, didSelectViewController:UIViewController):Void;
 
 	@:native("tabBarController:willBeginCustomizingViewControllers")
-	overload public function tabBarController_willBeginCustomizingViewControllers(tabBarController:UITabBarController, willBeginCustomizingViewControllers:Dynamic):Void;
+	overload public function tabBarController_willBeginCustomizingViewControllers(tabBarController:UITabBarController, willBeginCustomizingViewControllers:NSArray):Void;
 
 	@:native("tabBarController:willEndCustomizingViewControllers:changed")
-	overload public function tabBarController_willEndCustomizingViewControllers_changed(tabBarController:UITabBarController, willEndCustomizingViewControllers:Dynamic, changed:Bool):Void;
+	overload public function tabBarController_willEndCustomizingViewControllers_changed(tabBarController:UITabBarController, willEndCustomizingViewControllers:NSArray, changed:Bool):Void;
 
 	@:native("tabBarController:didEndCustomizingViewControllers:changed")
-	overload public function tabBarController_didEndCustomizingViewControllers_changed(tabBarController:UITabBarController, didEndCustomizingViewControllers:Dynamic, changed:Bool):Void;
+	overload public function tabBarController_didEndCustomizingViewControllers_changed(tabBarController:UITabBarController, didEndCustomizingViewControllers:NSArray, changed:Bool):Void;
 
 	@:native("tabBarControllerSupportedInterfaceOrientations")
 	overload public function tabBarControllerSupportedInterfaceOrientations(tabBarController:UITabBarController):UIInterfaceOrientationMask;

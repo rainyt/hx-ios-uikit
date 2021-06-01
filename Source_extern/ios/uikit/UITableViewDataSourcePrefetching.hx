@@ -12,10 +12,10 @@ extern interface UITableViewDataSourcePrefetching{
 	overload public static function autorelease():UITableViewDataSourcePrefetching;
 
 	@:native("tableView:prefetchRowsAtIndexPaths")
-	overload public function tableView_prefetchRowsAtIndexPaths(tableView:UITableView, prefetchRowsAtIndexPaths:Dynamic):Void;
+	overload public function tableView_prefetchRowsAtIndexPaths(tableView:UITableView, prefetchRowsAtIndexPaths:NSArray):Void;
 
 	@:native("tableView:cancelPrefetchingForRowsAtIndexPaths")
-	overload public function tableView_cancelPrefetchingForRowsAtIndexPaths(tableView:UITableView, cancelPrefetchingForRowsAtIndexPaths:Dynamic):Void;
+	overload public function tableView_cancelPrefetchingForRowsAtIndexPaths(tableView:UITableView, cancelPrefetchingForRowsAtIndexPaths:NSArray):Void;
 
 
 }

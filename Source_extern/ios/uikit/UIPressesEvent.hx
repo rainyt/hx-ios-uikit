@@ -12,25 +12,25 @@ extern class UIPressesEvent extends UIEvent{
 	overload public static function autorelease():UIPressesEvent;
 
 	@:native("allPresses")
-	public var allPresses:Dynamic;
+	public var allPresses:;
 
 	@:native("pressesForGestureRecognizer")
-	overload public function pressesForGestureRecognizer(gesture:UIGestureRecognizer):Dynamic;
+	overload public function pressesForGestureRecognizer(gesture:UIGestureRecognizer):NSSet;
 
 	@:native("touchesForWindow")
-	overload public function touchesForWindow(window:UIWindow):Dynamic;
+	overload public function touchesForWindow(window:UIWindow):NSSet;
 
 	@:native("touchesForView")
-	overload public function touchesForView(view:UIView):Dynamic;
+	overload public function touchesForView(view:UIView):NSSet;
 
 	@:native("touchesForGestureRecognizer")
-	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):Dynamic;
+	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):NSSet;
 
 	@:native("coalescedTouchesForTouch")
-	overload public function coalescedTouchesForTouch(touch:UITouch):Dynamic;
+	overload public function coalescedTouchesForTouch(touch:UITouch):NSArray;
 
 	@:native("predictedTouchesForTouch")
-	overload public function predictedTouchesForTouch(touch:UITouch):Dynamic;
+	overload public function predictedTouchesForTouch(touch:UITouch):NSArray;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -42,7 +42,7 @@ extern class UIPressesEvent extends UIEvent{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

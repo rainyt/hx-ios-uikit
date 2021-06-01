@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSDictionary;
 @:objc
 @:native("NSMutableAttributedString")
 @:include("UIKit/UIKit.h")
@@ -15,10 +16,10 @@ extern class NSMutableAttributedString{
 	overload public function fixAttributesInRange(range:Dynamic):Void;
 
 	@:native("readFromURL:options:documentAttributes:error")
-	overload public function readFromURL_options_documentAttributes_error(url:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):Bool;
+	overload public function readFromURL_options_documentAttributes_error(url:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):Bool;
 
 	@:native("readFromData:options:documentAttributes:error")
-	overload public function readFromData_options_documentAttributes_error(data:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):Bool;
+	overload public function readFromData_options_documentAttributes_error(data:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):Bool;
 
 
 }

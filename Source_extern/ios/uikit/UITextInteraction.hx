@@ -13,16 +13,16 @@ extern class UITextInteraction extends NSObject
 	overload public static function autorelease():UITextInteraction;
 
 	@:native("delegate")
-	public var delegate:Dynamic;
+	public var delegate:;
 
 	@:native("textInput")
-	public var textInput:Dynamic;
+	public var textInput:;
 
 	@:native("textInteractionMode")
 	public var textInteractionMode:UITextInteractionMode;
 
 	@:native("gesturesForFailureRequirements")
-	public var gesturesForFailureRequirements:Dynamic;
+	public var gesturesForFailureRequirements:;
 
 	@:native("textInteractionForMode")
 	overload public static function textInteractionForMode(mode:UITextInteractionMode):UITextInteraction;
@@ -37,7 +37,7 @@ extern class UITextInteraction extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

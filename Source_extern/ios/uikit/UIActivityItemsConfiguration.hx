@@ -31,16 +31,16 @@ implements cpp.objc.Protocol<UIActivityItemsConfigurationReading>
 	public var void:Dynamic;
 
 	@:native("activityItemsConfigurationWithObjects")
-	overload public static function activityItemsConfigurationWithObjects(objects:Dynamic):UIActivityItemsConfiguration;
+	overload public static function activityItemsConfigurationWithObjects(objects:NSArray):UIActivityItemsConfiguration;
 
 	@:native("activityItemsConfigurationWithItemProviders")
-	overload public static function activityItemsConfigurationWithItemProviders(itemProviders:Dynamic):UIActivityItemsConfiguration;
+	overload public static function activityItemsConfigurationWithItemProviders(itemProviders:NSArray):UIActivityItemsConfiguration;
 
 	@:native("initWithObjects")
-	overload public function initWithObjects(objects:Dynamic):UIActivityItemsConfiguration;
+	overload public function initWithObjects(objects:NSArray):UIActivityItemsConfiguration;
 
 	@:native("initWithItemProviders")
-	overload public function initWithItemProviders(itemProviders:Dynamic):UIActivityItemsConfiguration;
+	overload public function initWithItemProviders(itemProviders:NSArray):UIActivityItemsConfiguration;
 
 	@:native("init")
 	overload public function init():UIActivityItemsConfiguration;
@@ -67,7 +67,7 @@ implements cpp.objc.Protocol<UIActivityItemsConfigurationReading>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

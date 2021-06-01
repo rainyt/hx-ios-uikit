@@ -14,7 +14,7 @@ implements cpp.objc.Protocol<UITextInputTokenizer>
 	overload public static function autorelease():UITextInputStringTokenizer;
 
 	@:native("initWithTextInput")
-	overload public function initWithTextInput(textInput:Dynamic):UITextInputStringTokenizer;
+	overload public function initWithTextInput(textInput:UIResponder):UITextInputStringTokenizer;
 
 	@:native("rangeEnclosingPosition:withGranularity:inDirection")
 	overload public function rangeEnclosingPosition_withGranularity_inDirection(position:UITextPosition, withGranularity:UITextGranularity, inDirection:Int):UITextRange;
@@ -38,7 +38,7 @@ implements cpp.objc.Protocol<UITextInputTokenizer>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

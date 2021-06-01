@@ -25,7 +25,7 @@ extern interface UITextFieldDelegate{
 	overload public function textFieldDidEndEditing(textField:UITextField):Void;
 
 	@:native("textFieldDidEndEditing:reason")
-	overload public function textFieldDidEndEditing_reason(textField:UITextField, reason:Dynamic):Void;
+	overload public function textFieldDidEndEditing_reason(textField:UITextField, reason:UITextFieldDidEndEditingReason):Void;
 
 	@:native("textField:shouldChangeCharactersInRange:replacementString")
 	overload public function textField_shouldChangeCharactersInRange_replacementString(textField:UITextField, shouldChangeCharactersInRange:Dynamic, replacementString:NSString):Bool;

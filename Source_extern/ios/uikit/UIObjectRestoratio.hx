@@ -12,7 +12,7 @@ extern interface UIObjectRestoratio{
 	overload public static function autorelease():UIObjectRestoratio;
 
 	@:native("objectWithRestorationIdentifierPath:coder")
-	overload public static function objectWithRestorationIdentifierPath_coder(identifierComponents:Dynamic, coder:NSCoder):Dynamic;
+	overload public static function objectWithRestorationIdentifierPath_coder(identifierComponents:NSArray, coder:NSCoder):Dynamic;
 
 
 }

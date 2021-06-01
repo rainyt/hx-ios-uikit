@@ -35,10 +35,10 @@ extern class UINavigationItem extends NSObject
 	public var backButtonDisplayMode:UINavigationItemBackButtonDisplayMode;
 
 	@:native("setLeftBarButtonItems:animated")
-	overload public function setLeftBarButtonItems_animated(items:Dynamic, animated:Bool):Void;
+	overload public function setLeftBarButtonItems_animated(items:NSArray, animated:Bool):Void;
 
 	@:native("setRightBarButtonItems:animated")
-	overload public function setRightBarButtonItems_animated(items:Dynamic, animated:Bool):Void;
+	overload public function setRightBarButtonItems_animated(items:NSArray, animated:Bool):Void;
 
 	@:native("leftItemsSupplementBackButton")
 	public var leftItemsSupplementBackButton:Bool;
@@ -74,7 +74,7 @@ extern class UINavigationItem extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

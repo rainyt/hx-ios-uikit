@@ -80,14 +80,14 @@ extern class UIImage extends NSObject
 	@:native("size")
 	public var size:CGSize;
 
-	// @:native("CGImage")
-	// public var CGImage:Dynamic;
+	@:native("CGImage")
+	public var CGImage:Dynamic;
 
-	// @:native("CGImage")
-	// overload public function CGImage():Dynamic;
+	@:native("CGImage")
+	overload public function CGImage():Dynamic;
 
-	// @:native("CIImage")
-	// public var CIImage:CIImage;
+	@:native("CIImage")
+	public var CIImage:CIImage;
 
 	@:native("imageOrientation")
 	public var imageOrientation:UIImageOrientation;
@@ -108,10 +108,10 @@ extern class UIImage extends NSObject
 	overload public static function animatedResizableImageNamed_capInsets_resizingMode_duration(name:NSString, capInsets:Dynamic, resizingMode:UIImageResizingMode, duration:Dynamic):UIImage;
 
 	@:native("animatedImageWithImages:duration")
-	overload public static function animatedImageWithImages_duration(images:Dynamic, duration:Dynamic):UIImage;
+	overload public static function animatedImageWithImages_duration(images:NSArray, duration:Dynamic):UIImage;
 
 	@:native("images")
-	public var images:Dynamic;
+	public var images:NSArray;
 
 	@:native("duration")
 	public var duration:Dynamic;
@@ -228,7 +228,7 @@ extern class UIImage extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

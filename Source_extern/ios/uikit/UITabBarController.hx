@@ -5,6 +5,7 @@ import cpp.objc.NSString;
 @:native("UITabBarController")
 @:include("UIKit/UIKit.h")
 extern class UITabBarController extends UIViewController
+implements cpp.objc.Protocol<UITabBarDelegate>
 {
 
 	@:native("alloc")
@@ -14,7 +15,7 @@ extern class UITabBarController extends UIViewController
 	overload public static function autorelease():UITabBarController;
 
 	@:native("setViewControllers:animated")
-	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;
+	overload public function setViewControllers_animated(viewControllers:NSArray, animated:Bool):Void;
 
 	@:native("selectedViewController")
 	public var selectedViewController:UIViewController;
@@ -30,6 +31,21 @@ extern class UITabBarController extends UIViewController
 
 	@:native("delegate")
 	public var delegate:Dynamic;
+
+	@:native("tabBar:didSelectItem")
+	overload public function tabBar_didSelectItem(tabBar:UITabBar, didSelectItem:UITabBarItem):Void;
+
+	@:native("tabBar:willBeginCustomizingItems")
+	overload public function tabBar_willBeginCustomizingItems(tabBar:UITabBar, willBeginCustomizingItems:NSArray):Void;
+
+	@:native("tabBar:didBeginCustomizingItems")
+	overload public function tabBar_didBeginCustomizingItems(tabBar:UITabBar, didBeginCustomizingItems:NSArray):Void;
+
+	@:native("tabBar:willEndCustomizingItems:changed")
+	overload public function tabBar_willEndCustomizingItems_changed(tabBar:UITabBar, willEndCustomizingItems:NSArray, changed:Bool):Void;
+
+	@:native("tabBar:didEndCustomizingItems:changed")
+	overload public function tabBar_didEndCustomizingItems_changed(tabBar:UITabBar, didEndCustomizingItems:NSArray, changed:Bool):Void;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
@@ -59,7 +75,7 @@ extern class UITabBarController extends UIViewController
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -176,7 +192,7 @@ extern class UITabBarController extends UIViewController
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

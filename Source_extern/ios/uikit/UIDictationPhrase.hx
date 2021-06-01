@@ -16,7 +16,7 @@ extern class UIDictationPhrase extends NSObject{
 	public var text:NSString;
 
 	@:native("alternativeInterpretations")
-	public var alternativeInterpretations:Dynamic;
+	public var alternativeInterpretations:NSArray;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -28,7 +28,7 @@ extern class UIDictationPhrase extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

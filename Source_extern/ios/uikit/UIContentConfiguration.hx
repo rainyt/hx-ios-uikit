@@ -12,7 +12,7 @@ extern interface UIContentConfiguration{
 	overload public static function autorelease():UIContentConfiguration;
 
 	@:native("makeContentView")
-	overload public function makeContentView():Dynamic;
+	overload public function makeContentView():UIView;
 
 	@:native("updatedConfigurationForState")
 	overload public function updatedConfigurationForState(state:Dynamic):UIContentConfiguration;

@@ -83,7 +83,7 @@ implements cpp.objc.Protocol<UIContentConfiguration>
 	public var textToSecondaryTextVerticalPadding:Float;
 
 	@:native("makeContentView")
-	overload public function makeContentView():Dynamic;
+	overload public function makeContentView():UIView;
 
 	@:native("updatedConfigurationForState")
 	overload public function updatedConfigurationForState(state:Dynamic):UIContentConfiguration;
@@ -98,7 +98,7 @@ implements cpp.objc.Protocol<UIContentConfiguration>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

@@ -14,8 +14,14 @@ class ObjcType {
 			return "Bool";
 		if (t == "void")
 			return "Void";
-		if (t.indexOf("(") != -1 || t.indexOf("<") != -1 || t.indexOf("id") != -1)
+
+		if (t.indexOf("(") != -1 || t.indexOf("id") == 0) {
 			return "Dynamic";
+		}
+		
+		if (t.indexOf("<") != -1) {
+			return t.substr(0, t.indexOf("<"));
+		}
 
 		if (t == "CGFloat")
 			return "Float";

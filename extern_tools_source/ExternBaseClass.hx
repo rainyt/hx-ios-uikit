@@ -96,7 +96,7 @@ class ExternBaseClass {
 			className = null;
 			return;
 		}
-		this.className = StringTools.replace(pclassName, " ", "");
+		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""),null);
 		if (defcall != null)
 			defcall(this);
 		funcAndAttr.push({

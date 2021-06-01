@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.objc.CGRect;
 import cpp.objc.NSString;
 import ios.objc.CGSize;
+import cpp.objc.NSDictionary;
 import ios.objc.CGPoint;
 @:objc
 @:native("UISegmentedControl")
@@ -26,7 +27,7 @@ extern class UISegmentedControl extends UIControl
 	overload public function initWithItems(items:Dynamic):UISegmentedControl;
 
 	@:native("initWithFrame:actions")
-	overload public function initWithFrame_actions(frame:CGRect, actions:Dynamic):UISegmentedControl;
+	overload public function initWithFrame_actions(frame:CGRect, actions:NSArray):UISegmentedControl;
 
 	@:native("insertSegmentWithAction:atIndex:animated")
 	overload public function insertSegmentWithAction_atIndex_animated(action:UIAction, atIndex:Int, animated:Bool):Void;
@@ -113,10 +114,10 @@ extern class UISegmentedControl extends UIControl
 	overload public function dividerImageForLeftSegmentState_rightSegmentState_barMetrics(leftState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics):UIImage;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes_forState(attributes:Dynamic, forState:UIControlState):Void;
+	overload public function setTitleTextAttributes_forState(attributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("titleTextAttributesForState")
-	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
+	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
 
 	@:native("setContentPositionAdjustment:forSegmentType:barMetrics")
 	overload public function setContentPositionAdjustment_forSegmentType_barMetrics(adjustment:Dynamic, forSegmentType:UISegmentedControlSegment, barMetrics:UIBarMetrics):Void;
@@ -155,7 +156,7 @@ extern class UISegmentedControl extends UIControl
 	overload public function removeActionForIdentifier_forControlEvents(actionIdentifier:Dynamic, forControlEvents:UIControlEvents):Void;
 
 	@:native("actionsForTarget:forControlEvent")
-	overload public function actionsForTarget_forControlEvent(target:Dynamic, forControlEvent:UIControlEvents):Dynamic;
+	overload public function actionsForTarget_forControlEvent(target:Dynamic, forControlEvent:UIControlEvents):NSArray;
 
 	@:native("enumerateEventHandlers")
 	overload public function enumerateEventHandlers(iterator:Dynamic):Void;
@@ -344,7 +345,7 @@ extern class UISegmentedControl extends UIControl
 	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -374,13 +375,13 @@ extern class UISegmentedControl extends UIControl
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:Dynamic):Void;
+	overload public function addConstraints(constraints:NSArray):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:Dynamic):Void;
+	overload public function removeConstraints(constraints:NSArray):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -425,13 +426,13 @@ extern class UISegmentedControl extends UIControl
 	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
-	overload public function addLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("removeLayoutGuide")
-	overload public function removeLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;

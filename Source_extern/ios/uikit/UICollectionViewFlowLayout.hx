@@ -58,7 +58,7 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	overload public function invalidateLayout():Void;
 
 	@:native("invalidateLayoutWithContext")
-	overload public function invalidateLayoutWithContext(context:Dynamic):Void;
+	overload public function invalidateLayoutWithContext(context:UICollectionViewLayoutInvalidationContext):Void;
 
 	@:native("registerClass:forDecorationViewOfKind")
 	overload public function registerClass_forDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:NSString):Void;
@@ -76,7 +76,7 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	overload public function prepareLayout():Void;
 
 	@:native("layoutAttributesForElementsInRect")
-	overload public function layoutAttributesForElementsInRect(rect:CGRect):Dynamic;
+	overload public function layoutAttributesForElementsInRect(rect:CGRect):NSArray;
 
 	@:native("layoutAttributesForItemAtIndexPath")
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
@@ -91,13 +91,13 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect):Bool;
 
 	@:native("invalidationContextForBoundsChange")
-	overload public function invalidationContextForBoundsChange(newBounds:CGRect):Dynamic;
+	overload public function invalidationContextForBoundsChange(newBounds:CGRect):UICollectionViewLayoutInvalidationContext;
 
 	@:native("shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes")
 	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Bool;
 
 	@:native("invalidationContextForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function invalidationContextForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Dynamic;
+	overload public function invalidationContextForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutInvalidationContext;
 
 	@:native("targetContentOffsetForProposedContentOffset:withScrollingVelocity")
 	overload public function targetContentOffsetForProposedContentOffset_withScrollingVelocity(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint):CGPoint;
@@ -106,7 +106,7 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint):CGPoint;
 
 	@:native("prepareForCollectionViewUpdates")
-	overload public function prepareForCollectionViewUpdates(updateItems:Dynamic):Void;
+	overload public function prepareForCollectionViewUpdates(updateItems:NSArray):Void;
 
 	@:native("finalizeCollectionViewUpdates")
 	overload public function finalizeCollectionViewUpdates():Void;
@@ -145,16 +145,16 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
 
 	@:native("indexPathsToDeleteForSupplementaryViewOfKind")
-	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):NSArray;
 
 	@:native("indexPathsToDeleteForDecorationViewOfKind")
-	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:NSString):NSArray;
 
 	@:native("indexPathsToInsertForSupplementaryViewOfKind")
-	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:NSString):NSArray;
 
 	@:native("indexPathsToInsertForDecorationViewOfKind")
-	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):NSArray;
 
 	@:native("targetIndexPathForInteractivelyMovingItem:withPosition")
 	overload public function targetIndexPathForInteractivelyMovingItem_withPosition(previousIndexPath:Dynamic, withPosition:CGPoint):Dynamic;
@@ -163,10 +163,10 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	overload public function layoutAttributesForInteractivelyMovingItemAtIndexPath_withTargetPosition(indexPath:Dynamic, withTargetPosition:CGPoint):UICollectionViewLayoutAttributes;
 
 	@:native("invalidationContextForInteractivelyMovingItems:withTargetPosition:previousIndexPaths:previousPosition")
-	overload public function invalidationContextForInteractivelyMovingItems_withTargetPosition_previousIndexPaths_previousPosition(targetIndexPaths:Dynamic, withTargetPosition:CGPoint, previousIndexPaths:Dynamic, previousPosition:CGPoint):Dynamic;
+	overload public function invalidationContextForInteractivelyMovingItems_withTargetPosition_previousIndexPaths_previousPosition(targetIndexPaths:NSArray, withTargetPosition:CGPoint, previousIndexPaths:NSArray, previousPosition:CGPoint):UICollectionViewLayoutInvalidationContext;
 
 	@:native("invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:previousIndexPaths:movementCancelled")
-	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths_previousIndexPaths_movementCancelled(indexPaths:Dynamic, previousIndexPaths:Dynamic, movementCancelled:Bool):Dynamic;
+	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths_previousIndexPaths_movementCancelled(indexPaths:NSArray, previousIndexPaths:NSArray, movementCancelled:Bool):UICollectionViewLayoutInvalidationContext;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -178,7 +178,7 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

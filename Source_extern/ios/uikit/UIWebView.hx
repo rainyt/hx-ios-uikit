@@ -1,13 +1,14 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
-import ios.objc.CGRect;
 import ios.objc.CGPoint;
+import ios.objc.CGRect;
 import ios.objc.CGSize;
 @:objc
 @:native("UIWebView")
 @:include("UIKit/UIKit.h")
 extern class UIWebView extends UIView
+implements cpp.objc.Protocol<UIScrollViewDelegate>
 {
 
 	@:native("alloc")
@@ -17,7 +18,7 @@ extern class UIWebView extends UIView
 	overload public static function autorelease():UIWebView;
 
 	@:native("delegate")
-	public var delegate:Dynamic;
+	public var delegate:;
 
 	@:native("scrollView")
 	public var scrollView:UIScrollView;
@@ -102,6 +103,48 @@ extern class UIWebView extends UIView
 
 	@:native("allowsLinkPreview")
 	public var allowsLinkPreview:Bool;
+
+	@:native("scrollViewDidScroll")
+	overload public function scrollViewDidScroll(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewDidZoom")
+	overload public function scrollViewDidZoom(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewWillBeginDragging")
+	overload public function scrollViewWillBeginDragging(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewWillEndDragging:withVelocity:targetContentOffset")
+	overload public function scrollViewWillEndDragging_withVelocity_targetContentOffset(scrollView:UIScrollView, withVelocity:CGPoint, targetContentOffset:Dynamic):Void;
+
+	@:native("scrollViewDidEndDragging:willDecelerate")
+	overload public function scrollViewDidEndDragging_willDecelerate(scrollView:UIScrollView, willDecelerate:Bool):Void;
+
+	@:native("scrollViewWillBeginDecelerating")
+	overload public function scrollViewWillBeginDecelerating(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewDidEndDecelerating")
+	overload public function scrollViewDidEndDecelerating(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewDidEndScrollingAnimation")
+	overload public function scrollViewDidEndScrollingAnimation(scrollView:UIScrollView):Void;
+
+	@:native("viewForZoomingInScrollView")
+	overload public function viewForZoomingInScrollView(scrollView:UIScrollView):UIView;
+
+	@:native("scrollViewWillBeginZooming:withView")
+	overload public function scrollViewWillBeginZooming_withView(scrollView:UIScrollView, withView:UIView):Void;
+
+	@:native("scrollViewDidEndZooming:withView:atScale")
+	overload public function scrollViewDidEndZooming_withView_atScale(scrollView:UIScrollView, withView:UIView, atScale:Float):Void;
+
+	@:native("scrollViewShouldScrollToTop")
+	overload public function scrollViewShouldScrollToTop(scrollView:UIScrollView):Bool;
+
+	@:native("scrollViewDidScrollToTop")
+	overload public function scrollViewDidScrollToTop(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewDidChangeAdjustedContentInset")
+	overload public function scrollViewDidChangeAdjustedContentInset(scrollView:UIScrollView):Void;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
@@ -263,7 +306,7 @@ extern class UIWebView extends UIView
 	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -293,13 +336,13 @@ extern class UIWebView extends UIView
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:Dynamic):Void;
+	overload public function addConstraints(constraints:NSArray):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:Dynamic):Void;
+	overload public function removeConstraints(constraints:NSArray):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -344,13 +387,13 @@ extern class UIWebView extends UIView
 	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
-	overload public function addLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("removeLayoutGuide")
-	overload public function removeLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;

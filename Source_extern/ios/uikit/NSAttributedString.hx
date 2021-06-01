@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSDictionary;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
@@ -15,16 +16,16 @@ extern class NSAttributedString{
 	overload public static function autorelease():NSAttributedString;
 
 	@:native("initWithURL:options:documentAttributes:error")
-	overload public function initWithURL_options_documentAttributes_error(url:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):NSAttributedString;
+	overload public function initWithURL_options_documentAttributes_error(url:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):NSAttributedString;
 
 	@:native("initWithData:options:documentAttributes:error")
-	overload public function initWithData_options_documentAttributes_error(data:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):NSAttributedString;
+	overload public function initWithData_options_documentAttributes_error(data:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):NSAttributedString;
 
 	@:native("dataFromRange:documentAttributes:error")
-	overload public function dataFromRange_documentAttributes_error(range:Dynamic, documentAttributes:Dynamic, error:Dynamic):Dynamic;
+	overload public function dataFromRange_documentAttributes_error(range:Dynamic, documentAttributes:NSDictionary, error:Dynamic):Dynamic;
 
 	@:native("fileWrapperFromRange:documentAttributes:error")
-	overload public function fileWrapperFromRange_documentAttributes_error(range:Dynamic, documentAttributes:Dynamic, error:Dynamic):Dynamic;
+	overload public function fileWrapperFromRange_documentAttributes_error(range:Dynamic, documentAttributes:NSDictionary, error:Dynamic):Dynamic;
 
 	@:native("containsAttachmentsInRange")
 	overload public function containsAttachmentsInRange(range:Dynamic):Bool;

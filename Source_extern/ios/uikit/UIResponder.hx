@@ -33,31 +33,31 @@ implements cpp.objc.Protocol<UIResponderStandardEditActions>
 	public var isFirstResponder:Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBegan_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBegan_withEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMoved_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMoved_withEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEnded_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEnded_withEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelled_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelled_withEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
+	overload public function touchesEstimatedPropertiesUpdated(touches:NSSet):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBegan_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBegan_withEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChanged_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChanged_withEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEnded_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEnded_withEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelled_withEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
 	overload public function motionBegan_withEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
@@ -90,7 +90,7 @@ implements cpp.objc.Protocol<UIResponderStandardEditActions>
 	public var editingInteractionConfiguration:UIEditingInteractionConfiguration;
 
 	@:native("keyCommands")
-	public var keyCommands:Dynamic;
+	public var keyCommands:NSArray;
 
 	@:native("inputView")
 	public var inputView:UIView;
@@ -180,7 +180,7 @@ implements cpp.objc.Protocol<UIResponderStandardEditActions>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

@@ -16,16 +16,16 @@ extern class UITextChecker extends NSObject{
 	overload public function rangeOfMisspelledWordInString_range_startingAt_wrap_language(stringToCheck:NSString, range:Dynamic, startingAt:Int, wrap:Bool, language:NSString):Dynamic;
 
 	@:native("guessesForWordRange:inString:language")
-	overload public function guessesForWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):Dynamic;
+	overload public function guessesForWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):NSArray;
 
 	@:native("completionsForPartialWordRange:inString:language")
-	overload public function completionsForPartialWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):Dynamic;
+	overload public function completionsForPartialWordRange_inString_language(range:Dynamic, inString:NSString, language:NSString):NSArray;
 
 	@:native("ignoreWord")
 	overload public function ignoreWord(wordToIgnore:NSString):Void;
 
 	@:native("ignoredWords")
-	public var ignoredWords:Dynamic;
+	public var ignoredWords:NSArray;
 
 	@:native("learnWord")
 	overload public static function learnWord(word:NSString):Void;
@@ -37,7 +37,7 @@ extern class UITextChecker extends NSObject{
 	overload public static function unlearnWord(word:NSString):Void;
 
 	@:native("availableLanguages")
-	overload public static function availableLanguages():Dynamic;
+	overload public static function availableLanguages():NSArray;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -49,7 +49,7 @@ extern class UITextChecker extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

@@ -134,7 +134,7 @@ class ExternBaseClass:
         if (pclassName == ""):
             self.className = None
             return
-        self.className = StringTools.replace(pclassName," ","")
+        self.className = ObjcType.toType(StringTools.replace(pclassName," ",""),None)
         if (defcall is not None):
             defcall(self)
         _this = self.funcAndAttr
@@ -494,6 +494,10 @@ class ExternHFile:
             d.parentClassName = t2.className
             _gthis.typedefs.h[t2.className] = d
         t = ExternBaseClass(data,self,_hx_local_0)
+        _this = t.className
+        startIndex = None
+        if (((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) != -1):
+            raise haxe_Exception.thrown(("异常" + HxOverrides.stringOrNull(t.className)))
         t.saveFile = (((HxOverrides.stringOrNull(self.haxeSaveDir) + "/") + HxOverrides.stringOrNull(t.className)) + ".hx")
         t.pkg = self.haxePkg
         if (t.className is not None):
@@ -1142,20 +1146,18 @@ class ObjcType:
         if (t == "void"):
             return "Void"
         tmp = None
-        tmp1 = None
         startIndex = None
         if (((t.find("(") if ((startIndex is None)) else HxString.indexOfImpl(t,"(",startIndex))) == -1):
             startIndex = None
-            tmp1 = (((t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex))) != -1)
-        else:
-            tmp1 = True
-        if (not tmp1):
-            startIndex = None
-            tmp = (((t.find("id") if ((startIndex is None)) else HxString.indexOfImpl(t,"id",startIndex))) != -1)
+            tmp = (((t.find("id") if ((startIndex is None)) else HxString.indexOfImpl(t,"id",startIndex))) == 0)
         else:
             tmp = True
         if tmp:
             return "Dynamic"
+        startIndex = None
+        if (((t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex))) != -1):
+            startIndex = None
+            return HxString.substr(t,0,(t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex)))
         if (t == "CGFloat"):
             return "Float"
         if ((t == "NSUInteger") or ((t == "NSInteger"))):

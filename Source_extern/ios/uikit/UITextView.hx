@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.objc.CGRect;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
+import cpp.objc.NSDictionary;
 import ios.objc.CGSize;
 @:objc
 @:native("UITextView")
@@ -111,10 +112,10 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function offsetFromPosition_toPosition(from:UITextPosition, toPosition:UITextPosition):Int;
 
 	@:native("inputDelegate")
-	public var inputDelegate:Dynamic;
+	public var inputDelegate:;
 
 	@:native("tokenizer")
-	public var tokenizer:Dynamic;
+	public var tokenizer:;
 
 	@:native("positionWithinRange:farthestInDirection")
 	overload public function positionWithinRange_farthestInDirection(range:UITextRange, farthestInDirection:UITextLayoutDirection):UITextPosition;
@@ -135,7 +136,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function caretRectForPosition(position:UITextPosition):CGRect;
 
 	@:native("selectionRectsForRange")
-	overload public function selectionRectsForRange(range:UITextRange):Dynamic;
+	overload public function selectionRectsForRange(range:UITextRange):NSArray;
 
 	@:native("closestPositionToPoint")
 	overload public function closestPositionToPoint(point:CGPoint):UITextPosition;
@@ -150,7 +151,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function shouldChangeTextInRange_replacementText(range:UITextRange, replacementText:NSString):Bool;
 
 	@:native("textStylingAtPosition:inDirection")
-	overload public function textStylingAtPosition_inDirection(position:UITextPosition, inDirection:UITextStorageDirection):Dynamic;
+	overload public function textStylingAtPosition_inDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSDictionary;
 
 	@:native("positionWithinRange:atCharacterOffset")
 	overload public function positionWithinRange_atCharacterOffset(range:UITextRange, atCharacterOffset:Int):UITextPosition;
@@ -165,7 +166,7 @@ implements cpp.objc.Protocol<UITextInput>
 	public var selectionAffinity:UITextStorageDirection;
 
 	@:native("insertDictationResult")
-	overload public function insertDictationResult(dictationResult:Dynamic):Void;
+	overload public function insertDictationResult(dictationResult:NSArray):Void;
 
 	@:native("dictationRecordingDidEnd")
 	overload public function dictationRecordingDidEnd():Void;
@@ -183,7 +184,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function removeDictationResultPlaceholder_willInsertResult(placeholder:Dynamic, willInsertResult:Bool):Void;
 
 	@:native("insertText:alternatives:style")
-	overload public function insertText_alternatives_style(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
+	overload public function insertText_alternatives_style(text:NSString, alternatives:NSArray, style:UITextAlternativeStyle):Void;
 
 	@:native("setAttributedMarkedText:selectedRange")
 	overload public function setAttributedMarkedText_selectedRange(markedText:NSAttributedString, selectedRange:Dynamic):Void;
@@ -216,7 +217,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function flashScrollIndicators():Void;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBegin_withEvent_inContentView(touches:NSSet, withEvent:UIEvent, inContentView:UIView):Bool;
 
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
@@ -384,7 +385,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -414,13 +415,13 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:Dynamic):Void;
+	overload public function addConstraints(constraints:NSArray):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:Dynamic):Void;
+	overload public function removeConstraints(constraints:NSArray):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -465,13 +466,13 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
-	overload public function addLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("removeLayoutGuide")
-	overload public function removeLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;

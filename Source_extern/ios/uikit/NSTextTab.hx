@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSDictionary;
 @:objc
 @:native("NSTextTab")
 @:include("UIKit/UIKit.h")
@@ -16,7 +17,7 @@ extern class NSTextTab extends NSObject
 	overload public static function columnTerminatorsForLocale(aLocale:Dynamic):Dynamic;
 
 	@:native("initWithTextAlignment:location:options")
-	overload public function initWithTextAlignment_location_options(alignment:NSTextAlignment, location:Float, options:Dynamic):NSTextTab;
+	overload public function initWithTextAlignment_location_options(alignment:NSTextAlignment, location:Float, options:NSDictionary):NSTextTab;
 
 	@:native("alignment")
 	public var alignment:NSTextAlignment;
@@ -25,7 +26,7 @@ extern class NSTextTab extends NSObject
 	public var location:Float;
 
 	@:native("options")
-	public var options:Dynamic;
+	public var options:NSDictionary;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -37,7 +38,7 @@ extern class NSTextTab extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

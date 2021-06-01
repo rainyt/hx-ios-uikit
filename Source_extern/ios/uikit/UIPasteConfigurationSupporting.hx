@@ -12,10 +12,10 @@ extern interface UIPasteConfigurationSupporting{
 	overload public static function autorelease():UIPasteConfigurationSupporting;
 
 	@:native("pasteItemProviders")
-	overload public function pasteItemProviders(itemProviders:Dynamic):Void;
+	overload public function pasteItemProviders(itemProviders:NSArray):Void;
 
 	@:native("canPasteItemProviders")
-	overload public function canPasteItemProviders(itemProviders:Dynamic):Bool;
+	overload public function canPasteItemProviders(itemProviders:NSArray):Bool;
 
 
 }

@@ -13,7 +13,7 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	overload public static function autorelease():UICollisionBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):UICollisionBehavior;
+	overload public function initWithItems(items:NSArray):UICollisionBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -46,7 +46,7 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	overload public function removeAllBoundaries():Void;
 
 	@:native("collisionDelegate")
-	public var collisionDelegate:Dynamic;
+	public var collisionDelegate:;
 
 	@:native("addChildBehavior")
 	overload public function addChildBehavior(behavior:UIDynamicBehavior):Void;
@@ -67,7 +67,7 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("NSLayoutConstraint")
 @:include("UIKit/UIKit.h")
@@ -13,7 +14,7 @@ extern class NSLayoutConstraint extends NSObject{
 	overload public static function autorelease():NSLayoutConstraint;
 
 	@:native("constraintsWithVisualFormat:options:metrics:views")
-	overload public static function constraintsWithVisualFormat_options_metrics_views(format:NSString, options:NSLayoutFormatOptions, metrics:Dynamic, views:Dynamic):Dynamic;
+	overload public static function constraintsWithVisualFormat_options_metrics_views(format:NSString, options:NSLayoutFormatOptions, metrics:NSDictionary, views:NSDictionary):NSArray;
 
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
 	overload public static function constraintWithItem_attribute_relatedBy_toItem_attribute_multiplier_constant(view1:Dynamic, attribute:NSLayoutAttribute, relatedBy:NSLayoutRelation, toItem:Dynamic, attribute:NSLayoutAttribute, multiplier:Float, constant:Float):NSLayoutConstraint;
@@ -49,10 +50,10 @@ extern class NSLayoutConstraint extends NSObject{
 	public var active:Bool;
 
 	@:native("activateConstraints")
-	overload public static function activateConstraints(constraints:Dynamic):Void;
+	overload public static function activateConstraints(constraints:NSArray):Void;
 
 	@:native("deactivateConstraints")
-	overload public static function deactivateConstraints(constraints:Dynamic):Void;
+	overload public static function deactivateConstraints(constraints:NSArray):Void;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -64,7 +65,7 @@ extern class NSLayoutConstraint extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

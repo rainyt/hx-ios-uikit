@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
 @:objc
 @:native("UIPageViewController")
@@ -13,16 +14,16 @@ extern class UIPageViewController extends UIViewController{
 	overload public static function autorelease():UIPageViewController;
 
 	@:native("initWithTransitionStyle:navigationOrientation:options")
-	overload public function initWithTransitionStyle_navigationOrientation_options(style:UIPageViewControllerTransitionStyle, navigationOrientation:UIPageViewControllerNavigationOrientation, options:Dynamic):UIPageViewController;
+	overload public function initWithTransitionStyle_navigationOrientation_options(style:UIPageViewControllerTransitionStyle, navigationOrientation:UIPageViewControllerNavigationOrientation, options:NSDictionary):UIPageViewController;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIPageViewController;
 
 	@:native("delegate")
-	public var delegate:Dynamic;
+	public var delegate:;
 
 	@:native("dataSource")
-	public var dataSource:Dynamic;
+	public var dataSource:;
 
 	@:native("transitionStyle")
 	public var transitionStyle:UIPageViewControllerTransitionStyle;
@@ -37,13 +38,13 @@ extern class UIPageViewController extends UIViewController{
 	public var doubleSided:Bool;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:Dynamic;
+	public var gestureRecognizers:NSArray;
 
 	@:native("viewControllers")
-	public var viewControllers:Dynamic;
+	public var viewControllers:NSArray;
 
 	@:native("setViewControllers:direction:animated:completion")
-	overload public function setViewControllers_direction_animated_completion(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
+	overload public function setViewControllers_direction_animated_completion(viewControllers:NSArray, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
@@ -70,7 +71,7 @@ extern class UIPageViewController extends UIViewController{
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -187,7 +188,7 @@ extern class UIPageViewController extends UIViewController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

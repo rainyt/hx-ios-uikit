@@ -16,16 +16,16 @@ extern class UIPasteConfiguration extends NSObject
 	overload public function init():UIPasteConfiguration;
 
 	@:native("initWithAcceptableTypeIdentifiers")
-	overload public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):UIPasteConfiguration;
+	overload public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:NSArray):UIPasteConfiguration;
 
 	@:native("addAcceptableTypeIdentifiers")
-	overload public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):Void;
+	overload public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:NSArray):Void;
 
 	@:native("initWithTypeIdentifiersForAcceptingClass")
-	overload public function initWithTypeIdentifiersForAcceptingClass(aClass:Dynamic):UIPasteConfiguration;
+	overload public function initWithTypeIdentifiersForAcceptingClass(aClass:Class):UIPasteConfiguration;
 
 	@:native("addTypeIdentifiersForAcceptingClass")
-	overload public function addTypeIdentifiersForAcceptingClass(aClass:Dynamic):Void;
+	overload public function addTypeIdentifiersForAcceptingClass(aClass:Class):Void;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -37,7 +37,7 @@ extern class UIPasteConfiguration extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

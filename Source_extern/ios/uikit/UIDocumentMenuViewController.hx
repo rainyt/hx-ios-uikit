@@ -13,7 +13,7 @@ extern class UIDocumentMenuViewController extends UIViewController{
 	overload public static function autorelease():UIDocumentMenuViewController;
 
 	@:native("initWithDocumentTypes:inMode")
-	overload public function initWithDocumentTypes_inMode(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
+	overload public function initWithDocumentTypes_inMode(allowedUTIs:NSArray, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
 
 	@:native("initWithURL:inMode")
 	overload public function initWithURL_inMode(url:Dynamic, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
@@ -52,7 +52,7 @@ extern class UIDocumentMenuViewController extends UIViewController{
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -169,7 +169,7 @@ extern class UIDocumentMenuViewController extends UIViewController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

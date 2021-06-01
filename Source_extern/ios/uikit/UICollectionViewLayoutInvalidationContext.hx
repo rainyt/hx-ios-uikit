@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import cpp.objc.NSDictionary;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 @:objc
@@ -21,22 +22,22 @@ extern class UICollectionViewLayoutInvalidationContext extends NSObject{
 	public var invalidateDataSourceCounts:Bool;
 
 	@:native("invalidateItemsAtIndexPaths")
-	overload public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;
+	overload public function invalidateItemsAtIndexPaths(indexPaths:NSArray):Void;
 
 	@:native("invalidateSupplementaryElementsOfKind:atIndexPaths")
-	overload public function invalidateSupplementaryElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateSupplementaryElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:NSArray):Void;
 
 	@:native("invalidateDecorationElementsOfKind:atIndexPaths")
-	overload public function invalidateDecorationElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateDecorationElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:NSArray):Void;
 
 	@:native("invalidatedItemIndexPaths")
-	public var invalidatedItemIndexPaths:Dynamic;
+	public var invalidatedItemIndexPaths:NSArray;
 
 	@:native("invalidatedSupplementaryIndexPaths")
-	public var invalidatedSupplementaryIndexPaths:Dynamic;
+	public var invalidatedSupplementaryIndexPaths:NSDictionary;
 
 	@:native("invalidatedDecorationIndexPaths")
-	public var invalidatedDecorationIndexPaths:Dynamic;
+	public var invalidatedDecorationIndexPaths:NSDictionary;
 
 	@:native("contentOffsetAdjustment")
 	public var contentOffsetAdjustment:CGPoint;
@@ -57,7 +58,7 @@ extern class UICollectionViewLayoutInvalidationContext extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

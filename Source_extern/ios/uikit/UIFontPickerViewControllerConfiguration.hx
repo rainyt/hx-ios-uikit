@@ -22,7 +22,7 @@ extern class UIFontPickerViewControllerConfiguration extends NSObject
 	public var filteredTraits:UIFontDescriptorSymbolicTraits;
 
 	@:native("filterPredicateForFilteredLanguages")
-	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):Dynamic;
+	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:NSArray):Dynamic;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -34,7 +34,7 @@ extern class UIFontPickerViewControllerConfiguration extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

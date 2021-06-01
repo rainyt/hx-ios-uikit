@@ -27,7 +27,7 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	public var collectionViewLayout:UICollectionViewLayout;
 
 	@:native("dataSource")
-	public var dataSource:Dynamic;
+	public var dataSource:;
 
 	@:native("prefetchDataSource")
 	public var prefetchDataSource:Dynamic;
@@ -36,10 +36,10 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	public var prefetchingEnabled:Bool;
 
 	@:native("dragDelegate")
-	public var dragDelegate:Dynamic;
+	public var dragDelegate:;
 
 	@:native("dropDelegate")
-	public var dropDelegate:Dynamic;
+	public var dropDelegate:;
 
 	@:native("dragInteractionEnabled")
 	public var dragInteractionEnabled:Bool;
@@ -84,7 +84,7 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	public var allowsMultipleSelection:Bool;
 
 	@:native("indexPathsForSelectedItems")
-	public var indexPathsForSelectedItems:Dynamic;
+	public var indexPathsForSelectedItems:NSArray;
 
 	@:native("selectItemAtIndexPath:animated:scrollPosition")
 	overload public function selectItemAtIndexPath_animated_scrollPosition(indexPath:Dynamic, animated:Bool, scrollPosition:UICollectionViewScrollPosition):Void;
@@ -135,19 +135,19 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function cellForItemAtIndexPath(indexPath:Dynamic):UICollectionViewCell;
 
 	@:native("visibleCells")
-	public var visibleCells:Dynamic;
+	public var visibleCells:NSArray;
 
 	@:native("indexPathsForVisibleItems")
-	public var indexPathsForVisibleItems:Dynamic;
+	public var indexPathsForVisibleItems:NSArray;
 
 	@:native("supplementaryViewForElementKind:atIndexPath")
 	overload public function supplementaryViewForElementKind_atIndexPath(elementKind:NSString, atIndexPath:Dynamic):UICollectionReusableView;
 
 	@:native("visibleSupplementaryViewsOfKind")
-	overload public function visibleSupplementaryViewsOfKind(elementKind:NSString):Dynamic;
+	overload public function visibleSupplementaryViewsOfKind(elementKind:NSString):NSArray;
 
 	@:native("indexPathsForVisibleSupplementaryElementsOfKind")
-	overload public function indexPathsForVisibleSupplementaryElementsOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsForVisibleSupplementaryElementsOfKind(elementKind:NSString):NSArray;
 
 	@:native("scrollToItemAtIndexPath:atScrollPosition:animated")
 	overload public function scrollToItemAtIndexPath_atScrollPosition_animated(indexPath:Dynamic, atScrollPosition:UICollectionViewScrollPosition, animated:Bool):Void;
@@ -165,13 +165,13 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function moveSection_toSection(section:Int, toSection:Int):Void;
 
 	@:native("insertItemsAtIndexPaths")
-	overload public function insertItemsAtIndexPaths(indexPaths:Dynamic):Void;
+	overload public function insertItemsAtIndexPaths(indexPaths:NSArray):Void;
 
 	@:native("deleteItemsAtIndexPaths")
-	overload public function deleteItemsAtIndexPaths(indexPaths:Dynamic):Void;
+	overload public function deleteItemsAtIndexPaths(indexPaths:NSArray):Void;
 
 	@:native("reloadItemsAtIndexPaths")
-	overload public function reloadItemsAtIndexPaths(indexPaths:Dynamic):Void;
+	overload public function reloadItemsAtIndexPaths(indexPaths:NSArray):Void;
 
 	@:native("moveItemAtIndexPath:toIndexPath")
 	overload public function moveItemAtIndexPath_toIndexPath(indexPath:Dynamic, toIndexPath:Dynamic):Void;
@@ -240,7 +240,7 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function flashScrollIndicators():Void;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBegin_withEvent_inContentView(touches:NSSet, withEvent:UIEvent, inContentView:UIView):Bool;
 
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
@@ -408,7 +408,7 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -438,13 +438,13 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:Dynamic):Void;
+	overload public function addConstraints(constraints:NSArray):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:Dynamic):Void;
+	overload public function removeConstraints(constraints:NSArray):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -489,13 +489,13 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
-	overload public function addLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("removeLayoutGuide")
-	overload public function removeLayoutGuide(layoutGuide:Dynamic):Void;
+	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;

@@ -4,6 +4,7 @@ import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CGAffineTransform;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("NSLayoutManager")
 @:include("UIKit/UIKit.h")
@@ -26,7 +27,7 @@ extern class NSLayoutManager extends NSObject
 	public var textStorage:NSTextStorage;
 
 	@:native("textContainers")
-	public var textContainers:Dynamic;
+	public var textContainers:NSArray;
 
 	@:native("addTextContainer")
 	overload public function addTextContainer(container:NSTextContainer):Void;
@@ -41,7 +42,7 @@ extern class NSLayoutManager extends NSObject
 	overload public function textContainerChangedGeometry(container:NSTextContainer):Void;
 
 	@:native("delegate")
-	public var delegate:Dynamic;
+	public var delegate:;
 
 	@:native("showsInvisibleCharacters")
 	public var showsInvisibleCharacters:Bool;
@@ -245,7 +246,7 @@ extern class NSLayoutManager extends NSObject
 	overload public function drawGlyphsForGlyphRange_atPoint(glyphsToShow:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("showCGGlyphs:positions:count:font:textMatrix:attributes:inContext")
-	overload public function showCGGlyphs_positions_count_font_textMatrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Int, font:UIFont, textMatrix:CGAffineTransform, attributes:Dynamic, inContext:Dynamic):Void;
+	overload public function showCGGlyphs_positions_count_font_textMatrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Int, font:UIFont, textMatrix:CGAffineTransform, attributes:NSDictionary, inContext:Dynamic):Void;
 
 	@:native("fillBackgroundRectArray:count:forCharacterRange:color")
 	overload public function fillBackgroundRectArray_count_forCharacterRange_color(rectArray:Dynamic, count:Int, forCharacterRange:Dynamic, color:UIColor):Void;
@@ -278,7 +279,7 @@ extern class NSLayoutManager extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

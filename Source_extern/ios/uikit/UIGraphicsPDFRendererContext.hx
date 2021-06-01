@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.CGRect;
+import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
 import ios.objc.CGBlendMode;
@@ -22,7 +23,7 @@ extern class UIGraphicsPDFRendererContext extends UIGraphicsRendererContext{
 	overload public function beginPage():Void;
 
 	@:native("beginPageWithBounds:pageInfo")
-	overload public function beginPageWithBounds_pageInfo(bounds:CGRect, pageInfo:Dynamic):Void;
+	overload public function beginPageWithBounds_pageInfo(bounds:CGRect, pageInfo:NSDictionary):Void;
 
 	@:native("setURL:forRect")
 	overload public function setURL_forRect(url:Dynamic, forRect:CGRect):Void;
@@ -58,7 +59,7 @@ extern class UIGraphicsPDFRendererContext extends UIGraphicsRendererContext{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

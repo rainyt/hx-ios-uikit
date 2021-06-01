@@ -13,10 +13,10 @@ extern interface UICollectionViewDragDelegate{
 	overload public static function autorelease():UICollectionViewDragDelegate;
 
 	@:native("collectionView:itemsForBeginningDragSession:atIndexPath")
-	overload public function collectionView_itemsForBeginningDragSession_atIndexPath(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:Dynamic):Dynamic;
+	overload public function collectionView_itemsForBeginningDragSession_atIndexPath(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:Dynamic):NSArray;
 
 	@:native("collectionView:itemsForAddingToDragSession:atIndexPath:point")
-	overload public function collectionView_itemsForAddingToDragSession_atIndexPath_point(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:Dynamic, point:CGPoint):Dynamic;
+	overload public function collectionView_itemsForAddingToDragSession_atIndexPath_point(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:Dynamic, point:CGPoint):NSArray;
 
 	@:native("collectionView:dragPreviewParametersForItemAtIndexPath")
 	overload public function collectionView_dragPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dragPreviewParametersForItemAtIndexPath:Dynamic):UIDragPreviewParameters;

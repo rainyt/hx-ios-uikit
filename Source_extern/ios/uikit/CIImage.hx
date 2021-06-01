@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import cpp.objc.NSDictionary;
 @:objc
 @:native("CIImage")
 @:include("UIKit/UIKit.h")
@@ -15,7 +16,7 @@ extern class CIImage{
 	overload public function initWithImage(image:UIImage):CIImage;
 
 	@:native("initWithImage:options")
-	overload public function initWithImage_options(image:UIImage, options:Dynamic):CIImage;
+	overload public function initWithImage_options(image:UIImage, options:NSDictionary):CIImage;
 
 
 }

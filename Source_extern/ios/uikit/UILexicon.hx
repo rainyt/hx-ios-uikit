@@ -13,7 +13,7 @@ extern class UILexicon extends NSObject
 	overload public static function autorelease():UILexicon;
 
 	@:native("entries")
-	public var entries:Dynamic;
+	public var entries:NSArray;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -25,7 +25,7 @@ extern class UILexicon extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

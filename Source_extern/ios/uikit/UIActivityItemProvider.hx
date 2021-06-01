@@ -16,10 +16,10 @@ implements cpp.objc.Protocol<UIActivityItemSource>
 	overload public static function autorelease():UIActivityItemProvider;
 
 	@:native("init")
-	overload public function init():Dynamic;
+	overload public function init():UIActivityItemProvider;
 
 	@:native("initWithPlaceholderItem")
-	overload public function initWithPlaceholderItem(placeholderItem:Dynamic):Dynamic;
+	overload public function initWithPlaceholderItem(placeholderItem:Dynamic):UIActivityItemProvider;
 
 	@:native("placeholderItem")
 	public var placeholderItem:Dynamic;

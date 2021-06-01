@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import cpp.objc.NSString;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("UIBarButtonItem")
 @:include("UIKit/UIKit.h")
@@ -119,22 +120,22 @@ extern class UIBarButtonItem extends UIBarItem
 	public var buttonGroup:UIBarButtonItemGroup;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes_forState(attributes:Dynamic, forState:UIControlState):Void;
+	overload public function setTitleTextAttributes_forState(attributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("titleTextAttributesForState")
-	overload public function titleTextAttributesForState(state:UIControlState):Dynamic;
+	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
 
 	@:native("appearance")
 	overload public static function appearance():UIAppearance;
 
 	@:native("appearanceWhenContainedInInstancesOfClasses")
-	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:Dynamic):UIAppearance;
+	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIAppearance;
 
 	@:native("appearanceForTraitCollection")
 	overload public static function appearanceForTraitCollection(trait:UITraitCollection):UIAppearance;
 
 	@:native("appearanceForTraitCollection:whenContainedInInstancesOfClasses")
-	overload public static function appearanceForTraitCollection_whenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
+	overload public static function appearanceForTraitCollection_whenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:NSArray):UIAppearance;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -146,7 +147,7 @@ extern class UIBarButtonItem extends UIBarItem
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;
