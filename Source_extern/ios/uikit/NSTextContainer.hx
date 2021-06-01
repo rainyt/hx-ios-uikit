@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSSecureCoding;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
 @:objc

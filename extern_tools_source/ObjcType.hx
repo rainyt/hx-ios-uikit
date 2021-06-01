@@ -1,5 +1,5 @@
 class ObjcType {
-	public static function toType(t:String, typedefs:Map<String, ExternTypedefClass>):String {
+	public static function toType(t:String, typedefs:Map<String, ExternTypedefClass>, noDynamic:Bool = false):String {
 		if (t == null)
 			return t;
 
@@ -16,10 +16,14 @@ class ObjcType {
 			return "Void";
 
 		if (t.indexOf("(") != -1 || t.indexOf("id") == 0) {
+			if(noDynamic)
+				return t=t.substr(0,t.indexOf("("));
 			return "Dynamic";
 		}
 
 		if (t.indexOf("<") != -1) {
+			if(noDynamic)
+				return t=t.substr(0,t.indexOf("<"));
 			var t = t.substr(0, t.indexOf("<"));
 			switch (t) {
 				case "NSSet", "NSArray", "", "Class":
@@ -40,7 +44,7 @@ class ObjcType {
 		}
 
 		var i = ObjcImport.hasClass(t);
-		if (!i) {
+		if (!i && !noDynamic) {
 			return "Dynamic";
 		}
 		return t;

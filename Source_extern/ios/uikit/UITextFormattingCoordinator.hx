@@ -31,6 +31,12 @@ implements cpp.objc.Protocol<UIFontPickerViewControllerDelegate>
 	@:native("toggleFontPanel")
 	overload public static function toggleFontPanel(sender:Dynamic):Void;
 
+	@:native("fontPickerViewControllerDidCancel")
+	overload public function fontPickerViewControllerDidCancel(viewController:UIFontPickerViewController):Void;
+
+	@:native("fontPickerViewControllerDidPickFont")
+	overload public function fontPickerViewControllerDidPickFont(viewController:UIFontPickerViewController):Void;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

@@ -59,7 +59,7 @@ class ExternBaseClass {
 		var harray = _hdata.split("\n");
 		var pclassName = harray[0];
 		isProtocol = Std.isOfType(this, ExternProtocolClass);
-		pclassName = pclassName.substr(pclassName.indexOf("@interface") + 10);
+		pclassName = pclassName.substr(pclassName.indexOf(isProtocol ? "@protocol" : "@interface") + (isProtocol ? 9 : 10));
 		if (pclassName.indexOf("(") != -1) {
 			// 只有分类关系，没有继承关系
 			pclassName = pclassName.substr(0, pclassName.indexOf("("));
@@ -96,7 +96,7 @@ class ExternBaseClass {
 			className = null;
 			return;
 		}
-		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""), null);
+		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""), null, true);
 		if (defcall != null)
 			defcall(this);
 		funcAndAttr.push({
@@ -148,8 +148,8 @@ class ExternBaseClass {
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					if (!hasFuncOrAttr(value, true)) {
-						if (this.className == "UITextField")
-							trace(this.className, "追加方法：", t.className, value);
+						// if (this.className == "UITextField")
+							// trace(this.className, "追加方法：", t.className, value);
 						funcAndAttr.push(value);
 					}
 				case ExternBaseClassType.PROPERTY:

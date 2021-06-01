@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.NSCopying;
+import ios.objc.NSSecureCoding;
 @:objc
 @:native("UITraitCollection")
 @:include("UIKit/UIKit.h")

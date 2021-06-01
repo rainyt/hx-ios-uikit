@@ -81,6 +81,9 @@ implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 	@:native("adjustsLetterSpacingToFitWidth")
 	public var adjustsLetterSpacingToFitWidth:Bool;
 
+	@:native("adjustsFontForContentSizeCategory")
+	public var adjustsFontForContentSizeCategory:Bool;
+
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 

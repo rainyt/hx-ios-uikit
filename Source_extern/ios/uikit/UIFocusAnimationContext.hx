@@ -1,0 +1,18 @@
+package ios.uikit;
+
+@:objc
+@:native("UIFocusAnimationContext")
+@:include("UIKit/UIKit.h")
+extern interface UIFocusAnimationContext{
+
+	@:native("alloc")
+	overload public static function alloc():UIFocusAnimationContext;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIFocusAnimationContext;
+
+	@:native("duration")
+	public var duration:Dynamic;
+
+
+}

@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.NSCopying;
+import ios.objc.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
 import cpp.objc.NSDictionary;

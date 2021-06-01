@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.objc.NSCopying;
+import ios.objc.NSSecureCoding;
 import ios.objc.CGRect;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;

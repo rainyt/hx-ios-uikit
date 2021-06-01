@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSSecureCoding;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
@@ -124,14 +125,14 @@ implements cpp.objc.Protocol<NSCopying>
 	@:native("colorWithAlphaComponent")
 	overload public function colorWithAlphaComponent(alpha:Float):UIColor;
 
-	@:native("CGColor")
-	public var CGColor:Dynamic;
+	// @:native("CGColor")
+	// public var CGColor:Dynamic;
 
-	@:native("CGColor")
-	overload public function CGColor():Dynamic;
+	// @:native("CGColor")
+	// overload public function CGColor():Dynamic;
 
-	@:native("CIColor")
-	public var CIColor:CIColor;
+	// @:native("CIColor")
+	// public var CIColor:CIColor;
 
 	@:native("colorNamed")
 	overload public static function colorNamed(name:NSString):UIColor;

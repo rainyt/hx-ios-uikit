@@ -47,7 +47,7 @@ class ExternHFile {
 					if (value.indexOf("@end") != -1) {
 						isRead = false;
 						isProtocol = false;
-						defClass(read.join("\n"));
+						defProtocol(read.join("\n"));
 						read = [];
 					}
 				} else if (value.indexOf("@interface") != -1) {
@@ -104,7 +104,6 @@ class ExternHFile {
 	 */
 	public function defProtocol(data:String):Void {
 		var t = new ExternProtocolClass(data, this);
-		// trace("协议：", t.className);
 		t.saveFile = haxeSaveDir + "/" + t.className + ".hx";
 		t.pkg = haxePkg;
 		ExternTools.protocol.set(t.className, t);
@@ -121,7 +120,7 @@ class ExternHFile {
 			throw "异常" + t.className;
 		// 	t.saveFile = haxeSaveDir + "/" + t.className.substr(0, t.className.lastIndexOf("<"));
 		// else
-			t.saveFile = haxeSaveDir + "/" + t.className + ".hx";
+		t.saveFile = haxeSaveDir + "/" + t.className + ".hx";
 		t.pkg = haxePkg;
 		if (t.className != null) {
 			if (ExternTools.classDefine.exists(t.className)) {

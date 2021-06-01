@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
+import ios.objc.NSSecureCoding;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("NSTextTab")

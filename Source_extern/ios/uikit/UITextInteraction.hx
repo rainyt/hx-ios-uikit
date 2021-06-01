@@ -28,6 +28,15 @@ implements cpp.objc.Protocol<UIInteraction>
 	@:native("textInteractionForMode")
 	overload public static function textInteractionForMode(mode:UITextInteractionMode):UITextInteraction;
 
+	@:native("view")
+	public var view:UIView;
+
+	@:native("willMoveToView")
+	overload public function willMoveToView(view:UIView):Void;
+
+	@:native("didMoveToView")
+	overload public function didMoveToView(view:UIView):Void;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.objc.CGRect;
 import ios.objc.CGSize;
+import cpp.objc.NSString;
 @:objc
 @:native("UIPopoverPresentationController")
 @:include("UIKit/UIKit.h")
@@ -81,6 +82,21 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 
 	@:native("willTransitionToTraitCollection:withTransitionCoordinator")
 	overload public function willTransitionToTraitCollection_withTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
+
+	@:native("setNeedsFocusUpdate")
+	overload public function setNeedsFocusUpdate():Void;
+
+	@:native("updateFocusIfNeeded")
+	overload public function updateFocusIfNeeded():Void;
+
+	@:native("shouldUpdateFocusInContext")
+	overload public function shouldUpdateFocusInContext(context:UIFocusUpdateContext):Bool;
+
+	@:native("didUpdateFocusInContext:withAnimationCoordinator")
+	overload public function didUpdateFocusInContext_withAnimationCoordinator(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
+
+	@:native("soundIdentifierForFocusUpdateInContext")
+	overload public function soundIdentifierForFocusUpdateInContext(context:UIFocusUpdateContext):NSString;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

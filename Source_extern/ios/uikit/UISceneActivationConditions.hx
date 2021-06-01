@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSSecureCoding;
 @:objc
 @:native("UISceneActivationConditions")
 @:include("UIKit/UIKit.h")

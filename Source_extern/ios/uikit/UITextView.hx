@@ -205,6 +205,9 @@ implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 	@:native("endFloatingCursor")
 	overload public function endFloatingCursor():Void;
 
+	@:native("adjustsFontForContentSizeCategory")
+	public var adjustsFontForContentSizeCategory:Bool;
+
 	@:native("adjustedContentInsetDidChange")
 	overload public function adjustedContentInsetDidChange():Void;
 

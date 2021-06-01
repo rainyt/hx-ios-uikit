@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.objc.CGRect;
 import ios.objc.CGSize;
+import cpp.objc.NSString;
 @:objc
 @:native("UIPresentationController")
 @:include("UIKit/UIKit.h")
@@ -98,6 +99,30 @@ implements cpp.objc.Protocol<UIFocusEnvironment>
 
 	@:native("willTransitionToTraitCollection:withTransitionCoordinator")
 	overload public function willTransitionToTraitCollection_withTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
+
+	@:native("parentFocusEnvironment")
+	public var parentFocusEnvironment:Dynamic;
+
+	@:native("focusItemContainer")
+	public var focusItemContainer:Dynamic;
+
+	@:native("setNeedsFocusUpdate")
+	overload public function setNeedsFocusUpdate():Void;
+
+	@:native("updateFocusIfNeeded")
+	overload public function updateFocusIfNeeded():Void;
+
+	@:native("shouldUpdateFocusInContext")
+	overload public function shouldUpdateFocusInContext(context:UIFocusUpdateContext):Bool;
+
+	@:native("didUpdateFocusInContext:withAnimationCoordinator")
+	overload public function didUpdateFocusInContext_withAnimationCoordinator(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
+
+	@:native("soundIdentifierForFocusUpdateInContext")
+	overload public function soundIdentifierForFocusUpdateInContext(context:UIFocusUpdateContext):NSString;
+
+	@:native("preferredFocusedView")
+	public var preferredFocusedView:UIView;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

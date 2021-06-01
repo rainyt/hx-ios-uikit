@@ -25,6 +25,15 @@ implements cpp.objc.Protocol<UIInteraction>
 	@:native("invalidate")
 	overload public function invalidate():Void;
 
+	@:native("view")
+	public var view:UIView;
+
+	@:native("willMoveToView")
+	overload public function willMoveToView(view:UIView):Void;
+
+	@:native("didMoveToView")
+	overload public function didMoveToView(view:UIView):Void;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

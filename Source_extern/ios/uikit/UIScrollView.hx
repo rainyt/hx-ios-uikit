@@ -9,7 +9,7 @@ import ios.objc.CGRect;
 @:include("UIKit/UIKit.h")
 extern class UIScrollView extends UIView
 implements cpp.objc.Protocol<NSCoding>
-// implements cpp.objc.Protocol<UIFocusItemScrollableContainer>
+implements cpp.objc.Protocol<UIFocusItemScrollableContainer>
 {
 
 	@:native("alloc")
@@ -161,6 +161,9 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("refreshControl")
 	public var refreshControl:UIRefreshControl;
+
+	@:native("visibleSize")
+	public var visibleSize:CGSize;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

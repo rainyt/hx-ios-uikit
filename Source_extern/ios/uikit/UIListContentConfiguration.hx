@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSSecureCoding;
 @:objc
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")

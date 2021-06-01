@@ -28,6 +28,15 @@ implements cpp.objc.Protocol<UIInteraction>
 	@:native("interactionEffect")
 	public var interactionEffect:Dynamic;
 
+	@:native("view")
+	public var view:UIView;
+
+	@:native("willMoveToView")
+	overload public function willMoveToView(view:UIView):Void;
+
+	@:native("didMoveToView")
+	overload public function didMoveToView(view:UIView):Void;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

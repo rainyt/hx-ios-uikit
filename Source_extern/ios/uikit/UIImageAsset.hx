@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSSecureCoding;
 @:objc
 @:native("UIImageAsset")
 @:include("UIKit/UIKit.h")

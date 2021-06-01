@@ -25,6 +25,15 @@ implements cpp.objc.Protocol<UIInteraction>
 	@:native("allowsSimultaneousDropSessions")
 	public var allowsSimultaneousDropSessions:Bool;
 
+	@:native("view")
+	public var view:UIView;
+
+	@:native("willMoveToView")
+	overload public function willMoveToView(view:UIView):Void;
+
+	@:native("didMoveToView")
+	overload public function didMoveToView(view:UIView):Void;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 
