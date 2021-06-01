@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITraitEnvironment;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UITraitEnvironment")
 @:include("UIKit/UIKit.h")

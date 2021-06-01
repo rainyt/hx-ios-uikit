@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITextDroppable;
+import ios.uikit.UIDropInteraction;
 @:objc
 @:native("UITextDroppable")
 @:include("UIKit/UIKit.h")

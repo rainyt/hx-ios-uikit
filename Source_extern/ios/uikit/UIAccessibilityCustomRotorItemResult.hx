@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityCustomRotorItemResult;
+import ios.uikit.UITextRange;
 @:objc
 @:native("UIAccessibilityCustomRotorItemResult")
 @:include("UIKit/UIKit.h")

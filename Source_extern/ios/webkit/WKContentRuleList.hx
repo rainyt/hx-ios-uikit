@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKContentRuleList;
 @:objc
 @:native("WKContentRuleList")
 @:include("UIKit/UIKit.h")

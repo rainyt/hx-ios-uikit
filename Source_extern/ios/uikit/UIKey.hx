@@ -1,8 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIKey;
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
 import cpp.objc.NSString;
+import ios.uikit.UIKeyModifierFlags;
 @:objc
 @:native("UIKey")
 @:include("UIKit/UIKit.h")

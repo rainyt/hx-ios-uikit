@@ -1,6 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UICubicTimingParameters;
+import ios.uikit.UITimingCurveProvider;
+import ios.uikit.UIViewAnimationCurve;
 import ios.objc.CGPoint;
+import ios.uikit.NSCoder;
+import ios.uikit.UITimingCurveType;
+import ios.uikit.UISpringTimingParameters;
 @:objc
 @:native("UICubicTimingParameters")
 @:include("UIKit/UIKit.h")

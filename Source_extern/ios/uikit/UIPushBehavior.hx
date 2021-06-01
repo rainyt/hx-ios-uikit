@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIPushBehavior;
+import ios.uikit.UIPushBehaviorMode;
 import ios.objc.CGVector;
+import ios.uikit.UIDynamicBehavior;
+import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UIPushBehavior")
 @:include("UIKit/UIKit.h")

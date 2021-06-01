@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIViewControllerAnimatedTransitioning;
 @:objc
 @:native("UIViewControllerAnimatedTransitioning")
 @:include("UIKit/UIKit.h")

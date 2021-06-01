@@ -1,7 +1,18 @@
 package ios.uikit;
 
+import ios.uikit.UIPresentationController;
+import ios.uikit.UIAppearanceContainer;
+import ios.uikit.UITraitEnvironment;
+import ios.uikit.UIContentContainer;
+import ios.uikit.UIFocusEnvironment;
+import ios.uikit.UIViewController;
+import ios.uikit.UIModalPresentationStyle;
+import ios.uikit.UIView;
+import ios.uikit.UITraitCollection;
 import ios.objc.CGRect;
 import ios.objc.CGSize;
+import ios.uikit.UIFocusUpdateContext;
+import ios.uikit.UIFocusAnimationCoordinator;
 import cpp.objc.NSString;
 @:objc
 @:native("UIPresentationController")

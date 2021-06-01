@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIImpactFeedbackGenerator;
+import ios.uikit.UIImpactFeedbackStyle;
 @:objc
 @:native("UIImpactFeedbackGenerator")
 @:include("UIKit/UIKit.h")

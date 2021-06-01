@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutGroup;
 import ios.objc.NSCopying;
+import ios.uikit.NSCollectionLayoutSize;
+import ios.uikit.NSCollectionLayoutItem;
 import cpp.objc.NSString;
 @:objc
 @:native("NSCollectionLayoutGroup")

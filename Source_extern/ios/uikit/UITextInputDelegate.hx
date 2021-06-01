@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextInputDelegate;
 @:objc
 @:native("UITextInputDelegate")
 @:include("UIKit/UIKit.h")

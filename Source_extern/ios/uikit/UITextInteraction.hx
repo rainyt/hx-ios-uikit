@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UITextInteraction;
+import ios.uikit.UIInteraction;
+import ios.uikit.UITextInteractionMode;
+import ios.uikit.UIView;
 @:objc
 @:native("UITextInteraction")
 @:include("UIKit/UIKit.h")

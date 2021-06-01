@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIResponderStandardEditActions;
 @:objc
 @:native("UIResponderStandardEditActions")
 @:include("UIKit/UIKit.h")

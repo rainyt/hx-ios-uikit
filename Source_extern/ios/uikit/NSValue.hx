@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSValue;
 import ios.objc.CGPoint;
 import ios.objc.CGVector;
 import ios.objc.CGSize;

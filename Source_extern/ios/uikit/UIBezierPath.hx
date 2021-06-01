@@ -1,10 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UIBezierPath;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
 import ios.objc.CGRect;
+import ios.uikit.UIRectCorner;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
+import ios.uikit.NSCoder;
 import ios.objc.CGAffineTransform;
 import ios.objc.CGLineCap;
 import ios.objc.CGLineJoin;

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIActionSheetDelegate;
 @:objc
 @:native("UIActionSheetDelegate")
 @:include("UIKit/UIKit.h")

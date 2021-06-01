@@ -1,5 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDiffableDataSource;
+import ios.uikit.UICollectionViewDataSource;
+import ios.uikit.UICollectionView;
+import ios.uikit.NSDiffableDataSourceSnapshot;
+import ios.uikit.NSDiffableDataSourceSectionSnapshot;
+import ios.uikit.UICollectionViewCell;
+import ios.uikit.UICollectionReusableView;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewDiffableDataSource")

@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIViewControllerTransitioningDelegate;
+import ios.uikit.UIViewController;
+import ios.uikit.UIPresentationController;
 @:objc
 @:native("UIViewControllerTransitioningDelegate")
 @:include("UIKit/UIKit.h")

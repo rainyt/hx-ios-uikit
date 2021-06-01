@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITextRange;
+import ios.uikit.UITextPosition;
 @:objc
 @:native("UITextRange")
 @:include("UIKit/UIKit.h")

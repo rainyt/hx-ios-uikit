@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIDocumentBrowserAction;
 import cpp.objc.NSString;
+import ios.uikit.UIDocumentBrowserActionAvailability;
+import ios.uikit.UIImage;
 @:objc
 @:native("UIDocumentBrowserAction")
 @:include("UIKit/UIKit.h")

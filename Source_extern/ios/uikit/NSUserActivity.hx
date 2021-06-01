@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSUserActivity;
 @:objc
 @:native("NSUserActivity")
 @:include("UIKit/UIKit.h")

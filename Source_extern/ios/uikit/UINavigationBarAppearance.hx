@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UINavigationBarAppearance;
+import ios.uikit.UIImage;
+import ios.uikit.UIBarAppearance;
+import ios.uikit.UIUserInterfaceIdiom;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UINavigationBarAppearance")
 @:include("UIKit/UIKit.h")

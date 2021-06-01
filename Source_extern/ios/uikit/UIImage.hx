@@ -1,11 +1,23 @@
 package ios.uikit;
 
+import ios.uikit.UIImage;
 import ios.objc.NSSecureCoding;
 import cpp.objc.NSString;
+import ios.uikit.UIImageConfiguration;
+import ios.uikit.UITraitCollection;
+import ios.uikit.NSBundle;
+import ios.uikit.UIImageOrientation;
+import ios.uikit.CIImage;
 import ios.objc.CGSize;
+import ios.uikit.UIImageResizingMode;
 import ios.objc.CGPoint;
 import ios.objc.CGBlendMode;
 import ios.objc.CGRect;
+import ios.uikit.UIImageRenderingMode;
+import ios.uikit.UIGraphicsImageRendererFormat;
+import ios.uikit.UIImageAsset;
+import ios.uikit.UIImageSymbolConfiguration;
+import ios.uikit.UIColor;
 @:objc
 @:native("UIImage")
 @:include("UIKit/UIKit.h")

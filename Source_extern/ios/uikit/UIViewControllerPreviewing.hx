@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIViewControllerPreviewing;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIView;
 import ios.objc.CGRect;
 @:objc
 @:native("UIViewControllerPreviewing")

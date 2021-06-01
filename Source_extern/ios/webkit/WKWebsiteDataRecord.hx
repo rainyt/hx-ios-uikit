@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKWebsiteDataRecord;
 @:objc
 @:native("WKWebsiteDataRecord")
 @:include("UIKit/UIKit.h")

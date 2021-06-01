@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKProcessPool;
 import ios.objc.NSSecureCoding;
 @:objc
 @:native("WKProcessPool")

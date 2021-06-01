@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIViewControllerTransitionCoordinator;
 @:objc
 @:native("UIViewControllerTransitionCoordinator")
 @:include("UIKit/UIKit.h")

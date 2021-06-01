@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UITextPasteDelegate;
+import ios.uikit.NSAttributedString;
+import ios.uikit.UITextRange;
 @:objc
 @:native("UITextPasteDelegate")
 @:include("UIKit/UIKit.h")

@@ -1,7 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UIPrintInfo;
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
+import ios.uikit.NSCoder;
+import ios.uikit.UIPrintInfoOutputType;
+import ios.uikit.UIPrintInfoOrientation;
+import ios.uikit.UIPrintInfoDuplex;
 @:objc
 @:native("UIPrintInfo")
 @:include("UIKit/UIKit.h")

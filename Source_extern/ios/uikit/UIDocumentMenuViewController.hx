@@ -1,6 +1,19 @@
 package ios.uikit;
 
+import ios.uikit.UIDocumentMenuViewController;
+import ios.uikit.UIDocumentPickerMode;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
+import ios.uikit.UIImage;
+import ios.uikit.UIDocumentMenuOrder;
+import ios.uikit.UIViewController;
+import ios.uikit.NSBundle;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UIDocumentMenuViewController")
 @:include("UIKit/UIKit.h")

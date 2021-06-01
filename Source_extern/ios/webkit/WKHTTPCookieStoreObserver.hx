@@ -1,5 +1,7 @@
 package ios.webkit;
 
+import ios.webkit.WKHTTPCookieStoreObserver;
+import ios.webkit.WKHTTPCookieStore;
 @:objc
 @:native("WKHTTPCookieStoreObserver")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern interface WKHTTPCookieStoreObserver{
 	overload public static function autorelease():WKHTTPCookieStoreObserver;
 
 	@:native("cookiesDidChangeInCookieStore")
-	overload public function cookiesDidChangeInCookieStore(cookieStore:Dynamic):Void;
+	overload public function cookiesDidChangeInCookieStore(cookieStore:WKHTTPCookieStore):Void;
 
 
 }

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIColorPickerViewControllerDelegate;
+import ios.uikit.UIColorPickerViewController;
 @:objc
 @:native("UIColorPickerViewControllerDelegate")
 @:include("UIKit/UIKit.h")

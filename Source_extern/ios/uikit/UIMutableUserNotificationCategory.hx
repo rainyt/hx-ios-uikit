@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIMutableUserNotificationCategory;
+import ios.uikit.UIUserNotificationActionContext;
+import ios.uikit.UIUserNotificationCategory;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIMutableUserNotificationCategory")
 @:include("UIKit/UIKit.h")

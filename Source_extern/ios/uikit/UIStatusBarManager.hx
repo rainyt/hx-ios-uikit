@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIStatusBarManager;
+import ios.uikit.UIStatusBarStyle;
 import ios.objc.CGRect;
 @:objc
 @:native("UIStatusBarManager")

@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIImageAsset;
 import ios.objc.NSSecureCoding;
+import ios.uikit.NSCoder;
+import ios.uikit.UIImage;
+import ios.uikit.UIImageConfiguration;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIImageAsset")
 @:include("UIKit/UIKit.h")

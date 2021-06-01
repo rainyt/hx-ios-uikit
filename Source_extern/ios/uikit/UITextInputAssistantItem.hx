@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextInputAssistantItem;
 @:objc
 @:native("UITextInputAssistantItem")
 @:include("UIKit/UIKit.h")

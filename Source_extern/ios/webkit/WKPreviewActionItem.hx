@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKPreviewActionItem;
 @:objc
 @:native("WKPreviewActionItem")
 @:include("UIKit/UIKit.h")

@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDataSource;
+import ios.uikit.UITableView;
+import ios.uikit.UITableViewCell;
 import cpp.objc.NSString;
+import ios.uikit.UITableViewCellEditingStyle;
 @:objc
 @:native("UITableViewDataSource")
 @:include("UIKit/UIKit.h")

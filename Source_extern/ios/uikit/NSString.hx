@@ -5,6 +5,8 @@ import ios.objc.CGSize;
 import cpp.objc.NSDictionary;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
+import ios.uikit.NSStringDrawingOptions;
+import ios.uikit.NSStringDrawingContext;
 @:objc
 @:native("NSString")
 @:include("UIKit/UIKit.h")

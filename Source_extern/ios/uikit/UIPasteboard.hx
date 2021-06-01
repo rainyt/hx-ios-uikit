@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPasteboard;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 @:objc

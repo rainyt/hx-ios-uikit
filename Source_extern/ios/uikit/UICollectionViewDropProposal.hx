@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDropProposal;
+import ios.uikit.UIDropOperation;
+import ios.uikit.UICollectionViewDropIntent;
+import ios.uikit.UIDropProposal;
 @:objc
 @:native("UICollectionViewDropProposal")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIAccelerometer;
 @:objc
 @:native("UIAccelerometer")
 @:include("UIKit/UIKit.h")

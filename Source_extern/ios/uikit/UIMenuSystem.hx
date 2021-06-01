@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIMenuSystem;
 @:objc
 @:native("UIMenuSystem")
 @:include("UIKit/UIKit.h")

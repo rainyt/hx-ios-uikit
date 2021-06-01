@@ -1,6 +1,21 @@
 package ios.uikit;
 
+import ios.uikit.UINavigationController;
+import ios.uikit.UIViewController;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UINavigationBar;
+import ios.uikit.UIToolbar;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIPanGestureRecognizer;
+import ios.uikit.UITapGestureRecognizer;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UINavigationController")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UISceneDelegate;
+import ios.uikit.UIScene;
+import ios.uikit.UISceneSession;
+import ios.uikit.UISceneConnectionOptions;
+import ios.uikit.NSUserActivity;
 import cpp.objc.NSString;
 @:objc
 @:native("UISceneDelegate")

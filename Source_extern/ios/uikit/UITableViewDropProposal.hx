@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDropProposal;
+import ios.uikit.UIDropOperation;
+import ios.uikit.UITableViewDropIntent;
+import ios.uikit.UIDropProposal;
 @:objc
 @:native("UITableViewDropProposal")
 @:include("UIKit/UIKit.h")

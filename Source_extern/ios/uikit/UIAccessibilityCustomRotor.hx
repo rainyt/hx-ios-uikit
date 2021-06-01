@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityCustomRotor;
 import cpp.objc.NSString;
+import ios.uikit.NSAttributedString;
+import ios.uikit.UIAccessibilityCustomSystemRotorType;
 @:objc
 @:native("UIAccessibilityCustomRotor")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutDimension;
 import ios.objc.NSCopying;
 @:objc
 @:native("NSCollectionLayoutDimension")

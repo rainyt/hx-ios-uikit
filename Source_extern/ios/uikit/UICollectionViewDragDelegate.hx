@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDragDelegate;
+import ios.uikit.UICollectionView;
 import ios.objc.CGPoint;
+import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UICollectionViewDragDelegate")
 @:include("UIKit/UIKit.h")

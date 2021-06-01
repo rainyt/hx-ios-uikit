@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UISearchDisplayController;
+import ios.uikit.UISearchBar;
+import ios.uikit.UIViewController;
+import ios.uikit.UITableView;
+import ios.uikit.UINavigationItem;
 @:objc
 @:native("UISearchDisplayController")
 @:include("UIKit/UIKit.h")

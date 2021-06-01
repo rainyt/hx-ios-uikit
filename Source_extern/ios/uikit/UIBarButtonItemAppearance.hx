@@ -1,7 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIBarButtonItemAppearance;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UIBarButtonItemStyle;
+import ios.uikit.NSCoder;
+import ios.uikit.UIBarButtonItemStateAppearance;
 @:objc
 @:native("UIBarButtonItemAppearance")
 @:include("UIKit/UIKit.h")

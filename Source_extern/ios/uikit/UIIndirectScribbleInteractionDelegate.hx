@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIIndirectScribbleInteractionDelegate;
+import ios.uikit.UIIndirectScribbleInteraction;
 import ios.objc.CGRect;
 @:objc
 @:native("UIIndirectScribbleInteractionDelegate")

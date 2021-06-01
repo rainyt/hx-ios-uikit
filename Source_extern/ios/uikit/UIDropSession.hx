@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIDropSession;
+import ios.uikit.UIDropSessionProgressIndicatorStyle;
 @:objc
 @:native("UIDropSession")
 @:include("UIKit/UIKit.h")

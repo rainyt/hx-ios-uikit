@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIVibrancyEffect;
+import ios.uikit.UIBlurEffect;
+import ios.uikit.UIVibrancyEffectStyle;
 @:objc
 @:native("UIVibrancyEffect")
 @:include("UIKit/UIKit.h")

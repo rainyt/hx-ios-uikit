@@ -1,7 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UILocalNotification;
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UILocalNotification")
 @:include("UIKit/UIKit.h")

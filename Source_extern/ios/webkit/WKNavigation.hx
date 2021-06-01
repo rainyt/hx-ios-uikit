@@ -1,5 +1,7 @@
 package ios.webkit;
 
+import ios.webkit.WKNavigation;
+import ios.webkit.WKContentMode;
 @:objc
 @:native("WKNavigation")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UISearchToken;
+import ios.uikit.UIImage;
 import cpp.objc.NSString;
 @:objc
 @:native("UISearchToken")

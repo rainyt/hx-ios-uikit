@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIDynamicItemBehavior;
 import ios.objc.CGPoint;
+import ios.uikit.UIDynamicBehavior;
+import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UIDynamicItemBehavior")
 @:include("UIKit/UIKit.h")

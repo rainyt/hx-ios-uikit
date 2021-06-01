@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPercentDrivenInteractiveTransition;
+import ios.uikit.UIViewControllerInteractiveTransitioning;
+import ios.uikit.UIViewAnimationCurve;
 @:objc
 @:native("UIPercentDrivenInteractiveTransition")
 @:include("UIKit/UIKit.h")

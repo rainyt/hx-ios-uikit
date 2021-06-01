@@ -1,6 +1,22 @@
 package ios.uikit;
 
+import ios.uikit.UISplitViewController;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.UISplitViewControllerStyle;
+import ios.uikit.UISplitViewControllerSplitBehavior;
+import ios.uikit.UIViewController;
+import ios.uikit.UISplitViewControllerColumn;
+import ios.uikit.UISplitViewControllerDisplayMode;
+import ios.uikit.UIBarButtonItem;
+import ios.uikit.UISplitViewControllerPrimaryEdge;
+import ios.uikit.UISplitViewControllerBackgroundStyle;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
 @:objc
 @:native("UISplitViewController")
 @:include("UIKit/UIKit.h")

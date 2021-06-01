@@ -1,5 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIWindowSceneDelegate;
+import ios.uikit.UIWindow;
+import ios.uikit.UIWindowScene;
+import ios.uikit.UIInterfaceOrientation;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIApplicationShortcutItem;
 @:objc
 @:native("UIWindowSceneDelegate")
 @:include("UIKit/UIKit.h")

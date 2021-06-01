@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKHTTPCookieStore;
 @:objc
 @:native("WKHTTPCookieStore")
 @:include("UIKit/UIKit.h")

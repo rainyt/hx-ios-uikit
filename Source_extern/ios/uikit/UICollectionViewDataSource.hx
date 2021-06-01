@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDataSource;
+import ios.uikit.UICollectionView;
+import ios.uikit.UICollectionViewCell;
+import ios.uikit.UICollectionReusableView;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewDataSource")

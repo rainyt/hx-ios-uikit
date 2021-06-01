@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIVideoEditorControllerDelegate;
+import ios.uikit.UIVideoEditorController;
 import cpp.objc.NSString;
 @:objc
 @:native("UIVideoEditorControllerDelegate")

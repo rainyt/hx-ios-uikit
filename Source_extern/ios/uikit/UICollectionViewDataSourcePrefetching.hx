@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDataSourcePrefetching;
+import ios.uikit.UICollectionView;
 @:objc
 @:native("UICollectionViewDataSourcePrefetching")
 @:include("UIKit/UIKit.h")

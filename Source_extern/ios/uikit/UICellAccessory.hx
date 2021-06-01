@@ -1,7 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessory;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UICellAccessoryDisplayedState;
+import ios.uikit.UIColor;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessory")
 @:include("UIKit/UIKit.h")

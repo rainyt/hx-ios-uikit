@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIBarButtonItemStateAppearance;
+import ios.uikit.UIImage;
 @:objc
 @:native("UIBarButtonItemStateAppearance")
 @:include("UIKit/UIKit.h")

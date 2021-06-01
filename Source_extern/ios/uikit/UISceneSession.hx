@@ -1,7 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UISceneSession;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UIScene;
 import cpp.objc.NSString;
+import ios.uikit.NSUserActivity;
 @:objc
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")

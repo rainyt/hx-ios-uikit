@@ -1,5 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UICellConfigurationState;
+import ios.uikit.UICellConfigurationDragState;
+import ios.uikit.UICellConfigurationDropState;
+import ios.uikit.UIViewConfigurationState;
+import ios.uikit.UITraitCollection;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 @:objc
 @:native("UICellConfigurationState")

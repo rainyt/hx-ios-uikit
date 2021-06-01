@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIPress;
+import ios.uikit.UIWindow;
+import ios.uikit.UIResponder;
+import ios.uikit.UIKey;
 @:objc
 @:native("UIPress")
 @:include("UIKit/UIKit.h")

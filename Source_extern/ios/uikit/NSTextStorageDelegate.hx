@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.NSTextStorageDelegate;
+import ios.uikit.NSTextStorage;
+import ios.uikit.NSTextStorageEditActions;
 @:objc
 @:native("NSTextStorageDelegate")
 @:include("UIKit/UIKit.h")

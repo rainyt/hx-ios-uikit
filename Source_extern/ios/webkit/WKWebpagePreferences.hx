@@ -1,5 +1,7 @@
 package ios.webkit;
 
+import ios.webkit.WKWebpagePreferences;
+import ios.webkit.WKContentMode;
 @:objc
 @:native("WKWebpagePreferences")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class WKWebpagePreferences extends NSObject{
 	overload public static function autorelease():WKWebpagePreferences;
 
 	@:native("preferredContentMode")
-	public var preferredContentMode:Dynamic;
+	public var preferredContentMode:WKContentMode;
 
 	@:native("allowsContentJavaScript")
 	public var allowsContentJavaScript:Bool;

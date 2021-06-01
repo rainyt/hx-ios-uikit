@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UITextDropRequest;
+import ios.uikit.UITextPosition;
+import ios.uikit.UITextDropProposal;
 @:objc
 @:native("UITextDropRequest")
 @:include("UIKit/UIKit.h")

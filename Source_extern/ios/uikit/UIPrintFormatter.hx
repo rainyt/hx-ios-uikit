@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPrintFormatter;
 import ios.objc.NSCopying;
+import ios.uikit.UIPrintPageRenderer;
 import ios.objc.CGRect;
 @:objc
 @:native("UIPrintFormatter")

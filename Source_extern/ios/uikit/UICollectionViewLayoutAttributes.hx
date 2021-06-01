@@ -1,12 +1,17 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.objc.NSCopying;
+import ios.uikit.UIDynamicItem;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CATransform3D;
 import ios.objc.CGAffineTransform;
+import ios.uikit.UICollectionElementCategory;
 import cpp.objc.NSString;
+import ios.uikit.UIDynamicItemCollisionBoundsType;
+import ios.uikit.UIBezierPath;
 @:objc
 @:native("UICollectionViewLayoutAttributes")
 @:include("UIKit/UIKit.h")

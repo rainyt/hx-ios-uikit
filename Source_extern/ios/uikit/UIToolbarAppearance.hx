@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIToolbarAppearance;
+import ios.uikit.UIBarAppearance;
+import ios.uikit.UIUserInterfaceIdiom;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIToolbarAppearance")
 @:include("UIKit/UIKit.h")

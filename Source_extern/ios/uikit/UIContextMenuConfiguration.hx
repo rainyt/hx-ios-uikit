@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIContextMenuConfiguration;
 @:objc
 @:native("UIContextMenuConfiguration")
 @:include("UIKit/UIKit.h")

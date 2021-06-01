@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UISearchTextFieldDelegate;
+import ios.uikit.UISearchTextField;
+import ios.uikit.UISearchToken;
 @:objc
 @:native("UISearchTextFieldDelegate")
 @:include("UIKit/UIKit.h")

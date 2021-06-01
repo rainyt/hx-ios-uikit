@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIStateRestoring;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIStateRestoring")
 @:include("UIKit/UIKit.h")

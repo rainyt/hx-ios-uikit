@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKSecurityOrigin;
 @:objc
 @:native("WKSecurityOrigin")
 @:include("UIKit/UIKit.h")

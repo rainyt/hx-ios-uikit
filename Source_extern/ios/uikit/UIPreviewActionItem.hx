@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPreviewActionItem;
 @:objc
 @:native("UIPreviewActionItem")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIFontPickerViewControllerDelegate;
+import ios.uikit.UIFontPickerViewController;
 @:objc
 @:native("UIFontPickerViewControllerDelegate")
 @:include("UIKit/UIKit.h")

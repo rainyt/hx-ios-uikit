@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIPickerViewDataSource;
+import ios.uikit.UIPickerView;
 @:objc
 @:native("UIPickerViewDataSource")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusDebuggerOutput;
 @:objc
 @:native("UIFocusDebuggerOutput")
 @:include("UIKit/UIKit.h")

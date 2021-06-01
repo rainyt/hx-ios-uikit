@@ -1,7 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UIPopoverController;
+import ios.uikit.UIAppearanceContainer;
+import ios.uikit.UIViewController;
 import ios.objc.CGSize;
+import ios.uikit.UIPopoverArrowDirection;
 import ios.objc.CGRect;
+import ios.uikit.UIView;
+import ios.uikit.UIBarButtonItem;
 @:objc
 @:native("UIPopoverController")
 @:include("UIKit/UIKit.h")

@@ -1,8 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityReadingConten;
 import ios.objc.CGPoint;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
+import ios.uikit.NSAttributedString;
 @:objc
 @:native("UIAccessibilityReadingConten")
 @:include("UIKit/UIKit.h")

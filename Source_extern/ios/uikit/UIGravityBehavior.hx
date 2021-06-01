@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIGravityBehavior;
 import ios.objc.CGVector;
+import ios.uikit.UIDynamicBehavior;
+import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UIGravityBehavior")
 @:include("UIKit/UIKit.h")

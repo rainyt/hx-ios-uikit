@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusUpdateContext;
+import ios.uikit.UIView;
+import ios.uikit.UIFocusHeading;
 @:objc
 @:native("UIFocusUpdateContext")
 @:include("UIKit/UIKit.h")

@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIGraphicsRenderer;
 import ios.objc.CGRect;
+import ios.uikit.UIGraphicsRendererFormat;
+import ios.uikit.UIGraphicsRendererContext;
 @:objc
 @:native("UIGraphicsRenderer")
 @:include("UIKit/UIKit.h")

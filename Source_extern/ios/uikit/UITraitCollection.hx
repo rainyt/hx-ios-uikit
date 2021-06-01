@@ -1,7 +1,20 @@
 package ios.uikit;
 
+import ios.uikit.UITraitCollection;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.NSCoder;
+import ios.uikit.UIUserInterfaceIdiom;
+import ios.uikit.UIUserInterfaceStyle;
+import ios.uikit.UITraitEnvironmentLayoutDirection;
+import ios.uikit.UIUserInterfaceSizeClass;
+import ios.uikit.UIForceTouchCapability;
+import ios.uikit.UIDisplayGamut;
+import ios.uikit.UIAccessibilityContrast;
+import ios.uikit.UIUserInterfaceLevel;
+import ios.uikit.UILegibilityWeight;
+import ios.uikit.UIUserInterfaceActiveAppearance;
+import ios.uikit.UIImageConfiguration;
 @:objc
 @:native("UITraitCollection")
 @:include("UIKit/UIKit.h")

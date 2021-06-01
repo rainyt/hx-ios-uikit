@@ -1,7 +1,20 @@
 package ios.uikit;
 
+import ios.uikit.UIDocumentBrowserViewController;
 import ios.objc.NSCoding;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.UIDocumentBrowserImportMode;
+import ios.uikit.UIDocumentBrowserTransitionController;
+import ios.uikit.UIDocumentBrowserUserInterfaceStyle;
+import ios.uikit.UIViewController;
+import ios.uikit.NSCoder;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")

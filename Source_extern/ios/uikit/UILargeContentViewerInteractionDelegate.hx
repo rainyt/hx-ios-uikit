@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UILargeContentViewerInteractionDelegate;
+import ios.uikit.UILargeContentViewerInteraction;
 import ios.objc.CGPoint;
+import ios.uikit.UIViewController;
 @:objc
 @:native("UILargeContentViewerInteractionDelegate")
 @:include("UIKit/UIKit.h")

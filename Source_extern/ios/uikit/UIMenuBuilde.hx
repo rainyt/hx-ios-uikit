@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIMenuBuilde;
+import ios.uikit.UIMenuSystem;
+import ios.uikit.UIMenu;
+import ios.uikit.UIAction;
+import ios.uikit.UICommand;
 @:objc
 @:native("UIMenuBuilde")
 @:include("UIKit/UIKit.h")

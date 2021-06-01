@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIDevice;
 import cpp.objc.NSString;
+import ios.uikit.UIDeviceOrientation;
+import ios.uikit.UIDeviceBatteryState;
+import ios.uikit.UIUserInterfaceIdiom;
 @:objc
 @:native("UIDevice")
 @:include("UIKit/UIKit.h")

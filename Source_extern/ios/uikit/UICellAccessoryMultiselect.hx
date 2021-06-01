@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessoryMultiselect;
+import ios.uikit.UIColor;
+import ios.uikit.UICellAccessory;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessoryMultiselect")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKFindConfiguration;
 import ios.objc.NSCopying;
 @:objc
 @:native("WKFindConfiguration")

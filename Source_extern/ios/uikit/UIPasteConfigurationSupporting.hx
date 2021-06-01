@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPasteConfigurationSupporting;
 @:objc
 @:native("UIPasteConfigurationSupporting")
 @:include("UIKit/UIKit.h")

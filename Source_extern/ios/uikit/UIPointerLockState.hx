@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerLockState;
 @:objc
 @:native("UIPointerLockState")
 @:include("UIKit/UIKit.h")

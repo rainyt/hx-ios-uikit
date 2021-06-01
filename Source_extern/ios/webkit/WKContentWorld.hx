@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKContentWorld;
 import cpp.objc.NSString;
 @:objc
 @:native("WKContentWorld")

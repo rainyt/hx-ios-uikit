@@ -1,7 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.NSDataAsset;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
 @:objc
 @:native("NSDataAsset")
 @:include("UIKit/UIKit.h")

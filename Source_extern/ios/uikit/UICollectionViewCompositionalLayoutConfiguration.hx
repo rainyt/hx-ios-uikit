@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewCompositionalLayoutConfiguration;
 import ios.objc.NSCopying;
+import ios.uikit.UICollectionViewScrollDirection;
+import ios.uikit.UIContentInsetsReference;
 @:objc
 @:native("UICollectionViewCompositionalLayoutConfiguration")
 @:include("UIKit/UIKit.h")

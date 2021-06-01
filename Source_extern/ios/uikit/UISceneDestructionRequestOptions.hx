@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UISceneDestructionRequestOptions;
 @:objc
 @:native("UISceneDestructionRequestOptions")
 @:include("UIKit/UIKit.h")

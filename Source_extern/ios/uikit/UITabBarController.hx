@@ -1,7 +1,21 @@
 package ios.uikit;
 
+import ios.uikit.UITabBarController;
+import ios.uikit.UITabBarDelegate;
 import ios.objc.NSCoding;
+import ios.uikit.UIViewController;
+import ios.uikit.UINavigationController;
+import ios.uikit.UITabBar;
+import ios.uikit.UITabBarItem;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UITabBarController")
 @:include("UIKit/UIKit.h")

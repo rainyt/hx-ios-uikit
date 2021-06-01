@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSStringDrawingContext;
 import ios.objc.CGRect;
 @:objc
 @:native("NSStringDrawingContext")

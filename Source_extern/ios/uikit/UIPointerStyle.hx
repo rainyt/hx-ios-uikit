@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerStyle;
 import ios.objc.NSCopying;
+import ios.uikit.UIPointerEffect;
+import ios.uikit.UIPointerShape;
+import ios.uikit.UIAxis;
 @:objc
 @:native("UIPointerStyle")
 @:include("UIKit/UIKit.h")

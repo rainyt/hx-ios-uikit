@@ -1,9 +1,27 @@
 package ios.uikit;
 
+import ios.uikit.UIAlertView;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
+import ios.uikit.NSCoder;
+import ios.uikit.UIAlertViewStyle;
+import ios.uikit.UITextField;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
+import ios.uikit.UIView;
 import ios.objc.CGPoint;
+import ios.uikit.UIEvent;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UIAlertView")
 @:include("UIKit/UIKit.h")

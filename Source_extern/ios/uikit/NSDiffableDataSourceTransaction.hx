@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.NSDiffableDataSourceTransaction;
+import ios.uikit.NSDiffableDataSourceSnapshot;
 @:objc
 @:native("NSDiffableDataSourceTransaction")
 @:include("UIKit/UIKit.h")

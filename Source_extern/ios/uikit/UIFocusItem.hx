@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusItem;
 import ios.objc.CGRect;
 @:objc
 @:native("UIFocusItem")

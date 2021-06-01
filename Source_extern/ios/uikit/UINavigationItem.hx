@@ -1,7 +1,14 @@
 package ios.uikit;
 
+import ios.uikit.UINavigationItem;
 import ios.objc.NSCoding;
 import cpp.objc.NSString;
+import ios.uikit.NSCoder;
+import ios.uikit.UIView;
+import ios.uikit.UIBarButtonItem;
+import ios.uikit.UINavigationItemBackButtonDisplayMode;
+import ios.uikit.UINavigationItemLargeTitleDisplayMode;
+import ios.uikit.UISearchController;
 @:objc
 @:native("UINavigationItem")
 @:include("UIKit/UIKit.h")

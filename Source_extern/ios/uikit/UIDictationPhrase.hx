@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIDictationPhrase;
 import cpp.objc.NSString;
 @:objc
 @:native("UIDictationPhrase")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextPasteConfigurationSupporting;
 @:objc
 @:native("UITextPasteConfigurationSupporting")
 @:include("UIKit/UIKit.h")

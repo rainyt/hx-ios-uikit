@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDynamicAnimator;
+import ios.uikit.UICollectionViewLayout;
+import ios.uikit.UICollectionViewLayoutAttributes;
 import cpp.objc.NSString;
 @:objc
 @:native("UIDynamicAnimator")

@@ -1,5 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UITextInputStringTokenizer;
+import ios.uikit.UITextInputTokenizer;
+import ios.uikit.UIResponder;
+import ios.uikit.UITextRange;
+import ios.uikit.UITextPosition;
+import ios.uikit.UITextGranularity;
 @:objc
 @:native("UITextInputStringTokenizer")
 @:include("UIKit/UIKit.h")

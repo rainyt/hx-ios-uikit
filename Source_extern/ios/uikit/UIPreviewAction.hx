@@ -1,7 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIPreviewAction;
 import ios.objc.NSCopying;
+import ios.uikit.UIPreviewActionItem;
 import cpp.objc.NSString;
+import ios.uikit.UIPreviewActionStyle;
 @:objc
 @:native("UIPreviewAction")
 @:include("UIKit/UIKit.h")

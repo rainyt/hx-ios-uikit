@@ -1,8 +1,14 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutBoundarySupplementaryItem;
 import ios.objc.NSCopying;
+import ios.uikit.NSCollectionLayoutSize;
 import cpp.objc.NSString;
+import ios.uikit.NSRectAlignment;
 import ios.objc.CGPoint;
+import ios.uikit.NSCollectionLayoutSupplementaryItem;
+import ios.uikit.NSCollectionLayoutAnchor;
+import ios.uikit.NSCollectionLayoutItem;
 @:objc
 @:native("NSCollectionLayoutBoundarySupplementaryItem")
 @:include("UIKit/UIKit.h")

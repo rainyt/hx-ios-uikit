@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewFocusUpdateContext;
 @:objc
 @:native("UICollectionViewFocusUpdateContext")
 @:include("UIKit/UIKit.h")

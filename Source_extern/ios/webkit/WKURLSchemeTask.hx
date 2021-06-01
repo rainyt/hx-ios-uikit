@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKURLSchemeTask;
 @:objc
 @:native("WKURLSchemeTask")
 @:include("UIKit/UIKit.h")

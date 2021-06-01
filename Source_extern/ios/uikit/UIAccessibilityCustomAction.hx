@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityCustomAction;
 import cpp.objc.NSString;
+import ios.uikit.NSAttributedString;
+import ios.uikit.UIImage;
 @:objc
 @:native("UIAccessibilityCustomAction")
 @:include("UIKit/UIKit.h")

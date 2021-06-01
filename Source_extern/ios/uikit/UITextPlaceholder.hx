@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextPlaceholder;
 @:objc
 @:native("UITextPlaceholder")
 @:include("UIKit/UIKit.h")

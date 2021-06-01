@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIGraphicsImageRendererContext;
+import ios.uikit.UIImage;
 import ios.objc.CGRect;
 import ios.objc.CGBlendMode;
 @:objc

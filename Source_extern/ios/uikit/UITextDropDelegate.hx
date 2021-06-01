@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UITextDropDelegate;
+import ios.uikit.UITextDropEditability;
+import ios.uikit.UIView;
+import ios.uikit.UITextDropProposal;
+import ios.uikit.UITargetedDragPreview;
 @:objc
 @:native("UITextDropDelegate")
 @:include("UIKit/UIKit.h")

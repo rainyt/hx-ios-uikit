@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIAlertViewDelegate;
 @:objc
 @:native("UIAlertViewDelegate")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITabBarItemStateAppearance;
 @:objc
 @:native("UITabBarItemStateAppearance")
 @:include("UIKit/UIKit.h")

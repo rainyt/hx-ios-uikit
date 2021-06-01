@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewPlaceholder;
 import cpp.objc.NSString;
 @:objc
 @:native("UITableViewPlaceholder")

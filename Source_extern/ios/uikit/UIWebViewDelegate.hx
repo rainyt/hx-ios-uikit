@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIWebViewDelegate;
 @:objc
 @:native("UIWebViewDelegate")
 @:include("UIKit/UIKit.h")

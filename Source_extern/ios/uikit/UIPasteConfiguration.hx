@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPasteConfiguration;
 import ios.objc.NSSecureCoding;
 import ios.objc.NSCopying;
 @:objc

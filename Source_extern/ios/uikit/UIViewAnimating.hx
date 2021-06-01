@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIViewAnimating;
+import ios.uikit.UIViewAnimatingState;
+import ios.uikit.UIViewAnimatingPosition;
 @:objc
 @:native("UIViewAnimating")
 @:include("UIKit/UIKit.h")

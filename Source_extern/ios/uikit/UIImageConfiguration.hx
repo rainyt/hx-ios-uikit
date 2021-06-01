@@ -1,7 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIImageConfiguration;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIImageConfiguration")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UICloudSharingControllerDelegate;
+import ios.uikit.UICloudSharingController;
 import cpp.objc.NSString;
 @:objc
 @:native("UICloudSharingControllerDelegate")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDropItem;
+import ios.uikit.UIDragItem;
 import ios.objc.CGSize;
 @:objc
 @:native("UITableViewDropItem")

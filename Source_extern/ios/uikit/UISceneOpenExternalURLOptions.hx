@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UISceneOpenExternalURLOptions;
 @:objc
 @:native("UISceneOpenExternalURLOptions")
 @:include("UIKit/UIKit.h")

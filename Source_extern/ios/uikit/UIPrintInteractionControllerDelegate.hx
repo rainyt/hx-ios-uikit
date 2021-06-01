@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPrintInteractionControllerDelegate;
+import ios.uikit.UIPrintInteractionController;
+import ios.uikit.UIPrintPaper;
 @:objc
 @:native("UIPrintInteractionControllerDelegate")
 @:include("UIKit/UIKit.h")

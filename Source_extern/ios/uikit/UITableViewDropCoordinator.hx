@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDropCoordinator;
+import ios.uikit.UITableViewDropProposal;
+import ios.uikit.UIDragItem;
+import ios.uikit.UITableViewDropPlaceholder;
 import ios.objc.CGRect;
+import ios.uikit.UIDragPreviewTarget;
 @:objc
 @:native("UITableViewDropCoordinator")
 @:include("UIKit/UIKit.h")

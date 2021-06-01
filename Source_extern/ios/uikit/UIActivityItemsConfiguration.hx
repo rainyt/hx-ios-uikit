@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIActivityItemsConfiguration;
+import ios.uikit.UIActivityItemsConfigurationReading;
 import cpp.objc.NSString;
 import ios.objc.CGSize;
 @:objc

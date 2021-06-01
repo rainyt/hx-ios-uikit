@@ -1,7 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewTransitionLayout;
+import ios.uikit.UICollectionViewLayout;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
+import ios.uikit.UICollectionViewLayoutInvalidationContext;
+import ios.uikit.UINib;
 import ios.objc.CGRect;
+import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.objc.CGPoint;
 @:objc
 @:native("UICollectionViewTransitionLayout")

@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDropDelegate;
+import ios.uikit.UITableView;
+import ios.uikit.UITableViewDropProposal;
+import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UITableViewDropDelegate")
 @:include("UIKit/UIKit.h")

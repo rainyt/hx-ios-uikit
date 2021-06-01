@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UITextDraggable;
+import ios.uikit.UIDragInteraction;
+import ios.uikit.UITextDragOptions;
 @:objc
 @:native("UITextDraggable")
 @:include("UIKit/UIKit.h")

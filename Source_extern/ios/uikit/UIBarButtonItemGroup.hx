@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIBarButtonItemGroup;
 import ios.objc.NSCoding;
+import ios.uikit.UIBarButtonItem;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIBarButtonItemGroup")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusGuide;
+import ios.uikit.UIView;
+import ios.uikit.UILayoutConstraintAxis;
 @:objc
 @:native("UIFocusGuide")
 @:include("UIKit/UIKit.h")

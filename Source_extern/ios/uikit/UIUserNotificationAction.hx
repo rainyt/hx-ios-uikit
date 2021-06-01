@@ -1,7 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIUserNotificationAction;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.NSCoder;
+import ios.uikit.UIUserNotificationActionBehavior;
+import ios.uikit.UIUserNotificationActivationMode;
 @:objc
 @:native("UIUserNotificationAction")
 @:include("UIKit/UIKit.h")

@@ -1,7 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.NSShadow;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.NSCoder;
 import ios.objc.CGSize;
 @:objc
 @:native("NSShadow")

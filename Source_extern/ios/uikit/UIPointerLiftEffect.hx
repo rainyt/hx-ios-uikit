@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerLiftEffect;
+import ios.uikit.UIPointerEffect;
+import ios.uikit.UITargetedPreview;
 @:objc
 @:native("UIPointerLiftEffect")
 @:include("UIKit/UIKit.h")

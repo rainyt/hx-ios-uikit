@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.NSTextStorage;
 import ios.objc.NSSecureCoding;
+import ios.uikit.NSLayoutManager;
+import ios.uikit.NSTextStorageEditActions;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("NSTextStorage")

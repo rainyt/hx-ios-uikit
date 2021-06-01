@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIBlurEffect;
+import ios.uikit.UIBlurEffectStyle;
 @:objc
 @:native("UIBlurEffect")
 @:include("UIKit/UIKit.h")

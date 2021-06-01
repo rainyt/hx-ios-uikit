@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityContainerDataTable;
 @:objc
 @:native("UIAccessibilityContainerDataTable")
 @:include("UIKit/UIKit.h")

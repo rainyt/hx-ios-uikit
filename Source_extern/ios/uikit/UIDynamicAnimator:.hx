@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDynamicAnimator:;
+import ios.uikit.UIView;
+import ios.uikit.UIDynamicBehavior;
 import ios.objc.CGRect;
 @:objc
 @:native("UIDynamicAnimator:")

@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusEnvironment;
+import ios.uikit.UIFocusUpdateContext;
+import ios.uikit.UIFocusAnimationCoordinator;
 import cpp.objc.NSString;
+import ios.uikit.UIView;
 @:objc
 @:native("UIFocusEnvironment")
 @:include("UIKit/UIKit.h")

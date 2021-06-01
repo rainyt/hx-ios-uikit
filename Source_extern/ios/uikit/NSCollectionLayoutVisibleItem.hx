@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutVisibleItem;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
 import ios.objc.CATransform3D;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
+import ios.uikit.UICollectionElementCategory;
 @:objc
 @:native("NSCollectionLayoutVisibleItem")
 @:include("UIKit/UIKit.h")

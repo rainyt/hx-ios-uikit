@@ -1,8 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.NSTextContainer;
 import ios.objc.NSSecureCoding;
 import ios.objc.CGSize;
+import ios.uikit.NSCoder;
+import ios.uikit.NSLayoutManager;
+import ios.uikit.NSLineBreakMode;
 import ios.objc.CGRect;
+import ios.uikit.NSWritingDirection;
 @:objc
 @:native("NSTextContainer")
 @:include("UIKit/UIKit.h")

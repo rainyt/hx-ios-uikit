@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UITabBarControllerDelegate;
+import ios.uikit.UITabBarController;
+import ios.uikit.UIViewController;
+import ios.uikit.UIInterfaceOrientationMask;
+import ios.uikit.UIInterfaceOrientation;
 @:objc
 @:native("UITabBarControllerDelegate")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessoryReorder;
+import ios.uikit.UICellAccessory;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessoryReorder")
 @:include("UIKit/UIKit.h")

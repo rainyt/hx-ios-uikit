@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UILargeContentViewerInteraction;
+import ios.uikit.UIInteraction;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIView;
 @:objc
 @:native("UILargeContentViewerInteraction")
 @:include("UIKit/UIKit.h")

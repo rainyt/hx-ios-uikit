@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDropDelegate;
+import ios.uikit.UICollectionView;
+import ios.uikit.UICollectionViewDropProposal;
+import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UICollectionViewDropDelegate")
 @:include("UIKit/UIKit.h")

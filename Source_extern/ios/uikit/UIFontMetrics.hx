@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIFontMetrics;
+import ios.uikit.UIFont;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIFontMetrics")
 @:include("UIKit/UIKit.h")

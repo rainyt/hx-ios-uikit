@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIViewPropertyAnimator;
+import ios.uikit.UIViewImplicitlyAnimating;
 import ios.objc.NSCopying;
+import ios.uikit.UIViewAnimationCurve;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIViewPropertyAnimator")

@@ -1,7 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UIBarItem;
 import ios.objc.NSCoding;
+import ios.uikit.UIAppearance;
+import ios.uikit.NSCoder;
+import ios.uikit.UIImage;
 import cpp.objc.NSDictionary;
+import ios.uikit.UIControlState;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIBarItem")
 @:include("UIKit/UIKit.h")

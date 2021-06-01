@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerInteractionDelegate;
+import ios.uikit.UIPointerRegion;
+import ios.uikit.UIPointerInteraction;
+import ios.uikit.UIPointerRegionRequest;
+import ios.uikit.UIPointerStyle;
 @:objc
 @:native("UIPointerInteractionDelegate")
 @:include("UIKit/UIKit.h")

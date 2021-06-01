@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIContentConfiguration;
+import ios.uikit.UIView;
 @:objc
 @:native("UIContentConfiguration")
 @:include("UIKit/UIKit.h")

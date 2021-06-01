@@ -1102,8 +1102,17 @@ class ObjcImport:
                 return "cpp.objc.NSData"
         else:
             pass
-        if sys_FileSystem.exists((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/objc/") + ("null" if _hx_type is None else _hx_type)) + ".hx")):
-            return ("ios.objc." + ("null" if _hx_type is None else _hx_type))
+        files = sys_FileSystem.readDirectory((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios"))
+        _g_current = 0
+        _g_array = files
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            if sys_FileSystem.exists((((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/") + ("null" if value is None else value)) + "/") + ("null" if _hx_type is None else _hx_type)) + ".hx")):
+                return ((("ios." + ("null" if value is None else value)) + ".") + ("null" if _hx_type is None else _hx_type))
         return None
 
     @staticmethod

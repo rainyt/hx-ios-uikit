@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIContextMenuInteractionDelegate;
+import ios.uikit.UIContextMenuConfiguration;
+import ios.uikit.UIContextMenuInteraction;
 import ios.objc.CGPoint;
+import ios.uikit.UITargetedPreview;
 @:objc
 @:native("UIContextMenuInteractionDelegate")
 @:include("UIKit/UIKit.h")

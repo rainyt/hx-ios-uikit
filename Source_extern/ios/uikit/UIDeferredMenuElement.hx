@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDeferredMenuElement;
+import ios.uikit.UIMenuElement;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIDeferredMenuElement")
 @:include("UIKit/UIKit.h")

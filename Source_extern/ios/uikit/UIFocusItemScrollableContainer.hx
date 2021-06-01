@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusItemScrollableContainer;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 @:objc

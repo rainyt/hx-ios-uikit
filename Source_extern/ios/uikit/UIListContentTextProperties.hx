@@ -1,7 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UIListContentTextProperties;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UIFont;
+import ios.uikit.UIColor;
+import ios.uikit.UIListContentTextAlignment;
+import ios.uikit.NSLineBreakMode;
+import ios.uikit.UIListContentTextTransform;
 @:objc
 @:native("UIListContentTextProperties")
 @:include("UIKit/UIKit.h")

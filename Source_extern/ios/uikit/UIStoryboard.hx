@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIStoryboard;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
 @:objc
 @:native("UIStoryboard")
 @:include("UIKit/UIKit.h")

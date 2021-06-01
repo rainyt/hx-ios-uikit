@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewFlowLayoutInvalidationContext;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewFlowLayoutInvalidationContext")

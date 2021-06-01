@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerRegionRequest;
 import ios.objc.CGPoint;
+import ios.uikit.UIKeyModifierFlags;
 @:objc
 @:native("UIPointerRegionRequest")
 @:include("UIKit/UIKit.h")

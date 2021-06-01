@@ -1,7 +1,17 @@
 package ios.uikit;
 
+import ios.uikit.UIPopoverPresentationController;
+import ios.uikit.UIPopoverArrowDirection;
+import ios.uikit.UIView;
 import ios.objc.CGRect;
+import ios.uikit.UIBarButtonItem;
+import ios.uikit.UIPresentationController;
+import ios.uikit.UIViewController;
+import ios.uikit.UIModalPresentationStyle;
+import ios.uikit.UITraitCollection;
 import ios.objc.CGSize;
+import ios.uikit.UIFocusUpdateContext;
+import ios.uikit.UIFocusAnimationCoordinator;
 import cpp.objc.NSString;
 @:objc
 @:native("UIPopoverPresentationController")

@@ -1,7 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIUserNotificationCategory;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.NSCoder;
+import ios.uikit.UIUserNotificationActionContext;
 @:objc
 @:native("UIUserNotificationCategory")
 @:include("UIKit/UIKit.h")

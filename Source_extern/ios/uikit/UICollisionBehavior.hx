@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UICollisionBehavior;
+import ios.uikit.UICollisionBehaviorMode;
+import ios.uikit.UIBezierPath;
 import ios.objc.CGPoint;
+import ios.uikit.UIDynamicBehavior;
+import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UICollisionBehavior")
 @:include("UIKit/UIKit.h")

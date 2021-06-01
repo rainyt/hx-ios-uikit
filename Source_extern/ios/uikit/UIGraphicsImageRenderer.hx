@@ -1,7 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UIGraphicsImageRenderer;
 import ios.objc.CGSize;
+import ios.uikit.UIGraphicsImageRendererFormat;
 import ios.objc.CGRect;
+import ios.uikit.UIImage;
+import ios.uikit.UIGraphicsRenderer;
+import ios.uikit.UIGraphicsRendererFormat;
+import ios.uikit.UIGraphicsRendererContext;
 @:objc
 @:native("UIGraphicsImageRenderer")
 @:include("UIKit/UIKit.h")

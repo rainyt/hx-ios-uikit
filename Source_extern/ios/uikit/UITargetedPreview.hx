@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UITargetedPreview;
 import ios.objc.NSCopying;
+import ios.uikit.UIView;
+import ios.uikit.UIPreviewParameters;
+import ios.uikit.UIPreviewTarget;
 import ios.objc.CGSize;
 @:objc
 @:native("UITargetedPreview")

@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIViewControllerRestoratio;
+import ios.uikit.UIViewController;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIViewControllerRestoratio")
 @:include("UIKit/UIKit.h")

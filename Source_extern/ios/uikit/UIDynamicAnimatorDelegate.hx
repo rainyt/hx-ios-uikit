@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIDynamicAnimatorDelegate;
+import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UIDynamicAnimatorDelegate")
 @:include("UIKit/UIKit.h")

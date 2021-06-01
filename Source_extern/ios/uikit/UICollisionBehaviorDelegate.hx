@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UICollisionBehaviorDelegate;
+import ios.uikit.UICollisionBehavior;
 import ios.objc.CGPoint;
 @:objc
 @:native("UICollisionBehaviorDelegate")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPrinter;
 @:objc
 @:native("UIPrinter")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIDragSession;
 @:objc
 @:native("UIDragSession")
 @:include("UIKit/UIKit.h")

@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UINib;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UINib")

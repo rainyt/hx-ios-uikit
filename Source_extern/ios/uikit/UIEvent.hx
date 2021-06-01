@@ -1,5 +1,14 @@
 package ios.uikit;
 
+import ios.uikit.UIEvent;
+import ios.uikit.UIEventType;
+import ios.uikit.UIEventSubtype;
+import ios.uikit.UIKeyModifierFlags;
+import ios.uikit.UIEventButtonMask;
+import ios.uikit.UIWindow;
+import ios.uikit.UIView;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UITouch;
 @:objc
 @:native("UIEvent")
 @:include("UIKit/UIKit.h")

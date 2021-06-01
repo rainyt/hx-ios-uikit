@@ -1,10 +1,17 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewLayout;
 import ios.objc.NSCoding;
+import ios.uikit.NSCoder;
+import ios.uikit.UICollectionView;
+import ios.uikit.UICollectionViewLayoutInvalidationContext;
 import cpp.objc.NSString;
+import ios.uikit.UINib;
 import ios.objc.CGRect;
+import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
+import ios.uikit.UIUserInterfaceLayoutDirection;
 @:objc
 @:native("UICollectionViewLayout")
 @:include("UIKit/UIKit.h")

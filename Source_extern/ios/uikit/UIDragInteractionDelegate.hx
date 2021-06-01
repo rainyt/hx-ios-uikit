@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIDragInteractionDelegate;
+import ios.uikit.UIDragInteraction;
+import ios.uikit.UITargetedDragPreview;
+import ios.uikit.UIDragItem;
+import ios.uikit.UIDropOperation;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIDragInteractionDelegate")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UILexicon;
 import ios.objc.NSCopying;
 @:objc
 @:native("UILexicon")

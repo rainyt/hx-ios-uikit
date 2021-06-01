@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIContentContainer;
 import ios.objc.CGSize;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIContentContainer")
 @:include("UIKit/UIKit.h")

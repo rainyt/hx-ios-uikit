@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextFormattingCoordinatorDelegate;
 @:objc
 @:native("UITextFormattingCoordinatorDelegate")
 @:include("UIKit/UIKit.h")

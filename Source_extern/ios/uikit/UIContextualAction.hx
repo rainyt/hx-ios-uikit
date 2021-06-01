@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIContextualAction;
+import ios.uikit.UIContextualActionStyle;
 import cpp.objc.NSString;
 @:objc
 @:native("UIContextualAction")

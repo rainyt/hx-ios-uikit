@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UISimpleTextPrintFormatter;
 import cpp.objc.NSString;
+import ios.uikit.NSAttributedString;
+import ios.uikit.UIFont;
+import ios.uikit.UIColor;
+import ios.uikit.NSTextAlignment;
 import ios.objc.CGRect;
 @:objc
 @:native("UISimpleTextPrintFormatter")

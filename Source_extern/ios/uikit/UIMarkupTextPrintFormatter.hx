@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIMarkupTextPrintFormatter;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc

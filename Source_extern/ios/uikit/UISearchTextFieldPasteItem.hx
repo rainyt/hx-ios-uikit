@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UISearchTextFieldPasteItem;
+import ios.uikit.UISearchToken;
 @:objc
 @:native("UISearchTextFieldPasteItem")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.NSTextAttachment;
+import ios.uikit.UIImage;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
 @:objc

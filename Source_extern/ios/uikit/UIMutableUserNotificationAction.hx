@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIMutableUserNotificationAction;
+import ios.uikit.UIUserNotificationActionBehavior;
+import ios.uikit.UIUserNotificationActivationMode;
+import ios.uikit.UIUserNotificationAction;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIMutableUserNotificationAction")
 @:include("UIKit/UIKit.h")

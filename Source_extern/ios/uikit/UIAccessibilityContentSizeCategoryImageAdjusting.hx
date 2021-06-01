@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityContentSizeCategoryImageAdjusting;
 @:objc
 @:native("UIAccessibilityContentSizeCategoryImageAdjusting")
 @:include("UIKit/UIKit.h")

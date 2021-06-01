@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIView;
 import ios.objc.CGRect;
 @:objc
 @:native("UIViewPrintFormatter")

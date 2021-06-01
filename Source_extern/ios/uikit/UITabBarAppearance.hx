@@ -1,5 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UITabBarAppearance;
+import ios.uikit.UIImage;
+import ios.uikit.UITabBarItemPositioning;
+import ios.uikit.UIBarAppearance;
+import ios.uikit.UIUserInterfaceIdiom;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UITabBarAppearance")
 @:include("UIKit/UIKit.h")

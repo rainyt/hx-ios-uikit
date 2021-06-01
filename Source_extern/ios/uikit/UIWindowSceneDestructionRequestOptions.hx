@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIWindowSceneDestructionRequestOptions;
+import ios.uikit.UIWindowSceneDismissalAnimation;
 @:objc
 @:native("UIWindowSceneDestructionRequestOptions")
 @:include("UIKit/UIKit.h")

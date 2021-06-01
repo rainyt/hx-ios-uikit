@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIDocumentInteractionController;
+import ios.uikit.UIActionSheetDelegate;
 import ios.objc.CGRect;
+import ios.uikit.UIView;
+import ios.uikit.UIBarButtonItem;
 @:objc
 @:native("UIDocumentInteractionController")
 @:include("UIKit/UIKit.h")

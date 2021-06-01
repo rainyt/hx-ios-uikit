@@ -1,8 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UIDynamicItemGroup;
+import ios.uikit.UIDynamicItem;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
+import ios.uikit.UIDynamicItemCollisionBoundsType;
+import ios.uikit.UIBezierPath;
 @:objc
 @:native("UIDynamicItemGroup")
 @:include("UIKit/UIKit.h")

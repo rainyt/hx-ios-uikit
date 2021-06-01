@@ -1,7 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UIScreen;
+import ios.uikit.UITraitEnvironment;
 import ios.objc.CGRect;
+import ios.uikit.UIScreenMode;
+import ios.uikit.UIScreenOverscanCompensation;
 import ios.objc.CADisplayLink;
+import ios.uikit.UIView;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIScreen")
 @:include("UIKit/UIKit.h")

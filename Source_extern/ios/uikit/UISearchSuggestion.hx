@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UISearchSuggestion;
 import cpp.objc.NSString;
+import ios.uikit.UIImage;
 @:objc
 @:native("UISearchSuggestion")
 @:include("UIKit/UIKit.h")

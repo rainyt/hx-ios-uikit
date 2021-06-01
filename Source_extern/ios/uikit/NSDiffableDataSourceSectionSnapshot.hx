@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSDiffableDataSourceSectionSnapshot;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UISwipeActionsConfiguration;
 @:objc
 @:native("UISwipeActionsConfiguration")
 @:include("UIKit/UIKit.h")

@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDataSourceModelAssociatio;
 import cpp.objc.NSString;
+import ios.uikit.UIView;
 @:objc
 @:native("UIDataSourceModelAssociatio")
 @:include("UIKit/UIKit.h")

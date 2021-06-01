@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessoryCheckmark;
+import ios.uikit.UICellAccessory;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessoryCheckmark")
 @:include("UIKit/UIKit.h")

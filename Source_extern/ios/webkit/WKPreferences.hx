@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKPreferences;
 import ios.objc.NSSecureCoding;
 @:objc
 @:native("WKPreferences")

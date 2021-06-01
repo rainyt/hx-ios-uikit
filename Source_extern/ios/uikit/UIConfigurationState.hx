@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIConfigurationState;
+import ios.uikit.UITraitCollection;
 import cpp.objc.NSString;
 @:objc
 @:native("UIConfigurationState")

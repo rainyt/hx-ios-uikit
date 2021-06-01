@@ -1,6 +1,18 @@
 package ios.uikit;
 
+import ios.uikit.UIAlertController;
 import cpp.objc.NSString;
+import ios.uikit.UIAlertControllerStyle;
+import ios.uikit.UIAlertAction;
+import ios.uikit.UIViewController;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UIAlertController")
 @:include("UIKit/UIKit.h")

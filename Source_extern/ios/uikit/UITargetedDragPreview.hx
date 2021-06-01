@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITargetedDragPreview;
+import ios.uikit.UIDragPreviewTarget;
 @:objc
 @:native("UITargetedDragPreview")
 @:include("UIKit/UIKit.h")

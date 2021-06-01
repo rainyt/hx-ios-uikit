@@ -1,7 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIBackgroundConfiguration;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UIView;
+import ios.uikit.NSDirectionalRectEdge;
+import ios.uikit.UIColor;
 @:objc
 @:native("UIBackgroundConfiguration")
 @:include("UIKit/UIKit.h")

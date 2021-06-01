@@ -1,7 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UITouch;
+import ios.uikit.UITouchPhase;
+import ios.uikit.UITouchType;
+import ios.uikit.UIWindow;
+import ios.uikit.UIView;
 import ios.objc.CGPoint;
 import ios.objc.CGVector;
+import ios.uikit.UITouchProperties;
 @:objc
 @:native("UITouch")
 @:include("UIKit/UIKit.h")

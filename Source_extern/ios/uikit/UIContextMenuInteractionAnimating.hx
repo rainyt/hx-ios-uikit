@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIContextMenuInteractionAnimating;
+import ios.uikit.UIViewController;
 @:objc
 @:native("UIContextMenuInteractionAnimating")
 @:include("UIKit/UIKit.h")

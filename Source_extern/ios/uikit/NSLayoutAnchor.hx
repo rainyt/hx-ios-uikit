@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.NSLayoutAnchor;
+import ios.uikit.NSLayoutConstraint;
 @:objc
 @:native("NSLayoutAnchor")
 @:include("UIKit/UIKit.h")

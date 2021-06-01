@@ -1,7 +1,16 @@
 package ios.webkit;
 
+import ios.webkit.WKWebViewConfiguration;
 import ios.objc.NSSecureCoding;
 import ios.objc.NSCopying;
+import ios.webkit.WKProcessPool;
+import ios.webkit.WKPreferences;
+import ios.webkit.WKUserContentController;
+import ios.webkit.WKWebsiteDataStore;
+import ios.webkit.WKAudiovisualMediaTypes;
+import ios.webkit.WKSelectionGranularity;
+import ios.webkit.WKDataDetectorTypes;
+import ios.webkit.WKUserInterfaceDirectionPolicy;
 import cpp.objc.NSString;
 @:objc
 @:native("WKWebViewConfiguration")
@@ -16,16 +25,16 @@ extern class WKWebViewConfiguration extends NSObject
 	overload public static function autorelease():WKWebViewConfiguration;
 
 	@:native("processPool")
-	public var processPool:Dynamic;
+	public var processPool:WKProcessPool;
 
 	@:native("preferences")
-	public var preferences:Dynamic;
+	public var preferences:WKPreferences;
 
 	@:native("userContentController")
-	public var userContentController:Dynamic;
+	public var userContentController:WKUserContentController;
 
 	@:native("websiteDataStore")
-	public var websiteDataStore:Dynamic;
+	public var websiteDataStore:WKWebsiteDataStore;
 
 	@:native("suppressesIncrementalRendering")
 	public var suppressesIncrementalRendering:Bool;
@@ -34,7 +43,7 @@ extern class WKWebViewConfiguration extends NSObject
 	public var allowsAirPlayForMediaPlayback:Bool;
 
 	@:native("mediaTypesRequiringUserActionForPlayback")
-	public var mediaTypesRequiringUserActionForPlayback:Dynamic;
+	public var mediaTypesRequiringUserActionForPlayback:WKAudiovisualMediaTypes;
 
 	@:native("limitsNavigationsToAppBoundDomains")
 	public var limitsNavigationsToAppBoundDomains:Bool;
@@ -43,19 +52,19 @@ extern class WKWebViewConfiguration extends NSObject
 	public var allowsInlineMediaPlayback:Bool;
 
 	@:native("selectionGranularity")
-	public var selectionGranularity:Dynamic;
+	public var selectionGranularity:WKSelectionGranularity;
 
 	@:native("allowsPictureInPictureMediaPlayback")
 	public var allowsPictureInPictureMediaPlayback:Bool;
 
 	@:native("dataDetectorTypes")
-	public var dataDetectorTypes:Dynamic;
+	public var dataDetectorTypes:WKDataDetectorTypes;
 
 	@:native("ignoresViewportScaleLimits")
 	public var ignoresViewportScaleLimits:Bool;
 
 	@:native("userInterfaceDirectionPolicy")
-	public var userInterfaceDirectionPolicy:Dynamic;
+	public var userInterfaceDirectionPolicy:WKUserInterfaceDirectionPolicy;
 
 	@:native("setURLSchemeHandler:forURLScheme")
 	overload public function setURLSchemeHandler_forURLScheme(urlSchemeHandler:Dynamic, forURLScheme:NSString):Void;

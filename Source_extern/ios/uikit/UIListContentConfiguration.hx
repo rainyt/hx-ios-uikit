@@ -1,6 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UIListContentConfiguration;
+import ios.uikit.UIContentConfiguration;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UIImage;
+import ios.uikit.UIListContentImageProperties;
+import ios.uikit.UIListContentTextProperties;
+import ios.uikit.UIAxis;
+import ios.uikit.UIView;
 @:objc
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")

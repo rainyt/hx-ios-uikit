@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UISpringTimingParameters;
+import ios.uikit.UITimingCurveProvider;
 import ios.objc.CGVector;
+import ios.uikit.NSCoder;
+import ios.uikit.UITimingCurveType;
+import ios.uikit.UICubicTimingParameters;
 @:objc
 @:native("UISpringTimingParameters")
 @:include("UIKit/UIKit.h")

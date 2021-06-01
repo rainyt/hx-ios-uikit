@@ -1,7 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UIBarAppearance;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UIUserInterfaceIdiom;
+import ios.uikit.NSCoder;
+import ios.uikit.UIImage;
+import ios.uikit.UIViewContentMode;
 @:objc
 @:native("UIBarAppearance")
 @:include("UIKit/UIKit.h")

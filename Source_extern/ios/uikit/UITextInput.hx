@@ -1,9 +1,19 @@
 package ios.uikit;
 
+import ios.uikit.UITextInput;
 import cpp.objc.NSString;
+import ios.uikit.UITextRange;
+import ios.uikit.UITextPosition;
+import ios.uikit.UITextLayoutDirection;
+import ios.uikit.NSWritingDirection;
+import ios.uikit.UITextStorageDirection;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import cpp.objc.NSDictionary;
+import ios.uikit.UIView;
+import ios.uikit.UITextAlternativeStyle;
+import ios.uikit.NSAttributedString;
+import ios.uikit.UITextPlaceholder;
 import ios.objc.CGSize;
 @:objc
 @:native("UITextInput")

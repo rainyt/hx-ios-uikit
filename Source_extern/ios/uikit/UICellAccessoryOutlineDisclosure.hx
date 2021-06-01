@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessoryOutlineDisclosure;
+import ios.uikit.UICellAccessoryOutlineDisclosureStyle;
+import ios.uikit.UICellAccessory;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessoryOutlineDisclosure")
 @:include("UIKit/UIKit.h")

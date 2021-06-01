@@ -1,9 +1,46 @@
 package ios.uikit;
 
+import ios.uikit.UISearchBar;
+import ios.uikit.UIBarPositioning;
+import ios.uikit.UITextInputTraits;
 import ios.objc.CGRect;
+import ios.uikit.NSCoder;
+import ios.uikit.UIBarStyle;
+import ios.uikit.UISearchTextField;
+import ios.uikit.UITextInputAssistantItem;
+import ios.uikit.UIColor;
+import ios.uikit.UISearchBarStyle;
+import ios.uikit.UIView;
+import ios.uikit.UIImage;
+import ios.uikit.UIBarPosition;
+import ios.uikit.UIBarMetrics;
+import ios.uikit.UIControlState;
+import ios.uikit.UISearchBarIcon;
 import cpp.objc.NSDictionary;
+import ios.uikit.UITextAutocapitalizationType;
+import ios.uikit.UITextAutocorrectionType;
+import ios.uikit.UITextSpellCheckingType;
+import ios.uikit.UITextSmartQuotesType;
+import ios.uikit.UITextSmartDashesType;
+import ios.uikit.UITextSmartInsertDeleteType;
+import ios.uikit.UIKeyboardType;
+import ios.uikit.UIKeyboardAppearance;
+import ios.uikit.UIReturnKeyType;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
 import ios.objc.CGPoint;
+import ios.uikit.UIEvent;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UISearchBar")
 @:include("UIKit/UIKit.h")

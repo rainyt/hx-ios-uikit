@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIAppearanceContainer;
 @:objc
 @:native("UIAppearanceContainer")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UIScene;
+import ios.uikit.UIPointerLockState;
+import ios.uikit.UISceneSession;
+import ios.uikit.UISceneConnectionOptions;
+import ios.uikit.UISceneActivationState;
+import ios.uikit.UISceneOpenExternalURLOptions;
+import ios.uikit.UISceneActivationConditions;
 @:objc
 @:native("UIScene")
 @:include("UIKit/UIKit.h")

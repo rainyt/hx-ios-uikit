@@ -1,7 +1,30 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewController;
+import ios.uikit.UITableViewDelegate;
+import ios.uikit.UITableViewDataSource;
+import ios.uikit.UITableViewStyle;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UITableView;
+import ios.uikit.UIRefreshControl;
+import ios.uikit.UITableViewCell;
+import ios.uikit.UIView;
+import ios.uikit.UITableViewCellEditingStyle;
+import ios.uikit.UISwipeActionsConfiguration;
+import ios.uikit.UITableViewFocusUpdateContext;
+import ios.uikit.UIFocusAnimationCoordinator;
+import ios.uikit.UIContextMenuConfiguration;
 import ios.objc.CGPoint;
+import ios.uikit.UITargetedPreview;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIViewController;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UITableViewController")
 @:include("UIKit/UIKit.h")

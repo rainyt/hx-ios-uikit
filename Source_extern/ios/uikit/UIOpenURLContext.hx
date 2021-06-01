@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIOpenURLContext;
+import ios.uikit.UISceneOpenURLOptions;
 @:objc
 @:native("UIOpenURLContext")
 @:include("UIKit/UIKit.h")

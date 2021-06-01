@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UILocalizedIndexedCollation;
 @:objc
 @:native("UILocalizedIndexedCollation")
 @:include("UIKit/UIKit.h")

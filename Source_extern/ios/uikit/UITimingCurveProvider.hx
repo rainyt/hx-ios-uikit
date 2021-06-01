@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UITimingCurveProvider;
+import ios.uikit.UITimingCurveType;
+import ios.uikit.UICubicTimingParameters;
+import ios.uikit.UISpringTimingParameters;
 @:objc
 @:native("UITimingCurveProvider")
 @:include("UIKit/UIKit.h")

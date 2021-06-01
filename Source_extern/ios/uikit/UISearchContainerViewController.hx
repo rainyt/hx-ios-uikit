@@ -1,6 +1,17 @@
 package ios.uikit;
 
+import ios.uikit.UISearchContainerViewController;
+import ios.uikit.UISearchController;
+import ios.uikit.UIViewController;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UISearchContainerViewController")
 @:include("UIKit/UIKit.h")

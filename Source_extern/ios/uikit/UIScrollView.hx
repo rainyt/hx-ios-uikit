@@ -1,9 +1,33 @@
 package ios.uikit;
 
+import ios.uikit.UIScrollView;
 import ios.objc.NSCoding;
+import ios.uikit.UIFocusItemScrollableContainer;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
+import ios.uikit.UIScrollViewContentInsetAdjustmentBehavior;
+import ios.uikit.UILayoutGuide;
+import ios.uikit.UIScrollViewIndicatorStyle;
+import ios.uikit.UIScrollViewIndexDisplayMode;
 import ios.objc.CGRect;
+import ios.uikit.UIEvent;
+import ios.uikit.UIView;
+import ios.uikit.UIPanGestureRecognizer;
+import ios.uikit.UIPinchGestureRecognizer;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIScrollViewKeyboardDismissMode;
+import ios.uikit.UIRefreshControl;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.NSCoder;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
 @:objc
 @:native("UIScrollView")
 @:include("UIKit/UIKit.h")

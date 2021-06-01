@@ -1,8 +1,26 @@
 package ios.uikit;
 
+import ios.uikit.UIStackView;
 import ios.objc.CGRect;
+import ios.uikit.NSCoder;
+import ios.uikit.UIView;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UIStackViewDistribution;
+import ios.uikit.UIStackViewAlignment;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
 import ios.objc.CGPoint;
+import ios.uikit.UIEvent;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UIStackView")
 @:include("UIKit/UIKit.h")

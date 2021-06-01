@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIObjectRestoratio;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIObjectRestoratio")
 @:include("UIKit/UIKit.h")

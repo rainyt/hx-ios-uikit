@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIPencilInteractionDelegate;
+import ios.uikit.UIPencilInteraction;
 @:objc
 @:native("UIPencilInteractionDelegate")
 @:include("UIKit/UIKit.h")

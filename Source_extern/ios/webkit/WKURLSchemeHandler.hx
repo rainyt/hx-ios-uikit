@@ -1,5 +1,7 @@
 package ios.webkit;
 
+import ios.webkit.WKURLSchemeHandler;
+import ios.webkit.WKWebView;
 @:objc
 @:native("WKURLSchemeHandler")
 @:include("UIKit/UIKit.h")
@@ -12,10 +14,10 @@ extern interface WKURLSchemeHandler{
 	overload public static function autorelease():WKURLSchemeHandler;
 
 	@:native("webView:startURLSchemeTask")
-	overload public function webView_startURLSchemeTask(webView:Dynamic, startURLSchemeTask:Dynamic):Void;
+	overload public function webView_startURLSchemeTask(webView:WKWebView, startURLSchemeTask:Dynamic):Void;
 
 	@:native("webView:stopURLSchemeTask")
-	overload public function webView_stopURLSchemeTask(webView:Dynamic, stopURLSchemeTask:Dynamic):Void;
+	overload public function webView_stopURLSchemeTask(webView:WKWebView, stopURLSchemeTask:Dynamic):Void;
 
 
 }

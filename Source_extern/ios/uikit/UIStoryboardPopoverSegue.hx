@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIStoryboardPopoverSegue;
+import ios.uikit.UIPopoverController;
+import ios.uikit.UIStoryboardSegue;
 import cpp.objc.NSString;
+import ios.uikit.UIViewController;
 @:objc
 @:native("UIStoryboardPopoverSegue")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIFeedbackGenerator;
 @:objc
 @:native("UIFeedbackGenerator")
 @:include("UIKit/UIKit.h")

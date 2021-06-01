@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UISceneSizeRestrictions;
 import ios.objc.CGSize;
 @:objc
 @:native("UISceneSizeRestrictions")

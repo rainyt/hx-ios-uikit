@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDocumentBrowserViewControllerDelegate;
+import ios.uikit.UIDocumentBrowserViewController;
+import ios.uikit.UIActivityViewController;
 @:objc
 @:native("UIDocumentBrowserViewControllerDelegate")
 @:include("UIKit/UIKit.h")

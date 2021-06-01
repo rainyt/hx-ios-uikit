@@ -1,11 +1,35 @@
 package ios.uikit;
 
+import ios.uikit.UIView;
+import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
+import ios.uikit.UIImage;
+import ios.uikit.NSCoder;
 import ios.objc.CALayer;
+import ios.uikit.UISemanticContentAttribute;
+import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
 import ios.objc.CATransform3D;
+import ios.uikit.UIEvent;
+import ios.uikit.UIViewAutoresizing;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UILayoutGuide;
+import ios.uikit.UIViewContentMode;
+import ios.uikit.UIColor;
+import ios.uikit.UIViewTintAdjustmentMode;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.NSLayoutXAxisAnchor;
+import ios.uikit.NSLayoutYAxisAnchor;
+import ios.uikit.NSLayoutDimension;
+import ios.uikit.UIUserInterfaceStyle;
 @:objc
 @:native("UIView")
 @:include("UIKit/UIKit.h")

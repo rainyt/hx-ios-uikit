@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessoryDelete;
+import ios.uikit.UIColor;
+import ios.uikit.UICellAccessory;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessoryDelete")
 @:include("UIKit/UIKit.h")

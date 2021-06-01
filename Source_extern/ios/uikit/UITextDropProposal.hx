@@ -1,6 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UITextDropProposal;
 import ios.objc.NSCopying;
+import ios.uikit.UITextDropAction;
+import ios.uikit.UITextDropProgressMode;
+import ios.uikit.UITextDropPerformer;
+import ios.uikit.UIDropProposal;
+import ios.uikit.UIDropOperation;
 @:objc
 @:native("UITextDropProposal")
 @:include("UIKit/UIKit.h")

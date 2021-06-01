@@ -1,5 +1,7 @@
 package ios.webkit;
 
+import ios.webkit.WKNavigationAction;
+import ios.webkit.WKNavigationType;
 @:objc
 @:native("WKNavigationAction")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,7 @@ extern class WKNavigationAction extends NSObject{
 	overload public static function autorelease():WKNavigationAction;
 
 	@:native("navigationType")
-	public var navigationType:Dynamic;
+	public var navigationType:WKNavigationType;
 
 	@:native("modifierFlags")
 	public var modifierFlags:Dynamic;

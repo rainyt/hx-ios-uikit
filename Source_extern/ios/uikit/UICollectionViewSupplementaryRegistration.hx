@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewSupplementaryRegistration;
 import cpp.objc.NSString;
+import ios.uikit.UINib;
 @:objc
 @:native("UICollectionViewSupplementaryRegistration")
 @:include("UIKit/UIKit.h")

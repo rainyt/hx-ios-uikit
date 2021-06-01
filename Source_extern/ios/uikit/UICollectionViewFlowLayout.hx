@@ -1,8 +1,16 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewFlowLayout;
 import ios.objc.CGSize;
+import ios.uikit.UICollectionViewScrollDirection;
+import ios.uikit.UICollectionViewFlowLayoutSectionInsetReference;
+import ios.uikit.UICollectionViewLayout;
+import ios.uikit.NSCoder;
+import ios.uikit.UICollectionViewLayoutInvalidationContext;
 import cpp.objc.NSString;
+import ios.uikit.UINib;
 import ios.objc.CGRect;
+import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.objc.CGPoint;
 @:objc
 @:native("UICollectionViewFlowLayout")

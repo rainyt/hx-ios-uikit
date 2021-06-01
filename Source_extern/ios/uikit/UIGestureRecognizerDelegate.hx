@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIGestureRecognizerDelegate;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UITouch;
+import ios.uikit.UIPress;
+import ios.uikit.UIEvent;
 @:objc
 @:native("UIGestureRecognizerDelegate")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIScribbleInteractionDelegate;
+import ios.uikit.UIScribbleInteraction;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIScribbleInteractionDelegate")

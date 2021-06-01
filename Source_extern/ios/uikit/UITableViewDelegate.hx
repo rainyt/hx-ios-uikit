@@ -1,7 +1,17 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDelegate;
+import ios.uikit.UITableView;
+import ios.uikit.UITableViewCell;
+import ios.uikit.UIView;
+import ios.uikit.UITableViewCellEditingStyle;
 import cpp.objc.NSString;
+import ios.uikit.UISwipeActionsConfiguration;
+import ios.uikit.UITableViewFocusUpdateContext;
+import ios.uikit.UIFocusAnimationCoordinator;
+import ios.uikit.UIContextMenuConfiguration;
 import ios.objc.CGPoint;
+import ios.uikit.UITargetedPreview;
 @:objc
 @:native("UITableViewDelegate")
 @:include("UIKit/UIKit.h")

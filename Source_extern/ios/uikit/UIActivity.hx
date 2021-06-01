@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIActivity;
+import ios.uikit.UIActivityCategory;
 import cpp.objc.NSString;
+import ios.uikit.UIImage;
+import ios.uikit.UIViewController;
 @:objc
 @:native("UIActivity")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIDataSourceTranslating;
 @:objc
 @:native("UIDataSourceTranslating")
 @:include("UIKit/UIKit.h")

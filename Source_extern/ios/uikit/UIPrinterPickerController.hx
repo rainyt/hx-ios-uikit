@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIPrinterPickerController;
+import ios.uikit.UIPrinter;
 import ios.objc.CGRect;
+import ios.uikit.UIView;
+import ios.uikit.UIBarButtonItem;
 @:objc
 @:native("UIPrinterPickerController")
 @:include("UIKit/UIKit.h")

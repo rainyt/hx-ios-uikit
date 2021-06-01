@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIPickerViewAccessibilityDelegate;
 import cpp.objc.NSString;
+import ios.uikit.UIPickerView;
+import ios.uikit.NSAttributedString;
 @:objc
 @:native("UIPickerViewAccessibilityDelegate")
 @:include("UIKit/UIKit.h")

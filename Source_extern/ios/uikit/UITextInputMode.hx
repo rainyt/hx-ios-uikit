@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextInputMode;
 import ios.objc.NSSecureCoding;
 import cpp.objc.NSString;
 @:objc

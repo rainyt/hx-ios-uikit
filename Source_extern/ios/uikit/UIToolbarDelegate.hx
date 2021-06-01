@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIToolbarDelegate;
 @:objc
 @:native("UIToolbarDelegate")
 @:include("UIKit/UIKit.h")

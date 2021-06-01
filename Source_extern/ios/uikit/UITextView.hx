@@ -1,10 +1,43 @@
 package ios.uikit;
 
+import ios.uikit.UITextView;
+import ios.uikit.UITextInput;
+import ios.uikit.UIContentSizeCategoryAdjusting;
+import ios.uikit.UIFont;
+import ios.uikit.UIColor;
+import ios.uikit.NSTextAlignment;
+import ios.uikit.UIDataDetectorTypes;
+import ios.uikit.UIView;
 import ios.objc.CGRect;
+import ios.uikit.NSTextContainer;
+import ios.uikit.NSCoder;
+import ios.uikit.NSLayoutManager;
+import ios.uikit.NSTextStorage;
 import cpp.objc.NSString;
+import ios.uikit.UITextRange;
+import ios.uikit.UITextPosition;
+import ios.uikit.UITextLayoutDirection;
+import ios.uikit.NSWritingDirection;
+import ios.uikit.UITextStorageDirection;
 import ios.objc.CGPoint;
 import cpp.objc.NSDictionary;
+import ios.uikit.UITextAlternativeStyle;
+import ios.uikit.NSAttributedString;
+import ios.uikit.UITextPlaceholder;
 import ios.objc.CGSize;
+import ios.uikit.UIEvent;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UITextView")
 @:include("UIKit/UIKit.h")

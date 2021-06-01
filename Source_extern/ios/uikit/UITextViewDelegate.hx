@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UITextViewDelegate;
+import ios.uikit.UITextView;
 import cpp.objc.NSString;
+import ios.uikit.UITextItemInteraction;
+import ios.uikit.NSTextAttachment;
 @:objc
 @:native("UITextViewDelegate")
 @:include("UIKit/UIKit.h")

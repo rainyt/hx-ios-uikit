@@ -1,10 +1,14 @@
 package ios.uikit;
 
+import ios.uikit.UIFontDescriptor;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
+import ios.uikit.UIFontDescriptorSymbolicTraits;
 import cpp.objc.NSDictionary;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIFontDescriptor")
 @:include("UIKit/UIKit.h")

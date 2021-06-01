@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UISceneConnectionOptions;
 import cpp.objc.NSString;
+import ios.uikit.UIApplicationShortcutItem;
 @:objc
 @:native("UISceneConnectionOptions")
 @:include("UIKit/UIKit.h")

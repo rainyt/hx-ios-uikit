@@ -1,5 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UISplitViewControllerDelegat;
+import ios.uikit.UISplitViewController;
+import ios.uikit.UISplitViewControllerDisplayMode;
+import ios.uikit.UIViewController;
+import ios.uikit.UIInterfaceOrientationMask;
+import ios.uikit.UIInterfaceOrientation;
+import ios.uikit.UISplitViewControllerColumn;
 @:objc
 @:native("UISplitViewControllerDelegat")
 @:include("UIKit/UIKit.h")

@@ -1,6 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIDocumentInteractionControllerDelegate;
+import ios.uikit.UIViewController;
+import ios.uikit.UIDocumentInteractionController;
 import ios.objc.CGRect;
+import ios.uikit.UIView;
 import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentInteractionControllerDelegate")

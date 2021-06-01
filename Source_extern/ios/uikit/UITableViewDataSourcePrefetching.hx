@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDataSourcePrefetching;
+import ios.uikit.UITableView;
 @:objc
 @:native("UITableViewDataSourcePrefetching")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITextInteractionDelegate;
+import ios.uikit.UITextInteraction;
 import ios.objc.CGPoint;
 @:objc
 @:native("UITextInteractionDelegate")

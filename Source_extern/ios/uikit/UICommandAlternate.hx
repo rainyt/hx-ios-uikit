@@ -1,8 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UICommandAlternate;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
 import cpp.objc.NSString;
+import ios.uikit.UIKeyModifierFlags;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICommandAlternate")
 @:include("UIKit/UIKit.h")

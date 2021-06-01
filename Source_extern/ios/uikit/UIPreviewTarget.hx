@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPreviewTarget;
 import ios.objc.NSCopying;
+import ios.uikit.UIView;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
 @:objc

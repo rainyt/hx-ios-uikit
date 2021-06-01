@@ -4,6 +4,8 @@ import cpp.objc.NSObject;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import cpp.objc.NSString;
+import ios.uikit.UIAccessibilityNavigationStyle;
+import ios.uikit.UIAccessibilityContainerType;
 @:objc
 @:native("NSObject")
 @:include("UIKit/UIKit.h")

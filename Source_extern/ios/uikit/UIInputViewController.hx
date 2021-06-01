@@ -1,6 +1,18 @@
 package ios.uikit;
 
+import ios.uikit.UIInputViewController;
+import ios.uikit.UITextInputDelegate;
+import ios.uikit.UIInputView;
+import ios.uikit.UIViewController;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UIInputViewController")
 @:include("UIKit/UIKit.h")

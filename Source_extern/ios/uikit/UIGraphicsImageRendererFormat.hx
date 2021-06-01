@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIGraphicsImageRendererFormat;
+import ios.uikit.UIGraphicsImageRendererFormatRange;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIGraphicsRendererFormat;
 @:objc
 @:native("UIGraphicsImageRendererFormat")
 @:include("UIKit/UIKit.h")

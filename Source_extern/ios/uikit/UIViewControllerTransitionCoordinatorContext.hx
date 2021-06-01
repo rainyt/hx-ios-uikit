@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIViewControllerTransitionCoordinatorContext;
+import ios.uikit.UIModalPresentationStyle;
+import ios.uikit.UIViewAnimationCurve;
+import ios.uikit.UIViewController;
 import cpp.objc.NSString;
+import ios.uikit.UIView;
 import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIViewControllerTransitionCoordinatorContext")

@@ -1,8 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UIColor;
 import ios.objc.NSSecureCoding;
 import ios.objc.NSCopying;
+import ios.uikit.UIImage;
+import ios.uikit.CIColor;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIColor")
 @:include("UIKit/UIKit.h")

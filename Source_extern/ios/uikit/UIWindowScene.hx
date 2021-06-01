@@ -1,5 +1,12 @@
 package ios.uikit;
 
+import ios.uikit.UIWindowScene;
+import ios.uikit.UIScreenshotService;
+import ios.uikit.UIScreen;
+import ios.uikit.UIInterfaceOrientation;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UISceneSizeRestrictions;
+import ios.uikit.UIStatusBarManager;
 @:objc
 @:native("UIWindowScene")
 @:include("UIKit/UIKit.h")

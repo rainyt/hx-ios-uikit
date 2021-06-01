@@ -1,5 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIImageSymbolConfiguration;
+import ios.uikit.UIImageSymbolScale;
+import ios.uikit.UIImageSymbolWeight;
+import ios.uikit.UIFont;
+import ios.uikit.UIImageConfiguration;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIImageSymbolConfiguration")
 @:include("UIKit/UIKit.h")

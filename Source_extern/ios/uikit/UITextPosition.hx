@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextPosition;
 @:objc
 @:native("UITextPosition")
 @:include("UIKit/UIKit.h")

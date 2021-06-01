@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIDragPreviewParameters;
+import ios.uikit.UIPreviewParameters;
 @:objc
 @:native("UIDragPreviewParameters")
 @:include("UIKit/UIKit.h")

@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIScrollViewDelegate;
+import ios.uikit.UIScrollView;
 import ios.objc.CGPoint;
+import ios.uikit.UIView;
 @:objc
 @:native("UIScrollViewDelegate")
 @:include("UIKit/UIKit.h")

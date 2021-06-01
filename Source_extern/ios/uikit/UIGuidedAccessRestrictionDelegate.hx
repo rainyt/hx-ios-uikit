@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIGuidedAccessRestrictionDelegate;
 import cpp.objc.NSString;
+import ios.uikit.UIGuidedAccessRestrictionState;
 @:objc
 @:native("UIGuidedAccessRestrictionDelegate")
 @:include("UIKit/UIKit.h")

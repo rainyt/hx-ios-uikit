@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UINavigationBarDelegate;
+import ios.uikit.UINavigationBar;
+import ios.uikit.UINavigationItem;
 @:objc
 @:native("UINavigationBarDelegate")
 @:include("UIKit/UIKit.h")

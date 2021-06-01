@@ -1,6 +1,21 @@
 package ios.uikit;
 
+import ios.uikit.UISearchController;
+import ios.uikit.UIViewControllerTransitioningDelegate;
+import ios.uikit.UIViewControllerAnimatedTransitioning;
+import ios.uikit.UIViewController;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UISearchBar;
+import ios.uikit.UIScrollView;
+import ios.uikit.UIPresentationController;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UISearchController")
 @:include("UIKit/UIKit.h")

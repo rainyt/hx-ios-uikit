@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIMenuController;
+import ios.uikit.UIView;
 import ios.objc.CGRect;
+import ios.uikit.UIMenuControllerArrowDirection;
 @:objc
 @:native("UIMenuController")
 @:include("UIKit/UIKit.h")

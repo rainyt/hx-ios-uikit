@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPrintPageRenderer;
 import ios.objc.CGRect;
+import ios.uikit.UIPrintFormatter;
 @:objc
 @:native("UIPrintPageRenderer")
 @:include("UIKit/UIKit.h")

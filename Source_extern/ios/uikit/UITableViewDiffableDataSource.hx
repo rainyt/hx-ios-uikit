@@ -1,6 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDiffableDataSource;
+import ios.uikit.UITableViewDataSource;
+import ios.uikit.UITableView;
+import ios.uikit.NSDiffableDataSourceSnapshot;
+import ios.uikit.UITableViewRowAnimation;
+import ios.uikit.UITableViewCell;
 import cpp.objc.NSString;
+import ios.uikit.UITableViewCellEditingStyle;
 @:objc
 @:native("UITableViewDiffableDataSource")
 @:include("UIKit/UIKit.h")

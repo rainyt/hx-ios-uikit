@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UINavigationControllerDelegate;
+import ios.uikit.UINavigationController;
+import ios.uikit.UIViewController;
+import ios.uikit.UIInterfaceOrientationMask;
+import ios.uikit.UIInterfaceOrientation;
 @:objc
 @:native("UINavigationControllerDelegate")
 @:include("UIKit/UIKit.h")

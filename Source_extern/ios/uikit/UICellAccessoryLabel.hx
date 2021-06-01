@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessoryLabel;
 import cpp.objc.NSString;
+import ios.uikit.UIFont;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessoryLabel")
 @:include("UIKit/UIKit.h")

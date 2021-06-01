@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIContentSizeCategoryAdjusting;
 @:objc
 @:native("UIContentSizeCategoryAdjusting")
 @:include("UIKit/UIKit.h")

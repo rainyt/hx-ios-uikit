@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIScribbleInteraction;
+import ios.uikit.UIInteraction;
+import ios.uikit.UIView;
 @:objc
 @:native("UIScribbleInteraction")
 @:include("UIKit/UIKit.h")

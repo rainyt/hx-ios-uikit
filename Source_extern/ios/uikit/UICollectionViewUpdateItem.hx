@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewUpdateItem;
+import ios.uikit.UICollectionUpdateAction;
 @:objc
 @:native("UICollectionViewUpdateItem")
 @:include("UIKit/UIKit.h")

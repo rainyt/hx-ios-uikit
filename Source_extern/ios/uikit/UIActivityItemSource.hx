@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIActivityItemSource;
+import ios.uikit.UIActivityViewController;
 import cpp.objc.NSString;
+import ios.uikit.UIImage;
 import ios.objc.CGSize;
 @:objc
 @:native("UIActivityItemSource")

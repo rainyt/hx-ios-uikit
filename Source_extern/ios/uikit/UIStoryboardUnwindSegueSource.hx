@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewController;
 @:objc
 @:native("UIStoryboardUnwindSegueSource")
 @:include("UIKit/UIKit.h")

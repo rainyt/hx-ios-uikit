@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIInputViewAudioFeedback;
 @:objc
 @:native("UIInputViewAudioFeedback")
 @:include("UIKit/UIKit.h")

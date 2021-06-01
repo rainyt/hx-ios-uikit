@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UISearchBarDelegate;
+import ios.uikit.UISearchBar;
 import cpp.objc.NSString;
 @:objc
 @:native("UISearchBarDelegate")

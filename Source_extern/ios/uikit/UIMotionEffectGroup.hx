@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIMotionEffectGroup;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSCoder;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIMotionEffectGroup")

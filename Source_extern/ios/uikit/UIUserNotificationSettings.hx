@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIUserNotificationSettings;
+import ios.uikit.UIUserNotificationType;
 @:objc
 @:native("UIUserNotificationSettings")
 @:include("UIKit/UIKit.h")

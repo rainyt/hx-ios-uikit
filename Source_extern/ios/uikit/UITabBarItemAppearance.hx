@@ -1,7 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UITabBarItemAppearance;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UITabBarItemAppearanceStyle;
+import ios.uikit.NSCoder;
+import ios.uikit.UITabBarItemStateAppearance;
 @:objc
 @:native("UITabBarItemAppearance")
 @:include("UIKit/UIKit.h")

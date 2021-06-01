@@ -1,7 +1,16 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDelegate;
+import ios.uikit.UICollectionView;
+import ios.uikit.UICollectionViewCell;
+import ios.uikit.UICollectionReusableView;
 import cpp.objc.NSString;
+import ios.uikit.UICollectionViewLayout;
+import ios.uikit.UICollectionViewFocusUpdateContext;
+import ios.uikit.UIFocusAnimationCoordinator;
 import ios.objc.CGPoint;
+import ios.uikit.UIContextMenuConfiguration;
+import ios.uikit.UITargetedPreview;
 @:objc
 @:native("UICollectionViewDelegate")
 @:include("UIKit/UIKit.h")

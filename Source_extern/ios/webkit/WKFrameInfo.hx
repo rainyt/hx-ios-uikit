@@ -1,6 +1,9 @@
 package ios.webkit;
 
+import ios.webkit.WKFrameInfo;
 import ios.objc.NSCopying;
+import ios.webkit.WKSecurityOrigin;
+import ios.webkit.WKWebView;
 @:objc
 @:native("WKFrameInfo")
 @:include("UIKit/UIKit.h")
@@ -17,10 +20,10 @@ extern class WKFrameInfo extends NSObject
 	public var mainFrame:Bool;
 
 	@:native("securityOrigin")
-	public var securityOrigin:Dynamic;
+	public var securityOrigin:WKSecurityOrigin;
 
 	@:native("webView")
-	public var webView:Dynamic;
+	public var webView:WKWebView;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

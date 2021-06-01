@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIPageViewControllerDelegate;
+import ios.uikit.UIPageViewController;
+import ios.uikit.UIPageViewControllerSpineLocation;
+import ios.uikit.UIInterfaceOrientation;
+import ios.uikit.UIInterfaceOrientationMask;
 @:objc
 @:native("UIPageViewControllerDelegate")
 @:include("UIKit/UIKit.h")

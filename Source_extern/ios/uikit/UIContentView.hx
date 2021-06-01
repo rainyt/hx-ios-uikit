@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIContentView;
 @:objc
 @:native("UIContentView")
 @:include("UIKit/UIKit.h")

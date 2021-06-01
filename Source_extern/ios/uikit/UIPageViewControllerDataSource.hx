@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPageViewControllerDataSource;
+import ios.uikit.UIViewController;
+import ios.uikit.UIPageViewController;
 @:objc
 @:native("UIPageViewControllerDataSource")
 @:include("UIKit/UIKit.h")

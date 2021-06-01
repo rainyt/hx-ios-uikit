@@ -1,8 +1,27 @@
 package ios.uikit;
 
+import ios.uikit.UIImageView;
+import ios.uikit.UIImage;
+import ios.uikit.UIImageSymbolConfiguration;
+import ios.uikit.UIColor;
+import ios.uikit.UILayoutGuide;
+import ios.uikit.UIView;
+import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
+import ios.uikit.NSCoder;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
 import ios.objc.CGPoint;
+import ios.uikit.UIEvent;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
 @:objc
 @:native("UIImageView")
 @:include("UIKit/UIKit.h")

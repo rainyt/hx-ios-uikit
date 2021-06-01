@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIDragAnimating;
 @:objc
 @:native("UIDragAnimating")
 @:include("UIKit/UIKit.h")

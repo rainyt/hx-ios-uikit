@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UICoordinateSpace;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
 @:objc

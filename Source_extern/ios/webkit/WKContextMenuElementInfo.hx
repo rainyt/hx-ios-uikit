@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKContextMenuElementInfo;
 @:objc
 @:native("WKContextMenuElementInfo")
 @:include("UIKit/UIKit.h")

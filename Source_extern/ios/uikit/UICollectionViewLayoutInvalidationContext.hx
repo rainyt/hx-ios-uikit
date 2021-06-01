@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewLayoutInvalidationContext;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 import ios.objc.CGPoint;

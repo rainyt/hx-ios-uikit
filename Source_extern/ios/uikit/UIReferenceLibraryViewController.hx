@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIReferenceLibraryViewController;
 import cpp.objc.NSString;
+import ios.uikit.NSCoder;
+import ios.uikit.NSBundle;
 @:objc
 @:native("UIReferenceLibraryViewController")
 @:include("UIKit/UIKit.h")

@@ -1,10 +1,43 @@
 package ios.uikit;
 
+import ios.uikit.UISearchTextField;
+import ios.uikit.UISearchToken;
+import ios.uikit.UITextPosition;
+import ios.uikit.UITextRange;
+import ios.uikit.UIColor;
 import ios.objc.CGRect;
 import cpp.objc.NSString;
+import ios.uikit.UITextLayoutDirection;
+import ios.uikit.NSWritingDirection;
+import ios.uikit.UITextStorageDirection;
 import ios.objc.CGPoint;
 import cpp.objc.NSDictionary;
+import ios.uikit.UITextAlternativeStyle;
+import ios.uikit.NSAttributedString;
+import ios.uikit.UITextPlaceholder;
 import ios.objc.CGSize;
+import ios.uikit.UIControl;
+import ios.uikit.NSCoder;
+import ios.uikit.UIAction;
+import ios.uikit.UITouch;
+import ios.uikit.UIEvent;
+import ios.uikit.UIControlEvents;
+import ios.uikit.UIContextMenuConfiguration;
+import ios.uikit.UIContextMenuInteraction;
+import ios.uikit.UITargetedPreview;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
+import ios.uikit.UIView;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UISearchTextField")
 @:include("UIKit/UIKit.h")

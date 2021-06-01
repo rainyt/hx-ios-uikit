@@ -1,8 +1,22 @@
 package ios.uikit;
 
+import ios.uikit.UIBarButtonItem;
 import ios.objc.NSCoding;
+import ios.uikit.NSCoder;
+import ios.uikit.UIImage;
+import ios.uikit.UIBarButtonItemStyle;
 import cpp.objc.NSString;
+import ios.uikit.UIBarButtonSystemItem;
+import ios.uikit.UIView;
+import ios.uikit.UIAction;
+import ios.uikit.UIMenu;
+import ios.uikit.UIControlState;
+import ios.uikit.UIBarMetrics;
+import ios.uikit.UIColor;
+import ios.uikit.UIBarButtonItemGroup;
 import cpp.objc.NSDictionary;
+import ios.uikit.UIAppearance;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIBarButtonItem")
 @:include("UIKit/UIKit.h")

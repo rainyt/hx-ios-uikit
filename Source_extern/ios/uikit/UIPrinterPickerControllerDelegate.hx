@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIPrinterPickerControllerDelegate;
+import ios.uikit.UIViewController;
+import ios.uikit.UIPrinterPickerController;
+import ios.uikit.UIPrinter;
 @:objc
 @:native("UIPrinterPickerControllerDelegate")
 @:include("UIKit/UIKit.h")

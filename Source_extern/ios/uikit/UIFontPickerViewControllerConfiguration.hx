@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIFontPickerViewControllerConfiguration;
 import ios.objc.NSCopying;
+import ios.uikit.UIFontDescriptorSymbolicTraits;
 @:objc
 @:native("UIFontPickerViewControllerConfiguration")
 @:include("UIKit/UIKit.h")

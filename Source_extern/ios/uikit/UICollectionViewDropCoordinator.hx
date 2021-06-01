@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDropCoordinator;
+import ios.uikit.UICollectionViewDropProposal;
+import ios.uikit.UIDragItem;
+import ios.uikit.UICollectionViewDropPlaceholder;
 import ios.objc.CGRect;
+import ios.uikit.UIDragPreviewTarget;
 @:objc
 @:native("UICollectionViewDropCoordinator")
 @:include("UIKit/UIKit.h")

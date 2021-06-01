@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIMutableApplicationShortcutItem;
+import ios.uikit.UIApplicationShortcutItem;
 import cpp.objc.NSString;
+import ios.uikit.UIApplicationShortcutIcon;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIMutableApplicationShortcutItem")

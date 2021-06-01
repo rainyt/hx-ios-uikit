@@ -1,6 +1,8 @@
 package ios.webkit;
 
+import ios.webkit.WKWebsiteDataStore;
 import ios.objc.NSSecureCoding;
+import ios.webkit.WKHTTPCookieStore;
 @:objc
 @:native("WKWebsiteDataStore")
 @:include("UIKit/UIKit.h")
@@ -38,7 +40,7 @@ extern class WKWebsiteDataStore extends NSObject
 	overload public function removeDataOfTypes_modifiedSince_completionHandler(dataTypes:Dynamic, modifiedSince:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("httpCookieStore")
-	public var httpCookieStore:Dynamic;
+	public var httpCookieStore:WKHTTPCookieStore;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

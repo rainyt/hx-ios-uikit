@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIViewImplicitlyAnimating;
 @:objc
 @:native("UIViewImplicitlyAnimating")
 @:include("UIKit/UIKit.h")

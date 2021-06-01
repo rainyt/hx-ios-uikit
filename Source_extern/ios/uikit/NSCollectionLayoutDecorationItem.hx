@@ -1,7 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutDecorationItem;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
+import ios.uikit.NSCollectionLayoutItem;
+import ios.uikit.NSCollectionLayoutSize;
 @:objc
 @:native("NSCollectionLayoutDecorationItem")
 @:include("UIKit/UIKit.h")

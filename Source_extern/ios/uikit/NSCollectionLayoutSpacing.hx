@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutSpacing;
 import ios.objc.NSCopying;
 @:objc
 @:native("NSCollectionLayoutSpacing")

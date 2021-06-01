@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPopoverControllerDelegate;
 @:objc
 @:native("UIPopoverControllerDelegate")
 @:include("UIKit/UIKit.h")

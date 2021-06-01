@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKWindowFeatures;
 @:objc
 @:native("WKWindowFeatures")
 @:include("UIKit/UIKit.h")

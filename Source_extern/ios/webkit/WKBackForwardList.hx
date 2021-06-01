@@ -1,5 +1,7 @@
 package ios.webkit;
 
+import ios.webkit.WKBackForwardList;
+import ios.webkit.WKBackForwardListItem;
 @:objc
 @:native("WKBackForwardList")
 @:include("UIKit/UIKit.h")
@@ -12,16 +14,16 @@ extern class WKBackForwardList extends NSObject{
 	overload public static function autorelease():WKBackForwardList;
 
 	@:native("currentItem")
-	public var currentItem:Dynamic;
+	public var currentItem:WKBackForwardListItem;
 
 	@:native("backItem")
-	public var backItem:Dynamic;
+	public var backItem:WKBackForwardListItem;
 
 	@:native("forwardItem")
-	public var forwardItem:Dynamic;
+	public var forwardItem:WKBackForwardListItem;
 
 	@:native("itemAtIndex")
-	overload public function itemAtIndex(index:Int):Dynamic;
+	overload public function itemAtIndex(index:Int):WKBackForwardListItem;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

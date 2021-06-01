@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIGraphicsPDFRendererContext;
 import ios.objc.CGRect;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSString;

@@ -20,9 +20,14 @@ class ObjcImport {
 			case "Protocol":
 				return "cpp.objc.Protocol";
 		}
-		// 本地查找
-		if (FileSystem.exists(ExternTools.externDir + "/ios/objc/" + type + ".hx"))
-			return "ios.objc." + type;
+		var files = FileSystem.readDirectory(ExternTools.externDir + "/ios");
+		for (index => value in files) {
+			if (FileSystem.exists(ExternTools.externDir + "/ios/" + value + "/" + type + ".hx"))
+				return "ios." + value + "." + type;
+		}
+		// // 本地查找
+		// if (FileSystem.exists(ExternTools.externDir + "/ios/objc/" + type + ".hx"))
+		// 	return "ios.objc." + type;
 		return null;
 	}
 

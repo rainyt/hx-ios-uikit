@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UISearchResultsUpdating;
+import ios.uikit.UISearchController;
 @:objc
 @:native("UISearchResultsUpdating")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusAnimationCoordinator;
 @:objc
 @:native("UIFocusAnimationCoordinator")
 @:include("UIKit/UIKit.h")

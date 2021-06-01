@@ -1,7 +1,14 @@
 package ios.uikit;
 
+import ios.uikit.UITabBarItem;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
+import ios.uikit.UIImage;
+import ios.uikit.UITabBarSystemItem;
 import cpp.objc.NSDictionary;
+import ios.uikit.UIControlState;
+import ios.uikit.UIAppearance;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UITabBarItem")
 @:include("UIKit/UIKit.h")

@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDragDropSession;
 import ios.objc.CGPoint;
+import ios.uikit.UIView;
 @:objc
 @:native("UIDragDropSession")
 @:include("UIKit/UIKit.h")

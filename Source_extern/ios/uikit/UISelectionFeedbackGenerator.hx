@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UISelectionFeedbackGenerator;
 @:objc
 @:native("UISelectionFeedbackGenerator")
 @:include("UIKit/UIKit.h")

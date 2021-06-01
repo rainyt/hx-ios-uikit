@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIFont;
+import ios.uikit.UITraitCollection;
 import cpp.objc.NSString;
+import ios.uikit.UIFontDescriptor;
 @:objc
 @:native("UIFont")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UINotificationFeedbackGenerator;
+import ios.uikit.UINotificationFeedbackType;
 @:objc
 @:native("UINotificationFeedbackGenerator")
 @:include("UIKit/UIKit.h")

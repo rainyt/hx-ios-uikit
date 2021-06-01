@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UISearchControllerDelegate;
+import ios.uikit.UISearchController;
 @:objc
 @:native("UISearchControllerDelegate")
 @:include("UIKit/UIKit.h")

@@ -1,7 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.UILayoutGuide;
 import ios.objc.NSCoding;
 import ios.objc.CGRect;
+import ios.uikit.UIView;
+import ios.uikit.NSLayoutXAxisAnchor;
+import ios.uikit.NSLayoutYAxisAnchor;
+import ios.uikit.NSLayoutDimension;
+import ios.uikit.UILayoutConstraintAxis;
 @:objc
 @:native("UILayoutGuide")
 @:include("UIKit/UIKit.h")

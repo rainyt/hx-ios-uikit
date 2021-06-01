@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerRegion;
 import ios.objc.NSCopying;
 import ios.objc.CGRect;
 @:objc

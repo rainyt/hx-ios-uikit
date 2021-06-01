@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewCompositionalLayout;
+import ios.uikit.UICollectionLayoutListConfiguration;
+import ios.uikit.NSCollectionLayoutSection;
+import ios.uikit.UICollectionViewCompositionalLayoutConfiguration;
 @:objc
 @:native("UICollectionViewCompositionalLayout")
 @:include("UIKit/UIKit.h")

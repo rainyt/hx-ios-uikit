@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIViewControllerPreviewingDelegate;
 @:objc
 @:native("UIViewControllerPreviewingDelegate")
 @:include("UIKit/UIKit.h")

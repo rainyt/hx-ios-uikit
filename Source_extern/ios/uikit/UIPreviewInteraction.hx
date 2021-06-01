@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIPreviewInteraction;
+import ios.uikit.UIView;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIPreviewInteraction")

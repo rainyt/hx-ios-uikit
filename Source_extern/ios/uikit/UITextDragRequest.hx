@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITextDragRequest;
+import ios.uikit.UITextRange;
 @:objc
 @:native("UITextDragRequest")
 @:include("UIKit/UIKit.h")

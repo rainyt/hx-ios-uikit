@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIScreenshotService;
+import ios.uikit.UIWindowScene;
 @:objc
 @:native("UIScreenshotService")
 @:include("UIKit/UIKit.h")

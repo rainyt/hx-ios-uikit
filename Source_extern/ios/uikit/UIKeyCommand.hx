@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIKeyCommand;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
+import ios.uikit.UIKeyModifierFlags;
+import ios.uikit.UIMenuElementAttributes;
+import ios.uikit.UIMenuElementState;
 @:objc
 @:native("UIKeyCommand")
 @:include("UIKit/UIKit.h")

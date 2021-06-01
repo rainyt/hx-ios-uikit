@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityCustomRotorSearchPredicate;
+import ios.uikit.UIAccessibilityCustomRotorItemResult;
+import ios.uikit.UIAccessibilityCustomRotorDirection;
 @:objc
 @:native("UIAccessibilityCustomRotorSearchPredicate")
 @:include("UIKit/UIKit.h")

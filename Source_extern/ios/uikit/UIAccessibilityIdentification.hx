@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityIdentification;
 @:objc
 @:native("UIAccessibilityIdentification")
 @:include("UIKit/UIKit.h")

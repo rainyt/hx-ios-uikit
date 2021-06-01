@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIDragPreview;
 import ios.objc.NSCopying;
+import ios.uikit.UIView;
+import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UIDragPreview")
 @:include("UIKit/UIKit.h")

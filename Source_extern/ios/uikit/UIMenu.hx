@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIMenu;
 import cpp.objc.NSString;
+import ios.uikit.UIMenuOptions;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIMenu")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKOpenPanelParameters;
 @:objc
 @:native("WKOpenPanelParameters")
 @:include("UIKit/UIKit.h")

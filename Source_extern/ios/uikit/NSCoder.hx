@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSCoder;
 import ios.objc.CGPoint;
 import cpp.objc.NSString;
 import ios.objc.CGVector;

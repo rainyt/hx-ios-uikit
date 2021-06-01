@@ -1,7 +1,14 @@
 package ios.uikit;
 
+import ios.uikit.UIAccessibilityElement;
+import ios.uikit.UIAccessibilityIdentification;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
+import ios.uikit.UIEvent;
+import ios.uikit.UIPressesEvent;
+import ios.uikit.UIEventSubtype;
+import ios.uikit.UICommand;
+import ios.uikit.NSUserActivity;
 @:objc
 @:native("UIAccessibilityElement")
 @:include("UIKit/UIKit.h")

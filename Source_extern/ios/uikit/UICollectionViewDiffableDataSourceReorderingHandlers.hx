@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDiffableDataSourceReorderingHandlers;
 import ios.objc.NSCopying;
 @:objc
 @:native("UICollectionViewDiffableDataSourceReorderingHandlers")

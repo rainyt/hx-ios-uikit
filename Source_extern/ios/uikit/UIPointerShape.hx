@@ -1,7 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerShape;
 import ios.objc.NSCopying;
+import ios.uikit.UIBezierPath;
 import ios.objc.CGRect;
+import ios.uikit.UIAxis;
 @:objc
 @:native("UIPointerShape")
 @:include("UIKit/UIKit.h")

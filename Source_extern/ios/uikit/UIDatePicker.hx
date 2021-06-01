@@ -1,9 +1,34 @@
 package ios.uikit;
 
+import ios.uikit.UIDatePicker;
 import ios.objc.NSCoding;
+import ios.uikit.UIDatePickerMode;
+import ios.uikit.UIDatePickerStyle;
+import ios.uikit.UIControl;
 import ios.objc.CGRect;
+import ios.uikit.NSCoder;
+import ios.uikit.UIAction;
+import ios.uikit.UITouch;
+import ios.uikit.UIEvent;
+import ios.uikit.UIControlEvents;
 import ios.objc.CGPoint;
+import ios.uikit.UIContextMenuConfiguration;
+import ios.uikit.UIContextMenuInteraction;
+import ios.uikit.UITargetedPreview;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
+import ios.uikit.UIView;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")

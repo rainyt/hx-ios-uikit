@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewCellRegistration;
+import ios.uikit.UINib;
 @:objc
 @:native("UICollectionViewCellRegistration")
 @:include("UIKit/UIKit.h")

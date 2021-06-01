@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIVisualEffect;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
 @:objc

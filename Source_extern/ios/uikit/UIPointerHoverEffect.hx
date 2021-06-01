@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerHoverEffect;
+import ios.uikit.UIPointerEffectTintMode;
+import ios.uikit.UIPointerEffect;
+import ios.uikit.UITargetedPreview;
 @:objc
 @:native("UIPointerHoverEffect")
 @:include("UIKit/UIKit.h")

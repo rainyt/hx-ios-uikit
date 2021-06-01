@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionLayoutListConfiguration;
 import ios.objc.NSCopying;
+import ios.uikit.UICollectionLayoutListAppearance;
+import ios.uikit.UIColor;
+import ios.uikit.UICollectionLayoutListHeaderMode;
+import ios.uikit.UICollectionLayoutListFooterMode;
 @:objc
 @:native("UICollectionLayoutListConfiguration")
 @:include("UIKit/UIKit.h")

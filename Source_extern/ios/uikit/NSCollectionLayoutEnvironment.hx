@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutEnvironment;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("NSCollectionLayoutEnvironment")
 @:include("UIKit/UIKit.h")

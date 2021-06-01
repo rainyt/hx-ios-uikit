@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPreviewParameters;
 import ios.objc.NSCopying;
 @:objc
 @:native("UIPreviewParameters")

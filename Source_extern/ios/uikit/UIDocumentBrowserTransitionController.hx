@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDocumentBrowserTransitionController;
+import ios.uikit.UIViewControllerAnimatedTransitioning;
+import ios.uikit.UIView;
 @:objc
 @:native("UIDocumentBrowserTransitionController")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDragPreviewTarget;
+import ios.uikit.UIPreviewTarget;
+import ios.uikit.UIView;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
 @:objc

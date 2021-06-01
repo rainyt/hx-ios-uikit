@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDragDelegate;
+import ios.uikit.UITableView;
 import ios.objc.CGPoint;
+import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UITableViewDragDelegate")
 @:include("UIKit/UIKit.h")

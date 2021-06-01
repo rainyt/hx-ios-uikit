@@ -1,7 +1,18 @@
 package ios.uikit;
 
+import ios.uikit.UIApplicationDelegate;
+import ios.uikit.UIApplication;
 import cpp.objc.NSDictionary;
+import ios.uikit.UIApplicationShortcutItem;
 import cpp.objc.NSString;
+import ios.uikit.UIWindow;
+import ios.uikit.UIInterfaceOrientationMask;
+import ios.uikit.UIViewController;
+import ios.uikit.NSCoder;
+import ios.uikit.NSUserActivity;
+import ios.uikit.UISceneConfiguration;
+import ios.uikit.UISceneSession;
+import ios.uikit.UISceneConnectionOptions;
 @:objc
 @:native("UIApplicationDelegate")
 @:include("UIKit/UIKit.h")

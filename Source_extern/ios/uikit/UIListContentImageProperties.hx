@@ -1,7 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIListContentImageProperties;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UIColor;
 import ios.objc.CGSize;
 @:objc
 @:native("UIListContentImageProperties")

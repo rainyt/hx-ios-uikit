@@ -1,8 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.NSTextTab;
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
 import ios.objc.NSSecureCoding;
+import ios.uikit.NSTextAlignment;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("NSTextTab")

@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIGraphicsPDFRenderer;
 import ios.objc.CGRect;
+import ios.uikit.UIGraphicsPDFRendererFormat;
+import ios.uikit.UIGraphicsRenderer;
+import ios.uikit.UIGraphicsRendererFormat;
+import ios.uikit.UIGraphicsRendererContext;
 @:objc
 @:native("UIGraphicsPDFRenderer")
 @:include("UIKit/UIKit.h")

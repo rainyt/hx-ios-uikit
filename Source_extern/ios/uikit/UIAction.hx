@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIAction;
 import cpp.objc.NSString;
+import ios.uikit.UIMenuElementAttributes;
+import ios.uikit.UIMenuElementState;
+import ios.uikit.UIMenuElement;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIAction")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UITabBarDelegate;
+import ios.uikit.UITabBar;
+import ios.uikit.UITabBarItem;
 @:objc
 @:native("UITabBarDelegate")
 @:include("UIKit/UIKit.h")

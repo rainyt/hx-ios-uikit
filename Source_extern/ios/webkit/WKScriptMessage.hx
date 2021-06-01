@@ -1,5 +1,8 @@
 package ios.webkit;
 
+import ios.webkit.WKScriptMessage;
+import ios.webkit.WKWebView;
+import ios.webkit.WKContentWorld;
 @:objc
 @:native("WKScriptMessage")
 @:include("UIKit/UIKit.h")
@@ -12,10 +15,10 @@ extern class WKScriptMessage extends NSObject{
 	overload public static function autorelease():WKScriptMessage;
 
 	@:native("webView")
-	public var webView:Dynamic;
+	public var webView:WKWebView;
 
 	@:native("world")
-	public var world:Dynamic;
+	public var world:WKContentWorld;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerHighlightEffect;
+import ios.uikit.UIPointerEffect;
+import ios.uikit.UITargetedPreview;
 @:objc
 @:native("UIPointerHighlightEffect")
 @:include("UIKit/UIKit.h")

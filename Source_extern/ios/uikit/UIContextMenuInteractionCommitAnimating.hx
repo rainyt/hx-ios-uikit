@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIContextMenuInteractionCommitAnimating;
+import ios.uikit.UIContextMenuInteractionCommitStyle;
 @:objc
 @:native("UIContextMenuInteractionCommitAnimating")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewDropPlaceholderContext;
+import ios.uikit.UIDragItem;
 @:objc
 @:native("UITableViewDropPlaceholderContext")
 @:include("UIKit/UIKit.h")

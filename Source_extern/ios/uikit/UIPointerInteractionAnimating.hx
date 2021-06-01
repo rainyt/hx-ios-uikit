@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerInteractionAnimating;
 @:objc
 @:native("UIPointerInteractionAnimating")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UISpringLoadedInteractionContext;
+import ios.uikit.UISpringLoadedInteractionEffectState;
+import ios.uikit.UIView;
 import ios.objc.CGPoint;
 @:objc
 @:native("UISpringLoadedInteractionContext")

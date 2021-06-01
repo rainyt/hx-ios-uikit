@@ -1,7 +1,35 @@
 package ios.uikit;
 
+import ios.uikit.UIViewController;
 import ios.objc.CGSize;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UIView;
+import ios.uikit.UIStoryboard;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIModalTransitionStyle;
+import ios.uikit.UIModalPresentationStyle;
+import ios.uikit.UIRectEdge;
+import ios.uikit.UIStatusBarStyle;
+import ios.uikit.UIStatusBarAnimation;
+import ios.uikit.UIUserInterfaceStyle;
+import ios.uikit.UIInterfaceOrientationMask;
+import ios.uikit.UIInterfaceOrientation;
+import ios.uikit.UIBarButtonItem;
+import ios.uikit.UISearchDisplayController;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UIPresentationController;
+import ios.uikit.UIPopoverPresentationController;
+import ios.uikit.UINavigationItem;
+import ios.uikit.UINavigationController;
+import ios.uikit.UISplitViewController;
+import ios.uikit.UITabBarItem;
+import ios.uikit.UITabBarController;
+import ios.uikit.UIScrollView;
 @:objc
 @:native("UIViewController")
 @:include("UIKit/UIKit.h")

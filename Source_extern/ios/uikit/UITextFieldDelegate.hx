@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UITextFieldDelegate;
+import ios.uikit.UITextField;
+import ios.uikit.UITextFieldDidEndEditingReason;
 import cpp.objc.NSString;
 @:objc
 @:native("UITextFieldDelegate")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.NSTextLayoutOrientationProvide;
+import ios.uikit.NSTextLayoutOrientation;
 @:objc
 @:native("NSTextLayoutOrientationProvide")
 @:include("UIKit/UIKit.h")

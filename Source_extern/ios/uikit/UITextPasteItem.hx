@@ -1,7 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UITextPasteItem;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
+import ios.uikit.NSAttributedString;
+import ios.uikit.NSTextAttachment;
 @:objc
 @:native("UITextPasteItem")
 @:include("UIKit/UIKit.h")

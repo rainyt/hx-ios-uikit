@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UITextDragDelegate;
+import ios.uikit.UIView;
+import ios.uikit.UITargetedDragPreview;
+import ios.uikit.UIDragItem;
+import ios.uikit.UIDropOperation;
 @:objc
 @:native("UITextDragDelegate")
 @:include("UIKit/UIKit.h")

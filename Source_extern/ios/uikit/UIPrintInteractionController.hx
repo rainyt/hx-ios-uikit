@@ -1,6 +1,14 @@
 package ios.uikit;
 
+import ios.uikit.UIPrintInteractionController;
+import ios.uikit.UIPrintInfo;
+import ios.uikit.UIPrintPaper;
+import ios.uikit.UIPrintPageRenderer;
+import ios.uikit.UIPrintFormatter;
 import ios.objc.CGRect;
+import ios.uikit.UIView;
+import ios.uikit.UIBarButtonItem;
+import ios.uikit.UIPrinter;
 @:objc
 @:native("UIPrintInteractionController")
 @:include("UIKit/UIKit.h")

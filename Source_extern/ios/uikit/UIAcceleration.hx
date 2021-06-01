@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIAcceleration;
 @:objc
 @:native("UIAcceleration")
 @:include("UIKit/UIKit.h")

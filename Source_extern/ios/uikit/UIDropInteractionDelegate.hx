@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIDropInteractionDelegate;
+import ios.uikit.UIDropInteraction;
+import ios.uikit.UIDropProposal;
+import ios.uikit.UITargetedDragPreview;
+import ios.uikit.UIDragItem;
 @:objc
 @:native("UIDropInteractionDelegate")
 @:include("UIKit/UIKit.h")

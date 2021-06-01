@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKPDFConfiguration;
 import ios.objc.NSCopying;
 import ios.objc.CGRect;
 @:objc

@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UIAdaptivePresentationControllerDelegate;
+import ios.uikit.UIModalPresentationStyle;
+import ios.uikit.UIPresentationController;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIViewController;
 @:objc
 @:native("UIAdaptivePresentationControllerDelegate")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSMutableAttributedString;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("NSMutableAttributedString")

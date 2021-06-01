@@ -1,7 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIAttachmentBehavior;
 import ios.objc.CGPoint;
 import ios.objc.CGVector;
+import ios.uikit.UIAttachmentBehaviorType;
+import ios.uikit.UIDynamicBehavior;
+import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UIAttachmentBehavior")
 @:include("UIKit/UIKit.h")

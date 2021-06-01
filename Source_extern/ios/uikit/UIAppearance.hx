@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIAppearance;
+import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIAppearance")
 @:include("UIKit/UIKit.h")

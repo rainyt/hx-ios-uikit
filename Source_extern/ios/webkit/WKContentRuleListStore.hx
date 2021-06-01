@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKContentRuleListStore;
 import cpp.objc.NSString;
 @:objc
 @:native("WKContentRuleListStore")

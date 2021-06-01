@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UISpringLoadedInteractionEffect;
+import ios.uikit.UISpringLoadedInteraction;
 @:objc
 @:native("UISpringLoadedInteractionEffect")
 @:include("UIKit/UIKit.h")

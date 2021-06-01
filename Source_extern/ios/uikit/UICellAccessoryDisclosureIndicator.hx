@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessoryDisclosureIndicator;
+import ios.uikit.UICellAccessory;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessoryDisclosureIndicator")
 @:include("UIKit/UIKit.h")

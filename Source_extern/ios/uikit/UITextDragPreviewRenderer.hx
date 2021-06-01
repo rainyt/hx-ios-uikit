@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UITextDragPreviewRenderer;
+import ios.uikit.NSLayoutManager;
+import ios.uikit.UIImage;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 @:objc

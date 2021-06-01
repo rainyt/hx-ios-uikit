@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIDragItem;
 @:objc
 @:native("UIDragItem")
 @:include("UIKit/UIKit.h")

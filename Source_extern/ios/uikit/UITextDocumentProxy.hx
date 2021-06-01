@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UITextDocumentProxy;
 import cpp.objc.NSString;
+import ios.uikit.UITextInputMode;
 @:objc
 @:native("UITextDocumentProxy")
 @:include("UIKit/UIKit.h")

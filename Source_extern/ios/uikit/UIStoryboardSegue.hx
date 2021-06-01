@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIStoryboardSegue;
 import cpp.objc.NSString;
+import ios.uikit.UIViewController;
 @:objc
 @:native("UIStoryboardSegue")
 @:include("UIKit/UIKit.h")

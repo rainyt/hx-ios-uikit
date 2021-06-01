@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIRegion;
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
 import ios.objc.CGSize;

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutContainer;
 import ios.objc.CGSize;
 @:objc
 @:native("NSCollectionLayoutContainer")

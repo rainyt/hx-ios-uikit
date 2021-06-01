@@ -1,8 +1,25 @@
 package ios.uikit;
 
+import ios.uikit.UIApplication;
 import cpp.objc.NSDictionary;
+import ios.uikit.UIEvent;
+import ios.uikit.UIWindow;
+import ios.uikit.UIStatusBarStyle;
+import ios.uikit.UIInterfaceOrientation;
+import ios.uikit.UIInterfaceOrientationMask;
 import ios.objc.CGRect;
+import ios.uikit.UIApplicationState;
 import cpp.objc.NSString;
+import ios.uikit.UIBackgroundRefreshStatus;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISceneSession;
+import ios.uikit.NSUserActivity;
+import ios.uikit.UISceneActivationRequestOptions;
+import ios.uikit.UISceneDestructionRequestOptions;
+import ios.uikit.UIUserNotificationSettings;
+import ios.uikit.UIPressesEvent;
+import ios.uikit.UIEventSubtype;
+import ios.uikit.UICommand;
 @:objc
 @:native("UIApplication")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIImagePickerControllerDelegate;
+import ios.uikit.UIImagePickerController;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIImagePickerControllerDelegate")

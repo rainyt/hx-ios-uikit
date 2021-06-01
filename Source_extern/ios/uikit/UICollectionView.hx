@@ -1,9 +1,37 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionView;
+import ios.uikit.UIDataSourceTranslating;
 import ios.objc.CGRect;
+import ios.uikit.UICollectionViewLayout;
+import ios.uikit.NSCoder;
+import ios.uikit.UIContextMenuInteraction;
+import ios.uikit.UICollectionViewReorderingCadence;
+import ios.uikit.UIView;
 import cpp.objc.NSString;
+import ios.uikit.UINib;
+import ios.uikit.UICollectionViewCell;
+import ios.uikit.UICollectionReusableView;
+import ios.uikit.UICollectionViewCellRegistration;
+import ios.uikit.UICollectionViewSupplementaryRegistration;
+import ios.uikit.UICollectionViewScrollPosition;
+import ios.uikit.UICollectionViewTransitionLayout;
+import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.objc.CGPoint;
+import ios.uikit.UIEvent;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UICollectionView")
 @:include("UIKit/UIKit.h")

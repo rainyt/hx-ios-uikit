@@ -1,7 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIFieldBehavior;
 import ios.objc.CGPoint;
+import ios.uikit.UIRegion;
 import ios.objc.CGVector;
+import ios.uikit.UIDynamicBehavior;
+import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UIFieldBehavior")
 @:include("UIKit/UIKit.h")

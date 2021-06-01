@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKFindResult;
 import ios.objc.NSCopying;
 @:objc
 @:native("WKFindResult")

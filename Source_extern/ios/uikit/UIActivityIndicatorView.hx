@@ -1,9 +1,26 @@
 package ios.uikit;
 
+import ios.uikit.UIActivityIndicatorView;
 import ios.objc.NSCoding;
+import ios.uikit.UIActivityIndicatorViewStyle;
 import ios.objc.CGRect;
+import ios.uikit.NSCoder;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
+import ios.uikit.UIView;
 import ios.objc.CGPoint;
+import ios.uikit.UIEvent;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UIActivityIndicatorView")
 @:include("UIKit/UIKit.h")

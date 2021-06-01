@@ -1,8 +1,26 @@
 package ios.uikit;
 
+import ios.uikit.UIWindow;
+import ios.uikit.UIWindowScene;
+import ios.uikit.UIScreen;
+import ios.uikit.UIViewController;
+import ios.uikit.UIEvent;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIView;
+import ios.uikit.NSCoder;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
 import ios.objc.CGSize;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UIWindow")
 @:include("UIKit/UIKit.h")

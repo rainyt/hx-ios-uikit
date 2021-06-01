@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIViewControllerContextTransitioning;
+import ios.uikit.UIView;
+import ios.uikit.UIModalPresentationStyle;
+import ios.uikit.UIViewController;
 import ios.objc.CGAffineTransform;
 import ios.objc.CGRect;
 @:objc

@@ -1,6 +1,17 @@
 package ios.uikit;
 
+import ios.uikit.UICloudSharingController;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UICloudSharingPermissionOptions;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIViewController;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UICloudSharingController")
 @:include("UIKit/UIKit.h")

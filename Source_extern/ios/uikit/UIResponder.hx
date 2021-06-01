@@ -1,6 +1,18 @@
 package ios.uikit;
 
+import ios.uikit.UIResponder;
+import ios.uikit.UIResponderStandardEditActions;
+import ios.uikit.UIEvent;
+import ios.uikit.UIPressesEvent;
+import ios.uikit.UIEventSubtype;
+import ios.uikit.UICommand;
+import ios.uikit.UIEditingInteractionConfiguration;
+import ios.uikit.UIView;
+import ios.uikit.UITextInputAssistantItem;
+import ios.uikit.UIInputViewController;
+import ios.uikit.UITextInputMode;
 import cpp.objc.NSString;
+import ios.uikit.NSUserActivity;
 @:objc
 @:native("UIResponder")
 @:include("UIKit/UIKit.h")

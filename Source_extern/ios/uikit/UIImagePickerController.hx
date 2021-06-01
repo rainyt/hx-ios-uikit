@@ -1,8 +1,26 @@
 package ios.uikit;
 
+import ios.uikit.UIImagePickerController;
 import ios.objc.NSCoding;
+import ios.uikit.UIImagePickerControllerSourceType;
+import ios.uikit.UIImagePickerControllerCameraDevice;
+import ios.uikit.UIImagePickerControllerImageURLExportPreset;
+import ios.uikit.UIImagePickerControllerQualityType;
+import ios.uikit.UIView;
 import ios.objc.CGAffineTransform;
+import ios.uikit.UIImagePickerControllerCameraCaptureMode;
+import ios.uikit.UIImagePickerControllerCameraFlashMode;
+import ios.uikit.UINavigationController;
+import ios.uikit.UIViewController;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UIImagePickerController")
 @:include("UIKit/UIKit.h")

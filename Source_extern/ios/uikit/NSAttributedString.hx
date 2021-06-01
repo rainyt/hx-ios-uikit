@@ -1,9 +1,13 @@
 package ios.uikit;
 
+import ios.uikit.NSAttributedString;
 import cpp.objc.NSDictionary;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
+import ios.uikit.NSStringDrawingOptions;
+import ios.uikit.NSStringDrawingContext;
+import ios.uikit.NSTextAttachment;
 @:objc
 @:native("NSAttributedString")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDropPlaceholderContext;
+import ios.uikit.UIDragItem;
 @:objc
 @:native("UICollectionViewDropPlaceholderContext")
 @:include("UIKit/UIKit.h")

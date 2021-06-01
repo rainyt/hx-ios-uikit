@@ -1,8 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIMenuElement;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
 import cpp.objc.NSString;
+import ios.uikit.UIImage;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UIMenuElement")
 @:include("UIKit/UIKit.h")

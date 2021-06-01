@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UITextInputPasswordRules;
 import ios.objc.NSSecureCoding;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;

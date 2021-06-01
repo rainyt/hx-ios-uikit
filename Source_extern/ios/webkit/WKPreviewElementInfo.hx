@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKPreviewElementInfo;
 import ios.objc.NSCopying;
 @:objc
 @:native("WKPreviewElementInfo")

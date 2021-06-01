@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutEdgeSpacing;
 import ios.objc.NSCopying;
+import ios.uikit.NSCollectionLayoutSpacing;
 @:objc
 @:native("NSCollectionLayoutEdgeSpacing")
 @:include("UIKit/UIKit.h")

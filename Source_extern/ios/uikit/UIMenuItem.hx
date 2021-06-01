@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIMenuItem;
 import cpp.objc.NSString;
 @:objc
 @:native("UIMenuItem")

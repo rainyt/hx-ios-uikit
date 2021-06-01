@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.UIManagedDocument;
 import cpp.objc.NSString;
+import ios.uikit.UIDocument;
+import ios.uikit.UIDocumentChangeKind;
+import ios.uikit.UIDocumentSaveOperation;
+import ios.uikit.NSUserActivity;
 @:objc
 @:native("UIManagedDocument")
 @:include("UIKit/UIKit.h")

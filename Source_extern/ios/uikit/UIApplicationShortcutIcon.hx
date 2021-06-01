@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIApplicationShortcutIcon;
 import ios.objc.NSCopying;
+import ios.uikit.UIApplicationShortcutIconType;
 import cpp.objc.NSString;
 @:objc
 @:native("UIApplicationShortcutIcon")

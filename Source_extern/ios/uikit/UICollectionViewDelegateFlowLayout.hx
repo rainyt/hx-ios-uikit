@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDelegateFlowLayout;
 import ios.objc.CGSize;
+import ios.uikit.UICollectionView;
+import ios.uikit.UICollectionViewLayout;
 @:objc
 @:native("UICollectionViewDelegateFlowLayout")
 @:include("UIKit/UIKit.h")

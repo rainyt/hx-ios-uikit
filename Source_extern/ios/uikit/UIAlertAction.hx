@@ -1,7 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIAlertAction;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
+import ios.uikit.UIAlertActionStyle;
 @:objc
 @:native("UIAlertAction")
 @:include("UIKit/UIKit.h")

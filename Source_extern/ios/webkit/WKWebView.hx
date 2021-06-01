@@ -1,10 +1,36 @@
 package ios.webkit;
 
+import ios.webkit.WKWebView;
+import ios.webkit.WKBackForwardList;
 import ios.objc.CGRect;
+import ios.webkit.WKWebViewConfiguration;
+import ios.uikit.NSCoder;
+import ios.webkit.WKNavigation;
 import cpp.objc.NSString;
+import ios.webkit.WKBackForwardListItem;
+import ios.webkit.WKFrameInfo;
+import ios.webkit.WKContentWorld;
 import cpp.objc.NSDictionary;
+import ios.webkit.WKSnapshotConfiguration;
+import ios.webkit.WKPDFConfiguration;
+import ios.uikit.UIScrollView;
 import ios.objc.CGPoint;
+import ios.webkit.WKFindConfiguration;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIView;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
+import ios.uikit.UIEvent;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("WKWebView")
 @:include("UIKit/UIKit.h")
@@ -23,28 +49,28 @@ extern class WKWebView extends UIView{
 	public var UIDelegate:Dynamic;
 
 	@:native("backForwardList")
-	public var backForwardList:Dynamic;
+	public var backForwardList:WKBackForwardList;
 
 	@:native("initWithFrame:configuration")
-	overload public function initWithFrame_configuration(frame:CGRect, configuration:Dynamic):WKWebView;
+	overload public function initWithFrame_configuration(frame:CGRect, configuration:WKWebViewConfiguration):WKWebView;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):WKWebView;
 
 	@:native("loadRequest")
-	overload public function loadRequest(request:Dynamic):Dynamic;
+	overload public function loadRequest(request:Dynamic):WKNavigation;
 
 	@:native("loadFileURL:allowingReadAccessToURL")
-	overload public function loadFileURL_allowingReadAccessToURL(URL:Dynamic, allowingReadAccessToURL:Dynamic):Dynamic;
+	overload public function loadFileURL_allowingReadAccessToURL(URL:Dynamic, allowingReadAccessToURL:Dynamic):WKNavigation;
 
 	@:native("loadHTMLString:baseURL")
-	overload public function loadHTMLString_baseURL(string:NSString, baseURL:Dynamic):Dynamic;
+	overload public function loadHTMLString_baseURL(string:NSString, baseURL:Dynamic):WKNavigation;
 
 	@:native("loadData:MIMEType:characterEncodingName:baseURL")
-	overload public function loadData_MIMEType_characterEncodingName_baseURL(data:Dynamic, MIMEType:NSString, characterEncodingName:NSString, baseURL:Dynamic):Dynamic;
+	overload public function loadData_MIMEType_characterEncodingName_baseURL(data:Dynamic, MIMEType:NSString, characterEncodingName:NSString, baseURL:Dynamic):WKNavigation;
 
 	@:native("goToBackForwardListItem")
-	overload public function goToBackForwardListItem(item:Dynamic):Dynamic;
+	overload public function goToBackForwardListItem(item:WKBackForwardListItem):WKNavigation;
 
 	@:native("loading")
 	public var loading:Bool;
@@ -65,16 +91,16 @@ extern class WKWebView extends UIView{
 	public var canGoForward:Bool;
 
 	@:native("goBack")
-	overload public function goBack():Dynamic;
+	overload public function goBack():WKNavigation;
 
 	@:native("goForward")
-	overload public function goForward():Dynamic;
+	overload public function goForward():WKNavigation;
 
 	@:native("reload")
-	overload public function reload():Dynamic;
+	overload public function reload():WKNavigation;
 
 	@:native("reloadFromOrigin")
-	overload public function reloadFromOrigin():Dynamic;
+	overload public function reloadFromOrigin():WKNavigation;
 
 	@:native("stopLoading")
 	overload public function stopLoading():Void;
@@ -83,19 +109,19 @@ extern class WKWebView extends UIView{
 	overload public function evaluateJavaScript_completionHandler(javaScriptString:NSString, completionHandler:Dynamic):Void;
 
 	@:native("evaluateJavaScript:inFrame:inContentWorld:completionHandler")
-	overload public function evaluateJavaScript_inFrame_inContentWorld_completionHandler(javaScriptString:NSString, inFrame:Dynamic, inContentWorld:Dynamic, completionHandler:Dynamic):Void;
+	overload public function evaluateJavaScript_inFrame_inContentWorld_completionHandler(javaScriptString:NSString, inFrame:WKFrameInfo, inContentWorld:WKContentWorld, completionHandler:Dynamic):Void;
 
 	@:native("callAsyncJavaScript:arguments:inFrame:inContentWorld:completionHandler")
-	overload public function callAsyncJavaScript_arguments_inFrame_inContentWorld_completionHandler(functionBody:NSString, arguments:NSDictionary, inFrame:Dynamic, inContentWorld:Dynamic, completionHandler:Dynamic):Void;
+	overload public function callAsyncJavaScript_arguments_inFrame_inContentWorld_completionHandler(functionBody:NSString, arguments:NSDictionary, inFrame:WKFrameInfo, inContentWorld:WKContentWorld, completionHandler:Dynamic):Void;
 
 	@:native("takeSnapshotWithConfiguration:completionHandler")
-	overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:Dynamic, completionHandler:Dynamic):Void;
+	overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;
 
 	@:native("takeSnapshotWithConfiguration:completionHandler")
-	overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:Dynamic, completionHandler:Dynamic):Void;
+	overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;
 
 	@:native("createPDFWithConfiguration:completionHandler")
-	overload public function createPDFWithConfiguration_completionHandler(pdfConfiguration:Dynamic, completionHandler:Dynamic):Void;
+	overload public function createPDFWithConfiguration_completionHandler(pdfConfiguration:WKPDFConfiguration, completionHandler:Dynamic):Void;
 
 	@:native("createWebArchiveDataWithCompletionHandler")
 	overload public function createWebArchiveDataWithCompletionHandler(completionHandler:Dynamic):Void;
@@ -122,7 +148,7 @@ extern class WKWebView extends UIView{
 	public var pageZoom:Float;
 
 	@:native("findString:withConfiguration:completionHandler")
-	overload public function findString_withConfiguration_completionHandler(string:NSString, withConfiguration:Dynamic, completionHandler:Dynamic):Void;
+	overload public function findString_withConfiguration_completionHandler(string:NSString, withConfiguration:WKFindConfiguration, completionHandler:Dynamic):Void;
 
 	@:native("handlesURLScheme")
 	overload public static function handlesURLScheme(urlScheme:NSString):Bool;

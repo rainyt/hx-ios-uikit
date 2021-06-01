@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIInteraction;
+import ios.uikit.UIView;
 @:objc
 @:native("UIInteraction")
 @:include("UIKit/UIKit.h")

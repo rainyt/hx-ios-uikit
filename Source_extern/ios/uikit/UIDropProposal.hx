@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDropProposal;
 import ios.objc.NSCopying;
+import ios.uikit.UIDropOperation;
 @:objc
 @:native("UIDropProposal")
 @:include("UIKit/UIKit.h")

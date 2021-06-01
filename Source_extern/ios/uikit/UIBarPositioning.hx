@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIBarPositioning;
+import ios.uikit.UIBarPosition;
 @:objc
 @:native("UIBarPositioning")
 @:include("UIKit/UIKit.h")

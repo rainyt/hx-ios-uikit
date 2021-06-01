@@ -1,7 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.NSLayoutConstraint;
 import cpp.objc.NSString;
+import ios.uikit.NSLayoutFormatOptions;
 import cpp.objc.NSDictionary;
+import ios.uikit.NSLayoutAttribute;
+import ios.uikit.NSLayoutRelation;
 @:objc
 @:native("NSLayoutConstraint")
 @:include("UIKit/UIKit.h")

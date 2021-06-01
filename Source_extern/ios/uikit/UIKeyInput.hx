@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIKeyInput;
 import cpp.objc.NSString;
 @:objc
 @:native("UIKeyInput")

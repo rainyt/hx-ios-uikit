@@ -1,5 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutSection;
+import ios.uikit.UICollectionLayoutListConfiguration;
+import ios.uikit.NSCollectionLayoutGroup;
+import ios.uikit.UIContentInsetsReference;
+import ios.uikit.UICollectionLayoutSectionOrthogonalScrollingBehavior;
 @:objc
 @:native("NSCollectionLayoutSection")
 @:include("UIKit/UIKit.h")

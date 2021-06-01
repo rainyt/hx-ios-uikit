@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIPopoverBackgroundViewMethod;
 @:objc
 @:native("UIPopoverBackgroundViewMethod")
 @:include("UIKit/UIKit.h")

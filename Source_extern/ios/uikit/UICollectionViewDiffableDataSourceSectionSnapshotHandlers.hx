@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
 import ios.objc.NSCopying;
 @:objc
 @:native("UICollectionViewDiffableDataSourceSectionSnapshotHandlers")

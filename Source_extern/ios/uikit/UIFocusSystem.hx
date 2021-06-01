@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusSystem;
 @:objc
 @:native("UIFocusSystem")
 @:include("UIKit/UIKit.h")

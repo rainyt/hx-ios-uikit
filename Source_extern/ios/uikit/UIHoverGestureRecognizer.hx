@@ -1,6 +1,14 @@
 package ios.uikit;
 
+import ios.uikit.UIHoverGestureRecognizer;
+import ios.uikit.UITouch;
+import ios.uikit.UIEvent;
+import ios.uikit.UIPress;
+import ios.uikit.UIPressesEvent;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.NSCoder;
 import ios.objc.CGPoint;
+import ios.uikit.UIView;
 @:objc
 @:native("UIHoverGestureRecognizer")
 @:include("UIKit/UIKit.h")

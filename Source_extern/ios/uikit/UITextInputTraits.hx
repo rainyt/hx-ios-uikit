@@ -1,5 +1,15 @@
 package ios.uikit;
 
+import ios.uikit.UITextInputTraits;
+import ios.uikit.UITextAutocapitalizationType;
+import ios.uikit.UITextAutocorrectionType;
+import ios.uikit.UITextSpellCheckingType;
+import ios.uikit.UITextSmartQuotesType;
+import ios.uikit.UITextSmartDashesType;
+import ios.uikit.UITextSmartInsertDeleteType;
+import ios.uikit.UIKeyboardType;
+import ios.uikit.UIKeyboardAppearance;
+import ios.uikit.UIReturnKeyType;
 @:objc
 @:native("UITextInputTraits")
 @:include("UIKit/UIKit.h")

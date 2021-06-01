@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UITextFormattingCoordinator;
+import ios.uikit.UIFontPickerViewControllerDelegate;
+import ios.uikit.UIWindowScene;
+import ios.uikit.UIFontPickerViewController;
 @:objc
 @:native("UITextFormattingCoordinator")
 @:include("UIKit/UIKit.h")

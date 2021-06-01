@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UISceneActivationRequestOptions;
+import ios.uikit.UIScene;
+import ios.uikit.UISceneCollectionJoinBehavior;
 @:objc
 @:native("UISceneActivationRequestOptions")
 @:include("UIKit/UIKit.h")

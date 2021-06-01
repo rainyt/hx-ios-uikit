@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKNavigationResponse;
 @:objc
 @:native("WKNavigationResponse")
 @:include("UIKit/UIKit.h")

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UILargeContentViewerItem;
+import ios.uikit.UIImage;
 @:objc
 @:native("UILargeContentViewerItem")
 @:include("UIKit/UIKit.h")

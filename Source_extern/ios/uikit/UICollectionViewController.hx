@@ -1,7 +1,27 @@
 package ios.uikit;
 
+import ios.uikit.UICollectionViewController;
+import ios.uikit.UICollectionViewDelegate;
+import ios.uikit.UICollectionViewDataSource;
+import ios.uikit.UICollectionViewLayout;
 import cpp.objc.NSString;
+import ios.uikit.NSBundle;
+import ios.uikit.NSCoder;
+import ios.uikit.UICollectionView;
+import ios.uikit.UICollectionViewCell;
+import ios.uikit.UICollectionReusableView;
+import ios.uikit.UICollectionViewFocusUpdateContext;
+import ios.uikit.UIFocusAnimationCoordinator;
 import ios.objc.CGPoint;
+import ios.uikit.UIContextMenuConfiguration;
+import ios.uikit.UITargetedPreview;
+import ios.uikit.UIStoryboardSegue;
+import ios.uikit.UIViewController;
+import ios.uikit.UIStoryboardUnwindSegueSource;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UITraitCollection;
+import ios.uikit.UIKeyCommand;
+import ios.uikit.UISplitViewController;
 @:objc
 @:native("UICollectionViewController")
 @:include("UIKit/UIKit.h")

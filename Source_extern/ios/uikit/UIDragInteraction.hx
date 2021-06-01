@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDragInteraction;
+import ios.uikit.UIInteraction;
+import ios.uikit.UIView;
 @:objc
 @:native("UIDragInteraction")
 @:include("UIKit/UIKit.h")

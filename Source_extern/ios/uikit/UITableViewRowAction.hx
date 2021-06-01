@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UITableViewRowAction;
 import ios.objc.NSCopying;
+import ios.uikit.UITableViewRowActionStyle;
 import cpp.objc.NSString;
 @:objc
 @:native("UITableViewRowAction")

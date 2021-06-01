@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIUserActivityRestoring;
+import ios.uikit.NSUserActivity;
 @:objc
 @:native("UIUserActivityRestoring")
 @:include("UIKit/UIKit.h")

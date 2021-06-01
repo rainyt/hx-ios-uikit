@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIFocusMovementHint:;
 import ios.objc.NSCopying;
 import ios.objc.CGVector;
 import ios.objc.CATransform3D;

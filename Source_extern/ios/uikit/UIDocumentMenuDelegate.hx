@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIDocumentMenuDelegate;
+import ios.uikit.UIDocumentMenuViewController;
+import ios.uikit.UIDocumentPickerViewController;
 @:objc
 @:native("UIDocumentMenuDelegate")
 @:include("UIKit/UIKit.h")

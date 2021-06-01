@@ -1,5 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.UIPointerInteraction;
+import ios.uikit.UIInteraction;
+import ios.uikit.UIView;
 @:objc
 @:native("UIPointerInteraction")
 @:include("UIKit/UIKit.h")

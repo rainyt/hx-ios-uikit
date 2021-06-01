@@ -1,7 +1,21 @@
 package ios.uikit;
 
+import ios.uikit.UIButton;
 import ios.objc.CGRect;
+import ios.uikit.NSCoder;
+import ios.uikit.UIAction;
+import ios.uikit.UIButtonType;
+import ios.uikit.UIImage;
+import ios.uikit.UIColor;
+import ios.uikit.UIButtonRole;
 import cpp.objc.NSString;
+import ios.uikit.UIControlState;
+import ios.uikit.UIImageSymbolConfiguration;
+import ios.uikit.NSAttributedString;
+import ios.uikit.UILabel;
+import ios.uikit.UIImageView;
+import ios.uikit.UIFont;
+import ios.uikit.NSLineBreakMode;
 import ios.objc.CGSize;
 @:objc
 @:native("UIButton")

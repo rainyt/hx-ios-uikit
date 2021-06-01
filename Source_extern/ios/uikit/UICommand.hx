@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICommand;
+import ios.uikit.UIMenuElementAttributes;
+import ios.uikit.UIMenuElementState;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICommand")
 @:include("UIKit/UIKit.h")

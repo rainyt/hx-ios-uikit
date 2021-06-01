@@ -1,8 +1,10 @@
 package ios.uikit;
 
+import ios.uikit.UISceneConfiguration;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
 import cpp.objc.NSString;
+import ios.uikit.UIStoryboard;
 @:objc
 @:native("UISceneConfiguration")
 @:include("UIKit/UIKit.h")

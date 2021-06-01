@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSBundle;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 @:objc

@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.CIImage;
+import ios.uikit.UIImage;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("CIImage")

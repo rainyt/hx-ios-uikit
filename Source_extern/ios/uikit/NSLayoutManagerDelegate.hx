@@ -1,6 +1,11 @@
 package ios.uikit;
 
+import ios.uikit.NSLayoutManagerDelegate;
+import ios.uikit.NSLayoutManager;
+import ios.uikit.UIFont;
 import ios.objc.CGRect;
+import ios.uikit.NSControlCharacterAction;
+import ios.uikit.NSTextContainer;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 @:objc

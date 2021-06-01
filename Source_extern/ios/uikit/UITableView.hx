@@ -1,10 +1,37 @@
 package ios.uikit;
 
+import ios.uikit.UITableView;
 import ios.objc.NSCoding;
+import ios.uikit.UIDataSourceTranslating;
 import ios.objc.CGRect;
+import ios.uikit.UITableViewStyle;
+import ios.uikit.NSCoder;
+import ios.uikit.UITableViewSeparatorInsetReference;
+import ios.uikit.UIView;
+import ios.uikit.UIContextMenuInteraction;
 import ios.objc.CGPoint;
+import ios.uikit.UITableViewCell;
+import ios.uikit.UITableViewHeaderFooterView;
+import ios.uikit.UITableViewScrollPosition;
+import ios.uikit.UITableViewRowAnimation;
+import ios.uikit.UITableViewCellSeparatorStyle;
+import ios.uikit.UIColor;
 import cpp.objc.NSString;
+import ios.uikit.UINib;
+import ios.uikit.UIEvent;
+import ios.uikit.UIViewPrintFormatter;
+import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.uikit.UISemanticContentAttribute;
 import ios.objc.CGSize;
+import ios.uikit.UIWindow;
+import ios.uikit.UIViewAnimationOptions;
+import ios.uikit.UISystemAnimation;
+import ios.uikit.UIViewKeyframeAnimationOptions;
+import ios.uikit.UIGestureRecognizer;
+import ios.uikit.UIMotionEffect;
+import ios.uikit.NSLayoutConstraint;
+import ios.uikit.UILayoutConstraintAxis;
+import ios.uikit.UILayoutGuide;
 @:objc
 @:native("UITableView")
 @:include("UIKit/UIKit.h")

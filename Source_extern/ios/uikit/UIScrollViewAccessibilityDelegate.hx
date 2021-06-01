@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UIScrollViewAccessibilityDelegate;
 import cpp.objc.NSString;
+import ios.uikit.UIScrollView;
+import ios.uikit.NSAttributedString;
 @:objc
 @:native("UIScrollViewAccessibilityDelegate")
 @:include("UIKit/UIKit.h")

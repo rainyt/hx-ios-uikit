@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.NSCollectionLayoutAnchor;
 import ios.objc.NSCopying;
+import ios.uikit.NSDirectionalRectEdge;
 import ios.objc.CGPoint;
 @:objc
 @:native("NSCollectionLayoutAnchor")

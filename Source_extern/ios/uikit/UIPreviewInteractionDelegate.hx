@@ -1,5 +1,7 @@
 package ios.uikit;
 
+import ios.uikit.UIPreviewInteractionDelegate;
+import ios.uikit.UIPreviewInteraction;
 @:objc
 @:native("UIPreviewInteractionDelegate")
 @:include("UIKit/UIKit.h")

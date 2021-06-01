@@ -1,5 +1,8 @@
 package ios.webkit;
 
+import ios.webkit.WKScriptMessageHandler;
+import ios.webkit.WKUserContentController;
+import ios.webkit.WKScriptMessage;
 @:objc
 @:native("WKScriptMessageHandler")
 @:include("UIKit/UIKit.h")
@@ -12,7 +15,7 @@ extern interface WKScriptMessageHandler{
 	overload public static function autorelease():WKScriptMessageHandler;
 
 	@:native("userContentController:didReceiveScriptMessage")
-	overload public function userContentController_didReceiveScriptMessage(userContentController:Dynamic, didReceiveScriptMessage:Dynamic):Void;
+	overload public function userContentController_didReceiveScriptMessage(userContentController:WKUserContentController, didReceiveScriptMessage:WKScriptMessage):Void;
 
 
 }

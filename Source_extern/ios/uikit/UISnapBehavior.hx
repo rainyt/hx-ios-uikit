@@ -1,6 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UISnapBehavior;
 import ios.objc.CGPoint;
+import ios.uikit.UIDynamicBehavior;
+import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UISnapBehavior")
 @:include("UIKit/UIKit.h")

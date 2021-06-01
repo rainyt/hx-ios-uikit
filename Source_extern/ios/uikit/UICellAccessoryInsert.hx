@@ -1,5 +1,9 @@
 package ios.uikit;
 
+import ios.uikit.UICellAccessoryInsert;
+import ios.uikit.UIColor;
+import ios.uikit.UICellAccessory;
+import ios.uikit.NSCoder;
 @:objc
 @:native("UICellAccessoryInsert")
 @:include("UIKit/UIKit.h")

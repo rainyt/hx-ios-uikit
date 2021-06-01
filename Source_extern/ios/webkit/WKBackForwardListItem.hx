@@ -1,5 +1,6 @@
 package ios.webkit;
 
+import ios.webkit.WKBackForwardListItem;
 @:objc
 @:native("WKBackForwardListItem")
 @:include("UIKit/UIKit.h")
