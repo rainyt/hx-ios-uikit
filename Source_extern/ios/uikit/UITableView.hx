@@ -336,7 +336,7 @@ extern class UITableView extends UIScrollView
 	overload public static function layerClass():Dynamic;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIView;
+	overload public function initWithFrame(frame:CGRect):UITableView;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;

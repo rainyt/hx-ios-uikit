@@ -45,13 +45,13 @@ extern class UIColorWell extends UIControl{
 	public var selectedColor:UIColor;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIControl;
+	overload public function initWithFrame(frame:CGRect):UIColorWell;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIControl;
+	overload public function initWithCoder(coder:NSCoder):UIColorWell;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIColorWell;
 
 	@:native("beginTrackingWithTouch:withEvent")
 	overload public function beginTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;

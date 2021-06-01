@@ -18,7 +18,7 @@ extern class UIDeferredMenuElement extends UIMenuElement{
 	overload public static function elementWithProvider(elementProvider:Dynamic):UIDeferredMenuElement;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIMenuElement;
+	overload public function initWithCoder(coder:NSCoder):UIDeferredMenuElement;
 
 	@:native("init")
 	overload public function init():UIMenuElement;

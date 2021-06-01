@@ -79,13 +79,13 @@ extern class UIDatePicker extends UIControl
 ;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIControl;
+	overload public function initWithFrame(frame:CGRect):UIDatePicker;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIControl;
+	overload public function initWithCoder(coder:NSCoder):UIDatePicker;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIDatePicker;
 
 	@:native("beginTrackingWithTouch:withEvent")
 	overload public function beginTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;

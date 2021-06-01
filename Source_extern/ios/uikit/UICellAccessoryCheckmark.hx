@@ -15,7 +15,7 @@ extern class UICellAccessoryCheckmark extends UICellAccessory{
 	overload public static function autorelease():UICellAccessoryCheckmark;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICellAccessory;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessoryCheckmark;
 
 	@:native("init")
 	overload public function init():UICellAccessory;

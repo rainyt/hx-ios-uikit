@@ -34,16 +34,16 @@ extern class UIVideoEditorController extends UINavigationController{
 	public var videoQuality:UIImagePickerControllerQualityType;
 
 	@:native("initWithNavigationBarClass:toolbarClass")
-	overload public function initWithNavigationBarClass_toolbarClass(navigationBarClass:Dynamic, toolbarClass:Dynamic):UINavigationController;
+	overload public function initWithNavigationBarClass_toolbarClass(navigationBarClass:Dynamic, toolbarClass:Dynamic):UIVideoEditorController;
 
 	@:native("initWithRootViewController")
-	overload public function initWithRootViewController(rootViewController:UIViewController):UINavigationController;
+	overload public function initWithRootViewController(rootViewController:UIViewController):UIVideoEditorController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UINavigationController;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIVideoEditorController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:NSCoder):UINavigationController;
+	overload public function initWithCoder(aDecoder:NSCoder):UIVideoEditorController;
 
 	@:native("pushViewController:animated")
 	overload public function pushViewController_animated(viewController:UIViewController, animated:Bool):Void;

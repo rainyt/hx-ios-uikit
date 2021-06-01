@@ -15,7 +15,7 @@ extern class UICellAccessoryDisclosureIndicator extends UICellAccessory{
 	overload public static function autorelease():UICellAccessoryDisclosureIndicator;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICellAccessory;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessoryDisclosureIndicator;
 
 	@:native("init")
 	overload public function init():UICellAccessory;

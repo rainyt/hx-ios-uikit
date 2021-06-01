@@ -19,7 +19,7 @@ extern class UICellAccessoryDelete extends UICellAccessory{
 	public var backgroundColor:UIColor;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICellAccessory;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessoryDelete;
 
 	@:native("init")
 	overload public function init():UICellAccessory;

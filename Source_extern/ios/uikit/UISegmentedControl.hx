@@ -159,7 +159,7 @@ extern class UISegmentedControl extends UIControl
 ;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UISegmentedControl;
 
 	@:native("beginTrackingWithTouch:withEvent")
 	overload public function beginTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;

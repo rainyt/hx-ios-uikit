@@ -109,13 +109,13 @@ extern class UISlider extends UIControl
 ;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIControl;
+	overload public function initWithFrame(frame:CGRect):UISlider;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIControl;
+	overload public function initWithCoder(coder:NSCoder):UISlider;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UISlider;
 
 	@:native("beginTrackingWithTouch:withEvent")
 	overload public function beginTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;

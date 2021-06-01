@@ -27,7 +27,7 @@ extern class UIGraphicsPDFRenderer extends UIGraphicsRenderer{
 	overload public function PDFDataWithActions(actions:Dynamic):Dynamic;
 
 	@:native("initWithBounds")
-	overload public function initWithBounds(bounds:CGRect):UIGraphicsRenderer;
+	overload public function initWithBounds(bounds:CGRect):UIGraphicsPDFRenderer;
 
 	@:native("rendererContextClass")
 	overload public static function rendererContextClass():Dynamic;

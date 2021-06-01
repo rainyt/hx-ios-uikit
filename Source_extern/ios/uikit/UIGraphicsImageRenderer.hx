@@ -38,7 +38,7 @@ extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 	overload public function JPEGDataWithCompressionQuality_actions(compressionQuality:Float, actions:Dynamic):Dynamic;
 
 	@:native("initWithBounds")
-	overload public function initWithBounds(bounds:CGRect):UIGraphicsRenderer;
+	overload public function initWithBounds(bounds:CGRect):UIGraphicsImageRenderer;
 
 	@:native("rendererContextClass")
 	overload public static function rendererContextClass():Dynamic;

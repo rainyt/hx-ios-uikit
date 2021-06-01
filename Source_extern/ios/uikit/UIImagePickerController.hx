@@ -98,16 +98,16 @@ extern class UIImagePickerController extends UINavigationController
 ;
 
 	@:native("initWithNavigationBarClass:toolbarClass")
-	overload public function initWithNavigationBarClass_toolbarClass(navigationBarClass:Dynamic, toolbarClass:Dynamic):UINavigationController;
+	overload public function initWithNavigationBarClass_toolbarClass(navigationBarClass:Dynamic, toolbarClass:Dynamic):UIImagePickerController;
 
 	@:native("initWithRootViewController")
-	overload public function initWithRootViewController(rootViewController:UIViewController):UINavigationController;
+	overload public function initWithRootViewController(rootViewController:UIViewController):UIImagePickerController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UINavigationController;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIImagePickerController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:NSCoder):UINavigationController;
+	overload public function initWithCoder(aDecoder:NSCoder):UIImagePickerController;
 
 	@:native("pushViewController:animated")
 	overload public function pushViewController_animated(viewController:UIViewController, animated:Bool):Void;

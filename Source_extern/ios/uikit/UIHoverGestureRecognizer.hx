@@ -72,13 +72,13 @@ extern class UIHoverGestureRecognizer extends UIGestureRecognizer{
 	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("initWithTarget:action")
-	overload public function initWithTarget_action(target:Dynamic, action:String):UIGestureRecognizer;
+	overload public function initWithTarget_action(target:Dynamic, action:String):UIHoverGestureRecognizer;
 
 	@:native("init")
 	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIGestureRecognizer;
+	overload public function initWithCoder(coder:NSCoder):UIHoverGestureRecognizer;
 
 	@:native("addTarget:action")
 	overload public function addTarget_action(target:Dynamic, action:String):Void;

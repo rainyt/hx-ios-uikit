@@ -61,7 +61,7 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	overload public function init():UICollectionViewLayout;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICollectionViewLayout;
+	overload public function initWithCoder(coder:NSCoder):UICollectionViewFlowLayout;
 
 	@:native("invalidateLayout")
 	overload public function invalidateLayout():Void;

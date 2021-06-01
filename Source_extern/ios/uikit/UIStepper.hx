@@ -85,13 +85,13 @@ extern class UIStepper extends UIControl{
 	overload public function decrementImageForState(state:UIControlState):UIImage;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIControl;
+	overload public function initWithFrame(frame:CGRect):UIStepper;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIControl;
+	overload public function initWithCoder(coder:NSCoder):UIStepper;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;
+	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIStepper;
 
 	@:native("beginTrackingWithTouch:withEvent")
 	overload public function beginTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;

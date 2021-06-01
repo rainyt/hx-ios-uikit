@@ -19,7 +19,7 @@ extern class UIMotionEffectGroup extends UIMotionEffect{
 	overload public function init():UIMotionEffect;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIMotionEffect;
+	overload public function initWithCoder(coder:NSCoder):UIMotionEffectGroup;
 
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
 	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:Dynamic):NSDictionary;

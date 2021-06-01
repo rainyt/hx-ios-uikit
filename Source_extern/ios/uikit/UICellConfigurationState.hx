@@ -37,10 +37,10 @@ extern class UICellConfigurationState extends UIViewConfigurationState{
 	public var cellDropState:UICellConfigurationDropState;
 
 	@:native("initWithTraitCollection")
-	overload public function initWithTraitCollection(traitCollection:UITraitCollection):UIViewConfigurationState;
+	overload public function initWithTraitCollection(traitCollection:UITraitCollection):UICellConfigurationState;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIViewConfigurationState;
+	overload public function initWithCoder(coder:NSCoder):UICellConfigurationState;
 
 	@:native("init")
 	overload public function init():UIViewConfigurationState;

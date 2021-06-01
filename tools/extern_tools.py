@@ -336,7 +336,17 @@ class ExternBaseClass:
         return haxe
 
     def _toReturnClass(self,_hx_type):
-        if (_hx_type.isStatic and self.isExtendClass(_hx_type.returnClass)):
+        tmp = None
+        if (not _hx_type.isStatic):
+            if (_hx_type.name is not None):
+                _this = _hx_type.name
+                startIndex = None
+                tmp = (((_this.find("initWith") if ((startIndex is None)) else HxString.indexOfImpl(_this,"initWith",startIndex))) != -1)
+            else:
+                tmp = False
+        else:
+            tmp = True
+        if (tmp and self.isExtendClass(_hx_type.returnClass)):
             return self.className
         return _hx_type.returnClass
 

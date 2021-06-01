@@ -92,7 +92,7 @@ extern class UITableViewHeaderFooterView extends UIView{
 	overload public static function layerClass():Dynamic;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIView;
+	overload public function initWithFrame(frame:CGRect):UITableViewHeaderFooterView;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;

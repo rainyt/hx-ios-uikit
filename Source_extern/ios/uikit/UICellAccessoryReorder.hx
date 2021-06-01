@@ -18,7 +18,7 @@ extern class UICellAccessoryReorder extends UICellAccessory{
 	public var showsVerticalSeparator:Bool;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UICellAccessory;
+	overload public function initWithCoder(coder:NSCoder):UICellAccessoryReorder;
 
 	@:native("init")
 	overload public function init():UICellAccessory;

@@ -42,7 +42,7 @@ extern class UIManagedDocument extends UIDocument{
 	overload public function writeAdditionalContent_toURL_originalContentsURL_error(content:Dynamic, toURL:Dynamic, originalContentsURL:Dynamic, error:Dynamic):Bool;
 
 	@:native("initWithFileURL")
-	overload public function initWithFileURL(url:Dynamic):UIDocument;
+	overload public function initWithFileURL(url:Dynamic):UIManagedDocument;
 
 	@:native("openWithCompletionHandler")
 	overload public function openWithCompletionHandler(completionHandler:Dynamic):Void;

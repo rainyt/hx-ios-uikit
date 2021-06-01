@@ -33,13 +33,13 @@ extern class UITabBarAppearance extends UIBarAppearance{
 	overload public function init():UIBarAppearance;
 
 	@:native("initWithIdiom")
-	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIBarAppearance;
+	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UITabBarAppearance;
 
 	@:native("initWithBarAppearance")
-	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
+	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UITabBarAppearance;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIBarAppearance;
+	overload public function initWithCoder(coder:NSCoder):UITabBarAppearance;
 
 	@:native("copy")
 	overload public function copy():UIBarAppearance;

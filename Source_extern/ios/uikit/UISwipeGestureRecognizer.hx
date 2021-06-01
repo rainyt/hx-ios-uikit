@@ -79,13 +79,13 @@ extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("initWithTarget:action")
-	overload public function initWithTarget_action(target:Dynamic, action:String):UIGestureRecognizer;
+	overload public function initWithTarget_action(target:Dynamic, action:String):UISwipeGestureRecognizer;
 
 	@:native("init")
 	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIGestureRecognizer;
+	overload public function initWithCoder(coder:NSCoder):UISwipeGestureRecognizer;
 
 	@:native("addTarget:action")
 	overload public function addTarget_action(target:Dynamic, action:String):Void;

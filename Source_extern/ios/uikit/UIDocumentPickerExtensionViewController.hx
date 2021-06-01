@@ -36,10 +36,10 @@ extern class UIDocumentPickerExtensionViewController extends UIViewController{
 	overload public function setNeedsTouchBarUpdate():Void;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIDocumentPickerExtensionViewController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIViewController;
+	overload public function initWithCoder(coder:NSCoder):UIDocumentPickerExtensionViewController;
 
 	@:native("loadView")
 	overload public function loadView():Void;

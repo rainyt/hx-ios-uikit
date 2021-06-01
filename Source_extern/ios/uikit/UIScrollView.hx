@@ -210,10 +210,10 @@ extern class UIScrollView extends UIView
 	overload public static function layerClass():Dynamic;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIView;
+	overload public function initWithFrame(frame:CGRect):UIScrollView;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIView;
+	overload public function initWithCoder(coder:NSCoder):UIScrollView;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;

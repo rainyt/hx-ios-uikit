@@ -286,7 +286,7 @@ class ExternBaseClass {
 	 * @return String
 	 */
 	private function _toReturnClass(type:ExternBaseClassFunProperty):String {
-		if (type.isStatic && isExtendClass(type.returnClass))
+		if ((type.isStatic || (type.name != null && type.name.indexOf("initWith") != -1)) && isExtendClass(type.returnClass))
 			return this.className;
 		return type.returnClass;
 	}

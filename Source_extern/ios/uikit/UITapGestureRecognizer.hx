@@ -82,13 +82,13 @@ extern class UITapGestureRecognizer extends UIGestureRecognizer{
 	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("initWithTarget:action")
-	overload public function initWithTarget_action(target:Dynamic, action:String):UIGestureRecognizer;
+	overload public function initWithTarget_action(target:Dynamic, action:String):UITapGestureRecognizer;
 
 	@:native("init")
 	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIGestureRecognizer;
+	overload public function initWithCoder(coder:NSCoder):UITapGestureRecognizer;
 
 	@:native("addTarget:action")
 	overload public function addTarget_action(target:Dynamic, action:String):Void;

@@ -16,7 +16,7 @@ extern class UITableViewDropPlaceholder extends UITableViewPlaceholder{
 	overload public static function autorelease():UITableViewDropPlaceholder;
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier:rowHeight")
-	overload public function initWithInsertionIndexPath_reuseIdentifier_rowHeight(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString, rowHeight:Float):UITableViewPlaceholder;
+	overload public function initWithInsertionIndexPath_reuseIdentifier_rowHeight(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString, rowHeight:Float):UITableViewDropPlaceholder;
 
 	@:native("init")
 	overload public function init():UITableViewPlaceholder;

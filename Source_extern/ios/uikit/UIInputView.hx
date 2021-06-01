@@ -62,7 +62,7 @@ extern class UIInputView extends UIView{
 	overload public static function layerClass():Dynamic;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIView;
+	overload public function initWithFrame(frame:CGRect):UIInputView;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;

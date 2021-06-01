@@ -42,7 +42,7 @@ extern class UIColorPickerViewController extends UIViewController{
 	overload public function setNeedsTouchBarUpdate():Void;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIViewController;
+	overload public function initWithCoder(coder:NSCoder):UIColorPickerViewController;
 
 	@:native("loadView")
 	overload public function loadView():Void;

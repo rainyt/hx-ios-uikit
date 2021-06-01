@@ -36,7 +36,7 @@ extern class UITextDropProposal extends UIDropProposal
 ;
 
 	@:native("initWithDropOperation")
-	overload public function initWithDropOperation(operation:UIDropOperation):UIDropProposal;
+	overload public function initWithDropOperation(operation:UIDropOperation):UITextDropProposal;
 
 	@:native("init")
 	overload public function init():UIDropProposal;

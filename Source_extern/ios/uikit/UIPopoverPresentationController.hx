@@ -49,7 +49,7 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	public var popoverBackgroundViewClass:Dynamic;
 
 	@:native("initWithPresentedViewController:presentingViewController")
-	overload public function initWithPresentedViewController_presentingViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPresentationController;
+	overload public function initWithPresentedViewController_presentingViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPopoverPresentationController;
 
 	@:native("init")
 	overload public function init():UIPresentationController;

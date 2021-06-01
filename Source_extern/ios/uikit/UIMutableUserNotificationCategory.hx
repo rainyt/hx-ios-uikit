@@ -22,7 +22,7 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	overload public function init():UIUserNotificationCategory;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIUserNotificationCategory;
+	overload public function initWithCoder(coder:NSCoder):UIMutableUserNotificationCategory;
 
 	@:native("actionsForContext")
 	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;

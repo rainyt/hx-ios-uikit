@@ -17,10 +17,10 @@ extern class UIDragPreviewTarget extends UIPreviewTarget{
 	overload public static function autorelease():UIDragPreviewTarget;
 
 	@:native("initWithContainer:center:transform")
-	overload public function initWithContainer_center_transform(container:UIView, center:CGPoint, transform:CGAffineTransform):UIPreviewTarget;
+	overload public function initWithContainer_center_transform(container:UIView, center:CGPoint, transform:CGAffineTransform):UIDragPreviewTarget;
 
 	@:native("initWithContainer:center")
-	overload public function initWithContainer_center(container:UIView, center:CGPoint):UIPreviewTarget;
+	overload public function initWithContainer_center(container:UIView, center:CGPoint):UIDragPreviewTarget;
 
 	@:native("init")
 	overload public function init():UIPreviewTarget;

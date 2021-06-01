@@ -19,13 +19,13 @@ extern class UIToolbarAppearance extends UIBarAppearance{
 	overload public function init():UIBarAppearance;
 
 	@:native("initWithIdiom")
-	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIBarAppearance;
+	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIToolbarAppearance;
 
 	@:native("initWithBarAppearance")
-	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UIBarAppearance;
+	overload public function initWithBarAppearance(barAppearance:UIBarAppearance):UIToolbarAppearance;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIBarAppearance;
+	overload public function initWithCoder(coder:NSCoder):UIToolbarAppearance;
 
 	@:native("copy")
 	overload public function copy():UIBarAppearance;

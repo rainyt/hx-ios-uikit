@@ -16,7 +16,7 @@ extern class UICollectionViewDropPlaceholder extends UICollectionViewPlaceholder
 	overload public static function autorelease():UICollectionViewDropPlaceholder;
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier")
-	overload public function initWithInsertionIndexPath_reuseIdentifier(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString):UICollectionViewPlaceholder;
+	overload public function initWithInsertionIndexPath_reuseIdentifier(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString):UICollectionViewDropPlaceholder;
 
 	@:native("init")
 	overload public function init():UICollectionViewPlaceholder;

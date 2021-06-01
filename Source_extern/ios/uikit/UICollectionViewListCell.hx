@@ -94,10 +94,10 @@ extern class UICollectionViewListCell extends UICollectionViewCell{
 	overload public static function layerClass():Dynamic;
 
 	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIView;
+	overload public function initWithFrame(frame:CGRect):UICollectionViewListCell;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIView;
+	overload public function initWithCoder(coder:NSCoder):UICollectionViewListCell;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute")
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;

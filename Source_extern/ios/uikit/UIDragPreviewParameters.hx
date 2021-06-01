@@ -17,7 +17,7 @@ extern class UIDragPreviewParameters extends UIPreviewParameters{
 	overload public function init():UIPreviewParameters;
 
 	@:native("initWithTextLineRects")
-	overload public function initWithTextLineRects(textLineRects:Dynamic):UIPreviewParameters;
+	overload public function initWithTextLineRects(textLineRects:Dynamic):UIDragPreviewParameters;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

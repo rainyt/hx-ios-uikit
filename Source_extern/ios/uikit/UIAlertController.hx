@@ -49,10 +49,10 @@ extern class UIAlertController extends UIViewController{
 	overload public function setNeedsTouchBarUpdate():Void;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
+	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIAlertController;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIViewController;
+	overload public function initWithCoder(coder:NSCoder):UIAlertController;
 
 	@:native("loadView")
 	overload public function loadView():Void;

@@ -36,7 +36,7 @@ extern class UIAction extends UIMenuElement{
 	overload public function init():UIAction;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIMenuElement;
+	overload public function initWithCoder(coder:NSCoder):UIAction;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

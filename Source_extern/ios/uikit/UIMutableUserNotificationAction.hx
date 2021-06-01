@@ -20,7 +20,7 @@ extern class UIMutableUserNotificationAction extends UIUserNotificationAction{
 	overload public function init():UIUserNotificationAction;
 
 	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIUserNotificationAction;
+	overload public function initWithCoder(coder:NSCoder):UIMutableUserNotificationAction;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
