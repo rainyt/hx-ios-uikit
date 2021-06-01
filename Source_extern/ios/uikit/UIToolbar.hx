@@ -7,7 +7,6 @@ import ios.objc.CGSize;
 @:native("UIToolbar")
 @:include("UIKit/UIKit.h")
 extern class UIToolbar extends UIView
-implements cpp.objc.Protocol<UIBarPositioning>
 {
 
 	@:native("alloc")

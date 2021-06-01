@@ -4,7 +4,6 @@ package ios.uikit;
 @:native("UIDragInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIDragInteraction extends NSObject
-implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")

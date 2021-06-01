@@ -37,6 +37,14 @@ extern class UIInterpolatingMotionEffect extends UIMotionEffect{
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
 	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:Dynamic):NSDictionary;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

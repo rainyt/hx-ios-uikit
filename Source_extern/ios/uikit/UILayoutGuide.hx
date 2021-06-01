@@ -6,7 +6,6 @@ import ios.objc.CGRect;
 @:native("UILayoutGuide")
 @:include("UIKit/UIKit.h")
 extern class UILayoutGuide extends NSObject
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -56,6 +55,14 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("hasAmbiguousLayout")
 	public var hasAmbiguousLayout:Bool;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

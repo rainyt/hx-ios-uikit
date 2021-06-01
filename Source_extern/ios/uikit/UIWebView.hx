@@ -9,8 +9,6 @@ import ios.objc.CGSize;
 @:native("UIWebView")
 @:include("UIKit/UIKit.h")
 extern class UIWebView extends UIView
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<UIScrollViewDelegate>
 {
 
 	@:native("alloc")
@@ -105,6 +103,10 @@ implements cpp.objc.Protocol<UIScrollViewDelegate>
 
 	@:native("allowsLinkPreview")
 	public var allowsLinkPreview:Bool;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("scrollViewDidScroll")
 	overload public function scrollViewDidScroll(scrollView:UIScrollView):Void;

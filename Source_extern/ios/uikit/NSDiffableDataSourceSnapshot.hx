@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("NSDiffableDataSourceSnapshot")
 @:include("UIKit/UIKit.h")
 extern class NSDiffableDataSourceSnapshot extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -88,6 +87,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("reloadSectionsWithIdentifiers")
 	overload public function reloadSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

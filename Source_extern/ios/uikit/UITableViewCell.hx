@@ -9,8 +9,6 @@ import ios.objc.CGSize;
 @:native("UITableViewCell")
 @:include("UIKit/UIKit.h")
 extern class UITableViewCell extends UIView
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<UIGestureRecognizerDelegate>
 {
 
 	@:native("alloc")
@@ -165,6 +163,10 @@ implements cpp.objc.Protocol<UIGestureRecognizerDelegate>
 
 	@:native("accessoryAction")
 	public var accessoryAction:String;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer")
 	overload public function gestureRecognizer_shouldRecognizeSimultaneouslyWithGestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer):Bool;

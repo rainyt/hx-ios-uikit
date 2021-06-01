@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UICollectionViewDiffableDataSourceSectionSnapshotHandlers")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewDiffableDataSourceSectionSnapshotHandlers extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -13,6 +12,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

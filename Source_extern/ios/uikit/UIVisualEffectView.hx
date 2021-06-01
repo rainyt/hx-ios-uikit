@@ -8,7 +8,6 @@ import ios.objc.CGSize;
 @:native("UIVisualEffectView")
 @:include("UIKit/UIKit.h")
 extern class UIVisualEffectView extends UIView
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

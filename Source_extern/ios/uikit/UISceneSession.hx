@@ -6,7 +6,6 @@ import cpp.objc.NSString;
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")
 extern class UISceneSession extends NSObject
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

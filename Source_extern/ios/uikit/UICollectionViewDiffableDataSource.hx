@@ -5,7 +5,6 @@ import cpp.objc.NSString;
 @:native("UICollectionViewDiffableDataSource")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewDiffableDataSource extends NSObject
-implements cpp.objc.Protocol<UICollectionViewDataSource>
 {
 
 	@:native("alloc")

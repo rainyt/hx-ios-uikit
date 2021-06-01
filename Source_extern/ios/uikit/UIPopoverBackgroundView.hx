@@ -7,7 +7,6 @@ import ios.objc.CGSize;
 @:native("UIPopoverBackgroundView")
 @:include("UIKit/UIKit.h")
 extern class UIPopoverBackgroundView extends UIView
-implements cpp.objc.Protocol<UIPopoverBackgroundViewMethods>
 {
 
 	@:native("alloc")

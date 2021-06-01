@@ -7,7 +7,6 @@ import cpp.objc.NSString;
 @:native("UIImagePickerController")
 @:include("UIKit/UIKit.h")
 extern class UIImagePickerController extends UINavigationController
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -75,6 +74,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("cameraFlashMode")
 	public var cameraFlashMode:UIImagePickerControllerCameraFlashMode;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("initWithNavigationBarClass:toolbarClass")
 	overload public function initWithNavigationBarClass_toolbarClass(navigationBarClass:Dynamic, toolbarClass:Dynamic):UINavigationController;

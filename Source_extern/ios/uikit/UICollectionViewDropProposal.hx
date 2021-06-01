@@ -23,6 +23,10 @@ extern class UICollectionViewDropProposal extends UIDropProposal{
 	@:native("init")
 	overload public function init():UIDropProposal;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

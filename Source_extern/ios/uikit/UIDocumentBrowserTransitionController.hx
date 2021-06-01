@@ -4,7 +4,6 @@ package ios.uikit;
 @:native("UIDocumentBrowserTransitionController")
 @:include("UIKit/UIKit.h")
 extern class UIDocumentBrowserTransitionController extends NSObject
-implements cpp.objc.Protocol<UIViewControllerAnimatedTransitioning>
 {
 
 	@:native("alloc")

@@ -33,6 +33,10 @@ extern class UIAction extends UIMenuElement{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIMenuElement;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UILexicon")
 @:include("UIKit/UIKit.h")
 extern class UILexicon extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -16,6 +15,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("entries")
 	public var entries:Dynamic;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

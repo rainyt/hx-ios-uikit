@@ -78,13 +78,17 @@ class ObjcProperty {
 		}
 		p = p.filter((f) -> f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("API_") == -1 && f.indexOf("ios(") == -1
 			&& f != "UI_APPEARANCE_SELECTOR");
-		// trace(p , "line=" + line);
+		var pname = p[p.length - 1];
+		// 还没有找到处理CGImage、CGColor的方法
+		if (pname == "CGColor" || pname == "CGImage")
+			return null;
 		return ({
-			name: p[p.length - 1],
+			name: pname,
 			type: isClass ? ExternBaseClassType.FUNC : ExternBaseClassType.PROPERTY,
 			returnClass: ObjcType.toType(p[p.length - 2], typedefs),
 			isStatic: isClass,
-			args: null
+			args: null,
+			haxe: null
 		});
 	}
 }

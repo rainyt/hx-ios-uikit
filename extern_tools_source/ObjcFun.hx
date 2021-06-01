@@ -42,7 +42,8 @@ class ObjcFun {
 			type: ExternBaseClassType.FUNC,
 			returnClass: c,
 			isStatic: isStatic,
-			args: args
+			args: args,
+			haxe: null
 		};
 	}
 

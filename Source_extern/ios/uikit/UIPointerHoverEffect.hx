@@ -26,6 +26,10 @@ extern class UIPointerHoverEffect extends UIPointerEffect{
 	@:native("init")
 	overload public function init():UIPointerEffect;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

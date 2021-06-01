@@ -7,7 +7,6 @@ import ios.objc.CGAffineTransform;
 @:native("UIDynamicItemGroup")
 @:include("UIKit/UIKit.h")
 extern class UIDynamicItemGroup extends NSObject
-implements cpp.objc.Protocol<UIDynamicItem>
 {
 
 	@:native("alloc")

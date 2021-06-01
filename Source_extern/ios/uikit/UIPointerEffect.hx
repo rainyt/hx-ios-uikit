@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UIPointerEffect")
 @:include("UIKit/UIKit.h")
 extern class UIPointerEffect extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -19,6 +18,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("init")
 	overload public function init():UIPointerEffect;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

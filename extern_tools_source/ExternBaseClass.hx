@@ -1,3 +1,4 @@
+import ExternProtocolClass.ExternProtocolHaxeClass;
 import ExternBaseClassFunProperty.ExternBaseClassFunPropertyArgs;
 import sys.io.File;
 
@@ -9,6 +10,8 @@ class ExternBaseClass {
 	 * 是否为协议类型
 	 */
 	public var isProtocol:Bool = false;
+
+	public var hextern:ExternHFile;
 
 	/**
 	 * 包名
@@ -57,6 +60,7 @@ class ExternBaseClass {
 
 	public function new(_hdata:String, hextern:ExternHFile, defcall:ExternBaseClass->Void) {
 		var harray = _hdata.split("\n");
+		this.hextern = hextern;
 		var pclassName = harray[0];
 		isProtocol = Std.isOfType(this, ExternProtocolClass);
 		pclassName = pclassName.substr(pclassName.indexOf(isProtocol ? "@protocol" : "@interface") + (isProtocol ? 9 : 10));
@@ -108,14 +112,16 @@ class ExternBaseClass {
 			name: "alloc",
 			returnClass: this.className,
 			isStatic: true,
-			args: null
+			args: null,
+			haxe: null
 		});
 		funcAndAttr.push({
 			type: ExternBaseClassType.FUNC,
 			name: "autorelease",
 			returnClass: this.className,
 			isStatic: true,
-			args: null
+			args: null,
+			haxe: null
 		});
 		for (index => value in harray) {
 			if (value.indexOf("@property") == 0) {
@@ -152,14 +158,14 @@ class ExternBaseClass {
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					if (!hasFuncOrAttr(value, true)) {
-						// if (this.className == "UITextField")
-						// trace(this.className, "追加方法：", t.className, value);
 						funcAndAttr.push(value);
 					}
 				case ExternBaseClassType.PROPERTY:
 					if (Std.isOfType(value, ExternProtocolClass) && !hasFuncOrAttr(value)) {
 						funcAndAttr.push(value);
 					}
+				case ExternBaseClassType.HAXE:
+					funcAndAttr.push(value);
 			}
 		}
 	}
@@ -244,9 +250,9 @@ class ExternBaseClass {
 				var t = ExternTools.protocol.get(value);
 				if (t != null) {
 					// implements cpp.objc.Protocol<UITextInput>
-					haxe += "implements cpp.objc.Protocol<" + t.className + ">\n";
+					// haxe += "implements cpp.objc.Protocol<" + t.className + ">\n";
 				} else {
-					haxe += "implements cpp.objc.Protocol<" + value + ">\n";
+					// haxe += "implements cpp.objc.Protocol<" + value + ">\n";
 					// trace("协议类型不存在：" + value);
 				}
 			}
@@ -264,6 +270,8 @@ class ExternBaseClass {
 				case ExternBaseClassType.PROPERTY:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
 					haxe += "\tpublic var " + value.name + ":" + value.returnClass + ";\n\n";
+				case ExternBaseClassType.HAXE:
+					haxe += "\t/** Haxe Protocol */" + value.haxe + "\n\n";
 			}
 		}
 
@@ -306,6 +314,16 @@ class ExternBaseClass {
 				var t = ExternTools.protocol.get(value);
 				if (t != null)
 					c.putClass(t);
+				else {
+					// 新建协议
+					var readProtocols = ObjcImport.toImport(value);
+					if (readProtocols != null) {
+						var nt = new ExternProtocolHaxeClass(File.getContent(ExternTools.externDir + "/" + readProtocols.split(".").join("/") + ".hx"),
+							hextern);
+						c.putClass(nt);
+					}
+					// throw readProtocols;
+				}
 				// else
 				// trace("协议不存在：", value);
 			}
@@ -336,4 +354,9 @@ class ExternBaseClassType {
 	 * 属性定义
 	 */
 	public static inline var PROPERTY:String = "property";
+
+	/**
+	 * 原生Haxe定义
+	 */
+	public static inline var HAXE:String = "haxe";
 }

@@ -7,8 +7,6 @@ import cpp.objc.NSString;
 @:native("UIKey")
 @:include("UIKit/UIKit.h")
 extern class UIKey extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -28,6 +26,18 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("keyCode")
 	public var keyCode:Dynamic;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

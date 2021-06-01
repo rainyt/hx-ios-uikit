@@ -6,8 +6,6 @@ import cpp.objc.NSDictionary;
 @:native("UIBarItem")
 @:include("UIKit/UIKit.h")
 extern class UIBarItem extends NSObject
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<UIAppearance>
 {
 
 	@:native("alloc")
@@ -51,6 +49,10 @@ implements cpp.objc.Protocol<UIAppearance>
 
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("appearance")
 	overload public static function appearance():UIAppearance;

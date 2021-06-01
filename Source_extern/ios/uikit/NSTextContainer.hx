@@ -7,8 +7,6 @@ import ios.objc.CGRect;
 @:native("NSTextContainer")
 @:include("UIKit/UIKit.h")
 extern class NSTextContainer extends NSObject
-implements cpp.objc.Protocol<NSSecureCoding>
-implements cpp.objc.Protocol<NSTextLayoutOrientationProvider>
 {
 
 	@:native("alloc")

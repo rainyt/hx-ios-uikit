@@ -8,8 +8,6 @@ import ios.objc.CGSize;
 @:native("UISearchBar")
 @:include("UIKit/UIKit.h")
 extern class UISearchBar extends UIView
-implements cpp.objc.Protocol<UIBarPositioning>
-implements cpp.objc.Protocol<UITextInputTraits>
 {
 
 	@:native("alloc")

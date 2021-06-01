@@ -6,7 +6,6 @@ import cpp.objc.NSString;
 @:native("UIAlertAction")
 @:include("UIKit/UIKit.h")
 extern class UIAlertAction extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -26,6 +25,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("enabled")
 	public var enabled:Bool;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

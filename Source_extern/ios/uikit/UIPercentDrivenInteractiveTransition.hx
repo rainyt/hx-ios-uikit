@@ -4,7 +4,6 @@ package ios.uikit;
 @:native("UIPercentDrivenInteractiveTransition")
 @:include("UIKit/UIKit.h")
 extern class UIPercentDrivenInteractiveTransition extends NSObject
-implements cpp.objc.Protocol<UIViewControllerInteractiveTransitioning>
 {
 
 	@:native("alloc")

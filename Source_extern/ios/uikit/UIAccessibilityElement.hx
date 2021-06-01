@@ -6,7 +6,6 @@ import ios.objc.CGRect;
 @:native("UIAccessibilityElement")
 @:include("UIKit/UIKit.h")
 extern class UIAccessibilityElement extends UIResponder
-implements cpp.objc.Protocol<UIAccessibilityIdentification>
 {
 
 	@:native("alloc")

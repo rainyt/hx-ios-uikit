@@ -7,8 +7,6 @@ import cpp.objc.NSString;
 @:native("UIMenuElement")
 @:include("UIKit/UIKit.h")
 extern class UIMenuElement extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -28,6 +26,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("init")
 	overload public function init():UIMenuElement;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

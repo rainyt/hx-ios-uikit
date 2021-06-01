@@ -6,8 +6,6 @@ import cpp.objc.NSString;
 @:native("UIPreviewActionGroup")
 @:include("UIKit/UIKit.h")
 extern class UIPreviewActionGroup extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<UIPreviewActionItem>
 {
 
 	@:native("alloc")
@@ -18,6 +16,10 @@ implements cpp.objc.Protocol<UIPreviewActionItem>
 
 	@:native("actionGroupWithTitle:style:actions")
 	overload public static function actionGroupWithTitle_style_actions(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

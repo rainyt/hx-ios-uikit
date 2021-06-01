@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("NSCollectionLayoutEdgeSpacing")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutEdgeSpacing extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -28,6 +27,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("bottom")
 	public var bottom:NSCollectionLayoutSpacing;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

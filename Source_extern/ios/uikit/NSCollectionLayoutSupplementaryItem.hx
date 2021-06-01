@@ -6,7 +6,6 @@ import cpp.objc.NSString;
 @:native("NSCollectionLayoutSupplementaryItem")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutSupplementaryItem extends NSCollectionLayoutItem
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -41,6 +40,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("itemWithLayoutSize:supplementaryItems")
 	overload public static function itemWithLayoutSize_supplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutItem;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

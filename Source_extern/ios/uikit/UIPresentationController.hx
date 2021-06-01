@@ -7,10 +7,6 @@ import cpp.objc.NSString;
 @:native("UIPresentationController")
 @:include("UIKit/UIKit.h")
 extern class UIPresentationController extends NSObject
-implements cpp.objc.Protocol<UIAppearanceContainer>
-implements cpp.objc.Protocol<UITraitEnvironment>
-implements cpp.objc.Protocol<UIContentContainer>
-implements cpp.objc.Protocol<UIFocusEnvironment>
 {
 
 	@:native("alloc")

@@ -6,8 +6,6 @@ import ios.objc.CGPoint;
 @:native("UIViewPropertyAnimator")
 @:include("UIKit/UIKit.h")
 extern class UIViewPropertyAnimator extends NSObject
-implements cpp.objc.Protocol<UIViewImplicitlyAnimating>
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -60,6 +58,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("continueAnimationWithTimingParameters:durationFactor")
 	overload public function continueAnimationWithTimingParameters_durationFactor(parameters:Dynamic, durationFactor:Float):Void;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

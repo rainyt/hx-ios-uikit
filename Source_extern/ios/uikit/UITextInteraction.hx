@@ -4,7 +4,6 @@ package ios.uikit;
 @:native("UITextInteraction")
 @:include("UIKit/UIKit.h")
 extern class UITextInteraction extends NSObject
-implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")

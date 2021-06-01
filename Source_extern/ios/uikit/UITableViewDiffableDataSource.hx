@@ -5,7 +5,6 @@ import cpp.objc.NSString;
 @:native("UITableViewDiffableDataSource")
 @:include("UIKit/UIKit.h")
 extern class UITableViewDiffableDataSource extends NSObject
-implements cpp.objc.Protocol<UITableViewDataSource>
 {
 
 	@:native("alloc")

@@ -7,8 +7,6 @@ import cpp.objc.NSDictionary;
 @:native("UIApplicationShortcutItem")
 @:include("UIKit/UIKit.h")
 extern class UIApplicationShortcutItem extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSMutableCopying>
 {
 
 	@:native("alloc")
@@ -25,6 +23,10 @@ implements cpp.objc.Protocol<NSMutableCopying>
 
 	@:native("initWithType:localizedTitle")
 	overload public function initWithType_localizedTitle(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

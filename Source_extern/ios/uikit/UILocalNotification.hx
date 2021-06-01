@@ -6,8 +6,6 @@ import ios.objc.NSCoding;
 @:native("UILocalNotification")
 @:include("UIKit/UIKit.h")
 extern class UILocalNotification extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -33,6 +31,14 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("applicationIconBadgeNumber")
 	public var applicationIconBadgeNumber:Int;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

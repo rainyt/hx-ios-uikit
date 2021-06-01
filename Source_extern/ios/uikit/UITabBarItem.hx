@@ -46,6 +46,10 @@ extern class UITabBarItem extends UIBarItem{
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
 
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
+
 	@:native("appearance")
 	overload public static function appearance():UIAppearance;
 

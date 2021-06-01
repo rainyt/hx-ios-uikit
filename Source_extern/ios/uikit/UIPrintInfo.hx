@@ -6,8 +6,6 @@ import ios.objc.NSCoding;
 @:native("UIPrintInfo")
 @:include("UIKit/UIKit.h")
 extern class UIPrintInfo extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -36,6 +34,14 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("dictionaryRepresentation")
 	public var dictionaryRepresentation:Dynamic;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

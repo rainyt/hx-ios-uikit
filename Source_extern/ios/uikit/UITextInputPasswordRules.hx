@@ -7,8 +7,6 @@ import cpp.objc.NSString;
 @:native("UITextInputPasswordRules")
 @:include("UIKit/UIKit.h")
 extern class UITextInputPasswordRules extends NSObject
-implements cpp.objc.Protocol<NSSecureCoding>
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -25,6 +23,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("passwordRulesWithDescriptor")
 	overload public static function passwordRulesWithDescriptor(passwordRulesDescriptor:NSString):UITextInputPasswordRules;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

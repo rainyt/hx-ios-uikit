@@ -6,7 +6,6 @@ import ios.objc.CGSize;
 @:native("UIActivityItemsConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIActivityItemsConfiguration extends NSObject
-implements cpp.objc.Protocol<UIActivityItemsConfigurationReading>
 {
 
 	@:native("alloc")

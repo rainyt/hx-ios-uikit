@@ -8,7 +8,6 @@ import ios.objc.CGSize;
 @:native("UISlider")
 @:include("UIKit/UIKit.h")
 extern class UISlider extends UIControl
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -79,6 +78,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("thumbRectForBounds:trackRect:value")
 	overload public function thumbRectForBounds_trackRect_value(bounds:CGRect, trackRect:CGRect, value:Dynamic):CGRect;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIControl;

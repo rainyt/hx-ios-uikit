@@ -8,7 +8,6 @@ import ios.objc.CGSize;
 @:native("UIProgressView")
 @:include("UIKit/UIKit.h")
 extern class UIProgressView extends UIView
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -40,6 +39,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("observedProgress")
 	public var observedProgress:Dynamic;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

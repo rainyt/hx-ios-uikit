@@ -47,6 +47,10 @@ extern class UITabBarAppearance extends UIBarAppearance{
 	@:native("configureWithTransparentBackground")
 	overload public function configureWithTransparentBackground():Void;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

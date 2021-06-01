@@ -23,6 +23,10 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	@:native("actionsForContext")
 	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

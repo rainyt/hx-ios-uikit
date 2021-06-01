@@ -24,6 +24,10 @@ extern class NSMutableParagraphStyle extends NSParagraphStyle{
 	@:native("defaultWritingDirectionForLanguage")
 	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):NSWritingDirection;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

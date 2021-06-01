@@ -8,7 +8,6 @@ import ios.objc.CGSize;
 @:native("UISwitch")
 @:include("UIKit/UIKit.h")
 extern class UISwitch extends UIControl
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -37,6 +36,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("setOn:animated")
 	overload public function setOn_animated(on:Bool, animated:Bool):Void;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("initWithFrame:primaryAction")
 	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;

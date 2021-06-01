@@ -8,8 +8,6 @@ import ios.objc.CGPoint;
 @:native("UIRegion")
 @:include("UIKit/UIKit.h")
 extern class UIRegion extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -41,6 +39,18 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("containsPoint")
 	overload public function containsPoint(point:CGPoint):Bool;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

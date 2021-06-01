@@ -20,6 +20,10 @@ extern class UICellAccessoryOutlineDisclosure extends UICellAccessory{
 	@:native("init")
 	overload public function init():UICellAccessory;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

@@ -6,8 +6,6 @@ import ios.objc.NSSecureCoding;
 @:native("UIBarAppearance")
 @:include("UIKit/UIKit.h")
 extern class UIBarAppearance extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -51,6 +49,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("shadowImage")
 	public var shadowImage:UIImage;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

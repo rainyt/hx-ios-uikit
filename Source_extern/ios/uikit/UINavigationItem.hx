@@ -6,7 +6,6 @@ import cpp.objc.NSString;
 @:native("UINavigationItem")
 @:include("UIKit/UIKit.h")
 extern class UINavigationItem extends NSObject
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -65,6 +64,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("hidesSearchBarWhenScrolling")
 	public var hidesSearchBarWhenScrolling:Bool;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

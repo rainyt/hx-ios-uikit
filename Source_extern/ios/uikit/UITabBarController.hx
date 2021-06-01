@@ -6,8 +6,6 @@ import cpp.objc.NSString;
 @:native("UITabBarController")
 @:include("UIKit/UIKit.h")
 extern class UITabBarController extends UIViewController
-implements cpp.objc.Protocol<UITabBarDelegate>
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -48,6 +46,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("tabBar:didEndCustomizingItems:changed")
 	overload public function tabBar_didEndCustomizingItems_changed(tabBar:UITabBar, didEndCustomizingItems:Dynamic, changed:Bool):Void;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;

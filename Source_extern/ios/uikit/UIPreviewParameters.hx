@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UIPreviewParameters")
 @:include("UIKit/UIKit.h")
 extern class UIPreviewParameters extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -19,6 +18,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("initWithTextLineRects")
 	overload public function initWithTextLineRects(textLineRects:Dynamic):UIPreviewParameters;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

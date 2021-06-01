@@ -6,7 +6,6 @@ import cpp.objc.NSString;
 @:native("NSDataAsset")
 @:include("UIKit/UIKit.h")
 extern class NSDataAsset extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -23,6 +22,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("initWithName:bundle")
 	overload public function initWithName_bundle(name:NSString, bundle:NSBundle):NSDataAsset;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

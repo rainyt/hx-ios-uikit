@@ -7,7 +7,6 @@ import cpp.objc.NSDictionary;
 @:native("UIBarButtonItem")
 @:include("UIKit/UIKit.h")
 extern class UIBarButtonItem extends UIBarItem
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -120,6 +119,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("buttonGroup")
 	public var buttonGroup:UIBarButtonItemGroup;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("setTitleTextAttributes:forState")
 	overload public function setTitleTextAttributes_forState(attributes:NSDictionary, forState:UIControlState):Void;

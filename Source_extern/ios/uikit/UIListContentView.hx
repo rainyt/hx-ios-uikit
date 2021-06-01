@@ -7,7 +7,6 @@ import ios.objc.CGSize;
 @:native("UIListContentView")
 @:include("UIKit/UIKit.h")
 extern class UIListContentView extends UIView
-implements cpp.objc.Protocol<UIContentView>
 {
 
 	@:native("alloc")

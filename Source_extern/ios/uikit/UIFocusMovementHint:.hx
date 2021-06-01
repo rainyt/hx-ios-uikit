@@ -7,7 +7,6 @@ import ios.objc.CATransform3D;
 @:native("UIFocusMovementHint:")
 @:include("UIKit/UIKit.h")
 extern class UIFocusMovementHint: extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -33,6 +32,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("init")
 	overload public function init():UIFocusMovementHint:;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

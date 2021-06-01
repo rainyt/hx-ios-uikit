@@ -7,8 +7,6 @@ import cpp.objc.NSString;
 @:native("UICommandAlternate")
 @:include("UIKit/UIKit.h")
 extern class UICommandAlternate extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -31,6 +29,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICommandAlternate;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

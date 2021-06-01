@@ -5,7 +5,6 @@ import ios.objc.NSSecureCoding;
 @:native("UIImageAsset")
 @:include("UIKit/UIKit.h")
 extern class UIImageAsset extends NSObject
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

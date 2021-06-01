@@ -5,7 +5,6 @@ import cpp.objc.NSString;
 @:native("UIInputViewController")
 @:include("UIKit/UIKit.h")
 extern class UIInputViewController extends UIViewController
-implements cpp.objc.Protocol<UITextInputDelegate>
 {
 
 	@:native("alloc")

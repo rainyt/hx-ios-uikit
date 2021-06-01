@@ -8,8 +8,6 @@ import ios.objc.CGPoint;
 @:native("UILabel")
 @:include("UIKit/UIKit.h")
 extern class UILabel extends UIView
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
 
 	@:native("alloc")
@@ -80,6 +78,10 @@ implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 
 	@:native("adjustsLetterSpacingToFitWidth")
 	public var adjustsLetterSpacingToFitWidth:Bool;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("adjustsFontForContentSizeCategory")
 	public var adjustsFontForContentSizeCategory:Bool;

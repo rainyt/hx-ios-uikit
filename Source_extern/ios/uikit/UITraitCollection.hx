@@ -6,8 +6,6 @@ import ios.objc.NSSecureCoding;
 @:native("UITraitCollection")
 @:include("UIKit/UIKit.h")
 extern class UITraitCollection extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -114,6 +112,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("imageConfiguration")
 	public var imageConfiguration:UIImageConfiguration;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

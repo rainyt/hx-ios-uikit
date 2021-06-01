@@ -6,7 +6,6 @@ import ios.objc.CGRect;
 @:native("UIPointerShape")
 @:include("UIKit/UIKit.h")
 extern class UIPointerShape extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -29,6 +28,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("init")
 	overload public function init():UIPointerShape;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

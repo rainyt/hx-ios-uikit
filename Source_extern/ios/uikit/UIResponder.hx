@@ -5,7 +5,6 @@ import cpp.objc.NSString;
 @:native("UIResponder")
 @:include("UIKit/UIKit.h")
 extern class UIResponder extends NSObject
-implements cpp.objc.Protocol<UIResponderStandardEditActions>
 {
 
 	@:native("alloc")

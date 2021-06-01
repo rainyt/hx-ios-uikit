@@ -5,7 +5,6 @@ import ios.objc.NSSecureCoding;
 @:native("UISceneActivationConditions")
 @:include("UIKit/UIKit.h")
 extern class UISceneActivationConditions extends NSObject
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

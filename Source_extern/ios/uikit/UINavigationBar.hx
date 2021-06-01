@@ -8,8 +8,6 @@ import ios.objc.CGSize;
 @:native("UINavigationBar")
 @:include("UIKit/UIKit.h")
 extern class UINavigationBar extends UIView
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<UIBarPositioning>
 {
 
 	@:native("alloc")
@@ -62,6 +60,10 @@ implements cpp.objc.Protocol<UIBarPositioning>
 
 	@:native("titleVerticalPositionAdjustmentForBarMetrics")
 	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Float;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("barPosition")
 	public var barPosition:UIBarPosition;

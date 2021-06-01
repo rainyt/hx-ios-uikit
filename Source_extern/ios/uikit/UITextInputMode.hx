@@ -6,7 +6,6 @@ import cpp.objc.NSString;
 @:native("UITextInputMode")
 @:include("UIKit/UIKit.h")
 extern class UITextInputMode extends NSObject
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

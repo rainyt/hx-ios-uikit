@@ -7,8 +7,6 @@ import cpp.objc.NSString;
 @:native("UIColor")
 @:include("UIKit/UIKit.h")
 extern class UIColor extends NSObject
-implements cpp.objc.Protocol<NSSecureCoding>
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -124,9 +122,6 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("colorWithAlphaComponent")
 	overload public function colorWithAlphaComponent(alpha:Float):UIColor;
-
-	@:native("CGColor")
-	public var CGColor:Dynamic;
 
 	@:native("CGColor")
 	overload public function CGColor():Dynamic;
@@ -268,6 +263,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("accessibilityName")
 	public var accessibilityName:NSString;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

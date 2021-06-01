@@ -5,8 +5,6 @@ import ios.objc.NSSecureCoding;
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIListContentConfiguration extends NSObject
-implements cpp.objc.Protocol<UIContentConfiguration>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

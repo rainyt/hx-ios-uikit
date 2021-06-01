@@ -6,7 +6,6 @@ import ios.objc.CGSize;
 @:native("UIActivityItemProvider")
 @:include("UIKit/UIKit.h")
 extern class UIActivityItemProvider extends NSOperation
-implements cpp.objc.Protocol<UIActivityItemSource>
 {
 
 	@:native("alloc")

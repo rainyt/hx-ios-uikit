@@ -6,7 +6,6 @@ import cpp.objc.NSString;
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")
 extern class UIDocumentBrowserViewController extends UIViewController
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -53,6 +52,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("defaultDocumentAspectRatio")
 	public var defaultDocumentAspectRatio:Float;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIViewController;

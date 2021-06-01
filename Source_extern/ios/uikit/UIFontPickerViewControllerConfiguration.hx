@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UIFontPickerViewControllerConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIFontPickerViewControllerConfiguration extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -25,6 +24,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("filterPredicateForFilteredLanguages")
 	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):Dynamic;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

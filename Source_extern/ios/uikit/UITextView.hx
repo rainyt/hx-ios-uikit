@@ -9,8 +9,6 @@ import ios.objc.CGSize;
 @:native("UITextView")
 @:include("UIKit/UIKit.h")
 extern class UITextView extends UIScrollView
-implements cpp.objc.Protocol<UITextInput>
-implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
 
 	@:native("alloc")
@@ -231,6 +229,10 @@ implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 
 	@:native("zoomToRect:animated")
 	overload public function zoomToRect_animated(rect:CGRect, animated:Bool):Void;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

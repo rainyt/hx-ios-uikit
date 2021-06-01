@@ -6,7 +6,6 @@ import ios.objc.CGRect;
 @:native("UIPrintFormatter")
 @:include("UIKit/UIKit.h")
 extern class UIPrintFormatter extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -44,6 +43,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("drawInRect:forPageAtIndex")
 	overload public function drawInRect_forPageAtIndex(rect:CGRect, forPageAtIndex:Int):Void;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

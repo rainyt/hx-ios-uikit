@@ -22,6 +22,10 @@ extern class UIMutableApplicationShortcutItem extends UIApplicationShortcutItem{
 	@:native("initWithType:localizedTitle")
 	overload public function initWithType_localizedTitle(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

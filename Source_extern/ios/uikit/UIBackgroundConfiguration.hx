@@ -6,8 +6,6 @@ import ios.objc.NSSecureCoding;
 @:native("UIBackgroundConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIBackgroundConfiguration extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -75,6 +73,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("strokeOutset")
 	public var strokeOutset:Float;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

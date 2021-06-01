@@ -8,8 +8,6 @@ import ios.objc.CGRect;
 @:native("UIScrollView")
 @:include("UIKit/UIKit.h")
 extern class UIScrollView extends UIView
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<UIFocusItemScrollableContainer>
 {
 
 	@:native("alloc")
@@ -161,6 +159,10 @@ implements cpp.objc.Protocol<UIFocusItemScrollableContainer>
 
 	@:native("refreshControl")
 	public var refreshControl:UIRefreshControl;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("visibleSize")
 	public var visibleSize:CGSize;

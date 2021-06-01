@@ -5,7 +5,6 @@ import ios.objc.NSCoding;
 @:native("UIBarButtonItemGroup")
 @:include("UIKit/UIKit.h")
 extern class UIBarButtonItemGroup extends NSObject
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -25,6 +24,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("displayingRepresentativeItem")
 	public var displayingRepresentativeItem:Bool;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

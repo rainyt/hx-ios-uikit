@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("NSCollectionLayoutDimension")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutDimension extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -43,6 +42,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("dimension")
 	public var dimension:Float;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

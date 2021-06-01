@@ -4,7 +4,6 @@ package ios.uikit;
 @:native("UIScribbleInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIScribbleInteraction extends NSObject
-implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")

@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UIDragPreview")
 @:include("UIKit/UIKit.h")
 extern class UIDragPreview extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -31,6 +30,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("previewForURL:title")
 	overload public static function previewForURL_title(url:Dynamic, title:Dynamic):UIDragPreview;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

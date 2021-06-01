@@ -9,8 +9,6 @@ import ios.objc.CGSize;
 @:native("UITableView")
 @:include("UIKit/UIKit.h")
 extern class UITableView extends UIScrollView
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<UIDataSourceTranslating>
 {
 
 	@:native("alloc")
@@ -285,6 +283,10 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 
 	@:native("zoomToRect:animated")
 	overload public function zoomToRect_animated(rect:CGRect, animated:Bool):Void;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

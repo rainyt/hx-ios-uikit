@@ -5,7 +5,6 @@ import cpp.objc.NSString;
 @:native("UIViewConfigurationState")
 @:include("UIKit/UIKit.h")
 extern class UIViewConfigurationState extends NSObject
-implements cpp.objc.Protocol<UIConfigurationState>
 {
 
 	@:native("alloc")

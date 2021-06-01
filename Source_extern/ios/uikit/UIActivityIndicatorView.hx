@@ -8,7 +8,6 @@ import ios.objc.CGSize;
 @:native("UIActivityIndicatorView")
 @:include("UIKit/UIKit.h")
 extern class UIActivityIndicatorView extends UIView
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -43,6 +42,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("animating")
 	public var animating:Bool;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

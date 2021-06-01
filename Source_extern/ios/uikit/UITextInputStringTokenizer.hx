@@ -4,7 +4,6 @@ package ios.uikit;
 @:native("UITextInputStringTokenizer")
 @:include("UIKit/UIKit.h")
 extern class UITextInputStringTokenizer extends NSObject
-implements cpp.objc.Protocol<UITextInputTokenizer>
 {
 
 	@:native("alloc")

@@ -6,9 +6,6 @@ import ios.objc.NSSecureCoding;
 @:native("UIUserNotificationCategory")
 @:include("UIKit/UIKit.h")
 extern class UIUserNotificationCategory extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSMutableCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -25,6 +22,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("actionsForContext")
 	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

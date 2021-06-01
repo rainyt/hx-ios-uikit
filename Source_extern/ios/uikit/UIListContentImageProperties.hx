@@ -7,8 +7,6 @@ import ios.objc.CGSize;
 @:native("UIListContentImageProperties")
 @:include("UIKit/UIKit.h")
 extern class UIListContentImageProperties extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -34,6 +32,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("accessibilityIgnoresInvertColors")
 	public var accessibilityIgnoresInvertColors:Bool;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UIDropProposal")
 @:include("UIKit/UIKit.h")
 extern class UIDropProposal extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -28,6 +27,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("prefersFullSizePreview")
 	public var prefersFullSizePreview:Bool;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

@@ -13,8 +13,6 @@ import ios.objc.CGBlendMode;
 @:native("UIBezierPath")
 @:include("UIKit/UIKit.h")
 extern class UIBezierPath extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -136,6 +134,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("addClip")
 	overload public function addClip():Void;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

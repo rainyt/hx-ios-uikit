@@ -6,7 +6,6 @@ import ios.objc.CGSize;
 @:native("UITargetedPreview")
 @:include("UIKit/UIKit.h")
 extern class UITargetedPreview extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -38,6 +37,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("retargetedPreviewWithTarget")
 	overload public function retargetedPreviewWithTarget(newTarget:UIPreviewTarget):UITargetedPreview;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

@@ -29,6 +29,10 @@ extern class UIGraphicsImageRendererFormat extends UIGraphicsRendererFormat{
 	@:native("preferredFormat")
 	overload public static function preferredFormat():UIGraphicsRendererFormat;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

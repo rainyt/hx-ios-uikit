@@ -10,7 +10,6 @@ import ios.objc.CGPoint;
 @:native("UISegmentedControl")
 @:include("UIKit/UIKit.h")
 extern class UISegmentedControl extends UIControl
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -126,6 +125,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("contentPositionAdjustmentForSegmentType:barMetrics")
 	overload public function contentPositionAdjustmentForSegmentType_barMetrics(leftCenterRightOrAlone:UISegmentedControlSegment, barMetrics:UIBarMetrics):Dynamic;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("initWithFrame:primaryAction")
 	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIControl;

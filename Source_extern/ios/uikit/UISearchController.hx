@@ -5,8 +5,6 @@ import cpp.objc.NSString;
 @:native("UISearchController")
 @:include("UIKit/UIKit.h")
 extern class UISearchController extends UIViewController
-implements cpp.objc.Protocol<UIViewControllerTransitioningDelegate>
-implements cpp.objc.Protocol<UIViewControllerAnimatedTransitioning>
 {
 
 	@:native("alloc")

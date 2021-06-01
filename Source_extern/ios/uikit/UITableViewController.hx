@@ -6,8 +6,6 @@ import ios.objc.CGPoint;
 @:native("UITableViewController")
 @:include("UIKit/UIKit.h")
 extern class UITableViewController extends UIViewController
-implements cpp.objc.Protocol<UITableViewDelegate>
-implements cpp.objc.Protocol<UITableViewDataSource>
 {
 
 	@:native("alloc")

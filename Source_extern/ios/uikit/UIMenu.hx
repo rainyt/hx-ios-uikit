@@ -33,6 +33,10 @@ extern class UIMenu extends UIMenuElement{
 	@:native("menuByReplacingChildren")
 	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu;
 
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
 

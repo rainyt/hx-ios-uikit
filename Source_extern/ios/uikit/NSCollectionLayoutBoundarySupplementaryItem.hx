@@ -7,7 +7,6 @@ import ios.objc.CGPoint;
 @:native("NSCollectionLayoutBoundarySupplementaryItem")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutBoundarySupplementaryItem extends NSCollectionLayoutSupplementaryItem
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -48,6 +47,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("itemWithLayoutSize:supplementaryItems")
 	overload public static function itemWithLayoutSize_supplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutItem;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

@@ -6,7 +6,6 @@ import ios.objc.CGRect;
 @:native("UIPointerRegion")
 @:include("UIKit/UIKit.h")
 extern class UIPointerRegion extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -26,6 +25,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("init")
 	overload public function init():UIPointerRegion;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

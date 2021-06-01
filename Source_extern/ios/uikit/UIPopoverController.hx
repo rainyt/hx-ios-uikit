@@ -6,7 +6,6 @@ import ios.objc.CGRect;
 @:native("UIPopoverController")
 @:include("UIKit/UIKit.h")
 extern class UIPopoverController extends NSObject
-implements cpp.objc.Protocol<UIAppearanceContainer>
 {
 
 	@:native("alloc")

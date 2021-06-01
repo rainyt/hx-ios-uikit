@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UITextDropProposal")
 @:include("UIKit/UIKit.h")
 extern class UITextDropProposal extends UIDropProposal
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -25,6 +24,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("dropPerformer")
 	public var dropPerformer:UITextDropPerformer;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("initWithDropOperation")
 	overload public function initWithDropOperation(operation:UIDropOperation):UIDropProposal;

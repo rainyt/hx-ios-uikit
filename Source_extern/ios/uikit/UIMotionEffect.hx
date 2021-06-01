@@ -7,8 +7,6 @@ import cpp.objc.NSDictionary;
 @:native("UIMotionEffect")
 @:include("UIKit/UIKit.h")
 extern class UIMotionEffect extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -25,6 +23,14 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("keyPathsAndRelativeValuesForViewerOffset")
 	overload public function keyPathsAndRelativeValuesForViewerOffset(viewerOffset:Dynamic):NSDictionary;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

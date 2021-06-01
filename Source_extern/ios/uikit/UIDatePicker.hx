@@ -8,7 +8,6 @@ import ios.objc.CGSize;
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")
 extern class UIDatePicker extends UIControl
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -49,6 +48,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("datePickerStyle")
 	public var datePickerStyle:UIDatePickerStyle;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIControl;

@@ -6,7 +6,6 @@ import ios.objc.CADisplayLink;
 @:native("UIScreen")
 @:include("UIKit/UIKit.h")
 extern class UIScreen extends NSObject
-implements cpp.objc.Protocol<UITraitEnvironment>
 {
 
 	@:native("alloc")

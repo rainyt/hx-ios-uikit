@@ -9,8 +9,6 @@ import cpp.objc.NSDictionary;
 @:native("UIFontDescriptor")
 @:include("UIKit/UIKit.h")
 extern class UIFontDescriptor extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -84,6 +82,10 @@ implements cpp.objc.Protocol<NSSecureCoding>
 
 	@:native("fontDescriptorWithDesign")
 	overload public function fontDescriptorWithDesign(design:NSString):UIFontDescriptor;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

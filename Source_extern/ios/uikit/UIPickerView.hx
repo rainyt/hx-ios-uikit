@@ -8,7 +8,6 @@ import ios.objc.CGPoint;
 @:native("UIPickerView")
 @:include("UIKit/UIKit.h")
 extern class UIPickerView extends UIView
-implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
@@ -49,6 +48,10 @@ implements cpp.objc.Protocol<NSCoding>
 
 	@:native("selectedRowInComponent")
 	overload public function selectedRowInComponent(component:Int):Int;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

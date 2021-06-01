@@ -3,7 +3,8 @@ typedef ExternBaseClassFunProperty = {
 	type:String,
 	returnClass:String,
 	isStatic:Bool,
-	args:Array<ExternBaseClassFunPropertyArgs>
+	args:Array<ExternBaseClassFunPropertyArgs>,
+	haxe:String
 }
 
 typedef ExternBaseClassFunPropertyArgs = {

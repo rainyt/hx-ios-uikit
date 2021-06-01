@@ -10,9 +10,6 @@ import ios.objc.CGSize;
 @:native("UITextField")
 @:include("UIKit/UIKit.h")
 extern class UITextField extends UIControl
-implements cpp.objc.Protocol<UITextInput>
-implements cpp.objc.Protocol<NSCoding>
-implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
 
 	@:native("alloc")
@@ -236,6 +233,10 @@ implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 
 	@:native("endFloatingCursor")
 	overload public function endFloatingCursor():Void;
+
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void
+;
 
 	@:native("adjustsFontForContentSizeCategory")
 	public var adjustsFontForContentSizeCategory:Bool;

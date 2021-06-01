@@ -11,8 +11,6 @@ import cpp.objc.NSString;
 @:native("UICollectionViewLayoutAttributes")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewLayoutAttributes extends NSObject
-implements cpp.objc.Protocol<NSCopying>
-implements cpp.objc.Protocol<UIDynamicItem>
 {
 
 	@:native("alloc")
@@ -65,6 +63,10 @@ implements cpp.objc.Protocol<UIDynamicItem>
 
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
 	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("collisionBoundsType")
 	public var collisionBoundsType:UIDynamicItemCollisionBoundsType;

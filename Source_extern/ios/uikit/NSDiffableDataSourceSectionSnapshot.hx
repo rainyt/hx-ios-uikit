@@ -6,7 +6,6 @@ import cpp.objc.NSString;
 @:native("NSDiffableDataSourceSectionSnapshot")
 @:include("UIKit/UIKit.h")
 extern class NSDiffableDataSourceSectionSnapshot extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -92,6 +91,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("visualDescription")
 	overload public function visualDescription():NSString;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

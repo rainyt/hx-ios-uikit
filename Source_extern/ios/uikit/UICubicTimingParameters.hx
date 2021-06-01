@@ -5,7 +5,6 @@ import ios.objc.CGPoint;
 @:native("UICubicTimingParameters")
 @:include("UIKit/UIKit.h")
 extern class UICubicTimingParameters extends NSObject
-implements cpp.objc.Protocol<UITimingCurveProvider>
 {
 
 	@:native("alloc")

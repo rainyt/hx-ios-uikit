@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 @:native("UICollectionViewCompositionalLayoutConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewCompositionalLayoutConfiguration extends NSObject
-implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -22,6 +21,10 @@ implements cpp.objc.Protocol<NSCopying>
 
 	@:native("contentInsetsReference")
 	public var contentInsetsReference:UIContentInsetsReference;
+
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;

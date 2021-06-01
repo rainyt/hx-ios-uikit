@@ -4,7 +4,6 @@ package ios.uikit;
 @:native("UIPointerInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIPointerInteraction extends NSObject
-implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
