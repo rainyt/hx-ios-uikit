@@ -12,7 +12,8 @@ Source:https://github.com/Aurel300/hx-objc-externs
 
 But because the Git seems to have ceased maintenance, it can no longer be used correctly. The library will be maintained on its basis.
 
-## 
+## Framework
+- UIKit.framework
 
 ## Use
 
