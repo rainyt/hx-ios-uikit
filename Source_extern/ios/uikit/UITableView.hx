@@ -15,6 +15,7 @@ import ios.objc.CGPoint;
 import ios.uikit.UITableViewCell;
 import ios.uikit.UITableViewHeaderFooterView;
 import ios.uikit.UITableViewScrollPosition;
+import ios.foundation.NSIndexSet;
 import ios.uikit.UITableViewRowAnimation;
 import ios.uikit.UITableViewCellSeparatorStyle;
 import ios.uikit.UIColor;
@@ -155,13 +156,13 @@ extern class UITableView extends UIScrollView
 	overload public function endUpdates():Void;
 
 	@:native("insertSections:withRowAnimation")
-	overload public function insertSectionsWithRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function insertSectionsWithRowAnimation(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("deleteSections:withRowAnimation")
-	overload public function deleteSectionsWithRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function deleteSectionsWithRowAnimation(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("reloadSections:withRowAnimation")
-	overload public function reloadSectionsWithRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function reloadSectionsWithRowAnimation(sections:NSIndexSet, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveSection:toSection")
 	overload public function moveSectionToSection(section:Int, toSection:Int):Void;

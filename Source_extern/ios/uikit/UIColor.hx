@@ -1,7 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIColor;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
 import ios.uikit.UIImage;
 import ios.uikit.CIColor;
@@ -268,6 +268,9 @@ extern class UIColor
 
 	@:native("accessibilityName")
 	public var accessibilityName:NSString;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

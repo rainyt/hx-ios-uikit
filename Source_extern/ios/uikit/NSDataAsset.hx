@@ -4,6 +4,7 @@ import ios.uikit.NSDataAsset;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
+import cpp.objc.NSData;
 @:objc
 @:native("NSDataAsset")
 @:include("UIKit/UIKit.h")
@@ -29,7 +30,7 @@ extern class NSDataAsset
 	public var name:NSString;
 
 	@:native("data")
-	public var data:Dynamic;
+	public var data:NSData;
 
 	@:native("typeIdentifier")
 	public var typeIdentifier:NSString;

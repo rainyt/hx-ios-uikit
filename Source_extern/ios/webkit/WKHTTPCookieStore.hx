@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKHTTPCookieStore;
+import ios.foundation.NSHTTPCookie;
 @:objc
 @:native("WKHTTPCookieStore")
 @:include("WebKit/WebKit.h")
@@ -19,10 +20,10 @@ extern class WKHTTPCookieStore{
 	overload public function getAllCookies(completionHandler:Dynamic):Void;
 
 	@:native("setCookie:completionHandler")
-	overload public function setCookieCompletionHandler(cookie:Dynamic, completionHandler:Dynamic):Void;
+	overload public function setCookieCompletionHandler(cookie:NSHTTPCookie, completionHandler:Dynamic):Void;
 
 	@:native("deleteCookie:completionHandler")
-	overload public function deleteCookieCompletionHandler(cookie:Dynamic, completionHandler:Dynamic):Void;
+	overload public function deleteCookieCompletionHandler(cookie:NSHTTPCookie, completionHandler:Dynamic):Void;
 
 	@:native("addObserver")
 	overload public function addObserver(observer:Dynamic):Void;

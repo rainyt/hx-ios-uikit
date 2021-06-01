@@ -5,6 +5,7 @@ import ios.uikit.UIActivityViewController;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 import ios.uikit.UIStoryboardSegue;
 import ios.uikit.UIStoryboardUnwindSegueSource;
 import ios.uikit.UIViewAnimationOptions;
@@ -32,7 +33,7 @@ extern class UIActivityViewController extends UIViewController{
 	overload public function initWithCoder(coder:NSCoder):UIActivityViewController;
 
 	@:native("initWithActivityItems:applicationActivities")
-	overload public function initWithActivityItemsApplicationActivities(activityItems:Dynamic, applicationActivities:Dynamic):UIActivityViewController;
+	overload public function initWithActivityItemsApplicationActivities(activityItems:NSArray, applicationActivities:Dynamic):UIActivityViewController;
 
 	@:native("completionHandler")
 	public var completionHandler:Dynamic;

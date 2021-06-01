@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIListContentTextProperties;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UIFont;
 import ios.uikit.UIColor;
 import ios.uikit.UIListContentTextAlignment;
@@ -59,6 +59,9 @@ extern class UIListContentTextProperties
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

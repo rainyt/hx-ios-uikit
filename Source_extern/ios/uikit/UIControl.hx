@@ -11,6 +11,7 @@ import ios.uikit.UIControlState;
 import ios.uikit.UITouch;
 import ios.uikit.UIEvent;
 import ios.uikit.UIControlEvents;
+import ios.foundation.NSSet;
 import ios.uikit.UIContextMenuInteraction;
 import ios.objc.CGPoint;
 import ios.uikit.UIContextMenuConfiguration;
@@ -103,7 +104,7 @@ extern class UIControl extends UIView{
 	overload public function removeActionForIdentifierForControlEvents(actionIdentifier:Dynamic, forControlEvents:UIControlEvents):Void;
 
 	@:native("allTargets")
-	public var allTargets:Dynamic;
+	public var allTargets:NSSet;
 
 	@:native("allControlEvents")
 	public var allControlEvents:UIControlEvents;

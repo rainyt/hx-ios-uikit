@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIFocusSystem;
+import ios.foundation.NSURL;
 @:objc
 @:native("UIFocusSystem")
 @:include("UIKit/UIKit.h")
@@ -31,7 +32,7 @@ extern class UIFocusSystem{
 	overload public static function environmentContainsEnvironment(environment:Dynamic, containsEnvironment:Dynamic):Bool;
 
 	@:native("registerURL:forSoundIdentifier")
-	overload public static function registerURLForSoundIdentifier(soundFileURL:Dynamic, forSoundIdentifier:Dynamic):Void;
+	overload public static function registerURLForSoundIdentifier(soundFileURL:NSURL, forSoundIdentifier:Dynamic):Void;
 
 
 }

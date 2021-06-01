@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIViewController;
 import ios.uikit.UIDocumentMenuViewController;
 import ios.uikit.UIDocumentPickerMode;
+import ios.foundation.NSURL;
 import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.uikit.UIImage;
@@ -29,7 +30,7 @@ extern class UIDocumentMenuViewController extends UIViewController{
 	overload public function initWithDocumentTypesInMode(allowedUTIs:Dynamic, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
 
 	@:native("initWithURL:inMode")
-	overload public function initWithURLInMode(url:Dynamic, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
+	overload public function initWithURLInMode(url:NSURL, inMode:UIDocumentPickerMode):UIDocumentMenuViewController;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIDocumentMenuViewController;

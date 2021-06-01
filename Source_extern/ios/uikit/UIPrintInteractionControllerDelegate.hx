@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIPrintInteractionControllerDelegate;
 import ios.uikit.UIPrintInteractionController;
 import ios.uikit.UIPrintPaper;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIPrintInteractionControllerDelegate")
 @:include("UIKit/UIKit.h")
@@ -42,7 +43,7 @@ extern interface UIPrintInteractionControllerDelegate{
 	overload public function printInteractionControllerCutLengthForPaper(printInteractionController:UIPrintInteractionController, cutLengthForPaper:UIPrintPaper):Float;
 
 	@:native("printInteractionController:chooseCutterBehavior")
-	overload public function printInteractionControllerChooseCutterBehavior(printInteractionController:UIPrintInteractionController, chooseCutterBehavior:Dynamic):Dynamic;
+	overload public function printInteractionControllerChooseCutterBehavior(printInteractionController:UIPrintInteractionController, chooseCutterBehavior:NSArray):Dynamic;
 
 
 }

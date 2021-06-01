@@ -4,6 +4,7 @@ import ios.uikit.UIGraphicsRenderer;
 import ios.objc.CGRect;
 import ios.uikit.UIGraphicsRendererFormat;
 import ios.uikit.UIGraphicsRendererContext;
+import cpp.objc.NSError;
 @:objc
 @:native("UIGraphicsRenderer")
 @:include("UIKit/UIKit.h")
@@ -37,7 +38,7 @@ extern class UIGraphicsRenderer{
 	overload public static function prepareCGContextWithRendererContext(context:Dynamic, withRendererContext:UIGraphicsRendererContext):Void;
 
 	@:native("runDrawingActions:completionActions:error")
-	overload public function runDrawingActionsCompletionActionsError(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
+	overload public function runDrawingActionsCompletionActionsError(drawingActions:Dynamic, completionActions:Dynamic, error:NSError):Bool;
 
 
 }

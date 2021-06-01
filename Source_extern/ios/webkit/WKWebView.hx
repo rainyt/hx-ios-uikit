@@ -7,7 +7,10 @@ import ios.webkit.WKBackForwardList;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
 import ios.webkit.WKNavigation;
+import ios.foundation.NSURLRequest;
+import ios.foundation.NSURL;
 import cpp.objc.NSString;
+import cpp.objc.NSData;
 import ios.webkit.WKBackForwardListItem;
 import ios.webkit.WKFrameInfo;
 import ios.webkit.WKContentWorld;
@@ -17,6 +20,7 @@ import ios.webkit.WKPDFConfiguration;
 import ios.uikit.UIScrollView;
 import ios.objc.CGPoint;
 import ios.webkit.WKFindConfiguration;
+import ios.foundation.NSArray;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;
@@ -61,16 +65,16 @@ extern class WKWebView extends UIView{
 	overload public function initWithCoder(coder:NSCoder):WKWebView;
 
 	@:native("loadRequest")
-	overload public function loadRequest(request:Dynamic):WKNavigation;
+	overload public function loadRequest(request:NSURLRequest):WKNavigation;
 
 	@:native("loadFileURL:allowingReadAccessToURL")
-	overload public function loadFileURLAllowingReadAccessToURL(URL:Dynamic, allowingReadAccessToURL:Dynamic):WKNavigation;
+	overload public function loadFileURLAllowingReadAccessToURL(URL:NSURL, allowingReadAccessToURL:NSURL):WKNavigation;
 
 	@:native("loadHTMLString:baseURL")
-	overload public function loadHTMLStringBaseURL(string:NSString, baseURL:Dynamic):WKNavigation;
+	overload public function loadHTMLStringBaseURL(string:NSString, baseURL:NSURL):WKNavigation;
 
 	@:native("loadData:MIMEType:characterEncodingName:baseURL")
-	overload public function loadDataMIMETypeCharacterEncodingNameBaseURL(data:Dynamic, MIMEType:NSString, characterEncodingName:NSString, baseURL:Dynamic):WKNavigation;
+	overload public function loadDataMIMETypeCharacterEncodingNameBaseURL(data:NSData, MIMEType:NSString, characterEncodingName:NSString, baseURL:NSURL):WKNavigation;
 
 	@:native("goToBackForwardListItem")
 	overload public function goToBackForwardListItem(item:WKBackForwardListItem):WKNavigation;
@@ -79,7 +83,7 @@ extern class WKWebView extends UIView{
 	public var title:NSString;
 
 	@:native("URL")
-	public var URL:Dynamic;
+	public var URL:NSURL;
 
 	@:native("loading")
 	public var loading:Bool;
@@ -169,7 +173,7 @@ extern class WKWebView extends UIView{
 	overload public function printOperationWithPrintInfo(printInfo:Dynamic):Dynamic;
 
 	@:native("certificateChain")
-	public var certificateChain:Dynamic;
+	public var certificateChain:NSArray;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

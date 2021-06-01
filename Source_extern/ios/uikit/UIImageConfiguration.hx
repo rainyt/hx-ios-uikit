@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIImageConfiguration;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIImageConfiguration")
@@ -31,6 +31,9 @@ extern class UIImageConfiguration
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

@@ -4,6 +4,7 @@ import ios.uikit.UIViewController;
 import ios.uikit.UIDocumentPickerViewController;
 import ios.uikit.NSCoder;
 import ios.uikit.UIDocumentPickerMode;
+import ios.foundation.NSURL;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
 import ios.uikit.UIStoryboardSegue;
@@ -51,7 +52,7 @@ extern class UIDocumentPickerViewController extends UIViewController{
 	public var shouldShowFileExtensions:Bool;
 
 	@:native("directoryURL")
-	public var directoryURL:Dynamic;
+	public var directoryURL:NSURL;
 
 	@:native("setNeedsTouchBarUpdate")
 	overload public function setNeedsTouchBarUpdate():Void;

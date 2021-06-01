@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UITextDocumentProxy;
 import cpp.objc.NSString;
 import ios.uikit.UITextInputMode;
+import ios.foundation.NSUUID;
 @:objc
 @:native("UITextDocumentProxy")
 @:include("UIKit/UIKit.h")
@@ -27,7 +28,7 @@ extern interface UITextDocumentProxy{
 	public var documentInputMode:UITextInputMode;
 
 	@:native("documentIdentifier")
-	public var documentIdentifier:Dynamic;
+	public var documentIdentifier:NSUUID;
 
 	@:native("adjustTextPositionByCharacterOffset")
 	overload public function adjustTextPositionByCharacterOffset(offset:Int):Void;

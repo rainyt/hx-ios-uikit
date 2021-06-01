@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIBackgroundConfiguration;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UIView;
 import ios.uikit.NSDirectionalRectEdge;
 import ios.uikit.UIColor;
@@ -91,6 +91,9 @@ extern class UIBackgroundConfiguration
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

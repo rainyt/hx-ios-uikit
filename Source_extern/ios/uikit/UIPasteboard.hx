@@ -2,7 +2,11 @@ package ios.uikit;
 
 import ios.uikit.UIPasteboard;
 import cpp.objc.NSString;
+import cpp.objc.NSData;
+import ios.foundation.NSIndexSet;
+import ios.foundation.NSArray;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSURL;
 import ios.uikit.UIImage;
 import ios.uikit.UIColor;
 @:objc
@@ -56,7 +60,7 @@ extern class UIPasteboard{
 	overload public function containsPasteboardTypes(pasteboardTypes:Dynamic):Bool;
 
 	@:native("dataForPasteboardType")
-	overload public function dataForPasteboardType(pasteboardType:NSString):Dynamic;
+	overload public function dataForPasteboardType(pasteboardType:NSString):NSData;
 
 	@:native("valueForPasteboardType")
 	overload public function valueForPasteboardType(pasteboardType:NSString):Dynamic;
@@ -65,25 +69,25 @@ extern class UIPasteboard{
 	overload public function setValueForPasteboardType(value:Dynamic, forPasteboardType:NSString):Void;
 
 	@:native("setData:forPasteboardType")
-	overload public function setDataForPasteboardType(data:Dynamic, forPasteboardType:NSString):Void;
+	overload public function setDataForPasteboardType(data:NSData, forPasteboardType:NSString):Void;
 
 	@:native("numberOfItems")
 	public var numberOfItems:Int;
 
 	@:native("pasteboardTypesForItemSet")
-	overload public function pasteboardTypesForItemSet(itemSet:Dynamic):Dynamic;
+	overload public function pasteboardTypesForItemSet(itemSet:NSIndexSet):Dynamic;
 
 	@:native("containsPasteboardTypes:inItemSet")
-	overload public function containsPasteboardTypesInItemSet(pasteboardTypes:Dynamic, inItemSet:Dynamic):Bool;
+	overload public function containsPasteboardTypesInItemSet(pasteboardTypes:Dynamic, inItemSet:NSIndexSet):Bool;
 
 	@:native("itemSetWithPasteboardTypes")
-	overload public function itemSetWithPasteboardTypes(pasteboardTypes:Dynamic):Dynamic;
+	overload public function itemSetWithPasteboardTypes(pasteboardTypes:Dynamic):NSIndexSet;
 
 	@:native("valuesForPasteboardType:inItemSet")
-	overload public function valuesForPasteboardTypeInItemSet(pasteboardType:NSString, inItemSet:Dynamic):Dynamic;
+	overload public function valuesForPasteboardTypeInItemSet(pasteboardType:NSString, inItemSet:NSIndexSet):NSArray;
 
 	@:native("dataForPasteboardType:inItemSet")
-	overload public function dataForPasteboardTypeInItemSet(pasteboardType:NSString, inItemSet:Dynamic):Dynamic;
+	overload public function dataForPasteboardTypeInItemSet(pasteboardType:NSString, inItemSet:NSIndexSet):Dynamic;
 
 	@:native("items")
 	public var items:Dynamic;
@@ -101,7 +105,7 @@ extern class UIPasteboard{
 	public var strings:Dynamic;
 
 	@:native("URL")
-	public var URL:Dynamic;
+	public var URL:NSURL;
 
 	@:native("URLs")
 	public var URLs:Dynamic;

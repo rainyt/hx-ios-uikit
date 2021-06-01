@@ -32,5 +32,8 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
 
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
+
 
 }

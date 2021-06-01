@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UICellAccessory;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UICellAccessoryDisplayedState;
 import ios.uikit.UIColor;
 import ios.uikit.NSCoder;
@@ -39,6 +39,9 @@ extern class UICellAccessory
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

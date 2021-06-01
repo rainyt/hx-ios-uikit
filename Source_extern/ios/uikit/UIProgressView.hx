@@ -6,6 +6,7 @@ import ios.objc.NSCoding;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
 import ios.uikit.UIProgressViewStyle;
+import ios.foundation.NSProgress;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;
@@ -55,7 +56,7 @@ extern class UIProgressView extends UIView
 	overload public function setProgressAnimated(progress:Dynamic, animated:Bool):Void;
 
 	@:native("observedProgress")
-	public var observedProgress:Dynamic;
+	public var observedProgress:NSProgress;
 
 	@:native("encodeWithCoder")
 	overload public function encodeWithCoder(aCoder:Dynamic):Void

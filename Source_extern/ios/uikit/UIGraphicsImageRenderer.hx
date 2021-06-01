@@ -6,8 +6,10 @@ import ios.objc.CGSize;
 import ios.uikit.UIGraphicsImageRendererFormat;
 import ios.objc.CGRect;
 import ios.uikit.UIImage;
+import cpp.objc.NSData;
 import ios.uikit.UIGraphicsRendererFormat;
 import ios.uikit.UIGraphicsRendererContext;
+import cpp.objc.NSError;
 @:objc
 @:native("UIGraphicsImageRenderer")
 @:include("UIKit/UIKit.h")
@@ -32,10 +34,10 @@ extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 	overload public function imageWithActions(actions:Dynamic):UIImage;
 
 	@:native("PNGDataWithActions")
-	overload public function PNGDataWithActions(actions:Dynamic):Dynamic;
+	overload public function PNGDataWithActions(actions:Dynamic):NSData;
 
 	@:native("JPEGDataWithCompressionQuality:actions")
-	overload public function JPEGDataWithCompressionQualityActions(compressionQuality:Float, actions:Dynamic):Dynamic;
+	overload public function JPEGDataWithCompressionQualityActions(compressionQuality:Float, actions:Dynamic):NSData;
 
 	@:native("initWithBounds")
 	overload public function initWithBounds(bounds:CGRect):UIGraphicsImageRenderer;
@@ -50,7 +52,7 @@ extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 	overload public static function prepareCGContextWithRendererContext(context:Dynamic, withRendererContext:UIGraphicsRendererContext):Void;
 
 	@:native("runDrawingActions:completionActions:error")
-	overload public function runDrawingActionsCompletionActionsError(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
+	overload public function runDrawingActionsCompletionActionsError(drawingActions:Dynamic, completionActions:Dynamic, error:NSError):Bool;
 
 
 }

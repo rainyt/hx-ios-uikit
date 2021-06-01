@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.NSShadow;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
 import ios.objc.CGSize;
 @:objc
@@ -35,6 +35,9 @@ extern class NSShadow
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

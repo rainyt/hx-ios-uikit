@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UILocalizedIndexedCollation;
+import ios.foundation.NSArray;
 @:objc
 @:native("UILocalizedIndexedCollation")
 @:include("UIKit/UIKit.h")
@@ -28,7 +29,7 @@ extern class UILocalizedIndexedCollation{
 	overload public function sectionForObjectCollationStringSelector(object:Dynamic, collationStringSelector:String):Int;
 
 	@:native("sortedArrayFromArray:collationStringSelector")
-	overload public function sortedArrayFromArrayCollationStringSelector(array:Dynamic, collationStringSelector:String):Dynamic;
+	overload public function sortedArrayFromArrayCollationStringSelector(array:NSArray, collationStringSelector:String):NSArray;
 
 
 }

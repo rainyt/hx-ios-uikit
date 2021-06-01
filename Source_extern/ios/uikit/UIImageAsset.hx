@@ -1,7 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIImageAsset;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
 import ios.uikit.UIImage;
 import ios.uikit.UIImageConfiguration;
@@ -41,6 +41,9 @@ extern class UIImageAsset
 
 	@:native("unregisterImageWithTraitCollection")
 	overload public function unregisterImageWithTraitCollection(traitCollection:UITraitCollection):Void;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

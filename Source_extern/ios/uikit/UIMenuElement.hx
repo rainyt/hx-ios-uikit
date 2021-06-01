@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIMenuElement;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.uikit.UIImage;
 import ios.uikit.NSCoder;
@@ -33,6 +33,9 @@ extern class UIMenuElement
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

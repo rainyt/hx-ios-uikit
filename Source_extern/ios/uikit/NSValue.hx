@@ -6,6 +6,7 @@ import ios.objc.CGVector;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
+import ios.uikit.NSCoder;
 @:objc
 @:native("NSValue")
 @:include("UIKit/UIKit.h")
@@ -64,6 +65,45 @@ extern class NSValue{
 
 	@:native("UIOffsetValue")
 	public var UIOffsetValue:Dynamic;
+
+	@:native("getValue:size")
+	overload public function getValueSize(value:Void, size:Int):Void;
+
+	@:native("objCType")
+	public var objCType:Dynamic;
+
+	@:native("initWithBytes:objCType")
+	overload public function initWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSValue;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):NSValue;
+
+	@:native("valueWithBytes:objCType")
+	overload public static function valueWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSValue;
+
+	@:native("value:withObjCType")
+	overload public static function valueWithObjCType(value:Dynamic, withObjCType:Dynamic):NSValue;
+
+	@:native("valueWithNonretainedObject")
+	overload public static function valueWithNonretainedObject(anObject:Dynamic):NSValue;
+
+	@:native("nonretainedObjectValue")
+	public var nonretainedObjectValue:Dynamic;
+
+	@:native("valueWithPointer")
+	overload public static function valueWithPointer(pointer:Dynamic):NSValue;
+
+	@:native("pointerValue")
+	public var pointerValue:Void;
+
+	@:native("isEqualToValue")
+	overload public function isEqualToValue(value:NSValue):Bool;
+
+	@:native("valueWithRange")
+	overload public static function valueWithRange(range:Dynamic):NSValue;
+
+	@:native("rangeValue")
+	public var rangeValue:Dynamic;
 
 
 }

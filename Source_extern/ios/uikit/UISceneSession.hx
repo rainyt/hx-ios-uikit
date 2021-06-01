@@ -1,7 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UISceneSession;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UIScene;
 import ios.uikit.UISceneConfiguration;
 import cpp.objc.NSString;
@@ -39,6 +39,9 @@ extern class UISceneSession
 
 	@:native("userInfo")
 	public var userInfo:NSDictionary;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

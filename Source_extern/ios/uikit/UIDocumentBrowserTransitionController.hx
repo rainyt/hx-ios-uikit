@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDocumentBrowserTransitionController;
 import ios.uikit.UIViewControllerAnimatedTransitioning;
+import ios.foundation.NSProgress;
 import ios.uikit.UIView;
 @:objc
 @:native("UIDocumentBrowserTransitionController")
@@ -19,7 +20,7 @@ extern class UIDocumentBrowserTransitionController
 	overload public function init():UIDocumentBrowserTransitionController;
 
 	@:native("loadingProgress")
-	public var loadingProgress:Dynamic;
+	public var loadingProgress:NSProgress;
 
 	@:native("targetView")
 	public var targetView:UIView;

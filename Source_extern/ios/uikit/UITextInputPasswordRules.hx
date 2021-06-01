@@ -1,7 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextInputPasswordRules;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
@@ -24,6 +24,9 @@ extern class UITextInputPasswordRules
 
 	@:native("passwordRulesWithDescriptor")
 	overload public static function passwordRulesWithDescriptor(passwordRulesDescriptor:NSString):UITextInputPasswordRules;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

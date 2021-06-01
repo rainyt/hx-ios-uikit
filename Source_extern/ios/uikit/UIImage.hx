@@ -1,11 +1,12 @@
 package ios.uikit;
 
 import ios.uikit.UIImage;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.uikit.UIImageConfiguration;
 import ios.uikit.UITraitCollection;
 import ios.uikit.NSBundle;
+import cpp.objc.NSData;
 import ios.uikit.UIImageOrientation;
 import ios.uikit.CIImage;
 import ios.objc.CGSize;
@@ -52,10 +53,10 @@ extern class UIImage
 	overload public static function imageWithContentsOfFile(path:NSString):UIImage;
 
 	@:native("imageWithData")
-	overload public static function imageWithData(data:Dynamic):UIImage;
+	overload public static function imageWithData(data:NSData):UIImage;
 
 	@:native("imageWithData:scale")
-	overload public static function imageWithDataScale(data:Dynamic, scale:Float):UIImage;
+	overload public static function imageWithDataScale(data:NSData, scale:Float):UIImage;
 
 	@:native("imageWithCGImage")
 	overload public static function imageWithCGImage(cgImage:Dynamic):UIImage;
@@ -73,10 +74,10 @@ extern class UIImage
 	overload public function initWithContentsOfFile(path:NSString):UIImage;
 
 	@:native("initWithData")
-	overload public function initWithData(data:Dynamic):UIImage;
+	overload public function initWithData(data:NSData):UIImage;
 
 	@:native("initWithData:scale")
-	overload public function initWithDataScale(data:Dynamic, scale:Float):UIImage;
+	overload public function initWithDataScale(data:NSData, scale:Float):UIImage;
 
 	@:native("initWithCGImage")
 	overload public function initWithCGImage(cgImage:Dynamic):UIImage;
@@ -236,6 +237,9 @@ extern class UIImage
 
 	@:native("topCapHeight")
 	public var topCapHeight:Int;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

@@ -1,7 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKWebViewConfiguration;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
 import ios.webkit.WKProcessPool;
 import ios.webkit.WKPreferences;
@@ -87,6 +87,9 @@ extern class WKWebViewConfiguration
 
 	@:native("requiresUserActionForMediaPlayback")
 	public var requiresUserActionForMediaPlayback:Bool;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

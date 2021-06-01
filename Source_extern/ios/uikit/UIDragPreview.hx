@@ -4,6 +4,7 @@ import ios.uikit.UIDragPreview;
 import ios.objc.NSCopying;
 import ios.uikit.UIView;
 import ios.uikit.UIDragPreviewParameters;
+import ios.foundation.NSURL;
 @:objc
 @:native("UIDragPreview")
 @:include("UIKit/UIKit.h")
@@ -32,10 +33,10 @@ extern class UIDragPreview
 	public var parameters:UIDragPreviewParameters;
 
 	@:native("previewForURL")
-	overload public static function previewForURL(url:Dynamic):UIDragPreview;
+	overload public static function previewForURL(url:NSURL):UIDragPreview;
 
 	@:native("previewForURL:title")
-	overload public static function previewForURLTitle(url:Dynamic, title:Dynamic):UIDragPreview;
+	overload public static function previewForURLTitle(url:NSURL, title:Dynamic):UIDragPreview;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

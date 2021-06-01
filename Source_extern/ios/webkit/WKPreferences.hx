@@ -1,7 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKPreferences;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 @:objc
 @:native("WKPreferences")
 @:include("WebKit/WebKit.h")
@@ -34,6 +34,9 @@ extern class WKPreferences
 
 	@:native("javaScriptEnabled")
 	public var javaScriptEnabled:Bool;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

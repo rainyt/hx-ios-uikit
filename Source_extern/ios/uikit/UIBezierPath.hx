@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIBezierPath;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.objc.CGRect;
 import ios.uikit.UIRectCorner;
 import ios.objc.CGSize;
@@ -138,6 +138,9 @@ extern class UIBezierPath
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

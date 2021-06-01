@@ -4,6 +4,7 @@ import ios.uikit.UIActivity;
 import ios.uikit.UIActivityCategory;
 import cpp.objc.NSString;
 import ios.uikit.UIImage;
+import ios.foundation.NSArray;
 import ios.uikit.UIViewController;
 @:objc
 @:native("UIActivity")
@@ -29,10 +30,10 @@ extern class UIActivity{
 	public var activityImage:UIImage;
 
 	@:native("canPerformWithActivityItems")
-	overload public function canPerformWithActivityItems(activityItems:Dynamic):Bool;
+	overload public function canPerformWithActivityItems(activityItems:NSArray):Bool;
 
 	@:native("prepareWithActivityItems")
-	overload public function prepareWithActivityItems(activityItems:Dynamic):Void;
+	overload public function prepareWithActivityItems(activityItems:NSArray):Void;
 
 	@:native("activityViewController")
 	public var activityViewController:UIViewController;

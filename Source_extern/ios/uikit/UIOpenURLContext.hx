@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIOpenURLContext;
+import ios.foundation.NSURL;
 import ios.uikit.UISceneOpenURLOptions;
 @:objc
 @:native("UIOpenURLContext")
@@ -17,7 +18,7 @@ extern class UIOpenURLContext{
 	overload public function init():UIOpenURLContext;
 
 	@:native("URL")
-	public var URL:Dynamic;
+	public var URL:NSURL;
 
 	@:native("options")
 	public var options:UISceneOpenURLOptions;

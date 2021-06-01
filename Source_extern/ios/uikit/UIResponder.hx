@@ -6,6 +6,7 @@ import ios.uikit.UIEvent;
 import ios.uikit.UIPressesEvent;
 import ios.uikit.UIEventSubtype;
 import ios.uikit.UICommand;
+import ios.foundation.NSUndoManager;
 import ios.uikit.UIEditingInteractionConfiguration;
 import ios.uikit.UIView;
 import ios.uikit.UITextInputAssistantItem;
@@ -95,7 +96,7 @@ extern class UIResponder
 	overload public function validateCommand(command:UICommand):Void;
 
 	@:native("undoManager")
-	public var undoManager:Dynamic;
+	public var undoManager:NSUndoManager;
 
 	@:native("editingInteractionConfiguration")
 	public var editingInteractionConfiguration:UIEditingInteractionConfiguration;

@@ -3,6 +3,7 @@ package ios.webkit;
 import ios.webkit.WKNavigationAction;
 import ios.webkit.WKFrameInfo;
 import ios.webkit.WKNavigationType;
+import ios.foundation.NSURLRequest;
 @:objc
 @:native("WKNavigationAction")
 @:include("WebKit/WebKit.h")
@@ -24,7 +25,7 @@ extern class WKNavigationAction{
 	public var navigationType:WKNavigationType;
 
 	@:native("request")
-	public var request:Dynamic;
+	public var request:NSURLRequest;
 
 	@:native("modifierFlags")
 	public var modifierFlags:Dynamic;

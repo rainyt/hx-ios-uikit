@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIDevice;
 import cpp.objc.NSString;
 import ios.uikit.UIDeviceOrientation;
+import ios.foundation.NSUUID;
 import ios.uikit.UIDeviceBatteryState;
 import ios.uikit.UIUserInterfaceIdiom;
 @:objc
@@ -38,7 +39,7 @@ extern class UIDevice{
 	public var orientation:UIDeviceOrientation;
 
 	@:native("identifierForVendor")
-	public var identifierForVendor:Dynamic;
+	public var identifierForVendor:NSUUID;
 
 	@:native("generatesDeviceOrientationNotifications")
 	public var generatesDeviceOrientationNotifications:Bool;

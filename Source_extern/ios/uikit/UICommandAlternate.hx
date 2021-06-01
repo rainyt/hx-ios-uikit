@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UICommandAlternate;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.uikit.UIKeyModifierFlags;
 import ios.uikit.NSCoder;
@@ -36,6 +36,9 @@ extern class UICommandAlternate
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

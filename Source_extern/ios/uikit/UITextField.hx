@@ -19,6 +19,7 @@ import ios.objc.CGRect;
 import ios.uikit.UITextRange;
 import ios.uikit.UITextPosition;
 import ios.uikit.UITextLayoutDirection;
+import ios.foundation.NSComparisonResult;
 import ios.uikit.NSWritingDirection;
 import ios.uikit.UITextStorageDirection;
 import ios.objc.CGPoint;
@@ -199,7 +200,7 @@ extern class UITextField extends UIControl
 	overload public function positionFromPositionInDirectionOffset(position:UITextPosition, inDirection:UITextLayoutDirection, offset:Int):UITextPosition;
 
 	@:native("comparePosition:toPosition")
-	overload public function comparePositionToPosition(position:UITextPosition, toPosition:UITextPosition):Dynamic;
+	overload public function comparePositionToPosition(position:UITextPosition, toPosition:UITextPosition):NSComparisonResult;
 
 	@:native("offsetFromPosition:toPosition")
 	overload public function offsetFromPositionToPosition(from:UITextPosition, toPosition:UITextPosition):Int;

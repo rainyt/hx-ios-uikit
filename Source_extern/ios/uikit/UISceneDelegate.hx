@@ -6,6 +6,7 @@ import ios.uikit.UISceneSession;
 import ios.uikit.UISceneConnectionOptions;
 import ios.uikit.NSUserActivity;
 import cpp.objc.NSString;
+import cpp.objc.NSError;
 @:objc
 @:native("UISceneDelegate")
 @:include("UIKit/UIKit.h")
@@ -48,7 +49,7 @@ extern interface UISceneDelegate{
 	overload public function sceneContinueUserActivity(scene:UIScene, continueUserActivity:NSUserActivity):Void;
 
 	@:native("scene:didFailToContinueUserActivityWithType:error")
-	overload public function sceneDidFailToContinueUserActivityWithTypeError(scene:UIScene, didFailToContinueUserActivityWithType:NSString, error:Dynamic):Void;
+	overload public function sceneDidFailToContinueUserActivityWithTypeError(scene:UIScene, didFailToContinueUserActivityWithType:NSString, error:NSError):Void;
 
 	@:native("scene:didUpdateUserActivity")
 	overload public function sceneDidUpdateUserActivity(scene:UIScene, didUpdateUserActivity:NSUserActivity):Void;

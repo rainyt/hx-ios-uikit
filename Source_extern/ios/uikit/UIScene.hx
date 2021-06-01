@@ -5,6 +5,7 @@ import ios.uikit.UIPointerLockState;
 import ios.uikit.UISceneSession;
 import ios.uikit.UISceneConnectionOptions;
 import ios.uikit.UISceneActivationState;
+import ios.foundation.NSURL;
 import ios.uikit.UISceneOpenExternalURLOptions;
 import cpp.objc.NSString;
 import ios.uikit.UISceneActivationConditions;
@@ -38,7 +39,7 @@ extern class UIScene{
 	public var activationState:UISceneActivationState;
 
 	@:native("openURL:options:completionHandler")
-	overload public function openURLOptionsCompletionHandler(url:Dynamic, options:UISceneOpenExternalURLOptions, completionHandler:Dynamic):Void;
+	overload public function openURLOptionsCompletionHandler(url:NSURL, options:UISceneOpenExternalURLOptions, completionHandler:Dynamic):Void;
 
 	@:native("title")
 	public var title:NSString;

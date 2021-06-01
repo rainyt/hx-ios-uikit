@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDocumentBrowserViewControllerDelegate;
 import ios.uikit.UIDocumentBrowserViewController;
+import ios.foundation.NSURL;
 import ios.uikit.UIActivityViewController;
 @:objc
 @:native("UIDocumentBrowserViewControllerDelegate")
@@ -21,10 +22,10 @@ extern interface UIDocumentBrowserViewControllerDelegate{
 	overload public function documentBrowserDidRequestDocumentCreationWithHandler(controller:UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler:Dynamic):Void;
 
 	@:native("documentBrowser:didImportDocumentAtURL:toDestinationURL")
-	overload public function documentBrowserDidImportDocumentAtURLToDestinationURL(controller:UIDocumentBrowserViewController, didImportDocumentAtURL:Dynamic, toDestinationURL:Dynamic):Void;
+	overload public function documentBrowserDidImportDocumentAtURLToDestinationURL(controller:UIDocumentBrowserViewController, didImportDocumentAtURL:NSURL, toDestinationURL:NSURL):Void;
 
 	@:native("documentBrowser:failedToImportDocumentAtURL:error")
-	overload public function documentBrowserFailedToImportDocumentAtURLError(controller:UIDocumentBrowserViewController, failedToImportDocumentAtURL:Dynamic, error:Dynamic):Void;
+	overload public function documentBrowserFailedToImportDocumentAtURLError(controller:UIDocumentBrowserViewController, failedToImportDocumentAtURL:NSURL, error:Dynamic):Void;
 
 	@:native("documentBrowser:applicationActivitiesForDocumentURLs")
 	overload public function documentBrowserApplicationActivitiesForDocumentURLs(controller:UIDocumentBrowserViewController, applicationActivitiesForDocumentURLs:Dynamic):Dynamic;

@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIPrinter;
+import ios.foundation.NSURL;
 import cpp.objc.NSString;
 @:objc
 @:native("UIPrinter")
@@ -14,10 +15,10 @@ extern class UIPrinter{
 	overload public static function autorelease():UIPrinter;
 
 	@:native("printerWithURL")
-	overload public static function printerWithURL(url:Dynamic):UIPrinter;
+	overload public static function printerWithURL(url:NSURL):UIPrinter;
 
 	@:native("URL")
-	public var URL:Dynamic;
+	public var URL:NSURL;
 
 	@:native("displayName")
 	public var displayName:NSString;

@@ -5,7 +5,10 @@ import ios.uikit.UIWebView;
 import ios.objc.NSCoding;
 import ios.uikit.UIScrollViewDelegate;
 import ios.uikit.UIScrollView;
+import ios.foundation.NSURLRequest;
 import cpp.objc.NSString;
+import ios.foundation.NSURL;
+import cpp.objc.NSData;
 import ios.uikit.UIDataDetectorTypes;
 import ios.uikit.UIWebPaginationMode;
 import ios.uikit.UIWebPaginationBreakingMode;
@@ -45,16 +48,16 @@ extern class UIWebView extends UIView
 	public var scrollView:UIScrollView;
 
 	@:native("loadRequest")
-	overload public function loadRequest(request:Dynamic):Void;
+	overload public function loadRequest(request:NSURLRequest):Void;
 
 	@:native("loadHTMLString:baseURL")
-	overload public function loadHTMLStringBaseURL(string:NSString, baseURL:Dynamic):Void;
+	overload public function loadHTMLStringBaseURL(string:NSString, baseURL:NSURL):Void;
 
 	@:native("loadData:MIMEType:textEncodingName:baseURL")
-	overload public function loadDataMIMETypeTextEncodingNameBaseURL(data:Dynamic, MIMEType:NSString, textEncodingName:NSString, baseURL:Dynamic):Void;
+	overload public function loadDataMIMETypeTextEncodingNameBaseURL(data:NSData, MIMEType:NSString, textEncodingName:NSString, baseURL:NSURL):Void;
 
 	@:native("request")
-	public var request:Dynamic;
+	public var request:NSURLRequest;
 
 	@:native("reload")
 	overload public function reload():Void;

@@ -4,6 +4,7 @@ import ios.uikit.UIPrintInfo;
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
 import ios.uikit.NSCoder;
+import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
 import ios.uikit.UIPrintInfoOutputType;
 import ios.uikit.UIPrintInfoOrientation;
@@ -27,7 +28,7 @@ extern class UIPrintInfo
 	overload public static function printInfo():UIPrintInfo;
 
 	@:native("printInfoWithDictionary")
-	overload public static function printInfoWithDictionary(dictionary:Dynamic):UIPrintInfo;
+	overload public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo;
 
 	@:native("printerID")
 	public var printerID:NSString;
@@ -45,7 +46,7 @@ extern class UIPrintInfo
 	public var duplex:UIPrintInfoDuplex;
 
 	@:native("dictionaryRepresentation")
-	public var dictionaryRepresentation:Dynamic;
+	public var dictionaryRepresentation:NSDictionary;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

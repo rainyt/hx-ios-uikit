@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIUserNotificationCategory;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.uikit.UIUserNotificationActionContext;
@@ -33,6 +33,9 @@ extern class UIUserNotificationCategory
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

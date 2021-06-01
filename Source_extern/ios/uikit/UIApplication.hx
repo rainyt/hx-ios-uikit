@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIResponder;
 import ios.uikit.UIApplication;
+import ios.foundation.NSURL;
 import cpp.objc.NSDictionary;
 import ios.uikit.UIEvent;
 import ios.uikit.UIWindow;
@@ -45,10 +46,10 @@ extern class UIApplication extends UIResponder{
 	public var idleTimerDisabled:Bool;
 
 	@:native("canOpenURL")
-	overload public function canOpenURL(url:Dynamic):Bool;
+	overload public function canOpenURL(url:NSURL):Bool;
 
 	@:native("openURL:options:completionHandler")
-	overload public function openURLOptionsCompletionHandler(url:Dynamic, options:NSDictionary, completionHandler:Dynamic):Void;
+	overload public function openURLOptionsCompletionHandler(url:NSURL, options:NSDictionary, completionHandler:Dynamic):Void;
 
 	@:native("sendEvent")
 	overload public function sendEvent(event:UIEvent):Void;

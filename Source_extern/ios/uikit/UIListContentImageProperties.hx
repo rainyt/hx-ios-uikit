@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIListContentImageProperties;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UIImageSymbolConfiguration;
 import ios.uikit.UIColor;
 import ios.objc.CGSize;
@@ -45,6 +45,9 @@ extern class UIListContentImageProperties
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

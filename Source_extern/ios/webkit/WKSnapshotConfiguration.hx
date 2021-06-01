@@ -3,6 +3,7 @@ package ios.webkit;
 import ios.webkit.WKSnapshotConfiguration;
 import ios.objc.NSCopying;
 import ios.objc.CGRect;
+import ios.foundation.NSNumber;
 @:objc
 @:native("WKSnapshotConfiguration")
 @:include("WebKit/WebKit.h")
@@ -19,7 +20,7 @@ extern class WKSnapshotConfiguration
 	public var rect:CGRect;
 
 	@:native("snapshotWidth")
-	public var snapshotWidth:Dynamic;
+	public var snapshotWidth:NSNumber;
 
 	@:native("afterScreenUpdates")
 	public var afterScreenUpdates:Bool;

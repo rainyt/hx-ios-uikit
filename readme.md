@@ -15,6 +15,7 @@ But because the Git seems to have ceased maintenance, it can no longer be used c
 ## Support Framework
 - UIKit.framework
 - WebKit.framework
+- Foundation.framework
 
 ## Use
 

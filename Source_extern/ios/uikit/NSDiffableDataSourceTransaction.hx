@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.NSDiffableDataSourceTransaction;
 import ios.uikit.NSDiffableDataSourceSnapshot;
+import ios.foundation.NSOrderedCollectionDifference;
 @:objc
 @:native("NSDiffableDataSourceTransaction")
 @:include("UIKit/UIKit.h")

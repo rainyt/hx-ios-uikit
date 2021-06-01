@@ -5,6 +5,7 @@ import ios.uikit.UISegmentedControl;
 import ios.objc.NSCoding;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 import ios.uikit.UIAction;
 import ios.uikit.UISegmentedControlStyle;
 import cpp.objc.NSString;
@@ -53,7 +54,7 @@ extern class UISegmentedControl extends UIControl
 	overload public function initWithCoder(coder:NSCoder):UISegmentedControl;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):UISegmentedControl;
+	overload public function initWithItems(items:NSArray):UISegmentedControl;
 
 	@:native("initWithFrame:actions")
 	overload public function initWithFrameActions(frame:CGRect, actions:Dynamic):UISegmentedControl;

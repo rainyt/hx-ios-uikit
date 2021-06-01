@@ -1,7 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIPasteConfiguration;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
 @:objc
 @:native("UIPasteConfiguration")
@@ -32,6 +32,9 @@ extern class UIPasteConfiguration
 
 	@:native("addTypeIdentifiersForAcceptingClass")
 	overload public function addTypeIdentifiersForAcceptingClass(aClass:Dynamic):Void;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

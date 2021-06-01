@@ -4,6 +4,7 @@ import ios.uikit.UIGraphicsRendererContext;
 import ios.uikit.UIGraphicsPDFRendererContext;
 import ios.objc.CGRect;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSURL;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
 import ios.objc.CGBlendMode;
@@ -28,7 +29,7 @@ extern class UIGraphicsPDFRendererContext extends UIGraphicsRendererContext{
 	overload public function beginPageWithBoundsPageInfo(bounds:CGRect, pageInfo:NSDictionary):Void;
 
 	@:native("setURL:forRect")
-	overload public function setURLForRect(url:Dynamic, forRect:CGRect):Void;
+	overload public function setURLForRect(url:NSURL, forRect:CGRect):Void;
 
 	@:native("addDestinationWithName:atPoint")
 	overload public function addDestinationWithNameAtPoint(name:NSString, atPoint:CGPoint):Void;

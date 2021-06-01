@@ -1,8 +1,9 @@
 package ios.uikit;
 
 import ios.uikit.UISceneActivationConditions;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
+import ios.foundation.NSPredicate;
 @:objc
 @:native("UISceneActivationConditions")
 @:include("UIKit/UIKit.h")
@@ -22,10 +23,13 @@ extern class UISceneActivationConditions
 	overload public function initWithCoder(aDecoder:NSCoder):UISceneActivationConditions;
 
 	@:native("canActivateForTargetContentIdentifierPredicate")
-	public var canActivateForTargetContentIdentifierPredicate:Dynamic;
+	public var canActivateForTargetContentIdentifierPredicate:NSPredicate;
 
 	@:native("prefersToActivateForTargetContentIdentifierPredicate")
-	public var prefersToActivateForTargetContentIdentifierPredicate:Dynamic;
+	public var prefersToActivateForTargetContentIdentifierPredicate:NSPredicate;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.NSDiffableDataSourceSnapshot;
 import ios.objc.NSCopying;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSDiffableDataSourceSnapshot")
 @:include("UIKit/UIKit.h")
@@ -69,7 +70,7 @@ extern class NSDiffableDataSourceSnapshot
 	overload public function reloadItemsWithIdentifiers(identifiers:Dynamic):Void;
 
 	@:native("appendSectionsWithIdentifiers")
-	overload public function appendSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;
+	overload public function appendSectionsWithIdentifiers(sectionIdentifiers:NSArray):Void;
 
 	@:native("insertSectionsWithIdentifiers:beforeSectionWithIdentifier")
 	overload public function insertSectionsWithIdentifiersBeforeSectionWithIdentifier(sectionIdentifiers:Dynamic, beforeSectionWithIdentifier:Dynamic):Void;

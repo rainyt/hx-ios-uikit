@@ -1,7 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKUserContentController;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.webkit.WKUserScript;
 import ios.webkit.WKContentWorld;
 import cpp.objc.NSString;
@@ -56,6 +56,9 @@ extern class WKUserContentController
 
 	@:native("removeAllContentRuleLists")
 	overload public function removeAllContentRuleLists():Void;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

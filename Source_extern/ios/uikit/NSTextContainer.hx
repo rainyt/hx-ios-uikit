@@ -1,7 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.NSTextContainer;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.objc.CGSize;
 import ios.uikit.NSCoder;
 import ios.uikit.NSLayoutManager;
@@ -58,6 +58,9 @@ extern class NSTextContainer
 
 	@:native("heightTracksTextView")
 	public var heightTracksTextView:Bool;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

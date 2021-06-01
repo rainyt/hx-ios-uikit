@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKContextMenuElementInfo;
+import ios.foundation.NSURL;
 @:objc
 @:native("WKContextMenuElementInfo")
 @:include("WebKit/WebKit.h")
@@ -16,7 +17,7 @@ extern class WKContextMenuElementInfo{
 	overload public function init():WKContextMenuElementInfo;
 
 	@:native("linkURL")
-	public var linkURL:Dynamic;
+	public var linkURL:NSURL;
 
 
 }

@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIListContentConfiguration;
 import ios.uikit.UIContentConfiguration;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UIImage;
 import ios.uikit.UIListContentImageProperties;
 import cpp.objc.NSString;
@@ -108,6 +108,9 @@ extern class UIListContentConfiguration
 
 	@:native("updatedConfigurationForState")
 	overload public function updatedConfigurationForState(state:Dynamic):UIContentConfiguration;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

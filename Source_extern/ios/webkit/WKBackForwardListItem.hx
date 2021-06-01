@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKBackForwardListItem;
+import ios.foundation.NSURL;
 import cpp.objc.NSString;
 @:objc
 @:native("WKBackForwardListItem")
@@ -17,13 +18,13 @@ extern class WKBackForwardListItem{
 	overload public function init():WKBackForwardListItem;
 
 	@:native("URL")
-	public var URL:Dynamic;
+	public var URL:NSURL;
 
 	@:native("title")
 	public var title:NSString;
 
 	@:native("initialURL")
-	public var initialURL:Dynamic;
+	public var initialURL:NSURL;
 
 
 }

@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIBarAppearance;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UIUserInterfaceIdiom;
 import ios.uikit.NSCoder;
 import ios.uikit.UIBlurEffect;
@@ -69,6 +69,9 @@ extern class UIBarAppearance
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

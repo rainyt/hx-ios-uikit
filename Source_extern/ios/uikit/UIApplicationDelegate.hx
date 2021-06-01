@@ -3,6 +3,9 @@ package ios.uikit;
 import ios.uikit.UIApplicationDelegate;
 import ios.uikit.UIApplication;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSURL;
+import cpp.objc.NSData;
+import cpp.objc.NSError;
 import ios.uikit.UIApplicationShortcutItem;
 import cpp.objc.NSString;
 import ios.uikit.UIWindow;
@@ -40,7 +43,7 @@ extern interface UIApplicationDelegate{
 	overload public function applicationWillResignActive(application:UIApplication):Void;
 
 	@:native("application:openURL:options")
-	overload public function applicationOpenURLOptions(app:UIApplication, openURL:Dynamic, options:NSDictionary):Bool;
+	overload public function applicationOpenURLOptions(app:UIApplication, openURL:NSURL, options:NSDictionary):Bool;
 
 	@:native("applicationDidReceiveMemoryWarning")
 	overload public function applicationDidReceiveMemoryWarning(application:UIApplication):Void;
@@ -52,13 +55,13 @@ extern interface UIApplicationDelegate{
 	overload public function applicationSignificantTimeChange(application:UIApplication):Void;
 
 	@:native("application:didRegisterForRemoteNotificationsWithDeviceToken")
-	overload public function applicationDidRegisterForRemoteNotificationsWithDeviceToken(application:UIApplication, didRegisterForRemoteNotificationsWithDeviceToken:Dynamic):Void;
+	overload public function applicationDidRegisterForRemoteNotificationsWithDeviceToken(application:UIApplication, didRegisterForRemoteNotificationsWithDeviceToken:NSData):Void;
 
 	@:native("application:didFailToRegisterForRemoteNotificationsWithError")
-	overload public function applicationDidFailToRegisterForRemoteNotificationsWithError(application:UIApplication, didFailToRegisterForRemoteNotificationsWithError:Dynamic):Void;
+	overload public function applicationDidFailToRegisterForRemoteNotificationsWithError(application:UIApplication, didFailToRegisterForRemoteNotificationsWithError:NSError):Void;
 
 	@:native("application:didReceiveRemoteNotification:fetchCompletionHandler")
-	overload public function applicationDidReceiveRemoteNotificationFetchCompletionHandler(application:UIApplication, didReceiveRemoteNotification:Dynamic, fetchCompletionHandler:Dynamic):Void;
+	overload public function applicationDidReceiveRemoteNotificationFetchCompletionHandler(application:UIApplication, didReceiveRemoteNotification:NSDictionary, fetchCompletionHandler:Dynamic):Void;
 
 	@:native("application:performActionForShortcutItem:completionHandler")
 	overload public function applicationPerformActionForShortcutItemCompletionHandler(application:UIApplication, performActionForShortcutItem:UIApplicationShortcutItem, completionHandler:Dynamic):Void;
@@ -67,7 +70,7 @@ extern interface UIApplicationDelegate{
 	overload public function applicationHandleEventsForBackgroundURLSessionCompletionHandler(application:UIApplication, handleEventsForBackgroundURLSession:NSString, completionHandler:Dynamic):Void;
 
 	@:native("application:handleWatchKitExtensionRequest:reply")
-	overload public function applicationHandleWatchKitExtensionRequestReply(application:UIApplication, handleWatchKitExtensionRequest:Dynamic, reply:Dynamic):Void;
+	overload public function applicationHandleWatchKitExtensionRequestReply(application:UIApplication, handleWatchKitExtensionRequest:NSDictionary, reply:Dynamic):Void;
 
 	@:native("applicationShouldRequestHealthAuthorization")
 	overload public function applicationShouldRequestHealthAuthorization(application:UIApplication):Void;
@@ -118,7 +121,7 @@ extern interface UIApplicationDelegate{
 	overload public function applicationContinueUserActivityRestorationHandler(application:UIApplication, continueUserActivity:NSUserActivity, restorationHandler:Dynamic):Bool;
 
 	@:native("application:didFailToContinueUserActivityWithType:error")
-	overload public function applicationDidFailToContinueUserActivityWithTypeError(application:UIApplication, didFailToContinueUserActivityWithType:NSString, error:Dynamic):Void;
+	overload public function applicationDidFailToContinueUserActivityWithTypeError(application:UIApplication, didFailToContinueUserActivityWithType:NSString, error:NSError):Void;
 
 	@:native("application:didUpdateUserActivity")
 	overload public function applicationDidUpdateUserActivity(application:UIApplication, didUpdateUserActivity:NSUserActivity):Void;

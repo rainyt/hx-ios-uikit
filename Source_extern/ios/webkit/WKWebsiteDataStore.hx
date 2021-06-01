@@ -1,7 +1,8 @@
 package ios.webkit;
 
 import ios.webkit.WKWebsiteDataStore;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
+import ios.foundation.NSDate;
 import ios.webkit.WKHTTPCookieStore;
 @:objc
 @:native("WKWebsiteDataStore")
@@ -37,10 +38,13 @@ extern class WKWebsiteDataStore
 	overload public function removeDataOfTypesForDataRecordsCompletionHandler(dataTypes:Dynamic, forDataRecords:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("removeDataOfTypes:modifiedSince:completionHandler")
-	overload public function removeDataOfTypesModifiedSinceCompletionHandler(dataTypes:Dynamic, modifiedSince:Dynamic, completionHandler:Dynamic):Void;
+	overload public function removeDataOfTypesModifiedSinceCompletionHandler(dataTypes:Dynamic, modifiedSince:NSDate, completionHandler:Dynamic):Void;
 
 	@:native("httpCookieStore")
 	public var httpCookieStore:WKHTTPCookieStore;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

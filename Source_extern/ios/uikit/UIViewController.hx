@@ -22,6 +22,7 @@ import ios.uikit.UISearchDisplayController;
 import ios.uikit.UIViewAnimationOptions;
 import ios.uikit.UITraitCollection;
 import ios.uikit.UIKeyCommand;
+import ios.foundation.NSExtensionContext;
 import ios.uikit.UIPresentationController;
 import ios.uikit.UIPopoverPresentationController;
 import ios.uikit.UINavigationItem;
@@ -351,7 +352,7 @@ extern class UIViewController{
 	public var performsActionsWhilePresentingModally:Bool;
 
 	@:native("extensionContext")
-	public var extensionContext:Dynamic;
+	public var extensionContext:NSExtensionContext;
 
 	@:native("presentationController")
 	public var presentationController:UIPresentationController;

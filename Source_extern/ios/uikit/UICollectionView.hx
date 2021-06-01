@@ -20,6 +20,7 @@ import ios.uikit.UICollectionViewScrollPosition;
 import ios.uikit.UICollectionViewTransitionLayout;
 import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.objc.CGPoint;
+import ios.foundation.NSIndexSet;
 import ios.uikit.UIEvent;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
@@ -182,13 +183,13 @@ extern class UICollectionView extends UIScrollView
 	overload public function scrollToItemAtIndexPathAtScrollPositionAnimated(indexPath:NSIndexPath, atScrollPosition:UICollectionViewScrollPosition, animated:Bool):Void;
 
 	@:native("insertSections")
-	overload public function insertSections(sections:Dynamic):Void;
+	overload public function insertSections(sections:NSIndexSet):Void;
 
 	@:native("deleteSections")
-	overload public function deleteSections(sections:Dynamic):Void;
+	overload public function deleteSections(sections:NSIndexSet):Void;
 
 	@:native("reloadSections")
-	overload public function reloadSections(sections:Dynamic):Void;
+	overload public function reloadSections(sections:NSIndexSet):Void;
 
 	@:native("moveSection:toSection")
 	overload public function moveSectionToSection(section:Int, toSection:Int):Void;

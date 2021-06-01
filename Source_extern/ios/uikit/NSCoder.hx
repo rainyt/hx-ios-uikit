@@ -7,6 +7,11 @@ import ios.objc.CGVector;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
+import cpp.objc.NSData;
+import cpp.objc.NSError;
+import ios.foundation.NSArray;
+import cpp.objc.NSDictionary;
+import ios.foundation.NSDecodingFailurePolicy;
 @:objc
 @:native("NSCoder")
 @:include("UIKit/UIKit.h")
@@ -65,6 +70,183 @@ extern class NSCoder{
 
 	@:native("decodeUIOffsetForKey")
 	overload public function decodeUIOffsetForKey(key:NSString):Dynamic;
+
+	@:native("encodeValueOfObjCType:at")
+	overload public function encodeValueOfObjCTypeAt(type:Dynamic, at:Dynamic):Void;
+
+	@:native("encodeDataObject")
+	overload public function encodeDataObject(data:NSData):Void;
+
+	@:native("decodeDataObject")
+	overload public function decodeDataObject():NSData;
+
+	@:native("decodeValueOfObjCType:at:size")
+	overload public function decodeValueOfObjCTypeAtSize(type:Dynamic, at:Void, size:Int):Void;
+
+	@:native("versionForClassName")
+	overload public function versionForClassName(className:NSString):Int;
+
+	@:native("encodeObject")
+	overload public function encodeObject(object:Dynamic):Void;
+
+	@:native("encodeRootObject")
+	overload public function encodeRootObject(rootObject:Dynamic):Void;
+
+	@:native("encodeBycopyObject")
+	overload public function encodeBycopyObject(anObject:Dynamic):Void;
+
+	@:native("encodeByrefObject")
+	overload public function encodeByrefObject(anObject:Dynamic):Void;
+
+	@:native("encodeConditionalObject")
+	overload public function encodeConditionalObject(object:Dynamic):Void;
+
+	@:native("encodeValuesOfObjCTypes")
+	overload public function encodeValuesOfObjCTypes(types:Dynamic):Void;
+
+	@:native("encodeArrayOfObjCType:count:at")
+	overload public function encodeArrayOfObjCTypeCountAt(type:Dynamic, count:Int, at:Dynamic):Void;
+
+	@:native("encodeBytes:length")
+	overload public function encodeBytesLength(byteaddr:Dynamic, length:Int):Void;
+
+	@:native("decodeObject")
+	overload public function decodeObject():Dynamic;
+
+	@:native("decodeTopLevelObjectAndReturnError")
+	overload public function decodeTopLevelObjectAndReturnError(error:NSError):Dynamic;
+
+	@:native("decodeValuesOfObjCTypes")
+	overload public function decodeValuesOfObjCTypes(types:Dynamic):Void;
+
+	@:native("decodeArrayOfObjCType:count:at")
+	overload public function decodeArrayOfObjCTypeCountAt(itemType:Dynamic, count:Int, at:Void):Void;
+
+	@:native("decodeBytesWithReturnedLength")
+	overload public function decodeBytesWithReturnedLength(lengthp:Int):Void;
+
+	@:native("encodePropertyList")
+	overload public function encodePropertyList(aPropertyList:Dynamic):Void;
+
+	@:native("decodePropertyList")
+	overload public function decodePropertyList():Dynamic;
+
+	@:native("setObjectZone")
+	overload public function setObjectZone(zone:Dynamic):Void;
+
+	@:native("objectZone")
+	overload public function objectZone():Dynamic;
+
+	@:native("systemVersion")
+	public var systemVersion:Dynamic;
+
+	@:native("allowsKeyedCoding")
+	public var allowsKeyedCoding:Bool;
+
+	@:native("encodeObject:forKey")
+	overload public function encodeObjectForKey(object:Dynamic, forKey:NSString):Void;
+
+	@:native("encodeConditionalObject:forKey")
+	overload public function encodeConditionalObjectForKey(object:Dynamic, forKey:NSString):Void;
+
+	@:native("encodeBool:forKey")
+	overload public function encodeBoolForKey(value:Bool, forKey:NSString):Void;
+
+	@:native("encodeInt:forKey")
+	overload public function encodeIntForKey(value:Dynamic, forKey:NSString):Void;
+
+	@:native("encodeInt32:forKey")
+	overload public function encodeInt32ForKey(value:Dynamic, forKey:NSString):Void;
+
+	@:native("encodeInt64:forKey")
+	overload public function encodeInt64ForKey(value:Dynamic, forKey:NSString):Void;
+
+	@:native("encodeFloat:forKey")
+	overload public function encodeFloatForKey(value:Dynamic, forKey:NSString):Void;
+
+	@:native("encodeDouble:forKey")
+	overload public function encodeDoubleForKey(value:Dynamic, forKey:NSString):Void;
+
+	@:native("encodeBytes:length:forKey")
+	overload public function encodeBytesLengthForKey(bytes:Dynamic, length:Int, forKey:NSString):Void;
+
+	@:native("containsValueForKey")
+	overload public function containsValueForKey(key:NSString):Bool;
+
+	@:native("decodeObjectForKey")
+	overload public function decodeObjectForKey(key:NSString):Dynamic;
+
+	@:native("decodeTopLevelObjectForKey:error")
+	overload public function decodeTopLevelObjectForKeyError(key:NSString, error:NSError):Dynamic;
+
+	@:native("decodeBoolForKey")
+	overload public function decodeBoolForKey(key:NSString):Bool;
+
+	@:native("decodeIntForKey")
+	overload public function decodeIntForKey(key:NSString):Dynamic;
+
+	@:native("decodeInt32ForKey")
+	overload public function decodeInt32ForKey(key:NSString):Dynamic;
+
+	@:native("decodeInt64ForKey")
+	overload public function decodeInt64ForKey(key:NSString):Dynamic;
+
+	@:native("decodeFloatForKey")
+	overload public function decodeFloatForKey(key:NSString):Dynamic;
+
+	@:native("decodeDoubleForKey")
+	overload public function decodeDoubleForKey(key:NSString):Dynamic;
+
+	@:native("decodeBytesForKey:returnedLength")
+	overload public function decodeBytesForKeyReturnedLength(key:NSString, returnedLength:Int):Dynamic;
+
+	@:native("encodeInteger:forKey")
+	overload public function encodeIntegerForKey(value:Int, forKey:NSString):Void;
+
+	@:native("decodeIntegerForKey")
+	overload public function decodeIntegerForKey(key:NSString):Int;
+
+	@:native("requiresSecureCoding")
+	public var requiresSecureCoding:Bool;
+
+	@:native("decodeObjectOfClass:forKey")
+	overload public function decodeObjectOfClassForKey(aClass:Dynamic, forKey:NSString):Dynamic;
+
+	@:native("decodeTopLevelObjectOfClass:forKey:error")
+	overload public function decodeTopLevelObjectOfClassForKeyError(aClass:Dynamic, forKey:NSString, error:NSError):Dynamic;
+
+	@:native("decodeArrayOfObjectsOfClass:forKey")
+	overload public function decodeArrayOfObjectsOfClassForKey(cls:Dynamic, forKey:NSString):NSArray;
+
+	@:native("decodeDictionaryWithKeysOfClass:objectsOfClass:forKey")
+	overload public function decodeDictionaryWithKeysOfClassObjectsOfClassForKey(keyCls:Dynamic, objectsOfClass:Dynamic, forKey:NSString):NSDictionary;
+
+	@:native("decodeObjectOfClasses:forKey")
+	overload public function decodeObjectOfClassesForKey(classes:Dynamic, forKey:NSString):Dynamic;
+
+	@:native("decodeTopLevelObjectOfClasses:forKey:error")
+	overload public function decodeTopLevelObjectOfClassesForKeyError(classes:Dynamic, forKey:NSString, error:NSError):Dynamic;
+
+	@:native("decodeArrayOfObjectsOfClasses:forKey")
+	overload public function decodeArrayOfObjectsOfClassesForKey(classes:Dynamic, forKey:NSString):NSArray;
+
+	@:native("decodeDictionaryWithKeysOfClasses:objectsOfClasses:forKey")
+	overload public function decodeDictionaryWithKeysOfClassesObjectsOfClassesForKey(keyClasses:Dynamic, objectsOfClasses:Dynamic, forKey:NSString):NSDictionary;
+
+	@:native("decodePropertyListForKey")
+	overload public function decodePropertyListForKey(key:NSString):Dynamic;
+
+	@:native("allowedClasses")
+	public var allowedClasses:Dynamic;
+
+	@:native("failWithError")
+	overload public function failWithError(error:NSError):Void;
+
+	@:native("decodingFailurePolicy")
+	public var decodingFailurePolicy:NSDecodingFailurePolicy;
+
+	@:native("error")
+	public var error:NSError;
 
 
 }

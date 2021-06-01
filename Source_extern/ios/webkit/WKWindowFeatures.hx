@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKWindowFeatures;
+import ios.foundation.NSNumber;
 @:objc
 @:native("WKWindowFeatures")
 @:include("WebKit/WebKit.h")
@@ -13,28 +14,28 @@ extern class WKWindowFeatures{
 	overload public static function autorelease():WKWindowFeatures;
 
 	@:native("menuBarVisibility")
-	public var menuBarVisibility:Dynamic;
+	public var menuBarVisibility:NSNumber;
 
 	@:native("statusBarVisibility")
-	public var statusBarVisibility:Dynamic;
+	public var statusBarVisibility:NSNumber;
 
 	@:native("toolbarsVisibility")
-	public var toolbarsVisibility:Dynamic;
+	public var toolbarsVisibility:NSNumber;
 
 	@:native("allowsResizing")
-	public var allowsResizing:Dynamic;
+	public var allowsResizing:NSNumber;
 
 	@:native("x")
-	public var x:Dynamic;
+	public var x:NSNumber;
 
 	@:native("y")
-	public var y:Dynamic;
+	public var y:NSNumber;
 
 	@:native("width")
-	public var width:Dynamic;
+	public var width:NSNumber;
 
 	@:native("height")
-	public var height:Dynamic;
+	public var height:NSNumber;
 
 
 }

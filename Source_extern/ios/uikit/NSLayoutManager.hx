@@ -1,7 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.NSLayoutManager;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
 import ios.uikit.NSTextStorage;
 import ios.uikit.NSTextContainer;
@@ -278,6 +278,9 @@ extern class NSLayoutManager
 
 	@:native("glyphAtIndex")
 	overload public function glyphAtIndex(glyphIndex:Int):Dynamic;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

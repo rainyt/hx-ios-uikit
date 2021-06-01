@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDocumentInteractionController;
 import ios.uikit.UIActionSheetDelegate;
+import ios.foundation.NSURL;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
 import ios.uikit.UIView;
@@ -19,13 +20,13 @@ extern class UIDocumentInteractionController
 	overload public static function autorelease():UIDocumentInteractionController;
 
 	@:native("interactionControllerWithURL")
-	overload public static function interactionControllerWithURL(url:Dynamic):UIDocumentInteractionController;
+	overload public static function interactionControllerWithURL(url:NSURL):UIDocumentInteractionController;
 
 	@:native("delegate")
 	public var delegate:Dynamic;
 
 	@:native("URL")
-	public var URL:Dynamic;
+	public var URL:NSURL;
 
 	@:native("UTI")
 	public var UTI:NSString;

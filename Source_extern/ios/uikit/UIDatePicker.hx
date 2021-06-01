@@ -4,6 +4,10 @@ import ios.uikit.UIControl;
 import ios.uikit.UIDatePicker;
 import ios.objc.NSCoding;
 import ios.uikit.UIDatePickerMode;
+import ios.foundation.NSLocale;
+import ios.foundation.NSCalendar;
+import ios.foundation.NSTimeZone;
+import ios.foundation.NSDate;
 import ios.uikit.UIDatePickerStyle;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
@@ -45,22 +49,22 @@ extern class UIDatePicker extends UIControl
 	public var datePickerMode:UIDatePickerMode;
 
 	@:native("locale")
-	public var locale:Dynamic;
+	public var locale:NSLocale;
 
 	@:native("calendar")
-	public var calendar:Dynamic;
+	public var calendar:NSCalendar;
 
 	@:native("timeZone")
-	public var timeZone:Dynamic;
+	public var timeZone:NSTimeZone;
 
 	@:native("date")
-	public var date:Dynamic;
+	public var date:NSDate;
 
 	@:native("minimumDate")
-	public var minimumDate:Dynamic;
+	public var minimumDate:NSDate;
 
 	@:native("maximumDate")
-	public var maximumDate:Dynamic;
+	public var maximumDate:NSDate;
 
 	@:native("countDownDuration")
 	public var countDownDuration:Dynamic;
@@ -69,7 +73,7 @@ extern class UIDatePicker extends UIControl
 	public var minuteInterval:Int;
 
 	@:native("setDate:animated")
-	overload public function setDateAnimated(date:Dynamic, animated:Bool):Void;
+	overload public function setDateAnimated(date:NSDate, animated:Bool):Void;
 
 	@:native("preferredDatePickerStyle")
 	public var preferredDatePickerStyle:UIDatePickerStyle;

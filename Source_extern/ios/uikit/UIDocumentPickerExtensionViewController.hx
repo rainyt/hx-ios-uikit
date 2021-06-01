@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIViewController;
 import ios.uikit.UIDocumentPickerExtensionViewController;
+import ios.foundation.NSURL;
 import ios.uikit.UIDocumentPickerMode;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
@@ -24,7 +25,7 @@ extern class UIDocumentPickerExtensionViewController extends UIViewController{
 	overload public static function autorelease():UIDocumentPickerExtensionViewController;
 
 	@:native("dismissGrantingAccessToURL")
-	overload public function dismissGrantingAccessToURL(url:Dynamic):Void;
+	overload public function dismissGrantingAccessToURL(url:NSURL):Void;
 
 	@:native("prepareForPresentationInMode")
 	overload public function prepareForPresentationInMode(mode:UIDocumentPickerMode):Void;
@@ -33,7 +34,7 @@ extern class UIDocumentPickerExtensionViewController extends UIViewController{
 	public var documentPickerMode:UIDocumentPickerMode;
 
 	@:native("originalURL")
-	public var originalURL:Dynamic;
+	public var originalURL:NSURL;
 
 	@:native("validTypes")
 	public var validTypes:Dynamic;
@@ -42,7 +43,7 @@ extern class UIDocumentPickerExtensionViewController extends UIViewController{
 	public var providerIdentifier:NSString;
 
 	@:native("documentStorageURL")
-	public var documentStorageURL:Dynamic;
+	public var documentStorageURL:NSURL;
 
 	@:native("setNeedsTouchBarUpdate")
 	overload public function setNeedsTouchBarUpdate():Void;

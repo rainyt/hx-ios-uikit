@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.foundation.NSOperation;
 import ios.uikit.UIActivityItemProvider;
 import ios.uikit.UIActivityItemSource;
 import ios.uikit.UIActivityViewController;
@@ -50,6 +51,24 @@ extern class UIActivityItemProvider extends NSOperation
 
 	@:native("activityViewControllerLinkMetadata")
 	overload public function activityViewControllerLinkMetadata(activityViewController:UIActivityViewController):Dynamic;
+
+	@:native("start")
+	overload public function start():Void;
+
+	@:native("main")
+	overload public function main():Void;
+
+	@:native("cancel")
+	overload public function cancel():Void;
+
+	@:native("addDependency")
+	overload public function addDependency(op:NSOperation):Void;
+
+	@:native("removeDependency")
+	overload public function removeDependency(op:NSOperation):Void;
+
+	@:native("waitUntilFinished")
+	overload public function waitUntilFinished():Void;
 
 
 }

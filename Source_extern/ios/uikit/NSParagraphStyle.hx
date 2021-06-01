@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.NSParagraphStyle;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.NSWritingDirection;
 import cpp.objc.NSString;
 import ios.uikit.NSTextAlignment;
@@ -80,6 +80,9 @@ extern class NSParagraphStyle
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

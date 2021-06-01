@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKContentRuleListStore;
+import ios.foundation.NSURL;
 import cpp.objc.NSString;
 @:objc
 @:native("WKContentRuleListStore")
@@ -17,7 +18,7 @@ extern class WKContentRuleListStore{
 	overload public static function defaultStore():WKContentRuleListStore;
 
 	@:native("storeWithURL")
-	overload public static function storeWithURL(url:Dynamic):WKContentRuleListStore;
+	overload public static function storeWithURL(url:NSURL):WKContentRuleListStore;
 
 	@:native("compileContentRuleListForIdentifier:encodedContentRuleList:encodedContentRuleList")
 	overload public function compileContentRuleListForIdentifierEncodedContentRuleListEncodedContentRuleList(identifier:NSString, encodedContentRuleList:NSString, encodedContentRuleList:Dynamic):Void;

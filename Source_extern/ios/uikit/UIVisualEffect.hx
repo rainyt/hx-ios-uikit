@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIVisualEffect;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 @:objc
 @:native("UIVisualEffect")
 @:include("UIKit/UIKit.h")
@@ -18,6 +18,9 @@ extern class UIVisualEffect
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

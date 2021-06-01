@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIPrintInteractionController;
+import ios.foundation.NSURL;
+import cpp.objc.NSData;
 import ios.uikit.UIPrintInfo;
 import ios.uikit.UIPrintPaper;
 import ios.uikit.UIPrintPageRenderer;
 import ios.uikit.UIPrintFormatter;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 import ios.uikit.UIView;
 import ios.uikit.UIBarButtonItem;
@@ -27,10 +30,10 @@ extern class UIPrintInteractionController{
 	overload public static function printableUTIs():Dynamic;
 
 	@:native("canPrintURL")
-	overload public static function canPrintURL(url:Dynamic):Bool;
+	overload public static function canPrintURL(url:NSURL):Bool;
 
 	@:native("canPrintData")
-	overload public static function canPrintData(data:Dynamic):Bool;
+	overload public static function canPrintData(data:NSData):Bool;
 
 	@:native("sharedPrintController")
 	overload public static function sharedPrintController():UIPrintInteractionController;
@@ -63,7 +66,7 @@ extern class UIPrintInteractionController{
 	public var printingItem:Dynamic;
 
 	@:native("printingItems")
-	public var printingItems:Dynamic;
+	public var printingItems:NSArray;
 
 	@:native("presentAnimated:completionHandler")
 	overload public function presentAnimatedCompletionHandler(animated:Bool, completionHandler:Dynamic):Bool;

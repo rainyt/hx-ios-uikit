@@ -5,6 +5,7 @@ import ios.uikit.UIDocumentBrowserViewController;
 import ios.objc.NSCoding;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
+import ios.foundation.NSURL;
 import ios.uikit.UIDocumentBrowserImportMode;
 import ios.uikit.UIDocumentBrowserTransitionController;
 import ios.uikit.UIDocumentBrowserUserInterfaceStyle;
@@ -61,13 +62,13 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	public var additionalTrailingNavigationBarButtonItems:Dynamic;
 
 	@:native("revealDocumentAtURL:importIfNeeded:completion")
-	overload public function revealDocumentAtURLImportIfNeededCompletion(url:Dynamic, importIfNeeded:Bool, completion:Dynamic):Void;
+	overload public function revealDocumentAtURLImportIfNeededCompletion(url:NSURL, importIfNeeded:Bool, completion:Dynamic):Void;
 
 	@:native("importDocumentAtURL:nextToDocumentAtURL:mode:completionHandler")
-	overload public function importDocumentAtURLNextToDocumentAtURLModeCompletionHandler(documentURL:Dynamic, nextToDocumentAtURL:Dynamic, mode:UIDocumentBrowserImportMode, completionHandler:Dynamic):Void;
+	overload public function importDocumentAtURLNextToDocumentAtURLModeCompletionHandler(documentURL:NSURL, nextToDocumentAtURL:NSURL, mode:UIDocumentBrowserImportMode, completionHandler:Dynamic):Void;
 
 	@:native("transitionControllerForDocumentAtURL")
-	overload public function transitionControllerForDocumentAtURL(documentURL:Dynamic):UIDocumentBrowserTransitionController;
+	overload public function transitionControllerForDocumentAtURL(documentURL:NSURL):UIDocumentBrowserTransitionController;
 
 	@:native("customActions")
 	public var customActions:Dynamic;

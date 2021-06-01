@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIBarButtonItemAppearance;
 import ios.objc.NSCopying;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UIBarButtonItemStyle;
 import ios.uikit.NSCoder;
 import ios.uikit.UIBarButtonItemStateAppearance;
@@ -48,6 +48,9 @@ extern class UIBarButtonItemAppearance
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

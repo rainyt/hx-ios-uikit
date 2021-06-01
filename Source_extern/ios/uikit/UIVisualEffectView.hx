@@ -2,7 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIView;
 import ios.uikit.UIVisualEffectView;
-import ios.objc.NSSecureCoding;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UIVisualEffect;
 import ios.uikit.NSCoder;
 import ios.uikit.UIViewPrintFormatter;
@@ -44,6 +44,9 @@ extern class UIVisualEffectView extends UIView
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIVisualEffectView;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

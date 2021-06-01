@@ -2,6 +2,7 @@ package ios.webkit;
 
 import ios.webkit.WKFrameInfo;
 import ios.objc.NSCopying;
+import ios.foundation.NSURLRequest;
 import ios.webkit.WKSecurityOrigin;
 import ios.webkit.WKWebView;
 @:objc
@@ -20,7 +21,7 @@ extern class WKFrameInfo
 	public var mainFrame:Bool;
 
 	@:native("request")
-	public var request:Dynamic;
+	public var request:NSURLRequest;
 
 	@:native("securityOrigin")
 	public var securityOrigin:WKSecurityOrigin;

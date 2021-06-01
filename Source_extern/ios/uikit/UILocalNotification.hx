@@ -4,7 +4,12 @@ import ios.uikit.UILocalNotification;
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
 import ios.uikit.NSCoder;
+import ios.foundation.NSDate;
+import ios.foundation.NSTimeZone;
+import ios.foundation.NSCalendarUnit;
+import ios.foundation.NSCalendar;
 import cpp.objc.NSString;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("UILocalNotification")
 @:include("UIKit/UIKit.h")
@@ -24,16 +29,16 @@ extern class UILocalNotification
 	overload public function initWithCoder(coder:NSCoder):UILocalNotification;
 
 	@:native("fireDate")
-	public var fireDate:Dynamic;
+	public var fireDate:NSDate;
 
 	@:native("timeZone")
-	public var timeZone:Dynamic;
+	public var timeZone:NSTimeZone;
 
 	@:native("repeatInterval")
-	public var repeatInterval:Dynamic;
+	public var repeatInterval:NSCalendarUnit;
 
 	@:native("repeatCalendar")
-	public var repeatCalendar:Dynamic;
+	public var repeatCalendar:NSCalendar;
 
 	@:native("region")
 	public var region:Dynamic;
@@ -63,7 +68,7 @@ extern class UILocalNotification
 	public var applicationIconBadgeNumber:Int;
 
 	@:native("userInfo")
-	public var userInfo:Dynamic;
+	public var userInfo:NSDictionary;
 
 	@:native("category")
 	public var category:NSString;

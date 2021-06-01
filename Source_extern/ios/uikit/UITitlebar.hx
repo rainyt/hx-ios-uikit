@@ -4,6 +4,7 @@ import ios.uikit.UITitlebar;
 import ios.uikit.UITitlebarTitleVisibility;
 import ios.uikit.UITitlebarToolbarStyle;
 import ios.uikit.UITitlebarSeparatorStyle;
+import ios.foundation.NSURL;
 @:objc
 @:native("UITitlebar")
 @:include("UIKit/UIKit.h")
@@ -31,7 +32,7 @@ extern class UITitlebar{
 	public var autoHidesToolbarInFullScreen:Bool;
 
 	@:native("representedURL")
-	public var representedURL:Dynamic;
+	public var representedURL:NSURL;
 
 
 }
