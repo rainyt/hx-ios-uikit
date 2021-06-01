@@ -1,9 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UIUserNotificationAction")
 @:include("UIKit/UIKit.h")
 extern class UIUserNotificationAction extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSMutableCopying>
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

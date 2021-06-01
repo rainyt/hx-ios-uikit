@@ -183,8 +183,6 @@ class ExternBaseClass:
             _g_current = (_g_current + 1)
             index = _g1_key
             value = _g1_value
-            if (self.className == "UITextField"):
-                haxe_Log.trace(value.name,_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 136, 'className': "ExternBaseClass", 'methodName': "putClass"}))
             if (not self.hasFuncOrAttr(value,unFindParentFunc)):
                 _this = self.funcAndAttr
                 _this.append(value)
@@ -204,7 +202,7 @@ class ExternBaseClass:
                 if (_g == "func"):
                     if (not self.hasFuncOrAttr(value,True)):
                         if (self.className == "UITextField"):
-                            haxe_Log.trace(self.className,_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 154, 'className': "ExternBaseClass", 'methodName': "putExternClass", 'customParams': ["追加方法：", t.className, value]}))
+                            haxe_Log.trace(self.className,_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 152, 'className': "ExternBaseClass", 'methodName': "putExternClass", 'customParams': ["追加方法：", t.className, value]}))
                         _this = self.funcAndAttr
                         _this.append(value)
             elif (_hx_local_0 == 8):
@@ -269,6 +267,18 @@ class ExternBaseClass:
                     c3 = self._importType(a.type)
                     if (c3 is not None):
                         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c3 is None else c3)) + ";\n"))))
+            if (self.protocols is not None):
+                _g2_current1 = 0
+                _g2_array1 = self.protocols
+                while (_g2_current1 < len(_g2_array1)):
+                    _g3_value1 = (_g2_array1[_g2_current1] if _g2_current1 >= 0 and _g2_current1 < len(_g2_array1) else None)
+                    _g3_key1 = _g2_current1
+                    _g2_current1 = (_g2_current1 + 1)
+                    index2 = _g3_key1
+                    value1 = _g3_value1
+                    c4 = self._importType(value1)
+                    if (c4 is not None):
+                        haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c4 is None else c4)) + ";\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
@@ -286,6 +296,8 @@ class ExternBaseClass:
                 t = ExternTools.protocol.h.get(value,None)
                 if (t is not None):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("implements cpp.objc.Protocol<" + HxOverrides.stringOrNull(t.className)) + ">\n"))))
+                else:
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("implements cpp.objc.Protocol<" + ("null" if value is None else value)) + ">\n"))))
         haxe = (("null" if haxe is None else haxe) + "{\n\n")
         _g_current = 0
         _g_array = self.funcAndAttr
@@ -298,12 +310,12 @@ class ExternBaseClass:
             if ((value.type == "property") and self.hasFuncExtendsOrAttr(value)):
                 continue
             _g = value.type
-            _hx_local_10 = len(_g)
-            if (_hx_local_10 == 4):
+            _hx_local_12 = len(_g)
+            if (_hx_local_12 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((((((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(") + HxOverrides.stringOrNull(((self.toFuncArgs(value.args) if ((value.args is not None)) else "")))) + "):") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))
-            elif (_hx_local_10 == 8):
+            elif (_hx_local_12 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(value.returnClass)) + ";\n\n"))))

@@ -1,9 +1,11 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("NSCollectionLayoutSpacing")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutSpacing extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

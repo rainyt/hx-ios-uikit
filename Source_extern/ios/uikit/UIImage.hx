@@ -9,6 +9,7 @@ import ios.objc.CGRect;
 @:native("UIImage")
 @:include("UIKit/UIKit.h")
 extern class UIImage extends NSObject
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
@@ -80,14 +81,14 @@ extern class UIImage extends NSObject
 	@:native("size")
 	public var size:CGSize;
 
-	// @:native("CGImage")
-	// public var CGImage:Dynamic;
+	@:native("CGImage")
+	public var CGImage:Dynamic;
 
-	// @:native("CGImage")
-	// overload public function CGImage():Dynamic;
+	@:native("CGImage")
+	overload public function CGImage():Dynamic;
 
-	// @:native("CIImage")
-	// public var CIImage:CIImage;
+	@:native("CIImage")
+	public var CIImage:CIImage;
 
 	@:native("imageOrientation")
 	public var imageOrientation:UIImageOrientation;

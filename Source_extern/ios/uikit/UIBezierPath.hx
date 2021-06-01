@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGRect;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
@@ -11,6 +12,8 @@ import ios.objc.CGBlendMode;
 @:native("UIBezierPath")
 @:include("UIKit/UIKit.h")
 extern class UIBezierPath extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

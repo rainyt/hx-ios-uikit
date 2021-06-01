@@ -1,11 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIBarButtonItem")
 @:include("UIKit/UIKit.h")
 extern class UIBarButtonItem extends UIBarItem
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

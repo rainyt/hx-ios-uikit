@@ -1,9 +1,11 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UILexicon")
 @:include("UIKit/UIKit.h")
 extern class UILexicon extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

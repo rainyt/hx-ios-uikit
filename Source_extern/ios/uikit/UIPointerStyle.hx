@@ -1,9 +1,11 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UIPointerStyle")
 @:include("UIKit/UIKit.h")
 extern class UIPointerStyle extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

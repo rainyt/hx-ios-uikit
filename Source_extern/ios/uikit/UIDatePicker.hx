@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
@@ -7,6 +8,7 @@ import ios.objc.CGSize;
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")
 extern class UIDatePicker extends UIControl
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

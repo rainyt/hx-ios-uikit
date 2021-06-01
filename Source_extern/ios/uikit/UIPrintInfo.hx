@@ -1,9 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIPrintInfo")
 @:include("UIKit/UIKit.h")
 extern class UIPrintInfo extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

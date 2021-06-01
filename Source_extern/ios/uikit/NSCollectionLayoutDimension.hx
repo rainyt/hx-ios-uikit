@@ -1,9 +1,11 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("NSCollectionLayoutDimension")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutDimension extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

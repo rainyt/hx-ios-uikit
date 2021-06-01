@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
@@ -8,6 +9,7 @@ import ios.objc.CGSize;
 @:native("UIWebView")
 @:include("UIKit/UIKit.h")
 extern class UIWebView extends UIView
+implements cpp.objc.Protocol<NSCoding>
 implements cpp.objc.Protocol<UIScrollViewDelegate>
 {
 

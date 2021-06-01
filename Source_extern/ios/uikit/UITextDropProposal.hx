@@ -1,9 +1,11 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UITextDropProposal")
 @:include("UIKit/UIKit.h")
 extern class UITextDropProposal extends UIDropProposal
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

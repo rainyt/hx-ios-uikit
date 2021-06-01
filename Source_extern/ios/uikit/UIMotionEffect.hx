@@ -1,10 +1,14 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
+import ios.objc.NSCoding;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIMotionEffect")
 @:include("UIKit/UIKit.h")
 extern class UIMotionEffect extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

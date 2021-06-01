@@ -1,9 +1,11 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UICollectionViewDiffableDataSourceSectionSnapshotHandlers")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewDiffableDataSourceSectionSnapshotHandlers extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

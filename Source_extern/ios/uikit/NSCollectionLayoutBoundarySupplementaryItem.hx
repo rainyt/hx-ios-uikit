@@ -1,11 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
 @:objc
 @:native("NSCollectionLayoutBoundarySupplementaryItem")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutBoundarySupplementaryItem extends NSCollectionLayoutSupplementaryItem
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

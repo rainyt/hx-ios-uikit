@@ -1,11 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import ios.objc.CGAffineTransform;
 import cpp.objc.NSString;
 @:objc
 @:native("UIImagePickerController")
 @:include("UIKit/UIKit.h")
 extern class UIImagePickerController extends UINavigationController
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

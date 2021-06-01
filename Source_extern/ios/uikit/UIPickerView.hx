@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
@@ -7,6 +8,7 @@ import ios.objc.CGPoint;
 @:native("UIPickerView")
 @:include("UIKit/UIKit.h")
 extern class UIPickerView extends UIView
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

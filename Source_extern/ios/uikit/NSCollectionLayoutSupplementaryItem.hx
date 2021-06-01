@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
 @:native("NSCollectionLayoutSupplementaryItem")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutSupplementaryItem extends NSCollectionLayoutItem
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

@@ -1,10 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
 @:native("UIPreviewAction")
 @:include("UIKit/UIKit.h")
 extern class UIPreviewAction extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<UIPreviewActionItem>
 {
 
 	@:native("alloc")

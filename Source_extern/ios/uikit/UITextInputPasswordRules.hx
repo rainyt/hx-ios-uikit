@@ -1,10 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
 @:native("UITextInputPasswordRules")
 @:include("UIKit/UIKit.h")
 extern class UITextInputPasswordRules extends NSObject
+implements cpp.objc.Protocol<NSSecureCoding>
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

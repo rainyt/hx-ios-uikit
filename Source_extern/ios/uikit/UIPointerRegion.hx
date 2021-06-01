@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGRect;
 @:objc
 @:native("UIPointerRegion")
 @:include("UIKit/UIKit.h")
 extern class UIPointerRegion extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

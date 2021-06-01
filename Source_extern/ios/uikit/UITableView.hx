@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import cpp.objc.NSString;
@@ -8,6 +9,7 @@ import ios.objc.CGSize;
 @:native("UITableView")
 @:include("UIKit/UIKit.h")
 extern class UITableView extends UIScrollView
+implements cpp.objc.Protocol<NSCoding>
 implements cpp.objc.Protocol<UIDataSourceTranslating>
 {
 

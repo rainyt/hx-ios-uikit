@@ -1,9 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UIPasteConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIPasteConfiguration extends NSObject
+implements cpp.objc.Protocol<NSSecureCoding>
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

@@ -5,6 +5,8 @@ import cpp.objc.NSString;
 @:native("UIDocument")
 @:include("UIKit/UIKit.h")
 extern class UIDocument extends NSObject
+implements cpp.objc.Protocol<NSFilePresenter>
+implements cpp.objc.Protocol<NSProgressReporting>
 {
 
 	@:native("alloc")

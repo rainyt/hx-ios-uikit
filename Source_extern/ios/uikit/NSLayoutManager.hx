@@ -9,6 +9,7 @@ import cpp.objc.NSDictionary;
 @:native("NSLayoutManager")
 @:include("UIKit/UIKit.h")
 extern class NSLayoutManager extends NSObject
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
 import cpp.objc.NSDictionary;
@@ -7,6 +8,8 @@ import cpp.objc.NSDictionary;
 @:native("UIFontDescriptor")
 @:include("UIKit/UIKit.h")
 extern class UIFontDescriptor extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

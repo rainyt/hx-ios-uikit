@@ -1,11 +1,14 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIApplicationShortcutItem")
 @:include("UIKit/UIKit.h")
 extern class UIApplicationShortcutItem extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSMutableCopying>
 {
 
 	@:native("alloc")

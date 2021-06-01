@@ -4,6 +4,7 @@ package ios.uikit;
 @:native("UIDropInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIDropInteraction extends NSObject
+implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")

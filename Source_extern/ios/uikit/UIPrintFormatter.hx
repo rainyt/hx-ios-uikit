@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGRect;
 @:objc
 @:native("UIPrintFormatter")
 @:include("UIKit/UIKit.h")
 extern class UIPrintFormatter extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

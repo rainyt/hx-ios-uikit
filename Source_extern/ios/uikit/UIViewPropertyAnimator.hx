@@ -1,11 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIViewPropertyAnimator")
 @:include("UIKit/UIKit.h")
 extern class UIViewPropertyAnimator extends NSObject
 implements cpp.objc.Protocol<UIViewImplicitlyAnimating>
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

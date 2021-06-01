@@ -1,10 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
 @:native("UIColor")
 @:include("UIKit/UIKit.h")
 extern class UIColor extends NSObject
+implements cpp.objc.Protocol<NSSecureCoding>
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
@@ -121,14 +124,14 @@ extern class UIColor extends NSObject
 	@:native("colorWithAlphaComponent")
 	overload public function colorWithAlphaComponent(alpha:Float):UIColor;
 
-	// @:native("CGColor")
-	// public var CGColor:Dynamic;
+	@:native("CGColor")
+	public var CGColor:Dynamic;
 
-	// @:native("CGColor")
-	// overload public function CGColor():Dynamic;
+	@:native("CGColor")
+	overload public function CGColor():Dynamic;
 
-	// @:native("CIColor")
-	// public var CIColor:CIColor;
+	@:native("CIColor")
+	public var CIColor:CIColor;
 
 	@:native("colorNamed")
 	overload public static function colorNamed(name:NSString):UIColor;

@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
@@ -10,6 +11,7 @@ import cpp.objc.NSString;
 @:native("UICollectionViewLayoutAttributes")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewLayoutAttributes extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 implements cpp.objc.Protocol<UIDynamicItem>
 {
 

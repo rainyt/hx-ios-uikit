@@ -1,9 +1,11 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UICollectionViewDiffableDataSourceReorderingHandlers")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewDiffableDataSourceReorderingHandlers extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

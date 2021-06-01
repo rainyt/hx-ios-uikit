@@ -4,6 +4,7 @@ package ios.uikit;
 @:native("UITextFormattingCoordinator")
 @:include("UIKit/UIKit.h")
 extern class UITextFormattingCoordinator extends NSObject
+implements cpp.objc.Protocol<UIFontPickerViewControllerDelegate>
 {
 
 	@:native("alloc")

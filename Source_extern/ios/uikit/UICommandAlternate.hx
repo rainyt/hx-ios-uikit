@@ -1,10 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
 @:native("UICommandAlternate")
 @:include("UIKit/UIKit.h")
 extern class UICommandAlternate extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

@@ -1,11 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import cpp.objc.NSString;
 @:objc
 @:native("UITabBarController")
 @:include("UIKit/UIKit.h")
 extern class UITabBarController extends UIViewController
 implements cpp.objc.Protocol<UITabBarDelegate>
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

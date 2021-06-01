@@ -1,9 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UITabBarItemAppearance")
 @:include("UIKit/UIKit.h")
 extern class UITabBarItemAppearance extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

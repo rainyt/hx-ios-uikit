@@ -1,10 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGSize;
 @:objc
 @:native("NSShadow")
 @:include("UIKit/UIKit.h")
 extern class NSShadow extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

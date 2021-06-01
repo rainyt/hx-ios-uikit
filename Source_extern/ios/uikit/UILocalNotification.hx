@@ -1,9 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
+import ios.objc.NSCoding;
 @:objc
 @:native("UILocalNotification")
 @:include("UIKit/UIKit.h")
 extern class UILocalNotification extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

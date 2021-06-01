@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")
 extern class UIDocumentBrowserViewController extends UIViewController
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

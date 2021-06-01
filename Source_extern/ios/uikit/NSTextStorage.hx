@@ -5,6 +5,7 @@ import cpp.objc.NSDictionary;
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")
 extern class NSTextStorage extends NSMutableAttributedString
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

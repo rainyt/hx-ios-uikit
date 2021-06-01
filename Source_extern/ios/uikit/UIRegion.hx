@@ -1,11 +1,15 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
+import ios.objc.NSCoding;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIRegion")
 @:include("UIKit/UIKit.h")
 extern class UIRegion extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

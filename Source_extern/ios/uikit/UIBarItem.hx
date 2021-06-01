@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("UIBarItem")
 @:include("UIKit/UIKit.h")
 extern class UIBarItem extends NSObject
+implements cpp.objc.Protocol<NSCoding>
 implements cpp.objc.Protocol<UIAppearance>
 {
 

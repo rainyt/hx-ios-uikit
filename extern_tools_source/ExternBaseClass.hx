@@ -96,7 +96,7 @@ class ExternBaseClass {
 			className = null;
 			return;
 		}
-		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""),null);
+		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""), null);
 		if (defcall != null)
 			defcall(this);
 		funcAndAttr.push({
@@ -132,8 +132,6 @@ class ExternBaseClass {
 
 	public function putClass(t:ExternBaseClass, unFindParentFunc:Bool = false):Void {
 		for (index => value in t.funcAndAttr) {
-			if (this.className == "UITextField")
-				trace(value.name);
 			if (!hasFuncOrAttr(value, unFindParentFunc)) {
 				funcAndAttr.push(value);
 			}
@@ -219,6 +217,13 @@ class ExternBaseClass {
 						haxe += "import " + c3 + ";\n";
 				}
 			}
+			if (this.protocols != null) {
+				for (index => value in protocols) {
+					var c4 = _importType(value);
+					if (c4 != null)
+						haxe += "import " + c4 + ";\n";
+				}
+			}
 		}
 
 		haxe += "@:objc\n";
@@ -237,6 +242,7 @@ class ExternBaseClass {
 					// implements cpp.objc.Protocol<UITextInput>
 					haxe += "implements cpp.objc.Protocol<" + t.className + ">\n";
 				} else {
+					haxe += "implements cpp.objc.Protocol<" + value + ">\n";
 					// trace("协议类型不存在：" + value);
 				}
 			}

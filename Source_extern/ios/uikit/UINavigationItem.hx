@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import cpp.objc.NSString;
 @:objc
 @:native("UINavigationItem")
 @:include("UIKit/UIKit.h")
 extern class UINavigationItem extends NSObject
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

@@ -1,11 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGVector;
 import ios.objc.CATransform3D;
 @:objc
 @:native("UIFocusMovementHint:")
 @:include("UIKit/UIKit.h")
 extern class UIFocusMovementHint: extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

@@ -1,11 +1,13 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIPreviewTarget")
 @:include("UIKit/UIKit.h")
 extern class UIPreviewTarget extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

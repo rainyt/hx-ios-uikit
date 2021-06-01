@@ -10,6 +10,7 @@ import ios.objc.CGSize;
 @:include("UIKit/UIKit.h")
 extern class UITextView extends UIScrollView
 implements cpp.objc.Protocol<UITextInput>
+implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
 
 	@:native("alloc")

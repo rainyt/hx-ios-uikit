@@ -1,9 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 @:objc
 @:native("UITraitCollection")
 @:include("UIKit/UIKit.h")
 extern class UITraitCollection extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")

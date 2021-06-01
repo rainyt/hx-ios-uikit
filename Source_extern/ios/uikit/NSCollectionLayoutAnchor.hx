@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGPoint;
 @:objc
 @:native("NSCollectionLayoutAnchor")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutAnchor extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

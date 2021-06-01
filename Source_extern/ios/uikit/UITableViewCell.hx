@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
@@ -8,6 +9,7 @@ import ios.objc.CGSize;
 @:native("UITableViewCell")
 @:include("UIKit/UIKit.h")
 extern class UITableViewCell extends UIView
+implements cpp.objc.Protocol<NSCoding>
 implements cpp.objc.Protocol<UIGestureRecognizerDelegate>
 {
 

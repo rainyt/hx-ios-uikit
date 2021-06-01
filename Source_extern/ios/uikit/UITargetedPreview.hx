@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGSize;
 @:objc
 @:native("UITargetedPreview")
 @:include("UIKit/UIKit.h")
 extern class UITargetedPreview extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

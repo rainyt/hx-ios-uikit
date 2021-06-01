@@ -4,6 +4,7 @@ package ios.uikit;
 @:native("UISpringLoadedInteraction")
 @:include("UIKit/UIKit.h")
 extern class UISpringLoadedInteraction extends NSObject
+implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")

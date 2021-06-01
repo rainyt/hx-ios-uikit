@@ -4,6 +4,7 @@ package ios.uikit;
 @:native("UILargeContentViewerInteraction")
 @:include("UIKit/UIKit.h")
 extern class UILargeContentViewerInteraction extends NSObject
+implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")

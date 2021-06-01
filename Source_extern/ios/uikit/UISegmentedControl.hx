@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import ios.objc.CGRect;
 import cpp.objc.NSString;
 import ios.objc.CGSize;
@@ -9,6 +10,7 @@ import ios.objc.CGPoint;
 @:native("UISegmentedControl")
 @:include("UIKit/UIKit.h")
 extern class UISegmentedControl extends UIControl
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

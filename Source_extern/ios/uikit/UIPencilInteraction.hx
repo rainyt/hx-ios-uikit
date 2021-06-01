@@ -4,6 +4,7 @@ package ios.uikit;
 @:native("UIPencilInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIPencilInteraction extends NSObject
+implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")

@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import ios.objc.CGRect;
 @:objc
 @:native("UIGraphicsRendererFormat")
 @:include("UIKit/UIKit.h")
 extern class UIGraphicsRendererFormat extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")

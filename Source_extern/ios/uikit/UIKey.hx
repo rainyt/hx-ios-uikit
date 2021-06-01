@@ -1,10 +1,14 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
+import ios.objc.NSCoding;
 import cpp.objc.NSString;
 @:objc
 @:native("UIKey")
 @:include("UIKit/UIKit.h")
 extern class UIKey extends NSObject
+implements cpp.objc.Protocol<NSCopying>
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

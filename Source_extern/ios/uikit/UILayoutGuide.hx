@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import ios.objc.CGRect;
 @:objc
 @:native("UILayoutGuide")
 @:include("UIKit/UIKit.h")
 extern class UILayoutGuide extends NSObject
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

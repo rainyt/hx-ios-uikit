@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import ios.objc.CGRect;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
@@ -10,6 +11,8 @@ import ios.objc.CGSize;
 @:include("UIKit/UIKit.h")
 extern class UITextField extends UIControl
 implements cpp.objc.Protocol<UITextInput>
+implements cpp.objc.Protocol<NSCoding>
+implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
 
 	@:native("alloc")

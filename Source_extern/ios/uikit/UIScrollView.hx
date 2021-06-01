@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
@@ -7,6 +8,8 @@ import ios.objc.CGRect;
 @:native("UIScrollView")
 @:include("UIKit/UIKit.h")
 extern class UIScrollView extends UIView
+implements cpp.objc.Protocol<NSCoding>
+// implements cpp.objc.Protocol<UIFocusItemScrollableContainer>
 {
 
 	@:native("alloc")

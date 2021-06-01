@@ -1,9 +1,11 @@
 package ios.uikit;
 
+import ios.objc.NSCoding;
 @:objc
 @:native("UIBarButtonItemGroup")
 @:include("UIKit/UIKit.h")
 extern class UIBarButtonItemGroup extends NSObject
+implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")

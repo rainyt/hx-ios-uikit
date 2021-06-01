@@ -1,10 +1,12 @@
 package ios.uikit;
 
+import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
 @:native("NSDiffableDataSourceSectionSnapshot")
 @:include("UIKit/UIKit.h")
 extern class NSDiffableDataSourceSectionSnapshot extends NSObject
+implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
