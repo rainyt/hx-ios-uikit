@@ -33,17 +33,43 @@ Please don't worry, I did not complete the specific target milestone. When the l
 After completing the first milestone, you can write normally and simply.
 ```haxe
 // Haxe编写IOS原生UI的例子：
-// 创建一个Title和消息
-var alter = UIAlertController.alertControllerWithTitle_message_preferredStyle(NSString.castFromString("title"), NSString.castFromString("msg"),
-    UIAlertControllerStyle.UIAlertControllerStyleAlert);
-var action = UIAlertAction.actionWithTitle_style_handler(NSString.castFromString("ok"), UIAlertActionStyle.UIAlertActionStyleDefault,
-    ObjcHandler.UIAlertActionCall(function(data:UIAlertAction) {
-        var title = data.title;
-        trace("Click event!", title.toString());
-    }));
-alter.addAction(action);
 // 获得容器
 var application:UIViewController = UIApplication.sharedApplication().keyWindow.rootViewController;
+
+// Haxe编写IOS原生UI的例子：
+// 创建一个Title和消息
+var alert = UIAlertController.alertControllerWithTitleMessagePreferredStyle("Title", "Message", UIAlertControllerStyle.UIAlertControllerStyleAlert);
+var action = UIAlertAction.actionWithTitleStyleHandler("Ok", UIAlertActionStyle.UIAlertActionStyleDefault,
+    UIAlertActionCall(function(data:UIAlertAction) {
+        var title = data.title;
+        trace("点击事件！", title.toString());
+        // 文本测试
+        var label:UILabel = UILabel.alloc().initWithFrame(CGRectMake(100, 100, 200, 40));
+        label.text = "23";
+        label.textColor = UIColor.colorWithRedGreenBlueAlpha(1, 1, 0, 1);
+        application.view.addSubview(label);
+    }));
+alert.addAction(action);
+
+// WebView测试
+var webview:WKWebView = WKWebView.alloc()
+    .initWithFrame(CGRectMake(0, 0, UIScreen.mainScreen().bounds.size.width, UIScreen.mainScreen().bounds.size.height));
+webview.loadRequest(NSURLRequest.requestWithURL(NSURL.URLWithString("http://www.baidu.com")));
+application.view.addSubview(webview);
+
+var input = UITextField.alloc().initWithFrame(CGRectMake(0, 0, 200, 40));
+input.backgroundColor = UIColor.colorWithRedGreenBlueAlpha(1, 1, 0, 1);
+application.view.addSubview(input);
+
 // 把Alert添加到容器
-application.presentViewController_animated_completion(alter, true, untyped nil);
+application.presentViewControllerAnimatedCompletion(alert, true, untyped nil);
+
+var url = NSURL.URLWithString("http://www.baidu.com");
+var request = NSURLRequest.requestWithURL(url);
+var session = NSURLSession.sharedSession();
+var task = session.dataTaskWithRequestCompletionHandler(request,
+    NSData_NSURLResponse_NSError(function(data:NSData, response:NSURLResponse, err:NSError) {
+        trace("GetData", data.toBytes().toString());
+    }));
+task.resume();
 ```
