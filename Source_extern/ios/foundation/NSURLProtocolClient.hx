@@ -1,5 +1,6 @@
 package ios.foundation;
 
+import ios.foundation.NSURLProtocolClient;
 import ios.foundation.NSURLProtocol;
 import ios.foundation.NSURLRequest;
 import ios.foundation.NSURLResponse;

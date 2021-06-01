@@ -137,6 +137,7 @@ class ExternBaseClass {
 				// 对象方法
 				var func = ObjcFun.parsing(hextern.typedefs, this.className, value);
 				if (func != null && !_propertys.exists(func.name)) {
+					trace("写入：", func.name);
 					_propertys.set(func.name, func);
 					funcAndAttr.push(func);
 				}
@@ -262,8 +263,9 @@ class ExternBaseClass {
 		}
 		haxe += "{\n\n";
 		for (index => value in funcAndAttr) {
-			if (value.type == ExternBaseClassType.PROPERTY && hasFuncExtendsOrAttr(value))
+			if (value.type == ExternBaseClassType.PROPERTY && hasFuncExtendsOrAttr(value)) {
 				continue;
+			}
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					haxe += "\t@:native(\"" + value.name + "\")\n";

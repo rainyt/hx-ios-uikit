@@ -70,8 +70,8 @@ extern class NSProcessInfo{
 	@:native("enableAutomaticTermination")
 	overload public function enableAutomaticTermination(reason:NSString):Void;
 
-	@:native("macos(10.7)")
-	public var macos(10.7):null;
+	@:native("automaticTerminationSupportEnabled")
+	public var automaticTerminationSupportEnabled:Bool;
 
 	@:native("beginActivityWithOptions:reason")
 	overload public function beginActivityWithOptionsReason(options:NSActivityOptions, reason:NSString):Dynamic;

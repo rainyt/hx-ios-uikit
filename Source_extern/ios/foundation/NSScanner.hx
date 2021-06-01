@@ -17,8 +17,8 @@ extern class NSScanner{
 	@:native("string")
 	public var string:NSString;
 
-	@:native("null")
-	public var null:null;
+	@:native("scanLocation")
+	public var scanLocation:Int;
 
 	@:native("charactersToBeSkipped")
 	public var charactersToBeSkipped:NSCharacterSet;

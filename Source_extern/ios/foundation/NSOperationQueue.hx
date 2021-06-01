@@ -5,6 +5,7 @@ import ios.foundation.NSProgressReporting;
 import ios.foundation.NSProgress;
 import ios.foundation.NSOperation;
 import cpp.objc.NSString;
+import ios.foundation.NSQualityOfService;
 @:objc
 @:native("NSOperationQueue")
 @:include("Foundation/Foundation.h")
@@ -41,8 +42,8 @@ extern class NSOperationQueue
 	@:native("name")
 	public var name:NSString;
 
-	@:native("null")
-	public var null:null;
+	@:native("qualityOfService")
+	public var qualityOfService:NSQualityOfService;
 
 	@:native("underlyingQueue")
 	public var underlyingQueue:Dynamic;

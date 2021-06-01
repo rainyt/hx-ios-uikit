@@ -199,7 +199,8 @@ extern class NSURL:
 	overload public function stopAccessingSecurityScopedResource():Void;
 
 	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding():Bool;
+	overload public static function supportsSecureCoding(:null):Bool
+;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

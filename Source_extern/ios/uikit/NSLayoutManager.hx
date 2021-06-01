@@ -69,8 +69,11 @@ extern class NSLayoutManager
 	@:native("hasNonContiguousLayout")
 	public var hasNonContiguousLayout:Bool;
 
-	@:native("null")
-	public var null:null;
+	@:native("limitsLayoutForSuspiciousContents")
+	public var limitsLayoutForSuspiciousContents:Bool;
+
+	@:native("usesDefaultHyphenation")
+	public var usesDefaultHyphenation:Bool;
 
 	@:native("invalidateGlyphsForCharacterRange:changeInLength:actualCharacterRange")
 	overload public function invalidateGlyphsForCharacterRangeChangeInLengthActualCharacterRange(charRange:Dynamic, changeInLength:Int, actualCharacterRange:Dynamic):Void;
@@ -278,6 +281,9 @@ extern class NSLayoutManager
 
 	@:native("glyphAtIndex")
 	overload public function glyphAtIndex(glyphIndex:Int):Dynamic;
+
+	@:native("hyphenationFactor")
+	public var hyphenationFactor:Float;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

@@ -38,8 +38,11 @@ extern class NSURLSessionTask
 	@:native("earliestBeginDate")
 	public var earliestBeginDate:NSDate;
 
-	@:native("null")
-	public var null:null;
+	@:native("countOfBytesClientExpectsToSend")
+	public var countOfBytesClientExpectsToSend:Dynamic;
+
+	@:native("countOfBytesClientExpectsToReceive")
+	public var countOfBytesClientExpectsToReceive:Dynamic;
 
 	@:native("countOfBytesReceived")
 	public var countOfBytesReceived:Dynamic;
@@ -70,6 +73,9 @@ extern class NSURLSessionTask
 
 	@:native("resume")
 	overload public function resume():Void;
+
+	@:native("priority")
+	public var priority:Dynamic;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

@@ -1,5 +1,6 @@
 package ios.foundation;
 
+import ios.foundation.NSURLConnectionDownloadDelegate;
 import ios.foundation.NSURLConnection;
 import ios.foundation.NSURL;
 @:objc

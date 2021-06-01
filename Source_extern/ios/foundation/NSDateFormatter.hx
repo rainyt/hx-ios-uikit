@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSFormatter;
 import ios.foundation.NSDateFormatter;
+import ios.foundation.NSFormattingContext;
 import cpp.objc.NSString;
 import ios.foundation.NSDate;
 import ios.foundation.NSLocale;
@@ -20,8 +21,8 @@ extern class NSDateFormatter extends NSFormatter{
 	@:native("autorelease")
 	overload public static function autorelease():NSDateFormatter;
 
-	@:native("null")
-	public var null:null;
+	@:native("formattingContext")
+	public var formattingContext:NSFormattingContext;
 
 	@:native("getObjectValue:forString:range:error")
 	overload public function getObjectValueForStringRangeError(obj:Dynamic, forString:NSString, range:Dynamic, error:Dynamic):Bool;
@@ -139,6 +140,9 @@ extern class NSDateFormatter extends NSFormatter{
 
 	@:native("gregorianStartDate")
 	public var gregorianStartDate:NSDate;
+
+	@:native("doesRelativeDateFormatting")
+	public var doesRelativeDateFormatting:Bool;
 
 	@:native("stringForObjectValue")
 	overload public function stringForObjectValue(obj:Dynamic):NSString;

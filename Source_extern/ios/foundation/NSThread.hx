@@ -3,6 +3,7 @@ package ios.foundation;
 import ios.foundation.NSThread;
 import ios.foundation.NSMutableDictionary;
 import ios.foundation.NSDate;
+import ios.foundation.NSQualityOfService;
 import cpp.objc.NSString;
 @:objc
 @:native("NSThread")
@@ -45,8 +46,8 @@ extern class NSThread{
 	@:native("setThreadPriority")
 	overload public static function setThreadPriority(p:Dynamic):Bool;
 
-	@:native("null")
-	public var null:null;
+	@:native("qualityOfService")
+	public var qualityOfService:NSQualityOfService;
 
 	@:native("callStackReturnAddresses")
 	overload public static function callStackReturnAddresses():Dynamic;
@@ -56,6 +57,9 @@ extern class NSThread{
 
 	@:native("name")
 	public var name:NSString;
+
+	@:native("stackSize")
+	public var stackSize:Int;
 
 	@:native("isMainThread")
 	public var isMainThread:Bool;

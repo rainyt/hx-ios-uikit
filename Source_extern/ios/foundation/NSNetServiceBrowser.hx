@@ -20,8 +20,8 @@ extern class NSNetServiceBrowser{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("null")
-	public var null:null;
+	@:native("includesPeerToPeer")
+	public var includesPeerToPeer:Bool;
 
 	@:native("scheduleInRunLoop:forMode")
 	overload public function scheduleInRunLoopForMode(aRunLoop:NSRunLoop, forMode:Dynamic):Void;

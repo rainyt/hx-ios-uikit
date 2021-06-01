@@ -6,6 +6,7 @@ import cpp.objc.NSString;
 import ios.foundation.NSByteCountFormatterCountStyle;
 import ios.foundation.NSMeasurement;
 import ios.foundation.NSByteCountFormatterUnits;
+import ios.foundation.NSFormattingContext;
 import ios.uikit.NSAttributedString;
 import cpp.objc.NSDictionary;
 @:objc
@@ -58,8 +59,8 @@ extern class NSByteCountFormatter extends NSFormatter{
 	@:native("zeroPadsFractionDigits")
 	public var zeroPadsFractionDigits:Bool;
 
-	@:native("null")
-	public var null:null;
+	@:native("formattingContext")
+	public var formattingContext:NSFormattingContext;
 
 	@:native("attributedStringForObjectValue:withDefaultAttributes")
 	overload public function attributedStringForObjectValueWithDefaultAttributes(obj:Dynamic, withDefaultAttributes:NSDictionary):NSAttributedString;

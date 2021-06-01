@@ -4,6 +4,7 @@ import ios.foundation.NSURLRequest;
 import ios.foundation.NSMutableURLRequest;
 import ios.foundation.NSURL;
 import ios.foundation.NSURLRequestCachePolicy;
+import ios.foundation.NSURLRequestNetworkServiceType;
 import cpp.objc.NSString;
 @:objc
 @:native("NSMutableURLRequest")
@@ -15,9 +16,6 @@ extern class NSMutableURLRequest extends NSURLRequest{
 
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableURLRequest;
-
-	@:native("null")
-	public var null:null;
 
 	@:native("setValue:forHTTPHeaderField")
 	overload public function setValueForHTTPHeaderField(value:NSString, forHTTPHeaderField:NSString):Void;

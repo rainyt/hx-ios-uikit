@@ -2,8 +2,7 @@ import ExternBaseClass.ExternBaseClassType;
 
 class ObjcProperty {
 	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClassFunProperty {
-		// trace("line = ",line);
-		if (line.indexOf("(") != -1) {
+		if (line.indexOf(" (") != -1) {
 			line = line.substr(line.indexOf("("));
 		} else {
 			line = StringTools.replace(line, "@property", "");
@@ -16,7 +15,7 @@ class ObjcProperty {
 		var property = line.substr(0, line.indexOf(")"));
 		// 包含了class则为单例模式
 		var isClass = property.indexOf("class") != -1;
-		var isCopy = property.indexOf("copy") != -1;
+		// var isCopy = property.indexOf("copy") != -1;
 		// 如果是copy，则直接重写 这是否合理？？
 		// if (isCopy)
 		// return null;
@@ -79,6 +78,7 @@ class ObjcProperty {
 		p = p.filter((f) -> f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("...") == -1 && f.indexOf("API_") == -1
 			&& f.indexOf("ios(") == -1 && f != "UI_APPEARANCE_SELECTOR");
 		var pname = p[p.length - 1];
+		// trace(p);
 		// 还没有找到处理CGImage、CGColor的方法
 		if (pname == "CGColor" || pname == "CGImage")
 			return null;

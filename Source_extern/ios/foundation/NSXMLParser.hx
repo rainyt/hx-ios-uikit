@@ -4,6 +4,7 @@ import ios.foundation.NSXMLParser;
 import ios.foundation.NSURL;
 import cpp.objc.NSData;
 import ios.foundation.NSInputStream;
+import ios.foundation.NSXMLParserExternalEntityResolvingPolicy;
 import cpp.objc.NSError;
 import cpp.objc.NSString;
 @:objc
@@ -35,8 +36,8 @@ extern class NSXMLParser{
 	@:native("shouldReportNamespacePrefixes")
 	public var shouldReportNamespacePrefixes:Bool;
 
-	@:native("null")
-	public var null:null;
+	@:native("externalEntityResolvingPolicy")
+	public var externalEntityResolvingPolicy:NSXMLParserExternalEntityResolvingPolicy;
 
 	@:native("allowedExternalEntityURLs")
 	public var allowedExternalEntityURLs:Dynamic;

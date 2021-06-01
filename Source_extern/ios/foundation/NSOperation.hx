@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSOperation;
+import ios.foundation.NSQualityOfService;
 import cpp.objc.NSString;
 @:objc
 @:native("NSOperation")
@@ -58,8 +59,11 @@ extern class NSOperation{
 	@:native("waitUntilFinished")
 	overload public function waitUntilFinished():Void;
 
-	@:native("null")
-	public var null:null;
+	@:native("threadPriority")
+	public var threadPriority:Dynamic;
+
+	@:native("qualityOfService")
+	public var qualityOfService:NSQualityOfService;
 
 	@:native("name")
 	public var name:NSString;

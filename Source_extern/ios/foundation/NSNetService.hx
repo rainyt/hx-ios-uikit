@@ -32,8 +32,8 @@ extern class NSNetService{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
-	@:native("null")
-	public var null:null;
+	@:native("includesPeerToPeer")
+	public var includesPeerToPeer:Bool;
 
 	@:native("name")
 	public var name:NSString;

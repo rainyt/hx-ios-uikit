@@ -24,7 +24,8 @@ extern class NSFileSecurity
 ;
 
 	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding():Bool;
+	overload public static function supportsSecureCoding(:null):Bool
+;
 
 
 }

@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSFormatter;
 import ios.foundation.NSNumberFormatter;
+import ios.foundation.NSFormattingContext;
 import cpp.objc.NSString;
 import ios.foundation.NSNumber;
 import ios.foundation.NSNumberFormatterBehavior;
@@ -20,8 +21,8 @@ extern class NSNumberFormatter extends NSFormatter{
 	@:native("autorelease")
 	overload public static function autorelease():NSNumberFormatter;
 
-	@:native("null")
-	public var null:null;
+	@:native("formattingContext")
+	public var formattingContext:NSFormattingContext;
 
 	@:native("getObjectValue:forString:range:error")
 	overload public function getObjectValueForStringRangeError(obj:Dynamic, forString:NSString, range:Dynamic, error:Dynamic):Bool;
@@ -196,6 +197,15 @@ extern class NSNumberFormatter extends NSFormatter{
 
 	@:native("lenient")
 	public var lenient:Bool;
+
+	@:native("usesSignificantDigits")
+	public var usesSignificantDigits:Bool;
+
+	@:native("minimumSignificantDigits")
+	public var minimumSignificantDigits:Int;
+
+	@:native("maximumSignificantDigits")
+	public var maximumSignificantDigits:Int;
 
 	@:native("partialStringValidationEnabled")
 	public var partialStringValidationEnabled:Bool;

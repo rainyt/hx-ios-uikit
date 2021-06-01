@@ -7,6 +7,8 @@ class ObjcFun {
 			// 意味着该API已经被弃用
 			return null;
 		}
+		trace("----------------------");
+		trace("line = ",line);
 		line = line.substr(0, line.lastIndexOf(";") + 1);
 		var isStatic = line.indexOf("+") == 0;
 		var returnClass = line.substr(0, line.indexOf(")"));
@@ -19,6 +21,7 @@ class ObjcFun {
 				break;
 			}
 		}
+		trace("funcname=",funcName);
 		var args:Array<ExternBaseClassFunPropertyArgs> = null;
 		for (i in 0...funcName.length) {
 			var end = funcName.charAt(i);
@@ -37,6 +40,7 @@ class ObjcFun {
 		var c = returnClass.indexOf("instancetype") != -1 ? className : returnClass;
 		c = ObjcType.toType(c, typedefs);
 		var fname = parsingFuncName(funcName, args);
+		trace("最终方法：",isStatic,fname);
 		return fname == "new" || fname == "" ? null : {
 			name: fname,
 			type: ExternBaseClassType.FUNC,

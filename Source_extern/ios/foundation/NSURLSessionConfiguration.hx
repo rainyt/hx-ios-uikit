@@ -10,6 +10,7 @@ import ios.foundation.NSHTTPCookieAcceptPolicy;
 import ios.foundation.NSHTTPCookieStorage;
 import ios.foundation.NSURLCredentialStorage;
 import ios.foundation.NSURLCache;
+import ios.foundation.NSURLSessionMultipathServiceType;
 @:objc
 @:native("NSURLSessionConfiguration")
 @:include("Foundation/Foundation.h")
@@ -49,8 +50,14 @@ extern class NSURLSessionConfiguration
 	@:native("allowsCellularAccess")
 	public var allowsCellularAccess:Bool;
 
-	@:native("null")
-	public var null:null;
+	@:native("allowsExpensiveNetworkAccess")
+	public var allowsExpensiveNetworkAccess:Bool;
+
+	@:native("allowsConstrainedNetworkAccess")
+	public var allowsConstrainedNetworkAccess:Bool;
+
+	@:native("waitsForConnectivity")
+	public var waitsForConnectivity:Bool;
 
 	@:native("discretionary")
 	public var discretionary:Bool;
@@ -58,8 +65,23 @@ extern class NSURLSessionConfiguration
 	@:native("sharedContainerIdentifier")
 	public var sharedContainerIdentifier:NSString;
 
+	@:native("sessionSendsLaunchEvents")
+	public var sessionSendsLaunchEvents:Bool;
+
 	@:native("connectionProxyDictionary")
 	public var connectionProxyDictionary:NSDictionary;
+
+	@:native("TLSMinimumSupportedProtocol")
+	public var TLSMinimumSupportedProtocol:Dynamic;
+
+	@:native("TLSMaximumSupportedProtocol")
+	public var TLSMaximumSupportedProtocol:Dynamic;
+
+	@:native("TLSMinimumSupportedProtocolVersion")
+	public var TLSMinimumSupportedProtocolVersion:Dynamic;
+
+	@:native("TLSMaximumSupportedProtocolVersion")
+	public var TLSMaximumSupportedProtocolVersion:Dynamic;
 
 	@:native("HTTPShouldUsePipelining")
 	public var HTTPShouldUsePipelining:Bool;
@@ -85,8 +107,14 @@ extern class NSURLSessionConfiguration
 	@:native("URLCache")
 	public var URLCache:NSURLCache;
 
+	@:native("shouldUseExtendedBackgroundIdleMode")
+	public var shouldUseExtendedBackgroundIdleMode:Bool;
+
 	@:native("protocolClasses")
 	public var protocolClasses:Dynamic;
+
+	@:native("multipathServiceType")
+	public var multipathServiceType:NSURLSessionMultipathServiceType;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

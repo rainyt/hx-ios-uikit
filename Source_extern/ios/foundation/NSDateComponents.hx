@@ -46,14 +46,26 @@ extern class NSDateComponents
 	@:native("second")
 	public var second:Int;
 
-	@:native("null")
-	public var null:null;
+	@:native("nanosecond")
+	public var nanosecond:Int;
 
 	@:native("weekday")
 	public var weekday:Int;
 
 	@:native("weekdayOrdinal")
 	public var weekdayOrdinal:Int;
+
+	@:native("quarter")
+	public var quarter:Int;
+
+	@:native("weekOfMonth")
+	public var weekOfMonth:Int;
+
+	@:native("weekOfYear")
+	public var weekOfYear:Int;
+
+	@:native("yearForWeekOfYear")
+	public var yearForWeekOfYear:Int;
 
 	@:native("leapMonth")
 	public var leapMonth:Bool;

@@ -1,5 +1,6 @@
 package ios.foundation;
 
+import ios.foundation.NSURLConnectionDataDelegate;
 import ios.foundation.NSURLRequest;
 import ios.foundation.NSURLConnection;
 import ios.foundation.NSURLResponse;

@@ -47,8 +47,8 @@ extern class NSTimer{
 	@:native("timeInterval")
 	public var timeInterval:Dynamic;
 
-	@:native("null")
-	public var null:null;
+	@:native("tolerance")
+	public var tolerance:Dynamic;
 
 	@:native("invalidate")
 	overload public function invalidate():Void;

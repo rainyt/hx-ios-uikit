@@ -1,5 +1,6 @@
 package ios.foundation;
 
+import ios.foundation.NSURLConnectionDelegate;
 import ios.foundation.NSURLConnection;
 import cpp.objc.NSError;
 import ios.foundation.NSURLAuthenticationChallenge;
