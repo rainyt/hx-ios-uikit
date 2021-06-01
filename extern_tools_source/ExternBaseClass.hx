@@ -80,23 +80,27 @@ class ExternBaseClass {
 			}
 		}
 
+		if (pclassName == "") {
+			className = null;
+			return;
+		}
+		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""), null, true);
+
 		if (extendClassName != null) {
 			if (extendClassName.indexOf("<") != -1) {
 				// 解析协议
 				var ps = extendClassName.substr(extendClassName.indexOf("<") + 1);
 				ps = ps.substr(0, ps.indexOf(">"));
 				protocols = ps.split(",");
+				for (index => value in protocols) {
+					protocols[index] = ObjcType.toType(value, null, true);
+				}
+				protocols = protocols.filter((f) -> f != this.className);
 				// trace("协议：", extendClassName, protocols);
 				// 拥有协议
 				extendClassName = extendClassName.substr(0, extendClassName.indexOf("<"));
 			}
 		}
-
-		if (pclassName == "") {
-			className = null;
-			return;
-		}
-		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""), null, true);
 		if (defcall != null)
 			defcall(this);
 		funcAndAttr.push({
@@ -149,7 +153,7 @@ class ExternBaseClass {
 				case ExternBaseClassType.FUNC:
 					if (!hasFuncOrAttr(value, true)) {
 						// if (this.className == "UITextField")
-							// trace(this.className, "追加方法：", t.className, value);
+						// trace(this.className, "追加方法：", t.className, value);
 						funcAndAttr.push(value);
 					}
 				case ExternBaseClassType.PROPERTY:

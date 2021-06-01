@@ -78,6 +78,7 @@ class ExternBaseClass:
         self._imported = []
         self.protocols = None
         self.isProtocol = False
+        _gthis = self
         harray = _hdata.split("\n")
         pclassName = (harray[0] if 0 < len(harray) else None)
         self.isProtocol = Std.isOfType(self,ExternProtocolClass)
@@ -118,6 +119,10 @@ class ExternBaseClass:
                 self.extendClassName = HxString.substr(_this,(pos + 1),None)
                 self.extendClassName = StringTools.replace(self.extendClassName," ","")
                 self.extendClassName = StringTools.replace(self.extendClassName,"{","")
+        if (pclassName == ""):
+            self.className = None
+            return
+        self.className = ObjcType.toType(StringTools.replace(pclassName," ",""),None,True)
         if (self.extendClassName is not None):
             _this = self.extendClassName
             startIndex = None
@@ -128,13 +133,21 @@ class ExternBaseClass:
                 startIndex = None
                 ps = HxString.substr(ps,0,(ps.find(">") if ((startIndex is None)) else HxString.indexOfImpl(ps,">",startIndex)))
                 self.protocols = ps.split(",")
+                _g_current = 0
+                _g_array = self.protocols
+                while (_g_current < len(_g_array)):
+                    _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+                    _g1_key = _g_current
+                    _g_current = (_g_current + 1)
+                    index = _g1_key
+                    value = _g1_value
+                    python_internal_ArrayImpl._set(self.protocols, index, ObjcType.toType(value,None,True))
+                def _hx_local_0(f):
+                    return (f != _gthis.className)
+                self.protocols = list(filter(_hx_local_0,self.protocols))
                 _this = self.extendClassName
                 startIndex = None
                 self.extendClassName = HxString.substr(self.extendClassName,0,(_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex)))
-        if (pclassName == ""):
-            self.className = None
-            return
-        self.className = ObjcType.toType(StringTools.replace(pclassName," ",""),None,True)
         if (defcall is not None):
             defcall(self)
         _this = self.funcAndAttr
