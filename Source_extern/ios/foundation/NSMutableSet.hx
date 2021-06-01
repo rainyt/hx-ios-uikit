@@ -3,8 +3,8 @@ package ios.foundation;
 import ios.foundation.NSSet;
 import ios.foundation.NSMutableSet;
 import ios.foundation.NSPredicate;
-import ios.uikit.NSCoder;
 import ios.foundation.NSEnumerator;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.foundation.NSEnumerationOptions;
 import cpp.objc.NSObject;
@@ -28,12 +28,6 @@ extern class NSMutableSet extends NSSet{
 
 	@:native("removeObject")
 	overload public function removeObject(object:Dynamic):Void;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):NSMutableSet;
-
-	@:native("init")
-	overload public function init():NSMutableSet;
 
 	@:native("initWithCapacity")
 	overload public function initWithCapacity(numItems:Int):NSMutableSet;
@@ -68,8 +62,14 @@ extern class NSMutableSet extends NSSet{
 	@:native("objectEnumerator")
 	overload public function objectEnumerator():NSEnumerator;
 
+	@:native("init")
+	overload public function init():NSSet;
+
 	@:native("initWithObjects:count")
 	overload public function initWithObjectsCount(objects:Dynamic, count:Int):NSMutableSet;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):NSMutableSet;
 
 	@:native("anyObject")
 	overload public function anyObject():Dynamic;

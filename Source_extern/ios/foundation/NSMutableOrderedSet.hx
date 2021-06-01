@@ -3,10 +3,10 @@ package ios.foundation;
 import ios.foundation.NSOrderedSet;
 import ios.foundation.NSMutableOrderedSet;
 import ios.foundation.NSPredicate;
-import ios.uikit.NSCoder;
 import ios.foundation.NSIndexSet;
 import ios.foundation.NSSortOptions;
 import ios.foundation.NSOrderedCollectionDifference;
+import ios.uikit.NSCoder;
 import ios.foundation.NSEnumerator;
 import ios.foundation.NSEnumerationOptions;
 import cpp.objc.NSString;
@@ -35,12 +35,6 @@ extern class NSMutableOrderedSet extends NSOrderedSet{
 
 	@:native("replaceObjectAtIndex:withObject")
 	overload public function replaceObjectAtIndexWithObject(idx:Int, withObject:Dynamic):Void;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):NSMutableOrderedSet;
-
-	@:native("init")
-	overload public function init():NSMutableOrderedSet;
 
 	@:native("initWithCapacity")
 	overload public function initWithCapacity(numItems:Int):NSMutableOrderedSet;
@@ -135,8 +129,14 @@ extern class NSMutableOrderedSet extends NSOrderedSet{
 	@:native("indexOfObject")
 	overload public function indexOfObject(object:Dynamic):Int;
 
+	@:native("init")
+	overload public function init():NSOrderedSet;
+
 	@:native("initWithObjects:count")
 	overload public function initWithObjectsCount(objects:Dynamic, count:Int):NSMutableOrderedSet;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):NSMutableOrderedSet;
 
 	@:native("getObjects:range")
 	overload public function getObjectsRange(objects:Dynamic, range:Dynamic):Void;

@@ -4,8 +4,8 @@ import ios.foundation.NSMutableSet;
 import ios.foundation.NSCountedSet;
 import ios.foundation.NSEnumerator;
 import ios.foundation.NSPredicate;
-import ios.uikit.NSCoder;
 import ios.foundation.NSSet;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.foundation.NSEnumerationOptions;
 import cpp.objc.NSObject;
@@ -46,12 +46,6 @@ extern class NSCountedSet extends NSMutableSet
 	@:native("filterUsingPredicate")
 	overload public function filterUsingPredicate(predicate:NSPredicate):Void;
 
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):NSCountedSet;
-
-	@:native("init")
-	overload public function init():NSMutableSet;
-
 	@:native("addObjectsFromArray")
 	overload public function addObjectsFromArray(array:Dynamic):Void;
 
@@ -79,8 +73,14 @@ extern class NSCountedSet extends NSMutableSet
 	@:native("member")
 	overload public function member(object:Dynamic):Dynamic;
 
+	@:native("init")
+	overload public function init():NSSet;
+
 	@:native("initWithObjects:count")
 	overload public function initWithObjectsCount(objects:Dynamic, count:Int):NSCountedSet;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):NSCountedSet;
 
 	@:native("anyObject")
 	overload public function anyObject():Dynamic;

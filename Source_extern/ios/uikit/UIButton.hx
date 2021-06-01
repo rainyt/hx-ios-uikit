@@ -2,11 +2,9 @@ package ios.uikit;
 
 import ios.uikit.UIControl;
 import ios.uikit.UIButton;
-import ios.objc.CGRect;
-import ios.uikit.NSCoder;
-import ios.uikit.UIAction;
 import ios.uikit.UIButtonType;
 import ios.uikit.UIImage;
+import ios.uikit.UIAction;
 import ios.uikit.UIColor;
 import ios.uikit.UIButtonRole;
 import ios.uikit.UIMenu;
@@ -16,9 +14,11 @@ import ios.uikit.UIImageSymbolConfiguration;
 import ios.uikit.NSAttributedString;
 import ios.uikit.UILabel;
 import ios.uikit.UIImageView;
+import ios.objc.CGRect;
 import ios.uikit.UIFont;
 import ios.uikit.NSLineBreakMode;
 import ios.objc.CGSize;
+import ios.uikit.NSCoder;
 import ios.uikit.UITouch;
 import ios.uikit.UIEvent;
 import ios.uikit.UIControlEvents;
@@ -53,15 +53,6 @@ extern class UIButton extends UIControl{
 
 	@:native("autorelease")
 	overload public static function autorelease():UIButton;
-
-	@:native("initWithFrame")
-	overload public function initWithFrame(frame:CGRect):UIButton;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):UIButton;
-
-	@:native("initWithFrame:primaryAction")
-	overload public function initWithFramePrimaryAction(frame:CGRect, primaryAction:UIAction):UIButton;
 
 	@:native("buttonWithType")
 	overload public static function buttonWithType(buttonType:UIButtonType):UIButton;
@@ -200,6 +191,15 @@ extern class UIButton extends UIControl{
 
 	@:native("titleShadowOffset")
 	public var titleShadowOffset:CGSize;
+
+	@:native("initWithFrame")
+	overload public function initWithFrame(frame:CGRect):UIButton;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):UIButton;
+
+	@:native("initWithFrame:primaryAction")
+	overload public function initWithFramePrimaryAction(frame:CGRect, primaryAction:UIAction):UIButton;
 
 	@:native("beginTrackingWithTouch:withEvent")
 	overload public function beginTrackingWithTouchWithEvent(touch:UITouch, withEvent:UIEvent):Bool;

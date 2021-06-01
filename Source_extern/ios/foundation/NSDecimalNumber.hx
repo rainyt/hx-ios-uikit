@@ -3,13 +3,13 @@ package ios.foundation;
 import ios.foundation.NSNumber;
 import ios.foundation.NSDecimalNumber;
 import cpp.objc.NSString;
-import ios.uikit.NSCoder;
 import ios.uikit.NSValue;
 import ios.objc.CGPoint;
 import ios.objc.CGVector;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
+import ios.uikit.NSCoder;
 @:objc
 @:native("NSDecimalNumber")
 @:include("Foundation/Foundation.h")
@@ -107,9 +107,6 @@ extern class NSDecimalNumber extends NSNumber{
 
 	@:native("defaultBehavior")
 	overload public static function defaultBehavior():Dynamic;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):NSDecimalNumber;
 
 	@:native("initWithChar")
 	overload public function initWithChar(value:Dynamic):NSDecimalNumber;
@@ -233,6 +230,9 @@ extern class NSDecimalNumber extends NSNumber{
 
 	@:native("initWithBytes:objCType")
 	overload public function initWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSDecimalNumber;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):NSDecimalNumber;
 
 	@:native("valueWithBytes:objCType")
 	overload public static function valueWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSDecimalNumber;

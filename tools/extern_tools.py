@@ -194,6 +194,8 @@ class ExternBaseClass:
     def putClass(self,t,unFindParentFunc = None):
         if (unFindParentFunc is None):
             unFindParentFunc = False
+        if (((t.className == self.className) and ((t.extendClassName is not None))) and ((self.extendClassName is None))):
+            self.extendClassName = t.extendClassName
         _g_current = 0
         _g_array = t.funcAndAttr
         while (_g_current < len(_g_array)):
@@ -205,8 +207,6 @@ class ExternBaseClass:
             if (not self.hasFuncOrAttr(value,unFindParentFunc)):
                 _this = self.funcAndAttr
                 _this.append(value)
-        if (((t.className == self.className) and ((t.extendClassName is not None))) and ((self.extendClassName is None))):
-            self.extendClassName = t.extendClassName
 
     def putExternClass(self,t):
         _g_current = 0

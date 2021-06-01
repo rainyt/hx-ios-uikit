@@ -3,12 +3,12 @@ package ios.foundation;
 import ios.foundation.NSArray;
 import ios.foundation.NSMutableArray;
 import ios.foundation.NSPredicate;
-import ios.uikit.NSCoder;
 import ios.foundation.NSIndexSet;
 import ios.foundation.NSSortOptions;
 import cpp.objc.NSString;
 import ios.foundation.NSURL;
 import ios.foundation.NSOrderedCollectionDifference;
+import ios.uikit.NSCoder;
 import ios.foundation.NSEnumerator;
 import cpp.objc.NSData;
 import cpp.objc.NSError;
@@ -45,14 +45,8 @@ extern class NSMutableArray extends NSArray{
 	@:native("replaceObjectAtIndex:withObject")
 	overload public function replaceObjectAtIndexWithObject(index:Int, withObject:Dynamic):Void;
 
-	@:native("init")
-	overload public function init():NSMutableArray;
-
 	@:native("initWithCapacity")
 	overload public function initWithCapacity(numItems:Int):NSMutableArray;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):NSMutableArray;
 
 	@:native("addObjectsFromArray")
 	overload public function addObjectsFromArray(otherArray:Dynamic):Void;
@@ -141,8 +135,14 @@ extern class NSMutableArray extends NSArray{
 	@:native("objectAtIndex")
 	overload public function objectAtIndex(index:Int):Dynamic;
 
+	@:native("init")
+	overload public function init():NSArray;
+
 	@:native("initWithObjects:count")
 	overload public function initWithObjectsCount(objects:Dynamic, count:Int):NSMutableArray;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):NSMutableArray;
 
 	@:native("arrayByAddingObject")
 	overload public function arrayByAddingObject(anObject:Dynamic):Dynamic;

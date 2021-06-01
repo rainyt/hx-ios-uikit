@@ -2,13 +2,13 @@ package ios.foundation;
 
 import ios.uikit.NSValue;
 import ios.foundation.NSNumber;
-import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;
 import ios.objc.CGVector;
 import ios.objc.CGSize;
 import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
+import ios.uikit.NSCoder;
 @:objc
 @:native("NSNumber")
 @:include("Foundation/Foundation.h")
@@ -22,9 +22,6 @@ extern class NSNumber extends NSValue{
 
 	@:native("decimalValue")
 	public var decimalValue:Dynamic;
-
-	@:native("initWithCoder")
-	overload public function initWithCoder(coder:NSCoder):NSNumber;
 
 	@:native("initWithChar")
 	overload public function initWithChar(value:Dynamic):NSNumber;
@@ -202,6 +199,9 @@ extern class NSNumber extends NSValue{
 
 	@:native("initWithBytes:objCType")
 	overload public function initWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSNumber;
+
+	@:native("initWithCoder")
+	overload public function initWithCoder(coder:NSCoder):NSNumber;
 
 	@:native("valueWithBytes:objCType")
 	overload public static function valueWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSNumber;

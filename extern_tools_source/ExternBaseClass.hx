@@ -149,14 +149,14 @@ class ExternBaseClass {
 	}
 
 	public function putClass(t:ExternBaseClass, unFindParentFunc:Bool = false):Void {
+		// 继承关系
+		if (t.className == this.className && t.extendClassName != null && this.extendClassName == null) {
+			this.extendClassName = t.extendClassName;
+		}
 		for (index => value in t.funcAndAttr) {
 			if (!hasFuncOrAttr(value, unFindParentFunc)) {
 				funcAndAttr.push(value);
 			}
-		}
-		// 继承关系
-		if(t.className == this.className && t.extendClassName != null && this.extendClassName == null){
-			this.extendClassName = t.extendClassName;
 		}
 	}
 
