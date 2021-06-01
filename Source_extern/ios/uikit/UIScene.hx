@@ -6,6 +6,7 @@ import ios.uikit.UISceneSession;
 import ios.uikit.UISceneConnectionOptions;
 import ios.uikit.UISceneActivationState;
 import ios.uikit.UISceneOpenExternalURLOptions;
+import cpp.objc.NSString;
 import ios.uikit.UISceneActivationConditions;
 @:objc
 @:native("UIScene")
@@ -38,6 +39,9 @@ extern class UIScene{
 
 	@:native("openURL:options:completionHandler")
 	overload public function openURL_options_completionHandler(url:Dynamic, options:UISceneOpenExternalURLOptions, completionHandler:Dynamic):Void;
+
+	@:native("title")
+	public var title:NSString;
 
 	@:native("activationConditions")
 	public var activationConditions:UISceneActivationConditions;

@@ -4,26 +4,26 @@ import ios.uikit.UIScrollView;
 import ios.uikit.UITextView;
 import ios.uikit.UITextInput;
 import ios.uikit.UIContentSizeCategoryAdjusting;
+import cpp.objc.NSString;
 import ios.uikit.UIFont;
 import ios.uikit.UIColor;
 import ios.uikit.NSTextAlignment;
 import ios.uikit.UIDataDetectorTypes;
+import ios.uikit.NSAttributedString;
+import cpp.objc.NSDictionary;
 import ios.uikit.UIView;
 import ios.objc.CGRect;
 import ios.uikit.NSTextContainer;
 import ios.uikit.NSCoder;
 import ios.uikit.NSLayoutManager;
 import ios.uikit.NSTextStorage;
-import cpp.objc.NSString;
 import ios.uikit.UITextRange;
 import ios.uikit.UITextPosition;
 import ios.uikit.UITextLayoutDirection;
 import ios.uikit.NSWritingDirection;
 import ios.uikit.UITextStorageDirection;
 import ios.objc.CGPoint;
-import cpp.objc.NSDictionary;
 import ios.uikit.UITextAlternativeStyle;
-import ios.uikit.NSAttributedString;
 import ios.uikit.UITextPlaceholder;
 import ios.objc.CGSize;
 import ios.uikit.UIEvent;
@@ -51,6 +51,9 @@ extern class UITextView extends UIScrollView
 	@:native("autorelease")
 	overload public static function autorelease():UITextView;
 
+	@:native("text")
+	public var text:NSString;
+
 	@:native("font")
 	public var font:UIFont;
 
@@ -74,6 +77,12 @@ extern class UITextView extends UIScrollView
 
 	@:native("allowsEditingTextAttributes")
 	public var allowsEditingTextAttributes:Bool;
+
+	@:native("attributedText")
+	public var attributedText:NSAttributedString;
+
+	@:native("typingAttributes")
+	public var typingAttributes:NSDictionary;
 
 	@:native("scrollRangeToVisible")
 	overload public function scrollRangeToVisible(range:Dynamic):Void;
@@ -105,6 +114,9 @@ extern class UITextView extends UIScrollView
 	@:native("textStorage")
 	public var textStorage:NSTextStorage;
 
+	@:native("linkTextAttributes")
+	public var linkTextAttributes:NSDictionary;
+
 	@:native("usesStandardTextScaling")
 	public var usesStandardTextScaling:Bool;
 
@@ -114,8 +126,14 @@ extern class UITextView extends UIScrollView
 	@:native("replaceRange:withText")
 	overload public function replaceRange_withText(range:UITextRange, withText:NSString):Void;
 
+	@:native("selectedTextRange")
+	public var selectedTextRange:UITextRange;
+
 	@:native("markedTextRange")
 	public var markedTextRange:UITextRange;
+
+	@:native("markedTextStyle")
+	public var markedTextStyle:NSDictionary;
 
 	@:native("setMarkedText:selectedRange")
 	overload public function setMarkedText_selectedRange(markedText:NSString, selectedRange:Dynamic):Void;

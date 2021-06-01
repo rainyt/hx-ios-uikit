@@ -36,6 +36,9 @@ extern class UITargetedPreview
 	@:native("view")
 	public var view:UIView;
 
+	@:native("parameters")
+	public var parameters:UIPreviewParameters;
+
 	@:native("size")
 	public var size:CGSize;
 

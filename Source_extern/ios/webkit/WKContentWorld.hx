@@ -25,5 +25,8 @@ extern class WKContentWorld{
 	@:native("worldWithName")
 	overload public static function worldWithName(name:NSString):WKContentWorld;
 
+	@:native("name")
+	public var name:NSString;
+
 
 }

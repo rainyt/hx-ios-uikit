@@ -4,6 +4,7 @@ import ios.uikit.UIBarItem;
 import ios.objc.NSCoding;
 import ios.uikit.UIAppearance;
 import ios.uikit.NSCoder;
+import cpp.objc.NSString;
 import ios.uikit.UIImage;
 import cpp.objc.NSDictionary;
 import ios.uikit.UIControlState;
@@ -28,6 +29,9 @@ extern class UIBarItem
 
 	@:native("enabled")
 	public var enabled:Bool;
+
+	@:native("title")
+	public var title:NSString;
 
 	@:native("image")
 	public var image:UIImage;

@@ -1,8 +1,8 @@
 package ios.uikit;
 
 import ios.uikit.UIDocument;
-import ios.uikit.UIDocumentState;
 import cpp.objc.NSString;
+import ios.uikit.UIDocumentState;
 import ios.uikit.UIDocumentChangeKind;
 import ios.uikit.UIDocumentSaveOperation;
 import ios.uikit.NSUserActivity;
@@ -23,6 +23,15 @@ extern class UIDocument
 
 	@:native("fileURL")
 	public var fileURL:Dynamic;
+
+	@:native("localizedName")
+	public var localizedName:NSString;
+
+	@:native("fileType")
+	public var fileType:NSString;
+
+	@:native("fileModificationDate")
+	public var fileModificationDate:Dynamic;
 
 	@:native("documentState")
 	public var documentState:UIDocumentState;

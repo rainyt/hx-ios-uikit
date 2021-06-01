@@ -5,24 +5,24 @@ import ios.uikit.UITextField;
 import ios.uikit.UITextInput;
 import ios.objc.NSCoding;
 import ios.uikit.UIContentSizeCategoryAdjusting;
+import cpp.objc.NSString;
+import ios.uikit.NSAttributedString;
 import ios.uikit.UIColor;
 import ios.uikit.UIFont;
 import ios.uikit.NSTextAlignment;
 import ios.uikit.UITextBorderStyle;
+import cpp.objc.NSDictionary;
 import ios.uikit.UIImage;
 import ios.uikit.UITextFieldViewMode;
 import ios.uikit.UIView;
 import ios.objc.CGRect;
-import cpp.objc.NSString;
 import ios.uikit.UITextRange;
 import ios.uikit.UITextPosition;
 import ios.uikit.UITextLayoutDirection;
 import ios.uikit.NSWritingDirection;
 import ios.uikit.UITextStorageDirection;
 import ios.objc.CGPoint;
-import cpp.objc.NSDictionary;
 import ios.uikit.UITextAlternativeStyle;
-import ios.uikit.NSAttributedString;
 import ios.uikit.UITextPlaceholder;
 import ios.objc.CGSize;
 import ios.uikit.NSCoder;
@@ -57,6 +57,12 @@ extern class UITextField extends UIControl
 	@:native("autorelease")
 	overload public static function autorelease():UITextField;
 
+	@:native("text")
+	public var text:NSString;
+
+	@:native("attributedText")
+	public var attributedText:NSAttributedString;
+
 	@:native("textColor")
 	public var textColor:UIColor;
 
@@ -68,6 +74,15 @@ extern class UITextField extends UIControl
 
 	@:native("borderStyle")
 	public var borderStyle:UITextBorderStyle;
+
+	@:native("defaultTextAttributes")
+	public var defaultTextAttributes:NSDictionary;
+
+	@:native("placeholder")
+	public var placeholder:NSString;
+
+	@:native("attributedPlaceholder")
+	public var attributedPlaceholder:NSAttributedString;
 
 	@:native("clearsOnBeginEditing")
 	public var clearsOnBeginEditing:Bool;
@@ -92,6 +107,9 @@ extern class UITextField extends UIControl
 
 	@:native("allowsEditingTextAttributes")
 	public var allowsEditingTextAttributes:Bool;
+
+	@:native("typingAttributes")
+	public var typingAttributes:NSDictionary;
 
 	@:native("clearButtonMode")
 	public var clearButtonMode:UITextFieldViewMode;
@@ -150,8 +168,14 @@ extern class UITextField extends UIControl
 	@:native("replaceRange:withText")
 	overload public function replaceRange_withText(range:UITextRange, withText:NSString):Void;
 
+	@:native("selectedTextRange")
+	public var selectedTextRange:UITextRange;
+
 	@:native("markedTextRange")
 	public var markedTextRange:UITextRange;
+
+	@:native("markedTextStyle")
+	public var markedTextStyle:NSDictionary;
 
 	@:native("setMarkedText:selectedRange")
 	overload public function setMarkedText_selectedRange(markedText:NSString, selectedRange:Dynamic):Void;

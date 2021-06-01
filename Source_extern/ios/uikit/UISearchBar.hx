@@ -7,6 +7,7 @@ import ios.uikit.UITextInputTraits;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
 import ios.uikit.UIBarStyle;
+import cpp.objc.NSString;
 import ios.uikit.UISearchTextField;
 import ios.uikit.UITextInputAssistantItem;
 import ios.uikit.UIColor;
@@ -26,6 +27,7 @@ import ios.uikit.UITextSmartInsertDeleteType;
 import ios.uikit.UIKeyboardType;
 import ios.uikit.UIKeyboardAppearance;
 import ios.uikit.UIReturnKeyType;
+import ios.uikit.UITextInputPasswordRules;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.uikit.UISemanticContentAttribute;
@@ -68,6 +70,15 @@ extern class UISearchBar extends UIView
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	@:native("text")
+	public var text:NSString;
+
+	@:native("prompt")
+	public var prompt:NSString;
+
+	@:native("placeholder")
+	public var placeholder:NSString;
+
 	@:native("showsBookmarkButton")
 	public var showsBookmarkButton:Bool;
 
@@ -97,6 +108,9 @@ extern class UISearchBar extends UIView
 
 	@:native("translucent")
 	public var translucent:Bool;
+
+	@:native("scopeButtonTitles")
+	public var scopeButtonTitles:Dynamic;
 
 	@:native("selectedScopeButtonIndex")
 	public var selectedScopeButtonIndex:Int;
@@ -187,6 +201,12 @@ extern class UISearchBar extends UIView
 
 	@:native("secureTextEntry")
 	public var secureTextEntry:Bool;
+
+	@:native("textContentType")
+	public var textContentType:NSString;
+
+	@:native("passwordRules")
+	public var passwordRules:UITextInputPasswordRules;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

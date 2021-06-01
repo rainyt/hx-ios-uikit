@@ -2,6 +2,8 @@ package ios.uikit;
 
 import ios.uikit.UIBarAppearance;
 import ios.uikit.UITabBarAppearance;
+import ios.uikit.UITabBarItemAppearance;
+import ios.uikit.UIColor;
 import ios.uikit.UIImage;
 import ios.uikit.UITabBarItemPositioning;
 import ios.uikit.UIUserInterfaceIdiom;
@@ -16,6 +18,18 @@ extern class UITabBarAppearance extends UIBarAppearance{
 
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarAppearance;
+
+	@:native("stackedLayoutAppearance")
+	public var stackedLayoutAppearance:UITabBarItemAppearance;
+
+	@:native("inlineLayoutAppearance")
+	public var inlineLayoutAppearance:UITabBarItemAppearance;
+
+	@:native("compactInlineLayoutAppearance")
+	public var compactInlineLayoutAppearance:UITabBarItemAppearance;
+
+	@:native("selectionIndicatorTintColor")
+	public var selectionIndicatorTintColor:UIColor;
 
 	@:native("selectionIndicatorImage")
 	public var selectionIndicatorImage:UIImage;

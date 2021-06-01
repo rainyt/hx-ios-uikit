@@ -10,6 +10,8 @@ import ios.uikit.UIColor;
 import ios.uikit.UIImage;
 import ios.uikit.UIBarPosition;
 import ios.uikit.UIBarMetrics;
+import cpp.objc.NSDictionary;
+import ios.uikit.UINavigationBarAppearance;
 import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
@@ -60,6 +62,9 @@ extern class UINavigationBar extends UIView
 	@:native("backItem")
 	public var backItem:UINavigationItem;
 
+	@:native("items")
+	public var items:Dynamic;
+
 	@:native("setItems:animated")
 	overload public function setItems_animated(items:Dynamic, animated:Bool):Void;
 
@@ -78,11 +83,23 @@ extern class UINavigationBar extends UIView
 	@:native("backgroundImageForBarMetrics")
 	overload public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics):UIImage;
 
+	@:native("largeTitleTextAttributes")
+	public var largeTitleTextAttributes:NSDictionary;
+
 	@:native("setTitleVerticalPositionAdjustment:forBarMetrics")
 	overload public function setTitleVerticalPositionAdjustment_forBarMetrics(adjustment:Float, forBarMetrics:UIBarMetrics):Void;
 
 	@:native("titleVerticalPositionAdjustmentForBarMetrics")
 	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Float;
+
+	@:native("standardAppearance")
+	public var standardAppearance:UINavigationBarAppearance;
+
+	@:native("compactAppearance")
+	public var compactAppearance:UINavigationBarAppearance;
+
+	@:native("scrollEdgeAppearance")
+	public var scrollEdgeAppearance:UINavigationBarAppearance;
 
 	@:native("encodeWithCoder")
 	overload public function encodeWithCoder(aCoder:Dynamic):Void

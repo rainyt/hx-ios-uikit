@@ -34,6 +34,15 @@ extern class UIActivityViewController extends UIViewController{
 	@:native("initWithActivityItems:applicationActivities")
 	overload public function initWithActivityItems_applicationActivities(activityItems:Dynamic, applicationActivities:Dynamic):UIActivityViewController;
 
+	@:native("completionHandler")
+	public var completionHandler:Dynamic;
+
+	@:native("completionWithItemsHandler")
+	public var completionWithItemsHandler:Dynamic;
+
+	@:native("excludedActivityTypes")
+	public var excludedActivityTypes:Dynamic;
+
 	@:native("initWithActivityItemsConfiguration")
 	overload public function initWithActivityItemsConfiguration(activityItemsConfiguration:Dynamic):UIActivityViewController;
 

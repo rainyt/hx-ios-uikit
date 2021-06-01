@@ -57,6 +57,9 @@ extern class UINavigationController extends UIViewController{
 	@:native("visibleViewController")
 	public var visibleViewController:UIViewController;
 
+	@:native("viewControllers")
+	public var viewControllers:Dynamic;
+
 	@:native("setViewControllers:animated")
 	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;
 

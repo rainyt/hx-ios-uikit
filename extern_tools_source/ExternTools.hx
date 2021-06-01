@@ -51,7 +51,7 @@ class ExternTools {
 	public static function parsingHFile(hfile:String, out:String):Void {
 		var pkg = hfile.substring(hfile.lastIndexOf("/framework/") + 11);
 		pkg = pkg.substr(0, pkg.indexOf("."));
-		var haxefile = hfile.substr(hfile.lastIndexOf("/") + 1) + "x";
+		// var haxefile = hfile.substr(hfile.lastIndexOf("/") + 1) + "x";
 		var classpkg = "ios." + pkg.toLowerCase();
 		var haxedir = out + "/ios/" + pkg.toLowerCase();
 		var hlibsfile = pkg + "/" + pkg + ".h";

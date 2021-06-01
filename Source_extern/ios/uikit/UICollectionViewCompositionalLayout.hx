@@ -33,5 +33,8 @@ extern class UICollectionViewCompositionalLayout{
 	@:native("init")
 	overload public function init():UICollectionViewCompositionalLayout;
 
+	@:native("configuration")
+	public var configuration:UICollectionViewCompositionalLayoutConfiguration;
+
 
 }

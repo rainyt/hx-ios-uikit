@@ -51,6 +51,12 @@ extern class UIImageView extends UIView{
 	@:native("highlighted")
 	public var highlighted:Bool;
 
+	@:native("animationImages")
+	public var animationImages:Dynamic;
+
+	@:native("highlightedAnimationImages")
+	public var highlightedAnimationImages:Dynamic;
+
 	@:native("animationDuration")
 	public var animationDuration:Dynamic;
 

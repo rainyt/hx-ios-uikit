@@ -2,6 +2,8 @@ package ios.uikit;
 
 import ios.uikit.UIBarAppearance;
 import ios.uikit.UINavigationBarAppearance;
+import cpp.objc.NSDictionary;
+import ios.uikit.UIBarButtonItemAppearance;
 import ios.uikit.UIImage;
 import ios.uikit.UIUserInterfaceIdiom;
 import ios.uikit.NSCoder;
@@ -16,8 +18,23 @@ extern class UINavigationBarAppearance extends UIBarAppearance{
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationBarAppearance;
 
+	@:native("titleTextAttributes")
+	public var titleTextAttributes:NSDictionary;
+
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:Dynamic;
+
+	@:native("largeTitleTextAttributes")
+	public var largeTitleTextAttributes:NSDictionary;
+
+	@:native("buttonAppearance")
+	public var buttonAppearance:UIBarButtonItemAppearance;
+
+	@:native("doneButtonAppearance")
+	public var doneButtonAppearance:UIBarButtonItemAppearance;
+
+	@:native("backButtonAppearance")
+	public var backButtonAppearance:UIBarButtonItemAppearance;
 
 	@:native("backIndicatorImage")
 	public var backIndicatorImage:UIImage;

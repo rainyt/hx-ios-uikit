@@ -15,6 +15,9 @@ extern class WKNavigationResponse{
 	@:native("forMainFrame")
 	public var forMainFrame:Bool;
 
+	@:native("response")
+	public var response:Dynamic;
+
 	@:native("canShowMIMEType")
 	public var canShowMIMEType:Bool;
 

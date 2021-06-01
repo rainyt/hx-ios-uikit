@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIView;
 import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
+import cpp.objc.NSString;
 import ios.uikit.UIImage;
 import ios.uikit.NSCoder;
 import ios.objc.CALayer;
@@ -16,8 +17,8 @@ import ios.uikit.UIViewAutoresizing;
 import ios.objc.CGSize;
 import ios.uikit.UIWindow;
 import ios.uikit.UILayoutGuide;
-import ios.uikit.UIViewContentMode;
 import ios.uikit.UIColor;
+import ios.uikit.UIViewContentMode;
 import ios.uikit.UIViewTintAdjustmentMode;
 import ios.uikit.UIViewAnimationOptions;
 import ios.uikit.UISystemAnimation;
@@ -53,6 +54,9 @@ extern class UIView{
 	@:native("showsLargeContentViewer")
 	public var showsLargeContentViewer:Bool;
 
+	@:native("largeContentTitle")
+	public var largeContentTitle:NSString;
+
 	@:native("largeContentImage")
 	public var largeContentImage:UIImage;
 
@@ -70,6 +74,9 @@ extern class UIView{
 
 	@:native("removeInteraction")
 	overload public function removeInteraction(interaction:Dynamic):Void;
+
+	@:native("interactions")
+	public var interactions:Dynamic;
 
 	@:native("layerClass")
 	overload public static function layerClass():Dynamic;
@@ -94,6 +101,9 @@ extern class UIView{
 
 	@:native("focused")
 	public var focused:Bool;
+
+	@:native("focusGroupIdentifier")
+	public var focusGroupIdentifier:NSString;
 
 	@:native("semanticContentAttribute")
 	public var semanticContentAttribute:UISemanticContentAttribute;
@@ -163,6 +173,9 @@ extern class UIView{
 
 	@:native("superview")
 	public var superview:UIView;
+
+	@:native("subviews")
+	public var subviews:Dynamic;
 
 	@:native("window")
 	public var window:UIWindow;
@@ -266,6 +279,9 @@ extern class UIView{
 	@:native("clipsToBounds")
 	public var clipsToBounds:Bool;
 
+	@:native("backgroundColor")
+	public var backgroundColor:UIColor;
+
 	@:native("alpha")
 	public var alpha:Float;
 
@@ -338,6 +354,9 @@ extern class UIView{
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
 	overload public static function addKeyframeWithRelativeStartTime_relativeDuration_animations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
+	@:native("gestureRecognizers")
+	public var gestureRecognizers:Dynamic;
+
 	@:native("addGestureRecognizer")
 	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
 
@@ -352,6 +371,9 @@ extern class UIView{
 
 	@:native("removeMotionEffect")
 	overload public function removeMotionEffect(effect:UIMotionEffect):Void;
+
+	@:native("motionEffects")
+	public var motionEffects:Dynamic;
 
 	@:native("constraints")
 	public var constraints:Dynamic;
@@ -425,6 +447,9 @@ extern class UIView{
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
 	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
+	@:native("layoutGuides")
+	public var layoutGuides:Dynamic;
+
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
@@ -475,6 +500,9 @@ extern class UIView{
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;
+
+	@:native("restorationIdentifier")
+	public var restorationIdentifier:NSString;
 
 	@:native("encodeRestorableStateWithCoder")
 	overload public function encodeRestorableStateWithCoder(coder:NSCoder):Void;

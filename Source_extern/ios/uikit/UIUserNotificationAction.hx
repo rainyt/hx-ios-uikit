@@ -4,6 +4,7 @@ import ios.uikit.UIUserNotificationAction;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
 import ios.uikit.NSCoder;
+import cpp.objc.NSString;
 import ios.uikit.UIUserNotificationActionBehavior;
 import ios.uikit.UIUserNotificationActivationMode;
 @:objc
@@ -24,8 +25,17 @@ extern class UIUserNotificationAction
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIUserNotificationAction;
 
+	@:native("identifier")
+	public var identifier:NSString;
+
+	@:native("title")
+	public var title:NSString;
+
 	@:native("behavior")
 	public var behavior:UIUserNotificationActionBehavior;
+
+	@:native("tvos")
+	public var tvos:Dynamic;
 
 	@:native("activationMode")
 	public var activationMode:UIUserNotificationActivationMode;

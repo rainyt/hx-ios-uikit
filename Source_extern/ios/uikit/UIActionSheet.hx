@@ -41,6 +41,9 @@ extern class UIActionSheet extends UIView{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	@:native("title")
+	public var title:NSString;
+
 	@:native("actionSheetStyle")
 	public var actionSheetStyle:UIActionSheetStyle;
 

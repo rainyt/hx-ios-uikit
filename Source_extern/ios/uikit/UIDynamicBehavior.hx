@@ -19,6 +19,12 @@ extern class UIDynamicBehavior{
 	@:native("removeChildBehavior")
 	overload public function removeChildBehavior(behavior:UIDynamicBehavior):Void;
 
+	@:native("childBehaviors")
+	public var childBehaviors:Dynamic;
+
+	@:native("void")
+	public var void:Dynamic;
+
 	@:native("willMoveToAnimator")
 	overload public function willMoveToAnimator(dynamicAnimator:UIDynamicAnimator):Void;
 

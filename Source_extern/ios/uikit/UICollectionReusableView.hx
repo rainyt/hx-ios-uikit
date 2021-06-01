@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIView;
 import ios.uikit.UICollectionReusableView;
+import cpp.objc.NSString;
 import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.uikit.UICollectionViewLayout;
 import ios.uikit.UIViewPrintFormatter;
@@ -31,6 +32,9 @@ extern class UICollectionReusableView extends UIView{
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionReusableView;
+
+	@:native("reuseIdentifier")
+	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;

@@ -7,12 +7,12 @@ import ios.uikit.UIImagePickerControllerSourceType;
 import ios.uikit.UIImagePickerControllerCameraDevice;
 import ios.uikit.UIImagePickerControllerImageURLExportPreset;
 import ios.uikit.UIImagePickerControllerQualityType;
+import cpp.objc.NSString;
 import ios.uikit.UIView;
 import ios.objc.CGAffineTransform;
 import ios.uikit.UIImagePickerControllerCameraCaptureMode;
 import ios.uikit.UIImagePickerControllerCameraFlashMode;
 import ios.uikit.UIViewController;
-import cpp.objc.NSString;
 import ios.uikit.NSBundle;
 import ios.uikit.NSCoder;
 import ios.uikit.UIStoryboardSegue;
@@ -51,6 +51,9 @@ extern class UIImagePickerController extends UINavigationController
 	@:native("sourceType")
 	public var sourceType:UIImagePickerControllerSourceType;
 
+	@:native("mediaTypes")
+	public var mediaTypes:Dynamic;
+
 	@:native("allowsEditing")
 	public var allowsEditing:Bool;
 
@@ -65,6 +68,9 @@ extern class UIImagePickerController extends UINavigationController
 
 	@:native("videoQuality")
 	public var videoQuality:UIImagePickerControllerQualityType;
+
+	@:native("videoExportPreset")
+	public var videoExportPreset:NSString;
 
 	@:native("showsCameraControls")
 	public var showsCameraControls:Bool;

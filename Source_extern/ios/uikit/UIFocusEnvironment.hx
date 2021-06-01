@@ -16,6 +16,9 @@ extern interface UIFocusEnvironment{
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusEnvironment;
 
+	@:native("preferredFocusEnvironments")
+	public var preferredFocusEnvironments:Dynamic;
+
 	@:native("parentFocusEnvironment")
 	public var parentFocusEnvironment:Dynamic;
 

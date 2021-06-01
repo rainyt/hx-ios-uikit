@@ -41,6 +41,9 @@ extern class UIStackView extends UIView{
 	@:native("initWithArrangedSubviews")
 	overload public function initWithArrangedSubviews(views:Dynamic):UIStackView;
 
+	@:native("arrangedSubviews")
+	public var arrangedSubviews:Dynamic;
+
 	@:native("addArrangedSubview")
 	overload public function addArrangedSubview(view:UIView):Void;
 

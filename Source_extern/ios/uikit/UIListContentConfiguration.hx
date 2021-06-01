@@ -5,6 +5,8 @@ import ios.uikit.UIContentConfiguration;
 import ios.objc.NSSecureCoding;
 import ios.uikit.UIImage;
 import ios.uikit.UIListContentImageProperties;
+import cpp.objc.NSString;
+import ios.uikit.NSAttributedString;
 import ios.uikit.UIListContentTextProperties;
 import ios.uikit.UIAxis;
 import ios.uikit.UIView;
@@ -65,8 +67,20 @@ extern class UIListContentConfiguration
 	@:native("imageProperties")
 	public var imageProperties:UIListContentImageProperties;
 
+	@:native("text")
+	public var text:NSString;
+
+	@:native("attributedText")
+	public var attributedText:NSAttributedString;
+
 	@:native("textProperties")
 	public var textProperties:UIListContentTextProperties;
+
+	@:native("secondaryText")
+	public var secondaryText:NSString;
+
+	@:native("secondaryAttributedText")
+	public var secondaryAttributedText:NSAttributedString;
 
 	@:native("secondaryTextProperties")
 	public var secondaryTextProperties:UIListContentTextProperties;

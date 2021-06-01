@@ -25,5 +25,8 @@ extern class UIDragItem{
 	@:native("localObject")
 	public var localObject:Dynamic;
 
+	@:native("void")
+	public var void:Dynamic;
+
 
 }

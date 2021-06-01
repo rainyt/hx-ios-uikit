@@ -28,6 +28,9 @@ extern class UICellAccessoryCustomView extends UICellAccessory{
 	@:native("maintainsFixedSize")
 	public var maintainsFixedSize:Bool;
 
+	@:native("position")
+	public var position:Dynamic;
+
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryCustomView;
 

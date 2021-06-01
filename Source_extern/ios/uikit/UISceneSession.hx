@@ -3,8 +3,10 @@ package ios.uikit;
 import ios.uikit.UISceneSession;
 import ios.objc.NSSecureCoding;
 import ios.uikit.UIScene;
+import ios.uikit.UISceneConfiguration;
 import cpp.objc.NSString;
 import ios.uikit.NSUserActivity;
+import cpp.objc.NSDictionary;
 @:objc
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")
@@ -26,11 +28,17 @@ extern class UISceneSession
 	@:native("role")
 	public var role:Dynamic;
 
+	@:native("configuration")
+	public var configuration:UISceneConfiguration;
+
 	@:native("persistentIdentifier")
 	public var persistentIdentifier:NSString;
 
 	@:native("stateRestorationActivity")
 	public var stateRestorationActivity:NSUserActivity;
+
+	@:native("userInfo")
+	public var userInfo:NSDictionary;
 
 
 }

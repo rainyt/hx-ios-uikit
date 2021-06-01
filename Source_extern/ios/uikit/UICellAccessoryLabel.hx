@@ -19,6 +19,9 @@ extern class UICellAccessoryLabel extends UICellAccessory{
 	@:native("initWithText")
 	overload public function initWithText(text:NSString):UICellAccessoryLabel;
 
+	@:native("text")
+	public var text:NSString;
+
 	@:native("font")
 	public var font:UIFont;
 

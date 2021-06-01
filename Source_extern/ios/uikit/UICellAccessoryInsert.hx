@@ -18,6 +18,9 @@ extern class UICellAccessoryInsert extends UICellAccessory{
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
 
+	@:native("void")
+	public var void:Dynamic;
+
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryInsert;
 

@@ -24,6 +24,15 @@ extern class UIAccessibilityCustomRotor{
 	@:native("initWithSystemType:itemSearchBlock")
 	overload public function initWithSystemType_itemSearchBlock(type:UIAccessibilityCustomSystemRotorType, itemSearchBlock:Dynamic):UIAccessibilityCustomRotor;
 
+	@:native("name")
+	public var name:NSString;
+
+	@:native("attributedName")
+	public var attributedName:NSAttributedString;
+
+	@:native("itemSearchBlock")
+	public var itemSearchBlock:Dynamic;
+
 	@:native("systemRotorType")
 	public var systemRotorType:UIAccessibilityCustomSystemRotorType;
 

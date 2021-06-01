@@ -19,6 +19,9 @@ extern class WKFrameInfo
 	@:native("mainFrame")
 	public var mainFrame:Bool;
 
+	@:native("request")
+	public var request:Dynamic;
+
 	@:native("securityOrigin")
 	public var securityOrigin:WKSecurityOrigin;
 

@@ -46,6 +46,12 @@ extern class UICollectionViewLayoutInvalidationContext{
 	@:native("contentSizeAdjustment")
 	public var contentSizeAdjustment:CGSize;
 
+	@:native("previousIndexPathsForInteractivelyMovingItems")
+	public var previousIndexPathsForInteractivelyMovingItems:Dynamic;
+
+	@:native("targetIndexPathsForInteractivelyMovingItems")
+	public var targetIndexPathsForInteractivelyMovingItems:Dynamic;
+
 	@:native("interactiveMovementTarget")
 	public var interactiveMovementTarget:CGPoint;
 

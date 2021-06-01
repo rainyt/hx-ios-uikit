@@ -22,6 +22,9 @@ extern class UIDynamicItemGroup
 	@:native("initWithItems")
 	overload public function initWithItems(items:Dynamic):UIDynamicItemGroup;
 
+	@:native("items")
+	public var items:Dynamic;
+
 	@:native("center")
 	public var center:CGPoint;
 

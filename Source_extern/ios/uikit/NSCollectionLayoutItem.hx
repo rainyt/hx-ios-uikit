@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.NSCollectionLayoutItem;
 import ios.objc.NSCopying;
 import ios.uikit.NSCollectionLayoutSize;
+import ios.uikit.NSCollectionLayoutEdgeSpacing;
 @:objc
 @:native("NSCollectionLayoutItem")
 @:include("UIKit/UIKit.h")
@@ -26,6 +27,9 @@ extern class NSCollectionLayoutItem
 
 	@:native("contentInsets")
 	public var contentInsets:Dynamic;
+
+	@:native("edgeSpacing")
+	public var edgeSpacing:NSCollectionLayoutEdgeSpacing;
 
 	@:native("layoutSize")
 	public var layoutSize:NSCollectionLayoutSize;

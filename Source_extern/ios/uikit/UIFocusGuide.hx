@@ -18,6 +18,9 @@ extern class UIFocusGuide extends UILayoutGuide{
 	@:native("enabled")
 	public var enabled:Bool;
 
+	@:native("preferredFocusEnvironments")
+	public var preferredFocusEnvironments:Dynamic;
+
 	@:native("preferredFocusedView")
 	public var preferredFocusedView:UIView;
 

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIUserNotificationCategory;
 import ios.uikit.UIMutableUserNotificationCategory;
+import cpp.objc.NSString;
 import ios.uikit.UIUserNotificationActionContext;
 import ios.uikit.NSCoder;
 @:objc

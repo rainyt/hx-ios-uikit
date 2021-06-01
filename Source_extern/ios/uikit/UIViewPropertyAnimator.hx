@@ -17,6 +17,9 @@ extern class UIViewPropertyAnimator
 	@:native("autorelease")
 	overload public static function autorelease():UIViewPropertyAnimator;
 
+	@:native("timingParameters")
+	public var timingParameters:Dynamic;
+
 	@:native("duration")
 	public var duration:Dynamic;
 

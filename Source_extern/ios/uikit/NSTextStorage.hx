@@ -18,6 +18,9 @@ extern class NSTextStorage extends NSMutableAttributedString
 	@:native("autorelease")
 	overload public static function autorelease():NSTextStorage;
 
+	@:native("layoutManagers")
+	public var layoutManagers:Dynamic;
+
 	@:native("addLayoutManager")
 	overload public function addLayoutManager(aLayoutManager:NSLayoutManager):Void;
 

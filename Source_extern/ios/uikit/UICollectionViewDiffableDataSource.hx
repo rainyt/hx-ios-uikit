@@ -5,7 +5,9 @@ import ios.uikit.UICollectionViewDataSource;
 import ios.uikit.UICollectionView;
 import ios.uikit.NSDiffableDataSourceSnapshot;
 import ios.uikit.NSIndexPath;
+import ios.uikit.UICollectionViewDiffableDataSourceReorderingHandlers;
 import ios.uikit.NSDiffableDataSourceSectionSnapshot;
+import ios.uikit.UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
 import ios.uikit.UICollectionViewCell;
 import ios.uikit.UICollectionReusableView;
 import cpp.objc.NSString;
@@ -27,6 +29,9 @@ extern class UICollectionViewDiffableDataSource
 	@:native("init")
 	overload public function init():UICollectionViewDiffableDataSource;
 
+	@:native("supplementaryViewProvider")
+	public var supplementaryViewProvider:Dynamic;
+
 	@:native("snapshot")
 	overload public function snapshot():NSDiffableDataSourceSnapshot;
 
@@ -42,6 +47,9 @@ extern class UICollectionViewDiffableDataSource
 	@:native("indexPathForItemIdentifier")
 	overload public function indexPathForItemIdentifier(identifier:Dynamic):NSIndexPath;
 
+	@:native("reorderingHandlers")
+	public var reorderingHandlers:UICollectionViewDiffableDataSourceReorderingHandlers;
+
 	@:native("applySnapshot:toSection:animatingDifferences")
 	overload public function applySnapshot_toSection_animatingDifferences(snapshot:NSDiffableDataSourceSectionSnapshot, toSection:Dynamic, animatingDifferences:Bool):Void;
 
@@ -50,6 +58,9 @@ extern class UICollectionViewDiffableDataSource
 
 	@:native("snapshotForSection")
 	overload public function snapshotForSection(section:Dynamic):NSDiffableDataSourceSectionSnapshot;
+
+	@:native("sectionSnapshotHandlers")
+	public var sectionSnapshotHandlers:UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
 
 	@:native("collectionView:numberOfItemsInSection")
 	overload public function collectionView_numberOfItemsInSection(collectionView:UICollectionView, numberOfItemsInSection:Int):Int;

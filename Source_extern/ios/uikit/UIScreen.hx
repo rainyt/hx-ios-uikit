@@ -32,6 +32,9 @@ extern class UIScreen
 	@:native("scale")
 	public var scale:Float;
 
+	@:native("availableModes")
+	public var availableModes:Dynamic;
+
 	@:native("preferredMode")
 	public var preferredMode:UIScreenMode;
 

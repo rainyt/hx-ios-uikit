@@ -2,8 +2,8 @@ package ios.webkit;
 
 import ios.webkit.WKUserScript;
 import ios.objc.NSCopying;
-import ios.webkit.WKUserScriptInjectionTime;
 import cpp.objc.NSString;
+import ios.webkit.WKUserScriptInjectionTime;
 import ios.webkit.WKContentWorld;
 @:objc
 @:native("WKUserScript")
@@ -16,6 +16,9 @@ extern class WKUserScript
 
 	@:native("autorelease")
 	overload public static function autorelease():WKUserScript;
+
+	@:native("source")
+	public var source:NSString;
 
 	@:native("injectionTime")
 	public var injectionTime:WKUserScriptInjectionTime;

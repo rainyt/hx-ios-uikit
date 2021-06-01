@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UILargeContentViewerItem;
+import cpp.objc.NSString;
 import ios.uikit.UIImage;
 @:objc
 @:native("UILargeContentViewerItem")
@@ -15,6 +16,9 @@ extern interface UILargeContentViewerItem{
 
 	@:native("showsLargeContentViewer")
 	public var showsLargeContentViewer:Bool;
+
+	@:native("largeContentTitle")
+	public var largeContentTitle:NSString;
 
 	@:native("largeContentImage")
 	public var largeContentImage:UIImage;

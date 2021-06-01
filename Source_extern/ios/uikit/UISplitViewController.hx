@@ -64,6 +64,9 @@ extern class UISplitViewController extends UIViewController{
 	@:native("showColumn")
 	overload public function showColumn(column:UISplitViewControllerColumn):Void;
 
+	@:native("viewControllers")
+	public var viewControllers:Dynamic;
+
 	@:native("presentsWithGesture")
 	public var presentsWithGesture:Bool;
 

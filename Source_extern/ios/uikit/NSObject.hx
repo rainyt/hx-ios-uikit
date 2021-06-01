@@ -1,9 +1,11 @@
 package ios.uikit;
 
 import cpp.objc.NSObject;
-import ios.objc.CGRect;
-import ios.objc.CGPoint;
 import cpp.objc.NSString;
+import ios.uikit.NSAttributedString;
+import ios.objc.CGRect;
+import ios.uikit.UIBezierPath;
+import ios.objc.CGPoint;
 import ios.uikit.UIAccessibilityNavigationStyle;
 import ios.uikit.UIAccessibilityContainerType;
 @:objc
@@ -20,11 +22,32 @@ extern class NSObject{
 	@:native("isAccessibilityElement")
 	public var isAccessibilityElement:Bool;
 
+	@:native("accessibilityLabel")
+	public var accessibilityLabel:NSString;
+
+	@:native("accessibilityAttributedLabel")
+	public var accessibilityAttributedLabel:NSAttributedString;
+
+	@:native("accessibilityHint")
+	public var accessibilityHint:NSString;
+
+	@:native("accessibilityAttributedHint")
+	public var accessibilityAttributedHint:NSAttributedString;
+
+	@:native("accessibilityValue")
+	public var accessibilityValue:NSString;
+
+	@:native("accessibilityAttributedValue")
+	public var accessibilityAttributedValue:NSAttributedString;
+
 	@:native("accessibilityTraits")
 	public var accessibilityTraits:Dynamic;
 
 	@:native("accessibilityFrame")
 	public var accessibilityFrame:CGRect;
+
+	@:native("accessibilityPath")
+	public var accessibilityPath:UIBezierPath;
 
 	@:native("accessibilityActivationPoint")
 	public var accessibilityActivationPoint:CGPoint;
@@ -49,6 +72,12 @@ extern class NSObject{
 
 	@:native("accessibilityUserInputLabels")
 	public var accessibilityUserInputLabels:Dynamic;
+
+	@:native("accessibilityAttributedUserInputLabels")
+	public var accessibilityAttributedUserInputLabels:Dynamic;
+
+	@:native("accessibilityHeaderElements")
+	public var accessibilityHeaderElements:Dynamic;
 
 	@:native("accessibilityTextualContext")
 	public var accessibilityTextualContext:Dynamic;
@@ -85,6 +114,12 @@ extern class NSObject{
 
 	@:native("accessibilityCustomActions")
 	public var accessibilityCustomActions:Dynamic;
+
+	@:native("accessibilityDragSourceDescriptors")
+	public var accessibilityDragSourceDescriptors:Dynamic;
+
+	@:native("accessibilityDropPointDescriptors")
+	public var accessibilityDropPointDescriptors:Dynamic;
 
 	@:native("accessibilityCustomRotors")
 	public var accessibilityCustomRotors:Dynamic;

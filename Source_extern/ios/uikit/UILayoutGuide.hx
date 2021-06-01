@@ -4,6 +4,7 @@ import ios.uikit.UILayoutGuide;
 import ios.objc.NSCoding;
 import ios.objc.CGRect;
 import ios.uikit.UIView;
+import cpp.objc.NSString;
 import ios.uikit.NSLayoutXAxisAnchor;
 import ios.uikit.NSLayoutYAxisAnchor;
 import ios.uikit.NSLayoutDimension;
@@ -25,6 +26,9 @@ extern class UILayoutGuide
 
 	@:native("owningView")
 	public var owningView:UIView;
+
+	@:native("identifier")
+	public var identifier:NSString;
 
 	@:native("leadingAnchor")
 	public var leadingAnchor:NSLayoutXAxisAnchor;

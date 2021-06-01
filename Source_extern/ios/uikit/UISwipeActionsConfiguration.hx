@@ -15,6 +15,9 @@ extern class UISwipeActionsConfiguration{
 	@:native("configurationWithActions")
 	overload public static function configurationWithActions(actions:Dynamic):UISwipeActionsConfiguration;
 
+	@:native("actions")
+	public var actions:Dynamic;
+
 	@:native("performsFirstActionWithFullSwipe")
 	public var performsFirstActionWithFullSwipe:Bool;
 

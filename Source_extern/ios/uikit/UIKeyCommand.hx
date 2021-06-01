@@ -4,6 +4,7 @@ import ios.uikit.UICommand;
 import ios.uikit.UIKeyCommand;
 import ios.uikit.NSCoder;
 import cpp.objc.NSString;
+import ios.uikit.UIImage;
 import ios.uikit.UIKeyModifierFlags;
 import ios.uikit.UIMenuElementAttributes;
 import ios.uikit.UIMenuElementState;

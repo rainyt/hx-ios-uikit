@@ -21,5 +21,11 @@ extern class UISceneActivationConditions
 	@:native("initWithCoder")
 	overload public function initWithCoder(aDecoder:NSCoder):UISceneActivationConditions;
 
+	@:native("canActivateForTargetContentIdentifierPredicate")
+	public var canActivateForTargetContentIdentifierPredicate:Dynamic;
+
+	@:native("prefersToActivateForTargetContentIdentifierPredicate")
+	public var prefersToActivateForTargetContentIdentifierPredicate:Dynamic;
+
 
 }

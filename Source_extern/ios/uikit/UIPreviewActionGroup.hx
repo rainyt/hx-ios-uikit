@@ -24,5 +24,8 @@ extern class UIPreviewActionGroup
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
 
+	@:native("title")
+	public var title:NSString;
+
 
 }

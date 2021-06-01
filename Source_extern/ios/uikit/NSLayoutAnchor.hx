@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.NSLayoutAnchor;
 import ios.uikit.NSLayoutConstraint;
+import cpp.objc.NSString;
 @:objc
 @:native("NSLayoutAnchor")
 @:include("UIKit/UIKit.h")
@@ -30,6 +31,9 @@ extern class NSLayoutAnchor{
 
 	@:native("constraintLessThanOrEqualToAnchor:constant")
 	overload public function constraintLessThanOrEqualToAnchor_constant(anchor:NSLayoutAnchor, constant:Float):NSLayoutConstraint;
+
+	@:native("name")
+	public var name:NSString;
 
 	@:native("item")
 	public var item:Dynamic;

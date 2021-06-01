@@ -20,5 +20,8 @@ extern class UICollectionViewPlaceholder{
 	@:native("init")
 	overload public function init():UICollectionViewPlaceholder;
 
+	@:native("__kindof UICollectionViewCell ")
+	public var __kindof UICollectionViewCell :Dynamic;
+
 
 }

@@ -23,6 +23,9 @@ extern class UIStoryboardSegue{
 	@:native("init")
 	overload public function init():UIStoryboardSegue;
 
+	@:native("identifier")
+	public var identifier:NSString;
+
 	@:native("sourceViewController")
 	public var sourceViewController:UIViewController;
 

@@ -27,6 +27,9 @@ extern class UIVideoEditorController extends UINavigationController{
 	@:native("canEditVideoAtPath")
 	overload public static function canEditVideoAtPath(videoPath:NSString):Bool;
 
+	@:native("videoPath")
+	public var videoPath:NSString;
+
 	@:native("videoMaximumDuration")
 	public var videoMaximumDuration:Dynamic;
 

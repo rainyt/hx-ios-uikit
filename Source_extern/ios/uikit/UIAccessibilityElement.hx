@@ -49,6 +49,9 @@ extern class UIAccessibilityElement extends UIResponder
 	@:native("accessibilityFrameInContainerSpace")
 	public var accessibilityFrameInContainerSpace:CGRect;
 
+	@:native("accessibilityIdentifier")
+	public var accessibilityIdentifier:NSString;
+
 	@:native("becomeFirstResponder")
 	overload public function becomeFirstResponder():Bool;
 

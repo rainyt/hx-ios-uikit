@@ -12,5 +12,8 @@ extern interface UIContentView{
 	@:native("autorelease")
 	overload public static function autorelease():UIContentView;
 
+	@:native("configuration")
+	public var configuration:Dynamic;
+
 
 }

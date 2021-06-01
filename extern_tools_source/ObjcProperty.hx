@@ -2,7 +2,7 @@ import ExternBaseClass.ExternBaseClassType;
 
 class ObjcProperty {
 	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClassFunProperty {
-		// line = line.indexOf("(") != -1 ? StringTools.replace(line, "@property ", "") : StringTools.replace(line, "@property", "");
+		// trace("line = ",line);
 		if (line.indexOf("(") != -1) {
 			line = line.substr(line.indexOf("("));
 		} else {
@@ -18,8 +18,8 @@ class ObjcProperty {
 		var isClass = property.indexOf("class") != -1;
 		var isCopy = property.indexOf("copy") != -1;
 		// 如果是copy，则直接重写 这是否合理？？
-		if (isCopy)
-			return null;
+		// if (isCopy)
+			// return null;
 		var newline = "";
 		var lastchat = "";
 		// 调整空格，去除连续空格

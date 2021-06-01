@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDocumentInteractionController;
 import ios.uikit.UIActionSheetDelegate;
+import cpp.objc.NSString;
 import ios.objc.CGRect;
 import ios.uikit.UIView;
 import ios.uikit.UIBarButtonItem;
@@ -25,6 +26,12 @@ extern class UIDocumentInteractionController
 
 	@:native("URL")
 	public var URL:Dynamic;
+
+	@:native("UTI")
+	public var UTI:NSString;
+
+	@:native("name")
+	public var name:NSString;
 
 	@:native("icons")
 	public var icons:Dynamic;

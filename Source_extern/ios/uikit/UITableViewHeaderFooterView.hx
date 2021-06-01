@@ -7,6 +7,7 @@ import ios.uikit.NSCoder;
 import ios.uikit.UIViewConfigurationState;
 import ios.uikit.UIListContentConfiguration;
 import ios.uikit.UILabel;
+import ios.uikit.UIBackgroundConfiguration;
 import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
 import ios.uikit.UIUserInterfaceLayoutDirection;
@@ -52,6 +53,9 @@ extern class UITableViewHeaderFooterView extends UIView{
 	@:native("defaultContentConfiguration")
 	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
+	@:native("contentConfiguration")
+	public var contentConfiguration:Dynamic;
+
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
@@ -64,11 +68,17 @@ extern class UITableViewHeaderFooterView extends UIView{
 	@:native("detailTextLabel")
 	public var detailTextLabel:UILabel;
 
+	@:native("backgroundConfiguration")
+	public var backgroundConfiguration:UIBackgroundConfiguration;
+
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
 	@:native("backgroundView")
 	public var backgroundView:UIView;
+
+	@:native("reuseIdentifier")
+	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;

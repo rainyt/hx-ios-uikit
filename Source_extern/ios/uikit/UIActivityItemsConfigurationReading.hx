@@ -15,6 +15,9 @@ extern interface UIActivityItemsConfigurationReading{
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityItemsConfigurationReading;
 
+	@:native("itemProvidersForActivityItemsConfiguration")
+	public var itemProvidersForActivityItemsConfiguration:Dynamic;
+
 	@:native("activityItemsConfigurationSupportsInteraction")
 	overload public function activityItemsConfigurationSupportsInteraction(interaction:NSString):Bool;
 
@@ -26,6 +29,9 @@ extern interface UIActivityItemsConfigurationReading{
 
 	@:native("activityItemsConfigurationPreviewForItemAtIndex:intent:suggestedSize")
 	overload public function activityItemsConfigurationPreviewForItemAtIndex_intent_suggestedSize(index:Int, intent:NSString, suggestedSize:CGSize):NSItemProvider;
+
+	@:native("applicationActivitiesForActivityItemsConfiguration")
+	public var applicationActivitiesForActivityItemsConfiguration:Dynamic;
 
 
 }

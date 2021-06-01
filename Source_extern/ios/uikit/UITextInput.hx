@@ -3,13 +3,13 @@ package ios.uikit;
 import ios.uikit.UITextInput;
 import cpp.objc.NSString;
 import ios.uikit.UITextRange;
+import cpp.objc.NSDictionary;
 import ios.uikit.UITextPosition;
 import ios.uikit.UITextLayoutDirection;
 import ios.uikit.NSWritingDirection;
 import ios.uikit.UITextStorageDirection;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
-import cpp.objc.NSDictionary;
 import ios.uikit.UIView;
 import ios.uikit.UITextAlternativeStyle;
 import ios.uikit.NSAttributedString;
@@ -32,8 +32,14 @@ extern interface UITextInput{
 	@:native("replaceRange:withText")
 	overload public function replaceRange_withText(range:UITextRange, withText:NSString):Void;
 
+	@:native("selectedTextRange")
+	public var selectedTextRange:UITextRange;
+
 	@:native("markedTextRange")
 	public var markedTextRange:UITextRange;
+
+	@:native("markedTextStyle")
+	public var markedTextStyle:NSDictionary;
 
 	@:native("setMarkedText:selectedRange")
 	overload public function setMarkedText_selectedRange(markedText:NSString, selectedRange:Dynamic):Void;

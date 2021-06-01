@@ -18,11 +18,17 @@ extern class UISceneConnectionOptions{
 	@:native("init")
 	overload public function init():UISceneConnectionOptions;
 
+	@:native("URLContexts")
+	public var URLContexts:Dynamic;
+
 	@:native("sourceApplication")
 	public var sourceApplication:NSString;
 
 	@:native("handoffUserActivityType")
 	public var handoffUserActivityType:NSString;
+
+	@:native("userActivities")
+	public var userActivities:Dynamic;
 
 	@:native("notificationResponse")
 	public var notificationResponse:UNNotificationResponse;

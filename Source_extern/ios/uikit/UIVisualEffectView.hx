@@ -36,6 +36,9 @@ extern class UIVisualEffectView extends UIView
 	@:native("contentView")
 	public var contentView:UIView;
 
+	@:native("effect")
+	public var effect:UIVisualEffect;
+
 	@:native("initWithEffect")
 	overload public function initWithEffect(effect:UIVisualEffect):UIVisualEffectView;
 

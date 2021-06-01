@@ -168,6 +168,9 @@ extern class UIImage
 	@:native("imageRendererFormat")
 	public var imageRendererFormat:UIGraphicsImageRendererFormat;
 
+	@:native("traitCollection")
+	public var traitCollection:UITraitCollection;
+
 	@:native("imageAsset")
 	public var imageAsset:UIImageAsset;
 
@@ -192,8 +195,14 @@ extern class UIImage
 	@:native("imageWithoutBaseline")
 	overload public function imageWithoutBaseline():UIImage;
 
+	@:native("configuration")
+	public var configuration:UIImageConfiguration;
+
 	@:native("imageWithConfiguration")
 	overload public function imageWithConfiguration(configuration:UIImageConfiguration):UIImage;
+
+	@:native("symbolConfiguration")
+	public var symbolConfiguration:UIImageSymbolConfiguration;
 
 	@:native("imageByApplyingSymbolConfiguration")
 	overload public function imageByApplyingSymbolConfiguration(configuration:UIImageSymbolConfiguration):UIImage;

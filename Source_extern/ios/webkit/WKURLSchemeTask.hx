@@ -12,6 +12,9 @@ extern interface WKURLSchemeTask{
 	@:native("autorelease")
 	overload public static function autorelease():WKURLSchemeTask;
 
+	@:native("request")
+	public var request:Dynamic;
+
 	@:native("didReceiveResponse")
 	overload public function didReceiveResponse(response:Dynamic):Void;
 

@@ -29,6 +29,9 @@ extern class UIPrintPageRenderer{
 	@:native("numberOfPages")
 	public var numberOfPages:Int;
 
+	@:native("printFormatters")
+	public var printFormatters:Dynamic;
+
 	@:native("printFormattersForPageAtIndex")
 	overload public function printFormattersForPageAtIndex(pageIndex:Int):Dynamic;
 

@@ -48,6 +48,9 @@ extern class UICollectionViewListCell extends UICollectionViewCell{
 	@:native("indentsAccessories")
 	public var indentsAccessories:Bool;
 
+	@:native("accessories")
+	public var accessories:Dynamic;
+
 	@:native("separatorLayoutGuide")
 	public var separatorLayoutGuide:UILayoutGuide;
 

@@ -2,9 +2,9 @@ package ios.webkit;
 
 import ios.uikit.UIView;
 import ios.webkit.WKWebView;
+import ios.webkit.WKWebViewConfiguration;
 import ios.webkit.WKBackForwardList;
 import ios.objc.CGRect;
-import ios.webkit.WKWebViewConfiguration;
 import ios.uikit.NSCoder;
 import ios.webkit.WKNavigation;
 import cpp.objc.NSString;
@@ -42,6 +42,9 @@ extern class WKWebView extends UIView{
 	@:native("autorelease")
 	overload public static function autorelease():WKWebView;
 
+	@:native("configuration")
+	public var configuration:WKWebViewConfiguration;
+
 	@:native("navigationDelegate")
 	public var navigationDelegate:Dynamic;
 
@@ -71,6 +74,12 @@ extern class WKWebView extends UIView{
 
 	@:native("goToBackForwardListItem")
 	overload public function goToBackForwardListItem(item:WKBackForwardListItem):WKNavigation;
+
+	@:native("title")
+	public var title:NSString;
+
+	@:native("URL")
+	public var URL:Dynamic;
 
 	@:native("loading")
 	public var loading:Bool;
@@ -126,6 +135,9 @@ extern class WKWebView extends UIView{
 	@:native("allowsBackForwardNavigationGestures")
 	public var allowsBackForwardNavigationGestures:Bool;
 
+	@:native("customUserAgent")
+	public var customUserAgent:NSString;
+
 	@:native("allowsLinkPreview")
 	public var allowsLinkPreview:Bool;
 
@@ -150,8 +162,14 @@ extern class WKWebView extends UIView{
 	@:native("handlesURLScheme")
 	overload public static function handlesURLScheme(urlScheme:NSString):Bool;
 
+	@:native("mediaType")
+	public var mediaType:NSString;
+
 	@:native("printOperationWithPrintInfo")
 	overload public function printOperationWithPrintInfo(printInfo:Dynamic):Dynamic;
+
+	@:native("certificateChain")
+	public var certificateChain:Dynamic;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

@@ -83,6 +83,9 @@ extern class UIPresentationController
 	@:native("dismissalTransitionDidEnd")
 	overload public function dismissalTransitionDidEnd(completed:Bool):Void;
 
+	@:native("overrideTraitCollection")
+	public var overrideTraitCollection:UITraitCollection;
+
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;
 
@@ -106,6 +109,9 @@ extern class UIPresentationController
 
 	@:native("willTransitionToTraitCollection:withTransitionCoordinator")
 	overload public function willTransitionToTraitCollection_withTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
+
+	@:native("preferredFocusEnvironments")
+	public var preferredFocusEnvironments:Dynamic;
 
 	@:native("parentFocusEnvironment")
 	public var parentFocusEnvironment:Dynamic;

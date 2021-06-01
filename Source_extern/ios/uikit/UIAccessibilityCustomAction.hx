@@ -39,14 +39,23 @@ extern class UIAccessibilityCustomAction{
 	@:native("initWithAttributedName:image:actionHandler")
 	overload public function initWithAttributedName_image_actionHandler(attributedName:NSAttributedString, image:UIImage, actionHandler:Dynamic):UIAccessibilityCustomAction;
 
+	@:native("name")
+	public var name:NSString;
+
 	@:native("image")
 	public var image:UIImage;
+
+	@:native("attributedName")
+	public var attributedName:NSAttributedString;
 
 	@:native("target")
 	public var target:Dynamic;
 
 	@:native("selector")
 	public var selector:String;
+
+	@:native("actionHandler")
+	public var actionHandler:Dynamic;
 
 
 }

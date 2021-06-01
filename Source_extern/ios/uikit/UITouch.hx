@@ -43,6 +43,9 @@ extern class UITouch{
 	@:native("view")
 	public var view:UIView;
 
+	@:native("gestureRecognizers")
+	public var gestureRecognizers:Dynamic;
+
 	@:native("locationInView")
 	overload public function locationInView(view:UIView):CGPoint;
 

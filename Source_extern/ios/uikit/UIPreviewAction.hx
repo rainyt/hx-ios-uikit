@@ -17,12 +17,18 @@ extern class UIPreviewAction
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewAction;
 
+	@:native("id<UIPreviewActionItem> action, UIViewController previewViewController")
+	public var id<UIPreviewActionItem> action, UIViewController previewViewController:Dynamic;
+
 	@:native("actionWithTitle:style:handler")
 	overload public static function actionWithTitle_style_handler(title:NSString, style:UIPreviewActionStyle, handler:Dynamic):UIPreviewAction;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;
+
+	@:native("title")
+	public var title:NSString;
 
 
 }

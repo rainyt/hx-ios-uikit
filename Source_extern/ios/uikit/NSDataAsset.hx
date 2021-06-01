@@ -25,6 +25,15 @@ extern class NSDataAsset
 	@:native("initWithName:bundle")
 	overload public function initWithName_bundle(name:NSString, bundle:NSBundle):NSDataAsset;
 
+	@:native("name")
+	public var name:NSString;
+
+	@:native("data")
+	public var data:Dynamic;
+
+	@:native("typeIdentifier")
+	public var typeIdentifier:NSString;
+
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
 ;

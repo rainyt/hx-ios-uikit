@@ -20,5 +20,8 @@ extern class UITableViewPlaceholder{
 	@:native("init")
 	overload public function init():UITableViewPlaceholder;
 
+	@:native("__kindof UITableViewCell ")
+	public var __kindof UITableViewCell :Dynamic;
+
 
 }

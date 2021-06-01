@@ -28,6 +28,9 @@ extern class NSMutableParagraphStyle extends NSParagraphStyle{
 	@:native("setParagraphStyle")
 	overload public function setParagraphStyle(obj:NSParagraphStyle):Void;
 
+	@:native("defaultParagraphStyle")
+	overload public static function defaultParagraphStyle():NSMutableParagraphStyle;
+
 	@:native("defaultWritingDirectionForLanguage")
 	overload public static function defaultWritingDirectionForLanguage(languageName:NSString):NSWritingDirection;
 

@@ -20,6 +20,9 @@ extern class UIActivityItemsConfiguration
 	@:native("localObject")
 	public var localObject:Dynamic;
 
+	@:native("supportedInteractions")
+	public var supportedInteractions:Dynamic;
+
 	@:native("UIActivityItemsConfigurationMetadataKey key")
 	public var UIActivityItemsConfigurationMetadataKey key:Dynamic;
 
@@ -47,6 +50,9 @@ extern class UIActivityItemsConfiguration
 	@:native("init")
 	overload public function init():UIActivityItemsConfiguration;
 
+	@:native("itemProvidersForActivityItemsConfiguration")
+	public var itemProvidersForActivityItemsConfiguration:Dynamic;
+
 	@:native("activityItemsConfigurationSupportsInteraction")
 	overload public function activityItemsConfigurationSupportsInteraction(interaction:NSString):Bool;
 
@@ -58,6 +64,9 @@ extern class UIActivityItemsConfiguration
 
 	@:native("activityItemsConfigurationPreviewForItemAtIndex:intent:suggestedSize")
 	overload public function activityItemsConfigurationPreviewForItemAtIndex_intent_suggestedSize(index:Int, intent:NSString, suggestedSize:CGSize):NSItemProvider;
+
+	@:native("applicationActivitiesForActivityItemsConfiguration")
+	public var applicationActivitiesForActivityItemsConfiguration:Dynamic;
 
 
 }

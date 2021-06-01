@@ -50,6 +50,9 @@ extern class UISearchTextField extends UITextField{
 	@:native("autorelease")
 	overload public static function autorelease():UISearchTextField;
 
+	@:native("tokens")
+	public var tokens:Dynamic;
+
 	@:native("insertToken:atIndex")
 	overload public function insertToken_atIndex(token:UISearchToken, atIndex:Int):Void;
 

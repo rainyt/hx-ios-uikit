@@ -33,6 +33,12 @@ extern class UICollectionLayoutListConfiguration
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
 
+	@:native("leadingSwipeActionsConfigurationProvider")
+	public var leadingSwipeActionsConfigurationProvider:Dynamic;
+
+	@:native("trailingSwipeActionsConfigurationProvider")
+	public var trailingSwipeActionsConfigurationProvider:Dynamic;
+
 	@:native("headerMode")
 	public var headerMode:UICollectionLayoutListHeaderMode;
 

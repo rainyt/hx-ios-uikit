@@ -8,6 +8,7 @@ import ios.uikit.UIButtonType;
 import ios.uikit.UIImage;
 import ios.uikit.UIColor;
 import ios.uikit.UIButtonRole;
+import ios.uikit.UIMenu;
 import cpp.objc.NSString;
 import ios.uikit.UIControlState;
 import ios.uikit.UIImageSymbolConfiguration;
@@ -81,6 +82,12 @@ extern class UIButton{
 
 	@:native("pointerInteractionEnabled")
 	public var pointerInteractionEnabled:Bool;
+
+	@:native("pointerStyleProvider")
+	public var pointerStyleProvider:Dynamic;
+
+	@:native("menu")
+	public var menu:UIMenu;
 
 	@:native("setTitle:forState")
 	overload public function setTitle_forState(title:NSString, forState:UIControlState):Void;

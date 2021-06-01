@@ -24,6 +24,9 @@ extern class UIFontPickerViewControllerConfiguration
 	@:native("filteredTraits")
 	public var filteredTraits:UIFontDescriptorSymbolicTraits;
 
+	@:native("filteredLanguagesPredicate")
+	public var filteredLanguagesPredicate:Dynamic;
+
 	@:native("filterPredicateForFilteredLanguages")
 	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):Dynamic;
 

@@ -26,6 +26,9 @@ extern class UIListContentTextProperties
 	@:native("color")
 	public var color:UIColor;
 
+	@:native("colorTransformer")
+	public var colorTransformer:Dynamic;
+
 	@:native("resolvedColor")
 	overload public function resolvedColor():UIColor;
 

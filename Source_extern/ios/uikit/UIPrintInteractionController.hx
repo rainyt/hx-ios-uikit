@@ -59,6 +59,12 @@ extern class UIPrintInteractionController{
 	@:native("printFormatter")
 	public var printFormatter:UIPrintFormatter;
 
+	@:native("printingItem")
+	public var printingItem:Dynamic;
+
+	@:native("printingItems")
+	public var printingItems:Dynamic;
+
 	@:native("presentAnimated:completionHandler")
 	overload public function presentAnimated_completionHandler(animated:Bool, completionHandler:Dynamic):Bool;
 

@@ -45,6 +45,9 @@ extern class UIListContentView extends UIView
 	@:native("init")
 	overload public function init():UIListContentView;
 
+	@:native("configuration")
+	public var configuration:UIListContentConfiguration;
+
 	@:native("textLayoutGuide")
 	public var textLayoutGuide:UILayoutGuide;
 

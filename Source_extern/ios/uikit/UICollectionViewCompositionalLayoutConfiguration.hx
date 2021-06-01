@@ -22,6 +22,9 @@ extern class UICollectionViewCompositionalLayoutConfiguration
 	@:native("interSectionSpacing")
 	public var interSectionSpacing:Float;
 
+	@:native("boundarySupplementaryItems")
+	public var boundarySupplementaryItems:Dynamic;
+
 	@:native("contentInsetsReference")
 	public var contentInsetsReference:UIContentInsetsReference;
 

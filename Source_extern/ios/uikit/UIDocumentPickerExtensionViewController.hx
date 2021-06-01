@@ -32,6 +32,18 @@ extern class UIDocumentPickerExtensionViewController extends UIViewController{
 	@:native("documentPickerMode")
 	public var documentPickerMode:UIDocumentPickerMode;
 
+	@:native("originalURL")
+	public var originalURL:Dynamic;
+
+	@:native("validTypes")
+	public var validTypes:Dynamic;
+
+	@:native("providerIdentifier")
+	public var providerIdentifier:NSString;
+
+	@:native("documentStorageURL")
+	public var documentStorageURL:Dynamic;
+
 	@:native("setNeedsTouchBarUpdate")
 	overload public function setNeedsTouchBarUpdate():Void;
 

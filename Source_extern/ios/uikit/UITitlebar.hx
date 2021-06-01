@@ -30,5 +30,8 @@ extern class UITitlebar{
 	@:native("autoHidesToolbarInFullScreen")
 	public var autoHidesToolbarInFullScreen:Bool;
 
+	@:native("representedURL")
+	public var representedURL:Dynamic;
+
 
 }

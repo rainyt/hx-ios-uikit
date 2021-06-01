@@ -10,6 +10,8 @@ import ios.uikit.UITextSmartInsertDeleteType;
 import ios.uikit.UIKeyboardType;
 import ios.uikit.UIKeyboardAppearance;
 import ios.uikit.UIReturnKeyType;
+import cpp.objc.NSString;
+import ios.uikit.UITextInputPasswordRules;
 @:objc
 @:native("UITextInputTraits")
 @:include("UIKit/UIKit.h")
@@ -53,6 +55,12 @@ extern interface UITextInputTraits{
 
 	@:native("secureTextEntry")
 	public var secureTextEntry:Bool;
+
+	@:native("textContentType")
+	public var textContentType:NSString;
+
+	@:native("passwordRules")
+	public var passwordRules:UITextInputPasswordRules;
 
 
 }

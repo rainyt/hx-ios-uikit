@@ -31,6 +31,9 @@ extern class UIInputViewController extends UIViewController
 	@:native("textDocumentProxy")
 	public var textDocumentProxy:Dynamic;
 
+	@:native("primaryLanguage")
+	public var primaryLanguage:NSString;
+
 	@:native("hasDictationKey")
 	public var hasDictationKey:Bool;
 

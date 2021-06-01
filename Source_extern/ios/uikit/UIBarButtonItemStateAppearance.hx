@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIBarButtonItemStateAppearance;
+import cpp.objc.NSDictionary;
 import ios.uikit.UIImage;
 @:objc
 @:native("UIBarButtonItemStateAppearance")
@@ -15,6 +16,9 @@ extern class UIBarButtonItemStateAppearance{
 
 	@:native("init")
 	overload public function init():UIBarButtonItemStateAppearance;
+
+	@:native("titleTextAttributes")
+	public var titleTextAttributes:NSDictionary;
 
 	@:native("titlePositionAdjustment")
 	public var titlePositionAdjustment:Dynamic;

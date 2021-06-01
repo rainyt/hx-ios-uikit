@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIControl;
 import ios.uikit.UIColorWell;
+import cpp.objc.NSString;
 import ios.uikit.UIColor;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
@@ -37,6 +38,9 @@ extern class UIColorWell extends UIControl{
 
 	@:native("autorelease")
 	overload public static function autorelease():UIColorWell;
+
+	@:native("title")
+	public var title:NSString;
 
 	@:native("supportsAlpha")
 	public var supportsAlpha:Bool;

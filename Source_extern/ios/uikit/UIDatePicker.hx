@@ -47,6 +47,9 @@ extern class UIDatePicker extends UIControl
 	@:native("locale")
 	public var locale:Dynamic;
 
+	@:native("calendar")
+	public var calendar:Dynamic;
+
 	@:native("timeZone")
 	public var timeZone:Dynamic;
 

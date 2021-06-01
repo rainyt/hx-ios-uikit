@@ -26,6 +26,9 @@ extern interface UITextDocumentProxy{
 	@:native("documentInputMode")
 	public var documentInputMode:UITextInputMode;
 
+	@:native("documentIdentifier")
+	public var documentIdentifier:Dynamic;
+
 	@:native("adjustTextPositionByCharacterOffset")
 	overload public function adjustTextPositionByCharacterOffset(offset:Int):Void;
 

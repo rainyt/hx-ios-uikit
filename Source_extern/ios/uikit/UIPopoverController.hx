@@ -8,6 +8,7 @@ import ios.uikit.UIPopoverArrowDirection;
 import ios.objc.CGRect;
 import ios.uikit.UIView;
 import ios.uikit.UIBarButtonItem;
+import ios.uikit.UIColor;
 @:objc
 @:native("UIPopoverController")
 @:include("UIKit/UIKit.h")
@@ -44,6 +45,9 @@ extern class UIPopoverController
 	@:native("popoverArrowDirection")
 	public var popoverArrowDirection:UIPopoverArrowDirection;
 
+	@:native("passthroughViews")
+	public var passthroughViews:Dynamic;
+
 	@:native("presentPopoverFromRect:inView:permittedArrowDirections:animated")
 	overload public function presentPopoverFromRect_inView_permittedArrowDirections_animated(rect:CGRect, inView:UIView, permittedArrowDirections:UIPopoverArrowDirection, animated:Bool):Void;
 
@@ -52,6 +56,9 @@ extern class UIPopoverController
 
 	@:native("dismissPopoverAnimated")
 	overload public function dismissPopoverAnimated(animated:Bool):Void;
+
+	@:native("backgroundColor")
+	public var backgroundColor:UIColor;
 
 	@:native("popoverLayoutMargins")
 	public var popoverLayoutMargins:Dynamic;

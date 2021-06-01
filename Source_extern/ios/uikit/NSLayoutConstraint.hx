@@ -6,6 +6,7 @@ import ios.uikit.NSLayoutFormatOptions;
 import cpp.objc.NSDictionary;
 import ios.uikit.NSLayoutAttribute;
 import ios.uikit.NSLayoutRelation;
+import ios.uikit.NSLayoutAnchor;
 @:objc
 @:native("NSLayoutConstraint")
 @:include("UIKit/UIKit.h")
@@ -41,6 +42,12 @@ extern class NSLayoutConstraint{
 	@:native("secondAttribute")
 	public var secondAttribute:NSLayoutAttribute;
 
+	@:native("firstAnchor")
+	public var firstAnchor:NSLayoutAnchor;
+
+	@:native("secondAnchor")
+	public var secondAnchor:NSLayoutAnchor;
+
 	@:native("relation")
 	public var relation:NSLayoutRelation;
 
@@ -58,6 +65,9 @@ extern class NSLayoutConstraint{
 
 	@:native("deactivateConstraints")
 	overload public static function deactivateConstraints(constraints:Dynamic):Void;
+
+	@:native("identifier")
+	public var identifier:NSString;
 
 
 }

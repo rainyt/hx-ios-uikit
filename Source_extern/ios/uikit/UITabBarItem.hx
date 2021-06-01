@@ -8,6 +8,7 @@ import ios.uikit.UIImage;
 import ios.uikit.UITabBarSystemItem;
 import cpp.objc.NSDictionary;
 import ios.uikit.UIControlState;
+import ios.uikit.UITabBarAppearance;
 import ios.uikit.UIAppearance;
 import ios.uikit.UITraitCollection;
 @:objc
@@ -39,6 +40,9 @@ extern class UITabBarItem extends UIBarItem{
 	@:native("selectedImage")
 	public var selectedImage:UIImage;
 
+	@:native("badgeValue")
+	public var badgeValue:NSString;
+
 	@:native(" UI_APPEARANCE_SELECTOR")
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
@@ -47,6 +51,9 @@ extern class UITabBarItem extends UIBarItem{
 
 	@:native("badgeTextAttributesForState")
 	overload public function badgeTextAttributesForState(state:UIControlState):NSDictionary;
+
+	@:native("standardAppearance")
+	public var standardAppearance:UITabBarAppearance;
 
 	@:native("setTitleTextAttributes:forState")
 	overload public function setTitleTextAttributes_forState(attributes:NSDictionary, forState:UIControlState):Void;

@@ -45,6 +45,12 @@ extern class UIAlertView extends UIView{
 	@:native("delegate")
 	public var delegate:/;
 
+	@:native("title")
+	public var title:NSString;
+
+	@:native("message")
+	public var message:NSString;
+
 	@:native("addButtonWithTitle")
 	overload public function addButtonWithTitle(title:NSString):Int;
 

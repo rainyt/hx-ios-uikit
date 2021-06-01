@@ -26,6 +26,9 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	@:native("removeItem")
 	overload public function removeItem(item:Dynamic):Void;
 
+	@:native("items")
+	public var items:Dynamic;
+
 	@:native("collisionMode")
 	public var collisionMode:UICollisionBehaviorMode;
 
@@ -46,6 +49,9 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 
 	@:native("removeBoundaryWithIdentifier")
 	overload public function removeBoundaryWithIdentifier(identifier:Dynamic):Void;
+
+	@:native("boundaryIdentifiers")
+	public var boundaryIdentifiers:Dynamic;
 
 	@:native("removeAllBoundaries")
 	overload public function removeAllBoundaries():Void;

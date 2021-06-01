@@ -4,6 +4,7 @@ import ios.uikit.NSCollectionLayoutItem;
 import ios.uikit.NSCollectionLayoutGroup;
 import ios.objc.NSCopying;
 import ios.uikit.NSCollectionLayoutSize;
+import ios.uikit.NSCollectionLayoutSpacing;
 import cpp.objc.NSString;
 @:objc
 @:native("NSCollectionLayoutGroup")
@@ -34,6 +35,9 @@ extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutGroup;
+
+	@:native("interItemSpacing")
+	public var interItemSpacing:NSCollectionLayoutSpacing;
 
 	@:native("subitems")
 	public var subitems:Dynamic;

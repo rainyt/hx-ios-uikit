@@ -28,6 +28,9 @@ extern class UIDragPreview
 	@:native("view")
 	public var view:UIView;
 
+	@:native("parameters")
+	public var parameters:UIDragPreviewParameters;
+
 	@:native("previewForURL")
 	overload public static function previewForURL(url:Dynamic):UIDragPreview;
 

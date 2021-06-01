@@ -15,5 +15,11 @@ extern class UITextInputAssistantItem{
 	@:native("allowsHidingShortcuts")
 	public var allowsHidingShortcuts:Bool;
 
+	@:native("leadingBarButtonGroups")
+	public var leadingBarButtonGroups:Dynamic;
+
+	@:native("trailingBarButtonGroups")
+	public var trailingBarButtonGroups:Dynamic;
+
 
 }

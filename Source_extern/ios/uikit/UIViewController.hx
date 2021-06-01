@@ -80,6 +80,9 @@ extern class UIViewController{
 	@:native("viewLoaded")
 	public var viewLoaded:Bool;
 
+	@:native("nibName")
+	public var nibName:NSString;
+
 	@:native("nibBundle")
 	public var nibBundle:NSBundle;
 
@@ -124,6 +127,9 @@ extern class UIViewController{
 
 	@:native("viewDidLayoutSubviews")
 	overload public function viewDidLayoutSubviews():Void;
+
+	@:native("title")
+	public var title:NSString;
 
 	@:native("didReceiveMemoryWarning")
 	overload public function didReceiveMemoryWarning():Void;
@@ -292,6 +298,9 @@ extern class UIViewController{
 
 	@:native("didMoveToParentViewController")
 	overload public function didMoveToParentViewController(parent:UIViewController):Void;
+
+	@:native("restorationIdentifier")
+	public var restorationIdentifier:NSString;
 
 	@:native("restorationClass")
 	public var restorationClass:Dynamic;

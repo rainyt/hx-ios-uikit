@@ -9,6 +9,7 @@ import ios.uikit.UIPressesEvent;
 import ios.uikit.NSCoder;
 import ios.uikit.UIView;
 import ios.objc.CGPoint;
+import cpp.objc.NSString;
 import ios.uikit.UIKeyModifierFlags;
 import ios.uikit.UIEventButtonMask;
 @:objc
@@ -109,6 +110,12 @@ extern class UIGestureRecognizer{
 	@:native("delaysTouchesEnded")
 	public var delaysTouchesEnded:Bool;
 
+	@:native("allowedTouchTypes")
+	public var allowedTouchTypes:Dynamic;
+
+	@:native("allowedPressTypes")
+	public var allowedPressTypes:Dynamic;
+
 	@:native("requiresExclusiveTouchType")
 	public var requiresExclusiveTouchType:Bool;
 
@@ -123,6 +130,9 @@ extern class UIGestureRecognizer{
 
 	@:native("locationOfTouch:inView")
 	overload public function locationOfTouch_inView(touchIndex:Int, inView:UIView):CGPoint;
+
+	@:native("name")
+	public var name:NSString;
 
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;

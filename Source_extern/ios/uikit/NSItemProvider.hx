@@ -14,6 +14,9 @@ extern class NSItemProvider{
 	@:native("autorelease")
 	overload public static function autorelease():NSItemProvider;
 
+	@:native("teamData")
+	public var teamData:Dynamic;
+
 	@:native("preferredPresentationSize")
 	public var preferredPresentationSize:CGSize;
 

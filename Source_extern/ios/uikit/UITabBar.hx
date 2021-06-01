@@ -4,6 +4,7 @@ import ios.uikit.UIView;
 import ios.uikit.UITabBar;
 import ios.uikit.UITabBarItem;
 import ios.uikit.UIColor;
+import ios.uikit.UITabBarAppearance;
 import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
@@ -35,6 +36,9 @@ extern class UITabBar extends UIView{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	@:native("items")
+	public var items:Dynamic;
+
 	@:native("selectedItem")
 	public var selectedItem:UITabBarItem;
 
@@ -55,6 +59,9 @@ extern class UITabBar extends UIView{
 
 	@:native("translucent")
 	public var translucent:Bool;
+
+	@:native("standardAppearance")
+	public var standardAppearance:UITabBarAppearance;
 
 	@:native("leadingAccessoryView")
 	public var leadingAccessoryView:UIView;

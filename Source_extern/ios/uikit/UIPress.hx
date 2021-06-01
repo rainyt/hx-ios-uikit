@@ -30,6 +30,9 @@ extern class UIPress{
 	@:native("responder")
 	public var responder:UIResponder;
 
+	@:native("gestureRecognizers")
+	public var gestureRecognizers:Dynamic;
+
 	@:native("force")
 	public var force:Float;
 

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIUserNotificationAction;
 import ios.uikit.UIMutableUserNotificationAction;
+import cpp.objc.NSString;
 import ios.uikit.UIUserNotificationActionBehavior;
 import ios.uikit.UIUserNotificationActivationMode;
 import ios.uikit.NSCoder;
@@ -15,6 +16,9 @@ extern class UIMutableUserNotificationAction extends UIUserNotificationAction{
 
 	@:native("autorelease")
 	overload public static function autorelease():UIMutableUserNotificationAction;
+
+	@:native("parameters")
+	public var parameters:Dynamic;
 
 	@:native("init")
 	overload public function init():UIUserNotificationAction;

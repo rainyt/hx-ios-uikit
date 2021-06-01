@@ -22,6 +22,9 @@ extern class UIBarButtonItemGroup
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIBarButtonItemGroup;
 
+	@:native("barButtonItems")
+	public var barButtonItems:Dynamic;
+
 	@:native("representativeItem")
 	public var representativeItem:UIBarButtonItem;
 

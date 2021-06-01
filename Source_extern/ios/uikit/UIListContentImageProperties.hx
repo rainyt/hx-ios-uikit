@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIListContentImageProperties;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
+import ios.uikit.UIImageSymbolConfiguration;
 import ios.uikit.UIColor;
 import ios.objc.CGSize;
 @:objc
@@ -17,8 +18,14 @@ extern class UIListContentImageProperties
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentImageProperties;
 
+	@:native("preferredSymbolConfiguration")
+	public var preferredSymbolConfiguration:UIImageSymbolConfiguration;
+
 	@:native("tintColor")
 	public var tintColor:UIColor;
+
+	@:native("tintColorTransformer")
+	public var tintColorTransformer:Dynamic;
 
 	@:native("resolvedTintColorForTintColor")
 	overload public function resolvedTintColorForTintColor(tintColor:UIColor):UIColor;

@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIControl;
 import ios.uikit.UISwitch;
 import ios.objc.NSCoding;
+import cpp.objc.NSString;
 import ios.uikit.UISwitchStyle;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
@@ -42,6 +43,9 @@ extern class UISwitch extends UIControl
 
 	@:native(" UI_APPEARANCE_SELECTOR")
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;
+
+	@:native("title")
+	public var title:NSString;
 
 	@:native("style")
 	public var style:UISwitchStyle;

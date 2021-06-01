@@ -18,6 +18,9 @@ extern class UIMarkupTextPrintFormatter extends UIPrintFormatter{
 	@:native("initWithMarkupText")
 	overload public function initWithMarkupText(markupText:NSString):UIMarkupTextPrintFormatter;
 
+	@:native("markupText")
+	public var markupText:NSString;
+
 	@:native("removeFromPrintPageRenderer")
 	overload public function removeFromPrintPageRenderer():Void;
 

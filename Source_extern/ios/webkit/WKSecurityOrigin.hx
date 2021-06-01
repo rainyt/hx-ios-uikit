@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKSecurityOrigin;
+import cpp.objc.NSString;
 @:objc
 @:native("WKSecurityOrigin")
 @:include("WebKit/WebKit.h")
@@ -14,6 +15,12 @@ extern class WKSecurityOrigin{
 
 	@:native("init")
 	overload public function init():WKSecurityOrigin;
+
+	@:native("protocol")
+	public var protocol:NSString;
+
+	@:native("host")
+	public var host:NSString;
 
 	@:native("port")
 	public var port:Int;

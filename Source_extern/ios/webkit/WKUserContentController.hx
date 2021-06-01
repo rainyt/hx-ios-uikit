@@ -18,6 +18,9 @@ extern class WKUserContentController
 	@:native("autorelease")
 	overload public static function autorelease():WKUserContentController;
 
+	@:native("userScripts")
+	public var userScripts:Dynamic;
+
 	@:native("addUserScript")
 	overload public function addUserScript(userScript:WKUserScript):Void;
 

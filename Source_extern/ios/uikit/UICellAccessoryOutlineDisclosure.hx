@@ -18,6 +18,9 @@ extern class UICellAccessoryOutlineDisclosure extends UICellAccessory{
 	@:native("style")
 	public var style:UICellAccessoryOutlineDisclosureStyle;
 
+	@:native("void")
+	public var void:Dynamic;
+
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryOutlineDisclosure;
 

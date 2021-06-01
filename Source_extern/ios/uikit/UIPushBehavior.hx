@@ -25,6 +25,9 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	@:native("removeItem")
 	overload public function removeItem(item:Dynamic):Void;
 
+	@:native("items")
+	public var items:Dynamic;
+
 	@:native("targetOffsetFromCenterForItem")
 	overload public function targetOffsetFromCenterForItem(item:Dynamic):Dynamic;
 

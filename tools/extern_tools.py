@@ -660,30 +660,6 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
 
 
 
-class haxe_IMap:
-    _hx_class_name = "haxe.IMap"
-    __slots__ = ()
-    _hx_methods = ["get", "keys"]
-
-
-class haxe_ds_StringMap:
-    _hx_class_name = "haxe.ds.StringMap"
-    __slots__ = ("h",)
-    _hx_fields = ["h"]
-    _hx_methods = ["get", "keys"]
-    _hx_interfaces = [haxe_IMap]
-
-    def __init__(self):
-        self.h = dict()
-
-    def get(self,key):
-        return self.h.get(key,None)
-
-    def keys(self):
-        return python_HaxeIterator(iter(self.h.keys()))
-
-
-
 class ExternTools:
     _hx_class_name = "ExternTools"
     __slots__ = ()
@@ -752,16 +728,6 @@ class ExternTools:
         pkg = HxString.substring(hfile,(startIndex + 11),None)
         startIndex = None
         pkg = HxString.substr(pkg,0,(pkg.find(".") if ((startIndex is None)) else HxString.indexOfImpl(pkg,".",startIndex)))
-        startIndex1 = None
-        pos = None
-        if (startIndex1 is None):
-            pos = hfile.rfind("/", 0, len(hfile))
-        else:
-            i = hfile.rfind("/", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
-            check = hfile.find("/", startLeft, len(hfile))
-            pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
-        haxefile = (HxOverrides.stringOrNull(HxString.substr(hfile,(pos + 1),None)) + "x")
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
         hlibsfile = (((("null" if pkg is None else pkg) + "/") + ("null" if pkg is None else pkg)) + ".h")
@@ -1206,8 +1172,6 @@ class ObjcProperty:
         isClass = (((property.find("class") if ((startIndex is None)) else HxString.indexOfImpl(property,"class",startIndex))) != -1)
         startIndex = None
         isCopy = (((property.find("copy") if ((startIndex is None)) else HxString.indexOfImpl(property,"copy",startIndex))) != -1)
-        if isCopy:
-            return None
         newline = ""
         lastchat = ""
         _g = 0
@@ -1521,6 +1485,12 @@ class Sys:
         return Sys._programPath
 
 
+class haxe_IMap:
+    _hx_class_name = "haxe.IMap"
+    __slots__ = ()
+    _hx_methods = ["get", "keys"]
+
+
 class haxe_Exception(Exception):
     _hx_class_name = "haxe.Exception"
     __slots__ = ("_hx___nativeStack", "_hx___skipStack", "_hx___nativeException", "_hx___previousException")
@@ -1614,6 +1584,24 @@ class haxe_ValueException(haxe_Exception):
 
     def unwrap(self):
         return self.value
+
+
+
+class haxe_ds_StringMap:
+    _hx_class_name = "haxe.ds.StringMap"
+    __slots__ = ("h",)
+    _hx_fields = ["h"]
+    _hx_methods = ["get", "keys"]
+    _hx_interfaces = [haxe_IMap]
+
+    def __init__(self):
+        self.h = dict()
+
+    def get(self,key):
+        return self.h.get(key,None)
+
+    def keys(self):
+        return python_HaxeIterator(iter(self.h.keys()))
 
 
 

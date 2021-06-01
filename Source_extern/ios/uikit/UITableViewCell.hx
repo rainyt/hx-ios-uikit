@@ -11,6 +11,7 @@ import ios.uikit.UICellConfigurationState;
 import ios.uikit.UIListContentConfiguration;
 import ios.uikit.UIImageView;
 import ios.uikit.UILabel;
+import ios.uikit.UIBackgroundConfiguration;
 import ios.uikit.UITableViewCellSelectionStyle;
 import ios.uikit.UITableViewCellEditingStyle;
 import ios.uikit.UITableViewCellAccessoryType;
@@ -69,6 +70,9 @@ extern class UITableViewCell extends UIView
 	@:native("defaultContentConfiguration")
 	overload public function defaultContentConfiguration():UIListContentConfiguration;
 
+	@:native("contentConfiguration")
+	public var contentConfiguration:Dynamic;
+
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
@@ -84,6 +88,9 @@ extern class UITableViewCell extends UIView
 	@:native("detailTextLabel")
 	public var detailTextLabel:UILabel;
 
+	@:native("backgroundConfiguration")
+	public var backgroundConfiguration:UIBackgroundConfiguration;
+
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;
 
@@ -95,6 +102,9 @@ extern class UITableViewCell extends UIView
 
 	@:native("multipleSelectionBackgroundView")
 	public var multipleSelectionBackgroundView:UIView;
+
+	@:native("reuseIdentifier")
+	public var reuseIdentifier:NSString;
 
 	@:native("prepareForReuse")
 	overload public function prepareForReuse():Void;
@@ -164,6 +174,9 @@ extern class UITableViewCell extends UIView
 
 	@:native("userInteractionEnabledWhileDragging")
 	public var userInteractionEnabledWhileDragging:Bool;
+
+	@:native("text")
+	public var text:NSString;
 
 	@:native("font")
 	public var font:UIFont;

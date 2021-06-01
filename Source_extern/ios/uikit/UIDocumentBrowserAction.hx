@@ -33,6 +33,9 @@ extern class UIDocumentBrowserAction{
 	@:native("image")
 	public var image:UIImage;
 
+	@:native("supportedContentTypes")
+	public var supportedContentTypes:Dynamic;
+
 	@:native("supportsMultipleItems")
 	public var supportsMultipleItems:Bool;
 

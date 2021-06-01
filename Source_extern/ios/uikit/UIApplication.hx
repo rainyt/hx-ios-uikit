@@ -143,6 +143,9 @@ extern class UIApplication extends UIResponder{
 	@:native("registeredForRemoteNotifications")
 	public var registeredForRemoteNotifications:Bool;
 
+	@:native("scheduledLocalNotifications")
+	public var scheduledLocalNotifications:Dynamic;
+
 	@:native("currentUserNotificationSettings")
 	public var currentUserNotificationSettings:UIUserNotificationSettings;
 
@@ -151,6 +154,9 @@ extern class UIApplication extends UIResponder{
 
 	@:native("endReceivingRemoteControlEvents")
 	overload public function endReceivingRemoteControlEvents():Void;
+
+	@:native("shortcutItems")
+	public var shortcutItems:Dynamic;
 
 	@:native("supportsAlternateIcons")
 	public var supportsAlternateIcons:Bool;

@@ -16,5 +16,8 @@ extern class UIUserNotificationSettings{
 	@:native("types")
 	public var types:UIUserNotificationType;
 
+	@:native("categories")
+	public var categories:Dynamic;
+
 
 }

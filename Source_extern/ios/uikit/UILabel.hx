@@ -4,11 +4,13 @@ import ios.uikit.UIView;
 import ios.uikit.UILabel;
 import ios.objc.NSCoding;
 import ios.uikit.UIContentSizeCategoryAdjusting;
+import cpp.objc.NSString;
 import ios.uikit.UIFont;
 import ios.uikit.UIColor;
 import ios.objc.CGSize;
 import ios.uikit.NSTextAlignment;
 import ios.uikit.NSLineBreakMode;
+import ios.uikit.NSAttributedString;
 import ios.uikit.UIBaselineAdjustment;
 import ios.uikit.NSLineBreakStrategy;
 import ios.objc.CGRect;
@@ -39,6 +41,9 @@ extern class UILabel extends UIView
 	@:native("autorelease")
 	overload public static function autorelease():UILabel;
 
+	@:native("text")
+	public var text:NSString;
+
 	@:native("font")
 	public var font:UIFont;
 
@@ -56,6 +61,9 @@ extern class UILabel extends UIView
 
 	@:native("lineBreakMode")
 	public var lineBreakMode:NSLineBreakMode;
+
+	@:native("attributedText")
+	public var attributedText:NSAttributedString;
 
 	@:native("highlightedTextColor")
 	public var highlightedTextColor:UIColor;

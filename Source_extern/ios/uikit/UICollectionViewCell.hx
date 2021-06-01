@@ -5,6 +5,7 @@ import ios.uikit.UICollectionViewCell;
 import ios.uikit.UICellConfigurationState;
 import ios.uikit.UIView;
 import ios.uikit.UICollectionViewCellDragState;
+import ios.uikit.UIBackgroundConfiguration;
 import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.uikit.UICollectionViewLayout;
 import ios.uikit.UIViewPrintFormatter;
@@ -44,6 +45,9 @@ extern class UICollectionViewCell extends UICollectionReusableView{
 	@:native("updateConfigurationUsingState")
 	overload public function updateConfigurationUsingState(state:UICellConfigurationState):Void;
 
+	@:native("contentConfiguration")
+	public var contentConfiguration:Dynamic;
+
 	@:native("automaticallyUpdatesContentConfiguration")
 	public var automaticallyUpdatesContentConfiguration:Bool;
 
@@ -58,6 +62,9 @@ extern class UICollectionViewCell extends UICollectionReusableView{
 
 	@:native("dragStateDidChange")
 	overload public function dragStateDidChange(dragState:UICollectionViewCellDragState):Void;
+
+	@:native("backgroundConfiguration")
+	public var backgroundConfiguration:UIBackgroundConfiguration;
 
 	@:native("automaticallyUpdatesBackgroundConfiguration")
 	public var automaticallyUpdatesBackgroundConfiguration:Bool;

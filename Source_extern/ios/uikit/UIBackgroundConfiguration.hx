@@ -6,6 +6,7 @@ import ios.objc.NSSecureCoding;
 import ios.uikit.UIView;
 import ios.uikit.NSDirectionalRectEdge;
 import ios.uikit.UIColor;
+import ios.uikit.UIVisualEffect;
 @:objc
 @:native("UIBackgroundConfiguration")
 @:include("UIKit/UIKit.h")
@@ -63,11 +64,20 @@ extern class UIBackgroundConfiguration
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
 
+	@:native("backgroundColorTransformer")
+	public var backgroundColorTransformer:Dynamic;
+
 	@:native("resolvedBackgroundColorForTintColor")
 	overload public function resolvedBackgroundColorForTintColor(tintColor:UIColor):UIColor;
 
+	@:native("visualEffect")
+	public var visualEffect:UIVisualEffect;
+
 	@:native("strokeColor")
 	public var strokeColor:UIColor;
+
+	@:native("strokeColorTransformer")
+	public var strokeColorTransformer:Dynamic;
 
 	@:native("resolvedStrokeColorForTintColor")
 	overload public function resolvedStrokeColorForTintColor(tintColor:UIColor):UIColor;

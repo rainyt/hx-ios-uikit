@@ -25,5 +25,11 @@ extern class WKBackForwardList{
 	@:native("itemAtIndex")
 	overload public function itemAtIndex(index:Int):WKBackForwardListItem;
 
+	@:native("backList")
+	public var backList:Dynamic;
+
+	@:native("forwardList")
+	public var forwardList:Dynamic;
+
 
 }

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIBarAppearance;
 import ios.uikit.UIToolbarAppearance;
+import ios.uikit.UIBarButtonItemAppearance;
 import ios.uikit.UIUserInterfaceIdiom;
 import ios.uikit.NSCoder;
 @:objc
@@ -14,6 +15,12 @@ extern class UIToolbarAppearance extends UIBarAppearance{
 
 	@:native("autorelease")
 	overload public static function autorelease():UIToolbarAppearance;
+
+	@:native("buttonAppearance")
+	public var buttonAppearance:UIBarButtonItemAppearance;
+
+	@:native("doneButtonAppearance")
+	public var doneButtonAppearance:UIBarButtonItemAppearance;
 
 	@:native("init")
 	overload public function init():UIBarAppearance;

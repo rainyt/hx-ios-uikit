@@ -16,6 +16,9 @@ extern class UIMenuItem{
 	@:native("initWithTitle:action")
 	overload public function initWithTitle_action(title:NSString, action:String):UIMenuItem;
 
+	@:native("title")
+	public var title:NSString;
+
 	@:native("action")
 	public var action:String;
 

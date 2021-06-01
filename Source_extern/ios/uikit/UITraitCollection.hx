@@ -84,6 +84,9 @@ extern class UITraitCollection
 	@:native("traitCollectionWithPreferredContentSizeCategory")
 	overload public static function traitCollectionWithPreferredContentSizeCategory(preferredContentSizeCategory:Dynamic):UITraitCollection;
 
+	@:native("preferredContentSizeCategory")
+	public var preferredContentSizeCategory:Dynamic;
+
 	@:native("traitCollectionWithDisplayGamut")
 	overload public static function traitCollectionWithDisplayGamut(displayGamut:UIDisplayGamut):UITraitCollection;
 

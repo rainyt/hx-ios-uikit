@@ -7,11 +7,12 @@ import ios.webkit.WKProcessPool;
 import ios.webkit.WKPreferences;
 import ios.webkit.WKUserContentController;
 import ios.webkit.WKWebsiteDataStore;
+import cpp.objc.NSString;
 import ios.webkit.WKAudiovisualMediaTypes;
+import ios.webkit.WKWebpagePreferences;
 import ios.webkit.WKSelectionGranularity;
 import ios.webkit.WKDataDetectorTypes;
 import ios.webkit.WKUserInterfaceDirectionPolicy;
-import cpp.objc.NSString;
 @:objc
 @:native("WKWebViewConfiguration")
 @:include("WebKit/WebKit.h")
@@ -39,11 +40,17 @@ extern class WKWebViewConfiguration
 	@:native("suppressesIncrementalRendering")
 	public var suppressesIncrementalRendering:Bool;
 
+	@:native("applicationNameForUserAgent")
+	public var applicationNameForUserAgent:NSString;
+
 	@:native("allowsAirPlayForMediaPlayback")
 	public var allowsAirPlayForMediaPlayback:Bool;
 
 	@:native("mediaTypesRequiringUserActionForPlayback")
 	public var mediaTypesRequiringUserActionForPlayback:WKAudiovisualMediaTypes;
+
+	@:native("defaultWebpagePreferences")
+	public var defaultWebpagePreferences:WKWebpagePreferences;
 
 	@:native("limitsNavigationsToAppBoundDomains")
 	public var limitsNavigationsToAppBoundDomains:Bool;

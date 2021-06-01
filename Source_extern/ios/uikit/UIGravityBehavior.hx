@@ -24,6 +24,9 @@ extern class UIGravityBehavior extends UIDynamicBehavior{
 	@:native("removeItem")
 	overload public function removeItem(item:Dynamic):Void;
 
+	@:native("items")
+	public var items:Dynamic;
+
 	@:native("gravityDirection")
 	public var gravityDirection:CGVector;
 

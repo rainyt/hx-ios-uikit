@@ -33,6 +33,9 @@ extern class UIMenuController{
 	@:native("arrowDirection")
 	public var arrowDirection:UIMenuControllerArrowDirection;
 
+	@:native("menuItems")
+	public var menuItems:Dynamic;
+
 	@:native("update")
 	overload public function update():Void;
 

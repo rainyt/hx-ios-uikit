@@ -4,6 +4,7 @@ import ios.uikit.UIUserNotificationCategory;
 import ios.objc.NSCopying;
 import ios.objc.NSSecureCoding;
 import ios.uikit.NSCoder;
+import cpp.objc.NSString;
 import ios.uikit.UIUserNotificationActionContext;
 @:objc
 @:native("UIUserNotificationCategory")
@@ -22,6 +23,9 @@ extern class UIUserNotificationCategory
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIUserNotificationCategory;
+
+	@:native("identifier")
+	public var identifier:NSString;
 
 	@:native("actionsForContext")
 	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;

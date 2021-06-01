@@ -4,6 +4,7 @@ import ios.uikit.UIPrintInfo;
 import ios.objc.NSCopying;
 import ios.objc.NSCoding;
 import ios.uikit.NSCoder;
+import cpp.objc.NSString;
 import ios.uikit.UIPrintInfoOutputType;
 import ios.uikit.UIPrintInfoOrientation;
 import ios.uikit.UIPrintInfoDuplex;
@@ -27,6 +28,12 @@ extern class UIPrintInfo
 
 	@:native("printInfoWithDictionary")
 	overload public static function printInfoWithDictionary(dictionary:Dynamic):UIPrintInfo;
+
+	@:native("printerID")
+	public var printerID:NSString;
+
+	@:native("jobName")
+	public var jobName:NSString;
 
 	@:native("outputType")
 	public var outputType:UIPrintInfoOutputType;

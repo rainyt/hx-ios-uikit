@@ -8,6 +8,7 @@ import ios.uikit.UIColor;
 import ios.uikit.UIImage;
 import ios.uikit.UIBarPosition;
 import ios.uikit.UIBarMetrics;
+import ios.uikit.UIToolbarAppearance;
 import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
@@ -40,6 +41,9 @@ extern class UIToolbar extends UIView
 	@:native("barStyle")
 	public var barStyle:UIBarStyle;
 
+	@:native("items")
+	public var items:Dynamic;
+
 	@:native(" UI_APPEARANCE_SELECTOR")
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
@@ -57,6 +61,12 @@ extern class UIToolbar extends UIView
 
 	@:native("shadowImageForToolbarPosition")
 	overload public function shadowImageForToolbarPosition(topOrBottom:UIBarPosition):UIImage;
+
+	@:native("standardAppearance")
+	public var standardAppearance:UIToolbarAppearance;
+
+	@:native("compactAppearance")
+	public var compactAppearance:UIToolbarAppearance;
 
 	@:native("delegate")
 	public var delegate:Dynamic;

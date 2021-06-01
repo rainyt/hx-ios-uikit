@@ -4,6 +4,7 @@ import ios.uikit.UISearchDisplayController;
 import ios.uikit.UISearchBar;
 import ios.uikit.UIViewController;
 import ios.uikit.UITableView;
+import cpp.objc.NSString;
 import ios.uikit.UINavigationItem;
 @:objc
 @:native("UISearchDisplayController")
@@ -42,6 +43,9 @@ extern class UISearchDisplayController{
 
 	@:native("searchResultsDelegate")
 	public var searchResultsDelegate:Dynamic;
+
+	@:native("searchResultsTitle")
+	public var searchResultsTitle:NSString;
 
 	@:native("displaysSearchBarInNavigationBar")
 	public var displaysSearchBarInNavigationBar:Bool;

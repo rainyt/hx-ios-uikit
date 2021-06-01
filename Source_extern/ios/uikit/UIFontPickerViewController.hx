@@ -27,6 +27,9 @@ extern class UIFontPickerViewController extends UIViewController{
 	@:native("initWithConfiguration")
 	overload public function initWithConfiguration(configuration:UIFontPickerViewControllerConfiguration):UIFontPickerViewController;
 
+	@:native("configuration")
+	public var configuration:UIFontPickerViewControllerConfiguration;
+
 	@:native("delegate")
 	public var delegate:Dynamic;
 

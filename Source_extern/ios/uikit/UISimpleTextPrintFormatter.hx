@@ -25,6 +25,12 @@ extern class UISimpleTextPrintFormatter extends UIPrintFormatter{
 	@:native("initWithAttributedText")
 	overload public function initWithAttributedText(attributedText:NSAttributedString):UISimpleTextPrintFormatter;
 
+	@:native("text")
+	public var text:NSString;
+
+	@:native("attributedText")
+	public var attributedText:NSAttributedString;
+
 	@:native("font")
 	public var font:UIFont;
 

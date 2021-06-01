@@ -42,6 +42,9 @@ extern class UIAlertController extends UIViewController{
 	@:native("textFields")
 	public var textFields:Dynamic;
 
+	@:native("message")
+	public var message:NSString;
+
 	@:native("preferredStyle")
 	public var preferredStyle:UIAlertControllerStyle;
 

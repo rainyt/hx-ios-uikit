@@ -2,6 +2,8 @@ package ios.uikit;
 
 import ios.uikit.UIMenuElement;
 import ios.uikit.UICommand;
+import cpp.objc.NSString;
+import ios.uikit.UIImage;
 import ios.uikit.UIMenuElementAttributes;
 import ios.uikit.UIMenuElementState;
 import ios.uikit.NSCoder;
@@ -15,6 +17,9 @@ extern class UICommand extends UIMenuElement{
 
 	@:native("autorelease")
 	overload public static function autorelease():UICommand;
+
+	@:native("discoverabilityTitle")
+	public var discoverabilityTitle:NSString;
 
 	@:native("action")
 	public var action:String;

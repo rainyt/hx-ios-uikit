@@ -26,6 +26,12 @@ extern class UIManagedDocument extends UIDocument{
 	@:native("managedObjectModel")
 	public var managedObjectModel:Dynamic;
 
+	@:native("persistentStoreOptions")
+	public var persistentStoreOptions:Dynamic;
+
+	@:native("modelConfiguration")
+	public var modelConfiguration:NSString;
+
 	@:native("configurePersistentStoreCoordinatorForURL:ofType:modelConfiguration:storeOptions:error")
 	overload public function configurePersistentStoreCoordinatorForURL_ofType_modelConfiguration_storeOptions_error(storeURL:Dynamic, ofType:NSString, modelConfiguration:NSString, storeOptions:Dynamic, error:Dynamic):Bool;
 

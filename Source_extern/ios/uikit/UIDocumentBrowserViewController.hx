@@ -42,6 +42,15 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	@:native("allowsPickingMultipleItems")
 	public var allowsPickingMultipleItems:Bool;
 
+	@:native("allowedContentTypes")
+	public var allowedContentTypes:Dynamic;
+
+	@:native("recentDocumentsContentTypes")
+	public var recentDocumentsContentTypes:Dynamic;
+
+	@:native("contentTypesForRecentDocuments")
+	public var contentTypesForRecentDocuments:Dynamic;
+
 	@:native("shouldShowFileExtensions")
 	public var shouldShowFileExtensions:Bool;
 
@@ -60,8 +69,14 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	@:native("transitionControllerForDocumentAtURL")
 	overload public function transitionControllerForDocumentAtURL(documentURL:Dynamic):UIDocumentBrowserTransitionController;
 
+	@:native("customActions")
+	public var customActions:Dynamic;
+
 	@:native("browserUserInterfaceStyle")
 	public var browserUserInterfaceStyle:UIDocumentBrowserUserInterfaceStyle;
+
+	@:native("localizedCreateDocumentActionTitle")
+	public var localizedCreateDocumentActionTitle:NSString;
 
 	@:native("defaultDocumentAspectRatio")
 	public var defaultDocumentAspectRatio:Float;

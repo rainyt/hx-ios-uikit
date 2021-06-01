@@ -18,6 +18,9 @@ extern class WKSnapshotConfiguration
 	@:native("rect")
 	public var rect:CGRect;
 
+	@:native("snapshotWidth")
+	public var snapshotWidth:Dynamic;
+
 	@:native("afterScreenUpdates")
 	public var afterScreenUpdates:Bool;
 

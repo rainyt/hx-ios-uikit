@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIMenuElement;
 import ios.uikit.UIAction;
 import cpp.objc.NSString;
+import ios.uikit.UIImage;
 import ios.uikit.UIMenuElementAttributes;
 import ios.uikit.UIMenuElementState;
 import ios.uikit.NSCoder;
@@ -16,6 +17,9 @@ extern class UIAction extends UIMenuElement{
 
 	@:native("autorelease")
 	overload public static function autorelease():UIAction;
+
+	@:native("discoverabilityTitle")
+	public var discoverabilityTitle:NSString;
 
 	@:native("identifier")
 	public var identifier:NSString;
