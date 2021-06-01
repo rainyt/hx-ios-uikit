@@ -15,10 +15,10 @@ extern class UILocalizedIndexedCollation extends NSObject{
 	overload public static function currentCollation():UILocalizedIndexedCollation;
 
 	@:native("sectionTitles")
-	public var sectionTitles:NSArray;
+	public var sectionTitles:Dynamic;
 
 	@:native("sectionIndexTitles")
-	public var sectionIndexTitles:NSArray;
+	public var sectionIndexTitles:Dynamic;
 
 	@:native("sectionForSectionIndexTitleAtIndex")
 	overload public function sectionForSectionIndexTitleAtIndex(indexTitleIndex:Int):Int;
@@ -39,7 +39,7 @@ extern class UILocalizedIndexedCollation extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

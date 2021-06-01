@@ -53,10 +53,10 @@ extern interface UITextInput{
 	overload public function offsetFromPosition_toPosition(from:UITextPosition, toPosition:UITextPosition):Int;
 
 	@:native("inputDelegate")
-	public var inputDelegate:;
+	public var inputDelegate:Dynamic;
 
 	@:native("tokenizer")
-	public var tokenizer:;
+	public var tokenizer:Dynamic;
 
 	@:native("positionWithinRange:farthestInDirection")
 	overload public function positionWithinRange_farthestInDirection(range:UITextRange, farthestInDirection:UITextLayoutDirection):UITextPosition;
@@ -77,7 +77,7 @@ extern interface UITextInput{
 	overload public function caretRectForPosition(position:UITextPosition):CGRect;
 
 	@:native("selectionRectsForRange")
-	overload public function selectionRectsForRange(range:UITextRange):NSArray;
+	overload public function selectionRectsForRange(range:UITextRange):Dynamic;
 
 	@:native("closestPositionToPoint")
 	overload public function closestPositionToPoint(point:CGPoint):UITextPosition;
@@ -107,7 +107,7 @@ extern interface UITextInput{
 	public var selectionAffinity:UITextStorageDirection;
 
 	@:native("insertDictationResult")
-	overload public function insertDictationResult(dictationResult:NSArray):Void;
+	overload public function insertDictationResult(dictationResult:Dynamic):Void;
 
 	@:native("dictationRecordingDidEnd")
 	overload public function dictationRecordingDidEnd():Void;
@@ -125,7 +125,7 @@ extern interface UITextInput{
 	overload public function removeDictationResultPlaceholder_willInsertResult(placeholder:Dynamic, willInsertResult:Bool):Void;
 
 	@:native("insertText:alternatives:style")
-	overload public function insertText_alternatives_style(text:NSString, alternatives:NSArray, style:UITextAlternativeStyle):Void;
+	overload public function insertText_alternatives_style(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
 
 	@:native("setAttributedMarkedText:selectedRange")
 	overload public function setAttributedMarkedText_selectedRange(markedText:NSAttributedString, selectedRange:Dynamic):Void;

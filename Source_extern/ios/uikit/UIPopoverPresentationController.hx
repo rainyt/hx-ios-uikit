@@ -35,7 +35,7 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	public var popoverLayoutMargins:Dynamic;
 
 	@:native("popoverBackgroundViewClass")
-	public var popoverBackgroundViewClass:;
+	public var popoverBackgroundViewClass:Dynamic;
 
 	@:native("initWithPresentedViewController:presentingViewController")
 	overload public function initWithPresentedViewController_presentingViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPresentationController;
@@ -92,7 +92,7 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

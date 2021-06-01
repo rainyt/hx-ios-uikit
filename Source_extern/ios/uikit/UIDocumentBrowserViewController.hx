@@ -14,13 +14,13 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	overload public static function autorelease():UIDocumentBrowserViewController;
 
 	@:native("initForOpeningContentTypes")
-	overload public function initForOpeningContentTypes(contentTypes:NSArray):UIDocumentBrowserViewController;
+	overload public function initForOpeningContentTypes(contentTypes:Dynamic):UIDocumentBrowserViewController;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibName:NSString, bundle:NSBundle):UIDocumentBrowserViewController;
 
 	@:native("delegate")
-	public var delegate:;
+	public var delegate:Dynamic;
 
 	@:native("allowsDocumentCreation")
 	public var allowsDocumentCreation:Bool;
@@ -32,10 +32,10 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	public var shouldShowFileExtensions:Bool;
 
 	@:native("additionalLeadingNavigationBarButtonItems")
-	public var additionalLeadingNavigationBarButtonItems:;
+	public var additionalLeadingNavigationBarButtonItems:Dynamic;
 
 	@:native("additionalTrailingNavigationBarButtonItems")
-	public var additionalTrailingNavigationBarButtonItems:;
+	public var additionalTrailingNavigationBarButtonItems:Dynamic;
 
 	@:native("revealDocumentAtURL:importIfNeeded:completion")
 	overload public function revealDocumentAtURL_importIfNeeded_completion(url:Dynamic, importIfNeeded:Bool, completion:Dynamic):Void;
@@ -77,7 +77,7 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -194,7 +194,7 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

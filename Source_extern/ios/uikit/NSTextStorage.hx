@@ -29,7 +29,7 @@ extern class NSTextStorage extends NSMutableAttributedString
 	public var changeInLength:Int;
 
 	@:native("delegate")
-	public var delegate:;
+	public var delegate:Dynamic;
 
 	@:native("edited:range:changeInLength")
 	overload public function edited_range_changeInLength(editedMask:NSTextStorageEditActions, range:Dynamic, changeInLength:Int):Void;

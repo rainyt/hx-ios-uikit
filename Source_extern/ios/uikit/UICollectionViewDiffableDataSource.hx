@@ -63,7 +63,7 @@ implements cpp.objc.Protocol<UICollectionViewDataSource>
 	overload public function collectionView_moveItemAtIndexPath_toIndexPath(collectionView:UICollectionView, moveItemAtIndexPath:Dynamic, toIndexPath:Dynamic):Void;
 
 	@:native("indexTitlesForCollectionView")
-	overload public function indexTitlesForCollectionView(collectionView:UICollectionView):NSArray;
+	overload public function indexTitlesForCollectionView(collectionView:UICollectionView):Dynamic;
 
 	@:native("collectionView:indexPathForIndexTitle:atIndex")
 	overload public function collectionView_indexPathForIndexTitle_atIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):Dynamic;
@@ -78,7 +78,7 @@ implements cpp.objc.Protocol<UICollectionViewDataSource>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

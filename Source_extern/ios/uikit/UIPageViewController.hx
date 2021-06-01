@@ -20,10 +20,10 @@ extern class UIPageViewController extends UIViewController{
 	overload public function initWithCoder(coder:NSCoder):UIPageViewController;
 
 	@:native("delegate")
-	public var delegate:;
+	public var delegate:Dynamic;
 
 	@:native("dataSource")
-	public var dataSource:;
+	public var dataSource:Dynamic;
 
 	@:native("transitionStyle")
 	public var transitionStyle:UIPageViewControllerTransitionStyle;
@@ -38,13 +38,13 @@ extern class UIPageViewController extends UIViewController{
 	public var doubleSided:Bool;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:NSArray;
+	public var gestureRecognizers:Dynamic;
 
 	@:native("viewControllers")
-	public var viewControllers:NSArray;
+	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:direction:animated:completion")
-	overload public function setViewControllers_direction_animated_completion(viewControllers:NSArray, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
+	overload public function setViewControllers_direction_animated_completion(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
@@ -71,7 +71,7 @@ extern class UIPageViewController extends UIViewController{
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -188,7 +188,7 @@ extern class UIPageViewController extends UIViewController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

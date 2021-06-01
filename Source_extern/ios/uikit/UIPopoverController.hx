@@ -18,7 +18,7 @@ extern class UIPopoverController extends NSObject
 	overload public function initWithContentViewController(viewController:UIViewController):UIPopoverController;
 
 	@:native("delegate")
-	public var delegate:;
+	public var delegate:Dynamic;
 
 	@:native("contentViewController")
 	public var contentViewController:UIViewController;
@@ -63,7 +63,7 @@ extern class UIPopoverController extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

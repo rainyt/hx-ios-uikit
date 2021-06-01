@@ -19,10 +19,10 @@ extern class UIMenu extends UIMenuElement{
 	public var options:UIMenuOptions;
 
 	@:native("children")
-	public var children:NSArray;
+	public var children:Dynamic;
 
 	@:native("menuWithChildren")
-	overload public static function menuWithChildren(children:NSArray):UIMenu;
+	overload public static function menuWithChildren(children:Dynamic):UIMenu;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIMenu;
@@ -31,7 +31,7 @@ extern class UIMenu extends UIMenuElement{
 	overload public function init():UIMenu;
 
 	@:native("menuByReplacingChildren")
-	overload public function menuByReplacingChildren(newChildren:NSArray):UIMenu;
+	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -43,7 +43,7 @@ extern class UIMenu extends UIMenuElement{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

@@ -15,7 +15,7 @@ extern interface UITextPasteDelegate{
 	overload public function textPasteConfigurationSupporting_transformPasteItem(textPasteConfigurationSupporting:Dynamic, transformPasteItem:Dynamic):Void;
 
 	@:native("textPasteConfigurationSupporting:combineItemAttributedStrings:forRange")
-	overload public function textPasteConfigurationSupporting_combineItemAttributedStrings_forRange(textPasteConfigurationSupporting:Dynamic, combineItemAttributedStrings:NSArray, forRange:UITextRange):NSAttributedString;
+	overload public function textPasteConfigurationSupporting_combineItemAttributedStrings_forRange(textPasteConfigurationSupporting:Dynamic, combineItemAttributedStrings:Dynamic, forRange:UITextRange):NSAttributedString;
 
 	@:native("textPasteConfigurationSupporting:performPasteOfAttributedString:toRange")
 	overload public function textPasteConfigurationSupporting_performPasteOfAttributedString_toRange(textPasteConfigurationSupporting:Dynamic, performPasteOfAttributedString:NSAttributedString, toRange:UITextRange):UITextRange;

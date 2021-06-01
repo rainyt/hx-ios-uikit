@@ -27,22 +27,22 @@ extern class UIEvent extends NSObject{
 	public var buttonMask:UIEventButtonMask;
 
 	@:native("allTouches")
-	public var allTouches:;
+	public var allTouches:Dynamic;
 
 	@:native("touchesForWindow")
-	overload public function touchesForWindow(window:UIWindow):NSSet;
+	overload public function touchesForWindow(window:UIWindow):Dynamic;
 
 	@:native("touchesForView")
-	overload public function touchesForView(view:UIView):NSSet;
+	overload public function touchesForView(view:UIView):Dynamic;
 
 	@:native("touchesForGestureRecognizer")
-	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):NSSet;
+	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):Dynamic;
 
 	@:native("coalescedTouchesForTouch")
-	overload public function coalescedTouchesForTouch(touch:UITouch):NSArray;
+	overload public function coalescedTouchesForTouch(touch:UITouch):Dynamic;
 
 	@:native("predictedTouchesForTouch")
-	overload public function predictedTouchesForTouch(touch:UITouch):NSArray;
+	overload public function predictedTouchesForTouch(touch:UITouch):Dynamic;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -54,7 +54,7 @@ extern class UIEvent extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

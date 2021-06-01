@@ -18,9 +18,14 @@ class ObjcType {
 		if (t.indexOf("(") != -1 || t.indexOf("id") == 0) {
 			return "Dynamic";
 		}
-		
+
 		if (t.indexOf("<") != -1) {
-			return t.substr(0, t.indexOf("<"));
+			var t = t.substr(0, t.indexOf("<"));
+			switch (t) {
+				case "NSSet", "NSArray", "", "Class":
+					return "Dynamic";
+			}
+			return t;
 		}
 
 		if (t == "CGFloat")
@@ -28,7 +33,6 @@ class ObjcType {
 
 		if (t == "NSUInteger" || t == "NSInteger")
 			return "Int";
-
 		if (typedefs != null && typedefs.exists(t)) {
 			var def = typedefs.get(t);
 			if (!def.createHaxeFile)

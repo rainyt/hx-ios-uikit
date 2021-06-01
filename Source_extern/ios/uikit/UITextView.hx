@@ -112,10 +112,10 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function offsetFromPosition_toPosition(from:UITextPosition, toPosition:UITextPosition):Int;
 
 	@:native("inputDelegate")
-	public var inputDelegate:;
+	public var inputDelegate:Dynamic;
 
 	@:native("tokenizer")
-	public var tokenizer:;
+	public var tokenizer:Dynamic;
 
 	@:native("positionWithinRange:farthestInDirection")
 	overload public function positionWithinRange_farthestInDirection(range:UITextRange, farthestInDirection:UITextLayoutDirection):UITextPosition;
@@ -136,7 +136,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function caretRectForPosition(position:UITextPosition):CGRect;
 
 	@:native("selectionRectsForRange")
-	overload public function selectionRectsForRange(range:UITextRange):NSArray;
+	overload public function selectionRectsForRange(range:UITextRange):Dynamic;
 
 	@:native("closestPositionToPoint")
 	overload public function closestPositionToPoint(point:CGPoint):UITextPosition;
@@ -166,7 +166,7 @@ implements cpp.objc.Protocol<UITextInput>
 	public var selectionAffinity:UITextStorageDirection;
 
 	@:native("insertDictationResult")
-	overload public function insertDictationResult(dictationResult:NSArray):Void;
+	overload public function insertDictationResult(dictationResult:Dynamic):Void;
 
 	@:native("dictationRecordingDidEnd")
 	overload public function dictationRecordingDidEnd():Void;
@@ -184,7 +184,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function removeDictationResultPlaceholder_willInsertResult(placeholder:Dynamic, willInsertResult:Bool):Void;
 
 	@:native("insertText:alternatives:style")
-	overload public function insertText_alternatives_style(text:NSString, alternatives:NSArray, style:UITextAlternativeStyle):Void;
+	overload public function insertText_alternatives_style(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
 
 	@:native("setAttributedMarkedText:selectedRange")
 	overload public function setAttributedMarkedText_selectedRange(markedText:NSAttributedString, selectedRange:Dynamic):Void;
@@ -217,7 +217,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function flashScrollIndicators():Void;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin_withEvent_inContentView(touches:NSSet, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
 
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
@@ -385,7 +385,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -415,13 +415,13 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:NSArray):Void;
+	overload public function addConstraints(constraints:Dynamic):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:NSArray):Void;
+	overload public function removeConstraints(constraints:Dynamic):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -472,7 +472,7 @@ implements cpp.objc.Protocol<UITextInput>
 	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;

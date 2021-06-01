@@ -86,7 +86,7 @@ extern interface UIApplicationDelegate{
 	overload public function application_shouldAllowExtensionPointIdentifier(application:UIApplication, shouldAllowExtensionPointIdentifier:Dynamic):Bool;
 
 	@:native("application:viewControllerWithRestorationIdentifierPath:coder")
-	overload public function application_viewControllerWithRestorationIdentifierPath_coder(application:UIApplication, viewControllerWithRestorationIdentifierPath:NSArray, coder:NSCoder):UIViewController;
+	overload public function application_viewControllerWithRestorationIdentifierPath_coder(application:UIApplication, viewControllerWithRestorationIdentifierPath:Dynamic, coder:NSCoder):UIViewController;
 
 	@:native("application:shouldSaveSecureApplicationState")
 	overload public function application_shouldSaveSecureApplicationState(application:UIApplication, shouldSaveSecureApplicationState:NSCoder):Bool;
@@ -119,7 +119,7 @@ extern interface UIApplicationDelegate{
 	overload public function application_configurationForConnectingSceneSession_options(application:UIApplication, configurationForConnectingSceneSession:UISceneSession, options:UISceneConnectionOptions):UISceneConfiguration;
 
 	@:native("application:didDiscardSceneSessions")
-	overload public function application_didDiscardSceneSessions(application:UIApplication, didDiscardSceneSessions:NSSet):Void;
+	overload public function application_didDiscardSceneSessions(application:UIApplication, didDiscardSceneSessions:Dynamic):Void;
 
 
 }

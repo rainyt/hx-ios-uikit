@@ -27,7 +27,7 @@ extern class NSLayoutManager extends NSObject
 	public var textStorage:NSTextStorage;
 
 	@:native("textContainers")
-	public var textContainers:NSArray;
+	public var textContainers:Dynamic;
 
 	@:native("addTextContainer")
 	overload public function addTextContainer(container:NSTextContainer):Void;
@@ -42,7 +42,7 @@ extern class NSLayoutManager extends NSObject
 	overload public function textContainerChangedGeometry(container:NSTextContainer):Void;
 
 	@:native("delegate")
-	public var delegate:;
+	public var delegate:Dynamic;
 
 	@:native("showsInvisibleCharacters")
 	public var showsInvisibleCharacters:Bool;
@@ -279,7 +279,7 @@ extern class NSLayoutManager extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

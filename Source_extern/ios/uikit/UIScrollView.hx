@@ -112,7 +112,7 @@ extern class UIScrollView extends UIView
 	public var canCancelContentTouches:Bool;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin_withEvent_inContentView(touches:NSSet, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
 
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
@@ -319,7 +319,7 @@ extern class UIScrollView extends UIView
 	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -349,13 +349,13 @@ extern class UIScrollView extends UIView
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:NSArray):Void;
+	overload public function addConstraints(constraints:Dynamic):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:NSArray):Void;
+	overload public function removeConstraints(constraints:Dynamic):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -406,7 +406,7 @@ extern class UIScrollView extends UIView
 	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;

@@ -16,7 +16,7 @@ implements cpp.objc.Protocol<UITraitEnvironment>
 	overload public static function autorelease():UIScreen;
 
 	@:native("screens")
-	overload public static function screens():NSArray;
+	overload public static function screens():Dynamic;
 
 	@:native("mainScreen")
 	overload public static function mainScreen():UIScreen;
@@ -52,10 +52,10 @@ implements cpp.objc.Protocol<UITraitEnvironment>
 	public var wantsSoftwareDimming:Bool;
 
 	@:native("coordinateSpace")
-	public var coordinateSpace:;
+	public var coordinateSpace:Dynamic;
 
 	@:native("fixedCoordinateSpace")
-	public var fixedCoordinateSpace:;
+	public var fixedCoordinateSpace:Dynamic;
 
 	@:native("nativeBounds")
 	public var nativeBounds:CGRect;
@@ -103,7 +103,7 @@ implements cpp.objc.Protocol<UITraitEnvironment>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

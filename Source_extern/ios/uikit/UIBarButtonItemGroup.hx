@@ -13,7 +13,7 @@ extern class UIBarButtonItemGroup extends NSObject
 	overload public static function autorelease():UIBarButtonItemGroup;
 
 	@:native("initWithBarButtonItems:representativeItem")
-	overload public function initWithBarButtonItems_representativeItem(barButtonItems:NSArray, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
+	overload public function initWithBarButtonItems_representativeItem(barButtonItems:Dynamic, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIBarButtonItemGroup;
@@ -34,7 +34,7 @@ extern class UIBarButtonItemGroup extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

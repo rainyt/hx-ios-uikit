@@ -27,16 +27,16 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	public var style:UITableViewStyle;
 
 	@:native("dataSource")
-	public var dataSource:;
+	public var dataSource:Dynamic;
 
 	@:native("prefetchDataSource")
-	public var prefetchDataSource:;
+	public var prefetchDataSource:Dynamic;
 
 	@:native("dragDelegate")
-	public var dragDelegate:;
+	public var dragDelegate:Dynamic;
 
 	@:native("dropDelegate")
-	public var dropDelegate:;
+	public var dropDelegate:Dynamic;
 
 	@:native("rowHeight")
 	public var rowHeight:Float;
@@ -93,16 +93,16 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function indexPathForCell(cell:UITableViewCell):Dynamic;
 
 	@:native("indexPathsForRowsInRect")
-	overload public function indexPathsForRowsInRect(rect:CGRect):NSArray;
+	overload public function indexPathsForRowsInRect(rect:CGRect):Dynamic;
 
 	@:native("cellForRowAtIndexPath")
 	overload public function cellForRowAtIndexPath(indexPath:Dynamic):UITableViewCell;
 
 	@:native("visibleCells")
-	public var visibleCells:NSArray;
+	public var visibleCells:Dynamic;
 
 	@:native("indexPathsForVisibleRows")
-	public var indexPathsForVisibleRows:NSArray;
+	public var indexPathsForVisibleRows:Dynamic;
 
 	@:native("headerViewForSection")
 	overload public function headerViewForSection(section:Int):UITableViewHeaderFooterView;
@@ -138,13 +138,13 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function moveSection_toSection(section:Int, toSection:Int):Void;
 
 	@:native("insertRowsAtIndexPaths:withRowAnimation")
-	overload public function insertRowsAtIndexPaths_withRowAnimation(indexPaths:NSArray, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function insertRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("deleteRowsAtIndexPaths:withRowAnimation")
-	overload public function deleteRowsAtIndexPaths_withRowAnimation(indexPaths:NSArray, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function deleteRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("reloadRowsAtIndexPaths:withRowAnimation")
-	overload public function reloadRowsAtIndexPaths_withRowAnimation(indexPaths:NSArray, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function reloadRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveRowAtIndexPath:toIndexPath")
 	overload public function moveRowAtIndexPath_toIndexPath(indexPath:Dynamic, toIndexPath:Dynamic):Void;
@@ -180,7 +180,7 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	public var indexPathForSelectedRow:Dynamic;
 
 	@:native("indexPathsForSelectedRows")
-	public var indexPathsForSelectedRows:NSArray;
+	public var indexPathsForSelectedRows:Dynamic;
 
 	@:native("selectRowAtIndexPath:animated:scrollPosition")
 	overload public function selectRowAtIndexPath_animated_scrollPosition(indexPath:Dynamic, animated:Bool, scrollPosition:UITableViewScrollPosition):Void;
@@ -273,7 +273,7 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function flashScrollIndicators():Void;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin_withEvent_inContentView(touches:NSSet, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
 
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
@@ -441,7 +441,7 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
@@ -471,13 +471,13 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:NSArray):Void;
+	overload public function addConstraints(constraints:Dynamic):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:NSArray):Void;
+	overload public function removeConstraints(constraints:Dynamic):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -528,7 +528,7 @@ implements cpp.objc.Protocol<UIDataSourceTranslating>
 	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;

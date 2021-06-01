@@ -54,13 +54,13 @@ implements cpp.objc.Protocol<UIAppearance>
 	overload public static function appearance():UIAppearance;
 
 	@:native("appearanceWhenContainedInInstancesOfClasses")
-	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIAppearance;
+	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:Dynamic):UIAppearance;
 
 	@:native("appearanceForTraitCollection")
 	overload public static function appearanceForTraitCollection(trait:UITraitCollection):UIAppearance;
 
 	@:native("appearanceForTraitCollection:whenContainedInInstancesOfClasses")
-	overload public static function appearanceForTraitCollection_whenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:NSArray):UIAppearance;
+	overload public static function appearanceForTraitCollection_whenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -72,7 +72,7 @@ implements cpp.objc.Protocol<UIAppearance>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

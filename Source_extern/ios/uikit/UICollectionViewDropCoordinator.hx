@@ -13,7 +13,7 @@ extern interface UICollectionViewDropCoordinator{
 	overload public static function autorelease():UICollectionViewDropCoordinator;
 
 	@:native("items")
-	public var items:NSArray;
+	public var items:Dynamic;
 
 	@:native("destinationIndexPath")
 	public var destinationIndexPath:Dynamic;

@@ -15,10 +15,10 @@ extern interface UITextDragRequest{
 	public var dragRange:UITextRange;
 
 	@:native("suggestedItems")
-	public var suggestedItems:NSArray;
+	public var suggestedItems:Dynamic;
 
 	@:native("existingItems")
-	public var existingItems:NSArray;
+	public var existingItems:Dynamic;
 
 	@:native("selected")
 	public var selected:Bool;

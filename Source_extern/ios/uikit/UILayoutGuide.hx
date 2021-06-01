@@ -50,7 +50,7 @@ extern class UILayoutGuide extends NSObject
 	public var centerYAnchor:NSLayoutYAxisAnchor;
 
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("hasAmbiguousLayout")
 	public var hasAmbiguousLayout:Bool;
@@ -65,7 +65,7 @@ extern class UILayoutGuide extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

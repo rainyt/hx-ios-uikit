@@ -21,7 +21,7 @@ extern class NSDiffableDataSourceTransaction extends NSObject{
 	public var difference:NSOrderedCollectionDifference;
 
 	@:native("sectionTransactions")
-	public var sectionTransactions:NSArray;
+	public var sectionTransactions:Dynamic;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -33,7 +33,7 @@ extern class NSDiffableDataSourceTransaction extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

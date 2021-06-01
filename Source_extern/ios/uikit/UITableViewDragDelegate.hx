@@ -13,10 +13,10 @@ extern interface UITableViewDragDelegate{
 	overload public static function autorelease():UITableViewDragDelegate;
 
 	@:native("tableView:itemsForBeginningDragSession:atIndexPath")
-	overload public function tableView_itemsForBeginningDragSession_atIndexPath(tableView:UITableView, itemsForBeginningDragSession:Dynamic, atIndexPath:Dynamic):NSArray;
+	overload public function tableView_itemsForBeginningDragSession_atIndexPath(tableView:UITableView, itemsForBeginningDragSession:Dynamic, atIndexPath:Dynamic):Dynamic;
 
 	@:native("tableView:itemsForAddingToDragSession:atIndexPath:point")
-	overload public function tableView_itemsForAddingToDragSession_atIndexPath_point(tableView:UITableView, itemsForAddingToDragSession:Dynamic, atIndexPath:Dynamic, point:CGPoint):NSArray;
+	overload public function tableView_itemsForAddingToDragSession_atIndexPath_point(tableView:UITableView, itemsForAddingToDragSession:Dynamic, atIndexPath:Dynamic, point:CGPoint):Dynamic;
 
 	@:native("tableView:dragPreviewParametersForRowAtIndexPath")
 	overload public function tableView_dragPreviewParametersForRowAtIndexPath(tableView:UITableView, dragPreviewParametersForRowAtIndexPath:Dynamic):UIDragPreviewParameters;

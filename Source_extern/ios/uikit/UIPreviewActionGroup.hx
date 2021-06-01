@@ -14,7 +14,7 @@ extern class UIPreviewActionGroup extends NSObject
 	overload public static function autorelease():UIPreviewActionGroup;
 
 	@:native("actionGroupWithTitle:style:actions")
-	overload public static function actionGroupWithTitle_style_actions(title:NSString, style:UIPreviewActionStyle, actions:NSArray):UIPreviewActionGroup;
+	overload public static function actionGroupWithTitle_style_actions(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -26,7 +26,7 @@ extern class UIPreviewActionGroup extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

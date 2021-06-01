@@ -78,7 +78,7 @@ class ObjcProperty {
 		}
 		p = p.filter((f) -> f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("API_") == -1 && f.indexOf("ios(") == -1
 			&& f != "UI_APPEARANCE_SELECTOR");
-		// trace(p);
+		// trace(p , "line=" + line);
 		return ({
 			name: p[p.length - 1],
 			type: isClass ? ExternBaseClassType.FUNC : ExternBaseClassType.PROPERTY,

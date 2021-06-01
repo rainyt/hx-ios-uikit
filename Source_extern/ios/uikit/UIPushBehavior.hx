@@ -13,7 +13,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	overload public static function autorelease():UIPushBehavior;
 
 	@:native("initWithItems:mode")
-	overload public function initWithItems_mode(items:NSArray, mode:UIPushBehaviorMode):UIPushBehavior;
+	overload public function initWithItems_mode(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -64,7 +64,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

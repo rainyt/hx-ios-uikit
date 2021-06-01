@@ -17,7 +17,7 @@ implements cpp.objc.Protocol<UIDynamicItem>
 	overload public static function autorelease():UIDynamicItemGroup;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:NSArray):UIDynamicItemGroup;
+	overload public function initWithItems(items:Dynamic):UIDynamicItemGroup;
 
 	@:native("center")
 	public var center:CGPoint;
@@ -44,7 +44,7 @@ implements cpp.objc.Protocol<UIDynamicItem>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

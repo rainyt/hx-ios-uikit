@@ -13,7 +13,7 @@ extern interface UITableViewDropCoordinator{
 	overload public static function autorelease():UITableViewDropCoordinator;
 
 	@:native("items")
-	public var items:NSArray;
+	public var items:Dynamic;
 
 	@:native("destinationIndexPath")
 	public var destinationIndexPath:Dynamic;

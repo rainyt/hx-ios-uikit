@@ -28,7 +28,7 @@ extern class UIPrintPageRenderer extends NSObject{
 	public var numberOfPages:Int;
 
 	@:native("printFormattersForPageAtIndex")
-	overload public function printFormattersForPageAtIndex(pageIndex:Int):NSArray;
+	overload public function printFormattersForPageAtIndex(pageIndex:Int):Dynamic;
 
 	@:native("addPrintFormatter:startingAtPageAtIndex")
 	overload public function addPrintFormatter_startingAtPageAtIndex(formatter:UIPrintFormatter, startingAtPageAtIndex:Int):Void;
@@ -61,7 +61,7 @@ extern class UIPrintPageRenderer extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

@@ -12,10 +12,10 @@ extern interface UICollectionViewDataSourcePrefetching{
 	overload public static function autorelease():UICollectionViewDataSourcePrefetching;
 
 	@:native("collectionView:prefetchItemsAtIndexPaths")
-	overload public function collectionView_prefetchItemsAtIndexPaths(collectionView:UICollectionView, prefetchItemsAtIndexPaths:NSArray):Void;
+	overload public function collectionView_prefetchItemsAtIndexPaths(collectionView:UICollectionView, prefetchItemsAtIndexPaths:Dynamic):Void;
 
 	@:native("collectionView:cancelPrefetchingForItemsAtIndexPaths")
-	overload public function collectionView_cancelPrefetchingForItemsAtIndexPaths(collectionView:UICollectionView, cancelPrefetchingForItemsAtIndexPaths:NSArray):Void;
+	overload public function collectionView_cancelPrefetchingForItemsAtIndexPaths(collectionView:UICollectionView, cancelPrefetchingForItemsAtIndexPaths:Dynamic):Void;
 
 
 }

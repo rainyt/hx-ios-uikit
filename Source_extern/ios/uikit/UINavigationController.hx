@@ -31,10 +31,10 @@ extern class UINavigationController extends UIViewController{
 	overload public function popViewControllerAnimated(animated:Bool):UIViewController;
 
 	@:native("popToViewController:animated")
-	overload public function popToViewController_animated(viewController:UIViewController, animated:Bool):NSArray;
+	overload public function popToViewController_animated(viewController:UIViewController, animated:Bool):Dynamic;
 
 	@:native("popToRootViewControllerAnimated")
-	overload public function popToRootViewControllerAnimated(animated:Bool):NSArray;
+	overload public function popToRootViewControllerAnimated(animated:Bool):Dynamic;
 
 	@:native("topViewController")
 	public var topViewController:UIViewController;
@@ -43,7 +43,7 @@ extern class UINavigationController extends UIViewController{
 	public var visibleViewController:UIViewController;
 
 	@:native("setViewControllers:animated")
-	overload public function setViewControllers_animated(viewControllers:NSArray, animated:Bool):Void;
+	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;
 
 	@:native("navigationBarHidden")
 	public var navigationBarHidden:Bool;
@@ -112,7 +112,7 @@ extern class UINavigationController extends UIViewController{
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -226,7 +226,7 @@ extern class UINavigationController extends UIViewController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

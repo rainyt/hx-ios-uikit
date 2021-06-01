@@ -31,7 +31,7 @@ extern interface UICollectionViewDataSource{
 	overload public function collectionView_moveItemAtIndexPath_toIndexPath(collectionView:UICollectionView, moveItemAtIndexPath:Dynamic, toIndexPath:Dynamic):Void;
 
 	@:native("indexTitlesForCollectionView")
-	overload public function indexTitlesForCollectionView(collectionView:UICollectionView):NSArray;
+	overload public function indexTitlesForCollectionView(collectionView:UICollectionView):Dynamic;
 
 	@:native("collectionView:indexPathForIndexTitle:atIndex")
 	overload public function collectionView_indexPathForIndexTitle_atIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):Dynamic;

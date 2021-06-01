@@ -12,7 +12,7 @@ extern class UITextPlaceholder extends NSObject{
 	overload public static function autorelease():UITextPlaceholder;
 
 	@:native("rects")
-	public var rects:NSArray;
+	public var rects:Dynamic;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -24,7 +24,7 @@ extern class UITextPlaceholder extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

@@ -26,7 +26,7 @@ implements cpp.objc.Protocol<UIViewControllerInteractiveTransitioning>
 	public var completionCurve:UIViewAnimationCurve;
 
 	@:native("timingCurve")
-	public var timingCurve:;
+	public var timingCurve:Dynamic;
 
 	@:native("wantsInteractiveStart")
 	public var wantsInteractiveStart:Bool;
@@ -56,7 +56,7 @@ implements cpp.objc.Protocol<UIViewControllerInteractiveTransitioning>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

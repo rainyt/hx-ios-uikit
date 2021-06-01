@@ -17,28 +17,28 @@ extern class NSDiffableDataSourceSectionSnapshot extends NSObject
 	overload public function init():NSDiffableDataSourceSectionSnapshot;
 
 	@:native("appendItems")
-	overload public function appendItems(items:NSArray):Void;
+	overload public function appendItems(items:Dynamic):Void;
 
 	@:native("appendItems:intoParentItem")
-	overload public function appendItems_intoParentItem(items:NSArray, intoParentItem:Dynamic):Void;
+	overload public function appendItems_intoParentItem(items:Dynamic, intoParentItem:Dynamic):Void;
 
 	@:native("insertItems:beforeItem")
-	overload public function insertItems_beforeItem(items:NSArray, beforeItem:Dynamic):Void;
+	overload public function insertItems_beforeItem(items:Dynamic, beforeItem:Dynamic):Void;
 
 	@:native("insertItems:afterItem")
-	overload public function insertItems_afterItem(items:NSArray, afterItem:Dynamic):Void;
+	overload public function insertItems_afterItem(items:Dynamic, afterItem:Dynamic):Void;
 
 	@:native("deleteItems")
-	overload public function deleteItems(items:NSArray):Void;
+	overload public function deleteItems(items:Dynamic):Void;
 
 	@:native("deleteAllItems")
 	overload public function deleteAllItems():Void;
 
 	@:native("expandItems")
-	overload public function expandItems(items:NSArray):Void;
+	overload public function expandItems(items:Dynamic):Void;
 
 	@:native("collapseItems")
-	overload public function collapseItems(items:NSArray):Void;
+	overload public function collapseItems(items:Dynamic):Void;
 
 	@:native("replaceChildrenOfParentItem:withSnapshot")
 	overload public function replaceChildrenOfParentItem_withSnapshot(parentItem:Dynamic, withSnapshot:NSDiffableDataSourceSectionSnapshot):Void;
@@ -65,10 +65,10 @@ extern class NSDiffableDataSourceSectionSnapshot extends NSObject
 	overload public function indexOfItem(item:Dynamic):Int;
 
 	@:native("items")
-	overload public function items():NSArray;
+	overload public function items():Dynamic;
 
 	@:native("expandedItems")
-	overload public function expandedItems():NSArray;
+	overload public function expandedItems():Dynamic;
 
 	@:native("parentOfChildItem")
 	overload public function parentOfChildItem(childItem:Dynamic):Dynamic;
@@ -80,13 +80,13 @@ extern class NSDiffableDataSourceSectionSnapshot extends NSObject
 	overload public function snapshotOfParentItem_includingParentItem(parentItem:Dynamic, includingParentItem:Bool):NSDiffableDataSourceSectionSnapshot;
 
 	@:native("items")
-	public var items:NSArray;
+	public var items:Dynamic;
 
 	@:native("rootItems")
-	public var rootItems:NSArray;
+	public var rootItems:Dynamic;
 
 	@:native("visibleItems")
-	public var visibleItems:NSArray;
+	public var visibleItems:Dynamic;
 
 	@:native("visualDescription")
 	overload public function visualDescription():NSString;
@@ -101,7 +101,7 @@ extern class NSDiffableDataSourceSectionSnapshot extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

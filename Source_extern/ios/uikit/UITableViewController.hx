@@ -191,7 +191,7 @@ implements cpp.objc.Protocol<UITableViewDataSource>
 	overload public function tableView_canMoveRowAtIndexPath(tableView:UITableView, canMoveRowAtIndexPath:Dynamic):Bool;
 
 	@:native("sectionIndexTitlesForTableView")
-	overload public function sectionIndexTitlesForTableView(tableView:UITableView):NSArray;
+	overload public function sectionIndexTitlesForTableView(tableView:UITableView):Dynamic;
 
 	@:native("tableView:sectionForSectionIndexTitle:atIndex")
 	overload public function tableView_sectionForSectionIndexTitle_atIndex(tableView:UITableView, sectionForSectionIndexTitle:NSString, atIndex:Int):Int;
@@ -224,7 +224,7 @@ implements cpp.objc.Protocol<UITableViewDataSource>
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -341,7 +341,7 @@ implements cpp.objc.Protocol<UITableViewDataSource>
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

@@ -60,7 +60,7 @@ implements cpp.objc.Protocol<UITableViewDataSource>
 	overload public function tableView_canMoveRowAtIndexPath(tableView:UITableView, canMoveRowAtIndexPath:Dynamic):Bool;
 
 	@:native("sectionIndexTitlesForTableView")
-	overload public function sectionIndexTitlesForTableView(tableView:UITableView):NSArray;
+	overload public function sectionIndexTitlesForTableView(tableView:UITableView):Dynamic;
 
 	@:native("tableView:sectionForSectionIndexTitle:atIndex")
 	overload public function tableView_sectionForSectionIndexTitle_atIndex(tableView:UITableView, sectionForSectionIndexTitle:NSString, atIndex:Int):Int;
@@ -81,7 +81,7 @@ implements cpp.objc.Protocol<UITableViewDataSource>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

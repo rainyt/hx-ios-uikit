@@ -22,7 +22,7 @@ extern class UIActivityViewController extends UIViewController{
 	overload public function initWithCoder(coder:NSCoder):UIActivityViewController;
 
 	@:native("initWithActivityItems:applicationActivities")
-	overload public function initWithActivityItems_applicationActivities(activityItems:Dynamic, applicationActivities:NSArray):UIActivityViewController;
+	overload public function initWithActivityItems_applicationActivities(activityItems:Dynamic, applicationActivities:Dynamic):UIActivityViewController;
 
 	@:native("initWithActivityItemsConfiguration")
 	overload public function initWithActivityItemsConfiguration(activityItemsConfiguration:Dynamic):UIActivityViewController;
@@ -49,7 +49,7 @@ extern class UIActivityViewController extends UIViewController{
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -166,7 +166,7 @@ extern class UIActivityViewController extends UIViewController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

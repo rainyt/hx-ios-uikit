@@ -15,7 +15,7 @@ extern interface UIStateRestoring{
 	public var restorationParent:Dynamic;
 
 	@:native("objectRestorationClass")
-	public var objectRestorationClass:Class;
+	public var objectRestorationClass:Dynamic;
 
 	@:native("encodeRestorableStateWithCoder")
 	overload public function encodeRestorableStateWithCoder(coder:NSCoder):Void;

@@ -19,13 +19,13 @@ extern class UICollectionViewFlowLayoutInvalidationContext extends UICollectionV
 	public var invalidateFlowLayoutAttributes:Bool;
 
 	@:native("invalidateItemsAtIndexPaths")
-	overload public function invalidateItemsAtIndexPaths(indexPaths:NSArray):Void;
+	overload public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;
 
 	@:native("invalidateSupplementaryElementsOfKind:atIndexPaths")
-	overload public function invalidateSupplementaryElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:NSArray):Void;
+	overload public function invalidateSupplementaryElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
 
 	@:native("invalidateDecorationElementsOfKind:atIndexPaths")
-	overload public function invalidateDecorationElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:NSArray):Void;
+	overload public function invalidateDecorationElementsOfKind_atIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -37,7 +37,7 @@ extern class UICollectionViewFlowLayoutInvalidationContext extends UICollectionV
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

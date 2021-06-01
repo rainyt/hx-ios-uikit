@@ -16,7 +16,7 @@ extern class UIPreviewParameters extends NSObject
 	overload public function init():UIPreviewParameters;
 
 	@:native("initWithTextLineRects")
-	overload public function initWithTextLineRects(textLineRects:NSArray):UIPreviewParameters;
+	overload public function initWithTextLineRects(textLineRects:Dynamic):UIPreviewParameters;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -28,7 +28,7 @@ extern class UIPreviewParameters extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

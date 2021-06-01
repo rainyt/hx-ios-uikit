@@ -18,7 +18,7 @@ extern class UIImagePickerController extends UINavigationController
 	overload public static function isSourceTypeAvailable(sourceType:UIImagePickerControllerSourceType):Bool;
 
 	@:native("availableMediaTypesForSourceType")
-	overload public static function availableMediaTypesForSourceType(sourceType:UIImagePickerControllerSourceType):NSArray;
+	overload public static function availableMediaTypesForSourceType(sourceType:UIImagePickerControllerSourceType):Dynamic;
 
 	@:native("isCameraDeviceAvailable")
 	overload public static function isCameraDeviceAvailable(cameraDevice:UIImagePickerControllerCameraDevice):Bool;
@@ -27,7 +27,7 @@ extern class UIImagePickerController extends UINavigationController
 	overload public static function isFlashAvailableForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice):Bool;
 
 	@:native("availableCaptureModesForCameraDevice")
-	overload public static function availableCaptureModesForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice):NSArray;
+	overload public static function availableCaptureModesForCameraDevice(cameraDevice:UIImagePickerControllerCameraDevice):Dynamic;
 
 	@:native("sourceType")
 	public var sourceType:UIImagePickerControllerSourceType;
@@ -93,13 +93,13 @@ extern class UIImagePickerController extends UINavigationController
 	overload public function popViewControllerAnimated(animated:Bool):UIViewController;
 
 	@:native("popToViewController:animated")
-	overload public function popToViewController_animated(viewController:UIViewController, animated:Bool):NSArray;
+	overload public function popToViewController_animated(viewController:UIViewController, animated:Bool):Dynamic;
 
 	@:native("popToRootViewControllerAnimated")
-	overload public function popToRootViewControllerAnimated(animated:Bool):NSArray;
+	overload public function popToRootViewControllerAnimated(animated:Bool):Dynamic;
 
 	@:native("setViewControllers:animated")
-	overload public function setViewControllers_animated(viewControllers:NSArray, animated:Bool):Void;
+	overload public function setViewControllers_animated(viewControllers:Dynamic, animated:Bool):Void;
 
 	@:native("setNavigationBarHidden:animated")
 	overload public function setNavigationBarHidden_animated(hidden:Bool, animated:Bool):Void;
@@ -132,7 +132,7 @@ extern class UIImagePickerController extends UINavigationController
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -246,7 +246,7 @@ extern class UIImagePickerController extends UINavigationController
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

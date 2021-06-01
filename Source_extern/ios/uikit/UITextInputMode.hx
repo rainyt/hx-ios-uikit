@@ -17,7 +17,7 @@ extern class UITextInputMode extends NSObject
 	public var primaryLanguage:NSString;
 
 	@:native("activeInputModes")
-	overload public static function activeInputModes():NSArray;
+	overload public static function activeInputModes():Dynamic;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -29,7 +29,7 @@ extern class UITextInputMode extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

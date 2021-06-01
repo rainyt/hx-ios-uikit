@@ -16,7 +16,7 @@ extern class UIPrintInteractionController extends NSObject{
 	overload public static function printingAvailable():Bool;
 
 	@:native("printableUTIs")
-	overload public static function printableUTIs():NSSet;
+	overload public static function printableUTIs():Dynamic;
 
 	@:native("canPrintURL")
 	overload public static function canPrintURL(url:Dynamic):Bool;
@@ -76,7 +76,7 @@ extern class UIPrintInteractionController extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

@@ -12,7 +12,7 @@ extern class UISwipeActionsConfiguration extends NSObject{
 	overload public static function autorelease():UISwipeActionsConfiguration;
 
 	@:native("configurationWithActions")
-	overload public static function configurationWithActions(actions:NSArray):UISwipeActionsConfiguration;
+	overload public static function configurationWithActions(actions:Dynamic):UISwipeActionsConfiguration;
 
 	@:native("performsFirstActionWithFullSwipe")
 	public var performsFirstActionWithFullSwipe:Bool;
@@ -27,7 +27,7 @@ extern class UISwipeActionsConfiguration extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

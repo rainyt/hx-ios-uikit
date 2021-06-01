@@ -20,7 +20,7 @@ extern class UIViewController{
 	public var contentSizeForViewInPopover:CGSize;
 
 	@:native("transitionCoordinator")
-	public var transitionCoordinator:;
+	public var transitionCoordinator:Dynamic;
 
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
@@ -65,7 +65,7 @@ extern class UIViewController{
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -218,7 +218,7 @@ extern class UIViewController{
 	public var searchDisplayController:UISearchDisplayController;
 
 	@:native("childViewControllers")
-	public var childViewControllers:NSArray;
+	public var childViewControllers:Dynamic;
 
 	@:native("addChildViewController")
 	overload public function addChildViewController(childController:UIViewController):Void;
@@ -260,7 +260,7 @@ extern class UIViewController{
 	overload public function didMoveToParentViewController(parent:UIViewController):Void;
 
 	@:native("restorationClass")
-	public var restorationClass:Class;
+	public var restorationClass:Dynamic;
 
 	@:native("encodeRestorableStateWithCoder")
 	overload public function encodeRestorableStateWithCoder(coder:NSCoder):Void;
@@ -275,7 +275,7 @@ extern class UIViewController{
 	overload public function updateViewConstraints():Void;
 
 	@:native("transitioningDelegate")
-	public var transitioningDelegate:;
+	public var transitioningDelegate:Dynamic;
 
 	@:native("topLayoutGuide")
 	public var topLayoutGuide:Dynamic;
@@ -347,7 +347,7 @@ extern class UIViewController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("previewActionItems")
-	public var previewActionItems:;
+	public var previewActionItems:Dynamic;
 
 	@:native("navigationItem")
 	public var navigationItem:UINavigationItem;
@@ -359,10 +359,10 @@ extern class UIViewController{
 	public var navigationController:UINavigationController;
 
 	@:native("toolbarItems")
-	public var toolbarItems:NSArray;
+	public var toolbarItems:Dynamic;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("splitViewController")
 	public var splitViewController:UISplitViewController;

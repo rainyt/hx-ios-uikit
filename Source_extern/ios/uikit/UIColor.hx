@@ -121,14 +121,14 @@ extern class UIColor extends NSObject
 	@:native("colorWithAlphaComponent")
 	overload public function colorWithAlphaComponent(alpha:Float):UIColor;
 
-	@:native("CGColor")
-	public var CGColor:Dynamic;
+	// @:native("CGColor")
+	// public var CGColor:Dynamic;
 
-	@:native("CGColor")
-	overload public function CGColor():Dynamic;
+	// @:native("CGColor")
+	// overload public function CGColor():Dynamic;
 
-	@:native("CIColor")
-	public var CIColor:CIColor;
+	// @:native("CIColor")
+	// public var CIColor:CIColor;
 
 	@:native("colorNamed")
 	overload public static function colorNamed(name:NSString):UIColor;
@@ -275,7 +275,7 @@ extern class UIColor extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

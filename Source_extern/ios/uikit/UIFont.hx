@@ -40,10 +40,10 @@ extern class UIFont{
 	overload public static function fontWithName_size(fontName:NSString, size:Float):UIFont;
 
 	@:native("familyNames")
-	overload public static function familyNames():NSArray;
+	overload public static function familyNames():Dynamic;
 
 	@:native("fontNamesForFamilyName")
-	overload public static function fontNamesForFamilyName(familyName:NSString):NSArray;
+	overload public static function fontNamesForFamilyName(familyName:NSString):Dynamic;
 
 	@:native("systemFontOfSize")
 	overload public static function systemFontOfSize(fontSize:Float):UIFont;

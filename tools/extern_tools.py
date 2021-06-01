@@ -1157,7 +1157,23 @@ class ObjcType:
         startIndex = None
         if (((t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex))) != -1):
             startIndex = None
-            return HxString.substr(t,0,(t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex)))
+            t1 = HxString.substr(t,0,(t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex)))
+            t2 = t1
+            _hx_local_0 = len(t2)
+            if (_hx_local_0 == 0):
+                if (t2 == ""):
+                    return "Dynamic"
+            elif (_hx_local_0 == 5):
+                if (t2 == "Class"):
+                    return "Dynamic"
+                elif (t2 == "NSSet"):
+                    return "Dynamic"
+            elif (_hx_local_0 == 7):
+                if (t2 == "NSArray"):
+                    return "Dynamic"
+            else:
+                pass
+            return t1
         if (t == "CGFloat"):
             return "Float"
         if ((t == "NSUInteger") or ((t == "NSInteger"))):

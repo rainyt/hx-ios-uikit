@@ -24,7 +24,7 @@ implements cpp.objc.Protocol<UIActionSheetDelegate>
 	public var URL:Dynamic;
 
 	@:native("icons")
-	public var icons:NSArray;
+	public var icons:Dynamic;
 
 	@:native("annotation")
 	public var annotation:Dynamic;
@@ -51,7 +51,7 @@ implements cpp.objc.Protocol<UIActionSheetDelegate>
 	overload public function dismissMenuAnimated(animated:Bool):Void;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:NSArray;
+	public var gestureRecognizers:Dynamic;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -63,7 +63,7 @@ implements cpp.objc.Protocol<UIActionSheetDelegate>
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

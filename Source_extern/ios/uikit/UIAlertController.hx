@@ -19,7 +19,7 @@ extern class UIAlertController extends UIViewController{
 	overload public function addAction(action:UIAlertAction):Void;
 
 	@:native("actions")
-	public var actions:NSArray;
+	public var actions:Dynamic;
 
 	@:native("preferredAction")
 	public var preferredAction:UIAlertAction;
@@ -28,7 +28,7 @@ extern class UIAlertController extends UIViewController{
 	overload public function addTextFieldWithConfigurationHandler(configurationHandler:Dynamic):Void;
 
 	@:native("textFields")
-	public var textFields:NSArray;
+	public var textFields:Dynamic;
 
 	@:native("preferredStyle")
 	public var preferredStyle:UIAlertControllerStyle;
@@ -61,7 +61,7 @@ extern class UIAlertController extends UIViewController{
 	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -178,7 +178,7 @@ extern class UIAlertController extends UIViewController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:NSArray, animated:Bool):Void;
+	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;

@@ -40,7 +40,7 @@ extern class UIFontDescriptor extends NSObject
 	public var fontAttributes:NSDictionary;
 
 	@:native("matchingFontDescriptorsWithMandatoryKeys")
-	overload public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:NSSet):NSArray;
+	overload public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:Dynamic):Dynamic;
 
 	@:native("fontDescriptorWithFontAttributes")
 	overload public static function fontDescriptorWithFontAttributes(attributes:NSDictionary):UIFontDescriptor;
@@ -91,7 +91,7 @@ extern class UIFontDescriptor extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

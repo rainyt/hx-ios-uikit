@@ -22,7 +22,7 @@ extern class UITraitCollection extends NSObject
 	overload public function containsTraitsInCollection(trait:UITraitCollection):Bool;
 
 	@:native("traitCollectionWithTraitsFromCollections")
-	overload public static function traitCollectionWithTraitsFromCollections(traitCollections:NSArray):UITraitCollection;
+	overload public static function traitCollectionWithTraitsFromCollections(traitCollections:Dynamic):UITraitCollection;
 
 	@:native("traitCollectionWithUserInterfaceIdiom")
 	overload public static function traitCollectionWithUserInterfaceIdiom(idiom:UIUserInterfaceIdiom):UITraitCollection;
@@ -121,7 +121,7 @@ extern class UITraitCollection extends NSObject
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

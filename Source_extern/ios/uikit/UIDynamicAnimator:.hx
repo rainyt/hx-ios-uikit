@@ -28,7 +28,7 @@ extern class UIDynamicAnimator: extends NSObject{
 	public var referenceView:UIView;
 
 	@:native("itemsInRect")
-	overload public function itemsInRect(rect:CGRect):NSArray;
+	overload public function itemsInRect(rect:CGRect):Dynamic;
 
 	@:native("updateItemUsingCurrentState")
 	overload public function updateItemUsingCurrentState(item:Dynamic):Void;
@@ -40,7 +40,7 @@ extern class UIDynamicAnimator: extends NSObject{
 	public var elapsedTime:Dynamic;
 
 	@:native("delegate")
-	public var delegate:;
+	public var delegate:Dynamic;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -52,7 +52,7 @@ extern class UIDynamicAnimator: extends NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

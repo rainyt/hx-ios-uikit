@@ -17,13 +17,13 @@ extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
 	overload public static function horizontalGroupWithLayoutSize_subitem_count(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitems")
-	overload public static function horizontalGroupWithLayoutSize_subitems(layoutSize:NSCollectionLayoutSize, subitems:NSArray):NSCollectionLayoutGroup;
+	overload public static function horizontalGroupWithLayoutSize_subitems(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitem:count")
 	overload public static function verticalGroupWithLayoutSize_subitem_count(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitems")
-	overload public static function verticalGroupWithLayoutSize_subitems(layoutSize:NSCollectionLayoutSize, subitems:NSArray):NSCollectionLayoutGroup;
+	overload public static function verticalGroupWithLayoutSize_subitems(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("customGroupWithLayoutSize:itemProvider")
 	overload public static function customGroupWithLayoutSize_itemProvider(layoutSize:NSCollectionLayoutSize, itemProvider:Dynamic):NSCollectionLayoutGroup;
@@ -32,7 +32,7 @@ extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
 	overload public function init():NSCollectionLayoutGroup;
 
 	@:native("subitems")
-	public var subitems:NSArray;
+	public var subitems:Dynamic;
 
 	@:native("visualDescription")
 	overload public function visualDescription():NSString;
@@ -41,7 +41,7 @@ extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
 	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutItem;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSize_supplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:NSArray):NSCollectionLayoutItem;
+	overload public static function itemWithLayoutSize_supplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutItem;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -53,7 +53,7 @@ extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

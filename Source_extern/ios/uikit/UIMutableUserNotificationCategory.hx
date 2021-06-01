@@ -12,7 +12,7 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	overload public static function autorelease():UIMutableUserNotificationCategory;
 
 	@:native("setActions:forContext")
-	overload public function setActions_forContext(actions:NSArray, forContext:UIUserNotificationActionContext):Void;
+	overload public function setActions_forContext(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
 
 	@:native("init")
 	overload public function init():UIUserNotificationCategory;
@@ -21,7 +21,7 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	overload public function initWithCoder(coder:NSCoder):UIUserNotificationCategory;
 
 	@:native("actionsForContext")
-	overload public function actionsForContext(context:UIUserNotificationActionContext):NSArray;
+	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;
 
 	@:native("accessibilityElementDidBecomeFocused")
 	overload public function accessibilityElementDidBecomeFocused():Void;
@@ -33,7 +33,7 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
 
 	@:native("accessibilityActivate")
 	overload public function accessibilityActivate():Bool;

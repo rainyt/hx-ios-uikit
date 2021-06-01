@@ -12,7 +12,7 @@ extern interface UITextDragDelegate{
 	overload public static function autorelease():UITextDragDelegate;
 
 	@:native("textDraggableView:itemsForDrag")
-	overload public function textDraggableView_itemsForDrag(textDraggableView:UIView, itemsForDrag:Dynamic):NSArray;
+	overload public function textDraggableView_itemsForDrag(textDraggableView:UIView, itemsForDrag:Dynamic):Dynamic;
 
 	@:native("textDraggableView:dragPreviewForLiftingItem:session")
 	overload public function textDraggableView_dragPreviewForLiftingItem_session(textDraggableView:UIView, dragPreviewForLiftingItem:UIDragItem, session:Dynamic):UITargetedDragPreview;
