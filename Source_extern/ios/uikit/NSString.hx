@@ -296,11 +296,11 @@ extern class NSString{
 	@:native("getBytes:maxLength:usedLength:encoding:options:range:remainingRange")
 	overload public function getBytesMaxLengthUsedLengthEncodingOptionsRangeRemainingRange(buffer:Void, maxLength:Int, usedLength:Int, encoding:Dynamic, options:NSStringEncodingConversionOptions, range:Dynamic, remainingRange:Dynamic):Bool;
 
-	@:native("maximumLengthOfBytesUsingEncoding:Result:O(1")
-	overload public function maximumLengthOfBytesUsingEncodingResultO(1(enc:Dynamic, Result:Dynamic, O(1:Dynamic):Int;
+	@:native("maximumLengthOfBytesUsingEncoding:Result")
+	overload public function maximumLengthOfBytesUsingEncodingResult(enc:Dynamic, Result:Dynamic):Int;
 
-	@:native("lengthOfBytesUsingEncoding:Result:O(n")
-	overload public function lengthOfBytesUsingEncodingResultO(n(enc:Dynamic, Result:Dynamic, O(n:Dynamic):Int;
+	@:native("lengthOfBytesUsingEncoding:Result")
+	overload public function lengthOfBytesUsingEncodingResult(enc:Dynamic, Result:Dynamic):Int;
 
 	@:native("availableStringEncodings")
 	overload public static function availableStringEncodings():Dynamic;

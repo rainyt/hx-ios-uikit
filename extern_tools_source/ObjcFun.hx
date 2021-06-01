@@ -48,6 +48,7 @@ class ObjcFun {
 	}
 
 	public static function parsingFuncName(funcName:String, args:Array<ExternBaseClassFunPropertyArgs>):String {
+		// trace("funcName=",funcName,args);
 		funcName = StringTools.replace(funcName, ";", "");
 		if (args == null)
 			return funcName;
@@ -56,6 +57,7 @@ class ObjcFun {
 				continue;
 			funcName += ":" + value.name;
 		}
+		// trace("funcName@=",funcName);
 		return funcName;
 	}
 
@@ -66,6 +68,9 @@ class ObjcFun {
 		var skin = 0;
 		var kend = 0;
 		var start = true;
+
+		// 当第二个参数开始，需要跳过参数
+		var skinAttr = false;
 
 		for (i in 0...line.length) {
 			var char = line.charAt(i);
@@ -84,7 +89,15 @@ class ObjcFun {
 					start = false;
 				}
 			} else {
-				if (char == "(" || char == "<") {
+				if (skinAttr) {
+					if (char == " " && read.length > 0) {
+						read = "";
+						skinAttr = false;
+						isRaed = true;
+					} else
+						read += char;
+					continue;
+				} else if (char == "(" || char == "<") {
 					kend++;
 				} else if (char == ")" || char == ">") {
 					kend--;
@@ -92,6 +105,11 @@ class ObjcFun {
 						isRaed = false;
 						args.push(read);
 						read = "";
+						if (args.length >= 2) {
+							skinAttr = true;
+							isRaed = true;
+							continue;
+						}
 					}
 				} else if (kend == 0 && (char == " " || char == ":" || char == ";" || char == ",")) {
 					isRaed = char == " ";
@@ -127,6 +145,7 @@ class ObjcFun {
 				ret += value;
 			}
 		}
+
 		retargs = retargs.filter((f) -> f.indexOf("__attribute__") == -1 && f.indexOf("...") == -1 && f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1
 			&& f.indexOf("API_") == -1 && f.indexOf("ios(") == -1 && f != "UI_APPEARANCE_SELECTOR");
 		var r:Array<ExternBaseClassFunPropertyArgs> = [];
@@ -140,7 +159,6 @@ class ObjcFun {
 			});
 		}
 
-		// trace(r);
 		return r;
 	}
 }

@@ -17,8 +17,8 @@ extern interface NSKeyedUnarchiverDelegate{
 	@:native("unarchiver:cannotDecodeObjectOfClassName:originalClasses")
 	overload public function unarchiverCannotDecodeObjectOfClassNameOriginalClasses(unarchiver:NSKeyedUnarchiver, cannotDecodeObjectOfClassName:NSString, originalClasses:Dynamic):Dynamic;
 
-	@:native("unarchiver:didDecodeObject")
-	overload public function unarchiverDidDecodeObject(unarchiver:NSKeyedUnarchiver, didDecodeObject:Dynamic):Dynamic;
+	@:native("unarchiver:didDecodeObject:object")
+	overload public function unarchiverDidDecodeObjectObject(unarchiver:NSKeyedUnarchiver, didDecodeObject:Dynamic, object:Dynamic):Dynamic;
 
 	@:native("unarchiver:willReplaceObject:withObject")
 	overload public function unarchiverWillReplaceObjectWithObject(unarchiver:NSKeyedUnarchiver, willReplaceObject:Dynamic, withObject:Dynamic):Void;

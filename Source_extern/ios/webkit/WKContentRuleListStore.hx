@@ -20,8 +20,8 @@ extern class WKContentRuleListStore{
 	@:native("storeWithURL")
 	overload public static function storeWithURL(url:NSURL):WKContentRuleListStore;
 
-	@:native("compileContentRuleListForIdentifier:encodedContentRuleList:encodedContentRuleList")
-	overload public function compileContentRuleListForIdentifierEncodedContentRuleListEncodedContentRuleList(identifier:NSString, encodedContentRuleList:NSString, encodedContentRuleList:Dynamic):Void;
+	@:native("compileContentRuleListForIdentifier:encodedContentRuleList:completionHandler")
+	overload public function compileContentRuleListForIdentifierEncodedContentRuleListCompletionHandler(identifier:NSString, encodedContentRuleList:NSString, completionHandler:Dynamic):Void;
 
 	@:native("lookUpContentRuleListForIdentifier:completionHandler")
 	overload public function lookUpContentRuleListForIdentifierCompletionHandler(identifier:NSString, completionHandler:Dynamic):Void;

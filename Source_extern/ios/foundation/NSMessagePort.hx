@@ -34,8 +34,8 @@ extern class NSMessagePort extends NSPort{
 	@:native("removeFromRunLoop:forMode")
 	overload public function removeFromRunLoopForMode(runLoop:NSRunLoop, forMode:Dynamic):Void;
 
-	@:native("sendBeforeDate:components:from:receivePort")
-	overload public function sendBeforeDateComponentsFromReceivePort(limitDate:NSDate, components:NSMutableArray, from:NSPort, receivePort:Dynamic):Bool;
+	@:native("sendBeforeDate:components:from:reserved")
+	overload public function sendBeforeDateComponentsFromReserved(limitDate:NSDate, components:NSMutableArray, from:NSPort, reserved:Int):Bool;
 
 	@:native("sendBeforeDate:msgid:components:from:reserved")
 	overload public function sendBeforeDateMsgidComponentsFromReserved(limitDate:NSDate, msgid:Int, components:NSMutableArray, from:NSPort, reserved:Int):Bool;

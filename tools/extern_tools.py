@@ -1012,6 +1012,7 @@ class ObjcFun:
         skin = 0
         kend = 0
         start = True
+        skinAttr = False
         _g = 0
         _g1 = len(line)
         while (_g < _g1):
@@ -1031,6 +1032,14 @@ class ObjcFun:
                     isRaed = True
                     kend = 0
                     start = False
+            elif skinAttr:
+                if ((char == " ") and ((len(read) > 0))):
+                    read = ""
+                    skinAttr = False
+                    isRaed = True
+                else:
+                    read = (("null" if read is None else read) + ("null" if char is None else char))
+                continue
             elif ((char == "(") or ((char == "<"))):
                 kend = (kend + 1)
             elif ((char == ")") or ((char == ">"))):
@@ -1039,6 +1048,10 @@ class ObjcFun:
                     isRaed = False
                     args.append(read)
                     read = ""
+                    if (len(args) >= 2):
+                        skinAttr = True
+                        isRaed = True
+                        continue
             elif ((kend == 0) and (((((char == " ") or ((char == ":"))) or ((char == ";"))) or ((char == ","))))):
                 isRaed = (char == " ")
                 if isRaed:
@@ -1072,7 +1085,7 @@ class ObjcFun:
                 ret = ""
             else:
                 ret = (("null" if ret is None else ret) + ("null" if value is None else value))
-        def _hx_local_8(f):
+        def _hx_local_9(f):
             retargs = None
             retargs1 = None
             retargs2 = None
@@ -1108,7 +1121,7 @@ class ObjcFun:
                 return (f != "UI_APPEARANCE_SELECTOR")
             else:
                 return False
-        retargs = list(filter(_hx_local_8,retargs))
+        retargs = list(filter(_hx_local_9,retargs))
         r = []
         _g2_current = 0
         _g2_array = retargs

@@ -85,8 +85,8 @@ extern class NSUserActivity{
 	@:native("persistentIdentifier")
 	public var persistentIdentifier:NSString;
 
-	@:native("deleteSavedUserActivitiesWithPersistentIdentifiers:completionHandler:handler")
-	overload public static function deleteSavedUserActivitiesWithPersistentIdentifiersCompletionHandlerHandler(persistentIdentifiers:Dynamic, completionHandler:Dynamic, handler:Dynamic):Void;
+	@:native("deleteSavedUserActivitiesWithPersistentIdentifiers:completionHandler")
+	overload public static function deleteSavedUserActivitiesWithPersistentIdentifiersCompletionHandler(persistentIdentifiers:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("deleteAllSavedUserActivitiesWithCompletionHandler")
 	overload public static function deleteAllSavedUserActivitiesWithCompletionHandler(handler:Dynamic):Void;

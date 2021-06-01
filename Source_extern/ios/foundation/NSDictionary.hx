@@ -78,8 +78,8 @@ extern class NSDictionary
 	@:native("keysSortedByValueUsingSelector")
 	overload public function keysSortedByValueUsingSelector(comparator:String):Dynamic;
 
-	@:native("getObjects:andKeys:count")
-	overload public function getObjectsAndKeysCount(objects:Dynamic, andKeys:Dynamic, count:Int):Void;
+	@:native("getObjects:andKeys:count:and/or")
+	overload public function getObjectsAndKeysCountAnd/or(objects:Dynamic, andKeys:Dynamic, count:Int, and/or:Dynamic):Void;
 
 	@:native("objectForKeyedSubscript")
 	overload public function objectForKeyedSubscript(key:Dynamic):Dynamic;

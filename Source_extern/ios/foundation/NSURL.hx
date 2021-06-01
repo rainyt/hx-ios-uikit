@@ -32,8 +32,8 @@ extern class NSURL
 	@:native("initFileURLWithPath")
 	overload public function initFileURLWithPath(path:NSString):NSURL;
 
-	// @:native("fileURLWithPath:isDirectory:isDir:nullable NSURL *")
-	// overload public static function fileURLWithPathIsDirectoryIsDirNullable NSURL *(path:NSString, isDirectory:Bool, isDir:Dynamic, nullable NSURL *:Dynamic):NSURL;
+	@:native("fileURLWithPath:isDirectory:relativeToURL")
+	overload public static function fileURLWithPathIsDirectoryRelativeToURL(path:NSString, isDirectory:Bool, relativeToURL:NSURL):NSURL;
 
 	@:native("fileURLWithPath:relativeToURL")
 	overload public static function fileURLWithPathRelativeToURL(path:NSString, relativeToURL:NSURL):NSURL;
@@ -47,8 +47,8 @@ extern class NSURL
 	@:native("initFileURLWithFileSystemRepresentation:isDirectory:relativeToURL")
 	overload public function initFileURLWithFileSystemRepresentationIsDirectoryRelativeToURL(path:Dynamic, isDirectory:Bool, relativeToURL:NSURL):NSURL;
 
-	// @:native("fileURLWithFileSystemRepresentation:isDirectory:isDir:nullable NSURL *")
-	// overload public static function fileURLWithFileSystemRepresentationIsDirectoryIsDirNullable NSURL *(path:Dynamic, isDirectory:Bool, isDir:Dynamic, nullable NSURL *:Dynamic):NSURL;
+	@:native("fileURLWithFileSystemRepresentation:isDirectory:relativeToURL")
+	overload public static function fileURLWithFileSystemRepresentationIsDirectoryRelativeToURL(path:Dynamic, isDirectory:Bool, relativeToURL:NSURL):NSURL;
 
 	@:native("initWithString")
 	overload public function initWithString(URLString:NSString):NSURL;
