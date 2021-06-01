@@ -66,7 +66,7 @@ class ExternBaseClass:
     _hx_class_name = "ExternBaseClass"
     __slots__ = ("isProtocol", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys")
     _hx_fields = ["isProtocol", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys"]
-    _hx_methods = ["putClass", "hasFuncOrAttr", "hasFuncExtendsOrAttr", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName"]
+    _hx_methods = ["putClass", "putExternClass", "hasFuncOrAttr", "hasFuncExtendsOrAttr", "toHaxeFile", "_importType", "toFuncArgs", "toFuncName", "externParentFuncProperty"]
 
     def __init__(self,_hdata,hextern,defcall):
         self._hdata = None
@@ -128,7 +128,6 @@ class ExternBaseClass:
                 startIndex = None
                 ps = HxString.substr(ps,0,(ps.find(">") if ((startIndex is None)) else HxString.indexOfImpl(ps,">",startIndex)))
                 self.protocols = ps.split(",")
-                haxe_Log.trace("协议：",_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 89, 'className': "ExternBaseClass", 'methodName': "new", 'customParams': [self.extendClassName, self.protocols]}))
                 _this = self.extendClassName
                 startIndex = None
                 self.extendClassName = HxString.substr(self.extendClassName,0,(_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex)))
@@ -173,7 +172,9 @@ class ExternBaseClass:
                         _this1 = self.funcAndAttr
                         _this1.append(func)
 
-    def putClass(self,t):
+    def putClass(self,t,unFindParentFunc = None):
+        if (unFindParentFunc is None):
+            unFindParentFunc = False
         _g_current = 0
         _g_array = t.funcAndAttr
         while (_g_current < len(_g_array)):
@@ -182,11 +183,41 @@ class ExternBaseClass:
             _g_current = (_g_current + 1)
             index = _g1_key
             value = _g1_value
-            if (not self.hasFuncOrAttr(value)):
+            if (self.className == "UITextField"):
+                haxe_Log.trace(value.name,_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 136, 'className': "ExternBaseClass", 'methodName': "putClass"}))
+            if (not self.hasFuncOrAttr(value,unFindParentFunc)):
                 _this = self.funcAndAttr
                 _this.append(value)
 
-    def hasFuncOrAttr(self,t):
+    def putExternClass(self,t):
+        _g_current = 0
+        _g_array = t.funcAndAttr
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            _g = value.type
+            _hx_local_0 = len(_g)
+            if (_hx_local_0 == 4):
+                if (_g == "func"):
+                    if (not self.hasFuncOrAttr(value,True)):
+                        if (self.className == "UITextField"):
+                            haxe_Log.trace(self.className,_hx_AnonObject({'fileName': "extern_tools_source/ExternBaseClass.hx", 'lineNumber': 154, 'className': "ExternBaseClass", 'methodName': "putExternClass", 'customParams': ["追加方法：", t.className, value]}))
+                        _this = self.funcAndAttr
+                        _this.append(value)
+            elif (_hx_local_0 == 8):
+                if (_g == "property"):
+                    if (Std.isOfType(value,ExternProtocolClass) and (not self.hasFuncOrAttr(value))):
+                        _this1 = self.funcAndAttr
+                        _this1.append(value)
+            else:
+                pass
+
+    def hasFuncOrAttr(self,t,unFindParent = None):
+        if (unFindParent is None):
+            unFindParent = False
         _g_current = 0
         _g_array = self.funcAndAttr
         while (_g_current < len(_g_array)):
@@ -197,9 +228,10 @@ class ExternBaseClass:
             value = _g1_value
             if ((value.type == t.type) and ((value.name == t.name))):
                 return True
-        if (self.extendClassName is not None):
-            if (self.extendClassName in ExternTools.classDefine.h):
-                return ExternTools.classDefine.h.get(self.extendClassName,None).hasFuncOrAttr(t)
+        if (not unFindParent):
+            if (self.extendClassName is not None):
+                if (self.extendClassName in ExternTools.classDefine.h):
+                    return ExternTools.classDefine.h.get(self.extendClassName,None).hasFuncOrAttr(t)
         return False
 
     def hasFuncExtendsOrAttr(self,t):
@@ -209,6 +241,7 @@ class ExternBaseClass:
         return False
 
     def toHaxeFile(self):
+        self.externParentFuncProperty(self)
         haxe = (("package " + HxOverrides.stringOrNull(self.pkg)) + ";\n\n")
         _g_current = 0
         _g_array = self.funcAndAttr
@@ -262,7 +295,7 @@ class ExternBaseClass:
             _g_current = (_g_current + 1)
             index = _g1_key
             value = _g1_value
-            if self.hasFuncExtendsOrAttr(value):
+            if ((value.type == "property") and self.hasFuncExtendsOrAttr(value)):
                 continue
             _g = value.type
             _hx_local_10 = len(_g)
@@ -305,6 +338,26 @@ class ExternBaseClass:
 
     def toFuncName(self,_hx_str):
         return StringTools.replace(_hx_str,":","_")
+
+    def externParentFuncProperty(self,c):
+        if (self.protocols is not None):
+            _g_current = 0
+            _g_array = self.protocols
+            while (_g_current < len(_g_array)):
+                _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+                _g1_key = _g_current
+                _g_current = (_g_current + 1)
+                index = _g1_key
+                value = _g1_value
+                t = ExternTools.protocol.h.get(value,None)
+                if (t is not None):
+                    c.putClass(t)
+        if (self.extendClassName is not None):
+            extendsClass = ExternTools.classDefine.h.get(self.extendClassName,None)
+            if (extendsClass is not None):
+                extendsClass.externParentFuncProperty(extendsClass)
+                c.putExternClass(extendsClass)
+                extendsClass.externParentFuncProperty(c)
 
 
 
@@ -493,18 +546,6 @@ class ExternTools:
             _g1_key = key
             key1 = _g1_key
             value = _g1_value
-            if (value.protocols is not None):
-                _g2_current = 0
-                _g2_array = value.protocols
-                while (_g2_current < len(_g2_array)):
-                    _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
-                    _g3_key = _g2_current
-                    _g2_current = (_g2_current + 1)
-                    index = _g3_key
-                    protocolName = _g3_value
-                    t = ExternTools.protocol.h.get(protocolName,None)
-                    if (t is not None):
-                        value.putClass(t)
             sys_io_File.saveContent(value.saveFile,value.toHaxeFile())
         _hx_map = ExternTools.protocol
         _g_map = _hx_map
@@ -561,7 +602,7 @@ class ExternTools:
         haxefile = (HxOverrides.stringOrNull(HxString.substr(hfile,(pos + 1),None)) + "x")
         startIndex = None
         if (((haxefile.find("+") if ((startIndex is None)) else HxString.indexOfImpl(haxefile,"+",startIndex))) != -1):
-            haxe_Log.trace(("igone:" + ("null" if haxefile is None else haxefile)),_hx_AnonObject({'fileName': "extern_tools_source/ExternTools.hx", 'lineNumber': 63, 'className': "ExternTools", 'methodName': "parsingHFile"}))
+            haxe_Log.trace(("igone:" + ("null" if haxefile is None else haxefile)),_hx_AnonObject({'fileName': "extern_tools_source/ExternTools.hx", 'lineNumber': 56, 'className': "ExternTools", 'methodName': "parsingHFile"}))
             return
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))

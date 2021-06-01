@@ -86,7 +86,7 @@ class ExternBaseClass {
 				var ps = extendClassName.substr(extendClassName.indexOf("<") + 1);
 				ps = ps.substr(0, ps.indexOf(">"));
 				protocols = ps.split(",");
-				trace("协议：",extendClassName,protocols);
+				// trace("协议：", extendClassName, protocols);
 				// 拥有协议
 				extendClassName = extendClassName.substr(0, extendClassName.indexOf("<"));
 			}
@@ -130,26 +130,55 @@ class ExternBaseClass {
 		}
 	}
 
-	public function putClass(t:ExternBaseClass):Void {
+	public function putClass(t:ExternBaseClass, unFindParentFunc:Bool = false):Void {
 		for (index => value in t.funcAndAttr) {
-			if (!hasFuncOrAttr(value))
+			if (this.className == "UITextField")
+				trace(value.name);
+			if (!hasFuncOrAttr(value, unFindParentFunc)) {
 				funcAndAttr.push(value);
+			}
+		}
+	}
+
+	/**
+	 * 追加extern的类型，属性不追加，但是要追加方法
+	 * @param t 
+	 * @param unFindParentFunc 
+	 */
+	public function putExternClass(t:ExternBaseClass):Void {
+		for (index => value in t.funcAndAttr) {
+			switch (value.type) {
+				case ExternBaseClassType.FUNC:
+					if (!hasFuncOrAttr(value, true)) {
+						if (this.className == "UITextField")
+							trace(this.className, "追加方法：", t.className, value);
+						funcAndAttr.push(value);
+					}
+				case ExternBaseClassType.PROPERTY:
+					if (Std.isOfType(value, ExternProtocolClass) && !hasFuncOrAttr(value)) {
+						funcAndAttr.push(value);
+					}
+			}
 		}
 	}
 
 	/**
 	 * 判断当前方法是否已经存在
 	 * @param t 
+	 * @param unFindParentFunc 是否不查找父节点的方法
 	 * @return Bool
 	 */
-	public function hasFuncOrAttr(t:ExternBaseClassFunProperty):Bool {
+	public function hasFuncOrAttr(t:ExternBaseClassFunProperty, unFindParent:Bool = false):Bool {
 		for (index => value in funcAndAttr) {
-			if (value.type == t.type && value.name == t.name)
+			if (value.type == t.type && value.name == t.name) {
 				return true;
+			}
 		}
-		if (extendClassName != null) {
-			if (ExternTools.classDefine.exists(extendClassName)) {
-				return ExternTools.classDefine.get(extendClassName).hasFuncOrAttr(t);
+		if (!unFindParent) {
+			if (extendClassName != null) {
+				if (ExternTools.classDefine.exists(extendClassName)) {
+					return ExternTools.classDefine.get(extendClassName).hasFuncOrAttr(t);
+				}
 			}
 		}
 		return false;
@@ -169,6 +198,7 @@ class ExternBaseClass {
 	 * @return String
 	 */
 	public function toHaxeFile():String {
+		this.externParentFuncProperty(this);
 		var haxe = "package " + pkg + ";\n\n";
 		// 统一引入
 		// haxe += "import " + ObjcImport.toImport("NSString") + ";\n";
@@ -206,12 +236,14 @@ class ExternBaseClass {
 				if (t != null) {
 					// implements cpp.objc.Protocol<UITextInput>
 					haxe += "implements cpp.objc.Protocol<" + t.className + ">\n";
+				} else {
+					// trace("协议类型不存在：" + value);
 				}
 			}
 		}
 		haxe += "{\n\n";
 		for (index => value in funcAndAttr) {
-			if (hasFuncExtendsOrAttr(value))
+			if (value.type == ExternBaseClassType.PROPERTY && hasFuncExtendsOrAttr(value))
 				continue;
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
@@ -252,6 +284,35 @@ class ExternBaseClass {
 		// return str.substr(0, str.indexOf(":"));
 		// return str;
 		return StringTools.replace(str, ":", "_");
+	}
+
+	/**
+	 * 实现父类、协议类的所有属性与方法，父类仅实现方法。
+	 */
+	public function externParentFuncProperty(c:ExternBaseClass):Void {
+		// 协议补充
+		if (this.protocols != null) {
+			for (index => value in protocols) {
+				var t = ExternTools.protocol.get(value);
+				if (t != null)
+					c.putClass(t);
+				// else
+				// trace("协议不存在：", value);
+			}
+		}
+		// 继承对象的方法实现
+		if (extendClassName != null) {
+			var extendsClass = ExternTools.classDefine.get(extendClassName);
+			if (extendsClass != null) {
+				// 需要确保它自已本身已经被extendsClass
+				extendsClass.externParentFuncProperty(extendsClass);
+				c.putExternClass(extendsClass);
+				extendsClass.externParentFuncProperty(c);
+			}
+			//  else {
+			// trace("扩展类不存在：" + extendClassName);
+			// }
+		}
 	}
 }
 

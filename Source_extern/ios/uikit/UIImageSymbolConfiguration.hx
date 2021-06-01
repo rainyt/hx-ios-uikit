@@ -5,6 +5,12 @@ package ios.uikit;
 @:include("UIKit/UIKit.h")
 extern class UIImageSymbolConfiguration extends UIImageConfiguration{
 
+	@:native("alloc")
+	overload public static function alloc():UIImageSymbolConfiguration;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIImageSymbolConfiguration;
+
 	@:native("unspecifiedConfiguration")
 	overload public static function unspecifiedConfiguration():UIImageSymbolConfiguration;
 
@@ -49,6 +55,60 @@ extern class UIImageSymbolConfiguration extends UIImageConfiguration{
 
 	@:native("isEqualToConfiguration")
 	overload public function isEqualToConfiguration(otherConfiguration:UIImageSymbolConfiguration):Bool;
+
+	@:native("init")
+	overload public function init():UIImageConfiguration;
+
+	@:native("configurationWithTraitCollection")
+	overload public function configurationWithTraitCollection(traitCollection:UITraitCollection):UIImageConfiguration;
+
+	@:native("configurationByApplyingConfiguration")
+	overload public function configurationByApplyingConfiguration(otherConfiguration:UIImageConfiguration):UIImageConfiguration;
+
+	@:native("accessibilityElementDidBecomeFocused")
+	overload public function accessibilityElementDidBecomeFocused():Void;
+
+	@:native("accessibilityElementDidLoseFocus")
+	overload public function accessibilityElementDidLoseFocus():Void;
+
+	@:native("accessibilityElementIsFocused")
+	overload public function accessibilityElementIsFocused():Bool;
+
+	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+
+	@:native("accessibilityActivate")
+	overload public function accessibilityActivate():Bool;
+
+	@:native("accessibilityIncrement")
+	overload public function accessibilityIncrement():Void;
+
+	@:native("accessibilityDecrement")
+	overload public function accessibilityDecrement():Void;
+
+	@:native("accessibilityScroll")
+	overload public function accessibilityScroll(direction:Dynamic):Bool;
+
+	@:native("accessibilityPerformEscape")
+	overload public function accessibilityPerformEscape():Bool;
+
+	@:native("accessibilityPerformMagicTap")
+	overload public function accessibilityPerformMagicTap():Bool;
+
+	@:native("accessibilityElementCount")
+	overload public function accessibilityElementCount():Int;
+
+	@:native("accessibilityElementAtIndex")
+	overload public function accessibilityElementAtIndex(index:Int):Dynamic;
+
+	@:native("indexOfAccessibilityElement")
+	overload public function indexOfAccessibilityElement(element:Dynamic):Int;
+
+	@:native("awakeFromNib")
+	overload public function awakeFromNib():Void;
+
+	@:native("prepareForInterfaceBuilder")
+	overload public function prepareForInterfaceBuilder():Void;
 
 
 }

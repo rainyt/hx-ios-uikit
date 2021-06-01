@@ -7,6 +7,12 @@ import cpp.objc.NSString;
 extern class UIColor extends NSObject
 {
 
+	@:native("alloc")
+	overload public static function alloc():UIColor;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIColor;
+
 	@:native("colorWithWhite:alpha")
 	overload public static function colorWithWhite_alpha(white:Float, alpha:Float):UIColor;
 
@@ -118,11 +124,11 @@ extern class UIColor extends NSObject
 	// @:native("CGColor")
 	// public var CGColor:Dynamic;
 
-	@:native("CGColor")
-	overload public function CGColor():Dynamic;
+	// @:native("CGColor")
+	// overload public function CGColor():Dynamic;
 
-	@:native("CIColor")
-	public var CIColor:CIColor;
+	// @:native("CIColor")
+	// public var CIColor:CIColor;
 
 	@:native("colorNamed")
 	overload public static function colorNamed(name:NSString):UIColor;
@@ -258,6 +264,51 @@ extern class UIColor extends NSObject
 
 	@:native("accessibilityName")
 	public var accessibilityName:NSString;
+
+	@:native("accessibilityElementDidBecomeFocused")
+	overload public function accessibilityElementDidBecomeFocused():Void;
+
+	@:native("accessibilityElementDidLoseFocus")
+	overload public function accessibilityElementDidLoseFocus():Void;
+
+	@:native("accessibilityElementIsFocused")
+	overload public function accessibilityElementIsFocused():Bool;
+
+	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+
+	@:native("accessibilityActivate")
+	overload public function accessibilityActivate():Bool;
+
+	@:native("accessibilityIncrement")
+	overload public function accessibilityIncrement():Void;
+
+	@:native("accessibilityDecrement")
+	overload public function accessibilityDecrement():Void;
+
+	@:native("accessibilityScroll")
+	overload public function accessibilityScroll(direction:Dynamic):Bool;
+
+	@:native("accessibilityPerformEscape")
+	overload public function accessibilityPerformEscape():Bool;
+
+	@:native("accessibilityPerformMagicTap")
+	overload public function accessibilityPerformMagicTap():Bool;
+
+	@:native("accessibilityElementCount")
+	overload public function accessibilityElementCount():Int;
+
+	@:native("accessibilityElementAtIndex")
+	overload public function accessibilityElementAtIndex(index:Int):Dynamic;
+
+	@:native("indexOfAccessibilityElement")
+	overload public function indexOfAccessibilityElement(element:Dynamic):Int;
+
+	@:native("awakeFromNib")
+	overload public function awakeFromNib():Void;
+
+	@:native("prepareForInterfaceBuilder")
+	overload public function prepareForInterfaceBuilder():Void;
 
 
 }

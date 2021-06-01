@@ -28,17 +28,6 @@ class ExternTools {
 	public static function parsingFrameworkDir(indir:String, out:String):Void {
 		parsingFramework(indir, out);
 		for (key => value in ExternTools.classDefine) {
-			if (value.protocols != null) {
-				for (index => protocolName in value.protocols) {
-					var t = protocol.get(protocolName);
-					if (t != null)
-						value.putClass(t);
-					else {
-						// 其他包里的类型
-						// var otherType = ObjcType.getType(t);
-					}
-				}
-			}
 			File.saveContent(value.saveFile, value.toHaxeFile());
 		}
 		for (key => value in ExternTools.protocol) {

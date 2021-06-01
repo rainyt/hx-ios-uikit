@@ -11,6 +11,12 @@ import ios.objc.CGRect;
 extern class UIImage extends NSObject
 {
 
+	@:native("alloc")
+	overload public static function alloc():UIImage;
+
+	@:native("autorelease")
+	overload public static function autorelease():UIImage;
+
 	@:native("systemImageNamed")
 	overload public static function systemImageNamed(name:NSString):UIImage;
 
@@ -77,11 +83,11 @@ extern class UIImage extends NSObject
 	// @:native("CGImage")
 	// public var CGImage:Dynamic;
 
-	@:native("CGImage")
-	overload public function CGImage():Dynamic;
+	// @:native("CGImage")
+	// overload public function CGImage():Dynamic;
 
-	@:native("CIImage")
-	public var CIImage:CIImage;
+	// @:native("CIImage")
+	// public var CIImage:CIImage;
 
 	@:native("imageOrientation")
 	public var imageOrientation:UIImageOrientation;
@@ -211,6 +217,51 @@ extern class UIImage extends NSObject
 
 	@:native("topCapHeight")
 	public var topCapHeight:Int;
+
+	@:native("accessibilityElementDidBecomeFocused")
+	overload public function accessibilityElementDidBecomeFocused():Void;
+
+	@:native("accessibilityElementDidLoseFocus")
+	overload public function accessibilityElementDidLoseFocus():Void;
+
+	@:native("accessibilityElementIsFocused")
+	overload public function accessibilityElementIsFocused():Bool;
+
+	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+
+	@:native("accessibilityActivate")
+	overload public function accessibilityActivate():Bool;
+
+	@:native("accessibilityIncrement")
+	overload public function accessibilityIncrement():Void;
+
+	@:native("accessibilityDecrement")
+	overload public function accessibilityDecrement():Void;
+
+	@:native("accessibilityScroll")
+	overload public function accessibilityScroll(direction:Dynamic):Bool;
+
+	@:native("accessibilityPerformEscape")
+	overload public function accessibilityPerformEscape():Bool;
+
+	@:native("accessibilityPerformMagicTap")
+	overload public function accessibilityPerformMagicTap():Bool;
+
+	@:native("accessibilityElementCount")
+	overload public function accessibilityElementCount():Int;
+
+	@:native("accessibilityElementAtIndex")
+	overload public function accessibilityElementAtIndex(index:Int):Dynamic;
+
+	@:native("indexOfAccessibilityElement")
+	overload public function indexOfAccessibilityElement(element:Dynamic):Int;
+
+	@:native("awakeFromNib")
+	overload public function awakeFromNib():Void;
+
+	@:native("prepareForInterfaceBuilder")
+	overload public function prepareForInterfaceBuilder():Void;
 
 
 }

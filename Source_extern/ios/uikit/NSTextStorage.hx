@@ -6,6 +6,12 @@ package ios.uikit;
 extern class NSTextStorage extends NSMutableAttributedString
 {
 
+	@:native("alloc")
+	overload public static function alloc():NSTextStorage;
+
+	@:native("autorelease")
+	overload public static function autorelease():NSTextStorage;
+
 	@:native("addLayoutManager")
 	overload public function addLayoutManager(aLayoutManager:NSLayoutManager):Void;
 
@@ -38,6 +44,15 @@ extern class NSTextStorage extends NSMutableAttributedString
 
 	@:native("ensureAttributesAreFixedInRange")
 	overload public function ensureAttributesAreFixedInRange(range:Dynamic):Void;
+
+	@:native("fixAttributesInRange")
+	overload public function fixAttributesInRange(range:Dynamic):Void;
+
+	@:native("readFromURL:options:documentAttributes:error")
+	overload public function readFromURL_options_documentAttributes_error(url:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):Bool;
+
+	@:native("readFromData:options:documentAttributes:error")
+	overload public function readFromData_options_documentAttributes_error(data:Dynamic, options:Dynamic, documentAttributes:Dynamic, error:Dynamic):Bool;
 
 
 }
