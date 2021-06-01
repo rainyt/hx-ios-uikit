@@ -86,6 +86,7 @@ class ExternBaseClass {
 				var ps = extendClassName.substr(extendClassName.indexOf("<") + 1);
 				ps = ps.substr(0, ps.indexOf(">"));
 				protocols = ps.split(",");
+				trace("协议：",extendClassName,protocols);
 				// 拥有协议
 				extendClassName = extendClassName.substr(0, extendClassName.indexOf("<"));
 			}

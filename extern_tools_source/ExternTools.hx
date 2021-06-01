@@ -33,6 +33,10 @@ class ExternTools {
 					var t = protocol.get(protocolName);
 					if (t != null)
 						value.putClass(t);
+					else {
+						// 其他包里的类型
+						// var otherType = ObjcType.getType(t);
+					}
 				}
 			}
 			File.saveContent(value.saveFile, value.toHaxeFile());

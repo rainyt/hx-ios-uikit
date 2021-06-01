@@ -115,8 +115,8 @@ extern class UIColor extends NSObject
 	@:native("colorWithAlphaComponent")
 	overload public function colorWithAlphaComponent(alpha:Float):UIColor;
 
-	@:native("CGColor")
-	public var CGColor:Dynamic;
+	// @:native("CGColor")
+	// public var CGColor:Dynamic;
 
 	@:native("CGColor")
 	overload public function CGColor():Dynamic;

@@ -74,8 +74,8 @@ extern class UIImage extends NSObject
 	@:native("size")
 	public var size:CGSize;
 
-	@:native("CGImage")
-	public var CGImage:Dynamic;
+	// @:native("CGImage")
+	// public var CGImage:Dynamic;
 
 	@:native("CGImage")
 	overload public function CGImage():Dynamic;
