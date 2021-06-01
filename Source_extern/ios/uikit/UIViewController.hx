@@ -47,6 +47,12 @@ extern class UIViewController{
 	@:native("contentSizeForViewInPopover")
 	public var contentSizeForViewInPopover:CGSize;
 
+	@:native("childViewControllerForTouchBar")
+	public var childViewControllerForTouchBar:UIViewController;
+
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("transitionCoordinator")
 	public var transitionCoordinator:Dynamic;
 

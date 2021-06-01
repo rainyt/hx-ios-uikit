@@ -65,6 +65,9 @@ extern class UITabBarController extends UIViewController
 	overload public function encodeWithCoder(aCoder:Dynamic):Void
 ;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
 

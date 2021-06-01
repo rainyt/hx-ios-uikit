@@ -50,6 +50,9 @@ extern class UIDocumentPickerViewController extends UIViewController{
 	@:native("shouldShowFileExtensions")
 	public var shouldShowFileExtensions:Bool;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
 

@@ -169,6 +169,9 @@ extern class UICollectionViewController extends UIViewController
 	@:native("collectionView:indexPathForIndexTitle:atIndex")
 	overload public function collectionView_indexPathForIndexTitle_atIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):Dynamic;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("loadView")
 	overload public function loadView():Void;
 

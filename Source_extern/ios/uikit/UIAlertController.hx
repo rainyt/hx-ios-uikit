@@ -45,6 +45,9 @@ extern class UIAlertController extends UIViewController{
 	@:native("preferredStyle")
 	public var preferredStyle:UIAlertControllerStyle;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
 

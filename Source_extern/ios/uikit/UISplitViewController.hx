@@ -121,6 +121,9 @@ extern class UISplitViewController extends UIViewController{
 	@:native("primaryBackgroundStyle")
 	public var primaryBackgroundStyle:UISplitViewControllerBackgroundStyle;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("loadView")
 	overload public function loadView():Void;
 

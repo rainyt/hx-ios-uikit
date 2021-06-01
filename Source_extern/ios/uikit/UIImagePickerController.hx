@@ -133,6 +133,9 @@ extern class UIImagePickerController extends UINavigationController
 	@:native("showViewController:sender")
 	overload public function showViewController_sender(vc:UIViewController, sender:Dynamic):Void;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("loadView")
 	overload public function loadView():Void;
 

@@ -29,6 +29,9 @@ extern class UISearchContainerViewController extends UIViewController{
 	@:native("initWithSearchController")
 	overload public function initWithSearchController(searchController:UISearchController):UISearchContainerViewController;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
 

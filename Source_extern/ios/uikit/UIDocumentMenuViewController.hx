@@ -40,6 +40,9 @@ extern class UIDocumentMenuViewController extends UIViewController{
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
 

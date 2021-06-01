@@ -37,6 +37,9 @@ extern class UIActivityViewController extends UIViewController{
 	@:native("initWithActivityItemsConfiguration")
 	overload public function initWithActivityItemsConfiguration(activityItemsConfiguration:Dynamic):UIActivityViewController;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("loadView")
 	overload public function loadView():Void;
 

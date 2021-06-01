@@ -47,6 +47,9 @@ extern class UICloudSharingController extends UIViewController{
 	@:native("activityItemSource")
 	overload public function activityItemSource():Dynamic;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("loadView")
 	overload public function loadView():Void;
 

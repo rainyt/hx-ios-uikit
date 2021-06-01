@@ -60,6 +60,9 @@ extern class UIPageViewController extends UIViewController{
 	@:native("setViewControllers:direction:animated:completion")
 	overload public function setViewControllers_direction_animated_completion(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIViewController;
 

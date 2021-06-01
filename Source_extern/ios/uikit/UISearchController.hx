@@ -103,6 +103,9 @@ extern class UISearchController extends UIViewController
 	@:native("animationEnded")
 	overload public function animationEnded(transitionCompleted:Bool):Void;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("loadView")
 	overload public function loadView():Void;
 

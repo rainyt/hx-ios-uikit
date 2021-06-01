@@ -223,6 +223,9 @@ extern class UITableViewController extends UIViewController
 	@:native("tableView:moveRowAtIndexPath:toIndexPath")
 	overload public function tableView_moveRowAtIndexPath_toIndexPath(tableView:UITableView, moveRowAtIndexPath:Dynamic, toIndexPath:Dynamic):Void;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("loadView")
 	overload public function loadView():Void;
 

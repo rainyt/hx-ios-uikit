@@ -118,6 +118,9 @@ extern class UIAccessibilityElement extends UIResponder
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	@:native("makeTouchBar")
+	overload public function makeTouchBar():Dynamic;
+
 	@:native("cut")
 	overload public function cut(sender:Dynamic):Void;
 

@@ -105,6 +105,9 @@ extern class UINavigationController extends UIViewController{
 	@:native("barHideOnTapGestureRecognizer")
 	public var barHideOnTapGestureRecognizer:UITapGestureRecognizer;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("loadView")
 	overload public function loadView():Void;
 

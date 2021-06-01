@@ -723,10 +723,6 @@ class ExternTools:
             check = hfile.find("/", startLeft, len(hfile))
             pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
         haxefile = (HxOverrides.stringOrNull(HxString.substr(hfile,(pos + 1),None)) + "x")
-        startIndex = None
-        if (((haxefile.find("+") if ((startIndex is None)) else HxString.indexOfImpl(haxefile,"+",startIndex))) != -1):
-            print(str(("igone:" + ("null" if haxefile is None else haxefile))))
-            return
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
         hlibsfile = (((("null" if pkg is None else pkg) + "/") + ("null" if pkg is None else pkg)) + ".h")

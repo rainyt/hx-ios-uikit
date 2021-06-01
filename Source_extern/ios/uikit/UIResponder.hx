@@ -139,6 +139,15 @@ extern class UIResponder
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	@:native("touchBar")
+	public var touchBar:Dynamic;
+
+	@:native("makeTouchBar")
+	overload public function makeTouchBar():Dynamic;
+
+	@:native("activityItemsConfiguration")
+	public var activityItemsConfiguration:Dynamic;
+
 	@:native("cut")
 	overload public function cut(sender:Dynamic):Void;
 

@@ -70,6 +70,9 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	overload public function encodeWithCoder(aCoder:Dynamic):Void
 ;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIViewController;
 

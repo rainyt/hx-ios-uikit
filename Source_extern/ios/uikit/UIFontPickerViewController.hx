@@ -36,6 +36,9 @@ extern class UIFontPickerViewController extends UIViewController{
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIFontPickerViewController;
 
+	@:native("setNeedsTouchBarUpdate")
+	overload public function setNeedsTouchBarUpdate():Void;
+
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIViewController;
 

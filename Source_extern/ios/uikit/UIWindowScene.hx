@@ -39,6 +39,9 @@ extern class UIWindowScene{
 	@:native("windows")
 	public var windows:Dynamic;
 
+	@:native("titlebar")
+	public var titlebar:Dynamic;
+
 	@:native("statusBarManager")
 	public var statusBarManager:UIStatusBarManager;
 
