@@ -327,10 +327,21 @@ class ExternBaseClass {
 	}
 
 	public function toFuncName(str:String):String {
+		if (str.indexOf(":") != -1) {
+			var arr = str.split(":");
+			str = "";
+			for (index => value in arr) {
+				if (index == 0)
+					str += value;
+				else
+					str += value.charAt(0).toUpperCase() + value.substr(1);
+			}
+		}
+		return str;
 		// if (str.indexOf(":") != -1)
-		// return str.substr(0, str.indexOf(":"));
+		// 	return str.substr(0, str.indexOf(":"));
 		// return str;
-		return StringTools.replace(str, ":", "_");
+		// return StringTools.replace(str, ":", "_");
 	}
 
 	/**

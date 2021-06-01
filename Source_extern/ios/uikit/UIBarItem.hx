@@ -55,7 +55,7 @@ extern class UIBarItem
 	public var tag:Int;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes_forState(attributes:NSDictionary, forState:UIControlState):Void;
+	overload public function setTitleTextAttributesForState(attributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
@@ -74,7 +74,7 @@ extern class UIBarItem
 	overload public static function appearanceForTraitCollection(trait:UITraitCollection):UIAppearance;
 
 	@:native("appearanceForTraitCollection:whenContainedInInstancesOfClasses")
-	overload public static function appearanceForTraitCollection_whenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
+	overload public static function appearanceForTraitCollectionWhenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
 
 
 }

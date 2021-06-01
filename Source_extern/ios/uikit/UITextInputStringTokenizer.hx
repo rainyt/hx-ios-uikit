@@ -22,16 +22,16 @@ extern class UITextInputStringTokenizer
 	overload public function initWithTextInput(textInput:UIResponder):UITextInputStringTokenizer;
 
 	@:native("rangeEnclosingPosition:withGranularity:inDirection")
-	overload public function rangeEnclosingPosition_withGranularity_inDirection(position:UITextPosition, withGranularity:UITextGranularity, inDirection:Int):UITextRange;
+	overload public function rangeEnclosingPositionWithGranularityInDirection(position:UITextPosition, withGranularity:UITextGranularity, inDirection:Int):UITextRange;
 
 	@:native("isPosition:atBoundary:inDirection")
-	overload public function isPosition_atBoundary_inDirection(position:UITextPosition, atBoundary:UITextGranularity, inDirection:Int):Bool;
+	overload public function isPositionAtBoundaryInDirection(position:UITextPosition, atBoundary:UITextGranularity, inDirection:Int):Bool;
 
 	@:native("positionFromPosition:toBoundary:inDirection")
-	overload public function positionFromPosition_toBoundary_inDirection(position:UITextPosition, toBoundary:UITextGranularity, inDirection:Int):UITextPosition;
+	overload public function positionFromPositionToBoundaryInDirection(position:UITextPosition, toBoundary:UITextGranularity, inDirection:Int):UITextPosition;
 
 	@:native("isPosition:withinTextUnit:inDirection")
-	overload public function isPosition_withinTextUnit_inDirection(position:UITextPosition, withinTextUnit:UITextGranularity, inDirection:Int):Bool;
+	overload public function isPositionWithinTextUnitInDirection(position:UITextPosition, withinTextUnit:UITextGranularity, inDirection:Int):Bool;
 
 
 }

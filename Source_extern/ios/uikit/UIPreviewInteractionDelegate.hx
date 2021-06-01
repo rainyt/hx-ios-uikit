@@ -14,7 +14,7 @@ extern interface UIPreviewInteractionDelegate{
 	overload public static function autorelease():UIPreviewInteractionDelegate;
 
 	@:native("previewInteraction:didUpdatePreviewTransition:ended")
-	overload public function previewInteraction_didUpdatePreviewTransition_ended(previewInteraction:UIPreviewInteraction, didUpdatePreviewTransition:Float, ended:Bool):Void;
+	overload public function previewInteractionDidUpdatePreviewTransitionEnded(previewInteraction:UIPreviewInteraction, didUpdatePreviewTransition:Float, ended:Bool):Void;
 
 	@:native("previewInteractionDidCancel")
 	overload public function previewInteractionDidCancel(previewInteraction:UIPreviewInteraction):Void;
@@ -23,7 +23,7 @@ extern interface UIPreviewInteractionDelegate{
 	overload public function previewInteractionShouldBegin(previewInteraction:UIPreviewInteraction):Bool;
 
 	@:native("previewInteraction:didUpdateCommitTransition:ended")
-	overload public function previewInteraction_didUpdateCommitTransition_ended(previewInteraction:UIPreviewInteraction, didUpdateCommitTransition:Float, ended:Bool):Void;
+	overload public function previewInteractionDidUpdateCommitTransitionEnded(previewInteraction:UIPreviewInteraction, didUpdateCommitTransition:Float, ended:Bool):Void;
 
 
 }

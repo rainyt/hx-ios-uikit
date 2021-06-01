@@ -19,10 +19,10 @@ extern class NSCollectionLayoutSupplementaryItem extends NSCollectionLayoutItem
 	overload public static function autorelease():NSCollectionLayoutSupplementaryItem;
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor")
-	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;
+	overload public static function supplementaryItemWithLayoutSizeElementKindContainerAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;
 
 	@:native("supplementaryItemWithLayoutSize:elementKind:containerAnchor:itemAnchor")
-	overload public static function supplementaryItemWithLayoutSize_elementKind_containerAnchor_itemAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:NSCollectionLayoutAnchor, itemAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;
+	overload public static function supplementaryItemWithLayoutSizeElementKindContainerAnchorItemAnchor(layoutSize:NSCollectionLayoutSize, elementKind:NSString, containerAnchor:NSCollectionLayoutAnchor, itemAnchor:NSCollectionLayoutAnchor):NSCollectionLayoutSupplementaryItem;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutSupplementaryItem;
@@ -43,7 +43,7 @@ extern class NSCollectionLayoutSupplementaryItem extends NSCollectionLayoutItem
 	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutSupplementaryItem;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSize_supplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutSupplementaryItem;
+	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutSupplementaryItem;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

@@ -13,7 +13,7 @@ extern interface UIViewImplicitlyAnimating{
 	overload public static function autorelease():UIViewImplicitlyAnimating;
 
 	@:native("addAnimations:delayFactor")
-	overload public function addAnimations_delayFactor(animation:Dynamic, delayFactor:Float):Void;
+	overload public function addAnimationsDelayFactor(animation:Dynamic, delayFactor:Float):Void;
 
 	@:native("addAnimations")
 	overload public function addAnimations(animation:Dynamic):Void;
@@ -22,7 +22,7 @@ extern interface UIViewImplicitlyAnimating{
 	overload public function addCompletion(completion:Dynamic):Void;
 
 	@:native("continueAnimationWithTimingParameters:durationFactor")
-	overload public function continueAnimationWithTimingParameters_durationFactor(parameters:Dynamic, durationFactor:Float):Void;
+	overload public function continueAnimationWithTimingParametersDurationFactor(parameters:Dynamic, durationFactor:Float):Void;
 
 
 }

@@ -17,16 +17,16 @@ extern interface UIPointerInteractionDelegate{
 	overload public static function autorelease():UIPointerInteractionDelegate;
 
 	@:native("pointerInteraction:regionForRequest:defaultRegion")
-	overload public function pointerInteraction_regionForRequest_defaultRegion(interaction:UIPointerInteraction, regionForRequest:UIPointerRegionRequest, defaultRegion:UIPointerRegion):UIPointerRegion;
+	overload public function pointerInteractionRegionForRequestDefaultRegion(interaction:UIPointerInteraction, regionForRequest:UIPointerRegionRequest, defaultRegion:UIPointerRegion):UIPointerRegion;
 
 	@:native("pointerInteraction:styleForRegion")
-	overload public function pointerInteraction_styleForRegion(interaction:UIPointerInteraction, styleForRegion:UIPointerRegion):UIPointerStyle;
+	overload public function pointerInteractionStyleForRegion(interaction:UIPointerInteraction, styleForRegion:UIPointerRegion):UIPointerStyle;
 
 	@:native("pointerInteraction:willEnterRegion:animator")
-	overload public function pointerInteraction_willEnterRegion_animator(interaction:UIPointerInteraction, willEnterRegion:UIPointerRegion, animator:Dynamic):Void;
+	overload public function pointerInteractionWillEnterRegionAnimator(interaction:UIPointerInteraction, willEnterRegion:UIPointerRegion, animator:Dynamic):Void;
 
 	@:native("pointerInteraction:willExitRegion:animator")
-	overload public function pointerInteraction_willExitRegion_animator(interaction:UIPointerInteraction, willExitRegion:UIPointerRegion, animator:Dynamic):Void;
+	overload public function pointerInteractionWillExitRegionAnimator(interaction:UIPointerInteraction, willExitRegion:UIPointerRegion, animator:Dynamic):Void;
 
 
 }

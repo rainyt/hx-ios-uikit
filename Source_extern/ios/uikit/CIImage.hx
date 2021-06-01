@@ -18,7 +18,7 @@ extern class CIImage{
 	overload public function initWithImage(image:UIImage):CIImage;
 
 	@:native("initWithImage:options")
-	overload public function initWithImage_options(image:UIImage, options:NSDictionary):CIImage;
+	overload public function initWithImageOptions(image:UIImage, options:NSDictionary):CIImage;
 
 
 }

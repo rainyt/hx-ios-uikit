@@ -53,7 +53,7 @@ extern class UITableViewCell extends UIView
 	overload public static function autorelease():UITableViewCell;
 
 	@:native("initWithStyle:reuseIdentifier")
-	overload public function initWithStyle_reuseIdentifier(style:UITableViewCellStyle, reuseIdentifier:NSString):UITableViewCell;
+	overload public function initWithStyleReuseIdentifier(style:UITableViewCellStyle, reuseIdentifier:NSString):UITableViewCell;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UITableViewCell;
@@ -119,10 +119,10 @@ extern class UITableViewCell extends UIView
 	public var highlighted:Bool;
 
 	@:native("setSelected:animated")
-	overload public function setSelected_animated(selected:Bool, animated:Bool):Void;
+	overload public function setSelectedAnimated(selected:Bool, animated:Bool):Void;
 
 	@:native("setHighlighted:animated")
-	overload public function setHighlighted_animated(highlighted:Bool, animated:Bool):Void;
+	overload public function setHighlightedAnimated(highlighted:Bool, animated:Bool):Void;
 
 	@:native("editingStyle")
 	public var editingStyle:UITableViewCellEditingStyle;
@@ -158,7 +158,7 @@ extern class UITableViewCell extends UIView
 	public var editing:Bool;
 
 	@:native("setEditing:animated")
-	overload public function setEditing_animated(editing:Bool, animated:Bool):Void;
+	overload public function setEditingAnimated(editing:Bool, animated:Bool):Void;
 
 	@:native("showingDeleteConfirmation")
 	public var showingDeleteConfirmation:Bool;
@@ -216,28 +216,28 @@ extern class UITableViewCell extends UIView
 ;
 
 	@:native("gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer")
-	overload public function gestureRecognizer_shouldRecognizeSimultaneouslyWithGestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer):Bool;
+	overload public function gestureRecognizerShouldRecognizeSimultaneouslyWithGestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("gestureRecognizer:shouldRequireFailureOfGestureRecognizer")
-	overload public function gestureRecognizer_shouldRequireFailureOfGestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRequireFailureOfGestureRecognizer:UIGestureRecognizer):Bool;
+	overload public function gestureRecognizerShouldRequireFailureOfGestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRequireFailureOfGestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("gestureRecognizer:shouldBeRequiredToFailByGestureRecognizer")
-	overload public function gestureRecognizer_shouldBeRequiredToFailByGestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer:UIGestureRecognizer):Bool;
+	overload public function gestureRecognizerShouldBeRequiredToFailByGestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldBeRequiredToFailByGestureRecognizer:UIGestureRecognizer):Bool;
 
 	@:native("gestureRecognizer:shouldReceiveTouch")
-	overload public function gestureRecognizer_shouldReceiveTouch(gestureRecognizer:UIGestureRecognizer, shouldReceiveTouch:UITouch):Bool;
+	overload public function gestureRecognizerShouldReceiveTouch(gestureRecognizer:UIGestureRecognizer, shouldReceiveTouch:UITouch):Bool;
 
 	@:native("gestureRecognizer:shouldReceivePress")
-	overload public function gestureRecognizer_shouldReceivePress(gestureRecognizer:UIGestureRecognizer, shouldReceivePress:UIPress):Bool;
+	overload public function gestureRecognizerShouldReceivePress(gestureRecognizer:UIGestureRecognizer, shouldReceivePress:UIPress):Bool;
 
 	@:native("gestureRecognizer:shouldReceiveEvent")
-	overload public function gestureRecognizer_shouldReceiveEvent(gestureRecognizer:UIGestureRecognizer, shouldReceiveEvent:UIEvent):Bool;
+	overload public function gestureRecognizerShouldReceiveEvent(gestureRecognizer:UIGestureRecognizer, shouldReceiveEvent:UIEvent):Bool;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 
 	@:native("drawRect:forViewPrintFormatter")
-	overload public function drawRect_forViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
+	overload public function drawRectForViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
 
 	@:native("endEditing")
 	overload public function endEditing(force:Bool):Bool;
@@ -258,25 +258,25 @@ extern class UITableViewCell extends UIView
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttributeRelativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:UIEvent):UIView;
+	overload public function hitTestWithEvent(point:CGPoint, withEvent:UIEvent):UIView;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside_withEvent(point:CGPoint, withEvent:UIEvent):Bool;
+	overload public function pointInsideWithEvent(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
+	overload public function convertPointToView(point:CGPoint, toView:UIView):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint_fromView(point:CGPoint, fromView:UIView):CGPoint;
+	overload public function convertPointFromView(point:CGPoint, fromView:UIView):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect_toView(rect:CGRect, toView:UIView):CGRect;
+	overload public function convertRectToView(rect:CGRect, toView:UIView):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect_fromView(rect:CGRect, fromView:UIView):CGRect;
+	overload public function convertRectFromView(rect:CGRect, fromView:UIView):CGRect;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;
@@ -288,19 +288,19 @@ extern class UITableViewCell extends UIView
 	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
-	overload public function insertSubview_atIndex(view:UIView, atIndex:Int):Void;
+	overload public function insertSubviewAtIndex(view:UIView, atIndex:Int):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
-	overload public function exchangeSubviewAtIndex_withSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
+	overload public function exchangeSubviewAtIndexWithSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
 
 	@:native("addSubview")
 	overload public function addSubview(view:UIView):Void;
 
 	@:native("insertSubview:belowSubview")
-	overload public function insertSubview_belowSubview(view:UIView, belowSubview:UIView):Void;
+	overload public function insertSubviewBelowSubview(view:UIView, belowSubview:UIView):Void;
 
 	@:native("insertSubview:aboveSubview")
-	overload public function insertSubview_aboveSubview(view:UIView, aboveSubview:UIView):Void;
+	overload public function insertSubviewAboveSubview(view:UIView, aboveSubview:UIView):Void;
 
 	@:native("bringSubviewToFront")
 	overload public function bringSubviewToFront(view:UIView):Void;
@@ -372,34 +372,34 @@ extern class UITableViewCell extends UIView
 	overload public static function inheritedAnimationDuration():Dynamic;
 
 	@:native("animateWithDuration:delay:options:animations:completion")
-	overload public static function animateWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations:completion")
-	overload public static function animateWithDuration_animations_completion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationAnimationsCompletion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations")
-	overload public static function animateWithDuration_animations(duration:Dynamic, animations:Dynamic):Void;
+	overload public static function animateWithDurationAnimations(duration:Dynamic, animations:Dynamic):Void;
 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
-	overload public static function animateWithDuration_delay_usingSpringWithDamping_initialSpringVelocity_options_animations_completion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionWithView:duration:options:animations:completion")
-	overload public static function transitionWithView_duration_options_animations_completion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function transitionWithViewDurationOptionsAnimationsCompletion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionFromView:toView:duration:options:completion")
-	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
+	overload public static function transitionFromViewToViewDurationOptionsCompletion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
-	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
+	overload public static function modifyAnimationsWithRepeatCountAutoreversesAnimations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
-	overload public static function animateKeyframesWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateKeyframesWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
-	overload public static function addKeyframeWithRelativeStartTime_relativeDuration_animations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
+	overload public static function addKeyframeWithRelativeStartTimeRelativeDurationAnimations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
 	@:native("addGestureRecognizer")
 	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
@@ -456,19 +456,19 @@ extern class UITableViewCell extends UIView
 	overload public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentHuggingPriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
 	overload public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentCompressionResistancePriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("systemLayoutSizeFittingSize")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
-	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
+	overload public function systemLayoutSizeFittingSizeWithHorizontalFittingPriorityVerticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
@@ -492,10 +492,10 @@ extern class UITableViewCell extends UIView
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
 	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets")
-	overload public function resizableSnapshotViewFromRect_afterScreenUpdates_withCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
+	overload public function resizableSnapshotViewFromRectAfterScreenUpdatesWithCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
-	overload public function drawViewHierarchyInRect_afterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
+	overload public function drawViewHierarchyInRectAfterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
 
 
 }

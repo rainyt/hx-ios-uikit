@@ -27,10 +27,10 @@ extern interface UISearchBarDelegate{
 	overload public function searchBarTextDidEndEditing(searchBar:UISearchBar):Void;
 
 	@:native("searchBar:textDidChange")
-	overload public function searchBar_textDidChange(searchBar:UISearchBar, textDidChange:NSString):Void;
+	overload public function searchBarTextDidChange(searchBar:UISearchBar, textDidChange:NSString):Void;
 
 	@:native("searchBar:shouldChangeTextInRange:replacementText")
-	overload public function searchBar_shouldChangeTextInRange_replacementText(searchBar:UISearchBar, shouldChangeTextInRange:Dynamic, replacementText:NSString):Bool;
+	overload public function searchBarShouldChangeTextInRangeReplacementText(searchBar:UISearchBar, shouldChangeTextInRange:Dynamic, replacementText:NSString):Bool;
 
 	@:native("searchBarSearchButtonClicked")
 	overload public function searchBarSearchButtonClicked(searchBar:UISearchBar):Void;
@@ -45,7 +45,7 @@ extern interface UISearchBarDelegate{
 	overload public function searchBarResultsListButtonClicked(searchBar:UISearchBar):Void;
 
 	@:native("searchBar:selectedScopeButtonIndexDidChange")
-	overload public function searchBar_selectedScopeButtonIndexDidChange(searchBar:UISearchBar, selectedScopeButtonIndexDidChange:Int):Void;
+	overload public function searchBarSelectedScopeButtonIndexDidChange(searchBar:UISearchBar, selectedScopeButtonIndexDidChange:Int):Void;
 
 
 }

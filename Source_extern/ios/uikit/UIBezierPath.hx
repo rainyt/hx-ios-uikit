@@ -34,13 +34,13 @@ extern class UIBezierPath
 	overload public static function bezierPathWithOvalInRect(rect:CGRect):UIBezierPath;
 
 	@:native("bezierPathWithRoundedRect:cornerRadius")
-	overload public static function bezierPathWithRoundedRect_cornerRadius(rect:CGRect, cornerRadius:Float):UIBezierPath;
+	overload public static function bezierPathWithRoundedRectCornerRadius(rect:CGRect, cornerRadius:Float):UIBezierPath;
 
 	@:native("bezierPathWithRoundedRect:byRoundingCorners:cornerRadii")
-	overload public static function bezierPathWithRoundedRect_byRoundingCorners_cornerRadii(rect:CGRect, byRoundingCorners:UIRectCorner, cornerRadii:CGSize):UIBezierPath;
+	overload public static function bezierPathWithRoundedRectByRoundingCornersCornerRadii(rect:CGRect, byRoundingCorners:UIRectCorner, cornerRadii:CGSize):UIBezierPath;
 
 	@:native("bezierPathWithArcCenter:radius:startAngle:endAngle:clockwise")
-	overload public static function bezierPathWithArcCenter_radius_startAngle_endAngle_clockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):UIBezierPath;
+	overload public static function bezierPathWithArcCenterRadiusStartAngleEndAngleClockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):UIBezierPath;
 
 	@:native("bezierPathWithCGPath")
 	overload public static function bezierPathWithCGPath(CGPath:Dynamic):UIBezierPath;
@@ -61,13 +61,13 @@ extern class UIBezierPath
 	overload public function addLineToPoint(point:CGPoint):Void;
 
 	@:native("addCurveToPoint:controlPoint1:controlPoint2")
-	overload public function addCurveToPoint_controlPoint1_controlPoint2(endPoint:CGPoint, controlPoint1:CGPoint, controlPoint2:CGPoint):Void;
+	overload public function addCurveToPointControlPoint1ControlPoint2(endPoint:CGPoint, controlPoint1:CGPoint, controlPoint2:CGPoint):Void;
 
 	@:native("addQuadCurveToPoint:controlPoint")
-	overload public function addQuadCurveToPoint_controlPoint(endPoint:CGPoint, controlPoint:CGPoint):Void;
+	overload public function addQuadCurveToPointControlPoint(endPoint:CGPoint, controlPoint:CGPoint):Void;
 
 	@:native("addArcWithCenter:radius:startAngle:endAngle:clockwise")
-	overload public function addArcWithCenter_radius_startAngle_endAngle_clockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):Void;
+	overload public function addArcWithCenterRadiusStartAngleEndAngleClockwise(center:CGPoint, radius:Float, startAngle:Float, endAngle:Float, clockwise:Bool):Void;
 
 	@:native("closePath")
 	overload public function closePath():Void;
@@ -115,10 +115,10 @@ extern class UIBezierPath
 	public var usesEvenOddFillRule:Bool;
 
 	@:native("setLineDash:count:phase")
-	overload public function setLineDash_count_phase(pattern:Dynamic, count:Int, phase:Float):Void;
+	overload public function setLineDashCountPhase(pattern:Dynamic, count:Int, phase:Float):Void;
 
 	@:native("getLineDash:count:phase")
-	overload public function getLineDash_count_phase(pattern:Float, count:Int, phase:Float):Void;
+	overload public function getLineDashCountPhase(pattern:Float, count:Int, phase:Float):Void;
 
 	@:native("fill")
 	overload public function fill():Void;
@@ -127,10 +127,10 @@ extern class UIBezierPath
 	overload public function stroke():Void;
 
 	@:native("fillWithBlendMode:alpha")
-	overload public function fillWithBlendMode_alpha(blendMode:CGBlendMode, alpha:Float):Void;
+	overload public function fillWithBlendModeAlpha(blendMode:CGBlendMode, alpha:Float):Void;
 
 	@:native("strokeWithBlendMode:alpha")
-	overload public function strokeWithBlendMode_alpha(blendMode:CGBlendMode, alpha:Float):Void;
+	overload public function strokeWithBlendModeAlpha(blendMode:CGBlendMode, alpha:Float):Void;
 
 	@:native("addClip")
 	overload public function addClip():Void;

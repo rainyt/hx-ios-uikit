@@ -15,16 +15,16 @@ extern interface UICollisionBehaviorDelegate{
 	overload public static function autorelease():UICollisionBehaviorDelegate;
 
 	@:native("collisionBehavior:beganContactForItem:withItem:atPoint")
-	overload public function collisionBehavior_beganContactForItem_withItem_atPoint(behavior:UICollisionBehavior, beganContactForItem:Dynamic, withItem:Dynamic, atPoint:CGPoint):Void;
+	overload public function collisionBehaviorBeganContactForItemWithItemAtPoint(behavior:UICollisionBehavior, beganContactForItem:Dynamic, withItem:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("collisionBehavior:endedContactForItem:withItem")
-	overload public function collisionBehavior_endedContactForItem_withItem(behavior:UICollisionBehavior, endedContactForItem:Dynamic, withItem:Dynamic):Void;
+	overload public function collisionBehaviorEndedContactForItemWithItem(behavior:UICollisionBehavior, endedContactForItem:Dynamic, withItem:Dynamic):Void;
 
 	@:native("collisionBehavior:beganContactForItem:withBoundaryIdentifier:atPoint")
-	overload public function collisionBehavior_beganContactForItem_withBoundaryIdentifier_atPoint(behavior:UICollisionBehavior, beganContactForItem:Dynamic, withBoundaryIdentifier:Dynamic, atPoint:CGPoint):Void;
+	overload public function collisionBehaviorBeganContactForItemWithBoundaryIdentifierAtPoint(behavior:UICollisionBehavior, beganContactForItem:Dynamic, withBoundaryIdentifier:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("collisionBehavior:endedContactForItem:withBoundaryIdentifier")
-	overload public function collisionBehavior_endedContactForItem_withBoundaryIdentifier(behavior:UICollisionBehavior, endedContactForItem:Dynamic, withBoundaryIdentifier:Dynamic):Void;
+	overload public function collisionBehaviorEndedContactForItemWithBoundaryIdentifier(behavior:UICollisionBehavior, endedContactForItem:Dynamic, withBoundaryIdentifier:Dynamic):Void;
 
 
 }

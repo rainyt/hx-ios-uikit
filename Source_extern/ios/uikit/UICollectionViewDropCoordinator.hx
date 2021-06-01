@@ -31,16 +31,16 @@ extern interface UICollectionViewDropCoordinator{
 	public var session:Dynamic;
 
 	@:native("dropItem:toPlaceholder")
-	overload public function dropItem_toPlaceholder(dragItem:UIDragItem, toPlaceholder:UICollectionViewDropPlaceholder):Dynamic;
+	overload public function dropItemToPlaceholder(dragItem:UIDragItem, toPlaceholder:UICollectionViewDropPlaceholder):Dynamic;
 
 	@:native("dropItem:toItemAtIndexPath")
-	overload public function dropItem_toItemAtIndexPath(dragItem:UIDragItem, toItemAtIndexPath:NSIndexPath):Dynamic;
+	overload public function dropItemToItemAtIndexPath(dragItem:UIDragItem, toItemAtIndexPath:NSIndexPath):Dynamic;
 
 	@:native("dropItem:intoItemAtIndexPath:rect")
-	overload public function dropItem_intoItemAtIndexPath_rect(dragItem:UIDragItem, intoItemAtIndexPath:NSIndexPath, rect:CGRect):Dynamic;
+	overload public function dropItemIntoItemAtIndexPathRect(dragItem:UIDragItem, intoItemAtIndexPath:NSIndexPath, rect:CGRect):Dynamic;
 
 	@:native("dropItem:toTarget")
-	overload public function dropItem_toTarget(dragItem:UIDragItem, toTarget:UIDragPreviewTarget):Dynamic;
+	overload public function dropItemToTarget(dragItem:UIDragItem, toTarget:UIDragPreviewTarget):Dynamic;
 
 
 }

@@ -16,7 +16,7 @@ extern class UICollectionViewDropProposal extends UIDropProposal{
 	overload public static function autorelease():UICollectionViewDropProposal;
 
 	@:native("initWithDropOperation:intent")
-	overload public function initWithDropOperation_intent(operation:UIDropOperation, intent:UICollectionViewDropIntent):UICollectionViewDropProposal;
+	overload public function initWithDropOperationIntent(operation:UIDropOperation, intent:UICollectionViewDropIntent):UICollectionViewDropProposal;
 
 	@:native("intent")
 	public var intent:UICollectionViewDropIntent;

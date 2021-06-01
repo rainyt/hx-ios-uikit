@@ -21,10 +21,10 @@ extern class UIApplicationShortcutItem
 	overload public function init():UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle:localizedSubtitle:icon:userInfo")
-	overload public function initWithType_localizedTitle_localizedSubtitle_icon_userInfo(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:NSDictionary):UIApplicationShortcutItem;
+	overload public function initWithTypeLocalizedTitleLocalizedSubtitleIconUserInfo(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:NSDictionary):UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle")
-	overload public function initWithType_localizedTitle(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
+	overload public function initWithTypeLocalizedTitle(type:NSString, localizedTitle:NSString):UIApplicationShortcutItem;
 
 	@:native("type")
 	public var type:NSString;

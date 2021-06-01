@@ -18,7 +18,7 @@ extern class UIPreviewActionGroup
 	overload public static function autorelease():UIPreviewActionGroup;
 
 	@:native("actionGroupWithTitle:style:actions")
-	overload public static function actionGroupWithTitle_style_actions(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
+	overload public static function actionGroupWithTitleStyleActions(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

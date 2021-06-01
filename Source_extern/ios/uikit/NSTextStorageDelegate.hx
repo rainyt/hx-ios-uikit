@@ -15,10 +15,10 @@ extern interface NSTextStorageDelegate{
 	overload public static function autorelease():NSTextStorageDelegate;
 
 	@:native("textStorage:willProcessEditing:range:changeInLength")
-	overload public function textStorage_willProcessEditing_range_changeInLength(textStorage:NSTextStorage, willProcessEditing:NSTextStorageEditActions, range:Dynamic, changeInLength:Int):Void;
+	overload public function textStorageWillProcessEditingRangeChangeInLength(textStorage:NSTextStorage, willProcessEditing:NSTextStorageEditActions, range:Dynamic, changeInLength:Int):Void;
 
 	@:native("textStorage:didProcessEditing:range:changeInLength")
-	overload public function textStorage_didProcessEditing_range_changeInLength(textStorage:NSTextStorage, didProcessEditing:NSTextStorageEditActions, range:Dynamic, changeInLength:Int):Void;
+	overload public function textStorageDidProcessEditingRangeChangeInLength(textStorage:NSTextStorage, didProcessEditing:NSTextStorageEditActions, range:Dynamic, changeInLength:Int):Void;
 
 
 }

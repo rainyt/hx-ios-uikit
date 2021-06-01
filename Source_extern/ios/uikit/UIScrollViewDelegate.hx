@@ -25,10 +25,10 @@ extern interface UIScrollViewDelegate{
 	overload public function scrollViewWillBeginDragging(scrollView:UIScrollView):Void;
 
 	@:native("scrollViewWillEndDragging:withVelocity:targetContentOffset")
-	overload public function scrollViewWillEndDragging_withVelocity_targetContentOffset(scrollView:UIScrollView, withVelocity:CGPoint, targetContentOffset:Dynamic):Void;
+	overload public function scrollViewWillEndDraggingWithVelocityTargetContentOffset(scrollView:UIScrollView, withVelocity:CGPoint, targetContentOffset:Dynamic):Void;
 
 	@:native("scrollViewDidEndDragging:willDecelerate")
-	overload public function scrollViewDidEndDragging_willDecelerate(scrollView:UIScrollView, willDecelerate:Bool):Void;
+	overload public function scrollViewDidEndDraggingWillDecelerate(scrollView:UIScrollView, willDecelerate:Bool):Void;
 
 	@:native("scrollViewWillBeginDecelerating")
 	overload public function scrollViewWillBeginDecelerating(scrollView:UIScrollView):Void;
@@ -43,10 +43,10 @@ extern interface UIScrollViewDelegate{
 	overload public function viewForZoomingInScrollView(scrollView:UIScrollView):UIView;
 
 	@:native("scrollViewWillBeginZooming:withView")
-	overload public function scrollViewWillBeginZooming_withView(scrollView:UIScrollView, withView:UIView):Void;
+	overload public function scrollViewWillBeginZoomingWithView(scrollView:UIScrollView, withView:UIView):Void;
 
 	@:native("scrollViewDidEndZooming:withView:atScale")
-	overload public function scrollViewDidEndZooming_withView_atScale(scrollView:UIScrollView, withView:UIView, atScale:Float):Void;
+	overload public function scrollViewDidEndZoomingWithViewAtScale(scrollView:UIScrollView, withView:UIView, atScale:Float):Void;
 
 	@:native("scrollViewShouldScrollToTop")
 	overload public function scrollViewShouldScrollToTop(scrollView:UIScrollView):Bool;

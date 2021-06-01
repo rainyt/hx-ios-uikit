@@ -17,25 +17,25 @@ extern interface UICollectionViewDropDelegate{
 	overload public static function autorelease():UICollectionViewDropDelegate;
 
 	@:native("collectionView:performDropWithCoordinator")
-	overload public function collectionView_performDropWithCoordinator(collectionView:UICollectionView, performDropWithCoordinator:Dynamic):Void;
+	overload public function collectionViewPerformDropWithCoordinator(collectionView:UICollectionView, performDropWithCoordinator:Dynamic):Void;
 
 	@:native("collectionView:canHandleDropSession")
-	overload public function collectionView_canHandleDropSession(collectionView:UICollectionView, canHandleDropSession:Dynamic):Bool;
+	overload public function collectionViewCanHandleDropSession(collectionView:UICollectionView, canHandleDropSession:Dynamic):Bool;
 
 	@:native("collectionView:dropSessionDidEnter")
-	overload public function collectionView_dropSessionDidEnter(collectionView:UICollectionView, dropSessionDidEnter:Dynamic):Void;
+	overload public function collectionViewDropSessionDidEnter(collectionView:UICollectionView, dropSessionDidEnter:Dynamic):Void;
 
 	@:native("collectionView:dropSessionDidUpdate:withDestinationIndexPath")
-	overload public function collectionView_dropSessionDidUpdate_withDestinationIndexPath(collectionView:UICollectionView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:NSIndexPath):UICollectionViewDropProposal;
+	overload public function collectionViewDropSessionDidUpdateWithDestinationIndexPath(collectionView:UICollectionView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:NSIndexPath):UICollectionViewDropProposal;
 
 	@:native("collectionView:dropSessionDidExit")
-	overload public function collectionView_dropSessionDidExit(collectionView:UICollectionView, dropSessionDidExit:Dynamic):Void;
+	overload public function collectionViewDropSessionDidExit(collectionView:UICollectionView, dropSessionDidExit:Dynamic):Void;
 
 	@:native("collectionView:dropSessionDidEnd")
-	overload public function collectionView_dropSessionDidEnd(collectionView:UICollectionView, dropSessionDidEnd:Dynamic):Void;
+	overload public function collectionViewDropSessionDidEnd(collectionView:UICollectionView, dropSessionDidEnd:Dynamic):Void;
 
 	@:native("collectionView:dropPreviewParametersForItemAtIndexPath")
-	overload public function collectionView_dropPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dropPreviewParametersForItemAtIndexPath:NSIndexPath):UIDragPreviewParameters;
+	overload public function collectionViewDropPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dropPreviewParametersForItemAtIndexPath:NSIndexPath):UIDragPreviewParameters;
 
 
 }

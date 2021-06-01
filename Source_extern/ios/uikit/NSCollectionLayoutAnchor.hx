@@ -20,10 +20,10 @@ extern class NSCollectionLayoutAnchor
 	overload public static function layoutAnchorWithEdges(edges:NSDirectionalRectEdge):NSCollectionLayoutAnchor;
 
 	@:native("layoutAnchorWithEdges:absoluteOffset")
-	overload public static function layoutAnchorWithEdges_absoluteOffset(edges:NSDirectionalRectEdge, absoluteOffset:CGPoint):NSCollectionLayoutAnchor;
+	overload public static function layoutAnchorWithEdgesAbsoluteOffset(edges:NSDirectionalRectEdge, absoluteOffset:CGPoint):NSCollectionLayoutAnchor;
 
 	@:native("layoutAnchorWithEdges:fractionalOffset")
-	overload public static function layoutAnchorWithEdges_fractionalOffset(edges:NSDirectionalRectEdge, fractionalOffset:CGPoint):NSCollectionLayoutAnchor;
+	overload public static function layoutAnchorWithEdgesFractionalOffset(edges:NSDirectionalRectEdge, fractionalOffset:CGPoint):NSCollectionLayoutAnchor;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutAnchor;

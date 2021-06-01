@@ -15,10 +15,10 @@ extern interface UIVideoEditorControllerDelegate{
 	overload public static function autorelease():UIVideoEditorControllerDelegate;
 
 	@:native("videoEditorController:didSaveEditedVideoToPath")
-	overload public function videoEditorController_didSaveEditedVideoToPath(editor:UIVideoEditorController, didSaveEditedVideoToPath:NSString):Void;
+	overload public function videoEditorControllerDidSaveEditedVideoToPath(editor:UIVideoEditorController, didSaveEditedVideoToPath:NSString):Void;
 
 	@:native("videoEditorController:didFailWithError")
-	overload public function videoEditorController_didFailWithError(editor:UIVideoEditorController, didFailWithError:Dynamic):Void;
+	overload public function videoEditorControllerDidFailWithError(editor:UIVideoEditorController, didFailWithError:Dynamic):Void;
 
 	@:native("videoEditorControllerDidCancel")
 	overload public function videoEditorControllerDidCancel(editor:UIVideoEditorController):Void;

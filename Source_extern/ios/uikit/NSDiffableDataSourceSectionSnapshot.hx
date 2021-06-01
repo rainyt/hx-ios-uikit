@@ -22,13 +22,13 @@ extern class NSDiffableDataSourceSectionSnapshot
 	overload public function appendItems(items:Dynamic):Void;
 
 	@:native("appendItems:intoParentItem")
-	overload public function appendItems_intoParentItem(items:Dynamic, intoParentItem:Dynamic):Void;
+	overload public function appendItemsIntoParentItem(items:Dynamic, intoParentItem:Dynamic):Void;
 
 	@:native("insertItems:beforeItem")
-	overload public function insertItems_beforeItem(items:Dynamic, beforeItem:Dynamic):Void;
+	overload public function insertItemsBeforeItem(items:Dynamic, beforeItem:Dynamic):Void;
 
 	@:native("insertItems:afterItem")
-	overload public function insertItems_afterItem(items:Dynamic, afterItem:Dynamic):Void;
+	overload public function insertItemsAfterItem(items:Dynamic, afterItem:Dynamic):Void;
 
 	@:native("deleteItems")
 	overload public function deleteItems(items:Dynamic):Void;
@@ -43,13 +43,13 @@ extern class NSDiffableDataSourceSectionSnapshot
 	overload public function collapseItems(items:Dynamic):Void;
 
 	@:native("replaceChildrenOfParentItem:withSnapshot")
-	overload public function replaceChildrenOfParentItem_withSnapshot(parentItem:Dynamic, withSnapshot:NSDiffableDataSourceSectionSnapshot):Void;
+	overload public function replaceChildrenOfParentItemWithSnapshot(parentItem:Dynamic, withSnapshot:NSDiffableDataSourceSectionSnapshot):Void;
 
 	@:native("insertSnapshot:beforeItem")
-	overload public function insertSnapshot_beforeItem(snapshot:NSDiffableDataSourceSectionSnapshot, beforeItem:Dynamic):Void;
+	overload public function insertSnapshotBeforeItem(snapshot:NSDiffableDataSourceSectionSnapshot, beforeItem:Dynamic):Void;
 
 	@:native("insertSnapshot:afterItem")
-	overload public function insertSnapshot_afterItem(snapshot:NSDiffableDataSourceSectionSnapshot, afterItem:Dynamic):Dynamic;
+	overload public function insertSnapshotAfterItem(snapshot:NSDiffableDataSourceSectionSnapshot, afterItem:Dynamic):Dynamic;
 
 	@:native("isExpanded")
 	overload public function isExpanded(item:Dynamic):Bool;
@@ -79,7 +79,7 @@ extern class NSDiffableDataSourceSectionSnapshot
 	overload public function snapshotOfParentItem(parentItem:Dynamic):NSDiffableDataSourceSectionSnapshot;
 
 	@:native("snapshotOfParentItem:includingParentItem")
-	overload public function snapshotOfParentItem_includingParentItem(parentItem:Dynamic, includingParentItem:Bool):NSDiffableDataSourceSectionSnapshot;
+	overload public function snapshotOfParentItemIncludingParentItem(parentItem:Dynamic, includingParentItem:Bool):NSDiffableDataSourceSectionSnapshot;
 
 	@:native("rootItems")
 	public var rootItems:Dynamic;

@@ -22,7 +22,7 @@ extern class NSTextTab
 	overload public static function columnTerminatorsForLocale(aLocale:Dynamic):Dynamic;
 
 	@:native("initWithTextAlignment:location:options")
-	overload public function initWithTextAlignment_location_options(alignment:NSTextAlignment, location:Float, options:NSDictionary):NSTextTab;
+	overload public function initWithTextAlignmentLocationOptions(alignment:NSTextAlignment, location:Float, options:NSDictionary):NSTextTab;
 
 	@:native("alignment")
 	public var alignment:NSTextAlignment;

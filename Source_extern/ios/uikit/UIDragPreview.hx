@@ -17,7 +17,7 @@ extern class UIDragPreview
 	overload public static function autorelease():UIDragPreview;
 
 	@:native("initWithView:parameters")
-	overload public function initWithView_parameters(view:UIView, parameters:UIDragPreviewParameters):UIDragPreview;
+	overload public function initWithViewParameters(view:UIView, parameters:UIDragPreviewParameters):UIDragPreview;
 
 	@:native("initWithView")
 	overload public function initWithView(view:UIView):UIDragPreview;
@@ -35,7 +35,7 @@ extern class UIDragPreview
 	overload public static function previewForURL(url:Dynamic):UIDragPreview;
 
 	@:native("previewForURL:title")
-	overload public static function previewForURL_title(url:Dynamic, title:Dynamic):UIDragPreview;
+	overload public static function previewForURLTitle(url:Dynamic, title:Dynamic):UIDragPreview;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

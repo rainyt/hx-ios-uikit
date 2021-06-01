@@ -15,7 +15,7 @@ extern interface WKScriptMessageHandler{
 	overload public static function autorelease():WKScriptMessageHandler;
 
 	@:native("userContentController:didReceiveScriptMessage")
-	overload public function userContentController_didReceiveScriptMessage(userContentController:WKUserContentController, didReceiveScriptMessage:WKScriptMessage):Void;
+	overload public function userContentControllerDidReceiveScriptMessage(userContentController:WKUserContentController, didReceiveScriptMessage:WKScriptMessage):Void;
 
 
 }

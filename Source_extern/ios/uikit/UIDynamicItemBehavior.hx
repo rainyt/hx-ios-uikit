@@ -52,13 +52,13 @@ extern class UIDynamicItemBehavior extends UIDynamicBehavior{
 	public var allowsRotation:Bool;
 
 	@:native("addLinearVelocity:forItem")
-	overload public function addLinearVelocity_forItem(velocity:CGPoint, forItem:Dynamic):Void;
+	overload public function addLinearVelocityForItem(velocity:CGPoint, forItem:Dynamic):Void;
 
 	@:native("linearVelocityForItem")
 	overload public function linearVelocityForItem(item:Dynamic):CGPoint;
 
 	@:native("addAngularVelocity:forItem")
-	overload public function addAngularVelocity_forItem(velocity:Float, forItem:Dynamic):Void;
+	overload public function addAngularVelocityForItem(velocity:Float, forItem:Dynamic):Void;
 
 	@:native("angularVelocityForItem")
 	overload public function angularVelocityForItem(item:Dynamic):Float;

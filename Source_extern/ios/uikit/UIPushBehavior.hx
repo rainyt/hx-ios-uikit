@@ -17,7 +17,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	overload public static function autorelease():UIPushBehavior;
 
 	@:native("initWithItems:mode")
-	overload public function initWithItems_mode(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
+	overload public function initWithItemsMode(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -32,7 +32,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	overload public function targetOffsetFromCenterForItem(item:Dynamic):Dynamic;
 
 	@:native("setTargetOffsetFromCenter:forItem")
-	overload public function setTargetOffsetFromCenter_forItem(o:Dynamic, forItem:Dynamic):Void;
+	overload public function setTargetOffsetFromCenterForItem(o:Dynamic, forItem:Dynamic):Void;
 
 	@:native("mode")
 	public var mode:UIPushBehaviorMode;
@@ -50,7 +50,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	public var pushDirection:CGVector;
 
 	@:native("setAngle:magnitude")
-	overload public function setAngle_magnitude(angle:Float, magnitude:Float):Void;
+	overload public function setAngleMagnitude(angle:Float, magnitude:Float):Void;
 
 	@:native("addChildBehavior")
 	overload public function addChildBehavior(behavior:UIDynamicBehavior):Void;

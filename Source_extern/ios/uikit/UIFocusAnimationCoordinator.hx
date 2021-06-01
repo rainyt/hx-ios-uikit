@@ -13,13 +13,13 @@ extern class UIFocusAnimationCoordinator{
 	overload public static function autorelease():UIFocusAnimationCoordinator;
 
 	@:native("addCoordinatedAnimations:completion")
-	overload public function addCoordinatedAnimations_completion(animations:Dynamic, completion:Dynamic):Void;
+	overload public function addCoordinatedAnimationsCompletion(animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addCoordinatedFocusingAnimations:completion")
-	overload public function addCoordinatedFocusingAnimations_completion(animations:Dynamic, completion:Dynamic):Void;
+	overload public function addCoordinatedFocusingAnimationsCompletion(animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addCoordinatedUnfocusingAnimations:completion")
-	overload public function addCoordinatedUnfocusingAnimations_completion(animations:Dynamic, completion:Dynamic):Void;
+	overload public function addCoordinatedUnfocusingAnimationsCompletion(animations:Dynamic, completion:Dynamic):Void;
 
 
 }

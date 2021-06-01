@@ -15,7 +15,7 @@ extern interface UITextInteractionDelegate{
 	overload public static function autorelease():UITextInteractionDelegate;
 
 	@:native("interactionShouldBegin:atPoint")
-	overload public function interactionShouldBegin_atPoint(interaction:UITextInteraction, atPoint:CGPoint):Bool;
+	overload public function interactionShouldBeginAtPoint(interaction:UITextInteraction, atPoint:CGPoint):Bool;
 
 	@:native("interactionWillBegin")
 	overload public function interactionWillBegin(interaction:UITextInteraction):Void;

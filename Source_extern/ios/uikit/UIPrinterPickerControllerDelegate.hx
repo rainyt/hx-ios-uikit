@@ -19,7 +19,7 @@ extern interface UIPrinterPickerControllerDelegate{
 	overload public function printerPickerControllerParentViewController(printerPickerController:UIPrinterPickerController):UIViewController;
 
 	@:native("printerPickerController:shouldShowPrinter")
-	overload public function printerPickerController_shouldShowPrinter(printerPickerController:UIPrinterPickerController, shouldShowPrinter:UIPrinter):Bool;
+	overload public function printerPickerControllerShouldShowPrinter(printerPickerController:UIPrinterPickerController, shouldShowPrinter:UIPrinter):Bool;
 
 	@:native("printerPickerControllerWillPresent")
 	overload public function printerPickerControllerWillPresent(printerPickerController:UIPrinterPickerController):Void;

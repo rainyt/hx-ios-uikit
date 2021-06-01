@@ -16,10 +16,10 @@ extern interface UIDataSourceModelAssociatio{
 	overload public static function autorelease():UIDataSourceModelAssociatio;
 
 	@:native("modelIdentifierForElementAtIndexPath:inView")
-	overload public function modelIdentifierForElementAtIndexPath_inView(idx:NSIndexPath, inView:UIView):NSString;
+	overload public function modelIdentifierForElementAtIndexPathInView(idx:NSIndexPath, inView:UIView):NSString;
 
 	@:native("indexPathForElementWithModelIdentifier:inView")
-	overload public function indexPathForElementWithModelIdentifier_inView(identifier:NSString, inView:UIView):NSIndexPath;
+	overload public function indexPathForElementWithModelIdentifierInView(identifier:NSString, inView:UIView):NSIndexPath;
 
 
 }

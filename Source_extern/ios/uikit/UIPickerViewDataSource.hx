@@ -17,7 +17,7 @@ extern interface UIPickerViewDataSource{
 	overload public function numberOfComponentsInPickerView(pickerView:UIPickerView):Int;
 
 	@:native("pickerView:numberOfRowsInComponent")
-	overload public function pickerView_numberOfRowsInComponent(pickerView:UIPickerView, numberOfRowsInComponent:Int):Int;
+	overload public function pickerViewNumberOfRowsInComponent(pickerView:UIPickerView, numberOfRowsInComponent:Int):Int;
 
 
 }

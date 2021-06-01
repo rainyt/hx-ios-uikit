@@ -20,13 +20,13 @@ extern class NSLayoutYAxisAnchor extends NSLayoutAnchor
 	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutYAxisAnchor):NSLayoutDimension;
 
 	@:native("constraintEqualToSystemSpacingBelowAnchor:multiplier")
-	overload public function constraintEqualToSystemSpacingBelowAnchor_multiplier(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
+	overload public function constraintEqualToSystemSpacingBelowAnchorMultiplier(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
 
 	@:native("constraintGreaterThanOrEqualToSystemSpacingBelowAnchor:multiplier")
-	overload public function constraintGreaterThanOrEqualToSystemSpacingBelowAnchor_multiplier(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
+	overload public function constraintGreaterThanOrEqualToSystemSpacingBelowAnchorMultiplier(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
 
 	@:native("constraintLessThanOrEqualToSystemSpacingBelowAnchor:multiplier")
-	overload public function constraintLessThanOrEqualToSystemSpacingBelowAnchor_multiplier(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
+	overload public function constraintLessThanOrEqualToSystemSpacingBelowAnchorMultiplier(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
 
 	@:native("constraintEqualToAnchor")
 	overload public function constraintEqualToAnchor(anchor:NSLayoutAnchor):NSLayoutConstraint;
@@ -38,13 +38,13 @@ extern class NSLayoutYAxisAnchor extends NSLayoutAnchor
 	overload public function constraintLessThanOrEqualToAnchor(anchor:NSLayoutAnchor):NSLayoutConstraint;
 
 	@:native("constraintEqualToAnchor:constant")
-	overload public function constraintEqualToAnchor_constant(anchor:NSLayoutAnchor, constant:Float):NSLayoutConstraint;
+	overload public function constraintEqualToAnchorConstant(anchor:NSLayoutAnchor, constant:Float):NSLayoutConstraint;
 
 	@:native("constraintGreaterThanOrEqualToAnchor:constant")
-	overload public function constraintGreaterThanOrEqualToAnchor_constant(anchor:NSLayoutAnchor, constant:Float):NSLayoutConstraint;
+	overload public function constraintGreaterThanOrEqualToAnchorConstant(anchor:NSLayoutAnchor, constant:Float):NSLayoutConstraint;
 
 	@:native("constraintLessThanOrEqualToAnchor:constant")
-	overload public function constraintLessThanOrEqualToAnchor_constant(anchor:NSLayoutAnchor, constant:Float):NSLayoutConstraint;
+	overload public function constraintLessThanOrEqualToAnchorConstant(anchor:NSLayoutAnchor, constant:Float):NSLayoutConstraint;
 
 
 }

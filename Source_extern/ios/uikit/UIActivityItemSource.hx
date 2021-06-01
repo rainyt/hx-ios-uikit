@@ -20,16 +20,16 @@ extern interface UIActivityItemSource{
 	overload public function activityViewControllerPlaceholderItem(activityViewController:UIActivityViewController):Dynamic;
 
 	@:native("activityViewController:itemForActivityType")
-	overload public function activityViewController_itemForActivityType(activityViewController:UIActivityViewController, itemForActivityType:Dynamic):Dynamic;
+	overload public function activityViewControllerItemForActivityType(activityViewController:UIActivityViewController, itemForActivityType:Dynamic):Dynamic;
 
 	@:native("activityViewController:subjectForActivityType")
-	overload public function activityViewController_subjectForActivityType(activityViewController:UIActivityViewController, subjectForActivityType:Dynamic):NSString;
+	overload public function activityViewControllerSubjectForActivityType(activityViewController:UIActivityViewController, subjectForActivityType:Dynamic):NSString;
 
 	@:native("activityViewController:dataTypeIdentifierForActivityType")
-	overload public function activityViewController_dataTypeIdentifierForActivityType(activityViewController:UIActivityViewController, dataTypeIdentifierForActivityType:Dynamic):NSString;
+	overload public function activityViewControllerDataTypeIdentifierForActivityType(activityViewController:UIActivityViewController, dataTypeIdentifierForActivityType:Dynamic):NSString;
 
 	@:native("activityViewController:thumbnailImageForActivityType:suggestedSize")
-	overload public function activityViewController_thumbnailImageForActivityType_suggestedSize(activityViewController:UIActivityViewController, thumbnailImageForActivityType:Dynamic, suggestedSize:CGSize):UIImage;
+	overload public function activityViewControllerThumbnailImageForActivityTypeSuggestedSize(activityViewController:UIActivityViewController, thumbnailImageForActivityType:Dynamic, suggestedSize:CGSize):UIImage;
 
 	@:native("activityViewControllerLinkMetadata")
 	overload public function activityViewControllerLinkMetadata(activityViewController:UIActivityViewController):Dynamic;

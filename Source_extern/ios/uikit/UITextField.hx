@@ -166,7 +166,7 @@ extern class UITextField extends UIControl
 	overload public function textInRange(range:UITextRange):NSString;
 
 	@:native("replaceRange:withText")
-	overload public function replaceRange_withText(range:UITextRange, withText:NSString):Void;
+	overload public function replaceRangeWithText(range:UITextRange, withText:NSString):Void;
 
 	@:native("selectedTextRange")
 	public var selectedTextRange:UITextRange;
@@ -178,7 +178,7 @@ extern class UITextField extends UIControl
 	public var markedTextStyle:NSDictionary;
 
 	@:native("setMarkedText:selectedRange")
-	overload public function setMarkedText_selectedRange(markedText:NSString, selectedRange:Dynamic):Void;
+	overload public function setMarkedTextSelectedRange(markedText:NSString, selectedRange:Dynamic):Void;
 
 	@:native("unmarkText")
 	overload public function unmarkText():Void;
@@ -190,19 +190,19 @@ extern class UITextField extends UIControl
 	public var endOfDocument:UITextPosition;
 
 	@:native("textRangeFromPosition:toPosition")
-	overload public function textRangeFromPosition_toPosition(fromPosition:UITextPosition, toPosition:UITextPosition):UITextRange;
+	overload public function textRangeFromPositionToPosition(fromPosition:UITextPosition, toPosition:UITextPosition):UITextRange;
 
 	@:native("positionFromPosition:offset")
-	overload public function positionFromPosition_offset(position:UITextPosition, offset:Int):UITextPosition;
+	overload public function positionFromPositionOffset(position:UITextPosition, offset:Int):UITextPosition;
 
 	@:native("positionFromPosition:inDirection:offset")
-	overload public function positionFromPosition_inDirection_offset(position:UITextPosition, inDirection:UITextLayoutDirection, offset:Int):UITextPosition;
+	overload public function positionFromPositionInDirectionOffset(position:UITextPosition, inDirection:UITextLayoutDirection, offset:Int):UITextPosition;
 
 	@:native("comparePosition:toPosition")
-	overload public function comparePosition_toPosition(position:UITextPosition, toPosition:UITextPosition):Dynamic;
+	overload public function comparePositionToPosition(position:UITextPosition, toPosition:UITextPosition):Dynamic;
 
 	@:native("offsetFromPosition:toPosition")
-	overload public function offsetFromPosition_toPosition(from:UITextPosition, toPosition:UITextPosition):Int;
+	overload public function offsetFromPositionToPosition(from:UITextPosition, toPosition:UITextPosition):Int;
 
 	@:native("inputDelegate")
 	public var inputDelegate:Dynamic;
@@ -211,16 +211,16 @@ extern class UITextField extends UIControl
 	public var tokenizer:Dynamic;
 
 	@:native("positionWithinRange:farthestInDirection")
-	overload public function positionWithinRange_farthestInDirection(range:UITextRange, farthestInDirection:UITextLayoutDirection):UITextPosition;
+	overload public function positionWithinRangeFarthestInDirection(range:UITextRange, farthestInDirection:UITextLayoutDirection):UITextPosition;
 
 	@:native("characterRangeByExtendingPosition:inDirection")
-	overload public function characterRangeByExtendingPosition_inDirection(position:UITextPosition, inDirection:UITextLayoutDirection):UITextRange;
+	overload public function characterRangeByExtendingPositionInDirection(position:UITextPosition, inDirection:UITextLayoutDirection):UITextRange;
 
 	@:native("baseWritingDirectionForPosition:inDirection")
-	overload public function baseWritingDirectionForPosition_inDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSWritingDirection;
+	overload public function baseWritingDirectionForPositionInDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSWritingDirection;
 
 	@:native("setBaseWritingDirection:forRange")
-	overload public function setBaseWritingDirection_forRange(writingDirection:NSWritingDirection, forRange:UITextRange):Void;
+	overload public function setBaseWritingDirectionForRange(writingDirection:NSWritingDirection, forRange:UITextRange):Void;
 
 	@:native("firstRectForRange")
 	overload public function firstRectForRange(range:UITextRange):CGRect;
@@ -235,22 +235,22 @@ extern class UITextField extends UIControl
 	overload public function closestPositionToPoint(point:CGPoint):UITextPosition;
 
 	@:native("closestPositionToPoint:withinRange")
-	overload public function closestPositionToPoint_withinRange(point:CGPoint, withinRange:UITextRange):UITextPosition;
+	overload public function closestPositionToPointWithinRange(point:CGPoint, withinRange:UITextRange):UITextPosition;
 
 	@:native("characterRangeAtPoint")
 	overload public function characterRangeAtPoint(point:CGPoint):UITextRange;
 
 	@:native("shouldChangeTextInRange:replacementText")
-	overload public function shouldChangeTextInRange_replacementText(range:UITextRange, replacementText:NSString):Bool;
+	overload public function shouldChangeTextInRangeReplacementText(range:UITextRange, replacementText:NSString):Bool;
 
 	@:native("textStylingAtPosition:inDirection")
-	overload public function textStylingAtPosition_inDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSDictionary;
+	overload public function textStylingAtPositionInDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSDictionary;
 
 	@:native("positionWithinRange:atCharacterOffset")
-	overload public function positionWithinRange_atCharacterOffset(range:UITextRange, atCharacterOffset:Int):UITextPosition;
+	overload public function positionWithinRangeAtCharacterOffset(range:UITextRange, atCharacterOffset:Int):UITextPosition;
 
 	@:native("characterOffsetOfPosition:withinRange")
-	overload public function characterOffsetOfPosition_withinRange(position:UITextPosition, withinRange:UITextRange):Int;
+	overload public function characterOffsetOfPositionWithinRange(position:UITextPosition, withinRange:UITextRange):Int;
 
 	@:native("textInputView")
 	public var textInputView:UIView;
@@ -274,13 +274,13 @@ extern class UITextField extends UIControl
 	overload public function frameForDictationResultPlaceholder(placeholder:Dynamic):CGRect;
 
 	@:native("removeDictationResultPlaceholder:willInsertResult")
-	overload public function removeDictationResultPlaceholder_willInsertResult(placeholder:Dynamic, willInsertResult:Bool):Void;
+	overload public function removeDictationResultPlaceholderWillInsertResult(placeholder:Dynamic, willInsertResult:Bool):Void;
 
 	@:native("insertText:alternatives:style")
-	overload public function insertText_alternatives_style(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
+	overload public function insertTextAlternativesStyle(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
 
 	@:native("setAttributedMarkedText:selectedRange")
-	overload public function setAttributedMarkedText_selectedRange(markedText:NSAttributedString, selectedRange:Dynamic):Void;
+	overload public function setAttributedMarkedTextSelectedRange(markedText:NSAttributedString, selectedRange:Dynamic):Void;
 
 	@:native("insertTextPlaceholderWithSize")
 	overload public function insertTextPlaceholderWithSize(size:CGSize):UITextPlaceholder;
@@ -311,43 +311,43 @@ extern class UITextField extends UIControl
 	overload public function initWithCoder(coder:NSCoder):UITextField;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UITextField;
+	overload public function initWithFramePrimaryAction(frame:CGRect, primaryAction:UIAction):UITextField;
 
 	@:native("beginTrackingWithTouch:withEvent")
-	overload public function beginTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;
+	overload public function beginTrackingWithTouchWithEvent(touch:UITouch, withEvent:UIEvent):Bool;
 
 	@:native("continueTrackingWithTouch:withEvent")
-	overload public function continueTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;
+	overload public function continueTrackingWithTouchWithEvent(touch:UITouch, withEvent:UIEvent):Bool;
 
 	@:native("endTrackingWithTouch:withEvent")
-	overload public function endTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Void;
+	overload public function endTrackingWithTouchWithEvent(touch:UITouch, withEvent:UIEvent):Void;
 
 	@:native("cancelTrackingWithEvent")
 	overload public function cancelTrackingWithEvent(event:UIEvent):Void;
 
 	@:native("addTarget:action:forControlEvents")
-	overload public function addTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
+	overload public function addTargetActionForControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeTarget:action:forControlEvents")
-	overload public function removeTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
+	overload public function removeTargetActionForControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("addAction:forControlEvents")
-	overload public function addAction_forControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
+	overload public function addActionForControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeAction:forControlEvents")
-	overload public function removeAction_forControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
+	overload public function removeActionForControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeActionForIdentifier:forControlEvents")
-	overload public function removeActionForIdentifier_forControlEvents(actionIdentifier:Dynamic, forControlEvents:UIControlEvents):Void;
+	overload public function removeActionForIdentifierForControlEvents(actionIdentifier:Dynamic, forControlEvents:UIControlEvents):Void;
 
 	@:native("actionsForTarget:forControlEvent")
-	overload public function actionsForTarget_forControlEvent(target:Dynamic, forControlEvent:UIControlEvents):Dynamic;
+	overload public function actionsForTargetForControlEvent(target:Dynamic, forControlEvent:UIControlEvents):Dynamic;
 
 	@:native("enumerateEventHandlers")
 	overload public function enumerateEventHandlers(iterator:Dynamic):Void;
 
 	@:native("sendAction:to:forEvent")
-	overload public function sendAction_to_forEvent(action:String, to:Dynamic, forEvent:UIEvent):Void;
+	overload public function sendActionToForEvent(action:String, to:Dynamic, forEvent:UIEvent):Void;
 
 	@:native("sendAction")
 	overload public function sendAction(action:UIAction):Void;
@@ -359,28 +359,28 @@ extern class UITextField extends UIControl
 	overload public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration):CGPoint;
 
 	@:native("contextMenuInteraction:configurationForMenuAtLocation")
-	overload public function contextMenuInteraction_configurationForMenuAtLocation(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):UIContextMenuConfiguration;
+	overload public function contextMenuInteractionConfigurationForMenuAtLocation(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):UIContextMenuConfiguration;
 
 	@:native("contextMenuInteraction:previewForHighlightingMenuWithConfiguration")
-	overload public function contextMenuInteraction_previewForHighlightingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
+	overload public function contextMenuInteractionPreviewForHighlightingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
 	@:native("contextMenuInteraction:previewForDismissingMenuWithConfiguration")
-	overload public function contextMenuInteraction_previewForDismissingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
+	overload public function contextMenuInteractionPreviewForDismissingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
 	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator")
-	overload public function contextMenuInteraction_willDisplayMenuForConfiguration_animator(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
+	overload public function contextMenuInteractionWillDisplayMenuForConfigurationAnimator(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("contextMenuInteraction:willEndForConfiguration:animator")
-	overload public function contextMenuInteraction_willEndForConfiguration_animator(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
+	overload public function contextMenuInteractionWillEndForConfigurationAnimator(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator")
-	overload public function contextMenuInteraction_willPerformPreviewActionForMenuWithConfiguration_animator(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
+	overload public function contextMenuInteractionWillPerformPreviewActionForMenuWithConfigurationAnimator(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 
 	@:native("drawRect:forViewPrintFormatter")
-	overload public function drawRect_forViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
+	overload public function drawRectForViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
 
 	@:native("endEditing")
 	overload public function endEditing(force:Bool):Bool;
@@ -398,25 +398,25 @@ extern class UITextField extends UIControl
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttributeRelativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:UIEvent):UIView;
+	overload public function hitTestWithEvent(point:CGPoint, withEvent:UIEvent):UIView;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside_withEvent(point:CGPoint, withEvent:UIEvent):Bool;
+	overload public function pointInsideWithEvent(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
+	overload public function convertPointToView(point:CGPoint, toView:UIView):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint_fromView(point:CGPoint, fromView:UIView):CGPoint;
+	overload public function convertPointFromView(point:CGPoint, fromView:UIView):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect_toView(rect:CGRect, toView:UIView):CGRect;
+	overload public function convertRectToView(rect:CGRect, toView:UIView):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect_fromView(rect:CGRect, fromView:UIView):CGRect;
+	overload public function convertRectFromView(rect:CGRect, fromView:UIView):CGRect;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;
@@ -428,19 +428,19 @@ extern class UITextField extends UIControl
 	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
-	overload public function insertSubview_atIndex(view:UIView, atIndex:Int):Void;
+	overload public function insertSubviewAtIndex(view:UIView, atIndex:Int):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
-	overload public function exchangeSubviewAtIndex_withSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
+	overload public function exchangeSubviewAtIndexWithSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
 
 	@:native("addSubview")
 	overload public function addSubview(view:UIView):Void;
 
 	@:native("insertSubview:belowSubview")
-	overload public function insertSubview_belowSubview(view:UIView, belowSubview:UIView):Void;
+	overload public function insertSubviewBelowSubview(view:UIView, belowSubview:UIView):Void;
 
 	@:native("insertSubview:aboveSubview")
-	overload public function insertSubview_aboveSubview(view:UIView, aboveSubview:UIView):Void;
+	overload public function insertSubviewAboveSubview(view:UIView, aboveSubview:UIView):Void;
 
 	@:native("bringSubviewToFront")
 	overload public function bringSubviewToFront(view:UIView):Void;
@@ -512,34 +512,34 @@ extern class UITextField extends UIControl
 	overload public static function inheritedAnimationDuration():Dynamic;
 
 	@:native("animateWithDuration:delay:options:animations:completion")
-	overload public static function animateWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations:completion")
-	overload public static function animateWithDuration_animations_completion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationAnimationsCompletion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations")
-	overload public static function animateWithDuration_animations(duration:Dynamic, animations:Dynamic):Void;
+	overload public static function animateWithDurationAnimations(duration:Dynamic, animations:Dynamic):Void;
 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
-	overload public static function animateWithDuration_delay_usingSpringWithDamping_initialSpringVelocity_options_animations_completion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionWithView:duration:options:animations:completion")
-	overload public static function transitionWithView_duration_options_animations_completion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function transitionWithViewDurationOptionsAnimationsCompletion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionFromView:toView:duration:options:completion")
-	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
+	overload public static function transitionFromViewToViewDurationOptionsCompletion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
-	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
+	overload public static function modifyAnimationsWithRepeatCountAutoreversesAnimations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
-	overload public static function animateKeyframesWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateKeyframesWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
-	overload public static function addKeyframeWithRelativeStartTime_relativeDuration_animations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
+	overload public static function addKeyframeWithRelativeStartTimeRelativeDurationAnimations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
 	@:native("addGestureRecognizer")
 	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
@@ -596,19 +596,19 @@ extern class UITextField extends UIControl
 	overload public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentHuggingPriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
 	overload public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentCompressionResistancePriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("systemLayoutSizeFittingSize")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
-	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
+	overload public function systemLayoutSizeFittingSizeWithHorizontalFittingPriorityVerticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
@@ -632,10 +632,10 @@ extern class UITextField extends UIControl
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
 	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets")
-	overload public function resizableSnapshotViewFromRect_afterScreenUpdates_withCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
+	overload public function resizableSnapshotViewFromRectAfterScreenUpdatesWithCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
-	overload public function drawViewHierarchyInRect_afterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
+	overload public function drawViewHierarchyInRectAfterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
 
 
 }

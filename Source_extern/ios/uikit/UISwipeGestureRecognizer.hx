@@ -28,10 +28,10 @@ extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 	public var direction:UISwipeGestureRecognizerDirection;
 
 	@:native("ignoreTouch:forEvent")
-	overload public function ignoreTouch_forEvent(touch:UITouch, forEvent:UIEvent):Void;
+	overload public function ignoreTouchForEvent(touch:UITouch, forEvent:UIEvent):Void;
 
 	@:native("ignorePress:forEvent")
-	overload public function ignorePress_forEvent(button:UIPress, forEvent:UIPressesEvent):Void;
+	overload public function ignorePressForEvent(button:UIPress, forEvent:UIPressesEvent):Void;
 
 	@:native("reset")
 	overload public function reset():Void;
@@ -52,34 +52,34 @@ extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 	overload public function shouldReceiveEvent(event:UIEvent):Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBegan_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMoved_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEnded_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelled_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
 	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBegan_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChanged_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEnded_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("initWithTarget:action")
-	overload public function initWithTarget_action(target:Dynamic, action:String):UISwipeGestureRecognizer;
+	overload public function initWithTargetAction(target:Dynamic, action:String):UISwipeGestureRecognizer;
 
 	@:native("init")
 	overload public function init():UIGestureRecognizer;
@@ -88,10 +88,10 @@ extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 	overload public function initWithCoder(coder:NSCoder):UISwipeGestureRecognizer;
 
 	@:native("addTarget:action")
-	overload public function addTarget_action(target:Dynamic, action:String):Void;
+	overload public function addTargetAction(target:Dynamic, action:String):Void;
 
 	@:native("removeTarget:action")
-	overload public function removeTarget_action(target:Dynamic, action:String):Void;
+	overload public function removeTargetAction(target:Dynamic, action:String):Void;
 
 	@:native("requireGestureRecognizerToFail")
 	overload public function requireGestureRecognizerToFail(otherGestureRecognizer:UIGestureRecognizer):Void;
@@ -100,7 +100,7 @@ extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 	overload public function locationInView(view:UIView):CGPoint;
 
 	@:native("locationOfTouch:inView")
-	overload public function locationOfTouch_inView(touchIndex:Int, inView:UIView):CGPoint;
+	overload public function locationOfTouchInView(touchIndex:Int, inView:UIView):CGPoint;
 
 
 }

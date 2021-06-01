@@ -56,7 +56,7 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	public var popoverBackgroundViewClass:Dynamic;
 
 	@:native("initWithPresentedViewController:presentingViewController")
-	overload public function initWithPresentedViewController_presentingViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPopoverPresentationController;
+	overload public function initWithPresentedViewControllerPresentingViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPopoverPresentationController;
 
 	@:native("init")
 	overload public function init():UIPresentationController;
@@ -92,13 +92,13 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	overload public function systemLayoutFittingSizeDidChangeForChildContentContainer(container:Dynamic):Void;
 
 	@:native("sizeForChildContentContainer:withParentContainerSize")
-	overload public function sizeForChildContentContainer_withParentContainerSize(container:Dynamic, withParentContainerSize:CGSize):CGSize;
+	overload public function sizeForChildContentContainerWithParentContainerSize(container:Dynamic, withParentContainerSize:CGSize):CGSize;
 
 	@:native("viewWillTransitionToSize:withTransitionCoordinator")
-	overload public function viewWillTransitionToSize_withTransitionCoordinator(size:CGSize, withTransitionCoordinator:Dynamic):Void;
+	overload public function viewWillTransitionToSizeWithTransitionCoordinator(size:CGSize, withTransitionCoordinator:Dynamic):Void;
 
 	@:native("willTransitionToTraitCollection:withTransitionCoordinator")
-	overload public function willTransitionToTraitCollection_withTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
+	overload public function willTransitionToTraitCollectionWithTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
 
 	@:native("setNeedsFocusUpdate")
 	overload public function setNeedsFocusUpdate():Void;
@@ -110,7 +110,7 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	overload public function shouldUpdateFocusInContext(context:UIFocusUpdateContext):Bool;
 
 	@:native("didUpdateFocusInContext:withAnimationCoordinator")
-	overload public function didUpdateFocusInContext_withAnimationCoordinator(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
+	overload public function didUpdateFocusInContextWithAnimationCoordinator(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
 
 	@:native("soundIdentifierForFocusUpdateInContext")
 	overload public function soundIdentifierForFocusUpdateInContext(context:UIFocusUpdateContext):NSString;

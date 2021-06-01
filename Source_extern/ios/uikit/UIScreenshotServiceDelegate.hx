@@ -14,7 +14,7 @@ extern interface UIScreenshotServiceDelegate{
 	overload public static function autorelease():UIScreenshotServiceDelegate;
 
 	@:native("screenshotService:generatePDFRepresentationWithCompletion")
-	overload public function screenshotService_generatePDFRepresentationWithCompletion(screenshotService:UIScreenshotService, generatePDFRepresentationWithCompletion:Dynamic):Void;
+	overload public function screenshotServiceGeneratePDFRepresentationWithCompletion(screenshotService:UIScreenshotService, generatePDFRepresentationWithCompletion:Dynamic):Void;
 
 
 }

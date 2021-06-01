@@ -17,25 +17,25 @@ extern interface UITableViewDropDelegate{
 	overload public static function autorelease():UITableViewDropDelegate;
 
 	@:native("tableView:performDropWithCoordinator")
-	overload public function tableView_performDropWithCoordinator(tableView:UITableView, performDropWithCoordinator:Dynamic):Void;
+	overload public function tableViewPerformDropWithCoordinator(tableView:UITableView, performDropWithCoordinator:Dynamic):Void;
 
 	@:native("tableView:canHandleDropSession")
-	overload public function tableView_canHandleDropSession(tableView:UITableView, canHandleDropSession:Dynamic):Bool;
+	overload public function tableViewCanHandleDropSession(tableView:UITableView, canHandleDropSession:Dynamic):Bool;
 
 	@:native("tableView:dropSessionDidEnter")
-	overload public function tableView_dropSessionDidEnter(tableView:UITableView, dropSessionDidEnter:Dynamic):Void;
+	overload public function tableViewDropSessionDidEnter(tableView:UITableView, dropSessionDidEnter:Dynamic):Void;
 
 	@:native("tableView:dropSessionDidUpdate:withDestinationIndexPath")
-	overload public function tableView_dropSessionDidUpdate_withDestinationIndexPath(tableView:UITableView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:NSIndexPath):UITableViewDropProposal;
+	overload public function tableViewDropSessionDidUpdateWithDestinationIndexPath(tableView:UITableView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:NSIndexPath):UITableViewDropProposal;
 
 	@:native("tableView:dropSessionDidExit")
-	overload public function tableView_dropSessionDidExit(tableView:UITableView, dropSessionDidExit:Dynamic):Void;
+	overload public function tableViewDropSessionDidExit(tableView:UITableView, dropSessionDidExit:Dynamic):Void;
 
 	@:native("tableView:dropSessionDidEnd")
-	overload public function tableView_dropSessionDidEnd(tableView:UITableView, dropSessionDidEnd:Dynamic):Void;
+	overload public function tableViewDropSessionDidEnd(tableView:UITableView, dropSessionDidEnd:Dynamic):Void;
 
 	@:native("tableView:dropPreviewParametersForRowAtIndexPath")
-	overload public function tableView_dropPreviewParametersForRowAtIndexPath(tableView:UITableView, dropPreviewParametersForRowAtIndexPath:NSIndexPath):UIDragPreviewParameters;
+	overload public function tableViewDropPreviewParametersForRowAtIndexPath(tableView:UITableView, dropPreviewParametersForRowAtIndexPath:NSIndexPath):UIDragPreviewParameters;
 
 
 }

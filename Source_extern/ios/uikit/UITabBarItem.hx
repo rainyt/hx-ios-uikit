@@ -29,13 +29,13 @@ extern class UITabBarItem extends UIBarItem{
 	overload public function initWithCoder(coder:NSCoder):UITabBarItem;
 
 	@:native("initWithTitle:image:tag")
-	overload public function initWithTitle_image_tag(title:NSString, image:UIImage, tag:Int):UITabBarItem;
+	overload public function initWithTitleImageTag(title:NSString, image:UIImage, tag:Int):UITabBarItem;
 
 	@:native("initWithTitle:image:selectedImage")
-	overload public function initWithTitle_image_selectedImage(title:NSString, image:UIImage, selectedImage:UIImage):UITabBarItem;
+	overload public function initWithTitleImageSelectedImage(title:NSString, image:UIImage, selectedImage:UIImage):UITabBarItem;
 
 	@:native("initWithTabBarSystemItem:tag")
-	overload public function initWithTabBarSystemItem_tag(systemItem:UITabBarSystemItem, tag:Int):UITabBarItem;
+	overload public function initWithTabBarSystemItemTag(systemItem:UITabBarSystemItem, tag:Int):UITabBarItem;
 
 	@:native("selectedImage")
 	public var selectedImage:UIImage;
@@ -47,7 +47,7 @@ extern class UITabBarItem extends UIBarItem{
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
 	@:native("setBadgeTextAttributes:forState")
-	overload public function setBadgeTextAttributes_forState(textAttributes:NSDictionary, forState:UIControlState):Void;
+	overload public function setBadgeTextAttributesForState(textAttributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("badgeTextAttributesForState")
 	overload public function badgeTextAttributesForState(state:UIControlState):NSDictionary;
@@ -56,7 +56,7 @@ extern class UITabBarItem extends UIBarItem{
 	public var standardAppearance:UITabBarAppearance;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes_forState(attributes:NSDictionary, forState:UIControlState):Void;
+	overload public function setTitleTextAttributesForState(attributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
@@ -75,7 +75,7 @@ extern class UITabBarItem extends UIBarItem{
 	overload public static function appearanceForTraitCollection(trait:UITraitCollection):UIAppearance;
 
 	@:native("appearanceForTraitCollection:whenContainedInInstancesOfClasses")
-	overload public static function appearanceForTraitCollection_whenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
+	overload public static function appearanceForTraitCollectionWhenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
 
 
 }

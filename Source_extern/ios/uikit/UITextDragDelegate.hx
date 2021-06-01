@@ -17,19 +17,19 @@ extern interface UITextDragDelegate{
 	overload public static function autorelease():UITextDragDelegate;
 
 	@:native("textDraggableView:itemsForDrag")
-	overload public function textDraggableView_itemsForDrag(textDraggableView:UIView, itemsForDrag:Dynamic):Dynamic;
+	overload public function textDraggableViewItemsForDrag(textDraggableView:UIView, itemsForDrag:Dynamic):Dynamic;
 
 	@:native("textDraggableView:dragPreviewForLiftingItem:session")
-	overload public function textDraggableView_dragPreviewForLiftingItem_session(textDraggableView:UIView, dragPreviewForLiftingItem:UIDragItem, session:Dynamic):UITargetedDragPreview;
+	overload public function textDraggableViewDragPreviewForLiftingItemSession(textDraggableView:UIView, dragPreviewForLiftingItem:UIDragItem, session:Dynamic):UITargetedDragPreview;
 
 	@:native("textDraggableView:willAnimateLiftWithAnimator:session")
-	overload public function textDraggableView_willAnimateLiftWithAnimator_session(textDraggableView:UIView, willAnimateLiftWithAnimator:Dynamic, session:Dynamic):Void;
+	overload public function textDraggableViewWillAnimateLiftWithAnimatorSession(textDraggableView:UIView, willAnimateLiftWithAnimator:Dynamic, session:Dynamic):Void;
 
 	@:native("textDraggableView:dragSessionWillBegin")
-	overload public function textDraggableView_dragSessionWillBegin(textDraggableView:UIView, dragSessionWillBegin:Dynamic):Void;
+	overload public function textDraggableViewDragSessionWillBegin(textDraggableView:UIView, dragSessionWillBegin:Dynamic):Void;
 
 	@:native("textDraggableView:dragSessionDidEnd:withOperation")
-	overload public function textDraggableView_dragSessionDidEnd_withOperation(textDraggableView:UIView, dragSessionDidEnd:Dynamic, withOperation:UIDropOperation):Void;
+	overload public function textDraggableViewDragSessionDidEndWithOperation(textDraggableView:UIView, dragSessionDidEnd:Dynamic, withOperation:UIDropOperation):Void;
 
 
 }

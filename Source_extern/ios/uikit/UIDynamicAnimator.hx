@@ -23,10 +23,10 @@ extern class UIDynamicAnimator{
 	overload public function layoutAttributesForCellAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(kind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryViewOfKindAtIndexPath(kind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(decorationViewKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForDecorationViewOfKindAtIndexPath(decorationViewKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 
 }

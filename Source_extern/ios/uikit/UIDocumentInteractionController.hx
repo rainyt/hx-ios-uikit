@@ -40,19 +40,19 @@ extern class UIDocumentInteractionController
 	public var annotation:Dynamic;
 
 	@:native("presentOptionsMenuFromRect:inView:animated")
-	overload public function presentOptionsMenuFromRect_inView_animated(rect:CGRect, inView:UIView, animated:Bool):Bool;
+	overload public function presentOptionsMenuFromRectInViewAnimated(rect:CGRect, inView:UIView, animated:Bool):Bool;
 
 	@:native("presentOptionsMenuFromBarButtonItem:animated")
-	overload public function presentOptionsMenuFromBarButtonItem_animated(item:UIBarButtonItem, animated:Bool):Bool;
+	overload public function presentOptionsMenuFromBarButtonItemAnimated(item:UIBarButtonItem, animated:Bool):Bool;
 
 	@:native("presentPreviewAnimated")
 	overload public function presentPreviewAnimated(animated:Bool):Bool;
 
 	@:native("presentOpenInMenuFromRect:inView:animated")
-	overload public function presentOpenInMenuFromRect_inView_animated(rect:CGRect, inView:UIView, animated:Bool):Bool;
+	overload public function presentOpenInMenuFromRectInViewAnimated(rect:CGRect, inView:UIView, animated:Bool):Bool;
 
 	@:native("presentOpenInMenuFromBarButtonItem:animated")
-	overload public function presentOpenInMenuFromBarButtonItem_animated(item:UIBarButtonItem, animated:Bool):Bool;
+	overload public function presentOpenInMenuFromBarButtonItemAnimated(item:UIBarButtonItem, animated:Bool):Bool;
 
 	@:native("dismissPreviewAnimated")
 	overload public function dismissPreviewAnimated(animated:Bool):Void;

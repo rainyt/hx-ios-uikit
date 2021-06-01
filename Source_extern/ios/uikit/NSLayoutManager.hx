@@ -43,7 +43,7 @@ extern class NSLayoutManager
 	overload public function addTextContainer(container:NSTextContainer):Void;
 
 	@:native("insertTextContainer:atIndex")
-	overload public function insertTextContainer_atIndex(container:NSTextContainer, atIndex:Int):Void;
+	overload public function insertTextContainerAtIndex(container:NSTextContainer, atIndex:Int):Void;
 
 	@:native("removeTextContainerAtIndex")
 	overload public function removeTextContainerAtIndex(index:Int):Void;
@@ -73,10 +73,10 @@ extern class NSLayoutManager
 	public var null:null;
 
 	@:native("invalidateGlyphsForCharacterRange:changeInLength:actualCharacterRange")
-	overload public function invalidateGlyphsForCharacterRange_changeInLength_actualCharacterRange(charRange:Dynamic, changeInLength:Int, actualCharacterRange:Dynamic):Void;
+	overload public function invalidateGlyphsForCharacterRangeChangeInLengthActualCharacterRange(charRange:Dynamic, changeInLength:Int, actualCharacterRange:Dynamic):Void;
 
 	@:native("invalidateLayoutForCharacterRange:actualCharacterRange")
-	overload public function invalidateLayoutForCharacterRange_actualCharacterRange(charRange:Dynamic, actualCharacterRange:Dynamic):Void;
+	overload public function invalidateLayoutForCharacterRangeActualCharacterRange(charRange:Dynamic, actualCharacterRange:Dynamic):Void;
 
 	@:native("invalidateDisplayForCharacterRange")
 	overload public function invalidateDisplayForCharacterRange(charRange:Dynamic):Void;
@@ -85,7 +85,7 @@ extern class NSLayoutManager
 	overload public function invalidateDisplayForGlyphRange(glyphRange:Dynamic):Void;
 
 	@:native("processEditingForTextStorage:edited:range:changeInLength:invalidatedRange")
-	overload public function processEditingForTextStorage_edited_range_changeInLength_invalidatedRange(textStorage:NSTextStorage, edited:NSTextStorageEditActions, range:Dynamic, changeInLength:Int, invalidatedRange:Dynamic):Void;
+	overload public function processEditingForTextStorageEditedRangeChangeInLengthInvalidatedRange(textStorage:NSTextStorage, edited:NSTextStorageEditActions, range:Dynamic, changeInLength:Int, invalidatedRange:Dynamic):Void;
 
 	@:native("ensureGlyphsForCharacterRange")
 	overload public function ensureGlyphsForCharacterRange(charRange:Dynamic):Void;
@@ -103,16 +103,16 @@ extern class NSLayoutManager
 	overload public function ensureLayoutForTextContainer(container:NSTextContainer):Void;
 
 	@:native("ensureLayoutForBoundingRect:inTextContainer")
-	overload public function ensureLayoutForBoundingRect_inTextContainer(bounds:CGRect, inTextContainer:NSTextContainer):Void;
+	overload public function ensureLayoutForBoundingRectInTextContainer(bounds:CGRect, inTextContainer:NSTextContainer):Void;
 
 	@:native("setGlyphs:properties:characterIndexes:font:forGlyphRange")
-	overload public function setGlyphs_properties_characterIndexes_font_forGlyphRange(glyphs:Dynamic, properties:Dynamic, characterIndexes:Dynamic, font:UIFont, forGlyphRange:Dynamic):Void;
+	overload public function setGlyphsPropertiesCharacterIndexesFontForGlyphRange(glyphs:Dynamic, properties:Dynamic, characterIndexes:Dynamic, font:UIFont, forGlyphRange:Dynamic):Void;
 
 	@:native("numberOfGlyphs")
 	public var numberOfGlyphs:Int;
 
 	@:native("CGGlyphAtIndex:isValidIndex")
-	overload public function CGGlyphAtIndex_isValidIndex(glyphIndex:Int, isValidIndex:Bool):Dynamic;
+	overload public function CGGlyphAtIndexIsValidIndex(glyphIndex:Int, isValidIndex:Bool):Dynamic;
 
 	@:native("CGGlyphAtIndex")
 	overload public function CGGlyphAtIndex(glyphIndex:Int):Dynamic;
@@ -130,31 +130,31 @@ extern class NSLayoutManager
 	overload public function glyphIndexForCharacterAtIndex(charIndex:Int):Int;
 
 	@:native("getGlyphsInRange:glyphs:properties:characterIndexes:bidiLevels")
-	overload public function getGlyphsInRange_glyphs_properties_characterIndexes_bidiLevels(glyphRange:Dynamic, glyphs:Dynamic, properties:NSGlyphProperty, characterIndexes:Int, bidiLevels:Dynamic):Int;
+	overload public function getGlyphsInRangeGlyphsPropertiesCharacterIndexesBidiLevels(glyphRange:Dynamic, glyphs:Dynamic, properties:NSGlyphProperty, characterIndexes:Int, bidiLevels:Dynamic):Int;
 
 	@:native("setTextContainer:forGlyphRange")
-	overload public function setTextContainer_forGlyphRange(container:NSTextContainer, forGlyphRange:Dynamic):Void;
+	overload public function setTextContainerForGlyphRange(container:NSTextContainer, forGlyphRange:Dynamic):Void;
 
 	@:native("setLineFragmentRect:forGlyphRange:usedRect")
-	overload public function setLineFragmentRect_forGlyphRange_usedRect(fragmentRect:CGRect, forGlyphRange:Dynamic, usedRect:CGRect):Void;
+	overload public function setLineFragmentRectForGlyphRangeUsedRect(fragmentRect:CGRect, forGlyphRange:Dynamic, usedRect:CGRect):Void;
 
 	@:native("setExtraLineFragmentRect:usedRect:textContainer")
-	overload public function setExtraLineFragmentRect_usedRect_textContainer(fragmentRect:CGRect, usedRect:CGRect, textContainer:NSTextContainer):Void;
+	overload public function setExtraLineFragmentRectUsedRectTextContainer(fragmentRect:CGRect, usedRect:CGRect, textContainer:NSTextContainer):Void;
 
 	@:native("setLocation:forStartOfGlyphRange")
-	overload public function setLocation_forStartOfGlyphRange(location:CGPoint, forStartOfGlyphRange:Dynamic):Void;
+	overload public function setLocationForStartOfGlyphRange(location:CGPoint, forStartOfGlyphRange:Dynamic):Void;
 
 	@:native("setNotShownAttribute:forGlyphAtIndex")
-	overload public function setNotShownAttribute_forGlyphAtIndex(flag:Bool, forGlyphAtIndex:Int):Void;
+	overload public function setNotShownAttributeForGlyphAtIndex(flag:Bool, forGlyphAtIndex:Int):Void;
 
 	@:native("setDrawsOutsideLineFragment:forGlyphAtIndex")
-	overload public function setDrawsOutsideLineFragment_forGlyphAtIndex(flag:Bool, forGlyphAtIndex:Int):Void;
+	overload public function setDrawsOutsideLineFragmentForGlyphAtIndex(flag:Bool, forGlyphAtIndex:Int):Void;
 
 	@:native("setAttachmentSize:forGlyphRange")
-	overload public function setAttachmentSize_forGlyphRange(attachmentSize:CGSize, forGlyphRange:Dynamic):Void;
+	overload public function setAttachmentSizeForGlyphRange(attachmentSize:CGSize, forGlyphRange:Dynamic):Void;
 
 	@:native("getFirstUnlaidCharacterIndex:glyphIndex")
-	overload public function getFirstUnlaidCharacterIndex_glyphIndex(charIndex:Int, glyphIndex:Int):Void;
+	overload public function getFirstUnlaidCharacterIndexGlyphIndex(charIndex:Int, glyphIndex:Int):Void;
 
 	@:native("firstUnlaidCharacterIndex")
 	overload public function firstUnlaidCharacterIndex():Int;
@@ -163,25 +163,25 @@ extern class NSLayoutManager
 	overload public function firstUnlaidGlyphIndex():Int;
 
 	@:native("textContainerForGlyphAtIndex:effectiveRange")
-	overload public function textContainerForGlyphAtIndex_effectiveRange(glyphIndex:Int, effectiveRange:Dynamic):NSTextContainer;
+	overload public function textContainerForGlyphAtIndexEffectiveRange(glyphIndex:Int, effectiveRange:Dynamic):NSTextContainer;
 
 	@:native("textContainerForGlyphAtIndex:effectiveRange:withoutAdditionalLayout")
-	overload public function textContainerForGlyphAtIndex_effectiveRange_withoutAdditionalLayout(glyphIndex:Int, effectiveRange:Dynamic, withoutAdditionalLayout:Bool):NSTextContainer;
+	overload public function textContainerForGlyphAtIndexEffectiveRangeWithoutAdditionalLayout(glyphIndex:Int, effectiveRange:Dynamic, withoutAdditionalLayout:Bool):NSTextContainer;
 
 	@:native("usedRectForTextContainer")
 	overload public function usedRectForTextContainer(container:NSTextContainer):CGRect;
 
 	@:native("lineFragmentRectForGlyphAtIndex:effectiveRange")
-	overload public function lineFragmentRectForGlyphAtIndex_effectiveRange(glyphIndex:Int, effectiveRange:Dynamic):CGRect;
+	overload public function lineFragmentRectForGlyphAtIndexEffectiveRange(glyphIndex:Int, effectiveRange:Dynamic):CGRect;
 
 	@:native("lineFragmentRectForGlyphAtIndex:effectiveRange:withoutAdditionalLayout")
-	overload public function lineFragmentRectForGlyphAtIndex_effectiveRange_withoutAdditionalLayout(glyphIndex:Int, effectiveRange:Dynamic, withoutAdditionalLayout:Bool):CGRect;
+	overload public function lineFragmentRectForGlyphAtIndexEffectiveRangeWithoutAdditionalLayout(glyphIndex:Int, effectiveRange:Dynamic, withoutAdditionalLayout:Bool):CGRect;
 
 	@:native("lineFragmentUsedRectForGlyphAtIndex:effectiveRange")
-	overload public function lineFragmentUsedRectForGlyphAtIndex_effectiveRange(glyphIndex:Int, effectiveRange:Dynamic):CGRect;
+	overload public function lineFragmentUsedRectForGlyphAtIndexEffectiveRange(glyphIndex:Int, effectiveRange:Dynamic):CGRect;
 
 	@:native("lineFragmentUsedRectForGlyphAtIndex:effectiveRange:withoutAdditionalLayout")
-	overload public function lineFragmentUsedRectForGlyphAtIndex_effectiveRange_withoutAdditionalLayout(glyphIndex:Int, effectiveRange:Dynamic, withoutAdditionalLayout:Bool):CGRect;
+	overload public function lineFragmentUsedRectForGlyphAtIndexEffectiveRangeWithoutAdditionalLayout(glyphIndex:Int, effectiveRange:Dynamic, withoutAdditionalLayout:Bool):CGRect;
 
 	@:native("extraLineFragmentRect")
 	public var extraLineFragmentRect:CGRect;
@@ -208,10 +208,10 @@ extern class NSLayoutManager
 	overload public function truncatedGlyphRangeInLineFragmentForGlyphAtIndex(glyphIndex:Int):Dynamic;
 
 	@:native("glyphRangeForCharacterRange:actualCharacterRange")
-	overload public function glyphRangeForCharacterRange_actualCharacterRange(charRange:Dynamic, actualCharacterRange:Dynamic):Dynamic;
+	overload public function glyphRangeForCharacterRangeActualCharacterRange(charRange:Dynamic, actualCharacterRange:Dynamic):Dynamic;
 
 	@:native("characterRangeForGlyphRange:actualGlyphRange")
-	overload public function characterRangeForGlyphRange_actualGlyphRange(glyphRange:Dynamic, actualGlyphRange:Dynamic):Dynamic;
+	overload public function characterRangeForGlyphRangeActualGlyphRange(glyphRange:Dynamic, actualGlyphRange:Dynamic):Dynamic;
 
 	@:native("glyphRangeForTextContainer")
 	overload public function glyphRangeForTextContainer(container:NSTextContainer):Dynamic;
@@ -220,61 +220,61 @@ extern class NSLayoutManager
 	overload public function rangeOfNominallySpacedGlyphsContainingIndex(glyphIndex:Int):Dynamic;
 
 	@:native("boundingRectForGlyphRange:inTextContainer")
-	overload public function boundingRectForGlyphRange_inTextContainer(glyphRange:Dynamic, inTextContainer:NSTextContainer):CGRect;
+	overload public function boundingRectForGlyphRangeInTextContainer(glyphRange:Dynamic, inTextContainer:NSTextContainer):CGRect;
 
 	@:native("glyphRangeForBoundingRect:inTextContainer")
-	overload public function glyphRangeForBoundingRect_inTextContainer(bounds:CGRect, inTextContainer:NSTextContainer):Dynamic;
+	overload public function glyphRangeForBoundingRectInTextContainer(bounds:CGRect, inTextContainer:NSTextContainer):Dynamic;
 
 	@:native("glyphRangeForBoundingRectWithoutAdditionalLayout:inTextContainer")
-	overload public function glyphRangeForBoundingRectWithoutAdditionalLayout_inTextContainer(bounds:CGRect, inTextContainer:NSTextContainer):Dynamic;
+	overload public function glyphRangeForBoundingRectWithoutAdditionalLayoutInTextContainer(bounds:CGRect, inTextContainer:NSTextContainer):Dynamic;
 
 	@:native("glyphIndexForPoint:inTextContainer:fractionOfDistanceThroughGlyph")
-	overload public function glyphIndexForPoint_inTextContainer_fractionOfDistanceThroughGlyph(point:CGPoint, inTextContainer:NSTextContainer, fractionOfDistanceThroughGlyph:Float):Int;
+	overload public function glyphIndexForPointInTextContainerFractionOfDistanceThroughGlyph(point:CGPoint, inTextContainer:NSTextContainer, fractionOfDistanceThroughGlyph:Float):Int;
 
 	@:native("glyphIndexForPoint:inTextContainer")
-	overload public function glyphIndexForPoint_inTextContainer(point:CGPoint, inTextContainer:NSTextContainer):Int;
+	overload public function glyphIndexForPointInTextContainer(point:CGPoint, inTextContainer:NSTextContainer):Int;
 
 	@:native("fractionOfDistanceThroughGlyphForPoint:inTextContainer")
-	overload public function fractionOfDistanceThroughGlyphForPoint_inTextContainer(point:CGPoint, inTextContainer:NSTextContainer):Float;
+	overload public function fractionOfDistanceThroughGlyphForPointInTextContainer(point:CGPoint, inTextContainer:NSTextContainer):Float;
 
 	@:native("characterIndexForPoint:inTextContainer:fractionOfDistanceBetweenInsertionPoints")
-	overload public function characterIndexForPoint_inTextContainer_fractionOfDistanceBetweenInsertionPoints(point:CGPoint, inTextContainer:NSTextContainer, fractionOfDistanceBetweenInsertionPoints:Float):Int;
+	overload public function characterIndexForPointInTextContainerFractionOfDistanceBetweenInsertionPoints(point:CGPoint, inTextContainer:NSTextContainer, fractionOfDistanceBetweenInsertionPoints:Float):Int;
 
 	@:native("getLineFragmentInsertionPointsForCharacterAtIndex:alternatePositions:inDisplayOrder:positions:characterIndexes")
-	overload public function getLineFragmentInsertionPointsForCharacterAtIndex_alternatePositions_inDisplayOrder_positions_characterIndexes(charIndex:Int, alternatePositions:Bool, inDisplayOrder:Bool, positions:Float, characterIndexes:Int):Int;
+	overload public function getLineFragmentInsertionPointsForCharacterAtIndexAlternatePositionsInDisplayOrderPositionsCharacterIndexes(charIndex:Int, alternatePositions:Bool, inDisplayOrder:Bool, positions:Float, characterIndexes:Int):Int;
 
 	@:native("enumerateLineFragmentsForGlyphRange:usingBlock")
-	overload public function enumerateLineFragmentsForGlyphRange_usingBlock(glyphRange:Dynamic, usingBlock:Dynamic):Void;
+	overload public function enumerateLineFragmentsForGlyphRangeUsingBlock(glyphRange:Dynamic, usingBlock:Dynamic):Void;
 
 	@:native("enumerateEnclosingRectsForGlyphRange:withinSelectedGlyphRange:inTextContainer:usingBlock")
-	overload public function enumerateEnclosingRectsForGlyphRange_withinSelectedGlyphRange_inTextContainer_usingBlock(glyphRange:Dynamic, withinSelectedGlyphRange:Dynamic, inTextContainer:NSTextContainer, usingBlock:Dynamic):Void;
+	overload public function enumerateEnclosingRectsForGlyphRangeWithinSelectedGlyphRangeInTextContainerUsingBlock(glyphRange:Dynamic, withinSelectedGlyphRange:Dynamic, inTextContainer:NSTextContainer, usingBlock:Dynamic):Void;
 
 	@:native("drawBackgroundForGlyphRange:atPoint")
-	overload public function drawBackgroundForGlyphRange_atPoint(glyphsToShow:Dynamic, atPoint:CGPoint):Void;
+	overload public function drawBackgroundForGlyphRangeAtPoint(glyphsToShow:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("drawGlyphsForGlyphRange:atPoint")
-	overload public function drawGlyphsForGlyphRange_atPoint(glyphsToShow:Dynamic, atPoint:CGPoint):Void;
+	overload public function drawGlyphsForGlyphRangeAtPoint(glyphsToShow:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("showCGGlyphs:positions:count:font:textMatrix:attributes:inContext")
-	overload public function showCGGlyphs_positions_count_font_textMatrix_attributes_inContext(glyphs:Dynamic, positions:Dynamic, count:Int, font:UIFont, textMatrix:CGAffineTransform, attributes:NSDictionary, inContext:Dynamic):Void;
+	overload public function showCGGlyphsPositionsCountFontTextMatrixAttributesInContext(glyphs:Dynamic, positions:Dynamic, count:Int, font:UIFont, textMatrix:CGAffineTransform, attributes:NSDictionary, inContext:Dynamic):Void;
 
 	@:native("fillBackgroundRectArray:count:forCharacterRange:color")
-	overload public function fillBackgroundRectArray_count_forCharacterRange_color(rectArray:Dynamic, count:Int, forCharacterRange:Dynamic, color:UIColor):Void;
+	overload public function fillBackgroundRectArrayCountForCharacterRangeColor(rectArray:Dynamic, count:Int, forCharacterRange:Dynamic, color:UIColor):Void;
 
 	@:native("drawUnderlineForGlyphRange:underlineType:baselineOffset:lineFragmentRect:lineFragmentGlyphRange:containerOrigin")
-	overload public function drawUnderlineForGlyphRange_underlineType_baselineOffset_lineFragmentRect_lineFragmentGlyphRange_containerOrigin(glyphRange:Dynamic, underlineType:NSUnderlineStyle, baselineOffset:Float, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
+	overload public function drawUnderlineForGlyphRangeUnderlineTypeBaselineOffsetLineFragmentRectLineFragmentGlyphRangeContainerOrigin(glyphRange:Dynamic, underlineType:NSUnderlineStyle, baselineOffset:Float, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
 
 	@:native("underlineGlyphRange:underlineType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin")
-	overload public function underlineGlyphRange_underlineType_lineFragmentRect_lineFragmentGlyphRange_containerOrigin(glyphRange:Dynamic, underlineType:NSUnderlineStyle, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
+	overload public function underlineGlyphRangeUnderlineTypeLineFragmentRectLineFragmentGlyphRangeContainerOrigin(glyphRange:Dynamic, underlineType:NSUnderlineStyle, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
 
 	@:native("drawStrikethroughForGlyphRange:strikethroughType:baselineOffset:lineFragmentRect:lineFragmentGlyphRange:containerOrigin")
-	overload public function drawStrikethroughForGlyphRange_strikethroughType_baselineOffset_lineFragmentRect_lineFragmentGlyphRange_containerOrigin(glyphRange:Dynamic, strikethroughType:NSUnderlineStyle, baselineOffset:Float, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
+	overload public function drawStrikethroughForGlyphRangeStrikethroughTypeBaselineOffsetLineFragmentRectLineFragmentGlyphRangeContainerOrigin(glyphRange:Dynamic, strikethroughType:NSUnderlineStyle, baselineOffset:Float, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
 
 	@:native("strikethroughGlyphRange:strikethroughType:lineFragmentRect:lineFragmentGlyphRange:containerOrigin")
-	overload public function strikethroughGlyphRange_strikethroughType_lineFragmentRect_lineFragmentGlyphRange_containerOrigin(glyphRange:Dynamic, strikethroughType:NSUnderlineStyle, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
+	overload public function strikethroughGlyphRangeStrikethroughTypeLineFragmentRectLineFragmentGlyphRangeContainerOrigin(glyphRange:Dynamic, strikethroughType:NSUnderlineStyle, lineFragmentRect:CGRect, lineFragmentGlyphRange:Dynamic, containerOrigin:CGPoint):Void;
 
 	@:native("glyphAtIndex:isValidIndex")
-	overload public function glyphAtIndex_isValidIndex(glyphIndex:Int, isValidIndex:Bool):Dynamic;
+	overload public function glyphAtIndexIsValidIndex(glyphIndex:Int, isValidIndex:Bool):Dynamic;
 
 	@:native("glyphAtIndex")
 	overload public function glyphAtIndex(glyphIndex:Int):Dynamic;

@@ -14,7 +14,7 @@ extern interface UISpringLoadedInteractionBehavior{
 	overload public static function autorelease():UISpringLoadedInteractionBehavior;
 
 	@:native("shouldAllowInteraction:withContext")
-	overload public function shouldAllowInteraction_withContext(interaction:UISpringLoadedInteraction, withContext:Dynamic):Bool;
+	overload public function shouldAllowInteractionWithContext(interaction:UISpringLoadedInteraction, withContext:Dynamic):Bool;
 
 	@:native("interactionDidFinish")
 	overload public function interactionDidFinish(interaction:UISpringLoadedInteraction):Void;

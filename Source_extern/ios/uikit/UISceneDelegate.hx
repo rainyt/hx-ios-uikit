@@ -18,7 +18,7 @@ extern interface UISceneDelegate{
 	overload public static function autorelease():UISceneDelegate;
 
 	@:native("scene:willConnectToSession:options")
-	overload public function scene_willConnectToSession_options(scene:UIScene, willConnectToSession:UISceneSession, options:UISceneConnectionOptions):Void;
+	overload public function sceneWillConnectToSessionOptions(scene:UIScene, willConnectToSession:UISceneSession, options:UISceneConnectionOptions):Void;
 
 	@:native("sceneDidDisconnect")
 	overload public function sceneDidDisconnect(scene:UIScene):Void;
@@ -36,22 +36,22 @@ extern interface UISceneDelegate{
 	overload public function sceneDidEnterBackground(scene:UIScene):Void;
 
 	@:native("scene:openURLContexts")
-	overload public function scene_openURLContexts(scene:UIScene, openURLContexts:Dynamic):Void;
+	overload public function sceneOpenURLContexts(scene:UIScene, openURLContexts:Dynamic):Void;
 
 	@:native("stateRestorationActivityForScene")
 	overload public function stateRestorationActivityForScene(scene:UIScene):NSUserActivity;
 
 	@:native("scene:willContinueUserActivityWithType")
-	overload public function scene_willContinueUserActivityWithType(scene:UIScene, willContinueUserActivityWithType:NSString):Void;
+	overload public function sceneWillContinueUserActivityWithType(scene:UIScene, willContinueUserActivityWithType:NSString):Void;
 
 	@:native("scene:continueUserActivity")
-	overload public function scene_continueUserActivity(scene:UIScene, continueUserActivity:NSUserActivity):Void;
+	overload public function sceneContinueUserActivity(scene:UIScene, continueUserActivity:NSUserActivity):Void;
 
 	@:native("scene:didFailToContinueUserActivityWithType:error")
-	overload public function scene_didFailToContinueUserActivityWithType_error(scene:UIScene, didFailToContinueUserActivityWithType:NSString, error:Dynamic):Void;
+	overload public function sceneDidFailToContinueUserActivityWithTypeError(scene:UIScene, didFailToContinueUserActivityWithType:NSString, error:Dynamic):Void;
 
 	@:native("scene:didUpdateUserActivity")
-	overload public function scene_didUpdateUserActivity(scene:UIScene, didUpdateUserActivity:NSUserActivity):Void;
+	overload public function sceneDidUpdateUserActivity(scene:UIScene, didUpdateUserActivity:NSUserActivity):Void;
 
 
 }

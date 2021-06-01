@@ -18,7 +18,7 @@ extern interface UIGuidedAccessRestrictionDelegate{
 	public var guidedAccessRestrictionIdentifiers:Dynamic;
 
 	@:native("guidedAccessRestrictionWithIdentifier:didChangeState")
-	overload public function guidedAccessRestrictionWithIdentifier_didChangeState(restrictionIdentifier:NSString, didChangeState:UIGuidedAccessRestrictionState):Void;
+	overload public function guidedAccessRestrictionWithIdentifierDidChangeState(restrictionIdentifier:NSString, didChangeState:UIGuidedAccessRestrictionState):Void;
 
 	@:native("textForGuidedAccessRestrictionWithIdentifier")
 	overload public function textForGuidedAccessRestrictionWithIdentifier(restrictionIdentifier:NSString):NSString;

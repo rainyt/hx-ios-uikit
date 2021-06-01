@@ -48,7 +48,7 @@ extern class UIApplication extends UIResponder{
 	overload public function canOpenURL(url:Dynamic):Bool;
 
 	@:native("openURL:options:completionHandler")
-	overload public function openURL_options_completionHandler(url:Dynamic, options:NSDictionary, completionHandler:Dynamic):Void;
+	overload public function openURLOptionsCompletionHandler(url:Dynamic, options:NSDictionary, completionHandler:Dynamic):Void;
 
 	@:native("sendEvent")
 	overload public function sendEvent(event:UIEvent):Void;
@@ -60,7 +60,7 @@ extern class UIApplication extends UIResponder{
 	public var windows:Dynamic;
 
 	@:native("sendAction:to:from:forEvent")
-	overload public function sendAction_to_from_forEvent(action:String, to:Dynamic, from:Dynamic, forEvent:UIEvent):Bool;
+	overload public function sendActionToFromForEvent(action:String, to:Dynamic, from:Dynamic, forEvent:UIEvent):Bool;
 
 	@:native("networkActivityIndicatorVisible")
 	public var networkActivityIndicatorVisible:Bool;
@@ -99,7 +99,7 @@ extern class UIApplication extends UIResponder{
 	overload public function beginBackgroundTaskWithExpirationHandler(handler:Dynamic):Int;
 
 	@:native("beginBackgroundTaskWithName:expirationHandler")
-	overload public function beginBackgroundTaskWithName_expirationHandler(taskName:NSString, expirationHandler:Dynamic):Int;
+	overload public function beginBackgroundTaskWithNameExpirationHandler(taskName:NSString, expirationHandler:Dynamic):Int;
 
 	@:native("endBackgroundTask")
 	overload public function endBackgroundTask(identifier:Int):Void;
@@ -126,10 +126,10 @@ extern class UIApplication extends UIResponder{
 	public var supportsMultipleScenes:Bool;
 
 	@:native("requestSceneSessionActivation:userActivity:options:errorHandler")
-	overload public function requestSceneSessionActivation_userActivity_options_errorHandler(sceneSession:UISceneSession, userActivity:NSUserActivity, options:UISceneActivationRequestOptions, errorHandler:Dynamic):Void;
+	overload public function requestSceneSessionActivationUserActivityOptionsErrorHandler(sceneSession:UISceneSession, userActivity:NSUserActivity, options:UISceneActivationRequestOptions, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionDestruction:options:errorHandler")
-	overload public function requestSceneSessionDestruction_options_errorHandler(sceneSession:UISceneSession, options:UISceneDestructionRequestOptions, errorHandler:Dynamic):Void;
+	overload public function requestSceneSessionDestructionOptionsErrorHandler(sceneSession:UISceneSession, options:UISceneDestructionRequestOptions, errorHandler:Dynamic):Void;
 
 	@:native("requestSceneSessionRefresh")
 	overload public function requestSceneSessionRefresh(sceneSession:UISceneSession):Void;
@@ -162,7 +162,7 @@ extern class UIApplication extends UIResponder{
 	public var supportsAlternateIcons:Bool;
 
 	@:native("setAlternateIconName:completionHandler")
-	overload public function setAlternateIconName_completionHandler(alternateIconName:NSString, completionHandler:Dynamic):Void;
+	overload public function setAlternateIconNameCompletionHandler(alternateIconName:NSString, completionHandler:Dynamic):Void;
 
 	@:native("alternateIconName")
 	public var alternateIconName:NSString;
@@ -177,7 +177,7 @@ extern class UIApplication extends UIResponder{
 	overload public function ignoreSnapshotOnNextApplicationLaunch():Void;
 
 	@:native("registerObjectForStateRestoration:restorationIdentifier")
-	overload public static function registerObjectForStateRestoration_restorationIdentifier(object:Dynamic, restorationIdentifier:NSString):Void;
+	overload public static function registerObjectForStateRestorationRestorationIdentifier(object:Dynamic, restorationIdentifier:NSString):Void;
 
 	@:native("proximitySensingEnabled")
 	public var proximitySensingEnabled:Bool;
@@ -189,49 +189,49 @@ extern class UIApplication extends UIResponder{
 	overload public function resignFirstResponder():Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBegan_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMoved_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEnded_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelled_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
 	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBegan_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChanged_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEnded_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
-	overload public function motionBegan_withEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionBeganWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
 
 	@:native("motionEnded:withEvent")
-	overload public function motionEnded_withEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionEndedWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
 
 	@:native("motionCancelled:withEvent")
-	overload public function motionCancelled_withEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionCancelledWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
 
 	@:native("remoteControlReceivedWithEvent")
 	overload public function remoteControlReceivedWithEvent(event:UIEvent):Void;
 
 	@:native("canPerformAction:withSender")
-	overload public function canPerformAction_withSender(action:String, withSender:Dynamic):Bool;
+	overload public function canPerformActionWithSender(action:String, withSender:Dynamic):Bool;
 
 	@:native("targetForAction:withSender")
-	overload public function targetForAction_withSender(action:String, withSender:Dynamic):Dynamic;
+	overload public function targetForActionWithSender(action:String, withSender:Dynamic):Dynamic;
 
 	@:native("buildMenuWithBuilder")
 	overload public function buildMenuWithBuilder(builder:Dynamic):Void;

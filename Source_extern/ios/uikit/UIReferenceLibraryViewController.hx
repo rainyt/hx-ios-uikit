@@ -25,7 +25,7 @@ extern class UIReferenceLibraryViewController extends UIViewController}{
 	overload public function initWithCoder(coder:NSCoder):UIReferenceLibraryViewController;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIReferenceLibraryViewController;
+	overload public function initWithNibNameBundle(nibNameOrNil:NSString, bundle:NSBundle):UIReferenceLibraryViewController;
 
 	@:native("init")
 	overload public function init():UIReferenceLibraryViewController;

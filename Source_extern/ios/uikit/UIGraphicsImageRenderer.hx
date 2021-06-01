@@ -23,10 +23,10 @@ extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 	overload public function initWithSize(size:CGSize):UIGraphicsImageRenderer;
 
 	@:native("initWithSize:format")
-	overload public function initWithSize_format(size:CGSize, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
+	overload public function initWithSizeFormat(size:CGSize, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
+	overload public function initWithBoundsFormat(bounds:CGRect, format:UIGraphicsImageRendererFormat):UIGraphicsImageRenderer;
 
 	@:native("imageWithActions")
 	overload public function imageWithActions(actions:Dynamic):UIImage;
@@ -35,7 +35,7 @@ extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 	overload public function PNGDataWithActions(actions:Dynamic):Dynamic;
 
 	@:native("JPEGDataWithCompressionQuality:actions")
-	overload public function JPEGDataWithCompressionQuality_actions(compressionQuality:Float, actions:Dynamic):Dynamic;
+	overload public function JPEGDataWithCompressionQualityActions(compressionQuality:Float, actions:Dynamic):Dynamic;
 
 	@:native("initWithBounds")
 	overload public function initWithBounds(bounds:CGRect):UIGraphicsImageRenderer;
@@ -47,10 +47,10 @@ extern class UIGraphicsImageRenderer extends UIGraphicsRenderer{
 	overload public static function contextWithFormat(format:UIGraphicsRendererFormat):Dynamic;
 
 	@:native("prepareCGContext:withRendererContext")
-	overload public static function prepareCGContext_withRendererContext(context:Dynamic, withRendererContext:UIGraphicsRendererContext):Void;
+	overload public static function prepareCGContextWithRendererContext(context:Dynamic, withRendererContext:UIGraphicsRendererContext):Void;
 
 	@:native("runDrawingActions:completionActions:error")
-	overload public function runDrawingActions_completionActions_error(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
+	overload public function runDrawingActionsCompletionActionsError(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
 
 
 }

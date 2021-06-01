@@ -31,16 +31,16 @@ extern interface UITableViewDropCoordinator{
 	public var session:Dynamic;
 
 	@:native("dropItem:toPlaceholder")
-	overload public function dropItem_toPlaceholder(dragItem:UIDragItem, toPlaceholder:UITableViewDropPlaceholder):Dynamic;
+	overload public function dropItemToPlaceholder(dragItem:UIDragItem, toPlaceholder:UITableViewDropPlaceholder):Dynamic;
 
 	@:native("dropItem:toRowAtIndexPath")
-	overload public function dropItem_toRowAtIndexPath(dragItem:UIDragItem, toRowAtIndexPath:NSIndexPath):Dynamic;
+	overload public function dropItemToRowAtIndexPath(dragItem:UIDragItem, toRowAtIndexPath:NSIndexPath):Dynamic;
 
 	@:native("dropItem:intoRowAtIndexPath:rect")
-	overload public function dropItem_intoRowAtIndexPath_rect(dragItem:UIDragItem, intoRowAtIndexPath:NSIndexPath, rect:CGRect):Dynamic;
+	overload public function dropItemIntoRowAtIndexPathRect(dragItem:UIDragItem, intoRowAtIndexPath:NSIndexPath, rect:CGRect):Dynamic;
 
 	@:native("dropItem:toTarget")
-	overload public function dropItem_toTarget(dragItem:UIDragItem, toTarget:UIDragPreviewTarget):Dynamic;
+	overload public function dropItemToTarget(dragItem:UIDragItem, toTarget:UIDragPreviewTarget):Dynamic;
 
 
 }

@@ -17,25 +17,25 @@ extern interface UICollectionViewDragDelegate{
 	overload public static function autorelease():UICollectionViewDragDelegate;
 
 	@:native("collectionView:itemsForBeginningDragSession:atIndexPath")
-	overload public function collectionView_itemsForBeginningDragSession_atIndexPath(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):Dynamic;
+	overload public function collectionViewItemsForBeginningDragSessionAtIndexPath(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):Dynamic;
 
 	@:native("collectionView:itemsForAddingToDragSession:atIndexPath:point")
-	overload public function collectionView_itemsForAddingToDragSession_atIndexPath_point(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):Dynamic;
+	overload public function collectionViewItemsForAddingToDragSessionAtIndexPathPoint(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):Dynamic;
 
 	@:native("collectionView:dragPreviewParametersForItemAtIndexPath")
-	overload public function collectionView_dragPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dragPreviewParametersForItemAtIndexPath:NSIndexPath):UIDragPreviewParameters;
+	overload public function collectionViewDragPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dragPreviewParametersForItemAtIndexPath:NSIndexPath):UIDragPreviewParameters;
 
 	@:native("collectionView:dragSessionWillBegin")
-	overload public function collectionView_dragSessionWillBegin(collectionView:UICollectionView, dragSessionWillBegin:Dynamic):Void;
+	overload public function collectionViewDragSessionWillBegin(collectionView:UICollectionView, dragSessionWillBegin:Dynamic):Void;
 
 	@:native("collectionView:dragSessionDidEnd")
-	overload public function collectionView_dragSessionDidEnd(collectionView:UICollectionView, dragSessionDidEnd:Dynamic):Void;
+	overload public function collectionViewDragSessionDidEnd(collectionView:UICollectionView, dragSessionDidEnd:Dynamic):Void;
 
 	@:native("collectionView:dragSessionAllowsMoveOperation")
-	overload public function collectionView_dragSessionAllowsMoveOperation(collectionView:UICollectionView, dragSessionAllowsMoveOperation:Dynamic):Bool;
+	overload public function collectionViewDragSessionAllowsMoveOperation(collectionView:UICollectionView, dragSessionAllowsMoveOperation:Dynamic):Bool;
 
 	@:native("collectionView:dragSessionIsRestrictedToDraggingApplication")
-	overload public function collectionView_dragSessionIsRestrictedToDraggingApplication(collectionView:UICollectionView, dragSessionIsRestrictedToDraggingApplication:Dynamic):Bool;
+	overload public function collectionViewDragSessionIsRestrictedToDraggingApplication(collectionView:UICollectionView, dragSessionIsRestrictedToDraggingApplication:Dynamic):Bool;
 
 
 }

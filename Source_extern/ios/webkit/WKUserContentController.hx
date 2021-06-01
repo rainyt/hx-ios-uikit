@@ -28,16 +28,16 @@ extern class WKUserContentController
 	overload public function removeAllUserScripts():Void;
 
 	@:native("addScriptMessageHandler:contentWorld:name")
-	overload public function addScriptMessageHandler_contentWorld_name(scriptMessageHandler:Dynamic, contentWorld:WKContentWorld, name:NSString):Void;
+	overload public function addScriptMessageHandlerContentWorldName(scriptMessageHandler:Dynamic, contentWorld:WKContentWorld, name:NSString):Void;
 
 	@:native("addScriptMessageHandlerWithReply:contentWorld:name")
-	overload public function addScriptMessageHandlerWithReply_contentWorld_name(scriptMessageHandlerWithReply:Dynamic, contentWorld:WKContentWorld, name:NSString):Void;
+	overload public function addScriptMessageHandlerWithReplyContentWorldName(scriptMessageHandlerWithReply:Dynamic, contentWorld:WKContentWorld, name:NSString):Void;
 
 	@:native("addScriptMessageHandler:name")
-	overload public function addScriptMessageHandler_name(scriptMessageHandler:Dynamic, name:NSString):Void;
+	overload public function addScriptMessageHandlerName(scriptMessageHandler:Dynamic, name:NSString):Void;
 
 	@:native("removeScriptMessageHandlerForName:contentWorld")
-	overload public function removeScriptMessageHandlerForName_contentWorld(name:NSString, contentWorld:WKContentWorld):Void;
+	overload public function removeScriptMessageHandlerForNameContentWorld(name:NSString, contentWorld:WKContentWorld):Void;
 
 	@:native("removeScriptMessageHandlerForName")
 	overload public function removeScriptMessageHandlerForName(name:NSString):Void;

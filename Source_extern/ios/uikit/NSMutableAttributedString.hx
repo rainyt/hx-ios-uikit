@@ -17,10 +17,10 @@ extern class NSMutableAttributedString{
 	overload public function fixAttributesInRange(range:Dynamic):Void;
 
 	@:native("readFromURL:options:documentAttributes:error")
-	overload public function readFromURL_options_documentAttributes_error(url:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):Bool;
+	overload public function readFromURLOptionsDocumentAttributesError(url:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):Bool;
 
 	@:native("readFromData:options:documentAttributes:error")
-	overload public function readFromData_options_documentAttributes_error(data:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):Bool;
+	overload public function readFromDataOptionsDocumentAttributesError(data:Dynamic, options:NSDictionary, documentAttributes:NSDictionary, error:Dynamic):Bool;
 
 
 }

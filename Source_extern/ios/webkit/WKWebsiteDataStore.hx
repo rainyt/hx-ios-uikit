@@ -31,13 +31,13 @@ extern class WKWebsiteDataStore
 	overload public static function allWebsiteDataTypes():Dynamic;
 
 	@:native("fetchDataRecordsOfTypes:completionHandler")
-	overload public function fetchDataRecordsOfTypes_completionHandler(dataTypes:Dynamic, completionHandler:Dynamic):Void;
+	overload public function fetchDataRecordsOfTypesCompletionHandler(dataTypes:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("removeDataOfTypes:forDataRecords:completionHandler")
-	overload public function removeDataOfTypes_forDataRecords_completionHandler(dataTypes:Dynamic, forDataRecords:Dynamic, completionHandler:Dynamic):Void;
+	overload public function removeDataOfTypesForDataRecordsCompletionHandler(dataTypes:Dynamic, forDataRecords:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("removeDataOfTypes:modifiedSince:completionHandler")
-	overload public function removeDataOfTypes_modifiedSince_completionHandler(dataTypes:Dynamic, modifiedSince:Dynamic, completionHandler:Dynamic):Void;
+	overload public function removeDataOfTypesModifiedSinceCompletionHandler(dataTypes:Dynamic, modifiedSince:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("httpCookieStore")
 	public var httpCookieStore:WKHTTPCookieStore;

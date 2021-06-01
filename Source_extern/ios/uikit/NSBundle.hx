@@ -15,7 +15,7 @@ extern class NSBundle{
 	overload public static function autorelease():NSBundle;
 
 	@:native("loadNibNamed:owner:options")
-	overload public function loadNibNamed_owner_options(name:NSString, owner:Dynamic, options:NSDictionary):Dynamic;
+	overload public function loadNibNamedOwnerOptions(name:NSString, owner:Dynamic, options:NSDictionary):Dynamic;
 
 
 }

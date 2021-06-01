@@ -17,10 +17,10 @@ extern interface NSTextAttachmentContainer{
 	overload public static function autorelease():NSTextAttachmentContainer;
 
 	@:native("imageForBounds:textContainer:characterIndex")
-	overload public function imageForBounds_textContainer_characterIndex(imageBounds:CGRect, textContainer:NSTextContainer, characterIndex:Int):UIImage;
+	overload public function imageForBoundsTextContainerCharacterIndex(imageBounds:CGRect, textContainer:NSTextContainer, characterIndex:Int):UIImage;
 
 	@:native("attachmentBoundsForTextContainer:proposedLineFragment:glyphPosition:characterIndex")
-	overload public function attachmentBoundsForTextContainer_proposedLineFragment_glyphPosition_characterIndex(textContainer:NSTextContainer, proposedLineFragment:CGRect, glyphPosition:CGPoint, characterIndex:Int):CGRect;
+	overload public function attachmentBoundsForTextContainerProposedLineFragmentGlyphPositionCharacterIndex(textContainer:NSTextContainer, proposedLineFragment:CGRect, glyphPosition:CGPoint, characterIndex:Int):CGRect;
 
 
 }

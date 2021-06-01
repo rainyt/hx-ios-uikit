@@ -17,7 +17,7 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	overload public static function autorelease():UIMutableUserNotificationCategory;
 
 	@:native("setActions:forContext")
-	overload public function setActions_forContext(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
+	overload public function setActionsForContext(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
 
 	@:native("init")
 	overload public function init():UIUserNotificationCategory;

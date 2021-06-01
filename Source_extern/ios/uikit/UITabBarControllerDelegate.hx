@@ -17,19 +17,19 @@ extern interface UITabBarControllerDelegate{
 	overload public static function autorelease():UITabBarControllerDelegate;
 
 	@:native("tabBarController:shouldSelectViewController")
-	overload public function tabBarController_shouldSelectViewController(tabBarController:UITabBarController, shouldSelectViewController:UIViewController):Bool;
+	overload public function tabBarControllerShouldSelectViewController(tabBarController:UITabBarController, shouldSelectViewController:UIViewController):Bool;
 
 	@:native("tabBarController:didSelectViewController")
-	overload public function tabBarController_didSelectViewController(tabBarController:UITabBarController, didSelectViewController:UIViewController):Void;
+	overload public function tabBarControllerDidSelectViewController(tabBarController:UITabBarController, didSelectViewController:UIViewController):Void;
 
 	@:native("tabBarController:willBeginCustomizingViewControllers")
-	overload public function tabBarController_willBeginCustomizingViewControllers(tabBarController:UITabBarController, willBeginCustomizingViewControllers:Dynamic):Void;
+	overload public function tabBarControllerWillBeginCustomizingViewControllers(tabBarController:UITabBarController, willBeginCustomizingViewControllers:Dynamic):Void;
 
 	@:native("tabBarController:willEndCustomizingViewControllers:changed")
-	overload public function tabBarController_willEndCustomizingViewControllers_changed(tabBarController:UITabBarController, willEndCustomizingViewControllers:Dynamic, changed:Bool):Void;
+	overload public function tabBarControllerWillEndCustomizingViewControllersChanged(tabBarController:UITabBarController, willEndCustomizingViewControllers:Dynamic, changed:Bool):Void;
 
 	@:native("tabBarController:didEndCustomizingViewControllers:changed")
-	overload public function tabBarController_didEndCustomizingViewControllers_changed(tabBarController:UITabBarController, didEndCustomizingViewControllers:Dynamic, changed:Bool):Void;
+	overload public function tabBarControllerDidEndCustomizingViewControllersChanged(tabBarController:UITabBarController, didEndCustomizingViewControllers:Dynamic, changed:Bool):Void;
 
 	@:native("tabBarControllerSupportedInterfaceOrientations")
 	overload public function tabBarControllerSupportedInterfaceOrientations(tabBarController:UITabBarController):UIInterfaceOrientationMask;

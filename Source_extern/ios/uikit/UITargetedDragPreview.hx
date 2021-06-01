@@ -14,10 +14,10 @@ extern class UITargetedDragPreview{
 	overload public static function autorelease():UITargetedDragPreview;
 
 	@:native("previewForURL:target")
-	overload public static function previewForURL_target(url:Dynamic, target:UIDragPreviewTarget):UITargetedDragPreview;
+	overload public static function previewForURLTarget(url:Dynamic, target:UIDragPreviewTarget):UITargetedDragPreview;
 
 	@:native("previewForURL:title:target")
-	overload public static function previewForURL_title_target(url:Dynamic, title:Dynamic, target:UIDragPreviewTarget):UITargetedDragPreview;
+	overload public static function previewForURLTitleTarget(url:Dynamic, title:Dynamic, target:UIDragPreviewTarget):UITargetedDragPreview;
 
 	@:native("retargetedPreviewWithTarget")
 	overload public function retargetedPreviewWithTarget(newTarget:UIDragPreviewTarget):UITargetedDragPreview;

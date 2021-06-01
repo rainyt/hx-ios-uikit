@@ -31,7 +31,7 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	public var nextLayout:UICollectionViewLayout;
 
 	@:native("initWithCurrentLayout:nextLayout")
-	overload public function initWithCurrentLayout_nextLayout(currentLayout:UICollectionViewLayout, nextLayout:UICollectionViewLayout):UICollectionViewTransitionLayout;
+	overload public function initWithCurrentLayoutNextLayout(currentLayout:UICollectionViewLayout, nextLayout:UICollectionViewLayout):UICollectionViewTransitionLayout;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICollectionViewTransitionLayout;
@@ -40,7 +40,7 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function init():UICollectionViewTransitionLayout;
 
 	@:native("updateValue:forAnimatedKey")
-	overload public function updateValue_forAnimatedKey(value:Float, forAnimatedKey:NSString):Void;
+	overload public function updateValueForAnimatedKey(value:Float, forAnimatedKey:NSString):Void;
 
 	@:native("valueForAnimatedKey")
 	overload public function valueForAnimatedKey(key:NSString):Float;
@@ -52,10 +52,10 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function invalidateLayoutWithContext(context:UICollectionViewLayoutInvalidationContext):Void;
 
 	@:native("registerClass:forDecorationViewOfKind")
-	overload public function registerClass_forDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:NSString):Void;
+	overload public function registerClassForDecorationViewOfKind(viewClass:Dynamic, forDecorationViewOfKind:NSString):Void;
 
 	@:native("registerNib:forDecorationViewOfKind")
-	overload public function registerNib_forDecorationViewOfKind(nib:UINib, forDecorationViewOfKind:NSString):Void;
+	overload public function registerNibForDecorationViewOfKind(nib:UINib, forDecorationViewOfKind:NSString):Void;
 
 	@:native("layoutAttributesClass")
 	overload public static function layoutAttributesClass():Dynamic;
@@ -73,10 +73,10 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryViewOfKindAtIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForDecorationViewOfKindAtIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("shouldInvalidateLayoutForBoundsChange")
 	overload public function shouldInvalidateLayoutForBoundsChange(newBounds:CGRect):Bool;
@@ -85,13 +85,13 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function invalidationContextForBoundsChange(newBounds:CGRect):UICollectionViewLayoutInvalidationContext;
 
 	@:native("shouldInvalidateLayoutForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function shouldInvalidateLayoutForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Bool;
+	overload public function shouldInvalidateLayoutForPreferredLayoutAttributesWithOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):Bool;
 
 	@:native("invalidationContextForPreferredLayoutAttributes:withOriginalAttributes")
-	overload public function invalidationContextForPreferredLayoutAttributes_withOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutInvalidationContext;
+	overload public function invalidationContextForPreferredLayoutAttributesWithOriginalAttributes(preferredAttributes:UICollectionViewLayoutAttributes, withOriginalAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutInvalidationContext;
 
 	@:native("targetContentOffsetForProposedContentOffset:withScrollingVelocity")
-	overload public function targetContentOffsetForProposedContentOffset_withScrollingVelocity(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint):CGPoint;
+	overload public function targetContentOffsetForProposedContentOffsetWithScrollingVelocity(proposedContentOffset:CGPoint, withScrollingVelocity:CGPoint):CGPoint;
 
 	@:native("targetContentOffsetForProposedContentOffset")
 	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint):CGPoint;
@@ -124,16 +124,16 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function finalLayoutAttributesForDisappearingItemAtIndexPath(itemIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("initialLayoutAttributesForAppearingSupplementaryElementOfKind:atIndexPath")
-	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function initialLayoutAttributesForAppearingSupplementaryElementOfKindAtIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("finalLayoutAttributesForDisappearingSupplementaryElementOfKind:atIndexPath")
-	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function finalLayoutAttributesForDisappearingSupplementaryElementOfKindAtIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("initialLayoutAttributesForAppearingDecorationElementOfKind:atIndexPath")
-	overload public function initialLayoutAttributesForAppearingDecorationElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function initialLayoutAttributesForAppearingDecorationElementOfKindAtIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("finalLayoutAttributesForDisappearingDecorationElementOfKind:atIndexPath")
-	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKind_atIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKindAtIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("indexPathsToDeleteForSupplementaryViewOfKind")
 	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
@@ -148,16 +148,16 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):Dynamic;
 
 	@:native("targetIndexPathForInteractivelyMovingItem:withPosition")
-	overload public function targetIndexPathForInteractivelyMovingItem_withPosition(previousIndexPath:NSIndexPath, withPosition:CGPoint):NSIndexPath;
+	overload public function targetIndexPathForInteractivelyMovingItemWithPosition(previousIndexPath:NSIndexPath, withPosition:CGPoint):NSIndexPath;
 
 	@:native("layoutAttributesForInteractivelyMovingItemAtIndexPath:withTargetPosition")
-	overload public function layoutAttributesForInteractivelyMovingItemAtIndexPath_withTargetPosition(indexPath:NSIndexPath, withTargetPosition:CGPoint):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForInteractivelyMovingItemAtIndexPathWithTargetPosition(indexPath:NSIndexPath, withTargetPosition:CGPoint):UICollectionViewLayoutAttributes;
 
 	@:native("invalidationContextForInteractivelyMovingItems:withTargetPosition:previousIndexPaths:previousPosition")
-	overload public function invalidationContextForInteractivelyMovingItems_withTargetPosition_previousIndexPaths_previousPosition(targetIndexPaths:Dynamic, withTargetPosition:CGPoint, previousIndexPaths:Dynamic, previousPosition:CGPoint):UICollectionViewLayoutInvalidationContext;
+	overload public function invalidationContextForInteractivelyMovingItemsWithTargetPositionPreviousIndexPathsPreviousPosition(targetIndexPaths:Dynamic, withTargetPosition:CGPoint, previousIndexPaths:Dynamic, previousPosition:CGPoint):UICollectionViewLayoutInvalidationContext;
 
 	@:native("invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:previousIndexPaths:movementCancelled")
-	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths_previousIndexPaths_movementCancelled(indexPaths:Dynamic, previousIndexPaths:Dynamic, movementCancelled:Bool):UICollectionViewLayoutInvalidationContext;
+	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPathsPreviousIndexPathsMovementCancelled(indexPaths:Dynamic, previousIndexPaths:Dynamic, movementCancelled:Bool):UICollectionViewLayoutInvalidationContext;
 
 	@:native("encodeWithCoder")
 	overload public function encodeWithCoder(aCoder:Dynamic):Void

@@ -20,10 +20,10 @@ extern class UIStoryboardPopoverSegue extends UIStoryboardSegue{
 	public var popoverController:UIPopoverController;
 
 	@:native("segueWithIdentifier:source:destination:performHandler")
-	overload public static function segueWithIdentifier_source_destination_performHandler(identifier:NSString, source:UIViewController, destination:UIViewController, performHandler:Dynamic):UIStoryboardPopoverSegue;
+	overload public static function segueWithIdentifierSourceDestinationPerformHandler(identifier:NSString, source:UIViewController, destination:UIViewController, performHandler:Dynamic):UIStoryboardPopoverSegue;
 
 	@:native("initWithIdentifier:source:destination")
-	overload public function initWithIdentifier_source_destination(identifier:NSString, source:UIViewController, destination:UIViewController):UIStoryboardPopoverSegue;
+	overload public function initWithIdentifierSourceDestination(identifier:NSString, source:UIViewController, destination:UIViewController):UIStoryboardPopoverSegue;
 
 	@:native("init")
 	overload public function init():UIStoryboardSegue;

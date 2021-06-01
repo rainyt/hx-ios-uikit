@@ -30,7 +30,7 @@ extern interface UITextInput{
 	overload public function textInRange(range:UITextRange):NSString;
 
 	@:native("replaceRange:withText")
-	overload public function replaceRange_withText(range:UITextRange, withText:NSString):Void;
+	overload public function replaceRangeWithText(range:UITextRange, withText:NSString):Void;
 
 	@:native("selectedTextRange")
 	public var selectedTextRange:UITextRange;
@@ -42,7 +42,7 @@ extern interface UITextInput{
 	public var markedTextStyle:NSDictionary;
 
 	@:native("setMarkedText:selectedRange")
-	overload public function setMarkedText_selectedRange(markedText:NSString, selectedRange:Dynamic):Void;
+	overload public function setMarkedTextSelectedRange(markedText:NSString, selectedRange:Dynamic):Void;
 
 	@:native("unmarkText")
 	overload public function unmarkText():Void;
@@ -54,19 +54,19 @@ extern interface UITextInput{
 	public var endOfDocument:UITextPosition;
 
 	@:native("textRangeFromPosition:toPosition")
-	overload public function textRangeFromPosition_toPosition(fromPosition:UITextPosition, toPosition:UITextPosition):UITextRange;
+	overload public function textRangeFromPositionToPosition(fromPosition:UITextPosition, toPosition:UITextPosition):UITextRange;
 
 	@:native("positionFromPosition:offset")
-	overload public function positionFromPosition_offset(position:UITextPosition, offset:Int):UITextPosition;
+	overload public function positionFromPositionOffset(position:UITextPosition, offset:Int):UITextPosition;
 
 	@:native("positionFromPosition:inDirection:offset")
-	overload public function positionFromPosition_inDirection_offset(position:UITextPosition, inDirection:UITextLayoutDirection, offset:Int):UITextPosition;
+	overload public function positionFromPositionInDirectionOffset(position:UITextPosition, inDirection:UITextLayoutDirection, offset:Int):UITextPosition;
 
 	@:native("comparePosition:toPosition")
-	overload public function comparePosition_toPosition(position:UITextPosition, toPosition:UITextPosition):Dynamic;
+	overload public function comparePositionToPosition(position:UITextPosition, toPosition:UITextPosition):Dynamic;
 
 	@:native("offsetFromPosition:toPosition")
-	overload public function offsetFromPosition_toPosition(from:UITextPosition, toPosition:UITextPosition):Int;
+	overload public function offsetFromPositionToPosition(from:UITextPosition, toPosition:UITextPosition):Int;
 
 	@:native("inputDelegate")
 	public var inputDelegate:Dynamic;
@@ -75,16 +75,16 @@ extern interface UITextInput{
 	public var tokenizer:Dynamic;
 
 	@:native("positionWithinRange:farthestInDirection")
-	overload public function positionWithinRange_farthestInDirection(range:UITextRange, farthestInDirection:UITextLayoutDirection):UITextPosition;
+	overload public function positionWithinRangeFarthestInDirection(range:UITextRange, farthestInDirection:UITextLayoutDirection):UITextPosition;
 
 	@:native("characterRangeByExtendingPosition:inDirection")
-	overload public function characterRangeByExtendingPosition_inDirection(position:UITextPosition, inDirection:UITextLayoutDirection):UITextRange;
+	overload public function characterRangeByExtendingPositionInDirection(position:UITextPosition, inDirection:UITextLayoutDirection):UITextRange;
 
 	@:native("baseWritingDirectionForPosition:inDirection")
-	overload public function baseWritingDirectionForPosition_inDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSWritingDirection;
+	overload public function baseWritingDirectionForPositionInDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSWritingDirection;
 
 	@:native("setBaseWritingDirection:forRange")
-	overload public function setBaseWritingDirection_forRange(writingDirection:NSWritingDirection, forRange:UITextRange):Void;
+	overload public function setBaseWritingDirectionForRange(writingDirection:NSWritingDirection, forRange:UITextRange):Void;
 
 	@:native("firstRectForRange")
 	overload public function firstRectForRange(range:UITextRange):CGRect;
@@ -99,22 +99,22 @@ extern interface UITextInput{
 	overload public function closestPositionToPoint(point:CGPoint):UITextPosition;
 
 	@:native("closestPositionToPoint:withinRange")
-	overload public function closestPositionToPoint_withinRange(point:CGPoint, withinRange:UITextRange):UITextPosition;
+	overload public function closestPositionToPointWithinRange(point:CGPoint, withinRange:UITextRange):UITextPosition;
 
 	@:native("characterRangeAtPoint")
 	overload public function characterRangeAtPoint(point:CGPoint):UITextRange;
 
 	@:native("shouldChangeTextInRange:replacementText")
-	overload public function shouldChangeTextInRange_replacementText(range:UITextRange, replacementText:NSString):Bool;
+	overload public function shouldChangeTextInRangeReplacementText(range:UITextRange, replacementText:NSString):Bool;
 
 	@:native("textStylingAtPosition:inDirection")
-	overload public function textStylingAtPosition_inDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSDictionary;
+	overload public function textStylingAtPositionInDirection(position:UITextPosition, inDirection:UITextStorageDirection):NSDictionary;
 
 	@:native("positionWithinRange:atCharacterOffset")
-	overload public function positionWithinRange_atCharacterOffset(range:UITextRange, atCharacterOffset:Int):UITextPosition;
+	overload public function positionWithinRangeAtCharacterOffset(range:UITextRange, atCharacterOffset:Int):UITextPosition;
 
 	@:native("characterOffsetOfPosition:withinRange")
-	overload public function characterOffsetOfPosition_withinRange(position:UITextPosition, withinRange:UITextRange):Int;
+	overload public function characterOffsetOfPositionWithinRange(position:UITextPosition, withinRange:UITextRange):Int;
 
 	@:native("textInputView")
 	public var textInputView:UIView;
@@ -138,13 +138,13 @@ extern interface UITextInput{
 	overload public function frameForDictationResultPlaceholder(placeholder:Dynamic):CGRect;
 
 	@:native("removeDictationResultPlaceholder:willInsertResult")
-	overload public function removeDictationResultPlaceholder_willInsertResult(placeholder:Dynamic, willInsertResult:Bool):Void;
+	overload public function removeDictationResultPlaceholderWillInsertResult(placeholder:Dynamic, willInsertResult:Bool):Void;
 
 	@:native("insertText:alternatives:style")
-	overload public function insertText_alternatives_style(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
+	overload public function insertTextAlternativesStyle(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
 
 	@:native("setAttributedMarkedText:selectedRange")
-	overload public function setAttributedMarkedText_selectedRange(markedText:NSAttributedString, selectedRange:Dynamic):Void;
+	overload public function setAttributedMarkedTextSelectedRange(markedText:NSAttributedString, selectedRange:Dynamic):Void;
 
 	@:native("insertTextPlaceholderWithSize")
 	overload public function insertTextPlaceholderWithSize(size:CGSize):UITextPlaceholder;

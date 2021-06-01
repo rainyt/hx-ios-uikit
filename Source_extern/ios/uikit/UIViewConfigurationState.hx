@@ -45,13 +45,13 @@ extern class UIViewConfigurationState
 	overload public function customStateForKey(key:NSString):Dynamic;
 
 	@:native("setCustomState:forKey")
-	overload public function setCustomState_forKey(customState:Dynamic, forKey:NSString):Void;
+	overload public function setCustomStateForKey(customState:Dynamic, forKey:NSString):Void;
 
 	@:native("objectForKeyedSubscript")
 	overload public function objectForKeyedSubscript(key:NSString):Dynamic;
 
 	@:native("setObject:forKeyedSubscript")
-	overload public function setObject_forKeyedSubscript(obj:Dynamic, forKeyedSubscript:NSString):Void;
+	overload public function setObjectForKeyedSubscript(obj:Dynamic, forKeyedSubscript:NSString):Void;
 
 
 }

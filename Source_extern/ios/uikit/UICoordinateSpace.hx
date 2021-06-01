@@ -15,16 +15,16 @@ extern interface UICoordinateSpace{
 	overload public static function autorelease():UICoordinateSpace;
 
 	@:native("convertPoint:toCoordinateSpace")
-	overload public function convertPoint_toCoordinateSpace(point:CGPoint, toCoordinateSpace:Dynamic):CGPoint;
+	overload public function convertPointToCoordinateSpace(point:CGPoint, toCoordinateSpace:Dynamic):CGPoint;
 
 	@:native("convertPoint:fromCoordinateSpace")
-	overload public function convertPoint_fromCoordinateSpace(point:CGPoint, fromCoordinateSpace:Dynamic):CGPoint;
+	overload public function convertPointFromCoordinateSpace(point:CGPoint, fromCoordinateSpace:Dynamic):CGPoint;
 
 	@:native("convertRect:toCoordinateSpace")
-	overload public function convertRect_toCoordinateSpace(rect:CGRect, toCoordinateSpace:Dynamic):CGRect;
+	overload public function convertRectToCoordinateSpace(rect:CGRect, toCoordinateSpace:Dynamic):CGRect;
 
 	@:native("convertRect:fromCoordinateSpace")
-	overload public function convertRect_fromCoordinateSpace(rect:CGRect, fromCoordinateSpace:Dynamic):CGRect;
+	overload public function convertRectFromCoordinateSpace(rect:CGRect, fromCoordinateSpace:Dynamic):CGRect;
 
 	@:native("bounds")
 	public var bounds:CGRect;

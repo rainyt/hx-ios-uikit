@@ -15,7 +15,7 @@ extern interface UIImagePickerControllerDelegate{
 	overload public static function autorelease():UIImagePickerControllerDelegate;
 
 	@:native("imagePickerController:didFinishPickingMediaWithInfo")
-	overload public function imagePickerController_didFinishPickingMediaWithInfo(picker:UIImagePickerController, didFinishPickingMediaWithInfo:NSDictionary):Void;
+	overload public function imagePickerControllerDidFinishPickingMediaWithInfo(picker:UIImagePickerController, didFinishPickingMediaWithInfo:NSDictionary):Void;
 
 	@:native("imagePickerControllerDidCancel")
 	overload public function imagePickerControllerDidCancel(picker:UIImagePickerController):Void;

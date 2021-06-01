@@ -36,19 +36,19 @@ extern class UIButton{
 	overload public function initWithCoder(coder:NSCoder):UIButton;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UIButton;
+	overload public function initWithFramePrimaryAction(frame:CGRect, primaryAction:UIAction):UIButton;
 
 	@:native("buttonWithType")
 	overload public static function buttonWithType(buttonType:UIButtonType):UIButton;
 
 	@:native("systemButtonWithImage:target:action")
-	overload public static function systemButtonWithImage_target_action(image:UIImage, target:Dynamic, action:String):UIButton;
+	overload public static function systemButtonWithImageTargetAction(image:UIImage, target:Dynamic, action:String):UIButton;
 
 	@:native("systemButtonWithPrimaryAction")
 	overload public static function systemButtonWithPrimaryAction(primaryAction:UIAction):UIButton;
 
 	@:native("buttonWithType:primaryAction")
-	overload public static function buttonWithType_primaryAction(buttonType:UIButtonType, primaryAction:UIAction):UIButton;
+	overload public static function buttonWithTypePrimaryAction(buttonType:UIButtonType, primaryAction:UIAction):UIButton;
 
 	@:native("contentEdgeInsets")
 	public var contentEdgeInsets:Dynamic;
@@ -90,25 +90,25 @@ extern class UIButton{
 	public var menu:UIMenu;
 
 	@:native("setTitle:forState")
-	overload public function setTitle_forState(title:NSString, forState:UIControlState):Void;
+	overload public function setTitleForState(title:NSString, forState:UIControlState):Void;
 
 	@:native("setTitleColor:forState")
-	overload public function setTitleColor_forState(color:UIColor, forState:UIControlState):Void;
+	overload public function setTitleColorForState(color:UIColor, forState:UIControlState):Void;
 
 	@:native("setTitleShadowColor:forState")
-	overload public function setTitleShadowColor_forState(color:UIColor, forState:UIControlState):Void;
+	overload public function setTitleShadowColorForState(color:UIColor, forState:UIControlState):Void;
 
 	@:native("setImage:forState")
-	overload public function setImage_forState(image:UIImage, forState:UIControlState):Void;
+	overload public function setImageForState(image:UIImage, forState:UIControlState):Void;
 
 	@:native("setBackgroundImage:forState")
-	overload public function setBackgroundImage_forState(image:UIImage, forState:UIControlState):Void;
+	overload public function setBackgroundImageForState(image:UIImage, forState:UIControlState):Void;
 
 	@:native("setPreferredSymbolConfiguration:forImageInState:UI_APPEARANCE_SELECTOR")
-	overload public function setPreferredSymbolConfiguration_forImageInState_UI_APPEARANCE_SELECTOR(configuration:UIImageSymbolConfiguration, forImageInState:UIControlState, UI_APPEARANCE_SELECTOR:Dynamic):Void;
+	overload public function setPreferredSymbolConfigurationForImageInStateUI_APPEARANCE_SELECTOR(configuration:UIImageSymbolConfiguration, forImageInState:UIControlState, UI_APPEARANCE_SELECTOR:Dynamic):Void;
 
 	@:native("setAttributedTitle:forState")
-	overload public function setAttributedTitle_forState(title:NSAttributedString, forState:UIControlState):Void;
+	overload public function setAttributedTitleForState(title:NSAttributedString, forState:UIControlState):Void;
 
 	@:native("titleForState")
 	overload public function titleForState(state:UIControlState):NSString;

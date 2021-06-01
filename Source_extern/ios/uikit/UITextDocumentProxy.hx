@@ -33,7 +33,7 @@ extern interface UITextDocumentProxy{
 	overload public function adjustTextPositionByCharacterOffset(offset:Int):Void;
 
 	@:native("setMarkedText:selectedRange")
-	overload public function setMarkedText_selectedRange(markedText:NSString, selectedRange:Dynamic):Void;
+	overload public function setMarkedTextSelectedRange(markedText:NSString, selectedRange:Dynamic):Void;
 
 	@:native("unmarkText")
 	overload public function unmarkText():Void;

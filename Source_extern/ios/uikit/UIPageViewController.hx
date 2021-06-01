@@ -28,7 +28,7 @@ extern class UIPageViewController extends UIViewController{
 	overload public static function autorelease():UIPageViewController;
 
 	@:native("initWithTransitionStyle:navigationOrientation:options")
-	overload public function initWithTransitionStyle_navigationOrientation_options(style:UIPageViewControllerTransitionStyle, navigationOrientation:UIPageViewControllerNavigationOrientation, options:NSDictionary):UIPageViewController;
+	overload public function initWithTransitionStyleNavigationOrientationOptions(style:UIPageViewControllerTransitionStyle, navigationOrientation:UIPageViewControllerNavigationOrientation, options:NSDictionary):UIPageViewController;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIPageViewController;
@@ -58,13 +58,13 @@ extern class UIPageViewController extends UIViewController{
 	public var viewControllers:Dynamic;
 
 	@:native("setViewControllers:direction:animated:completion")
-	overload public function setViewControllers_direction_animated_completion(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
+	overload public function setViewControllersDirectionAnimatedCompletion(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
 
 	@:native("setNeedsTouchBarUpdate")
 	overload public function setNeedsTouchBarUpdate():Void;
 
 	@:native("initWithNibName:bundle")
-	overload public function initWithNibName_bundle(nibNameOrNil:NSString, bundle:NSBundle):UIPageViewController;
+	overload public function initWithNibNameBundle(nibNameOrNil:NSString, bundle:NSBundle):UIPageViewController;
 
 	@:native("loadView")
 	overload public function loadView():Void;
@@ -76,16 +76,16 @@ extern class UIPageViewController extends UIViewController{
 	overload public function viewDidLoad():Void;
 
 	@:native("performSegueWithIdentifier:sender")
-	overload public function performSegueWithIdentifier_sender(identifier:NSString, sender:Dynamic):Void;
+	overload public function performSegueWithIdentifierSender(identifier:NSString, sender:Dynamic):Void;
 
 	@:native("shouldPerformSegueWithIdentifier:sender")
-	overload public function shouldPerformSegueWithIdentifier_sender(identifier:NSString, sender:Dynamic):Bool;
+	overload public function shouldPerformSegueWithIdentifierSender(identifier:NSString, sender:Dynamic):Bool;
 
 	@:native("prepareForSegue:sender")
-	overload public function prepareForSegue_sender(segue:UIStoryboardSegue, sender:Dynamic):Void;
+	overload public function prepareForSegueSender(segue:UIStoryboardSegue, sender:Dynamic):Void;
 
 	@:native("canPerformUnwindSegueAction:fromViewController:sender")
-	overload public function canPerformUnwindSegueAction_fromViewController_sender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
+	overload public function canPerformUnwindSegueActionFromViewControllerSender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
 	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
@@ -94,7 +94,7 @@ extern class UIPageViewController extends UIViewController{
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
 
 	@:native("unwindForSegue:towardsViewController")
-	overload public function unwindForSegue_towardsViewController(unwindSegue:UIStoryboardSegue, towardsViewController:UIViewController):Void;
+	overload public function unwindForSegueTowardsViewController(unwindSegue:UIStoryboardSegue, towardsViewController:UIViewController):Void;
 
 	@:native("viewWillAppear")
 	overload public function viewWillAppear(animated:Bool):Void;
@@ -118,22 +118,22 @@ extern class UIPageViewController extends UIViewController{
 	overload public function didReceiveMemoryWarning():Void;
 
 	@:native("presentViewController:animated:completion")
-	overload public function presentViewController_animated_completion(viewControllerToPresent:UIViewController, animated:Dynamic, completion:Dynamic):Void;
+	overload public function presentViewControllerAnimatedCompletion(viewControllerToPresent:UIViewController, animated:Dynamic, completion:Dynamic):Void;
 
 	@:native("dismissViewControllerAnimated:completion")
-	overload public function dismissViewControllerAnimated_completion(flag:Dynamic, completion:Dynamic):Void;
+	overload public function dismissViewControllerAnimatedCompletion(flag:Dynamic, completion:Dynamic):Void;
 
 	@:native("setNeedsStatusBarAppearanceUpdate")
 	overload public function setNeedsStatusBarAppearanceUpdate():Void;
 
 	@:native("targetViewControllerForAction:sender")
-	overload public function targetViewControllerForAction_sender(action:String, sender:Dynamic):UIViewController;
+	overload public function targetViewControllerForActionSender(action:String, sender:Dynamic):UIViewController;
 
 	@:native("showViewController:sender")
-	overload public function showViewController_sender(vc:UIViewController, sender:Dynamic):Void;
+	overload public function showViewControllerSender(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("showDetailViewController:sender")
-	overload public function showDetailViewController_sender(vc:UIViewController, sender:Dynamic):Void;
+	overload public function showDetailViewControllerSender(vc:UIViewController, sender:Dynamic):Void;
 
 	@:native("setNeedsUserInterfaceAppearanceUpdate")
 	overload public function setNeedsUserInterfaceAppearanceUpdate():Void;
@@ -142,7 +142,7 @@ extern class UIPageViewController extends UIViewController{
 	overload public static function attemptRotationToDeviceOrientation():Void;
 
 	@:native("setEditing:animated")
-	overload public function setEditing_animated(editing:Bool, animated:Bool):Void;
+	overload public function setEditingAnimated(editing:Bool, animated:Bool):Void;
 
 	@:native("addChildViewController")
 	overload public function addChildViewController(childController:UIViewController):Void;
@@ -151,16 +151,16 @@ extern class UIPageViewController extends UIViewController{
 	overload public function removeFromParentViewController():Void;
 
 	@:native("transitionFromViewController:toViewController:duration:options:animations:completion")
-	overload public function transitionFromViewController_toViewController_duration_options_animations_completion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public function transitionFromViewControllerToViewControllerDurationOptionsAnimationsCompletion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginAppearanceTransition:animated")
-	overload public function beginAppearanceTransition_animated(isAppearing:Bool, animated:Bool):Void;
+	overload public function beginAppearanceTransitionAnimated(isAppearing:Bool, animated:Bool):Void;
 
 	@:native("endAppearanceTransition")
 	overload public function endAppearanceTransition():Void;
 
 	@:native("setOverrideTraitCollection:forChildViewController")
-	overload public function setOverrideTraitCollection_forChildViewController(collection:UITraitCollection, forChildViewController:UIViewController):Void;
+	overload public function setOverrideTraitCollectionForChildViewController(collection:UITraitCollection, forChildViewController:UIViewController):Void;
 
 	@:native("overrideTraitCollectionForChildViewController")
 	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):UITraitCollection;
@@ -205,10 +205,10 @@ extern class UIPageViewController extends UIViewController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItems_animated(toolbarItems:Dynamic, animated:Bool):Void;
+	overload public function setToolbarItemsAnimated(toolbarItems:Dynamic, animated:Bool):Void;
 
 	@:native("collapseSecondaryViewController:forSplitViewController")
-	overload public function collapseSecondaryViewController_forSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;
+	overload public function collapseSecondaryViewControllerForSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;
 
 	@:native("separateSecondaryViewControllerForSplitViewController")
 	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):UIViewController;

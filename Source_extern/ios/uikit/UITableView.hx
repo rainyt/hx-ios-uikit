@@ -47,7 +47,7 @@ extern class UITableView extends UIScrollView
 	overload public static function autorelease():UITableView;
 
 	@:native("initWithFrame:style")
-	overload public function initWithFrame_style(frame:CGRect, style:UITableViewStyle):UITableView;
+	overload public function initWithFrameStyle(frame:CGRect, style:UITableViewStyle):UITableView;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UITableView;
@@ -140,13 +140,13 @@ extern class UITableView extends UIScrollView
 	overload public function footerViewForSection(section:Int):UITableViewHeaderFooterView;
 
 	@:native("scrollToRowAtIndexPath:atScrollPosition:animated")
-	overload public function scrollToRowAtIndexPath_atScrollPosition_animated(indexPath:NSIndexPath, atScrollPosition:UITableViewScrollPosition, animated:Bool):Void;
+	overload public function scrollToRowAtIndexPathAtScrollPositionAnimated(indexPath:NSIndexPath, atScrollPosition:UITableViewScrollPosition, animated:Bool):Void;
 
 	@:native("scrollToNearestSelectedRowAtScrollPosition:animated")
-	overload public function scrollToNearestSelectedRowAtScrollPosition_animated(scrollPosition:UITableViewScrollPosition, animated:Bool):Void;
+	overload public function scrollToNearestSelectedRowAtScrollPositionAnimated(scrollPosition:UITableViewScrollPosition, animated:Bool):Void;
 
 	@:native("performBatchUpdates:completion")
-	overload public function performBatchUpdates_completion(updates:Dynamic, completion:Dynamic):Void;
+	overload public function performBatchUpdatesCompletion(updates:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginUpdates")
 	overload public function beginUpdates():Void;
@@ -155,28 +155,28 @@ extern class UITableView extends UIScrollView
 	overload public function endUpdates():Void;
 
 	@:native("insertSections:withRowAnimation")
-	overload public function insertSections_withRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function insertSectionsWithRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("deleteSections:withRowAnimation")
-	overload public function deleteSections_withRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function deleteSectionsWithRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("reloadSections:withRowAnimation")
-	overload public function reloadSections_withRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function reloadSectionsWithRowAnimation(sections:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveSection:toSection")
-	overload public function moveSection_toSection(section:Int, toSection:Int):Void;
+	overload public function moveSectionToSection(section:Int, toSection:Int):Void;
 
 	@:native("insertRowsAtIndexPaths:withRowAnimation")
-	overload public function insertRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function insertRowsAtIndexPathsWithRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("deleteRowsAtIndexPaths:withRowAnimation")
-	overload public function deleteRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function deleteRowsAtIndexPathsWithRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("reloadRowsAtIndexPaths:withRowAnimation")
-	overload public function reloadRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
+	overload public function reloadRowsAtIndexPathsWithRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveRowAtIndexPath:toIndexPath")
-	overload public function moveRowAtIndexPath_toIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
+	overload public function moveRowAtIndexPathToIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("hasUncommittedUpdates")
 	public var hasUncommittedUpdates:Bool;
@@ -191,7 +191,7 @@ extern class UITableView extends UIScrollView
 	public var editing:Bool;
 
 	@:native("setEditing:animated")
-	overload public function setEditing_animated(editing:Bool, animated:Bool):Void;
+	overload public function setEditingAnimated(editing:Bool, animated:Bool):Void;
 
 	@:native("allowsSelection")
 	public var allowsSelection:Bool;
@@ -212,10 +212,10 @@ extern class UITableView extends UIScrollView
 	public var indexPathsForSelectedRows:Dynamic;
 
 	@:native("selectRowAtIndexPath:animated:scrollPosition")
-	overload public function selectRowAtIndexPath_animated_scrollPosition(indexPath:NSIndexPath, animated:Bool, scrollPosition:UITableViewScrollPosition):Void;
+	overload public function selectRowAtIndexPathAnimatedScrollPosition(indexPath:NSIndexPath, animated:Bool, scrollPosition:UITableViewScrollPosition):Void;
 
 	@:native("deselectRowAtIndexPath:animated")
-	overload public function deselectRowAtIndexPath_animated(indexPath:NSIndexPath, animated:Bool):Void;
+	overload public function deselectRowAtIndexPathAnimated(indexPath:NSIndexPath, animated:Bool):Void;
 
 	@:native("sectionIndexMinimumDisplayRowCount")
 	public var sectionIndexMinimumDisplayRowCount:Int;
@@ -242,22 +242,22 @@ extern class UITableView extends UIScrollView
 	overload public function dequeueReusableCellWithIdentifier(identifier:NSString):UITableViewCell;
 
 	@:native("dequeueReusableCellWithIdentifier:forIndexPath")
-	overload public function dequeueReusableCellWithIdentifier_forIndexPath(identifier:NSString, forIndexPath:NSIndexPath):UITableViewCell;
+	overload public function dequeueReusableCellWithIdentifierForIndexPath(identifier:NSString, forIndexPath:NSIndexPath):UITableViewCell;
 
 	@:native("dequeueReusableHeaderFooterViewWithIdentifier")
 	overload public function dequeueReusableHeaderFooterViewWithIdentifier(identifier:NSString):UITableViewHeaderFooterView;
 
 	@:native("registerNib:forCellReuseIdentifier")
-	overload public function registerNib_forCellReuseIdentifier(nib:UINib, forCellReuseIdentifier:NSString):Void;
+	overload public function registerNibForCellReuseIdentifier(nib:UINib, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forCellReuseIdentifier")
-	overload public function registerClass_forCellReuseIdentifier(cellClass:Dynamic, forCellReuseIdentifier:NSString):Void;
+	overload public function registerClassForCellReuseIdentifier(cellClass:Dynamic, forCellReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forHeaderFooterViewReuseIdentifier")
-	overload public function registerNib_forHeaderFooterViewReuseIdentifier(nib:UINib, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload public function registerNibForHeaderFooterViewReuseIdentifier(nib:UINib, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forHeaderFooterViewReuseIdentifier")
-	overload public function registerClass_forHeaderFooterViewReuseIdentifier(aClass:Dynamic, forHeaderFooterViewReuseIdentifier:NSString):Void;
+	overload public function registerClassForHeaderFooterViewReuseIdentifier(aClass:Dynamic, forHeaderFooterViewReuseIdentifier:NSString):Void;
 
 	@:native("remembersLastFocusedIndexPath")
 	public var remembersLastFocusedIndexPath:Bool;
@@ -293,25 +293,25 @@ extern class UITableView extends UIScrollView
 	overload public function adjustedContentInsetDidChange():Void;
 
 	@:native("setContentOffset:animated")
-	overload public function setContentOffset_animated(contentOffset:CGPoint, animated:Bool):Void;
+	overload public function setContentOffsetAnimated(contentOffset:CGPoint, animated:Bool):Void;
 
 	@:native("scrollRectToVisible:animated")
-	overload public function scrollRectToVisible_animated(rect:CGRect, animated:Bool):Void;
+	overload public function scrollRectToVisibleAnimated(rect:CGRect, animated:Bool):Void;
 
 	@:native("flashScrollIndicators")
 	overload public function flashScrollIndicators():Void;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBeginWithEventInContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
 
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
 
 	@:native("setZoomScale:animated")
-	overload public function setZoomScale_animated(scale:Float, animated:Bool):Void;
+	overload public function setZoomScaleAnimated(scale:Float, animated:Bool):Void;
 
 	@:native("zoomToRect:animated")
-	overload public function zoomToRect_animated(rect:CGRect, animated:Bool):Void;
+	overload public function zoomToRectAnimated(rect:CGRect, animated:Bool):Void;
 
 	@:native("encodeWithCoder")
 	overload public function encodeWithCoder(aCoder:Dynamic):Void
@@ -321,7 +321,7 @@ extern class UITableView extends UIScrollView
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 
 	@:native("drawRect:forViewPrintFormatter")
-	overload public function drawRect_forViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
+	overload public function drawRectForViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
 
 	@:native("endEditing")
 	overload public function endEditing(force:Bool):Bool;
@@ -342,25 +342,25 @@ extern class UITableView extends UIScrollView
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttributeRelativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:UIEvent):UIView;
+	overload public function hitTestWithEvent(point:CGPoint, withEvent:UIEvent):UIView;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside_withEvent(point:CGPoint, withEvent:UIEvent):Bool;
+	overload public function pointInsideWithEvent(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
+	overload public function convertPointToView(point:CGPoint, toView:UIView):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint_fromView(point:CGPoint, fromView:UIView):CGPoint;
+	overload public function convertPointFromView(point:CGPoint, fromView:UIView):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect_toView(rect:CGRect, toView:UIView):CGRect;
+	overload public function convertRectToView(rect:CGRect, toView:UIView):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect_fromView(rect:CGRect, fromView:UIView):CGRect;
+	overload public function convertRectFromView(rect:CGRect, fromView:UIView):CGRect;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;
@@ -372,19 +372,19 @@ extern class UITableView extends UIScrollView
 	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
-	overload public function insertSubview_atIndex(view:UIView, atIndex:Int):Void;
+	overload public function insertSubviewAtIndex(view:UIView, atIndex:Int):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
-	overload public function exchangeSubviewAtIndex_withSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
+	overload public function exchangeSubviewAtIndexWithSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
 
 	@:native("addSubview")
 	overload public function addSubview(view:UIView):Void;
 
 	@:native("insertSubview:belowSubview")
-	overload public function insertSubview_belowSubview(view:UIView, belowSubview:UIView):Void;
+	overload public function insertSubviewBelowSubview(view:UIView, belowSubview:UIView):Void;
 
 	@:native("insertSubview:aboveSubview")
-	overload public function insertSubview_aboveSubview(view:UIView, aboveSubview:UIView):Void;
+	overload public function insertSubviewAboveSubview(view:UIView, aboveSubview:UIView):Void;
 
 	@:native("bringSubviewToFront")
 	overload public function bringSubviewToFront(view:UIView):Void;
@@ -456,34 +456,34 @@ extern class UITableView extends UIScrollView
 	overload public static function inheritedAnimationDuration():Dynamic;
 
 	@:native("animateWithDuration:delay:options:animations:completion")
-	overload public static function animateWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations:completion")
-	overload public static function animateWithDuration_animations_completion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationAnimationsCompletion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations")
-	overload public static function animateWithDuration_animations(duration:Dynamic, animations:Dynamic):Void;
+	overload public static function animateWithDurationAnimations(duration:Dynamic, animations:Dynamic):Void;
 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
-	overload public static function animateWithDuration_delay_usingSpringWithDamping_initialSpringVelocity_options_animations_completion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionWithView:duration:options:animations:completion")
-	overload public static function transitionWithView_duration_options_animations_completion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function transitionWithViewDurationOptionsAnimationsCompletion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionFromView:toView:duration:options:completion")
-	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
+	overload public static function transitionFromViewToViewDurationOptionsCompletion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
-	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
+	overload public static function modifyAnimationsWithRepeatCountAutoreversesAnimations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
-	overload public static function animateKeyframesWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateKeyframesWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
-	overload public static function addKeyframeWithRelativeStartTime_relativeDuration_animations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
+	overload public static function addKeyframeWithRelativeStartTimeRelativeDurationAnimations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
 	@:native("addGestureRecognizer")
 	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
@@ -540,19 +540,19 @@ extern class UITableView extends UIScrollView
 	overload public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentHuggingPriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
 	overload public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentCompressionResistancePriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("systemLayoutSizeFittingSize")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
-	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
+	overload public function systemLayoutSizeFittingSizeWithHorizontalFittingPriorityVerticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
@@ -576,10 +576,10 @@ extern class UITableView extends UIScrollView
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
 	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets")
-	overload public function resizableSnapshotViewFromRect_afterScreenUpdates_withCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
+	overload public function resizableSnapshotViewFromRectAfterScreenUpdatesWithCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
-	overload public function drawViewHierarchyInRect_afterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
+	overload public function drawViewHierarchyInRectAfterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
 
 
 }

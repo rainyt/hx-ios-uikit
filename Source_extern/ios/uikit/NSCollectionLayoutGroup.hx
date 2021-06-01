@@ -19,19 +19,19 @@ extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
 	overload public static function autorelease():NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitem:count")
-	overload public static function horizontalGroupWithLayoutSize_subitem_count(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
+	overload public static function horizontalGroupWithLayoutSizeSubitemCount(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
 
 	@:native("horizontalGroupWithLayoutSize:subitems")
-	overload public static function horizontalGroupWithLayoutSize_subitems(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
+	overload public static function horizontalGroupWithLayoutSizeSubitems(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitem:count")
-	overload public static function verticalGroupWithLayoutSize_subitem_count(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
+	overload public static function verticalGroupWithLayoutSizeSubitemCount(layoutSize:NSCollectionLayoutSize, subitem:NSCollectionLayoutItem, count:Int):NSCollectionLayoutGroup;
 
 	@:native("verticalGroupWithLayoutSize:subitems")
-	overload public static function verticalGroupWithLayoutSize_subitems(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
+	overload public static function verticalGroupWithLayoutSizeSubitems(layoutSize:NSCollectionLayoutSize, subitems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("customGroupWithLayoutSize:itemProvider")
-	overload public static function customGroupWithLayoutSize_itemProvider(layoutSize:NSCollectionLayoutSize, itemProvider:Dynamic):NSCollectionLayoutGroup;
+	overload public static function customGroupWithLayoutSizeItemProvider(layoutSize:NSCollectionLayoutSize, itemProvider:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutGroup;
@@ -49,7 +49,7 @@ extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
 	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutGroup;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSize_supplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutGroup;
+	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutGroup;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

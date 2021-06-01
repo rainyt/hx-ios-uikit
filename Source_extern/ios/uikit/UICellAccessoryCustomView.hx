@@ -17,7 +17,7 @@ extern class UICellAccessoryCustomView extends UICellAccessory{
 	overload public static function autorelease():UICellAccessoryCustomView;
 
 	@:native("initWithCustomView:placement")
-	overload public function initWithCustomView_placement(customView:UIView, placement:UICellAccessoryPlacement):UICellAccessoryCustomView;
+	overload public function initWithCustomViewPlacement(customView:UIView, placement:UICellAccessoryPlacement):UICellAccessoryCustomView;
 
 	@:native("customView")
 	public var customView:UIView;

@@ -18,10 +18,10 @@ extern class UIGraphicsPDFRenderer extends UIGraphicsRenderer{
 	overload public static function autorelease():UIGraphicsPDFRenderer;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
+	overload public function initWithBoundsFormat(bounds:CGRect, format:UIGraphicsPDFRendererFormat):UIGraphicsPDFRenderer;
 
 	@:native("writePDFToURL:withActions:error")
-	overload public function writePDFToURL_withActions_error(url:Dynamic, withActions:Dynamic, error:Dynamic):Bool;
+	overload public function writePDFToURLWithActionsError(url:Dynamic, withActions:Dynamic, error:Dynamic):Bool;
 
 	@:native("PDFDataWithActions")
 	overload public function PDFDataWithActions(actions:Dynamic):Dynamic;
@@ -36,10 +36,10 @@ extern class UIGraphicsPDFRenderer extends UIGraphicsRenderer{
 	overload public static function contextWithFormat(format:UIGraphicsRendererFormat):Dynamic;
 
 	@:native("prepareCGContext:withRendererContext")
-	overload public static function prepareCGContext_withRendererContext(context:Dynamic, withRendererContext:UIGraphicsRendererContext):Void;
+	overload public static function prepareCGContextWithRendererContext(context:Dynamic, withRendererContext:UIGraphicsRendererContext):Void;
 
 	@:native("runDrawingActions:completionActions:error")
-	overload public function runDrawingActions_completionActions_error(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
+	overload public function runDrawingActionsCompletionActionsError(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
 
 
 }

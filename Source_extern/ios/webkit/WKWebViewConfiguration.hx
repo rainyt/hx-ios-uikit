@@ -74,7 +74,7 @@ extern class WKWebViewConfiguration
 	public var userInterfaceDirectionPolicy:WKUserInterfaceDirectionPolicy;
 
 	@:native("setURLSchemeHandler:forURLScheme")
-	overload public function setURLSchemeHandler_forURLScheme(urlSchemeHandler:Dynamic, forURLScheme:NSString):Void;
+	overload public function setURLSchemeHandlerForURLScheme(urlSchemeHandler:Dynamic, forURLScheme:NSString):Void;
 
 	@:native("urlSchemeHandlerForURLScheme")
 	overload public function urlSchemeHandlerForURLScheme(urlScheme:NSString):Dynamic;

@@ -21,16 +21,16 @@ extern class UIColor
 	overload public static function autorelease():UIColor;
 
 	@:native("colorWithWhite:alpha")
-	overload public static function colorWithWhite_alpha(white:Float, alpha:Float):UIColor;
+	overload public static function colorWithWhiteAlpha(white:Float, alpha:Float):UIColor;
 
 	@:native("colorWithHue:saturation:brightness:alpha")
-	overload public static function colorWithHue_saturation_brightness_alpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):UIColor;
+	overload public static function colorWithHueSaturationBrightnessAlpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):UIColor;
 
 	@:native("colorWithRed:green:blue:alpha")
-	overload public static function colorWithRed_green_blue_alpha(red:Float, green:Float, blue:Float, alpha:Float):UIColor;
+	overload public static function colorWithRedGreenBlueAlpha(red:Float, green:Float, blue:Float, alpha:Float):UIColor;
 
 	@:native("colorWithDisplayP3Red:green:blue:alpha")
-	overload public static function colorWithDisplayP3Red_green_blue_alpha(displayP3Red:Float, green:Float, blue:Float, alpha:Float):UIColor;
+	overload public static function colorWithDisplayP3RedGreenBlueAlpha(displayP3Red:Float, green:Float, blue:Float, alpha:Float):UIColor;
 
 	@:native("colorWithCGColor")
 	overload public static function colorWithCGColor(cgColor:Dynamic):UIColor;
@@ -42,16 +42,16 @@ extern class UIColor
 	overload public static function colorWithCIColor(ciColor:CIColor):UIColor;
 
 	@:native("initWithWhite:alpha")
-	overload public function initWithWhite_alpha(white:Float, alpha:Float):UIColor;
+	overload public function initWithWhiteAlpha(white:Float, alpha:Float):UIColor;
 
 	@:native("initWithHue:saturation:brightness:alpha")
-	overload public function initWithHue_saturation_brightness_alpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):UIColor;
+	overload public function initWithHueSaturationBrightnessAlpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):UIColor;
 
 	@:native("initWithRed:green:blue:alpha")
-	overload public function initWithRed_green_blue_alpha(red:Float, green:Float, blue:Float, alpha:Float):UIColor;
+	overload public function initWithRedGreenBlueAlpha(red:Float, green:Float, blue:Float, alpha:Float):UIColor;
 
 	@:native("initWithDisplayP3Red:green:blue:alpha")
-	overload public function initWithDisplayP3Red_green_blue_alpha(displayP3Red:Float, green:Float, blue:Float, alpha:Float):UIColor;
+	overload public function initWithDisplayP3RedGreenBlueAlpha(displayP3Red:Float, green:Float, blue:Float, alpha:Float):UIColor;
 
 	@:native("initWithCGColor")
 	overload public function initWithCGColor(cgColor:Dynamic):UIColor;
@@ -117,13 +117,13 @@ extern class UIColor
 	overload public function setStroke():Void;
 
 	@:native("getWhite:alpha")
-	overload public function getWhite_alpha(white:Float, alpha:Float):Bool;
+	overload public function getWhiteAlpha(white:Float, alpha:Float):Bool;
 
 	@:native("getHue:saturation:brightness:alpha")
-	overload public function getHue_saturation_brightness_alpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):Bool;
+	overload public function getHueSaturationBrightnessAlpha(hue:Float, saturation:Float, brightness:Float, alpha:Float):Bool;
 
 	@:native("getRed:green:blue:alpha")
-	overload public function getRed_green_blue_alpha(red:Float, green:Float, blue:Float, alpha:Float):Bool;
+	overload public function getRedGreenBlueAlpha(red:Float, green:Float, blue:Float, alpha:Float):Bool;
 
 	@:native("colorWithAlphaComponent")
 	overload public function colorWithAlphaComponent(alpha:Float):UIColor;
@@ -138,7 +138,7 @@ extern class UIColor
 	overload public static function colorNamed(name:NSString):UIColor;
 
 	@:native("colorNamed:inBundle:compatibleWithTraitCollection")
-	overload public static function colorNamed_inBundle_compatibleWithTraitCollection(name:NSString, inBundle:NSBundle, compatibleWithTraitCollection:UITraitCollection):UIColor;
+	overload public static function colorNamedInBundleCompatibleWithTraitCollection(name:NSString, inBundle:NSBundle, compatibleWithTraitCollection:UITraitCollection):UIColor;
 
 	@:native("colorWithDynamicProvider")
 	overload public static function colorWithDynamicProvider(dynamicProvider:Dynamic):UIColor;

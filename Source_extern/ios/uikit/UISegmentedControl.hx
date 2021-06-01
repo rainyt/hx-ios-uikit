@@ -56,13 +56,13 @@ extern class UISegmentedControl extends UIControl
 	overload public function initWithItems(items:Dynamic):UISegmentedControl;
 
 	@:native("initWithFrame:actions")
-	overload public function initWithFrame_actions(frame:CGRect, actions:Dynamic):UISegmentedControl;
+	overload public function initWithFrameActions(frame:CGRect, actions:Dynamic):UISegmentedControl;
 
 	@:native("insertSegmentWithAction:atIndex:animated")
-	overload public function insertSegmentWithAction_atIndex_animated(action:UIAction, atIndex:Int, animated:Bool):Void;
+	overload public function insertSegmentWithActionAtIndexAnimated(action:UIAction, atIndex:Int, animated:Bool):Void;
 
 	@:native("setAction:forSegmentAtIndex")
-	overload public function setAction_forSegmentAtIndex(action:UIAction, forSegmentAtIndex:Int):Void;
+	overload public function setActionForSegmentAtIndex(action:UIAction, forSegmentAtIndex:Int):Void;
 
 	@:native("actionForSegmentAtIndex")
 	overload public function actionForSegmentAtIndex(segment:Int):UIAction;
@@ -83,43 +83,43 @@ extern class UISegmentedControl extends UIControl
 	public var apportionsSegmentWidthsByContent:Bool;
 
 	@:native("insertSegmentWithTitle:atIndex:animated")
-	overload public function insertSegmentWithTitle_atIndex_animated(title:NSString, atIndex:Int, animated:Bool):Void;
+	overload public function insertSegmentWithTitleAtIndexAnimated(title:NSString, atIndex:Int, animated:Bool):Void;
 
 	@:native("insertSegmentWithImage:NSUInteger")
-	overload public function insertSegmentWithImage_NSUInteger(image:UIImage, NSUInteger:Dynamic):Void;
+	overload public function insertSegmentWithImageNSUInteger(image:UIImage, NSUInteger:Dynamic):Void;
 
 	@:native("removeSegmentAtIndex:animated")
-	overload public function removeSegmentAtIndex_animated(segment:Int, animated:Bool):Void;
+	overload public function removeSegmentAtIndexAnimated(segment:Int, animated:Bool):Void;
 
 	@:native("removeAllSegments")
 	overload public function removeAllSegments():Void;
 
 	@:native("setTitle:forSegmentAtIndex")
-	overload public function setTitle_forSegmentAtIndex(title:NSString, forSegmentAtIndex:Int):Void;
+	overload public function setTitleForSegmentAtIndex(title:NSString, forSegmentAtIndex:Int):Void;
 
 	@:native("titleForSegmentAtIndex")
 	overload public function titleForSegmentAtIndex(segment:Int):NSString;
 
 	@:native("setImage:forSegmentAtIndex")
-	overload public function setImage_forSegmentAtIndex(image:UIImage, forSegmentAtIndex:Int):Void;
+	overload public function setImageForSegmentAtIndex(image:UIImage, forSegmentAtIndex:Int):Void;
 
 	@:native("imageForSegmentAtIndex")
 	overload public function imageForSegmentAtIndex(segment:Int):UIImage;
 
 	@:native("setWidth:forSegmentAtIndex")
-	overload public function setWidth_forSegmentAtIndex(width:Float, forSegmentAtIndex:Int):Void;
+	overload public function setWidthForSegmentAtIndex(width:Float, forSegmentAtIndex:Int):Void;
 
 	@:native("widthForSegmentAtIndex")
 	overload public function widthForSegmentAtIndex(segment:Int):Float;
 
 	@:native("setContentOffset:forSegmentAtIndex")
-	overload public function setContentOffset_forSegmentAtIndex(offset:CGSize, forSegmentAtIndex:Int):Void;
+	overload public function setContentOffsetForSegmentAtIndex(offset:CGSize, forSegmentAtIndex:Int):Void;
 
 	@:native("contentOffsetForSegmentAtIndex")
 	overload public function contentOffsetForSegmentAtIndex(segment:Int):CGSize;
 
 	@:native("setEnabled:forSegmentAtIndex")
-	overload public function setEnabled_forSegmentAtIndex(enabled:Bool, forSegmentAtIndex:Int):Void;
+	overload public function setEnabledForSegmentAtIndex(enabled:Bool, forSegmentAtIndex:Int):Void;
 
 	@:native("isEnabledForSegmentAtIndex")
 	overload public function isEnabledForSegmentAtIndex(segment:Int):Bool;
@@ -131,71 +131,71 @@ extern class UISegmentedControl extends UIControl
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
 	@:native("setBackgroundImage:forState:barMetrics")
-	overload public function setBackgroundImage_forState_barMetrics(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics):Void;
+	overload public function setBackgroundImageForStateBarMetrics(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics):Void;
 
 	@:native("backgroundImageForState:barMetrics")
-	overload public function backgroundImageForState_barMetrics(state:UIControlState, barMetrics:UIBarMetrics):UIImage;
+	overload public function backgroundImageForStateBarMetrics(state:UIControlState, barMetrics:UIBarMetrics):UIImage;
 
 	@:native("setDividerImage:forLeftSegmentState:rightSegmentState:barMetrics")
-	overload public function setDividerImage_forLeftSegmentState_rightSegmentState_barMetrics(dividerImage:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics):Void;
+	overload public function setDividerImageForLeftSegmentStateRightSegmentStateBarMetrics(dividerImage:UIImage, forLeftSegmentState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics):Void;
 
 	@:native("dividerImageForLeftSegmentState:rightSegmentState:barMetrics")
-	overload public function dividerImageForLeftSegmentState_rightSegmentState_barMetrics(leftState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics):UIImage;
+	overload public function dividerImageForLeftSegmentStateRightSegmentStateBarMetrics(leftState:UIControlState, rightSegmentState:UIControlState, barMetrics:UIBarMetrics):UIImage;
 
 	@:native("setTitleTextAttributes:forState")
-	overload public function setTitleTextAttributes_forState(attributes:NSDictionary, forState:UIControlState):Void;
+	overload public function setTitleTextAttributesForState(attributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
 
 	@:native("setContentPositionAdjustment:forSegmentType:barMetrics")
-	overload public function setContentPositionAdjustment_forSegmentType_barMetrics(adjustment:Dynamic, forSegmentType:UISegmentedControlSegment, barMetrics:UIBarMetrics):Void;
+	overload public function setContentPositionAdjustmentForSegmentTypeBarMetrics(adjustment:Dynamic, forSegmentType:UISegmentedControlSegment, barMetrics:UIBarMetrics):Void;
 
 	@:native("contentPositionAdjustmentForSegmentType:barMetrics")
-	overload public function contentPositionAdjustmentForSegmentType_barMetrics(leftCenterRightOrAlone:UISegmentedControlSegment, barMetrics:UIBarMetrics):Dynamic;
+	overload public function contentPositionAdjustmentForSegmentTypeBarMetrics(leftCenterRightOrAlone:UISegmentedControlSegment, barMetrics:UIBarMetrics):Dynamic;
 
 	@:native("encodeWithCoder")
 	overload public function encodeWithCoder(aCoder:Dynamic):Void
 ;
 
 	@:native("initWithFrame:primaryAction")
-	overload public function initWithFrame_primaryAction(frame:CGRect, primaryAction:UIAction):UISegmentedControl;
+	overload public function initWithFramePrimaryAction(frame:CGRect, primaryAction:UIAction):UISegmentedControl;
 
 	@:native("beginTrackingWithTouch:withEvent")
-	overload public function beginTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;
+	overload public function beginTrackingWithTouchWithEvent(touch:UITouch, withEvent:UIEvent):Bool;
 
 	@:native("continueTrackingWithTouch:withEvent")
-	overload public function continueTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Bool;
+	overload public function continueTrackingWithTouchWithEvent(touch:UITouch, withEvent:UIEvent):Bool;
 
 	@:native("endTrackingWithTouch:withEvent")
-	overload public function endTrackingWithTouch_withEvent(touch:UITouch, withEvent:UIEvent):Void;
+	overload public function endTrackingWithTouchWithEvent(touch:UITouch, withEvent:UIEvent):Void;
 
 	@:native("cancelTrackingWithEvent")
 	overload public function cancelTrackingWithEvent(event:UIEvent):Void;
 
 	@:native("addTarget:action:forControlEvents")
-	overload public function addTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
+	overload public function addTargetActionForControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeTarget:action:forControlEvents")
-	overload public function removeTarget_action_forControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
+	overload public function removeTargetActionForControlEvents(target:Dynamic, action:String, forControlEvents:UIControlEvents):Void;
 
 	@:native("addAction:forControlEvents")
-	overload public function addAction_forControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
+	overload public function addActionForControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeAction:forControlEvents")
-	overload public function removeAction_forControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
+	overload public function removeActionForControlEvents(action:UIAction, forControlEvents:UIControlEvents):Void;
 
 	@:native("removeActionForIdentifier:forControlEvents")
-	overload public function removeActionForIdentifier_forControlEvents(actionIdentifier:Dynamic, forControlEvents:UIControlEvents):Void;
+	overload public function removeActionForIdentifierForControlEvents(actionIdentifier:Dynamic, forControlEvents:UIControlEvents):Void;
 
 	@:native("actionsForTarget:forControlEvent")
-	overload public function actionsForTarget_forControlEvent(target:Dynamic, forControlEvent:UIControlEvents):Dynamic;
+	overload public function actionsForTargetForControlEvent(target:Dynamic, forControlEvent:UIControlEvents):Dynamic;
 
 	@:native("enumerateEventHandlers")
 	overload public function enumerateEventHandlers(iterator:Dynamic):Void;
 
 	@:native("sendAction:to:forEvent")
-	overload public function sendAction_to_forEvent(action:String, to:Dynamic, forEvent:UIEvent):Void;
+	overload public function sendActionToForEvent(action:String, to:Dynamic, forEvent:UIEvent):Void;
 
 	@:native("sendAction")
 	overload public function sendAction(action:UIAction):Void;
@@ -207,28 +207,28 @@ extern class UISegmentedControl extends UIControl
 	overload public function menuAttachmentPointForConfiguration(configuration:UIContextMenuConfiguration):CGPoint;
 
 	@:native("contextMenuInteraction:configurationForMenuAtLocation")
-	overload public function contextMenuInteraction_configurationForMenuAtLocation(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):UIContextMenuConfiguration;
+	overload public function contextMenuInteractionConfigurationForMenuAtLocation(interaction:UIContextMenuInteraction, configurationForMenuAtLocation:CGPoint):UIContextMenuConfiguration;
 
 	@:native("contextMenuInteraction:previewForHighlightingMenuWithConfiguration")
-	overload public function contextMenuInteraction_previewForHighlightingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
+	overload public function contextMenuInteractionPreviewForHighlightingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForHighlightingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
 	@:native("contextMenuInteraction:previewForDismissingMenuWithConfiguration")
-	overload public function contextMenuInteraction_previewForDismissingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
+	overload public function contextMenuInteractionPreviewForDismissingMenuWithConfiguration(interaction:UIContextMenuInteraction, previewForDismissingMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
 	@:native("contextMenuInteraction:willDisplayMenuForConfiguration:animator")
-	overload public function contextMenuInteraction_willDisplayMenuForConfiguration_animator(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
+	overload public function contextMenuInteractionWillDisplayMenuForConfigurationAnimator(interaction:UIContextMenuInteraction, willDisplayMenuForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("contextMenuInteraction:willEndForConfiguration:animator")
-	overload public function contextMenuInteraction_willEndForConfiguration_animator(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
+	overload public function contextMenuInteractionWillEndForConfigurationAnimator(interaction:UIContextMenuInteraction, willEndForConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("contextMenuInteraction:willPerformPreviewActionForMenuWithConfiguration:animator")
-	overload public function contextMenuInteraction_willPerformPreviewActionForMenuWithConfiguration_animator(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
+	overload public function contextMenuInteractionWillPerformPreviewActionForMenuWithConfigurationAnimator(interaction:UIContextMenuInteraction, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 
 	@:native("drawRect:forViewPrintFormatter")
-	overload public function drawRect_forViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
+	overload public function drawRectForViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
 
 	@:native("endEditing")
 	overload public function endEditing(force:Bool):Bool;
@@ -246,25 +246,25 @@ extern class UISegmentedControl extends UIControl
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttributeRelativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:UIEvent):UIView;
+	overload public function hitTestWithEvent(point:CGPoint, withEvent:UIEvent):UIView;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside_withEvent(point:CGPoint, withEvent:UIEvent):Bool;
+	overload public function pointInsideWithEvent(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
+	overload public function convertPointToView(point:CGPoint, toView:UIView):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint_fromView(point:CGPoint, fromView:UIView):CGPoint;
+	overload public function convertPointFromView(point:CGPoint, fromView:UIView):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect_toView(rect:CGRect, toView:UIView):CGRect;
+	overload public function convertRectToView(rect:CGRect, toView:UIView):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect_fromView(rect:CGRect, fromView:UIView):CGRect;
+	overload public function convertRectFromView(rect:CGRect, fromView:UIView):CGRect;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;
@@ -276,19 +276,19 @@ extern class UISegmentedControl extends UIControl
 	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
-	overload public function insertSubview_atIndex(view:UIView, atIndex:Int):Void;
+	overload public function insertSubviewAtIndex(view:UIView, atIndex:Int):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
-	overload public function exchangeSubviewAtIndex_withSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
+	overload public function exchangeSubviewAtIndexWithSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
 
 	@:native("addSubview")
 	overload public function addSubview(view:UIView):Void;
 
 	@:native("insertSubview:belowSubview")
-	overload public function insertSubview_belowSubview(view:UIView, belowSubview:UIView):Void;
+	overload public function insertSubviewBelowSubview(view:UIView, belowSubview:UIView):Void;
 
 	@:native("insertSubview:aboveSubview")
-	overload public function insertSubview_aboveSubview(view:UIView, aboveSubview:UIView):Void;
+	overload public function insertSubviewAboveSubview(view:UIView, aboveSubview:UIView):Void;
 
 	@:native("bringSubviewToFront")
 	overload public function bringSubviewToFront(view:UIView):Void;
@@ -360,34 +360,34 @@ extern class UISegmentedControl extends UIControl
 	overload public static function inheritedAnimationDuration():Dynamic;
 
 	@:native("animateWithDuration:delay:options:animations:completion")
-	overload public static function animateWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations:completion")
-	overload public static function animateWithDuration_animations_completion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationAnimationsCompletion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations")
-	overload public static function animateWithDuration_animations(duration:Dynamic, animations:Dynamic):Void;
+	overload public static function animateWithDurationAnimations(duration:Dynamic, animations:Dynamic):Void;
 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
-	overload public static function animateWithDuration_delay_usingSpringWithDamping_initialSpringVelocity_options_animations_completion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionWithView:duration:options:animations:completion")
-	overload public static function transitionWithView_duration_options_animations_completion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function transitionWithViewDurationOptionsAnimationsCompletion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionFromView:toView:duration:options:completion")
-	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
+	overload public static function transitionFromViewToViewDurationOptionsCompletion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
-	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
+	overload public static function modifyAnimationsWithRepeatCountAutoreversesAnimations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
-	overload public static function animateKeyframesWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateKeyframesWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
-	overload public static function addKeyframeWithRelativeStartTime_relativeDuration_animations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
+	overload public static function addKeyframeWithRelativeStartTimeRelativeDurationAnimations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
 	@:native("addGestureRecognizer")
 	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
@@ -444,19 +444,19 @@ extern class UISegmentedControl extends UIControl
 	overload public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentHuggingPriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
 	overload public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentCompressionResistancePriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("systemLayoutSizeFittingSize")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
-	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
+	overload public function systemLayoutSizeFittingSizeWithHorizontalFittingPriorityVerticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
@@ -480,10 +480,10 @@ extern class UISegmentedControl extends UIControl
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
 	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets")
-	overload public function resizableSnapshotViewFromRect_afterScreenUpdates_withCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
+	overload public function resizableSnapshotViewFromRectAfterScreenUpdatesWithCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
-	overload public function drawViewHierarchyInRect_afterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
+	overload public function drawViewHierarchyInRectAfterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
 
 
 }

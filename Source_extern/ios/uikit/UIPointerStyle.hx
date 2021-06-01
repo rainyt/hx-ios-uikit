@@ -18,10 +18,10 @@ extern class UIPointerStyle
 	overload public static function autorelease():UIPointerStyle;
 
 	@:native("styleWithEffect:shape")
-	overload public static function styleWithEffect_shape(effect:UIPointerEffect, shape:UIPointerShape):UIPointerStyle;
+	overload public static function styleWithEffectShape(effect:UIPointerEffect, shape:UIPointerShape):UIPointerStyle;
 
 	@:native("styleWithShape:constrainedAxes")
-	overload public static function styleWithShape_constrainedAxes(shape:UIPointerShape, constrainedAxes:UIAxis):UIPointerStyle;
+	overload public static function styleWithShapeConstrainedAxes(shape:UIPointerShape, constrainedAxes:UIAxis):UIPointerStyle;
 
 	@:native("hiddenPointerStyle")
 	overload public static function hiddenPointerStyle():UIPointerStyle;

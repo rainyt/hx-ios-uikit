@@ -24,7 +24,7 @@ extern class UICollectionViewDiffableDataSource
 	overload public static function autorelease():UICollectionViewDiffableDataSource;
 
 	@:native("initWithCollectionView:cellProvider")
-	overload public function initWithCollectionView_cellProvider(collectionView:UICollectionView, cellProvider:Dynamic):UICollectionViewDiffableDataSource;
+	overload public function initWithCollectionViewCellProvider(collectionView:UICollectionView, cellProvider:Dynamic):UICollectionViewDiffableDataSource;
 
 	@:native("init")
 	overload public function init():UICollectionViewDiffableDataSource;
@@ -36,10 +36,10 @@ extern class UICollectionViewDiffableDataSource
 	overload public function snapshot():NSDiffableDataSourceSnapshot;
 
 	@:native("applySnapshot:animatingDifferences")
-	overload public function applySnapshot_animatingDifferences(snapshot:NSDiffableDataSourceSnapshot, animatingDifferences:Bool):Void;
+	overload public function applySnapshotAnimatingDifferences(snapshot:NSDiffableDataSourceSnapshot, animatingDifferences:Bool):Void;
 
 	@:native("applySnapshot:animatingDifferences:completion")
-	overload public function applySnapshot_animatingDifferences_completion(snapshot:NSDiffableDataSourceSnapshot, animatingDifferences:Bool, completion:Dynamic):Void;
+	overload public function applySnapshotAnimatingDifferencesCompletion(snapshot:NSDiffableDataSourceSnapshot, animatingDifferences:Bool, completion:Dynamic):Void;
 
 	@:native("itemIdentifierForIndexPath")
 	overload public function itemIdentifierForIndexPath(indexPath:NSIndexPath):Dynamic;
@@ -51,10 +51,10 @@ extern class UICollectionViewDiffableDataSource
 	public var reorderingHandlers:UICollectionViewDiffableDataSourceReorderingHandlers;
 
 	@:native("applySnapshot:toSection:animatingDifferences")
-	overload public function applySnapshot_toSection_animatingDifferences(snapshot:NSDiffableDataSourceSectionSnapshot, toSection:Dynamic, animatingDifferences:Bool):Void;
+	overload public function applySnapshotToSectionAnimatingDifferences(snapshot:NSDiffableDataSourceSectionSnapshot, toSection:Dynamic, animatingDifferences:Bool):Void;
 
 	@:native("applySnapshot:toSection:animatingDifferences:completion")
-	overload public function applySnapshot_toSection_animatingDifferences_completion(snapshot:NSDiffableDataSourceSectionSnapshot, toSection:Dynamic, animatingDifferences:Bool, completion:Dynamic):Void;
+	overload public function applySnapshotToSectionAnimatingDifferencesCompletion(snapshot:NSDiffableDataSourceSectionSnapshot, toSection:Dynamic, animatingDifferences:Bool, completion:Dynamic):Void;
 
 	@:native("snapshotForSection")
 	overload public function snapshotForSection(section:Dynamic):NSDiffableDataSourceSectionSnapshot;
@@ -63,28 +63,28 @@ extern class UICollectionViewDiffableDataSource
 	public var sectionSnapshotHandlers:UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
 
 	@:native("collectionView:numberOfItemsInSection")
-	overload public function collectionView_numberOfItemsInSection(collectionView:UICollectionView, numberOfItemsInSection:Int):Int;
+	overload public function collectionViewNumberOfItemsInSection(collectionView:UICollectionView, numberOfItemsInSection:Int):Int;
 
 	@:native("collectionView:cellForItemAtIndexPath")
-	overload public function collectionView_cellForItemAtIndexPath(collectionView:UICollectionView, cellForItemAtIndexPath:NSIndexPath):UICollectionViewCell;
+	overload public function collectionViewCellForItemAtIndexPath(collectionView:UICollectionView, cellForItemAtIndexPath:NSIndexPath):UICollectionViewCell;
 
 	@:native("numberOfSectionsInCollectionView")
 	overload public function numberOfSectionsInCollectionView(collectionView:UICollectionView):Int;
 
 	@:native("collectionView:viewForSupplementaryElementOfKind:atIndexPath")
-	overload public function collectionView_viewForSupplementaryElementOfKind_atIndexPath(collectionView:UICollectionView, viewForSupplementaryElementOfKind:NSString, atIndexPath:NSIndexPath):UICollectionReusableView;
+	overload public function collectionViewViewForSupplementaryElementOfKindAtIndexPath(collectionView:UICollectionView, viewForSupplementaryElementOfKind:NSString, atIndexPath:NSIndexPath):UICollectionReusableView;
 
 	@:native("collectionView:canMoveItemAtIndexPath")
-	overload public function collectionView_canMoveItemAtIndexPath(collectionView:UICollectionView, canMoveItemAtIndexPath:NSIndexPath):Bool;
+	overload public function collectionViewCanMoveItemAtIndexPath(collectionView:UICollectionView, canMoveItemAtIndexPath:NSIndexPath):Bool;
 
 	@:native("collectionView:moveItemAtIndexPath:toIndexPath")
-	overload public function collectionView_moveItemAtIndexPath_toIndexPath(collectionView:UICollectionView, moveItemAtIndexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
+	overload public function collectionViewMoveItemAtIndexPathToIndexPath(collectionView:UICollectionView, moveItemAtIndexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("indexTitlesForCollectionView")
 	overload public function indexTitlesForCollectionView(collectionView:UICollectionView):Dynamic;
 
 	@:native("collectionView:indexPathForIndexTitle:atIndex")
-	overload public function collectionView_indexPathForIndexTitle_atIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):NSIndexPath;
+	overload public function collectionViewIndexPathForIndexTitleAtIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):NSIndexPath;
 
 
 }

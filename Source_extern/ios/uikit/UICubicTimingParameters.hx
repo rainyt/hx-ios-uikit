@@ -38,7 +38,7 @@ extern class UICubicTimingParameters
 	overload public function initWithAnimationCurve(curve:UIViewAnimationCurve):UICubicTimingParameters;
 
 	@:native("initWithControlPoint1:controlPoint2")
-	overload public function initWithControlPoint1_controlPoint2(point1:CGPoint, controlPoint2:CGPoint):UICubicTimingParameters;
+	overload public function initWithControlPoint1ControlPoint2(point1:CGPoint, controlPoint2:CGPoint):UICubicTimingParameters;
 
 	@:native("timingCurveType")
 	public var timingCurveType:UITimingCurveType;

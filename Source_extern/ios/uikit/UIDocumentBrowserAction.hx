@@ -19,7 +19,7 @@ extern class UIDocumentBrowserAction{
 	overload public function init():UIDocumentBrowserAction;
 
 	@:native("initWithIdentifier:localizedTitle:availability:handler")
-	overload public function initWithIdentifier_localizedTitle_availability_handler(identifier:NSString, localizedTitle:NSString, availability:UIDocumentBrowserActionAvailability, handler:Dynamic):UIDocumentBrowserAction;
+	overload public function initWithIdentifierLocalizedTitleAvailabilityHandler(identifier:NSString, localizedTitle:NSString, availability:UIDocumentBrowserActionAvailability, handler:Dynamic):UIDocumentBrowserAction;
 
 	@:native("identifier")
 	public var identifier:NSString;

@@ -28,10 +28,10 @@ extern class UISpringTimingParameters
 	overload public function initWithCoder(coder:NSCoder):UISpringTimingParameters;
 
 	@:native("initWithDampingRatio:initialVelocity")
-	overload public function initWithDampingRatio_initialVelocity(ratio:Float, initialVelocity:CGVector):UISpringTimingParameters;
+	overload public function initWithDampingRatioInitialVelocity(ratio:Float, initialVelocity:CGVector):UISpringTimingParameters;
 
 	@:native("initWithMass:stiffness:damping:initialVelocity")
-	overload public function initWithMass_stiffness_damping_initialVelocity(mass:Float, stiffness:Float, damping:Float, initialVelocity:CGVector):UISpringTimingParameters;
+	overload public function initWithMassStiffnessDampingInitialVelocity(mass:Float, stiffness:Float, damping:Float, initialVelocity:CGVector):UISpringTimingParameters;
 
 	@:native("initWithDampingRatio")
 	overload public function initWithDampingRatio(ratio:Float):UISpringTimingParameters;

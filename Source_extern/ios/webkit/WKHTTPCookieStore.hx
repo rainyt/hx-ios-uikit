@@ -19,10 +19,10 @@ extern class WKHTTPCookieStore{
 	overload public function getAllCookies(completionHandler:Dynamic):Void;
 
 	@:native("setCookie:completionHandler")
-	overload public function setCookie_completionHandler(cookie:Dynamic, completionHandler:Dynamic):Void;
+	overload public function setCookieCompletionHandler(cookie:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("deleteCookie:completionHandler")
-	overload public function deleteCookie_completionHandler(cookie:Dynamic, completionHandler:Dynamic):Void;
+	overload public function deleteCookieCompletionHandler(cookie:Dynamic, completionHandler:Dynamic):Void;
 
 	@:native("addObserver")
 	overload public function addObserver(observer:Dynamic):Void;

@@ -15,7 +15,7 @@ extern interface UICloudSharingControllerDelegate{
 	overload public static function autorelease():UICloudSharingControllerDelegate;
 
 	@:native("cloudSharingController:failedToSaveShareWithError")
-	overload public function cloudSharingController_failedToSaveShareWithError(csc:UICloudSharingController, failedToSaveShareWithError:Dynamic):Void;
+	overload public function cloudSharingControllerFailedToSaveShareWithError(csc:UICloudSharingController, failedToSaveShareWithError:Dynamic):Void;
 
 	@:native("itemTitleForCloudSharingController")
 	overload public function itemTitleForCloudSharingController(csc:UICloudSharingController):NSString;

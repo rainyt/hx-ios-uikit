@@ -15,19 +15,19 @@ extern interface UITabBarDelegate{
 	overload public static function autorelease():UITabBarDelegate;
 
 	@:native("tabBar:didSelectItem")
-	overload public function tabBar_didSelectItem(tabBar:UITabBar, didSelectItem:UITabBarItem):Void;
+	overload public function tabBarDidSelectItem(tabBar:UITabBar, didSelectItem:UITabBarItem):Void;
 
 	@:native("tabBar:willBeginCustomizingItems")
-	overload public function tabBar_willBeginCustomizingItems(tabBar:UITabBar, willBeginCustomizingItems:Dynamic):Void;
+	overload public function tabBarWillBeginCustomizingItems(tabBar:UITabBar, willBeginCustomizingItems:Dynamic):Void;
 
 	@:native("tabBar:didBeginCustomizingItems")
-	overload public function tabBar_didBeginCustomizingItems(tabBar:UITabBar, didBeginCustomizingItems:Dynamic):Void;
+	overload public function tabBarDidBeginCustomizingItems(tabBar:UITabBar, didBeginCustomizingItems:Dynamic):Void;
 
 	@:native("tabBar:willEndCustomizingItems:changed")
-	overload public function tabBar_willEndCustomizingItems_changed(tabBar:UITabBar, willEndCustomizingItems:Dynamic, changed:Bool):Void;
+	overload public function tabBarWillEndCustomizingItemsChanged(tabBar:UITabBar, willEndCustomizingItems:Dynamic, changed:Bool):Void;
 
 	@:native("tabBar:didEndCustomizingItems:changed")
-	overload public function tabBar_didEndCustomizingItems_changed(tabBar:UITabBar, didEndCustomizingItems:Dynamic, changed:Bool):Void;
+	overload public function tabBarDidEndCustomizingItemsChanged(tabBar:UITabBar, didEndCustomizingItems:Dynamic, changed:Bool):Void;
 
 
 }

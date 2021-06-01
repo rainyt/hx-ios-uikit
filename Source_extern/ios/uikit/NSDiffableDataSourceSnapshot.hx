@@ -45,13 +45,13 @@ extern class NSDiffableDataSourceSnapshot
 	overload public function appendItemsWithIdentifiers(identifiers:Dynamic):Void;
 
 	@:native("appendItemsWithIdentifiers:intoSectionWithIdentifier")
-	overload public function appendItemsWithIdentifiers_intoSectionWithIdentifier(identifiers:Dynamic, intoSectionWithIdentifier:Dynamic):Void;
+	overload public function appendItemsWithIdentifiersIntoSectionWithIdentifier(identifiers:Dynamic, intoSectionWithIdentifier:Dynamic):Void;
 
 	@:native("insertItemsWithIdentifiers:beforeItemWithIdentifier")
-	overload public function insertItemsWithIdentifiers_beforeItemWithIdentifier(identifiers:Dynamic, beforeItemWithIdentifier:Dynamic):Void;
+	overload public function insertItemsWithIdentifiersBeforeItemWithIdentifier(identifiers:Dynamic, beforeItemWithIdentifier:Dynamic):Void;
 
 	@:native("insertItemsWithIdentifiers:afterItemWithIdentifier")
-	overload public function insertItemsWithIdentifiers_afterItemWithIdentifier(identifiers:Dynamic, afterItemWithIdentifier:Dynamic):Void;
+	overload public function insertItemsWithIdentifiersAfterItemWithIdentifier(identifiers:Dynamic, afterItemWithIdentifier:Dynamic):Void;
 
 	@:native("deleteItemsWithIdentifiers")
 	overload public function deleteItemsWithIdentifiers(identifiers:Dynamic):Void;
@@ -60,10 +60,10 @@ extern class NSDiffableDataSourceSnapshot
 	overload public function deleteAllItems():Void;
 
 	@:native("moveItemWithIdentifier:beforeItemWithIdentifier")
-	overload public function moveItemWithIdentifier_beforeItemWithIdentifier(fromIdentifier:Dynamic, beforeItemWithIdentifier:Dynamic):Void;
+	overload public function moveItemWithIdentifierBeforeItemWithIdentifier(fromIdentifier:Dynamic, beforeItemWithIdentifier:Dynamic):Void;
 
 	@:native("moveItemWithIdentifier:afterItemWithIdentifier")
-	overload public function moveItemWithIdentifier_afterItemWithIdentifier(fromIdentifier:Dynamic, afterItemWithIdentifier:Dynamic):Void;
+	overload public function moveItemWithIdentifierAfterItemWithIdentifier(fromIdentifier:Dynamic, afterItemWithIdentifier:Dynamic):Void;
 
 	@:native("reloadItemsWithIdentifiers")
 	overload public function reloadItemsWithIdentifiers(identifiers:Dynamic):Void;
@@ -72,19 +72,19 @@ extern class NSDiffableDataSourceSnapshot
 	overload public function appendSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;
 
 	@:native("insertSectionsWithIdentifiers:beforeSectionWithIdentifier")
-	overload public function insertSectionsWithIdentifiers_beforeSectionWithIdentifier(sectionIdentifiers:Dynamic, beforeSectionWithIdentifier:Dynamic):Void;
+	overload public function insertSectionsWithIdentifiersBeforeSectionWithIdentifier(sectionIdentifiers:Dynamic, beforeSectionWithIdentifier:Dynamic):Void;
 
 	@:native("insertSectionsWithIdentifiers:afterSectionWithIdentifier")
-	overload public function insertSectionsWithIdentifiers_afterSectionWithIdentifier(sectionIdentifiers:Dynamic, afterSectionWithIdentifier:Dynamic):Void;
+	overload public function insertSectionsWithIdentifiersAfterSectionWithIdentifier(sectionIdentifiers:Dynamic, afterSectionWithIdentifier:Dynamic):Void;
 
 	@:native("deleteSectionsWithIdentifiers")
 	overload public function deleteSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;
 
 	@:native("moveSectionWithIdentifier:beforeSectionWithIdentifier")
-	overload public function moveSectionWithIdentifier_beforeSectionWithIdentifier(fromSectionIdentifier:Dynamic, beforeSectionWithIdentifier:Dynamic):Void;
+	overload public function moveSectionWithIdentifierBeforeSectionWithIdentifier(fromSectionIdentifier:Dynamic, beforeSectionWithIdentifier:Dynamic):Void;
 
 	@:native("moveSectionWithIdentifier:afterSectionWithIdentifier")
-	overload public function moveSectionWithIdentifier_afterSectionWithIdentifier(fromSectionIdentifier:Dynamic, afterSectionWithIdentifier:Dynamic):Void;
+	overload public function moveSectionWithIdentifierAfterSectionWithIdentifier(fromSectionIdentifier:Dynamic, afterSectionWithIdentifier:Dynamic):Void;
 
 	@:native("reloadSectionsWithIdentifiers")
 	overload public function reloadSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;

@@ -15,7 +15,7 @@ extern interface UIDocumentMenuDelegate{
 	overload public static function autorelease():UIDocumentMenuDelegate;
 
 	@:native("documentMenu:didPickDocumentPicker")
-	overload public function documentMenu_didPickDocumentPicker(documentMenu:UIDocumentMenuViewController, didPickDocumentPicker:UIDocumentPickerViewController):Void;
+	overload public function documentMenuDidPickDocumentPicker(documentMenu:UIDocumentMenuViewController, didPickDocumentPicker:UIDocumentPickerViewController):Void;
 
 	@:native("documentMenuWasCancelled")
 	overload public function documentMenuWasCancelled(documentMenu:UIDocumentMenuViewController):Void;

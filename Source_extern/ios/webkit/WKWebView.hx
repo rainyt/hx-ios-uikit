@@ -55,7 +55,7 @@ extern class WKWebView extends UIView{
 	public var backForwardList:WKBackForwardList;
 
 	@:native("initWithFrame:configuration")
-	overload public function initWithFrame_configuration(frame:CGRect, configuration:WKWebViewConfiguration):WKWebView;
+	overload public function initWithFrameConfiguration(frame:CGRect, configuration:WKWebViewConfiguration):WKWebView;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):WKWebView;
@@ -64,13 +64,13 @@ extern class WKWebView extends UIView{
 	overload public function loadRequest(request:Dynamic):WKNavigation;
 
 	@:native("loadFileURL:allowingReadAccessToURL")
-	overload public function loadFileURL_allowingReadAccessToURL(URL:Dynamic, allowingReadAccessToURL:Dynamic):WKNavigation;
+	overload public function loadFileURLAllowingReadAccessToURL(URL:Dynamic, allowingReadAccessToURL:Dynamic):WKNavigation;
 
 	@:native("loadHTMLString:baseURL")
-	overload public function loadHTMLString_baseURL(string:NSString, baseURL:Dynamic):WKNavigation;
+	overload public function loadHTMLStringBaseURL(string:NSString, baseURL:Dynamic):WKNavigation;
 
 	@:native("loadData:MIMEType:characterEncodingName:baseURL")
-	overload public function loadData_MIMEType_characterEncodingName_baseURL(data:Dynamic, MIMEType:NSString, characterEncodingName:NSString, baseURL:Dynamic):WKNavigation;
+	overload public function loadDataMIMETypeCharacterEncodingNameBaseURL(data:Dynamic, MIMEType:NSString, characterEncodingName:NSString, baseURL:Dynamic):WKNavigation;
 
 	@:native("goToBackForwardListItem")
 	overload public function goToBackForwardListItem(item:WKBackForwardListItem):WKNavigation;
@@ -115,19 +115,19 @@ extern class WKWebView extends UIView{
 	overload public function stopLoading():Void;
 
 	@:native("evaluateJavaScript:completionHandler")
-	overload public function evaluateJavaScript_completionHandler(javaScriptString:NSString, completionHandler:Dynamic):Void;
+	overload public function evaluateJavaScriptCompletionHandler(javaScriptString:NSString, completionHandler:Dynamic):Void;
 
 	@:native("evaluateJavaScript:inFrame:inContentWorld:completionHandler")
-	overload public function evaluateJavaScript_inFrame_inContentWorld_completionHandler(javaScriptString:NSString, inFrame:WKFrameInfo, inContentWorld:WKContentWorld, completionHandler:Dynamic):Void;
+	overload public function evaluateJavaScriptInFrameInContentWorldCompletionHandler(javaScriptString:NSString, inFrame:WKFrameInfo, inContentWorld:WKContentWorld, completionHandler:Dynamic):Void;
 
 	@:native("callAsyncJavaScript:arguments:inFrame:inContentWorld:completionHandler")
-	overload public function callAsyncJavaScript_arguments_inFrame_inContentWorld_completionHandler(functionBody:NSString, arguments:NSDictionary, inFrame:WKFrameInfo, inContentWorld:WKContentWorld, completionHandler:Dynamic):Void;
+	overload public function callAsyncJavaScriptArgumentsInFrameInContentWorldCompletionHandler(functionBody:NSString, arguments:NSDictionary, inFrame:WKFrameInfo, inContentWorld:WKContentWorld, completionHandler:Dynamic):Void;
 
 	@:native("takeSnapshotWithConfiguration:completionHandler")
-	overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;
+	overload public function takeSnapshotWithConfigurationCompletionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;
 
 	@:native("createPDFWithConfiguration:completionHandler")
-	overload public function createPDFWithConfiguration_completionHandler(pdfConfiguration:WKPDFConfiguration, completionHandler:Dynamic):Void;
+	overload public function createPDFWithConfigurationCompletionHandler(pdfConfiguration:WKPDFConfiguration, completionHandler:Dynamic):Void;
 
 	@:native("createWebArchiveDataWithCompletionHandler")
 	overload public function createWebArchiveDataWithCompletionHandler(completionHandler:Dynamic):Void;
@@ -151,13 +151,13 @@ extern class WKWebView extends UIView{
 	public var magnification:Float;
 
 	@:native("setMagnification:centeredAtPoint")
-	overload public function setMagnification_centeredAtPoint(magnification:Float, centeredAtPoint:CGPoint):Void;
+	overload public function setMagnificationCenteredAtPoint(magnification:Float, centeredAtPoint:CGPoint):Void;
 
 	@:native("pageZoom")
 	public var pageZoom:Float;
 
 	@:native("findString:withConfiguration:completionHandler")
-	overload public function findString_withConfiguration_completionHandler(string:NSString, withConfiguration:WKFindConfiguration, completionHandler:Dynamic):Void;
+	overload public function findStringWithConfigurationCompletionHandler(string:NSString, withConfiguration:WKFindConfiguration, completionHandler:Dynamic):Void;
 
 	@:native("handlesURLScheme")
 	overload public static function handlesURLScheme(urlScheme:NSString):Bool;
@@ -175,7 +175,7 @@ extern class WKWebView extends UIView{
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 
 	@:native("drawRect:forViewPrintFormatter")
-	overload public function drawRect_forViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
+	overload public function drawRectForViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
 
 	@:native("endEditing")
 	overload public function endEditing(force:Bool):Bool;
@@ -196,25 +196,25 @@ extern class WKWebView extends UIView{
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttributeRelativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:UIEvent):UIView;
+	overload public function hitTestWithEvent(point:CGPoint, withEvent:UIEvent):UIView;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside_withEvent(point:CGPoint, withEvent:UIEvent):Bool;
+	overload public function pointInsideWithEvent(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
+	overload public function convertPointToView(point:CGPoint, toView:UIView):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint_fromView(point:CGPoint, fromView:UIView):CGPoint;
+	overload public function convertPointFromView(point:CGPoint, fromView:UIView):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect_toView(rect:CGRect, toView:UIView):CGRect;
+	overload public function convertRectToView(rect:CGRect, toView:UIView):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect_fromView(rect:CGRect, fromView:UIView):CGRect;
+	overload public function convertRectFromView(rect:CGRect, fromView:UIView):CGRect;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;
@@ -226,19 +226,19 @@ extern class WKWebView extends UIView{
 	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
-	overload public function insertSubview_atIndex(view:UIView, atIndex:Int):Void;
+	overload public function insertSubviewAtIndex(view:UIView, atIndex:Int):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
-	overload public function exchangeSubviewAtIndex_withSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
+	overload public function exchangeSubviewAtIndexWithSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
 
 	@:native("addSubview")
 	overload public function addSubview(view:UIView):Void;
 
 	@:native("insertSubview:belowSubview")
-	overload public function insertSubview_belowSubview(view:UIView, belowSubview:UIView):Void;
+	overload public function insertSubviewBelowSubview(view:UIView, belowSubview:UIView):Void;
 
 	@:native("insertSubview:aboveSubview")
-	overload public function insertSubview_aboveSubview(view:UIView, aboveSubview:UIView):Void;
+	overload public function insertSubviewAboveSubview(view:UIView, aboveSubview:UIView):Void;
 
 	@:native("bringSubviewToFront")
 	overload public function bringSubviewToFront(view:UIView):Void;
@@ -310,34 +310,34 @@ extern class WKWebView extends UIView{
 	overload public static function inheritedAnimationDuration():Dynamic;
 
 	@:native("animateWithDuration:delay:options:animations:completion")
-	overload public static function animateWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations:completion")
-	overload public static function animateWithDuration_animations_completion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationAnimationsCompletion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations")
-	overload public static function animateWithDuration_animations(duration:Dynamic, animations:Dynamic):Void;
+	overload public static function animateWithDurationAnimations(duration:Dynamic, animations:Dynamic):Void;
 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
-	overload public static function animateWithDuration_delay_usingSpringWithDamping_initialSpringVelocity_options_animations_completion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionWithView:duration:options:animations:completion")
-	overload public static function transitionWithView_duration_options_animations_completion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function transitionWithViewDurationOptionsAnimationsCompletion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionFromView:toView:duration:options:completion")
-	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
+	overload public static function transitionFromViewToViewDurationOptionsCompletion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
-	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
+	overload public static function modifyAnimationsWithRepeatCountAutoreversesAnimations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
-	overload public static function animateKeyframesWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateKeyframesWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
-	overload public static function addKeyframeWithRelativeStartTime_relativeDuration_animations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
+	overload public static function addKeyframeWithRelativeStartTimeRelativeDurationAnimations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
 	@:native("addGestureRecognizer")
 	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
@@ -394,19 +394,19 @@ extern class WKWebView extends UIView{
 	overload public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentHuggingPriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
 	overload public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentCompressionResistancePriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("systemLayoutSizeFittingSize")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
-	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
+	overload public function systemLayoutSizeFittingSizeWithHorizontalFittingPriorityVerticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
@@ -430,10 +430,10 @@ extern class WKWebView extends UIView{
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
 	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets")
-	overload public function resizableSnapshotViewFromRect_afterScreenUpdates_withCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
+	overload public function resizableSnapshotViewFromRectAfterScreenUpdatesWithCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
-	overload public function drawViewHierarchyInRect_afterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
+	overload public function drawViewHierarchyInRectAfterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
 
 
 }

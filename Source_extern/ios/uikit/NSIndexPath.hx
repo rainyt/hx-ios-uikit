@@ -13,10 +13,10 @@ extern class NSIndexPath{
 	overload public static function autorelease():NSIndexPath;
 
 	@:native("indexPathForRow:inSection")
-	overload public static function indexPathForRow_inSection(row:Int, inSection:Int):NSIndexPath;
+	overload public static function indexPathForRowInSection(row:Int, inSection:Int):NSIndexPath;
 
 	@:native("indexPathForItem:inSection")
-	overload public static function indexPathForItem_inSection(item:Int, inSection:Int):NSIndexPath;
+	overload public static function indexPathForItemInSection(item:Int, inSection:Int):NSIndexPath;
 
 	@:native("section")
 	public var section:Int;

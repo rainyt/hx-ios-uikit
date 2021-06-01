@@ -15,7 +15,7 @@ extern interface UIViewControllerRestoratio{
 	overload public static function autorelease():UIViewControllerRestoratio;
 
 	@:native("viewControllerWithRestorationIdentifierPath:coder")
-	overload public static function viewControllerWithRestorationIdentifierPath_coder(identifierComponents:Dynamic, coder:NSCoder):UIViewController;
+	overload public static function viewControllerWithRestorationIdentifierPathCoder(identifierComponents:Dynamic, coder:NSCoder):UIViewController;
 
 
 }

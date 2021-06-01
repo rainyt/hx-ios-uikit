@@ -59,49 +59,49 @@ extern class UIAccessibilityElement extends UIResponder
 	overload public function resignFirstResponder():Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBegan_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMoved_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEnded_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelled_withEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
 	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBegan_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChanged_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEnded_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelled_withEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
-	overload public function motionBegan_withEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionBeganWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
 
 	@:native("motionEnded:withEvent")
-	overload public function motionEnded_withEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionEndedWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
 
 	@:native("motionCancelled:withEvent")
-	overload public function motionCancelled_withEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
+	overload public function motionCancelledWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;
 
 	@:native("remoteControlReceivedWithEvent")
 	overload public function remoteControlReceivedWithEvent(event:UIEvent):Void;
 
 	@:native("canPerformAction:withSender")
-	overload public function canPerformAction_withSender(action:String, withSender:Dynamic):Bool;
+	overload public function canPerformActionWithSender(action:String, withSender:Dynamic):Bool;
 
 	@:native("targetForAction:withSender")
-	overload public function targetForAction_withSender(action:String, withSender:Dynamic):Dynamic;
+	overload public function targetForActionWithSender(action:String, withSender:Dynamic):Dynamic;
 
 	@:native("buildMenuWithBuilder")
 	overload public function buildMenuWithBuilder(builder:Dynamic):Void;

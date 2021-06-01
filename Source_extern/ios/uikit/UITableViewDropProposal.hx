@@ -16,7 +16,7 @@ extern class UITableViewDropProposal extends UIDropProposal{
 	overload public static function autorelease():UITableViewDropProposal;
 
 	@:native("initWithDropOperation:intent")
-	overload public function initWithDropOperation_intent(operation:UIDropOperation, intent:UITableViewDropIntent):UITableViewDropProposal;
+	overload public function initWithDropOperationIntent(operation:UIDropOperation, intent:UITableViewDropIntent):UITableViewDropProposal;
 
 	@:native("intent")
 	public var intent:UITableViewDropIntent;

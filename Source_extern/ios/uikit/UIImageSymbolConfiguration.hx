@@ -30,22 +30,22 @@ extern class UIImageSymbolConfiguration extends UIImageConfiguration{
 	overload public static function configurationWithWeight(weight:UIImageSymbolWeight):UIImageSymbolConfiguration;
 
 	@:native("configurationWithPointSize:weight")
-	overload public static function configurationWithPointSize_weight(pointSize:Float, weight:UIImageSymbolWeight):UIImageSymbolConfiguration;
+	overload public static function configurationWithPointSizeWeight(pointSize:Float, weight:UIImageSymbolWeight):UIImageSymbolConfiguration;
 
 	@:native("configurationWithPointSize:weight:scale")
-	overload public static function configurationWithPointSize_weight_scale(pointSize:Float, weight:UIImageSymbolWeight, scale:UIImageSymbolScale):UIImageSymbolConfiguration;
+	overload public static function configurationWithPointSizeWeightScale(pointSize:Float, weight:UIImageSymbolWeight, scale:UIImageSymbolScale):UIImageSymbolConfiguration;
 
 	@:native("configurationWithTextStyle")
 	overload public static function configurationWithTextStyle(textStyle:Dynamic):UIImageSymbolConfiguration;
 
 	@:native("configurationWithTextStyle:scale")
-	overload public static function configurationWithTextStyle_scale(textStyle:Dynamic, scale:UIImageSymbolScale):UIImageSymbolConfiguration;
+	overload public static function configurationWithTextStyleScale(textStyle:Dynamic, scale:UIImageSymbolScale):UIImageSymbolConfiguration;
 
 	@:native("configurationWithFont")
 	overload public static function configurationWithFont(font:UIFont):UIImageSymbolConfiguration;
 
 	@:native("configurationWithFont:scale")
-	overload public static function configurationWithFont_scale(font:UIFont, scale:UIImageSymbolScale):UIImageSymbolConfiguration;
+	overload public static function configurationWithFontScale(font:UIFont, scale:UIImageSymbolScale):UIImageSymbolConfiguration;
 
 	@:native("configurationWithoutTextStyle")
 	overload public function configurationWithoutTextStyle():UIImageSymbolConfiguration;

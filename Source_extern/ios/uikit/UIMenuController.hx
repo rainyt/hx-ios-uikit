@@ -22,7 +22,7 @@ extern class UIMenuController{
 	public var menuVisible:Bool;
 
 	@:native("showMenuFromView:rect")
-	overload public function showMenuFromView_rect(targetView:UIView, rect:CGRect):Void;
+	overload public function showMenuFromViewRect(targetView:UIView, rect:CGRect):Void;
 
 	@:native("hideMenuFromView")
 	overload public function hideMenuFromView(targetView:UIView):Void;

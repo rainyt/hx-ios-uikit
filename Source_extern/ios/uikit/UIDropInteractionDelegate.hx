@@ -17,31 +17,31 @@ extern interface UIDropInteractionDelegate{
 	overload public static function autorelease():UIDropInteractionDelegate;
 
 	@:native("dropInteraction:canHandleSession")
-	overload public function dropInteraction_canHandleSession(interaction:UIDropInteraction, canHandleSession:Dynamic):Bool;
+	overload public function dropInteractionCanHandleSession(interaction:UIDropInteraction, canHandleSession:Dynamic):Bool;
 
 	@:native("dropInteraction:sessionDidEnter")
-	overload public function dropInteraction_sessionDidEnter(interaction:UIDropInteraction, sessionDidEnter:Dynamic):Void;
+	overload public function dropInteractionSessionDidEnter(interaction:UIDropInteraction, sessionDidEnter:Dynamic):Void;
 
 	@:native("dropInteraction:sessionDidUpdate")
-	overload public function dropInteraction_sessionDidUpdate(interaction:UIDropInteraction, sessionDidUpdate:Dynamic):UIDropProposal;
+	overload public function dropInteractionSessionDidUpdate(interaction:UIDropInteraction, sessionDidUpdate:Dynamic):UIDropProposal;
 
 	@:native("dropInteraction:sessionDidExit")
-	overload public function dropInteraction_sessionDidExit(interaction:UIDropInteraction, sessionDidExit:Dynamic):Void;
+	overload public function dropInteractionSessionDidExit(interaction:UIDropInteraction, sessionDidExit:Dynamic):Void;
 
 	@:native("dropInteraction:performDrop")
-	overload public function dropInteraction_performDrop(interaction:UIDropInteraction, performDrop:Dynamic):Void;
+	overload public function dropInteractionPerformDrop(interaction:UIDropInteraction, performDrop:Dynamic):Void;
 
 	@:native("dropInteraction:concludeDrop")
-	overload public function dropInteraction_concludeDrop(interaction:UIDropInteraction, concludeDrop:Dynamic):Void;
+	overload public function dropInteractionConcludeDrop(interaction:UIDropInteraction, concludeDrop:Dynamic):Void;
 
 	@:native("dropInteraction:sessionDidEnd")
-	overload public function dropInteraction_sessionDidEnd(interaction:UIDropInteraction, sessionDidEnd:Dynamic):Void;
+	overload public function dropInteractionSessionDidEnd(interaction:UIDropInteraction, sessionDidEnd:Dynamic):Void;
 
 	@:native("dropInteraction:previewForDroppingItem:withDefault")
-	overload public function dropInteraction_previewForDroppingItem_withDefault(interaction:UIDropInteraction, previewForDroppingItem:UIDragItem, withDefault:UITargetedDragPreview):UITargetedDragPreview;
+	overload public function dropInteractionPreviewForDroppingItemWithDefault(interaction:UIDropInteraction, previewForDroppingItem:UIDragItem, withDefault:UITargetedDragPreview):UITargetedDragPreview;
 
 	@:native("dropInteraction:item:willAnimateDropWithAnimator")
-	overload public function dropInteraction_item_willAnimateDropWithAnimator(interaction:UIDropInteraction, item:UIDragItem, willAnimateDropWithAnimator:Dynamic):Void;
+	overload public function dropInteractionItemWillAnimateDropWithAnimator(interaction:UIDropInteraction, item:UIDragItem, willAnimateDropWithAnimator:Dynamic):Void;
 
 
 }

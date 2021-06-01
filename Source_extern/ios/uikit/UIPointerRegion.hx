@@ -22,7 +22,7 @@ extern class UIPointerRegion
 	public var identifier:Dynamic;
 
 	@:native("regionWithRect:identifier")
-	overload public static function regionWithRect_identifier(rect:CGRect, identifier:Dynamic):UIPointerRegion;
+	overload public static function regionWithRectIdentifier(rect:CGRect, identifier:Dynamic):UIPointerRegion;
 
 	@:native("init")
 	overload public function init():UIPointerRegion;

@@ -16,7 +16,7 @@ extern interface UISearchTextFieldDelegate{
 	overload public static function autorelease():UISearchTextFieldDelegate;
 
 	@:native("searchTextField:itemProviderForCopyingToken")
-	overload public function searchTextField_itemProviderForCopyingToken(searchTextField:UISearchTextField, itemProviderForCopyingToken:UISearchToken):NSItemProvider;
+	overload public function searchTextFieldItemProviderForCopyingToken(searchTextField:UISearchTextField, itemProviderForCopyingToken:UISearchToken):NSItemProvider;
 
 
 }

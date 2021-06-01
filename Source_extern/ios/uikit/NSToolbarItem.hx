@@ -15,7 +15,7 @@ extern class NSToolbarItem{
 	overload public static function autorelease():NSToolbarItem;
 
 	@:native("itemWithItemIdentifier:barButtonItem")
-	overload public static function itemWithItemIdentifier_barButtonItem(itemIdentifier:Dynamic, barButtonItem:UIBarButtonItem):NSToolbarItem;
+	overload public static function itemWithItemIdentifierBarButtonItem(itemIdentifier:Dynamic, barButtonItem:UIBarButtonItem):NSToolbarItem;
 
 	@:native("itemMenuFormRepresentation")
 	public var itemMenuFormRepresentation:UIMenuElement;

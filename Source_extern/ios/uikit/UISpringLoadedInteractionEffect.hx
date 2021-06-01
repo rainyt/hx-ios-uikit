@@ -14,7 +14,7 @@ extern interface UISpringLoadedInteractionEffect{
 	overload public static function autorelease():UISpringLoadedInteractionEffect;
 
 	@:native("interaction:didChangeWithContext")
-	overload public function interaction_didChangeWithContext(interaction:UISpringLoadedInteraction, didChangeWithContext:Dynamic):Void;
+	overload public function interactionDidChangeWithContext(interaction:UISpringLoadedInteraction, didChangeWithContext:Dynamic):Void;
 
 
 }

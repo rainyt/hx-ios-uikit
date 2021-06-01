@@ -25,10 +25,10 @@ extern interface UIActivityItemsConfigurationReading{
 	overload public function activityItemsConfigurationMetadataForKey(key:NSString):Dynamic;
 
 	@:native("activityItemsConfigurationMetadataForItemAtIndex:key")
-	overload public function activityItemsConfigurationMetadataForItemAtIndex_key(index:Int, key:NSString):Dynamic;
+	overload public function activityItemsConfigurationMetadataForItemAtIndexKey(index:Int, key:NSString):Dynamic;
 
 	@:native("activityItemsConfigurationPreviewForItemAtIndex:intent:suggestedSize")
-	overload public function activityItemsConfigurationPreviewForItemAtIndex_intent_suggestedSize(index:Int, intent:NSString, suggestedSize:CGSize):NSItemProvider;
+	overload public function activityItemsConfigurationPreviewForItemAtIndexIntentSuggestedSize(index:Int, intent:NSString, suggestedSize:CGSize):NSItemProvider;
 
 	@:native("applicationActivitiesForActivityItemsConfiguration")
 	public var applicationActivitiesForActivityItemsConfiguration:Dynamic;

@@ -18,7 +18,7 @@ extern class UIInterpolatingMotionEffect extends UIMotionEffect{
 	overload public static function autorelease():UIInterpolatingMotionEffect;
 
 	@:native("initWithKeyPath:type")
-	overload public function initWithKeyPath_type(keyPath:NSString, type:UIInterpolatingMotionEffectType):UIInterpolatingMotionEffect;
+	overload public function initWithKeyPathType(keyPath:NSString, type:UIInterpolatingMotionEffectType):UIInterpolatingMotionEffect;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIInterpolatingMotionEffect;

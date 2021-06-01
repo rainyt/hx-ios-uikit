@@ -47,7 +47,7 @@ extern class UISimpleTextPrintFormatter extends UIPrintFormatter{
 	overload public function rectForPageAtIndex(pageIndex:Int):CGRect;
 
 	@:native("drawInRect:forPageAtIndex")
-	overload public function drawInRect_forPageAtIndex(rect:CGRect, forPageAtIndex:Int):Void;
+	overload public function drawInRectForPageAtIndex(rect:CGRect, forPageAtIndex:Int):Void;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

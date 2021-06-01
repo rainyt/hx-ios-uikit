@@ -28,10 +28,10 @@ extern class UIFocusSystem{
 	overload public function updateFocusIfNeeded():Void;
 
 	@:native("environment:containsEnvironment")
-	overload public static function environment_containsEnvironment(environment:Dynamic, containsEnvironment:Dynamic):Bool;
+	overload public static function environmentContainsEnvironment(environment:Dynamic, containsEnvironment:Dynamic):Bool;
 
 	@:native("registerURL:forSoundIdentifier")
-	overload public static function registerURL_forSoundIdentifier(soundFileURL:Dynamic, forSoundIdentifier:Dynamic):Void;
+	overload public static function registerURLForSoundIdentifier(soundFileURL:Dynamic, forSoundIdentifier:Dynamic):Void;
 
 
 }

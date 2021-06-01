@@ -65,10 +65,10 @@ extern class UICollectionViewLayoutAttributes
 	overload public static function layoutAttributesForCellWithIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForSupplementaryViewOfKind_withIndexPath(elementKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForSupplementaryViewOfKindWithIndexPath(elementKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForDecorationViewOfKindWithIndexPath(decorationViewKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

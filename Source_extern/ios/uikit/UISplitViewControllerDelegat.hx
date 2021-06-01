@@ -19,16 +19,16 @@ extern interface UISplitViewControllerDelegat{
 	overload public static function autorelease():UISplitViewControllerDelegat;
 
 	@:native("splitViewController:willChangeToDisplayMode")
-	overload public function splitViewController_willChangeToDisplayMode(svc:UISplitViewController, willChangeToDisplayMode:UISplitViewControllerDisplayMode):Void;
+	overload public function splitViewControllerWillChangeToDisplayMode(svc:UISplitViewController, willChangeToDisplayMode:UISplitViewControllerDisplayMode):Void;
 
 	@:native("targetDisplayModeForActionInSplitViewController")
 	overload public function targetDisplayModeForActionInSplitViewController(svc:UISplitViewController):UISplitViewControllerDisplayMode;
 
 	@:native("splitViewController:showViewController:sender")
-	overload public function splitViewController_showViewController_sender(splitViewController:UISplitViewController, showViewController:UIViewController, sender:Dynamic):Bool;
+	overload public function splitViewControllerShowViewControllerSender(splitViewController:UISplitViewController, showViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("splitViewController:showDetailViewController:sender")
-	overload public function splitViewController_showDetailViewController_sender(splitViewController:UISplitViewController, showDetailViewController:UIViewController, sender:Dynamic):Bool;
+	overload public function splitViewControllerShowDetailViewControllerSender(splitViewController:UISplitViewController, showDetailViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("primaryViewControllerForCollapsingSplitViewController")
 	overload public function primaryViewControllerForCollapsingSplitViewController(splitViewController:UISplitViewController):UIViewController;
@@ -37,10 +37,10 @@ extern interface UISplitViewControllerDelegat{
 	overload public function primaryViewControllerForExpandingSplitViewController(splitViewController:UISplitViewController):UIViewController;
 
 	@:native("splitViewController:collapseSecondaryViewController:ontoPrimaryViewController")
-	overload public function splitViewController_collapseSecondaryViewController_ontoPrimaryViewController(splitViewController:UISplitViewController, collapseSecondaryViewController:UIViewController, ontoPrimaryViewController:UIViewController):Bool;
+	overload public function splitViewControllerCollapseSecondaryViewControllerOntoPrimaryViewController(splitViewController:UISplitViewController, collapseSecondaryViewController:UIViewController, ontoPrimaryViewController:UIViewController):Bool;
 
 	@:native("splitViewController:separateSecondaryViewControllerFromPrimaryViewController")
-	overload public function splitViewController_separateSecondaryViewControllerFromPrimaryViewController(splitViewController:UISplitViewController, separateSecondaryViewControllerFromPrimaryViewController:UIViewController):UIViewController;
+	overload public function splitViewControllerSeparateSecondaryViewControllerFromPrimaryViewController(splitViewController:UISplitViewController, separateSecondaryViewControllerFromPrimaryViewController:UIViewController):UIViewController;
 
 	@:native("splitViewControllerSupportedInterfaceOrientations")
 	overload public function splitViewControllerSupportedInterfaceOrientations(splitViewController:UISplitViewController):UIInterfaceOrientationMask;
@@ -49,10 +49,10 @@ extern interface UISplitViewControllerDelegat{
 	overload public function splitViewControllerPreferredInterfaceOrientationForPresentation(splitViewController:UISplitViewController):UIInterfaceOrientation;
 
 	@:native("splitViewController:topColumnForCollapsingToProposedTopColumn")
-	overload public function splitViewController_topColumnForCollapsingToProposedTopColumn(svc:UISplitViewController, topColumnForCollapsingToProposedTopColumn:UISplitViewControllerColumn):UISplitViewControllerColumn;
+	overload public function splitViewControllerTopColumnForCollapsingToProposedTopColumn(svc:UISplitViewController, topColumnForCollapsingToProposedTopColumn:UISplitViewControllerColumn):UISplitViewControllerColumn;
 
 	@:native("splitViewController:displayModeForExpandingToProposedDisplayMode")
-	overload public function splitViewController_displayModeForExpandingToProposedDisplayMode(svc:UISplitViewController, displayModeForExpandingToProposedDisplayMode:UISplitViewControllerDisplayMode):UISplitViewControllerDisplayMode;
+	overload public function splitViewControllerDisplayModeForExpandingToProposedDisplayMode(svc:UISplitViewController, displayModeForExpandingToProposedDisplayMode:UISplitViewControllerDisplayMode):UISplitViewControllerDisplayMode;
 
 	@:native("splitViewControllerDidCollapse")
 	overload public function splitViewControllerDidCollapse(svc:UISplitViewController):Void;
@@ -61,10 +61,10 @@ extern interface UISplitViewControllerDelegat{
 	overload public function splitViewControllerDidExpand(svc:UISplitViewController):Void;
 
 	@:native("splitViewController:willShowColumn")
-	overload public function splitViewController_willShowColumn(svc:UISplitViewController, willShowColumn:UISplitViewControllerColumn):Void;
+	overload public function splitViewControllerWillShowColumn(svc:UISplitViewController, willShowColumn:UISplitViewControllerColumn):Void;
 
 	@:native("splitViewController:willHideColumn")
-	overload public function splitViewController_willHideColumn(svc:UISplitViewController, willHideColumn:UISplitViewControllerColumn):Void;
+	overload public function splitViewControllerWillHideColumn(svc:UISplitViewController, willHideColumn:UISplitViewControllerColumn):Void;
 
 	@:native("splitViewControllerInteractivePresentationGestureWillBegin")
 	overload public function splitViewControllerInteractivePresentationGestureWillBegin(svc:UISplitViewController):Void;

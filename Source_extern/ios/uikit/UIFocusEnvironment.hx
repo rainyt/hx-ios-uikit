@@ -35,7 +35,7 @@ extern interface UIFocusEnvironment{
 	overload public function shouldUpdateFocusInContext(context:UIFocusUpdateContext):Bool;
 
 	@:native("didUpdateFocusInContext:withAnimationCoordinator")
-	overload public function didUpdateFocusInContext_withAnimationCoordinator(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
+	overload public function didUpdateFocusInContextWithAnimationCoordinator(context:UIFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
 
 	@:native("soundIdentifierForFocusUpdateInContext")
 	overload public function soundIdentifierForFocusUpdateInContext(context:UIFocusUpdateContext):NSString;

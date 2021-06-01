@@ -16,10 +16,10 @@ extern interface UILargeContentViewerInteractionDelegate{
 	overload public static function autorelease():UILargeContentViewerInteractionDelegate;
 
 	@:native("largeContentViewerInteraction:didEndOnItem:atPoint")
-	overload public function largeContentViewerInteraction_didEndOnItem_atPoint(interaction:UILargeContentViewerInteraction, didEndOnItem:Dynamic, atPoint:CGPoint):Void;
+	overload public function largeContentViewerInteractionDidEndOnItemAtPoint(interaction:UILargeContentViewerInteraction, didEndOnItem:Dynamic, atPoint:CGPoint):Void;
 
 	@:native("largeContentViewerInteraction:itemAtPoint")
-	overload public function largeContentViewerInteraction_itemAtPoint(interaction:UILargeContentViewerInteraction, itemAtPoint:CGPoint):Dynamic;
+	overload public function largeContentViewerInteractionItemAtPoint(interaction:UILargeContentViewerInteraction, itemAtPoint:CGPoint):Dynamic;
 
 	@:native("viewControllerForLargeContentViewerInteraction")
 	overload public function viewControllerForLargeContentViewerInteraction(interaction:UILargeContentViewerInteraction):UIViewController;

@@ -20,7 +20,7 @@ extern interface UIDropSession{
 	public var progressIndicatorStyle:UIDropSessionProgressIndicatorStyle;
 
 	@:native("loadObjectsOfClass:completion")
-	overload public function loadObjectsOfClass_completion(aClass:Dynamic, completion:Dynamic):Dynamic;
+	overload public function loadObjectsOfClassCompletion(aClass:Dynamic, completion:Dynamic):Dynamic;
 
 
 }

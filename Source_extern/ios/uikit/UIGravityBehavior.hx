@@ -37,7 +37,7 @@ extern class UIGravityBehavior extends UIDynamicBehavior{
 	public var magnitude:Float;
 
 	@:native("setAngle:magnitude")
-	overload public function setAngle_magnitude(angle:Float, magnitude:Float):Void;
+	overload public function setAngleMagnitude(angle:Float, magnitude:Float):Void;
 
 	@:native("addChildBehavior")
 	overload public function addChildBehavior(behavior:UIDynamicBehavior):Void;

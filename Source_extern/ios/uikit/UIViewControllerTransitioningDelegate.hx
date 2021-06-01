@@ -15,7 +15,7 @@ extern interface UIViewControllerTransitioningDelegate{
 	overload public static function autorelease():UIViewControllerTransitioningDelegate;
 
 	@:native("animationControllerForPresentedController:presentingController:sourceController")
-	overload public function animationControllerForPresentedController_presentingController_sourceController(presented:UIViewController, presentingController:UIViewController, sourceController:UIViewController):Dynamic;
+	overload public function animationControllerForPresentedControllerPresentingControllerSourceController(presented:UIViewController, presentingController:UIViewController, sourceController:UIViewController):Dynamic;
 
 	@:native("animationControllerForDismissedController")
 	overload public function animationControllerForDismissedController(dismissed:UIViewController):Dynamic;
@@ -27,7 +27,7 @@ extern interface UIViewControllerTransitioningDelegate{
 	overload public function interactionControllerForDismissal(animator:Dynamic):Dynamic;
 
 	@:native("presentationControllerForPresentedViewController:presentingViewController:sourceViewController")
-	overload public function presentationControllerForPresentedViewController_presentingViewController_sourceViewController(presented:UIViewController, presentingViewController:UIViewController, sourceViewController:UIViewController):UIPresentationController;
+	overload public function presentationControllerForPresentedViewControllerPresentingViewControllerSourceViewController(presented:UIViewController, presentingViewController:UIViewController, sourceViewController:UIViewController):UIPresentationController;
 
 
 }

@@ -13,7 +13,7 @@ extern interface UIAccessibilityContainerDataTable{
 	overload public static function autorelease():UIAccessibilityContainerDataTable;
 
 	@:native("accessibilityDataTableCellElementForRow:column")
-	overload public function accessibilityDataTableCellElementForRow_column(row:Int, column:Int):Dynamic;
+	overload public function accessibilityDataTableCellElementForRowColumn(row:Int, column:Int):Dynamic;
 
 	@:native("accessibilityRowCount")
 	overload public function accessibilityRowCount():Int;

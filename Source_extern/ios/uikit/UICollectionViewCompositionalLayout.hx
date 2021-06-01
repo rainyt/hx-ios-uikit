@@ -22,13 +22,13 @@ extern class UICollectionViewCompositionalLayout{
 	overload public function initWithSection(section:NSCollectionLayoutSection):UICollectionViewCompositionalLayout;
 
 	@:native("initWithSection:configuration")
-	overload public function initWithSection_configuration(section:NSCollectionLayoutSection, configuration:UICollectionViewCompositionalLayoutConfiguration):UICollectionViewCompositionalLayout;
+	overload public function initWithSectionConfiguration(section:NSCollectionLayoutSection, configuration:UICollectionViewCompositionalLayoutConfiguration):UICollectionViewCompositionalLayout;
 
 	@:native("initWithSectionProvider")
 	overload public function initWithSectionProvider(sectionProvider:Dynamic):UICollectionViewCompositionalLayout;
 
 	@:native("initWithSectionProvider:configuration")
-	overload public function initWithSectionProvider_configuration(sectionProvider:Dynamic, configuration:UICollectionViewCompositionalLayoutConfiguration):UICollectionViewCompositionalLayout;
+	overload public function initWithSectionProviderConfiguration(sectionProvider:Dynamic, configuration:UICollectionViewCompositionalLayoutConfiguration):UICollectionViewCompositionalLayout;
 
 	@:native("init")
 	overload public function init():UICollectionViewCompositionalLayout;

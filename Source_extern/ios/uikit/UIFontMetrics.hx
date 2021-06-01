@@ -30,19 +30,19 @@ extern class UIFontMetrics{
 	overload public function scaledFontForFont(font:UIFont):UIFont;
 
 	@:native("scaledFontForFont:maximumPointSize")
-	overload public function scaledFontForFont_maximumPointSize(font:UIFont, maximumPointSize:Float):UIFont;
+	overload public function scaledFontForFontMaximumPointSize(font:UIFont, maximumPointSize:Float):UIFont;
 
 	@:native("scaledFontForFont:compatibleWithTraitCollection")
-	overload public function scaledFontForFont_compatibleWithTraitCollection(font:UIFont, compatibleWithTraitCollection:UITraitCollection):UIFont;
+	overload public function scaledFontForFontCompatibleWithTraitCollection(font:UIFont, compatibleWithTraitCollection:UITraitCollection):UIFont;
 
 	@:native("scaledFontForFont:maximumPointSize:compatibleWithTraitCollection")
-	overload public function scaledFontForFont_maximumPointSize_compatibleWithTraitCollection(font:UIFont, maximumPointSize:Float, compatibleWithTraitCollection:UITraitCollection):UIFont;
+	overload public function scaledFontForFontMaximumPointSizeCompatibleWithTraitCollection(font:UIFont, maximumPointSize:Float, compatibleWithTraitCollection:UITraitCollection):UIFont;
 
 	@:native("scaledValueForValue")
 	overload public function scaledValueForValue(value:Float):Float;
 
 	@:native("scaledValueForValue:compatibleWithTraitCollection")
-	overload public function scaledValueForValue_compatibleWithTraitCollection(value:Float, compatibleWithTraitCollection:UITraitCollection):Float;
+	overload public function scaledValueForValueCompatibleWithTraitCollection(value:Float, compatibleWithTraitCollection:UITraitCollection):Float;
 
 
 }

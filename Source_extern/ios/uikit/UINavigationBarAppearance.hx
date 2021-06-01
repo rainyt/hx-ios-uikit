@@ -43,7 +43,7 @@ extern class UINavigationBarAppearance extends UIBarAppearance{
 	public var backIndicatorTransitionMaskImage:UIImage;
 
 	@:native("setBackIndicatorImage:transitionMaskImage")
-	overload public function setBackIndicatorImage_transitionMaskImage(backIndicatorImage:UIImage, transitionMaskImage:UIImage):Void;
+	overload public function setBackIndicatorImageTransitionMaskImage(backIndicatorImage:UIImage, transitionMaskImage:UIImage):Void;
 
 	@:native("init")
 	overload public function init():UIBarAppearance;

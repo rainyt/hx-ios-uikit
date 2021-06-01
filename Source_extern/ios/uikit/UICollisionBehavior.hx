@@ -39,10 +39,10 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	overload public function setTranslatesReferenceBoundsIntoBoundaryWithInsets(insets:Dynamic):Void;
 
 	@:native("addBoundaryWithIdentifier:forPath")
-	overload public function addBoundaryWithIdentifier_forPath(identifier:Dynamic, forPath:UIBezierPath):Void;
+	overload public function addBoundaryWithIdentifierForPath(identifier:Dynamic, forPath:UIBezierPath):Void;
 
 	@:native("addBoundaryWithIdentifier:fromPoint:toPoint")
-	overload public function addBoundaryWithIdentifier_fromPoint_toPoint(identifier:Dynamic, fromPoint:CGPoint, toPoint:CGPoint):Void;
+	overload public function addBoundaryWithIdentifierFromPointToPoint(identifier:Dynamic, fromPoint:CGPoint, toPoint:CGPoint):Void;
 
 	@:native("boundaryWithIdentifier")
 	overload public function boundaryWithIdentifier(identifier:Dynamic):UIBezierPath;

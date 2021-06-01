@@ -24,13 +24,13 @@ extern interface UIContentContainer{
 	overload public function systemLayoutFittingSizeDidChangeForChildContentContainer(container:Dynamic):Void;
 
 	@:native("sizeForChildContentContainer:withParentContainerSize")
-	overload public function sizeForChildContentContainer_withParentContainerSize(container:Dynamic, withParentContainerSize:CGSize):CGSize;
+	overload public function sizeForChildContentContainerWithParentContainerSize(container:Dynamic, withParentContainerSize:CGSize):CGSize;
 
 	@:native("viewWillTransitionToSize:withTransitionCoordinator")
-	overload public function viewWillTransitionToSize_withTransitionCoordinator(size:CGSize, withTransitionCoordinator:Dynamic):Void;
+	overload public function viewWillTransitionToSizeWithTransitionCoordinator(size:CGSize, withTransitionCoordinator:Dynamic):Void;
 
 	@:native("willTransitionToTraitCollection:withTransitionCoordinator")
-	overload public function willTransitionToTraitCollection_withTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
+	overload public function willTransitionToTraitCollectionWithTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
 
 
 }

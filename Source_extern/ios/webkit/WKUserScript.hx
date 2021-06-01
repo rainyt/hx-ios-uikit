@@ -27,10 +27,10 @@ extern class WKUserScript
 	public var forMainFrameOnly:Bool;
 
 	@:native("initWithSource:injectionTime:forMainFrameOnly")
-	overload public function initWithSource_injectionTime_forMainFrameOnly(source:NSString, injectionTime:WKUserScriptInjectionTime, forMainFrameOnly:Bool):WKUserScript;
+	overload public function initWithSourceInjectionTimeForMainFrameOnly(source:NSString, injectionTime:WKUserScriptInjectionTime, forMainFrameOnly:Bool):WKUserScript;
 
 	@:native("initWithSource:injectionTime:forMainFrameOnly:inContentWorld")
-	overload public function initWithSource_injectionTime_forMainFrameOnly_inContentWorld(source:NSString, injectionTime:WKUserScriptInjectionTime, forMainFrameOnly:Bool, inContentWorld:WKContentWorld):WKUserScript;
+	overload public function initWithSourceInjectionTimeForMainFrameOnlyInContentWorld(source:NSString, injectionTime:WKUserScriptInjectionTime, forMainFrameOnly:Bool, inContentWorld:WKContentWorld):WKUserScript;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

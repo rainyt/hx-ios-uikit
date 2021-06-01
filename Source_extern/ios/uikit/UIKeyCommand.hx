@@ -32,7 +32,7 @@ extern class UIKeyCommand extends UICommand{
 	public var modifierFlags:UIKeyModifierFlags;
 
 	@:native("keyCommandWithInput:modifierFlags:action")
-	overload public static function keyCommandWithInput_modifierFlags_action(input:NSString, modifierFlags:UIKeyModifierFlags, action:String):UIKeyCommand;
+	overload public static function keyCommandWithInputModifierFlagsAction(input:NSString, modifierFlags:UIKeyModifierFlags, action:String):UIKeyCommand;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

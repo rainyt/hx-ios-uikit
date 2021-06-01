@@ -69,10 +69,10 @@ extern class UIFieldBehavior extends UIDynamicBehavior{
 	overload public static function velocityFieldWithVector(direction:CGVector):UIFieldBehavior;
 
 	@:native("noiseFieldWithSmoothness:animationSpeed")
-	overload public static function noiseFieldWithSmoothness_animationSpeed(smoothness:Float, animationSpeed:Float):UIFieldBehavior;
+	overload public static function noiseFieldWithSmoothnessAnimationSpeed(smoothness:Float, animationSpeed:Float):UIFieldBehavior;
 
 	@:native("turbulenceFieldWithSmoothness:animationSpeed")
-	overload public static function turbulenceFieldWithSmoothness_animationSpeed(smoothness:Float, animationSpeed:Float):UIFieldBehavior;
+	overload public static function turbulenceFieldWithSmoothnessAnimationSpeed(smoothness:Float, animationSpeed:Float):UIFieldBehavior;
 
 	@:native("springField")
 	overload public static function springField():UIFieldBehavior;

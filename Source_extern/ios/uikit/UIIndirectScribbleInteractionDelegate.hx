@@ -15,22 +15,22 @@ extern interface UIIndirectScribbleInteractionDelegate{
 	overload public static function autorelease():UIIndirectScribbleInteractionDelegate;
 
 	@:native("indirectScribbleInteraction:requestElementsInRect:completion")
-	overload public function indirectScribbleInteraction_requestElementsInRect_completion(interaction:UIIndirectScribbleInteraction, requestElementsInRect:CGRect, completion:Dynamic):Void;
+	overload public function indirectScribbleInteractionRequestElementsInRectCompletion(interaction:UIIndirectScribbleInteraction, requestElementsInRect:CGRect, completion:Dynamic):Void;
 
 	@:native("indirectScribbleInteraction:isElementFocused")
-	overload public function indirectScribbleInteraction_isElementFocused(interaction:UIIndirectScribbleInteraction, isElementFocused:Dynamic):Bool;
+	overload public function indirectScribbleInteractionIsElementFocused(interaction:UIIndirectScribbleInteraction, isElementFocused:Dynamic):Bool;
 
 	@:native("indirectScribbleInteraction:frameForElement")
-	overload public function indirectScribbleInteraction_frameForElement(interaction:UIIndirectScribbleInteraction, frameForElement:Dynamic):CGRect;
+	overload public function indirectScribbleInteractionFrameForElement(interaction:UIIndirectScribbleInteraction, frameForElement:Dynamic):CGRect;
 
 	@:native("indirectScribbleInteraction:shouldDelayFocusForElement")
-	overload public function indirectScribbleInteraction_shouldDelayFocusForElement(interaction:UIIndirectScribbleInteraction, shouldDelayFocusForElement:Dynamic):Bool;
+	overload public function indirectScribbleInteractionShouldDelayFocusForElement(interaction:UIIndirectScribbleInteraction, shouldDelayFocusForElement:Dynamic):Bool;
 
 	@:native("indirectScribbleInteraction:willBeginWritingInElement")
-	overload public function indirectScribbleInteraction_willBeginWritingInElement(interaction:UIIndirectScribbleInteraction, willBeginWritingInElement:Dynamic):Void;
+	overload public function indirectScribbleInteractionWillBeginWritingInElement(interaction:UIIndirectScribbleInteraction, willBeginWritingInElement:Dynamic):Void;
 
 	@:native("indirectScribbleInteraction:didFinishWritingInElement")
-	overload public function indirectScribbleInteraction_didFinishWritingInElement(interaction:UIIndirectScribbleInteraction, didFinishWritingInElement:Dynamic):Void;
+	overload public function indirectScribbleInteractionDidFinishWritingInElement(interaction:UIIndirectScribbleInteraction, didFinishWritingInElement:Dynamic):Void;
 
 
 }

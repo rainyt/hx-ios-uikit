@@ -16,7 +16,7 @@ extern class NSCollectionLayoutSize
 	overload public static function autorelease():NSCollectionLayoutSize;
 
 	@:native("sizeWithWidthDimension:heightDimension")
-	overload public static function sizeWithWidthDimension_heightDimension(width:NSCollectionLayoutDimension, heightDimension:NSCollectionLayoutDimension):NSCollectionLayoutSize;
+	overload public static function sizeWithWidthDimensionHeightDimension(width:NSCollectionLayoutDimension, heightDimension:NSCollectionLayoutDimension):NSCollectionLayoutSize;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutSize;

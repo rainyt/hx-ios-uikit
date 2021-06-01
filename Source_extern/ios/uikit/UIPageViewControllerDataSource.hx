@@ -15,10 +15,10 @@ extern interface UIPageViewControllerDataSource{
 	overload public static function autorelease():UIPageViewControllerDataSource;
 
 	@:native("pageViewController:viewControllerBeforeViewController")
-	overload public function pageViewController_viewControllerBeforeViewController(pageViewController:UIPageViewController, viewControllerBeforeViewController:UIViewController):UIViewController;
+	overload public function pageViewControllerViewControllerBeforeViewController(pageViewController:UIPageViewController, viewControllerBeforeViewController:UIViewController):UIViewController;
 
 	@:native("pageViewController:viewControllerAfterViewController")
-	overload public function pageViewController_viewControllerAfterViewController(pageViewController:UIPageViewController, viewControllerAfterViewController:UIViewController):UIViewController;
+	overload public function pageViewControllerViewControllerAfterViewController(pageViewController:UIPageViewController, viewControllerAfterViewController:UIViewController):UIViewController;
 
 	@:native("presentationCountForPageViewController")
 	overload public function presentationCountForPageViewController(pageViewController:UIPageViewController):Int;

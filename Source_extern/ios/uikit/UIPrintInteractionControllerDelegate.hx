@@ -18,7 +18,7 @@ extern interface UIPrintInteractionControllerDelegate{
 	overload public function printInteractionControllerParentViewController(printInteractionController:UIPrintInteractionController):Dynamic;
 
 	@:native("printInteractionController:choosePaper")
-	overload public function printInteractionController_choosePaper(printInteractionController:UIPrintInteractionController, choosePaper:Dynamic):UIPrintPaper;
+	overload public function printInteractionControllerChoosePaper(printInteractionController:UIPrintInteractionController, choosePaper:Dynamic):UIPrintPaper;
 
 	@:native("printInteractionControllerWillPresentPrinterOptions")
 	overload public function printInteractionControllerWillPresentPrinterOptions(printInteractionController:UIPrintInteractionController):Void;
@@ -39,10 +39,10 @@ extern interface UIPrintInteractionControllerDelegate{
 	overload public function printInteractionControllerDidFinishJob(printInteractionController:UIPrintInteractionController):Void;
 
 	@:native("printInteractionController:cutLengthForPaper")
-	overload public function printInteractionController_cutLengthForPaper(printInteractionController:UIPrintInteractionController, cutLengthForPaper:UIPrintPaper):Float;
+	overload public function printInteractionControllerCutLengthForPaper(printInteractionController:UIPrintInteractionController, cutLengthForPaper:UIPrintPaper):Float;
 
 	@:native("printInteractionController:chooseCutterBehavior")
-	overload public function printInteractionController_chooseCutterBehavior(printInteractionController:UIPrintInteractionController, chooseCutterBehavior:Dynamic):Dynamic;
+	overload public function printInteractionControllerChooseCutterBehavior(printInteractionController:UIPrintInteractionController, chooseCutterBehavior:Dynamic):Dynamic;
 
 
 }

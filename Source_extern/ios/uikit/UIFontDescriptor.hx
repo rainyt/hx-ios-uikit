@@ -52,16 +52,16 @@ extern class UIFontDescriptor
 	overload public static function fontDescriptorWithFontAttributes(attributes:NSDictionary):UIFontDescriptor;
 
 	@:native("fontDescriptorWithName:size")
-	overload public static function fontDescriptorWithName_size(fontName:NSString, size:Float):UIFontDescriptor;
+	overload public static function fontDescriptorWithNameSize(fontName:NSString, size:Float):UIFontDescriptor;
 
 	@:native("fontDescriptorWithName:matrix")
-	overload public static function fontDescriptorWithName_matrix(fontName:NSString, matrix:CGAffineTransform):UIFontDescriptor;
+	overload public static function fontDescriptorWithNameMatrix(fontName:NSString, matrix:CGAffineTransform):UIFontDescriptor;
 
 	@:native("preferredFontDescriptorWithTextStyle")
 	overload public static function preferredFontDescriptorWithTextStyle(style:NSString):UIFontDescriptor;
 
 	@:native("preferredFontDescriptorWithTextStyle:compatibleWithTraitCollection")
-	overload public static function preferredFontDescriptorWithTextStyle_compatibleWithTraitCollection(style:NSString, compatibleWithTraitCollection:UITraitCollection):UIFontDescriptor;
+	overload public static function preferredFontDescriptorWithTextStyleCompatibleWithTraitCollection(style:NSString, compatibleWithTraitCollection:UITraitCollection):UIFontDescriptor;
 
 	@:native("initWithFontAttributes")
 	overload public function initWithFontAttributes(attributes:NSDictionary):UIFontDescriptor;

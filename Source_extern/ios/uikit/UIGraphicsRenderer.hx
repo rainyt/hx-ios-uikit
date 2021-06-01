@@ -19,7 +19,7 @@ extern class UIGraphicsRenderer{
 	overload public function initWithBounds(bounds:CGRect):UIGraphicsRenderer;
 
 	@:native("initWithBounds:format")
-	overload public function initWithBounds_format(bounds:CGRect, format:UIGraphicsRendererFormat):UIGraphicsRenderer;
+	overload public function initWithBoundsFormat(bounds:CGRect, format:UIGraphicsRendererFormat):UIGraphicsRenderer;
 
 	@:native("format")
 	public var format:UIGraphicsRendererFormat;
@@ -34,10 +34,10 @@ extern class UIGraphicsRenderer{
 	overload public static function contextWithFormat(format:UIGraphicsRendererFormat):Dynamic;
 
 	@:native("prepareCGContext:withRendererContext")
-	overload public static function prepareCGContext_withRendererContext(context:Dynamic, withRendererContext:UIGraphicsRendererContext):Void;
+	overload public static function prepareCGContextWithRendererContext(context:Dynamic, withRendererContext:UIGraphicsRendererContext):Void;
 
 	@:native("runDrawingActions:completionActions:error")
-	overload public function runDrawingActions_completionActions_error(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
+	overload public function runDrawingActionsCompletionActionsError(drawingActions:Dynamic, completionActions:Dynamic, error:Dynamic):Bool;
 
 
 }

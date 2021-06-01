@@ -28,7 +28,7 @@ extern class UIImageAsset
 	overload public function imageWithConfiguration(configuration:UIImageConfiguration):UIImage;
 
 	@:native("registerImage:withConfiguration")
-	overload public function registerImage_withConfiguration(image:UIImage, withConfiguration:UIImageConfiguration):Void;
+	overload public function registerImageWithConfiguration(image:UIImage, withConfiguration:UIImageConfiguration):Void;
 
 	@:native("unregisterImageWithConfiguration")
 	overload public function unregisterImageWithConfiguration(configuration:UIImageConfiguration):Void;
@@ -37,7 +37,7 @@ extern class UIImageAsset
 	overload public function imageWithTraitCollection(traitCollection:UITraitCollection):UIImage;
 
 	@:native("registerImage:withTraitCollection")
-	overload public function registerImage_withTraitCollection(image:UIImage, withTraitCollection:UITraitCollection):Void;
+	overload public function registerImageWithTraitCollection(image:UIImage, withTraitCollection:UITraitCollection):Void;
 
 	@:native("unregisterImageWithTraitCollection")
 	overload public function unregisterImageWithTraitCollection(traitCollection:UITraitCollection):Void;

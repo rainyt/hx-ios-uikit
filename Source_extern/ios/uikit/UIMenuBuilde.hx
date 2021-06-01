@@ -26,22 +26,22 @@ extern interface UIMenuBuilde{
 	overload public function actionForIdentifier(identifier:Dynamic):UIAction;
 
 	@:native("commandForAction:propertyList")
-	overload public function commandForAction_propertyList(action:String, propertyList:Dynamic):UICommand;
+	overload public function commandForActionPropertyList(action:String, propertyList:Dynamic):UICommand;
 
 	@:native("replaceMenuForIdentifier:withMenu")
-	overload public function replaceMenuForIdentifier_withMenu(replacedIdentifier:Dynamic, withMenu:UIMenu):Void;
+	overload public function replaceMenuForIdentifierWithMenu(replacedIdentifier:Dynamic, withMenu:UIMenu):Void;
 
 	@:native("insertSiblingMenu:beforeMenuForIdentifier")
-	overload public function insertSiblingMenu_beforeMenuForIdentifier(siblingMenu:UIMenu, beforeMenuForIdentifier:Dynamic):Void;
+	overload public function insertSiblingMenuBeforeMenuForIdentifier(siblingMenu:UIMenu, beforeMenuForIdentifier:Dynamic):Void;
 
 	@:native("insertSiblingMenu:afterMenuForIdentifier")
-	overload public function insertSiblingMenu_afterMenuForIdentifier(siblingMenu:UIMenu, afterMenuForIdentifier:Dynamic):Void;
+	overload public function insertSiblingMenuAfterMenuForIdentifier(siblingMenu:UIMenu, afterMenuForIdentifier:Dynamic):Void;
 
 	@:native("insertChildMenu:atStartOfMenuForIdentifier")
-	overload public function insertChildMenu_atStartOfMenuForIdentifier(childMenu:UIMenu, atStartOfMenuForIdentifier:Dynamic):Void;
+	overload public function insertChildMenuAtStartOfMenuForIdentifier(childMenu:UIMenu, atStartOfMenuForIdentifier:Dynamic):Void;
 
 	@:native("insertChildMenu:atEndOfMenuForIdentifier")
-	overload public function insertChildMenu_atEndOfMenuForIdentifier(childMenu:UIMenu, atEndOfMenuForIdentifier:Dynamic):Void;
+	overload public function insertChildMenuAtEndOfMenuForIdentifier(childMenu:UIMenu, atEndOfMenuForIdentifier:Dynamic):Void;
 
 	@:native("removeMenuForIdentifier")
 	overload public function removeMenuForIdentifier(removedIdentifier:Dynamic):Void;

@@ -15,7 +15,7 @@ extern interface UIScribbleInteractionDelegate{
 	overload public static function autorelease():UIScribbleInteractionDelegate;
 
 	@:native("scribbleInteraction:shouldBeginAtLocation")
-	overload public function scribbleInteraction_shouldBeginAtLocation(interaction:UIScribbleInteraction, shouldBeginAtLocation:CGPoint):Bool;
+	overload public function scribbleInteractionShouldBeginAtLocation(interaction:UIScribbleInteraction, shouldBeginAtLocation:CGPoint):Bool;
 
 	@:native("scribbleInteractionShouldDelayFocus")
 	overload public function scribbleInteractionShouldDelayFocus(interaction:UIScribbleInteraction):Bool;

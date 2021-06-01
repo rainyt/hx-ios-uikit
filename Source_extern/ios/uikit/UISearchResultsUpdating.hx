@@ -17,7 +17,7 @@ extern interface UISearchResultsUpdating{
 	overload public function updateSearchResultsForSearchController(searchController:UISearchController):Void;
 
 	@:native("updateSearchResultsForSearchController:selectingSearchSuggestion")
-	overload public function updateSearchResultsForSearchController_selectingSearchSuggestion(searchController:Dynamic, selectingSearchSuggestion:nonnullid):Void;
+	overload public function updateSearchResultsForSearchControllerSelectingSearchSuggestion(searchController:Dynamic, selectingSearchSuggestion:nonnullid):Void;
 
 
 }

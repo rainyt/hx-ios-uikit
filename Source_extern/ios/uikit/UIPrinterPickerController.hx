@@ -26,13 +26,13 @@ extern class UIPrinterPickerController{
 	public var delegate:Dynamic;
 
 	@:native("presentAnimated:completionHandler")
-	overload public function presentAnimated_completionHandler(animated:Bool, completionHandler:Dynamic):Bool;
+	overload public function presentAnimatedCompletionHandler(animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("presentFromRect:inView:animated:completionHandler")
-	overload public function presentFromRect_inView_animated_completionHandler(rect:CGRect, inView:UIView, animated:Bool, completionHandler:Dynamic):Bool;
+	overload public function presentFromRectInViewAnimatedCompletionHandler(rect:CGRect, inView:UIView, animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("presentFromBarButtonItem:animated:completionHandler")
-	overload public function presentFromBarButtonItem_animated_completionHandler(item:UIBarButtonItem, animated:Bool, completionHandler:Dynamic):Bool;
+	overload public function presentFromBarButtonItemAnimatedCompletionHandler(item:UIBarButtonItem, animated:Bool, completionHandler:Dynamic):Bool;
 
 	@:native("dismissAnimated")
 	overload public function dismissAnimated(animated:Bool):Void;

@@ -14,7 +14,7 @@ extern interface UIDocumentPickerDelegate{
 	overload public static function autorelease():UIDocumentPickerDelegate;
 
 	@:native("documentPicker:didPickDocumentsAtURLs")
-	overload public function documentPicker_didPickDocumentsAtURLs(controller:UIDocumentPickerViewController, didPickDocumentsAtURLs:Dynamic):Void;
+	overload public function documentPickerDidPickDocumentsAtURLs(controller:UIDocumentPickerViewController, didPickDocumentsAtURLs:Dynamic):Void;
 
 	@:native("documentPickerWasCancelled")
 	overload public function documentPickerWasCancelled(controller:UIDocumentPickerViewController):Void;

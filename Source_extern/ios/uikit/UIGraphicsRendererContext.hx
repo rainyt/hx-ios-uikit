@@ -25,13 +25,13 @@ extern class UIGraphicsRendererContext{
 	overload public function fillRect(rect:CGRect):Void;
 
 	@:native("fillRect:blendMode")
-	overload public function fillRect_blendMode(rect:CGRect, blendMode:CGBlendMode):Void;
+	overload public function fillRectBlendMode(rect:CGRect, blendMode:CGBlendMode):Void;
 
 	@:native("strokeRect")
 	overload public function strokeRect(rect:CGRect):Void;
 
 	@:native("strokeRect:blendMode")
-	overload public function strokeRect_blendMode(rect:CGRect, blendMode:CGBlendMode):Void;
+	overload public function strokeRectBlendMode(rect:CGRect, blendMode:CGBlendMode):Void;
 
 	@:native("clipToRect")
 	overload public function clipToRect(rect:CGRect):Void;

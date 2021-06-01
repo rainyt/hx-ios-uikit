@@ -17,22 +17,22 @@ extern interface UIPickerViewDelegate{
 	overload public static function autorelease():UIPickerViewDelegate;
 
 	@:native("pickerView:widthForComponent")
-	overload public function pickerView_widthForComponent(pickerView:UIPickerView, widthForComponent:Int):Float;
+	overload public function pickerViewWidthForComponent(pickerView:UIPickerView, widthForComponent:Int):Float;
 
 	@:native("pickerView:rowHeightForComponent")
-	overload public function pickerView_rowHeightForComponent(pickerView:UIPickerView, rowHeightForComponent:Int):Float;
+	overload public function pickerViewRowHeightForComponent(pickerView:UIPickerView, rowHeightForComponent:Int):Float;
 
 	@:native("pickerView:titleForRow:forComponent")
-	overload public function pickerView_titleForRow_forComponent(pickerView:UIPickerView, titleForRow:Int, forComponent:Int):NSString;
+	overload public function pickerViewTitleForRowForComponent(pickerView:UIPickerView, titleForRow:Int, forComponent:Int):NSString;
 
 	@:native("pickerView:attributedTitleForRow:forComponent")
-	overload public function pickerView_attributedTitleForRow_forComponent(pickerView:UIPickerView, attributedTitleForRow:Int, forComponent:Int):NSAttributedString;
+	overload public function pickerViewAttributedTitleForRowForComponent(pickerView:UIPickerView, attributedTitleForRow:Int, forComponent:Int):NSAttributedString;
 
 	@:native("pickerView:viewForRow:forComponent:reusingView")
-	overload public function pickerView_viewForRow_forComponent_reusingView(pickerView:UIPickerView, viewForRow:Int, forComponent:Int, reusingView:UIView):UIView;
+	overload public function pickerViewViewForRowForComponentReusingView(pickerView:UIPickerView, viewForRow:Int, forComponent:Int, reusingView:UIView):UIView;
 
 	@:native("pickerView:didSelectRow:inComponent")
-	overload public function pickerView_didSelectRow_inComponent(pickerView:UIPickerView, didSelectRow:Int, inComponent:Int):Void;
+	overload public function pickerViewDidSelectRowInComponent(pickerView:UIPickerView, didSelectRow:Int, inComponent:Int):Void;
 
 
 }

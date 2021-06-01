@@ -20,13 +20,13 @@ extern class WKContentRuleListStore{
 	overload public static function storeWithURL(url:Dynamic):WKContentRuleListStore;
 
 	@:native("compileContentRuleListForIdentifier:encodedContentRuleList:encodedContentRuleList")
-	overload public function compileContentRuleListForIdentifier_encodedContentRuleList_encodedContentRuleList(identifier:NSString, encodedContentRuleList:NSString, encodedContentRuleList:Dynamic):Void;
+	overload public function compileContentRuleListForIdentifierEncodedContentRuleListEncodedContentRuleList(identifier:NSString, encodedContentRuleList:NSString, encodedContentRuleList:Dynamic):Void;
 
 	@:native("lookUpContentRuleListForIdentifier:completionHandler")
-	overload public function lookUpContentRuleListForIdentifier_completionHandler(identifier:NSString, completionHandler:Dynamic):Void;
+	overload public function lookUpContentRuleListForIdentifierCompletionHandler(identifier:NSString, completionHandler:Dynamic):Void;
 
 	@:native("removeContentRuleListForIdentifier:completionHandler")
-	overload public function removeContentRuleListForIdentifier_completionHandler(identifier:NSString, completionHandler:Dynamic):Void;
+	overload public function removeContentRuleListForIdentifierCompletionHandler(identifier:NSString, completionHandler:Dynamic):Void;
 
 	@:native("getAvailableContentRuleListIdentifiers")
 	overload public function getAvailableContentRuleListIdentifiers(completionHandler:Dynamic):Void;

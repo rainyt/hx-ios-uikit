@@ -26,7 +26,7 @@ extern class UIScene{
 	overload public function init():UIScene;
 
 	@:native("initWithSession:connectionOptions")
-	overload public function initWithSession_connectionOptions(session:UISceneSession, connectionOptions:UISceneConnectionOptions):UIScene;
+	overload public function initWithSessionConnectionOptions(session:UISceneSession, connectionOptions:UISceneConnectionOptions):UIScene;
 
 	@:native("session")
 	public var session:UISceneSession;
@@ -38,7 +38,7 @@ extern class UIScene{
 	public var activationState:UISceneActivationState;
 
 	@:native("openURL:options:completionHandler")
-	overload public function openURL_options_completionHandler(url:Dynamic, options:UISceneOpenExternalURLOptions, completionHandler:Dynamic):Void;
+	overload public function openURLOptionsCompletionHandler(url:Dynamic, options:UISceneOpenExternalURLOptions, completionHandler:Dynamic):Void;
 
 	@:native("title")
 	public var title:NSString;

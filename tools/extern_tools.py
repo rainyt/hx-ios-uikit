@@ -384,7 +384,23 @@ class ExternBaseClass:
         return ", ".join([python_Boot.toString1(x1,'') for x1 in args])
 
     def toFuncName(self,_hx_str):
-        return StringTools.replace(_hx_str,":","_")
+        startIndex = None
+        if (((_hx_str.find(":") if ((startIndex is None)) else HxString.indexOfImpl(_hx_str,":",startIndex))) != -1):
+            arr = _hx_str.split(":")
+            _hx_str = ""
+            _g_current = 0
+            _g_array = arr
+            while (_g_current < len(_g_array)):
+                _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+                _g1_key = _g_current
+                _g_current = (_g_current + 1)
+                index = _g1_key
+                value = _g1_value
+                if (index == 0):
+                    _hx_str = (("null" if _hx_str is None else _hx_str) + ("null" if value is None else value))
+                else:
+                    _hx_str = (("null" if _hx_str is None else _hx_str) + HxOverrides.stringOrNull(((HxOverrides.stringOrNull(("" if ((0 >= len(value))) else value[0]).upper()) + HxOverrides.stringOrNull(HxString.substr(value,1,None))))))
+        return _hx_str
 
     def externParentFuncProperty(self,c):
         if (self.protocols is not None):

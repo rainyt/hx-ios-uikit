@@ -17,7 +17,7 @@ extern interface UIPopoverPresentationControllerDelegate{
 	overload public function prepareForPopoverPresentation(popoverPresentationController:UIPopoverPresentationController):Void;
 
 	@:native("popoverPresentationController:willRepositionPopoverToRect:inView")
-	overload public function popoverPresentationController_willRepositionPopoverToRect_inView(popoverPresentationController:UIPopoverPresentationController, willRepositionPopoverToRect:Dynamic, inView:Dynamic):Void;
+	overload public function popoverPresentationControllerWillRepositionPopoverToRectInView(popoverPresentationController:UIPopoverPresentationController, willRepositionPopoverToRect:Dynamic, inView:Dynamic):Void;
 
 
 }

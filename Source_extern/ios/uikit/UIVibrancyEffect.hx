@@ -19,7 +19,7 @@ extern class UIVibrancyEffect extends UIVisualEffect{
 	overload public static function effectForBlurEffect(blurEffect:UIBlurEffect):UIVibrancyEffect;
 
 	@:native("effectForBlurEffect:style")
-	overload public static function effectForBlurEffect_style(blurEffect:UIBlurEffect, style:UIVibrancyEffectStyle):UIVibrancyEffect;
+	overload public static function effectForBlurEffectStyle(blurEffect:UIBlurEffect, style:UIVibrancyEffectStyle):UIVibrancyEffect;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

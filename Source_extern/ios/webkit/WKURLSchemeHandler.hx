@@ -14,10 +14,10 @@ extern interface WKURLSchemeHandler{
 	overload public static function autorelease():WKURLSchemeHandler;
 
 	@:native("webView:startURLSchemeTask")
-	overload public function webView_startURLSchemeTask(webView:WKWebView, startURLSchemeTask:Dynamic):Void;
+	overload public function webViewStartURLSchemeTask(webView:WKWebView, startURLSchemeTask:Dynamic):Void;
 
 	@:native("webView:stopURLSchemeTask")
-	overload public function webView_stopURLSchemeTask(webView:WKWebView, stopURLSchemeTask:Dynamic):Void;
+	overload public function webViewStopURLSchemeTask(webView:WKWebView, stopURLSchemeTask:Dynamic):Void;
 
 
 }

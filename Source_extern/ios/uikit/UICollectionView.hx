@@ -47,7 +47,7 @@ extern class UICollectionView extends UIScrollView
 	overload public static function autorelease():UICollectionView;
 
 	@:native("initWithFrame:collectionViewLayout")
-	overload public function initWithFrame_collectionViewLayout(frame:CGRect, collectionViewLayout:UICollectionViewLayout):UICollectionView;
+	overload public function initWithFrameCollectionViewLayout(frame:CGRect, collectionViewLayout:UICollectionViewLayout):UICollectionView;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICollectionView;
@@ -83,28 +83,28 @@ extern class UICollectionView extends UIScrollView
 	public var backgroundView:UIView;
 
 	@:native("registerClass:forCellWithReuseIdentifier")
-	overload public function registerClass_forCellWithReuseIdentifier(cellClass:Dynamic, forCellWithReuseIdentifier:NSString):Void;
+	overload public function registerClassForCellWithReuseIdentifier(cellClass:Dynamic, forCellWithReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forCellWithReuseIdentifier")
-	overload public function registerNib_forCellWithReuseIdentifier(nib:UINib, forCellWithReuseIdentifier:NSString):Void;
+	overload public function registerNibForCellWithReuseIdentifier(nib:UINib, forCellWithReuseIdentifier:NSString):Void;
 
 	@:native("registerClass:forSupplementaryViewOfKind:withReuseIdentifier")
-	overload public function registerClass_forSupplementaryViewOfKind_withReuseIdentifier(viewClass:Dynamic, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
+	overload public function registerClassForSupplementaryViewOfKindWithReuseIdentifier(viewClass:Dynamic, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
 
 	@:native("registerNib:forSupplementaryViewOfKind:withReuseIdentifier")
-	overload public function registerNib_forSupplementaryViewOfKind_withReuseIdentifier(nib:UINib, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
+	overload public function registerNibForSupplementaryViewOfKindWithReuseIdentifier(nib:UINib, forSupplementaryViewOfKind:NSString, withReuseIdentifier:NSString):Void;
 
 	@:native("dequeueReusableCellWithReuseIdentifier:forIndexPath")
-	overload public function dequeueReusableCellWithReuseIdentifier_forIndexPath(identifier:NSString, forIndexPath:NSIndexPath):UICollectionViewCell;
+	overload public function dequeueReusableCellWithReuseIdentifierForIndexPath(identifier:NSString, forIndexPath:NSIndexPath):UICollectionViewCell;
 
 	@:native("dequeueReusableSupplementaryViewOfKind:withReuseIdentifier:forIndexPath")
-	overload public function dequeueReusableSupplementaryViewOfKind_withReuseIdentifier_forIndexPath(elementKind:NSString, withReuseIdentifier:NSString, forIndexPath:NSIndexPath):UICollectionReusableView;
+	overload public function dequeueReusableSupplementaryViewOfKindWithReuseIdentifierForIndexPath(elementKind:NSString, withReuseIdentifier:NSString, forIndexPath:NSIndexPath):UICollectionReusableView;
 
 	@:native("dequeueConfiguredReusableCellWithRegistration:forIndexPath:item")
-	overload public function dequeueConfiguredReusableCellWithRegistration_forIndexPath_item(registration:UICollectionViewCellRegistration, forIndexPath:NSIndexPath, item:Dynamic):UICollectionViewCell;
+	overload public function dequeueConfiguredReusableCellWithRegistrationForIndexPathItem(registration:UICollectionViewCellRegistration, forIndexPath:NSIndexPath, item:Dynamic):UICollectionViewCell;
 
 	@:native("dequeueConfiguredReusableSupplementaryViewWithRegistration:forIndexPath")
-	overload public function dequeueConfiguredReusableSupplementaryViewWithRegistration_forIndexPath(registration:UICollectionViewSupplementaryRegistration, forIndexPath:NSIndexPath):UICollectionReusableView;
+	overload public function dequeueConfiguredReusableSupplementaryViewWithRegistrationForIndexPath(registration:UICollectionViewSupplementaryRegistration, forIndexPath:NSIndexPath):UICollectionReusableView;
 
 	@:native("allowsSelection")
 	public var allowsSelection:Bool;
@@ -116,10 +116,10 @@ extern class UICollectionView extends UIScrollView
 	public var indexPathsForSelectedItems:Dynamic;
 
 	@:native("selectItemAtIndexPath:animated:scrollPosition")
-	overload public function selectItemAtIndexPath_animated_scrollPosition(indexPath:NSIndexPath, animated:Bool, scrollPosition:UICollectionViewScrollPosition):Void;
+	overload public function selectItemAtIndexPathAnimatedScrollPosition(indexPath:NSIndexPath, animated:Bool, scrollPosition:UICollectionViewScrollPosition):Void;
 
 	@:native("deselectItemAtIndexPath:animated")
-	overload public function deselectItemAtIndexPath_animated(indexPath:NSIndexPath, animated:Bool):Void;
+	overload public function deselectItemAtIndexPathAnimated(indexPath:NSIndexPath, animated:Bool):Void;
 
 	@:native("hasUncommittedUpdates")
 	public var hasUncommittedUpdates:Bool;
@@ -128,13 +128,13 @@ extern class UICollectionView extends UIScrollView
 	overload public function reloadData():Void;
 
 	@:native("setCollectionViewLayout:animated")
-	overload public function setCollectionViewLayout_animated(layout:UICollectionViewLayout, animated:Bool):Void;
+	overload public function setCollectionViewLayoutAnimated(layout:UICollectionViewLayout, animated:Bool):Void;
 
 	@:native("setCollectionViewLayout:animated:completion")
-	overload public function setCollectionViewLayout_animated_completion(layout:UICollectionViewLayout, animated:Bool, completion:Dynamic):Void;
+	overload public function setCollectionViewLayoutAnimatedCompletion(layout:UICollectionViewLayout, animated:Bool, completion:Dynamic):Void;
 
 	@:native("startInteractiveTransitionToCollectionViewLayout:completion")
-	overload public function startInteractiveTransitionToCollectionViewLayout_completion(layout:UICollectionViewLayout, completion:Dynamic):UICollectionViewTransitionLayout;
+	overload public function startInteractiveTransitionToCollectionViewLayoutCompletion(layout:UICollectionViewLayout, completion:Dynamic):UICollectionViewTransitionLayout;
 
 	@:native("finishInteractiveTransition")
 	overload public function finishInteractiveTransition():Void;
@@ -152,7 +152,7 @@ extern class UICollectionView extends UIScrollView
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryElementOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryElementOfKind_atIndexPath(kind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryElementOfKindAtIndexPath(kind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("indexPathForItemAtPoint")
 	overload public function indexPathForItemAtPoint(point:CGPoint):NSIndexPath;
@@ -170,7 +170,7 @@ extern class UICollectionView extends UIScrollView
 	public var indexPathsForVisibleItems:Dynamic;
 
 	@:native("supplementaryViewForElementKind:atIndexPath")
-	overload public function supplementaryViewForElementKind_atIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionReusableView;
+	overload public function supplementaryViewForElementKindAtIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionReusableView;
 
 	@:native("visibleSupplementaryViewsOfKind")
 	overload public function visibleSupplementaryViewsOfKind(elementKind:NSString):Dynamic;
@@ -179,7 +179,7 @@ extern class UICollectionView extends UIScrollView
 	overload public function indexPathsForVisibleSupplementaryElementsOfKind(elementKind:NSString):Dynamic;
 
 	@:native("scrollToItemAtIndexPath:atScrollPosition:animated")
-	overload public function scrollToItemAtIndexPath_atScrollPosition_animated(indexPath:NSIndexPath, atScrollPosition:UICollectionViewScrollPosition, animated:Bool):Void;
+	overload public function scrollToItemAtIndexPathAtScrollPositionAnimated(indexPath:NSIndexPath, atScrollPosition:UICollectionViewScrollPosition, animated:Bool):Void;
 
 	@:native("insertSections")
 	overload public function insertSections(sections:Dynamic):Void;
@@ -191,7 +191,7 @@ extern class UICollectionView extends UIScrollView
 	overload public function reloadSections(sections:Dynamic):Void;
 
 	@:native("moveSection:toSection")
-	overload public function moveSection_toSection(section:Int, toSection:Int):Void;
+	overload public function moveSectionToSection(section:Int, toSection:Int):Void;
 
 	@:native("insertItemsAtIndexPaths")
 	overload public function insertItemsAtIndexPaths(indexPaths:Dynamic):Void;
@@ -203,10 +203,10 @@ extern class UICollectionView extends UIScrollView
 	overload public function reloadItemsAtIndexPaths(indexPaths:Dynamic):Void;
 
 	@:native("moveItemAtIndexPath:toIndexPath")
-	overload public function moveItemAtIndexPath_toIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
+	overload public function moveItemAtIndexPathToIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("performBatchUpdates:completion")
-	overload public function performBatchUpdates_completion(updates:Dynamic, completion:Dynamic):Void;
+	overload public function performBatchUpdatesCompletion(updates:Dynamic, completion:Dynamic):Void;
 
 	@:native("beginInteractiveMovementForItemAtIndexPath")
 	overload public function beginInteractiveMovementForItemAtIndexPath(indexPath:NSIndexPath):Bool;
@@ -260,25 +260,25 @@ extern class UICollectionView extends UIScrollView
 	overload public function adjustedContentInsetDidChange():Void;
 
 	@:native("setContentOffset:animated")
-	overload public function setContentOffset_animated(contentOffset:CGPoint, animated:Bool):Void;
+	overload public function setContentOffsetAnimated(contentOffset:CGPoint, animated:Bool):Void;
 
 	@:native("scrollRectToVisible:animated")
-	overload public function scrollRectToVisible_animated(rect:CGRect, animated:Bool):Void;
+	overload public function scrollRectToVisibleAnimated(rect:CGRect, animated:Bool):Void;
 
 	@:native("flashScrollIndicators")
 	overload public function flashScrollIndicators():Void;
 
 	@:native("touchesShouldBegin:withEvent:inContentView")
-	overload public function touchesShouldBegin_withEvent_inContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
+	overload public function touchesShouldBeginWithEventInContentView(touches:Dynamic, withEvent:UIEvent, inContentView:UIView):Bool;
 
 	@:native("touchesShouldCancelInContentView")
 	overload public function touchesShouldCancelInContentView(view:UIView):Bool;
 
 	@:native("setZoomScale:animated")
-	overload public function setZoomScale_animated(scale:Float, animated:Bool):Void;
+	overload public function setZoomScaleAnimated(scale:Float, animated:Bool):Void;
 
 	@:native("zoomToRect:animated")
-	overload public function zoomToRect_animated(rect:CGRect, animated:Bool):Void;
+	overload public function zoomToRectAnimated(rect:CGRect, animated:Bool):Void;
 
 	@:native("encodeWithCoder")
 	overload public function encodeWithCoder(aCoder:Dynamic):Void
@@ -288,7 +288,7 @@ extern class UICollectionView extends UIScrollView
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 
 	@:native("drawRect:forViewPrintFormatter")
-	overload public function drawRect_forViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
+	overload public function drawRectForViewPrintFormatter(rect:CGRect, forViewPrintFormatter:UIViewPrintFormatter):Void;
 
 	@:native("endEditing")
 	overload public function endEditing(force:Bool):Bool;
@@ -309,25 +309,25 @@ extern class UICollectionView extends UIScrollView
 	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute(attribute:UISemanticContentAttribute):UIUserInterfaceLayoutDirection;
 
 	@:native("userInterfaceLayoutDirectionForSemanticContentAttribute:relativeToLayoutDirection")
-	overload public static function userInterfaceLayoutDirectionForSemanticContentAttribute_relativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
+	overload public static function userInterfaceLayoutDirectionForSemanticContentAttributeRelativeToLayoutDirection(semanticContentAttribute:UISemanticContentAttribute, relativeToLayoutDirection:UIUserInterfaceLayoutDirection):UIUserInterfaceLayoutDirection;
 
 	@:native("hitTest:withEvent")
-	overload public function hitTest_withEvent(point:CGPoint, withEvent:UIEvent):UIView;
+	overload public function hitTestWithEvent(point:CGPoint, withEvent:UIEvent):UIView;
 
 	@:native("pointInside:withEvent")
-	overload public function pointInside_withEvent(point:CGPoint, withEvent:UIEvent):Bool;
+	overload public function pointInsideWithEvent(point:CGPoint, withEvent:UIEvent):Bool;
 
 	@:native("convertPoint:toView")
-	overload public function convertPoint_toView(point:CGPoint, toView:UIView):CGPoint;
+	overload public function convertPointToView(point:CGPoint, toView:UIView):CGPoint;
 
 	@:native("convertPoint:fromView")
-	overload public function convertPoint_fromView(point:CGPoint, fromView:UIView):CGPoint;
+	overload public function convertPointFromView(point:CGPoint, fromView:UIView):CGPoint;
 
 	@:native("convertRect:toView")
-	overload public function convertRect_toView(rect:CGRect, toView:UIView):CGRect;
+	overload public function convertRectToView(rect:CGRect, toView:UIView):CGRect;
 
 	@:native("convertRect:fromView")
-	overload public function convertRect_fromView(rect:CGRect, fromView:UIView):CGRect;
+	overload public function convertRectFromView(rect:CGRect, fromView:UIView):CGRect;
 
 	@:native("sizeThatFits")
 	overload public function sizeThatFits(size:CGSize):CGSize;
@@ -339,19 +339,19 @@ extern class UICollectionView extends UIScrollView
 	overload public function removeFromSuperview():Void;
 
 	@:native("insertSubview:atIndex")
-	overload public function insertSubview_atIndex(view:UIView, atIndex:Int):Void;
+	overload public function insertSubviewAtIndex(view:UIView, atIndex:Int):Void;
 
 	@:native("exchangeSubviewAtIndex:withSubviewAtIndex")
-	overload public function exchangeSubviewAtIndex_withSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
+	overload public function exchangeSubviewAtIndexWithSubviewAtIndex(index1:Int, withSubviewAtIndex:Int):Void;
 
 	@:native("addSubview")
 	overload public function addSubview(view:UIView):Void;
 
 	@:native("insertSubview:belowSubview")
-	overload public function insertSubview_belowSubview(view:UIView, belowSubview:UIView):Void;
+	overload public function insertSubviewBelowSubview(view:UIView, belowSubview:UIView):Void;
 
 	@:native("insertSubview:aboveSubview")
-	overload public function insertSubview_aboveSubview(view:UIView, aboveSubview:UIView):Void;
+	overload public function insertSubviewAboveSubview(view:UIView, aboveSubview:UIView):Void;
 
 	@:native("bringSubviewToFront")
 	overload public function bringSubviewToFront(view:UIView):Void;
@@ -423,34 +423,34 @@ extern class UICollectionView extends UIScrollView
 	overload public static function inheritedAnimationDuration():Dynamic;
 
 	@:native("animateWithDuration:delay:options:animations:completion")
-	overload public static function animateWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations:completion")
-	overload public static function animateWithDuration_animations_completion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationAnimationsCompletion(duration:Dynamic, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("animateWithDuration:animations")
-	overload public static function animateWithDuration_animations(duration:Dynamic, animations:Dynamic):Void;
+	overload public static function animateWithDurationAnimations(duration:Dynamic, animations:Dynamic):Void;
 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
-	overload public static function animateWithDuration_delay_usingSpringWithDamping_initialSpringVelocity_options_animations_completion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionWithView:duration:options:animations:completion")
-	overload public static function transitionWithView_duration_options_animations_completion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function transitionWithViewDurationOptionsAnimationsCompletion(view:UIView, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("transitionFromView:toView:duration:options:completion")
-	overload public static function transitionFromView_toView_duration_options_completion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
+	overload public static function transitionFromViewToViewDurationOptionsCompletion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimation_onViews_options_animations_completion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
-	overload public static function modifyAnimationsWithRepeatCount_autoreverses_animations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
+	overload public static function modifyAnimationsWithRepeatCountAutoreversesAnimations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
 
 	@:native("animateKeyframesWithDuration:delay:options:animations:completion")
-	overload public static function animateKeyframesWithDuration_delay_options_animations_completion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function animateKeyframesWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewKeyframeAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	@:native("addKeyframeWithRelativeStartTime:relativeDuration:animations")
-	overload public static function addKeyframeWithRelativeStartTime_relativeDuration_animations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
+	overload public static function addKeyframeWithRelativeStartTimeRelativeDurationAnimations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
 	@:native("addGestureRecognizer")
 	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
@@ -507,19 +507,19 @@ extern class UICollectionView extends UIScrollView
 	overload public function contentHuggingPriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentHuggingPriority:forAxis")
-	overload public function setContentHuggingPriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentHuggingPriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("contentCompressionResistancePriorityForAxis")
 	overload public function contentCompressionResistancePriorityForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
 	@:native("setContentCompressionResistancePriority:forAxis")
-	overload public function setContentCompressionResistancePriority_forAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
+	overload public function setContentCompressionResistancePriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
 	@:native("systemLayoutSizeFittingSize")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
-	overload public function systemLayoutSizeFittingSize_withHorizontalFittingPriority_verticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
+	overload public function systemLayoutSizeFittingSizeWithHorizontalFittingPriorityVerticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
@@ -543,10 +543,10 @@ extern class UICollectionView extends UIScrollView
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
 	@:native("resizableSnapshotViewFromRect:afterScreenUpdates:withCapInsets")
-	overload public function resizableSnapshotViewFromRect_afterScreenUpdates_withCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
+	overload public function resizableSnapshotViewFromRectAfterScreenUpdatesWithCapInsets(rect:CGRect, afterScreenUpdates:Bool, withCapInsets:Dynamic):UIView;
 
 	@:native("drawViewHierarchyInRect:afterScreenUpdates")
-	overload public function drawViewHierarchyInRect_afterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
+	overload public function drawViewHierarchyInRectAfterScreenUpdates(rect:CGRect, afterScreenUpdates:Bool):Bool;
 
 
 }

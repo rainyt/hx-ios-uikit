@@ -48,7 +48,7 @@ extern class NSTextContainer
 	public var maximumNumberOfLines:Int;
 
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
-	overload public function lineFragmentRectForProposedRect_atIndex_writingDirection_remainingRect(proposedRect:CGRect, atIndex:Int, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
+	overload public function lineFragmentRectForProposedRectAtIndexWritingDirectionRemainingRect(proposedRect:CGRect, atIndex:Int, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
 
 	@:native("simpleRectangularTextContainer")
 	public var simpleRectangularTextContainer:Bool;

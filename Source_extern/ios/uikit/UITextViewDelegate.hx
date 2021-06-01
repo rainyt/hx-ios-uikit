@@ -29,7 +29,7 @@ extern interface UITextViewDelegate{
 	overload public function textViewDidEndEditing(textView:UITextView):Void;
 
 	@:native("textView:shouldChangeTextInRange:replacementText")
-	overload public function textView_shouldChangeTextInRange_replacementText(textView:UITextView, shouldChangeTextInRange:Dynamic, replacementText:NSString):Bool;
+	overload public function textViewShouldChangeTextInRangeReplacementText(textView:UITextView, shouldChangeTextInRange:Dynamic, replacementText:NSString):Bool;
 
 	@:native("textViewDidChange")
 	overload public function textViewDidChange(textView:UITextView):Void;
@@ -38,10 +38,10 @@ extern interface UITextViewDelegate{
 	overload public function textViewDidChangeSelection(textView:UITextView):Void;
 
 	@:native("textView:shouldInteractWithURL:inRange:interaction")
-	overload public function textView_shouldInteractWithURL_inRange_interaction(textView:UITextView, shouldInteractWithURL:Dynamic, inRange:Dynamic, interaction:UITextItemInteraction):Bool;
+	overload public function textViewShouldInteractWithURLInRangeInteraction(textView:UITextView, shouldInteractWithURL:Dynamic, inRange:Dynamic, interaction:UITextItemInteraction):Bool;
 
 	@:native("textView:shouldInteractWithTextAttachment:inRange:interaction")
-	overload public function textView_shouldInteractWithTextAttachment_inRange_interaction(textView:UITextView, shouldInteractWithTextAttachment:NSTextAttachment, inRange:Dynamic, interaction:UITextItemInteraction):Bool;
+	overload public function textViewShouldInteractWithTextAttachmentInRangeInteraction(textView:UITextView, shouldInteractWithTextAttachment:NSTextAttachment, inRange:Dynamic, interaction:UITextItemInteraction):Bool;
 
 
 }

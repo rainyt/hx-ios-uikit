@@ -24,10 +24,10 @@ extern class UIPointerShape
 	overload public static function shapeWithRoundedRect(rect:CGRect):UIPointerShape;
 
 	@:native("shapeWithRoundedRect:cornerRadius")
-	overload public static function shapeWithRoundedRect_cornerRadius(rect:CGRect, cornerRadius:Float):UIPointerShape;
+	overload public static function shapeWithRoundedRectCornerRadius(rect:CGRect, cornerRadius:Float):UIPointerShape;
 
 	@:native("beamWithPreferredLength:axis")
-	overload public static function beamWithPreferredLength_axis(length:Float, axis:UIAxis):UIPointerShape;
+	overload public static function beamWithPreferredLengthAxis(length:Float, axis:UIAxis):UIPointerShape;
 
 	@:native("init")
 	overload public function init():UIPointerShape;

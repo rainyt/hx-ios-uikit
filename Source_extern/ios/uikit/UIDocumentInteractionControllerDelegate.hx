@@ -45,16 +45,16 @@ extern interface UIDocumentInteractionControllerDelegate{
 	overload public function documentInteractionControllerDidDismissOpenInMenu(controller:UIDocumentInteractionController):Void;
 
 	@:native("documentInteractionController:willBeginSendingToApplication")
-	overload public function documentInteractionController_willBeginSendingToApplication(controller:UIDocumentInteractionController, willBeginSendingToApplication:NSString):Void;
+	overload public function documentInteractionControllerWillBeginSendingToApplication(controller:UIDocumentInteractionController, willBeginSendingToApplication:NSString):Void;
 
 	@:native("documentInteractionController:didEndSendingToApplication")
-	overload public function documentInteractionController_didEndSendingToApplication(controller:UIDocumentInteractionController, didEndSendingToApplication:NSString):Void;
+	overload public function documentInteractionControllerDidEndSendingToApplication(controller:UIDocumentInteractionController, didEndSendingToApplication:NSString):Void;
 
 	@:native("documentInteractionController:canPerformAction")
-	overload public function documentInteractionController_canPerformAction(controller:UIDocumentInteractionController, canPerformAction:String):Bool;
+	overload public function documentInteractionControllerCanPerformAction(controller:UIDocumentInteractionController, canPerformAction:String):Bool;
 
 	@:native("documentInteractionController:performAction")
-	overload public function documentInteractionController_performAction(controller:UIDocumentInteractionController, performAction:String):Bool;
+	overload public function documentInteractionControllerPerformAction(controller:UIDocumentInteractionController, performAction:String):Bool;
 
 
 }
