@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UICollectionViewDropDelegate;
 import ios.uikit.UICollectionView;
 import ios.uikit.UICollectionViewDropProposal;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UICollectionViewDropDelegate")
@@ -25,7 +26,7 @@ extern interface UICollectionViewDropDelegate{
 	overload public function collectionView_dropSessionDidEnter(collectionView:UICollectionView, dropSessionDidEnter:Dynamic):Void;
 
 	@:native("collectionView:dropSessionDidUpdate:withDestinationIndexPath")
-	overload public function collectionView_dropSessionDidUpdate_withDestinationIndexPath(collectionView:UICollectionView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:Dynamic):UICollectionViewDropProposal;
+	overload public function collectionView_dropSessionDidUpdate_withDestinationIndexPath(collectionView:UICollectionView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:NSIndexPath):UICollectionViewDropProposal;
 
 	@:native("collectionView:dropSessionDidExit")
 	overload public function collectionView_dropSessionDidExit(collectionView:UICollectionView, dropSessionDidExit:Dynamic):Void;
@@ -34,7 +35,7 @@ extern interface UICollectionViewDropDelegate{
 	overload public function collectionView_dropSessionDidEnd(collectionView:UICollectionView, dropSessionDidEnd:Dynamic):Void;
 
 	@:native("collectionView:dropPreviewParametersForItemAtIndexPath")
-	overload public function collectionView_dropPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dropPreviewParametersForItemAtIndexPath:Dynamic):UIDragPreviewParameters;
+	overload public function collectionView_dropPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dropPreviewParametersForItemAtIndexPath:NSIndexPath):UIDragPreviewParameters;
 
 
 }

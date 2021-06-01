@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextPasteItem;
+import ios.uikit.NSItemProvider;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
 import ios.uikit.NSAttributedString;
@@ -17,7 +18,7 @@ extern interface UITextPasteItem{
 	overload public static function autorelease():UITextPasteItem;
 
 	@:native("itemProvider")
-	public var itemProvider:Dynamic;
+	public var itemProvider:NSItemProvider;
 
 	@:native("localObject")
 	public var localObject:Dynamic;

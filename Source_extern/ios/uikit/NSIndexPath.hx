@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSIndexPath;
 @:objc
 @:native("NSIndexPath")
 @:include("UIKit/UIKit.h")

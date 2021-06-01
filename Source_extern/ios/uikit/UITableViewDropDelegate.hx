@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UITableViewDropDelegate;
 import ios.uikit.UITableView;
 import ios.uikit.UITableViewDropProposal;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UITableViewDropDelegate")
@@ -25,7 +26,7 @@ extern interface UITableViewDropDelegate{
 	overload public function tableView_dropSessionDidEnter(tableView:UITableView, dropSessionDidEnter:Dynamic):Void;
 
 	@:native("tableView:dropSessionDidUpdate:withDestinationIndexPath")
-	overload public function tableView_dropSessionDidUpdate_withDestinationIndexPath(tableView:UITableView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:Dynamic):UITableViewDropProposal;
+	overload public function tableView_dropSessionDidUpdate_withDestinationIndexPath(tableView:UITableView, dropSessionDidUpdate:Dynamic, withDestinationIndexPath:NSIndexPath):UITableViewDropProposal;
 
 	@:native("tableView:dropSessionDidExit")
 	overload public function tableView_dropSessionDidExit(tableView:UITableView, dropSessionDidExit:Dynamic):Void;
@@ -34,7 +35,7 @@ extern interface UITableViewDropDelegate{
 	overload public function tableView_dropSessionDidEnd(tableView:UITableView, dropSessionDidEnd:Dynamic):Void;
 
 	@:native("tableView:dropPreviewParametersForRowAtIndexPath")
-	overload public function tableView_dropPreviewParametersForRowAtIndexPath(tableView:UITableView, dropPreviewParametersForRowAtIndexPath:Dynamic):UIDragPreviewParameters;
+	overload public function tableView_dropPreviewParametersForRowAtIndexPath(tableView:UITableView, dropPreviewParametersForRowAtIndexPath:NSIndexPath):UIDragPreviewParameters;
 
 
 }

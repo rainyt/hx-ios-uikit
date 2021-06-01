@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UIItemProviderPresentationSizeProviding;
 import ios.objc.CGSize;
 @:objc
 @:native("UIItemProviderPresentationSizeProviding")

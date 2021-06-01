@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.UNNotificationResponse;
 import ios.uikit.UIScene;
 @:objc
 @:native("UNNotificationResponse")

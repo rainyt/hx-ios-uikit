@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UICollectionViewDropItem;
 import ios.uikit.UIDragItem;
+import ios.uikit.NSIndexPath;
 import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewDropItem")
@@ -18,7 +19,7 @@ extern interface UICollectionViewDropItem{
 	public var dragItem:UIDragItem;
 
 	@:native("sourceIndexPath")
-	public var sourceIndexPath:Dynamic;
+	public var sourceIndexPath:NSIndexPath;
 
 	@:native("previewSize")
 	public var previewSize:CGSize;

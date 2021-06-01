@@ -136,8 +136,10 @@ class ExternBaseClass {
 			} else if (value.indexOf("-") == 0 || value.indexOf("+") == 0) {
 				// 对象方法
 				var func = ObjcFun.parsing(hextern.typedefs, this.className, value);
-				if (func != null)
+				if (func != null && !_propertys.exists(func.name)) {
+					_propertys.set(func.name, func);
 					funcAndAttr.push(func);
+				}
 			}
 		}
 	}

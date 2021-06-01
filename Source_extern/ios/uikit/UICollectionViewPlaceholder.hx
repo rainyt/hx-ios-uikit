@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewPlaceholder;
+import ios.uikit.NSIndexPath;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewPlaceholder")
@@ -14,7 +15,7 @@ extern class UICollectionViewPlaceholder{
 	overload public static function autorelease():UICollectionViewPlaceholder;
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier")
-	overload public function initWithInsertionIndexPath_reuseIdentifier(insertionIndexPath:Dynamic, reuseIdentifier:NSString):UICollectionViewPlaceholder;
+	overload public function initWithInsertionIndexPath_reuseIdentifier(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString):UICollectionViewPlaceholder;
 
 	@:native("init")
 	overload public function init():UICollectionViewPlaceholder;

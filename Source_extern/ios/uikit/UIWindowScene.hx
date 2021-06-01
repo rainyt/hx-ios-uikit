@@ -6,6 +6,7 @@ import ios.uikit.UIScreen;
 import ios.uikit.UIInterfaceOrientation;
 import ios.uikit.UITraitCollection;
 import ios.uikit.UISceneSizeRestrictions;
+import ios.uikit.UITitlebar;
 import ios.uikit.UIStatusBarManager;
 @:objc
 @:native("UIWindowScene")
@@ -40,7 +41,7 @@ extern class UIWindowScene{
 	public var windows:Dynamic;
 
 	@:native("titlebar")
-	public var titlebar:Dynamic;
+	public var titlebar:UITitlebar;
 
 	@:native("statusBarManager")
 	public var statusBarManager:UIStatusBarManager;

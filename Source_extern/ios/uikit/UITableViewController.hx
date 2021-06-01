@@ -11,6 +11,7 @@ import ios.uikit.NSCoder;
 import ios.uikit.UITableView;
 import ios.uikit.UIRefreshControl;
 import ios.uikit.UITableViewCell;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UIView;
 import ios.uikit.UITableViewCellEditingStyle;
 import ios.uikit.UISwipeActionsConfiguration;
@@ -56,7 +57,7 @@ extern class UITableViewController extends UIViewController
 	public var refreshControl:UIRefreshControl;
 
 	@:native("tableView:willDisplayCell:forRowAtIndexPath")
-	overload public function tableView_willDisplayCell_forRowAtIndexPath(tableView:UITableView, willDisplayCell:UITableViewCell, forRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_willDisplayCell_forRowAtIndexPath(tableView:UITableView, willDisplayCell:UITableViewCell, forRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:willDisplayHeaderView:forSection")
 	overload public function tableView_willDisplayHeaderView_forSection(tableView:UITableView, willDisplayHeaderView:UIView, forSection:Int):Void;
@@ -65,7 +66,7 @@ extern class UITableViewController extends UIViewController
 	overload public function tableView_willDisplayFooterView_forSection(tableView:UITableView, willDisplayFooterView:UIView, forSection:Int):Void;
 
 	@:native("tableView:didEndDisplayingCell:forRowAtIndexPath")
-	overload public function tableView_didEndDisplayingCell_forRowAtIndexPath(tableView:UITableView, didEndDisplayingCell:UITableViewCell, forRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_didEndDisplayingCell_forRowAtIndexPath(tableView:UITableView, didEndDisplayingCell:UITableViewCell, forRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:didEndDisplayingHeaderView:forSection")
 	overload public function tableView_didEndDisplayingHeaderView_forSection(tableView:UITableView, didEndDisplayingHeaderView:UIView, forSection:Int):Void;
@@ -74,7 +75,7 @@ extern class UITableViewController extends UIViewController
 	overload public function tableView_didEndDisplayingFooterView_forSection(tableView:UITableView, didEndDisplayingFooterView:UIView, forSection:Int):Void;
 
 	@:native("tableView:heightForRowAtIndexPath")
-	overload public function tableView_heightForRowAtIndexPath(tableView:UITableView, heightForRowAtIndexPath:Dynamic):Float;
+	overload public function tableView_heightForRowAtIndexPath(tableView:UITableView, heightForRowAtIndexPath:NSIndexPath):Float;
 
 	@:native("tableView:heightForHeaderInSection")
 	overload public function tableView_heightForHeaderInSection(tableView:UITableView, heightForHeaderInSection:Int):Float;
@@ -83,7 +84,7 @@ extern class UITableViewController extends UIViewController
 	overload public function tableView_heightForFooterInSection(tableView:UITableView, heightForFooterInSection:Int):Float;
 
 	@:native("tableView:estimatedHeightForRowAtIndexPath")
-	overload public function tableView_estimatedHeightForRowAtIndexPath(tableView:UITableView, estimatedHeightForRowAtIndexPath:Dynamic):Float;
+	overload public function tableView_estimatedHeightForRowAtIndexPath(tableView:UITableView, estimatedHeightForRowAtIndexPath:NSIndexPath):Float;
 
 	@:native("tableView:estimatedHeightForHeaderInSection")
 	overload public function tableView_estimatedHeightForHeaderInSection(tableView:UITableView, estimatedHeightForHeaderInSection:Int):Float;
@@ -98,58 +99,58 @@ extern class UITableViewController extends UIViewController
 	overload public function tableView_viewForFooterInSection(tableView:UITableView, viewForFooterInSection:Int):UIView;
 
 	@:native("tableView:accessoryButtonTappedForRowWithIndexPath")
-	overload public function tableView_accessoryButtonTappedForRowWithIndexPath(tableView:UITableView, accessoryButtonTappedForRowWithIndexPath:Dynamic):Void;
+	overload public function tableView_accessoryButtonTappedForRowWithIndexPath(tableView:UITableView, accessoryButtonTappedForRowWithIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:shouldHighlightRowAtIndexPath")
-	overload public function tableView_shouldHighlightRowAtIndexPath(tableView:UITableView, shouldHighlightRowAtIndexPath:Dynamic):Bool;
+	overload public function tableView_shouldHighlightRowAtIndexPath(tableView:UITableView, shouldHighlightRowAtIndexPath:NSIndexPath):Bool;
 
 	@:native("tableView:didHighlightRowAtIndexPath")
-	overload public function tableView_didHighlightRowAtIndexPath(tableView:UITableView, didHighlightRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_didHighlightRowAtIndexPath(tableView:UITableView, didHighlightRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:didUnhighlightRowAtIndexPath")
-	overload public function tableView_didUnhighlightRowAtIndexPath(tableView:UITableView, didUnhighlightRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_didUnhighlightRowAtIndexPath(tableView:UITableView, didUnhighlightRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:willSelectRowAtIndexPath")
-	overload public function tableView_willSelectRowAtIndexPath(tableView:UITableView, willSelectRowAtIndexPath:Dynamic):Dynamic;
+	overload public function tableView_willSelectRowAtIndexPath(tableView:UITableView, willSelectRowAtIndexPath:NSIndexPath):NSIndexPath;
 
 	@:native("tableView:willDeselectRowAtIndexPath")
-	overload public function tableView_willDeselectRowAtIndexPath(tableView:UITableView, willDeselectRowAtIndexPath:Dynamic):Dynamic;
+	overload public function tableView_willDeselectRowAtIndexPath(tableView:UITableView, willDeselectRowAtIndexPath:NSIndexPath):NSIndexPath;
 
 	@:native("tableView:didSelectRowAtIndexPath")
-	overload public function tableView_didSelectRowAtIndexPath(tableView:UITableView, didSelectRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_didSelectRowAtIndexPath(tableView:UITableView, didSelectRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:didDeselectRowAtIndexPath")
-	overload public function tableView_didDeselectRowAtIndexPath(tableView:UITableView, didDeselectRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_didDeselectRowAtIndexPath(tableView:UITableView, didDeselectRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:editingStyleForRowAtIndexPath")
-	overload public function tableView_editingStyleForRowAtIndexPath(tableView:UITableView, editingStyleForRowAtIndexPath:Dynamic):UITableViewCellEditingStyle;
+	overload public function tableView_editingStyleForRowAtIndexPath(tableView:UITableView, editingStyleForRowAtIndexPath:NSIndexPath):UITableViewCellEditingStyle;
 
 	@:native("tableView:titleForDeleteConfirmationButtonForRowAtIndexPath")
-	overload public function tableView_titleForDeleteConfirmationButtonForRowAtIndexPath(tableView:UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath:Dynamic):NSString;
+	overload public function tableView_titleForDeleteConfirmationButtonForRowAtIndexPath(tableView:UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath:NSIndexPath):NSString;
 
 	@:native("tableView:leadingSwipeActionsConfigurationForRowAtIndexPath")
-	overload public function tableView_leadingSwipeActionsConfigurationForRowAtIndexPath(tableView:UITableView, leadingSwipeActionsConfigurationForRowAtIndexPath:Dynamic):UISwipeActionsConfiguration;
+	overload public function tableView_leadingSwipeActionsConfigurationForRowAtIndexPath(tableView:UITableView, leadingSwipeActionsConfigurationForRowAtIndexPath:NSIndexPath):UISwipeActionsConfiguration;
 
 	@:native("tableView:trailingSwipeActionsConfigurationForRowAtIndexPath")
-	overload public function tableView_trailingSwipeActionsConfigurationForRowAtIndexPath(tableView:UITableView, trailingSwipeActionsConfigurationForRowAtIndexPath:Dynamic):UISwipeActionsConfiguration;
+	overload public function tableView_trailingSwipeActionsConfigurationForRowAtIndexPath(tableView:UITableView, trailingSwipeActionsConfigurationForRowAtIndexPath:NSIndexPath):UISwipeActionsConfiguration;
 
 	@:native("tableView:shouldIndentWhileEditingRowAtIndexPath")
-	overload public function tableView_shouldIndentWhileEditingRowAtIndexPath(tableView:UITableView, shouldIndentWhileEditingRowAtIndexPath:Dynamic):Bool;
+	overload public function tableView_shouldIndentWhileEditingRowAtIndexPath(tableView:UITableView, shouldIndentWhileEditingRowAtIndexPath:NSIndexPath):Bool;
 
 	@:native("tableView:willBeginEditingRowAtIndexPath")
-	overload public function tableView_willBeginEditingRowAtIndexPath(tableView:UITableView, willBeginEditingRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_willBeginEditingRowAtIndexPath(tableView:UITableView, willBeginEditingRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:didEndEditingRowAtIndexPath")
-	overload public function tableView_didEndEditingRowAtIndexPath(tableView:UITableView, didEndEditingRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_didEndEditingRowAtIndexPath(tableView:UITableView, didEndEditingRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:targetIndexPathForMoveFromRowAtIndexPath:toProposedIndexPath")
-	overload public function tableView_targetIndexPathForMoveFromRowAtIndexPath_toProposedIndexPath(tableView:UITableView, targetIndexPathForMoveFromRowAtIndexPath:Dynamic, toProposedIndexPath:Dynamic):Dynamic;
+	overload public function tableView_targetIndexPathForMoveFromRowAtIndexPath_toProposedIndexPath(tableView:UITableView, targetIndexPathForMoveFromRowAtIndexPath:NSIndexPath, toProposedIndexPath:NSIndexPath):NSIndexPath;
 
 	@:native("tableView:indentationLevelForRowAtIndexPath")
-	overload public function tableView_indentationLevelForRowAtIndexPath(tableView:UITableView, indentationLevelForRowAtIndexPath:Dynamic):Int;
+	overload public function tableView_indentationLevelForRowAtIndexPath(tableView:UITableView, indentationLevelForRowAtIndexPath:NSIndexPath):Int;
 
 	@:native("tableView:canFocusRowAtIndexPath")
-	overload public function tableView_canFocusRowAtIndexPath(tableView:UITableView, canFocusRowAtIndexPath:Dynamic):Bool;
+	overload public function tableView_canFocusRowAtIndexPath(tableView:UITableView, canFocusRowAtIndexPath:NSIndexPath):Bool;
 
 	@:native("tableView:shouldUpdateFocusInContext")
 	overload public function tableView_shouldUpdateFocusInContext(tableView:UITableView, shouldUpdateFocusInContext:UITableViewFocusUpdateContext):Bool;
@@ -158,22 +159,22 @@ extern class UITableViewController extends UIViewController
 	overload public function tableView_didUpdateFocusInContext_withAnimationCoordinator(tableView:UITableView, didUpdateFocusInContext:UITableViewFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
 
 	@:native("indexPathForPreferredFocusedViewInTableView")
-	overload public function indexPathForPreferredFocusedViewInTableView(tableView:UITableView):Dynamic;
+	overload public function indexPathForPreferredFocusedViewInTableView(tableView:UITableView):NSIndexPath;
 
 	@:native("tableView:shouldSpringLoadRowAtIndexPath:withContext")
-	overload public function tableView_shouldSpringLoadRowAtIndexPath_withContext(tableView:UITableView, shouldSpringLoadRowAtIndexPath:Dynamic, withContext:Dynamic):Bool;
+	overload public function tableView_shouldSpringLoadRowAtIndexPath_withContext(tableView:UITableView, shouldSpringLoadRowAtIndexPath:NSIndexPath, withContext:Dynamic):Bool;
 
 	@:native("tableView:shouldBeginMultipleSelectionInteractionAtIndexPath")
-	overload public function tableView_shouldBeginMultipleSelectionInteractionAtIndexPath(tableView:UITableView, shouldBeginMultipleSelectionInteractionAtIndexPath:Dynamic):Bool;
+	overload public function tableView_shouldBeginMultipleSelectionInteractionAtIndexPath(tableView:UITableView, shouldBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath):Bool;
 
 	@:native("tableView:didBeginMultipleSelectionInteractionAtIndexPath")
-	overload public function tableView_didBeginMultipleSelectionInteractionAtIndexPath(tableView:UITableView, didBeginMultipleSelectionInteractionAtIndexPath:Dynamic):Void;
+	overload public function tableView_didBeginMultipleSelectionInteractionAtIndexPath(tableView:UITableView, didBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableViewDidEndMultipleSelectionInteraction")
 	overload public function tableViewDidEndMultipleSelectionInteraction(tableView:UITableView):Void;
 
 	@:native("tableView:contextMenuConfigurationForRowAtIndexPath:point")
-	overload public function tableView_contextMenuConfigurationForRowAtIndexPath_point(tableView:UITableView, contextMenuConfigurationForRowAtIndexPath:Dynamic, point:CGPoint):UIContextMenuConfiguration;
+	overload public function tableView_contextMenuConfigurationForRowAtIndexPath_point(tableView:UITableView, contextMenuConfigurationForRowAtIndexPath:NSIndexPath, point:CGPoint):UIContextMenuConfiguration;
 
 	@:native("tableView:previewForHighlightingContextMenuWithConfiguration")
 	overload public function tableView_previewForHighlightingContextMenuWithConfiguration(tableView:UITableView, previewForHighlightingContextMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
@@ -194,7 +195,7 @@ extern class UITableViewController extends UIViewController
 	overload public function tableView_numberOfRowsInSection(tableView:UITableView, numberOfRowsInSection:Int):Int;
 
 	@:native("tableView:cellForRowAtIndexPath")
-	overload public function tableView_cellForRowAtIndexPath(tableView:UITableView, cellForRowAtIndexPath:Dynamic):UITableViewCell;
+	overload public function tableView_cellForRowAtIndexPath(tableView:UITableView, cellForRowAtIndexPath:NSIndexPath):UITableViewCell;
 
 	@:native("numberOfSectionsInTableView")
 	overload public function numberOfSectionsInTableView(tableView:UITableView):Int;
@@ -206,10 +207,10 @@ extern class UITableViewController extends UIViewController
 	overload public function tableView_titleForFooterInSection(tableView:UITableView, titleForFooterInSection:Int):NSString;
 
 	@:native("tableView:canEditRowAtIndexPath")
-	overload public function tableView_canEditRowAtIndexPath(tableView:UITableView, canEditRowAtIndexPath:Dynamic):Bool;
+	overload public function tableView_canEditRowAtIndexPath(tableView:UITableView, canEditRowAtIndexPath:NSIndexPath):Bool;
 
 	@:native("tableView:canMoveRowAtIndexPath")
-	overload public function tableView_canMoveRowAtIndexPath(tableView:UITableView, canMoveRowAtIndexPath:Dynamic):Bool;
+	overload public function tableView_canMoveRowAtIndexPath(tableView:UITableView, canMoveRowAtIndexPath:NSIndexPath):Bool;
 
 	@:native("sectionIndexTitlesForTableView")
 	overload public function sectionIndexTitlesForTableView(tableView:UITableView):Dynamic;
@@ -218,10 +219,10 @@ extern class UITableViewController extends UIViewController
 	overload public function tableView_sectionForSectionIndexTitle_atIndex(tableView:UITableView, sectionForSectionIndexTitle:NSString, atIndex:Int):Int;
 
 	@:native("tableView:commitEditingStyle:forRowAtIndexPath")
-	overload public function tableView_commitEditingStyle_forRowAtIndexPath(tableView:UITableView, commitEditingStyle:UITableViewCellEditingStyle, forRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_commitEditingStyle_forRowAtIndexPath(tableView:UITableView, commitEditingStyle:UITableViewCellEditingStyle, forRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:moveRowAtIndexPath:toIndexPath")
-	overload public function tableView_moveRowAtIndexPath_toIndexPath(tableView:UITableView, moveRowAtIndexPath:Dynamic, toIndexPath:Dynamic):Void;
+	overload public function tableView_moveRowAtIndexPath_toIndexPath(tableView:UITableView, moveRowAtIndexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("setNeedsTouchBarUpdate")
 	overload public function setNeedsTouchBarUpdate():Void;

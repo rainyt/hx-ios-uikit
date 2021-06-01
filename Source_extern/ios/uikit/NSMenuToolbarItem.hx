@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSMenuToolbarItem;
 @:objc
 @:native("NSMenuToolbarItem")
 @:include("UIKit/UIKit.h")

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIFocusUpdateContext;
 import ios.uikit.UICollectionViewFocusUpdateContext;
+import ios.uikit.NSIndexPath;
 @:objc
 @:native("UICollectionViewFocusUpdateContext")
 @:include("UIKit/UIKit.h")
@@ -14,10 +15,10 @@ extern class UICollectionViewFocusUpdateContext extends UIFocusUpdateContext{
 	overload public static function autorelease():UICollectionViewFocusUpdateContext;
 
 	@:native("previouslyFocusedIndexPath")
-	public var previouslyFocusedIndexPath:Dynamic;
+	public var previouslyFocusedIndexPath:NSIndexPath;
 
 	@:native("nextFocusedIndexPath")
-	public var nextFocusedIndexPath:Dynamic;
+	public var nextFocusedIndexPath:NSIndexPath;
 
 
 }

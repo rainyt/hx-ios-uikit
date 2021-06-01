@@ -8,6 +8,7 @@ import ios.objc.CGPoint;
 import ios.objc.CGSize;
 import ios.objc.CATransform3D;
 import ios.objc.CGAffineTransform;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UICollectionElementCategory;
 import cpp.objc.NSString;
 import ios.uikit.UIDynamicItemCollisionBoundsType;
@@ -52,7 +53,7 @@ extern class UICollectionViewLayoutAttributes
 	public var hidden:Bool;
 
 	@:native("indexPath")
-	public var indexPath:Dynamic;
+	public var indexPath:NSIndexPath;
 
 	@:native("representedElementCategory")
 	public var representedElementCategory:UICollectionElementCategory;
@@ -61,13 +62,13 @@ extern class UICollectionViewLayoutAttributes
 	public var representedElementKind:NSString;
 
 	@:native("layoutAttributesForCellWithIndexPath")
-	overload public static function layoutAttributesForCellWithIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForCellWithIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForSupplementaryViewOfKind_withIndexPath(elementKind:NSString, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForSupplementaryViewOfKind_withIndexPath(elementKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
-	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public static function layoutAttributesForDecorationViewOfKind_withIndexPath(decorationViewKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIFocusUpdateContext;
 import ios.uikit.UITableViewFocusUpdateContext;
+import ios.uikit.NSIndexPath;
 @:objc
 @:native("UITableViewFocusUpdateContext")
 @:include("UIKit/UIKit.h")
@@ -14,10 +15,10 @@ extern class UITableViewFocusUpdateContext extends UIFocusUpdateContext{
 	overload public static function autorelease():UITableViewFocusUpdateContext;
 
 	@:native("previouslyFocusedIndexPath")
-	public var previouslyFocusedIndexPath:Dynamic;
+	public var previouslyFocusedIndexPath:NSIndexPath;
 
 	@:native("nextFocusedIndexPath")
-	public var nextFocusedIndexPath:Dynamic;
+	public var nextFocusedIndexPath:NSIndexPath;
 
 
 }

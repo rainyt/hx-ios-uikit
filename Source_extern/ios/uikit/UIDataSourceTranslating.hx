@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIDataSourceTranslating;
+import ios.uikit.NSIndexPath;
 @:objc
 @:native("UIDataSourceTranslating")
 @:include("UIKit/UIKit.h")
@@ -19,10 +20,10 @@ extern interface UIDataSourceTranslating{
 	overload public function dataSourceSectionIndexForPresentationSectionIndex(presentationSectionIndex:Int):Int;
 
 	@:native("presentationIndexPathForDataSourceIndexPath")
-	overload public function presentationIndexPathForDataSourceIndexPath(dataSourceIndexPath:Dynamic):Dynamic;
+	overload public function presentationIndexPathForDataSourceIndexPath(dataSourceIndexPath:NSIndexPath):NSIndexPath;
 
 	@:native("dataSourceIndexPathForPresentationIndexPath")
-	overload public function dataSourceIndexPathForPresentationIndexPath(presentationIndexPath:Dynamic):Dynamic;
+	overload public function dataSourceIndexPathForPresentationIndexPath(presentationIndexPath:NSIndexPath):NSIndexPath;
 
 	@:native("performUsingPresentationValues")
 	overload public function performUsingPresentationValues(actionsToTranslate:Dynamic):Void;

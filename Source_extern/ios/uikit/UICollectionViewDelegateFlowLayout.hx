@@ -4,6 +4,7 @@ import ios.uikit.UICollectionViewDelegateFlowLayout;
 import ios.objc.CGSize;
 import ios.uikit.UICollectionView;
 import ios.uikit.UICollectionViewLayout;
+import ios.uikit.NSIndexPath;
 @:objc
 @:native("UICollectionViewDelegateFlowLayout")
 @:include("UIKit/UIKit.h")
@@ -16,7 +17,7 @@ extern interface UICollectionViewDelegateFlowLayout{
 	overload public static function autorelease():UICollectionViewDelegateFlowLayout;
 
 	@:native("collectionView:layout:sizeForItemAtIndexPath")
-	overload public function collectionView_layout_sizeForItemAtIndexPath(collectionView:UICollectionView, layout:UICollectionViewLayout, sizeForItemAtIndexPath:Dynamic):CGSize;
+	overload public function collectionView_layout_sizeForItemAtIndexPath(collectionView:UICollectionView, layout:UICollectionViewLayout, sizeForItemAtIndexPath:NSIndexPath):CGSize;
 
 	@:native("collectionView:layout:insetForSectionAtIndex")
 	overload public function collectionView_layout_insetForSectionAtIndex(collectionView:UICollectionView, layout:UICollectionViewLayout, insetForSectionAtIndex:Int):Dynamic;

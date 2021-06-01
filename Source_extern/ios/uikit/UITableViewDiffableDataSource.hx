@@ -4,6 +4,7 @@ import ios.uikit.UITableViewDiffableDataSource;
 import ios.uikit.UITableViewDataSource;
 import ios.uikit.UITableView;
 import ios.uikit.NSDiffableDataSourceSnapshot;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UITableViewRowAnimation;
 import ios.uikit.UITableViewCell;
 import cpp.objc.NSString;
@@ -36,10 +37,10 @@ extern class UITableViewDiffableDataSource
 	overload public function applySnapshot_animatingDifferences_completion(snapshot:NSDiffableDataSourceSnapshot, animatingDifferences:Bool, completion:Dynamic):Void;
 
 	@:native("itemIdentifierForIndexPath")
-	overload public function itemIdentifierForIndexPath(indexPath:Dynamic):Dynamic;
+	overload public function itemIdentifierForIndexPath(indexPath:NSIndexPath):Dynamic;
 
 	@:native("indexPathForItemIdentifier")
-	overload public function indexPathForItemIdentifier(identifier:Dynamic):Dynamic;
+	overload public function indexPathForItemIdentifier(identifier:Dynamic):NSIndexPath;
 
 	@:native("defaultRowAnimation")
 	public var defaultRowAnimation:UITableViewRowAnimation;
@@ -48,7 +49,7 @@ extern class UITableViewDiffableDataSource
 	overload public function tableView_numberOfRowsInSection(tableView:UITableView, numberOfRowsInSection:Int):Int;
 
 	@:native("tableView:cellForRowAtIndexPath")
-	overload public function tableView_cellForRowAtIndexPath(tableView:UITableView, cellForRowAtIndexPath:Dynamic):UITableViewCell;
+	overload public function tableView_cellForRowAtIndexPath(tableView:UITableView, cellForRowAtIndexPath:NSIndexPath):UITableViewCell;
 
 	@:native("numberOfSectionsInTableView")
 	overload public function numberOfSectionsInTableView(tableView:UITableView):Int;
@@ -60,10 +61,10 @@ extern class UITableViewDiffableDataSource
 	overload public function tableView_titleForFooterInSection(tableView:UITableView, titleForFooterInSection:Int):NSString;
 
 	@:native("tableView:canEditRowAtIndexPath")
-	overload public function tableView_canEditRowAtIndexPath(tableView:UITableView, canEditRowAtIndexPath:Dynamic):Bool;
+	overload public function tableView_canEditRowAtIndexPath(tableView:UITableView, canEditRowAtIndexPath:NSIndexPath):Bool;
 
 	@:native("tableView:canMoveRowAtIndexPath")
-	overload public function tableView_canMoveRowAtIndexPath(tableView:UITableView, canMoveRowAtIndexPath:Dynamic):Bool;
+	overload public function tableView_canMoveRowAtIndexPath(tableView:UITableView, canMoveRowAtIndexPath:NSIndexPath):Bool;
 
 	@:native("sectionIndexTitlesForTableView")
 	overload public function sectionIndexTitlesForTableView(tableView:UITableView):Dynamic;
@@ -72,10 +73,10 @@ extern class UITableViewDiffableDataSource
 	overload public function tableView_sectionForSectionIndexTitle_atIndex(tableView:UITableView, sectionForSectionIndexTitle:NSString, atIndex:Int):Int;
 
 	@:native("tableView:commitEditingStyle:forRowAtIndexPath")
-	overload public function tableView_commitEditingStyle_forRowAtIndexPath(tableView:UITableView, commitEditingStyle:UITableViewCellEditingStyle, forRowAtIndexPath:Dynamic):Void;
+	overload public function tableView_commitEditingStyle_forRowAtIndexPath(tableView:UITableView, commitEditingStyle:UITableViewCellEditingStyle, forRowAtIndexPath:NSIndexPath):Void;
 
 	@:native("tableView:moveRowAtIndexPath:toIndexPath")
-	overload public function tableView_moveRowAtIndexPath_toIndexPath(tableView:UITableView, moveRowAtIndexPath:Dynamic, toIndexPath:Dynamic):Void;
+	overload public function tableView_moveRowAtIndexPath_toIndexPath(tableView:UITableView, moveRowAtIndexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 
 }

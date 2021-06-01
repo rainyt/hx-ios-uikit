@@ -1,6 +1,8 @@
 package ios.uikit;
 
+import ios.uikit.NSItemProvider;
 import ios.objc.CGSize;
+import ios.uikit.UIPreferredPresentationStyle;
 @:objc
 @:native("NSItemProvider")
 @:include("UIKit/UIKit.h")
@@ -16,7 +18,7 @@ extern class NSItemProvider{
 	public var preferredPresentationSize:CGSize;
 
 	@:native("preferredPresentationStyle")
-	public var preferredPresentationStyle:Dynamic;
+	public var preferredPresentationStyle:UIPreferredPresentationStyle;
 
 
 }

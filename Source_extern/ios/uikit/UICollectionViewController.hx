@@ -9,6 +9,7 @@ import cpp.objc.NSString;
 import ios.uikit.NSBundle;
 import ios.uikit.NSCoder;
 import ios.uikit.UICollectionView;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UICollectionViewCell;
 import ios.uikit.UICollectionReusableView;
 import ios.uikit.UICollectionViewFocusUpdateContext;
@@ -59,43 +60,43 @@ extern class UICollectionViewController extends UIViewController
 	public var installsStandardGestureForInteractiveMovement:Bool;
 
 	@:native("collectionView:shouldHighlightItemAtIndexPath")
-	overload public function collectionView_shouldHighlightItemAtIndexPath(collectionView:UICollectionView, shouldHighlightItemAtIndexPath:Dynamic):Bool;
+	overload public function collectionView_shouldHighlightItemAtIndexPath(collectionView:UICollectionView, shouldHighlightItemAtIndexPath:NSIndexPath):Bool;
 
 	@:native("collectionView:didHighlightItemAtIndexPath")
-	overload public function collectionView_didHighlightItemAtIndexPath(collectionView:UICollectionView, didHighlightItemAtIndexPath:Dynamic):Void;
+	overload public function collectionView_didHighlightItemAtIndexPath(collectionView:UICollectionView, didHighlightItemAtIndexPath:NSIndexPath):Void;
 
 	@:native("collectionView:didUnhighlightItemAtIndexPath")
-	overload public function collectionView_didUnhighlightItemAtIndexPath(collectionView:UICollectionView, didUnhighlightItemAtIndexPath:Dynamic):Void;
+	overload public function collectionView_didUnhighlightItemAtIndexPath(collectionView:UICollectionView, didUnhighlightItemAtIndexPath:NSIndexPath):Void;
 
 	@:native("collectionView:shouldSelectItemAtIndexPath")
-	overload public function collectionView_shouldSelectItemAtIndexPath(collectionView:UICollectionView, shouldSelectItemAtIndexPath:Dynamic):Bool;
+	overload public function collectionView_shouldSelectItemAtIndexPath(collectionView:UICollectionView, shouldSelectItemAtIndexPath:NSIndexPath):Bool;
 
 	@:native("collectionView:shouldDeselectItemAtIndexPath")
-	overload public function collectionView_shouldDeselectItemAtIndexPath(collectionView:UICollectionView, shouldDeselectItemAtIndexPath:Dynamic):Bool;
+	overload public function collectionView_shouldDeselectItemAtIndexPath(collectionView:UICollectionView, shouldDeselectItemAtIndexPath:NSIndexPath):Bool;
 
 	@:native("collectionView:didSelectItemAtIndexPath")
-	overload public function collectionView_didSelectItemAtIndexPath(collectionView:UICollectionView, didSelectItemAtIndexPath:Dynamic):Void;
+	overload public function collectionView_didSelectItemAtIndexPath(collectionView:UICollectionView, didSelectItemAtIndexPath:NSIndexPath):Void;
 
 	@:native("collectionView:didDeselectItemAtIndexPath")
-	overload public function collectionView_didDeselectItemAtIndexPath(collectionView:UICollectionView, didDeselectItemAtIndexPath:Dynamic):Void;
+	overload public function collectionView_didDeselectItemAtIndexPath(collectionView:UICollectionView, didDeselectItemAtIndexPath:NSIndexPath):Void;
 
 	@:native("collectionView:willDisplayCell:forItemAtIndexPath")
-	overload public function collectionView_willDisplayCell_forItemAtIndexPath(collectionView:UICollectionView, willDisplayCell:UICollectionViewCell, forItemAtIndexPath:Dynamic):Void;
+	overload public function collectionView_willDisplayCell_forItemAtIndexPath(collectionView:UICollectionView, willDisplayCell:UICollectionViewCell, forItemAtIndexPath:NSIndexPath):Void;
 
 	@:native("collectionView:willDisplaySupplementaryView:forElementKind:atIndexPath")
-	overload public function collectionView_willDisplaySupplementaryView_forElementKind_atIndexPath(collectionView:UICollectionView, willDisplaySupplementaryView:UICollectionReusableView, forElementKind:NSString, atIndexPath:Dynamic):Void;
+	overload public function collectionView_willDisplaySupplementaryView_forElementKind_atIndexPath(collectionView:UICollectionView, willDisplaySupplementaryView:UICollectionReusableView, forElementKind:NSString, atIndexPath:NSIndexPath):Void;
 
 	@:native("collectionView:didEndDisplayingCell:forItemAtIndexPath")
-	overload public function collectionView_didEndDisplayingCell_forItemAtIndexPath(collectionView:UICollectionView, didEndDisplayingCell:UICollectionViewCell, forItemAtIndexPath:Dynamic):Void;
+	overload public function collectionView_didEndDisplayingCell_forItemAtIndexPath(collectionView:UICollectionView, didEndDisplayingCell:UICollectionViewCell, forItemAtIndexPath:NSIndexPath):Void;
 
 	@:native("collectionView:didEndDisplayingSupplementaryView:forElementOfKind:atIndexPath")
-	overload public function collectionView_didEndDisplayingSupplementaryView_forElementOfKind_atIndexPath(collectionView:UICollectionView, didEndDisplayingSupplementaryView:UICollectionReusableView, forElementOfKind:NSString, atIndexPath:Dynamic):Void;
+	overload public function collectionView_didEndDisplayingSupplementaryView_forElementOfKind_atIndexPath(collectionView:UICollectionView, didEndDisplayingSupplementaryView:UICollectionReusableView, forElementOfKind:NSString, atIndexPath:NSIndexPath):Void;
 
 	@:native("collectionView:transitionLayoutForOldLayout:newLayout")
 	overload public function collectionView_transitionLayoutForOldLayout_newLayout(collectionView:UICollectionView, transitionLayoutForOldLayout:UICollectionViewLayout, newLayout:UICollectionViewLayout):Dynamic;
 
 	@:native("collectionView:canFocusItemAtIndexPath")
-	overload public function collectionView_canFocusItemAtIndexPath(collectionView:UICollectionView, canFocusItemAtIndexPath:Dynamic):Bool;
+	overload public function collectionView_canFocusItemAtIndexPath(collectionView:UICollectionView, canFocusItemAtIndexPath:NSIndexPath):Bool;
 
 	@:native("collectionView:shouldUpdateFocusInContext")
 	overload public function collectionView_shouldUpdateFocusInContext(collectionView:UICollectionView, shouldUpdateFocusInContext:UICollectionViewFocusUpdateContext):Bool;
@@ -104,31 +105,31 @@ extern class UICollectionViewController extends UIViewController
 	overload public function collectionView_didUpdateFocusInContext_withAnimationCoordinator(collectionView:UICollectionView, didUpdateFocusInContext:UICollectionViewFocusUpdateContext, withAnimationCoordinator:UIFocusAnimationCoordinator):Void;
 
 	@:native("indexPathForPreferredFocusedViewInCollectionView")
-	overload public function indexPathForPreferredFocusedViewInCollectionView(collectionView:UICollectionView):Dynamic;
+	overload public function indexPathForPreferredFocusedViewInCollectionView(collectionView:UICollectionView):NSIndexPath;
 
 	@:native("collectionView:targetIndexPathForMoveFromItemAtIndexPath:toProposedIndexPath")
-	overload public function collectionView_targetIndexPathForMoveFromItemAtIndexPath_toProposedIndexPath(collectionView:UICollectionView, targetIndexPathForMoveFromItemAtIndexPath:Dynamic, toProposedIndexPath:Dynamic):Dynamic;
+	overload public function collectionView_targetIndexPathForMoveFromItemAtIndexPath_toProposedIndexPath(collectionView:UICollectionView, targetIndexPathForMoveFromItemAtIndexPath:NSIndexPath, toProposedIndexPath:NSIndexPath):NSIndexPath;
 
 	@:native("collectionView:targetContentOffsetForProposedContentOffset")
 	overload public function collectionView_targetContentOffsetForProposedContentOffset(collectionView:UICollectionView, targetContentOffsetForProposedContentOffset:CGPoint):CGPoint;
 
 	@:native("collectionView:canEditItemAtIndexPath")
-	overload public function collectionView_canEditItemAtIndexPath(collectionView:UICollectionView, canEditItemAtIndexPath:Dynamic):Bool;
+	overload public function collectionView_canEditItemAtIndexPath(collectionView:UICollectionView, canEditItemAtIndexPath:NSIndexPath):Bool;
 
 	@:native("collectionView:shouldSpringLoadItemAtIndexPath:withContext")
-	overload public function collectionView_shouldSpringLoadItemAtIndexPath_withContext(collectionView:UICollectionView, shouldSpringLoadItemAtIndexPath:Dynamic, withContext:Dynamic):Bool;
+	overload public function collectionView_shouldSpringLoadItemAtIndexPath_withContext(collectionView:UICollectionView, shouldSpringLoadItemAtIndexPath:NSIndexPath, withContext:Dynamic):Bool;
 
 	@:native("collectionView:shouldBeginMultipleSelectionInteractionAtIndexPath")
-	overload public function collectionView_shouldBeginMultipleSelectionInteractionAtIndexPath(collectionView:UICollectionView, shouldBeginMultipleSelectionInteractionAtIndexPath:Dynamic):Bool;
+	overload public function collectionView_shouldBeginMultipleSelectionInteractionAtIndexPath(collectionView:UICollectionView, shouldBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath):Bool;
 
 	@:native("collectionView:didBeginMultipleSelectionInteractionAtIndexPath")
-	overload public function collectionView_didBeginMultipleSelectionInteractionAtIndexPath(collectionView:UICollectionView, didBeginMultipleSelectionInteractionAtIndexPath:Dynamic):Void;
+	overload public function collectionView_didBeginMultipleSelectionInteractionAtIndexPath(collectionView:UICollectionView, didBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath):Void;
 
 	@:native("collectionViewDidEndMultipleSelectionInteraction")
 	overload public function collectionViewDidEndMultipleSelectionInteraction(collectionView:UICollectionView):Void;
 
 	@:native("collectionView:contextMenuConfigurationForItemAtIndexPath:point")
-	overload public function collectionView_contextMenuConfigurationForItemAtIndexPath_point(collectionView:UICollectionView, contextMenuConfigurationForItemAtIndexPath:Dynamic, point:CGPoint):UIContextMenuConfiguration;
+	overload public function collectionView_contextMenuConfigurationForItemAtIndexPath_point(collectionView:UICollectionView, contextMenuConfigurationForItemAtIndexPath:NSIndexPath, point:CGPoint):UIContextMenuConfiguration;
 
 	@:native("collectionView:previewForHighlightingContextMenuWithConfiguration")
 	overload public function collectionView_previewForHighlightingContextMenuWithConfiguration(collectionView:UICollectionView, previewForHighlightingContextMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
@@ -149,25 +150,25 @@ extern class UICollectionViewController extends UIViewController
 	overload public function collectionView_numberOfItemsInSection(collectionView:UICollectionView, numberOfItemsInSection:Int):Int;
 
 	@:native("collectionView:cellForItemAtIndexPath")
-	overload public function collectionView_cellForItemAtIndexPath(collectionView:UICollectionView, cellForItemAtIndexPath:Dynamic):UICollectionViewCell;
+	overload public function collectionView_cellForItemAtIndexPath(collectionView:UICollectionView, cellForItemAtIndexPath:NSIndexPath):UICollectionViewCell;
 
 	@:native("numberOfSectionsInCollectionView")
 	overload public function numberOfSectionsInCollectionView(collectionView:UICollectionView):Int;
 
 	@:native("collectionView:viewForSupplementaryElementOfKind:atIndexPath")
-	overload public function collectionView_viewForSupplementaryElementOfKind_atIndexPath(collectionView:UICollectionView, viewForSupplementaryElementOfKind:NSString, atIndexPath:Dynamic):UICollectionReusableView;
+	overload public function collectionView_viewForSupplementaryElementOfKind_atIndexPath(collectionView:UICollectionView, viewForSupplementaryElementOfKind:NSString, atIndexPath:NSIndexPath):UICollectionReusableView;
 
 	@:native("collectionView:canMoveItemAtIndexPath")
-	overload public function collectionView_canMoveItemAtIndexPath(collectionView:UICollectionView, canMoveItemAtIndexPath:Dynamic):Bool;
+	overload public function collectionView_canMoveItemAtIndexPath(collectionView:UICollectionView, canMoveItemAtIndexPath:NSIndexPath):Bool;
 
 	@:native("collectionView:moveItemAtIndexPath:toIndexPath")
-	overload public function collectionView_moveItemAtIndexPath_toIndexPath(collectionView:UICollectionView, moveItemAtIndexPath:Dynamic, toIndexPath:Dynamic):Void;
+	overload public function collectionView_moveItemAtIndexPath_toIndexPath(collectionView:UICollectionView, moveItemAtIndexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("indexTitlesForCollectionView")
 	overload public function indexTitlesForCollectionView(collectionView:UICollectionView):Dynamic;
 
 	@:native("collectionView:indexPathForIndexTitle:atIndex")
-	overload public function collectionView_indexPathForIndexTitle_atIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):Dynamic;
+	overload public function collectionView_indexPathForIndexTitle_atIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):NSIndexPath;
 
 	@:native("setNeedsTouchBarUpdate")
 	overload public function setNeedsTouchBarUpdate():Void;

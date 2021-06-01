@@ -10,6 +10,7 @@ import ios.uikit.NSCoder;
 import ios.uikit.UITableViewSeparatorInsetReference;
 import ios.uikit.UIView;
 import ios.uikit.UIContextMenuInteraction;
+import ios.uikit.NSIndexPath;
 import ios.objc.CGPoint;
 import ios.uikit.UITableViewCell;
 import ios.uikit.UITableViewHeaderFooterView;
@@ -112,19 +113,19 @@ extern class UITableView extends UIScrollView
 	overload public function rectForFooterInSection(section:Int):CGRect;
 
 	@:native("rectForRowAtIndexPath")
-	overload public function rectForRowAtIndexPath(indexPath:Dynamic):CGRect;
+	overload public function rectForRowAtIndexPath(indexPath:NSIndexPath):CGRect;
 
 	@:native("indexPathForRowAtPoint")
-	overload public function indexPathForRowAtPoint(point:CGPoint):Dynamic;
+	overload public function indexPathForRowAtPoint(point:CGPoint):NSIndexPath;
 
 	@:native("indexPathForCell")
-	overload public function indexPathForCell(cell:UITableViewCell):Dynamic;
+	overload public function indexPathForCell(cell:UITableViewCell):NSIndexPath;
 
 	@:native("indexPathsForRowsInRect")
 	overload public function indexPathsForRowsInRect(rect:CGRect):Dynamic;
 
 	@:native("cellForRowAtIndexPath")
-	overload public function cellForRowAtIndexPath(indexPath:Dynamic):UITableViewCell;
+	overload public function cellForRowAtIndexPath(indexPath:NSIndexPath):UITableViewCell;
 
 	@:native("visibleCells")
 	public var visibleCells:Dynamic;
@@ -139,7 +140,7 @@ extern class UITableView extends UIScrollView
 	overload public function footerViewForSection(section:Int):UITableViewHeaderFooterView;
 
 	@:native("scrollToRowAtIndexPath:atScrollPosition:animated")
-	overload public function scrollToRowAtIndexPath_atScrollPosition_animated(indexPath:Dynamic, atScrollPosition:UITableViewScrollPosition, animated:Bool):Void;
+	overload public function scrollToRowAtIndexPath_atScrollPosition_animated(indexPath:NSIndexPath, atScrollPosition:UITableViewScrollPosition, animated:Bool):Void;
 
 	@:native("scrollToNearestSelectedRowAtScrollPosition:animated")
 	overload public function scrollToNearestSelectedRowAtScrollPosition_animated(scrollPosition:UITableViewScrollPosition, animated:Bool):Void;
@@ -175,7 +176,7 @@ extern class UITableView extends UIScrollView
 	overload public function reloadRowsAtIndexPaths_withRowAnimation(indexPaths:Dynamic, withRowAnimation:UITableViewRowAnimation):Void;
 
 	@:native("moveRowAtIndexPath:toIndexPath")
-	overload public function moveRowAtIndexPath_toIndexPath(indexPath:Dynamic, toIndexPath:Dynamic):Void;
+	overload public function moveRowAtIndexPath_toIndexPath(indexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("hasUncommittedUpdates")
 	public var hasUncommittedUpdates:Bool;
@@ -205,16 +206,16 @@ extern class UITableView extends UIScrollView
 	public var allowsMultipleSelectionDuringEditing:Bool;
 
 	@:native("indexPathForSelectedRow")
-	public var indexPathForSelectedRow:Dynamic;
+	public var indexPathForSelectedRow:NSIndexPath;
 
 	@:native("indexPathsForSelectedRows")
 	public var indexPathsForSelectedRows:Dynamic;
 
 	@:native("selectRowAtIndexPath:animated:scrollPosition")
-	overload public function selectRowAtIndexPath_animated_scrollPosition(indexPath:Dynamic, animated:Bool, scrollPosition:UITableViewScrollPosition):Void;
+	overload public function selectRowAtIndexPath_animated_scrollPosition(indexPath:NSIndexPath, animated:Bool, scrollPosition:UITableViewScrollPosition):Void;
 
 	@:native("deselectRowAtIndexPath:animated")
-	overload public function deselectRowAtIndexPath_animated(indexPath:Dynamic, animated:Bool):Void;
+	overload public function deselectRowAtIndexPath_animated(indexPath:NSIndexPath, animated:Bool):Void;
 
 	@:native("sectionIndexMinimumDisplayRowCount")
 	public var sectionIndexMinimumDisplayRowCount:Int;
@@ -241,7 +242,7 @@ extern class UITableView extends UIScrollView
 	overload public function dequeueReusableCellWithIdentifier(identifier:NSString):UITableViewCell;
 
 	@:native("dequeueReusableCellWithIdentifier:forIndexPath")
-	overload public function dequeueReusableCellWithIdentifier_forIndexPath(identifier:NSString, forIndexPath:Dynamic):UITableViewCell;
+	overload public function dequeueReusableCellWithIdentifier_forIndexPath(identifier:NSString, forIndexPath:NSIndexPath):UITableViewCell;
 
 	@:native("dequeueReusableHeaderFooterViewWithIdentifier")
 	overload public function dequeueReusableHeaderFooterViewWithIdentifier(identifier:NSString):UITableViewHeaderFooterView;
@@ -280,10 +281,10 @@ extern class UITableView extends UIScrollView
 	overload public function dataSourceSectionIndexForPresentationSectionIndex(presentationSectionIndex:Int):Int;
 
 	@:native("presentationIndexPathForDataSourceIndexPath")
-	overload public function presentationIndexPathForDataSourceIndexPath(dataSourceIndexPath:Dynamic):Dynamic;
+	overload public function presentationIndexPathForDataSourceIndexPath(dataSourceIndexPath:NSIndexPath):NSIndexPath;
 
 	@:native("dataSourceIndexPathForPresentationIndexPath")
-	overload public function dataSourceIndexPathForPresentationIndexPath(presentationIndexPath:Dynamic):Dynamic;
+	overload public function dataSourceIndexPathForPresentationIndexPath(presentationIndexPath:NSIndexPath):NSIndexPath;
 
 	@:native("performUsingPresentationValues")
 	overload public function performUsingPresentationValues(actionsToTranslate:Dynamic):Void;

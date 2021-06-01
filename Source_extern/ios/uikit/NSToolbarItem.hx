@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSToolbarItem;
 import ios.uikit.UIBarButtonItem;
 @:objc
 @:native("NSToolbarItem")

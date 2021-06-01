@@ -114,9 +114,6 @@ extern class WKWebView extends UIView{
 	@:native("callAsyncJavaScript:arguments:inFrame:inContentWorld:completionHandler")
 	overload public function callAsyncJavaScript_arguments_inFrame_inContentWorld_completionHandler(functionBody:NSString, arguments:NSDictionary, inFrame:WKFrameInfo, inContentWorld:WKContentWorld, completionHandler:Dynamic):Void;
 
-	// @:native("takeSnapshotWithConfiguration:completionHandler")
-	// overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;
-
 	@:native("takeSnapshotWithConfiguration:completionHandler")
 	overload public function takeSnapshotWithConfiguration_completionHandler(snapshotConfiguration:WKSnapshotConfiguration, completionHandler:Dynamic):Void;
 

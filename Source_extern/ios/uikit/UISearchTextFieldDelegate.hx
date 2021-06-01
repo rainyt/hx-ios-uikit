@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UISearchTextFieldDelegate;
+import ios.uikit.NSItemProvider;
 import ios.uikit.UISearchTextField;
 import ios.uikit.UISearchToken;
 @:objc
@@ -15,7 +16,7 @@ extern interface UISearchTextFieldDelegate{
 	overload public static function autorelease():UISearchTextFieldDelegate;
 
 	@:native("searchTextField:itemProviderForCopyingToken")
-	overload public function searchTextField_itemProviderForCopyingToken(searchTextField:UISearchTextField, itemProviderForCopyingToken:UISearchToken):Dynamic;
+	overload public function searchTextField_itemProviderForCopyingToken(searchTextField:UISearchTextField, itemProviderForCopyingToken:UISearchToken):NSItemProvider;
 
 
 }

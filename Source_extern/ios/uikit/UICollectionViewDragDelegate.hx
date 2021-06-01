@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UICollectionViewDragDelegate;
 import ios.uikit.UICollectionView;
+import ios.uikit.NSIndexPath;
 import ios.objc.CGPoint;
 import ios.uikit.UIDragPreviewParameters;
 @:objc
@@ -16,13 +17,13 @@ extern interface UICollectionViewDragDelegate{
 	overload public static function autorelease():UICollectionViewDragDelegate;
 
 	@:native("collectionView:itemsForBeginningDragSession:atIndexPath")
-	overload public function collectionView_itemsForBeginningDragSession_atIndexPath(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:Dynamic):Dynamic;
+	overload public function collectionView_itemsForBeginningDragSession_atIndexPath(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):Dynamic;
 
 	@:native("collectionView:itemsForAddingToDragSession:atIndexPath:point")
-	overload public function collectionView_itemsForAddingToDragSession_atIndexPath_point(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:Dynamic, point:CGPoint):Dynamic;
+	overload public function collectionView_itemsForAddingToDragSession_atIndexPath_point(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):Dynamic;
 
 	@:native("collectionView:dragPreviewParametersForItemAtIndexPath")
-	overload public function collectionView_dragPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dragPreviewParametersForItemAtIndexPath:Dynamic):UIDragPreviewParameters;
+	overload public function collectionView_dragPreviewParametersForItemAtIndexPath(collectionView:UICollectionView, dragPreviewParametersForItemAtIndexPath:NSIndexPath):UIDragPreviewParameters;
 
 	@:native("collectionView:dragSessionWillBegin")
 	overload public function collectionView_dragSessionWillBegin(collectionView:UICollectionView, dragSessionWillBegin:Dynamic):Void;

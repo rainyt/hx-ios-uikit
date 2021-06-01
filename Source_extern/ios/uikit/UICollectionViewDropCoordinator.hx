@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDropCoordinator;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UICollectionViewDropProposal;
 import ios.uikit.UIDragItem;
 import ios.uikit.UICollectionViewDropPlaceholder;
@@ -21,7 +22,7 @@ extern interface UICollectionViewDropCoordinator{
 	public var items:Dynamic;
 
 	@:native("destinationIndexPath")
-	public var destinationIndexPath:Dynamic;
+	public var destinationIndexPath:NSIndexPath;
 
 	@:native("proposal")
 	public var proposal:UICollectionViewDropProposal;
@@ -33,10 +34,10 @@ extern interface UICollectionViewDropCoordinator{
 	overload public function dropItem_toPlaceholder(dragItem:UIDragItem, toPlaceholder:UICollectionViewDropPlaceholder):Dynamic;
 
 	@:native("dropItem:toItemAtIndexPath")
-	overload public function dropItem_toItemAtIndexPath(dragItem:UIDragItem, toItemAtIndexPath:Dynamic):Dynamic;
+	overload public function dropItem_toItemAtIndexPath(dragItem:UIDragItem, toItemAtIndexPath:NSIndexPath):Dynamic;
 
 	@:native("dropItem:intoItemAtIndexPath:rect")
-	overload public function dropItem_intoItemAtIndexPath_rect(dragItem:UIDragItem, intoItemAtIndexPath:Dynamic, rect:CGRect):Dynamic;
+	overload public function dropItem_intoItemAtIndexPath_rect(dragItem:UIDragItem, intoItemAtIndexPath:NSIndexPath, rect:CGRect):Dynamic;
 
 	@:native("dropItem:toTarget")
 	overload public function dropItem_toTarget(dragItem:UIDragItem, toTarget:UIDragPreviewTarget):Dynamic;

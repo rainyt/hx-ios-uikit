@@ -1,5 +1,6 @@
 package ios.uikit;
 
+import ios.uikit.NSSharingServicePickerToolbarItem;
 @:objc
 @:native("NSSharingServicePickerToolbarItem")
 @:include("UIKit/UIKit.h")

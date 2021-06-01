@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIActivityItemsConfigurationReading;
 import cpp.objc.NSString;
+import ios.uikit.NSItemProvider;
 import ios.objc.CGSize;
 @:objc
 @:native("UIActivityItemsConfigurationReading")
@@ -24,7 +25,7 @@ extern interface UIActivityItemsConfigurationReading{
 	overload public function activityItemsConfigurationMetadataForItemAtIndex_key(index:Int, key:NSString):Dynamic;
 
 	@:native("activityItemsConfigurationPreviewForItemAtIndex:intent:suggestedSize")
-	overload public function activityItemsConfigurationPreviewForItemAtIndex_intent_suggestedSize(index:Int, intent:NSString, suggestedSize:CGSize):Dynamic;
+	overload public function activityItemsConfigurationPreviewForItemAtIndex_intent_suggestedSize(index:Int, intent:NSString, suggestedSize:CGSize):NSItemProvider;
 
 
 }

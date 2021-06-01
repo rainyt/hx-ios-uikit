@@ -54,9 +54,6 @@ extern class UIBezierPath
 	@:native("CGPath")
 	public var CGPath:Dynamic;
 
-	@:native("CGPath")
-	overload public function CGPath():Dynamic;
-
 	@:native("moveToPoint")
 	overload public function moveToPoint(point:CGPoint):Void;
 

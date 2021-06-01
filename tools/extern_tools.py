@@ -185,7 +185,8 @@ class ExternBaseClass:
                     tmp = True
                 if tmp:
                     func = ObjcFun.parsing(hextern.typedefs,self.className,value)
-                    if (func is not None):
+                    if ((func is not None) and (not (func.name in self._propertys.h))):
+                        self._propertys.h[func.name] = func
                         _this1 = self.funcAndAttr
                         _this1.append(func)
 

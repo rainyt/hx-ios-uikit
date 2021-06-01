@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIDynamicAnimator;
 import ios.uikit.UICollectionViewLayout;
 import ios.uikit.UICollectionViewLayoutAttributes;
+import ios.uikit.NSIndexPath;
 import cpp.objc.NSString;
 @:objc
 @:native("UIDynamicAnimator")
@@ -19,13 +20,13 @@ extern class UIDynamicAnimator{
 	overload public function initWithCollectionViewLayout(layout:UICollectionViewLayout):UIDynamicAnimator;
 
 	@:native("layoutAttributesForCellAtIndexPath")
-	overload public function layoutAttributesForCellAtIndexPath(indexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForCellAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForSupplementaryViewOfKind:atIndexPath")
-	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(kind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForSupplementaryViewOfKind_atIndexPath(kind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("layoutAttributesForDecorationViewOfKind:atIndexPath")
-	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(decorationViewKind:NSString, atIndexPath:Dynamic):UICollectionViewLayoutAttributes;
+	overload public function layoutAttributesForDecorationViewOfKind_atIndexPath(decorationViewKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 
 }

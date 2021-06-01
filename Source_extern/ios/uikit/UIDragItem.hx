@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIDragItem;
+import ios.uikit.NSItemProvider;
 @:objc
 @:native("UIDragItem")
 @:include("UIKit/UIKit.h")
@@ -13,13 +14,13 @@ extern class UIDragItem{
 	overload public static function autorelease():UIDragItem;
 
 	@:native("initWithItemProvider")
-	overload public function initWithItemProvider(itemProvider:Dynamic):UIDragItem;
+	overload public function initWithItemProvider(itemProvider:NSItemProvider):UIDragItem;
 
 	@:native("init")
 	overload public function init():UIDragItem;
 
 	@:native("itemProvider")
-	public var itemProvider:Dynamic;
+	public var itemProvider:NSItemProvider;
 
 	@:native("localObject")
 	public var localObject:Dynamic;

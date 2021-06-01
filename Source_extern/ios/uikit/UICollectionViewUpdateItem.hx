@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewUpdateItem;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UICollectionUpdateAction;
 @:objc
 @:native("UICollectionViewUpdateItem")
@@ -14,10 +15,10 @@ extern class UICollectionViewUpdateItem{
 	overload public static function autorelease():UICollectionViewUpdateItem;
 
 	@:native("indexPathBeforeUpdate")
-	public var indexPathBeforeUpdate:Dynamic;
+	public var indexPathBeforeUpdate:NSIndexPath;
 
 	@:native("indexPathAfterUpdate")
-	public var indexPathAfterUpdate:Dynamic;
+	public var indexPathAfterUpdate:NSIndexPath;
 
 	@:native("updateAction")
 	public var updateAction:UICollectionUpdateAction;

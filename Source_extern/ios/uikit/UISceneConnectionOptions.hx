@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UISceneConnectionOptions;
 import cpp.objc.NSString;
+import ios.uikit.UNNotificationResponse;
 import ios.uikit.UIApplicationShortcutItem;
 @:objc
 @:native("UISceneConnectionOptions")
@@ -24,7 +25,7 @@ extern class UISceneConnectionOptions{
 	public var handoffUserActivityType:NSString;
 
 	@:native("notificationResponse")
-	public var notificationResponse:Dynamic;
+	public var notificationResponse:UNNotificationResponse;
 
 	@:native("shortcutItem")
 	public var shortcutItem:UIApplicationShortcutItem;

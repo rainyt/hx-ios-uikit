@@ -5,6 +5,7 @@ import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
 import ios.objc.CATransform3D;
 import cpp.objc.NSString;
+import ios.uikit.NSIndexPath;
 import ios.objc.CGRect;
 import ios.uikit.UICollectionElementCategory;
 @:objc
@@ -40,7 +41,7 @@ extern interface NSCollectionLayoutVisibleItem{
 	public var name:NSString;
 
 	@:native("indexPath")
-	public var indexPath:Dynamic;
+	public var indexPath:NSIndexPath;
 
 	@:native("frame")
 	public var frame:CGRect;

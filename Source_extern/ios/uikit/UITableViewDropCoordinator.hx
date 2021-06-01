@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITableViewDropCoordinator;
+import ios.uikit.NSIndexPath;
 import ios.uikit.UITableViewDropProposal;
 import ios.uikit.UIDragItem;
 import ios.uikit.UITableViewDropPlaceholder;
@@ -21,7 +22,7 @@ extern interface UITableViewDropCoordinator{
 	public var items:Dynamic;
 
 	@:native("destinationIndexPath")
-	public var destinationIndexPath:Dynamic;
+	public var destinationIndexPath:NSIndexPath;
 
 	@:native("proposal")
 	public var proposal:UITableViewDropProposal;
@@ -33,10 +34,10 @@ extern interface UITableViewDropCoordinator{
 	overload public function dropItem_toPlaceholder(dragItem:UIDragItem, toPlaceholder:UITableViewDropPlaceholder):Dynamic;
 
 	@:native("dropItem:toRowAtIndexPath")
-	overload public function dropItem_toRowAtIndexPath(dragItem:UIDragItem, toRowAtIndexPath:Dynamic):Dynamic;
+	overload public function dropItem_toRowAtIndexPath(dragItem:UIDragItem, toRowAtIndexPath:NSIndexPath):Dynamic;
 
 	@:native("dropItem:intoRowAtIndexPath:rect")
-	overload public function dropItem_intoRowAtIndexPath_rect(dragItem:UIDragItem, intoRowAtIndexPath:Dynamic, rect:CGRect):Dynamic;
+	overload public function dropItem_intoRowAtIndexPath_rect(dragItem:UIDragItem, intoRowAtIndexPath:NSIndexPath, rect:CGRect):Dynamic;
 
 	@:native("dropItem:toTarget")
 	overload public function dropItem_toTarget(dragItem:UIDragItem, toTarget:UIDragPreviewTarget):Dynamic;

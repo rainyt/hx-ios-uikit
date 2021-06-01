@@ -81,9 +81,6 @@ extern class NSDiffableDataSourceSectionSnapshot
 	@:native("snapshotOfParentItem:includingParentItem")
 	overload public function snapshotOfParentItem_includingParentItem(parentItem:Dynamic, includingParentItem:Bool):NSDiffableDataSourceSectionSnapshot;
 
-	@:native("items")
-	public var items:Dynamic;
-
 	@:native("rootItems")
 	public var rootItems:Dynamic;
 
