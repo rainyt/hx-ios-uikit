@@ -33,8 +33,8 @@ extern class UIAlertView extends UIView{
 	@:native("autorelease")
 	overload public static function autorelease():UIAlertView;
 
-	@:native("initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles:...")
-	overload public function initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles...(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString, ...:Dynamic):UIAlertView;
+	@:native("initWithTitle:message:delegate:cancelButtonTitle:otherButtonTitles")
+	overload public function initWithTitleMessageDelegateCancelButtonTitleOtherButtonTitles(title:NSString, message:NSString, delegate:Dynamic, cancelButtonTitle:NSString, otherButtonTitles:NSString):UIAlertView;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):Dynamic;

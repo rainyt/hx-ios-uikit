@@ -40,8 +40,8 @@ extern class NSMutableString extends NSString{
 	@:native("appendString")
 	overload public function appendString(aString:NSString):Void;
 
-	@:native("appendFormat:...")
-	overload public function appendFormat...(format,:NSString, ...:Dynamic):Void;
+	@:native("appendFormat")
+	overload public function appendFormat(format:NSString):Void;
 
 	@:native("setString")
 	overload public function setString(aString:NSString):Void;
@@ -196,8 +196,8 @@ extern class NSMutableString extends NSString{
 	@:native("stringByAppendingString")
 	overload public function stringByAppendingString(aString:NSString):NSString;
 
-	@:native("stringByAppendingFormat:...")
-	overload public function stringByAppendingFormat...(format,:NSString, ...:Dynamic):NSString;
+	@:native("stringByAppendingFormat")
+	overload public function stringByAppendingFormat(format:NSString):NSString;
 
 	@:native("uppercaseStringWithLocale")
 	overload public function uppercaseStringWithLocale(locale:NSLocale):NSString;
@@ -307,14 +307,14 @@ extern class NSMutableString extends NSString{
 	@:native("initWithString")
 	overload public function initWithString(aString:NSString):NSMutableString;
 
-	@:native("initWithFormat:...")
-	overload public function initWithFormat...(format,:NSString, ...:Dynamic):NSMutableString;
+	@:native("initWithFormat")
+	overload public function initWithFormat(format:NSString):NSMutableString;
 
 	@:native("initWithFormat:arguments")
 	overload public function initWithFormatArguments(format:NSString, arguments:Dynamic):NSMutableString;
 
-	@:native("initWithFormat:locale:...")
-	overload public function initWithFormatLocale...(format:NSString, locale:Dynamic, ...:Dynamic):NSMutableString;
+	@:native("initWithFormat:locale")
+	overload public function initWithFormatLocale(format:NSString, locale:Dynamic):NSMutableString;
 
 	@:native("initWithFormat:locale:arguments")
 	overload public function initWithFormatLocaleArguments(format:NSString, locale:Dynamic, arguments:Dynamic):NSMutableString;
@@ -343,11 +343,11 @@ extern class NSMutableString extends NSString{
 	@:native("stringWithUTF8String")
 	overload public static function stringWithUTF8String(nullTerminatedCString:Dynamic):NSMutableString;
 
-	@:native("stringWithFormat:...")
-	overload public static function stringWithFormat...(format,:NSString, ...:Dynamic):NSMutableString;
+	@:native("stringWithFormat")
+	overload public static function stringWithFormat(format:NSString):NSMutableString;
 
-	@:native("localizedStringWithFormat:...")
-	overload public static function localizedStringWithFormat...(format,:NSString, ...:Dynamic):NSMutableString;
+	@:native("localizedStringWithFormat")
+	overload public static function localizedStringWithFormat(format:NSString):NSMutableString;
 
 	@:native("initWithCString:encoding")
 	overload public function initWithCStringEncoding(nullTerminatedCString:Dynamic, encoding:Dynamic):NSMutableString;

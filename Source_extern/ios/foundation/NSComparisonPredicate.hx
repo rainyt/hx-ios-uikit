@@ -58,7 +58,7 @@ extern class NSComparisonPredicate extends NSPredicate{
 	overload public static function predicateWithFormatArgumentArray(predicateFormat:NSString, argumentArray:NSArray):NSComparisonPredicate;
 
 	@:native("predicateWithFormat")
-	overload public static function predicateWithFormat(predicateFormat,:NSString):NSComparisonPredicate;
+	overload public static function predicateWithFormat(predicateFormat:NSString):NSComparisonPredicate;
 
 	@:native("predicateWithFormat:arguments")
 	overload public static function predicateWithFormatArguments(predicateFormat:NSString, arguments:Dynamic):NSComparisonPredicate;

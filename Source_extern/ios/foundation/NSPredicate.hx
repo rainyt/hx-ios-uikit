@@ -22,7 +22,7 @@ extern class NSPredicate
 	overload public static function predicateWithFormatArgumentArray(predicateFormat:NSString, argumentArray:NSArray):NSPredicate;
 
 	@:native("predicateWithFormat")
-	overload public static function predicateWithFormat(predicateFormat,:NSString):NSPredicate;
+	overload public static function predicateWithFormat(predicateFormat:NSString):NSPredicate;
 
 	@:native("predicateWithFormat:arguments")
 	overload public static function predicateWithFormatArguments(predicateFormat:NSString, arguments:Dynamic):NSPredicate;

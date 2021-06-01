@@ -24,8 +24,8 @@ extern class NSExpression
 	@:native("expressionWithFormat:argumentArray")
 	overload public static function expressionWithFormatArgumentArray(expressionFormat:NSString, argumentArray:NSArray):NSExpression;
 
-	@:native("expressionWithFormat:...")
-	overload public static function expressionWithFormat...(expressionFormat,:NSString, ...:Dynamic):NSExpression;
+	@:native("expressionWithFormat")
+	overload public static function expressionWithFormat(expressionFormat:NSString):NSExpression;
 
 	@:native("expressionWithFormat:arguments")
 	overload public static function expressionWithFormatArguments(expressionFormat:NSString, arguments:Dynamic):NSExpression;

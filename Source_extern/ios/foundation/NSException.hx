@@ -41,8 +41,8 @@ extern class NSException
 	@:native("raise")
 	overload public function raise():Void;
 
-	@:native("raise:format:...")
-	overload public static function raiseFormat...(name:Dynamic, format:NSString, ...:Dynamic):Void;
+	@:native("raise:format")
+	overload public static function raiseFormat(name:Dynamic, format:NSString):Void;
 
 	@:native("raise:format:arguments")
 	overload public static function raiseFormatArguments(name:Dynamic, format:NSString, arguments:Dynamic):Void;

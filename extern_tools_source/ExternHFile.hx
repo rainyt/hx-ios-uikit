@@ -37,11 +37,15 @@ class ExternHFile {
 		var isInterface = false;
 		var isMacro = false;
 		var isProtocol = false; // 是否为协议
+		var isIgone = false; // 过滤协议
 		for (index => value in contents) {
 			if (!isRead) {
 				if (index != 0 && value.indexOf("#if") != -1) {
 					// isMacro = true;
 					// isRead = true;
+				} else if (value.indexOf("/*") != -1 && value.indexOf("*/") == -1) {
+					isIgone = true;
+					isRead = true;
 				} else if (value.indexOf("@protocol") != -1 && value.indexOf(";") == -1) {
 					isProtocol = true;
 					isRead = true;
@@ -75,7 +79,11 @@ class ExternHFile {
 				}
 			} else {
 				read.push(value);
-				if (isMacro && value.indexOf("#endif") != -1) {
+				if (isIgone && value.indexOf("*/") != -1) {
+					isIgone = false;
+					isRead = false;
+					read = [];
+				} else if (isMacro && value.indexOf("#endif") != -1) {
 					// isMacro = false;
 					// isRead = false;
 				} else if (isTypedef && value.indexOf(";") != -1) {

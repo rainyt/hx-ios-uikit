@@ -43,7 +43,7 @@ extern class NSCompoundPredicate extends NSPredicate{
 	overload public static function predicateWithFormatArgumentArray(predicateFormat:NSString, argumentArray:NSArray):NSCompoundPredicate;
 
 	@:native("predicateWithFormat")
-	overload public static function predicateWithFormat(predicateFormat,:NSString):NSCompoundPredicate;
+	overload public static function predicateWithFormat(predicateFormat:NSString):NSCompoundPredicate;
 
 	@:native("predicateWithFormat:arguments")
 	overload public static function predicateWithFormatArguments(predicateFormat:NSString, arguments:Dynamic):NSCompoundPredicate;

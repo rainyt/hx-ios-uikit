@@ -93,7 +93,7 @@ class ObjcFun {
 						args.push(read);
 						read = "";
 					}
-				} else if (kend == 0 && (char == " " || char == ":" || char == ";")) {
+				} else if (kend == 0 && (char == " " || char == ":" || char == ";" || char == ",")) {
 					isRaed = char == " ";
 					if (isRaed)
 						skin = 1;
@@ -127,8 +127,8 @@ class ObjcFun {
 				ret += value;
 			}
 		}
-		retargs = retargs.filter((f) -> f.indexOf("__attribute__") == -1 && f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1 && f.indexOf("API_") == -1
-			&& f.indexOf("ios(") == -1 && f != "UI_APPEARANCE_SELECTOR");
+		retargs = retargs.filter((f) -> f.indexOf("__attribute__") == -1 && f.indexOf("...") == -1 && f.indexOf("UIKIT_") == -1 && f.indexOf("NS_") == -1
+			&& f.indexOf("API_") == -1 && f.indexOf("ios(") == -1 && f != "UI_APPEARANCE_SELECTOR");
 		var r:Array<ExternBaseClassFunPropertyArgs> = [];
 		for (index => value in retargs) {
 			var a = value.split(":");

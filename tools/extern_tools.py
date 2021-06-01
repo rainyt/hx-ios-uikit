@@ -457,6 +457,7 @@ class ExternHFile:
         isInterface = False
         isMacro = False
         isProtocol = False
+        isIgone = False
         _g_current = 0
         _g_array = contents
         while (_g_current < len(_g_array)):
@@ -475,82 +476,104 @@ class ExternHFile:
                 if (not tmp):
                     tmp1 = None
                     startIndex1 = None
-                    if (((value.find("@protocol") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"@protocol",startIndex1))) != -1):
+                    if (((value.find("/*") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"/*",startIndex1))) != -1):
                         startIndex2 = None
-                        tmp1 = (((value.find(";") if ((startIndex2 is None)) else HxString.indexOfImpl(value,";",startIndex2))) == -1)
+                        tmp1 = (((value.find("*/") if ((startIndex2 is None)) else HxString.indexOfImpl(value,"*/",startIndex2))) == -1)
                     else:
                         tmp1 = False
                     if tmp1:
-                        isProtocol = True
+                        isIgone = True
                         isRead = True
-                        read.append(value)
-                        startIndex3 = None
-                        if (((value.find("@end") if ((startIndex3 is None)) else HxString.indexOfImpl(value,"@end",startIndex3))) != -1):
-                            isRead = False
-                            isProtocol = False
-                            self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
-                            read = []
                     else:
-                        startIndex4 = None
-                        if (((value.find("@interface") if ((startIndex4 is None)) else HxString.indexOfImpl(value,"@interface",startIndex4))) != -1):
-                            isInterface = True
+                        tmp2 = None
+                        startIndex3 = None
+                        if (((value.find("@protocol") if ((startIndex3 is None)) else HxString.indexOfImpl(value,"@protocol",startIndex3))) != -1):
+                            startIndex4 = None
+                            tmp2 = (((value.find(";") if ((startIndex4 is None)) else HxString.indexOfImpl(value,";",startIndex4))) == -1)
+                        else:
+                            tmp2 = False
+                        if tmp2:
+                            isProtocol = True
                             isRead = True
                             read.append(value)
                             startIndex5 = None
                             if (((value.find("@end") if ((startIndex5 is None)) else HxString.indexOfImpl(value,"@end",startIndex5))) != -1):
                                 isRead = False
-                                isInterface = False
-                                self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                isProtocol = False
+                                self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
                                 read = []
                         else:
                             startIndex6 = None
-                            if (((value.find("typedef ") if ((startIndex6 is None)) else HxString.indexOfImpl(value,"typedef ",startIndex6))) != -1):
-                                isTypedef = True
+                            if (((value.find("@interface") if ((startIndex6 is None)) else HxString.indexOfImpl(value,"@interface",startIndex6))) != -1):
+                                isInterface = True
                                 isRead = True
                                 read.append(value)
                                 startIndex7 = None
-                                if (((value.find(";") if ((startIndex7 is None)) else HxString.indexOfImpl(value,";",startIndex7))) != -1):
+                                if (((value.find("@end") if ((startIndex7 is None)) else HxString.indexOfImpl(value,"@end",startIndex7))) != -1):
                                     isRead = False
-                                    isTypedef = False
-                                    self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                    isInterface = False
+                                    self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
                                     read = []
+                            else:
+                                startIndex8 = None
+                                if (((value.find("typedef ") if ((startIndex8 is None)) else HxString.indexOfImpl(value,"typedef ",startIndex8))) != -1):
+                                    isTypedef = True
+                                    isRead = True
+                                    read.append(value)
+                                    startIndex9 = None
+                                    if (((value.find(";") if ((startIndex9 is None)) else HxString.indexOfImpl(value,";",startIndex9))) != -1):
+                                        isRead = False
+                                        isTypedef = False
+                                        self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                        read = []
             else:
                 read.append(value)
-                tmp2 = None
-                if isMacro:
-                    startIndex8 = None
-                    tmp2 = (((value.find("#endif") if ((startIndex8 is None)) else HxString.indexOfImpl(value,"#endif",startIndex8))) != -1)
+                tmp3 = None
+                if isIgone:
+                    startIndex10 = None
+                    tmp3 = (((value.find("*/") if ((startIndex10 is None)) else HxString.indexOfImpl(value,"*/",startIndex10))) != -1)
                 else:
-                    tmp2 = False
-                if (not tmp2):
-                    tmp3 = None
-                    if isTypedef:
-                        startIndex9 = None
-                        tmp3 = (((value.find(";") if ((startIndex9 is None)) else HxString.indexOfImpl(value,";",startIndex9))) != -1)
+                    tmp3 = False
+                if tmp3:
+                    isIgone = False
+                    isRead = False
+                    read = []
+                else:
+                    tmp4 = None
+                    if isMacro:
+                        startIndex11 = None
+                        tmp4 = (((value.find("#endif") if ((startIndex11 is None)) else HxString.indexOfImpl(value,"#endif",startIndex11))) != -1)
                     else:
-                        tmp3 = False
-                    if tmp3:
-                        isRead = False
-                        isTypedef = False
-                        self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
-                        read = []
-                    else:
-                        tmp4 = None
-                        if (isInterface or isProtocol):
-                            startIndex10 = None
-                            tmp4 = (((value.find("@end") if ((startIndex10 is None)) else HxString.indexOfImpl(value,"@end",startIndex10))) != -1)
+                        tmp4 = False
+                    if (not tmp4):
+                        tmp5 = None
+                        if isTypedef:
+                            startIndex12 = None
+                            tmp5 = (((value.find(";") if ((startIndex12 is None)) else HxString.indexOfImpl(value,";",startIndex12))) != -1)
                         else:
-                            tmp4 = False
-                        if tmp4:
-                            if isInterface:
-                                isRead = False
-                                isInterface = False
-                                self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
-                            if isProtocol:
-                                isRead = False
-                                isProtocol = False
-                                self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                            tmp5 = False
+                        if tmp5:
+                            isRead = False
+                            isTypedef = False
+                            self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
                             read = []
+                        else:
+                            tmp6 = None
+                            if (isInterface or isProtocol):
+                                startIndex13 = None
+                                tmp6 = (((value.find("@end") if ((startIndex13 is None)) else HxString.indexOfImpl(value,"@end",startIndex13))) != -1)
+                            else:
+                                tmp6 = False
+                            if tmp6:
+                                if isInterface:
+                                    isRead = False
+                                    isInterface = False
+                                    self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                if isProtocol:
+                                    isRead = False
+                                    isProtocol = False
+                                    self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                read = []
 
     def defProtocol(self,data):
         t = ExternProtocolClass(data,self)
@@ -1015,7 +1038,7 @@ class ObjcFun:
                     isRaed = False
                     args.append(read)
                     read = ""
-            elif ((kend == 0) and ((((char == " ") or ((char == ":"))) or ((char == ";"))))):
+            elif ((kend == 0) and (((((char == " ") or ((char == ":"))) or ((char == ";"))) or ((char == ","))))):
                 isRaed = (char == " ")
                 if isRaed:
                     skin = 1
@@ -1053,8 +1076,14 @@ class ObjcFun:
             retargs1 = None
             retargs2 = None
             retargs3 = None
+            retargs4 = None
             startIndex = None
             if (((f.find("__attribute__") if ((startIndex is None)) else HxString.indexOfImpl(f,"__attribute__",startIndex))) == -1):
+                startIndex = None
+                retargs4 = (((f.find("...") if ((startIndex is None)) else HxString.indexOfImpl(f,"...",startIndex))) == -1)
+            else:
+                retargs4 = False
+            if retargs4:
                 startIndex = None
                 retargs3 = (((f.find("UIKIT_") if ((startIndex is None)) else HxString.indexOfImpl(f,"UIKIT_",startIndex))) == -1)
             else:
@@ -1246,10 +1275,16 @@ class ObjcProperty:
             p = None
             p1 = None
             p2 = None
+            p3 = None
             startIndex = None
             if (((f.find("UIKIT_") if ((startIndex is None)) else HxString.indexOfImpl(f,"UIKIT_",startIndex))) == -1):
                 startIndex = None
-                p2 = (((f.find("NS_") if ((startIndex is None)) else HxString.indexOfImpl(f,"NS_",startIndex))) == -1)
+                p3 = (((f.find("NS_") if ((startIndex is None)) else HxString.indexOfImpl(f,"NS_",startIndex))) == -1)
+            else:
+                p3 = False
+            if p3:
+                startIndex = None
+                p2 = (((f.find("...") if ((startIndex is None)) else HxString.indexOfImpl(f,"...",startIndex))) == -1)
             else:
                 p2 = False
             if p2:

@@ -100,8 +100,8 @@ extern class NSSet{
 	@:native("setWithObjects:count")
 	overload public static function setWithObjectsCount(objects:Dynamic, count:Int):NSSet;
 
-	@:native("setWithObjects:...")
-	overload public static function setWithObjects...(firstObj,:Dynamic, ...:Dynamic):NSSet;
+	@:native("setWithObjects")
+	overload public static function setWithObjects(firstObj:Dynamic):NSSet;
 
 	@:native("setWithSet")
 	overload public static function setWithSet(set:Dynamic):NSSet;
@@ -109,8 +109,8 @@ extern class NSSet{
 	@:native("setWithArray")
 	overload public static function setWithArray(array:Dynamic):NSSet;
 
-	@:native("initWithObjects:...")
-	overload public function initWithObjects...(firstObj,:Dynamic, ...:Dynamic):NSSet;
+	@:native("initWithObjects")
+	overload public function initWithObjects(firstObj:Dynamic):NSSet;
 
 	@:native("initWithSet")
 	overload public function initWithSet(set:Dynamic):NSSet;

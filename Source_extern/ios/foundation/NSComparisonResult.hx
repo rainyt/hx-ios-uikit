@@ -8,8 +8,8 @@ import cpp.objc.NSData;
 @:include("UIKit/UIKit.h")
 extern abstract NSComparisonResult(Int) from Int to Int {
 
-	@:native("...")
-	var ...;
+	// @:native("...")
+	// var ...;
 
 
 }

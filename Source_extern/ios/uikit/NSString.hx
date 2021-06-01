@@ -204,8 +204,8 @@ extern class NSString{
 	@:native("stringByAppendingString")
 	overload public function stringByAppendingString(aString:NSString):NSString;
 
-	@:native("stringByAppendingFormat:...")
-	overload public function stringByAppendingFormat...(format,:NSString, ...:Dynamic):NSString;
+	@:native("stringByAppendingFormat")
+	overload public function stringByAppendingFormat(format:NSString):NSString;
 
 	@:native("doubleValue")
 	public var doubleValue:Dynamic;
@@ -378,14 +378,14 @@ extern class NSString{
 	@:native("initWithString")
 	overload public function initWithString(aString:NSString):NSString;
 
-	@:native("initWithFormat:...")
-	overload public function initWithFormat...(format,:NSString, ...:Dynamic):NSString;
+	@:native("initWithFormat")
+	overload public function initWithFormat(format:NSString):NSString;
 
 	@:native("initWithFormat:arguments")
 	overload public function initWithFormatArguments(format:NSString, arguments:Dynamic):NSString;
 
-	@:native("initWithFormat:locale:...")
-	overload public function initWithFormatLocale...(format:NSString, locale:Dynamic, ...:Dynamic):NSString;
+	@:native("initWithFormat:locale")
+	overload public function initWithFormatLocale(format:NSString, locale:Dynamic):NSString;
 
 	@:native("initWithFormat:locale:arguments")
 	overload public function initWithFormatLocaleArguments(format:NSString, locale:Dynamic, arguments:Dynamic):NSString;
@@ -414,11 +414,11 @@ extern class NSString{
 	@:native("stringWithUTF8String")
 	overload public static function stringWithUTF8String(nullTerminatedCString:Dynamic):NSString;
 
-	@:native("stringWithFormat:...")
-	overload public static function stringWithFormat...(format,:NSString, ...:Dynamic):NSString;
+	@:native("stringWithFormat")
+	overload public static function stringWithFormat(format:NSString):NSString;
 
-	@:native("localizedStringWithFormat:...")
-	overload public static function localizedStringWithFormat...(format,:NSString, ...:Dynamic):NSString;
+	@:native("localizedStringWithFormat")
+	overload public static function localizedStringWithFormat(format:NSString):NSString;
 
 	@:native("initWithCString:encoding")
 	overload public function initWithCStringEncoding(nullTerminatedCString:Dynamic, encoding:Dynamic):NSString;

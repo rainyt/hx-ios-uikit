@@ -146,8 +146,8 @@ extern class NSOrderedSet{
 	@:native("orderedSetWithObjects:count")
 	overload public static function orderedSetWithObjectsCount(objects:Dynamic, count:Int):NSOrderedSet;
 
-	@:native("orderedSetWithObjects:...")
-	overload public static function orderedSetWithObjects...(firstObj,:Dynamic, ...:Dynamic):NSOrderedSet;
+	@:native("orderedSetWithObjects")
+	overload public static function orderedSetWithObjects(firstObj:Dynamic):NSOrderedSet;
 
 	@:native("orderedSetWithOrderedSet")
 	overload public static function orderedSetWithOrderedSet(set:NSOrderedSet):NSOrderedSet;
@@ -170,8 +170,8 @@ extern class NSOrderedSet{
 	@:native("initWithObject")
 	overload public function initWithObject(object:Dynamic):NSOrderedSet;
 
-	@:native("initWithObjects:...")
-	overload public function initWithObjects...(firstObj,:Dynamic, ...:Dynamic):NSOrderedSet;
+	@:native("initWithObjects")
+	overload public function initWithObjects(firstObj:Dynamic):NSOrderedSet;
 
 	@:native("initWithOrderedSet")
 	overload public function initWithOrderedSet(set:NSOrderedSet):NSOrderedSet;

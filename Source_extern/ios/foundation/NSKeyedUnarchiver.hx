@@ -163,7 +163,7 @@ extern class NSKeyedUnarchiver extends NSCoder{
 	overload public function encodeConditionalObject(object:Dynamic):Void;
 
 	@:native("encodeValuesOfObjCTypes")
-	overload public function encodeValuesOfObjCTypes(types,:Dynamic):Void;
+	overload public function encodeValuesOfObjCTypes(types:Dynamic):Void;
 
 	@:native("encodeArrayOfObjCType:count:at")
 	overload public function encodeArrayOfObjCTypeCountAt(type:Dynamic, count:Int, at:Dynamic):Void;
@@ -178,7 +178,7 @@ extern class NSKeyedUnarchiver extends NSCoder{
 	overload public function decodeTopLevelObjectAndReturnError(error:NSError):Dynamic;
 
 	@:native("decodeValuesOfObjCTypes")
-	overload public function decodeValuesOfObjCTypes(types,:Dynamic):Void;
+	overload public function decodeValuesOfObjCTypes(types:Dynamic):Void;
 
 	@:native("decodeArrayOfObjCType:count:at")
 	overload public function decodeArrayOfObjCTypeCountAt(itemType:Dynamic, count:Int, at:Void):Void;

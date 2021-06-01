@@ -111,8 +111,8 @@ extern class NSDictionary
 	@:native("dictionaryWithObjects:forKeys:count")
 	overload public static function dictionaryWithObjectsForKeysCount(objects:Dynamic, forKeys:constKeyType, count:Int):NSDictionary;
 
-	@:native("dictionaryWithObjectsAndKeys:...")
-	overload public static function dictionaryWithObjectsAndKeys...(firstObject,:Dynamic, ...:Dynamic):NSDictionary;
+	@:native("dictionaryWithObjectsAndKeys")
+	overload public static function dictionaryWithObjectsAndKeys(firstObject:Dynamic):NSDictionary;
 
 	@:native("dictionaryWithDictionary")
 	overload public static function dictionaryWithDictionary(dict:NSDictionary):NSDictionary;
@@ -120,8 +120,8 @@ extern class NSDictionary
 	@:native("dictionaryWithObjects:forKeys")
 	overload public static function dictionaryWithObjectsForKeys(objects:Dynamic, forKeys:Dynamic):NSDictionary;
 
-	@:native("initWithObjectsAndKeys:...")
-	overload public function initWithObjectsAndKeys...(firstObject,:Dynamic, ...:Dynamic):NSDictionary;
+	@:native("initWithObjectsAndKeys")
+	overload public function initWithObjectsAndKeys(firstObject:Dynamic):NSDictionary;
 
 	@:native("initWithDictionary")
 	overload public function initWithDictionary(otherDictionary:NSDictionary):NSDictionary;

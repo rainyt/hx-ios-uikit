@@ -173,14 +173,14 @@ extern class NSArray{
 	@:native("arrayWithObjects:count")
 	overload public static function arrayWithObjectsCount(objects:Dynamic, count:Int):NSArray;
 
-	@:native("arrayWithObjects:...")
-	overload public static function arrayWithObjects...(firstObj,:Dynamic, ...:Dynamic):NSArray;
+	@:native("arrayWithObjects")
+	overload public static function arrayWithObjects(firstObj:Dynamic):NSArray;
 
 	@:native("arrayWithArray")
 	overload public static function arrayWithArray(array:Dynamic):NSArray;
 
-	@:native("initWithObjects:...")
-	overload public function initWithObjects...(firstObj,:Dynamic, ...:Dynamic):NSArray;
+	@:native("initWithObjects")
+	overload public function initWithObjects(firstObj:Dynamic):NSArray;
 
 	@:native("initWithArray")
 	overload public function initWithArray(array:Dynamic):NSArray;
