@@ -5,7 +5,6 @@ import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
 import ios.uikit.NSCoder;
-import ios.foundation.NSComparisonResult;
 @:objc
 @:native("NSSortDescriptor")
 @:include("Foundation/Foundation.h")
@@ -55,7 +54,7 @@ extern class NSSortDescriptor
 	public var comparator:Dynamic;
 
 	@:native("compareObject:toObject")
-	overload public function compareObjectToObject(object1:Dynamic, toObject:Dynamic):NSComparisonResult;
+	overload public function compareObjectToObject(object1:Dynamic, toObject:Dynamic):Dynamic;
 
 	@:native("reversedSortDescriptor")
 	public var reversedSortDescriptor:Dynamic;

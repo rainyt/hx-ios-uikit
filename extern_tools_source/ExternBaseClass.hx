@@ -88,6 +88,7 @@ class ExternBaseClass {
 			className = null;
 			return;
 		}
+		pclassName = StringTools.replace(pclassName, ":", "");
 		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""), null, true);
 
 		if (extendClassName != null) {
@@ -137,7 +138,6 @@ class ExternBaseClass {
 				// 对象方法
 				var func = ObjcFun.parsing(hextern.typedefs, this.className, value);
 				if (func != null && !_propertys.exists(func.name)) {
-					trace("写入：", func.name);
 					_propertys.set(func.name, func);
 					funcAndAttr.push(func);
 				}

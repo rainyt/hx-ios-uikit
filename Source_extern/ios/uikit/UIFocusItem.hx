@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIFocusItem;
 import ios.objc.CGRect;
+import ios.uikit.UIFocusMovementHint;
 @:objc
 @:native("UIFocusItem")
 @:include("UIKit/UIKit.h")
@@ -20,7 +21,7 @@ extern interface UIFocusItem{
 	public var frame:CGRect;
 
 	@:native("didHintFocusMovement")
-	overload public function didHintFocusMovement(hint:Dynamic):Void;
+	overload public function didHintFocusMovement(hint:UIFocusMovementHint):Void;
 
 
 }

@@ -3,7 +3,6 @@ package ios.foundation;
 import ios.foundation.NSNumber;
 import ios.foundation.NSDecimalNumber;
 import cpp.objc.NSString;
-import ios.foundation.NSComparisonResult;
 import ios.uikit.NSCoder;
 @:objc
 @:native("NSDecimalNumber")
@@ -98,7 +97,7 @@ extern class NSDecimalNumber extends NSNumber{
 	overload public function decimalNumberByRoundingAccordingToBehavior(behavior:Dynamic):NSDecimalNumber;
 
 	@:native("compare")
-	overload public function compare(decimalNumber:NSNumber):NSComparisonResult;
+	overload public function compare(decimalNumber:NSNumber):Dynamic;
 
 	@:native("defaultBehavior")
 	overload public static function defaultBehavior():Dynamic;

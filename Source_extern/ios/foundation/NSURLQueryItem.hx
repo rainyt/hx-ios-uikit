@@ -29,8 +29,7 @@ extern class NSURLQueryItem
 	public var value:NSString;
 
 	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding(:null):Bool
-;
+	overload public static function supportsSecureCoding():Bool;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

@@ -1,7 +1,6 @@
 package ios.uikit;
 
 import ios.uikit.NSIndexPath;
-import ios.foundation.NSComparisonResult;
 @:objc
 @:native("NSIndexPath")
 @:include("UIKit/UIKit.h")
@@ -56,7 +55,7 @@ extern class NSIndexPath{
 	overload public function getIndexesRange(indexes:Int, range:Dynamic):Void;
 
 	@:native("compare")
-	overload public function compare(otherObject:NSIndexPath):NSComparisonResult;
+	overload public function compare(otherObject:NSIndexPath):Dynamic;
 
 
 }

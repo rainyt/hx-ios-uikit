@@ -6,7 +6,6 @@ import ios.uikit.UITextRange;
 import cpp.objc.NSDictionary;
 import ios.uikit.UITextPosition;
 import ios.uikit.UITextLayoutDirection;
-import ios.foundation.NSComparisonResult;
 import ios.uikit.NSWritingDirection;
 import ios.uikit.UITextStorageDirection;
 import ios.objc.CGRect;
@@ -64,7 +63,7 @@ extern interface UITextInput{
 	overload public function positionFromPositionInDirectionOffset(position:UITextPosition, inDirection:UITextLayoutDirection, offset:Int):UITextPosition;
 
 	@:native("comparePosition:toPosition")
-	overload public function comparePositionToPosition(position:UITextPosition, toPosition:UITextPosition):NSComparisonResult;
+	overload public function comparePositionToPosition(position:UITextPosition, toPosition:UITextPosition):Dynamic;
 
 	@:native("offsetFromPosition:toPosition")
 	overload public function offsetFromPositionToPosition(from:UITextPosition, toPosition:UITextPosition):Int;

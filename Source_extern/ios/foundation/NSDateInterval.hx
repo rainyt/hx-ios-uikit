@@ -5,7 +5,6 @@ import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import ios.foundation.NSDate;
 import ios.uikit.NSCoder;
-import ios.foundation.NSComparisonResult;
 @:objc
 @:native("NSDateInterval")
 @:include("Foundation/Foundation.h")
@@ -40,7 +39,7 @@ extern class NSDateInterval
 	overload public function initWithStartDateEndDate(startDate:NSDate, endDate:NSDate):NSDateInterval;
 
 	@:native("compare")
-	overload public function compare(dateInterval:NSDateInterval):NSComparisonResult;
+	overload public function compare(dateInterval:NSDateInterval):Dynamic;
 
 	@:native("isEqualToDateInterval")
 	overload public function isEqualToDateInterval(dateInterval:NSDateInterval):Bool;

@@ -3,7 +3,6 @@ package ios.foundation;
 import ios.foundation.NSNumber;
 import ios.uikit.NSCoder;
 import cpp.objc.NSString;
-import ios.foundation.NSComparisonResult;
 @:objc
 @:native("NSNumber")
 @:include("Foundation/Foundation.h")
@@ -115,7 +114,7 @@ extern class NSNumber{
 	public var stringValue:NSString;
 
 	@:native("compare")
-	overload public function compare(otherNumber:NSNumber):NSComparisonResult;
+	overload public function compare(otherNumber:NSNumber):Dynamic;
 
 	@:native("isEqualToNumber")
 	overload public function isEqualToNumber(number:NSNumber):Bool;

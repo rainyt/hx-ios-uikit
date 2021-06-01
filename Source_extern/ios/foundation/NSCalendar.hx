@@ -10,7 +10,6 @@ import ios.foundation.NSCalendarUnit;
 import ios.foundation.NSDate;
 import ios.foundation.NSDateComponents;
 import ios.foundation.NSCalendarOptions;
-import ios.foundation.NSComparisonResult;
 @:objc
 @:native("NSCalendar")
 @:include("Foundation/Foundation.h")
@@ -165,7 +164,7 @@ extern class NSCalendar
 	overload public function componentsInTimeZoneFromDate(timezone:NSTimeZone, fromDate:NSDate):NSDateComponents;
 
 	@:native("compareDate:toDate:toUnitGranularity")
-	overload public function compareDateToDateToUnitGranularity(date1:NSDate, toDate:NSDate, toUnitGranularity:NSCalendarUnit):NSComparisonResult;
+	overload public function compareDateToDateToUnitGranularity(date1:NSDate, toDate:NSDate, toUnitGranularity:NSCalendarUnit):Dynamic;
 
 	@:native("isDate:equalToDate:toUnitGranularity")
 	overload public function isDateEqualToDateToUnitGranularity(date1:NSDate, equalToDate:NSDate, toUnitGranularity:NSCalendarUnit):Bool;

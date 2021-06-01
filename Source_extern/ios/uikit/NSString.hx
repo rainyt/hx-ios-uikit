@@ -9,7 +9,6 @@ import ios.uikit.NSStringDrawingOptions;
 import ios.uikit.NSStringDrawingContext;
 import ios.foundation.NSCharacterSet;
 import ios.uikit.NSCoder;
-import ios.foundation.NSComparisonResult;
 import ios.foundation.NSStringCompareOptions;
 import ios.foundation.NSLocale;
 import cpp.objc.NSData;
@@ -127,28 +126,28 @@ extern class NSString{
 	overload public function getCharactersRange(buffer:Dynamic, range:Dynamic):Void;
 
 	@:native("compare")
-	overload public function compare(string:NSString):NSComparisonResult;
+	overload public function compare(string:NSString):Dynamic;
 
 	@:native("compare:options")
-	overload public function compareOptions(string:NSString, options:NSStringCompareOptions):NSComparisonResult;
+	overload public function compareOptions(string:NSString, options:NSStringCompareOptions):Dynamic;
 
 	@:native("compare:options:range")
-	overload public function compareOptionsRange(string:NSString, options:NSStringCompareOptions, range:Dynamic):NSComparisonResult;
+	overload public function compareOptionsRange(string:NSString, options:NSStringCompareOptions, range:Dynamic):Dynamic;
 
 	@:native("compare:options:range:locale")
-	overload public function compareOptionsRangeLocale(string:NSString, options:NSStringCompareOptions, range:Dynamic, locale:Dynamic):NSComparisonResult;
+	overload public function compareOptionsRangeLocale(string:NSString, options:NSStringCompareOptions, range:Dynamic, locale:Dynamic):Dynamic;
 
 	@:native("caseInsensitiveCompare")
-	overload public function caseInsensitiveCompare(string:NSString):NSComparisonResult;
+	overload public function caseInsensitiveCompare(string:NSString):Dynamic;
 
 	@:native("localizedCompare")
-	overload public function localizedCompare(string:NSString):NSComparisonResult;
+	overload public function localizedCompare(string:NSString):Dynamic;
 
 	@:native("localizedCaseInsensitiveCompare")
-	overload public function localizedCaseInsensitiveCompare(string:NSString):NSComparisonResult;
+	overload public function localizedCaseInsensitiveCompare(string:NSString):Dynamic;
 
 	@:native("localizedStandardCompare")
-	overload public function localizedStandardCompare(string:NSString):NSComparisonResult;
+	overload public function localizedStandardCompare(string:NSString):Dynamic;
 
 	@:native("isEqualToString")
 	overload public function isEqualToString(aString:NSString):Bool;

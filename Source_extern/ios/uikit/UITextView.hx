@@ -20,7 +20,6 @@ import ios.uikit.NSTextStorage;
 import ios.uikit.UITextRange;
 import ios.uikit.UITextPosition;
 import ios.uikit.UITextLayoutDirection;
-import ios.foundation.NSComparisonResult;
 import ios.uikit.NSWritingDirection;
 import ios.uikit.UITextStorageDirection;
 import ios.objc.CGPoint;
@@ -158,7 +157,7 @@ extern class UITextView extends UIScrollView
 	overload public function positionFromPositionInDirectionOffset(position:UITextPosition, inDirection:UITextLayoutDirection, offset:Int):UITextPosition;
 
 	@:native("comparePosition:toPosition")
-	overload public function comparePositionToPosition(position:UITextPosition, toPosition:UITextPosition):NSComparisonResult;
+	overload public function comparePositionToPosition(position:UITextPosition, toPosition:UITextPosition):Dynamic;
 
 	@:native("offsetFromPosition:toPosition")
 	overload public function offsetFromPositionToPosition(from:UITextPosition, toPosition:UITextPosition):Int;

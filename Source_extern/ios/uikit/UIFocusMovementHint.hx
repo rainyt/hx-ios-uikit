@@ -1,20 +1,20 @@
 package ios.uikit;
 
-import ios.uikit.UIFocusMovementHint:;
+import ios.uikit.UIFocusMovementHint;
 import ios.objc.NSCopying;
 import ios.objc.CGVector;
 import ios.objc.CATransform3D;
 @:objc
-@:native("UIFocusMovementHint:")
+@:native("UIFocusMovementHint")
 @:include("UIKit/UIKit.h")
-extern class UIFocusMovementHint:
+extern class UIFocusMovementHint
 {
 
 	@:native("alloc")
-	overload public static function alloc():UIFocusMovementHint:;
+	overload public static function alloc():UIFocusMovementHint;
 
 	@:native("autorelease")
-	overload public static function autorelease():UIFocusMovementHint:;
+	overload public static function autorelease():UIFocusMovementHint;
 
 	@:native("movementDirection")
 	public var movementDirection:CGVector;
@@ -32,7 +32,7 @@ extern class UIFocusMovementHint:
 	public var interactionTransform:CATransform3D;
 
 	@:native("init")
-	overload public function init():UIFocusMovementHint:;
+	overload public function init():UIFocusMovementHint;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

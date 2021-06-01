@@ -4,7 +4,6 @@ import ios.foundation.NSDate;
 import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
-import ios.foundation.NSComparisonResult;
 import cpp.objc.NSString;
 @:objc
 @:native("NSDate")
@@ -49,7 +48,7 @@ extern class NSDate
 	overload public function laterDate(anotherDate:NSDate):NSDate;
 
 	@:native("compare")
-	overload public function compare(other:NSDate):NSComparisonResult;
+	overload public function compare(other:NSDate):Dynamic;
 
 	@:native("isEqualToDate")
 	overload public function isEqualToDate(otherDate:NSDate):Bool;
