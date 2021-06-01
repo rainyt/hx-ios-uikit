@@ -205,6 +205,8 @@ class ExternBaseClass:
             if (not self.hasFuncOrAttr(value,unFindParentFunc)):
                 _this = self.funcAndAttr
                 _this.append(value)
+        if (((t.className == self.className) and ((t.extendClassName is not None))) and ((self.extendClassName is None))):
+            self.extendClassName = t.extendClassName
 
     def putExternClass(self,t):
         _g_current = 0
@@ -697,30 +699,6 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
                 array.append(_hx_AnonObject({'name': (a[0] if 0 < len(a) else None), 'type': (a[1] if 1 < len(a) else None)}))
             return array
         return None
-
-
-
-class haxe_IMap:
-    _hx_class_name = "haxe.IMap"
-    __slots__ = ()
-    _hx_methods = ["get", "keys"]
-
-
-class haxe_ds_StringMap:
-    _hx_class_name = "haxe.ds.StringMap"
-    __slots__ = ("h",)
-    _hx_fields = ["h"]
-    _hx_methods = ["get", "keys"]
-    _hx_interfaces = [haxe_IMap]
-
-    def __init__(self):
-        self.h = dict()
-
-    def get(self,key):
-        return self.h.get(key,None)
-
-    def keys(self):
-        return python_HaxeIterator(iter(self.h.keys()))
 
 
 
@@ -1572,6 +1550,12 @@ class Sys:
         return Sys._programPath
 
 
+class haxe_IMap:
+    _hx_class_name = "haxe.IMap"
+    __slots__ = ()
+    _hx_methods = ["get", "keys"]
+
+
 class haxe_Exception(Exception):
     _hx_class_name = "haxe.Exception"
     __slots__ = ("_hx___nativeStack", "_hx___skipStack", "_hx___nativeException", "_hx___previousException")
@@ -1665,6 +1649,24 @@ class haxe_ValueException(haxe_Exception):
 
     def unwrap(self):
         return self.value
+
+
+
+class haxe_ds_StringMap:
+    _hx_class_name = "haxe.ds.StringMap"
+    __slots__ = ("h",)
+    _hx_fields = ["h"]
+    _hx_methods = ["get", "keys"]
+    _hx_interfaces = [haxe_IMap]
+
+    def __init__(self):
+        self.h = dict()
+
+    def get(self,key):
+        return self.h.get(key,None)
+
+    def keys(self):
+        return python_HaxeIterator(iter(self.h.keys()))
 
 
 

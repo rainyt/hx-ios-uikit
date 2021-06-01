@@ -4,6 +4,12 @@ import ios.foundation.NSNumber;
 import ios.foundation.NSDecimalNumber;
 import cpp.objc.NSString;
 import ios.uikit.NSCoder;
+import ios.uikit.NSValue;
+import ios.objc.CGPoint;
+import ios.objc.CGVector;
+import ios.objc.CGSize;
+import ios.objc.CGRect;
+import ios.objc.CGAffineTransform;
 @:objc
 @:native("NSDecimalNumber")
 @:include("Foundation/Foundation.h")
@@ -102,9 +108,6 @@ extern class NSDecimalNumber extends NSNumber{
 	@:native("defaultBehavior")
 	overload public static function defaultBehavior():Dynamic;
 
-	@:native("objCType")
-	public var objCType:Dynamic;
-
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):NSDecimalNumber;
 
@@ -200,6 +203,54 @@ extern class NSDecimalNumber extends NSNumber{
 
 	@:native("numberWithUnsignedInteger")
 	overload public static function numberWithUnsignedInteger(value:Int):NSDecimalNumber;
+
+	@:native("valueWithCGPoint")
+	overload public static function valueWithCGPoint(point:CGPoint):NSDecimalNumber;
+
+	@:native("valueWithCGVector")
+	overload public static function valueWithCGVector(vector:CGVector):NSDecimalNumber;
+
+	@:native("valueWithCGSize")
+	overload public static function valueWithCGSize(size:CGSize):NSDecimalNumber;
+
+	@:native("valueWithCGRect")
+	overload public static function valueWithCGRect(rect:CGRect):NSDecimalNumber;
+
+	@:native("valueWithCGAffineTransform")
+	overload public static function valueWithCGAffineTransform(transform:CGAffineTransform):NSDecimalNumber;
+
+	@:native("valueWithUIEdgeInsets")
+	overload public static function valueWithUIEdgeInsets(insets:Dynamic):NSDecimalNumber;
+
+	@:native("valueWithDirectionalEdgeInsets")
+	overload public static function valueWithDirectionalEdgeInsets(insets:Dynamic):NSDecimalNumber;
+
+	@:native("valueWithUIOffset")
+	overload public static function valueWithUIOffset(insets:Dynamic):NSDecimalNumber;
+
+	@:native("getValue:size")
+	overload public function getValueSize(value:Void, size:Int):Void;
+
+	@:native("initWithBytes:objCType")
+	overload public function initWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSDecimalNumber;
+
+	@:native("valueWithBytes:objCType")
+	overload public static function valueWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSDecimalNumber;
+
+	@:native("value:withObjCType")
+	overload public static function valueWithObjCType(value:Dynamic, withObjCType:Dynamic):NSDecimalNumber;
+
+	@:native("valueWithNonretainedObject")
+	overload public static function valueWithNonretainedObject(anObject:Dynamic):NSDecimalNumber;
+
+	@:native("valueWithPointer")
+	overload public static function valueWithPointer(pointer:Dynamic):NSDecimalNumber;
+
+	@:native("isEqualToValue")
+	overload public function isEqualToValue(value:NSValue):Bool;
+
+	@:native("valueWithRange")
+	overload public static function valueWithRange(range:Dynamic):NSDecimalNumber;
 
 
 }

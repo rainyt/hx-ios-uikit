@@ -1,12 +1,18 @@
 package ios.foundation;
 
+import ios.uikit.NSValue;
 import ios.foundation.NSNumber;
 import ios.uikit.NSCoder;
 import cpp.objc.NSString;
+import ios.objc.CGPoint;
+import ios.objc.CGVector;
+import ios.objc.CGSize;
+import ios.objc.CGRect;
+import ios.objc.CGAffineTransform;
 @:objc
 @:native("NSNumber")
 @:include("Foundation/Foundation.h")
-extern class NSNumber{
+extern class NSNumber extends NSValue{
 
 	@:native("alloc")
 	overload public static function alloc():NSNumber;
@@ -166,6 +172,54 @@ extern class NSNumber{
 
 	@:native("numberWithUnsignedInteger")
 	overload public static function numberWithUnsignedInteger(value:Int):NSNumber;
+
+	@:native("valueWithCGPoint")
+	overload public static function valueWithCGPoint(point:CGPoint):NSNumber;
+
+	@:native("valueWithCGVector")
+	overload public static function valueWithCGVector(vector:CGVector):NSNumber;
+
+	@:native("valueWithCGSize")
+	overload public static function valueWithCGSize(size:CGSize):NSNumber;
+
+	@:native("valueWithCGRect")
+	overload public static function valueWithCGRect(rect:CGRect):NSNumber;
+
+	@:native("valueWithCGAffineTransform")
+	overload public static function valueWithCGAffineTransform(transform:CGAffineTransform):NSNumber;
+
+	@:native("valueWithUIEdgeInsets")
+	overload public static function valueWithUIEdgeInsets(insets:Dynamic):NSNumber;
+
+	@:native("valueWithDirectionalEdgeInsets")
+	overload public static function valueWithDirectionalEdgeInsets(insets:Dynamic):NSNumber;
+
+	@:native("valueWithUIOffset")
+	overload public static function valueWithUIOffset(insets:Dynamic):NSNumber;
+
+	@:native("getValue:size")
+	overload public function getValueSize(value:Void, size:Int):Void;
+
+	@:native("initWithBytes:objCType")
+	overload public function initWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSNumber;
+
+	@:native("valueWithBytes:objCType")
+	overload public static function valueWithBytesObjCType(value:Dynamic, objCType:Dynamic):NSNumber;
+
+	@:native("value:withObjCType")
+	overload public static function valueWithObjCType(value:Dynamic, withObjCType:Dynamic):NSNumber;
+
+	@:native("valueWithNonretainedObject")
+	overload public static function valueWithNonretainedObject(anObject:Dynamic):NSNumber;
+
+	@:native("valueWithPointer")
+	overload public static function valueWithPointer(pointer:Dynamic):NSNumber;
+
+	@:native("isEqualToValue")
+	overload public function isEqualToValue(value:NSValue):Bool;
+
+	@:native("valueWithRange")
+	overload public static function valueWithRange(range:Dynamic):NSNumber;
 
 
 }

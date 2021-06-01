@@ -106,8 +106,11 @@ class ExternBaseClass {
 				extendClassName = extendClassName.substr(0, extendClassName.indexOf("<"));
 			}
 		}
-		if (extendClassName == "NSObject")
+		// if(this.className == "UIButton")
+		// trace(extendClassName);
+		if (extendClassName == "NSObject") {
 			extendClassName = null;
+		}
 		if (defcall != null)
 			defcall(this);
 		funcAndAttr.push({
@@ -150,6 +153,10 @@ class ExternBaseClass {
 			if (!hasFuncOrAttr(value, unFindParentFunc)) {
 				funcAndAttr.push(value);
 			}
+		}
+		// 继承关系
+		if(t.className == this.className && t.extendClassName != null && this.extendClassName == null){
+			this.extendClassName = t.extendClassName;
 		}
 	}
 
