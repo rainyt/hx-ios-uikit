@@ -764,8 +764,10 @@ class ExternTools:
 
     @staticmethod
     def main():
-        ExternTools.externDir = ((HxOverrides.stringOrNull(Sys.getCwd()) + "/") + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(Sys.args(), 1)))
-        framework = ((HxOverrides.stringOrNull(Sys.getCwd()) + "/") + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(Sys.args(), 0)))
+        _this = python_internal_ArrayImpl._get(Sys.args(), 1)
+        ExternTools.externDir = (python_internal_ArrayImpl._get(Sys.args(), 1) if (((("" if ((0 >= len(_this))) else _this[0])) == "/")) else ((HxOverrides.stringOrNull(Sys.getCwd()) + "/") + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(Sys.args(), 1))))
+        _this = python_internal_ArrayImpl._get(Sys.args(), 0)
+        framework = (python_internal_ArrayImpl._get(Sys.args(), 0) if (((("" if ((0 >= len(_this))) else _this[0])) == "/")) else ((HxOverrides.stringOrNull(Sys.getCwd()) + "/") + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(Sys.args(), 0))))
         ExternTools.parsingFrameworkDir(framework,ExternTools.externDir)
 
     @staticmethod
@@ -826,10 +828,10 @@ class ExternTools:
         pkg = HxString.substr(pkg,0,(pkg.find(".") if ((startIndex is None)) else HxString.indexOfImpl(pkg,".",startIndex)))
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
-        hlibsfile = (((("null" if pkg is None else pkg) + "/") + ("null" if pkg is None else pkg)) + ".h")
-        c = ExternHFile(hfile,haxedir,hlibsfile,classpkg)
         if (not sys_FileSystem.exists(haxedir)):
             sys_FileSystem.createDirectory(haxedir)
+        hlibsfile = (((("null" if pkg is None else pkg) + "/") + ("null" if pkg is None else pkg)) + ".h")
+        c = ExternHFile(hfile,haxedir,hlibsfile,classpkg)
         _hx_map = c.typedefs
         _g_map = _hx_map
         _g_keys = _hx_map.keys()

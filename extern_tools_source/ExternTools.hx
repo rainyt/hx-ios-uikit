@@ -23,8 +23,8 @@ class ExternTools {
 	 * python3 tools/extern_tools.py Frameworks Output
 	 */
 	static function main() {
-		externDir = Sys.getCwd() + "/" + Sys.args()[1];
-		var framework = Sys.getCwd() + "/" + Sys.args()[0];
+		externDir = Sys.args()[1].charAt(0) == "/" ? Sys.args()[1] : Sys.getCwd() + "/" + Sys.args()[1];
+		var framework = Sys.args()[0].charAt(0) == "/" ? Sys.args()[0] : Sys.getCwd() + "/" + Sys.args()[0];
 		// externDir = StringTools.replace(Sys.programPath(), "extern_tools.py", "../Source_extern");
 		// var framework = StringTools.replace(Sys.programPath(), "extern_tools.py", "../framework");
 		parsingFrameworkDir(framework, externDir);
@@ -59,11 +59,11 @@ class ExternTools {
 		// var haxefile = hfile.substr(hfile.lastIndexOf("/") + 1) + "x";
 		var classpkg = "ios." + pkg.toLowerCase();
 		var haxedir = out + "/ios/" + pkg.toLowerCase();
-		var hlibsfile = pkg + "/" + pkg + ".h";
-		var c = new ExternHFile(hfile, haxedir, hlibsfile, classpkg);
 		if (!FileSystem.exists(haxedir)) {
 			FileSystem.createDirectory(haxedir);
 		}
+		var hlibsfile = pkg + "/" + pkg + ".h";
+		var c = new ExternHFile(hfile, haxedir, hlibsfile, classpkg);
 		// 保存定义
 		for (key => value in c.typedefs) {
 			if (value.className.indexOf("<") == -1 && value.className.indexOf("(") == -1)
