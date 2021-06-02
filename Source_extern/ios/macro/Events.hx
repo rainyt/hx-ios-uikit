@@ -27,7 +27,7 @@ class Events {
 @:objc
 @:build(ios.macro.ObjCWrap.wrap({
      hppImports: ["<UIKit/UIKit.h>"]
-    ,cppImports: ["<plumob/ios/Events.h>"]
+    ,cppImports: ["<ios/macro/Events.h>"]
     ,ext: "NSObject"
     ,protocols: []
     ,fields: [
@@ -35,7 +35,7 @@ class Events {
       ]
     ,methods: [{
          args: [{desc: "handle", name: "sender", type: "id"}]
-        ,code: "::plumob::ios::Events_obj::handleNative(self->listener);"
+        ,code: "::ios::macro::Events_obj::handleNative(self->listener);"
         ,ret: "void"
       }]
   }))
