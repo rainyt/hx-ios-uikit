@@ -1,5 +1,15 @@
 import haxe.macro.Expr.ExprDef;
 
+
+macro function selector(call:Dynamic):Dynamic {
+	var expr:ExprDef = call.expr;
+	expr = expr.getParameters()[0];
+	var string:String = (expr.getParameters()[0]);
+	return macro {
+		untyped __cpp__("@selector({0})", string);
+	};
+}
+
 macro function UIAlertActionCall(call:Dynamic):Dynamic {
 	return macro {
 		untyped __cpp__("^(UIAlertAction * _Nonnull action){

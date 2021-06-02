@@ -11,10 +11,7 @@ class EXUIImage {
 		var rect:CGRect = CGRectMake(0, 0, 1, 1);
 		untyped __cpp__("UIGraphicsBeginImageContext({0}.size)", rect);
 		untyped __cpp__("CGContextRef context = UIGraphicsGetCurrentContext();CGContextSetFillColorWithColor(context, [{0} CGColor]);CGContextFillRect(context, {1});",
-			color,
-			rect);
-		untyped __cpp__("UIGraphicsEndImageContext()");
-		untyped __cpp__("UIGraphicsEndImageContext()");
+			color, rect);
 		var image:UIImage = untyped __cpp__("UIGraphicsGetImageFromCurrentImageContext()");
 		untyped __cpp__("UIGraphicsEndImageContext()");
 		return image;
