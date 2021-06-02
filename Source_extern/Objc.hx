@@ -1,12 +1,14 @@
 import haxe.macro.Expr.ExprDef;
 
-
-macro function selector(call:Dynamic):Dynamic {
-	var expr:ExprDef = call.expr;
-	expr = expr.getParameters()[0];
-	var string:String = (expr.getParameters()[0]);
+/**
+ * 延迟操作
+ * @param time 
+ */
+macro function dispatch_after(time:Dynamic, call:Dynamic) {
 	return macro {
-		untyped __cpp__("@selector({0})", string);
+		untyped __cpp__('dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)({0} * NSEC_PER_SEC)), dispatch_get_main_queue(), ^(){
+				{1}();
+		});', ${time}, ${call});
 	};
 }
 
