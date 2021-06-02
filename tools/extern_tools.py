@@ -162,6 +162,7 @@ class ExternBaseClass:
         x = _hx_AnonObject({'type': "func", 'name': "autorelease", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None})
         _this.append(x)
         read = ""
+        isIgone = False
         isRead = False
         _g_current = 0
         _g_array = harray
@@ -173,64 +174,76 @@ class ExternBaseClass:
             value = _g1_value
             if (not isRead):
                 startIndex = None
-                if (((value.find("//") if ((startIndex is None)) else HxString.indexOfImpl(value,"//",startIndex))) != -1):
-                    startIndex1 = None
-                    value = HxString.substr(value,0,(value.find("//") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"//",startIndex1)))
-                tmp = None
-                tmp1 = None
-                startIndex2 = None
-                if (((value.find("@property") if ((startIndex2 is None)) else HxString.indexOfImpl(value,"@property",startIndex2))) != 0):
-                    startIndex3 = None
-                    tmp1 = (((value.find("-") if ((startIndex3 is None)) else HxString.indexOfImpl(value,"-",startIndex3))) == 0)
-                else:
-                    tmp1 = True
-                if (not tmp1):
-                    startIndex4 = None
-                    tmp = (((value.find("+") if ((startIndex4 is None)) else HxString.indexOfImpl(value,"+",startIndex4))) == 0)
-                else:
-                    tmp = True
-                if tmp:
+                if (((value.find("/*") if ((startIndex is None)) else HxString.indexOfImpl(value,"/*",startIndex))) == 0):
+                    isIgone = True
                     isRead = True
+                else:
+                    startIndex1 = None
+                    if (((value.find("//") if ((startIndex1 is None)) else HxString.indexOfImpl(value,"//",startIndex1))) != -1):
+                        startIndex2 = None
+                        value = HxString.substr(value,0,(value.find("//") if ((startIndex2 is None)) else HxString.indexOfImpl(value,"//",startIndex2)))
+                    tmp = None
+                    tmp1 = None
+                    startIndex3 = None
+                    if (((value.find("@property") if ((startIndex3 is None)) else HxString.indexOfImpl(value,"@property",startIndex3))) != 0):
+                        startIndex4 = None
+                        tmp1 = (((value.find("-") if ((startIndex4 is None)) else HxString.indexOfImpl(value,"-",startIndex4))) == 0)
+                    else:
+                        tmp1 = True
+                    if (not tmp1):
+                        startIndex5 = None
+                        tmp = (((value.find("+") if ((startIndex5 is None)) else HxString.indexOfImpl(value,"+",startIndex5))) == 0)
+                    else:
+                        tmp = True
+                    if tmp:
+                        isRead = True
             if isRead:
                 if (read != ""):
                     read = (("null" if read is None else read) + HxOverrides.stringOrNull(((" " + ("null" if value is None else value)))))
                 else:
                     read = (("null" if read is None else read) + ("null" if value is None else value))
-                startIndex5 = None
-                if (((read.find(";") if ((startIndex5 is None)) else HxString.indexOfImpl(read,";",startIndex5))) != -1):
-                    rs = list(read)
-                    read = ""
-                    last = ""
-                    _g2_current = 0
-                    _g2_array = rs
-                    while (_g2_current < len(_g2_array)):
-                        _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
-                        _g3_key = _g2_current
-                        _g2_current = (_g2_current + 1)
-                        index1 = _g3_key
-                        value1 = _g3_value
-                        if ((last == " ") and ((value1 == " "))):
+                if isIgone:
+                    startIndex6 = None
+                    if (((value.find("*/") if ((startIndex6 is None)) else HxString.indexOfImpl(value,"*/",startIndex6))) != -1):
+                        isIgone = False
+                        isRead = False
+                        read = ""
+                else:
+                    startIndex7 = None
+                    if (((read.find(";") if ((startIndex7 is None)) else HxString.indexOfImpl(read,";",startIndex7))) != -1):
+                        rs = list(read)
+                        read = ""
+                        last = ""
+                        _g2_current = 0
+                        _g2_array = rs
+                        while (_g2_current < len(_g2_array)):
+                            _g3_value = (_g2_array[_g2_current] if _g2_current >= 0 and _g2_current < len(_g2_array) else None)
+                            _g3_key = _g2_current
+                            _g2_current = (_g2_current + 1)
+                            index1 = _g3_key
+                            value1 = _g3_value
+                            if ((last == " ") and ((value1 == " "))):
+                                last = value1
+                                continue
+                            read = (("null" if read is None else read) + ("null" if value1 is None else value1))
                             last = value1
-                            continue
-                        read = (("null" if read is None else read) + ("null" if value1 is None else value1))
-                        last = value1
-                    isRead = False
-                    _g = ("" if ((0 >= len(read))) else read[0])
-                    if ((_g == "-") or ((_g == "+"))):
-                        func = ObjcFun.parsing(hextern.typedefs,self.className,read)
-                        if ((func is not None) and (not (func.name in self._propertys.h))):
-                            self._propertys.h[func.name] = func
-                            _this = self.funcAndAttr
-                            _this.append(func)
-                    elif (_g == "@"):
-                        property = ObjcProperty.parsing(hextern.typedefs,self.className,read)
-                        if ((property is not None) and (not (property.name in self._propertys.h))):
-                            self._propertys.h[property.name] = property
-                            _this1 = self.funcAndAttr
-                            _this1.append(property)
-                    else:
-                        pass
-                    read = ""
+                        isRead = False
+                        _g = ("" if ((0 >= len(read))) else read[0])
+                        if ((_g == "-") or ((_g == "+"))):
+                            func = ObjcFun.parsing(hextern.typedefs,self.className,read)
+                            if ((func is not None) and (not (func.name in self._propertys.h))):
+                                self._propertys.h[func.name] = func
+                                _this = self.funcAndAttr
+                                _this.append(func)
+                        elif (_g == "@"):
+                            property = ObjcProperty.parsing(hextern.typedefs,self.className,read)
+                            if ((property is not None) and (not (property.name in self._propertys.h))):
+                                self._propertys.h[property.name] = property
+                                _this1 = self.funcAndAttr
+                                _this1.append(property)
+                        else:
+                            pass
+                        read = ""
 
     def putClass(self,t,unFindParentFunc = None):
         if (unFindParentFunc is None):
@@ -751,8 +764,8 @@ class ExternTools:
 
     @staticmethod
     def main():
-        ExternTools.externDir = StringTools.replace(Sys.programPath(),"extern_tools.py","../Source_extern")
-        framework = StringTools.replace(Sys.programPath(),"extern_tools.py","../framework")
+        ExternTools.externDir = ((HxOverrides.stringOrNull(Sys.getCwd()) + "/") + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(Sys.args(), 1)))
+        framework = ((HxOverrides.stringOrNull(Sys.getCwd()) + "/") + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(Sys.args(), 0)))
         ExternTools.parsingFrameworkDir(framework,ExternTools.externDir)
 
     @staticmethod
@@ -1558,15 +1571,11 @@ class StringTools:
 class sys_FileSystem:
     _hx_class_name = "sys.FileSystem"
     __slots__ = ()
-    _hx_statics = ["exists", "fullPath", "isDirectory", "createDirectory", "readDirectory"]
+    _hx_statics = ["exists", "isDirectory", "createDirectory", "readDirectory"]
 
     @staticmethod
     def exists(path):
         return python_lib_os_Path.exists(path)
-
-    @staticmethod
-    def fullPath(relPath):
-        return python_lib_os_Path.realpath(relPath)
 
     @staticmethod
     def isDirectory(path):
@@ -1584,11 +1593,16 @@ class sys_FileSystem:
 class Sys:
     _hx_class_name = "Sys"
     __slots__ = ()
-    _hx_statics = ["_programPath", "programPath"]
+    _hx_statics = ["args", "getCwd"]
 
     @staticmethod
-    def programPath():
-        return Sys._programPath
+    def args():
+        argv = python_lib_Sys.argv
+        return argv[1:None]
+
+    @staticmethod
+    def getCwd():
+        return python_lib_Os.getcwd()
 
 
 class haxe_IMap:
@@ -2132,7 +2146,6 @@ ExternBaseClassType.PROPERTY = "property"
 ExternBaseClassType.HAXE = "haxe"
 ExternTools.classDefine = haxe_ds_StringMap()
 ExternTools.protocol = haxe_ds_StringMap()
-Sys._programPath = sys_FileSystem.fullPath(python_lib_Inspect.getsourcefile(Sys))
 python_Boot.keywords = set(["and", "del", "from", "not", "with", "as", "elif", "global", "or", "yield", "assert", "else", "if", "pass", "None", "break", "except", "import", "raise", "True", "class", "exec", "in", "return", "False", "continue", "finally", "is", "try", "def", "for", "lambda", "while"])
 python_Boot.prefixLength = len("_hx_")
 

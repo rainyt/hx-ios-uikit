@@ -130,13 +130,19 @@ class ExternBaseClass {
 			haxe: null
 		});
 		var read = "";
+		var isIgone = false;
 		var isRead = false;
 		for (index => value in harray) {
 			if (!isRead) {
-				if (value.indexOf("//") != -1)
-					value = value.substr(0, value.indexOf("//"));
-				if (value.indexOf("@property") == 0 || value.indexOf("-") == 0 || value.indexOf("+") == 0) {
+				if (value.indexOf("/*") == 0) {
+					isIgone = true;
 					isRead = true;
+				} else {
+					if (value.indexOf("//") != -1)
+						value = value.substr(0, value.indexOf("//"));
+					if (value.indexOf("@property") == 0 || value.indexOf("-") == 0 || value.indexOf("+") == 0) {
+						isRead = true;
+					}
 				}
 			}
 			if (isRead) {
@@ -144,7 +150,14 @@ class ExternBaseClass {
 					read += " " + value;
 				else
 					read += value;
-				if (read.indexOf(";") != -1) {
+
+				if (isIgone) {
+					if (value.indexOf("*/") != -1) {
+						isIgone = false;
+						isRead = false;
+						read = "";
+					}
+				} else if (read.indexOf(";") != -1) {
 					var rs = read.split("");
 					read = "";
 					var last = "";
@@ -377,10 +390,6 @@ class ExternBaseClass {
 			}
 		}
 		return str;
-		// if (str.indexOf(":") != -1)
-		// 	return str.substr(0, str.indexOf(":"));
-		// return str;
-		// return StringTools.replace(str, ":", "_");
 	}
 
 	/**

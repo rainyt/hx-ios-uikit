@@ -1,3 +1,9 @@
 --class-path extern_tools_source
+
+--each
 --main ExternTools
 --python tools/extern_tools.py
+
+--next
+--main RunTools
+--neko run.n

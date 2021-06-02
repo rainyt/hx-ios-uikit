@@ -19,9 +19,14 @@ class ExternTools {
 	 */
 	public static var externDir:String;
 
+	/**
+	 * python3 tools/extern_tools.py Frameworks Output
+	 */
 	static function main() {
-		externDir = StringTools.replace(Sys.programPath(), "extern_tools.py", "../Source_extern");
-		var framework = StringTools.replace(Sys.programPath(), "extern_tools.py", "../framework");
+		externDir = Sys.getCwd() + "/" + Sys.args()[1];
+		var framework = Sys.getCwd() + "/" + Sys.args()[0];
+		// externDir = StringTools.replace(Sys.programPath(), "extern_tools.py", "../Source_extern");
+		// var framework = StringTools.replace(Sys.programPath(), "extern_tools.py", "../framework");
 		parsingFrameworkDir(framework, externDir);
 	}
 

@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSFileCoordinator;
+import cpp.objc.NSString;
 import ios.foundation.NSOperationQueue;
 import ios.foundation.NSURL;
 import ios.foundation.NSFileCoordinatorReadingOptions;
@@ -29,8 +30,8 @@ extern class NSFileCoordinator{
 	@:native("initWithFilePresenter")
 	overload public function initWithFilePresenter(filePresenterOrNil:Dynamic):NSFileCoordinator;
 
-	@:native("NSString")
-	overload public function NSString():Dynamic;
+	@:native("purposeIdentifier")
+	public var purposeIdentifier:NSString;
 
 	@:native("coordinateAccessWithIntents:queue:byAccessor")
 	overload public function coordinateAccessWithIntentsQueueByAccessor(intents:Dynamic, queue:NSOperationQueue, byAccessor:Dynamic):Void;
