@@ -815,15 +815,25 @@ class ExternTools:
     @staticmethod
     def parsingHFile(hfile,out):
         startIndex1 = None
-        startIndex = None
+        endIndex = None
         if (startIndex1 is None):
-            startIndex = hfile.rfind("/framework/", 0, len(hfile))
+            endIndex = hfile.rfind("/Headers/", 0, len(hfile))
         else:
-            i = hfile.rfind("/framework/", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len("/framework/"))) if ((i == -1)) else (i + 1))
-            check = hfile.find("/framework/", startLeft, len(hfile))
-            startIndex = (check if (((check > i) and ((check <= startIndex1)))) else i)
-        pkg = HxString.substring(hfile,(startIndex + 11),None)
+            i = hfile.rfind("/Headers/", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("/Headers/"))) if ((i == -1)) else (i + 1))
+            check = hfile.find("/Headers/", startLeft, len(hfile))
+            endIndex = (check if (((check > i) and ((check <= startIndex1)))) else i)
+        pkg = HxString.substring(hfile,0,endIndex)
+        startIndex1 = None
+        pos = None
+        if (startIndex1 is None):
+            pos = pkg.rfind("/", 0, len(pkg))
+        else:
+            i = pkg.rfind("/", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
+            check = pkg.find("/", startLeft, len(pkg))
+            pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
+        pkg = HxString.substr(pkg,(pos + 1),None)
         startIndex = None
         pkg = HxString.substr(pkg,0,(pkg.find(".") if ((startIndex is None)) else HxString.indexOfImpl(pkg,".",startIndex)))
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
