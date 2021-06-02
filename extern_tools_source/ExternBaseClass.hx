@@ -129,20 +129,50 @@ class ExternBaseClass {
 			args: null,
 			haxe: null
 		});
+		var read = "";
+		var isRead = false;
 		for (index => value in harray) {
-			if (value.indexOf("@property") == 0) {
-				// 属性解析
-				var property = ObjcProperty.parsing(hextern.typedefs, this.className, value);
-				if (property != null && !_propertys.exists(property.name)) {
-					_propertys.set(property.name, property);
-					funcAndAttr.push(property);
+			if (!isRead) {
+				if (value.indexOf("//") != -1)
+					value = value.substr(0, value.indexOf("//"));
+				if (value.indexOf("@property") == 0 || value.indexOf("-") == 0 || value.indexOf("+") == 0) {
+					isRead = true;
 				}
-			} else if (value.indexOf("-") == 0 || value.indexOf("+") == 0) {
-				// 对象方法
-				var func = ObjcFun.parsing(hextern.typedefs, this.className, value);
-				if (func != null && !_propertys.exists(func.name)) {
-					_propertys.set(func.name, func);
-					funcAndAttr.push(func);
+			}
+			if (isRead) {
+				if (read != "")
+					read += " " + value;
+				else
+					read += value;
+				if (read.indexOf(";") != -1) {
+					var rs = read.split("");
+					read = "";
+					var last = "";
+					for (index => value in rs) {
+						if (last == " " && value == " ") {
+							last = value;
+							continue;
+						}
+						read += value;
+						last = value;
+					}
+					isRead = false;
+					switch (read.charAt(0)) {
+						case "@":
+							var property = ObjcProperty.parsing(hextern.typedefs, this.className, read);
+							if (property != null && !_propertys.exists(property.name)) {
+								_propertys.set(property.name, property);
+								funcAndAttr.push(property);
+							}
+						case "-", "+":
+							// 对象方法
+							var func = ObjcFun.parsing(hextern.typedefs, this.className, read);
+							if (func != null && !_propertys.exists(func.name)) {
+								_propertys.set(func.name, func);
+								funcAndAttr.push(func);
+							}
+					}
+					read = "";
 				}
 			}
 		}

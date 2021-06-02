@@ -42,8 +42,8 @@ extern class NSExpression
 	@:native("expressionForKeyPath")
 	overload public static function expressionForKeyPath(keyPath:NSString):NSExpression;
 
-	@:native("expressionForFunction:arguments:Expression:invokes:of:predefined:Will:immediately:the:is")
-	overload public static function expressionForFunctionArgumentsExpressionInvokesOfPredefinedWillImmediatelyTheIs(name:NSString, arguments:NSArray, Expression:Dynamic, invokes:Dynamic, of:Dynamic, predefined:Dynamic, Will:Dynamic, immediately:Dynamic, the:Dynamic, is:Dynamic):NSExpression;
+	@:native("expressionForFunction:arguments")
+	overload public static function expressionForFunctionArguments(name:NSString, arguments:NSArray):NSExpression;
 
 	@:native("expressionForAggregate")
 	overload public static function expressionForAggregate(subexpressions:Dynamic):NSExpression;
@@ -57,8 +57,8 @@ extern class NSExpression
 	@:native("expressionForMinusSet:with")
 	overload public static function expressionForMinusSetWith(left:NSExpression, with:NSExpression):NSExpression;
 
-	@:native("expressionForSubquery:usingIteratorVariable:predicate:Expression:filters:collection:storing:in:collection:the:variable:keeping:elements:which:returns")
-	overload public static function expressionForSubqueryUsingIteratorVariablePredicateExpressionFiltersCollectionStoringInCollectionTheVariableKeepingElementsWhichReturns(expression:NSExpression, usingIteratorVariable:NSString, predicate:NSPredicate, Expression:Dynamic, filters:Dynamic, collection:Dynamic, storing:Dynamic, in:Dynamic, collection:Dynamic, the:Dynamic, variable:Dynamic, keeping:Dynamic, elements:Dynamic, which:Dynamic, returns:Dynamic):NSExpression;
+	@:native("expressionForSubquery:usingIteratorVariable:predicate")
+	overload public static function expressionForSubqueryUsingIteratorVariablePredicate(expression:NSExpression, usingIteratorVariable:NSString, predicate:NSPredicate):NSExpression;
 
 	@:native("expressionForFunction:selectorName:arguments")
 	overload public static function expressionForFunctionSelectorNameArguments(target:NSExpression, selectorName:NSString, arguments:NSArray):NSExpression;
@@ -66,8 +66,8 @@ extern class NSExpression
 	@:native("expressionForAnyKey")
 	overload public static function expressionForAnyKey():NSExpression;
 
-	@:native("expressionForBlock:arguments:Expression:invokes:block:the")
-	overload public static function expressionForBlockArgumentsExpressionInvokesBlockThe(block:Dynamic, arguments:Dynamic, Expression:Dynamic, invokes:Dynamic, block:Dynamic, the:Dynamic):NSExpression;
+	@:native("expressionForBlock:arguments")
+	overload public static function expressionForBlockArguments(block:Dynamic, arguments:Dynamic):NSExpression;
 
 	@:native("expressionForConditional:trueExpression:falseExpression")
 	overload public static function expressionForConditionalTrueExpressionFalseExpression(predicate:NSPredicate, trueExpression:NSExpression, falseExpression:NSExpression):NSExpression;

@@ -4,9 +4,10 @@ import ios.uikit.NSItemProvider;
 import cpp.objc.NSData;
 import ios.objc.CGSize;
 import ios.uikit.UIPreferredPresentationStyle;
-import ios.foundation.NSItemProviderFileOptions;
 import cpp.objc.NSString;
 import ios.foundation.NSItemProviderRepresentationVisibility;
+import ios.foundation.NSItemProviderFileOptions;
+import ios.foundation.NSProgress;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("NSItemProvider")
@@ -31,6 +32,12 @@ extern class NSItemProvider{
 	@:native("init")
 	overload public function init():NSItemProvider;
 
+	@:native("registerDataRepresentationForTypeIdentifier:visibility:loadHandler")
+	overload public function registerDataRepresentationForTypeIdentifierVisibilityLoadHandler(typeIdentifier:NSString, visibility:NSItemProviderRepresentationVisibility, loadHandler:Dynamic):Void;
+
+	@:native("registerFileRepresentationForTypeIdentifier:fileOptions:visibility:loadHandler")
+	overload public function registerFileRepresentationForTypeIdentifierFileOptionsVisibilityLoadHandler(typeIdentifier:NSString, fileOptions:NSItemProviderFileOptions, visibility:NSItemProviderRepresentationVisibility, loadHandler:Dynamic):Void;
+
 	@:native("registeredTypeIdentifiers")
 	public var registeredTypeIdentifiers:Dynamic;
 
@@ -39,6 +46,18 @@ extern class NSItemProvider{
 
 	@:native("hasItemConformingToTypeIdentifier")
 	overload public function hasItemConformingToTypeIdentifier(typeIdentifier:NSString):Bool;
+
+	@:native("hasRepresentationConformingToTypeIdentifier:fileOptions")
+	overload public function hasRepresentationConformingToTypeIdentifierFileOptions(typeIdentifier:NSString, fileOptions:NSItemProviderFileOptions):Bool;
+
+	@:native("loadDataRepresentationForTypeIdentifier:completionHandler")
+	overload public function loadDataRepresentationForTypeIdentifierCompletionHandler(typeIdentifier:NSString, completionHandler:Dynamic):NSProgress;
+
+	@:native("loadFileRepresentationForTypeIdentifier:completionHandler")
+	overload public function loadFileRepresentationForTypeIdentifierCompletionHandler(typeIdentifier:NSString, completionHandler:Dynamic):NSProgress;
+
+	@:native("loadInPlaceFileRepresentationForTypeIdentifier:completionHandler")
+	overload public function loadInPlaceFileRepresentationForTypeIdentifierCompletionHandler(typeIdentifier:NSString, completionHandler:Dynamic):NSProgress;
 
 	@:native("suggestedName")
 	public var suggestedName:NSString;
@@ -49,8 +68,14 @@ extern class NSItemProvider{
 	@:native("registerObject:visibility")
 	overload public function registerObjectVisibility(object:Dynamic, visibility:NSItemProviderRepresentationVisibility):Void;
 
+	@:native("registerObjectOfClass:visibility:loadHandler")
+	overload public function registerObjectOfClassVisibilityLoadHandler(aClass:Dynamic, visibility:NSItemProviderRepresentationVisibility, loadHandler:Dynamic):Void;
+
 	@:native("canLoadObjectOfClass")
 	overload public function canLoadObjectOfClass(aClass:Dynamic):Bool;
+
+	@:native("loadObjectOfClass:completionHandler")
+	overload public function loadObjectOfClassCompletionHandler(aClass:Dynamic, completionHandler:Dynamic):NSProgress;
 
 	@:native("initWithItem:typeIdentifier")
 	overload public function initWithItemTypeIdentifier(item:Dynamic, typeIdentifier:NSString):NSItemProvider;

@@ -37,5 +37,11 @@ extern interface UITabBarControllerDelegate{
 	@:native("tabBarControllerPreferredInterfaceOrientationForPresentation")
 	overload public function tabBarControllerPreferredInterfaceOrientationForPresentation(tabBarController:UITabBarController):UIInterfaceOrientation;
 
+	@:native("tabBarController:interactionControllerForAnimationController")
+	overload public function tabBarControllerInteractionControllerForAnimationController(tabBarController:UITabBarController, interactionControllerForAnimationController:Dynamic):Dynamic;
+
+	@:native("tabBarController:animationControllerForTransitionFromViewController:toViewController")
+	overload public function tabBarControllerAnimationControllerForTransitionFromViewControllerToViewController(tabBarController:UITabBarController, animationControllerForTransitionFromViewController:UIViewController, toViewController:UIViewController):Dynamic;
+
 
 }

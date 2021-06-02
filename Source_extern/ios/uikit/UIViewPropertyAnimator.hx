@@ -5,6 +5,7 @@ import ios.uikit.UIViewImplicitlyAnimating;
 import ios.objc.NSCopying;
 import ios.uikit.UIViewAnimationCurve;
 import ios.objc.CGPoint;
+import ios.uikit.UIViewAnimationOptions;
 @:objc
 @:native("UIViewPropertyAnimator")
 @:include("UIKit/UIKit.h")
@@ -52,6 +53,9 @@ extern class UIViewPropertyAnimator
 
 	@:native("initWithDuration:dampingRatio:animations")
 	overload public function initWithDurationDampingRatioAnimations(duration:Dynamic, dampingRatio:Float, animations:Dynamic):UIViewPropertyAnimator;
+
+	@:native("runningPropertyAnimatorWithDuration:delay:options:animations:completion")
+	overload public static function runningPropertyAnimatorWithDurationDelayOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):UIViewPropertyAnimator;
 
 	@:native("addAnimations:delayFactor")
 	overload public function addAnimationsDelayFactor(animation:Dynamic, delayFactor:Float):Void;

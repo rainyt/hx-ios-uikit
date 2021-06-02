@@ -17,6 +17,7 @@ Enlighten Source:https://github.com/Aurel300/hx-objc-externs
 - UIKit.framework
 - WebKit.framework
 - Foundation.framework
+- QuartzCore.framework
 
 ## 使用说明（Use）
 

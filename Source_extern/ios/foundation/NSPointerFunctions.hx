@@ -33,8 +33,11 @@ extern class NSPointerFunctions
 	@:native("const void src, NSUInteger ( _Nullable size)(const void item), BOOL shouldCopy")
 	public var const void src, NSUInteger ( _Nullable size)(const void item), BOOL shouldCopy:Dynamic;
 
-	@:native("write")
-	public var write:Dynamic;
+	@:native("usesStrongWriteBarrier")
+	public var usesStrongWriteBarrier:Bool;
+
+	@:native("usesWeakReadAndWriteBarriers")
+	public var usesWeakReadAndWriteBarriers:Bool;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

@@ -15,6 +15,9 @@ extern class NSCollectionLayoutEdgeSpacing
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutEdgeSpacing;
 
+	@:native("spacingForLeading:top:trailing:bottom")
+	overload public static function spacingForLeadingTopTrailingBottom(leading:NSCollectionLayoutSpacing, top:NSCollectionLayoutSpacing, trailing:NSCollectionLayoutSpacing, bottom:NSCollectionLayoutSpacing):NSCollectionLayoutEdgeSpacing;
+
 	@:native("init")
 	overload public function init():NSCollectionLayoutEdgeSpacing;
 

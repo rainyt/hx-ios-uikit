@@ -13,6 +13,12 @@ extern class NSOrderedCollectionChange{
 	@:native("autorelease")
 	overload public static function autorelease():NSOrderedCollectionChange;
 
+	@:native("changeWithObject:type:index")
+	overload public static function changeWithObjectTypeIndex(anObject:Dynamic, type:NSCollectionChangeType, index:Int):NSOrderedCollectionChange;
+
+	@:native("changeWithObject:type:index:associatedIndex")
+	overload public static function changeWithObjectTypeIndexAssociatedIndex(anObject:Dynamic, type:NSCollectionChangeType, index:Int, associatedIndex:Int):NSOrderedCollectionChange;
+
 	@:native("object")
 	public var object:Dynamic;
 
@@ -27,6 +33,12 @@ extern class NSOrderedCollectionChange{
 
 	@:native("init")
 	overload public function init():Dynamic;
+
+	@:native("initWithObject:type:index")
+	overload public function initWithObjectTypeIndex(anObject:Dynamic, type:NSCollectionChangeType, index:Int):NSOrderedCollectionChange;
+
+	@:native("initWithObject:type:index:associatedIndex")
+	overload public function initWithObjectTypeIndexAssociatedIndex(anObject:Dynamic, type:NSCollectionChangeType, index:Int, associatedIndex:Int):NSOrderedCollectionChange;
 
 
 }

@@ -31,6 +31,9 @@ extern interface UIMenuBuilde{
 	@:native("replaceMenuForIdentifier:withMenu")
 	overload public function replaceMenuForIdentifierWithMenu(replacedIdentifier:Dynamic, withMenu:UIMenu):Void;
 
+	@:native("replaceChildrenOfMenuForIdentifier:fromChildrenBlock")
+	overload public function replaceChildrenOfMenuForIdentifierFromChildrenBlock(parentIdentifier:Dynamic, fromChildrenBlock:Dynamic):Void;
+
 	@:native("insertSiblingMenu:beforeMenuForIdentifier")
 	overload public function insertSiblingMenuBeforeMenuForIdentifier(siblingMenu:UIMenu, beforeMenuForIdentifier:Dynamic):Void;
 

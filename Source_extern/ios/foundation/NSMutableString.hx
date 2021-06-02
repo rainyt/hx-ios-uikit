@@ -234,20 +234,20 @@ extern class NSMutableString extends NSString{
 	@:native("canBeConvertedToEncoding")
 	overload public function canBeConvertedToEncoding(encoding:Dynamic):Bool;
 
-	@:native("cStringUsingEncoding:NULL:if:conversion")
-	overload public function cStringUsingEncodingNULLIfConversion(encoding:Dynamic, NULL:Dynamic, if:Dynamic, conversion:Dynamic):Dynamic;
+	@:native("cStringUsingEncoding")
+	overload public function cStringUsingEncoding(encoding:Dynamic):Dynamic;
 
-	@:native("getCString:maxLength:encoding:NO:if:not:due:encoding:or:small:a:The:should:room:maxBufferCount")
-	overload public function getCStringMaxLengthEncodingNOIfNotDueEncodingOrSmallATheShouldRoomMaxBufferCount(buffer:Dynamic, maxLength:Int, encoding:Dynamic, NO:Dynamic, if:Dynamic, not:Dynamic, due:Dynamic, encoding:Dynamic, or:Dynamic, small:Dynamic, a:Dynamic, The:Dynamic, should:Dynamic, room:Dynamic, maxBufferCount:Dynamic):Bool;
+	@:native("getCString:maxLength:encoding")
+	overload public function getCStringMaxLengthEncoding(buffer:Dynamic, maxLength:Int, encoding:Dynamic):Bool;
 
 	@:native("getBytes:maxLength:usedLength:encoding:options:range:remainingRange")
 	overload public function getBytesMaxLengthUsedLengthEncodingOptionsRangeRemainingRange(buffer:Void, maxLength:Int, usedLength:Int, encoding:Dynamic, options:NSStringEncodingConversionOptions, range:Dynamic, remainingRange:Dynamic):Bool;
 
-	@:native("maximumLengthOfBytesUsingEncoding:Result")
-	overload public function maximumLengthOfBytesUsingEncodingResult(enc:Dynamic, Result:Dynamic):Int;
+	@:native("maximumLengthOfBytesUsingEncoding")
+	overload public function maximumLengthOfBytesUsingEncoding(enc:Dynamic):Int;
 
-	@:native("lengthOfBytesUsingEncoding:Result")
-	overload public function lengthOfBytesUsingEncodingResult(enc:Dynamic, Result:Dynamic):Int;
+	@:native("lengthOfBytesUsingEncoding")
+	overload public function lengthOfBytesUsingEncoding(enc:Dynamic):Int;
 
 	@:native("availableStringEncodings")
 	overload public static function availableStringEncodings():Dynamic;
@@ -377,6 +377,9 @@ extern class NSMutableString extends NSString{
 
 	@:native("stringWithContentsOfFile:usedEncoding:error")
 	overload public static function stringWithContentsOfFileUsedEncodingError(path:NSString, usedEncoding:Dynamic, error:NSError):NSMutableString;
+
+	@:native("stringEncodingForData:encodingOptions:convertedString:usedLossyConversion")
+	overload public static function stringEncodingForDataEncodingOptionsConvertedStringUsedLossyConversion(data:NSData, encodingOptions:NSDictionary, convertedString:Dynamic, usedLossyConversion:Bool):Dynamic;
 
 	@:native("propertyList")
 	overload public function propertyList():Dynamic;

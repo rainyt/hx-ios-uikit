@@ -30,6 +30,9 @@ extern interface NSURLConnectionDataDelegate{
 	@:native("connection:needNewBodyStream")
 	overload public function connectionNeedNewBodyStream(connection:NSURLConnection, needNewBodyStream:NSURLRequest):NSInputStream;
 
+	@:native("connection:didSendBodyData:totalBytesWritten:totalBytesExpectedToWrite")
+	overload public function connectionDidSendBodyDataTotalBytesWrittenTotalBytesExpectedToWrite(connection:NSURLConnection, didSendBodyData:Int, totalBytesWritten:Int, totalBytesExpectedToWrite:Int):Void;
+
 	@:native("connection:willCacheResponse")
 	overload public function connectionWillCacheResponse(connection:NSURLConnection, willCacheResponse:NSCachedURLResponse):NSCachedURLResponse;
 

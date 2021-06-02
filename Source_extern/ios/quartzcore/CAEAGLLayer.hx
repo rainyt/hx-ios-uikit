@@ -125,6 +125,9 @@ extern class CAEAGLLayer extends CALayer
 	@:native("renderInContext")
 	overload public function renderInContext(ctx:Dynamic):Void;
 
+	@:native("cornerCurveExpansionFactor")
+	overload public static function cornerCurveExpansionFactor(curve:NSString):Float;
+
 	@:native("preferredFrameSize")
 	overload public function preferredFrameSize():CGSize;
 

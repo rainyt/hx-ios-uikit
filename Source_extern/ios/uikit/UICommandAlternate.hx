@@ -27,6 +27,9 @@ extern class UICommandAlternate
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;
 
+	@:native("alternateWithTitle:action:modifierFlags")
+	overload public static function alternateWithTitleActionModifierFlags(title:NSString, action:String, modifierFlags:UIKeyModifierFlags):UICommandAlternate;
+
 	@:native("init")
 	overload public function init():UICommandAlternate;
 

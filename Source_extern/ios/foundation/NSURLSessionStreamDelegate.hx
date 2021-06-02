@@ -3,6 +3,8 @@ package ios.foundation;
 import ios.foundation.NSURLSessionStreamDelegate;
 import ios.foundation.NSURLSession;
 import ios.foundation.NSURLSessionStreamTask;
+import ios.foundation.NSInputStream;
+import ios.foundation.NSOutputStream;
 @:objc
 @:native("NSURLSessionStreamDelegate")
 @:include("Foundation/Foundation.h")
@@ -22,6 +24,9 @@ extern interface NSURLSessionStreamDelegate{
 
 	@:native("URLSession:betterRouteDiscoveredForStreamTask")
 	overload public function URLSessionBetterRouteDiscoveredForStreamTask(session:NSURLSession, betterRouteDiscoveredForStreamTask:NSURLSessionStreamTask):Void;
+
+	@:native("URLSession:streamTask:didBecomeInputStream:outputStream")
+	overload public function URLSessionStreamTaskDidBecomeInputStreamOutputStream(session:NSURLSession, streamTask:NSURLSessionStreamTask, didBecomeInputStream:NSInputStream, outputStream:NSOutputStream):Void;
 
 
 }

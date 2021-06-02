@@ -20,6 +20,9 @@ extern interface CALayerDelegate{
 	@:native("drawLayer:inContext")
 	overload public function drawLayerInContext(layer:CALayer, inContext:Dynamic):Void;
 
+	@:native("layerWillDraw")
+	overload public function layerWillDraw(layer:CALayer):Void;
+
 	@:native("layoutSublayersOfLayer")
 	overload public function layoutSublayersOfLayer(layer:CALayer):Void;
 

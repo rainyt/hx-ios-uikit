@@ -18,6 +18,7 @@ import ios.objc.CGRect;
 import ios.uikit.NSStringDrawingOptions;
 import ios.uikit.NSStringDrawingContext;
 import ios.uikit.NSTextAttachment;
+import ios.foundation.NSURLRequest;
 @:objc
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")
@@ -146,6 +147,18 @@ extern class NSTextStorage extends NSMutableAttributedString
 
 	@:native("attributedStringWithAttachment")
 	overload public static function attributedStringWithAttachment(attachment:NSTextAttachment):NSTextStorage;
+
+	@:native("loadFromHTMLWithRequest:options:completionHandler")
+	overload public static function loadFromHTMLWithRequestOptionsCompletionHandler(request:NSURLRequest, options:NSDictionary, completionHandler:Dynamic):Void;
+
+	@:native("loadFromHTMLWithFileURL:options:completionHandler")
+	overload public static function loadFromHTMLWithFileURLOptionsCompletionHandler(fileURL:NSURL, options:NSDictionary, completionHandler:Dynamic):Void;
+
+	@:native("loadFromHTMLWithString:options:completionHandler")
+	overload public static function loadFromHTMLWithStringOptionsCompletionHandler(string:NSString, options:NSDictionary, completionHandler:Dynamic):Void;
+
+	@:native("loadFromHTMLWithData:options:completionHandler")
+	overload public static function loadFromHTMLWithDataOptionsCompletionHandler(data:NSData, options:NSDictionary, completionHandler:Dynamic):Void;
 
 	@:native("attributesAtIndex:effectiveRange")
 	overload public function attributesAtIndexEffectiveRange(location:Int, effectiveRange:Dynamic):NSDictionary;

@@ -31,8 +31,20 @@ extern class UIKeyCommand extends UICommand{
 	@:native("modifierFlags")
 	public var modifierFlags:UIKeyModifierFlags;
 
+	@:native("commandWithTitle:image:action:input:modifierFlags:propertyList")
+	overload public static function commandWithTitleImageActionInputModifierFlagsPropertyList(title:NSString, image:UIImage, action:String, input:NSString, modifierFlags:UIKeyModifierFlags, propertyList:Dynamic):UIKeyCommand;
+
+	@:native("commandWithTitle:image:action:input:modifierFlags:propertyList:alternates")
+	overload public static function commandWithTitleImageActionInputModifierFlagsPropertyListAlternates(title:NSString, image:UIImage, action:String, input:NSString, modifierFlags:UIKeyModifierFlags, propertyList:Dynamic, alternates:Dynamic):UIKeyCommand;
+
 	@:native("keyCommandWithInput:modifierFlags:action")
 	overload public static function keyCommandWithInputModifierFlagsAction(input:NSString, modifierFlags:UIKeyModifierFlags, action:String):UIKeyCommand;
+
+	@:native("commandWithTitle:image:action:propertyList")
+	overload public static function commandWithTitleImageActionPropertyList(title:NSString, image:UIImage, action:String, propertyList:Dynamic):UIKeyCommand;
+
+	@:native("commandWithTitle:image:action:propertyList:alternates")
+	overload public static function commandWithTitleImageActionPropertyListAlternates(title:NSString, image:UIImage, action:String, propertyList:Dynamic, alternates:Dynamic):UIKeyCommand;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

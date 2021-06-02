@@ -4,6 +4,7 @@ import ios.uikit.UIMenuElement;
 import ios.uikit.UIMenu;
 import cpp.objc.NSString;
 import ios.uikit.UIMenuOptions;
+import ios.uikit.UIImage;
 import ios.uikit.NSCoder;
 @:objc
 @:native("UIMenu")
@@ -27,6 +28,12 @@ extern class UIMenu extends UIMenuElement{
 
 	@:native("menuWithChildren")
 	overload public static function menuWithChildren(children:Dynamic):UIMenu;
+
+	@:native("menuWithTitle:children")
+	overload public static function menuWithTitleChildren(title:NSString, children:Dynamic):UIMenu;
+
+	@:native("menuWithTitle:image:identifier:options:children")
+	overload public static function menuWithTitleImageIdentifierOptionsChildren(title:NSString, image:UIImage, identifier:NSString, options:UIMenuOptions, children:Dynamic):UIMenu;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIMenu;

@@ -6,6 +6,7 @@ import ios.objc.CGRect;
 import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
 import ios.quartzcore.CAEdgeAntialiasingMask;
+import ios.quartzcore.CACornerMask;
 import ios.foundation.NSArray;
 import ios.objc.CGSize;
 import cpp.objc.NSDictionary;
@@ -159,14 +160,14 @@ extern class CALayer{
 	@:native("contentsGravity")
 	public var contentsGravity:NSString;
 
-	@:native(" CGFloat")
-	public var  CGFloat:null;
+	@:native("contentsScale")
+	public var contentsScale:Float;
 
 	@:native("contentsCenter")
 	public var contentsCenter:CGRect;
 
-	@:native(" CALayerContentsFormat")
-	public var  CALayerContentsFormat:Dynamic;
+	@:native("contentsFormat")
+	public var contentsFormat:NSString;
 
 	@:native("minificationFilter")
 	public var minificationFilter:NSString;
@@ -198,8 +199,8 @@ extern class CALayer{
 	@:native("needsDisplayOnBoundsChange")
 	public var needsDisplayOnBoundsChange:Bool;
 
-	@:native(" BOOL")
-	public var  BOOL:null;
+	@:native("drawsAsynchronously")
+	public var drawsAsynchronously:Bool;
 
 	@:native("drawInContext")
 	overload public function drawInContext(ctx:Dynamic):Void;
@@ -210,17 +211,23 @@ extern class CALayer{
 	@:native("edgeAntialiasingMask")
 	public var edgeAntialiasingMask:CAEdgeAntialiasingMask;
 
+	@:native("allowsEdgeAntialiasing")
+	public var allowsEdgeAntialiasing:Bool;
+
 	@:native("backgroundColor")
 	public var backgroundColor:Dynamic;
 
 	@:native("cornerRadius")
 	public var cornerRadius:Float;
 
-	@:native(" CACornerMask")
-	public var  CACornerMask:null;
+	@:native("maskedCorners")
+	public var maskedCorners:CACornerMask;
 
-	@:native(" CALayerCornerCurve")
-	public var  CALayerCornerCurve:Dynamic;
+	@:native("cornerCurve")
+	public var cornerCurve:NSString;
+
+	@:native("cornerCurveExpansionFactor")
+	overload public static function cornerCurveExpansionFactor(curve:NSString):Float;
 
 	@:native("borderWidth")
 	public var borderWidth:Float;
@@ -230,6 +237,9 @@ extern class CALayer{
 
 	@:native("opacity")
 	public var opacity:Dynamic;
+
+	@:native("allowsGroupOpacity")
+	public var allowsGroupOpacity:Bool;
 
 	@:native("compositingFilter")
 	public var compositingFilter:Dynamic;

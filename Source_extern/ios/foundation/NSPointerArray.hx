@@ -45,8 +45,8 @@ extern class NSPointerArray
 	@:native("insertPointer:atIndex")
 	overload public function insertPointerAtIndex(item:Void, atIndex:Int):Void;
 
-	@:native("replacePointerAtIndex:withPointer:O(1:item")
-	overload public function replacePointerAtIndexWithPointerO(1Item(index:Int, withPointer:Void, O(1:Dynamic, item:Dynamic):Void;
+	@:native("replacePointerAtIndex:withPointer")
+	overload public function replacePointerAtIndexWithPointer(index:Int, withPointer:Void):Void;
 
 	@:native("compact")
 	overload public function compact():Void;

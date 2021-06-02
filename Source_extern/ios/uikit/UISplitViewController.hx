@@ -63,6 +63,9 @@ extern class UISplitViewController extends UIViewController{
 	@:native("viewControllerForColumn")
 	overload public function viewControllerForColumn(column:UISplitViewControllerColumn):UIViewController;
 
+	// @:native("-hideColumn:do:accept:Compact:Collapsed:always:for:Primary:or:the:column:not")
+	// overload public function -hideColumnDoAcceptCompactCollapsedAlwaysForPrimaryOrTheColumnNot(-showColumn:Dynamic, do:Dynamic, accept:Dynamic, Compact:Dynamic, Collapsed:Dynamic, always:Dynamic, for:Dynamic, Primary:Dynamic, or:Dynamic, the:Dynamic, column:Dynamic, not:Dynamic):Dynamic;
+
 	@:native("hideColumn")
 	overload public function hideColumn(column:UISplitViewControllerColumn):Void;
 

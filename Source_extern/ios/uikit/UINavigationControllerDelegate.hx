@@ -5,6 +5,7 @@ import ios.uikit.UINavigationController;
 import ios.uikit.UIViewController;
 import ios.uikit.UIInterfaceOrientationMask;
 import ios.uikit.UIInterfaceOrientation;
+import ios.uikit.UINavigationControllerOperation;
 @:objc
 @:native("UINavigationControllerDelegate")
 @:include("UIKit/UIKit.h")
@@ -27,6 +28,12 @@ extern interface UINavigationControllerDelegate{
 
 	@:native("navigationControllerPreferredInterfaceOrientationForPresentation")
 	overload public function navigationControllerPreferredInterfaceOrientationForPresentation(navigationController:UINavigationController):UIInterfaceOrientation;
+
+	@:native("navigationController:interactionControllerForAnimationController")
+	overload public function navigationControllerInteractionControllerForAnimationController(navigationController:UINavigationController, interactionControllerForAnimationController:Dynamic):Dynamic;
+
+	@:native("navigationController:animationControllerForOperation:fromViewController:toViewController")
+	overload public function navigationControllerAnimationControllerForOperationFromViewControllerToViewController(navigationController:UINavigationController, animationControllerForOperation:UINavigationControllerOperation, fromViewController:UIViewController, toViewController:UIViewController):Dynamic;
 
 
 }

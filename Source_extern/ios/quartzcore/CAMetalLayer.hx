@@ -22,8 +22,8 @@ extern class CAMetalLayer extends CALayer{
 	@:native("device")
 	public var device:Dynamic;
 
-	@:native(" id<MTLDevice>")
-	public var  id<MTLDevice>:Dynamic;
+	@:native("preferredDevice")
+	public var preferredDevice:Dynamic;
 
 	@:native("pixelFormat")
 	public var pixelFormat:Dynamic;
@@ -37,14 +37,17 @@ extern class CAMetalLayer extends CALayer{
 	@:native("nextDrawable")
 	overload public function nextDrawable():Dynamic;
 
-	@:native(" NSUInteger")
-	public var  NSUInteger:null;
+	@:native("maximumDrawableCount")
+	public var maximumDrawableCount:Int;
 
 	@:native("presentsWithTransaction")
 	public var presentsWithTransaction:Bool;
 
 	@:native("colorspace")
 	public var colorspace:Dynamic;
+
+	@:native("allowsNextDrawableTimeout")
+	public var allowsNextDrawableTimeout:Bool;
 
 	@:native("scrollPoint")
 	overload public function scrollPoint(p:CGPoint):Void;
@@ -147,6 +150,9 @@ extern class CAMetalLayer extends CALayer{
 
 	@:native("renderInContext")
 	overload public function renderInContext(ctx:Dynamic):Void;
+
+	@:native("cornerCurveExpansionFactor")
+	overload public static function cornerCurveExpansionFactor(curve:NSString):Float;
 
 	@:native("preferredFrameSize")
 	overload public function preferredFrameSize():CGSize;

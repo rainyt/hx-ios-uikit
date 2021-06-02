@@ -90,8 +90,8 @@ extern class UISegmentedControl extends UIControl
 	@:native("insertSegmentWithTitle:atIndex:animated")
 	overload public function insertSegmentWithTitleAtIndexAnimated(title:NSString, atIndex:Int, animated:Bool):Void;
 
-	@:native("insertSegmentWithImage:NSUInteger")
-	overload public function insertSegmentWithImageNSUInteger(image:UIImage, NSUInteger:Dynamic):Void;
+	@:native("insertSegmentWithImage:atIndex:animated")
+	overload public function insertSegmentWithImageAtIndexAnimated(image:UIImage, atIndex:Int, animated:Bool):Void;
 
 	@:native("removeSegmentAtIndex:animated")
 	overload public function removeSegmentAtIndexAnimated(segment:Int, animated:Bool):Void;

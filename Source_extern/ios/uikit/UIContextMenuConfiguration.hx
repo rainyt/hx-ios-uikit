@@ -15,5 +15,8 @@ extern class UIContextMenuConfiguration{
 	@:native("identifier")
 	public var identifier:Dynamic;
 
+	@:native("configurationWithIdentifier:previewProvider:actionProvider")
+	overload public static function configurationWithIdentifierPreviewProviderActionProvider(identifier:Dynamic, previewProvider:Dynamic, actionProvider:Dynamic):UIContextMenuConfiguration;
+
 
 }

@@ -36,6 +36,9 @@ extern class UIAction extends UIMenuElement{
 	@:native("actionWithHandler")
 	overload public static function actionWithHandler(handler:Dynamic):UIAction;
 
+	@:native("actionWithTitle:image:identifier:handler")
+	overload public static function actionWithTitleImageIdentifierHandler(title:NSString, image:UIImage, identifier:NSString, handler:Dynamic):UIAction;
+
 	@:native("init")
 	overload public function init():UIAction;
 

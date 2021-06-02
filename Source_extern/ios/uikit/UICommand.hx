@@ -36,6 +36,12 @@ extern class UICommand extends UIMenuElement{
 	@:native("alternates")
 	public var alternates:Dynamic;
 
+	@:native("commandWithTitle:image:action:propertyList")
+	overload public static function commandWithTitleImageActionPropertyList(title:NSString, image:UIImage, action:String, propertyList:Dynamic):UICommand;
+
+	@:native("commandWithTitle:image:action:propertyList:alternates")
+	overload public static function commandWithTitleImageActionPropertyListAlternates(title:NSString, image:UIImage, action:String, propertyList:Dynamic, alternates:Dynamic):UICommand;
+
 	@:native("init")
 	overload public function init():UICommand;
 

@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSOrderedCollectionDifference;
+import ios.foundation.NSIndexSet;
 @:objc
 @:native("NSOrderedCollectionDifference")
 @:include("Foundation/Foundation.h")
@@ -15,6 +16,12 @@ extern class NSOrderedCollectionDifference
 
 	@:native("initWithChanges")
 	overload public function initWithChanges(changes:Dynamic):NSOrderedCollectionDifference;
+
+	@:native("initWithInsertIndexes:insertedObjects:removeIndexes:removedObjects:additionalChanges")
+	overload public function initWithInsertIndexesInsertedObjectsRemoveIndexesRemovedObjectsAdditionalChanges(inserts:NSIndexSet, insertedObjects:Dynamic, removeIndexes:NSIndexSet, removedObjects:Dynamic, additionalChanges:Dynamic):NSOrderedCollectionDifference;
+
+	@:native("initWithInsertIndexes:insertedObjects:removeIndexes:removedObjects")
+	overload public function initWithInsertIndexesInsertedObjectsRemoveIndexesRemovedObjects(inserts:NSIndexSet, insertedObjects:Dynamic, removeIndexes:NSIndexSet, removedObjects:Dynamic):NSOrderedCollectionDifference;
 
 	@:native("insertions")
 	public var insertions:Dynamic;

@@ -50,6 +50,18 @@ extern class NSScanner{
 	@:native("scanDouble")
 	overload public function scanDouble(result:Dynamic):Bool;
 
+	@:native("scanHexInt")
+	overload public function scanHexInt(result:Dynamic):Bool;
+
+	@:native("scanHexLongLong")
+	overload public function scanHexLongLong(result:Dynamic):Bool;
+
+	@:native("scanHexFloat")
+	overload public function scanHexFloat(result:Dynamic):Bool;
+
+	@:native("scanHexDouble")
+	overload public function scanHexDouble(result:Dynamic):Bool;
+
 	@:native("scanString:intoString")
 	overload public function scanStringIntoString(string:NSString, intoString:Dynamic):Bool;
 

@@ -5,6 +5,7 @@ import ios.foundation.NSPersonNameComponentsFormatter;
 import ios.foundation.NSPersonNameComponentsFormatterStyle;
 import cpp.objc.NSString;
 import ios.foundation.NSPersonNameComponents;
+import ios.foundation.NSPersonNameComponentsFormatterOptions;
 import ios.uikit.NSAttributedString;
 import cpp.objc.NSDictionary;
 @:objc
@@ -23,6 +24,9 @@ extern class NSPersonNameComponentsFormatter extends NSFormatter{
 
 	@:native("phonetic")
 	public var phonetic:Bool;
+
+	@:native("localizedStringFromPersonNameComponents:style:options")
+	overload public static function localizedStringFromPersonNameComponentsStyleOptions(components:NSPersonNameComponents, style:NSPersonNameComponentsFormatterStyle, options:NSPersonNameComponentsFormatterOptions):NSString;
 
 	@:native("stringFromPersonNameComponents")
 	overload public function stringFromPersonNameComponents(components:NSPersonNameComponents):NSString;

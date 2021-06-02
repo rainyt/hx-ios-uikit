@@ -19,8 +19,8 @@ extern class NSURLProtectionSpace
 	@:native("initWithHost:port:protocol:realm:authenticationMethod")
 	overload public function initWithHostPortProtocolRealmAuthenticationMethod(host:NSString, port:Int, protocol:NSString, realm:NSString, authenticationMethod:NSString):NSURLProtectionSpace;
 
-	@:native("initWithProxyHost:port:type:realm")
-	overload public function initWithProxyHostPortTypeRealm(host:NSString, port:Int, type:NSString, realm:NSString):NSURLProtectionSpace;
+	@:native("initWithProxyHost:port:type:realm:authenticationMethod")
+	overload public function initWithProxyHostPortTypeRealmAuthenticationMethod(host:NSString, port:Int, type:NSString, realm:NSString, authenticationMethod:NSString):NSURLProtectionSpace;
 
 	@:native("realm")
 	public var realm:NSString;

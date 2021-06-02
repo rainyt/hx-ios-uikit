@@ -134,5 +134,17 @@ extern class UIPasteboard{
 	@:native("hasColors")
 	public var hasColors:Bool;
 
+	@:native("detectPatternsForPatterns:completionHandler")
+	overload public function detectPatternsForPatternsCompletionHandler(patterns:Dynamic, completionHandler:Dynamic):Void;
+
+	@:native("detectPatternsForPatterns:inItemSet:completionHandler")
+	overload public function detectPatternsForPatternsInItemSetCompletionHandler(patterns:Dynamic, inItemSet:Dynamic, completionHandler:Dynamic):Void;
+
+	@:native("detectValuesForPatterns:completionHandler")
+	overload public function detectValuesForPatternsCompletionHandler(patterns:Dynamic, completionHandler:Dynamic):Void;
+
+	@:native("detectValuesForPatterns:inItemSet:completionHandler")
+	overload public function detectValuesForPatternsInItemSetCompletionHandler(patterns:Dynamic, inItemSet:Dynamic, completionHandler:Dynamic):Void;
+
 
 }

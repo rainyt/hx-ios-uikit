@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UITextFormattingCoordinator;
 import ios.uikit.UIFontPickerViewControllerDelegate;
 import ios.uikit.UIWindowScene;
+import cpp.objc.NSDictionary;
 import ios.uikit.UIFontPickerViewController;
 @:objc
 @:native("UITextFormattingCoordinator")
@@ -30,6 +31,9 @@ extern class UITextFormattingCoordinator
 
 	@:native("init")
 	overload public function init():UITextFormattingCoordinator;
+
+	@:native("setSelectedAttributes:isMultiple")
+	overload public function setSelectedAttributesIsMultiple(attributes:NSDictionary, isMultiple:Bool):Void;
 
 	@:native("toggleFontPanel")
 	overload public static function toggleFontPanel(sender:Dynamic):Void;

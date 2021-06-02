@@ -31,14 +31,17 @@ extern class CADisplayLink{
 	@:native("duration")
 	public var duration:Dynamic;
 
-	@:native(" CFTimeInterval")
-	public var  CFTimeInterval:Dynamic;
+	@:native("targetTimestamp")
+	public var targetTimestamp:Dynamic;
 
 	@:native("paused")
 	public var paused:Bool;
 
-	@:native(" NSInteger")
-	public var  NSInteger:Dynamic;
+	@:native("frameInterval")
+	public var frameInterval:Int;
+
+	@:native("preferredFramesPerSecond")
+	public var preferredFramesPerSecond:Int;
 
 
 }
