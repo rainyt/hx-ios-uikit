@@ -6,7 +6,6 @@ import ios.uikit.UIDynamicItem;
 import ios.objc.CGRect;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
-import ios.objc.CATransform3D;
 import ios.objc.CGAffineTransform;
 import ios.uikit.NSIndexPath;
 import ios.uikit.UICollectionElementCategory;
@@ -35,7 +34,7 @@ extern class UICollectionViewLayoutAttributes
 	public var size:CGSize;
 
 	@:native("transform3D")
-	public var transform3D:CATransform3D;
+	public var transform3D:Dynamic;
 
 	@:native("bounds")
 	public var bounds:CGRect;

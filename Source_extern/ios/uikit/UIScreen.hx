@@ -5,7 +5,7 @@ import ios.uikit.UITraitEnvironment;
 import ios.objc.CGRect;
 import ios.uikit.UIScreenMode;
 import ios.uikit.UIScreenOverscanCompensation;
-import ios.objc.CADisplayLink;
+import ios.quartzcore.CADisplayLink;
 import ios.uikit.UIView;
 import ios.uikit.UITraitCollection;
 @:objc

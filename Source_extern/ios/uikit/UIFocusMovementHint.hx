@@ -3,7 +3,6 @@ package ios.uikit;
 import ios.uikit.UIFocusMovementHint;
 import ios.objc.NSCopying;
 import ios.objc.CGVector;
-import ios.objc.CATransform3D;
 @:objc
 @:native("UIFocusMovementHint")
 @:include("UIKit/UIKit.h")
@@ -20,7 +19,7 @@ extern class UIFocusMovementHint
 	public var movementDirection:CGVector;
 
 	@:native("perspectiveTransform")
-	public var perspectiveTransform:CATransform3D;
+	public var perspectiveTransform:Dynamic;
 
 	@:native("rotation")
 	public var rotation:CGVector;
@@ -29,7 +28,7 @@ extern class UIFocusMovementHint
 	public var translation:CGVector;
 
 	@:native("interactionTransform")
-	public var interactionTransform:CATransform3D;
+	public var interactionTransform:Dynamic;
 
 	@:native("init")
 	overload public function init():UIFocusMovementHint;

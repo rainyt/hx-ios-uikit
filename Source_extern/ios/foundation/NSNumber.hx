@@ -170,6 +170,9 @@ extern class NSNumber extends NSValue{
 	@:native("numberWithUnsignedInteger")
 	overload public static function numberWithUnsignedInteger(value:Int):NSNumber;
 
+	@:native("valueWithCATransform3D")
+	overload public static function valueWithCATransform3D(t:Dynamic):NSNumber;
+
 	@:native("valueWithCGPoint")
 	overload public static function valueWithCGPoint(point:CGPoint):NSNumber;
 

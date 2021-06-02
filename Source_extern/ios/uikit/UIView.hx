@@ -7,12 +7,11 @@ import ios.objc.CGRect;
 import cpp.objc.NSString;
 import ios.uikit.UIImage;
 import ios.uikit.NSCoder;
-import ios.objc.CALayer;
+import ios.quartzcore.CALayer;
 import ios.uikit.UISemanticContentAttribute;
 import ios.uikit.UIUserInterfaceLayoutDirection;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
-import ios.objc.CATransform3D;
 import ios.uikit.UIEvent;
 import ios.uikit.UIViewAutoresizing;
 import ios.objc.CGSize;
@@ -135,7 +134,7 @@ extern class UIView extends UIResponder{
 	public var transform:CGAffineTransform;
 
 	@:native("transform3D")
-	public var transform3D:CATransform3D;
+	public var transform3D:Dynamic;
 
 	@:native("contentScaleFactor")
 	public var contentScaleFactor:Float;

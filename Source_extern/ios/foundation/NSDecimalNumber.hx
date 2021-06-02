@@ -201,6 +201,9 @@ extern class NSDecimalNumber extends NSNumber{
 	@:native("numberWithUnsignedInteger")
 	overload public static function numberWithUnsignedInteger(value:Int):NSDecimalNumber;
 
+	@:native("valueWithCATransform3D")
+	overload public static function valueWithCATransform3D(t:Dynamic):NSDecimalNumber;
+
 	@:native("valueWithCGPoint")
 	overload public static function valueWithCGPoint(point:CGPoint):NSDecimalNumber;
 

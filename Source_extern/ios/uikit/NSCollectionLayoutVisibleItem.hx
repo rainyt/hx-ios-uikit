@@ -3,7 +3,6 @@ package ios.uikit;
 import ios.uikit.NSCollectionLayoutVisibleItem;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
-import ios.objc.CATransform3D;
 import cpp.objc.NSString;
 import ios.uikit.NSIndexPath;
 import ios.objc.CGRect;
@@ -35,7 +34,7 @@ extern interface NSCollectionLayoutVisibleItem{
 	public var transform:CGAffineTransform;
 
 	@:native("transform3D")
-	public var transform3D:CATransform3D;
+	public var transform3D:Dynamic;
 
 	@:native("name")
 	public var name:NSString;
