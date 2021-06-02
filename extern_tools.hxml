@@ -1,3 +1,4 @@
 --class-path extern_tools_source
+--class-path Source_extern
 --main ExternTools
 --python tools/extern_tools.py
