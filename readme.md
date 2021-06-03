@@ -97,3 +97,9 @@ var task = session.dataTaskWithRequestCompletionHandler(request,
     }));
 task.resume();
 ```
+
+## 转换Objective-C为Haxe extern
+现在，可以使用命令行来生成Haxe extern：
+```shell
+haxelib run hx-ios-uikit build framework目录 outpu输出目录
+```
