@@ -4,7 +4,7 @@
     "license": "MIT",
     "tags": ["ios","uikit","webkit"],
     "description": "Uikit extern for IOS.",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "releasenote": "",
     "contributors": ["rainy"],
     "classPath": "Source_extern",

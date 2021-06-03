@@ -6,6 +6,10 @@
 
 需要使用Haxe4.2.0+以上的版本。You need to use Haxe 4.2.0+ or above.
 
+现在已经发布了版本，可以从haxelib中安装可用版本：
+```shell
+haxelib install hx-ios-uikit
+```
 
 ## Root
 
