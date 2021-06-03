@@ -92,7 +92,8 @@ class ObjcProperty {
 			returnClass: ObjcType.toType(p[p.length - 2], typedefs),
 			isStatic: isClass,
 			args: null,
-			haxe: null
+			haxe: null,
+			desc: null
 		});
 	}
 }

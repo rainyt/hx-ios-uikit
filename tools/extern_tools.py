@@ -64,14 +64,28 @@ class Enum:
 
 
 
+class BaseClass:
+    _hx_class_name = "BaseClass"
+    __slots__ = ("desc",)
+    _hx_fields = ["desc"]
+
+    def __init__(self):
+        self.desc = None
+
+
+
 class Class: pass
 
 
-class ExternBaseClass:
+class ExternBaseClass(BaseClass):
     _hx_class_name = "ExternBaseClass"
     __slots__ = ("isProtocol", "hextern", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys")
     _hx_fields = ["isProtocol", "hextern", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys"]
     _hx_methods = ["putClass", "putExternClass", "hasFuncOrAttr", "hasFuncExtendsOrAttr", "toHaxeFile", "_toReturnClass", "isExtendClass", "_importType", "toFuncArgs", "toFuncName", "externParentFuncProperty"]
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = BaseClass
+
 
     def __init__(self,_hdata,hextern,defcall):
         self._hdata = None
@@ -86,6 +100,7 @@ class ExternBaseClass:
         self.protocols = None
         self.isProtocol = False
         _gthis = self
+        super().__init__()
         harray = _hdata.split("\n")
         self.hextern = hextern
         pclassName = (harray[0] if 0 < len(harray) else None)
@@ -162,10 +177,10 @@ class ExternBaseClass:
         if (defcall is not None):
             defcall(self)
         _this = self.funcAndAttr
-        x = _hx_AnonObject({'type': "func", 'name': "alloc", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None})
+        x = _hx_AnonObject({'type': "func", 'name': "alloc", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None, 'desc': None})
         _this.append(x)
         _this = self.funcAndAttr
-        x = _hx_AnonObject({'type': "func", 'name': "autorelease", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None})
+        x = _hx_AnonObject({'type': "func", 'name': "autorelease", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None, 'desc': None})
         _this.append(x)
         read = ""
         isIgone = False
@@ -367,6 +382,8 @@ class ExternBaseClass:
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:include(\"" + HxOverrides.stringOrNull(self.hextern.hfile)) + "\")\n"))))
+        if (self.desc is not None):
+            haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((HxOverrides.stringOrNull(self.desc) + "\n"))))
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("extern " + HxOverrides.stringOrNull((("interface" if (self.isProtocol) else "class")))) + " ") + HxOverrides.stringOrNull(self.className)) + HxOverrides.stringOrNull((((" extends " + HxOverrides.stringOrNull(self.extendClassName)) if ((self.extendClassName is not None)) else "")))))))
         if (self.protocols is not None):
             haxe = (("null" if haxe is None else haxe) + "\n")
@@ -382,14 +399,14 @@ class ExternBaseClass:
             if ((value.type == "property") and self.hasFuncExtendsOrAttr(value)):
                 continue
             _g = value.type
-            _hx_local_11 = len(_g)
-            if (_hx_local_11 == 4):
+            _hx_local_12 = len(_g)
+            if (_hx_local_12 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((((((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(") + HxOverrides.stringOrNull(((self.toFuncArgs(value.args) if ((value.args is not None)) else "")))) + "):") + HxOverrides.stringOrNull(self._toReturnClass(value))) + ";\n\n"))))
                 elif (_g == "haxe"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t/** Haxe Protocol */" + HxOverrides.stringOrNull(value.haxe)) + "\n\n"))))
-            elif (_hx_local_11 == 8):
+            elif (_hx_local_12 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(self._toReturnClass(value))) + ";\n\n"))))
@@ -520,7 +537,8 @@ class ExternHFile:
         isInterface = False
         isMacro = False
         isProtocol = False
-        isIgone = False
+        isDesc = False
+        lastDesc = None
         _g_current = 0
         _g_array = contents
         while (_g_current < len(_g_array)):
@@ -545,8 +563,10 @@ class ExternHFile:
                     else:
                         tmp1 = False
                     if tmp1:
-                        isIgone = True
+                        isDesc = True
                         isRead = True
+                        lastDesc = None
+                        read.append(value)
                     else:
                         tmp2 = None
                         startIndex3 = None
@@ -563,7 +583,8 @@ class ExternHFile:
                             if (((value.find("@end") if ((startIndex5 is None)) else HxString.indexOfImpl(value,"@end",startIndex5))) != -1):
                                 isRead = False
                                 isProtocol = False
-                                self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]),lastDesc)
+                                lastDesc = None
                                 read = []
                         else:
                             startIndex6 = None
@@ -575,7 +596,8 @@ class ExternHFile:
                                 if (((value.find("@end") if ((startIndex7 is None)) else HxString.indexOfImpl(value,"@end",startIndex7))) != -1):
                                     isRead = False
                                     isInterface = False
-                                    self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                    self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]),lastDesc)
+                                    lastDesc = None
                                     read = []
                             else:
                                 startIndex8 = None
@@ -587,19 +609,21 @@ class ExternHFile:
                                     if (((value.find(";") if ((startIndex9 is None)) else HxString.indexOfImpl(value,";",startIndex9))) != -1):
                                         isRead = False
                                         isTypedef = False
-                                        self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                        self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]),lastDesc)
+                                        lastDesc = None
                                         read = []
             else:
                 read.append(value)
                 tmp3 = None
-                if isIgone:
+                if isDesc:
                     startIndex10 = None
                     tmp3 = (((value.find("*/") if ((startIndex10 is None)) else HxString.indexOfImpl(value,"*/",startIndex10))) != -1)
                 else:
                     tmp3 = False
                 if tmp3:
-                    isIgone = False
+                    isDesc = False
                     isRead = False
+                    lastDesc = "\n".join([python_Boot.toString1(x1,'') for x1 in read])
                     read = []
                 else:
                     tmp4 = None
@@ -618,7 +642,8 @@ class ExternHFile:
                         if tmp5:
                             isRead = False
                             isTypedef = False
-                            self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                            self.defTypedef("\n".join([python_Boot.toString1(x1,'') for x1 in read]),lastDesc)
+                            lastDesc = None
                             read = []
                         else:
                             tmp6 = None
@@ -631,20 +656,24 @@ class ExternHFile:
                                 if isInterface:
                                     isRead = False
                                     isInterface = False
-                                    self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                    self.defClass("\n".join([python_Boot.toString1(x1,'') for x1 in read]),lastDesc)
+                                    lastDesc = None
                                 if isProtocol:
                                     isRead = False
                                     isProtocol = False
-                                    self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]))
+                                    self.defProtocol("\n".join([python_Boot.toString1(x1,'') for x1 in read]),lastDesc)
+                                    lastDesc = None
                                 read = []
 
-    def defProtocol(self,data):
+    def defProtocol(self,data,desc):
         t = ExternProtocolClass(data,self)
+        t.desc = desc
+        print(str(desc))
         t.saveFile = (((HxOverrides.stringOrNull(self.haxeSaveDir) + "/") + HxOverrides.stringOrNull(t.className)) + ".hx")
         t.pkg = self.haxePkg
         ExternTools.protocol.h[t.className] = t
 
-    def defClass(self,data):
+    def defClass(self,data,desc):
         _gthis = self
         def _hx_local_0(t2):
             d = ExternTypedefClass()
@@ -652,6 +681,7 @@ class ExternHFile:
             d.parentClassName = t2.className
             _gthis.typedefs.h[t2.className] = d
         t = ExternBaseClass(data,self,_hx_local_0)
+        t.desc = desc
         _this = t.className
         startIndex = None
         if (((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) != -1):
@@ -664,8 +694,9 @@ class ExternHFile:
             else:
                 ExternTools.classDefine.h[t.className] = t
 
-    def defTypedef(self,data):
+    def defTypedef(self,data,desc):
         t = ExternTypedefClass(data)
+        t.desc = desc
         self.typedefs.h[t.className] = t
 
 
@@ -733,7 +764,7 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
                 _this = self.funcAndAttr
                 startIndex4 = None
                 x = (read.find("static") if ((startIndex4 is None)) else HxString.indexOfImpl(read,"static",startIndex4))
-                _this.append(_hx_AnonObject({'name': name, 'type': ("func" if isFunc else "property"), 'returnClass': retclass, 'isStatic': (x != -1), 'args': args, 'haxe': read}))
+                _this.append(_hx_AnonObject({'name': name, 'type': ("func" if isFunc else "property"), 'returnClass': retclass, 'isStatic': (x != -1), 'args': args, 'haxe': read, 'desc': None}))
                 read = ""
 
     def toArgs(self,haxe):
@@ -878,17 +909,22 @@ class ExternTools:
                     sys_io_File.saveContent((((("null" if haxedir is None else haxedir) + "/") + HxOverrides.stringOrNull(value.className)) + ".hx"),value.toHaxeFile(classpkg))
 
 
-class ExternTypedefClass:
+class ExternTypedefClass(BaseClass):
     _hx_class_name = "ExternTypedefClass"
     __slots__ = ("parentClassName", "createHaxeFile", "className", "enums")
     _hx_fields = ["parentClassName", "createHaxeFile", "className", "enums"]
     _hx_methods = ["toHaxeFile"]
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = BaseClass
+
 
     def __init__(self,value = None):
         self.parentClassName = None
         self.enums = []
         self.className = None
         self.createHaxeFile = False
+        super().__init__()
         if (value is None):
             return
         tmp = None
@@ -990,6 +1026,8 @@ class ExternTypedefClass:
         haxe = (("null" if haxe is None else haxe) + "@:enum\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:include(\"UIKit/UIKit.h\")\n")
+        if (self.desc is not None):
+            haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((HxOverrides.stringOrNull(self.desc) + "\n"))))
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("extern abstract " + HxOverrides.stringOrNull(self.className)) + "(Int) from Int to Int {\n\n"))))
         _g_current = 0
         _g_array = self.enums
@@ -1065,7 +1103,7 @@ class ObjcFun:
         if ((fname == "new") or ((fname == ""))):
             return None
         else:
-            return _hx_AnonObject({'name': fname, 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args, 'haxe': None})
+            return _hx_AnonObject({'name': fname, 'type': "func", 'returnClass': c, 'isStatic': isStatic, 'args': args, 'haxe': None, 'desc': None})
 
     @staticmethod
     def parsingFuncName(funcName,args):
@@ -1419,7 +1457,7 @@ class ObjcProperty:
         pname = python_internal_ArrayImpl._get(p, (len(p) - 1))
         if ((pname == "CGColor") or ((pname == "CGImage"))):
             return None
-        return _hx_AnonObject({'name': pname, 'type': ("func" if isClass else "property"), 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': isClass, 'args': None, 'haxe': None})
+        return _hx_AnonObject({'name': pname, 'type': ("func" if isClass else "property"), 'returnClass': ObjcType.toType(python_internal_ArrayImpl._get(p, (len(p) - 2)),typedefs), 'isStatic': isClass, 'args': None, 'haxe': None, 'desc': None})
 
 
 class ObjcType:

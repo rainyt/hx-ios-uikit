@@ -43,7 +43,8 @@ class ObjcFun {
 			returnClass: c,
 			isStatic: isStatic,
 			args: args,
-			haxe: null
+			haxe: null,
+			desc: null
 		};
 	}
 

@@ -35,7 +35,8 @@ class ExternProtocolHaxeClass extends ExternProtocolClass {
 					returnClass: retclass,
 					isStatic: read.indexOf("static") != -1,
 					args: args,
-					haxe: read
+					haxe: read,
+					desc: null
 				});
 				read = "";
 			}

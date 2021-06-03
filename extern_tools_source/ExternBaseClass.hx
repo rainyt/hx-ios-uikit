@@ -5,7 +5,7 @@ import sys.io.File;
 /**
  * 创建一个基础的Extern的类型
  */
-class ExternBaseClass {
+class ExternBaseClass extends BaseClass {
 	/**
 	 * 是否为协议类型
 	 */
@@ -59,6 +59,7 @@ class ExternBaseClass {
 	private var _propertys:Map<String, ExternBaseClassFunProperty> = [];
 
 	public function new(_hdata:String, hextern:ExternHFile, defcall:ExternBaseClass->Void) {
+		super();
 		var harray = _hdata.split("\n");
 		this.hextern = hextern;
 		var pclassName = harray[0];
@@ -119,7 +120,8 @@ class ExternBaseClass {
 			returnClass: this.className,
 			isStatic: true,
 			args: null,
-			haxe: null
+			haxe: null,
+			desc: null
 		});
 		funcAndAttr.push({
 			type: ExternBaseClassType.FUNC,
@@ -127,7 +129,8 @@ class ExternBaseClass {
 			returnClass: this.className,
 			isStatic: true,
 			args: null,
-			haxe: null
+			haxe: null,
+			desc: null
 		});
 		var read = "";
 		var isIgone = false;
@@ -292,6 +295,8 @@ class ExternBaseClass {
 		haxe += "@:objc\n";
 		haxe += "@:native(\"" + className + "\")\n";
 		haxe += "@:include(\"" + hextern.hfile + "\")\n";
+		if (desc != null)
+			haxe += desc + "\n";
 		haxe += "extern "
 			+ (isProtocol ? "interface" : "class")
 			+ " "

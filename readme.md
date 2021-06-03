@@ -105,5 +105,6 @@ task.resume();
 ## 转换Objective-C为Haxe extern
 现在，可以使用命令行来生成Haxe extern：
 ```shell
-haxelib run hx-ios-uikit build framework目录 outpu输出目录
+haxelib run hx-ios-uikit build "frameworks or hfileDir" "output"
 ```
+它的原理就是解析h头文件，即便不在framework里，也会自动被解析。

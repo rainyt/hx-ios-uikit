@@ -1,4 +1,4 @@
-class ExternTypedefClass {
+class ExternTypedefClass extends BaseClass {
 	/**
 	 * 父亲类名
 	 */
@@ -17,6 +17,7 @@ class ExternTypedefClass {
 	public var enums:Array<String> = [];
 
 	public function new(value:String = null) {
+		super();
 		if (value == null)
 			return;
 		createHaxeFile = value.indexOf("typedef NS_ENUM") == 0 || value.indexOf("typedef NS_OPTIONS") == 0;
@@ -51,7 +52,7 @@ class ExternTypedefClass {
 				if (e3 == null || e3.indexOf("//") != -1 || e3.indexOf("#") != -1)
 					continue;
 				e3 = StringTools.replace(e3, ",", "");
-				if(enums.indexOf(e3) == -1)
+				if (enums.indexOf(e3) == -1)
 					enums.push(e3);
 			}
 		} else {
@@ -84,6 +85,8 @@ class ExternTypedefClass {
 		haxe += "@:native(\"" + className + "\")\n";
 		haxe += "@:include(\"UIKit/UIKit.h\")\n";
 		// extern abstract UIAlertActionStyle(Int) from Int to Int
+		if (desc != null)
+			haxe += desc + "\n";
 		haxe += "extern abstract " + className + "(Int) from Int to Int {\n\n";
 		for (index => value in enums) {
 			// @:native("UIAlertActionStyleDefault") var UIAlertActionStyleDefault;
