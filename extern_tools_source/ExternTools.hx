@@ -1,9 +1,15 @@
 package;
 
+import sys.io.Process;
 import sys.io.File;
 import sys.FileSystem;
 
 class ExternTools {
+	/**
+	 * Haxelib中的ExternDir目录
+	 */
+	public static var haxelibExternDir:String;
+
 	/**
 	 * 全局类型定义
 	 */
@@ -20,13 +26,20 @@ class ExternTools {
 	public static var externDir:String;
 
 	/**
+	 * 编译命令：rebuild build
+	 */
+	public static var command:String;
+
+	/**
 	 * python3 tools/extern_tools.py Frameworks Output
 	 */
 	static function main() {
+		command = Sys.args()[2];
 		externDir = Sys.args()[1].charAt(0) == "/" ? Sys.args()[1] : Sys.getCwd() + "/" + Sys.args()[1];
 		var framework = Sys.args()[0].charAt(0) == "/" ? Sys.args()[0] : Sys.getCwd() + "/" + Sys.args()[0];
-		// externDir = StringTools.replace(Sys.programPath(), "extern_tools.py", "../Source_extern");
-		// var framework = StringTools.replace(Sys.programPath(), "extern_tools.py", "../framework");
+		var p = new Process("haxelib path hx-ios-uikit");
+		haxelibExternDir = p.stdout.readAll().toString().split("\n")[0];
+		trace(haxelibExternDir);
 		parsingFrameworkDir(framework, externDir);
 	}
 
@@ -54,17 +67,17 @@ class ExternTools {
 	}
 
 	public static function parsingHFile(hfile:String, out:String):Void {
-		var pkg = hfile.substring(0,hfile.lastIndexOf("/Headers/"));
+		var pkg = hfile.substring(0, hfile.lastIndexOf("/Headers/"));
 		pkg = pkg.substr(pkg.lastIndexOf("/") + 1);
 		pkg = pkg.substr(0, pkg.indexOf("."));
-		
-		// var haxefile = hfile.substr(hfile.lastIndexOf("/") + 1) + "x";
+
 		var classpkg = "ios." + pkg.toLowerCase();
 		var haxedir = out + "/ios/" + pkg.toLowerCase();
 		if (!FileSystem.exists(haxedir)) {
 			FileSystem.createDirectory(haxedir);
 		}
 		var hlibsfile = pkg + "/" + pkg + ".h";
+
 		var c = new ExternHFile(hfile, haxedir, hlibsfile, classpkg);
 		// 保存定义
 		for (key => value in c.typedefs) {

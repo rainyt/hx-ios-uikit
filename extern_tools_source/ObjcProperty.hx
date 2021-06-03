@@ -2,6 +2,10 @@ import ExternBaseClass.ExternBaseClassType;
 
 class ObjcProperty {
 	public static function parsing(typedefs:Map<String, ExternTypedefClass>, className:String, line:String):ExternBaseClassFunProperty {
+		// 过滤无属性名的变量
+		if (line.lastIndexOf(");") != -1) {
+			return null;
+		}
 		if (line.indexOf(" (") != -1) {
 			line = line.substr(line.indexOf("("));
 		} else {

@@ -9,7 +9,13 @@ import inspect as python_lib_Inspect
 import sys as python_lib_Sys
 import traceback as python_lib_Traceback
 import builtins as python_lib_Builtins
+import functools as python_lib_Functools
 import os as python_lib_Os
+import subprocess as python_lib_Subprocess
+from io import BufferedReader as python_lib_io_BufferedReader
+from io import BufferedWriter as python_lib_io_BufferedWriter
+from io import TextIOWrapper as python_lib_io_TextIOWrapper
+from subprocess import Popen as python_lib_subprocess_Popen
 
 
 class _hx_AnonObject:
@@ -759,15 +765,22 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
 class ExternTools:
     _hx_class_name = "ExternTools"
     __slots__ = ()
-    _hx_statics = ["classDefine", "protocol", "externDir", "main", "parsingFrameworkDir", "parsingFramework", "parsingHFile"]
+    _hx_statics = ["haxelibExternDir", "classDefine", "protocol", "externDir", "command", "main", "parsingFrameworkDir", "parsingFramework", "parsingHFile"]
+    haxelibExternDir = None
     externDir = None
+    command = None
 
     @staticmethod
     def main():
+        ExternTools.command = python_internal_ArrayImpl._get(Sys.args(), 2)
         _this = python_internal_ArrayImpl._get(Sys.args(), 1)
         ExternTools.externDir = (python_internal_ArrayImpl._get(Sys.args(), 1) if (((("" if ((0 >= len(_this))) else _this[0])) == "/")) else ((HxOverrides.stringOrNull(Sys.getCwd()) + "/") + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(Sys.args(), 1))))
         _this = python_internal_ArrayImpl._get(Sys.args(), 0)
         framework = (python_internal_ArrayImpl._get(Sys.args(), 0) if (((("" if ((0 >= len(_this))) else _this[0])) == "/")) else ((HxOverrides.stringOrNull(Sys.getCwd()) + "/") + HxOverrides.stringOrNull(python_internal_ArrayImpl._get(Sys.args(), 0))))
+        p = sys_io_Process("haxelib path hx-ios-uikit")
+        _this = p.stdout.readAll().toString()
+        ExternTools.haxelibExternDir = python_internal_ArrayImpl._get(_this.split("\n"), 0)
+        print(str(ExternTools.haxelibExternDir))
         ExternTools.parsingFrameworkDir(framework,ExternTools.externDir)
 
     @staticmethod
@@ -1209,7 +1222,7 @@ class ObjcFun:
 class ObjcImport:
     _hx_class_name = "ObjcImport"
     __slots__ = ()
-    _hx_statics = ["toImport", "hasClass"]
+    _hx_statics = ["toImport", "findDirImportType", "hasClass"]
 
     @staticmethod
     def toImport(_hx_type):
@@ -1238,7 +1251,17 @@ class ObjcImport:
                 return "cpp.objc.NSData"
         else:
             pass
-        files = sys_FileSystem.readDirectory((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios"))
+        selfc = ObjcImport.findDirImportType(ExternTools.externDir,_hx_type)
+        if (selfc is not None):
+            return selfc
+        selfc2 = ObjcImport.findDirImportType(ExternTools.haxelibExternDir,_hx_type)
+        if (selfc2 is not None):
+            return selfc2
+        return None
+
+    @staticmethod
+    def findDirImportType(dir,_hx_type):
+        files = sys_FileSystem.readDirectory((("null" if dir is None else dir) + "/ios"))
         _g_current = 0
         _g_array = files
         while (_g_current < len(_g_array)):
@@ -1247,7 +1270,7 @@ class ObjcImport:
             _g_current = (_g_current + 1)
             index = _g1_key
             value = _g1_value
-            if sys_FileSystem.exists((((((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios/") + ("null" if value is None else value)) + "/") + ("null" if _hx_type is None else _hx_type)) + ".hx")):
+            if sys_FileSystem.exists((((((("null" if dir is None else dir) + "/ios/") + ("null" if value is None else value)) + "/") + ("null" if _hx_type is None else _hx_type)) + ".hx")):
                 return ((("ios." + ("null" if value is None else value)) + ".") + ("null" if _hx_type is None else _hx_type))
         return None
 
@@ -1274,6 +1297,17 @@ class ObjcProperty:
 
     @staticmethod
     def parsing(typedefs,className,line):
+        startIndex1 = None
+        tmp = None
+        if (startIndex1 is None):
+            tmp = line.rfind(");", 0, len(line))
+        else:
+            i = line.rfind(");", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len(");"))) if ((i == -1)) else (i + 1))
+            check = line.find(");", startLeft, len(line))
+            tmp = (check if (((check > i) and ((check <= startIndex1)))) else i)
+        if (tmp != -1):
+            return None
         startIndex = None
         if (((line.find(" (") if ((startIndex is None)) else HxString.indexOfImpl(line," (",startIndex))) != -1):
             startIndex = None
@@ -1463,6 +1497,20 @@ class ObjcType:
         return t
 
 
+class Reflect:
+    _hx_class_name = "Reflect"
+    __slots__ = ()
+    _hx_statics = ["field", "setField"]
+
+    @staticmethod
+    def field(o,field):
+        return python_Boot.field(o,field)
+
+    @staticmethod
+    def setField(o,field,value):
+        setattr(o,(("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field)),value)
+
+
 class Std:
     _hx_class_name = "Std"
     __slots__ = ()
@@ -1605,7 +1653,7 @@ class sys_FileSystem:
 class Sys:
     _hx_class_name = "Sys"
     __slots__ = ()
-    _hx_statics = ["args", "getCwd"]
+    _hx_statics = ["args", "getCwd", "systemName"]
 
     @staticmethod
     def args():
@@ -1615,6 +1663,30 @@ class Sys:
     @staticmethod
     def getCwd():
         return python_lib_Os.getcwd()
+
+    @staticmethod
+    def systemName():
+        _g = python_lib_Sys.platform
+        x = _g
+        if x.startswith("linux"):
+            return "Linux"
+        else:
+            _g1 = _g
+            _hx_local_0 = len(_g1)
+            if (_hx_local_0 == 5):
+                if (_g1 == "win32"):
+                    return "Windows"
+                else:
+                    raise haxe_Exception.thrown("not supported platform")
+            elif (_hx_local_0 == 6):
+                if (_g1 == "cygwin"):
+                    return "Windows"
+                elif (_g1 == "darwin"):
+                    return "Mac"
+                else:
+                    raise haxe_Exception.thrown("not supported platform")
+            else:
+                raise haxe_Exception.thrown("not supported platform")
 
 
 class haxe_IMap:
@@ -1627,7 +1699,7 @@ class haxe_Exception(Exception):
     _hx_class_name = "haxe.Exception"
     __slots__ = ("_hx___nativeStack", "_hx___skipStack", "_hx___nativeException", "_hx___previousException")
     _hx_fields = ["__nativeStack", "__skipStack", "__nativeException", "__previousException"]
-    _hx_methods = ["unwrap", "get_native"]
+    _hx_methods = ["unwrap", "toString", "get_message", "get_native"]
     _hx_statics = ["caught", "thrown"]
     _hx_interfaces = []
     _hx_super = Exception
@@ -1653,6 +1725,12 @@ class haxe_Exception(Exception):
 
     def unwrap(self):
         return self._hx___nativeException
+
+    def toString(self):
+        return self.get_message()
+
+    def get_message(self):
+        return str(self)
 
     def get_native(self):
         return self._hx___nativeException
@@ -1737,6 +1815,188 @@ class haxe_ds_StringMap:
 
 
 
+class haxe_exceptions_PosException(haxe_Exception):
+    _hx_class_name = "haxe.exceptions.PosException"
+    __slots__ = ("posInfos",)
+    _hx_fields = ["posInfos"]
+    _hx_methods = ["toString"]
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = haxe_Exception
+
+
+    def __init__(self,message,previous = None,pos = None):
+        self.posInfos = None
+        super().__init__(message,previous)
+        if (pos is None):
+            self.posInfos = _hx_AnonObject({'fileName': "(unknown)", 'lineNumber': 0, 'className': "(unknown)", 'methodName': "(unknown)"})
+        else:
+            self.posInfos = pos
+
+    def toString(self):
+        return ((((((((("" + HxOverrides.stringOrNull(super().toString())) + " in ") + HxOverrides.stringOrNull(self.posInfos.className)) + ".") + HxOverrides.stringOrNull(self.posInfos.methodName)) + " at ") + HxOverrides.stringOrNull(self.posInfos.fileName)) + ":") + Std.string(self.posInfos.lineNumber))
+
+
+
+class haxe_exceptions_NotImplementedException(haxe_exceptions_PosException):
+    _hx_class_name = "haxe.exceptions.NotImplementedException"
+    __slots__ = ()
+    _hx_fields = []
+    _hx_methods = []
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = haxe_exceptions_PosException
+
+
+    def __init__(self,message = None,previous = None,pos = None):
+        if (message is None):
+            message = "Not implemented"
+        super().__init__(message,previous,pos)
+
+
+class haxe_io_Bytes:
+    _hx_class_name = "haxe.io.Bytes"
+    __slots__ = ("length", "b")
+    _hx_fields = ["length", "b"]
+    _hx_methods = ["blit", "getString", "toString"]
+    _hx_statics = ["alloc", "ofData"]
+
+    def __init__(self,length,b):
+        self.length = length
+        self.b = b
+
+    def blit(self,pos,src,srcpos,_hx_len):
+        if (((((pos < 0) or ((srcpos < 0))) or ((_hx_len < 0))) or (((pos + _hx_len) > self.length))) or (((srcpos + _hx_len) > src.length))):
+            raise haxe_Exception.thrown(haxe_io_Error.OutsideBounds)
+        self.b[pos:pos+_hx_len] = src.b[srcpos:srcpos+_hx_len]
+
+    def getString(self,pos,_hx_len,encoding = None):
+        tmp = (encoding is None)
+        if (((pos < 0) or ((_hx_len < 0))) or (((pos + _hx_len) > self.length))):
+            raise haxe_Exception.thrown(haxe_io_Error.OutsideBounds)
+        return self.b[pos:pos+_hx_len].decode('UTF-8','replace')
+
+    def toString(self):
+        return self.getString(0,self.length)
+
+    @staticmethod
+    def alloc(length):
+        return haxe_io_Bytes(length,bytearray(length))
+
+    @staticmethod
+    def ofData(b):
+        return haxe_io_Bytes(len(b),b)
+
+
+
+class haxe_io_BytesBuffer:
+    _hx_class_name = "haxe.io.BytesBuffer"
+    __slots__ = ("b",)
+    _hx_fields = ["b"]
+    _hx_methods = ["getBytes"]
+
+    def __init__(self):
+        self.b = bytearray()
+
+    def getBytes(self):
+        _hx_bytes = haxe_io_Bytes(len(self.b),self.b)
+        self.b = None
+        return _hx_bytes
+
+
+class haxe_io_Encoding(Enum):
+    __slots__ = ()
+    _hx_class_name = "haxe.io.Encoding"
+    _hx_constructs = ["UTF8", "RawNative"]
+haxe_io_Encoding.UTF8 = haxe_io_Encoding("UTF8", 0, ())
+haxe_io_Encoding.RawNative = haxe_io_Encoding("RawNative", 1, ())
+
+
+class haxe_io_Eof:
+    _hx_class_name = "haxe.io.Eof"
+    __slots__ = ()
+    _hx_methods = ["toString"]
+
+    def __init__(self):
+        pass
+
+    def toString(self):
+        return "Eof"
+
+
+class haxe_io_Error(Enum):
+    __slots__ = ()
+    _hx_class_name = "haxe.io.Error"
+    _hx_constructs = ["Blocked", "Overflow", "OutsideBounds", "Custom"]
+
+    @staticmethod
+    def Custom(e):
+        return haxe_io_Error("Custom", 3, (e,))
+haxe_io_Error.Blocked = haxe_io_Error("Blocked", 0, ())
+haxe_io_Error.Overflow = haxe_io_Error("Overflow", 1, ())
+haxe_io_Error.OutsideBounds = haxe_io_Error("OutsideBounds", 2, ())
+
+
+class haxe_io_Input:
+    _hx_class_name = "haxe.io.Input"
+    __slots__ = ("bigEndian",)
+    _hx_fields = ["bigEndian"]
+    _hx_methods = ["readByte", "readBytes", "set_bigEndian", "readAll"]
+
+    def readByte(self):
+        raise haxe_exceptions_NotImplementedException(None,None,_hx_AnonObject({'fileName': "haxe/io/Input.hx", 'lineNumber': 53, 'className': "haxe.io.Input", 'methodName': "readByte"}))
+
+    def readBytes(self,s,pos,_hx_len):
+        k = _hx_len
+        b = s.b
+        if (((pos < 0) or ((_hx_len < 0))) or (((pos + _hx_len) > s.length))):
+            raise haxe_Exception.thrown(haxe_io_Error.OutsideBounds)
+        try:
+            while (k > 0):
+                b[pos] = self.readByte()
+                pos = (pos + 1)
+                k = (k - 1)
+        except BaseException as _g:
+            if (not Std.isOfType(haxe_Exception.caught(_g).unwrap(),haxe_io_Eof)):
+                raise _g
+        return (_hx_len - k)
+
+    def set_bigEndian(self,b):
+        self.bigEndian = b
+        return b
+
+    def readAll(self,bufsize = None):
+        if (bufsize is None):
+            bufsize = 16384
+        buf = haxe_io_Bytes.alloc(bufsize)
+        total = haxe_io_BytesBuffer()
+        try:
+            while True:
+                _hx_len = self.readBytes(buf,0,bufsize)
+                if (_hx_len == 0):
+                    raise haxe_Exception.thrown(haxe_io_Error.Blocked)
+                if ((_hx_len < 0) or ((_hx_len > buf.length))):
+                    raise haxe_Exception.thrown(haxe_io_Error.OutsideBounds)
+                total.b.extend(buf.b[0:_hx_len])
+        except BaseException as _g:
+            if (not Std.isOfType(haxe_Exception.caught(_g).unwrap(),haxe_io_Eof)):
+                raise _g
+        return total.getBytes()
+
+
+
+class haxe_io_Output:
+    _hx_class_name = "haxe.io.Output"
+    __slots__ = ("bigEndian",)
+    _hx_fields = ["bigEndian"]
+    _hx_methods = ["set_bigEndian"]
+
+    def set_bigEndian(self,b):
+        self.bigEndian = b
+        return b
+
+
+
 class haxe_iterators_ArrayIterator:
     _hx_class_name = "haxe.iterators.ArrayIterator"
     __slots__ = ("array", "current")
@@ -1762,10 +2022,35 @@ class haxe_iterators_ArrayIterator:
 
 
 
+class haxe_iterators_ArrayKeyValueIterator:
+    _hx_class_name = "haxe.iterators.ArrayKeyValueIterator"
+    __slots__ = ("current", "array")
+    _hx_fields = ["current", "array"]
+    _hx_methods = ["hasNext", "next"]
+
+    def __init__(self,array):
+        self.current = 0
+        self.array = array
+
+    def hasNext(self):
+        return (self.current < len(self.array))
+
+    def next(self):
+        def _hx_local_3():
+            def _hx_local_2():
+                _hx_local_0 = self
+                _hx_local_1 = _hx_local_0.current
+                _hx_local_0.current = (_hx_local_1 + 1)
+                return _hx_local_1
+            return _hx_AnonObject({'value': python_internal_ArrayImpl._get(self.array, self.current), 'key': _hx_local_2()})
+        return _hx_local_3()
+
+
+
 class python_Boot:
     _hx_class_name = "python.Boot"
     __slots__ = ()
-    _hx_statics = ["keywords", "toString1", "fields", "simpleField", "getInstanceFields", "getSuperClass", "getClassFields", "prefixLength", "unhandleKeywords"]
+    _hx_statics = ["keywords", "toString1", "fields", "simpleField", "hasField", "field", "getInstanceFields", "getSuperClass", "getClassFields", "prefixLength", "unhandleKeywords"]
 
     @staticmethod
     def toString1(o,s):
@@ -1928,6 +2213,212 @@ class python_Boot:
             return None
 
     @staticmethod
+    def hasField(o,field):
+        if isinstance(o,_hx_AnonObject):
+            return o._hx_hasattr(field)
+        return hasattr(o,(("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field)))
+
+    @staticmethod
+    def field(o,field):
+        if (field is None):
+            return None
+        if isinstance(o,str):
+            field1 = field
+            _hx_local_0 = len(field1)
+            if (_hx_local_0 == 10):
+                if (field1 == "charCodeAt"):
+                    return python_internal_MethodClosure(o,HxString.charCodeAt)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 11):
+                if (field1 == "lastIndexOf"):
+                    return python_internal_MethodClosure(o,HxString.lastIndexOf)
+                elif (field1 == "toLowerCase"):
+                    return python_internal_MethodClosure(o,HxString.toLowerCase)
+                elif (field1 == "toUpperCase"):
+                    return python_internal_MethodClosure(o,HxString.toUpperCase)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 9):
+                if (field1 == "substring"):
+                    return python_internal_MethodClosure(o,HxString.substring)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 5):
+                if (field1 == "split"):
+                    return python_internal_MethodClosure(o,HxString.split)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 7):
+                if (field1 == "indexOf"):
+                    return python_internal_MethodClosure(o,HxString.indexOf)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 8):
+                if (field1 == "toString"):
+                    return python_internal_MethodClosure(o,HxString.toString)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_0 == 6):
+                if (field1 == "charAt"):
+                    return python_internal_MethodClosure(o,HxString.charAt)
+                elif (field1 == "length"):
+                    return len(o)
+                elif (field1 == "substr"):
+                    return python_internal_MethodClosure(o,HxString.substr)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            else:
+                field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                if hasattr(o,field1):
+                    return getattr(o,field1)
+                else:
+                    return None
+        elif isinstance(o,list):
+            field1 = field
+            _hx_local_1 = len(field1)
+            if (_hx_local_1 == 11):
+                if (field1 == "lastIndexOf"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.lastIndexOf)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 4):
+                if (field1 == "copy"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.copy)
+                elif (field1 == "join"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.join)
+                elif (field1 == "push"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.push)
+                elif (field1 == "sort"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.sort)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 5):
+                if (field1 == "shift"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.shift)
+                elif (field1 == "slice"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.slice)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 7):
+                if (field1 == "indexOf"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.indexOf)
+                elif (field1 == "reverse"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.reverse)
+                elif (field1 == "unshift"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.unshift)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 3):
+                if (field1 == "map"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.map)
+                elif (field1 == "pop"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.pop)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 8):
+                if (field1 == "contains"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.contains)
+                elif (field1 == "iterator"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.iterator)
+                elif (field1 == "toString"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.toString)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 16):
+                if (field1 == "keyValueIterator"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.keyValueIterator)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            elif (_hx_local_1 == 6):
+                if (field1 == "concat"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.concat)
+                elif (field1 == "filter"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.filter)
+                elif (field1 == "insert"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.insert)
+                elif (field1 == "length"):
+                    return len(o)
+                elif (field1 == "remove"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.remove)
+                elif (field1 == "splice"):
+                    return python_internal_MethodClosure(o,python_internal_ArrayImpl.splice)
+                else:
+                    field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                    if hasattr(o,field1):
+                        return getattr(o,field1)
+                    else:
+                        return None
+            else:
+                field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+                if hasattr(o,field1):
+                    return getattr(o,field1)
+                else:
+                    return None
+        else:
+            field1 = (("_hx_" + field) if ((field in python_Boot.keywords)) else (("_hx_" + field) if (((((len(field) > 2) and ((ord(field[0]) == 95))) and ((ord(field[1]) == 95))) and ((ord(field[(len(field) - 1)]) != 95)))) else field))
+            if hasattr(o,field1):
+                return getattr(o,field1)
+            else:
+                return None
+
+    @staticmethod
     def getInstanceFields(c):
         f = (list(c._hx_fields) if (hasattr(c,"_hx_fields")) else [])
         if hasattr(c,"_hx_methods"):
@@ -2012,7 +2503,66 @@ class python_HaxeIterator:
 class HxString:
     _hx_class_name = "HxString"
     __slots__ = ()
-    _hx_statics = ["indexOfImpl", "substring", "substr"]
+    _hx_statics = ["split", "charCodeAt", "charAt", "lastIndexOf", "toUpperCase", "toLowerCase", "indexOf", "indexOfImpl", "toString", "substring", "substr"]
+
+    @staticmethod
+    def split(s,d):
+        if (d == ""):
+            return list(s)
+        else:
+            return s.split(d)
+
+    @staticmethod
+    def charCodeAt(s,index):
+        if ((((s is None) or ((len(s) == 0))) or ((index < 0))) or ((index >= len(s)))):
+            return None
+        else:
+            return ord(s[index])
+
+    @staticmethod
+    def charAt(s,index):
+        if ((index < 0) or ((index >= len(s)))):
+            return ""
+        else:
+            return s[index]
+
+    @staticmethod
+    def lastIndexOf(s,_hx_str,startIndex = None):
+        if (startIndex is None):
+            return s.rfind(_hx_str, 0, len(s))
+        elif (_hx_str == ""):
+            length = len(s)
+            if (startIndex < 0):
+                startIndex = (length + startIndex)
+                if (startIndex < 0):
+                    startIndex = 0
+            if (startIndex > length):
+                return length
+            else:
+                return startIndex
+        else:
+            i = s.rfind(_hx_str, 0, (startIndex + 1))
+            startLeft = (max(0,((startIndex + 1) - len(_hx_str))) if ((i == -1)) else (i + 1))
+            check = s.find(_hx_str, startLeft, len(s))
+            if ((check > i) and ((check <= startIndex))):
+                return check
+            else:
+                return i
+
+    @staticmethod
+    def toUpperCase(s):
+        return s.upper()
+
+    @staticmethod
+    def toLowerCase(s):
+        return s.lower()
+
+    @staticmethod
+    def indexOf(s,_hx_str,startIndex = None):
+        if (startIndex is None):
+            return s.find(_hx_str)
+        else:
+            return HxString.indexOfImpl(s,_hx_str,startIndex)
 
     @staticmethod
     def indexOfImpl(s,_hx_str,startIndex):
@@ -2027,6 +2577,10 @@ class HxString:
             else:
                 return startIndex
         return s.find(_hx_str, startIndex)
+
+    @staticmethod
+    def toString(s):
+        return s
 
     @staticmethod
     def substring(s,startIndex,endIndex = None):
@@ -2059,7 +2613,23 @@ class HxString:
 class python_internal_ArrayImpl:
     _hx_class_name = "python.internal.ArrayImpl"
     __slots__ = ()
-    _hx_statics = ["indexOf", "_get", "_set"]
+    _hx_statics = ["concat", "copy", "iterator", "keyValueIterator", "indexOf", "lastIndexOf", "join", "toString", "pop", "push", "unshift", "remove", "contains", "shift", "slice", "sort", "splice", "map", "filter", "insert", "reverse", "_get", "_set"]
+
+    @staticmethod
+    def concat(a1,a2):
+        return (a1 + a2)
+
+    @staticmethod
+    def copy(x):
+        return list(x)
+
+    @staticmethod
+    def iterator(x):
+        return python_HaxeIterator(x.__iter__())
+
+    @staticmethod
+    def keyValueIterator(x):
+        return haxe_iterators_ArrayKeyValueIterator(x)
 
     @staticmethod
     def indexOf(a,x,fromIndex = None):
@@ -2075,6 +2645,97 @@ class python_internal_ArrayImpl:
             if HxOverrides.eq(a[i],x):
                 return i
         return -1
+
+    @staticmethod
+    def lastIndexOf(a,x,fromIndex = None):
+        _hx_len = len(a)
+        l = (_hx_len if ((fromIndex is None)) else (((_hx_len + fromIndex) + 1) if ((fromIndex < 0)) else (fromIndex + 1)))
+        if (l > _hx_len):
+            l = _hx_len
+        while True:
+            l = (l - 1)
+            tmp = l
+            if (not ((tmp > -1))):
+                break
+            if HxOverrides.eq(a[l],x):
+                return l
+        return -1
+
+    @staticmethod
+    def join(x,sep):
+        return sep.join([python_Boot.toString1(x1,'') for x1 in x])
+
+    @staticmethod
+    def toString(x):
+        return (("[" + HxOverrides.stringOrNull(",".join([python_Boot.toString1(x1,'') for x1 in x]))) + "]")
+
+    @staticmethod
+    def pop(x):
+        if (len(x) == 0):
+            return None
+        else:
+            return x.pop()
+
+    @staticmethod
+    def push(x,e):
+        x.append(e)
+        return len(x)
+
+    @staticmethod
+    def unshift(x,e):
+        x.insert(0, e)
+
+    @staticmethod
+    def remove(x,e):
+        try:
+            x.remove(e)
+            return True
+        except BaseException as _g:
+            return False
+
+    @staticmethod
+    def contains(x,e):
+        return (e in x)
+
+    @staticmethod
+    def shift(x):
+        if (len(x) == 0):
+            return None
+        return x.pop(0)
+
+    @staticmethod
+    def slice(x,pos,end = None):
+        return x[pos:end]
+
+    @staticmethod
+    def sort(x,f):
+        x.sort(key= python_lib_Functools.cmp_to_key(f))
+
+    @staticmethod
+    def splice(x,pos,_hx_len):
+        if (pos < 0):
+            pos = (len(x) + pos)
+        if (pos < 0):
+            pos = 0
+        res = x[pos:(pos + _hx_len)]
+        del x[pos:(pos + _hx_len)]
+        return res
+
+    @staticmethod
+    def map(x,f):
+        return list(map(f,x))
+
+    @staticmethod
+    def filter(x,f):
+        return list(filter(f,x))
+
+    @staticmethod
+    def insert(a,pos,x):
+        a.insert(pos, x)
+
+    @staticmethod
+    def reverse(a):
+        a.reverse()
 
     @staticmethod
     def _get(x,idx):
@@ -2130,6 +2791,170 @@ class python_internal_MethodClosure:
 
 
 
+class python_io_NativeInput(haxe_io_Input):
+    _hx_class_name = "python.io.NativeInput"
+    __slots__ = ("stream", "wasEof")
+    _hx_fields = ["stream", "wasEof"]
+    _hx_methods = ["throwEof", "readinto", "readBytes"]
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = haxe_io_Input
+
+
+    def __init__(self,s):
+        self.wasEof = None
+        self.stream = s
+        self.set_bigEndian(False)
+        self.wasEof = False
+        if (not self.stream.readable()):
+            raise haxe_Exception.thrown("Write-only stream")
+
+    def throwEof(self):
+        self.wasEof = True
+        raise haxe_Exception.thrown(haxe_io_Eof())
+
+    def readinto(self,b):
+        raise haxe_Exception.thrown("abstract method, should be overridden")
+
+    def readBytes(self,s,pos,_hx_len):
+        if (((pos < 0) or ((_hx_len < 0))) or (((pos + _hx_len) > s.length))):
+            raise haxe_Exception.thrown(haxe_io_Error.OutsideBounds)
+        ba = bytearray(_hx_len)
+        ret = self.readinto(ba)
+        if (ret == 0):
+            self.throwEof()
+        s.blit(pos,haxe_io_Bytes.ofData(ba),0,_hx_len)
+        return ret
+
+
+
+class python_io_IInput:
+    _hx_class_name = "python.io.IInput"
+    __slots__ = ("bigEndian",)
+    _hx_fields = ["bigEndian"]
+    _hx_methods = ["set_bigEndian", "readByte", "readBytes", "readAll"]
+
+
+class python_io_IFileInput:
+    _hx_class_name = "python.io.IFileInput"
+    __slots__ = ()
+    _hx_interfaces = [python_io_IInput]
+
+
+class python_io_NativeOutput(haxe_io_Output):
+    _hx_class_name = "python.io.NativeOutput"
+    __slots__ = ("stream",)
+    _hx_fields = ["stream"]
+    _hx_methods = []
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = haxe_io_Output
+
+
+    def __init__(self,stream):
+        self.stream = None
+        self.set_bigEndian(False)
+        self.stream = stream
+        if (not stream.writable()):
+            raise haxe_Exception.thrown("Read only stream")
+
+
+
+class python_io_IOutput:
+    _hx_class_name = "python.io.IOutput"
+    __slots__ = ("bigEndian",)
+    _hx_fields = ["bigEndian"]
+    _hx_methods = ["set_bigEndian"]
+
+
+class python_io_IFileOutput:
+    _hx_class_name = "python.io.IFileOutput"
+    __slots__ = ()
+    _hx_interfaces = [python_io_IOutput]
+
+
+class python_io_NativeTextInput(python_io_NativeInput):
+    _hx_class_name = "python.io.NativeTextInput"
+    __slots__ = ()
+    _hx_fields = []
+    _hx_methods = ["readByte", "readinto"]
+    _hx_statics = []
+    _hx_interfaces = [python_io_IInput]
+    _hx_super = python_io_NativeInput
+
+
+    def __init__(self,stream):
+        super().__init__(stream)
+
+    def readByte(self):
+        ret = self.stream.buffer.read(1)
+        if (len(ret) == 0):
+            self.throwEof()
+        return ret[0]
+
+    def readinto(self,b):
+        return self.stream.buffer.readinto(b)
+
+
+
+class python_io_FileTextInput(python_io_NativeTextInput):
+    _hx_class_name = "python.io.FileTextInput"
+    __slots__ = ()
+    _hx_fields = []
+    _hx_methods = []
+    _hx_statics = []
+    _hx_interfaces = [python_io_IFileInput]
+    _hx_super = python_io_NativeTextInput
+
+
+    def __init__(self,stream):
+        super().__init__(stream)
+
+
+class python_io_NativeTextOutput(python_io_NativeOutput):
+    _hx_class_name = "python.io.NativeTextOutput"
+    __slots__ = ()
+    _hx_fields = []
+    _hx_methods = []
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = python_io_NativeOutput
+
+
+    def __init__(self,stream):
+        super().__init__(stream)
+        if (not stream.writable()):
+            raise haxe_Exception.thrown("Read only stream")
+
+
+class python_io_FileTextOutput(python_io_NativeTextOutput):
+    _hx_class_name = "python.io.FileTextOutput"
+    __slots__ = ()
+    _hx_fields = []
+    _hx_methods = []
+    _hx_statics = []
+    _hx_interfaces = [python_io_IFileOutput]
+    _hx_super = python_io_NativeTextOutput
+
+
+    def __init__(self,stream):
+        super().__init__(stream)
+
+
+class python_io_IoTools:
+    _hx_class_name = "python.io.IoTools"
+    __slots__ = ()
+    _hx_statics = ["createFileInputFromText", "createFileOutputFromText"]
+
+    @staticmethod
+    def createFileInputFromText(t):
+        return sys_io_FileInput(python_io_FileTextInput(t))
+
+    @staticmethod
+    def createFileOutputFromText(t):
+        return sys_io_FileOutput(python_io_FileTextOutput(t))
+
+
 class sys_io_File:
     _hx_class_name = "sys.io.File"
     __slots__ = ()
@@ -2147,6 +2972,84 @@ class sys_io_File:
         f = python_lib_Builtins.open(path,"w",-1,"utf-8",None,"")
         f.write(content)
         f.close()
+
+
+class sys_io_FileInput(haxe_io_Input):
+    _hx_class_name = "sys.io.FileInput"
+    __slots__ = ("impl",)
+    _hx_fields = ["impl"]
+    _hx_methods = ["set_bigEndian", "readByte", "readBytes", "readAll"]
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = haxe_io_Input
+
+
+    def __init__(self,impl):
+        self.impl = impl
+
+    def set_bigEndian(self,b):
+        return self.impl.set_bigEndian(b)
+
+    def readByte(self):
+        return self.impl.readByte()
+
+    def readBytes(self,s,pos,_hx_len):
+        return self.impl.readBytes(s,pos,_hx_len)
+
+    def readAll(self,bufsize = None):
+        return self.impl.readAll(bufsize)
+
+
+
+class sys_io_FileOutput(haxe_io_Output):
+    _hx_class_name = "sys.io.FileOutput"
+    __slots__ = ("impl",)
+    _hx_fields = ["impl"]
+    _hx_methods = ["set_bigEndian"]
+    _hx_statics = []
+    _hx_interfaces = []
+    _hx_super = haxe_io_Output
+
+
+    def __init__(self,impl):
+        self.impl = impl
+
+    def set_bigEndian(self,b):
+        return self.impl.set_bigEndian(b)
+
+
+
+class sys_io_Process:
+    _hx_class_name = "sys.io.Process"
+    __slots__ = ("stdout", "stderr", "stdin", "p")
+    _hx_fields = ["stdout", "stderr", "stdin", "p"]
+
+    def __init__(self,cmd,args = None,detached = None):
+        self.stdin = None
+        self.stderr = None
+        self.stdout = None
+        if detached:
+            raise haxe_Exception.thrown("Detached process is not supported on this platform")
+        args1 = (cmd if ((args is None)) else ([cmd] + args))
+        o = _hx_AnonObject({'shell': (args is None), 'stdin': python_lib_Subprocess.PIPE, 'stdout': python_lib_Subprocess.PIPE, 'stderr': python_lib_Subprocess.PIPE})
+        Reflect.setField(o,"bufsize",(Reflect.field(o,"bufsize") if (python_Boot.hasField(o,"bufsize")) else 0))
+        Reflect.setField(o,"executable",(Reflect.field(o,"executable") if (python_Boot.hasField(o,"executable")) else None))
+        Reflect.setField(o,"stdin",(Reflect.field(o,"stdin") if (python_Boot.hasField(o,"stdin")) else None))
+        Reflect.setField(o,"stdout",(Reflect.field(o,"stdout") if (python_Boot.hasField(o,"stdout")) else None))
+        Reflect.setField(o,"stderr",(Reflect.field(o,"stderr") if (python_Boot.hasField(o,"stderr")) else None))
+        Reflect.setField(o,"preexec_fn",(Reflect.field(o,"preexec_fn") if (python_Boot.hasField(o,"preexec_fn")) else None))
+        Reflect.setField(o,"close_fds",(Reflect.field(o,"close_fds") if (python_Boot.hasField(o,"close_fds")) else None))
+        Reflect.setField(o,"shell",(Reflect.field(o,"shell") if (python_Boot.hasField(o,"shell")) else None))
+        Reflect.setField(o,"cwd",(Reflect.field(o,"cwd") if (python_Boot.hasField(o,"cwd")) else None))
+        Reflect.setField(o,"env",(Reflect.field(o,"env") if (python_Boot.hasField(o,"env")) else None))
+        Reflect.setField(o,"universal_newlines",(Reflect.field(o,"universal_newlines") if (python_Boot.hasField(o,"universal_newlines")) else None))
+        Reflect.setField(o,"startupinfo",(Reflect.field(o,"startupinfo") if (python_Boot.hasField(o,"startupinfo")) else None))
+        Reflect.setField(o,"creationflags",(Reflect.field(o,"creationflags") if (python_Boot.hasField(o,"creationflags")) else 0))
+        self.p = (python_lib_subprocess_Popen(args1,Reflect.field(o,"bufsize"),Reflect.field(o,"executable"),Reflect.field(o,"stdin"),Reflect.field(o,"stdout"),Reflect.field(o,"stderr"),Reflect.field(o,"preexec_fn"),Reflect.field(o,"close_fds"),Reflect.field(o,"shell"),Reflect.field(o,"cwd"),Reflect.field(o,"env"),Reflect.field(o,"universal_newlines"),Reflect.field(o,"startupinfo"),Reflect.field(o,"creationflags")) if ((Sys.systemName() == "Windows")) else python_lib_subprocess_Popen(args1,Reflect.field(o,"bufsize"),Reflect.field(o,"executable"),Reflect.field(o,"stdin"),Reflect.field(o,"stdout"),Reflect.field(o,"stderr"),Reflect.field(o,"preexec_fn"),Reflect.field(o,"close_fds"),Reflect.field(o,"shell"),Reflect.field(o,"cwd"),Reflect.field(o,"env"),Reflect.field(o,"universal_newlines"),Reflect.field(o,"startupinfo")))
+        self.stdout = python_io_IoTools.createFileInputFromText(python_lib_io_TextIOWrapper(python_lib_io_BufferedReader(self.p.stdout)))
+        self.stderr = python_io_IoTools.createFileInputFromText(python_lib_io_TextIOWrapper(python_lib_io_BufferedReader(self.p.stderr)))
+        self.stdin = python_io_IoTools.createFileOutputFromText(python_lib_io_TextIOWrapper(python_lib_io_BufferedWriter(self.p.stdin)))
+
 
 Math.NEGATIVE_INFINITY = float("-inf")
 Math.POSITIVE_INFINITY = float("inf")
