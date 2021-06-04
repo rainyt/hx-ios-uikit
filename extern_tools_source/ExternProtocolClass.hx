@@ -53,8 +53,8 @@ class ExternProtocolHaxeClass extends ExternProtocolClass {
 			for (index => value in haxes) {
 				var a = value.split(":");
 				array.push({
-					name:a[0],
-					type:a[1]
+					name: a[0],
+					type: a[1]
 				});
 			}
 			return array;

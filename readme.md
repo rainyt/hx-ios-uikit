@@ -11,12 +11,6 @@
 haxelib install hx-ios-uikit
 ```
 
-## Root
-
-Enlighten Source:https://github.com/Aurel300/hx-objc-externs
-
-但由于该Git似乎已经停止维护了，已经不能正确使用。该库将在它的基础上进行重新实现。However, since the Git seems to have ceased maintenance, it can no longer be used correctly. The library will be re-implemented on its basis.
-
 ## Support Framework
 - UIKit.framework
 - WebKit.framework
