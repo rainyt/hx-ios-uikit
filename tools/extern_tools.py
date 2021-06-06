@@ -1342,6 +1342,17 @@ class ObjcProperty:
 
     @staticmethod
     def parsing(typedefs,className,line):
+        startIndex1 = None
+        tmp = None
+        if (startIndex1 is None):
+            tmp = line.rfind("void(^", 0, len(line))
+        else:
+            i = line.rfind("void(^", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("void(^"))) if ((i == -1)) else (i + 1))
+            check = line.find("void(^", startLeft, len(line))
+            tmp = (check if (((check > i) and ((check <= startIndex1)))) else i)
+        if (tmp != -1):
+            return None
         startIndex = None
         if (((line.find(" (") if ((startIndex is None)) else HxString.indexOfImpl(line," (",startIndex))) != -1):
             startIndex = None
