@@ -5,6 +5,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSCache")
 @:include("Foundation/Foundation.h")
+/*      NSCache.h
+        Copyright (c) 2008-2019, Apple Inc. All rights reserved.
+*/
 extern class NSCache{
 
 	@:native("alloc")

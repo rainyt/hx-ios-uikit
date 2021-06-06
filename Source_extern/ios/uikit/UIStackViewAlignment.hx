@@ -6,6 +6,8 @@ import cpp.objc.NSData;
 @:enum
 @:native("UIStackViewAlignment")
 @:include("UIKit/UIKit.h")
+/* Alignment—the layout transverse to the stacking axis.
+ */
 extern abstract UIStackViewAlignment(Int) from Int to Int {
 
 	@:native("UIStackViewAlignmentFill")

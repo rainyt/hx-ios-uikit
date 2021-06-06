@@ -31,6 +31,7 @@ extern class UIImage
 	@:native("autorelease")
 	overload public static function autorelease():UIImage;
 
+	/*  * Retrieve a system-provided image with the specified name.  * This will only return system-provided images. If you want a custom  * image as defined in your own catalogs, you should use +imageNamed:.  *  * UIKit applications on macOS may pass NSImageName values (defined in  * <AppKit/NSImage.h>) for the name to access macOS system images.  *  * Returns nil if an image with specified name doesn't exist.  */
 	@:native("systemImageNamed")
 	overload public static function systemImageNamed(name:NSString):UIImage;
 
@@ -184,6 +185,7 @@ extern class UIImage
 	@:native("imageWithHorizontallyFlippedOrientation")
 	overload public function imageWithHorizontallyFlippedOrientation():UIImage;
 
+	/*  * The baseline offset is expressed in points from the bottom of the image (positive = up, negative = down).  * If the image doesn't have a defined baseline, this value will be 0, but you can  * use -hasBaseline to see if it actually has one defined (because it is perfectly possible to have  * a baseline with the value of 0).  */
 	@:native("baselineOffsetFromBottom")
 	public var baselineOffsetFromBottom:Float;
 
@@ -196,15 +198,19 @@ extern class UIImage
 	@:native("imageWithoutBaseline")
 	overload public function imageWithoutBaseline():UIImage;
 
+	/*  * Configuration support  * ---------------------  * This describes the configuration of the image.  * Depending on which type of image, the configuration might be different.  * Symbol images will always have a UIImageSymbolConfiguration, even if you give it another  * type of configuration (it will merge the trait info from the other configuration into  * its current configuration).  * Images start off with an unspecified configuration but can be modified by the methods below.  * The preferred ways of adding configurations for displaying images is to specify them on  * the image view, but it is possible to modify images with a more specific configuration.  */
 	@:native("configuration")
 	public var configuration:UIImageConfiguration;
 
+	/*  * Create a new image by replacing the existing configuration with a new one.  * For symbol images this will always result in an image with a UIImageSymbolConfiguration,  * even if you give it another type of configuration (the trait info from the new configuration  * will be merged into the current symbol configuration resulting in anew symbol configuration).  * For non-symbol images, this will replace the configuration of the image with a new one.  *  * Important note! Given (for example):  *  *    image = image(named:"the_image").withRenderingMode(.alwaysTemplate)   * the following two statements aren't exactly equivalent:  *  *    a = image.imageAsset.withConfiguration(configuration)  *    b = image.withConfiguration(configuration)  *  * The first one will resolve the image again from the asset catalog (if it is originating from one),  * resulting in a fresh image without any modifications. In other words, `a` won't have the  * rendering mode change set anymore, and it will be "reverted" to `.automatic`.  * The second one will resolve the image, but apply and changes that were made to the image.  * That means that `b` might be a different image, but it will still have the same rendering mode  * as `image`.  */
 	@:native("imageWithConfiguration")
 	overload public function imageWithConfiguration(configuration:UIImageConfiguration):UIImage;
 
+	/*  * Symbol configuration support  * ----------------------------  * This describes the symbol configuration of a symbol image.  * Symbol images start off with an unspecified configuration but can be modified by using  * `image.withConfiguration(:)`.  *  * However... the preferred ways of adding configurations for displaying images is to specify  * them on the image view using `preferredSymbolConfiguration`, but it is possible to modify  * images with a more specific configuration. This include image related traits, for example  * you can use this to fix a symbol image to a dynamic type style at a fixed preferred content size  * category.  */
 	@:native("symbolConfiguration")
 	public var symbolConfiguration:UIImageSymbolConfiguration;
 
+	/*  * This is a convience method to apply another symbol configuration over an existing one.  * If the image doesn't have a symbolconfiguration, it will just merge the traits of the existing  * with the new one (where the new traits override the old traits). The symbol in  *  * Create a new image by applying the specified configuration over the existing  one.  * This only works if the configuration already has a configuration (i.e. is a symbol image).  * The image will be configured with a combination of both configurations.  *  * If you use this on a symbol image with other layout modifications done (e.g. changed baseline),  * those changes will be lost and overwritten with the new configuration's layout properties.  * This applies to size, contentInsets and baseline.  */
 	@:native("imageByApplyingSymbolConfiguration")
 	overload public function imageByApplyingSymbolConfiguration(configuration:UIImageSymbolConfiguration):UIImage;
 

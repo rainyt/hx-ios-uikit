@@ -534,7 +534,6 @@ class ExternHFile:
     def __init__(self,file,haxeSaveDir,hfile,haxePkg):
         self.hfile = ""
         self.typedefs = haxe_ds_StringMap()
-        print(str(("parsing:" + ("null" if file is None else file))))
         self.haxeSaveDir = haxeSaveDir
         self.hfile = hfile
         self.haxePkg = haxePkg
@@ -677,7 +676,6 @@ class ExternHFile:
     def defProtocol(self,data,desc):
         t = ExternProtocolClass(data,self)
         t.desc = desc
-        print(str(desc))
         t.saveFile = (((HxOverrides.stringOrNull(self.haxeSaveDir) + "/") + HxOverrides.stringOrNull(t.className)) + ".hx")
         t.pkg = self.haxePkg
         ExternTools.protocol.h[t.className] = t
@@ -1344,17 +1342,6 @@ class ObjcProperty:
 
     @staticmethod
     def parsing(typedefs,className,line):
-        startIndex1 = None
-        tmp = None
-        if (startIndex1 is None):
-            tmp = line.rfind(");", 0, len(line))
-        else:
-            i = line.rfind(");", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len(");"))) if ((i == -1)) else (i + 1))
-            check = line.find(");", startLeft, len(line))
-            tmp = (check if (((check > i) and ((check <= startIndex1)))) else i)
-        if (tmp != -1):
-            return None
         startIndex = None
         if (((line.find(" (") if ((startIndex is None)) else HxString.indexOfImpl(line," (",startIndex))) != -1):
             startIndex = None

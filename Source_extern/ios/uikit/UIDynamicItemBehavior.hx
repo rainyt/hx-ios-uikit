@@ -42,9 +42,11 @@ extern class UIDynamicItemBehavior extends UIDynamicBehavior{
 	@:native("angularResistance")
 	public var angularResistance:Float;
 
+	/*!  Specifies the charge associated with the item behavior. Charge determines the degree to which a dynamic item is affected by  electric and magnetic fields. Note that this is a unitless quantity, it is up to the developer to  set charge and field strength appropriately. Defaults to 0.0  */
 	@:native("charge")
 	public var charge:Float;
 
+	/*!  If an item is anchored, it can participate in collisions, but will not exhibit  any dynamic response. i.e. The item will behave more like a collision boundary.  The default is NO  */
 	@:native("anchored")
 	public var anchored:Bool;
 

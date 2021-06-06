@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSDataReadingOptions")
 @:include("UIKit/UIKit.h")
+/*	NSData.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSDataReadingOptions(Int) from Int to Int {
 
 	@:native("NSDataReadingMappedIfSafe")

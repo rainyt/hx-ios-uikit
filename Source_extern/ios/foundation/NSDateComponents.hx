@@ -73,15 +73,19 @@ extern class NSDateComponents
 	@:native("date")
 	public var date:NSDate;
 
+	/* 	This API allows one to set a specific component of NSDateComponents, by enum constant value rather than property name. 	The calendar and timeZone and isLeapMonth properties cannot be set by this method. */
 	@:native("setValue:forComponent")
 	overload public function setValueForComponent(value:Int, forComponent:NSCalendarUnit):Void;
 
+	/* 	This API allows one to get the value of a specific component of NSDateComponents, by enum constant value rather than property name. 	The calendar and timeZone and isLeapMonth property values cannot be gotten by this method. */
 	@:native("valueForComponent")
 	overload public function valueForComponent(unit:NSCalendarUnit):Int;
 
+	/* 	Reports whether or not the combination of properties which have been set in the receiver is a date which exists in the calendar. 	This method is not appropriate for use on NSDateComponents objects which are specifying relative quantities of calendar components. 	Except for some trivial cases (e.g., 'seconds' should be 0 - 59 in any calendar), this method is not necessarily cheap. 	If the time zone property is set in the NSDateComponents object, it is used. 	The calendar property must be set, or NO is returned. */
 	@:native("validDate")
 	public var validDate:Bool;
 
+	/* 	Reports whether or not the combination of properties which have been set in the receiver is a date which exists in the calendar. 	This method is not appropriate for use on NSDateComponents objects which are specifying relative quantities of calendar components. 	Except for some trivial cases (e.g., 'seconds' should be 0 - 59 in any calendar), this method is not necessarily cheap. 	If the time zone property is set in the NSDateComponents object, it is used. */
 	@:native("isValidDateInCalendar")
 	overload public function isValidDateInCalendar(calendar:NSCalendar):Bool;
 

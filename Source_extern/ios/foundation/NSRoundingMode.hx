@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSRoundingMode")
 @:include("UIKit/UIKit.h")
+/*	NSDecimal.h
+	Copyright (c) 1995-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSRoundingMode(Int) from Int to Int {
 
 	@:native("NSRoundPlain")

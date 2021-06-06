@@ -54,6 +54,7 @@ extern interface UIScrollViewDelegate{
 	@:native("scrollViewDidScrollToTop")
 	overload public function scrollViewDidScrollToTop(scrollView:UIScrollView):Void;
 
+	/* Also see -[UIScrollView adjustedContentInsetDidChange]  */
 	@:native("scrollViewDidChangeAdjustedContentInset")
 	overload public function scrollViewDidChangeAdjustedContentInset(scrollView:UIScrollView):Void;
 

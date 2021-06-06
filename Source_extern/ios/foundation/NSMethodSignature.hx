@@ -4,6 +4,9 @@ import ios.foundation.NSMethodSignature;
 @:objc
 @:native("NSMethodSignature")
 @:include("Foundation/Foundation.h")
+/*	NSMethodSignature.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSMethodSignature{
 
 	@:native("alloc")

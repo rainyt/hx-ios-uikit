@@ -63,6 +63,7 @@ extern class UIFont{
 	@:native("monospacedDigitSystemFontOfSize:weight")
 	overload public static function monospacedDigitSystemFontOfSizeWeight(fontSize:Float, weight:Dynamic):UIFont;
 
+	/* Returns current default monospaced font for system UI. Clients of this API should be aware that the monospaced system font has a similar coverage of default system UI font, which includes Latin and common symbols used for displaying text like source code. For the characters it does not cover, the subtituted fonts are usually not the same width as the monospaced system font, they can be wider, narrower, or variable. To ensure fixed advances in text layout, clients can consider using string attributes like UIFontDescriptorFixedAdvanceAttribute. */
 	@:native("monospacedSystemFontOfSize:weight")
 	overload public static function monospacedSystemFontOfSizeWeight(fontSize:Float, weight:Dynamic):UIFont;
 

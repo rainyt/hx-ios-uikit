@@ -22,6 +22,16 @@ import ios.foundation.NSURLRequest;
 @:objc
 @:native("NSTextStorage")
 @:include("UIKit/UIKit.h")
+/* Note for subclassing NSTextStorage: NSTextStorage is a semi-abstract subclass of NSMutableAttributedString. It implements change management (beginEditing/endEditing), verification of attributes, delegate handling, and layout management notification. The one aspect it does not implement is the actual attributed string storage --- this is left up to the subclassers, which need to override the two NSMutableAttributedString primitives in addition to two NSAttributedString primitives:
+ 
+ - (NSString *)string;
+ - (NSDictionary *)attributesAtIndex:(NSUInteger)location effectiveRange:(NSRangePointer)range;
+
+ - (void)replaceCharactersInRange:(NSRange)range withString:(NSString *)str;
+ - (void)setAttributes:(NSDictionary *)attrs range:(NSRange)range;
+ 
+ These primitives should perform the change then call edited:range:changeInLength: to get everything else to happen.
+*/
 extern class NSTextStorage extends NSMutableAttributedString
 {
 
@@ -31,6 +41,7 @@ extern class NSTextStorage extends NSMutableAttributedString
 	@:native("autorelease")
 	overload public static function autorelease():NSTextStorage;
 
+	/**************************** Layout manager ****************************/
 	@:native("layoutManagers")
 	public var layoutManagers:Dynamic;
 
@@ -40,6 +51,7 @@ extern class NSTextStorage extends NSMutableAttributedString
 	@:native("removeLayoutManager")
 	overload public function removeLayoutManager(aLayoutManager:NSLayoutManager):Void;
 
+	/**************************** Pending edit info ****************************/
 	@:native("editedMask")
 	public var editedMask:NSTextStorageEditActions;
 
@@ -49,15 +61,18 @@ extern class NSTextStorage extends NSMutableAttributedString
 	@:native("changeInLength")
 	public var changeInLength:Int;
 
+	/**************************** Delegate ****************************/
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	/**************************** Edit management ****************************/
 	@:native("edited:range:changeInLength")
 	overload public function editedRangeChangeInLength(editedMask:NSTextStorageEditActions, range:Dynamic, changeInLength:Int):Void;
 
 	@:native("processEditing")
 	overload public function processEditing():Void;
 
+	/**************************** Attribute fixing ****************************/
 	@:native("fixesAttributesLazily")
 	public var fixesAttributesLazily:Bool;
 
@@ -148,15 +163,19 @@ extern class NSTextStorage extends NSMutableAttributedString
 	@:native("attributedStringWithAttachment")
 	overload public static function attributedStringWithAttachment(attachment:NSTextAttachment):NSTextStorage;
 
+	/*!  @abstract Loads an HTML URL request and converts the contents into an attributed string.  @param request The request specifying the URL to load.  @param options Document attributes for interpreting the document contents.  NSTextSizeMultiplierDocumentOption and NSTimeoutDocumentOption are supported option keys.  @param completionHandler A block to invoke when the operation completes or fails.  @discussion The completionHandler is passed the attributed string result along with any  document-level attributes, or an error. */
 	@:native("loadFromHTMLWithRequest:options:completionHandler")
 	overload public static function loadFromHTMLWithRequestOptionsCompletionHandler(request:NSURLRequest, options:NSDictionary, completionHandler:Dynamic):Void;
 
+	/*!  @abstract Converts a local HTML file into an attributed string.  @param fileURL The file URL to load.  @param options Document attributes for interpreting the document contents.  NSTextSizeMultiplierDocumentOption, NSTimeoutDocumentOption and NSReadAccessURLDocumentOption  are supported option keys.  @param completionHandler A block to invoke when the operation completes or fails.  @discussion The completionHandler is passed the attributed string result along with any  document-level attributes, or an error. If NSReadAccessURLDocumentOption references a single file,  only that file may be loaded by WebKit. If NSReadAccessURLDocumentOption references a directory,  files inside that directory may be loaded by WebKit. */
 	@:native("loadFromHTMLWithFileURL:options:completionHandler")
 	overload public static function loadFromHTMLWithFileURLOptionsCompletionHandler(fileURL:NSURL, options:NSDictionary, completionHandler:Dynamic):Void;
 
+	/*!  @abstract Converts an HTML string into an attributed string.  @param string The HTML string to use as the contents.  @param options Document attributes for interpreting the document contents.  NSTextSizeMultiplierDocumentOption, NSTimeoutDocumentOption and NSBaseURLDocumentOption  are supported option keys.  @param completionHandler A block to invoke when the operation completes or fails.  @discussion The completionHandler is passed the attributed string result along with any  document-level attributes, or an error. NSBaseURLDocumentOption is used to resolve relative URLs  within the document. */
 	@:native("loadFromHTMLWithString:options:completionHandler")
 	overload public static function loadFromHTMLWithStringOptionsCompletionHandler(string:NSString, options:NSDictionary, completionHandler:Dynamic):Void;
 
+	/*!  @abstract Converts HTML data into an attributed string.  @param data The HTML data to use as the contents.  @param options Document attributes for interpreting the document contents.  NSTextSizeMultiplierDocumentOption, NSTimeoutDocumentOption, NSTextEncodingNameDocumentOption,  and NSCharacterEncodingDocumentOption are supported option keys.  @param completionHandler A block to invoke when the operation completes or fails.  @discussion The completionHandler is passed the attributed string result along with any  document-level attributes, or an error. If neither NSTextEncodingNameDocumentOption nor  NSCharacterEncodingDocumentOption is supplied, a best-guess encoding is used. */
 	@:native("loadFromHTMLWithData:options:completionHandler")
 	overload public static function loadFromHTMLWithDataOptionsCompletionHandler(data:NSData, options:NSDictionary, completionHandler:Dynamic):Void;
 

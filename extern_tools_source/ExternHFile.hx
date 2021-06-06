@@ -25,7 +25,6 @@ class ExternHFile {
 	public var hfile:String = "";
 
 	public function new(file:String, haxeSaveDir:String, hfile:String, haxePkg:String) {
-		trace("parsing:" + file);
 		this.haxeSaveDir = haxeSaveDir;
 		this.hfile = hfile;
 		this.haxePkg = haxePkg;
@@ -125,7 +124,6 @@ class ExternHFile {
 	public function defProtocol(data:String, desc:String):Void {
 		var t = new ExternProtocolClass(data, this);
 		t.desc = desc;
-		trace(desc);
 		t.saveFile = haxeSaveDir + "/" + t.className + ".hx";
 		t.pkg = haxePkg;
 		ExternTools.protocol.set(t.className, t);

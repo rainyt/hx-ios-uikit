@@ -18,6 +18,7 @@ extern class NSUnitEnergy extends NSDimension
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitEnergy;
 
+	/*  Base unit - joules  */
 	@:native("kilojoules")
 	overload public static function kilojoules():NSUnitEnergy;
 
@@ -36,6 +37,7 @@ extern class NSUnitEnergy extends NSDimension
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitEnergy;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitEnergy;
 

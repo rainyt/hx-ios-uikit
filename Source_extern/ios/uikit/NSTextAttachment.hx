@@ -20,21 +20,25 @@ extern class NSTextAttachment{
 	@:native("textAttachmentWithImage")
 	overload public static function textAttachmentWithImage(image:UIImage):NSTextAttachment;
 
+	/**************************** Initialization ****************************/
 	@:native("initWithData:ofType")
 	overload public function initWithDataOfType(contentData:NSData, ofType:NSString):NSTextAttachment;
 
+	/**************************** Content properties ****************************/
 	@:native("contents")
 	public var contents:NSData;
 
 	@:native("fileType")
 	public var fileType:NSString;
 
+	/**************************** Rendering/layout properties ****************************/
 	@:native("image")
 	public var image:UIImage;
 
 	@:native("bounds")
 	public var bounds:CGRect;
 
+	/**************************** Non-image contents properties ****************************/
 	@:native("fileWrapper")
 	public var fileWrapper:NSFileWrapper;
 

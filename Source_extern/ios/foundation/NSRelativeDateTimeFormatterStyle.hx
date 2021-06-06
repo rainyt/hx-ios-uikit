@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSRelativeDateTimeFormatterStyle")
 @:include("UIKit/UIKit.h")
+/*    NSRelativeDateTimeFormatter.h
+      Copyright (c) 2018-2019, Apple Inc. All rights reserved.
+ */
 extern abstract NSRelativeDateTimeFormatterStyle(Int) from Int to Int {
 
 	@:native("NSRelativeDateTimeFormatterStyleNumeric")

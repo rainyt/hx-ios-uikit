@@ -8,6 +8,9 @@ import cpp.objc.NSDictionary;
 @:objc
 @:native("NSException")
 @:include("Foundation/Foundation.h")
+/*	NSException.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSException
 {
 

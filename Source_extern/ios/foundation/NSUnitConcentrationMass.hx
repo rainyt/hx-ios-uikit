@@ -18,6 +18,7 @@ extern class NSUnitConcentrationMass extends NSDimension
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitConcentrationMass;
 
+	/*  Base unit - gramsPerLiter  */
 	@:native("gramsPerLiter")
 	overload public static function gramsPerLiter():NSUnitConcentrationMass;
 
@@ -30,6 +31,7 @@ extern class NSUnitConcentrationMass extends NSDimension
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitConcentrationMass;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitConcentrationMass;
 

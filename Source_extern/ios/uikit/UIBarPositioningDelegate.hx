@@ -13,6 +13,7 @@ extern interface UIBarPositioningDelegate{
 	@:native("autorelease")
 	overload public static function autorelease():UIBarPositioningDelegate;
 
+	/* Implement this method on your manual bar delegate when not managed by a UIKit controller.  UINavigationBar and UISearchBar default to UIBarPositionTop, UIToolbar defaults to UIBarPositionBottom.  This message will be sent when the bar moves to a window.  */
 	@:native("positionForBar")
 	overload public function positionForBar(bar:Dynamic):UIBarPosition;
 

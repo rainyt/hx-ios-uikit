@@ -40,6 +40,7 @@ extern class NSMapTable
 	@:native("weakToWeakObjectsMapTable")
 	overload public static function weakToWeakObjectsMapTable():NSMapTable;
 
+	/* return an NSPointerFunctions object reflecting the functions in use.  This is a new autoreleased object that can be subsequently modified and/or used directly in the creation of other pointer "collections". */
 	@:native("keyPointerFunctions")
 	public var keyPointerFunctions:NSPointerFunctions;
 

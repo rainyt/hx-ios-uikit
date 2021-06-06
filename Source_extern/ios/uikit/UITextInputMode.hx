@@ -6,6 +6,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("UITextInputMode")
 @:include("UIKit/UIKit.h")
+/* The UITextInputMode class should not be subclassed. It is to allow other in-app functionality to adapt 
+ * based on the keyboard language. Different UITextInputMode objects may have the same primaryLanguage. */
 extern class UITextInputMode
 {
 

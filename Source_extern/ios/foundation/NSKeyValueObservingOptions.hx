@@ -6,6 +6,8 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSKeyValueObservingOptions")
 @:include("UIKit/UIKit.h")
+/* Options for use with -addObserver:forKeyPath:options:context: and -addObserver:toObjectsAtIndexes:forKeyPath:options:context:.
+*/
 extern abstract NSKeyValueObservingOptions(Int) from Int to Int {
 
 	@:native("NSKeyValueObservingOptionNew")

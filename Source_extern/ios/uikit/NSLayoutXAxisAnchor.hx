@@ -19,6 +19,7 @@ extern class NSLayoutXAxisAnchor extends NSLayoutAnchor
 	@:native("anchorWithOffsetToAnchor")
 	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutXAxisAnchor):NSLayoutDimension;
 
+	/* Constraints of the form,  receiver [= | ≥ | ≤] 'anchor' + 'multiplier' * system space,   where the value of the system space is determined from information available from the anchors.  The constraint affects how far the receiver will be positioned trailing 'anchor', per the effective user interface layout direction.  */
 	@:native("constraintEqualToSystemSpacingAfterAnchor:multiplier")
 	overload public function constraintEqualToSystemSpacingAfterAnchorMultiplier(anchor:NSLayoutXAxisAnchor, multiplier:Float):NSLayoutConstraint;
 

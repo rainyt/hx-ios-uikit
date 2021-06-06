@@ -35,6 +35,7 @@ extern class NSMutableIndexSet extends NSIndexSet{
 	@:native("removeIndexesInRange")
 	overload public function removeIndexesInRange(range:Dynamic):Void;
 
+	/* For a positive delta, shifts the indexes in [index, INT_MAX] to the right, thereby inserting an "empty space" [index, delta], for a negative delta, shifts the indexes in [index, INT_MAX] to the left, thereby deleting the indexes in the range [index - delta, delta]. */
 	@:native("shiftIndexesStartingAtIndex:by")
 	overload public function shiftIndexesStartingAtIndexBy(index:Int, by:Int):Void;
 
@@ -71,6 +72,7 @@ extern class NSMutableIndexSet extends NSIndexSet{
 	@:native("indexLessThanOrEqualToIndex")
 	overload public function indexLessThanOrEqualToIndex(value:Int):Int;
 
+	/* Fills up to bufferSize indexes in the specified range into the buffer and returns the number of indexes actually placed in the buffer; also modifies the optional range passed in by pointer to be "positioned" after the last index filled into the buffer.Example: if the index set contains the indexes 0, 2, 4, ..., 98, 100, for a buffer of size 10 and the range (20, 80) the buffer would contain 20, 22, ..., 38 and the range would be modified to (40, 60). */
 	@:native("getIndexes:maxCount:inIndexRange")
 	overload public function getIndexesMaxCountInIndexRange(indexBuffer:Int, maxCount:Int, inIndexRange:Dynamic):Int;
 
@@ -116,6 +118,7 @@ extern class NSMutableIndexSet extends NSIndexSet{
 	@:native("indexesInRange:options:passingTest")
 	overload public function indexesInRangeOptionsPassingTest(range:Dynamic, options:NSEnumerationOptions, passingTest:Dynamic):NSIndexSet;
 
+	/*  The following three convenience methods allow you to enumerate the indexes in the receiver by ranges of contiguous indexes. The performance of these methods is not guaranteed to be any better than if they were implemented with enumerateIndexesInRange:options:usingBlock:. However, depending on the receiver's implementation, they may perform better than that.    If the specified range for enumeration intersects a range of contiguous indexes in the receiver, then the block will be invoked with the intersection of those two ranges. */
 	@:native("enumerateRangesUsingBlock")
 	overload public function enumerateRangesUsingBlock(block:Dynamic):Void;
 

@@ -18,12 +18,14 @@ extern class NSUnitDispersion extends NSDimension
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitDispersion;
 
+	/*  Base unit - partsPerMillion  */
 	@:native("partsPerMillion")
 	overload public static function partsPerMillion():NSUnitDispersion;
 
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitDispersion;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitDispersion;
 

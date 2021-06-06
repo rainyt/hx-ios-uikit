@@ -209,12 +209,15 @@ extern class NSOrderedSet{
 	@:native("orderedSetByApplyingDifference")
 	overload public function orderedSetByApplyingDifference(difference:NSOrderedCollectionDifference):NSOrderedSet;
 
+	/* Return an ordered set containing the results of invoking -valueForKey: on each of the receiver's members. The returned ordered set might not have the same number of members as the receiver. The returned ordered set will not contain any elements corresponding to instances of -valueForKey: returning nil, nor will it contain duplicates. */
 	@:native("valueForKey")
 	overload public function valueForKey(key:NSString):Dynamic;
 
+	/* Invoke -setValue:forKey: on each of the receiver's members. */
 	@:native("setValue:forKey")
 	overload public function setValueForKey(value:Dynamic, forKey:NSString):Void;
 
+	/* NSOrderedSets are not observable, so these methods raise exceptions when invoked on NSOrderedSets. Instead of observing an ordered set, observe the ordered to-many relationship for which the ordered set is the collection of related objects. */
 	@:native("addObserver:forKeyPath:options:context")
 	overload public function addObserverForKeyPathOptionsContext(observer:NSObject, forKeyPath:NSString, options:NSKeyValueObservingOptions, context:Void):Void;
 

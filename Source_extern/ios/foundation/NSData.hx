@@ -27,6 +27,7 @@ extern class NSData
 	@:native("length")
 	public var length:Int;
 
+	/*  The -bytes method returns a pointer to a contiguous region of memory managed by the receiver.  If the regions of memory represented by the receiver are already contiguous, it does so in O(1) time, otherwise it may take longer  Using -enumerateByteRangesUsingBlock: will be efficient for both contiguous and discontiguous data.  */
 	@:native("bytes")
 	public var bytes:Void;
 
@@ -60,6 +61,7 @@ extern class NSData
 	@:native("rangeOfData:options:range")
 	overload public function rangeOfDataOptionsRange(dataToFind:NSData, options:NSDataSearchOptions, range:Dynamic):Dynamic;
 
+	/*  'block' is called once for each contiguous region of memory in the receiver (once total for contiguous NSDatas), until either all bytes have been enumerated, or the 'stop' parameter is set to YES.  */
 	@:native("enumerateByteRangesUsingBlock")
 	overload public function enumerateByteRangesUsingBlock(block:Dynamic):Void;
 
@@ -117,18 +119,23 @@ extern class NSData
 	@:native("dataWithData")
 	overload public static function dataWithData(data:NSData):NSData;
 
+	/* Create an NSData from a Base-64 encoded NSString using the given options. By default, returns nil when the input is not recognized as valid Base-64. */
 	@:native("initWithBase64EncodedString:options")
 	overload public function initWithBase64EncodedStringOptions(base64String:NSString, options:NSDataBase64DecodingOptions):NSData;
 
+	/* Create a Base-64 encoded NSString from the receiver's contents using the given options. */
 	@:native("base64EncodedStringWithOptions")
 	overload public function base64EncodedStringWithOptions(options:NSDataBase64EncodingOptions):NSString;
 
+	/* Create an NSData from a Base-64, UTF-8 encoded NSData. By default, returns nil when the input is not recognized as valid Base-64. */
 	@:native("initWithBase64EncodedData:options")
 	overload public function initWithBase64EncodedDataOptions(base64Data:NSData, options:NSDataBase64DecodingOptions):NSData;
 
+	/* Create a Base-64, UTF-8 encoded NSData from the receiver's contents using the given options. */
 	@:native("base64EncodedDataWithOptions")
 	overload public function base64EncodedDataWithOptions(options:NSDataBase64EncodingOptions):NSData;
 
+	/* These methods return a compressed or decompressed version of the receiver using the specified algorithm.  */
 	@:native("decompressedDataUsingAlgorithm:error")
 	overload public function decompressedDataUsingAlgorithmError(algorithm:NSDataCompressionAlgorithm, error:NSError):NSData;
 

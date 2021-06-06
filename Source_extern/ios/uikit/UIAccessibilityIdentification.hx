@@ -13,6 +13,7 @@ extern interface UIAccessibilityIdentification{
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityIdentification;
 
+	/*  A string that identifies the user interface element.  default == nil */
 	@:native("accessibilityIdentifier")
 	public var accessibilityIdentifier:NSString;
 

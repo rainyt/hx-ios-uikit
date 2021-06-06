@@ -16,6 +16,7 @@ extern interface UITraitEnvironment{
 	@:native("traitCollection")
 	public var traitCollection:UITraitCollection;
 
+	/*! To be overridden as needed to provide custom behavior when the environment's traits change. */
 	@:native("traitCollectionDidChange")
 	overload public function traitCollectionDidChange(previousTraitCollection:UITraitCollection):Void;
 

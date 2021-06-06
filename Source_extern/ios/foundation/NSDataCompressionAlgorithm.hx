@@ -6,6 +6,8 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSDataCompressionAlgorithm")
 @:include("UIKit/UIKit.h")
+/* Various algorithms provided for compression APIs. See NSData and NSMutableData.
+ */
 extern abstract NSDataCompressionAlgorithm(Int) from Int to Int {
 
 	@:native("NSDataCompressionAlgorithmLZFSE")

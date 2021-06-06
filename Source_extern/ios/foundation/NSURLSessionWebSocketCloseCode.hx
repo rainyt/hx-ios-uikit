@@ -6,6 +6,8 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSURLSessionWebSocketCloseCode")
 @:include("UIKit/UIKit.h")
+/* The WebSocket close codes follow the close codes given in the RFC
+ */
 extern abstract NSURLSessionWebSocketCloseCode(Int) from Int to Int {
 
 	@:native("NSURLSessionWebSocketCloseCodeInvalid")

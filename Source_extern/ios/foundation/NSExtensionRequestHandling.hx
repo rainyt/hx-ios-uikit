@@ -5,6 +5,9 @@ import ios.foundation.NSExtensionContext;
 @:objc
 @:native("NSExtensionRequestHandling")
 @:include("Foundation/Foundation.h")
+/*	NSExtensionRequestHandling.h
+ Copyright (c) 2013-2019, Apple Inc. All rights reserved.
+ */
 extern interface NSExtensionRequestHandling{
 
 	@:native("alloc")

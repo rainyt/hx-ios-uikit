@@ -6,6 +6,13 @@ import ios.uikit.UIGuidedAccessRestrictionState;
 @:objc
 @:native("UIGuidedAccessRestrictionDelegate")
 @:include("UIKit/UIKit.h")
+/*
+ UIGuidedAccessRestrictionDelegate
+ 
+ Implement on the application delegate to present the user with additional Guided Access restrictions.
+ 
+ The initial state of all Guided Access restrictions is UIGuidedAccessRestrictionStateAllow.
+ */
 extern interface UIGuidedAccessRestrictionDelegate{
 
 	@:native("alloc")
@@ -14,6 +21,7 @@ extern interface UIGuidedAccessRestrictionDelegate{
 	@:native("autorelease")
 	overload public static function autorelease():UIGuidedAccessRestrictionDelegate;
 
+	/*  Returns a list of restriction identifiers in the order they will be presented to the user.  Each restriction identifier must be unique string.  For example: com.MyCompany.MyApp.SomeRestrictionIdentifier  */
 	@:native("guidedAccessRestrictionIdentifiers")
 	public var guidedAccessRestrictionIdentifiers:Dynamic;
 

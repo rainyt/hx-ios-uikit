@@ -8,6 +8,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSThread")
 @:include("Foundation/Foundation.h")
+/*	NSThread.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSThread{
 
 	@:native("alloc")

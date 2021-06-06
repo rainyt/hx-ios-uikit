@@ -13,6 +13,7 @@ extern class UIDictationPhrase{
 	@:native("autorelease")
 	overload public static function autorelease():UIDictationPhrase;
 
+	/* -text returns the most likely interpretation for a phrase. If there are other   * interpretations, -alternativeInterpretations will return an array of them, with   * the first being most likely and the last being least likely. */
 	@:native("text")
 	public var text:NSString;
 

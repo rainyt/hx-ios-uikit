@@ -18,6 +18,7 @@ extern class NSUnitElectricCharge extends NSDimension
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitElectricCharge;
 
+	/*  Base unit - coulombs  */
 	@:native("coulombs")
 	overload public static function coulombs():NSUnitElectricCharge;
 
@@ -39,6 +40,7 @@ extern class NSUnitElectricCharge extends NSDimension
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitElectricCharge;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitElectricCharge;
 

@@ -33,9 +33,11 @@ extern class UIAction extends UIMenuElement{
 	@:native("sender")
 	public var sender:Dynamic;
 
+	/*!  * @abstract Creates a UIAction with an empty title, nil image, and automatically generated identifier  *  * @param handler  Handler block. Called when the user selects the action.  *  * @return A new UIAction.  */
 	@:native("actionWithHandler")
 	overload public static function actionWithHandler(handler:Dynamic):UIAction;
 
+	/*!  * @abstract Creates a UIAction with the given arguments.  *  * @param title    The action's title.  * @param image    Image that can appear next to this action, if needed.  * @param identifier  The action's identifier. Pass nil to use an auto-generated identifier.  * @param handler  Handler block. Called when the user selects the action.  *  * @return A new UIAction.  */
 	@:native("actionWithTitle:image:identifier:handler")
 	overload public static function actionWithTitleImageIdentifierHandler(title:NSString, image:UIImage, identifier:NSString, handler:Dynamic):UIAction;
 

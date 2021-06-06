@@ -10,6 +10,9 @@ import ios.uikit.NSCoder;
 @:objc
 @:native("NSValue")
 @:include("QuartzCore/QuartzCore.h")
+/* Returns the affine transform represented by 't'. If 't' can not be
+ * represented exactly by an affine transform the returned value is
+ * undefined. */
 extern class NSValue{
 
 	@:native("alloc")

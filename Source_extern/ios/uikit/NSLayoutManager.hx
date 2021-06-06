@@ -27,15 +27,18 @@ extern class NSLayoutManager
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutManager;
 
+	/**************************** Initialization ****************************/
 	@:native("init")
 	overload public function init():NSLayoutManager;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):NSLayoutManager;
 
+	/*************************** Text storage ***************************/
 	@:native("textStorage")
 	public var textStorage:NSTextStorage;
 
+	/**************************** Text containers ****************************/
 	@:native("textContainers")
 	public var textContainers:Dynamic;
 
@@ -51,9 +54,11 @@ extern class NSLayoutManager
 	@:native("textContainerChangedGeometry")
 	overload public function textContainerChangedGeometry(container:NSTextContainer):Void;
 
+	/**************************** Delegate ****************************/
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	/*********************** Global layout manager options ***********************/
 	@:native("showsInvisibleCharacters")
 	public var showsInvisibleCharacters:Bool;
 
@@ -75,6 +80,7 @@ extern class NSLayoutManager
 	@:native("usesDefaultHyphenation")
 	public var usesDefaultHyphenation:Bool;
 
+	/************************** Invalidation **************************/
 	@:native("invalidateGlyphsForCharacterRange:changeInLength:actualCharacterRange")
 	overload public function invalidateGlyphsForCharacterRangeChangeInLengthActualCharacterRange(charRange:Dynamic, changeInLength:Int, actualCharacterRange:Dynamic):Void;
 
@@ -90,6 +96,7 @@ extern class NSLayoutManager
 	@:native("processEditingForTextStorage:edited:range:changeInLength:invalidatedRange")
 	overload public function processEditingForTextStorageEditedRangeChangeInLengthInvalidatedRange(textStorage:NSTextStorage, edited:NSTextStorageEditActions, range:Dynamic, changeInLength:Int, invalidatedRange:Dynamic):Void;
 
+	/************************ Causing glyph generation and layout ************************/
 	@:native("ensureGlyphsForCharacterRange")
 	overload public function ensureGlyphsForCharacterRange(charRange:Dynamic):Void;
 
@@ -108,9 +115,11 @@ extern class NSLayoutManager
 	@:native("ensureLayoutForBoundingRect:inTextContainer")
 	overload public function ensureLayoutForBoundingRectInTextContainer(bounds:CGRect, inTextContainer:NSTextContainer):Void;
 
+	/************************ Set glyphs and glyph properties ************************/
 	@:native("setGlyphs:properties:characterIndexes:font:forGlyphRange")
 	overload public function setGlyphsPropertiesCharacterIndexesFontForGlyphRange(glyphs:Dynamic, properties:Dynamic, characterIndexes:Dynamic, font:UIFont, forGlyphRange:Dynamic):Void;
 
+	/************************ Get glyphs and glyph properties ************************/
 	@:native("numberOfGlyphs")
 	public var numberOfGlyphs:Int;
 
@@ -135,6 +144,7 @@ extern class NSLayoutManager
 	@:native("getGlyphsInRange:glyphs:properties:characterIndexes:bidiLevels")
 	overload public function getGlyphsInRangeGlyphsPropertiesCharacterIndexesBidiLevels(glyphRange:Dynamic, glyphs:Dynamic, properties:NSGlyphProperty, characterIndexes:Int, bidiLevels:Dynamic):Int;
 
+	/************************ Set layout information ************************/
 	@:native("setTextContainer:forGlyphRange")
 	overload public function setTextContainerForGlyphRange(container:NSTextContainer, forGlyphRange:Dynamic):Void;
 
@@ -156,6 +166,7 @@ extern class NSLayoutManager
 	@:native("setAttachmentSize:forGlyphRange")
 	overload public function setAttachmentSizeForGlyphRange(attachmentSize:CGSize, forGlyphRange:Dynamic):Void;
 
+	/************************ Get layout information ************************/
 	@:native("getFirstUnlaidCharacterIndex:glyphIndex")
 	overload public function getFirstUnlaidCharacterIndexGlyphIndex(charIndex:Int, glyphIndex:Int):Void;
 
@@ -210,6 +221,7 @@ extern class NSLayoutManager
 	@:native("truncatedGlyphRangeInLineFragmentForGlyphAtIndex")
 	overload public function truncatedGlyphRangeInLineFragmentForGlyphAtIndex(glyphIndex:Int):Dynamic;
 
+	/************************ More sophisticated queries ************************/
 	@:native("glyphRangeForCharacterRange:actualCharacterRange")
 	overload public function glyphRangeForCharacterRangeActualCharacterRange(charRange:Dynamic, actualCharacterRange:Dynamic):Dynamic;
 
@@ -252,6 +264,7 @@ extern class NSLayoutManager
 	@:native("enumerateEnclosingRectsForGlyphRange:withinSelectedGlyphRange:inTextContainer:usingBlock")
 	overload public function enumerateEnclosingRectsForGlyphRangeWithinSelectedGlyphRangeInTextContainerUsingBlock(glyphRange:Dynamic, withinSelectedGlyphRange:Dynamic, inTextContainer:NSTextContainer, usingBlock:Dynamic):Void;
 
+	/************************ Drawing support ************************/
 	@:native("drawBackgroundForGlyphRange:atPoint")
 	overload public function drawBackgroundForGlyphRangeAtPoint(glyphsToShow:Dynamic, atPoint:CGPoint):Void;
 

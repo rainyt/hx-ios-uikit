@@ -16,6 +16,9 @@ import cpp.objc.NSDictionary;
 @:objc
 @:native("NSKeyedArchiver")
 @:include("Foundation/Foundation.h")
+/*	NSKeyedArchiver.h
+	Copyright (c) 2001-2019, Apple Inc. All rights reserved.
+*/
 extern class NSKeyedArchiver extends NSCoder{
 
 	@:native("alloc")
@@ -24,9 +27,11 @@ extern class NSKeyedArchiver extends NSCoder{
 	@:native("autorelease")
 	overload public static function autorelease():NSKeyedArchiver;
 
+	/**  Initializes the receiver for encoding an archive, optionally disabling secure coding.   If \c NSSecureCoding cannot be used, \c requiresSecureCoding may be turned off here; for improved security, however, \c requiresSecureCoding should be left enabled whenever possible. \c requiresSecureCoding ensures that all encoded objects conform to \c NSSecureCoding, preventing the possibility of encoding objects which cannot be decoded later.   To produce archives whose structure matches those previously encoded using \c +archivedDataWithRootObject, encode the top-level object in your archive for the \c NSKeyedArchiveRootObjectKey.  */
 	@:native("initRequiringSecureCoding")
 	overload public function initRequiringSecureCoding(requiresSecureCoding:Bool):NSKeyedArchiver;
 
+	/**  Returns an \c NSData object containing the encoded form of the object graph whose root object is given, optionally disabling secure coding.   If \c NSSecureCoding cannot be used, \c requiresSecureCoding may be turned off here; for improved security, however, \c requiresSecureCoding should be left enabled whenever possible. \c requiresSecureCoding ensures that all encoded objects conform to \c NSSecureCoding, preventing the possibility of encoding objects which cannot be decoded later.   If the object graph cannot be encoded, returns \c nil and sets the \c error out parameter.  */
 	@:native("archivedDataWithRootObject:requiringSecureCoding:error")
 	overload public static function archivedDataWithRootObjectRequiringSecureCodingError(object:Dynamic, requiringSecureCoding:Bool, error:NSError):NSData;
 
@@ -231,9 +236,11 @@ extern class NSKeyedArchiver extends NSCoder{
 	@:native("decodeTopLevelObjectOfClass:forKey:error")
 	overload public function decodeTopLevelObjectOfClassForKeyError(aClass:Dynamic, forKey:NSString, error:NSError):Dynamic;
 
+	/**  Decodes the \c NSArray object for the given  \c key, which should be an \c NSArray<cls>, containing the given non-collection class (no nested arrays or arrays of dictionaries, etc) from the coder.   Requires \c NSSecureCoding otherwise an exception is thrown and sets the \c decodingFailurePolicy to \c NSDecodingFailurePolicySetErrorAndReturn.   Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.  */
 	@:native("decodeArrayOfObjectsOfClass:forKey")
 	overload public function decodeArrayOfObjectsOfClassForKey(cls:Dynamic, forKey:NSString):NSArray;
 
+	/**   Decodes the \c NSDictionary object for the given \c key, which should be an \c NSDictionary<keyCls,objectCls> , with keys of type given in \c keyCls and objects of the given non-collection class \c objectCls (no nested dictionaries or other dictionaries contained in the dictionary, etc) from the coder.   Requires \c NSSecureCoding otherwise an exception is thrown and sets the \c decodingFailurePolicy to \c NSDecodingFailurePolicySetErrorAndReturn.   Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.  */
 	@:native("decodeDictionaryWithKeysOfClass:objectsOfClass:forKey")
 	overload public function decodeDictionaryWithKeysOfClassObjectsOfClassForKey(keyCls:Dynamic, objectsOfClass:Dynamic, forKey:NSString):NSDictionary;
 
@@ -243,15 +250,18 @@ extern class NSKeyedArchiver extends NSCoder{
 	@:native("decodeTopLevelObjectOfClasses:forKey:error")
 	overload public function decodeTopLevelObjectOfClassesForKeyError(classes:Dynamic, forKey:NSString, error:NSError):Dynamic;
 
+	/**  Decodes the \c NSArray object for the given \c key, which should be an \c NSArray, containing the given non-collection classes (no nested arrays or arrays of dictionaries, etc) from the coder.   Requires \c NSSecureCoding otherwise an exception is thrown and sets the \c decodingFailurePolicy to \c NSDecodingFailurePolicySetErrorAndReturn.   Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.  */
 	@:native("decodeArrayOfObjectsOfClasses:forKey")
 	overload public function decodeArrayOfObjectsOfClassesForKey(classes:Dynamic, forKey:NSString):NSArray;
 
+	/**  Decodes the \c NSDictionary object for the given \c key, which should be an \c NSDictionary, with keys of the types given in \c keyClasses and objects of the given non-collection classes in \c objectClasses (no nested dictionaries or other dictionaries contained in the dictionary, etc) from the given coder.   Requires \c NSSecureCoding otherwise an exception is thrown and sets the \c decodingFailurePolicy to \c NSDecodingFailurePolicySetErrorAndReturn.   Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.  */
 	@:native("decodeDictionaryWithKeysOfClasses:objectsOfClasses:forKey")
 	overload public function decodeDictionaryWithKeysOfClassesObjectsOfClassesForKey(keyClasses:Dynamic, objectsOfClasses:Dynamic, forKey:NSString):NSDictionary;
 
 	@:native("decodePropertyListForKey")
 	overload public function decodePropertyListForKey(key:NSString):Dynamic;
 
+	/*!  @abstract Signals to this coder that the decode has failed.  @parameter non-nil error that describes the reason why the decode failed  @discussion  Sets an error on this NSCoder once per TopLevel decode; calling it repeatedly will have no effect until the call stack unwinds to one of the TopLevel decode entry-points.   This method is only meaningful to call for decodes.   Typically, you would want to call this method in your -initWithCoder: implementation when you detect situations like:  - lack of secure coding  - corruption of your data  - domain validation failures   After calling -failWithError: within your -initWithCoder: implementation, you should clean up and return nil as early as possible.   Once an error has been signaled to a decoder, it remains set until it has handed off to the first TopLevel decode invocation above it.  For example, consider the following call graph:  A    -decodeTopLevelObjectForKey:error:  B        -initWithCoder:  C            -decodeObjectForKey:  D                -initWithCoder:  E                    -decodeObjectForKey:  F                        -failWithError:   In this case the error provided in stack-frame F will be returned via the outError in stack-frame A. Furthermore the result object from decodeTopLevelObjectForKey:error: will be nil, regardless of the result of stack-frame B.   NSCoder implementations support two mechanisms for the stack-unwinding from F to A:  - forced (NSException based)  - particpatory (error based)   The kind of unwinding you get is determined by the decodingFailurePolicy property of this NSCoder (which defaults to NSDecodingFailurePolicyRaiseException to match historical behavior).  */
 	@:native("failWithError")
 	overload public function failWithError(error:NSError):Void;
 

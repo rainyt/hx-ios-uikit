@@ -20,6 +20,7 @@ extern class NSBundle{
 	@:native("loadNibNamed:owner:options")
 	overload public function loadNibNamedOwnerOptions(name:NSString, owner:Dynamic, options:NSDictionary):NSArray;
 
+	/* Methods for creating or retrieving bundle instances. */
 	@:native("mainBundle")
 	overload public static function mainBundle():NSBundle;
 
@@ -47,6 +48,7 @@ extern class NSBundle{
 	@:native("allFrameworks")
 	overload public static function allFrameworks():Dynamic;
 
+	/* Methods for loading and unloading bundles. */
 	@:native("load")
 	overload public function load():Bool;
 
@@ -62,6 +64,7 @@ extern class NSBundle{
 	@:native("loadAndReturnError")
 	overload public function loadAndReturnError(error:NSError):Bool;
 
+	/* Methods for locating various components of a bundle. */
 	@:native("bundleURL")
 	public var bundleURL:NSURL;
 
@@ -113,6 +116,7 @@ extern class NSBundle{
 	@:native("builtInPlugInsPath")
 	public var builtInPlugInsPath:NSString;
 
+	/* Methods for locating bundle resources.  Instance methods locate resources in the bundle indicated by the receiver; class methods take an argument pointing to a bundle on disk.  In the class methods, bundleURL is a URL pointing to the location of a bundle on disk, and may not be nil; bundlePath is the path equivalent of bundleURL, an absolute path pointing to the location of a bundle on disk.  By contrast, subpath is a relative path to a subdirectory inside the relevant global or localized resource directory, and should be nil if the resource file in question is not in a subdirectory.  Where appropriate, localizationName is the name of a .lproj directory in the bundle, minus the .lproj extension; passing nil for localizationName retrieves only global resources, whereas using a method without this argument retrieves both global and localized resources (using the standard localization search algorithm).  */
 	@:native("URLForResource:withExtension:subdirectory:inBundleWithURL")
 	overload public static function URLForResourceWithExtensionSubdirectoryInBundleWithURL(name:NSString, withExtension:NSString, subdirectory:NSString, inBundleWithURL:NSURL):NSURL;
 
@@ -149,9 +153,11 @@ extern class NSBundle{
 	@:native("pathsForResourcesOfType:inDirectory:forLocalization")
 	overload public function pathsForResourcesOfTypeInDirectoryForLocalization(ext:NSString, inDirectory:NSString, forLocalization:NSString):Dynamic;
 
+	/* Method for retrieving localized strings. */
 	@:native("localizedStringForKey:value:table")
 	overload public function localizedStringForKeyValueTable(key:NSString, value:NSString, table:NSString):NSString;
 
+	/* Methods for obtaining various information about a bundle. */
 	@:native("bundleIdentifier")
 	public var bundleIdentifier:NSString;
 
@@ -170,6 +176,7 @@ extern class NSBundle{
 	@:native("principalClass")
 	public var principalClass:Dynamic;
 
+	/* Methods for dealing with localizations. */
 	@:native("preferredLocalizations")
 	public var preferredLocalizations:Dynamic;
 
@@ -185,9 +192,11 @@ extern class NSBundle{
 	@:native("preferredLocalizationsFromArray:forPreferences")
 	overload public static function preferredLocalizationsFromArrayForPreferences(localizationsArray:Dynamic, forPreferences:Dynamic):Dynamic;
 
+	/* Method for determining executable architectures. */
 	@:native("executableArchitectures")
 	public var executableArchitectures:Dynamic;
 
+	/* Set a preservation priority for tags that are included in this bundle for the On Demand Resources system. Preservation priorities may be between 0.0 and 1.0, with higher values being the last choice for purging by the system. The exact meaning of this value is up to your application as it only has meaning within the set of tags your application uses.        The default value is 0.0.      This method will throw an exception if the receiver bundle has no on demand resource tag information. */
 	@:native("setPreservationPriority:forTags")
 	overload public function setPreservationPriorityForTags(priority:Dynamic, forTags:Dynamic):Void;
 

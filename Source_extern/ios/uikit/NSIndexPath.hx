@@ -51,6 +51,7 @@ extern class NSIndexPath{
 	@:native("length")
 	public var length:Int;
 
+	/*!  @abstract Copies the indexes stored in this index path from the positions specified by positionRange into indexes.  @param indexes Buffer of at least as many NSUIntegers as specified by the length of positionRange. On return, this memory will hold the index path's indexes.  @param positionRange A range of valid positions within this index path.  If the location plus the length of positionRange is greater than the length of this index path, this method raises an NSRangeException.  @discussion     It is the developer’s responsibility to allocate the memory for the C array.  */
 	@:native("getIndexes:range")
 	overload public function getIndexesRange(indexes:Int, range:Dynamic):Void;
 

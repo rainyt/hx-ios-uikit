@@ -6,6 +6,10 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIGraphicsRendererFormat")
 @:include("UIKit/UIKit.h")
+/*
+ UIGraphicsRendererFormat is an object that describes the particular properties of the
+ context created by its associated renderer class.
+ */
 extern class UIGraphicsRendererFormat
 {
 

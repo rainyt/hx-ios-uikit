@@ -6,6 +6,9 @@ import ios.foundation.NSDate;
 @:objc
 @:native("NSTimer")
 @:include("Foundation/Foundation.h")
+/*	NSTimer.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSTimer{
 
 	@:native("alloc")

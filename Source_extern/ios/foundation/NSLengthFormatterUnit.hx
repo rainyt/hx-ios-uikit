@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSLengthFormatterUnit")
 @:include("UIKit/UIKit.h")
+/*      NSLengthFormatter.h
+        Copyright (c) 2014-2019, Apple Inc. All rights reserved.
+ */
 extern abstract NSLengthFormatterUnit(Int) from Int to Int {
 
 	@:native("NSLengthFormatterUnitMillimeter")

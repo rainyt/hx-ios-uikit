@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSFormattingContext")
 @:include("UIKit/UIKit.h")
+/*	NSFormatter.h
+	Copyright (c) 1995-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSFormattingContext(Int) from Int to Int {
 
 	@:native("NSFormattingContextUnknown")

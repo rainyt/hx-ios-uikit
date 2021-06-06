@@ -57,6 +57,7 @@ extern class NSPurgeableData extends NSMutableData
 	@:native("initWithLength")
 	overload public function initWithLength(length:Int):NSPurgeableData;
 
+	/* These methods compress or decompress the receiver's contents in-place using the specified algorithm. If the operation is not successful, these methods leave the receiver unchanged..  */
 	@:native("decompressUsingAlgorithm:error")
 	overload public function decompressUsingAlgorithmError(algorithm:NSDataCompressionAlgorithm, error:NSError):Bool;
 
@@ -90,6 +91,7 @@ extern class NSPurgeableData extends NSMutableData
 	@:native("rangeOfData:options:range")
 	overload public function rangeOfDataOptionsRange(dataToFind:NSData, options:NSDataSearchOptions, range:Dynamic):Dynamic;
 
+	/*  'block' is called once for each contiguous region of memory in the receiver (once total for contiguous NSDatas), until either all bytes have been enumerated, or the 'stop' parameter is set to YES.  */
 	@:native("enumerateByteRangesUsingBlock")
 	overload public function enumerateByteRangesUsingBlock(block:Dynamic):Void;
 
@@ -147,18 +149,23 @@ extern class NSPurgeableData extends NSMutableData
 	@:native("dataWithData")
 	overload public static function dataWithData(data:NSData):NSPurgeableData;
 
+	/* Create an NSData from a Base-64 encoded NSString using the given options. By default, returns nil when the input is not recognized as valid Base-64. */
 	@:native("initWithBase64EncodedString:options")
 	overload public function initWithBase64EncodedStringOptions(base64String:NSString, options:NSDataBase64DecodingOptions):NSPurgeableData;
 
+	/* Create a Base-64 encoded NSString from the receiver's contents using the given options. */
 	@:native("base64EncodedStringWithOptions")
 	overload public function base64EncodedStringWithOptions(options:NSDataBase64EncodingOptions):NSString;
 
+	/* Create an NSData from a Base-64, UTF-8 encoded NSData. By default, returns nil when the input is not recognized as valid Base-64. */
 	@:native("initWithBase64EncodedData:options")
 	overload public function initWithBase64EncodedDataOptions(base64Data:NSData, options:NSDataBase64DecodingOptions):NSPurgeableData;
 
+	/* Create a Base-64, UTF-8 encoded NSData from the receiver's contents using the given options. */
 	@:native("base64EncodedDataWithOptions")
 	overload public function base64EncodedDataWithOptions(options:NSDataBase64EncodingOptions):NSData;
 
+	/* These methods return a compressed or decompressed version of the receiver using the specified algorithm.  */
 	@:native("decompressedDataUsingAlgorithm:error")
 	overload public function decompressedDataUsingAlgorithmError(algorithm:NSDataCompressionAlgorithm, error:NSError):NSData;
 

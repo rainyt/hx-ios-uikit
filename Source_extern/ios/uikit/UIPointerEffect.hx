@@ -18,6 +18,7 @@ extern class UIPointerEffect
 	@:native("preview")
 	public var preview:UITargetedPreview;
 
+	/*!  * @abstract Creates a pointer content effect with the given preview's view.  *  * @param preview  A UITargetedPreview object describing a view with which to construct the effect.  *  * @discussion UIPointerEffect attempts to determine the appropriate effect for the given preview automatically.  *             Use one of its subclasses to request a specific system-provided effect.  */
 	@:native("effectWithPreview")
 	overload public static function effectWithPreview(preview:UITargetedPreview):UIPointerEffect;
 

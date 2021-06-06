@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSItemProviderRepresentationVisibility")
 @:include("UIKit/UIKit.h")
+/*	NSItemProvider.h
+        Copyright (c) 2013-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSItemProviderRepresentationVisibility(Int) from Int to Int {
 
 	@:native("NSItemProviderRepresentationVisibilityAll")

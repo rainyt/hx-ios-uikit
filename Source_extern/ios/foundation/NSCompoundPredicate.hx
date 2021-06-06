@@ -30,6 +30,7 @@ extern class NSCompoundPredicate extends NSPredicate{
 	@:native("subpredicates")
 	public var subpredicates:NSArray;
 
+	/*** Convenience Methods ***/
 	@:native("andPredicateWithSubpredicates")
 	overload public static function andPredicateWithSubpredicates(subpredicates:Dynamic):NSCompoundPredicate;
 

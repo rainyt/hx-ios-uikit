@@ -11,6 +11,9 @@ import ios.foundation.NSLocale;
 @:objc
 @:native("NSTimeZone")
 @:include("Foundation/Foundation.h")
+/*	NSTimeZone.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSTimeZone
 {
 

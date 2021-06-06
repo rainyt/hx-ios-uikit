@@ -77,6 +77,7 @@ extern class UIPrintInteractionController{
 	@:native("presentFromBarButtonItem:animated:completionHandler")
 	overload public function presentFromBarButtonItemAnimatedCompletionHandler(item:UIBarButtonItem, animated:Bool, completionHandler:Dynamic):Bool;
 
+	/*!  * @discussion	Use to print without showing the standard print panel. Use with a  *		UIPrinter found using the UIPrinterPickerController.  *              The value for the duplex property on printInfo will be ignored.  */
 	@:native("printToPrinter:completionHandler")
 	overload public function printToPrinterCompletionHandler(printer:UIPrinter, completionHandler:Dynamic):Bool;
 

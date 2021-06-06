@@ -4,6 +4,9 @@ import ios.foundation.NSXPCProxyCreatin;
 @:objc
 @:native("NSXPCProxyCreatin")
 @:include("Foundation/Foundation.h")
+/*	NSXPCConnection.h
+        Copyright (c) 2011-2019, Apple Inc. All rights reserved.
+ */
 extern interface NSXPCProxyCreatin{
 
 	@:native("alloc")

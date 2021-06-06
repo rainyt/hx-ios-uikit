@@ -29,12 +29,15 @@ extern class UIContextMenuInteraction
 	@:native("init")
 	overload public function init():UIContextMenuInteraction;
 
+	/*!  * @abstract Returns the interaction's location within the given view.  *  * @param view The view in which to locate the interaction.  */
 	@:native("locationInView")
 	overload public function locationInView(view:UIView):CGPoint;
 
+	/*!  * @abstract Call to update the currently visible menu. This method does nothing if called before a menu is presented.  *  * @param block  Called with the a mutable copy of the currently visible menu. Modify and return this menu (or an entirely  *               new one) to change the currently visible menu items.  */
 	@:native("updateVisibleMenuWithBlock")
 	overload public function updateVisibleMenuWithBlock(block:Dynamic):Void;
 
+	/*!  * @abstract Dismisses the currently presented menu (if there is one).  */
 	@:native("dismissMenu")
 	overload public function dismissMenu():Void;
 

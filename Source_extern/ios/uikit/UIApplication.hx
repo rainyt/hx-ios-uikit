@@ -105,6 +105,7 @@ extern class UIApplication extends UIResponder{
 	@:native("endBackgroundTask")
 	overload public function endBackgroundTask(identifier:Int):Void;
 
+	/*! When background refresh is available for an application, it may launched or resumed in the background to handle significant     location changes, remote notifications, background fetches, etc. Observe UIApplicationBackgroundRefreshStatusDidChangeNotification to     be notified of changes. */
 	@:native("backgroundRefreshStatus")
 	public var backgroundRefreshStatus:UIBackgroundRefreshStatus;
 
@@ -252,6 +253,7 @@ extern class UIApplication extends UIResponder{
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

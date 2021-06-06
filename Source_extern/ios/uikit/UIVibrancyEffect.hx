@@ -7,6 +7,8 @@ import ios.uikit.UIVibrancyEffectStyle;
 @:objc
 @:native("UIVibrancyEffect")
 @:include("UIKit/UIKit.h")
+/* UIVibrancyEffect amplifies and adjusts the color of content layered behind the view, allowing content placed inside the contentView to become more vivid. It is intended to be placed over, or as a subview of, a UIVisualEffectView that has been configured with a UIBlurEffect. This effect only affects content added to the contentView. Because the vibrancy effect is color dependent, subviews added to the contentView need to be tintColorDidChange aware and must be prepared to update themselves accordingly. UIImageView will need its image to have a rendering mode of UIImageRenderingModeAlwaysTemplate to receive the proper effect.
+ */
 extern class UIVibrancyEffect extends UIVisualEffect{
 
 	@:native("alloc")

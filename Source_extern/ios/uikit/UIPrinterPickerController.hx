@@ -16,9 +16,11 @@ extern class UIPrinterPickerController{
 	@:native("autorelease")
 	overload public static function autorelease():UIPrinterPickerController;
 
+	/*!  *  @method     printerPickerControllerWithInitiallySelectedPrinter:  *  @discussion This method returns a printer picker controller object for showing the  *              UI that allows the user to select a printer. This is only used with the  *              UIPrintInteractionController's printWithoutUIToPrinter: method.  *              If no printer should be preselected, use a value of nil for the parameter.  */
 	@:native("printerPickerControllerWithInitiallySelectedPrinter")
 	overload public static function printerPickerControllerWithInitiallySelectedPrinter(printer:UIPrinter):UIPrinterPickerController;
 
+	/*!  * @discussion	The selected printer. Set this before presenting the UI to show the currently  * 	        selected printer. Use this to determine which printer the user selected.  */
 	@:native("selectedPrinter")
 	public var selectedPrinter:UIPrinter;
 

@@ -6,6 +6,12 @@ import ios.uikit.NSLayoutDimension;
 @:objc
 @:native("UILayoutSupport")
 @:include("UIKit/UIKit.h")
+/*
+ UILayoutSupport protocol is implemented by layout guide objects
+ returned by UIViewController properties topLayoutGuide and bottomLayoutGuide.
+ These guide objects may be used as layout items in the NSLayoutConstraint
+ factory methods.
+ */
 extern interface UILayoutSupport{
 
 	@:native("alloc")
@@ -17,6 +23,7 @@ extern interface UILayoutSupport{
 	@:native("length")
 	public var length:Float;
 
+	/* Constraint creation conveniences. See NSLayoutAnchor.h for details.  */
 	@:native("topAnchor")
 	public var topAnchor:NSLayoutYAxisAnchor;
 

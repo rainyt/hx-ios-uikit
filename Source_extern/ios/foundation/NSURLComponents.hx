@@ -83,6 +83,7 @@ extern class NSURLComponents
 	@:native("percentEncodedFragment")
 	public var percentEncodedFragment:NSString;
 
+	/* These properties return the character range of a component in the URL string returned by -[NSURLComponents string]. If the component does not exist in the NSURLComponents object, {NSNotFound, 0} is returned. Note: Zero length components are legal. For example, the URL string "scheme://:@/?#" has a zero length user, password, host, query and fragment; the URL strings "scheme:" and "" both have a zero length path.  */
 	@:native("rangeOfScheme")
 	public var rangeOfScheme:Dynamic;
 

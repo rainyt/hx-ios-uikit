@@ -21,12 +21,14 @@ extern class NSISO8601DateFormatter extends NSFormatter
 	@:native("autorelease")
 	overload public static function autorelease():NSISO8601DateFormatter;
 
+	/* Please note that there can be a significant performance cost when resetting these properties.  Resetting each property can result in regenerating the entire CFDateFormatterRef, which can be very expensive. */
 	@:native("timeZone")
 	public var timeZone:NSTimeZone;
 
 	@:native("formatOptions")
 	public var formatOptions:NSISO8601DateFormatOptions;
 
+	/* This init method creates a formatter object set to the GMT time zone and preconfigured with the RFC 3339 standard format ("yyyy-MM-dd'T'HH:mm:ssXXXXX") using the following options:  NSISO8601DateFormatWithInternetDateTime | NSISO8601DateFormatWithDashSeparatorInDate | NSISO8601DateFormatWithColonSeparatorInTime | NSISO8601DateFormatWithColonSeparatorInTimeZone  */
 	@:native("init")
 	overload public function init():NSISO8601DateFormatter;
 

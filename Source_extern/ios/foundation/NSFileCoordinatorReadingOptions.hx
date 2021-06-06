@@ -6,6 +6,11 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSFileCoordinatorReadingOptions")
 @:include("UIKit/UIKit.h")
+/*
+	NSFileCoordinator.h
+	Copyright (c) 2010-2019, Apple Inc.
+	All rights reserved.
+*/
 extern abstract NSFileCoordinatorReadingOptions(Int) from Int to Int {
 
 	@:native("NSFileCoordinatorReadingWithoutChanges")

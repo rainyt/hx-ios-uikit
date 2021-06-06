@@ -10,6 +10,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSMetadataQuery")
 @:include("Foundation/Foundation.h")
+/*	NSMetadata.h
+	Copyright (c) 2004-2019, Apple Inc. All rights reserved.
+*/
 extern class NSMetadataQuery{
 
 	@:native("alloc")

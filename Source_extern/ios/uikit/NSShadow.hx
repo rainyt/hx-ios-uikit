@@ -8,6 +8,10 @@ import ios.objc.CGSize;
 @:objc
 @:native("NSShadow")
 @:include("UIKit/UIKit.h")
+/*
+ NSShadow stores the properties of a drop shadow for drawing text.
+ To set a shadow on an NSAttributedString use it as a value for NSShadowAttributeName.
+ */
 extern class NSShadow
 {
 

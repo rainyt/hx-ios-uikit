@@ -52,6 +52,7 @@ extern class UINavigationBar extends UIView
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	/*  New behavior on iOS 7.  Default is YES.  You may force an opaque background by setting the property to NO.  If the navigation bar has a custom background image, the default is inferred   from the alpha values of the image—YES if it has any pixel with alpha < 1.0  If you send setTranslucent:YES to a bar with an opaque custom background image  it will apply a system opacity less than 1.0 to the image.  If you send setTranslucent:NO to a bar with a translucent custom background image  it will provide an opaque background for the image using the bar's barTintColor if defined, or black  for UIBarStyleBlack or white for UIBarStyleDefault if barTintColor is nil.  */
 	@:native(" UI_APPEARANCE_SELECTOR")
 	public var  UI_APPEARANCE_SELECTOR:Dynamic;
 
@@ -76,18 +77,21 @@ extern class UINavigationBar extends UIView
 	@:native("prefersLargeTitles")
 	public var prefersLargeTitles:Bool;
 
+	/* In general, you should specify a value for the normal state to be used by other states which don't have a custom value set.    Similarly, when a property is dependent on the bar metrics (on the iPhone in landscape orientation, bars have a different height from standard), be sure to specify a value for UIBarMetricsDefault.  */
 	@:native("setBackgroundImage:forBarPosition:barMetrics")
 	overload public function setBackgroundImageForBarPositionBarMetrics(backgroundImage:UIImage, forBarPosition:UIBarPosition, barMetrics:UIBarMetrics):Void;
 
 	@:native("backgroundImageForBarPosition:barMetrics")
 	overload public function backgroundImageForBarPositionBarMetrics(barPosition:UIBarPosition, barMetrics:UIBarMetrics):UIImage;
 
+	/* Same as using UIBarPositionAny in -setBackgroundImage:forBarPosition:barMetrics. Resizable images will be stretched vertically if necessary when the navigation bar is in the position UIBarPositionTopAttached. */
 	@:native("setBackgroundImage:forBarMetrics")
 	overload public function setBackgroundImageForBarMetrics(backgroundImage:UIImage, forBarMetrics:UIBarMetrics):Void;
 
 	@:native("backgroundImageForBarMetrics")
 	overload public function backgroundImageForBarMetrics(barMetrics:UIBarMetrics):UIImage;
 
+	/* You may specify the font, text color, and shadow properties for the large title in the text attributes dictionary, using the keys found in NSAttributedString.h.  */
 	@:native("largeTitleTextAttributes")
 	public var largeTitleTextAttributes:NSDictionary;
 
@@ -97,6 +101,7 @@ extern class UINavigationBar extends UIView
 	@:native("titleVerticalPositionAdjustmentForBarMetrics")
 	overload public function titleVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Float;
 
+	/*  Fallback Behavior:  1) Appearance objects are used in whole – that is, all values will be sourced entirely from an instance of UINavigationBarAppearance defined by one of these named properties (standardAppearance, compactAppearance, scrollEdgeAppearance) on either UINavigationBar (self) or UINavigationItem (self.topItem).  2) The navigation bar will always attempt to use the most relevant appearance instances first, before falling back to less relevant ones. The fallback logic is:      AtScrollEdge: self.topItem.scrollEdgeAppearance => self.scrollEdgeAppearance => self.topItem.standardAppearance => self.standardAppearance      CompactSize: self.topItem.compactAppearance => self.compactAppearance => self.topItem.standardAppearance => self.standardAppearance      NormalSize: self.topItem.standardAppearance => self.standardAppearance  */
 	@:native("standardAppearance")
 	public var standardAppearance:UINavigationBarAppearance;
 
@@ -239,6 +244,7 @@ extern class UINavigationBar extends UIView
 	@:native("setNeedsDisplayInRect")
 	overload public function setNeedsDisplayInRect(rect:CGRect):Void;
 
+	/*  The -tintColorDidChange message is sent to appropriate subviews of a view when its tintColor is changed by client code or to subviews in the view hierarchy of a view whose tintColor is implicitly changed when its superview or tintAdjustmentMode changes.  */
 	@:native("tintColorDidChange")
 	overload public function tintColorDidChange():Void;
 
@@ -263,6 +269,7 @@ extern class UINavigationBar extends UIView
 	@:native("animateWithDuration:animations")
 	overload public static function animateWithDurationAnimations(duration:Dynamic, animations:Dynamic):Void;
 
+	/* Performs `animations` using a timing curve described by the motion of a spring. When `dampingRatio` is 1, the animation will smoothly decelerate to its final model values without oscillating. Damping ratios less than 1 will oscillate more and more before coming to a complete stop. You can use the initial spring velocity to specify how fast the object at the end of the simulated spring was moving before it was attached. It's a unit coordinate system, where 1 is defined as travelling the total animation distance in a second. So if you're changing an object's position by 200pt in this animation, and you want the animation to behave as if the object was moving at 100pt/s before the animation started, you'd pass 0.5. You'll typically want to pass 0 for the velocity. */ 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
 	overload public static function animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
@@ -272,9 +279,11 @@ extern class UINavigationBar extends UIView
 	@:native("transitionFromView:toView:duration:options:completion")
 	overload public static function transitionFromViewToViewDurationOptionsCompletion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
+	/* Performs the requested system-provided animation on one or more views. Specify addtional animations in the parallelAnimations block. These additional animations will run alongside the system animation with the same timing and duration that the system animation defines/inherits. Additional animations should not modify properties of the view on which the system animation is being performed. Not all system animations honor all available options.  */
 	@:native("performSystemAnimation:onViews:options:animations:completion")
 	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
+	/* Call this method from within an animation block to repeat animations, otherwise has no effect. The total duration of a repeating animation can be computed via (outerAnimationDuration * repeatCount * autoreverses ? 2 : 1). */
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCountAutoreversesAnimations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
 
@@ -293,9 +302,11 @@ extern class UINavigationBar extends UIView
 	@:native("gestureRecognizerShouldBegin")
 	overload public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):Bool;
 
+	/*! Begins applying `effect` to the receiver. The effect's emitted keyPath/value pairs will be     applied to the view's presentation layer.       Animates the transition to the motion effect's values using the present UIView animation     context. */
 	@:native("addMotionEffect")
 	overload public function addMotionEffect(effect:UIMotionEffect):Void;
 
+	/*! Stops applying `effect` to the receiver. Any affected presentation values will animate to     their post-removal values using the present UIView animation context. */
 	@:native("removeMotionEffect")
 	overload public function removeMotionEffect(effect:UIMotionEffect):Void;
 
@@ -323,9 +334,11 @@ extern class UINavigationBar extends UIView
 	@:native("setNeedsUpdateConstraints")
 	overload public function setNeedsUpdateConstraints():Void;
 
+	/* constraint-based layout engages lazily when someone tries to use it (e.g., adds a constraint to a view).  If you do all of your constraint set up in -updateConstraints, you might never even receive updateConstraints if no one makes a constraint.  To fix this chicken and egg problem, override this method to return YES if your view needs the window to use constraint-based layout.    */
 	@:native("requiresConstraintBasedLayout")
 	overload public static function requiresConstraintBasedLayout():Bool;
 
+	/* These two methods should be inverses of each other.  UIKit will call both as part of layout computation.  They may be overridden to provide arbitrary transforms between frame and alignment rect, though the two methods must be inverses of each other.  However, the default implementation uses -alignmentRectInsets, so just override that if it's applicable.  It's easier to get right.   A view that displayed an image with some ornament would typically override these, because the ornamental part of an image would scale up with the size of the frame.    Set the NSUserDefault UIViewShowAlignmentRects to YES to see alignment rects drawn.  */
 	@:native("alignmentRectForFrame")
 	overload public function alignmentRectForFrame(frame:CGRect):CGRect;
 
@@ -347,18 +360,22 @@ extern class UINavigationBar extends UIView
 	@:native("setContentCompressionResistancePriority:forAxis")
 	overload public function setContentCompressionResistancePriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
+	/* The size fitting most closely to targetSize in which the receiver's subtree can be laid out while optimally satisfying the constraints. If you want the smallest possible size, pass UILayoutFittingCompressedSize; for the largest possible size, pass UILayoutFittingExpandedSize.  Also see the comment for UILayoutPriorityFittingSizeLevel.  */
 	@:native("systemLayoutSizeFittingSize")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
 	overload public function systemLayoutSizeFittingSizeWithHorizontalFittingPriorityVerticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
+	/* Adds layoutGuide to the receiver, passing the receiver in -setOwningView: to layoutGuide.  */
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
+	/* Removes layoutGuide from the receiver, passing nil in -setOwningView: to layoutGuide.  */
 	@:native("removeLayoutGuide")
 	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
+	/* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.  Pass UILayoutConstraintAxisHorizontal for the constraints affecting [self center].x and CGRectGetWidth([self bounds]), and UILayoutConstraintAxisVertical for the constraints affecting[self center].y and CGRectGetHeight([self bounds]).  */
 	@:native("constraintsAffectingLayoutForAxis")
 	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
@@ -371,6 +388,7 @@ extern class UINavigationBar extends UIView
 	@:native("decodeRestorableStateWithCoder")
 	overload public function decodeRestorableStateWithCoder(coder:NSCoder):Void;
 
+	/*  * When requesting a snapshot, 'afterUpdates' defines whether the snapshot is representative of what's currently on screen or if you wish to include any recent changes before taking the snapshot.     If called during layout from a committing transaction, snapshots occurring after the screen updates will include all changes made, regardless of when the snapshot is taken and the changes are made. For example:        - (void)layoutSubviews {          UIView *snapshot = [self snapshotViewAfterScreenUpdates:YES];          self.alpha = 0.0;      }    The snapshot will appear to be empty since the change in alpha will be captured by the snapshot. If you need to animate the view during layout, animate the snapshot instead.  * Creating snapshots from existing snapshots (as a method to duplicate, crop or create a resizable variant) is supported. In cases where many snapshots are needed, creating a snapshot from a common superview and making subsequent snapshots from it can be more performant. Please keep in mind that if 'afterUpdates' is YES, the original snapshot is committed and any changes made to it, not the view originally snapshotted, will be included.  */
 	@:native("snapshotViewAfterScreenUpdates")
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
@@ -449,6 +467,7 @@ extern class UINavigationBar extends UIView
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

@@ -5,6 +5,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSUndoManager")
 @:include("Foundation/Foundation.h")
+/*	NSUndoManager.h
+	Copyright (c) 1995-2019, Apple Inc. All rights reserved.
+*/
 extern class NSUndoManager{
 
 	@:native("alloc")
@@ -73,6 +76,7 @@ extern class NSUndoManager{
 	@:native("prepareWithInvocationTarget")
 	overload public function prepareWithInvocationTarget(target:Dynamic):Dynamic;
 
+	/*! @abstract records single undo operation for the specified target     @param target non-nil target of the undo operation     @param undoHandler non-nil block to be executed for the undo operation     @discussion       As with other undo operations, this does not strongly retain target. Care should be taken to avoid introducing retain cycles by other references captured by the block.  */
 	@:native("registerUndoWithTarget:handler")
 	overload public function registerUndoWithTargetHandler(target:Dynamic, handler:Dynamic):Void;
 

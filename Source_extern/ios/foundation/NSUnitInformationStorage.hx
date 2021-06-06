@@ -9,6 +9,12 @@ import ios.foundation.NSUnit;
 @:objc
 @:native("NSUnitInformationStorage")
 @:include("Foundation/Foundation.h")
+/*
+ A dimension for representing amounts of digital information.
+ Base Unit: Byte
+
+ The values of the below follow IEC 80000-13 definitions and conventions.
+ */
 extern class NSUnitInformationStorage extends NSDimension
 {
 
@@ -126,6 +132,7 @@ extern class NSUnitInformationStorage extends NSDimension
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitInformationStorage;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitInformationStorage;
 

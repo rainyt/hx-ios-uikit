@@ -96,12 +96,14 @@ extern class UIBarButtonItem extends UIBarItem
 	@:native("menu")
 	public var menu:UIMenu;
 
+	/* In general, you should specify a value for the normal state to be used by other states which don't have a custom value set.    Similarly, when a property is dependent on the bar metrics (on the iPhone in landscape orientation, bars have a different height from standard), be sure to specify a value for UIBarMetricsDefault.    This sets the background image for buttons of any style.  */
 	@:native("setBackgroundImage:forState:barMetrics")
 	overload public function setBackgroundImageForStateBarMetrics(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics):Void;
 
 	@:native("backgroundImageForState:barMetrics")
 	overload public function backgroundImageForStateBarMetrics(state:UIControlState, barMetrics:UIBarMetrics):UIImage;
 
+	/* This sets the background image for buttons with a specific style. When calling this on a UIBarButtonItem instance, the style argument must match the button's style; when calling on the UIAppearance proxy, any style may be passed.  */
 	@:native("setBackgroundImage:forState:style:barMetrics")
 	overload public function setBackgroundImageForStateStyleBarMetrics(backgroundImage:UIImage, forState:UIControlState, style:UIBarButtonItemStyle, barMetrics:UIBarMetrics):Void;
 
@@ -111,18 +113,21 @@ extern class UIBarButtonItem extends UIBarItem
 	@:native("tintColor")
 	public var tintColor:UIColor;
 
+	/* For adjusting the vertical centering of bordered bar buttons within the bar   */
 	@:native("setBackgroundVerticalPositionAdjustment:forBarMetrics")
 	overload public function setBackgroundVerticalPositionAdjustmentForBarMetrics(adjustment:Float, forBarMetrics:UIBarMetrics):Void;
 
 	@:native("backgroundVerticalPositionAdjustmentForBarMetrics")
 	overload public function backgroundVerticalPositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Float;
 
+	/* For adjusting the position of a title (if any) within a bordered bar button   */
 	@:native("setTitlePositionAdjustment:forBarMetrics")
 	overload public function setTitlePositionAdjustmentForBarMetrics(adjustment:Dynamic, forBarMetrics:UIBarMetrics):Void;
 
 	@:native("titlePositionAdjustmentForBarMetrics")
 	overload public function titlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Dynamic;
 
+	/*  backgroundImage must be a resizable image for good results.  */
 	@:native("setBackButtonBackgroundImage:forState:barMetrics")
 	overload public function setBackButtonBackgroundImageForStateBarMetrics(backgroundImage:UIImage, forState:UIControlState, barMetrics:UIBarMetrics):Void;
 
@@ -135,6 +140,7 @@ extern class UIBarButtonItem extends UIBarItem
 	@:native("backButtonTitlePositionAdjustmentForBarMetrics")
 	overload public function backButtonTitlePositionAdjustmentForBarMetrics(barMetrics:UIBarMetrics):Dynamic;
 
+	/* For adjusting the vertical centering of bordered bar buttons within the bar   */
 	@:native("setBackButtonBackgroundVerticalPositionAdjustment:forBarMetrics")
 	overload public function setBackButtonBackgroundVerticalPositionAdjustmentForBarMetrics(adjustment:Float, forBarMetrics:UIBarMetrics):Void;
 
@@ -148,12 +154,14 @@ extern class UIBarButtonItem extends UIBarItem
 	overload public function encodeWithCoder(aCoder:Dynamic):Void
 ;
 
+	/* You may specify the font, text color, and shadow properties for the title in the text attributes dictionary, using the keys found in NSAttributedString.h.  */
 	@:native("setTitleTextAttributes:forState")
 	overload public function setTitleTextAttributesForState(attributes:NSDictionary, forState:UIControlState):Void;
 
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
 
+	/* To customize the appearance of all instances of a class, send the relevant appearance modification messages to the appearance proxy for the class. For example, to modify the bar tint color for all UINavigationBar instances:     [[UINavigationBar appearance] setBarTintColor:myColor];       Note for iOS7: On iOS7 the tintColor property has moved to UIView, and now has special inherited behavior described in UIView.h.     This inherited behavior can conflict with the appearance proxy, and therefore tintColor is now disallowed with the appearance proxy.   */
 	@:native("appearance")
 	overload public static function appearance():UIAppearance;
 

@@ -19,6 +19,7 @@ extern class NSLinguisticTagger{
 	@:native("string")
 	public var string:NSString;
 
+	/* Returns the top identified language (if any) for the entire string.  Convenience for tagAtIndex: with NSLinguisticTagSchemeLanguage and NSLinguisticTaggerUnitDocument. */
 	@:native("dominantLanguage")
 	public var dominantLanguage:NSString;
 

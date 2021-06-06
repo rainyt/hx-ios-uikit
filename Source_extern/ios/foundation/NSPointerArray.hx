@@ -9,6 +9,17 @@ import ios.foundation.NSArray;
 @:objc
 @:native("NSPointerArray")
 @:include("Foundation/Foundation.h")
+/*
+   NSPointerArray.h
+
+   A PointerArray acts like a traditional array that slides elements on insertion or deletion.
+   Unlike traditional arrays, it holds NULLs, which can be inserted or extracted (and contribute to count).
+   Also unlike traditional arrays, the 'count' of the array may be set directly.
+   Using NSPointerFunctionsWeakMemory object references will turn to NULL on last release.
+
+   The copying and archiving protocols are applicable only when NSPointerArray is configured for Object uses.
+   The fast enumeration protocol (supporting the for..in statement) will yield NULLs if present.  It is defined for all types of pointers although the language syntax doesn't directly support this.
+*/
 extern class NSPointerArray
 {
 
@@ -30,6 +41,7 @@ extern class NSPointerArray
 	@:native("pointerArrayWithPointerFunctions")
 	overload public static function pointerArrayWithPointerFunctions(functions:NSPointerFunctions):NSPointerArray;
 
+	/* return an NSPointerFunctions object reflecting the functions in use.  This is a new autoreleased object that can be subsequently modified and/or used directly in the creation of other pointer "collections". */
 	@:native("pointerFunctions")
 	public var pointerFunctions:NSPointerFunctions;
 

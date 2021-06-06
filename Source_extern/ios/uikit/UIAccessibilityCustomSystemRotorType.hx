@@ -6,6 +6,10 @@ import cpp.objc.NSData;
 @:enum
 @:native("UIAccessibilityCustomSystemRotorType")
 @:include("UIKit/UIKit.h")
+/*
+ UIAccessibilityCustomSystemRotorType should be used when you want to allow searching for one of the following types.
+ This will allow VoiceOver to use appropriate gestures and keyboard commands for these specific search types.
+ */
 extern abstract UIAccessibilityCustomSystemRotorType(Int) from Int to Int {
 
 	@:native("UIAccessibilityCustomSystemRotorTypeNone")

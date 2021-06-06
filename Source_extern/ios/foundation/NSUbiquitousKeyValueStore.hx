@@ -8,6 +8,9 @@ import cpp.objc.NSData;
 @:objc
 @:native("NSUbiquitousKeyValueStore")
 @:include("Foundation/Foundation.h")
+/*	NSUbiquitousKeyValueStore.h
+	Copyright (c) 2011-2019, Apple Inc. All rights reserved.
+*/
 extern class NSUbiquitousKeyValueStore{
 
 	@:native("alloc")

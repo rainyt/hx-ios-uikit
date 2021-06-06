@@ -18,12 +18,15 @@ extern class UITargetedPreview
 	@:native("autorelease")
 	overload public static function autorelease():UITargetedPreview;
 
+	/* To use this initializer, the view need not be in a window.  */
 	@:native("initWithView:parameters:target")
 	overload public function initWithViewParametersTarget(view:UIView, parameters:UIPreviewParameters, target:UIPreviewTarget):UITargetedPreview;
 
+	/* To use this initializer, the view must be in a window.  * Sets the target based on the view's current superview, center, and transform.  */
 	@:native("initWithView:parameters")
 	overload public function initWithViewParameters(view:UIView, parameters:UIPreviewParameters):UITargetedPreview;
 
+	/* To use this initializer, the view must be in a window.  * Sets the parameters to defaults.  * Sets the target based on the view's current superview, center, and transform.  */
 	@:native("initWithView")
 	overload public function initWithView(view:UIView):UITargetedPreview;
 
@@ -39,9 +42,11 @@ extern class UITargetedPreview
 	@:native("parameters")
 	public var parameters:UIPreviewParameters;
 
+	/* Provide the size of the item.  * You might use this size to create an appropriately-sized gap in your view,  * where this item will land when it is dropped.  */
 	@:native("size")
 	public var size:CGSize;
 
+	/* Returns a preview with the same view and parameters, but a new target.  *  * You might call this in a UIDropInteractionDelegate in  * -dropInteraction:previewForDroppingItem:withDefault:, or in  * a UIDropInteractionDelegate in -dropInteraction:previewForCancellingItem:withDefault:,  * to direct the default UITargetedPreview to a different target.  */
 	@:native("retargetedPreviewWithTarget")
 	overload public function retargetedPreviewWithTarget(newTarget:UIPreviewTarget):UITargetedPreview;
 

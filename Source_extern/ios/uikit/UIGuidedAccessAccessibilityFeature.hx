@@ -6,6 +6,11 @@ import cpp.objc.NSData;
 @:enum
 @:native("UIGuidedAccessAccessibilityFeature")
 @:include("UIKit/UIKit.h")
+/*
+ * Applications that are locked into Guided Access via a Single App Mode profile are granted the ability to configure certain accessibility features,
+ * to support kiosk deployments. If your app is locked into Single App Mode, you can use the UIGuidedAccessConfigureAccessibilityFeatures function
+ * to configure what accessibility features are enabled.
+ */
 extern abstract UIGuidedAccessAccessibilityFeature(Int) from Int to Int {
 
 	@:native("UIGuidedAccessAccessibilityFeatureVoiceOver")

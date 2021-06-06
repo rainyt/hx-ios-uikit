@@ -10,6 +10,9 @@ import cpp.objc.NSError;
 @:objc
 @:native("NSFileHandle")
 @:include("Foundation/Foundation.h")
+/*	NSFileHandle.h
+	Copyright (c) 1995-2019, Apple Inc. All rights reserved.
+*/
 extern class NSFileHandle
 {
 

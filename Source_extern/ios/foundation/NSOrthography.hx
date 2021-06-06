@@ -9,6 +9,9 @@ import ios.uikit.NSCoder;
 @:objc
 @:native("NSOrthography")
 @:include("Foundation/Foundation.h")
+/*	NSOrthography.h
+	Copyright (c) 2008-2019, Apple Inc. All rights reserved.
+*/
 extern class NSOrthography
 {
 
@@ -18,6 +21,7 @@ extern class NSOrthography
 	@:native("autorelease")
 	overload public static function autorelease():NSOrthography;
 
+	/* These are the primitive properties which a subclass must implement.  The dominantScript should be a script tag (such as Latn, Cyrl, and so forth) and the languageMap should be a dictionary whose keys are script tags and whose values are arrays of language tags (such as en, fr, de, and so forth). */
 	@:native("dominantScript")
 	public var dominantScript:NSString;
 
@@ -30,12 +34,14 @@ extern class NSOrthography
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):NSOrthography;
 
+	/* languagesForScript: returns the list of languages for the specified script, and dominantLanguageForScript: returns the first item on that list. */
 	@:native("languagesForScript")
 	overload public function languagesForScript(script:NSString):Dynamic;
 
 	@:native("dominantLanguageForScript")
 	overload public function dominantLanguageForScript(script:NSString):NSString;
 
+	/*  The dominantLanguage is the first in the list of languages for the dominant script, allScripts includes the dominant script and all others appearing as keys in the language map, and allLanguages includes all languages appearing in the values of the language map. */
 	@:native("dominantLanguage")
 	public var dominantLanguage:NSString;
 

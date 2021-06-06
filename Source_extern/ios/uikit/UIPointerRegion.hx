@@ -21,6 +21,7 @@ extern class UIPointerRegion
 	@:native("identifier")
 	public var identifier:Dynamic;
 
+	/*!  * @abstract Creates a UIPointerRegion with the supplied rect and optional identifier.  *  * @param rect        This region's rect. Must be in the pointer interaction's view's coordinate space.  * @param identifier  Optional identifier that may be used to identify this region in subsequent pointer interaction delegate calls. */
 	@:native("regionWithRect:identifier")
 	overload public static function regionWithRectIdentifier(rect:CGRect, identifier:Dynamic):UIPointerRegion;
 

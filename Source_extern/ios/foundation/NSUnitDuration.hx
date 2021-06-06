@@ -12,6 +12,7 @@ extern class NSUnitDuration extends Thisclassisnotmeanttobeusedfordatecalculatio
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitDuration;
 
+	/*  Base unit - seconds  */
 	@:native("hours")
 	overload public static function hours():NSUnitDuration;
 

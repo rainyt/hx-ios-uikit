@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSNetServicesError")
 @:include("UIKit/UIKit.h")
+/*	NSNetServices.h
+        Copyright (c) 2002-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSNetServicesError(Int) from Int to Int {
 
 	@:native("NSNetServicesUnknownError")

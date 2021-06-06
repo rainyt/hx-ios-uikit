@@ -6,6 +6,10 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSISO8601DateFormatOptions")
 @:include("UIKit/UIKit.h")
+/*
+    NSISO8601DateFormatter.h
+    Copyright (c) 2015-2019, Apple Inc. All rights reserved.
+ */
 extern abstract NSISO8601DateFormatOptions(Int) from Int to Int {
 
 	@:native("NSISO8601DateFormatWithYear")

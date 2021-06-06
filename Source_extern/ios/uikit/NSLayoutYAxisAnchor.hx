@@ -19,6 +19,7 @@ extern class NSLayoutYAxisAnchor extends NSLayoutAnchor
 	@:native("anchorWithOffsetToAnchor")
 	overload public function anchorWithOffsetToAnchor(otherAnchor:NSLayoutYAxisAnchor):NSLayoutDimension;
 
+	/* Constraints of the form,  receiver [= | ≥ | ≤] 'anchor' + 'multiplier' * system space,   where the value of the system space is determined from information available from the anchors.  The constraint affects how far the receiver will be positioned below 'anchor'.   If either the receiver or 'anchor' is the firstBaselineAnchor or lastBaselineAnchor of a view with text content  then the spacing will depend on the fonts involved and will change when those do.  */
 	@:native("constraintEqualToSystemSpacingBelowAnchor:multiplier")
 	overload public function constraintEqualToSystemSpacingBelowAnchorMultiplier(anchor:NSLayoutYAxisAnchor, multiplier:Float):NSLayoutConstraint;
 

@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSURLSessionTaskMetricsDomainResolutionProtocol")
 @:include("UIKit/UIKit.h")
+/*
+ * DNS protocol used for domain resolution.
+ */
 extern abstract NSURLSessionTaskMetricsDomainResolutionProtocol(Int) from Int to Int {
 
 	@:native("NSURLSessionTaskMetricsDomainResolutionProtocolUnknown")

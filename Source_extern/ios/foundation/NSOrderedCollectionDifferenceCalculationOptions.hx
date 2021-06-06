@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSOrderedCollectionDifferenceCalculationOptions")
 @:include("UIKit/UIKit.h")
+/*	NSOrderedCollectionDifference.h
+	Copyright (c) 2017-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSOrderedCollectionDifferenceCalculationOptions(Int) from Int to Int {
 
 	@:native("NSOrderedCollectionDifferenceCalculationOmitInsertedObjects")

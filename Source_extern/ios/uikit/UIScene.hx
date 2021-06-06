@@ -122,6 +122,7 @@ extern class UIScene extends UIResponder{
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

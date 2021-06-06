@@ -140,15 +140,18 @@ extern class UIColor
 	@:native("colorNamed:inBundle:compatibleWithTraitCollection")
 	overload public static function colorNamedInBundleCompatibleWithTraitCollection(name:NSString, inBundle:NSBundle, compatibleWithTraitCollection:UITraitCollection):UIColor;
 
+	/* Create a dynamic color with a provider.  * When methods are called on this color that need color component values,  * the provider is called with UITraitCollection.currentTraitCollection.  * The provider should use that trait collection to decide a more fundamental UIColor to return.  * As much as possible, use the given trait collection to make that decision, not other state.  */
 	@:native("colorWithDynamicProvider")
 	overload public static function colorWithDynamicProvider(dynamicProvider:Dynamic):UIColor;
 
 	@:native("initWithDynamicProvider")
 	overload public function initWithDynamicProvider(dynamicProvider:Dynamic):UIColor;
 
+	/* Resolve any color to its most fundamental form (a non-dynamic color) for a specific trait collection.  */
 	@:native("resolvedColorWithTraitCollection")
 	overload public function resolvedColorWithTraitCollection(traitCollection:UITraitCollection):UIColor;
 
+	/* Some colors that are used by system elements and applications.  * These return named colors whose values may vary between different contexts and releases.  * Do not make assumptions about the color spaces or actual colors used.  */
 	@:native("systemRedColor")
 	overload public static function systemRedColor():UIColor;
 
@@ -176,9 +179,11 @@ extern class UIColor
 	@:native("systemIndigoColor")
 	overload public static function systemIndigoColor():UIColor;
 
+	/* Shades of gray. systemGray is the base gray color.  */
 	@:native("systemGrayColor")
 	overload public static function systemGrayColor():UIColor;
 
+	/* The numbered variations, systemGray2 through systemGray6, are grays which increasingly  * trend away from systemGray and in the direction of systemBackgroundColor.  *  * In UIUserInterfaceStyleLight: systemGray1 is slightly lighter than systemGray.  *                               systemGray2 is lighter than that, and so on.  * In UIUserInterfaceStyleDark:  systemGray1 is slightly darker than systemGray.  *                               systemGray2 is darker than that, and so on.  */
 	@:native("systemGray2Color")
 	overload public static function systemGray2Color():UIColor;
 
@@ -194,6 +199,7 @@ extern class UIColor
 	@:native("systemGray6Color")
 	overload public static function systemGray6Color():UIColor;
 
+	/* Foreground colors for static text and related elements.  */
 	@:native("labelColor")
 	overload public static function labelColor():UIColor;
 
@@ -206,18 +212,22 @@ extern class UIColor
 	@:native("quaternaryLabelColor")
 	overload public static function quaternaryLabelColor():UIColor;
 
+	/* Foreground color for standard system links.  */
 	@:native("linkColor")
 	overload public static function linkColor():UIColor;
 
+	/* Foreground color for placeholder text in controls or text fields or text views.  */
 	@:native("placeholderTextColor")
 	overload public static function placeholderTextColor():UIColor;
 
+	/* Foreground colors for separators (thin border or divider lines).  * `separatorColor` may be partially transparent, so it can go on top of any content.  * `opaqueSeparatorColor` is intended to look similar, but is guaranteed to be opaque, so it will  * completely cover anything behind it. Depending on the situation, you may need one or the other.  */
 	@:native("separatorColor")
 	overload public static function separatorColor():UIColor;
 
 	@:native("opaqueSeparatorColor")
 	overload public static function opaqueSeparatorColor():UIColor;
 
+	/* We provide two design systems (also known as "stacks") for structuring an iOS app's backgrounds.  *  * Each stack has three "levels" of background colors. The first color is intended to be the  * main background, farthest back. Secondary and tertiary colors are layered on top  * of the main background, when appropriate.  *  * Inside of a discrete piece of UI, choose a stack, then use colors from that stack.  * We do not recommend mixing and matching background colors between stacks.  * The foreground colors above are designed to work in both stacks.  *  * 1. systemBackground  *    Use this stack for views with standard table views, and designs which have a white  *    primary background in light mode.  */
 	@:native("systemBackgroundColor")
 	overload public static function systemBackgroundColor():UIColor;
 
@@ -227,6 +237,7 @@ extern class UIColor
 	@:native("tertiarySystemBackgroundColor")
 	overload public static function tertiarySystemBackgroundColor():UIColor;
 
+	/* 2. systemGroupedBackground  *    Use this stack for views with grouped content, such as grouped tables and  *    platter-based designs. These are like grouped table views, but you may use these  *    colors in places where a table view wouldn't make sense.  */
 	@:native("systemGroupedBackgroundColor")
 	overload public static function systemGroupedBackgroundColor():UIColor;
 
@@ -236,24 +247,30 @@ extern class UIColor
 	@:native("tertiarySystemGroupedBackgroundColor")
 	overload public static function tertiarySystemGroupedBackgroundColor():UIColor;
 
+	/* Fill colors for UI elements.  * These are meant to be used over the background colors, since their alpha component is less than 1.  *  * systemFillColor is appropriate for filling thin and small shapes.  * Example: The track of a slider.  */
 	@:native("systemFillColor")
 	overload public static function systemFillColor():UIColor;
 
+	/* secondarySystemFillColor is appropriate for filling medium-size shapes.  * Example: The background of a switch.  */
 	@:native("secondarySystemFillColor")
 	overload public static function secondarySystemFillColor():UIColor;
 
+	/* tertiarySystemFillColor is appropriate for filling large shapes.  * Examples: Input fields, search bars, buttons.  */
 	@:native("tertiarySystemFillColor")
 	overload public static function tertiarySystemFillColor():UIColor;
 
+	/* quaternarySystemFillColor is appropriate for filling large areas containing complex content.  * Example: Expanded table cells.  */
 	@:native("quaternarySystemFillColor")
 	overload public static function quaternarySystemFillColor():UIColor;
 
+	/* lightTextColor is always light, and darkTextColor is always dark, regardless of the current UIUserInterfaceStyle.  * When possible, we recommend using `labelColor` and its variants, instead.  */
 	@:native("lightTextColor")
 	overload public static function lightTextColor():UIColor;
 
 	@:native("darkTextColor")
 	overload public static function darkTextColor():UIColor;
 
+	/* groupTableViewBackgroundColor is now the same as systemGroupedBackgroundColor.  */
 	@:native("groupTableViewBackgroundColor")
 	overload public static function groupTableViewBackgroundColor():UIColor;
 

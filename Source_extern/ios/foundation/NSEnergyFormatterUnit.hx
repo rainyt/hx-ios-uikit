@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSEnergyFormatterUnit")
 @:include("UIKit/UIKit.h")
+/*      NSEnergyFormatter.h
+        Copyright (c) 2014-2019, Apple Inc. All rights reserved.
+ */
 extern abstract NSEnergyFormatterUnit(Int) from Int to Int {
 
 	@:native("NSEnergyFormatterUnitJoule")

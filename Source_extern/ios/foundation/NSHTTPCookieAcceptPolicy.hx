@@ -6,6 +6,14 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSHTTPCookieAcceptPolicy")
 @:include("UIKit/UIKit.h")
+/*!
+    @enum NSHTTPCookieAcceptPolicy
+    @abstract Values for the different cookie accept policies
+    @constant NSHTTPCookieAcceptPolicyAlways Accept all cookies
+    @constant NSHTTPCookieAcceptPolicyNever Reject all cookies
+    @constant NSHTTPCookieAcceptPolicyOnlyFromMainDocumentDomain Accept cookies
+    only from the main document domain
+*/
 extern abstract NSHTTPCookieAcceptPolicy(Int) from Int to Int {
 
 	@:native("NSHTTPCookieAcceptPolicyAlways")

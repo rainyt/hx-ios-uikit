@@ -30,6 +30,7 @@ extern class NSHashTable
 	@:native("weakObjectsHashTable")
 	overload public static function weakObjectsHashTable():NSHashTable;
 
+	/* return an NSPointerFunctions object reflecting the functions in use.  This is a new autoreleased object that can be subsequently modified and/or used directly in the creation of other pointer "collections". */
 	@:native("pointerFunctions")
 	public var pointerFunctions:NSPointerFunctions;
 

@@ -17,6 +17,7 @@ extern interface UITabBarDelegate{
 	@:native("tabBar:didSelectItem")
 	overload public function tabBarDidSelectItem(tabBar:UITabBar, didSelectItem:UITabBarItem):Void;
 
+	/* called when user shows or dismisses customize sheet. you can use the 'willEnd' to set up what appears underneath.   changed is YES if there was some change to which items are visible or which order they appear. If selectedItem is no longer visible,   it will be set to nil.  */
 	@:native("tabBar:willBeginCustomizingItems")
 	overload public function tabBarWillBeginCustomizingItems(tabBar:UITabBar, willBeginCustomizingItems:Dynamic):Void;
 

@@ -24,21 +24,26 @@ extern class NSMeasurementFormatter extends NSFormatter
 	@:native("autorelease")
 	overload public static function autorelease():NSMeasurementFormatter;
 
+	/*  This property can be set to ensure that the formatter behaves in a way the developer expects, even if it is not standard according to the preferences of the user's locale. If not specified, unitOptions defaults to localizing according to the preferences of the locale.    Ex:    By default, if unitOptions is set to the empty set, the formatter will do the following:     - kilocalories may be formatted as "C" instead of "kcal" depending on the locale.     - kilometersPerHour may be formatted as "miles per hour" for US and UK locales but "kilometers per hour" for other locales.    However, if NSMeasurementFormatterUnitOptionsProvidedUnit is set, the formatter will do the following:     - kilocalories would be formatted as "kcal" in the language of the locale, even if the locale prefers "C".     - kilometersPerHour would be formatted as "kilometers per hour" for US and UK locales even though the preference is for "miles per hour."   Note that NSMeasurementFormatter will handle converting measurement objects to the preferred units in a particular locale.  For instance, if provided a measurement object in kilometers and the set locale is en_US, the formatter will implicitly convert the measurement object to miles and return the formatted string as the equivalent measurement in miles.   */
 	@:native("unitOptions")
 	public var unitOptions:NSMeasurementFormatterUnitOptions;
 
+	/*  If not specified, unitStyle is set to NSFormattingUnitStyleMedium.  */
 	@:native("unitStyle")
 	public var unitStyle:NSFormattingUnitStyle;
 
+	/*  If not specified, locale is set to the user's current locale.  */
 	@:native("locale")
 	public var locale:NSLocale;
 
+	/*  If not specified, the number formatter is set up with NSNumberFormatterDecimalStyle.  */
 	@:native("numberFormatter")
 	public var numberFormatter:NSNumberFormatter;
 
 	@:native("stringFromMeasurement")
 	overload public function stringFromMeasurement(measurement:NSMeasurement):NSString;
 
+	/*  @param An NSUnit  @return A formatted string representing the localized form of the unit without a value attached to it.  This method will return [unit symbol] if the provided unit cannot be localized.  */
 	@:native("stringFromUnit")
 	overload public function stringFromUnit(unit:NSUnit):NSString;
 

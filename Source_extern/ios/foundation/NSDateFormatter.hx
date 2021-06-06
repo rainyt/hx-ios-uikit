@@ -13,6 +13,9 @@ import cpp.objc.NSDictionary;
 @:objc
 @:native("NSDateFormatter")
 @:include("Foundation/Foundation.h")
+/*	NSDateFormatter.h
+	Copyright (c) 1995-2019, Apple Inc. All rights reserved.
+*/
 extern class NSDateFormatter extends NSFormatter{
 
 	@:native("alloc")
@@ -42,6 +45,7 @@ extern class NSDateFormatter extends NSFormatter{
 	@:native("defaultFormatterBehavior")
 	overload public static function defaultFormatterBehavior():Dynamic;
 
+	/*  A convenient way to generate an appropriate localized date format, and set it, in a single operation.   Equivalent to, though not necessarily implemented as:  formatter.dateFormat = [NSDateFormatter dateFormatFromTemplate:dateFormatTemplate options:0 locale:formatter.locale];   Note that the template string is used only to specify which date format components should be included. Ordering and other text will not be preserved.  The parameter is also not stored, or updated when the locale or other options change, just as with the ‘dateFormat’ property.  */
 	@:native("setLocalizedDateFormatFromTemplate")
 	overload public function setLocalizedDateFormatFromTemplate(dateFormatTemplate:NSString):Void;
 

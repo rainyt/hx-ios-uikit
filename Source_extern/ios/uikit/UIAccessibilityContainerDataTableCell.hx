@@ -4,6 +4,10 @@ import ios.uikit.UIAccessibilityContainerDataTableCell;
 @:objc
 @:native("UIAccessibilityContainerDataTableCell")
 @:include("UIKit/UIKit.h")
+/* 
+ The UIAccessibilityContainerDataTable and UIAccessibilityContainerDataTableCell protocols
+ convey more information specific to tables that contain structured data.
+ */
 extern interface UIAccessibilityContainerDataTableCell{
 
 	@:native("alloc")

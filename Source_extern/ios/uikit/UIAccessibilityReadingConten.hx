@@ -8,6 +8,12 @@ import ios.uikit.NSAttributedString;
 @:objc
 @:native("UIAccessibilityReadingConten")
 @:include("UIKit/UIKit.h")
+/* 
+ UIAccessibilityReadingContent
+ 
+ Implemented on an element that represents content meant to be read, like a book or periodical. 
+ Use in conjuction with UIAccessibilityTraitCausesPageTurn to provide a continuous reading experience with VoiceOver.
+ */
 extern interface UIAccessibilityReadingConten{
 
 	@:native("alloc")

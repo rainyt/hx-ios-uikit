@@ -6,6 +6,11 @@ import cpp.objc.NSData;
 @:enum
 @:native("UIVibrancyEffectStyle")
 @:include("UIKit/UIKit.h")
+/* Additional vibrancy styles available in iOS 13, intended for use with the "system material" UIBlurEffect styles.
+ *
+ * These vibrancy styles, combined with those blur effect styles, cause only the alpha component of the content
+ * to be used. Color information is ignored. (UIVibrancyEffectStyleLabel is an exception; it passes color through.)
+ */
 extern abstract UIVibrancyEffectStyle(Int) from Int to Int {
 
 	@:native("UIVibrancyEffectStyleLabel")

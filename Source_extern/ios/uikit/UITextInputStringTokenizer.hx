@@ -9,6 +9,8 @@ import ios.uikit.UITextGranularity;
 @:objc
 @:native("UITextInputStringTokenizer")
 @:include("UIKit/UIKit.h")
+/* A recommended base implementation of the tokenizer protocol. Subclasses are responsible
+ * for handling directions and granularities affected by layout.*/
 extern class UITextInputStringTokenizer
 {
 

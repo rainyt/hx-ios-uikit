@@ -9,6 +9,9 @@ import cpp.objc.NSDictionary;
 @:objc
 @:native("NSPredicate")
 @:include("Foundation/Foundation.h")
+/*	NSPredicate.h
+	Copyright (c) 2004-2019, Apple Inc. All rights reserved.
+*/
 extern class NSPredicate
 {
 

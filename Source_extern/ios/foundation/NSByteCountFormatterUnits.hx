@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSByteCountFormatterUnits")
 @:include("UIKit/UIKit.h")
+/*	NSByteCountFormatter.h
+	Copyright (c) 2012-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSByteCountFormatterUnits(Int) from Int to Int {
 
 	@:native("NSByteCountFormatterUseDefault")

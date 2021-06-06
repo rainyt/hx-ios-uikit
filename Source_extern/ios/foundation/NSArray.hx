@@ -113,6 +113,7 @@ extern class NSArray{
 	@:native("subarrayWithRange")
 	overload public function subarrayWithRange(range:Dynamic):Dynamic;
 
+	/* Serializes this instance to the specified URL in the NSPropertyList format (using NSPropertyListXMLFormat_v1_0). For other formats use NSPropertyListSerialization directly. */
 	@:native("writeToURL:error")
 	overload public function writeToURLError(url:NSURL, error:NSError):Bool;
 
@@ -188,9 +189,11 @@ extern class NSArray{
 	@:native("initWithArray:copyItems")
 	overload public function initWithArrayCopyItems(array:Dynamic, copyItems:Bool):NSArray;
 
+	/* Reads array stored in NSPropertyList format from the specified url. */
 	@:native("initWithContentsOfURL:error")
 	overload public function initWithContentsOfURLError(url:NSURL, error:NSError):Dynamic;
 
+	/* Reads array stored in NSPropertyList format from the specified url. */
 	@:native("arrayWithContentsOfURL:error")
 	overload public static function arrayWithContentsOfURLError(url:NSURL, error:NSError):Dynamic;
 
@@ -206,15 +209,18 @@ extern class NSArray{
 	@:native("arrayByApplyingDifference")
 	overload public function arrayByApplyingDifference(difference:NSOrderedCollectionDifference):Dynamic;
 
+	/* Return an array containing the results of invoking -valueForKey: on each of the receiver's elements. The returned array will contain NSNull elements for each instance of -valueForKey: returning nil. */
 	@:native("valueForKey")
 	overload public function valueForKey(key:NSString):Dynamic;
 
+	/* Invoke -setValue:forKey: on each of the receiver's elements. */
 	@:native("setValue:forKey")
 	overload public function setValueForKey(value:Dynamic, forKey:NSString):Void;
 
 	@:native("pathsMatchingExtensions")
 	overload public function pathsMatchingExtensions(filterTypes:Dynamic):Dynamic;
 
+	/* Register or deregister as an observer of the values at a key path relative to each indexed element of the array. The options determine what is included in observer notifications and when they're sent, as described above, and the context is passed in observer notifications as described above. These are not merely convenience methods; invoking them is potentially much faster than repeatedly invoking NSObject(NSKeyValueObserverRegistration) methods. You should use -removeObserver:fromObjectsAtIndexes:forKeyPath:context: instead of -removeObserver:fromObjectsAtIndexes:forKeyPath: whenever possible for the same reason described in the NSObject(NSKeyValueObserverRegistration) comment. */
 	@:native("addObserver:toObjectsAtIndexes:forKeyPath:options:context")
 	overload public function addObserverToObjectsAtIndexesForKeyPathOptionsContext(observer:NSObject, toObjectsAtIndexes:NSIndexSet, forKeyPath:NSString, options:NSKeyValueObservingOptions, context:Void):Void;
 
@@ -224,6 +230,7 @@ extern class NSArray{
 	@:native("removeObserver:fromObjectsAtIndexes:forKeyPath")
 	overload public function removeObserverFromObjectsAtIndexesForKeyPath(observer:NSObject, fromObjectsAtIndexes:NSIndexSet, forKeyPath:NSString):Void;
 
+	/* NSArrays are not observable, so these methods raise exceptions when invoked on NSArrays. Instead of observing an array, observe the ordered to-many relationship for which the array is the collection of related objects. */
 	@:native("addObserver:forKeyPath:options:context")
 	overload public function addObserverForKeyPathOptionsContext(observer:NSObject, forKeyPath:NSString, options:NSKeyValueObservingOptions, context:Void):Void;
 

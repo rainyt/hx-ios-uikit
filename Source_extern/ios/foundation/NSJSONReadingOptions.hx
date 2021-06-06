@@ -6,6 +6,10 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSJSONReadingOptions")
 @:include("UIKit/UIKit.h")
+/*	
+    NSJSONSerialization.h
+    Copyright (c) 2009-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSJSONReadingOptions(Int) from Int to Int {
 
 	@:native("NSJSONReadingMutableContainers")

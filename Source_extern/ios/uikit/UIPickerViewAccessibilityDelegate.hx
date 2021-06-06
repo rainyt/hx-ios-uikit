@@ -7,6 +7,11 @@ import ios.uikit.NSAttributedString;
 @:objc
 @:native("UIPickerViewAccessibilityDelegate")
 @:include("UIKit/UIKit.h")
+/* 
+  Optionally implement the following methods in a UIPickerView delegate
+  in order to provide accessibility information per component. 
+  See UIAccessibility.h for more information about hints and labels.
+*/
 extern interface UIPickerViewAccessibilityDelegate{
 
 	@:native("alloc")

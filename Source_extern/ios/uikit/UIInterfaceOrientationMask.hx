@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("UIInterfaceOrientationMask")
 @:include("UIKit/UIKit.h")
+/* This exception is raised if supportedInterfaceOrientations returns 0, or if preferredInterfaceOrientationForPresentation
+   returns an orientation that is not supported.
+*/
 extern abstract UIInterfaceOrientationMask(Int) from Int to Int {
 
 	@:native("UIInterfaceOrientationMaskPortrait")

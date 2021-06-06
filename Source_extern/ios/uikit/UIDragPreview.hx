@@ -17,9 +17,11 @@ extern class UIDragPreview
 	@:native("autorelease")
 	overload public static function autorelease():UIDragPreview;
 
+	/* Create a preview based on a view and parameters.  * Note: it doesn't matter whether this view is in a window or not.  */
 	@:native("initWithView:parameters")
 	overload public function initWithViewParameters(view:UIView, parameters:UIDragPreviewParameters):UIDragPreview;
 
+	/* Use the default parameters.  */
 	@:native("initWithView")
 	overload public function initWithView(view:UIView):UIDragPreview;
 
@@ -35,6 +37,7 @@ extern class UIDragPreview
 	@:native("previewForURL")
 	overload public static function previewForURL(url:NSURL):UIDragPreview;
 
+	/* If the title is nil or empty, this is the same as `previewForURL:`.  */
 	@:native("previewForURL:title")
 	overload public static function previewForURLTitle(url:NSURL, title:Dynamic):UIDragPreview;
 

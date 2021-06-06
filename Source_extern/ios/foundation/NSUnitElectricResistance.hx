@@ -18,6 +18,7 @@ extern class NSUnitElectricResistance extends NSDimension
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitElectricResistance;
 
+	/*  Base unit - ohms  */
 	@:native("megaohms")
 	overload public static function megaohms():NSUnitElectricResistance;
 
@@ -36,6 +37,7 @@ extern class NSUnitElectricResistance extends NSDimension
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitElectricResistance;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitElectricResistance;
 

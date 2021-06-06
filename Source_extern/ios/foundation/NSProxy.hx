@@ -7,6 +7,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSProxy")
 @:include("Foundation/Foundation.h")
+/*	NSProxy.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSProxy{
 
 	@:native("alloc")

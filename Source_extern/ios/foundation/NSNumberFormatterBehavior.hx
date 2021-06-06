@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSNumberFormatterBehavior")
 @:include("UIKit/UIKit.h")
+/*	NSNumberFormatter.h
+	Copyright (c) 1996-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSNumberFormatterBehavior(Int) from Int to Int {
 
 	@:native("NSNumberFormatterBehaviorDefault")

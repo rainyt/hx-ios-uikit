@@ -18,6 +18,7 @@ extern class NSUnitAngle extends NSDimension
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitAngle;
 
+	/*  Base unit - degrees  */
 	@:native("degrees")
 	overload public static function degrees():NSUnitAngle;
 
@@ -39,6 +40,7 @@ extern class NSUnitAngle extends NSDimension
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitAngle;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitAngle;
 

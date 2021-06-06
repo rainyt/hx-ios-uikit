@@ -23,12 +23,14 @@ extern class NSTextCheckingResult
 	@:native("autorelease")
 	overload public static function autorelease():NSTextCheckingResult;
 
+	/* Mandatory properties, used with all types of results. */
 	@:native("resultType")
 	public var resultType:NSTextCheckingType;
 
 	@:native("range")
 	public var range:Dynamic;
 
+	/* Optional properties, used with certain types of results. */
 	@:native("orthography")
 	public var orthography:NSOrthography;
 
@@ -62,6 +64,7 @@ extern class NSTextCheckingResult
 	@:native("phoneNumber")
 	public var phoneNumber:NSString;
 
+	/* A result must have at least one range, but may optionally have more (for example, to represent regular expression capture groups).  The range at index 0 always matches the range property.  Additional ranges, if any, will have indexes from 1 to numberOfRanges-1. rangeWithName: can be used with named regular expression capture groups. */
 	@:native("numberOfRanges")
 	public var numberOfRanges:Int;
 
@@ -77,6 +80,7 @@ extern class NSTextCheckingResult
 	@:native("addressComponents")
 	public var addressComponents:NSDictionary;
 
+	/* Methods for creating instances of the various types of results. */
 	@:native("orthographyCheckingResultWithRange:orthography")
 	overload public static function orthographyCheckingResultWithRangeOrthography(range:Dynamic, orthography:NSOrthography):NSTextCheckingResult;
 

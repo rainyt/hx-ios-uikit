@@ -18,6 +18,7 @@ extern interface UIPrinterPickerControllerDelegate{
 	@:native("printerPickerControllerParentViewController")
 	overload public function printerPickerControllerParentViewController(printerPickerController:UIPrinterPickerController):UIViewController;
 
+	/*!  *  @method     printerPickerController:shouldShowPrinter:  *  @discussion	Use to filter out specific printers from the printer picker.  * 	        Evaluate the UIPrinter object and returns YES if the printer should  * 	        be shown, NO otherwise.  *		This delegate can assume that all UIPrinter properties are available  *		(the contactPrinter: method need not be called).  * 	        This method may be called from threads other than the main thread,  * 	        and may be called simultaneously from several different threads.  */
 	@:native("printerPickerController:shouldShowPrinter")
 	overload public function printerPickerControllerShouldShowPrinter(printerPickerController:UIPrinterPickerController, shouldShowPrinter:UIPrinter):Bool;
 

@@ -13,6 +13,14 @@ import ios.uikit.NSUserActivity;
 @:objc
 @:native("UIAccessibilityElement")
 @:include("UIKit/UIKit.h")
+/*
+ UIAccessibilityElement
+ 
+ Instances of this class can be used as "fake" accessibility elements.
+ An accessibility container (see UIAccessibility.h) can create and vend instances
+ of UIAccessibilityElement to cover for user interface items that are not
+ backed by a UIView (for example: painted text or icon).
+ */
 extern class UIAccessibilityElement extends UIResponder
 {
 
@@ -49,6 +57,7 @@ extern class UIAccessibilityElement extends UIResponder
 	@:native("accessibilityFrameInContainerSpace")
 	public var accessibilityFrameInContainerSpace:CGRect;
 
+	/*  A string that identifies the user interface element.  default == nil */
 	@:native("accessibilityIdentifier")
 	public var accessibilityIdentifier:NSString;
 
@@ -121,6 +130,7 @@ extern class UIAccessibilityElement extends UIResponder
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

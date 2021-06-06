@@ -12,6 +12,12 @@ import ios.foundation.NSURLAuthenticationChallenge;
 @:objc
 @:native("NSURLProtocolClient")
 @:include("Foundation/Foundation.h")
+/*!
+@protocol NSURLProtocolClient
+@discussion NSURLProtocolClient provides the interface to the URL
+loading system that is intended for use by NSURLProtocol
+implementors.
+*/
 extern interface NSURLProtocolClient{
 
 	@:native("alloc")
@@ -20,6 +26,7 @@ extern interface NSURLProtocolClient{
 	@:native("autorelease")
 	overload public static function autorelease():NSURLProtocolClient;
 
+	/*! @method URLProtocol:wasRedirectedToRequest:  @abstract Indicates to an NSURLProtocolClient that a redirect has  occurred.  @param protocol the NSURLProtocol object sending the message.  @param request the NSURLRequest to which the protocol implementation  has redirected.  */
 	@:native("URLProtocol:wasRedirectedToRequest:redirectResponse")
 	overload public function URLProtocolWasRedirectedToRequestRedirectResponse(protocol:NSURLProtocol, wasRedirectedToRequest:NSURLRequest, redirectResponse:NSURLResponse):Void;
 

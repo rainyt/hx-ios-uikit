@@ -6,6 +6,8 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSStringCompareOptions")
 @:include("UIKit/UIKit.h")
+/* These options apply to the various search/find and comparison methods (except where noted).
+*/
 extern abstract NSStringCompareOptions(Int) from Int to Int {
 
 	@:native("NSCaseInsensitiveSearch")

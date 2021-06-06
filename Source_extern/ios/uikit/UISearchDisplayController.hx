@@ -47,6 +47,7 @@ extern class UISearchDisplayController{
 	@:native("searchResultsTitle")
 	public var searchResultsTitle:NSString;
 
+	/* Displaying the search bar in a navigation bar will override the contentsController's navigationItem if it has one. */
 	@:native("displaysSearchBarInNavigationBar")
 	public var displaysSearchBarInNavigationBar:Bool;
 

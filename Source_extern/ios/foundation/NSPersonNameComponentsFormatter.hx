@@ -19,21 +19,27 @@ extern class NSPersonNameComponentsFormatter extends NSFormatter{
 	@:native("autorelease")
 	overload public static function autorelease():NSPersonNameComponentsFormatter;
 
+	/* Specify the formatting style for the formatted string on an instance. ShortStyle will fall back to user preferences and language-specific defaults  */
 	@:native("style")
 	public var style:NSPersonNameComponentsFormatterStyle;
 
+	/* Specify that the formatter should only format the components object's phoneticRepresentation  */
 	@:native("phonetic")
 	public var phonetic:Bool;
 
+	/* Shortcut for converting an NSPersonNameComponents object into a string without explicitly creating an instance.     Create an instance for greater customizability.  */
 	@:native("localizedStringFromPersonNameComponents:style:options")
 	overload public static function localizedStringFromPersonNameComponentsStyleOptions(components:NSPersonNameComponents, style:NSPersonNameComponentsFormatterStyle, options:NSPersonNameComponentsFormatterOptions):NSString;
 
+	/* Convenience method on stringForObjectValue:. Returns a string containing the formatted value of the provided components object.  */
 	@:native("stringFromPersonNameComponents")
 	overload public function stringFromPersonNameComponents(components:NSPersonNameComponents):NSString;
 
+	/* Returns attributed string with annotations for each component. For each range, attributes can be obtained by querying     dictionary key NSPersonNameComponentKey , using NSPersonNameComponent constant values.  */
 	@:native("annotatedStringFromPersonNameComponents")
 	overload public function annotatedStringFromPersonNameComponents(components:NSPersonNameComponents):NSAttributedString;
 
+	/* Convenience method on getObjectValue:forString:error:. Returns an NSPersonNameComponents object representing the name components found in the provided string.  */
 	@:native("personNameComponentsFromString")
 	overload public function personNameComponentsFromString(string:Dynamic):NSPersonNameComponents;
 

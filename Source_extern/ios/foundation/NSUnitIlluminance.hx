@@ -18,12 +18,14 @@ extern class NSUnitIlluminance extends NSDimension
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitIlluminance;
 
+	/*  Base unit - lux  */
 	@:native("lux")
 	overload public static function lux():NSUnitIlluminance;
 
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitIlluminance;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitIlluminance;
 

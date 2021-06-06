@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSTextCheckingType")
 @:include("UIKit/UIKit.h")
+/*	NSTextCheckingResult.h
+	Copyright (c) 2008-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSTextCheckingType(Int) from Int to Int {
 
 	@:native("NSTextCheckingTypeOrthography")

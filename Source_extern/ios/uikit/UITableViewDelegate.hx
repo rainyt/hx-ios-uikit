@@ -132,30 +132,39 @@ extern interface UITableViewDelegate{
 	@:native("tableView:shouldSpringLoadRowAtIndexPath:withContext")
 	overload public function tableViewShouldSpringLoadRowAtIndexPathWithContext(tableView:UITableView, shouldSpringLoadRowAtIndexPath:NSIndexPath, withContext:Dynamic):Bool;
 
+	/* Allows a two-finger pan gesture to automatically transition the table view into editing mode and start selecting cells.  *  * If this method returns YES, allow the user to start selecting multiple contiguous cells via a two-finger pan gesture. If  * the table view is already in editing mode, the user can also select multiple cells via a one-finger pan gesture along the  * edge of the table that contains editing controls (checkboxes).  *  * In order to support this behavior, you must also set allowsMultipleSelectionDuringEditing to YES.  *  * If this method is not implemented, the default is NO.  */
 	@:native("tableView:shouldBeginMultipleSelectionInteractionAtIndexPath")
 	overload public function tableViewShouldBeginMultipleSelectionInteractionAtIndexPath(tableView:UITableView, shouldBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath):Bool;
 
+	/* Called right after the multi-select pan gesture begins and the table view is automatically transitioned into editing mode.  *  * In your app, this would be a good opportunity to update the state of your UI to reflect the fact that the user is now selecting  * multiple items at once; such as updating buttons to say "Done" instead of "Select"/"Edit", for instance.  */
 	@:native("tableView:didBeginMultipleSelectionInteractionAtIndexPath")
 	overload public function tableViewDidBeginMultipleSelectionInteractionAtIndexPath(tableView:UITableView, didBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath):Void;
 
+	/* Called when the multi-select interaction ends.  *  * At this point, the table view will remain in multi-select mode, but this delegate method is called to indicate that the multiple  * selection gesture or hardware keyboard interaction has ended.  */
 	@:native("tableViewDidEndMultipleSelectionInteraction")
 	overload public function tableViewDidEndMultipleSelectionInteraction(tableView:UITableView):Void;
 
+	/*!  * @abstract Called when the interaction begins.  *  * @param tableView  This UITableView.  * @param indexPath  IndexPath of the row for which a configuration is being requested.  * @param point      Location of the interaction in the table view's coordinate space  *  * @return A UIContextMenuConfiguration describing the menu to be presented. Return nil to prevent the interaction from beginning.  *         Returning an empty configuration causes the interaction to begin then fail with a cancellation effect. You might use this  *         to indicate to users that it's possible for a menu to be presented from this element, but that there are no actions to  *         present at this particular time.  */
 	@:native("tableView:contextMenuConfigurationForRowAtIndexPath:point")
 	overload public function tableViewContextMenuConfigurationForRowAtIndexPathPoint(tableView:UITableView, contextMenuConfigurationForRowAtIndexPath:NSIndexPath, point:CGPoint):UIContextMenuConfiguration;
 
+	/*!  * @abstract Called when the interaction begins. Return a UITargetedPreview to override the default preview created by the table view.  *  * @param tableView      This UITableView.  * @param configuration  The configuration of the menu about to be displayed by this interaction.  */
 	@:native("tableView:previewForHighlightingContextMenuWithConfiguration")
 	overload public function tableViewPreviewForHighlightingContextMenuWithConfiguration(tableView:UITableView, previewForHighlightingContextMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
+	/*!  * @abstract Called when the interaction is about to dismiss. Return a UITargetedPreview describing the desired dismissal target.  * The interaction will animate the presented menu to the target. Use this to customize the dismissal animation.  *  * @param tableView      This UITableView.  * @param configuration  The configuration of the menu displayed by this interaction.  */
 	@:native("tableView:previewForDismissingContextMenuWithConfiguration")
 	overload public function tableViewPreviewForDismissingContextMenuWithConfiguration(tableView:UITableView, previewForDismissingContextMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
+	/*!  * @abstract Called when the interaction is about to "commit" in response to the user tapping the preview.  *  * @param tableView      This UITableView.  * @param configuration  Configuration of the currently displayed menu.  * @param animator       Commit animator. Add animations to this object to run them alongside the commit transition.  */
 	@:native("tableView:willPerformPreviewActionForMenuWithConfiguration:animator")
 	overload public function tableViewWillPerformPreviewActionForMenuWithConfigurationAnimator(tableView:UITableView, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
+	/*!  * @abstract Called when the table view is about to display a menu.  *  * @param tableView       This UITableView.  * @param configuration   The configuration of the menu about to be displayed.  * @param animator        Appearance animator. Add animations to run them alongside the appearance transition.  */
 	@:native("tableView:willDisplayContextMenuWithConfiguration:animator")
 	overload public function tableViewWillDisplayContextMenuWithConfigurationAnimator(tableView:UITableView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
+	/*!  * @abstract Called when the table view's context menu interaction is about to end.  *  * @param tableView       This UITableView.  * @param configuration   Ending configuration.  * @param animator        Disappearance animator. Add animations to run them alongside the disappearance transition.  */
 	@:native("tableView:willEndContextMenuInteractionWithConfiguration:animator")
 	overload public function tableViewWillEndContextMenuInteractionWithConfigurationAnimator(tableView:UITableView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 

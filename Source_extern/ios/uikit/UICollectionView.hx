@@ -75,12 +75,14 @@ extern class UICollectionView extends UIScrollView
 	@:native("dropDelegate")
 	public var dropDelegate:Dynamic;
 
+	/* To enable intra-app drags on iPhone, set this to YES.  * You can also force drags to be disabled for this collection view by setting this to NO.  * By default, For iPad this will return YES and iPhone will return NO.  */
 	@:native("dragInteractionEnabled")
 	public var dragInteractionEnabled:Bool;
 
 	@:native("contextMenuInteraction")
 	public var contextMenuInteraction:UIContextMenuInteraction;
 
+	/* Reordering cadence affects how easily reordering occurs while dragging around a reorder-capable drop destination.  * Default is UICollectionViewReorderingCadenceImmediate.  */
 	@:native("reorderingCadence")
 	public var reorderingCadence:UICollectionViewReorderingCadence;
 
@@ -231,36 +233,47 @@ extern class UICollectionView extends UIScrollView
 	@:native("selectionFollowsFocus")
 	public var selectionFollowsFocus:Bool;
 
+	/* YES if a drag session is currently active. A drag session begins after items are "lifted" from the collection view.  */
 	@:native("hasActiveDrag")
 	public var hasActiveDrag:Bool;
 
+	/* YES if collection view is currently tracking a drop session.  */
 	@:native("hasActiveDrop")
 	public var hasActiveDrop:Bool;
 
+	/* Controls the editing state for the receiver.  */
 	@:native("editing")
 	public var editing:Bool;
 
+	/* Controls whether an item can be selected when the receiver is editing.  * Defaults to NO.  */
 	@:native("allowsSelectionDuringEditing")
 	public var allowsSelectionDuringEditing:Bool;
 
+	/* Controls whether multiple item selection can occur when the receiver is editing.  * Defaults to NO.  */
 	@:native("allowsMultipleSelectionDuringEditing")
 	public var allowsMultipleSelectionDuringEditing:Bool;
 
+	/* Translate (if needed) a Data Source section index to its Presentation section index value.  * If section was deleted during a transaction, this will return NSNotFound.  * If no effective change took place, will return passed value.  */
 	@:native("presentationSectionIndexForDataSourceSectionIndex")
 	overload public function presentationSectionIndexForDataSourceSectionIndex(dataSourceSectionIndex:Int):Int;
 
+	/* Translate (if needed) a Presentation section index to its Data Source section index value.  * If section was inserted and not known the Data Source, this will return NSNotFound.  * If no effective change took place, will return passed value.  */
 	@:native("dataSourceSectionIndexForPresentationSectionIndex")
 	overload public function dataSourceSectionIndexForPresentationSectionIndex(presentationSectionIndex:Int):Int;
 
+	/* Translate (if needed) a Data Source index path to the Presentation index path.  * If the item was deleted at the index path, this will return nil.  * If no effective change took place, will return passed value.  */
 	@:native("presentationIndexPathForDataSourceIndexPath")
 	overload public function presentationIndexPathForDataSourceIndexPath(dataSourceIndexPath:NSIndexPath):NSIndexPath;
 
+	/* Translate (if needed) a Presentation index path to the Data Source index path.  * If the item was inserted at the index path, this will return nil.  * If no effective change took place, will return passed value.  */
 	@:native("dataSourceIndexPathForPresentationIndexPath")
 	overload public function dataSourceIndexPathForPresentationIndexPath(presentationIndexPath:NSIndexPath):NSIndexPath;
 
+	/* Arguments passed to actions performed inside the scope of this block will be interpreted as values in the presentation state,  * and the values returned from these actions will also be in the presentation state.  */
 	@:native("performUsingPresentationValues")
 	overload public function performUsingPresentationValues(actionsToTranslate:Dynamic):Void;
 
+	/* Also see -scrollViewDidChangeAdjustedContentInset: in the UIScrollViewDelegate protocol.  */
 	@:native("adjustedContentInsetDidChange")
 	overload public function adjustedContentInsetDidChange():Void;
 
@@ -412,6 +425,7 @@ extern class UICollectionView extends UIScrollView
 	@:native("setNeedsDisplayInRect")
 	overload public function setNeedsDisplayInRect(rect:CGRect):Void;
 
+	/*  The -tintColorDidChange message is sent to appropriate subviews of a view when its tintColor is changed by client code or to subviews in the view hierarchy of a view whose tintColor is implicitly changed when its superview or tintAdjustmentMode changes.  */
 	@:native("tintColorDidChange")
 	overload public function tintColorDidChange():Void;
 
@@ -436,6 +450,7 @@ extern class UICollectionView extends UIScrollView
 	@:native("animateWithDuration:animations")
 	overload public static function animateWithDurationAnimations(duration:Dynamic, animations:Dynamic):Void;
 
+	/* Performs `animations` using a timing curve described by the motion of a spring. When `dampingRatio` is 1, the animation will smoothly decelerate to its final model values without oscillating. Damping ratios less than 1 will oscillate more and more before coming to a complete stop. You can use the initial spring velocity to specify how fast the object at the end of the simulated spring was moving before it was attached. It's a unit coordinate system, where 1 is defined as travelling the total animation distance in a second. So if you're changing an object's position by 200pt in this animation, and you want the animation to behave as if the object was moving at 100pt/s before the animation started, you'd pass 0.5. You'll typically want to pass 0 for the velocity. */ 
 	@:native("animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion")
 	overload public static function animateWithDurationDelayUsingSpringWithDampingInitialSpringVelocityOptionsAnimationsCompletion(duration:Dynamic, delay:Dynamic, usingSpringWithDamping:Float, initialSpringVelocity:Float, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
@@ -445,9 +460,11 @@ extern class UICollectionView extends UIScrollView
 	@:native("transitionFromView:toView:duration:options:completion")
 	overload public static function transitionFromViewToViewDurationOptionsCompletion(fromView:UIView, toView:UIView, duration:Dynamic, options:UIViewAnimationOptions, completion:Dynamic):Void;
 
+	/* Performs the requested system-provided animation on one or more views. Specify addtional animations in the parallelAnimations block. These additional animations will run alongside the system animation with the same timing and duration that the system animation defines/inherits. Additional animations should not modify properties of the view on which the system animation is being performed. Not all system animations honor all available options.  */
 	@:native("performSystemAnimation:onViews:options:animations:completion")
 	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
+	/* Call this method from within an animation block to repeat animations, otherwise has no effect. The total duration of a repeating animation can be computed via (outerAnimationDuration * repeatCount * autoreverses ? 2 : 1). */
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
 	overload public static function modifyAnimationsWithRepeatCountAutoreversesAnimations(count:Float, autoreverses:Bool, animations:Dynamic):Void;
 
@@ -466,9 +483,11 @@ extern class UICollectionView extends UIScrollView
 	@:native("gestureRecognizerShouldBegin")
 	overload public function gestureRecognizerShouldBegin(gestureRecognizer:UIGestureRecognizer):Bool;
 
+	/*! Begins applying `effect` to the receiver. The effect's emitted keyPath/value pairs will be     applied to the view's presentation layer.       Animates the transition to the motion effect's values using the present UIView animation     context. */
 	@:native("addMotionEffect")
 	overload public function addMotionEffect(effect:UIMotionEffect):Void;
 
+	/*! Stops applying `effect` to the receiver. Any affected presentation values will animate to     their post-removal values using the present UIView animation context. */
 	@:native("removeMotionEffect")
 	overload public function removeMotionEffect(effect:UIMotionEffect):Void;
 
@@ -496,9 +515,11 @@ extern class UICollectionView extends UIScrollView
 	@:native("setNeedsUpdateConstraints")
 	overload public function setNeedsUpdateConstraints():Void;
 
+	/* constraint-based layout engages lazily when someone tries to use it (e.g., adds a constraint to a view).  If you do all of your constraint set up in -updateConstraints, you might never even receive updateConstraints if no one makes a constraint.  To fix this chicken and egg problem, override this method to return YES if your view needs the window to use constraint-based layout.    */
 	@:native("requiresConstraintBasedLayout")
 	overload public static function requiresConstraintBasedLayout():Bool;
 
+	/* These two methods should be inverses of each other.  UIKit will call both as part of layout computation.  They may be overridden to provide arbitrary transforms between frame and alignment rect, though the two methods must be inverses of each other.  However, the default implementation uses -alignmentRectInsets, so just override that if it's applicable.  It's easier to get right.   A view that displayed an image with some ornament would typically override these, because the ornamental part of an image would scale up with the size of the frame.    Set the NSUserDefault UIViewShowAlignmentRects to YES to see alignment rects drawn.  */
 	@:native("alignmentRectForFrame")
 	overload public function alignmentRectForFrame(frame:CGRect):CGRect;
 
@@ -520,18 +541,22 @@ extern class UICollectionView extends UIScrollView
 	@:native("setContentCompressionResistancePriority:forAxis")
 	overload public function setContentCompressionResistancePriorityForAxis(priority:Dynamic, forAxis:UILayoutConstraintAxis):Void;
 
+	/* The size fitting most closely to targetSize in which the receiver's subtree can be laid out while optimally satisfying the constraints. If you want the smallest possible size, pass UILayoutFittingCompressedSize; for the largest possible size, pass UILayoutFittingExpandedSize.  Also see the comment for UILayoutPriorityFittingSizeLevel.  */
 	@:native("systemLayoutSizeFittingSize")
 	overload public function systemLayoutSizeFittingSize(targetSize:CGSize):CGSize;
 
 	@:native("systemLayoutSizeFittingSize:withHorizontalFittingPriority:verticalFittingPriority")
 	overload public function systemLayoutSizeFittingSizeWithHorizontalFittingPriorityVerticalFittingPriority(targetSize:CGSize, withHorizontalFittingPriority:Dynamic, verticalFittingPriority:Dynamic):CGSize;
 
+	/* Adds layoutGuide to the receiver, passing the receiver in -setOwningView: to layoutGuide.  */
 	@:native("addLayoutGuide")
 	overload public function addLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
+	/* Removes layoutGuide from the receiver, passing nil in -setOwningView: to layoutGuide.  */
 	@:native("removeLayoutGuide")
 	overload public function removeLayoutGuide(layoutGuide:UILayoutGuide):Void;
 
+	/* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.  Pass UILayoutConstraintAxisHorizontal for the constraints affecting [self center].x and CGRectGetWidth([self bounds]), and UILayoutConstraintAxisVertical for the constraints affecting[self center].y and CGRectGetHeight([self bounds]).  */
 	@:native("constraintsAffectingLayoutForAxis")
 	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
@@ -544,6 +569,7 @@ extern class UICollectionView extends UIScrollView
 	@:native("decodeRestorableStateWithCoder")
 	overload public function decodeRestorableStateWithCoder(coder:NSCoder):Void;
 
+	/*  * When requesting a snapshot, 'afterUpdates' defines whether the snapshot is representative of what's currently on screen or if you wish to include any recent changes before taking the snapshot.     If called during layout from a committing transaction, snapshots occurring after the screen updates will include all changes made, regardless of when the snapshot is taken and the changes are made. For example:        - (void)layoutSubviews {          UIView *snapshot = [self snapshotViewAfterScreenUpdates:YES];          self.alpha = 0.0;      }    The snapshot will appear to be empty since the change in alpha will be captured by the snapshot. If you need to animate the view during layout, animate the snapshot instead.  * Creating snapshots from existing snapshots (as a method to duplicate, crop or create a resizable variant) is supported. In cases where many snapshots are needed, creating a snapshot from a common superview and making subsequent snapshots from it can be more performant. Please keep in mind that if 'afterUpdates' is YES, the original snapshot is committed and any changes made to it, not the view originally snapshotted, will be included.  */
 	@:native("snapshotViewAfterScreenUpdates")
 	overload public function snapshotViewAfterScreenUpdates(afterUpdates:Bool):UIView;
 
@@ -622,6 +648,7 @@ extern class UICollectionView extends UIScrollView
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

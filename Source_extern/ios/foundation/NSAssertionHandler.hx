@@ -5,6 +5,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSAssertionHandler")
 @:include("Foundation/Foundation.h")
+/*
+ * Asserts to use in Objective-C method bodies
+ */
 extern class NSAssertionHandler{
 
 	@:native("alloc")

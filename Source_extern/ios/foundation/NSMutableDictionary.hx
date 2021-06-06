@@ -68,9 +68,11 @@ extern class NSMutableDictionary extends NSDictionary
 	@:native("initWithContentsOfURL")
 	overload public function initWithContentsOfURL(url:NSURL):NSMutableDictionary;
 
+	/*  Create a mutable dictionary which is optimized for dealing with a known set of keys.  Keys that are not in the key set can still be set into the dictionary, but that usage is not optimal.  As with any dictionary, the keys must be copyable.  If keyset is nil, an exception is thrown.  If keyset is not an object returned by +sharedKeySetForKeys:, an exception is thrown.  */
 	@:native("dictionaryWithSharedKeySet")
 	overload public static function dictionaryWithSharedKeySet(keyset:Dynamic):NSMutableDictionary;
 
+	/* Send -setObject:forKey: to the receiver, unless the value is nil, in which case send -removeObjectForKey:. */
 	@:native("setValue:forKey")
 	overload public function setValueForKey(value:Dynamic, forKey:NSString):Void;
 
@@ -101,6 +103,7 @@ extern class NSMutableDictionary extends NSDictionary
 	@:native("objectsForKeys:notFoundMarker")
 	overload public function objectsForKeysNotFoundMarker(keys:Dynamic, notFoundMarker:Dynamic):Dynamic;
 
+	/* Serializes this instance to the specified URL in the NSPropertyList format (using NSPropertyListXMLFormat_v1_0). For other formats use NSPropertyListSerialization directly. */
 	@:native("writeToURL:error")
 	overload public function writeToURLError(url:NSURL, error:NSError):Bool;
 
@@ -161,12 +164,15 @@ extern class NSMutableDictionary extends NSDictionary
 	@:native("initWithObjects:forKeys")
 	overload public function initWithObjectsForKeys(objects:Dynamic, forKeys:Dynamic):NSMutableDictionary;
 
+	/* Reads dictionary stored in NSPropertyList format from the specified url. */
 	@:native("initWithContentsOfURL:error")
 	overload public function initWithContentsOfURLError(url:NSURL, error:NSError):NSMutableDictionary;
 
+	/* Reads dictionary stored in NSPropertyList format from the specified url. */
 	@:native("dictionaryWithContentsOfURL:error")
 	overload public static function dictionaryWithContentsOfURLError(url:NSURL, error:NSError):NSMutableDictionary;
 
+	/*  Use this method to create a key set to pass to +dictionaryWithSharedKeySet:.  The keys are copied from the array and must be copyable.  If the array parameter is nil or not an NSArray, an exception is thrown.  If the array of keys is empty, an empty key set is returned.  The array of keys may contain duplicates, which are ignored (it is undefined which object of each duplicate pair is used).  As for any usage of hashing, is recommended that the keys have a well-distributed implementation of -hash, and the hash codes must satisfy the hash/isEqual: invariant.  Keys with duplicate hash codes are allowed, but will cause lower performance and increase memory usage.  */
 	@:native("sharedKeySetForKeys")
 	overload public static function sharedKeySetForKeys(keys:Dynamic):Dynamic;
 
@@ -221,6 +227,7 @@ extern class NSMutableDictionary extends NSDictionary
 	@:native("fileGroupOwnerAccountID")
 	overload public function fileGroupOwnerAccountID():NSNumber;
 
+	/* Return the result of sending -objectForKey: to the receiver. */
 	@:native("valueForKey")
 	overload public function valueForKey(key:NSString):Dynamic;
 

@@ -6,6 +6,11 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSMeasurementFormatterUnitOptions")
 @:include("UIKit/UIKit.h")
+/*
+ NSMeasurementFormatter.h
+ Copyright (c) 2015-2019, Apple Inc.
+ All rights reserved.
+ */
 extern abstract NSMeasurementFormatterUnitOptions(Int) from Int to Int {
 
 	@:native("NSMeasurementFormatterUnitOptionsProvidedUnit")

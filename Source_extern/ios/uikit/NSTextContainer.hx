@@ -20,18 +20,21 @@ extern class NSTextContainer
 	@:native("autorelease")
 	overload public static function autorelease():NSTextContainer;
 
+	/**************************** Initialization ****************************/
 	@:native("initWithSize")
 	overload public function initWithSize(size:CGSize):NSTextContainer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):NSTextContainer;
 
+	/**************************** Layout ****************************/
 	@:native("layoutManager")
 	public var layoutManager:NSLayoutManager;
 
 	@:native("replaceLayoutManager")
 	overload public function replaceLayoutManager(newLayoutManager:NSLayoutManager):Void;
 
+	/************************* Container shape properties *************************/
 	@:native("size")
 	public var size:CGSize;
 
@@ -41,18 +44,21 @@ extern class NSTextContainer
 	@:native("lineBreakMode")
 	public var lineBreakMode:NSLineBreakMode;
 
+	/************************* Layout constraint properties *************************/
 	@:native("lineFragmentPadding")
 	public var lineFragmentPadding:Float;
 
 	@:native("maximumNumberOfLines")
 	public var maximumNumberOfLines:Int;
 
+	/**************************** Line fragments ****************************/
 	@:native("lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect")
 	overload public function lineFragmentRectForProposedRectAtIndexWritingDirectionRemainingRect(proposedRect:CGRect, atIndex:Int, writingDirection:NSWritingDirection, remainingRect:CGRect):CGRect;
 
 	@:native("simpleRectangularTextContainer")
 	public var simpleRectangularTextContainer:Bool;
 
+	/**************************** View synchronization ****************************/
 	@:native("widthTracksTextView")
 	public var widthTracksTextView:Bool;
 

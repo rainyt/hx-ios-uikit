@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSPropertyListMutabilityOptions")
 @:include("UIKit/UIKit.h")
+/*	NSPropertyList.h
+	Copyright (c) 2002-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSPropertyListMutabilityOptions(Int) from Int to Int {
 
 	@:native("NSPropertyListImmutable")

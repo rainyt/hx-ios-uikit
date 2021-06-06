@@ -6,6 +6,8 @@ import cpp.objc.NSString;
 @:objc
 @:native("WKBackForwardListItem")
 @:include("WebKit/WebKit.h")
+/*! A WKBackForwardListItem object represents a webpage in the back-forward list of a web view.
+ */
 extern class WKBackForwardListItem{
 
 	@:native("alloc")
@@ -17,12 +19,15 @@ extern class WKBackForwardListItem{
 	@:native("init")
 	overload public function init():WKBackForwardListItem;
 
+	/*! @abstract The URL of the webpage represented by this item.  */
 	@:native("URL")
 	public var URL:NSURL;
 
+	/*! @abstract The title of the webpage represented by this item.  */
 	@:native("title")
 	public var title:NSString;
 
+	/*! @abstract The URL of the initial request that created this item.  */
 	@:native("initialURL")
 	public var initialURL:NSURL;
 

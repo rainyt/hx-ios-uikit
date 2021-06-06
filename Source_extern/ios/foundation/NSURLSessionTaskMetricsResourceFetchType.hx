@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSURLSessionTaskMetricsResourceFetchType")
 @:include("UIKit/UIKit.h")
+/*
+ * The resource fetch type.
+ */
 extern abstract NSURLSessionTaskMetricsResourceFetchType(Int) from Int to Int {
 
 	@:native("NSURLSessionTaskMetricsResourceFetchTypeUnknown")

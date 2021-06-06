@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("UIAccessibilityNavigationStyle")
 @:include("UIKit/UIKit.h")
+/*
+ The following values describe how the receiver's elements should be navigated by an assistive technology.
+ */
 extern abstract UIAccessibilityNavigationStyle(Int) from Int to Int {
 
 	@:native("UIAccessibilityNavigationStyleAutomatic")

@@ -65,9 +65,11 @@ extern class UIPageViewController extends UIViewController{
 	@:native("setViewControllers:direction:animated:completion")
 	overload public function setViewControllersDirectionAnimatedCompletion(viewControllers:Dynamic, direction:UIPageViewControllerNavigationDirection, animated:Bool, completion:Dynamic):Void;
 
+	/*  Whenever the return value from -childViewControllerForTouchBar changes, -setNeedsTouchBarUpdate should be called.  */
 	@:native("setNeedsTouchBarUpdate")
 	overload public function setNeedsTouchBarUpdate():Void;
 
+	/*   The designated initializer. If you subclass UIViewController, you must call the super implementation of this   method, even if you aren't using a NIB.  (As a convenience, the default init method will do this for you,   and specify nil for both of this methods arguments.) In the specified NIB, the File's Owner proxy should   have its class set to your view controller subclass, with the view outlet connected to the main view. If you   invoke this method with a nil nib name, then this class' -loadView method will attempt to load a NIB whose   name is the same as your view controller's class. If no such NIB in fact exists then you must either call   -setView: before -view is invoked, or override the -loadView method to set up your views programatically. */
 	@:native("initWithNibName:bundle")
 	overload public function initWithNibNameBundle(nibNameOrNil:NSString, bundle:NSBundle):UIPageViewController;
 
@@ -122,6 +124,7 @@ extern class UIPageViewController extends UIViewController{
 	@:native("didReceiveMemoryWarning")
 	overload public function didReceiveMemoryWarning():Void;
 
+	/*   The next two methods are replacements for presentModalViewController:animated and   dismissModalViewControllerAnimated: The completion handler, if provided, will be invoked after the presented   controllers viewDidAppear: callback is invoked. */
 	@:native("presentViewController:animated:completion")
 	overload public function presentViewControllerAnimatedCompletion(viewControllerToPresent:UIViewController, animated:Dynamic, completion:Dynamic):Void;
 
@@ -131,12 +134,15 @@ extern class UIPageViewController extends UIViewController{
 	@:native("setNeedsStatusBarAppearanceUpdate")
 	overload public function setNeedsStatusBarAppearanceUpdate():Void;
 
+	/* This method returns either itself or the nearest ancestor that can perform the given action and, if applicable, has overridden UIViewController's default implementation of the action method. View controllers can return NO from canPerformAction:withSender: to opt out of being a target for a given action. */
 	@:native("targetViewControllerForAction:sender")
 	overload public function targetViewControllerForActionSender(action:String, sender:Dynamic):UIViewController;
 
+	/* This method will show a view controller appropriately for the current size-class environment. It's implementation calls  `[self targetViewControllerForAction:sender:]` first and redirects accordingly if the return value is not `self`, otherwise it will present the vc. */
 	@:native("showViewController:sender")
 	overload public function showViewControllerSender(vc:UIViewController, sender:Dynamic):Void;
 
+	/* This method will show a view controller within the semantic "detail" UI associated with the current size-class environment. It's implementation calls  `[self targetViewControllerForAction:sender:]` first and redirects accordingly if the return value is not `self`, otherwise it will present the vc.  */
 	@:native("showDetailViewController:sender")
 	overload public function showDetailViewControllerSender(vc:UIViewController, sender:Dynamic):Void;
 
@@ -149,12 +155,15 @@ extern class UIPageViewController extends UIViewController{
 	@:native("setEditing:animated")
 	overload public function setEditingAnimated(editing:Bool, animated:Bool):Void;
 
+	/*   If the child controller has a different parent controller, it will first be removed from its current parent   by calling removeFromParentViewController. If this method is overridden then the super implementation must   be called. */
 	@:native("addChildViewController")
 	overload public function addChildViewController(childController:UIViewController):Void;
 
+	/*   Removes the the receiver from its parent's children controllers array. If this method is overridden then   the super implementation must be called. */
 	@:native("removeFromParentViewController")
 	overload public function removeFromParentViewController():Void;
 
+	/*   This method can be used to transition between sibling child view controllers. The receiver of this method is   their common parent view controller. (Use [UIViewController addChildViewController:] to create the   parent/child relationship.) This method will add the toViewController's view to the superview of the   fromViewController's view and the fromViewController's view will be removed from its superview after the   transition completes. It is important to allow this method to add and remove the views. The arguments to   this method are the same as those defined by UIView's block animation API. This method will fail with an   NSInvalidArgumentException if the parent view controllers are not the same as the receiver, or if the   receiver explicitly forwards its appearance and rotation callbacks to its children. Finally, the receiver   should not be a subclass of an iOS container view controller. Note also that it is possible to use the   UIView APIs directly. If they are used it is important to ensure that the toViewController's view is added   to the visible view hierarchy while the fromViewController's view is removed. */
 	@:native("transitionFromViewController:toViewController:duration:options:animations:completion")
 	overload public function transitionFromViewControllerToViewControllerDurationOptionsAnimationsCompletion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
@@ -170,6 +179,7 @@ extern class UIPageViewController extends UIViewController{
 	@:native("overrideTraitCollectionForChildViewController")
 	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):UITraitCollection;
 
+	/*   These two methods are public for container subclasses to call when transitioning between child   controllers. If they are overridden, the overrides should ensure to call the super. The parent argument in   both of these methods is nil when a child is being removed from its parent; otherwise it is equal to the new   parent view controller.    addChildViewController: will call [child willMoveToParentViewController:self] before adding the   child. However, it will not call didMoveToParentViewController:. It is expected that a container view   controller subclass will make this call after a transition to the new child has completed or, in the   case of no transition, immediately after the call to addChildViewController:. Similarly,   removeFromParentViewController does not call [self willMoveToParentViewController:nil] before removing the   child. This is also the responsibilty of the container subclass. Container subclasses will typically define   a method that transitions to a new child by first calling addChildViewController:, then executing a   transition which will add the new child's view into the view hierarchy of its parent, and finally will call   didMoveToParentViewController:. Similarly, subclasses will typically define a method that removes a child in   the reverse manner by first calling [child willMoveToParentViewController:nil]. */
 	@:native("willMoveToParentViewController")
 	overload public function willMoveToParentViewController(parent:UIViewController):Void;
 
@@ -185,6 +195,7 @@ extern class UIPageViewController extends UIViewController{
 	@:native("applicationFinishedRestoringState")
 	overload public function applicationFinishedRestoringState():Void;
 
+	/* Base implementation sends -updateConstraints to the view.     When a view has a view controller, this message is sent to the view controller during       the autolayout updateConstraints pass in lieu of sending updateConstraints directly      to the view.     You may override this method in a UIViewController subclass for updating custom       constraints instead of subclassing your view and overriding -[UIView updateConstraints].     Overrides must call super or send -updateConstraints to the view.  */
 	@:native("updateViewConstraints")
 	overload public function updateViewConstraints():Void;
 
@@ -212,9 +223,11 @@ extern class UIPageViewController extends UIViewController{
 	@:native("setToolbarItems:animated")
 	overload public function setToolbarItemsAnimated(toolbarItems:Dynamic, animated:Bool):Void;
 
+	/* Called on the primary view controller when a split view controller is collapsing its children for a transition to a compact-width size class, if its delegate does not provide overridden behavior. The default implementation simply shows the primary (the secondary controller disappears.) */
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewControllerForSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;
 
+	/* Called on the primary view controller when a split view controller is separating its children for a transition to a regular-width size class, if its delegate does not provide overridden behavior. The default implementation restores the previous secondary controller. */
 	@:native("separateSecondaryViewControllerForSplitViewController")
 	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):UIViewController;
 
@@ -287,6 +300,7 @@ extern class UIPageViewController extends UIViewController{
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

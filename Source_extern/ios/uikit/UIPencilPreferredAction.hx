@@ -6,6 +6,8 @@ import cpp.objc.NSData;
 @:enum
 @:native("UIPencilPreferredAction")
 @:include("UIKit/UIKit.h")
+/* Preferred actions available to the user in Settings.
+ */
 extern abstract UIPencilPreferredAction(Int) from Int to Int {
 
 	@:native("UIPencilPreferredActionIgnore")

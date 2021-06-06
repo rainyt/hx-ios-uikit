@@ -5,6 +5,9 @@ import ios.foundation.NSMethodSignature;
 @:objc
 @:native("NSInvocation")
 @:include("Foundation/Foundation.h")
+/*	NSInvocation.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSInvocation{
 
 	@:native("alloc")

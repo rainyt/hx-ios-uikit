@@ -58,15 +58,19 @@ extern class NSAttributedString{
 	@:native("attributedStringWithAttachment")
 	overload public static function attributedStringWithAttachment(attachment:NSTextAttachment):NSAttributedString;
 
+	/*!  @abstract Loads an HTML URL request and converts the contents into an attributed string.  @param request The request specifying the URL to load.  @param options Document attributes for interpreting the document contents.  NSTextSizeMultiplierDocumentOption and NSTimeoutDocumentOption are supported option keys.  @param completionHandler A block to invoke when the operation completes or fails.  @discussion The completionHandler is passed the attributed string result along with any  document-level attributes, or an error. */
 	@:native("loadFromHTMLWithRequest:options:completionHandler")
 	overload public static function loadFromHTMLWithRequestOptionsCompletionHandler(request:NSURLRequest, options:NSDictionary, completionHandler:Dynamic):Void;
 
+	/*!  @abstract Converts a local HTML file into an attributed string.  @param fileURL The file URL to load.  @param options Document attributes for interpreting the document contents.  NSTextSizeMultiplierDocumentOption, NSTimeoutDocumentOption and NSReadAccessURLDocumentOption  are supported option keys.  @param completionHandler A block to invoke when the operation completes or fails.  @discussion The completionHandler is passed the attributed string result along with any  document-level attributes, or an error. If NSReadAccessURLDocumentOption references a single file,  only that file may be loaded by WebKit. If NSReadAccessURLDocumentOption references a directory,  files inside that directory may be loaded by WebKit. */
 	@:native("loadFromHTMLWithFileURL:options:completionHandler")
 	overload public static function loadFromHTMLWithFileURLOptionsCompletionHandler(fileURL:NSURL, options:NSDictionary, completionHandler:Dynamic):Void;
 
+	/*!  @abstract Converts an HTML string into an attributed string.  @param string The HTML string to use as the contents.  @param options Document attributes for interpreting the document contents.  NSTextSizeMultiplierDocumentOption, NSTimeoutDocumentOption and NSBaseURLDocumentOption  are supported option keys.  @param completionHandler A block to invoke when the operation completes or fails.  @discussion The completionHandler is passed the attributed string result along with any  document-level attributes, or an error. NSBaseURLDocumentOption is used to resolve relative URLs  within the document. */
 	@:native("loadFromHTMLWithString:options:completionHandler")
 	overload public static function loadFromHTMLWithStringOptionsCompletionHandler(string:NSString, options:NSDictionary, completionHandler:Dynamic):Void;
 
+	/*!  @abstract Converts HTML data into an attributed string.  @param data The HTML data to use as the contents.  @param options Document attributes for interpreting the document contents.  NSTextSizeMultiplierDocumentOption, NSTimeoutDocumentOption, NSTextEncodingNameDocumentOption,  and NSCharacterEncodingDocumentOption are supported option keys.  @param completionHandler A block to invoke when the operation completes or fails.  @discussion The completionHandler is passed the attributed string result along with any  document-level attributes, or an error. If neither NSTextEncodingNameDocumentOption nor  NSCharacterEncodingDocumentOption is supplied, a best-guess encoding is used. */
 	@:native("loadFromHTMLWithData:options:completionHandler")
 	overload public static function loadFromHTMLWithDataOptionsCompletionHandler(data:NSData, options:NSDictionary, completionHandler:Dynamic):Void;
 

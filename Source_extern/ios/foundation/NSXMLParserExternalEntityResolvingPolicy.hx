@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSXMLParserExternalEntityResolvingPolicy")
 @:include("UIKit/UIKit.h")
+/*	NSXMLParser.h
+        Copyright (c) 2003-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSXMLParserExternalEntityResolvingPolicy(Int) from Int to Int {
 
 	@:native("NSXMLParserResolveExternalEntitiesNever")

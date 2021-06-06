@@ -119,9 +119,11 @@ extern class UIResponder
 	@:native("inputAccessoryViewController")
 	public var inputAccessoryViewController:UIInputViewController;
 
+	/* When queried, returns the current UITextInputMode, from which the keyboard language can be determined.  * When overridden it should return a previously-queried UITextInputMode object, which will attempt to be  * set inside that app, but not persistently affect the user's system-wide keyboard settings. */
 	@:native("textInputMode")
 	public var textInputMode:UITextInputMode;
 
+	/* When the first responder changes and an identifier is queried, the system will establish a context to  * track the textInputMode automatically. The system will save and restore the state of that context to  * the user defaults via the app identifier. Use of -textInputMode above will supersede use of -textInputContextIdentifier. */
 	@:native("textInputContextIdentifier")
 	public var textInputContextIdentifier:NSString;
 
@@ -140,9 +142,11 @@ extern class UIResponder
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  The NSTouchBar object associated with this responder. If no NSTouchBar is explicitly set, UIResponder will send -makeTouchBar to itself to create the default NSTouchBar for this responder.  */
 	@:native("touchBar")
 	public var touchBar:Dynamic;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

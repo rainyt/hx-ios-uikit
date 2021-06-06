@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("UIDropOperation")
 @:include("UIKit/UIKit.h")
+/* The UIDropInteraction's delegate uses a UIDropOperation to tell the system
+ * what operation it will perform if the user drops.
+ */
 extern abstract UIDropOperation(Int) from Int to Int {
 
 	@:native("UIDropOperationCancel")

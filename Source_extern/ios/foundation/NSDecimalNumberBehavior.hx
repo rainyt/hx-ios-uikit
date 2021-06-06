@@ -7,6 +7,9 @@ import ios.foundation.NSCalculationError;
 @:objc
 @:native("NSDecimalNumberBehavior")
 @:include("Foundation/Foundation.h")
+/*	NSDecimalNumber.h
+	Copyright (c) 1995-2019, Apple Inc. All rights reserved.
+*/
 extern interface NSDecimalNumberBehavior{
 
 	@:native("alloc")

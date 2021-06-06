@@ -24,12 +24,15 @@ extern class UIDragInteraction
 	@:native("delegate")
 	public var delegate:Dynamic;
 
+	/* Determines whether this interaction allows recognition of other gesture recognizers during the lift.  * If true, the interaction will be cancelled during the lift if another gesture recognizer recognizes.  * If false (the default value), all competing gesture recognizers will be failed when the lift begins.  * Note: UILongPressGestureRecognizers are always delayed and simultaneous during the lift.  */
 	@:native("allowsSimultaneousRecognitionDuringLift")
 	public var allowsSimultaneousRecognitionDuringLift:Bool;
 
+	/* Whether this interaction is allowed to drag.  * If true, the interaction will use touches to begin drags and/or add items to drags.  * If false, it will ignore touches.  */
 	@:native("enabled")
 	public var enabled:Bool;
 
+	/* The default value of `enabled` in newly created UIDragInteractions.  * The value depends on the device.  */
 	@:native("enabledByDefault")
 	overload public static function enabledByDefault():Bool;
 

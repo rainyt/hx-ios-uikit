@@ -30,6 +30,7 @@ extern class UIWindowScene extends UIScene{
 	@:native("autorelease")
 	overload public static function autorelease():UIWindowScene;
 
+	/*!  @abstract The screenshot object associated with the scene  @discussion This is non-null if the screenshot service is available for this window scene  */
 	@:native("screenshotService")
 	public var screenshotService:UIScreenshotService;
 
@@ -135,6 +136,7 @@ extern class UIWindowScene extends UIScene{
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

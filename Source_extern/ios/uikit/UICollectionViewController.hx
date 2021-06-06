@@ -118,36 +118,47 @@ extern class UICollectionViewController extends UIViewController
 	@:native("collectionView:targetContentOffsetForProposedContentOffset")
 	overload public function collectionViewTargetContentOffsetForProposedContentOffset(collectionView:UICollectionView, targetContentOffsetForProposedContentOffset:CGPoint):CGPoint;
 
+	/* Asks the delegate to verify that the given item is editable.  *  * @param collectionView The collection view object requesting this information.  * @param indexPath An index path locating an item in `collectionView`.  *  * @return `YES` if the item is editable; otherwise, `NO`. Defaults to `YES`.  */
 	@:native("collectionView:canEditItemAtIndexPath")
 	overload public function collectionViewCanEditItemAtIndexPath(collectionView:UICollectionView, canEditItemAtIndexPath:NSIndexPath):Bool;
 
+	/* Allows opting-out of spring loading for an particular item.  *  * If you want the interaction effect on a different subview of the spring loaded cell, modify the context.targetView property.  * The default is the cell.  *  * If this method is not implemented, the default is YES.  */
 	@:native("collectionView:shouldSpringLoadItemAtIndexPath:withContext")
 	overload public function collectionViewShouldSpringLoadItemAtIndexPathWithContext(collectionView:UICollectionView, shouldSpringLoadItemAtIndexPath:NSIndexPath, withContext:Dynamic):Bool;
 
+	/* Allows a two-finger pan gesture to automatically enable allowsMultipleSelection and start selecting multiple cells.  *  * After a multi-select gesture is recognized, this method will be called before allowsMultipleSelection is automatically  * set to YES to allow the user to select multiple contiguous items using a two-finger pan gesture across the constrained  * scroll direction.  *  * If the collection view has no constrained scroll direction (i.e., the collection view scrolls both horizontally and vertically),  * then this method will not be called and the multi-select gesture will be disabled.  *  * If this method is not implemented, the default is NO.  */
 	@:native("collectionView:shouldBeginMultipleSelectionInteractionAtIndexPath")
 	overload public function collectionViewShouldBeginMultipleSelectionInteractionAtIndexPath(collectionView:UICollectionView, shouldBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath):Bool;
 
+	/* Called right after allowsMultipleSelection is set to YES if -collectionView:shouldBeginMultipleSelectionInteractionAtIndexPath:  * returned YES.  *  * In your app, this would be a good opportunity to update the state of your UI to reflect the fact that the user is now selecting  * multiple items at once; such as updating buttons to say "Done" instead of "Select"/"Edit", for instance.  */
 	@:native("collectionView:didBeginMultipleSelectionInteractionAtIndexPath")
 	overload public function collectionViewDidBeginMultipleSelectionInteractionAtIndexPath(collectionView:UICollectionView, didBeginMultipleSelectionInteractionAtIndexPath:NSIndexPath):Void;
 
+	/* Called when the multi-select interaction ends.  *  * At this point, the collection view will remain in multi-select mode, but this delegate method is called to indicate that the  * multiple selection gesture or hardware keyboard interaction has ended.  */
 	@:native("collectionViewDidEndMultipleSelectionInteraction")
 	overload public function collectionViewDidEndMultipleSelectionInteraction(collectionView:UICollectionView):Void;
 
+	/*!  * @abstract Called when the interaction begins.  *  * @param collectionView  This UICollectionView.  * @param indexPath       IndexPath of the item for which a configuration is being requested.  * @param point           Location in the collection view's coordinate space  *  * @return A UIContextMenuConfiguration describing the menu to be presented. Return nil to prevent the interaction from beginning.  *         Returning an empty configuration causes the interaction to begin then fail with a cancellation effect. You might use this  *         to indicate to users that it's possible for a menu to be presented from this element, but that there are no actions to  *         present at this particular time.  */
 	@:native("collectionView:contextMenuConfigurationForItemAtIndexPath:point")
 	overload public function collectionViewContextMenuConfigurationForItemAtIndexPathPoint(collectionView:UICollectionView, contextMenuConfigurationForItemAtIndexPath:NSIndexPath, point:CGPoint):UIContextMenuConfiguration;
 
+	/*!  * @abstract Called when the interaction begins. Return a UITargetedPreview describing the desired highlight preview.  *  * @param collectionView  This UICollectionView.  * @param configuration   The configuration of the menu about to be displayed by this interaction.  */
 	@:native("collectionView:previewForHighlightingContextMenuWithConfiguration")
 	overload public function collectionViewPreviewForHighlightingContextMenuWithConfiguration(collectionView:UICollectionView, previewForHighlightingContextMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
+	/*!  * @abstract Called when the interaction is about to dismiss. Return a UITargetedPreview describing the desired dismissal target.  * The interaction will animate the presented menu to the target. Use this to customize the dismissal animation.  *  * @param collectionView  This UICollectionView.  * @param configuration   The configuration of the menu displayed by this interaction.  */
 	@:native("collectionView:previewForDismissingContextMenuWithConfiguration")
 	overload public function collectionViewPreviewForDismissingContextMenuWithConfiguration(collectionView:UICollectionView, previewForDismissingContextMenuWithConfiguration:UIContextMenuConfiguration):UITargetedPreview;
 
+	/*!  * @abstract Called when the interaction is about to "commit" in response to the user tapping the preview.  *  * @param collectionView  This UICollectionView.  * @param configuration   Configuration of the currently displayed menu.  * @param animator        Commit animator. Add animations to this object to run them alongside the commit transition.  */
 	@:native("collectionView:willPerformPreviewActionForMenuWithConfiguration:animator")
 	overload public function collectionViewWillPerformPreviewActionForMenuWithConfigurationAnimator(collectionView:UICollectionView, willPerformPreviewActionForMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
+	/*!  * @abstract Called when the collection view is about to display a menu.  *  * @param collectionView  This UICollectionView.  * @param configuration   The configuration of the menu about to be displayed.  * @param animator        Appearance animator. Add animations to run them alongside the appearance transition.  */
 	@:native("collectionView:willDisplayContextMenuWithConfiguration:animator")
 	overload public function collectionViewWillDisplayContextMenuWithConfigurationAnimator(collectionView:UICollectionView, willDisplayContextMenuWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
+	/*!  * @abstract Called when the collection view's context menu interaction is about to end.  *  * @param collectionView  This UICollectionView.  * @param configuration   Ending configuration.  * @param animator        Disappearance animator. Add animations to run them alongside the disappearance transition.  */
 	@:native("collectionView:willEndContextMenuInteractionWithConfiguration:animator")
 	overload public function collectionViewWillEndContextMenuInteractionWithConfigurationAnimator(collectionView:UICollectionView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
 
@@ -175,6 +186,7 @@ extern class UICollectionViewController extends UIViewController
 	@:native("collectionView:indexPathForIndexTitle:atIndex")
 	overload public function collectionViewIndexPathForIndexTitleAtIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):NSIndexPath;
 
+	/*  Whenever the return value from -childViewControllerForTouchBar changes, -setNeedsTouchBarUpdate should be called.  */
 	@:native("setNeedsTouchBarUpdate")
 	overload public function setNeedsTouchBarUpdate():Void;
 
@@ -229,6 +241,7 @@ extern class UICollectionViewController extends UIViewController
 	@:native("didReceiveMemoryWarning")
 	overload public function didReceiveMemoryWarning():Void;
 
+	/*   The next two methods are replacements for presentModalViewController:animated and   dismissModalViewControllerAnimated: The completion handler, if provided, will be invoked after the presented   controllers viewDidAppear: callback is invoked. */
 	@:native("presentViewController:animated:completion")
 	overload public function presentViewControllerAnimatedCompletion(viewControllerToPresent:UIViewController, animated:Dynamic, completion:Dynamic):Void;
 
@@ -238,12 +251,15 @@ extern class UICollectionViewController extends UIViewController
 	@:native("setNeedsStatusBarAppearanceUpdate")
 	overload public function setNeedsStatusBarAppearanceUpdate():Void;
 
+	/* This method returns either itself or the nearest ancestor that can perform the given action and, if applicable, has overridden UIViewController's default implementation of the action method. View controllers can return NO from canPerformAction:withSender: to opt out of being a target for a given action. */
 	@:native("targetViewControllerForAction:sender")
 	overload public function targetViewControllerForActionSender(action:String, sender:Dynamic):UIViewController;
 
+	/* This method will show a view controller appropriately for the current size-class environment. It's implementation calls  `[self targetViewControllerForAction:sender:]` first and redirects accordingly if the return value is not `self`, otherwise it will present the vc. */
 	@:native("showViewController:sender")
 	overload public function showViewControllerSender(vc:UIViewController, sender:Dynamic):Void;
 
+	/* This method will show a view controller within the semantic "detail" UI associated with the current size-class environment. It's implementation calls  `[self targetViewControllerForAction:sender:]` first and redirects accordingly if the return value is not `self`, otherwise it will present the vc.  */
 	@:native("showDetailViewController:sender")
 	overload public function showDetailViewControllerSender(vc:UIViewController, sender:Dynamic):Void;
 
@@ -256,12 +272,15 @@ extern class UICollectionViewController extends UIViewController
 	@:native("setEditing:animated")
 	overload public function setEditingAnimated(editing:Bool, animated:Bool):Void;
 
+	/*   If the child controller has a different parent controller, it will first be removed from its current parent   by calling removeFromParentViewController. If this method is overridden then the super implementation must   be called. */
 	@:native("addChildViewController")
 	overload public function addChildViewController(childController:UIViewController):Void;
 
+	/*   Removes the the receiver from its parent's children controllers array. If this method is overridden then   the super implementation must be called. */
 	@:native("removeFromParentViewController")
 	overload public function removeFromParentViewController():Void;
 
+	/*   This method can be used to transition between sibling child view controllers. The receiver of this method is   their common parent view controller. (Use [UIViewController addChildViewController:] to create the   parent/child relationship.) This method will add the toViewController's view to the superview of the   fromViewController's view and the fromViewController's view will be removed from its superview after the   transition completes. It is important to allow this method to add and remove the views. The arguments to   this method are the same as those defined by UIView's block animation API. This method will fail with an   NSInvalidArgumentException if the parent view controllers are not the same as the receiver, or if the   receiver explicitly forwards its appearance and rotation callbacks to its children. Finally, the receiver   should not be a subclass of an iOS container view controller. Note also that it is possible to use the   UIView APIs directly. If they are used it is important to ensure that the toViewController's view is added   to the visible view hierarchy while the fromViewController's view is removed. */
 	@:native("transitionFromViewController:toViewController:duration:options:animations:completion")
 	overload public function transitionFromViewControllerToViewControllerDurationOptionsAnimationsCompletion(fromViewController:UIViewController, toViewController:UIViewController, duration:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
@@ -277,6 +296,7 @@ extern class UICollectionViewController extends UIViewController
 	@:native("overrideTraitCollectionForChildViewController")
 	overload public function overrideTraitCollectionForChildViewController(childViewController:UIViewController):UITraitCollection;
 
+	/*   These two methods are public for container subclasses to call when transitioning between child   controllers. If they are overridden, the overrides should ensure to call the super. The parent argument in   both of these methods is nil when a child is being removed from its parent; otherwise it is equal to the new   parent view controller.    addChildViewController: will call [child willMoveToParentViewController:self] before adding the   child. However, it will not call didMoveToParentViewController:. It is expected that a container view   controller subclass will make this call after a transition to the new child has completed or, in the   case of no transition, immediately after the call to addChildViewController:. Similarly,   removeFromParentViewController does not call [self willMoveToParentViewController:nil] before removing the   child. This is also the responsibilty of the container subclass. Container subclasses will typically define   a method that transitions to a new child by first calling addChildViewController:, then executing a   transition which will add the new child's view into the view hierarchy of its parent, and finally will call   didMoveToParentViewController:. Similarly, subclasses will typically define a method that removes a child in   the reverse manner by first calling [child willMoveToParentViewController:nil]. */
 	@:native("willMoveToParentViewController")
 	overload public function willMoveToParentViewController(parent:UIViewController):Void;
 
@@ -292,6 +312,7 @@ extern class UICollectionViewController extends UIViewController
 	@:native("applicationFinishedRestoringState")
 	overload public function applicationFinishedRestoringState():Void;
 
+	/* Base implementation sends -updateConstraints to the view.     When a view has a view controller, this message is sent to the view controller during       the autolayout updateConstraints pass in lieu of sending updateConstraints directly      to the view.     You may override this method in a UIViewController subclass for updating custom       constraints instead of subclassing your view and overriding -[UIView updateConstraints].     Overrides must call super or send -updateConstraints to the view.  */
 	@:native("updateViewConstraints")
 	overload public function updateViewConstraints():Void;
 
@@ -319,9 +340,11 @@ extern class UICollectionViewController extends UIViewController
 	@:native("setToolbarItems:animated")
 	overload public function setToolbarItemsAnimated(toolbarItems:Dynamic, animated:Bool):Void;
 
+	/* Called on the primary view controller when a split view controller is collapsing its children for a transition to a compact-width size class, if its delegate does not provide overridden behavior. The default implementation simply shows the primary (the secondary controller disappears.) */
 	@:native("collapseSecondaryViewController:forSplitViewController")
 	overload public function collapseSecondaryViewControllerForSplitViewController(secondaryViewController:UIViewController, forSplitViewController:UISplitViewController):Void;
 
+	/* Called on the primary view controller when a split view controller is separating its children for a transition to a regular-width size class, if its delegate does not provide overridden behavior. The default implementation restores the previous secondary controller. */
 	@:native("separateSecondaryViewControllerForSplitViewController")
 	overload public function separateSecondaryViewControllerForSplitViewController(splitViewController:UISplitViewController):UIViewController;
 
@@ -394,6 +417,7 @@ extern class UICollectionViewController extends UIViewController
 	@:native("restoreUserActivityState")
 	overload public function restoreUserActivityState(activity:NSUserActivity):Void;
 
+	/*  Subclasses should override this method to create and configure the default NSTouchBar for this responder.  */
 	@:native("makeTouchBar")
 	overload public function makeTouchBar():Dynamic;
 

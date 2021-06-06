@@ -12,6 +12,7 @@ extern class NSSharingServicePickerTouchBarItem{
 	@:native("autorelease")
 	overload public static function autorelease():NSSharingServicePickerTouchBarItem;
 
+	/*  Expresses the payload of what should be shared.  If nil or the activityItemsConfiguration contains no valid data, the item will be disabled.  */
 	@:native("activityItemsConfiguration")
 	public var activityItemsConfiguration:Dynamic;
 

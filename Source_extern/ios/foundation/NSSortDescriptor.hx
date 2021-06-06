@@ -8,6 +8,11 @@ import ios.uikit.NSCoder;
 @:objc
 @:native("NSSortDescriptor")
 @:include("Foundation/Foundation.h")
+/*
+	NSSortDescriptor.h
+	Foundation
+	Copyright (c) 2002-2019, Apple Inc. All rights reserved.
+*/
 extern class NSSortDescriptor
 {
 

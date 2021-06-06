@@ -24,6 +24,7 @@ extern class UIPointerInteraction
 	@:native("initWithDelegate")
 	overload public function initWithDelegate(delegate:Dynamic):UIPointerInteraction;
 
+	/*!  * @abstract  Call this method to cause the interaction to update the pointer in response to some event.  */
 	@:native("invalidate")
 	overload public function invalidate():Void;
 

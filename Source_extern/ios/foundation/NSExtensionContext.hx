@@ -7,6 +7,9 @@ import ios.foundation.NSURL;
 @:objc
 @:native("NSExtensionContext")
 @:include("Foundation/Foundation.h")
+/*	NSExtensionContext.h
+        Copyright (c) 2013-2019, Apple Inc. All rights reserved.
+*/
 extern class NSExtensionContext{
 
 	@:native("alloc")

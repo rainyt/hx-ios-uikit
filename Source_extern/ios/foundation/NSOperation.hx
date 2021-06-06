@@ -6,6 +6,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSOperation")
 @:include("Foundation/Foundation.h")
+/*	NSOperation.h
+	Copyright (c) 2006-2019, Apple Inc. All rights reserved.
+*/
 extern class NSOperation{
 
 	@:native("alloc")

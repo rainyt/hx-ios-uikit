@@ -15,9 +15,11 @@ extern class UIReferenceLibraryViewController extends UIViewController}{
 	@:native("autorelease")
 	overload public static function autorelease():UIReferenceLibraryViewController;
 
+	/*! Returns YES if any installed dictionary has a definition for the provided term.  */
 	@:native("dictionaryHasDefinitionForTerm")
 	overload public static function dictionaryHasDefinitionForTerm(term:NSString):Bool;
 
+	/*! Initializes an instance of a UIReferenceLibraryViewController with the term provided.  */
 	@:native("initWithTerm")
 	overload public function initWithTerm(term:NSString):UIReferenceLibraryViewController;
 

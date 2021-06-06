@@ -7,6 +7,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("NSUnit")
 @:include("Foundation/Foundation.h")
+/*
+ NSUnit is the base class for all unit types (dimensional and dimensionless).
+ */
 extern class NSUnit
 {
 

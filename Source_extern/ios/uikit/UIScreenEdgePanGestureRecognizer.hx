@@ -14,6 +14,8 @@ import ios.uikit.NSCoder;
 @:objc
 @:native("UIScreenEdgePanGestureRecognizer")
 @:include("UIKit/UIKit.h")
+/*! This subclass of UIPanGestureRecognizer only recognizes if the user slides their finger
+    in from the bezel on the specified edge. */
 extern class UIScreenEdgePanGestureRecognizer extends UIPanGestureRecognizer{
 
 	@:native("alloc")

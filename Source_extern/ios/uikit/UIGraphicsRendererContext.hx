@@ -7,6 +7,11 @@ import ios.objc.CGBlendMode;
 @:objc
 @:native("UIGraphicsRendererContext")
 @:include("UIKit/UIKit.h")
+/*
+ A UIGraphicsRendererContext provides primative drawing routines not provided through other
+ UIKit classes (UIImage, UIBezierPath, etc) in addition to providing access to the underlying
+ CGContextRef.
+ */
 extern class UIGraphicsRendererContext{
 
 	@:native("alloc")

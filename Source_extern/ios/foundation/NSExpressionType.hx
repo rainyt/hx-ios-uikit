@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSExpressionType")
 @:include("UIKit/UIKit.h")
+/*	NSExpression.h
+	Copyright (c) 2004-2019, Apple Inc. All rights reserved.
+*/
 extern abstract NSExpressionType(Int) from Int to Int {
 
 	@:native("NSConstantValueExpressionType")

@@ -9,6 +9,21 @@ import cpp.objc.NSError;
 @:objc
 @:native("NSXMLParserDelegate")
 @:include("Foundation/Foundation.h")
+/*
+ 
+ For the discussion of event methods, assume the following XML:
+
+ <?xml version="1.0" encoding="UTF-8"?>
+ <?xml-stylesheet type='text/css' href='cvslog.css'?>
+ <!DOCTYPE cvslog SYSTEM "cvslog.dtd">
+ <cvslog xmlns="http://xml.apple.com/cvslog">
+   <radar:radar xmlns:radar="http://xml.apple.com/radar">
+     <radar:bugID>2920186</radar:bugID>
+     <radar:title>API/NSXMLParser: there ought to be an NSXMLParser</radar:title>
+   </radar:radar>
+ </cvslog>
+ 
+ */
 extern interface NSXMLParserDelegate{
 
 	@:native("alloc")

@@ -8,6 +8,9 @@ import cpp.objc.NSError;
 @:objc
 @:native("UIGraphicsRenderer")
 @:include("UIKit/UIKit.h")
+/*
+ An abstract base class for creating graphics renderers. Do not use this class directly.
+ */
 extern class UIGraphicsRenderer{
 
 	@:native("alloc")

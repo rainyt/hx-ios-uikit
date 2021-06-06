@@ -4,6 +4,9 @@ import ios.foundation.NSAutoreleasePool;
 @:objc
 @:native("NSAutoreleasePool")
 @:include("Foundation/Foundation.h")
+/*	NSAutoreleasePool.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSAutoreleasePool{
 
 	@:native("alloc")

@@ -18,6 +18,7 @@ extern class NSUnitSpeed extends NSDimension
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitSpeed;
 
+	/*  Base unit - metersPerSecond  */
 	@:native("metersPerSecond")
 	overload public static function metersPerSecond():NSUnitSpeed;
 
@@ -33,6 +34,7 @@ extern class NSUnitSpeed extends NSDimension
 	@:native("initWithSymbol:converter")
 	overload public function initWithSymbolConverter(symbol:NSString, converter:NSUnitConverter):NSUnitSpeed;
 
+	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitSpeed;
 

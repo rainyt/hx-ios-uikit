@@ -19,9 +19,11 @@ extern interface NSLayoutManagerDelegate{
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutManagerDelegate;
 
+	/************************ Glyph generation ************************/
 	@:native("layoutManager:shouldGenerateGlyphs:properties:characterIndexes:font:forGlyphRange")
 	overload public function layoutManagerShouldGenerateGlyphsPropertiesCharacterIndexesFontForGlyphRange(layoutManager:NSLayoutManager, shouldGenerateGlyphs:Dynamic, properties:Dynamic, characterIndexes:Dynamic, font:UIFont, forGlyphRange:Dynamic):Int;
 
+	/************************ Line layout ************************/
 	@:native("layoutManager:lineSpacingAfterGlyphAtIndex:withProposedLineFragmentRect")
 	overload public function layoutManagerLineSpacingAfterGlyphAtIndexWithProposedLineFragmentRect(layoutManager:NSLayoutManager, lineSpacingAfterGlyphAtIndex:Int, withProposedLineFragmentRect:CGRect):Float;
 
@@ -46,6 +48,7 @@ extern interface NSLayoutManagerDelegate{
 	@:native("layoutManager:shouldSetLineFragmentRect:lineFragmentUsedRect:baselineOffset:inTextContainer:forGlyphRange")
 	overload public function layoutManagerShouldSetLineFragmentRectLineFragmentUsedRectBaselineOffsetInTextContainerForGlyphRange(layoutManager:NSLayoutManager, shouldSetLineFragmentRect:Dynamic, lineFragmentUsedRect:Dynamic, baselineOffset:Dynamic, inTextContainer:NSTextContainer, forGlyphRange:Dynamic):Bool;
 
+	/************************ Layout processing ************************/
 	@:native("layoutManagerDidInvalidateLayout")
 	overload public function layoutManagerDidInvalidateLayout(sender:NSLayoutManager):Void;
 

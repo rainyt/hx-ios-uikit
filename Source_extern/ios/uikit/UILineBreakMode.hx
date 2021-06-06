@@ -6,6 +6,10 @@ import cpp.objc.NSData;
 @:enum
 @:native("UILineBreakMode")
 @:include("UIKit/UIKit.h")
+/* Keys for text attributes dictionaries.
+ These keys are superseded by the corresponding attribute name keys (NSFontAttributeName, NSForegroundColorAttributeName, NSShadowAttributeName)
+ in NSAttributedString.h.
+ */
 extern abstract UILineBreakMode(Int) from Int to Int {
 
 	@:native("UILineBreakModeWordWrap")

@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSURLSessionDelayedRequestDisposition")
 @:include("UIKit/UIKit.h")
+/*
+ * Disposition options for various delegate messages
+ */
 extern abstract NSURLSessionDelayedRequestDisposition(Int) from Int to Int {
 
 

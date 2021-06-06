@@ -6,6 +6,9 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSPersonNameComponentsFormatterStyle")
 @:include("UIKit/UIKit.h")
+/*	NSPersonNameComponentsFormatter.h
+	Copyright (c) 2015-2019, Apple Inc. All rights reserved.
+ */
 extern abstract NSPersonNameComponentsFormatterStyle(Int) from Int to Int {
 
 	@:native("NSPersonNameComponentsFormatterStyleDefault")

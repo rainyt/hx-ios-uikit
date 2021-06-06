@@ -24,6 +24,7 @@ extern class UIFocusGuide extends UILayoutGuide{
 	@:native("preferredFocusedView")
 	public var preferredFocusedView:UIView;
 
+	/* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.  Pass UILayoutConstraintAxisHorizontal for the constraints affecting [self center].x and CGRectGetWidth([self bounds]), and UILayoutConstraintAxisVertical for the constraints affecting[self center].y and CGRectGetHeight([self bounds]).  */
 	@:native("constraintsAffectingLayoutForAxis")
 	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 

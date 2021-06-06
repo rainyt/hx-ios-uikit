@@ -7,6 +7,9 @@ import ios.foundation.NSDate;
 @:objc
 @:native("NSRunLoop")
 @:include("Foundation/Foundation.h")
+/*	NSRunLoop.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern class NSRunLoop{
 
 	@:native("alloc")

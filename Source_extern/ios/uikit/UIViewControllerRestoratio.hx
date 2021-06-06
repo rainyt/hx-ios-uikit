@@ -6,6 +6,13 @@ import ios.uikit.NSCoder;
 @:objc
 @:native("UIViewControllerRestoratio")
 @:include("UIKit/UIKit.h")
+/*
+ *  UIStateRestoration.h
+ *  UIKit
+ *
+ *  Copyright 2012-2018 Apple Inc. All rights reserved.
+ *
+ */
 extern interface UIViewControllerRestoratio{
 
 	@:native("alloc")

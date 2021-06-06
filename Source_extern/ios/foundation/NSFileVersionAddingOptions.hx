@@ -6,6 +6,11 @@ import cpp.objc.NSData;
 @:enum
 @:native("NSFileVersionAddingOptions")
 @:include("UIKit/UIKit.h")
+/*
+	NSFileVersion.h
+	Copyright (c) 2010-2019, Apple Inc.
+	All rights reserved.
+*/
 extern abstract NSFileVersionAddingOptions(Int) from Int to Int {
 
 	@:native("NSFileVersionAddingByMoving")

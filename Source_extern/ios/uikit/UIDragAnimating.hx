@@ -12,6 +12,7 @@ extern interface UIDragAnimating{
 	@:native("autorelease")
 	overload public static function autorelease():UIDragAnimating;
 
+	/* Instances of UIDragAnimating provide you a way to animate your own changes  * alongside the drag and drop system's animations.  *  * Animatable view properties that are set by the animation block will be  * animated to their new values.   */
 	@:native("addAnimations")
 	overload public function addAnimations(animations:Dynamic):Void;
 

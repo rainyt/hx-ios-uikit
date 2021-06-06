@@ -4,6 +4,9 @@ import ios.foundation.NSLockin;
 @:objc
 @:native("NSLockin")
 @:include("Foundation/Foundation.h")
+/*	NSLock.h
+	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
+*/
 extern interface NSLockin{
 
 	@:native("alloc")

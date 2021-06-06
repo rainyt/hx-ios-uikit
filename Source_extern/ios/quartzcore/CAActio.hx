@@ -14,6 +14,7 @@ extern interface CAActio{
 	@:native("autorelease")
 	overload public static function autorelease():CAActio;
 
+	/* Called to trigger the event named 'path' on the receiver. The object  * (e.g. the layer) on which the event happened is 'anObject'. The  * arguments dictionary may be nil, if non-nil it carries parameters  * associated with the event. */
 	@:native("runActionForKey:object:arguments")
 	overload public function runActionForKeyObjectArguments(event:NSString, object:Dynamic, arguments:NSDictionary):Void;
 
