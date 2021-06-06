@@ -185,6 +185,7 @@ class ExternBaseClass(BaseClass):
         read = ""
         isIgone = False
         isRead = False
+        lastDesc = None
         _g_current = 0
         _g_array = harray
         while (_g_current < len(_g_array)):
@@ -228,6 +229,7 @@ class ExternBaseClass(BaseClass):
                     if (((value.find("*/") if ((startIndex6 is None)) else HxString.indexOfImpl(value,"*/",startIndex6))) != -1):
                         isIgone = False
                         isRead = False
+                        lastDesc = read
                         read = ""
                 else:
                     startIndex7 = None
@@ -256,12 +258,16 @@ class ExternBaseClass(BaseClass):
                                 self._propertys.h[func.name] = func
                                 _this = self.funcAndAttr
                                 _this.append(func)
+                                func.desc = lastDesc
+                            lastDesc = None
                         elif (_g == "@"):
                             property = ObjcProperty.parsing(hextern.typedefs,self.className,read)
                             if ((property is not None) and (not (property.name in self._propertys.h))):
                                 self._propertys.h[property.name] = property
                                 _this1 = self.funcAndAttr
                                 _this1.append(property)
+                                property.desc = lastDesc
+                            lastDesc = None
                         else:
                             pass
                         read = ""
@@ -398,15 +404,17 @@ class ExternBaseClass(BaseClass):
             value = _g1_value
             if ((value.type == "property") and self.hasFuncExtendsOrAttr(value)):
                 continue
+            if (value.desc is not None):
+                haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t" + HxOverrides.stringOrNull(value.desc)) + "\n"))))
             _g = value.type
-            _hx_local_12 = len(_g)
-            if (_hx_local_12 == 4):
+            _hx_local_13 = len(_g)
+            if (_hx_local_13 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((((((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(") + HxOverrides.stringOrNull(((self.toFuncArgs(value.args) if ((value.args is not None)) else "")))) + "):") + HxOverrides.stringOrNull(self._toReturnClass(value))) + ";\n\n"))))
                 elif (_g == "haxe"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t/** Haxe Protocol */" + HxOverrides.stringOrNull(value.haxe)) + "\n\n"))))
-            elif (_hx_local_12 == 8):
+            elif (_hx_local_13 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(self._toReturnClass(value))) + ";\n\n"))))
@@ -526,6 +534,7 @@ class ExternHFile:
     def __init__(self,file,haxeSaveDir,hfile,haxePkg):
         self.hfile = ""
         self.typedefs = haxe_ds_StringMap()
+        print(str(("parsing:" + ("null" if file is None else file))))
         self.haxeSaveDir = haxeSaveDir
         self.hfile = hfile
         self.haxePkg = haxePkg

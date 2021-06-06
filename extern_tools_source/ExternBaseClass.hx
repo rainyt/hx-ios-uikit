@@ -135,6 +135,7 @@ class ExternBaseClass extends BaseClass {
 		var read = "";
 		var isIgone = false;
 		var isRead = false;
+		var lastDesc:String = null;
 		for (index => value in harray) {
 			if (!isRead) {
 				if (value.indexOf("/*") == 0) {
@@ -158,6 +159,7 @@ class ExternBaseClass extends BaseClass {
 					if (value.indexOf("*/") != -1) {
 						isIgone = false;
 						isRead = false;
+						lastDesc = read;
 						read = "";
 					}
 				} else if (read.indexOf(";") != -1) {
@@ -179,14 +181,18 @@ class ExternBaseClass extends BaseClass {
 							if (property != null && !_propertys.exists(property.name)) {
 								_propertys.set(property.name, property);
 								funcAndAttr.push(property);
+								property.desc = lastDesc;
 							}
+							lastDesc = null;
 						case "-", "+":
 							// 对象方法
 							var func = ObjcFun.parsing(hextern.typedefs, this.className, read);
 							if (func != null && !_propertys.exists(func.name)) {
 								_propertys.set(func.name, func);
 								funcAndAttr.push(func);
+								func.desc = lastDesc;
 							}
+							lastDesc = null;
 					}
 					read = "";
 				}
@@ -321,6 +327,8 @@ class ExternBaseClass extends BaseClass {
 			if (value.type == ExternBaseClassType.PROPERTY && hasFuncExtendsOrAttr(value)) {
 				continue;
 			}
+			if (value.desc != null)
+				haxe += "\t" + value.desc + "\n";
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					haxe += "\t@:native(\"" + value.name + "\")\n";

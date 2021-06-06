@@ -25,6 +25,7 @@ class ExternHFile {
 	public var hfile:String = "";
 
 	public function new(file:String, haxeSaveDir:String, hfile:String, haxePkg:String) {
+		trace("parsing:" + file);
 		this.haxeSaveDir = haxeSaveDir;
 		this.hfile = hfile;
 		this.haxePkg = haxePkg;
