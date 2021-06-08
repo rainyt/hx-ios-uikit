@@ -16,6 +16,9 @@ extern class UIUserNotificationAction
 	@:native("alloc")
 	overload public static function alloc():UIUserNotificationAction;
 
+	@:native("init")
+	overload public function init():UIUserNotificationAction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIUserNotificationAction;
 

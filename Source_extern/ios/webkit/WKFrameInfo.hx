@@ -19,6 +19,9 @@ extern class WKFrameInfo
 	@:native("alloc")
 	overload public static function alloc():WKFrameInfo;
 
+	@:native("init")
+	overload public function init():WKFrameInfo;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKFrameInfo;
 

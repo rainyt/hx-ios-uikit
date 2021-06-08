@@ -13,6 +13,9 @@ extern class UIAlertAction
 	@:native("alloc")
 	overload public static function alloc():UIAlertAction;
 
+	@:native("init")
+	overload public function init():UIAlertAction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAlertAction;
 

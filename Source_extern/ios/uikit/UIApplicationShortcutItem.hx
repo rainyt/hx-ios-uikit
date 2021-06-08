@@ -14,6 +14,9 @@ extern class UIApplicationShortcutItem
 	@:native("alloc")
 	overload public static function alloc():UIApplicationShortcutItem;
 
+	@:native("init")
+	overload public function init():UIApplicationShortcutItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIApplicationShortcutItem;
 

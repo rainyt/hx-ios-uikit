@@ -13,6 +13,9 @@ extern class NSURLQueryItem
 	@:native("alloc")
 	overload public static function alloc():NSURLQueryItem;
 
+	@:native("init")
+	overload public function init():NSURLQueryItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLQueryItem;
 

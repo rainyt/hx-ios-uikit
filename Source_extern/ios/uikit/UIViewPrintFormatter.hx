@@ -12,6 +12,9 @@ extern class UIViewPrintFormatter extends UIPrintFormatter{
 	@:native("alloc")
 	overload public static function alloc():UIViewPrintFormatter;
 
+	@:native("init")
+	overload public function init():UIViewPrintFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIViewPrintFormatter;
 

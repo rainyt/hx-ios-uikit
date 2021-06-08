@@ -42,6 +42,9 @@ extern class UISwitch extends UIControl
 	@:native("alloc")
 	overload public static function alloc():UISwitch;
 
+	@:native("init")
+	overload public function init():UISwitch;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISwitch;
 

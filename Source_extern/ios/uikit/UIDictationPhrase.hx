@@ -10,6 +10,9 @@ extern class UIDictationPhrase{
 	@:native("alloc")
 	overload public static function alloc():UIDictationPhrase;
 
+	@:native("init")
+	overload public function init():UIDictationPhrase;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDictationPhrase;
 

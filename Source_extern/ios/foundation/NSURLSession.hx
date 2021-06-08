@@ -83,6 +83,9 @@ extern class NSURLSession{
 	@:native("alloc")
 	overload public static function alloc():NSURLSession;
 
+	@:native("init")
+	overload public function init():NSURLSession;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSession;
 

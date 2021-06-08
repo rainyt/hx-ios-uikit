@@ -11,6 +11,9 @@ extern interface NSKeyedUnarchiverDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSKeyedUnarchiverDelegate;
 
+	@:native("init")
+	overload public function init():NSKeyedUnarchiverDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSKeyedUnarchiverDelegate;
 

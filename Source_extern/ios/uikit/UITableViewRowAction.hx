@@ -15,6 +15,9 @@ extern class UITableViewRowAction
 	@:native("alloc")
 	overload public static function alloc():UITableViewRowAction;
 
+	@:native("init")
+	overload public function init():UITableViewRowAction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewRowAction;
 

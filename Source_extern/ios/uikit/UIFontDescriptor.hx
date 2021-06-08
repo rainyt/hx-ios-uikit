@@ -18,6 +18,9 @@ extern class UIFontDescriptor
 	@:native("alloc")
 	overload public static function alloc():UIFontDescriptor;
 
+	@:native("init")
+	overload public function init():UIFontDescriptor;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFontDescriptor;
 

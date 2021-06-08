@@ -9,6 +9,9 @@ extern class NSUnitDuration extends Thisclassisnotmeanttobeusedfordatecalculatio
 	@:native("alloc")
 	overload public static function alloc():NSUnitDuration;
 
+	@:native("init")
+	overload public function init():NSUnitDuration;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitDuration;
 

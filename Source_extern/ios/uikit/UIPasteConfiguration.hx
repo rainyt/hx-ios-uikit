@@ -12,6 +12,9 @@ extern class UIPasteConfiguration
 	@:native("alloc")
 	overload public static function alloc():UIPasteConfiguration;
 
+	@:native("init")
+	overload public function init():UIPasteConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPasteConfiguration;
 

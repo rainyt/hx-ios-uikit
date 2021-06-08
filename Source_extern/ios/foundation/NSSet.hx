@@ -16,6 +16,9 @@ extern class NSSet{
 	@:native("alloc")
 	overload public static function alloc():NSSet;
 
+	@:native("init")
+	overload public function init():NSSet;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSSet;
 
@@ -30,9 +33,6 @@ extern class NSSet{
 
 	@:native("objectEnumerator")
 	overload public function objectEnumerator():NSEnumerator;
-
-	@:native("init")
-	overload public function init():NSSet;
 
 	@:native("initWithObjects:count")
 	overload public function initWithObjectsCount(objects:Dynamic, count:Int):NSSet;

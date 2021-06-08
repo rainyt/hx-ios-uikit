@@ -24,6 +24,9 @@ extern class NSMutableAttributedString extends NSAttributedString{
 	@:native("alloc")
 	overload public static function alloc():NSMutableAttributedString;
 
+	@:native("init")
+	overload public function init():NSMutableAttributedString;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableAttributedString;
 

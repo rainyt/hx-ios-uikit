@@ -16,6 +16,9 @@ extern class NSLocale
 	@:native("alloc")
 	overload public static function alloc():NSLocale;
 
+	@:native("init")
+	overload public function init():NSLocale;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSLocale;
 
@@ -123,9 +126,6 @@ extern class NSLocale
 
 	@:native("localeWithLocaleIdentifier")
 	overload public static function localeWithLocaleIdentifier(ident:NSString):NSLocale;
-
-	@:native("init")
-	overload public function init():NSLocale;
 
 	@:native("availableLocaleIdentifiers")
 	overload public static function availableLocaleIdentifiers():Dynamic;

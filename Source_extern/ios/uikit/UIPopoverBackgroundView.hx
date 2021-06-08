@@ -34,6 +34,9 @@ extern class UIPopoverBackgroundView extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIPopoverBackgroundView;
 
+	@:native("init")
+	overload public function init():UIPopoverBackgroundView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPopoverBackgroundView;
 

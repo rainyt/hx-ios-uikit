@@ -19,6 +19,9 @@ extern interface UIAccessibilityReadingConten{
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityReadingConten;
 
+	@:native("init")
+	overload public function init():UIAccessibilityReadingConten;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityReadingConten;
 

@@ -19,6 +19,9 @@ extern interface WKNavigationDelegate{
 	@:native("alloc")
 	overload public static function alloc():WKNavigationDelegate;
 
+	@:native("init")
+	overload public function init():WKNavigationDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKNavigationDelegate;
 

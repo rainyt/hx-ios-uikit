@@ -34,6 +34,9 @@ extern class UIWindow extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UIWindow;
 
+	@:native("init")
+	overload public function init():UIWindow;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIWindow;
 

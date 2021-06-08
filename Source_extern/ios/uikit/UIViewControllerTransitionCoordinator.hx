@@ -10,6 +10,9 @@ extern interface UIViewControllerTransitionCoordinator{
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerTransitionCoordinator;
 
+	@:native("init")
+	overload public function init():UIViewControllerTransitionCoordinator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIViewControllerTransitionCoordinator;
 

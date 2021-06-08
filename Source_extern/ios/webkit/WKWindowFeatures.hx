@@ -12,6 +12,9 @@ extern class WKWindowFeatures{
 	@:native("alloc")
 	overload public static function alloc():WKWindowFeatures;
 
+	@:native("init")
+	overload public function init():WKWindowFeatures;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKWindowFeatures;
 

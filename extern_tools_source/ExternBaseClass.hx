@@ -11,7 +11,15 @@ class ExternBaseClass extends BaseClass {
 	 */
 	public var isProtocol:Bool = false;
 
+	/**
+	 * H头文件
+	 */
 	public var hextern:ExternHFile;
+
+	/**
+	 * include引用关系
+	 */
+	public var includes:Array<String> = [];
 
 	/**
 	 * 包名
@@ -62,6 +70,7 @@ class ExternBaseClass extends BaseClass {
 		super();
 		var harray = _hdata.split("\n");
 		this.hextern = hextern;
+		this.includes.push(this.hextern.hfile);
 		var pclassName = harray[0];
 		isProtocol = Std.isOfType(this, ExternProtocolClass);
 		pclassName = pclassName.substr(pclassName.indexOf(isProtocol ? "@protocol" : "@interface") + (isProtocol ? 9 : 10));
@@ -119,6 +128,15 @@ class ExternBaseClass extends BaseClass {
 			name: "alloc",
 			returnClass: this.className,
 			isStatic: true,
+			args: null,
+			haxe: null,
+			desc: null
+		});
+		funcAndAttr.push({
+			type: ExternBaseClassType.FUNC,
+			name: "init",
+			returnClass: this.className,
+			isStatic: false,
 			args: null,
 			haxe: null,
 			desc: null
@@ -210,6 +228,9 @@ class ExternBaseClass extends BaseClass {
 				funcAndAttr.push(value);
 			}
 		}
+		for (index => value in t.includes) {
+			includes.push(value);
+		}
 	}
 
 	/**
@@ -300,7 +321,13 @@ class ExternBaseClass extends BaseClass {
 
 		haxe += "@:objc\n";
 		haxe += "@:native(\"" + className + "\")\n";
+		var cppFileCode:String = "";
 		haxe += "@:include(\"" + hextern.hfile + "\")\n";
+		// for (index => value in includes) {
+		// haxe += "@:include(\"" + value + "\")\n";
+		// cppFileCode += "#include \"" + value + "\"\n";
+		// }
+		// haxe += "@:cppFileCode('" + cppFileCode + "')\n";
 		if (desc != null)
 			haxe += desc + "\n";
 		haxe += "extern "

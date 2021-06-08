@@ -45,6 +45,9 @@ extern class UIVisualEffectView extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIVisualEffectView;
 
+	@:native("init")
+	overload public function init():UIVisualEffectView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIVisualEffectView;
 

@@ -15,6 +15,9 @@ extern interface UITableViewDropCoordinator{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropCoordinator;
 
+	@:native("init")
+	overload public function init():UITableViewDropCoordinator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDropCoordinator;
 

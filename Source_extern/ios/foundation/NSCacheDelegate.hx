@@ -10,6 +10,9 @@ extern interface NSCacheDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSCacheDelegate;
 
+	@:native("init")
+	overload public function init():NSCacheDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCacheDelegate;
 

@@ -21,6 +21,9 @@ extern class NSMeasurementFormatter extends NSFormatter
 	@:native("alloc")
 	overload public static function alloc():NSMeasurementFormatter;
 
+	@:native("init")
+	overload public function init():NSMeasurementFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMeasurementFormatter;
 

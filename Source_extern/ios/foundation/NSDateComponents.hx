@@ -16,6 +16,9 @@ extern class NSDateComponents
 	@:native("alloc")
 	overload public static function alloc():NSDateComponents;
 
+	@:native("init")
+	overload public function init():NSDateComponents;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDateComponents;
 

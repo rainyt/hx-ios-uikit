@@ -18,6 +18,9 @@ extern class NSExpression
 	@:native("alloc")
 	overload public static function alloc():NSExpression;
 
+	@:native("init")
+	overload public function init():NSExpression;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSExpression;
 

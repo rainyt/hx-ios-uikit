@@ -12,6 +12,9 @@ extern interface UIVideoEditorControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIVideoEditorControllerDelegate;
 
+	@:native("init")
+	overload public function init():UIVideoEditorControllerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIVideoEditorControllerDelegate;
 

@@ -36,6 +36,9 @@ extern class WKPDFConfiguration
 	@:native("alloc")
 	overload public static function alloc():WKPDFConfiguration;
 
+	@:native("init")
+	overload public function init():WKPDFConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKPDFConfiguration;
 

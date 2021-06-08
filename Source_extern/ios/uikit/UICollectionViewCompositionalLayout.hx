@@ -21,6 +21,9 @@ extern class UICollectionViewCompositionalLayout extends UICollectionViewLayout{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewCompositionalLayout;
 
+	@:native("init")
+	overload public function init():UICollectionViewCompositionalLayout;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewCompositionalLayout;
 
@@ -41,9 +44,6 @@ extern class UICollectionViewCompositionalLayout extends UICollectionViewLayout{
 
 	@:native("configuration")
 	public var configuration:UICollectionViewCompositionalLayoutConfiguration;
-
-	@:native("init")
-	overload public function init():UICollectionViewLayout;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICollectionViewCompositionalLayout;

@@ -23,6 +23,9 @@ extern class UIResponder
 	@:native("alloc")
 	overload public static function alloc():UIResponder;
 
+	@:native("init")
+	overload public function init():UIResponder;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIResponder;
 

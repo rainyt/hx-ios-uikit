@@ -14,6 +14,9 @@ extern class UIActivityItemsConfiguration
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemsConfiguration;
 
+	@:native("init")
+	overload public function init():UIActivityItemsConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityItemsConfiguration;
 

@@ -13,6 +13,9 @@ extern class NSMachPort extends NSPort{
 	@:native("alloc")
 	overload public static function alloc():NSMachPort;
 
+	@:native("init")
+	overload public function init():NSMachPort;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMachPort;
 

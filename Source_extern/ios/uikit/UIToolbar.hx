@@ -40,6 +40,9 @@ extern class UIToolbar extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIToolbar;
 
+	@:native("init")
+	overload public function init():UIToolbar;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIToolbar;
 

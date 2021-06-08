@@ -17,6 +17,9 @@ extern class UITextInputStringTokenizer
 	@:native("alloc")
 	overload public static function alloc():UITextInputStringTokenizer;
 
+	@:native("init")
+	overload public function init():UITextInputStringTokenizer;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputStringTokenizer;
 

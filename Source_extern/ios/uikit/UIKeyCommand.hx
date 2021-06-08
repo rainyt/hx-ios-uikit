@@ -16,6 +16,9 @@ extern class UIKeyCommand extends UICommand{
 	@:native("alloc")
 	overload public static function alloc():UIKeyCommand;
 
+	@:native("init")
+	overload public function init():UIKeyCommand;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIKeyCommand;
 

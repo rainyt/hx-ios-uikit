@@ -51,6 +51,9 @@ extern class UISearchTextField extends UITextField{
 	@:native("alloc")
 	overload public static function alloc():UISearchTextField;
 
+	@:native("init")
+	overload public function init():UISearchTextField;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISearchTextField;
 

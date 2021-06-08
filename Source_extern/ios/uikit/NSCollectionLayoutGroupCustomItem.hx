@@ -12,6 +12,9 @@ extern class NSCollectionLayoutGroupCustomItem
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutGroupCustomItem;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutGroupCustomItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutGroupCustomItem;
 

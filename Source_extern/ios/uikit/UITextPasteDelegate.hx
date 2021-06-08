@@ -40,6 +40,9 @@ extern interface UITextPasteDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITextPasteDelegate;
 
+	@:native("init")
+	overload public function init():UITextPasteDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextPasteDelegate;
 

@@ -11,6 +11,9 @@ extern class UITabBarItemStateAppearance{
 	@:native("alloc")
 	overload public static function alloc():UITabBarItemStateAppearance;
 
+	@:native("init")
+	overload public function init():UITabBarItemStateAppearance;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarItemStateAppearance;
 

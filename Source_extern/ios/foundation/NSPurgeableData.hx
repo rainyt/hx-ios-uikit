@@ -21,6 +21,9 @@ extern class NSPurgeableData extends NSMutableData
 	@:native("alloc")
 	overload public static function alloc():NSPurgeableData;
 
+	@:native("init")
+	overload public function init():NSPurgeableData;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPurgeableData;
 

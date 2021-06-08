@@ -13,6 +13,9 @@ extern interface UIAdaptivePresentationControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIAdaptivePresentationControllerDelegate;
 
+	@:native("init")
+	overload public function init():UIAdaptivePresentationControllerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAdaptivePresentationControllerDelegate;
 

@@ -21,6 +21,9 @@ extern class UIBezierPath
 	@:native("alloc")
 	overload public static function alloc():UIBezierPath;
 
+	@:native("init")
+	overload public function init():UIBezierPath;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIBezierPath;
 

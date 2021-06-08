@@ -22,6 +22,9 @@ extern class UICollectionViewLayout
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayout;
 
+	@:native("init")
+	overload public function init():UICollectionViewLayout;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewLayout;
 

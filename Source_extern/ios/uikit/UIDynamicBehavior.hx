@@ -10,6 +10,9 @@ extern class UIDynamicBehavior{
 	@:native("alloc")
 	overload public static function alloc():UIDynamicBehavior;
 
+	@:native("init")
+	overload public function init():UIDynamicBehavior;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDynamicBehavior;
 

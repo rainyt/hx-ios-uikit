@@ -12,6 +12,9 @@ extern class UIFont{
 	@:native("alloc")
 	overload public static function alloc():UIFont;
 
+	@:native("init")
+	overload public function init():UIFont;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFont;
 

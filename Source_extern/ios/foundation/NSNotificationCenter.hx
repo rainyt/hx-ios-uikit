@@ -13,6 +13,9 @@ extern class NSNotificationCenter{
 	@:native("alloc")
 	overload public static function alloc():NSNotificationCenter;
 
+	@:native("init")
+	overload public function init():NSNotificationCenter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNotificationCenter;
 

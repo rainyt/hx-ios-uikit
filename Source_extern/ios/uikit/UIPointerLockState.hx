@@ -9,6 +9,9 @@ extern class UIPointerLockState{
 	@:native("alloc")
 	overload public static function alloc():UIPointerLockState;
 
+	@:native("init")
+	overload public function init():UIPointerLockState;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerLockState;
 

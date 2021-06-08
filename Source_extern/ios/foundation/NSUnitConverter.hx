@@ -12,6 +12,9 @@ extern class NSUnitConverter{
 	@:native("alloc")
 	overload public static function alloc():NSUnitConverter;
 
+	@:native("init")
+	overload public function init():NSUnitConverter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitConverter;
 

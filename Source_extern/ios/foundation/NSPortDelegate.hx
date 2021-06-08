@@ -9,6 +9,9 @@ extern interface NSPortDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSPortDelegate;
 
+	@:native("init")
+	overload public function init():NSPortDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPortDelegate;
 

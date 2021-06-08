@@ -13,6 +13,9 @@ extern class UIImageConfiguration
 	@:native("alloc")
 	overload public static function alloc():UIImageConfiguration;
 
+	@:native("init")
+	overload public function init():UIImageConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIImageConfiguration;
 

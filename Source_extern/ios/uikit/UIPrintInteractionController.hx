@@ -20,6 +20,9 @@ extern class UIPrintInteractionController{
 	@:native("alloc")
 	overload public static function alloc():UIPrintInteractionController;
 
+	@:native("init")
+	overload public function init():UIPrintInteractionController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPrintInteractionController;
 

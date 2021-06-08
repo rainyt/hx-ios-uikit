@@ -16,6 +16,9 @@ extern class NSUnit
 	@:native("alloc")
 	overload public static function alloc():NSUnit;
 
+	@:native("init")
+	overload public function init():NSUnit;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUnit;
 

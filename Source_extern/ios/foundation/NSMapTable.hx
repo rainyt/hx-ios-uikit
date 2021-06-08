@@ -16,6 +16,9 @@ extern class NSMapTable
 	@:native("alloc")
 	overload public static function alloc():NSMapTable;
 
+	@:native("init")
+	overload public function init():NSMapTable;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMapTable;
 

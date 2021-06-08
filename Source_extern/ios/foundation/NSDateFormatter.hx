@@ -21,6 +21,9 @@ extern class NSDateFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSDateFormatter;
 
+	@:native("init")
+	overload public function init():NSDateFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDateFormatter;
 

@@ -19,6 +19,9 @@ extern class NSFileWrapper
 	@:native("alloc")
 	overload public static function alloc():NSFileWrapper;
 
+	@:native("init")
+	overload public function init():NSFileWrapper;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFileWrapper;
 

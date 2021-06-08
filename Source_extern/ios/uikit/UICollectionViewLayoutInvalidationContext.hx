@@ -13,6 +13,9 @@ extern class UICollectionViewLayoutInvalidationContext{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayoutInvalidationContext;
 
+	@:native("init")
+	overload public function init():UICollectionViewLayoutInvalidationContext;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewLayoutInvalidationContext;
 

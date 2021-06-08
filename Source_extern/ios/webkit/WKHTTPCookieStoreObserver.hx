@@ -34,6 +34,9 @@ extern interface WKHTTPCookieStoreObserver{
 	@:native("alloc")
 	overload public static function alloc():WKHTTPCookieStoreObserver;
 
+	@:native("init")
+	overload public function init():WKHTTPCookieStoreObserver;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKHTTPCookieStoreObserver;
 

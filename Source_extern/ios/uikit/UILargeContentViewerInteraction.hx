@@ -13,6 +13,9 @@ extern class UILargeContentViewerInteraction
 	@:native("alloc")
 	overload public static function alloc():UILargeContentViewerInteraction;
 
+	@:native("init")
+	overload public function init():UILargeContentViewerInteraction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UILargeContentViewerInteraction;
 

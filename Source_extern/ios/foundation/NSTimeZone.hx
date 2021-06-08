@@ -20,6 +20,9 @@ extern class NSTimeZone
 	@:native("alloc")
 	overload public static function alloc():NSTimeZone;
 
+	@:native("init")
+	overload public function init():NSTimeZone;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSTimeZone;
 

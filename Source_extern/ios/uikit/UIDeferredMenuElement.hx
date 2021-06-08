@@ -11,6 +11,9 @@ extern class UIDeferredMenuElement extends UIMenuElement{
 	@:native("alloc")
 	overload public static function alloc():UIDeferredMenuElement;
 
+	@:native("init")
+	overload public function init():UIDeferredMenuElement;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDeferredMenuElement;
 
@@ -20,9 +23,6 @@ extern class UIDeferredMenuElement extends UIMenuElement{
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIDeferredMenuElement;
-
-	@:native("init")
-	overload public function init():UIMenuElement;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

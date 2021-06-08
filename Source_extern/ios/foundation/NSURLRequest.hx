@@ -50,6 +50,9 @@ extern class NSURLRequest
 	@:native("alloc")
 	overload public static function alloc():NSURLRequest;
 
+	@:native("init")
+	overload public function init():NSURLRequest;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLRequest;
 

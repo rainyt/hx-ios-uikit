@@ -23,6 +23,9 @@ extern class NSJSONSerialization{
 	@:native("alloc")
 	overload public static function alloc():NSJSONSerialization;
 
+	@:native("init")
+	overload public function init():NSJSONSerialization;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSJSONSerialization;
 

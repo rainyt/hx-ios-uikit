@@ -12,6 +12,9 @@ extern class NSFileProviderService{
 	@:native("alloc")
 	overload public static function alloc():NSFileProviderService;
 
+	@:native("init")
+	overload public function init():NSFileProviderService;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFileProviderService;
 

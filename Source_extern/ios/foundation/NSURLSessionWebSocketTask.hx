@@ -22,6 +22,9 @@ extern class NSURLSessionWebSocketTask extends NSURLSessionTask{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionWebSocketTask;
 
+	@:native("init")
+	overload public function init():NSURLSessionWebSocketTask;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionWebSocketTask;
 

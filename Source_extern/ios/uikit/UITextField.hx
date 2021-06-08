@@ -58,6 +58,9 @@ extern class UITextField extends UIControl
 	@:native("alloc")
 	overload public static function alloc():UITextField;
 
+	@:native("init")
+	overload public function init():UITextField;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextField;
 

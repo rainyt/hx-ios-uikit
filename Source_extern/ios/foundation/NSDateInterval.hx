@@ -17,6 +17,9 @@ extern class NSDateInterval
 	@:native("alloc")
 	overload public static function alloc():NSDateInterval;
 
+	@:native("init")
+	overload public function init():NSDateInterval;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDateInterval;
 

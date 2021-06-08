@@ -12,6 +12,9 @@ extern class NSMetadataItem{
 	@:native("alloc")
 	overload public static function alloc():NSMetadataItem;
 
+	@:native("init")
+	overload public function init():NSMetadataItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMetadataItem;
 

@@ -15,6 +15,9 @@ extern class NSHashTable
 	@:native("alloc")
 	overload public static function alloc():NSHashTable;
 
+	@:native("init")
+	overload public function init():NSHashTable;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSHashTable;
 

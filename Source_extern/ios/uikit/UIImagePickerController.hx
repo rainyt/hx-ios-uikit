@@ -35,6 +35,9 @@ extern class UIImagePickerController extends UINavigationController
 	@:native("alloc")
 	overload public static function alloc():UIImagePickerController;
 
+	@:native("init")
+	overload public function init():UIImagePickerController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIImagePickerController;
 

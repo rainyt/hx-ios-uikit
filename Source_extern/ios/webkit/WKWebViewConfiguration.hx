@@ -26,6 +26,9 @@ extern class WKWebViewConfiguration
 	@:native("alloc")
 	overload public static function alloc():WKWebViewConfiguration;
 
+	@:native("init")
+	overload public function init():WKWebViewConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKWebViewConfiguration;
 

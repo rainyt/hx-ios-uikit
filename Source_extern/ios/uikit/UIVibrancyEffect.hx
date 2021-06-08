@@ -14,6 +14,9 @@ extern class UIVibrancyEffect extends UIVisualEffect{
 	@:native("alloc")
 	overload public static function alloc():UIVibrancyEffect;
 
+	@:native("init")
+	overload public function init():UIVibrancyEffect;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIVibrancyEffect;
 

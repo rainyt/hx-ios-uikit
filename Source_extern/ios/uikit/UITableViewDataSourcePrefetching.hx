@@ -10,6 +10,9 @@ extern interface UITableViewDataSourcePrefetching{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDataSourcePrefetching;
 
+	@:native("init")
+	overload public function init():UITableViewDataSourcePrefetching;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDataSourcePrefetching;
 

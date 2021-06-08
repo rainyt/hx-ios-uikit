@@ -13,6 +13,9 @@ extern interface UITableViewDragDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDragDelegate;
 
+	@:native("init")
+	overload public function init():UITableViewDragDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDragDelegate;
 

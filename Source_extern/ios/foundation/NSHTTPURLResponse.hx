@@ -21,6 +21,9 @@ extern class NSHTTPURLResponse extends NSURLResponse{
 	@:native("alloc")
 	overload public static function alloc():NSHTTPURLResponse;
 
+	@:native("init")
+	overload public function init():NSHTTPURLResponse;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSHTTPURLResponse;
 

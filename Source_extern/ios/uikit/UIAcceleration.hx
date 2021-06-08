@@ -9,6 +9,9 @@ extern class UIAcceleration{
 	@:native("alloc")
 	overload public static function alloc():UIAcceleration;
 
+	@:native("init")
+	overload public function init():UIAcceleration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAcceleration;
 

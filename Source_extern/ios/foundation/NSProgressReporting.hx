@@ -12,6 +12,9 @@ extern interface NSProgressReporting{
 	@:native("alloc")
 	overload public static function alloc():NSProgressReporting;
 
+	@:native("init")
+	overload public function init():NSProgressReporting;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSProgressReporting;
 

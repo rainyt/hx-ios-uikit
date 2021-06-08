@@ -9,6 +9,9 @@ extern interface NSItemProviderWriting{
 	@:native("alloc")
 	overload public static function alloc():NSItemProviderWriting;
 
+	@:native("init")
+	overload public function init():NSItemProviderWriting;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSItemProviderWriting;
 

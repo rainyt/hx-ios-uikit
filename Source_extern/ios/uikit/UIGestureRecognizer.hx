@@ -20,6 +20,9 @@ extern class UIGestureRecognizer{
 	@:native("alloc")
 	overload public static function alloc():UIGestureRecognizer;
 
+	@:native("init")
+	overload public function init():UIGestureRecognizer;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIGestureRecognizer;
 
@@ -79,9 +82,6 @@ extern class UIGestureRecognizer{
 
 	@:native("initWithTarget:action")
 	overload public function initWithTargetAction(target:Dynamic, action:String):UIGestureRecognizer;
-
-	@:native("init")
-	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIGestureRecognizer;

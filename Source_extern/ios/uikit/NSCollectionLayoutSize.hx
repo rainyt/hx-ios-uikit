@@ -12,6 +12,9 @@ extern class NSCollectionLayoutSize
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutSize;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutSize;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutSize;
 

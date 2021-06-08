@@ -48,6 +48,9 @@ extern class UISegmentedControl extends UIControl
 	@:native("alloc")
 	overload public static function alloc():UISegmentedControl;
 
+	@:native("init")
+	overload public function init():UISegmentedControl;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISegmentedControl;
 

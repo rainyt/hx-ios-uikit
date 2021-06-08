@@ -14,6 +14,9 @@ extern class NSURLSessionDownloadTask extends NSURLSessionTask{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionDownloadTask;
 
+	@:native("init")
+	overload public function init():NSURLSessionDownloadTask;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionDownloadTask;
 

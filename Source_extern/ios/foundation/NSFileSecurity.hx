@@ -15,6 +15,9 @@ extern class NSFileSecurity
 	@:native("alloc")
 	overload public static function alloc():NSFileSecurity;
 
+	@:native("init")
+	overload public function init():NSFileSecurity;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFileSecurity;
 

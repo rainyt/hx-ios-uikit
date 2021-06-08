@@ -27,6 +27,9 @@ extern class UIWindowScene extends UIScene{
 	@:native("alloc")
 	overload public static function alloc():UIWindowScene;
 
+	@:native("init")
+	overload public function init():UIWindowScene;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIWindowScene;
 
@@ -57,9 +60,6 @@ extern class UIWindowScene extends UIScene{
 
 	@:native("statusBarManager")
 	public var statusBarManager:UIStatusBarManager;
-
-	@:native("init")
-	overload public function init():UIScene;
 
 	@:native("initWithSession:connectionOptions")
 	overload public function initWithSessionConnectionOptions(session:UISceneSession, connectionOptions:UISceneConnectionOptions):UIWindowScene;

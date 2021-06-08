@@ -15,6 +15,9 @@ extern class UIImageAsset
 	@:native("alloc")
 	overload public static function alloc():UIImageAsset;
 
+	@:native("init")
+	overload public function init():UIImageAsset;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIImageAsset;
 

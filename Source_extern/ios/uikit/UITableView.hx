@@ -48,6 +48,9 @@ extern class UITableView extends UIScrollView
 	@:native("alloc")
 	overload public static function alloc():UITableView;
 
+	@:native("init")
+	overload public function init():UITableView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableView;
 

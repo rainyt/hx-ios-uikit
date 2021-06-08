@@ -24,6 +24,9 @@ extern class NSDictionary
 	@:native("alloc")
 	overload public static function alloc():NSDictionary;
 
+	@:native("init")
+	overload public function init():NSDictionary;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDictionary;
 

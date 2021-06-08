@@ -13,6 +13,9 @@ extern class UIPrinterPickerController{
 	@:native("alloc")
 	overload public static function alloc():UIPrinterPickerController;
 
+	@:native("init")
+	overload public function init():UIPrinterPickerController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPrinterPickerController;
 

@@ -11,6 +11,9 @@ extern interface UICoordinateSpace{
 	@:native("alloc")
 	overload public static function alloc():UICoordinateSpace;
 
+	@:native("init")
+	overload public function init():UICoordinateSpace;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICoordinateSpace;
 

@@ -15,6 +15,9 @@ extern interface NSCollectionLayoutVisibleItem{
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutVisibleItem;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutVisibleItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutVisibleItem;
 

@@ -18,6 +18,9 @@ extern interface UIScrollViewAccessibilityDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIScrollViewAccessibilityDelegate;
 
+	@:native("init")
+	overload public function init():UIScrollViewAccessibilityDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIScrollViewAccessibilityDelegate;
 

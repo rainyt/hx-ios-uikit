@@ -10,6 +10,9 @@ extern interface NSCodin{
 	@:native("alloc")
 	overload public static function alloc():NSCodin;
 
+	@:native("init")
+	overload public function init():NSCodin;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCodin;
 

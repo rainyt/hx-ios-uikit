@@ -12,6 +12,9 @@ extern class UICellAccessoryDelete extends UICellAccessory{
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryDelete;
 
+	@:native("init")
+	overload public function init():UICellAccessoryDelete;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessoryDelete;
 
@@ -23,9 +26,6 @@ extern class UICellAccessoryDelete extends UICellAccessory{
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryDelete;
-
-	@:native("init")
-	overload public function init():UICellAccessory;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

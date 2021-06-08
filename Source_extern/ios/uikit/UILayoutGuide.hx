@@ -24,6 +24,9 @@ extern class UILayoutGuide
 	@:native("alloc")
 	overload public static function alloc():UILayoutGuide;
 
+	@:native("init")
+	overload public function init():UILayoutGuide;
+
 	@:native("autorelease")
 	overload public static function autorelease():UILayoutGuide;
 

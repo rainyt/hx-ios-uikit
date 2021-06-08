@@ -19,6 +19,9 @@ extern class NSFileHandle
 	@:native("alloc")
 	overload public static function alloc():NSFileHandle;
 
+	@:native("init")
+	overload public function init():NSFileHandle;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFileHandle;
 

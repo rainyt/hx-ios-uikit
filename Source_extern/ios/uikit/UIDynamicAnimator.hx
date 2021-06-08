@@ -16,6 +16,9 @@ extern class UIDynamicAnimator{
 	@:native("alloc")
 	overload public static function alloc():UIDynamicAnimator;
 
+	@:native("init")
+	overload public function init():UIDynamicAnimator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDynamicAnimator;
 

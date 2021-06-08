@@ -11,6 +11,9 @@ extern class UICollectionViewFocusUpdateContext extends UIFocusUpdateContext{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewFocusUpdateContext;
 
+	@:native("init")
+	overload public function init():UICollectionViewFocusUpdateContext;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewFocusUpdateContext;
 

@@ -36,6 +36,9 @@ extern class UITableViewHeaderFooterView extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UITableViewHeaderFooterView;
 
+	@:native("init")
+	overload public function init():UITableViewHeaderFooterView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewHeaderFooterView;
 

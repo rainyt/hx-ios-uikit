@@ -15,6 +15,9 @@ extern class NSUnitEnergy extends NSDimension
 	@:native("alloc")
 	overload public static function alloc():NSUnitEnergy;
 
+	@:native("init")
+	overload public function init():NSUnitEnergy;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitEnergy;
 
@@ -40,9 +43,6 @@ extern class NSUnitEnergy extends NSDimension
 	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitEnergy;
-
-	@:native("init")
-	overload public function init():NSUnit;
 
 	@:native("initWithSymbol")
 	overload public function initWithSymbol(symbol:NSString):NSUnitEnergy;

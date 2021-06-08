@@ -18,6 +18,9 @@ extern class NSRegularExpression
 	@:native("alloc")
 	overload public static function alloc():NSRegularExpression;
 
+	@:native("init")
+	overload public function init():NSRegularExpression;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSRegularExpression;
 

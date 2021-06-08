@@ -29,6 +29,9 @@ extern class UIPageViewController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UIPageViewController;
 
+	@:native("init")
+	overload public function init():UIPageViewController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPageViewController;
 

@@ -9,6 +9,9 @@ extern class UISceneDestructionRequestOptions{
 	@:native("alloc")
 	overload public static function alloc():UISceneDestructionRequestOptions;
 
+	@:native("init")
+	overload public function init():UISceneDestructionRequestOptions;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISceneDestructionRequestOptions;
 

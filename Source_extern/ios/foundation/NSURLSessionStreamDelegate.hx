@@ -13,6 +13,9 @@ extern interface NSURLSessionStreamDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionStreamDelegate;
 
+	@:native("init")
+	overload public function init():NSURLSessionStreamDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionStreamDelegate;
 

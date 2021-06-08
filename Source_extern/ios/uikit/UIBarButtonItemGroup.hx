@@ -13,6 +13,9 @@ extern class UIBarButtonItemGroup
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItemGroup;
 
+	@:native("init")
+	overload public function init():UIBarButtonItemGroup;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIBarButtonItemGroup;
 

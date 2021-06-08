@@ -13,6 +13,9 @@ extern class NSAssertionHandler{
 	@:native("alloc")
 	overload public static function alloc():NSAssertionHandler;
 
+	@:native("init")
+	overload public function init():NSAssertionHandler;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSAssertionHandler;
 

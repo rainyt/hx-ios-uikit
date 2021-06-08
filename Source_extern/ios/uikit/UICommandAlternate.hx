@@ -15,6 +15,9 @@ extern class UICommandAlternate
 	@:native("alloc")
 	overload public static function alloc():UICommandAlternate;
 
+	@:native("init")
+	overload public function init():UICommandAlternate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICommandAlternate;
 

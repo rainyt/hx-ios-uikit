@@ -10,6 +10,9 @@ extern interface UIContentConfiguration{
 	@:native("alloc")
 	overload public static function alloc():UIContentConfiguration;
 
+	@:native("init")
+	overload public function init():UIContentConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIContentConfiguration;
 

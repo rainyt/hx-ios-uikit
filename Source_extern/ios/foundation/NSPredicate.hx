@@ -18,6 +18,9 @@ extern class NSPredicate
 	@:native("alloc")
 	overload public static function alloc():NSPredicate;
 
+	@:native("init")
+	overload public function init():NSPredicate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPredicate;
 

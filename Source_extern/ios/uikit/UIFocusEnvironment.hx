@@ -13,6 +13,9 @@ extern interface UIFocusEnvironment{
 	@:native("alloc")
 	overload public static function alloc():UIFocusEnvironment;
 
+	@:native("init")
+	overload public function init():UIFocusEnvironment;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusEnvironment;
 

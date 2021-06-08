@@ -43,6 +43,9 @@ extern class UINavigationBar extends UIView
 	@:native("alloc")
 	overload public static function alloc():UINavigationBar;
 
+	@:native("init")
+	overload public function init():UINavigationBar;
+
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationBar;
 

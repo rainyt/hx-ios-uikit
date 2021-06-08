@@ -14,6 +14,9 @@ extern class NSXPCConnection
 	@:native("alloc")
 	overload public static function alloc():NSXPCConnection;
 
+	@:native("init")
+	overload public function init():NSXPCConnection;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSXPCConnection;
 

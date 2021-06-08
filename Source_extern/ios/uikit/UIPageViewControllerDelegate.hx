@@ -13,6 +13,9 @@ extern interface UIPageViewControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIPageViewControllerDelegate;
 
+	@:native("init")
+	overload public function init():UIPageViewControllerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPageViewControllerDelegate;
 

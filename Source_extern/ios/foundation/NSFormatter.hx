@@ -15,6 +15,9 @@ extern class NSFormatter
 	@:native("alloc")
 	overload public static function alloc():NSFormatter;
 
+	@:native("init")
+	overload public function init():NSFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFormatter;
 

@@ -13,6 +13,9 @@ extern class UIFontPickerViewControllerConfiguration
 	@:native("alloc")
 	overload public static function alloc():UIFontPickerViewControllerConfiguration;
 
+	@:native("init")
+	overload public function init():UIFontPickerViewControllerConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFontPickerViewControllerConfiguration;
 

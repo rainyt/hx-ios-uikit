@@ -19,6 +19,9 @@ extern class UIMotionEffect
 	@:native("alloc")
 	overload public static function alloc():UIMotionEffect;
 
+	@:native("init")
+	overload public function init():UIMotionEffect;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIMotionEffect;
 

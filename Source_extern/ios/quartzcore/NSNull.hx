@@ -9,6 +9,9 @@ extern class NSNull{
 	@:native("alloc")
 	overload public static function alloc():NSNull;
 
+	@:native("init")
+	overload public function init():NSNull;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNull;
 

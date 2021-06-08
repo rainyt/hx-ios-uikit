@@ -15,6 +15,9 @@ extern class NSURLSessionDataTask extends NSURLSessionTask{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionDataTask;
 
+	@:native("init")
+	overload public function init():NSURLSessionDataTask;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionDataTask;
 

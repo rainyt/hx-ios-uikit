@@ -12,6 +12,9 @@ extern class CAValueFunction
 	@:native("alloc")
 	overload public static function alloc():CAValueFunction;
 
+	@:native("init")
+	overload public function init():CAValueFunction;
+
 	@:native("autorelease")
 	overload public static function autorelease():CAValueFunction;
 

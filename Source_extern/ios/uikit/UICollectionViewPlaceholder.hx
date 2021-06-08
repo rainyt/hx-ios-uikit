@@ -11,6 +11,9 @@ extern class UICollectionViewPlaceholder{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewPlaceholder;
 
+	@:native("init")
+	overload public function init():UICollectionViewPlaceholder;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewPlaceholder;
 
@@ -19,10 +22,6 @@ extern class UICollectionViewPlaceholder{
 
 	@:native("init")
 	overload public function init():UICollectionViewPlaceholder;
-
-	/* Called whenever the placeholder cell is visible to update the contents of the cell.  */
-	@:native("__kindof UICollectionViewCell ")
-	public var __kindof UICollectionViewCell :Dynamic;
 
 
 }

@@ -42,6 +42,9 @@ extern class UIScrollView extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIScrollView;
 
+	@:native("init")
+	overload public function init():UIScrollView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIScrollView;
 

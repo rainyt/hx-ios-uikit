@@ -12,6 +12,9 @@ extern class NSUnitConverterLinear extends NSUnitConverter
 	@:native("alloc")
 	overload public static function alloc():NSUnitConverterLinear;
 
+	@:native("init")
+	overload public function init():NSUnitConverterLinear;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitConverterLinear;
 

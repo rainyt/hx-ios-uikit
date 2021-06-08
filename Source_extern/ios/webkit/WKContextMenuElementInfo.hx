@@ -34,6 +34,9 @@ extern class WKContextMenuElementInfo{
 	@:native("alloc")
 	overload public static function alloc():WKContextMenuElementInfo;
 
+	@:native("init")
+	overload public function init():WKContextMenuElementInfo;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKContextMenuElementInfo;
 

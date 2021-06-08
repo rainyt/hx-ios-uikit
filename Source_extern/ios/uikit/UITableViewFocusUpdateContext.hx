@@ -11,6 +11,9 @@ extern class UITableViewFocusUpdateContext extends UIFocusUpdateContext{
 	@:native("alloc")
 	overload public static function alloc():UITableViewFocusUpdateContext;
 
+	@:native("init")
+	overload public function init():UITableViewFocusUpdateContext;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewFocusUpdateContext;
 

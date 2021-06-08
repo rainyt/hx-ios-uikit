@@ -9,6 +9,9 @@ extern class UIContextMenuConfiguration{
 	@:native("alloc")
 	overload public static function alloc():UIContextMenuConfiguration;
 
+	@:native("init")
+	overload public function init():UIContextMenuConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIContextMenuConfiguration;
 

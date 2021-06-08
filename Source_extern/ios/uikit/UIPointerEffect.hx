@@ -12,6 +12,9 @@ extern class UIPointerEffect
 	@:native("alloc")
 	overload public static function alloc():UIPointerEffect;
 
+	@:native("init")
+	overload public function init():UIPointerEffect;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerEffect;
 

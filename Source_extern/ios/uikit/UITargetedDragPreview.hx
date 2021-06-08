@@ -15,6 +15,9 @@ extern class UITargetedDragPreview extends UITargetedPreview{
 	@:native("alloc")
 	overload public static function alloc():UITargetedDragPreview;
 
+	@:native("init")
+	overload public function init():UITargetedDragPreview;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITargetedDragPreview;
 
@@ -40,9 +43,6 @@ extern class UITargetedDragPreview extends UITargetedPreview{
 	/* To use this initializer, the view must be in a window.  * Sets the parameters to defaults.  * Sets the target based on the view's current superview, center, and transform.  */
 	@:native("initWithView")
 	overload public function initWithView(view:UIView):UITargetedDragPreview;
-
-	@:native("init")
-	overload public function init():UITargetedPreview;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

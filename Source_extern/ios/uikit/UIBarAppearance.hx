@@ -18,6 +18,9 @@ extern class UIBarAppearance
 	@:native("alloc")
 	overload public static function alloc():UIBarAppearance;
 
+	@:native("init")
+	overload public function init():UIBarAppearance;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIBarAppearance;
 

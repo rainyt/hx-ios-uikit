@@ -15,6 +15,9 @@ extern class NSCompoundPredicate extends NSPredicate{
 	@:native("alloc")
 	overload public static function alloc():NSCompoundPredicate;
 
+	@:native("init")
+	overload public function init():NSCompoundPredicate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCompoundPredicate;
 

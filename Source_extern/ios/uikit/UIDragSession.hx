@@ -9,6 +9,9 @@ extern interface UIDragSession{
 	@:native("alloc")
 	overload public static function alloc():UIDragSession;
 
+	@:native("init")
+	overload public function init():UIDragSession;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDragSession;
 

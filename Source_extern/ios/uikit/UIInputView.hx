@@ -33,6 +33,9 @@ extern class UIInputView extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UIInputView;
 
+	@:native("init")
+	overload public function init():UIInputView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIInputView;
 

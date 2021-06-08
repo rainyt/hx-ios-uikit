@@ -12,6 +12,9 @@ extern class NSDiffableDataSourceSectionSnapshot
 	@:native("alloc")
 	overload public static function alloc():NSDiffableDataSourceSectionSnapshot;
 
+	@:native("init")
+	overload public function init():NSDiffableDataSourceSectionSnapshot;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDiffableDataSourceSectionSnapshot;
 

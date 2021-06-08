@@ -22,6 +22,9 @@ extern class NSURLProtocol{
 	@:native("alloc")
 	overload public static function alloc():NSURLProtocol;
 
+	@:native("init")
+	overload public function init():NSURLProtocol;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLProtocol;
 

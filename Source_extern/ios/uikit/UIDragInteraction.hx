@@ -12,6 +12,9 @@ extern class UIDragInteraction
 	@:native("alloc")
 	overload public static function alloc():UIDragInteraction;
 
+	@:native("init")
+	overload public function init():UIDragInteraction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDragInteraction;
 

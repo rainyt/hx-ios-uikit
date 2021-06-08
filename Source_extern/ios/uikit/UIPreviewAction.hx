@@ -14,6 +14,9 @@ extern class UIPreviewAction
 	@:native("alloc")
 	overload public static function alloc():UIPreviewAction;
 
+	@:native("init")
+	overload public function init():UIPreviewAction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewAction;
 

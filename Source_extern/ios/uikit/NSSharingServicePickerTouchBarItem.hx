@@ -9,6 +9,9 @@ extern class NSSharingServicePickerTouchBarItem{
 	@:native("alloc")
 	overload public static function alloc():NSSharingServicePickerTouchBarItem;
 
+	@:native("init")
+	overload public function init():NSSharingServicePickerTouchBarItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSSharingServicePickerTouchBarItem;
 

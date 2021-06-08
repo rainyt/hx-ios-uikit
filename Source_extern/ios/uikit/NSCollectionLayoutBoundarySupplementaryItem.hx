@@ -18,6 +18,9 @@ extern class NSCollectionLayoutBoundarySupplementaryItem extends NSCollectionLay
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutBoundarySupplementaryItem;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutBoundarySupplementaryItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutBoundarySupplementaryItem;
 

@@ -11,6 +11,9 @@ extern class NSScanner{
 	@:native("alloc")
 	overload public static function alloc():NSScanner;
 
+	@:native("init")
+	overload public function init():NSScanner;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSScanner;
 

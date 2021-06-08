@@ -14,6 +14,9 @@ extern interface UINavigationControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UINavigationControllerDelegate;
 
+	@:native("init")
+	overload public function init():UINavigationControllerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationControllerDelegate;
 

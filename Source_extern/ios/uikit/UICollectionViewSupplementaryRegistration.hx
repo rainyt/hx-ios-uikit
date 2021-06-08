@@ -11,6 +11,9 @@ extern class UICollectionViewSupplementaryRegistration{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewSupplementaryRegistration;
 
+	@:native("init")
+	overload public function init():UICollectionViewSupplementaryRegistration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewSupplementaryRegistration;
 

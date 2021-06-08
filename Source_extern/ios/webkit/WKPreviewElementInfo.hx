@@ -36,6 +36,9 @@ extern class WKPreviewElementInfo
 	@:native("alloc")
 	overload public static function alloc():WKPreviewElementInfo;
 
+	@:native("init")
+	overload public function init():WKPreviewElementInfo;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKPreviewElementInfo;
 

@@ -14,6 +14,9 @@ extern interface UIWindowSceneDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIWindowSceneDelegate;
 
+	@:native("init")
+	overload public function init():UIWindowSceneDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIWindowSceneDelegate;
 

@@ -10,6 +10,9 @@ extern interface UITableViewDropPlaceholderContext{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropPlaceholderContext;
 
+	@:native("init")
+	overload public function init():UITableViewDropPlaceholderContext;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDropPlaceholderContext;
 

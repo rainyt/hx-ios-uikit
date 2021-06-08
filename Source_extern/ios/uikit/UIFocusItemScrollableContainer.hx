@@ -11,6 +11,9 @@ extern interface UIFocusItemScrollableContainer{
 	@:native("alloc")
 	overload public static function alloc():UIFocusItemScrollableContainer;
 
+	@:native("init")
+	overload public function init():UIFocusItemScrollableContainer;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusItemScrollableContainer;
 

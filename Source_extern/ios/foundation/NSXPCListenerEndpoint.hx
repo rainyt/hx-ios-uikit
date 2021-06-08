@@ -11,6 +11,9 @@ extern class NSXPCListenerEndpoint
 	@:native("alloc")
 	overload public static function alloc():NSXPCListenerEndpoint;
 
+	@:native("init")
+	overload public function init():NSXPCListenerEndpoint;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSXPCListenerEndpoint;
 

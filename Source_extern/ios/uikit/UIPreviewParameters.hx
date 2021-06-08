@@ -13,6 +13,9 @@ extern class UIPreviewParameters
 	@:native("alloc")
 	overload public static function alloc():UIPreviewParameters;
 
+	@:native("init")
+	overload public function init():UIPreviewParameters;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewParameters;
 

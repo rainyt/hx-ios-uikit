@@ -35,6 +35,9 @@ extern class WKFindResult
 	@:native("alloc")
 	overload public static function alloc():WKFindResult;
 
+	@:native("init")
+	overload public function init():WKFindResult;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKFindResult;
 

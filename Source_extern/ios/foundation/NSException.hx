@@ -17,6 +17,9 @@ extern class NSException
 	@:native("alloc")
 	overload public static function alloc():NSException;
 
+	@:native("init")
+	overload public function init():NSException;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSException;
 

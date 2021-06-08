@@ -12,6 +12,9 @@ extern class NSDecimalNumberHandler
 	@:native("alloc")
 	overload public static function alloc():NSDecimalNumberHandler;
 
+	@:native("init")
+	overload public function init():NSDecimalNumberHandler;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDecimalNumberHandler;
 

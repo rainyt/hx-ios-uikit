@@ -19,6 +19,9 @@ extern class UINavigationItem
 	@:native("alloc")
 	overload public static function alloc():UINavigationItem;
 
+	@:native("init")
+	overload public function init():UINavigationItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationItem;
 

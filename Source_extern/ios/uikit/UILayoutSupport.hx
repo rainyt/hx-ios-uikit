@@ -17,6 +17,9 @@ extern interface UILayoutSupport{
 	@:native("alloc")
 	overload public static function alloc():UILayoutSupport;
 
+	@:native("init")
+	overload public function init():UILayoutSupport;
+
 	@:native("autorelease")
 	overload public static function autorelease():UILayoutSupport;
 

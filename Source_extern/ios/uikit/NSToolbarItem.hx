@@ -11,6 +11,9 @@ extern class NSToolbarItem{
 	@:native("alloc")
 	overload public static function alloc():NSToolbarItem;
 
+	@:native("init")
+	overload public function init():NSToolbarItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSToolbarItem;
 

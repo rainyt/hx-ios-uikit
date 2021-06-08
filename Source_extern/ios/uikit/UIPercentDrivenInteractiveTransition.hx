@@ -12,6 +12,9 @@ extern class UIPercentDrivenInteractiveTransition
 	@:native("alloc")
 	overload public static function alloc():UIPercentDrivenInteractiveTransition;
 
+	@:native("init")
+	overload public function init():UIPercentDrivenInteractiveTransition;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPercentDrivenInteractiveTransition;
 

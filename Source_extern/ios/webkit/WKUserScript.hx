@@ -16,6 +16,9 @@ extern class WKUserScript
 	@:native("alloc")
 	overload public static function alloc():WKUserScript;
 
+	@:native("init")
+	overload public function init():WKUserScript;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKUserScript;
 

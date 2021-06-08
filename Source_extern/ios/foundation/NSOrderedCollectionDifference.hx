@@ -11,6 +11,9 @@ extern class NSOrderedCollectionDifference
 	@:native("alloc")
 	overload public static function alloc():NSOrderedCollectionDifference;
 
+	@:native("init")
+	overload public function init():NSOrderedCollectionDifference;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSOrderedCollectionDifference;
 

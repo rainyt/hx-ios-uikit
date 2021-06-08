@@ -10,6 +10,9 @@ extern class UISceneSizeRestrictions{
 	@:native("alloc")
 	overload public static function alloc():UISceneSizeRestrictions;
 
+	@:native("init")
+	overload public function init():UISceneSizeRestrictions;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISceneSizeRestrictions;
 

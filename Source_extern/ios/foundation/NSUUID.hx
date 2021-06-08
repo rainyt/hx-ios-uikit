@@ -16,6 +16,9 @@ extern class NSUUID
 	@:native("alloc")
 	overload public static function alloc():NSUUID;
 
+	@:native("init")
+	overload public function init():NSUUID;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUUID;
 

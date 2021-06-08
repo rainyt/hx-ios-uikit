@@ -13,6 +13,9 @@ extern interface UITextDropDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITextDropDelegate;
 
+	@:native("init")
+	overload public function init():UITextDropDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextDropDelegate;
 

@@ -9,6 +9,9 @@ extern interface UIResponderStandardEditActions{
 	@:native("alloc")
 	overload public static function alloc():UIResponderStandardEditActions;
 
+	@:native("init")
+	overload public function init():UIResponderStandardEditActions;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIResponderStandardEditActions;
 

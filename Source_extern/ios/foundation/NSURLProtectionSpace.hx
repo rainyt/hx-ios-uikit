@@ -17,6 +17,9 @@ extern class NSURLProtectionSpace
 	@:native("alloc")
 	overload public static function alloc():NSURLProtectionSpace;
 
+	@:native("init")
+	overload public function init():NSURLProtectionSpace;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLProtectionSpace;
 

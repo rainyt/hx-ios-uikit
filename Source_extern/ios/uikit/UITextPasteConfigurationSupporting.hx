@@ -9,6 +9,9 @@ extern interface UITextPasteConfigurationSupporting{
 	@:native("alloc")
 	overload public static function alloc():UITextPasteConfigurationSupporting;
 
+	@:native("init")
+	overload public function init():UITextPasteConfigurationSupporting;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextPasteConfigurationSupporting;
 

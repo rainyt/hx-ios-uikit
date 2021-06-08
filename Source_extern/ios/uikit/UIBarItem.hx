@@ -18,6 +18,9 @@ extern class UIBarItem
 	@:native("alloc")
 	overload public static function alloc():UIBarItem;
 
+	@:native("init")
+	overload public function init():UIBarItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIBarItem;
 

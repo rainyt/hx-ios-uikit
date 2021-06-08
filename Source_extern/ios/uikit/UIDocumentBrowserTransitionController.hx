@@ -13,6 +13,9 @@ extern class UIDocumentBrowserTransitionController
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserTransitionController;
 
+	@:native("init")
+	overload public function init():UIDocumentBrowserTransitionController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentBrowserTransitionController;
 

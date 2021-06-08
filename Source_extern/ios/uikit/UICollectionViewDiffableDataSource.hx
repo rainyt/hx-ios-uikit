@@ -20,6 +20,9 @@ extern class UICollectionViewDiffableDataSource
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDiffableDataSource;
 
+	@:native("init")
+	overload public function init():UICollectionViewDiffableDataSource;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDiffableDataSource;
 

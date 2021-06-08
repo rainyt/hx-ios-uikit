@@ -15,6 +15,9 @@ extern class UIViewPropertyAnimator
 	@:native("alloc")
 	overload public static function alloc():UIViewPropertyAnimator;
 
+	@:native("init")
+	overload public function init():UIViewPropertyAnimator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIViewPropertyAnimator;
 
@@ -70,7 +73,8 @@ extern class UIViewPropertyAnimator
 	overload public function continueAnimationWithTimingParametersDurationFactor(parameters:Dynamic, durationFactor:Float):Void;
 
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
+;
 
 
 }

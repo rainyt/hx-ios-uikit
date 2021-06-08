@@ -33,6 +33,9 @@ extern class NSIndexSet
 	@:native("alloc")
 	overload public static function alloc():NSIndexSet;
 
+	@:native("init")
+	overload public function init():NSIndexSet;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSIndexSet;
 

@@ -26,6 +26,9 @@ extern class UIVideoEditorController extends UINavigationController{
 	@:native("alloc")
 	overload public static function alloc():UIVideoEditorController;
 
+	@:native("init")
+	overload public function init():UIVideoEditorController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIVideoEditorController;
 

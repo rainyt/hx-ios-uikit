@@ -26,6 +26,9 @@ extern class NSURLResponse
 	@:native("alloc")
 	overload public static function alloc():NSURLResponse;
 
+	@:native("init")
+	overload public function init():NSURLResponse;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLResponse;
 

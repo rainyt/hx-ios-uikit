@@ -10,6 +10,9 @@ extern interface UIStateRestoring{
 	@:native("alloc")
 	overload public static function alloc():UIStateRestoring;
 
+	@:native("init")
+	overload public function init():UIStateRestoring;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIStateRestoring;
 

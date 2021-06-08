@@ -36,6 +36,9 @@ extern class UIProgressView extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIProgressView;
 
+	@:native("init")
+	overload public function init():UIProgressView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIProgressView;
 

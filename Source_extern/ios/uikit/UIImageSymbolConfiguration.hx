@@ -14,6 +14,9 @@ extern class UIImageSymbolConfiguration extends UIImageConfiguration{
 	@:native("alloc")
 	overload public static function alloc():UIImageSymbolConfiguration;
 
+	@:native("init")
+	overload public function init():UIImageSymbolConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIImageSymbolConfiguration;
 
@@ -61,9 +64,6 @@ extern class UIImageSymbolConfiguration extends UIImageConfiguration{
 
 	@:native("isEqualToConfiguration")
 	overload public function isEqualToConfiguration(otherConfiguration:UIImageSymbolConfiguration):Bool;
-
-	@:native("init")
-	overload public function init():UIImageConfiguration;
 
 	@:native("configurationWithTraitCollection")
 	overload public function configurationWithTraitCollection(traitCollection:UITraitCollection):UIImageConfiguration;

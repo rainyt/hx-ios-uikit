@@ -12,6 +12,9 @@ extern class NSConditionLock
 	@:native("alloc")
 	overload public static function alloc():NSConditionLock;
 
+	@:native("init")
+	overload public function init():NSConditionLock;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSConditionLock;
 

@@ -11,6 +11,9 @@ extern class UIImpactFeedbackGenerator extends UIFeedbackGenerator{
 	@:native("alloc")
 	overload public static function alloc():UIImpactFeedbackGenerator;
 
+	@:native("init")
+	overload public function init():UIImpactFeedbackGenerator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIImpactFeedbackGenerator;
 

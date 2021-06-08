@@ -15,6 +15,9 @@ extern class UIUserNotificationCategory
 	@:native("alloc")
 	overload public static function alloc():UIUserNotificationCategory;
 
+	@:native("init")
+	overload public function init():UIUserNotificationCategory;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIUserNotificationCategory;
 

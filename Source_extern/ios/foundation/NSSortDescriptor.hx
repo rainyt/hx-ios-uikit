@@ -19,6 +19,9 @@ extern class NSSortDescriptor
 	@:native("alloc")
 	overload public static function alloc():NSSortDescriptor;
 
+	@:native("init")
+	overload public function init():NSSortDescriptor;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSSortDescriptor;
 

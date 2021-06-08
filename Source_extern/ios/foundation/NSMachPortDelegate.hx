@@ -9,6 +9,9 @@ extern interface NSMachPortDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSMachPortDelegate;
 
+	@:native("init")
+	overload public function init():NSMachPortDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMachPortDelegate;
 

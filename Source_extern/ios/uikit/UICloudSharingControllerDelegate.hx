@@ -13,6 +13,9 @@ extern interface UICloudSharingControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UICloudSharingControllerDelegate;
 
+	@:native("init")
+	overload public function init():UICloudSharingControllerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICloudSharingControllerDelegate;
 

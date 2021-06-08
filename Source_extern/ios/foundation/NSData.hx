@@ -21,6 +21,9 @@ extern class NSData
 	@:native("alloc")
 	overload public static function alloc():NSData;
 
+	@:native("init")
+	overload public function init():NSData;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSData;
 

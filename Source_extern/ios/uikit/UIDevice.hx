@@ -14,6 +14,9 @@ extern class UIDevice{
 	@:native("alloc")
 	overload public static function alloc():UIDevice;
 
+	@:native("init")
+	overload public function init():UIDevice;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDevice;
 

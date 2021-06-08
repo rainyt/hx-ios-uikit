@@ -14,6 +14,9 @@ extern class NSTimer{
 	@:native("alloc")
 	overload public static function alloc():NSTimer;
 
+	@:native("init")
+	overload public function init():NSTimer;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSTimer;
 

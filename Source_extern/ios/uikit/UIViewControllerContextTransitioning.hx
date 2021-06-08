@@ -14,6 +14,9 @@ extern interface UIViewControllerContextTransitioning{
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerContextTransitioning;
 
+	@:native("init")
+	overload public function init():UIViewControllerContextTransitioning;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIViewControllerContextTransitioning;
 

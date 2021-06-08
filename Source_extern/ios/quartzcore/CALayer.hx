@@ -19,6 +19,9 @@ extern class CALayer{
 	@:native("alloc")
 	overload public static function alloc():CALayer;
 
+	@:native("init")
+	overload public function init():CALayer;
+
 	@:native("autorelease")
 	overload public static function autorelease():CALayer;
 
@@ -36,10 +39,6 @@ extern class CALayer{
 	/** Layer creation and initialization. **/
 	@:native("layer")
 	overload public static function layer():CALayer;
-
-	/* The designated initializer. */
-	@:native("init")
-	overload public function init():CALayer;
 
 	/* This initializer is used by CoreAnimation to create shadow copies of  * layers, e.g. for use as presentation layers. Subclasses can override  * this method to copy their instance variables into the presentation  * layer (subclasses should call the superclass afterwards). Calling this  * method in any other situation will result in undefined behavior. */
 	@:native("initWithLayer")

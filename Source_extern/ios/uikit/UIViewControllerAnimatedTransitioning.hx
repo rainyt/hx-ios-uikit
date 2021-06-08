@@ -9,6 +9,9 @@ extern interface UIViewControllerAnimatedTransitioning{
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerAnimatedTransitioning;
 
+	@:native("init")
+	overload public function init():UIViewControllerAnimatedTransitioning;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIViewControllerAnimatedTransitioning;
 

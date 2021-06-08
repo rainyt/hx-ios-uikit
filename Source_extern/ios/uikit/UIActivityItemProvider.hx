@@ -16,6 +16,9 @@ extern class UIActivityItemProvider extends NSOperation
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemProvider;
 
+	@:native("init")
+	overload public function init():UIActivityItemProvider;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityItemProvider;
 

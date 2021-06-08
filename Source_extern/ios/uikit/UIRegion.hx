@@ -14,6 +14,9 @@ extern class UIRegion
 	@:native("alloc")
 	overload public static function alloc():UIRegion;
 
+	@:native("init")
+	overload public function init():UIRegion;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIRegion;
 

@@ -10,6 +10,9 @@ extern interface UIUserActivityRestoring{
 	@:native("alloc")
 	overload public static function alloc():UIUserActivityRestoring;
 
+	@:native("init")
+	overload public function init():UIUserActivityRestoring;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIUserActivityRestoring;
 

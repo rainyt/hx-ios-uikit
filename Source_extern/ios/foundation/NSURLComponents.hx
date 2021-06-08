@@ -14,6 +14,9 @@ extern class NSURLComponents
 	@:native("alloc")
 	overload public static function alloc():NSURLComponents;
 
+	@:native("init")
+	overload public function init():NSURLComponents;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLComponents;
 

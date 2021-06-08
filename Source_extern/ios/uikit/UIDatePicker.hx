@@ -47,6 +47,9 @@ extern class UIDatePicker extends UIControl
 	@:native("alloc")
 	overload public static function alloc():UIDatePicker;
 
+	@:native("init")
+	overload public function init():UIDatePicker;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDatePicker;
 

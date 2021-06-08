@@ -13,6 +13,9 @@ extern class UIPrintFormatter
 	@:native("alloc")
 	overload public static function alloc():UIPrintFormatter;
 
+	@:native("init")
+	overload public function init():UIPrintFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPrintFormatter;
 

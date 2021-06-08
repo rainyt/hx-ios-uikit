@@ -34,6 +34,9 @@ extern class UIPickerView extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIPickerView;
 
+	@:native("init")
+	overload public function init():UIPickerView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPickerView;
 

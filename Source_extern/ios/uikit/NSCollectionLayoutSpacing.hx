@@ -11,6 +11,9 @@ extern class NSCollectionLayoutSpacing
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutSpacing;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutSpacing;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutSpacing;
 

@@ -13,6 +13,9 @@ extern class UITextInteraction
 	@:native("alloc")
 	overload public static function alloc():UITextInteraction;
 
+	@:native("init")
+	overload public function init():UITextInteraction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextInteraction;
 

@@ -20,6 +20,9 @@ extern interface NSURLSessionDataDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionDataDelegate;
 
+	@:native("init")
+	overload public function init():NSURLSessionDataDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionDataDelegate;
 

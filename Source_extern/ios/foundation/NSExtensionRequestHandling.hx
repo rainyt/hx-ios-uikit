@@ -13,6 +13,9 @@ extern interface NSExtensionRequestHandling{
 	@:native("alloc")
 	overload public static function alloc():NSExtensionRequestHandling;
 
+	@:native("init")
+	overload public function init():NSExtensionRequestHandling;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSExtensionRequestHandling;
 

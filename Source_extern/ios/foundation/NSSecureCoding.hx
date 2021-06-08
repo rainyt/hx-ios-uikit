@@ -9,6 +9,9 @@ extern interface NSSecureCoding{
 	@:native("alloc")
 	overload public static function alloc():NSSecureCoding;
 
+	@:native("init")
+	overload public function init():NSSecureCoding;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSSecureCoding;
 

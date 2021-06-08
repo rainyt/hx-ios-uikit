@@ -17,6 +17,9 @@ extern class WKWebsiteDataStore
 	@:native("alloc")
 	overload public static function alloc():WKWebsiteDataStore;
 
+	@:native("init")
+	overload public function init():WKWebsiteDataStore;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKWebsiteDataStore;
 

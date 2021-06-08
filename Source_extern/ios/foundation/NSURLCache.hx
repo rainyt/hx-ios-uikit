@@ -14,6 +14,9 @@ extern class NSURLCache{
 	@:native("alloc")
 	overload public static function alloc():NSURLCache;
 
+	@:native("init")
+	overload public function init():NSURLCache;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLCache;
 

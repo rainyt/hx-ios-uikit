@@ -15,6 +15,9 @@ extern interface UISceneDelegate{
 	@:native("alloc")
 	overload public static function alloc():UISceneDelegate;
 
+	@:native("init")
+	overload public function init():UISceneDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISceneDelegate;
 

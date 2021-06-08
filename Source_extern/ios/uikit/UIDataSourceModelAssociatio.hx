@@ -12,6 +12,9 @@ extern interface UIDataSourceModelAssociatio{
 	@:native("alloc")
 	overload public static function alloc():UIDataSourceModelAssociatio;
 
+	@:native("init")
+	overload public function init():UIDataSourceModelAssociatio;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDataSourceModelAssociatio;
 

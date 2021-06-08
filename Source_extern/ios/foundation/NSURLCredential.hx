@@ -19,6 +19,9 @@ extern class NSURLCredential
 	@:native("alloc")
 	overload public static function alloc():NSURLCredential;
 
+	@:native("init")
+	overload public function init():NSURLCredential;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLCredential;
 

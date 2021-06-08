@@ -11,6 +11,9 @@ extern class UICollectionViewDiffableDataSourceSectionSnapshotHandlers
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
 
+	@:native("init")
+	overload public function init():UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
 

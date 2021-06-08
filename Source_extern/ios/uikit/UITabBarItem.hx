@@ -19,6 +19,9 @@ extern class UITabBarItem extends UIBarItem{
 	@:native("alloc")
 	overload public static function alloc():UITabBarItem;
 
+	@:native("init")
+	overload public function init():UITabBarItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarItem;
 

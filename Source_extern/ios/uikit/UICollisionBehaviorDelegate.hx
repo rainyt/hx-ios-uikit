@@ -11,6 +11,9 @@ extern interface UICollisionBehaviorDelegate{
 	@:native("alloc")
 	overload public static function alloc():UICollisionBehaviorDelegate;
 
+	@:native("init")
+	overload public function init():UICollisionBehaviorDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollisionBehaviorDelegate;
 

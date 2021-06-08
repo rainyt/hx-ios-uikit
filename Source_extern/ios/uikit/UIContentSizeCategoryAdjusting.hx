@@ -9,6 +9,9 @@ extern interface UIContentSizeCategoryAdjusting{
 	@:native("alloc")
 	overload public static function alloc():UIContentSizeCategoryAdjusting;
 
+	@:native("init")
+	overload public function init():UIContentSizeCategoryAdjusting;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIContentSizeCategoryAdjusting;
 

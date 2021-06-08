@@ -14,6 +14,9 @@ extern interface NSUserActivityDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSUserActivityDelegate;
 
+	@:native("init")
+	overload public function init():NSUserActivityDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUserActivityDelegate;
 

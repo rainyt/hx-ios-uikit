@@ -16,6 +16,9 @@ extern class NSURLSessionWebSocketMessage{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionWebSocketMessage;
 
+	@:native("init")
+	overload public function init():NSURLSessionWebSocketMessage;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionWebSocketMessage;
 

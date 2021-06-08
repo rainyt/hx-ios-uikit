@@ -24,6 +24,9 @@ extern class UITraitCollection
 	@:native("alloc")
 	overload public static function alloc():UITraitCollection;
 
+	@:native("init")
+	overload public function init():UITraitCollection;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITraitCollection;
 

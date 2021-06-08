@@ -16,6 +16,9 @@ extern class UIDynamicItemGroup
 	@:native("alloc")
 	overload public static function alloc():UIDynamicItemGroup;
 
+	@:native("init")
+	overload public function init():UIDynamicItemGroup;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDynamicItemGroup;
 

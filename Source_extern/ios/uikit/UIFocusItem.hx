@@ -11,6 +11,9 @@ extern interface UIFocusItem{
 	@:native("alloc")
 	overload public static function alloc():UIFocusItem;
 
+	@:native("init")
+	overload public function init():UIFocusItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusItem;
 

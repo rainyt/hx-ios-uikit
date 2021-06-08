@@ -18,6 +18,9 @@ extern class NSMeasurement
 	@:native("alloc")
 	overload public static function alloc():NSMeasurement;
 
+	@:native("init")
+	overload public function init():NSMeasurement;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMeasurement;
 

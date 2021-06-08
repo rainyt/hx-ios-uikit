@@ -17,6 +17,9 @@ extern class UIScribbleInteraction
 	@:native("alloc")
 	overload public static function alloc():UIScribbleInteraction;
 
+	@:native("init")
+	overload public function init():UIScribbleInteraction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIScribbleInteraction;
 

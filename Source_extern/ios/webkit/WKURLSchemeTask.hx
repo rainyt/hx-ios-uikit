@@ -37,6 +37,9 @@ extern interface WKURLSchemeTask{
 	@:native("alloc")
 	overload public static function alloc():WKURLSchemeTask;
 
+	@:native("init")
+	overload public function init():WKURLSchemeTask;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKURLSchemeTask;
 

@@ -15,6 +15,9 @@ extern class UITargetedPreview
 	@:native("alloc")
 	overload public static function alloc():UITargetedPreview;
 
+	@:native("init")
+	overload public function init():UITargetedPreview;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITargetedPreview;
 

@@ -10,6 +10,9 @@ extern class NSEnumerator
 	@:native("alloc")
 	overload public static function alloc():NSEnumerator;
 
+	@:native("init")
+	overload public function init():NSEnumerator;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSEnumerator;
 

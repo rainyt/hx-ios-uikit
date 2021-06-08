@@ -20,6 +20,9 @@ extern class NSCoder{
 	@:native("alloc")
 	overload public static function alloc():NSCoder;
 
+	@:native("init")
+	overload public function init():NSCoder;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCoder;
 

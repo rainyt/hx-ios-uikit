@@ -12,6 +12,9 @@ extern class NSDirectoryEnumerator extends NSEnumerator
 	@:native("alloc")
 	overload public static function alloc():NSDirectoryEnumerator;
 
+	@:native("init")
+	overload public function init():NSDirectoryEnumerator;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDirectoryEnumerator;
 

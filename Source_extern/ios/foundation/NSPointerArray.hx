@@ -26,6 +26,9 @@ extern class NSPointerArray
 	@:native("alloc")
 	overload public static function alloc():NSPointerArray;
 
+	@:native("init")
+	overload public function init():NSPointerArray;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPointerArray;
 

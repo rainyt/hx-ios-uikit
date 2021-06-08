@@ -9,6 +9,9 @@ extern interface UIContentView{
 	@:native("alloc")
 	overload public static function alloc():UIContentView;
 
+	@:native("init")
+	overload public function init():UIContentView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIContentView;
 

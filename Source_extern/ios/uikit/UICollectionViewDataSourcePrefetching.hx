@@ -10,6 +10,9 @@ extern interface UICollectionViewDataSourcePrefetching{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDataSourcePrefetching;
 
+	@:native("init")
+	overload public function init():UICollectionViewDataSourcePrefetching;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDataSourcePrefetching;
 

@@ -10,6 +10,9 @@ extern class NSPipe{
 	@:native("alloc")
 	overload public static function alloc():NSPipe;
 
+	@:native("init")
+	overload public function init():NSPipe;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPipe;
 

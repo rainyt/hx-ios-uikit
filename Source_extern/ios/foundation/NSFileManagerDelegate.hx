@@ -13,6 +13,9 @@ extern interface NSFileManagerDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSFileManagerDelegate;
 
+	@:native("init")
+	overload public function init():NSFileManagerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFileManagerDelegate;
 

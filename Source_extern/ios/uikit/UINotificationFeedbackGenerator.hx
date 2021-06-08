@@ -11,6 +11,9 @@ extern class UINotificationFeedbackGenerator extends UIFeedbackGenerator{
 	@:native("alloc")
 	overload public static function alloc():UINotificationFeedbackGenerator;
 
+	@:native("init")
+	overload public function init():UINotificationFeedbackGenerator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UINotificationFeedbackGenerator;
 

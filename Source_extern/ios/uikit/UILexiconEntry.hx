@@ -12,6 +12,9 @@ extern class UILexiconEntry
 	@:native("alloc")
 	overload public static function alloc():UILexiconEntry;
 
+	@:native("init")
+	overload public function init():UILexiconEntry;
+
 	@:native("autorelease")
 	overload public static function autorelease():UILexiconEntry;
 

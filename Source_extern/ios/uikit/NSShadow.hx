@@ -18,6 +18,9 @@ extern class NSShadow
 	@:native("alloc")
 	overload public static function alloc():NSShadow;
 
+	@:native("init")
+	overload public function init():NSShadow;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSShadow;
 

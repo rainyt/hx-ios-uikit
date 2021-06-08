@@ -16,6 +16,9 @@ extern class UIGraphicsPDFRendererContext extends UIGraphicsRendererContext{
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsPDFRendererContext;
 
+	@:native("init")
+	overload public function init():UIGraphicsPDFRendererContext;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsPDFRendererContext;
 

@@ -27,6 +27,9 @@ extern class UIInputViewController extends UIViewController
 	@:native("alloc")
 	overload public static function alloc():UIInputViewController;
 
+	@:native("init")
+	overload public function init():UIInputViewController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIInputViewController;
 

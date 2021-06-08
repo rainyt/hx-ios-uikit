@@ -16,6 +16,9 @@ extern class NSPersonNameComponentsFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSPersonNameComponentsFormatter;
 
+	@:native("init")
+	overload public function init():NSPersonNameComponentsFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPersonNameComponentsFormatter;
 

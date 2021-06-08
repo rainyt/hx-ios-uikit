@@ -12,6 +12,9 @@ extern class NSPointerFunctions
 	@:native("alloc")
 	overload public static function alloc():NSPointerFunctions;
 
+	@:native("init")
+	overload public function init():NSPointerFunctions;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPointerFunctions;
 

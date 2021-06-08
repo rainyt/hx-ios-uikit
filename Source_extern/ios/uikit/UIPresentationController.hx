@@ -23,6 +23,9 @@ extern class UIPresentationController
 	@:native("alloc")
 	overload public static function alloc():UIPresentationController;
 
+	@:native("init")
+	overload public function init():UIPresentationController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPresentationController;
 

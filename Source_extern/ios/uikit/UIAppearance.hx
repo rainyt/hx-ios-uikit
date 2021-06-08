@@ -10,6 +10,9 @@ extern interface UIAppearance{
 	@:native("alloc")
 	overload public static function alloc():UIAppearance;
 
+	@:native("init")
+	overload public function init():UIAppearance;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAppearance;
 

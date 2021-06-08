@@ -42,6 +42,9 @@ extern class UIWebView extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIWebView;
 
+	@:native("init")
+	overload public function init():UIWebView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIWebView;
 

@@ -12,6 +12,9 @@ extern interface UIScrollViewDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIScrollViewDelegate;
 
+	@:native("init")
+	overload public function init():UIScrollViewDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIScrollViewDelegate;
 

@@ -15,6 +15,9 @@ extern class NSXMLParser{
 	@:native("alloc")
 	overload public static function alloc():NSXMLParser;
 
+	@:native("init")
+	overload public function init():NSXMLParser;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSXMLParser;
 

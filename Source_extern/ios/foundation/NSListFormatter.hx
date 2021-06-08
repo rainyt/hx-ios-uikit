@@ -17,6 +17,9 @@ extern class NSListFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSListFormatter;
 
+	@:native("init")
+	overload public function init():NSListFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSListFormatter;
 

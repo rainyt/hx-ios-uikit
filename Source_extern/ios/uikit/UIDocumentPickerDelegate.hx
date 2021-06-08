@@ -10,6 +10,9 @@ extern interface UIDocumentPickerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIDocumentPickerDelegate;
 
+	@:native("init")
+	overload public function init():UIDocumentPickerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentPickerDelegate;
 

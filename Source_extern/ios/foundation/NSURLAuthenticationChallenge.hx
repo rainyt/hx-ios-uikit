@@ -21,6 +21,9 @@ extern class NSURLAuthenticationChallenge
 	@:native("alloc")
 	overload public static function alloc():NSURLAuthenticationChallenge;
 
+	@:native("init")
+	overload public function init():NSURLAuthenticationChallenge;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLAuthenticationChallenge;
 

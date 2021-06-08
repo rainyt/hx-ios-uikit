@@ -41,6 +41,9 @@ extern class UIRefreshControl extends UIControl{
 	@:native("alloc")
 	overload public static function alloc():UIRefreshControl;
 
+	@:native("init")
+	overload public function init():UIRefreshControl;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIRefreshControl;
 

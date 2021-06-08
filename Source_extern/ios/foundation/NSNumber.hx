@@ -17,6 +17,9 @@ extern class NSNumber extends NSValue{
 	@:native("alloc")
 	overload public static function alloc():NSNumber;
 
+	@:native("init")
+	overload public function init():NSNumber;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNumber;
 

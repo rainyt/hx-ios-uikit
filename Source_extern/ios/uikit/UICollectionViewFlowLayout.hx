@@ -21,6 +21,9 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewFlowLayout;
 
+	@:native("init")
+	overload public function init():UICollectionViewFlowLayout;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewFlowLayout;
 
@@ -56,9 +59,6 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 
 	@:native("sectionFootersPinToVisibleBounds")
 	public var sectionFootersPinToVisibleBounds:Bool;
-
-	@:native("init")
-	overload public function init():UICollectionViewLayout;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICollectionViewFlowLayout;

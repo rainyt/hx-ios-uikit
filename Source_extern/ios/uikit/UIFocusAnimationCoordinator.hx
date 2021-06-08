@@ -9,6 +9,9 @@ extern class UIFocusAnimationCoordinator{
 	@:native("alloc")
 	overload public static function alloc():UIFocusAnimationCoordinator;
 
+	@:native("init")
+	overload public function init():UIFocusAnimationCoordinator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusAnimationCoordinator;
 

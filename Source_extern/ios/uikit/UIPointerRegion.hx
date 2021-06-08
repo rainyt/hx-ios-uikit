@@ -12,6 +12,9 @@ extern class UIPointerRegion
 	@:native("alloc")
 	overload public static function alloc():UIPointerRegion;
 
+	@:native("init")
+	overload public function init():UIPointerRegion;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerRegion;
 

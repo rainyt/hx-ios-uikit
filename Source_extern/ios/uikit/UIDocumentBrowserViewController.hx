@@ -30,6 +30,9 @@ extern class UIDocumentBrowserViewController extends UIViewController
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserViewController;
 
+	@:native("init")
+	overload public function init():UIDocumentBrowserViewController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentBrowserViewController;
 

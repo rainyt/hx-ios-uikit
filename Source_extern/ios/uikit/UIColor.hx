@@ -17,6 +17,9 @@ extern class UIColor
 	@:native("alloc")
 	overload public static function alloc():UIColor;
 
+	@:native("init")
+	overload public function init():UIColor;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIColor;
 

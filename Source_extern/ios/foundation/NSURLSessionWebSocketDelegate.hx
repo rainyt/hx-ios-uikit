@@ -12,6 +12,9 @@ extern interface NSURLSessionWebSocketDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionWebSocketDelegate;
 
+	@:native("init")
+	overload public function init():NSURLSessionWebSocketDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionWebSocketDelegate;
 

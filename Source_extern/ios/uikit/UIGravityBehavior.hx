@@ -12,6 +12,9 @@ extern class UIGravityBehavior extends UIDynamicBehavior{
 	@:native("alloc")
 	overload public static function alloc():UIGravityBehavior;
 
+	@:native("init")
+	overload public function init():UIGravityBehavior;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIGravityBehavior;
 

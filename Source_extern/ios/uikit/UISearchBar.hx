@@ -59,6 +59,9 @@ extern class UISearchBar extends UIView
 	@:native("alloc")
 	overload public static function alloc():UISearchBar;
 
+	@:native("init")
+	overload public function init():UISearchBar;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISearchBar;
 

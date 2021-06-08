@@ -13,6 +13,9 @@ extern interface NSNetServiceBrowserDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSNetServiceBrowserDelegate;
 
+	@:native("init")
+	overload public function init():NSNetServiceBrowserDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNetServiceBrowserDelegate;
 

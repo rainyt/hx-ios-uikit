@@ -12,6 +12,9 @@ extern class NSCollectionLayoutEdgeSpacing
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutEdgeSpacing;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutEdgeSpacing;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutEdgeSpacing;
 

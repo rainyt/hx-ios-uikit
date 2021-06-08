@@ -52,6 +52,9 @@ extern class UITextView extends UIScrollView
 	@:native("alloc")
 	overload public static function alloc():UITextView;
 
+	@:native("init")
+	overload public function init():UITextView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextView;
 

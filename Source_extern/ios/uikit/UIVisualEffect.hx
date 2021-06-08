@@ -12,6 +12,9 @@ extern class UIVisualEffect
 	@:native("alloc")
 	overload public static function alloc():UIVisualEffect;
 
+	@:native("init")
+	overload public function init():UIVisualEffect;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIVisualEffect;
 

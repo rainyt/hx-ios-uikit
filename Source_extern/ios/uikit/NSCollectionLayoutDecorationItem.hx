@@ -14,6 +14,9 @@ extern class NSCollectionLayoutDecorationItem extends NSCollectionLayoutItem
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutDecorationItem;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutDecorationItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutDecorationItem;
 

@@ -12,6 +12,9 @@ extern class UIDropProposal
 	@:native("alloc")
 	overload public static function alloc():UIDropProposal;
 
+	@:native("init")
+	overload public function init():UIDropProposal;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDropProposal;
 

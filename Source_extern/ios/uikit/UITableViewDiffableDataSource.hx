@@ -18,6 +18,9 @@ extern class UITableViewDiffableDataSource
 	@:native("alloc")
 	overload public static function alloc():UITableViewDiffableDataSource;
 
+	@:native("init")
+	overload public function init():UITableViewDiffableDataSource;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDiffableDataSource;
 

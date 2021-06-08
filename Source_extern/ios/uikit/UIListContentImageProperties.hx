@@ -15,6 +15,9 @@ extern class UIListContentImageProperties
 	@:native("alloc")
 	overload public static function alloc():UIListContentImageProperties;
 
+	@:native("init")
+	overload public function init():UIListContentImageProperties;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentImageProperties;
 

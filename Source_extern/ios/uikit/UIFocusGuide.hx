@@ -12,6 +12,9 @@ extern class UIFocusGuide extends UILayoutGuide{
 	@:native("alloc")
 	overload public static function alloc():UIFocusGuide;
 
+	@:native("init")
+	overload public function init():UIFocusGuide;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusGuide;
 

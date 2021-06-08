@@ -14,6 +14,9 @@ extern class UITextFormattingCoordinator
 	@:native("alloc")
 	overload public static function alloc():UITextFormattingCoordinator;
 
+	@:native("init")
+	overload public function init():UITextFormattingCoordinator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextFormattingCoordinator;
 

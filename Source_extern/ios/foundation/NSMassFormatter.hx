@@ -16,6 +16,9 @@ extern class NSMassFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSMassFormatter;
 
+	@:native("init")
+	overload public function init():NSMassFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMassFormatter;
 

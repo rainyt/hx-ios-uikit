@@ -15,6 +15,9 @@ extern class NSUnitMass extends NSDimension
 	@:native("alloc")
 	overload public static function alloc():NSUnitMass;
 
+	@:native("init")
+	overload public function init():NSUnitMass;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitMass;
 
@@ -73,9 +76,6 @@ extern class NSUnitMass extends NSDimension
 	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitMass;
-
-	@:native("init")
-	overload public function init():NSUnit;
 
 	@:native("initWithSymbol")
 	overload public function initWithSymbol(symbol:NSString):NSUnitMass;

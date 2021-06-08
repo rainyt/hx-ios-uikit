@@ -35,6 +35,9 @@ extern class UIListContentView extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIListContentView;
 
+	@:native("init")
+	overload public function init():UIListContentView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentView;
 

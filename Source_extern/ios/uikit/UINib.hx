@@ -14,6 +14,9 @@ extern class UINib{
 	@:native("alloc")
 	overload public static function alloc():UINib;
 
+	@:native("init")
+	overload public function init():UINib;
+
 	@:native("autorelease")
 	overload public static function autorelease():UINib;
 

@@ -37,6 +37,9 @@ extern class UICollectionViewController extends UIViewController
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewController;
 
+	@:native("init")
+	overload public function init():UICollectionViewController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewController;
 

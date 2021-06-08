@@ -15,6 +15,9 @@ extern class NSPort
 	@:native("alloc")
 	overload public static function alloc():NSPort;
 
+	@:native("init")
+	overload public function init():NSPort;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPort;
 

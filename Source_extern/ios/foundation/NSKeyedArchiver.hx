@@ -24,6 +24,9 @@ extern class NSKeyedArchiver extends NSCoder{
 	@:native("alloc")
 	overload public static function alloc():NSKeyedArchiver;
 
+	@:native("init")
+	overload public function init():NSKeyedArchiver;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSKeyedArchiver;
 

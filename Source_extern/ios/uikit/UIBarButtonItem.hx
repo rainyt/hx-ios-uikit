@@ -27,6 +27,9 @@ extern class UIBarButtonItem extends UIBarItem
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItem;
 
+	@:native("init")
+	overload public function init():UIBarButtonItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIBarButtonItem;
 

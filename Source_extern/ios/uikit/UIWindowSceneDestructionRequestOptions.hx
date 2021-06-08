@@ -11,6 +11,9 @@ extern class UIWindowSceneDestructionRequestOptions extends UISceneDestructionRe
 	@:native("alloc")
 	overload public static function alloc():UIWindowSceneDestructionRequestOptions;
 
+	@:native("init")
+	overload public function init():UIWindowSceneDestructionRequestOptions;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIWindowSceneDestructionRequestOptions;
 

@@ -10,6 +10,9 @@ extern class UICollectionViewCellRegistration{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewCellRegistration;
 
+	@:native("init")
+	overload public function init():UICollectionViewCellRegistration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewCellRegistration;
 

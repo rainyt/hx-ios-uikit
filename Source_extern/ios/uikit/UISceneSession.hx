@@ -16,6 +16,9 @@ extern class UISceneSession
 	@:native("alloc")
 	overload public static function alloc():UISceneSession;
 
+	@:native("init")
+	overload public function init():UISceneSession;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISceneSession;
 

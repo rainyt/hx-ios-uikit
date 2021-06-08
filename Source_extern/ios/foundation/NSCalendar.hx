@@ -19,6 +19,9 @@ extern class NSCalendar
 	@:native("alloc")
 	overload public static function alloc():NSCalendar;
 
+	@:native("init")
+	overload public function init():NSCalendar;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCalendar;
 

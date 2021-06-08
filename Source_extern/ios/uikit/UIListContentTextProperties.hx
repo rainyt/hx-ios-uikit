@@ -17,6 +17,9 @@ extern class UIListContentTextProperties
 	@:native("alloc")
 	overload public static function alloc():UIListContentTextProperties;
 
+	@:native("init")
+	overload public function init():UIListContentTextProperties;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentTextProperties;
 

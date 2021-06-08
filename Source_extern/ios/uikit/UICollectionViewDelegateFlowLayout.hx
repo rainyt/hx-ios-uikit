@@ -13,6 +13,9 @@ extern interface UICollectionViewDelegateFlowLayout{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDelegateFlowLayout;
 
+	@:native("init")
+	overload public function init():UICollectionViewDelegateFlowLayout;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDelegateFlowLayout;
 

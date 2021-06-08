@@ -18,6 +18,9 @@ extern class UITapGestureRecognizer extends UIGestureRecognizer{
 	@:native("alloc")
 	overload public static function alloc():UITapGestureRecognizer;
 
+	@:native("init")
+	overload public function init():UITapGestureRecognizer;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITapGestureRecognizer;
 
@@ -83,9 +86,6 @@ extern class UITapGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("initWithTarget:action")
 	overload public function initWithTargetAction(target:Dynamic, action:String):UITapGestureRecognizer;
-
-	@:native("init")
-	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UITapGestureRecognizer;

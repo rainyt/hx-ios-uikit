@@ -79,8 +79,8 @@ class Class: pass
 
 class ExternBaseClass(BaseClass):
     _hx_class_name = "ExternBaseClass"
-    __slots__ = ("isProtocol", "hextern", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys")
-    _hx_fields = ["isProtocol", "hextern", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys"]
+    __slots__ = ("isProtocol", "hextern", "includes", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys")
+    _hx_fields = ["isProtocol", "hextern", "includes", "pkg", "saveFile", "className", "extendClassName", "protocols", "_imported", "_hdata", "funcAndAttr", "_propertys"]
     _hx_methods = ["putClass", "putExternClass", "hasFuncOrAttr", "hasFuncExtendsOrAttr", "toHaxeFile", "_toReturnClass", "isExtendClass", "_importType", "toFuncArgs", "toFuncName", "externParentFuncProperty"]
     _hx_statics = []
     _hx_interfaces = []
@@ -98,11 +98,15 @@ class ExternBaseClass(BaseClass):
         self.funcAndAttr = []
         self._imported = []
         self.protocols = None
+        self.includes = []
         self.isProtocol = False
         _gthis = self
         super().__init__()
         harray = _hdata.split("\n")
         self.hextern = hextern
+        _this = self.includes
+        x = self.hextern.hfile
+        _this.append(x)
         pclassName = (harray[0] if 0 < len(harray) else None)
         self.isProtocol = Std.isOfType(self,ExternProtocolClass)
         _hx_str = ("@protocol" if (self.isProtocol) else "@interface")
@@ -130,15 +134,15 @@ class ExternBaseClass(BaseClass):
                 self.extendClassName = (harray[0] if 0 < len(harray) else None)
                 _this = self.extendClassName
                 _this1 = self.extendClassName
-                startIndex = None
+                startIndex1 = None
                 pos = None
-                if (startIndex is None):
+                if (startIndex1 is None):
                     pos = _this1.rfind(":", 0, len(_this1))
                 else:
-                    i = _this1.rfind(":", 0, (startIndex + 1))
-                    startLeft = (max(0,((startIndex + 1) - len(":"))) if ((i == -1)) else (i + 1))
+                    i = _this1.rfind(":", 0, (startIndex1 + 1))
+                    startLeft = (max(0,((startIndex1 + 1) - len(":"))) if ((i == -1)) else (i + 1))
                     check = _this1.find(":", startLeft, len(_this1))
-                    pos = (check if (((check > i) and ((check <= startIndex)))) else i)
+                    pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
                 self.extendClassName = HxString.substr(_this,(pos + 1),None)
                 self.extendClassName = StringTools.replace(self.extendClassName," ","")
                 self.extendClassName = StringTools.replace(self.extendClassName,"{","")
@@ -178,6 +182,9 @@ class ExternBaseClass(BaseClass):
             defcall(self)
         _this = self.funcAndAttr
         x = _hx_AnonObject({'type': "func", 'name': "alloc", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None, 'desc': None})
+        _this.append(x)
+        _this = self.funcAndAttr
+        x = _hx_AnonObject({'type': "func", 'name': "init", 'returnClass': self.className, 'isStatic': False, 'args': None, 'haxe': None, 'desc': None})
         _this.append(x)
         _this = self.funcAndAttr
         x = _hx_AnonObject({'type': "func", 'name': "autorelease", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None, 'desc': None})
@@ -288,6 +295,16 @@ class ExternBaseClass(BaseClass):
             if (not self.hasFuncOrAttr(value,unFindParentFunc)):
                 _this = self.funcAndAttr
                 _this.append(value)
+        _g_current = 0
+        _g_array = t.includes
+        while (_g_current < len(_g_array)):
+            _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+            _g1_key = _g_current
+            _g_current = (_g_current + 1)
+            index = _g1_key
+            value = _g1_value
+            _this = self.includes
+            _this.append(value)
 
     def putExternClass(self,t):
         _g_current = 0
@@ -387,6 +404,7 @@ class ExternBaseClass(BaseClass):
                         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("import " + ("null" if c4 is None else c4)) + ";\n"))))
         haxe = (("null" if haxe is None else haxe) + "@:objc\n")
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:native(\"" + HxOverrides.stringOrNull(self.className)) + "\")\n"))))
+        cppFileCode = ""
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("@:include(\"" + HxOverrides.stringOrNull(self.hextern.hfile)) + "\")\n"))))
         if (self.desc is not None):
             haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((HxOverrides.stringOrNull(self.desc) + "\n"))))
@@ -756,21 +774,21 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
                 startIndex3 = None
                 name = HxString.substr(name,0,(name.find("(") if ((startIndex3 is None)) else HxString.indexOfImpl(name,"(",startIndex3)))
                 name = StringTools.replace(name," ","")
-                startIndex4 = None
+                startIndex11 = None
                 pos = None
-                if (startIndex4 is None):
+                if (startIndex11 is None):
                     pos = read.rfind(":", 0, len(read))
                 else:
-                    i = read.rfind(":", 0, (startIndex4 + 1))
-                    startLeft = (max(0,((startIndex4 + 1) - len(":"))) if ((i == -1)) else (i + 1))
+                    i = read.rfind(":", 0, (startIndex11 + 1))
+                    startLeft = (max(0,((startIndex11 + 1) - len(":"))) if ((i == -1)) else (i + 1))
                     check = read.find(":", startLeft, len(read))
-                    pos = (check if (((check > i) and ((check <= startIndex4)))) else i)
+                    pos = (check if (((check > i) and ((check <= startIndex11)))) else i)
                 retclass = HxString.substr(read,(pos + 1),None)
                 retclass = StringTools.replace(retclass,";","")
                 args = self.toArgs(read)
                 _this = self.funcAndAttr
-                startIndex5 = None
-                x = (read.find("static") if ((startIndex5 is None)) else HxString.indexOfImpl(read,"static",startIndex5))
+                startIndex4 = None
+                x = (read.find("static") if ((startIndex4 is None)) else HxString.indexOfImpl(read,"static",startIndex4))
                 _this.append(_hx_AnonObject({'name': name, 'type': ("func" if isFunc else "property"), 'returnClass': retclass, 'isStatic': (x != -1), 'args': args, 'haxe': read, 'desc': None}))
                 read = ""
 
@@ -889,25 +907,25 @@ class ExternTools:
 
     @staticmethod
     def parsingHFile(hfile,out):
-        startIndex = None
+        startIndex1 = None
         endIndex = None
-        if (startIndex is None):
+        if (startIndex1 is None):
             endIndex = hfile.rfind("/Headers/", 0, len(hfile))
         else:
-            i = hfile.rfind("/Headers/", 0, (startIndex + 1))
-            startLeft = (max(0,((startIndex + 1) - len("/Headers/"))) if ((i == -1)) else (i + 1))
+            i = hfile.rfind("/Headers/", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("/Headers/"))) if ((i == -1)) else (i + 1))
             check = hfile.find("/Headers/", startLeft, len(hfile))
-            endIndex = (check if (((check > i) and ((check <= startIndex)))) else i)
+            endIndex = (check if (((check > i) and ((check <= startIndex1)))) else i)
         pkg = HxString.substring(hfile,0,endIndex)
-        startIndex = None
+        startIndex1 = None
         pos = None
-        if (startIndex is None):
+        if (startIndex1 is None):
             pos = pkg.rfind("/", 0, len(pkg))
         else:
-            i = pkg.rfind("/", 0, (startIndex + 1))
-            startLeft = (max(0,((startIndex + 1) - len("/"))) if ((i == -1)) else (i + 1))
+            i = pkg.rfind("/", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
             check = pkg.find("/", startLeft, len(pkg))
-            pos = (check if (((check > i) and ((check <= startIndex)))) else i)
+            pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
         pkg = HxString.substr(pkg,(pos + 1),None)
         startIndex = None
         pkg = HxString.substr(pkg,0,(pkg.find(".") if ((startIndex is None)) else HxString.indexOfImpl(pkg,".",startIndex)))
@@ -978,15 +996,15 @@ class ExternTypedefClass(BaseClass):
             enumContent = value
             startIndex = None
             enumContent = HxString.substr(enumContent,(((enumContent.find("{") if ((startIndex is None)) else HxString.indexOfImpl(enumContent,"{",startIndex))) + 1),None)
-            startIndex = None
+            startIndex1 = None
             _hx_len = None
-            if (startIndex is None):
+            if (startIndex1 is None):
                 _hx_len = enumContent.rfind("}", 0, len(enumContent))
             else:
-                i = enumContent.rfind("}", 0, (startIndex + 1))
-                startLeft = (max(0,((startIndex + 1) - len("}"))) if ((i == -1)) else (i + 1))
+                i = enumContent.rfind("}", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("}"))) if ((i == -1)) else (i + 1))
                 check = enumContent.find("}", startLeft, len(enumContent))
-                _hx_len = (check if (((check > i) and ((check <= startIndex)))) else i)
+                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
             enumContent = HxString.substr(enumContent,0,_hx_len)
             e = enumContent.split("\n")
             isIgone = False
@@ -1085,15 +1103,15 @@ class ObjcFun:
         startIndex = None
         if (((line.find("API_DEPRECATED") if ((startIndex is None)) else HxString.indexOfImpl(line,"API_DEPRECATED",startIndex))) != -1):
             return None
-        startIndex = None
+        startIndex1 = None
         _hx_len = None
-        if (startIndex is None):
+        if (startIndex1 is None):
             _hx_len = line.rfind(";", 0, len(line))
         else:
-            i = line.rfind(";", 0, (startIndex + 1))
-            startLeft = (max(0,((startIndex + 1) - len(";"))) if ((i == -1)) else (i + 1))
+            i = line.rfind(";", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len(";"))) if ((i == -1)) else (i + 1))
             check = line.find(";", startLeft, len(line))
-            _hx_len = (check if (((check > i) and ((check <= startIndex)))) else i)
+            _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
         line = HxString.substr(line,0,(_hx_len + 1))
         startIndex = None
         isStatic = (((line.find("+") if ((startIndex is None)) else HxString.indexOfImpl(line,"+",startIndex))) == 0)
@@ -1366,15 +1384,15 @@ class ObjcProperty:
 
     @staticmethod
     def parsing(typedefs,className,line):
-        startIndex = None
+        startIndex1 = None
         tmp = None
-        if (startIndex is None):
+        if (startIndex1 is None):
             tmp = line.rfind("void(^", 0, len(line))
         else:
-            i = line.rfind("void(^", 0, (startIndex + 1))
-            startLeft = (max(0,((startIndex + 1) - len("void(^"))) if ((i == -1)) else (i + 1))
+            i = line.rfind("void(^", 0, (startIndex1 + 1))
+            startLeft = (max(0,((startIndex1 + 1) - len("void(^"))) if ((i == -1)) else (i + 1))
             check = line.find("void(^", startLeft, len(line))
-            tmp = (check if (((check > i) and ((check <= startIndex)))) else i)
+            tmp = (check if (((check > i) and ((check <= startIndex1)))) else i)
         if (tmp != -1):
             return None
         startIndex = None
@@ -1386,15 +1404,15 @@ class ObjcProperty:
         line = StringTools.replace(line,"*","")
         startIndex = None
         if (((line.find("//") if ((startIndex is None)) else HxString.indexOfImpl(line,"//",startIndex))) != -1):
-            startIndex = None
+            startIndex1 = None
             _hx_len = None
-            if (startIndex is None):
+            if (startIndex1 is None):
                 _hx_len = line.rfind("//", 0, len(line))
             else:
-                i = line.rfind("//", 0, (startIndex + 1))
-                startLeft = (max(0,((startIndex + 1) - len("//"))) if ((i == -1)) else (i + 1))
+                i = line.rfind("//", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("//"))) if ((i == -1)) else (i + 1))
                 check = line.find("//", startLeft, len(line))
-                _hx_len = (check if (((check > i) and ((check <= startIndex)))) else i)
+                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
             line = HxString.substr(line,0,_hx_len)
         startIndex = None
         property = HxString.substr(line,0,(line.find(")") if ((startIndex is None)) else HxString.indexOfImpl(line,")",startIndex)))

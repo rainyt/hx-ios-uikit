@@ -11,6 +11,9 @@ extern class WKOpenPanelParameters{
 	@:native("alloc")
 	overload public static function alloc():WKOpenPanelParameters;
 
+	@:native("init")
+	overload public function init():WKOpenPanelParameters;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKOpenPanelParameters;
 

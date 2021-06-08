@@ -12,6 +12,9 @@ extern interface NSLockin{
 	@:native("alloc")
 	overload public static function alloc():NSLockin;
 
+	@:native("init")
+	overload public function init():NSLockin;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSLockin;
 

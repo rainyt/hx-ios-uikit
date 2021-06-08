@@ -16,6 +16,9 @@ extern class UIBackgroundConfiguration
 	@:native("alloc")
 	overload public static function alloc():UIBackgroundConfiguration;
 
+	@:native("init")
+	overload public function init():UIBackgroundConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIBackgroundConfiguration;
 

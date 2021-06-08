@@ -12,6 +12,9 @@ extern class UIMenuController{
 	@:native("alloc")
 	overload public static function alloc():UIMenuController;
 
+	@:native("init")
+	overload public function init():UIMenuController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIMenuController;
 

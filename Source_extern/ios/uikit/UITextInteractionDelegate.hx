@@ -11,6 +11,9 @@ extern interface UITextInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITextInteractionDelegate;
 
+	@:native("init")
+	overload public function init():UITextInteractionDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextInteractionDelegate;
 

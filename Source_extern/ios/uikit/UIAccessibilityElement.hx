@@ -27,6 +27,9 @@ extern class UIAccessibilityElement extends UIResponder
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityElement;
 
+	@:native("init")
+	overload public function init():UIAccessibilityElement;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityElement;
 

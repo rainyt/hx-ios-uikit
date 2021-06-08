@@ -11,14 +11,14 @@ extern class UICollectionViewDiffableDataSourceReorderingHandlers
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDiffableDataSourceReorderingHandlers;
 
+	@:native("init")
+	overload public function init():UICollectionViewDiffableDataSourceReorderingHandlers;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDiffableDataSourceReorderingHandlers;
 
 	@:native("ItemType")
 	public var ItemType:Dynamic;
-
-	@:native("NSDiffableDataSourceTransaction<SectionType, ItemType> ")
-	public var NSDiffableDataSourceTransaction<SectionType, ItemType> :Dynamic;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

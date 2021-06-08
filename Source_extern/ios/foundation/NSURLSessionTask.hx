@@ -21,6 +21,9 @@ extern class NSURLSessionTask
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionTask;
 
+	@:native("init")
+	overload public function init():NSURLSessionTask;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionTask;
 

@@ -15,6 +15,9 @@ extern class NSNotification
 	@:native("alloc")
 	overload public static function alloc():NSNotification;
 
+	@:native("init")
+	overload public function init():NSNotification;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNotification;
 
@@ -38,9 +41,6 @@ extern class NSNotification
 
 	@:native("notificationWithName:object:userInfo")
 	overload public static function notificationWithNameObjectUserInfo(aName:NSString, object:Dynamic, userInfo:NSDictionary):NSNotification;
-
-	@:native("init")
-	overload public function init():NSNotification;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

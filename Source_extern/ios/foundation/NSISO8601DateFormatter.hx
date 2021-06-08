@@ -18,6 +18,9 @@ extern class NSISO8601DateFormatter extends NSFormatter
 	@:native("alloc")
 	overload public static function alloc():NSISO8601DateFormatter;
 
+	@:native("init")
+	overload public function init():NSISO8601DateFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSISO8601DateFormatter;
 

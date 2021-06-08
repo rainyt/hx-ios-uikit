@@ -13,6 +13,9 @@ extern class UICollectionViewCompositionalLayoutConfiguration
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewCompositionalLayoutConfiguration;
 
+	@:native("init")
+	overload public function init():UICollectionViewCompositionalLayoutConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewCompositionalLayoutConfiguration;
 

@@ -9,6 +9,9 @@ extern interface UITextFormattingCoordinatorDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITextFormattingCoordinatorDelegate;
 
+	@:native("init")
+	overload public function init():UITextFormattingCoordinatorDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextFormattingCoordinatorDelegate;
 

@@ -23,6 +23,9 @@ extern class NSArray{
 	@:native("alloc")
 	overload public static function alloc():NSArray;
 
+	@:native("init")
+	overload public function init():NSArray;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSArray;
 
@@ -34,9 +37,6 @@ extern class NSArray{
 
 	@:native("objectAtIndex")
 	overload public function objectAtIndex(index:Int):Dynamic;
-
-	@:native("init")
-	overload public function init():NSArray;
 
 	@:native("initWithObjects:count")
 	overload public function initWithObjectsCount(objects:Dynamic, count:Int):NSArray;

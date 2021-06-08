@@ -12,6 +12,9 @@ extern class NSAutoreleasePool{
 	@:native("alloc")
 	overload public static function alloc():NSAutoreleasePool;
 
+	@:native("init")
+	overload public function init():NSAutoreleasePool;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSAutoreleasePool;
 

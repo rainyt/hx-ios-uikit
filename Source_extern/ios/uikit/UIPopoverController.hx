@@ -18,6 +18,9 @@ extern class UIPopoverController
 	@:native("alloc")
 	overload public static function alloc():UIPopoverController;
 
+	@:native("init")
+	overload public function init():UIPopoverController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPopoverController;
 

@@ -16,6 +16,9 @@ extern interface UIAppearanceContainer{
 	@:native("alloc")
 	overload public static function alloc():UIAppearanceContainer;
 
+	@:native("init")
+	overload public function init():UIAppearanceContainer;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAppearanceContainer;
 

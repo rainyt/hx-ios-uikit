@@ -14,6 +14,9 @@ extern class UIViewConfigurationState
 	@:native("alloc")
 	overload public static function alloc():UIViewConfigurationState;
 
+	@:native("init")
+	overload public function init():UIViewConfigurationState;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIViewConfigurationState;
 

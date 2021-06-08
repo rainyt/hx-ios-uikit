@@ -18,6 +18,9 @@ extern class NSNumberFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSNumberFormatter;
 
+	@:native("init")
+	overload public function init():NSNumberFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNumberFormatter;
 

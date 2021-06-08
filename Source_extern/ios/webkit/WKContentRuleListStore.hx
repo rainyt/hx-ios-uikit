@@ -35,6 +35,9 @@ extern class WKContentRuleListStore{
 	@:native("alloc")
 	overload public static function alloc():WKContentRuleListStore;
 
+	@:native("init")
+	overload public function init():WKContentRuleListStore;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKContentRuleListStore;
 

@@ -10,6 +10,9 @@ extern class UIStoryboardUnwindSegueSource{
 	@:native("alloc")
 	overload public static function alloc():UIStoryboardUnwindSegueSource;
 
+	@:native("init")
+	overload public function init():UIStoryboardUnwindSegueSource;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIStoryboardUnwindSegueSource;
 

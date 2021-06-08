@@ -13,6 +13,9 @@ extern class NSStream{
 	@:native("alloc")
 	overload public static function alloc():NSStream;
 
+	@:native("init")
+	overload public function init():NSStream;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSStream;
 

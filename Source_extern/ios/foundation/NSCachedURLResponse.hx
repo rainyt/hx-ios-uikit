@@ -23,6 +23,9 @@ extern class NSCachedURLResponse
 	@:native("alloc")
 	overload public static function alloc():NSCachedURLResponse;
 
+	@:native("init")
+	overload public function init():NSCachedURLResponse;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCachedURLResponse;
 

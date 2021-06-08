@@ -35,6 +35,9 @@ extern class UIImageView extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UIImageView;
 
+	@:native("init")
+	overload public function init():UIImageView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIImageView;
 

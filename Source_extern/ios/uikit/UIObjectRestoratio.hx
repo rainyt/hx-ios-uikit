@@ -10,6 +10,9 @@ extern interface UIObjectRestoratio{
 	@:native("alloc")
 	overload public static function alloc():UIObjectRestoratio;
 
+	@:native("init")
+	overload public function init():UIObjectRestoratio;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIObjectRestoratio;
 

@@ -13,6 +13,9 @@ extern interface UIDropInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIDropInteractionDelegate;
 
+	@:native("init")
+	overload public function init():UIDropInteractionDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDropInteractionDelegate;
 

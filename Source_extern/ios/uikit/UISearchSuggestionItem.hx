@@ -13,6 +13,9 @@ extern class UISearchSuggestionItem
 	@:native("alloc")
 	overload public static function alloc():UISearchSuggestionItem;
 
+	@:native("init")
+	overload public function init():UISearchSuggestionItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISearchSuggestionItem;
 

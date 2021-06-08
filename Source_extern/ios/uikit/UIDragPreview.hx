@@ -14,6 +14,9 @@ extern class UIDragPreview
 	@:native("alloc")
 	overload public static function alloc():UIDragPreview;
 
+	@:native("init")
+	overload public function init():UIDragPreview;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDragPreview;
 

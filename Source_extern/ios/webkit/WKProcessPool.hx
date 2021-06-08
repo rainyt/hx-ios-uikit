@@ -17,6 +17,9 @@ extern class WKProcessPool
 	@:native("alloc")
 	overload public static function alloc():WKProcessPool;
 
+	@:native("init")
+	overload public function init():WKProcessPool;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKProcessPool;
 

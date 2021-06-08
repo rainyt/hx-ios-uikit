@@ -17,6 +17,9 @@ extern class NSURL
 	@:native("alloc")
 	overload public static function alloc():NSURL;
 
+	@:native("init")
+	overload public function init():NSURL;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURL;
 

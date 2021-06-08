@@ -12,6 +12,9 @@ extern class NSLayoutDimension extends NSLayoutAnchor
 	@:native("alloc")
 	overload public static function alloc():NSLayoutDimension;
 
+	@:native("init")
+	overload public function init():NSLayoutDimension;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutDimension;
 

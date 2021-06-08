@@ -10,6 +10,9 @@ extern interface NSTextLayoutOrientationProvide{
 	@:native("alloc")
 	overload public static function alloc():NSTextLayoutOrientationProvide;
 
+	@:native("init")
+	overload public function init():NSTextLayoutOrientationProvide;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSTextLayoutOrientationProvide;
 

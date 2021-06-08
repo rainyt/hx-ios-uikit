@@ -17,6 +17,9 @@ extern class NSExtensionItem
 	@:native("alloc")
 	overload public static function alloc():NSExtensionItem;
 
+	@:native("init")
+	overload public function init():NSExtensionItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSExtensionItem;
 

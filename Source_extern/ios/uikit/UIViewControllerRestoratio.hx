@@ -18,6 +18,9 @@ extern interface UIViewControllerRestoratio{
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerRestoratio;
 
+	@:native("init")
+	overload public function init():UIViewControllerRestoratio;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIViewControllerRestoratio;
 

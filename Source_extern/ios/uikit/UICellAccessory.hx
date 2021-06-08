@@ -15,6 +15,9 @@ extern class UICellAccessory
 	@:native("alloc")
 	overload public static function alloc():UICellAccessory;
 
+	@:native("init")
+	overload public function init():UICellAccessory;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessory;
 

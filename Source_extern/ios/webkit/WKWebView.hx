@@ -52,6 +52,9 @@ extern class WKWebView extends UIView{
 	@:native("alloc")
 	overload public static function alloc():WKWebView;
 
+	@:native("init")
+	overload public function init():WKWebView;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKWebView;
 

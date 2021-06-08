@@ -15,6 +15,9 @@ extern class NSSocketPort extends NSPort{
 	@:native("alloc")
 	overload public static function alloc():NSSocketPort;
 
+	@:native("init")
+	overload public function init():NSSocketPort;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSSocketPort;
 

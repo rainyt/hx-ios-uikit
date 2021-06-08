@@ -42,6 +42,9 @@ extern class UILabel extends UIView
 	@:native("alloc")
 	overload public static function alloc():UILabel;
 
+	@:native("init")
+	overload public function init():UILabel;
+
 	@:native("autorelease")
 	overload public static function autorelease():UILabel;
 

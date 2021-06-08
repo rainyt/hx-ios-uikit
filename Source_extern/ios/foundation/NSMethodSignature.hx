@@ -12,6 +12,9 @@ extern class NSMethodSignature{
 	@:native("alloc")
 	overload public static function alloc():NSMethodSignature;
 
+	@:native("init")
+	overload public function init():NSMethodSignature;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMethodSignature;
 

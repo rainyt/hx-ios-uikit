@@ -12,6 +12,9 @@ extern class UIDropInteraction
 	@:native("alloc")
 	overload public static function alloc():UIDropInteraction;
 
+	@:native("init")
+	overload public function init():UIDropInteraction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDropInteraction;
 

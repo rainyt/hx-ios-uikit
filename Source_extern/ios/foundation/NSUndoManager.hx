@@ -13,6 +13,9 @@ extern class NSUndoManager{
 	@:native("alloc")
 	overload public static function alloc():NSUndoManager;
 
+	@:native("init")
+	overload public function init():NSUndoManager;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUndoManager;
 

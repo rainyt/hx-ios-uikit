@@ -13,6 +13,9 @@ extern class NSPropertyListSerialization{
 	@:native("alloc")
 	overload public static function alloc():NSPropertyListSerialization;
 
+	@:native("init")
+	overload public function init():NSPropertyListSerialization;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPropertyListSerialization;
 

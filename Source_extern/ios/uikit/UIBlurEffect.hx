@@ -11,6 +11,9 @@ extern class UIBlurEffect extends UIVisualEffect{
 	@:native("alloc")
 	overload public static function alloc():UIBlurEffect;
 
+	@:native("init")
+	overload public function init():UIBlurEffect;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIBlurEffect;
 

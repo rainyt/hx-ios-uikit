@@ -36,6 +36,9 @@ extern class UIActionSheet extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UIActionSheet;
 
+	@:native("init")
+	overload public function init():UIActionSheet;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIActionSheet;
 

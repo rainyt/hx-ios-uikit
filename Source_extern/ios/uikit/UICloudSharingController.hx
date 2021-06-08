@@ -25,6 +25,9 @@ extern class UICloudSharingController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UICloudSharingController;
 
+	@:native("init")
+	overload public function init():UICloudSharingController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICloudSharingController;
 

@@ -9,6 +9,9 @@ extern interface UIDragAnimating{
 	@:native("alloc")
 	overload public static function alloc():UIDragAnimating;
 
+	@:native("init")
+	overload public function init():UIDragAnimating;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDragAnimating;
 

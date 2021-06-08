@@ -13,6 +13,9 @@ extern class UITextInputPasswordRules
 	@:native("alloc")
 	overload public static function alloc():UITextInputPasswordRules;
 
+	@:native("init")
+	overload public function init():UITextInputPasswordRules;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputPasswordRules;
 

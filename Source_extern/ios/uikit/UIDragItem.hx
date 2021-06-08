@@ -10,6 +10,9 @@ extern class UIDragItem{
 	@:native("alloc")
 	overload public static function alloc():UIDragItem;
 
+	@:native("init")
+	overload public function init():UIDragItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDragItem;
 

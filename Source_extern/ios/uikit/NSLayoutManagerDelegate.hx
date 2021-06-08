@@ -16,6 +16,9 @@ extern interface NSLayoutManagerDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSLayoutManagerDelegate;
 
+	@:native("init")
+	overload public function init():NSLayoutManagerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutManagerDelegate;
 

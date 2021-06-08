@@ -10,6 +10,9 @@ extern interface UIColorPickerViewControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIColorPickerViewControllerDelegate;
 
+	@:native("init")
+	overload public function init():UIColorPickerViewControllerDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIColorPickerViewControllerDelegate;
 

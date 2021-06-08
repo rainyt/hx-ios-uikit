@@ -17,6 +17,9 @@ extern class NSTextTab
 	@:native("alloc")
 	overload public static function alloc():NSTextTab;
 
+	@:native("init")
+	overload public function init():NSTextTab;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSTextTab;
 

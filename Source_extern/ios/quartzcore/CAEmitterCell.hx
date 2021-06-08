@@ -18,6 +18,9 @@ extern class CAEmitterCell
 	@:native("alloc")
 	overload public static function alloc():CAEmitterCell;
 
+	@:native("init")
+	overload public function init():CAEmitterCell;
+
 	@:native("autorelease")
 	overload public static function autorelease():CAEmitterCell;
 

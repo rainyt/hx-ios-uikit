@@ -10,6 +10,9 @@ extern class NSMenuToolbarItem{
 	@:native("alloc")
 	overload public static function alloc():NSMenuToolbarItem;
 
+	@:native("init")
+	overload public function init():NSMenuToolbarItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMenuToolbarItem;
 

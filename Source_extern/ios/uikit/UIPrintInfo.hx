@@ -18,6 +18,9 @@ extern class UIPrintInfo
 	@:native("alloc")
 	overload public static function alloc():UIPrintInfo;
 
+	@:native("init")
+	overload public function init():UIPrintInfo;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPrintInfo;
 

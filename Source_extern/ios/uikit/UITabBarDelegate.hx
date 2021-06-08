@@ -11,6 +11,9 @@ extern interface UITabBarDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITabBarDelegate;
 
+	@:native("init")
+	overload public function init():UITabBarDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarDelegate;
 

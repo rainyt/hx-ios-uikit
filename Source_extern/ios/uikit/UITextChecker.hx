@@ -12,6 +12,9 @@ extern class UITextChecker{
 	@:native("alloc")
 	overload public static function alloc():UITextChecker;
 
+	@:native("init")
+	overload public function init():UITextChecker;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextChecker;
 

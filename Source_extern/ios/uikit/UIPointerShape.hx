@@ -14,6 +14,9 @@ extern class UIPointerShape
 	@:native("alloc")
 	overload public static function alloc():UIPointerShape;
 
+	@:native("init")
+	overload public function init():UIPointerShape;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerShape;
 

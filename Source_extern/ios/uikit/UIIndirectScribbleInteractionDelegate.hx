@@ -14,6 +14,9 @@ extern interface UIIndirectScribbleInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIIndirectScribbleInteractionDelegate;
 
+	@:native("init")
+	overload public function init():UIIndirectScribbleInteractionDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIIndirectScribbleInteractionDelegate;
 

@@ -16,6 +16,9 @@ extern class NSPersonNameComponents
 	@:native("alloc")
 	overload public static function alloc():NSPersonNameComponents;
 
+	@:native("init")
+	overload public function init():NSPersonNameComponents;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSPersonNameComponents;
 

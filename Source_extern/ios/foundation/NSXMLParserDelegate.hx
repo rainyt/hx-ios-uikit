@@ -29,6 +29,9 @@ extern interface NSXMLParserDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSXMLParserDelegate;
 
+	@:native("init")
+	overload public function init():NSXMLParserDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSXMLParserDelegate;
 

@@ -11,6 +11,9 @@ extern class UICellAccessoryReorder extends UICellAccessory{
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryReorder;
 
+	@:native("init")
+	overload public function init():UICellAccessoryReorder;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessoryReorder;
 
@@ -19,9 +22,6 @@ extern class UICellAccessoryReorder extends UICellAccessory{
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryReorder;
-
-	@:native("init")
-	overload public function init():UICellAccessory;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

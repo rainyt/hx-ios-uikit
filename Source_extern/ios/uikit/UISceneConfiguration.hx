@@ -14,6 +14,9 @@ extern class UISceneConfiguration
 	@:native("alloc")
 	overload public static function alloc():UISceneConfiguration;
 
+	@:native("init")
+	overload public function init():UISceneConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISceneConfiguration;
 

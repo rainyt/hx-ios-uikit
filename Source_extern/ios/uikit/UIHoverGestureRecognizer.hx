@@ -17,6 +17,9 @@ extern class UIHoverGestureRecognizer extends UIGestureRecognizer{
 	@:native("alloc")
 	overload public static function alloc():UIHoverGestureRecognizer;
 
+	@:native("init")
+	overload public function init():UIHoverGestureRecognizer;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIHoverGestureRecognizer;
 
@@ -73,9 +76,6 @@ extern class UIHoverGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("initWithTarget:action")
 	overload public function initWithTargetAction(target:Dynamic, action:String):UIHoverGestureRecognizer;
-
-	@:native("init")
-	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIHoverGestureRecognizer;

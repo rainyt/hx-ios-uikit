@@ -26,6 +26,9 @@ extern class UIDocumentPickerViewController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UIDocumentPickerViewController;
 
+	@:native("init")
+	overload public function init():UIDocumentPickerViewController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentPickerViewController;
 

@@ -14,6 +14,9 @@ extern interface UITextViewDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITextViewDelegate;
 
+	@:native("init")
+	overload public function init():UITextViewDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextViewDelegate;
 

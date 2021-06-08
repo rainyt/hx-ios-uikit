@@ -9,6 +9,9 @@ extern interface NSFastEnumeratio{
 	@:native("alloc")
 	overload public static function alloc():NSFastEnumeratio;
 
+	@:native("init")
+	overload public function init():NSFastEnumeratio;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFastEnumeratio;
 

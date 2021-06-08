@@ -14,6 +14,9 @@ extern class UITextInputMode
 	@:native("alloc")
 	overload public static function alloc():UITextInputMode;
 
+	@:native("init")
+	overload public function init():UITextInputMode;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputMode;
 

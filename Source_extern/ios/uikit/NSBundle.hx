@@ -14,6 +14,9 @@ extern class NSBundle{
 	@:native("alloc")
 	overload public static function alloc():NSBundle;
 
+	@:native("init")
+	overload public function init():NSBundle;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSBundle;
 

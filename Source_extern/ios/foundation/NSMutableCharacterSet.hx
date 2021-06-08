@@ -16,6 +16,9 @@ extern class NSMutableCharacterSet extends NSCharacterSet
 	@:native("alloc")
 	overload public static function alloc():NSMutableCharacterSet;
 
+	@:native("init")
+	overload public function init():NSMutableCharacterSet;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableCharacterSet;
 

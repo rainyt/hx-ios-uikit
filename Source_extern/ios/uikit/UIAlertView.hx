@@ -34,6 +34,9 @@ extern class UIAlertView extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UIAlertView;
 
+	@:native("init")
+	overload public function init():UIAlertView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAlertView;
 

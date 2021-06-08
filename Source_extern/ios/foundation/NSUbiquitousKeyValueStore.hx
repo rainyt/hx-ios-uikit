@@ -16,6 +16,9 @@ extern class NSUbiquitousKeyValueStore{
 	@:native("alloc")
 	overload public static function alloc():NSUbiquitousKeyValueStore;
 
+	@:native("init")
+	overload public function init():NSUbiquitousKeyValueStore;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSUbiquitousKeyValueStore;
 

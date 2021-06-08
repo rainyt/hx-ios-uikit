@@ -10,6 +10,9 @@ extern class NSStringDrawingContext{
 	@:native("alloc")
 	overload public static function alloc():NSStringDrawingContext;
 
+	@:native("init")
+	overload public function init():NSStringDrawingContext;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSStringDrawingContext;
 

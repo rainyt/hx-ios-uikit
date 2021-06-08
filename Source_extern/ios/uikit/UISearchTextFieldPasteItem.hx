@@ -10,6 +10,9 @@ extern interface UISearchTextFieldPasteItem{
 	@:native("alloc")
 	overload public static function alloc():UISearchTextFieldPasteItem;
 
+	@:native("init")
+	overload public function init():UISearchTextFieldPasteItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISearchTextFieldPasteItem;
 

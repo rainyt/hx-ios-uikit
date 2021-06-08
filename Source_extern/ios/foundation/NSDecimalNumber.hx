@@ -18,6 +18,9 @@ extern class NSDecimalNumber extends NSNumber{
 	@:native("alloc")
 	overload public static function alloc():NSDecimalNumber;
 
+	@:native("init")
+	overload public function init():NSDecimalNumber;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDecimalNumber;
 

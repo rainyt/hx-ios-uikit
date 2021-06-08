@@ -18,6 +18,9 @@ extern interface UIGuidedAccessRestrictionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIGuidedAccessRestrictionDelegate;
 
+	@:native("init")
+	overload public function init():UIGuidedAccessRestrictionDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIGuidedAccessRestrictionDelegate;
 

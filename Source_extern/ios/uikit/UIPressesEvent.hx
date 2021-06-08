@@ -14,6 +14,9 @@ extern class UIPressesEvent extends UIEvent{
 	@:native("alloc")
 	overload public static function alloc():UIPressesEvent;
 
+	@:native("init")
+	overload public function init():UIPressesEvent;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPressesEvent;
 

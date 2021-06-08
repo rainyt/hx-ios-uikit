@@ -11,6 +11,9 @@ extern interface UIContentContainer{
 	@:native("alloc")
 	overload public static function alloc():UIContentContainer;
 
+	@:native("init")
+	overload public function init():UIContentContainer;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIContentContainer;
 

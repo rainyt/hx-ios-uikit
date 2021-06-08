@@ -22,6 +22,9 @@ extern class NSBundleResourceRequest
 	@:native("alloc")
 	overload public static function alloc():NSBundleResourceRequest;
 
+	@:native("init")
+	overload public function init():NSBundleResourceRequest;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSBundleResourceRequest;
 

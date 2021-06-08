@@ -10,6 +10,9 @@ extern interface UIPreviewActionItem{
 	@:native("alloc")
 	overload public static function alloc():UIPreviewActionItem;
 
+	@:native("init")
+	overload public function init():UIPreviewActionItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewActionItem;
 

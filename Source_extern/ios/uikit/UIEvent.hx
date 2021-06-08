@@ -17,6 +17,9 @@ extern class UIEvent{
 	@:native("alloc")
 	overload public static function alloc():UIEvent;
 
+	@:native("init")
+	overload public function init():UIEvent;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIEvent;
 

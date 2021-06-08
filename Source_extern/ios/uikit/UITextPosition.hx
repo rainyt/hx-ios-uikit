@@ -13,6 +13,9 @@ extern class UITextPosition{
 	@:native("alloc")
 	overload public static function alloc():UITextPosition;
 
+	@:native("init")
+	overload public function init():UITextPosition;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextPosition;
 

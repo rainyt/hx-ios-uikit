@@ -22,6 +22,9 @@ extern class NSAttributedString{
 	@:native("alloc")
 	overload public static function alloc():NSAttributedString;
 
+	@:native("init")
+	overload public function init():NSAttributedString;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSAttributedString;
 

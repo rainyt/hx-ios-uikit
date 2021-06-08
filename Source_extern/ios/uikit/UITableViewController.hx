@@ -40,6 +40,9 @@ extern class UITableViewController extends UIViewController
 	@:native("alloc")
 	overload public static function alloc():UITableViewController;
 
+	@:native("init")
+	overload public function init():UITableViewController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewController;
 

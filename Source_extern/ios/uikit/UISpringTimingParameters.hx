@@ -15,6 +15,9 @@ extern class UISpringTimingParameters
 	@:native("alloc")
 	overload public static function alloc():UISpringTimingParameters;
 
+	@:native("init")
+	overload public function init():UISpringTimingParameters;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISpringTimingParameters;
 

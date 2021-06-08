@@ -17,6 +17,9 @@ extern class NSParagraphStyle
 	@:native("alloc")
 	overload public static function alloc():NSParagraphStyle;
 
+	@:native("init")
+	overload public function init():NSParagraphStyle;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSParagraphStyle;
 

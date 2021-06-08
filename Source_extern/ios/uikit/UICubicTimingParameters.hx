@@ -16,6 +16,9 @@ extern class UICubicTimingParameters
 	@:native("alloc")
 	overload public static function alloc():UICubicTimingParameters;
 
+	@:native("init")
+	overload public function init():UICubicTimingParameters;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICubicTimingParameters;
 

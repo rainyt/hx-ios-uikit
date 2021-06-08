@@ -30,6 +30,9 @@ extern class UISearchController extends UIViewController
 	@:native("alloc")
 	overload public static function alloc():UISearchController;
 
+	@:native("init")
+	overload public function init():UISearchController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISearchController;
 

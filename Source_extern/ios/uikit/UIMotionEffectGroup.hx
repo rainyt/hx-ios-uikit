@@ -14,14 +14,14 @@ extern class UIMotionEffectGroup extends UIMotionEffect{
 	@:native("alloc")
 	overload public static function alloc():UIMotionEffectGroup;
 
+	@:native("init")
+	overload public function init():UIMotionEffectGroup;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIMotionEffectGroup;
 
 	@:native("motionEffects")
 	public var motionEffects:Dynamic;
-
-	@:native("init")
-	overload public function init():UIMotionEffect;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIMotionEffectGroup;

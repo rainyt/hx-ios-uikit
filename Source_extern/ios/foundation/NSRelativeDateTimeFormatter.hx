@@ -22,6 +22,9 @@ extern class NSRelativeDateTimeFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSRelativeDateTimeFormatter;
 
+	@:native("init")
+	overload public function init():NSRelativeDateTimeFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSRelativeDateTimeFormatter;
 

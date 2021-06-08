@@ -14,6 +14,9 @@ extern interface UIDragInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIDragInteractionDelegate;
 
+	@:native("init")
+	overload public function init():UIDragInteractionDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDragInteractionDelegate;
 

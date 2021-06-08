@@ -38,6 +38,9 @@ extern class NSTextStorage extends NSMutableAttributedString
 	@:native("alloc")
 	overload public static function alloc():NSTextStorage;
 
+	@:native("init")
+	overload public function init():NSTextStorage;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSTextStorage;
 

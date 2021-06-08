@@ -18,6 +18,9 @@ extern class NSComparisonPredicate extends NSPredicate{
 	@:native("alloc")
 	overload public static function alloc():NSComparisonPredicate;
 
+	@:native("init")
+	overload public function init():NSComparisonPredicate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSComparisonPredicate;
 

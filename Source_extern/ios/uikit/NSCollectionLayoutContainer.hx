@@ -10,6 +10,9 @@ extern interface NSCollectionLayoutContainer{
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutContainer;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutContainer;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutContainer;
 

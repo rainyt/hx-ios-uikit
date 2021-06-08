@@ -13,6 +13,9 @@ extern class NSCollectionLayoutItem
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutItem;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutItem;
 

@@ -17,6 +17,9 @@ extern class UILongPressGestureRecognizer extends UIGestureRecognizer{
 	@:native("alloc")
 	overload public static function alloc():UILongPressGestureRecognizer;
 
+	@:native("init")
+	overload public function init():UILongPressGestureRecognizer;
+
 	@:native("autorelease")
 	overload public static function autorelease():UILongPressGestureRecognizer;
 
@@ -85,9 +88,6 @@ extern class UILongPressGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("initWithTarget:action")
 	overload public function initWithTargetAction(target:Dynamic, action:String):UILongPressGestureRecognizer;
-
-	@:native("init")
-	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UILongPressGestureRecognizer;

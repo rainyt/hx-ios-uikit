@@ -35,6 +35,9 @@ extern class UIActivityIndicatorView extends UIView
 	@:native("alloc")
 	overload public static function alloc():UIActivityIndicatorView;
 
+	@:native("init")
+	overload public function init():UIActivityIndicatorView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityIndicatorView;
 

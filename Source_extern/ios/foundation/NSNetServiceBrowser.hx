@@ -11,6 +11,9 @@ extern class NSNetServiceBrowser{
 	@:native("alloc")
 	overload public static function alloc():NSNetServiceBrowser;
 
+	@:native("init")
+	overload public function init():NSNetServiceBrowser;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNetServiceBrowser;
 

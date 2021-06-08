@@ -12,6 +12,9 @@ extern interface UITimingCurveProvider{
 	@:native("alloc")
 	overload public static function alloc():UITimingCurveProvider;
 
+	@:native("init")
+	overload public function init():UITimingCurveProvider;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITimingCurveProvider;
 

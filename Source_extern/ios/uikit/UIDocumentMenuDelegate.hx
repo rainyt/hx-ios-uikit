@@ -11,6 +11,9 @@ extern interface UIDocumentMenuDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIDocumentMenuDelegate;
 
+	@:native("init")
+	overload public function init():UIDocumentMenuDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentMenuDelegate;
 

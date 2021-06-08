@@ -10,6 +10,9 @@ extern interface UIContextMenuInteractionCommitAnimating{
 	@:native("alloc")
 	overload public static function alloc():UIContextMenuInteractionCommitAnimating;
 
+	@:native("init")
+	overload public function init():UIContextMenuInteractionCommitAnimating;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIContextMenuInteractionCommitAnimating;
 

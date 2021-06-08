@@ -17,6 +17,9 @@ extern class NSTextContainer
 	@:native("alloc")
 	overload public static function alloc():NSTextContainer;
 
+	@:native("init")
+	overload public function init():NSTextContainer;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSTextContainer;
 

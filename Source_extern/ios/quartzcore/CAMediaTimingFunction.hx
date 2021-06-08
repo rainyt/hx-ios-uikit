@@ -17,6 +17,9 @@ extern class CAMediaTimingFunction
 	@:native("alloc")
 	overload public static function alloc():CAMediaTimingFunction;
 
+	@:native("init")
+	overload public function init():CAMediaTimingFunction;
+
 	@:native("autorelease")
 	overload public static function autorelease():CAMediaTimingFunction;
 

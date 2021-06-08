@@ -14,6 +14,9 @@ extern class UIAttachmentBehavior extends UIDynamicBehavior{
 	@:native("alloc")
 	overload public static function alloc():UIAttachmentBehavior;
 
+	@:native("init")
+	overload public function init():UIAttachmentBehavior;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAttachmentBehavior;
 

@@ -13,6 +13,9 @@ extern class UIApplicationShortcutIcon
 	@:native("alloc")
 	overload public static function alloc():UIApplicationShortcutIcon;
 
+	@:native("init")
+	overload public function init():UIApplicationShortcutIcon;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIApplicationShortcutIcon;
 

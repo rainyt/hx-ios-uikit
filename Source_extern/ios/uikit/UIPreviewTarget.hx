@@ -14,6 +14,9 @@ extern class UIPreviewTarget
 	@:native("alloc")
 	overload public static function alloc():UIPreviewTarget;
 
+	@:native("init")
+	overload public function init():UIPreviewTarget;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewTarget;
 

@@ -10,6 +10,9 @@ extern class UIFocusSystem{
 	@:native("alloc")
 	overload public static function alloc():UIFocusSystem;
 
+	@:native("init")
+	overload public function init():UIFocusSystem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusSystem;
 

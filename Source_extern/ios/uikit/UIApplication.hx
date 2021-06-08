@@ -30,6 +30,9 @@ extern class UIApplication extends UIResponder{
 	@:native("alloc")
 	overload public static function alloc():UIApplication;
 
+	@:native("init")
+	overload public function init():UIApplication;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIApplication;
 

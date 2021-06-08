@@ -20,6 +20,9 @@ extern class WKUserContentController
 	@:native("alloc")
 	overload public static function alloc():WKUserContentController;
 
+	@:native("init")
+	overload public function init():WKUserContentController;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKUserContentController;
 

@@ -13,6 +13,9 @@ extern class UIContextualAction{
 	@:native("alloc")
 	overload public static function alloc():UIContextualAction;
 
+	@:native("init")
+	overload public function init():UIContextualAction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIContextualAction;
 

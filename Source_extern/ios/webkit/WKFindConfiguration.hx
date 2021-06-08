@@ -35,6 +35,9 @@ extern class WKFindConfiguration
 	@:native("alloc")
 	overload public static function alloc():WKFindConfiguration;
 
+	@:native("init")
+	overload public function init():WKFindConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKFindConfiguration;
 

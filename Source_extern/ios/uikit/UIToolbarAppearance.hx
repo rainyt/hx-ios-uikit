@@ -13,6 +13,9 @@ extern class UIToolbarAppearance extends UIBarAppearance{
 	@:native("alloc")
 	overload public static function alloc():UIToolbarAppearance;
 
+	@:native("init")
+	overload public function init():UIToolbarAppearance;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIToolbarAppearance;
 
@@ -21,9 +24,6 @@ extern class UIToolbarAppearance extends UIBarAppearance{
 
 	@:native("doneButtonAppearance")
 	public var doneButtonAppearance:UIBarButtonItemAppearance;
-
-	@:native("init")
-	overload public function init():UIBarAppearance;
 
 	@:native("initWithIdiom")
 	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UIToolbarAppearance;

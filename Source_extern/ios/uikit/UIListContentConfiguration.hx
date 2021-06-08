@@ -19,6 +19,9 @@ extern class UIListContentConfiguration
 	@:native("alloc")
 	overload public static function alloc():UIListContentConfiguration;
 
+	@:native("init")
+	overload public function init():UIListContentConfiguration;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentConfiguration;
 

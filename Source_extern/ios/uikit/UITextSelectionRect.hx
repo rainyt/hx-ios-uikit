@@ -14,6 +14,9 @@ extern class UITextSelectionRect{
 	@:native("alloc")
 	overload public static function alloc():UITextSelectionRect;
 
+	@:native("init")
+	overload public function init():UITextSelectionRect;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextSelectionRect;
 

@@ -13,6 +13,9 @@ extern interface WKURLSchemeHandler{
 	@:native("alloc")
 	overload public static function alloc():WKURLSchemeHandler;
 
+	@:native("init")
+	overload public function init():WKURLSchemeHandler;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKURLSchemeHandler;
 

@@ -12,6 +12,9 @@ extern class NSLock
 	@:native("alloc")
 	overload public static function alloc():NSLock;
 
+	@:native("init")
+	overload public function init():NSLock;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSLock;
 

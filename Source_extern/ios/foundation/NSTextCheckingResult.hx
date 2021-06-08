@@ -20,6 +20,9 @@ extern class NSTextCheckingResult
 	@:native("alloc")
 	overload public static function alloc():NSTextCheckingResult;
 
+	@:native("init")
+	overload public function init():NSTextCheckingResult;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSTextCheckingResult;
 

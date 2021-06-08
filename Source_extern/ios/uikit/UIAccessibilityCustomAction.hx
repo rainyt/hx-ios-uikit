@@ -12,6 +12,9 @@ extern class UIAccessibilityCustomAction{
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityCustomAction;
 
+	@:native("init")
+	overload public function init():UIAccessibilityCustomAction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityCustomAction;
 

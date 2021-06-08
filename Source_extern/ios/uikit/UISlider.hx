@@ -43,6 +43,9 @@ extern class UISlider extends UIControl
 	@:native("alloc")
 	overload public static function alloc():UISlider;
 
+	@:native("init")
+	overload public function init():UISlider;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISlider;
 

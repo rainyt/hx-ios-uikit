@@ -45,6 +45,9 @@ extern class NSObject{
 	@:native("alloc")
 	overload public static function alloc():NSObject;
 
+	@:native("init")
+	overload public function init():NSObject;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSObject;
 

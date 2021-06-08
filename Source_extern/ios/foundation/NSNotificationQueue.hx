@@ -13,6 +13,9 @@ extern class NSNotificationQueue{
 	@:native("alloc")
 	overload public static function alloc():NSNotificationQueue;
 
+	@:native("init")
+	overload public function init():NSNotificationQueue;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNotificationQueue;
 

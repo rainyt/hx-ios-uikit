@@ -16,6 +16,9 @@ extern class NSThread{
 	@:native("alloc")
 	overload public static function alloc():NSThread;
 
+	@:native("init")
+	overload public function init():NSThread;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSThread;
 

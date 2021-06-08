@@ -12,6 +12,9 @@ extern interface UITableViewDropItem{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropItem;
 
+	@:native("init")
+	overload public function init():UITableViewDropItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDropItem;
 

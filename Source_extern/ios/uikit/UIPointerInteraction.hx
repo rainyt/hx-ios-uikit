@@ -12,6 +12,9 @@ extern class UIPointerInteraction
 	@:native("alloc")
 	overload public static function alloc():UIPointerInteraction;
 
+	@:native("init")
+	overload public function init():UIPointerInteraction;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerInteraction;
 

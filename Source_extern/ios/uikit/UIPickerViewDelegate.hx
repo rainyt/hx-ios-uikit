@@ -13,6 +13,9 @@ extern interface UIPickerViewDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewDelegate;
 
+	@:native("init")
+	overload public function init():UIPickerViewDelegate;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPickerViewDelegate;
 

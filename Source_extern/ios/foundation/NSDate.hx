@@ -14,6 +14,9 @@ extern class NSDate
 	@:native("alloc")
 	overload public static function alloc():NSDate;
 
+	@:native("init")
+	overload public function init():NSDate;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDate;
 

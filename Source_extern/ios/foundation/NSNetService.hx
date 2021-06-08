@@ -14,6 +14,9 @@ extern class NSNetService{
 	@:native("alloc")
 	overload public static function alloc():NSNetService;
 
+	@:native("init")
+	overload public function init():NSNetService;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSNetService;
 

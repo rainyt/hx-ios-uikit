@@ -26,6 +26,9 @@ extern class UIAlertController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UIAlertController;
 
+	@:native("init")
+	overload public function init():UIAlertController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIAlertController;
 

@@ -11,14 +11,14 @@ extern class UICellAccessoryDisclosureIndicator extends UICellAccessory{
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryDisclosureIndicator;
 
+	@:native("init")
+	overload public function init():UICellAccessoryDisclosureIndicator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessoryDisclosureIndicator;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryDisclosureIndicator;
-
-	@:native("init")
-	overload public function init():UICellAccessory;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

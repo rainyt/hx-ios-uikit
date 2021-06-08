@@ -13,6 +13,9 @@ extern class UISceneActivationConditions
 	@:native("alloc")
 	overload public static function alloc():UISceneActivationConditions;
 
+	@:native("init")
+	overload public function init():UISceneActivationConditions;
+
 	@:native("autorelease")
 	overload public static function autorelease():UISceneActivationConditions;
 

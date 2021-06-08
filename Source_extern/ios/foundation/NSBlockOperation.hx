@@ -10,6 +10,9 @@ extern class NSBlockOperation extends NSOperation{
 	@:native("alloc")
 	overload public static function alloc():NSBlockOperation;
 
+	@:native("init")
+	overload public function init():NSBlockOperation;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSBlockOperation;
 

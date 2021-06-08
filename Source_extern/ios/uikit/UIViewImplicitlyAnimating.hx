@@ -9,6 +9,9 @@ extern interface UIViewImplicitlyAnimating{
 	@:native("alloc")
 	overload public static function alloc():UIViewImplicitlyAnimating;
 
+	@:native("init")
+	overload public function init():UIViewImplicitlyAnimating;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIViewImplicitlyAnimating;
 

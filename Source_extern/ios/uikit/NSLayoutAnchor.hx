@@ -19,6 +19,9 @@ extern class NSLayoutAnchor{
 	@:native("alloc")
 	overload public static function alloc():NSLayoutAnchor;
 
+	@:native("init")
+	overload public function init():NSLayoutAnchor;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutAnchor;
 

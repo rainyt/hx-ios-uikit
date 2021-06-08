@@ -24,6 +24,9 @@ extern class NSFileManager{
 	@:native("alloc")
 	overload public static function alloc():NSFileManager;
 
+	@:native("init")
+	overload public function init():NSFileManager;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFileManager;
 

@@ -9,6 +9,9 @@ extern class UIFeedbackGenerator{
 	@:native("alloc")
 	overload public static function alloc():UIFeedbackGenerator;
 
+	@:native("init")
+	overload public function init():UIFeedbackGenerator;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFeedbackGenerator;
 

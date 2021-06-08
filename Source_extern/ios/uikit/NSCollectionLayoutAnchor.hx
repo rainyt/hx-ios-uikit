@@ -13,6 +13,9 @@ extern class NSCollectionLayoutAnchor
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutAnchor;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutAnchor;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutAnchor;
 

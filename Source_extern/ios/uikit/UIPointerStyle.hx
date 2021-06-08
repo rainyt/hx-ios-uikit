@@ -14,6 +14,9 @@ extern class UIPointerStyle
 	@:native("alloc")
 	overload public static function alloc():UIPointerStyle;
 
+	@:native("init")
+	overload public function init():UIPointerStyle;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerStyle;
 

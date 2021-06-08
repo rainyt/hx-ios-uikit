@@ -48,6 +48,9 @@ extern class UICollectionView extends UIScrollView
 	@:native("alloc")
 	overload public static function alloc():UICollectionView;
 
+	@:native("init")
+	overload public function init():UICollectionView;
+
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionView;
 

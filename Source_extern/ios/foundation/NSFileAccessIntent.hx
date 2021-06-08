@@ -12,6 +12,9 @@ extern class NSFileAccessIntent{
 	@:native("alloc")
 	overload public static function alloc():NSFileAccessIntent;
 
+	@:native("init")
+	overload public function init():NSFileAccessIntent;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSFileAccessIntent;
 

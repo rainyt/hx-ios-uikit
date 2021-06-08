@@ -16,6 +16,9 @@ extern class UIGraphicsRendererFormat
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsRendererFormat;
 
+	@:native("init")
+	overload public function init():UIGraphicsRendererFormat;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsRendererFormat;
 

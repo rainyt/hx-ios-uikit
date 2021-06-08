@@ -18,6 +18,9 @@ extern class UIManagedDocument extends UIDocument{
 	@:native("alloc")
 	overload public static function alloc():UIManagedDocument;
 
+	@:native("init")
+	overload public function init():UIManagedDocument;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIManagedDocument;
 

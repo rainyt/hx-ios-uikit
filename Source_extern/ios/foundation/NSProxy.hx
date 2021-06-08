@@ -15,6 +15,9 @@ extern class NSProxy{
 	@:native("alloc")
 	overload public static function alloc():NSProxy;
 
+	@:native("init")
+	overload public function init():NSProxy;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSProxy;
 

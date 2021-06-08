@@ -14,6 +14,9 @@ extern interface UITextPasteItem{
 	@:native("alloc")
 	overload public static function alloc():UITextPasteItem;
 
+	@:native("init")
+	overload public function init():UITextPasteItem;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITextPasteItem;
 

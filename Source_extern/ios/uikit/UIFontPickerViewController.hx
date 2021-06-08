@@ -26,6 +26,9 @@ extern class UIFontPickerViewController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UIFontPickerViewController;
 
+	@:native("init")
+	overload public function init():UIFontPickerViewController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIFontPickerViewController;
 

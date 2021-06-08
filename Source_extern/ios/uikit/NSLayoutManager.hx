@@ -24,6 +24,9 @@ extern class NSLayoutManager
 	@:native("alloc")
 	overload public static function alloc():NSLayoutManager;
 
+	@:native("init")
+	overload public function init():NSLayoutManager;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutManager;
 

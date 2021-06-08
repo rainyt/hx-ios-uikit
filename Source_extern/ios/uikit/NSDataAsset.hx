@@ -14,6 +14,9 @@ extern class NSDataAsset
 	@:native("alloc")
 	overload public static function alloc():NSDataAsset;
 
+	@:native("init")
+	overload public function init():NSDataAsset;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSDataAsset;
 

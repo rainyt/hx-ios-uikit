@@ -20,6 +20,9 @@ extern class NSMutableDictionary extends NSDictionary
 	@:native("alloc")
 	overload public static function alloc():NSMutableDictionary;
 
+	@:native("init")
+	overload public function init():NSMutableDictionary;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableDictionary;
 

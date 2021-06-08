@@ -12,6 +12,9 @@ extern class UIMarkupTextPrintFormatter extends UIPrintFormatter{
 	@:native("alloc")
 	overload public static function alloc():UIMarkupTextPrintFormatter;
 
+	@:native("init")
+	overload public function init():UIMarkupTextPrintFormatter;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIMarkupTextPrintFormatter;
 

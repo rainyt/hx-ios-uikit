@@ -22,6 +22,9 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	@:native("alloc")
 	overload public static function alloc():UIPopoverPresentationController;
 
+	@:native("init")
+	overload public function init():UIPopoverPresentationController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIPopoverPresentationController;
 
@@ -57,9 +60,6 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 
 	@:native("initWithPresentedViewController:presentingViewController")
 	overload public function initWithPresentedViewControllerPresentingViewController(presentedViewController:UIViewController, presentingViewController:UIViewController):UIPopoverPresentationController;
-
-	@:native("init")
-	overload public function init():UIPresentationController;
 
 	@:native("adaptivePresentationStyleForTraitCollection")
 	overload public function adaptivePresentationStyleForTraitCollection(traitCollection:UITraitCollection):UIModalPresentationStyle;

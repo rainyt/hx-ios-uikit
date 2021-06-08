@@ -10,6 +10,9 @@ extern interface NSCollectionLayoutEnvironment{
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutEnvironment;
 
+	@:native("init")
+	overload public function init():NSCollectionLayoutEnvironment;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutEnvironment;
 

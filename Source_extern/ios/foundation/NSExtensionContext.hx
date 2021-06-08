@@ -15,6 +15,9 @@ extern class NSExtensionContext{
 	@:native("alloc")
 	overload public static function alloc():NSExtensionContext;
 
+	@:native("init")
+	overload public function init():NSExtensionContext;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSExtensionContext;
 

@@ -14,6 +14,9 @@ extern class NSError
 	@:native("alloc")
 	overload public static function alloc():NSError;
 
+	@:native("init")
+	overload public function init():NSError;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSError;
 

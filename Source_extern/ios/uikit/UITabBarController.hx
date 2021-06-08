@@ -41,6 +41,9 @@ extern class UITabBarController extends UIViewController
 	@:native("alloc")
 	overload public static function alloc():UITabBarController;
 
+	@:native("init")
+	overload public function init():UITabBarController;
+
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarController;
 

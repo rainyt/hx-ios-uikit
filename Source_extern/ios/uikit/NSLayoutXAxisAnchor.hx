@@ -13,6 +13,9 @@ extern class NSLayoutXAxisAnchor extends NSLayoutAnchor
 	@:native("alloc")
 	overload public static function alloc():NSLayoutXAxisAnchor;
 
+	@:native("init")
+	overload public function init():NSLayoutXAxisAnchor;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutXAxisAnchor;
 

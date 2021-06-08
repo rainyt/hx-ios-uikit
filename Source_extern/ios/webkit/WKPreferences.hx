@@ -15,6 +15,9 @@ extern class WKPreferences
 	@:native("alloc")
 	overload public static function alloc():WKPreferences;
 
+	@:native("init")
+	overload public function init():WKPreferences;
+
 	@:native("autorelease")
 	overload public static function autorelease():WKPreferences;
 

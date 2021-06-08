@@ -40,6 +40,9 @@ extern class UIColorWell extends UIControl{
 	@:native("alloc")
 	overload public static function alloc():UIColorWell;
 
+	@:native("init")
+	overload public function init():UIColorWell;
+
 	@:native("autorelease")
 	overload public static function autorelease():UIColorWell;
 

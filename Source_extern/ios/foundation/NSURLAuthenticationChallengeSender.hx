@@ -20,6 +20,9 @@ extern interface NSURLAuthenticationChallengeSender{
 	@:native("alloc")
 	overload public static function alloc():NSURLAuthenticationChallengeSender;
 
+	@:native("init")
+	overload public function init():NSURLAuthenticationChallengeSender;
+
 	@:native("autorelease")
 	overload public static function autorelease():NSURLAuthenticationChallengeSender;
 
