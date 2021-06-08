@@ -4,7 +4,7 @@ import ios.uikit.UIControlEvents;
 import ios.uikit.UIControl;
 
 class Events {
-	private static var listeners:Array<EventListener>;
+	private static var listeners:Array<EventListener> = [];
 	private static var listenerId:Int;
 
 	public static function listen(control:UIControl, event:UIControlEvents, handler:Void->Void):EventListener {

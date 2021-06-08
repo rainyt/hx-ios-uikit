@@ -130,15 +130,15 @@ class ExternBaseClass(BaseClass):
                 self.extendClassName = (harray[0] if 0 < len(harray) else None)
                 _this = self.extendClassName
                 _this1 = self.extendClassName
-                startIndex1 = None
+                startIndex = None
                 pos = None
-                if (startIndex1 is None):
+                if (startIndex is None):
                     pos = _this1.rfind(":", 0, len(_this1))
                 else:
-                    i = _this1.rfind(":", 0, (startIndex1 + 1))
-                    startLeft = (max(0,((startIndex1 + 1) - len(":"))) if ((i == -1)) else (i + 1))
+                    i = _this1.rfind(":", 0, (startIndex + 1))
+                    startLeft = (max(0,((startIndex + 1) - len(":"))) if ((i == -1)) else (i + 1))
                     check = _this1.find(":", startLeft, len(_this1))
-                    pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
+                    pos = (check if (((check > i) and ((check <= startIndex)))) else i)
                 self.extendClassName = HxString.substr(_this,(pos + 1),None)
                 self.extendClassName = StringTools.replace(self.extendClassName," ","")
                 self.extendClassName = StringTools.replace(self.extendClassName,"{","")
@@ -756,21 +756,21 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
                 startIndex3 = None
                 name = HxString.substr(name,0,(name.find("(") if ((startIndex3 is None)) else HxString.indexOfImpl(name,"(",startIndex3)))
                 name = StringTools.replace(name," ","")
-                startIndex11 = None
+                startIndex4 = None
                 pos = None
-                if (startIndex11 is None):
+                if (startIndex4 is None):
                     pos = read.rfind(":", 0, len(read))
                 else:
-                    i = read.rfind(":", 0, (startIndex11 + 1))
-                    startLeft = (max(0,((startIndex11 + 1) - len(":"))) if ((i == -1)) else (i + 1))
+                    i = read.rfind(":", 0, (startIndex4 + 1))
+                    startLeft = (max(0,((startIndex4 + 1) - len(":"))) if ((i == -1)) else (i + 1))
                     check = read.find(":", startLeft, len(read))
-                    pos = (check if (((check > i) and ((check <= startIndex11)))) else i)
+                    pos = (check if (((check > i) and ((check <= startIndex4)))) else i)
                 retclass = HxString.substr(read,(pos + 1),None)
                 retclass = StringTools.replace(retclass,";","")
                 args = self.toArgs(read)
                 _this = self.funcAndAttr
-                startIndex4 = None
-                x = (read.find("static") if ((startIndex4 is None)) else HxString.indexOfImpl(read,"static",startIndex4))
+                startIndex5 = None
+                x = (read.find("static") if ((startIndex5 is None)) else HxString.indexOfImpl(read,"static",startIndex5))
                 _this.append(_hx_AnonObject({'name': name, 'type': ("func" if isFunc else "property"), 'returnClass': retclass, 'isStatic': (x != -1), 'args': args, 'haxe': read, 'desc': None}))
                 read = ""
 
@@ -797,6 +797,30 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
                 array.append(_hx_AnonObject({'name': (a[0] if 0 < len(a) else None), 'type': (a[1] if 1 < len(a) else None)}))
             return array
         return None
+
+
+
+class haxe_IMap:
+    _hx_class_name = "haxe.IMap"
+    __slots__ = ()
+    _hx_methods = ["get", "keys"]
+
+
+class haxe_ds_StringMap:
+    _hx_class_name = "haxe.ds.StringMap"
+    __slots__ = ("h",)
+    _hx_fields = ["h"]
+    _hx_methods = ["get", "keys"]
+    _hx_interfaces = [haxe_IMap]
+
+    def __init__(self):
+        self.h = dict()
+
+    def get(self,key):
+        return self.h.get(key,None)
+
+    def keys(self):
+        return python_HaxeIterator(iter(self.h.keys()))
 
 
 
@@ -865,25 +889,25 @@ class ExternTools:
 
     @staticmethod
     def parsingHFile(hfile,out):
-        startIndex1 = None
+        startIndex = None
         endIndex = None
-        if (startIndex1 is None):
+        if (startIndex is None):
             endIndex = hfile.rfind("/Headers/", 0, len(hfile))
         else:
-            i = hfile.rfind("/Headers/", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len("/Headers/"))) if ((i == -1)) else (i + 1))
+            i = hfile.rfind("/Headers/", 0, (startIndex + 1))
+            startLeft = (max(0,((startIndex + 1) - len("/Headers/"))) if ((i == -1)) else (i + 1))
             check = hfile.find("/Headers/", startLeft, len(hfile))
-            endIndex = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            endIndex = (check if (((check > i) and ((check <= startIndex)))) else i)
         pkg = HxString.substring(hfile,0,endIndex)
-        startIndex1 = None
+        startIndex = None
         pos = None
-        if (startIndex1 is None):
+        if (startIndex is None):
             pos = pkg.rfind("/", 0, len(pkg))
         else:
-            i = pkg.rfind("/", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
+            i = pkg.rfind("/", 0, (startIndex + 1))
+            startLeft = (max(0,((startIndex + 1) - len("/"))) if ((i == -1)) else (i + 1))
             check = pkg.find("/", startLeft, len(pkg))
-            pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            pos = (check if (((check > i) and ((check <= startIndex)))) else i)
         pkg = HxString.substr(pkg,(pos + 1),None)
         startIndex = None
         pkg = HxString.substr(pkg,0,(pkg.find(".") if ((startIndex is None)) else HxString.indexOfImpl(pkg,".",startIndex)))
@@ -954,15 +978,15 @@ class ExternTypedefClass(BaseClass):
             enumContent = value
             startIndex = None
             enumContent = HxString.substr(enumContent,(((enumContent.find("{") if ((startIndex is None)) else HxString.indexOfImpl(enumContent,"{",startIndex))) + 1),None)
-            startIndex1 = None
+            startIndex = None
             _hx_len = None
-            if (startIndex1 is None):
+            if (startIndex is None):
                 _hx_len = enumContent.rfind("}", 0, len(enumContent))
             else:
-                i = enumContent.rfind("}", 0, (startIndex1 + 1))
-                startLeft = (max(0,((startIndex1 + 1) - len("}"))) if ((i == -1)) else (i + 1))
+                i = enumContent.rfind("}", 0, (startIndex + 1))
+                startLeft = (max(0,((startIndex + 1) - len("}"))) if ((i == -1)) else (i + 1))
                 check = enumContent.find("}", startLeft, len(enumContent))
-                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+                _hx_len = (check if (((check > i) and ((check <= startIndex)))) else i)
             enumContent = HxString.substr(enumContent,0,_hx_len)
             e = enumContent.split("\n")
             isIgone = False
@@ -1061,15 +1085,15 @@ class ObjcFun:
         startIndex = None
         if (((line.find("API_DEPRECATED") if ((startIndex is None)) else HxString.indexOfImpl(line,"API_DEPRECATED",startIndex))) != -1):
             return None
-        startIndex1 = None
+        startIndex = None
         _hx_len = None
-        if (startIndex1 is None):
+        if (startIndex is None):
             _hx_len = line.rfind(";", 0, len(line))
         else:
-            i = line.rfind(";", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len(";"))) if ((i == -1)) else (i + 1))
+            i = line.rfind(";", 0, (startIndex + 1))
+            startLeft = (max(0,((startIndex + 1) - len(";"))) if ((i == -1)) else (i + 1))
             check = line.find(";", startLeft, len(line))
-            _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            _hx_len = (check if (((check > i) and ((check <= startIndex)))) else i)
         line = HxString.substr(line,0,(_hx_len + 1))
         startIndex = None
         isStatic = (((line.find("+") if ((startIndex is None)) else HxString.indexOfImpl(line,"+",startIndex))) == 0)
@@ -1342,15 +1366,15 @@ class ObjcProperty:
 
     @staticmethod
     def parsing(typedefs,className,line):
-        startIndex1 = None
+        startIndex = None
         tmp = None
-        if (startIndex1 is None):
+        if (startIndex is None):
             tmp = line.rfind("void(^", 0, len(line))
         else:
-            i = line.rfind("void(^", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len("void(^"))) if ((i == -1)) else (i + 1))
+            i = line.rfind("void(^", 0, (startIndex + 1))
+            startLeft = (max(0,((startIndex + 1) - len("void(^"))) if ((i == -1)) else (i + 1))
             check = line.find("void(^", startLeft, len(line))
-            tmp = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            tmp = (check if (((check > i) and ((check <= startIndex)))) else i)
         if (tmp != -1):
             return None
         startIndex = None
@@ -1362,15 +1386,15 @@ class ObjcProperty:
         line = StringTools.replace(line,"*","")
         startIndex = None
         if (((line.find("//") if ((startIndex is None)) else HxString.indexOfImpl(line,"//",startIndex))) != -1):
-            startIndex1 = None
+            startIndex = None
             _hx_len = None
-            if (startIndex1 is None):
+            if (startIndex is None):
                 _hx_len = line.rfind("//", 0, len(line))
             else:
-                i = line.rfind("//", 0, (startIndex1 + 1))
-                startLeft = (max(0,((startIndex1 + 1) - len("//"))) if ((i == -1)) else (i + 1))
+                i = line.rfind("//", 0, (startIndex + 1))
+                startLeft = (max(0,((startIndex + 1) - len("//"))) if ((i == -1)) else (i + 1))
                 check = line.find("//", startLeft, len(line))
-                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+                _hx_len = (check if (((check > i) and ((check <= startIndex)))) else i)
             line = HxString.substr(line,0,_hx_len)
         startIndex = None
         property = HxString.substr(line,0,(line.find(")") if ((startIndex is None)) else HxString.indexOfImpl(line,")",startIndex)))
@@ -1734,12 +1758,6 @@ class Sys:
                 raise haxe_Exception.thrown("not supported platform")
 
 
-class haxe_IMap:
-    _hx_class_name = "haxe.IMap"
-    __slots__ = ()
-    _hx_methods = ["get", "keys"]
-
-
 class haxe_Exception(Exception):
     _hx_class_name = "haxe.Exception"
     __slots__ = ("_hx___nativeStack", "_hx___skipStack", "_hx___nativeException", "_hx___previousException")
@@ -1839,24 +1857,6 @@ class haxe_ValueException(haxe_Exception):
 
     def unwrap(self):
         return self.value
-
-
-
-class haxe_ds_StringMap:
-    _hx_class_name = "haxe.ds.StringMap"
-    __slots__ = ("h",)
-    _hx_fields = ["h"]
-    _hx_methods = ["get", "keys"]
-    _hx_interfaces = [haxe_IMap]
-
-    def __init__(self):
-        self.h = dict()
-
-    def get(self,key):
-        return self.h.get(key,None)
-
-    def keys(self):
-        return python_HaxeIterator(iter(self.h.keys()))
 
 
 
