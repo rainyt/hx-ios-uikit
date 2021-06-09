@@ -159,9 +159,9 @@ extern class NSURLSessionConfiguration
 	@:native("multipathServiceType")
 	public var multipathServiceType:NSURLSessionMultipathServiceType;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

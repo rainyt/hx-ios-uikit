@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKURLSchemeHandler;
+import cpp.objc.NSObject;
 import ios.webkit.WKWebView;
 @:objc
 @:native("WKURLSchemeHandler")
@@ -8,7 +9,9 @@ import ios.webkit.WKWebView;
 /*! A class conforming to the WKURLSchemeHandler protocol provides methods for
  loading resources with URL schemes that WebKit doesn't know how to handle itself.
  */
-extern interface WKURLSchemeHandler{
+extern interface WKURLSchemeHandler
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():WKURLSchemeHandler;

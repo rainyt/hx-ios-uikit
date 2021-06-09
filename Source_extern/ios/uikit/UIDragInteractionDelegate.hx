@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIDragInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIDragInteraction;
 import ios.uikit.UITargetedDragPreview;
 import ios.uikit.UIDragItem;
@@ -9,7 +10,9 @@ import ios.objc.CGPoint;
 @:objc
 @:native("UIDragInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIDragInteractionDelegate{
+extern interface UIDragInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDragInteractionDelegate;

@@ -36,9 +36,9 @@ extern class NSDataAsset
 	@:native("typeIdentifier")
 	public var typeIdentifier:NSString;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

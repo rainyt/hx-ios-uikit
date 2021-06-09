@@ -32,9 +32,9 @@ extern class UIBarButtonItemGroup
 	@:native("displayingRepresentativeItem")
 	public var displayingRepresentativeItem:Bool;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 
 }

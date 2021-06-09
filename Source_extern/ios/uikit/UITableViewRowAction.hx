@@ -34,9 +34,9 @@ extern class UITableViewRowAction
 	@:native("backgroundEffect")
 	public var backgroundEffect:UIVisualEffect;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

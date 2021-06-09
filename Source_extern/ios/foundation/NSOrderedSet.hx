@@ -15,7 +15,9 @@ import ios.foundation.NSKeyValueObservingOptions;
 @:objc
 @:native("NSOrderedSet")
 @:include("Foundation/Foundation.h")
-extern class NSOrderedSet{
+extern class NSOrderedSet
+//implements cpp.objc.Protocol<ObjectType>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSOrderedSet;

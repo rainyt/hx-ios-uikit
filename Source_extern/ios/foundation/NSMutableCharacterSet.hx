@@ -100,9 +100,9 @@ extern class NSMutableCharacterSet extends NSCharacterSet
 	@:native("characterSetWithContentsOfFile")
 	overload public static function characterSetWithContentsOfFile(fName:NSString):NSMutableCharacterSet;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

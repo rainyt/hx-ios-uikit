@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextPasteItem;
+import cpp.objc.NSObject;
 import ios.uikit.NSItemProvider;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
@@ -9,7 +10,9 @@ import ios.uikit.NSTextAttachment;
 @:objc
 @:native("UITextPasteItem")
 @:include("UIKit/UIKit.h")
-extern interface UITextPasteItem{
+extern interface UITextPasteItem
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextPasteItem;

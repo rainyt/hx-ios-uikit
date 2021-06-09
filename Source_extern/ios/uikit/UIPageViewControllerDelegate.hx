@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIPageViewControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIPageViewController;
 import ios.uikit.UIPageViewControllerSpineLocation;
 import ios.uikit.UIInterfaceOrientation;
@@ -8,7 +9,9 @@ import ios.uikit.UIInterfaceOrientationMask;
 @:objc
 @:native("UIPageViewControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIPageViewControllerDelegate{
+extern interface UIPageViewControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPageViewControllerDelegate;

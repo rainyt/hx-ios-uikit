@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKScriptMessageHandlerWithReply;
+import cpp.objc.NSObject;
 import ios.webkit.WKUserContentController;
 import ios.webkit.WKScriptMessage;
 @:objc
@@ -9,7 +10,9 @@ import ios.webkit.WKScriptMessage;
 /*! A class conforming to  the WKScriptMessageHandlerWithReply protocol provides a
 method for receiving messages from JavaScript running in a webpage and replying to them asynchronously.
 */
-extern interface WKScriptMessageHandlerWithReply{
+extern interface WKScriptMessageHandlerWithReply
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():WKScriptMessageHandlerWithReply;

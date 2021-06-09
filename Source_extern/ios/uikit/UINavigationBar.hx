@@ -113,9 +113,9 @@ extern class UINavigationBar extends UIView
 	@:native("scrollEdgeAppearance")
 	public var scrollEdgeAppearance:UINavigationBarAppearance;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("barPosition")
 	public var barPosition:UIBarPosition;

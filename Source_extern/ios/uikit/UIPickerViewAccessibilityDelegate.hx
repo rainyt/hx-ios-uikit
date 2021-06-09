@@ -1,9 +1,11 @@
 package ios.uikit;
 
 import ios.uikit.UIPickerViewAccessibilityDelegate;
+import ios.uikit.UIPickerViewDelegate;
 import cpp.objc.NSString;
 import ios.uikit.UIPickerView;
 import ios.uikit.NSAttributedString;
+import ios.uikit.UIView;
 @:objc
 @:native("UIPickerViewAccessibilityDelegate")
 @:include("UIKit/UIKit.h")
@@ -12,7 +14,9 @@ import ios.uikit.NSAttributedString;
   in order to provide accessibility information per component. 
   See UIAccessibility.h for more information about hints and labels.
 */
-extern interface UIPickerViewAccessibilityDelegate{
+extern interface UIPickerViewAccessibilityDelegate
+//implements cpp.objc.Protocol<UIPickerViewDelegate>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewAccessibilityDelegate;
@@ -37,6 +41,24 @@ extern interface UIPickerViewAccessibilityDelegate{
 
 	@:native("pickerView:accessibilityAttributedUserInputLabelsForComponent")
 	overload public function pickerViewAccessibilityAttributedUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityAttributedUserInputLabelsForComponent:Int):Dynamic;
+
+	@:native("pickerView:widthForComponent")
+	overload public function pickerViewWidthForComponent(pickerView:UIPickerView, widthForComponent:Int):Float;
+
+	@:native("pickerView:rowHeightForComponent")
+	overload public function pickerViewRowHeightForComponent(pickerView:UIPickerView, rowHeightForComponent:Int):Float;
+
+	@:native("pickerView:titleForRow:forComponent")
+	overload public function pickerViewTitleForRowForComponent(pickerView:UIPickerView, titleForRow:Int, forComponent:Int):NSString;
+
+	@:native("pickerView:attributedTitleForRow:forComponent")
+	overload public function pickerViewAttributedTitleForRowForComponent(pickerView:UIPickerView, attributedTitleForRow:Int, forComponent:Int):NSAttributedString;
+
+	@:native("pickerView:viewForRow:forComponent:reusingView")
+	overload public function pickerViewViewForRowForComponentReusingView(pickerView:UIPickerView, viewForRow:Int, forComponent:Int, reusingView:UIView):UIView;
+
+	@:native("pickerView:didSelectRow:inComponent")
+	overload public function pickerViewDidSelectRowInComponent(pickerView:UIPickerView, didSelectRow:Int, inComponent:Int):Void;
 
 
 }

@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIContentSizeCategoryAdjusting;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIContentSizeCategoryAdjusting")
 @:include("UIKit/UIKit.h")
-extern interface UIContentSizeCategoryAdjusting{
+extern interface UIContentSizeCategoryAdjusting
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIContentSizeCategoryAdjusting;

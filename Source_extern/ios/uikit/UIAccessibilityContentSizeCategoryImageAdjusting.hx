@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIAccessibilityContentSizeCategoryImageAdjusting;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIAccessibilityContentSizeCategoryImageAdjusting")
 @:include("UIKit/UIKit.h")
-extern interface UIAccessibilityContentSizeCategoryImageAdjusting{
+extern interface UIAccessibilityContentSizeCategoryImageAdjusting
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityContentSizeCategoryImageAdjusting;

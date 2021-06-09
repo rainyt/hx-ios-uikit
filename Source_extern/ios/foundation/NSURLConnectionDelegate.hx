@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSURLConnectionDelegate;
+import cpp.objc.NSObject;
 import ios.foundation.NSURLConnection;
 import cpp.objc.NSError;
 import ios.foundation.NSURLAuthenticationChallenge;
@@ -49,7 +50,9 @@ import ios.foundation.NSURLAuthenticationChallenge;
                     compatability, but incur more latency in dealing
                     with the authentication challenge.
 */
-extern interface NSURLConnectionDelegate{
+extern interface NSURLConnectionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSURLConnectionDelegate;

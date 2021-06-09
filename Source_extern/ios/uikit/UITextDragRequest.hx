@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UITextDragRequest;
+import cpp.objc.NSObject;
 import ios.uikit.UITextRange;
 @:objc
 @:native("UITextDragRequest")
 @:include("UIKit/UIKit.h")
-extern interface UITextDragRequest{
+extern interface UITextDragRequest
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDragRequest;

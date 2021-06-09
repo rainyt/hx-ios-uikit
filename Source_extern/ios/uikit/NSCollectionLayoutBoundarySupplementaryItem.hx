@@ -55,9 +55,9 @@ extern class NSCollectionLayoutBoundarySupplementaryItem extends NSCollectionLay
 	@:native("itemWithLayoutSize:supplementaryItems")
 	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutBoundarySupplementaryItem;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

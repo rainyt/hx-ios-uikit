@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIContextMenuInteractionAnimating;
+import cpp.objc.NSObject;
 import ios.uikit.UIViewController;
 @:objc
 @:native("UIContextMenuInteractionAnimating")
 @:include("UIKit/UIKit.h")
-extern interface UIContextMenuInteractionAnimating{
+extern interface UIContextMenuInteractionAnimating
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIContextMenuInteractionAnimating;

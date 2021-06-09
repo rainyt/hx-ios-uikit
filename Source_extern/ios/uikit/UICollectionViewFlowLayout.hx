@@ -177,9 +177,9 @@ extern class UICollectionViewFlowLayout extends UICollectionViewLayout{
 	@:native("invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:previousIndexPaths:movementCancelled")
 	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPathsPreviousIndexPathsMovementCancelled(indexPaths:Dynamic, previousIndexPaths:Dynamic, movementCancelled:Bool):UICollectionViewLayoutInvalidationContext;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 
 }

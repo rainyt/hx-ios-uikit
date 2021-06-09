@@ -80,9 +80,9 @@ extern class NSParagraphStyle
 	@:native("lineBreakStrategy")
 	public var lineBreakStrategy:NSLineBreakStrategy;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

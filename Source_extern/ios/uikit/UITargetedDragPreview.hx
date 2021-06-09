@@ -44,9 +44,9 @@ extern class UITargetedDragPreview extends UITargetedPreview{
 	@:native("init")
 	overload public function init():UITargetedPreview;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

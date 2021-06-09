@@ -30,9 +30,9 @@ extern class UIMarkupTextPrintFormatter extends UIPrintFormatter{
 	@:native("drawInRect:forPageAtIndex")
 	overload public function drawInRectForPageAtIndex(rect:CGRect, forPageAtIndex:Int):Void;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

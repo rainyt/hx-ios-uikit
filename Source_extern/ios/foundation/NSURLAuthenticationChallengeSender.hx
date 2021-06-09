@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSURLAuthenticationChallengeSender;
+import cpp.objc.NSObject;
 import ios.foundation.NSURLCredential;
 import ios.foundation.NSURLAuthenticationChallenge;
 @:objc
@@ -15,7 +16,9 @@ import ios.foundation.NSURLAuthenticationChallenge;
     action as defined by the system, or reject the currently supplied protection-space
     in the challenge.
 */
-extern interface NSURLAuthenticationChallengeSender{
+extern interface NSURLAuthenticationChallengeSender
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSURLAuthenticationChallengeSender;

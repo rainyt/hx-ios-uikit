@@ -151,9 +151,9 @@ extern class UIBarButtonItem extends UIBarItem
 	@:native("buttonGroup")
 	public var buttonGroup:UIBarButtonItemGroup;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	/* You may specify the font, text color, and shadow properties for the title in the text attributes dictionary, using the keys found in NSAttributedString.h.  */
 	@:native("setTitleTextAttributes:forState")

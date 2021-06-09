@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UISearchSuggestion;
+import cpp.objc.NSObject;
 import cpp.objc.NSString;
 import ios.uikit.UIImage;
 @:objc
 @:native("UISearchSuggestion")
 @:include("UIKit/UIKit.h")
-extern interface UISearchSuggestion{
+extern interface UISearchSuggestion
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchSuggestion;

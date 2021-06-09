@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIViewControllerTransitionCoordinatorContext;
+import cpp.objc.NSObject;
 import ios.uikit.UIModalPresentationStyle;
 import ios.uikit.UIViewAnimationCurve;
 import ios.uikit.UIViewController;
@@ -10,7 +11,9 @@ import ios.objc.CGAffineTransform;
 @:objc
 @:native("UIViewControllerTransitionCoordinatorContext")
 @:include("UIKit/UIKit.h")
-extern interface UIViewControllerTransitionCoordinatorContext{
+extern interface UIViewControllerTransitionCoordinatorContext
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerTransitionCoordinatorContext;

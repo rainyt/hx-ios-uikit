@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIPointerInteractionAnimating;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIPointerInteractionAnimating")
 @:include("UIKit/UIKit.h")
-extern interface UIPointerInteractionAnimating{
+extern interface UIPointerInteractionAnimating
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerInteractionAnimating;

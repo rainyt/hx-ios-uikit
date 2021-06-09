@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UIScribbleInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIScribbleInteraction;
 import ios.objc.CGPoint;
 @:objc
 @:native("UIScribbleInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIScribbleInteractionDelegate{
+extern interface UIScribbleInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIScribbleInteractionDelegate;

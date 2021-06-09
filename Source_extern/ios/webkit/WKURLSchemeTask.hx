@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKURLSchemeTask;
+import cpp.objc.NSObject;
 import ios.foundation.NSURLRequest;
 import ios.foundation.NSURLResponse;
 import cpp.objc.NSData;
@@ -32,7 +33,9 @@ import cpp.objc.NSError;
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
-extern interface WKURLSchemeTask{
+extern interface WKURLSchemeTask
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():WKURLSchemeTask;

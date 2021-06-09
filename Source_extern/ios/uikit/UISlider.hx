@@ -110,9 +110,9 @@ extern class UISlider extends UIControl
 	@:native("thumbRectForBounds:trackRect:value")
 	overload public function thumbRectForBoundsTrackRectValue(bounds:CGRect, trackRect:CGRect, value:Dynamic):CGRect;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UISlider;

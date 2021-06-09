@@ -43,9 +43,9 @@ extern class WKPreviewElementInfo
 	@:native("linkURL")
 	public var linkURL:NSURL;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

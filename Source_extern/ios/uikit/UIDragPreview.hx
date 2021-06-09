@@ -42,9 +42,9 @@ extern class UIDragPreview
 	@:native("previewForURL:title")
 	overload public static function previewForURLTitle(url:NSURL, title:Dynamic):UIDragPreview;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

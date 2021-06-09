@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UITextFormattingCoordinatorDelegate;
+import cpp.objc.NSObject;
 @:objc
 @:native("UITextFormattingCoordinatorDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITextFormattingCoordinatorDelegate{
+extern interface UITextFormattingCoordinatorDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextFormattingCoordinatorDelegate;

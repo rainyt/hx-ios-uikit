@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UISpringLoadedInteractionEffect;
+import cpp.objc.NSObject;
 import ios.uikit.UISpringLoadedInteraction;
 @:objc
 @:native("UISpringLoadedInteractionEffect")
@@ -9,7 +10,9 @@ import ios.uikit.UISpringLoadedInteraction;
  The interaction effect of a `UISpringLoadedInteraction` object must adopt the `UISpringLoadedInteractionEffect` protocol.
  It is responsible for styling the interaction view according to the current springloading state.
  */
-extern interface UISpringLoadedInteractionEffect{
+extern interface UISpringLoadedInteractionEffect
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UISpringLoadedInteractionEffect;

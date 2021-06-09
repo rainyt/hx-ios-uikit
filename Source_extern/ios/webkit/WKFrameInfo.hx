@@ -39,9 +39,9 @@ extern class WKFrameInfo
 	@:native("webView")
 	public var webView:WKWebView;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

@@ -19,7 +19,9 @@ import ios.foundation.NSKeyValueObservingOptions;
 @:objc
 @:native("NSMutableArray")
 @:include("Foundation/Foundation.h")
-extern class NSMutableArray extends NSArray{
+extern class NSMutableArray extends NSArray
+//implements cpp.objc.Protocol<ObjectType>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSMutableArray;

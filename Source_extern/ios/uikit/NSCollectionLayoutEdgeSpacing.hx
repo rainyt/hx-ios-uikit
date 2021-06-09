@@ -34,9 +34,9 @@ extern class NSCollectionLayoutEdgeSpacing
 	@:native("bottom")
 	public var bottom:NSCollectionLayoutSpacing;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

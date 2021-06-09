@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIActivityItemSource;
+import cpp.objc.NSObject;
 import ios.uikit.UIActivityViewController;
 import cpp.objc.NSString;
 import ios.uikit.UIImage;
@@ -8,7 +9,9 @@ import ios.objc.CGSize;
 @:objc
 @:native("UIActivityItemSource")
 @:include("UIKit/UIKit.h")
-extern interface UIActivityItemSource{
+extern interface UIActivityItemSource
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemSource;

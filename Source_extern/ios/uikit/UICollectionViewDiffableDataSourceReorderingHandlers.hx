@@ -1,12 +1,12 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDiffableDataSourceReorderingHandlers;
-import ios.objc.NSCopying;
 @:objc
 @:native("UICollectionViewDiffableDataSourceReorderingHandlers")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewDiffableDataSourceReorderingHandlers
-//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<SectionType>
+//implements cpp.objc.Protocol<ItemType>
 {
 
 	@:native("alloc")
@@ -17,10 +17,6 @@ extern class UICollectionViewDiffableDataSourceReorderingHandlers
 
 	@:native("ItemType")
 	public var ItemType:Dynamic;
-
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
 
 
 }

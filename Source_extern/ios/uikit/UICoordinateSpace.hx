@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UICoordinateSpace;
+import cpp.objc.NSObject;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
 @:objc
 @:native("UICoordinateSpace")
 @:include("UIKit/UIKit.h")
-extern interface UICoordinateSpace{
+extern interface UICoordinateSpace
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICoordinateSpace;

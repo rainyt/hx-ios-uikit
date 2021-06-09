@@ -1,12 +1,15 @@
 package ios.quartzcore;
 
 import ios.quartzcore.CALayerDelegate;
+import cpp.objc.NSObject;
 import ios.quartzcore.CALayer;
 import cpp.objc.NSString;
 @:objc
 @:native("CALayerDelegate")
 @:include("QuartzCore/QuartzCore.h")
-extern interface CALayerDelegate{
+extern interface CALayerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():CALayerDelegate;

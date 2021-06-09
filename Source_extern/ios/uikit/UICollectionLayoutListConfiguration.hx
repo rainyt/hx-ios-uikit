@@ -46,9 +46,9 @@ extern class UICollectionLayoutListConfiguration
 	@:native("footerMode")
 	public var footerMode:UICollectionLayoutListFooterMode;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

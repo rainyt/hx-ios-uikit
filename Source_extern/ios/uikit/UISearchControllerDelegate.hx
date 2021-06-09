@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UISearchControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UISearchController;
 @:objc
 @:native("UISearchControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UISearchControllerDelegate{
+extern interface UISearchControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchControllerDelegate;

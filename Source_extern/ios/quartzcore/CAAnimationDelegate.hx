@@ -1,11 +1,14 @@
 package ios.quartzcore;
 
 import ios.quartzcore.CAAnimationDelegate;
+import cpp.objc.NSObject;
 import ios.quartzcore.CAAnimation;
 @:objc
 @:native("CAAnimationDelegate")
 @:include("QuartzCore/QuartzCore.h")
-extern interface CAAnimationDelegate{
+extern interface CAAnimationDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():CAAnimationDelegate;

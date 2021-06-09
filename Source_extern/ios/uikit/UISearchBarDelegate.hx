@@ -1,12 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UISearchBarDelegate;
+import ios.uikit.UIBarPositioningDelegate;
 import ios.uikit.UISearchBar;
 import cpp.objc.NSString;
+import ios.uikit.UIBarPosition;
 @:objc
 @:native("UISearchBarDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UISearchBarDelegate{
+extern interface UISearchBarDelegate
+//implements cpp.objc.Protocol<UIBarPositioningDelegate>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchBarDelegate;
@@ -46,6 +50,10 @@ extern interface UISearchBarDelegate{
 
 	@:native("searchBar:selectedScopeButtonIndexDidChange")
 	overload public function searchBarSelectedScopeButtonIndexDidChange(searchBar:UISearchBar, selectedScopeButtonIndexDidChange:Int):Void;
+
+	/* Implement this method on your manual bar delegate when not managed by a UIKit controller.  UINavigationBar and UISearchBar default to UIBarPositionTop, UIToolbar defaults to UIBarPositionBottom.  This message will be sent when the bar moves to a window.  */
+	@:native("positionForBar")
+	overload public function positionForBar(bar:Dynamic):UIBarPosition;
 
 
 }

@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UISearchResultsUpdating;
+import cpp.objc.NSObject;
 import ios.uikit.UISearchController;
 @:objc
 @:native("UISearchResultsUpdating")
 @:include("UIKit/UIKit.h")
-extern interface UISearchResultsUpdating{
+extern interface UISearchResultsUpdating
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UISearchResultsUpdating;

@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIAppearance;
+import cpp.objc.NSObject;
 import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIAppearance")
 @:include("UIKit/UIKit.h")
-extern interface UIAppearance{
+extern interface UIAppearance
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIAppearance;

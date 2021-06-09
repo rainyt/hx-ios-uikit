@@ -71,9 +71,9 @@ extern class UIPickerView extends UIView
 	@:native("selectedRowInComponent")
 	overload public function selectedRowInComponent(component:Int):Int;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

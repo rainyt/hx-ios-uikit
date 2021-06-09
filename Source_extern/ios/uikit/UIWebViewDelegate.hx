@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIWebViewDelegate;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIWebViewDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIWebViewDelegate{
+extern interface UIWebViewDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIWebViewDelegate;

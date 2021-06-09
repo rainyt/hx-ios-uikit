@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDragDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UICollectionView;
 import ios.uikit.NSIndexPath;
 import ios.objc.CGPoint;
@@ -8,7 +9,9 @@ import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UICollectionViewDragDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UICollectionViewDragDelegate{
+extern interface UICollectionViewDragDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDragDelegate;

@@ -31,9 +31,9 @@ extern class NSCollectionLayoutGroupCustomItem
 	@:native("zIndex")
 	public var zIndex:Int;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

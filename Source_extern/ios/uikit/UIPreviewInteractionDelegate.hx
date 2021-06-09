@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIPreviewInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIPreviewInteraction;
 @:objc
 @:native("UIPreviewInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIPreviewInteractionDelegate{
+extern interface UIPreviewInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPreviewInteractionDelegate;

@@ -38,9 +38,9 @@ extern class NSCollectionLayoutItem
 	@:native("supplementaryItems")
 	public var supplementaryItems:Dynamic;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

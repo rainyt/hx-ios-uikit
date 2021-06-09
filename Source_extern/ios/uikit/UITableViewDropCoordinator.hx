@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITableViewDropCoordinator;
+import cpp.objc.NSObject;
 import ios.uikit.NSIndexPath;
 import ios.uikit.UITableViewDropProposal;
 import ios.uikit.UIDragItem;
@@ -10,7 +11,9 @@ import ios.uikit.UIDragPreviewTarget;
 @:objc
 @:native("UITableViewDropCoordinator")
 @:include("UIKit/UIKit.h")
-extern interface UITableViewDropCoordinator{
+extern interface UITableViewDropCoordinator
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropCoordinator;

@@ -12,7 +12,9 @@ import ios.foundation.NSKeyValueObservingOptions;
 @:objc
 @:native("NSMutableSet")
 @:include("Foundation/Foundation.h")
-extern class NSMutableSet extends NSSet{
+extern class NSMutableSet extends NSSet
+//implements cpp.objc.Protocol<ObjectType>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSMutableSet;

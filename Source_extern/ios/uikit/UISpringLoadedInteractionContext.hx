@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UISpringLoadedInteractionContext;
+import cpp.objc.NSObject;
 import ios.uikit.UISpringLoadedInteractionEffectState;
 import ios.uikit.UIView;
 import ios.objc.CGPoint;
@@ -10,7 +11,9 @@ import ios.objc.CGPoint;
 /**
  UISpringLoadedContext supplies information about the springloading state and current drag.
  */
-extern interface UISpringLoadedInteractionContext{
+extern interface UISpringLoadedInteractionContext
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UISpringLoadedInteractionContext;

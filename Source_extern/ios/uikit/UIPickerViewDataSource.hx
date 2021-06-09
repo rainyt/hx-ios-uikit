@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIPickerViewDataSource;
+import cpp.objc.NSObject;
 import ios.uikit.UIPickerView;
 @:objc
 @:native("UIPickerViewDataSource")
 @:include("UIKit/UIKit.h")
-extern interface UIPickerViewDataSource{
+extern interface UIPickerViewDataSource
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewDataSource;

@@ -1,10 +1,12 @@
 package ios.quartzcore;
 
-import ios.foundation.NSNull;
+import ios.quartzcore.NSNull;
 @:objc
 @:native("NSNull")
 @:include("QuartzCore/QuartzCore.h")
-extern class NSNull{
+extern class NSNull
+//implements cpp.objc.Protocol<CAAction>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSNull;

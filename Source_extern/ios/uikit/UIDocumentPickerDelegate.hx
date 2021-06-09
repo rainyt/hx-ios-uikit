@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIDocumentPickerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIDocumentPickerViewController;
 @:objc
 @:native("UIDocumentPickerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIDocumentPickerDelegate{
+extern interface UIDocumentPickerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentPickerDelegate;

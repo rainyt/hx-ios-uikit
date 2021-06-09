@@ -32,9 +32,9 @@ extern class UIFontPickerViewControllerConfiguration
 	@:native("filterPredicateForFilteredLanguages")
 	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):NSPredicate;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

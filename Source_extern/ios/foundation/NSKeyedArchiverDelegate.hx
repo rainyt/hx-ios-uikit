@@ -1,11 +1,14 @@
 package ios.foundation;
 
 import ios.foundation.NSKeyedArchiverDelegate;
+import cpp.objc.NSObject;
 import ios.foundation.NSKeyedArchiver;
 @:objc
 @:native("NSKeyedArchiverDelegate")
 @:include("Foundation/Foundation.h")
-extern interface NSKeyedArchiverDelegate{
+extern interface NSKeyedArchiverDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSKeyedArchiverDelegate;

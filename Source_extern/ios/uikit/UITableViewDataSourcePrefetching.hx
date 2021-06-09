@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UITableViewDataSourcePrefetching;
+import cpp.objc.NSObject;
 import ios.uikit.UITableView;
 @:objc
 @:native("UITableViewDataSourcePrefetching")
 @:include("UIKit/UIKit.h")
-extern interface UITableViewDataSourcePrefetching{
+extern interface UITableViewDataSourcePrefetching
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDataSourcePrefetching;

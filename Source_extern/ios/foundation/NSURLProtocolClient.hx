@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSURLProtocolClient;
+import cpp.objc.NSObject;
 import ios.foundation.NSURLProtocol;
 import ios.foundation.NSURLRequest;
 import ios.foundation.NSURLResponse;
@@ -18,7 +19,9 @@ import ios.foundation.NSURLAuthenticationChallenge;
 loading system that is intended for use by NSURLProtocol
 implementors.
 */
-extern interface NSURLProtocolClient{
+extern interface NSURLProtocolClient
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSURLProtocolClient;

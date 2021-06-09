@@ -70,9 +70,9 @@ extern class UISwitch extends UIControl
 	@:native("setOn:animated")
 	overload public function setOnAnimated(on:Bool, animated:Bool):Void;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("initWithFrame:primaryAction")
 	overload public function initWithFramePrimaryAction(frame:CGRect, primaryAction:UIAction):UISwitch;

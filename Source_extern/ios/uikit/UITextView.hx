@@ -305,9 +305,9 @@ extern class UITextView extends UIScrollView
 	@:native("zoomToRect:animated")
 	overload public function zoomToRectAnimated(rect:CGRect, animated:Bool):Void;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

@@ -28,9 +28,9 @@ extern class NSCollectionLayoutSize
 	@:native("heightDimension")
 	public var heightDimension:NSCollectionLayoutDimension;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

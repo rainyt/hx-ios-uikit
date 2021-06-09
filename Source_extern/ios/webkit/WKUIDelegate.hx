@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKUIDelegate;
+import cpp.objc.NSObject;
 import ios.webkit.WKWebView;
 import ios.webkit.WKWebViewConfiguration;
 import ios.webkit.WKNavigationAction;
@@ -15,7 +16,9 @@ import ios.webkit.WKOpenPanelParameters;
 /*! A class conforming to the WKUIDelegate protocol provides methods for
  presenting native UI on behalf of a webpage.
  */
-extern interface WKUIDelegate{
+extern interface WKUIDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():WKUIDelegate;

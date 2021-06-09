@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIInputViewAudioFeedback;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIInputViewAudioFeedback")
 @:include("UIKit/UIKit.h")
-extern interface UIInputViewAudioFeedback{
+extern interface UIInputViewAudioFeedback
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIInputViewAudioFeedback;

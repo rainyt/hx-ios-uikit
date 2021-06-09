@@ -46,9 +46,9 @@ extern class UIApplicationShortcutItem
 	@:native("targetContentIdentifier")
 	public var targetContentIdentifier:Dynamic;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

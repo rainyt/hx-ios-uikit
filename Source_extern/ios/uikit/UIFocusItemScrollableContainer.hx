@@ -1,12 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UIFocusItemScrollableContainer;
+import ios.uikit.UIFocusItemContainer;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
+import ios.objc.CGRect;
 @:objc
 @:native("UIFocusItemScrollableContainer")
 @:include("UIKit/UIKit.h")
-extern interface UIFocusItemScrollableContainer{
+extern interface UIFocusItemScrollableContainer
+//implements cpp.objc.Protocol<UIFocusItemContainer>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIFocusItemScrollableContainer;
@@ -22,6 +26,12 @@ extern interface UIFocusItemScrollableContainer{
 
 	@:native("visibleSize")
 	public var visibleSize:CGSize;
+
+	@:native("coordinateSpace")
+	public var coordinateSpace:Dynamic;
+
+	@:native("focusItemsInRect")
+	overload public function focusItemsInRect(rect:CGRect):Dynamic;
 
 
 }

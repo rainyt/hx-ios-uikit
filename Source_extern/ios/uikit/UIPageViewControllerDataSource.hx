@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UIPageViewControllerDataSource;
+import cpp.objc.NSObject;
 import ios.uikit.UIViewController;
 import ios.uikit.UIPageViewController;
 @:objc
 @:native("UIPageViewControllerDataSource")
 @:include("UIKit/UIKit.h")
-extern interface UIPageViewControllerDataSource{
+extern interface UIPageViewControllerDataSource
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPageViewControllerDataSource;

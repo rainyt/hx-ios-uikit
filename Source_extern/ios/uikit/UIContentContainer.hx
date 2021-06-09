@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UIContentContainer;
+import cpp.objc.NSObject;
 import ios.objc.CGSize;
 import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIContentContainer")
 @:include("UIKit/UIKit.h")
-extern interface UIContentContainer{
+extern interface UIContentContainer
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIContentContainer;

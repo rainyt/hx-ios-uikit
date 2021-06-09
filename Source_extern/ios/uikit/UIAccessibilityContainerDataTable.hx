@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIAccessibilityContainerDataTable;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIAccessibilityContainerDataTable")
 @:include("UIKit/UIKit.h")
-extern interface UIAccessibilityContainerDataTable{
+extern interface UIAccessibilityContainerDataTable
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityContainerDataTable;

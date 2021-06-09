@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSUserActivityDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.NSUserActivity;
 import ios.foundation.NSInputStream;
 import ios.foundation.NSOutputStream;
@@ -9,7 +10,9 @@ import ios.foundation.NSOutputStream;
 @:include("Foundation/Foundation.h")
 /* The user activity delegate is responsible for updating the state of an activity and is also notified when an activity has been continued on another device.
 */
-extern interface NSUserActivityDelegate{
+extern interface NSUserActivityDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSUserActivityDelegate;

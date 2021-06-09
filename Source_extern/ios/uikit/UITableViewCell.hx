@@ -219,9 +219,9 @@ extern class UITableViewCell extends UIView
 	@:native("accessoryAction")
 	public var accessoryAction:String;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("gestureRecognizer:shouldRecognizeSimultaneouslyWithGestureRecognizer")
 	overload public function gestureRecognizerShouldRecognizeSimultaneouslyWithGestureRecognizer(gestureRecognizer:UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer:UIGestureRecognizer):Bool;

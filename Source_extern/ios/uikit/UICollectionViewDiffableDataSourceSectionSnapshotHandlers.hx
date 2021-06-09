@@ -1,12 +1,11 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDiffableDataSourceSectionSnapshotHandlers;
-import ios.objc.NSCopying;
 @:objc
 @:native("UICollectionViewDiffableDataSourceSectionSnapshotHandlers")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewDiffableDataSourceSectionSnapshotHandlers
-//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<ItemType>
 {
 
 	@:native("alloc")
@@ -20,10 +19,6 @@ extern class UICollectionViewDiffableDataSourceSectionSnapshotHandlers
 
 	@:native("ItemType, NSDiffableDataSourceSectionSnapshot<ItemType>")
 	public var ItemType, NSDiffableDataSourceSectionSnapshot<ItemType>:Dynamic;
-
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
 
 
 }

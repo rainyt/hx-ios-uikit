@@ -1,6 +1,6 @@
 package ios.foundation;
 
-import ios.uikit.NSValue;
+import ios.quartzcore.NSValue;
 import ios.foundation.NSNumber;
 import cpp.objc.NSString;
 import ios.objc.CGPoint;

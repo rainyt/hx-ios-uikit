@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSNetServiceBrowserDelegate;
+import cpp.objc.NSObject;
 import ios.foundation.NSNetServiceBrowser;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
@@ -8,7 +9,9 @@ import ios.foundation.NSNetService;
 @:objc
 @:native("NSNetServiceBrowserDelegate")
 @:include("Foundation/Foundation.h")
-extern interface NSNetServiceBrowserDelegate{
+extern interface NSNetServiceBrowserDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSNetServiceBrowserDelegate;

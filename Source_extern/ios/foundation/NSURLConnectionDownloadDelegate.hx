@@ -1,8 +1,11 @@
 package ios.foundation;
 
 import ios.foundation.NSURLConnectionDownloadDelegate;
+import ios.foundation.NSURLConnectionDelegate;
 import ios.foundation.NSURLConnection;
 import ios.foundation.NSURL;
+import cpp.objc.NSError;
+import ios.foundation.NSURLAuthenticationChallenge;
 @:objc
 @:native("NSURLConnectionDownloadDelegate")
 @:include("Foundation/Foundation.h")
@@ -42,7 +45,9 @@ import ios.foundation.NSURL;
                     move the download to a more persistent location if
                     desired.
 */
-extern interface NSURLConnectionDownloadDelegate{
+extern interface NSURLConnectionDownloadDelegate
+//implements cpp.objc.Protocol<NSURLConnectionDelegate>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSURLConnectionDownloadDelegate;
@@ -58,6 +63,15 @@ extern interface NSURLConnectionDownloadDelegate{
 
 	@:native("connectionDidFinishDownloading:destinationURL")
 	overload public function connectionDidFinishDownloadingDestinationURL(connection:NSURLConnection, destinationURL:NSURL):Void;
+
+	@:native("connection:didFailWithError")
+	overload public function connectionDidFailWithError(connection:NSURLConnection, didFailWithError:NSError):Void;
+
+	@:native("connectionShouldUseCredentialStorage")
+	overload public function connectionShouldUseCredentialStorage(connection:NSURLConnection):Bool;
+
+	@:native("connection:willSendRequestForAuthenticationChallenge")
+	overload public function connectionWillSendRequestForAuthenticationChallenge(connection:NSURLConnection, willSendRequestForAuthenticationChallenge:NSURLAuthenticationChallenge):Void;
 
 
 }

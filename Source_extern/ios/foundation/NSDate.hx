@@ -97,9 +97,9 @@ extern class NSDate
 	@:native("initWithTimeInterval:sinceDate")
 	overload public function initWithTimeIntervalSinceDate(secsToBeAdded:Dynamic, sinceDate:NSDate):NSDate;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

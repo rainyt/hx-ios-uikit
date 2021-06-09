@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSXMLParserDelegate;
+import cpp.objc.NSObject;
 import ios.foundation.NSXMLParser;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
@@ -24,7 +25,9 @@ import cpp.objc.NSError;
  </cvslog>
  
  */
-extern interface NSXMLParserDelegate{
+extern interface NSXMLParserDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSXMLParserDelegate;

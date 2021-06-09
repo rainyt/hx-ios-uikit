@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UIViewControllerTransitioningDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIViewController;
 import ios.uikit.UIPresentationController;
 @:objc
 @:native("UIViewControllerTransitioningDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIViewControllerTransitioningDelegate{
+extern interface UIViewControllerTransitioningDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerTransitioningDelegate;

@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UITextInputDelegate;
+import cpp.objc.NSObject;
 @:objc
 @:native("UITextInputDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITextInputDelegate{
+extern interface UITextInputDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputDelegate;

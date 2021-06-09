@@ -5,7 +5,9 @@ import ios.foundation.NSCollectionChangeType;
 @:objc
 @:native("NSOrderedCollectionChange")
 @:include("Foundation/Foundation.h")
-extern class NSOrderedCollectionChange{
+extern class NSOrderedCollectionChange
+//implements cpp.objc.Protocol<ObjectType>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSOrderedCollectionChange;

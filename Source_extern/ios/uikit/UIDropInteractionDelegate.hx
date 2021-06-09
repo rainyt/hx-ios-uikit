@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIDropInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIDropInteraction;
 import ios.uikit.UIDropProposal;
 import ios.uikit.UITargetedDragPreview;
@@ -8,7 +9,9 @@ import ios.uikit.UIDragItem;
 @:objc
 @:native("UIDropInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIDropInteractionDelegate{
+extern interface UIDropInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDropInteractionDelegate;

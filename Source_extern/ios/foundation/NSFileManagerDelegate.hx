@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSFileManagerDelegate;
+import cpp.objc.NSObject;
 import ios.foundation.NSFileManager;
 import cpp.objc.NSString;
 import ios.foundation.NSURL;
@@ -8,7 +9,9 @@ import cpp.objc.NSError;
 @:objc
 @:native("NSFileManagerDelegate")
 @:include("Foundation/Foundation.h")
-extern interface NSFileManagerDelegate{
+extern interface NSFileManagerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSFileManagerDelegate;

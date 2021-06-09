@@ -6,7 +6,7 @@ import ios.foundation.NSIndexSet;
 @:native("NSOrderedCollectionDifference")
 @:include("Foundation/Foundation.h")
 extern class NSOrderedCollectionDifference
-//implements cpp.objc.Protocol<NSFastEnumeration>
+//implements cpp.objc.Protocol<ObjectType>
 {
 
 	@:native("alloc")

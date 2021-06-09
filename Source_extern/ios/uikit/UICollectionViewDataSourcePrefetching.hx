@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDataSourcePrefetching;
+import cpp.objc.NSObject;
 import ios.uikit.UICollectionView;
 @:objc
 @:native("UICollectionViewDataSourcePrefetching")
 @:include("UIKit/UIKit.h")
-extern interface UICollectionViewDataSourcePrefetching{
+extern interface UICollectionViewDataSourcePrefetching
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDataSourcePrefetching;

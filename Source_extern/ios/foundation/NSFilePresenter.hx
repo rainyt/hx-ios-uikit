@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSFilePresenter;
+import cpp.objc.NSObject;
 import ios.foundation.NSURL;
 import ios.foundation.NSOperationQueue;
 import ios.foundation.NSFileVersion;
@@ -13,7 +14,9 @@ See the comments for -[NSFileCoordinator initWithFilePresenter:] for information
 
 You can consider "item" in method names in this header file to be an abbreviation of "fileOrDirectory." As always, a directory might actually be a file package.
 */
-extern interface NSFilePresenter{
+extern interface NSFilePresenter
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSFilePresenter;

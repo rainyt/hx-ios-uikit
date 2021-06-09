@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UICloudSharingControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UICloudSharingController;
 import cpp.objc.NSError;
 import cpp.objc.NSString;
@@ -8,7 +9,9 @@ import cpp.objc.NSData;
 @:objc
 @:native("UICloudSharingControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UICloudSharingControllerDelegate{
+extern interface UICloudSharingControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICloudSharingControllerDelegate;

@@ -105,9 +105,9 @@ extern class UIImagePickerController extends UINavigationController
 	@:native("cameraFlashMode")
 	public var cameraFlashMode:UIImagePickerControllerCameraFlashMode;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	/* Use this initializer to make the navigation controller use your custom bar class.     Passing nil for navigationBarClass will get you UINavigationBar, nil for toolbarClass gets UIToolbar.    The arguments must otherwise be subclasses of the respective UIKit classes.  */
 	@:native("initWithNavigationBarClass:toolbarClass")

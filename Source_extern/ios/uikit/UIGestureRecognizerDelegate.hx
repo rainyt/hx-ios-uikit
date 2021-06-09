@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIGestureRecognizerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIGestureRecognizer;
 import ios.uikit.UITouch;
 import ios.uikit.UIPress;
@@ -8,7 +9,9 @@ import ios.uikit.UIEvent;
 @:objc
 @:native("UIGestureRecognizerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIGestureRecognizerDelegate{
+extern interface UIGestureRecognizerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIGestureRecognizerDelegate;

@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIAccessibilityContainerDataTableCell;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIAccessibilityContainerDataTableCell")
 @:include("UIKit/UIKit.h")
@@ -8,7 +9,9 @@ import ios.uikit.UIAccessibilityContainerDataTableCell;
  The UIAccessibilityContainerDataTable and UIAccessibilityContainerDataTableCell protocols
  convey more information specific to tables that contain structured data.
  */
-extern interface UIAccessibilityContainerDataTableCell{
+extern interface UIAccessibilityContainerDataTableCell
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityContainerDataTableCell;

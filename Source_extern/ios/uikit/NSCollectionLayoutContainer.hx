@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.NSCollectionLayoutContainer;
+import cpp.objc.NSObject;
 import ios.objc.CGSize;
 @:objc
 @:native("NSCollectionLayoutContainer")
 @:include("UIKit/UIKit.h")
-extern interface NSCollectionLayoutContainer{
+extern interface NSCollectionLayoutContainer
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutContainer;

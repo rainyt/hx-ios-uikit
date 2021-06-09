@@ -34,9 +34,9 @@ extern class UIFocusMovementHint
 	@:native("init")
 	overload public function init():UIFocusMovementHint;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

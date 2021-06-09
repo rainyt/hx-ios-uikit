@@ -23,12 +23,22 @@ class ExternProtocolHaxeClass extends ExternProtocolClass {
 			read += value + "\n";
 			if (value.indexOf("public ") != -1) {
 				var isFunc = read.indexOf("function ") != -1;
-				var name = read.substr(read.indexOf("function ") + 8);
-				name = name.substr(0, name.indexOf("("));
+				var name = read;
+				var line = "";
+				if (isFunc) {
+					name = read.substr(read.indexOf("function ") + 8);
+					line = name;
+					name = name.substr(0, name.indexOf("("));
+				} else {
+					name = read.substr(read.indexOf("var ") + 3);
+					line = name;
+					name = name.substr(0, name.indexOf(":"));
+				}
 				name = StringTools.replace(name, " ", "");
-				var retclass = read.substr(read.lastIndexOf(":") + 1);
+				var retclass = line.substr(line.lastIndexOf(":") + 1);
 				retclass = StringTools.replace(retclass, ";", "");
-				var args = toArgs(read);
+				retclass = StringTools.replace(retclass, "\n", "");
+				var args = toArgs(line);
 				funcAndAttr.push({
 					name: name,
 					type: isFunc ? ExternBaseClassType.FUNC : ExternBaseClassType.PROPERTY,
@@ -44,8 +54,7 @@ class ExternProtocolHaxeClass extends ExternProtocolClass {
 	}
 
 	public function toArgs(haxe:String):Array<ExternBaseClassFunPropertyArgs> {
-		if (haxe.indexOf("function") != -1) {
-			haxe = haxe.substr(haxe.indexOf("function") + 8);
+		if (haxe.indexOf("(") != -1) {
 			haxe = haxe.substr(haxe.indexOf("(") + 1);
 			haxe = haxe.substr(0, haxe.indexOf(")"));
 			var array = [];

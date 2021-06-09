@@ -1,10 +1,13 @@
 package ios.foundation;
 
 import ios.foundation.NSPortDelegate;
+import cpp.objc.NSObject;
 @:objc
 @:native("NSPortDelegate")
 @:include("Foundation/Foundation.h")
-extern interface NSPortDelegate{
+extern interface NSPortDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSPortDelegate;

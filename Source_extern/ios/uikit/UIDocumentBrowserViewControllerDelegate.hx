@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UIDocumentBrowserViewControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIDocumentBrowserViewController;
 import ios.foundation.NSURL;
 import ios.uikit.UIActivityViewController;
 @:objc
 @:native("UIDocumentBrowserViewControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIDocumentBrowserViewControllerDelegate{
+extern interface UIDocumentBrowserViewControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserViewControllerDelegate;

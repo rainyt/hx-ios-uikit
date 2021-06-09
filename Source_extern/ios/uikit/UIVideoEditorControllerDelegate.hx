@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UIVideoEditorControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIVideoEditorController;
 import cpp.objc.NSString;
 import cpp.objc.NSError;
 @:objc
 @:native("UIVideoEditorControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIVideoEditorControllerDelegate{
+extern interface UIVideoEditorControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIVideoEditorControllerDelegate;

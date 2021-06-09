@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UIViewControllerPreviewing;
+import cpp.objc.NSObject;
 import ios.uikit.UIGestureRecognizer;
 import ios.uikit.UIView;
 import ios.objc.CGRect;
 @:objc
 @:native("UIViewControllerPreviewing")
 @:include("UIKit/UIKit.h")
-extern interface UIViewControllerPreviewing{
+extern interface UIViewControllerPreviewing
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerPreviewing;

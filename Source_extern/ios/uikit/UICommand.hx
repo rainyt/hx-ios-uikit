@@ -48,9 +48,9 @@ extern class UICommand extends UIMenuElement{
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICommand;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

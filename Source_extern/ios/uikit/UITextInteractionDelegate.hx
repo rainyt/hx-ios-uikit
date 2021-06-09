@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UITextInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UITextInteraction;
 import ios.objc.CGPoint;
 @:objc
 @:native("UITextInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITextInteractionDelegate{
+extern interface UITextInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInteractionDelegate;

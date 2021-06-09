@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.NSTextStorageDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.NSTextStorage;
 import ios.uikit.NSTextStorageEditActions;
 @:objc
 @:native("NSTextStorageDelegate")
 @:include("UIKit/UIKit.h")
-extern interface NSTextStorageDelegate{
+extern interface NSTextStorageDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSTextStorageDelegate;

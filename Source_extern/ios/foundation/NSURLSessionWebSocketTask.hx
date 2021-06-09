@@ -64,9 +64,9 @@ extern class NSURLSessionWebSocketTask extends NSURLSessionTask{
 	@:native("resume")
 	overload public function resume():Void;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

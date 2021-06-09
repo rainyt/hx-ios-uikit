@@ -22,9 +22,9 @@ extern class UILexiconEntry
 	@:native("userInput")
 	public var userInput:NSString;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

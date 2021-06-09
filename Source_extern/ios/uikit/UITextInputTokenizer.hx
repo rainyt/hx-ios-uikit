@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UITextInputTokenizer;
+import cpp.objc.NSObject;
 import ios.uikit.UITextRange;
 import ios.uikit.UITextPosition;
 import ios.uikit.UITextGranularity;
 @:objc
 @:native("UITextInputTokenizer")
 @:include("UIKit/UIKit.h")
-extern interface UITextInputTokenizer{
+extern interface UITextInputTokenizer
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputTokenizer;

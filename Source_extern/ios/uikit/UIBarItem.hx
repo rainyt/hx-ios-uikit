@@ -63,9 +63,9 @@ extern class UIBarItem
 	@:native("titleTextAttributesForState")
 	overload public function titleTextAttributesForState(state:UIControlState):NSDictionary;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	/* To customize the appearance of all instances of a class, send the relevant appearance modification messages to the appearance proxy for the class. For example, to modify the bar tint color for all UINavigationBar instances:     [[UINavigationBar appearance] setBarTintColor:myColor];       Note for iOS7: On iOS7 the tintColor property has moved to UIView, and now has special inherited behavior described in UIView.h.     This inherited behavior can conflict with the appearance proxy, and therefore tintColor is now disallowed with the appearance proxy.   */
 	@:native("appearance")

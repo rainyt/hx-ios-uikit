@@ -89,9 +89,9 @@ extern class UIFontDescriptor
 	@:native("fontDescriptorWithDesign")
 	overload public function fontDescriptorWithDesign(design:NSString):UIFontDescriptor;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

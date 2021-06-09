@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIColorPickerViewControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIColorPickerViewController;
 @:objc
 @:native("UIColorPickerViewControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIColorPickerViewControllerDelegate{
+extern interface UIColorPickerViewControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIColorPickerViewControllerDelegate;

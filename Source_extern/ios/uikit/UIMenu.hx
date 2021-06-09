@@ -48,9 +48,9 @@ extern class UIMenu extends UIMenuElement{
 	@:native("menuByReplacingChildren")
 	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

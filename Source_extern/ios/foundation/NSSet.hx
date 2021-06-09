@@ -11,7 +11,9 @@ import ios.foundation.NSKeyValueObservingOptions;
 @:objc
 @:native("NSSet")
 @:include("Foundation/Foundation.h")
-extern class NSSet{
+extern class NSSet
+//implements cpp.objc.Protocol<ObjectType>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSSet;

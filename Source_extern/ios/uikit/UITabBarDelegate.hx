@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UITabBarDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UITabBar;
 import ios.uikit.UITabBarItem;
 @:objc
 @:native("UITabBarDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITabBarDelegate{
+extern interface UITabBarDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarDelegate;

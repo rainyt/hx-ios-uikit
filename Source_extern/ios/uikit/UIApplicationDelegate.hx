@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIApplicationDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIApplication;
 import cpp.objc.NSDictionary;
 import ios.foundation.NSURL;
@@ -19,7 +20,9 @@ import ios.uikit.UISceneConnectionOptions;
 @:objc
 @:native("UIApplicationDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIApplicationDelegate{
+extern interface UIApplicationDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIApplicationDelegate;

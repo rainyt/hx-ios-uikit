@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIContextMenuInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIContextMenuConfiguration;
 import ios.uikit.UIContextMenuInteraction;
 import ios.objc.CGPoint;
@@ -8,7 +9,9 @@ import ios.uikit.UITargetedPreview;
 @:objc
 @:native("UIContextMenuInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIContextMenuInteractionDelegate{
+extern interface UIContextMenuInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIContextMenuInteractionDelegate;

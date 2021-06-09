@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDropItem;
+import cpp.objc.NSObject;
 import ios.uikit.UIDragItem;
 import ios.uikit.NSIndexPath;
 import ios.objc.CGSize;
 @:objc
 @:native("UICollectionViewDropItem")
 @:include("UIKit/UIKit.h")
-extern interface UICollectionViewDropItem{
+extern interface UICollectionViewDropItem
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropItem;

@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIBarPositioningDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIBarPosition;
 @:objc
 @:native("UIBarPositioningDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIBarPositioningDelegate{
+extern interface UIBarPositioningDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIBarPositioningDelegate;

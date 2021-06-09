@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UITraitEnvironment;
+import cpp.objc.NSObject;
 import ios.uikit.UITraitCollection;
 @:objc
 @:native("UITraitEnvironment")
 @:include("UIKit/UIKit.h")
-extern interface UITraitEnvironment{
+extern interface UITraitEnvironment
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITraitEnvironment;

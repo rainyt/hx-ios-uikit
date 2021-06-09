@@ -50,17 +50,17 @@ extern class NSPort
 	@:native("sendBeforeDate:msgid:components:from:reserved")
 	overload public function sendBeforeDateMsgidComponentsFromReserved(limitDate:NSDate, msgid:Int, components:NSMutableArray, from:NSPort, reserved:Int):Bool;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
+	/** Haxe Protocol */
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:Dynamic):NSCoding
-;
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIViewControllerAnimatedTransitioning;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIViewControllerAnimatedTransitioning")
 @:include("UIKit/UIKit.h")
-extern interface UIViewControllerAnimatedTransitioning{
+extern interface UIViewControllerAnimatedTransitioning
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerAnimatedTransitioning;

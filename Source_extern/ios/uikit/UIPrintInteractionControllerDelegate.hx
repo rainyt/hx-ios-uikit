@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UIPrintInteractionControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIPrintInteractionController;
 import ios.uikit.UIPrintPaper;
 import ios.foundation.NSArray;
 @:objc
 @:native("UIPrintInteractionControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIPrintInteractionControllerDelegate{
+extern interface UIPrintInteractionControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrintInteractionControllerDelegate;

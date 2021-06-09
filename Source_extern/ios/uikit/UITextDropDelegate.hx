@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextDropDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UITextDropEditability;
 import ios.uikit.UIView;
 import ios.uikit.UITextDropProposal;
@@ -8,7 +9,9 @@ import ios.uikit.UITargetedDragPreview;
 @:objc
 @:native("UITextDropDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITextDropDelegate{
+extern interface UITextDropDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDropDelegate;

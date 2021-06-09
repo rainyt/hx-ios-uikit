@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIPencilInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIPencilInteraction;
 @:objc
 @:native("UIPencilInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIPencilInteractionDelegate{
+extern interface UIPencilInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPencilInteractionDelegate;

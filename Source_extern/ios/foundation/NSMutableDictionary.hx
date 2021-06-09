@@ -233,12 +233,5 @@ extern class NSMutableDictionary extends NSDictionary
 	@:native("valueForKey")
 	overload public function valueForKey(key:NSString):Dynamic;
 
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
-
-	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding():Bool;
-
 
 }

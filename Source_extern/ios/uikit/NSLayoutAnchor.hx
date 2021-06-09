@@ -14,7 +14,9 @@ import cpp.objc.NSString;
  The -constraint* methods are available in multiple flavors to support use of different relations and omission of unused options.
  
  */
-extern class NSLayoutAnchor{
+extern class NSLayoutAnchor
+//implements cpp.objc.Protocol<AnchorType>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutAnchor;

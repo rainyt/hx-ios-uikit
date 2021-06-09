@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UISpringLoadedInteractionBehavior;
+import cpp.objc.NSObject;
 import ios.uikit.UISpringLoadedInteraction;
 @:objc
 @:native("UISpringLoadedInteractionBehavior")
@@ -8,7 +9,9 @@ import ios.uikit.UISpringLoadedInteraction;
 /**
  The interaction behavior of a `UISpringLoadedInteraction` object must adopt the `UISpringLoadedInteractionBehavior` protocol.
  */
-extern interface UISpringLoadedInteractionBehavior{
+extern interface UISpringLoadedInteractionBehavior
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UISpringLoadedInteractionBehavior;

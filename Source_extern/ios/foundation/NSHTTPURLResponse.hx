@@ -51,9 +51,9 @@ extern class NSHTTPURLResponse extends NSURLResponse{
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

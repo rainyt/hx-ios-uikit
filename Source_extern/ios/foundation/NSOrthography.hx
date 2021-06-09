@@ -59,9 +59,9 @@ extern class NSOrthography
 	@:native("orthographyWithDominantScript:languageMap")
 	overload public static function orthographyWithDominantScriptLanguageMap(script:NSString, languageMap:NSDictionary):NSOrthography;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

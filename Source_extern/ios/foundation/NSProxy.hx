@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSProxy;
+import cpp.objc.NSObject;
 import ios.foundation.NSInvocation;
 import ios.foundation.NSMethodSignature;
 import cpp.objc.NSString;
@@ -10,7 +11,9 @@ import cpp.objc.NSString;
 /*	NSProxy.h
 	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
 */
-extern class NSProxy{
+extern class NSProxy
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSProxy;

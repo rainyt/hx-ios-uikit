@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIInteraction;
+import cpp.objc.NSObject;
 import ios.uikit.UIView;
 @:objc
 @:native("UIInteraction")
 @:include("UIKit/UIKit.h")
-extern interface UIInteraction{
+extern interface UIInteraction
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIInteraction;

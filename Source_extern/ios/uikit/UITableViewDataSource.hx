@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITableViewDataSource;
+import cpp.objc.NSObject;
 import ios.uikit.UITableView;
 import ios.uikit.UITableViewCell;
 import ios.uikit.NSIndexPath;
@@ -9,7 +10,9 @@ import ios.uikit.UITableViewCellEditingStyle;
 @:objc
 @:native("UITableViewDataSource")
 @:include("UIKit/UIKit.h")
-extern interface UITableViewDataSource{
+extern interface UITableViewDataSource
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDataSource;

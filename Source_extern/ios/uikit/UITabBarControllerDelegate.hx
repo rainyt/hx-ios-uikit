@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITabBarControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UITabBarController;
 import ios.uikit.UIViewController;
 import ios.uikit.UIInterfaceOrientationMask;
@@ -8,7 +9,9 @@ import ios.uikit.UIInterfaceOrientation;
 @:objc
 @:native("UITabBarControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITabBarControllerDelegate{
+extern interface UITabBarControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarControllerDelegate;

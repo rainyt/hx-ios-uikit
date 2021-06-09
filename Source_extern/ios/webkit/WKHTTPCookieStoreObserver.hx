@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKHTTPCookieStoreObserver;
+import cpp.objc.NSObject;
 import ios.webkit.WKHTTPCookieStore;
 @:objc
 @:native("WKHTTPCookieStoreObserver")
@@ -29,7 +30,9 @@ import ios.webkit.WKHTTPCookieStore;
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
-extern interface WKHTTPCookieStoreObserver{
+extern interface WKHTTPCookieStoreObserver
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():WKHTTPCookieStoreObserver;

@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIDragAnimating;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIDragAnimating")
 @:include("UIKit/UIKit.h")
-extern interface UIDragAnimating{
+extern interface UIDragAnimating
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDragAnimating;

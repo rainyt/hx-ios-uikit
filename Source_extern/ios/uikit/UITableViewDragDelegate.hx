@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITableViewDragDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UITableView;
 import ios.uikit.NSIndexPath;
 import ios.objc.CGPoint;
@@ -8,7 +9,9 @@ import ios.uikit.UIDragPreviewParameters;
 @:objc
 @:native("UITableViewDragDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITableViewDragDelegate{
+extern interface UITableViewDragDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDragDelegate;

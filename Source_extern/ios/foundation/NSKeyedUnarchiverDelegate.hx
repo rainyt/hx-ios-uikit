@@ -1,12 +1,15 @@
 package ios.foundation;
 
 import ios.foundation.NSKeyedUnarchiverDelegate;
+import cpp.objc.NSObject;
 import ios.foundation.NSKeyedUnarchiver;
 import cpp.objc.NSString;
 @:objc
 @:native("NSKeyedUnarchiverDelegate")
 @:include("Foundation/Foundation.h")
-extern interface NSKeyedUnarchiverDelegate{
+extern interface NSKeyedUnarchiverDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSKeyedUnarchiverDelegate;

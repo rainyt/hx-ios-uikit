@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDataSource;
+import cpp.objc.NSObject;
 import ios.uikit.UICollectionView;
 import ios.uikit.UICollectionViewCell;
 import ios.uikit.NSIndexPath;
@@ -9,7 +10,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewDataSource")
 @:include("UIKit/UIKit.h")
-extern interface UICollectionViewDataSource{
+extern interface UICollectionViewDataSource
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDataSource;

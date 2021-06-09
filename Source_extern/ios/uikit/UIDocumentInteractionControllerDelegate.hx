@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIDocumentInteractionControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIViewController;
 import ios.uikit.UIDocumentInteractionController;
 import ios.objc.CGRect;
@@ -9,7 +10,9 @@ import cpp.objc.NSString;
 @:objc
 @:native("UIDocumentInteractionControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIDocumentInteractionControllerDelegate{
+extern interface UIDocumentInteractionControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentInteractionControllerDelegate;

@@ -51,9 +51,9 @@ extern class UITargetedPreview
 	@:native("retargetedPreviewWithTarget")
 	overload public function retargetedPreviewWithTarget(newTarget:UIPreviewTarget):UITargetedPreview;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

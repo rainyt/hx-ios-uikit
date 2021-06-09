@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKNavigationDelegate;
+import cpp.objc.NSObject;
 import ios.webkit.WKWebView;
 import ios.webkit.WKNavigationAction;
 import ios.webkit.WKWebpagePreferences;
@@ -14,7 +15,9 @@ import ios.foundation.NSURLAuthenticationChallenge;
  methods for tracking progress for main frame navigations and for deciding
  policy for main frame and subframe navigations.
  */
-extern interface WKNavigationDelegate{
+extern interface WKNavigationDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():WKNavigationDelegate;

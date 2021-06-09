@@ -22,9 +22,9 @@ extern class UIPreviewActionGroup
 	@:native("actionGroupWithTitle:style:actions")
 	overload public static function actionGroupWithTitleStyleActions(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("title")
 	public var title:NSString;

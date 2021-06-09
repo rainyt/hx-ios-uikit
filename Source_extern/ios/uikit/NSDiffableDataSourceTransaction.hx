@@ -6,7 +6,10 @@ import ios.foundation.NSOrderedCollectionDifference;
 @:objc
 @:native("NSDiffableDataSourceTransaction")
 @:include("UIKit/UIKit.h")
-extern class NSDiffableDataSourceTransaction{
+extern class NSDiffableDataSourceTransaction
+//implements cpp.objc.Protocol<SectionIdentifierType>
+//implements cpp.objc.Protocol<ItemIdentifierType>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSDiffableDataSourceTransaction;

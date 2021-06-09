@@ -26,9 +26,9 @@ extern class UIPointerEffect
 	@:native("init")
 	overload public function init():UIPointerEffect;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

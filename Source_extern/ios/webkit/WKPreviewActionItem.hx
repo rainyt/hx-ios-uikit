@@ -1,6 +1,7 @@
 package ios.webkit;
 
 import ios.webkit.WKPreviewActionItem;
+import ios.uikit.UIPreviewActionItem;
 import cpp.objc.NSString;
 @:objc
 @:native("WKPreviewActionItem")
@@ -29,7 +30,9 @@ import cpp.objc.NSString;
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
-extern interface WKPreviewActionItem{
+extern interface WKPreviewActionItem
+//implements cpp.objc.Protocol<UIPreviewActionItem>
+{
 
 	@:native("alloc")
 	overload public static function alloc():WKPreviewActionItem;
@@ -39,6 +42,9 @@ extern interface WKPreviewActionItem{
 
 	@:native("identifier")
 	public var identifier:NSString;
+
+	@:native("title")
+	public var title:NSString;
 
 
 }

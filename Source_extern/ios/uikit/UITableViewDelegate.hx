@@ -1,6 +1,8 @@
 package ios.uikit;
 
 import ios.uikit.UITableViewDelegate;
+import cpp.objc.NSObject;
+import ios.uikit.UIScrollViewDelegate;
 import ios.uikit.UITableView;
 import ios.uikit.UITableViewCell;
 import ios.uikit.NSIndexPath;
@@ -13,10 +15,14 @@ import ios.uikit.UIFocusAnimationCoordinator;
 import ios.uikit.UIContextMenuConfiguration;
 import ios.objc.CGPoint;
 import ios.uikit.UITargetedPreview;
+import ios.uikit.UIScrollView;
 @:objc
 @:native("UITableViewDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITableViewDelegate{
+extern interface UITableViewDelegate
+//implements cpp.objc.Protocol<NSObject>
+//implements cpp.objc.Protocol<UIScrollViewDelegate>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDelegate;
@@ -167,6 +173,49 @@ extern interface UITableViewDelegate{
 	/*!  * @abstract Called when the table view's context menu interaction is about to end.  *  * @param tableView       This UITableView.  * @param configuration   Ending configuration.  * @param animator        Disappearance animator. Add animations to run them alongside the disappearance transition.  */
 	@:native("tableView:willEndContextMenuInteractionWithConfiguration:animator")
 	overload public function tableViewWillEndContextMenuInteractionWithConfigurationAnimator(tableView:UITableView, willEndContextMenuInteractionWithConfiguration:UIContextMenuConfiguration, animator:Dynamic):Void;
+
+	@:native("scrollViewDidScroll")
+	overload public function scrollViewDidScroll(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewDidZoom")
+	overload public function scrollViewDidZoom(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewWillBeginDragging")
+	overload public function scrollViewWillBeginDragging(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewWillEndDragging:withVelocity:targetContentOffset")
+	overload public function scrollViewWillEndDraggingWithVelocityTargetContentOffset(scrollView:UIScrollView, withVelocity:CGPoint, targetContentOffset:Dynamic):Void;
+
+	@:native("scrollViewDidEndDragging:willDecelerate")
+	overload public function scrollViewDidEndDraggingWillDecelerate(scrollView:UIScrollView, willDecelerate:Bool):Void;
+
+	@:native("scrollViewWillBeginDecelerating")
+	overload public function scrollViewWillBeginDecelerating(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewDidEndDecelerating")
+	overload public function scrollViewDidEndDecelerating(scrollView:UIScrollView):Void;
+
+	@:native("scrollViewDidEndScrollingAnimation")
+	overload public function scrollViewDidEndScrollingAnimation(scrollView:UIScrollView):Void;
+
+	@:native("viewForZoomingInScrollView")
+	overload public function viewForZoomingInScrollView(scrollView:UIScrollView):UIView;
+
+	@:native("scrollViewWillBeginZooming:withView")
+	overload public function scrollViewWillBeginZoomingWithView(scrollView:UIScrollView, withView:UIView):Void;
+
+	@:native("scrollViewDidEndZooming:withView:atScale")
+	overload public function scrollViewDidEndZoomingWithViewAtScale(scrollView:UIScrollView, withView:UIView, atScale:Float):Void;
+
+	@:native("scrollViewShouldScrollToTop")
+	overload public function scrollViewShouldScrollToTop(scrollView:UIScrollView):Bool;
+
+	@:native("scrollViewDidScrollToTop")
+	overload public function scrollViewDidScrollToTop(scrollView:UIScrollView):Void;
+
+	/* Also see -[UIScrollView adjustedContentInsetDidChange]  */
+	@:native("scrollViewDidChangeAdjustedContentInset")
+	overload public function scrollViewDidChangeAdjustedContentInset(scrollView:UIScrollView):Void;
 
 
 }

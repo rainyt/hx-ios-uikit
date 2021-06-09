@@ -3,7 +3,7 @@ package ios.foundation;
 import ios.foundation.NSNumber;
 import ios.foundation.NSDecimalNumber;
 import cpp.objc.NSString;
-import ios.uikit.NSValue;
+import ios.quartzcore.NSValue;
 import ios.objc.CGPoint;
 import ios.objc.CGVector;
 import ios.objc.CGSize;

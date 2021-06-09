@@ -5,7 +5,7 @@ import ios.foundation.NSEnumerator;
 @:native("NSEnumerator")
 @:include("Foundation/Foundation.h")
 extern class NSEnumerator
-//implements cpp.objc.Protocol<NSFastEnumeration>
+//implements cpp.objc.Protocol<ObjectType>
 {
 
 	@:native("alloc")

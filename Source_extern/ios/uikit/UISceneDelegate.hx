@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UISceneDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIScene;
 import ios.uikit.UISceneSession;
 import ios.uikit.UISceneConnectionOptions;
@@ -10,7 +11,9 @@ import cpp.objc.NSError;
 @:objc
 @:native("UISceneDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UISceneDelegate{
+extern interface UISceneDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UISceneDelegate;

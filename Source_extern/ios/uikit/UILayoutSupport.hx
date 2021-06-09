@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UILayoutSupport;
+import cpp.objc.NSObject;
 import ios.uikit.NSLayoutYAxisAnchor;
 import ios.uikit.NSLayoutDimension;
 @:objc
@@ -12,7 +13,9 @@ import ios.uikit.NSLayoutDimension;
  These guide objects may be used as layout items in the NSLayoutConstraint
  factory methods.
  */
-extern interface UILayoutSupport{
+extern interface UILayoutSupport
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UILayoutSupport;

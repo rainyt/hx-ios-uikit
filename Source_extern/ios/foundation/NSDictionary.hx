@@ -1,8 +1,6 @@
 package ios.foundation;
 
 import cpp.objc.NSDictionary;
-import ios.objc.NSCopying;
-import ios.foundation.NSSecureCoding;
 import ios.foundation.NSEnumerator;
 import ios.uikit.NSCoder;
 import cpp.objc.NSString;
@@ -19,10 +17,8 @@ import ios.foundation.NSNumber;
 	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
 */
 extern class NSDictionary
-//implements cpp.objc.Protocol<NSCopying>
-//implements cpp.objc.Protocol<NSMutableCopying>
-//implements cpp.objc.Protocol<NSSecureCoding>
-//implements cpp.objc.Protocol<NSFastEnumeration>
+//implements cpp.objc.Protocol<__covariantKeyType>
+//implements cpp.objc.Protocol<__covariantObjectType>
 {
 
 	@:native("alloc")
@@ -206,13 +202,6 @@ extern class NSDictionary
 	/* Return the result of sending -objectForKey: to the receiver. */
 	@:native("valueForKey")
 	overload public function valueForKey(key:NSString):Dynamic;
-
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
-
-	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding():Bool;
 
 
 }

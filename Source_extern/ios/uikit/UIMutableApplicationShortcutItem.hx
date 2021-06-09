@@ -25,9 +25,9 @@ extern class UIMutableApplicationShortcutItem extends UIApplicationShortcutItem{
 	@:native("initWithType:localizedTitle")
 	overload public function initWithTypeLocalizedTitle(type:NSString, localizedTitle:NSString):UIMutableApplicationShortcutItem;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

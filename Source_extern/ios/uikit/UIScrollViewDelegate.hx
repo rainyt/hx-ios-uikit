@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UIScrollViewDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIScrollView;
 import ios.objc.CGPoint;
 import ios.uikit.UIView;
 @:objc
 @:native("UIScrollViewDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIScrollViewDelegate{
+extern interface UIScrollViewDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIScrollViewDelegate;

@@ -4,6 +4,7 @@ import ios.uikit.UILayoutGuide;
 import ios.uikit.UIFocusGuide;
 import ios.uikit.UIView;
 import ios.uikit.UILayoutConstraintAxis;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIFocusGuide")
 @:include("UIKit/UIKit.h")
@@ -28,13 +29,13 @@ extern class UIFocusGuide extends UILayoutGuide{
 	@:native("constraintsAffectingLayoutForAxis")
 	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
+	/** Haxe Protocol */
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:Dynamic):NSCoding
-;
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

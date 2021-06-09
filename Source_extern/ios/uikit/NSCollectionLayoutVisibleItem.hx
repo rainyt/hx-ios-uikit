@@ -1,16 +1,23 @@
 package ios.uikit;
 
 import ios.uikit.NSCollectionLayoutVisibleItem;
+import cpp.objc.NSObject;
+import ios.uikit.UIDynamicItem;
 import ios.objc.CGPoint;
 import ios.objc.CGAffineTransform;
 import cpp.objc.NSString;
 import ios.uikit.NSIndexPath;
 import ios.objc.CGRect;
 import ios.uikit.UICollectionElementCategory;
+import ios.uikit.UIDynamicItemCollisionBoundsType;
+import ios.uikit.UIBezierPath;
 @:objc
 @:native("NSCollectionLayoutVisibleItem")
 @:include("UIKit/UIKit.h")
-extern interface NSCollectionLayoutVisibleItem{
+extern interface NSCollectionLayoutVisibleItem
+//implements cpp.objc.Protocol<NSObject>
+//implements cpp.objc.Protocol<UIDynamicItem>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutVisibleItem;
@@ -53,6 +60,14 @@ extern interface NSCollectionLayoutVisibleItem{
 
 	@:native("representedElementKind")
 	public var representedElementKind:NSString;
+
+	/**  The collision type represents how the dynamics system will evaluate collisions with   respect to the dynamic item. defaults to UIDynamicItemCollisionBoundsTypeRectangle  */
+	@:native("collisionBoundsType")
+	public var collisionBoundsType:UIDynamicItemCollisionBoundsType;
+
+	/**  The path must represent a convex polygon with counter clockwise winding and no self intersection.   The point (0,0) in the path corresponds to the dynamic item's center.  */
+	@:native("collisionBoundingPath")
+	public var collisionBoundingPath:UIBezierPath;
 
 
 }

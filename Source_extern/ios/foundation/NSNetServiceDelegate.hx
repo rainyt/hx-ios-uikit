@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSNetServiceDelegate;
+import cpp.objc.NSObject;
 import ios.foundation.NSNetService;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSData;
@@ -9,7 +10,9 @@ import ios.foundation.NSOutputStream;
 @:objc
 @:native("NSNetServiceDelegate")
 @:include("Foundation/Foundation.h")
-extern interface NSNetServiceDelegate{
+extern interface NSNetServiceDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSNetServiceDelegate;

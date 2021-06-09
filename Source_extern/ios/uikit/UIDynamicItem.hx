@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIDynamicItem;
+import cpp.objc.NSObject;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
@@ -9,7 +10,9 @@ import ios.uikit.UIBezierPath;
 @:objc
 @:native("UIDynamicItem")
 @:include("UIKit/UIKit.h")
-extern interface UIDynamicItem{
+extern interface UIDynamicItem
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDynamicItem;

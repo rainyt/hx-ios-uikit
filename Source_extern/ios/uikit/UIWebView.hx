@@ -134,9 +134,9 @@ extern class UIWebView extends UIView
 	@:native("allowsLinkPreview")
 	public var allowsLinkPreview:Bool;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("scrollViewDidScroll")
 	overload public function scrollViewDidScroll(scrollView:UIScrollView):Void;

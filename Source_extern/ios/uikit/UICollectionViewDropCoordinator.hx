@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDropCoordinator;
+import cpp.objc.NSObject;
 import ios.uikit.NSIndexPath;
 import ios.uikit.UICollectionViewDropProposal;
 import ios.uikit.UIDragItem;
@@ -10,7 +11,9 @@ import ios.uikit.UIDragPreviewTarget;
 @:objc
 @:native("UICollectionViewDropCoordinator")
 @:include("UIKit/UIKit.h")
-extern interface UICollectionViewDropCoordinator{
+extern interface UICollectionViewDropCoordinator
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropCoordinator;

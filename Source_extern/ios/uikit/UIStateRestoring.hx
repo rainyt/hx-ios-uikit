@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIStateRestoring;
+import cpp.objc.NSObject;
 import ios.uikit.NSCoder;
 @:objc
 @:native("UIStateRestoring")
 @:include("UIKit/UIKit.h")
-extern interface UIStateRestoring{
+extern interface UIStateRestoring
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIStateRestoring;

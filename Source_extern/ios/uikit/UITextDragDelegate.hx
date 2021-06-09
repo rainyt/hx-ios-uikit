@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextDragDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIView;
 import ios.uikit.UITargetedDragPreview;
 import ios.uikit.UIDragItem;
@@ -8,7 +9,9 @@ import ios.uikit.UIDropOperation;
 @:objc
 @:native("UITextDragDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UITextDragDelegate{
+extern interface UITextDragDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDragDelegate;

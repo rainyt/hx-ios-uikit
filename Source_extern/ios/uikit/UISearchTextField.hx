@@ -229,9 +229,9 @@ extern class UISearchTextField extends UITextField{
 	@:native("endFloatingCursor")
 	overload public function endFloatingCursor():Void;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UISearchTextField;

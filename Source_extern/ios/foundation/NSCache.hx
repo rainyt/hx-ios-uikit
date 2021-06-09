@@ -8,7 +8,10 @@ import cpp.objc.NSString;
 /*      NSCache.h
         Copyright (c) 2008-2019, Apple Inc. All rights reserved.
 */
-extern class NSCache{
+extern class NSCache
+//implements cpp.objc.Protocol<KeyType>
+//implements cpp.objc.Protocol<ObjectType>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSCache;

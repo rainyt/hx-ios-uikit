@@ -26,13 +26,13 @@ extern class NSDecimalNumberHandler
 	@:native("decimalNumberHandlerWithRoundingMode:scale:raiseOnExactness:raiseOnOverflow:raiseOnUnderflow:raiseOnDivideByZero")
 	overload public static function decimalNumberHandlerWithRoundingModeScaleRaiseOnExactnessRaiseOnOverflowRaiseOnUnderflowRaiseOnDivideByZero(roundingMode:NSRoundingMode, scale:Dynamic, raiseOnExactness:Bool, raiseOnOverflow:Bool, raiseOnUnderflow:Bool, raiseOnDivideByZero:Bool):NSDecimalNumberHandler;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
+	/** Haxe Protocol */
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:Dynamic):NSCoding
-;
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

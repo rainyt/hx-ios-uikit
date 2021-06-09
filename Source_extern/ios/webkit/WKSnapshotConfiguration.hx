@@ -53,9 +53,9 @@ extern class WKSnapshotConfiguration
 	@:native("afterScreenUpdates")
 	public var afterScreenUpdates:Bool;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

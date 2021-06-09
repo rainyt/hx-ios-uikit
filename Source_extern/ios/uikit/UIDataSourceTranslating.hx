@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIDataSourceTranslating;
+import cpp.objc.NSObject;
 import ios.uikit.NSIndexPath;
 @:objc
 @:native("UIDataSourceTranslating")
@@ -9,7 +10,9 @@ import ios.uikit.NSIndexPath;
  * to gather information in order to create UICollectionViewLayoutAttributes) this protocol allows
  * translation between the data source index path into the presentation index path (i.e. layout) state.
  */
-extern interface UIDataSourceTranslating{
+extern interface UIDataSourceTranslating
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDataSourceTranslating;

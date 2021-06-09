@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextInputTraits;
+import cpp.objc.NSObject;
 import ios.uikit.UITextAutocapitalizationType;
 import ios.uikit.UITextAutocorrectionType;
 import ios.uikit.UITextSpellCheckingType;
@@ -15,7 +16,9 @@ import ios.uikit.UITextInputPasswordRules;
 @:objc
 @:native("UITextInputTraits")
 @:include("UIKit/UIKit.h")
-extern interface UITextInputTraits{
+extern interface UITextInputTraits
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputTraits;

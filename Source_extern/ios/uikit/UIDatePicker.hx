@@ -87,9 +87,9 @@ extern class UIDatePicker extends UIControl
 	@:native("datePickerStyle")
 	public var datePickerStyle:UIDatePickerStyle;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIDatePicker;

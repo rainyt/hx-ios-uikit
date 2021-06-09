@@ -40,9 +40,9 @@ extern class WKUserScript
 	@:native("initWithSource:injectionTime:forMainFrameOnly:inContentWorld")
 	overload public function initWithSourceInjectionTimeForMainFrameOnlyInContentWorld(source:NSString, injectionTime:WKUserScriptInjectionTime, forMainFrameOnly:Bool, inContentWorld:WKContentWorld):WKUserScript;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

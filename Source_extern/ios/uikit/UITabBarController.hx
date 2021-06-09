@@ -86,9 +86,9 @@ extern class UITabBarController extends UIViewController
 	@:native("tabBar:didEndCustomizingItems:changed")
 	overload public function tabBarDidEndCustomizingItemsChanged(tabBar:UITabBar, didEndCustomizingItems:Dynamic, changed:Bool):Void;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	/*  Whenever the return value from -childViewControllerForTouchBar changes, -setNeedsTouchBarUpdate should be called.  */
 	@:native("setNeedsTouchBarUpdate")

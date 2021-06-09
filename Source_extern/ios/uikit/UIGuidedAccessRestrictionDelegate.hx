@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIGuidedAccessRestrictionDelegate;
+import cpp.objc.NSObject;
 import cpp.objc.NSString;
 import ios.uikit.UIGuidedAccessRestrictionState;
 @:objc
@@ -13,7 +14,9 @@ import ios.uikit.UIGuidedAccessRestrictionState;
  
  The initial state of all Guided Access restrictions is UIGuidedAccessRestrictionStateAllow.
  */
-extern interface UIGuidedAccessRestrictionDelegate{
+extern interface UIGuidedAccessRestrictionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIGuidedAccessRestrictionDelegate;

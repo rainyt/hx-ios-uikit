@@ -13,7 +13,9 @@ import ios.quartzcore.CAMetalLayer;
  * display. In order for a texture to be re-used for a new CAMetalDrawable,
  * any prior CAMetalDrawable must have been deallocated and another
  * CAMetalDrawable presented. */
-extern interface CAMetalDrawable{
+extern interface CAMetalDrawable
+//implements cpp.objc.Protocol<MTLDrawable>
+{
 
 	@:native("alloc")
 	overload public static function alloc():CAMetalDrawable;

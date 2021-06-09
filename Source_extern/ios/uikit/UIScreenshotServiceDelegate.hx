@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIScreenshotServiceDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIScreenshotService;
 @:objc
 @:native("UIScreenshotServiceDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIScreenshotServiceDelegate{
+extern interface UIScreenshotServiceDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIScreenshotServiceDelegate;

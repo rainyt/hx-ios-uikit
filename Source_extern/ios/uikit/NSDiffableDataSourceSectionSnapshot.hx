@@ -1,13 +1,12 @@
 package ios.uikit;
 
 import ios.uikit.NSDiffableDataSourceSectionSnapshot;
-import ios.objc.NSCopying;
 import cpp.objc.NSString;
 @:objc
 @:native("NSDiffableDataSourceSectionSnapshot")
 @:include("UIKit/UIKit.h")
 extern class NSDiffableDataSourceSectionSnapshot
-//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<ItemIdentifierType>
 {
 
 	@:native("alloc")
@@ -90,10 +89,6 @@ extern class NSDiffableDataSourceSectionSnapshot
 
 	@:native("visualDescription")
 	overload public function visualDescription():NSString;
-
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
 
 
 }

@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewDropPlaceholderContext;
+import ios.uikit.UIDragAnimating;
 import ios.uikit.UIDragItem;
 @:objc
 @:native("UICollectionViewDropPlaceholderContext")
 @:include("UIKit/UIKit.h")
-extern interface UICollectionViewDropPlaceholderContext{
+extern interface UICollectionViewDropPlaceholderContext
+//implements cpp.objc.Protocol<UIDragAnimating>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropPlaceholderContext;
@@ -28,6 +31,13 @@ extern interface UICollectionViewDropPlaceholderContext{
 	/* Call this method to request an update of the placeholder cell's content via the updateCellHandler.  * This will only be called if the placeholder is visible. If the placeholder becomes visible via scrolling,  * the updateCellHandler will automatically be called.  */
 	@:native("setNeedsCellUpdate")
 	overload public function setNeedsCellUpdate():Void;
+
+	/* Instances of UIDragAnimating provide you a way to animate your own changes  * alongside the drag and drop system's animations.  *  * Animatable view properties that are set by the animation block will be  * animated to their new values.   */
+	@:native("addAnimations")
+	overload public function addAnimations(animations:Dynamic):Void;
+
+	@:native("addCompletion")
+	overload public function addCompletion(completion:Dynamic):Void;
 
 
 }

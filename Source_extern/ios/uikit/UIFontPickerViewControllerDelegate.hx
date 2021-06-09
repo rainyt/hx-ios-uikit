@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIFontPickerViewControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIFontPickerViewController;
 @:objc
 @:native("UIFontPickerViewControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIFontPickerViewControllerDelegate{
+extern interface UIFontPickerViewControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIFontPickerViewControllerDelegate;

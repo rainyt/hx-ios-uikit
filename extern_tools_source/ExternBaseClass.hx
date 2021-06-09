@@ -1,3 +1,4 @@
+import sys.FileSystem;
 import ExternProtocolClass.ExternProtocolHaxeClass;
 import ExternBaseClassFunProperty.ExternBaseClassFunPropertyArgs;
 import sys.io.File;
@@ -72,6 +73,16 @@ class ExternBaseClass extends BaseClass {
 		this.hextern = hextern;
 		this.includes.push(this.hextern.hfile);
 		var pclassName = harray[0];
+
+		if (pclassName.indexOf("<") != -1) { // 解析协议
+			var ps = pclassName.substr(pclassName.indexOf("<") + 1);
+			ps = ps.substr(0, ps.indexOf(">"));
+			protocols = ps.split(",");
+			for (index => value in protocols) {
+				protocols[index] = ObjcType.toType(value, null, true);
+			}
+		}
+
 		isProtocol = Std.isOfType(this, ExternProtocolClass);
 		pclassName = pclassName.substr(pclassName.indexOf(isProtocol ? "@protocol" : "@interface") + (isProtocol ? 9 : 10));
 		if (pclassName.indexOf("(") != -1) {
@@ -100,17 +111,11 @@ class ExternBaseClass extends BaseClass {
 		}
 		pclassName = StringTools.replace(pclassName, ":", "");
 		this.className = ObjcType.toType(StringTools.replace(pclassName, " ", ""), null, true);
+		if (protocols != null)
+			protocols = protocols.filter((f) -> f != this.className);
 
 		if (extendClassName != null) {
 			if (extendClassName.indexOf("<") != -1) {
-				// 解析协议
-				var ps = extendClassName.substr(extendClassName.indexOf("<") + 1);
-				ps = ps.substr(0, ps.indexOf(">"));
-				protocols = ps.split(",");
-				for (index => value in protocols) {
-					protocols[index] = ObjcType.toType(value, null, true);
-				}
-				protocols = protocols.filter((f) -> f != this.className);
 				// trace("协议：", extendClassName, protocols);
 				// 拥有协议
 				extendClassName = extendClassName.substr(0, extendClassName.indexOf("<"));
@@ -339,14 +344,7 @@ class ExternBaseClass extends BaseClass {
 			// 这里的实现暂时注释掉，如果启动implements关系，会编译不过
 			haxe += "\n";
 			for (index => value in protocols) {
-				var t = ExternTools.protocol.get(value);
-				if (t != null) {
-					// implements cpp.objc.Protocol<UITextInput>
-					haxe += "//implements cpp.objc.Protocol<" + t.className + ">\n";
-				} else {
-					haxe += "//implements cpp.objc.Protocol<" + value + ">\n";
-					// trace("协议类型不存在：" + value);
-				}
+				haxe += "//implements cpp.objc.Protocol<" + value + ">\n";
 			}
 		}
 		haxe += "{\n\n";
@@ -356,6 +354,8 @@ class ExternBaseClass extends BaseClass {
 			}
 			if (value.desc != null)
 				haxe += "\t" + value.desc + "\n";
+			if (value.haxe != null)
+				haxe += "\t/** Haxe Protocol */" + "\n";
 			switch (value.type) {
 				case ExternBaseClassType.FUNC:
 					haxe += "\t@:native(\"" + value.name + "\")\n";
@@ -439,6 +439,7 @@ class ExternBaseClass extends BaseClass {
 		// 协议补充
 		if (this.protocols != null) {
 			for (index => value in protocols) {
+				// trace("处理协议：", value);
 				var t = ExternTools.protocol.get(value);
 				if (t != null)
 					c.putClass(t);
@@ -446,9 +447,12 @@ class ExternBaseClass extends BaseClass {
 					// 新建协议
 					var readProtocols = ObjcImport.toImport(value);
 					if (readProtocols != null) {
-						var nt = new ExternProtocolHaxeClass(File.getContent(ExternTools.externDir + "/" + readProtocols.split(".").join("/") + ".hx"),
-							hextern);
-						c.putClass(nt);
+						var protocolsPath = ExternTools.externDir + "/" + readProtocols.split(".").join("/") + ".hx";
+						if (FileSystem.exists(protocolsPath)) {
+							var nt = new ExternProtocolHaxeClass(File.getContent(protocolsPath), hextern);
+							// trace("nt",nt.funcAndAttr);
+							c.putClass(nt);
+						}
 					}
 					// throw readProtocols;
 				}

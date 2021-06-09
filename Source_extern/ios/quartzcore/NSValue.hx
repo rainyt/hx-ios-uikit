@@ -1,6 +1,6 @@
 package ios.quartzcore;
 
-import ios.uikit.NSValue;
+import ios.quartzcore.NSValue;
 import ios.objc.CGPoint;
 import ios.objc.CGVector;
 import ios.objc.CGSize;

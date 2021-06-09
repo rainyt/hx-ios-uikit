@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIPointerInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIPointerRegion;
 import ios.uikit.UIPointerInteraction;
 import ios.uikit.UIPointerRegionRequest;
@@ -8,7 +9,9 @@ import ios.uikit.UIPointerStyle;
 @:objc
 @:native("UIPointerInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIPointerInteractionDelegate{
+extern interface UIPointerInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerInteractionDelegate;

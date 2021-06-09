@@ -108,6 +108,22 @@ class ExternBaseClass(BaseClass):
         x = self.hextern.hfile
         _this.append(x)
         pclassName = (harray[0] if 0 < len(harray) else None)
+        startIndex = None
+        if (((pclassName.find("<") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"<",startIndex))) != -1):
+            startIndex = None
+            ps = HxString.substr(pclassName,(((pclassName.find("<") if ((startIndex is None)) else HxString.indexOfImpl(pclassName,"<",startIndex))) + 1),None)
+            startIndex = None
+            ps = HxString.substr(ps,0,(ps.find(">") if ((startIndex is None)) else HxString.indexOfImpl(ps,">",startIndex)))
+            self.protocols = ps.split(",")
+            _g_current = 0
+            _g_array = self.protocols
+            while (_g_current < len(_g_array)):
+                _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+                _g1_key = _g_current
+                _g_current = (_g_current + 1)
+                index = _g1_key
+                value = _g1_value
+                python_internal_ArrayImpl._set(self.protocols, index, ObjcType.toType(value,None,True))
         self.isProtocol = Std.isOfType(self,ExternProtocolClass)
         _hx_str = ("@protocol" if (self.isProtocol) else "@interface")
         startIndex = None
@@ -151,28 +167,14 @@ class ExternBaseClass(BaseClass):
             return
         pclassName = StringTools.replace(pclassName,":","")
         self.className = ObjcType.toType(StringTools.replace(pclassName," ",""),None,True)
+        if (self.protocols is not None):
+            def _hx_local_0(f):
+                return (f != _gthis.className)
+            self.protocols = list(filter(_hx_local_0,self.protocols))
         if (self.extendClassName is not None):
             _this = self.extendClassName
             startIndex = None
             if (((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) != -1):
-                _this = self.extendClassName
-                startIndex = None
-                ps = HxString.substr(self.extendClassName,(((_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex))) + 1),None)
-                startIndex = None
-                ps = HxString.substr(ps,0,(ps.find(">") if ((startIndex is None)) else HxString.indexOfImpl(ps,">",startIndex)))
-                self.protocols = ps.split(",")
-                _g_current = 0
-                _g_array = self.protocols
-                while (_g_current < len(_g_array)):
-                    _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
-                    _g1_key = _g_current
-                    _g_current = (_g_current + 1)
-                    index = _g1_key
-                    value = _g1_value
-                    python_internal_ArrayImpl._set(self.protocols, index, ObjcType.toType(value,None,True))
-                def _hx_local_0(f):
-                    return (f != _gthis.className)
-                self.protocols = list(filter(_hx_local_0,self.protocols))
                 _this = self.extendClassName
                 startIndex = None
                 self.extendClassName = HxString.substr(self.extendClassName,0,(_this.find("<") if ((startIndex is None)) else HxString.indexOfImpl(_this,"<",startIndex)))
@@ -416,11 +418,7 @@ class ExternBaseClass(BaseClass):
                 _g_current = (_g_current + 1)
                 index = _g1_key
                 value = _g1_value
-                t = ExternTools.protocol.h.get(value,None)
-                if (t is not None):
-                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("//implements cpp.objc.Protocol<" + HxOverrides.stringOrNull(t.className)) + ">\n"))))
-                else:
-                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("//implements cpp.objc.Protocol<" + ("null" if value is None else value)) + ">\n"))))
+                haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("//implements cpp.objc.Protocol<" + ("null" if value is None else value)) + ">\n"))))
         haxe = (("null" if haxe is None else haxe) + "{\n\n")
         _g_current = 0
         _g_array = self.funcAndAttr
@@ -434,6 +432,8 @@ class ExternBaseClass(BaseClass):
                 continue
             if (value.desc is not None):
                 haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t" + HxOverrides.stringOrNull(value.desc)) + "\n"))))
+            if (value.haxe is not None):
+                haxe = (("null" if haxe is None else haxe) + (("\t/** Haxe Protocol */" + "\n")))
             _g = value.type
             _hx_local_15 = len(_g)
             if (_hx_local_15 == 4):
@@ -534,10 +534,12 @@ class ExternBaseClass(BaseClass):
                 else:
                     readProtocols = ObjcImport.toImport(value)
                     if (readProtocols is not None):
-                        nt = (HxOverrides.stringOrNull(ExternTools.externDir) + "/")
+                        protocolsPath = (HxOverrides.stringOrNull(ExternTools.externDir) + "/")
                         _this = readProtocols.split(".")
-                        nt1 = ExternProtocolHaxeClass(sys_io_File.getContent(((("null" if nt is None else nt) + HxOverrides.stringOrNull("/".join([python_Boot.toString1(x1,'') for x1 in _this]))) + ".hx")),self.hextern)
-                        c.putClass(nt1)
+                        protocolsPath1 = ((("null" if protocolsPath is None else protocolsPath) + HxOverrides.stringOrNull("/".join([python_Boot.toString1(x1,'') for x1 in _this]))) + ".hx")
+                        if sys_FileSystem.exists(protocolsPath1):
+                            nt = ExternProtocolHaxeClass(sys_io_File.getContent(protocolsPath1),self.hextern)
+                            c.putClass(nt)
         if (self.extendClassName is not None):
             extendsClass = ExternTools.classDefine.h.get(self.extendClassName,None)
             if (extendsClass is not None):
@@ -779,34 +781,43 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
             if (((value.find("public ") if ((startIndex is None)) else HxString.indexOfImpl(value,"public ",startIndex))) != -1):
                 startIndex1 = None
                 isFunc = (((read.find("function ") if ((startIndex1 is None)) else HxString.indexOfImpl(read,"function ",startIndex1))) != -1)
-                startIndex2 = None
-                name = HxString.substr(read,(((read.find("function ") if ((startIndex2 is None)) else HxString.indexOfImpl(read,"function ",startIndex2))) + 8),None)
-                startIndex3 = None
-                name = HxString.substr(name,0,(name.find("(") if ((startIndex3 is None)) else HxString.indexOfImpl(name,"(",startIndex3)))
+                name = read
+                line = ""
+                if isFunc:
+                    startIndex2 = None
+                    name = HxString.substr(read,(((read.find("function ") if ((startIndex2 is None)) else HxString.indexOfImpl(read,"function ",startIndex2))) + 8),None)
+                    line = name
+                    startIndex3 = None
+                    name = HxString.substr(name,0,(name.find("(") if ((startIndex3 is None)) else HxString.indexOfImpl(name,"(",startIndex3)))
+                else:
+                    startIndex4 = None
+                    name = HxString.substr(read,(((read.find("var ") if ((startIndex4 is None)) else HxString.indexOfImpl(read,"var ",startIndex4))) + 3),None)
+                    line = name
+                    startIndex5 = None
+                    name = HxString.substr(name,0,(name.find(":") if ((startIndex5 is None)) else HxString.indexOfImpl(name,":",startIndex5)))
                 name = StringTools.replace(name," ","")
                 startIndex11 = None
                 pos = None
                 if (startIndex11 is None):
-                    pos = read.rfind(":", 0, len(read))
+                    pos = line.rfind(":", 0, len(line))
                 else:
-                    i = read.rfind(":", 0, (startIndex11 + 1))
+                    i = line.rfind(":", 0, (startIndex11 + 1))
                     startLeft = (max(0,((startIndex11 + 1) - len(":"))) if ((i == -1)) else (i + 1))
-                    check = read.find(":", startLeft, len(read))
+                    check = line.find(":", startLeft, len(line))
                     pos = (check if (((check > i) and ((check <= startIndex11)))) else i)
-                retclass = HxString.substr(read,(pos + 1),None)
+                retclass = HxString.substr(line,(pos + 1),None)
                 retclass = StringTools.replace(retclass,";","")
-                args = self.toArgs(read)
+                retclass = StringTools.replace(retclass,"\n","")
+                args = self.toArgs(line)
                 _this = self.funcAndAttr
-                startIndex4 = None
-                x = (read.find("static") if ((startIndex4 is None)) else HxString.indexOfImpl(read,"static",startIndex4))
+                startIndex6 = None
+                x = (read.find("static") if ((startIndex6 is None)) else HxString.indexOfImpl(read,"static",startIndex6))
                 _this.append(_hx_AnonObject({'name': name, 'type': ("func" if isFunc else "property"), 'returnClass': retclass, 'isStatic': (x != -1), 'args': args, 'haxe': read, 'desc': None}))
                 read = ""
 
     def toArgs(self,haxe):
         startIndex = None
-        if (((haxe.find("function") if ((startIndex is None)) else HxString.indexOfImpl(haxe,"function",startIndex))) != -1):
-            startIndex = None
-            haxe = HxString.substr(haxe,(((haxe.find("function") if ((startIndex is None)) else HxString.indexOfImpl(haxe,"function",startIndex))) + 8),None)
+        if (((haxe.find("(") if ((startIndex is None)) else HxString.indexOfImpl(haxe,"(",startIndex))) != -1):
             startIndex = None
             haxe = HxString.substr(haxe,(((haxe.find("(") if ((startIndex is None)) else HxString.indexOfImpl(haxe,"(",startIndex))) + 1),None)
             startIndex = None

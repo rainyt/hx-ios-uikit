@@ -52,9 +52,9 @@ extern class NSException
 	@:native("raise:format:arguments")
 	overload public static function raiseFormatArguments(name:Dynamic, format:NSString, arguments:Dynamic):Void;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

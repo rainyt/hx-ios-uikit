@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIIndirectScribbleInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIIndirectScribbleInteraction;
 import ios.objc.CGRect;
 @:objc
@@ -9,7 +10,9 @@ import ios.objc.CGRect;
 /*!
     @abstract The protocol to be implemented by the delegate of UIIndirectScribbleInteraction. It will be responsible for supplying a list of writable elements, focusing them, and ultimately providing a real UITextInput that will handle text editing operations.
  */
-extern interface UIIndirectScribbleInteractionDelegate{
+extern interface UIIndirectScribbleInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIIndirectScribbleInteractionDelegate;

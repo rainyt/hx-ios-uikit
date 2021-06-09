@@ -1,12 +1,15 @@
 package ios.foundation;
 
 import ios.foundation.NSURLConnectionDataDelegate;
+import ios.foundation.NSURLConnectionDelegate;
 import ios.foundation.NSURLRequest;
 import ios.foundation.NSURLConnection;
 import ios.foundation.NSURLResponse;
 import cpp.objc.NSData;
 import ios.foundation.NSInputStream;
 import ios.foundation.NSCachedURLResponse;
+import cpp.objc.NSError;
+import ios.foundation.NSURLAuthenticationChallenge;
 @:objc
 @:native("NSURLConnectionDataDelegate")
 @:include("Foundation/Foundation.h")
@@ -87,7 +90,9 @@ import ios.foundation.NSCachedURLResponse;
                     before the delegate is released by the
                     connection.<p>
 */
-extern interface NSURLConnectionDataDelegate{
+extern interface NSURLConnectionDataDelegate
+//implements cpp.objc.Protocol<NSURLConnectionDelegate>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSURLConnectionDataDelegate;
@@ -115,6 +120,15 @@ extern interface NSURLConnectionDataDelegate{
 
 	@:native("connectionDidFinishLoading")
 	overload public function connectionDidFinishLoading(connection:NSURLConnection):Void;
+
+	@:native("connection:didFailWithError")
+	overload public function connectionDidFailWithError(connection:NSURLConnection, didFailWithError:NSError):Void;
+
+	@:native("connectionShouldUseCredentialStorage")
+	overload public function connectionShouldUseCredentialStorage(connection:NSURLConnection):Bool;
+
+	@:native("connection:willSendRequestForAuthenticationChallenge")
+	overload public function connectionWillSendRequestForAuthenticationChallenge(connection:NSURLConnection, willSendRequestForAuthenticationChallenge:NSURLAuthenticationChallenge):Void;
 
 
 }

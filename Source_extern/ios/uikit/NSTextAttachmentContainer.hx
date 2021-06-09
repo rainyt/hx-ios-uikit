@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.NSTextAttachmentContainer;
+import cpp.objc.NSObject;
 import ios.uikit.UIImage;
 import ios.objc.CGRect;
 import ios.uikit.NSTextContainer;
@@ -8,7 +9,9 @@ import ios.objc.CGPoint;
 @:objc
 @:native("NSTextAttachmentContainer")
 @:include("UIKit/UIKit.h")
-extern interface NSTextAttachmentContainer{
+extern interface NSTextAttachmentContainer
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSTextAttachmentContainer;

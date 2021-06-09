@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UICollisionBehaviorDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UICollisionBehavior;
 import ios.objc.CGPoint;
 @:objc
 @:native("UICollisionBehaviorDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UICollisionBehaviorDelegate{
+extern interface UICollisionBehaviorDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UICollisionBehaviorDelegate;

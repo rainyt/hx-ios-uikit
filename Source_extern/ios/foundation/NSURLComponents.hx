@@ -115,9 +115,9 @@ extern class NSURLComponents
 	@:native("percentEncodedQueryItems")
 	public var percentEncodedQueryItems:Dynamic;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

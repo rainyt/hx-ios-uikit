@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSURLSessionDelegate;
+import cpp.objc.NSObject;
 import ios.foundation.NSURLSession;
 import cpp.objc.NSError;
 import ios.foundation.NSURLAuthenticationChallenge;
@@ -10,7 +11,9 @@ import ios.foundation.NSURLAuthenticationChallenge;
 /*
  * Messages related to the URL session as a whole
  */
-extern interface NSURLSessionDelegate{
+extern interface NSURLSessionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionDelegate;

@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UIActivityItemsConfigurationReading;
+import cpp.objc.NSObject;
 import cpp.objc.NSString;
 import ios.uikit.NSItemProvider;
 import ios.objc.CGSize;
 @:objc
 @:native("UIActivityItemsConfigurationReading")
 @:include("UIKit/UIKit.h")
-extern interface UIActivityItemsConfigurationReading{
+extern interface UIActivityItemsConfigurationReading
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemsConfigurationReading;

@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UITextDropRequest;
+import cpp.objc.NSObject;
 import ios.uikit.UITextPosition;
 import ios.uikit.UITextDropProposal;
 @:objc
 @:native("UITextDropRequest")
 @:include("UIKit/UIKit.h")
-extern interface UITextDropRequest{
+extern interface UITextDropRequest
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextDropRequest;

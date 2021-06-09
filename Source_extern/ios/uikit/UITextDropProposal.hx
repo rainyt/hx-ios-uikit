@@ -36,9 +36,9 @@ extern class UITextDropProposal extends UIDropProposal
 	@:native("dropPerformer")
 	public var dropPerformer:UITextDropPerformer;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("initWithDropOperation")
 	overload public function initWithDropOperation(operation:UIDropOperation):UITextDropProposal;

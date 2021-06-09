@@ -79,13 +79,13 @@ extern class UILayoutGuide
 	@:native("hasAmbiguousLayout")
 	public var hasAmbiguousLayout:Bool;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
+	/** Haxe Protocol */
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:Dynamic):NSCoding
-;
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

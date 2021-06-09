@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIFocusItemContainer;
+import cpp.objc.NSObject;
 import ios.objc.CGRect;
 @:objc
 @:native("UIFocusItemContainer")
 @:include("UIKit/UIKit.h")
-extern interface UIFocusItemContainer{
+extern interface UIFocusItemContainer
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIFocusItemContainer;

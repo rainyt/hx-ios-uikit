@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UINavigationControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UINavigationController;
 import ios.uikit.UIViewController;
 import ios.uikit.UIInterfaceOrientationMask;
@@ -9,7 +10,9 @@ import ios.uikit.UINavigationControllerOperation;
 @:objc
 @:native("UINavigationControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UINavigationControllerDelegate{
+extern interface UINavigationControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UINavigationControllerDelegate;

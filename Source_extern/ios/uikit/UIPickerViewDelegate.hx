@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIPickerViewDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIPickerView;
 import cpp.objc.NSString;
 import ios.uikit.NSAttributedString;
@@ -8,7 +9,9 @@ import ios.uikit.UIView;
 @:objc
 @:native("UIPickerViewDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIPickerViewDelegate{
+extern interface UIPickerViewDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewDelegate;

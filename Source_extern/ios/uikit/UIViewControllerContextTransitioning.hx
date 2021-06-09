@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIViewControllerContextTransitioning;
+import cpp.objc.NSObject;
 import ios.uikit.UIView;
 import ios.uikit.UIModalPresentationStyle;
 import ios.uikit.UIViewController;
@@ -9,7 +10,9 @@ import ios.objc.CGRect;
 @:objc
 @:native("UIViewControllerContextTransitioning")
 @:include("UIKit/UIKit.h")
-extern interface UIViewControllerContextTransitioning{
+extern interface UIViewControllerContextTransitioning
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerContextTransitioning;

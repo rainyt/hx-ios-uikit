@@ -33,9 +33,9 @@ extern class UIGraphicsImageRendererFormat extends UIGraphicsRendererFormat{
 	@:native("preferredFormat")
 	overload public static function preferredFormat():UIGraphicsImageRendererFormat;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

@@ -40,9 +40,9 @@ extern class NSPointerFunctions
 	@:native("usesWeakReadAndWriteBarriers")
 	public var usesWeakReadAndWriteBarriers:Bool;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

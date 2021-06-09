@@ -199,9 +199,9 @@ extern class UIScrollView extends UIView
 	@:native("refreshControl")
 	public var refreshControl:UIRefreshControl;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
 	@:native("visibleSize")
 	public var visibleSize:CGSize;

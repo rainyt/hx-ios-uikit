@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIFocusEnvironment;
+import cpp.objc.NSObject;
 import ios.uikit.UIFocusUpdateContext;
 import ios.uikit.UIFocusAnimationCoordinator;
 import cpp.objc.NSString;
@@ -8,7 +9,9 @@ import ios.uikit.UIView;
 @:objc
 @:native("UIFocusEnvironment")
 @:include("UIKit/UIKit.h")
-extern interface UIFocusEnvironment{
+extern interface UIFocusEnvironment
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIFocusEnvironment;

@@ -1,10 +1,13 @@
 package ios.foundation;
 
 import ios.foundation.NSUnitDuration;
+import ios.foundation.NSSecureCoding;
 @:objc
 @:native("NSUnitDuration")
 @:include("Foundation/Foundation.h")
-extern class NSUnitDuration extends Thisclassisnotmeanttobeusedfordatecalculation.UseNSDate/NSCalendar/NSDateComponentsforcalendricaldateandtimeoperations.{
+extern class NSUnitDuration extends Thisclassisnotmeanttobeusedfordatecalculation.UseNSDate/NSCalendar/NSDateComponentsforcalendricaldateandtimeoperations.
+//implements cpp.objc.Protocol<NSSecureCoding>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSUnitDuration;
@@ -33,6 +36,9 @@ extern class NSUnitDuration extends Thisclassisnotmeanttobeusedfordatecalculatio
 
 	@:native("picoseconds")
 	overload public static function picoseconds():NSUnitDuration;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

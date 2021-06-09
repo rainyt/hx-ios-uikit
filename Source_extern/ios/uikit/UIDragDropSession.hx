@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UIDragDropSession;
+import cpp.objc.NSObject;
 import ios.objc.CGPoint;
 import ios.uikit.UIView;
 @:objc
 @:native("UIDragDropSession")
 @:include("UIKit/UIKit.h")
-extern interface UIDragDropSession{
+extern interface UIDragDropSession
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDragDropSession;

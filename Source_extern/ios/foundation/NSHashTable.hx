@@ -1,8 +1,6 @@
 package ios.foundation;
 
 import ios.foundation.NSHashTable;
-import ios.objc.NSCopying;
-import ios.foundation.NSSecureCoding;
 import ios.foundation.NSPointerFunctionsOptions;
 import ios.foundation.NSPointerFunctions;
 import ios.foundation.NSEnumerator;
@@ -10,9 +8,7 @@ import ios.foundation.NSEnumerator;
 @:native("NSHashTable")
 @:include("Foundation/Foundation.h")
 extern class NSHashTable
-//implements cpp.objc.Protocol<NSCopying>
-//implements cpp.objc.Protocol<NSSecureCoding>
-//implements cpp.objc.Protocol<NSFastEnumeration>
+//implements cpp.objc.Protocol<ObjectType>
 {
 
 	@:native("alloc")
@@ -84,13 +80,6 @@ extern class NSHashTable
 
 	@:native("setRepresentation")
 	public var setRepresentation:Dynamic;
-
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
-
-	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding():Bool;
 
 
 }

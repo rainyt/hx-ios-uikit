@@ -109,9 +109,9 @@ extern class NSTimeZone
 	@:native("timeZoneWithAbbreviation")
 	overload public static function timeZoneWithAbbreviation(abbreviation:NSString):NSTimeZone;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

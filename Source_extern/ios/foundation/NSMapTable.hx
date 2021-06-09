@@ -1,8 +1,6 @@
 package ios.foundation;
 
 import ios.foundation.NSMapTable;
-import ios.objc.NSCopying;
-import ios.foundation.NSSecureCoding;
 import ios.foundation.NSPointerFunctionsOptions;
 import ios.foundation.NSPointerFunctions;
 import ios.foundation.NSEnumerator;
@@ -11,9 +9,8 @@ import cpp.objc.NSDictionary;
 @:native("NSMapTable")
 @:include("Foundation/Foundation.h")
 extern class NSMapTable
-//implements cpp.objc.Protocol<NSCopying>
-//implements cpp.objc.Protocol<NSSecureCoding>
-//implements cpp.objc.Protocol<NSFastEnumeration>
+//implements cpp.objc.Protocol<KeyType>
+//implements cpp.objc.Protocol<ObjectType>
 {
 
 	@:native("alloc")
@@ -73,13 +70,6 @@ extern class NSMapTable
 
 	@:native("dictionaryRepresentation")
 	overload public function dictionaryRepresentation():NSDictionary;
-
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
-
-	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding():Bool;
 
 
 }

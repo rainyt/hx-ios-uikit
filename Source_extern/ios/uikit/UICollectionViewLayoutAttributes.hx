@@ -71,9 +71,9 @@ extern class UICollectionViewLayoutAttributes
 	@:native("layoutAttributesForDecorationViewOfKind:withIndexPath")
 	overload public static function layoutAttributesForDecorationViewOfKindWithIndexPath(decorationViewKind:NSString, withIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	/**  The collision type represents how the dynamics system will evaluate collisions with   respect to the dynamic item. defaults to UIDynamicItemCollisionBoundsTypeRectangle  */
 	@:native("collisionBoundsType")

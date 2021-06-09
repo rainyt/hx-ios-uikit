@@ -1,8 +1,6 @@
 package ios.foundation;
 
 import ios.foundation.NSMeasurement;
-import ios.objc.NSCopying;
-import ios.foundation.NSSecureCoding;
 import ios.foundation.NSUnit;
 @:objc
 @:native("NSMeasurement")
@@ -13,8 +11,7 @@ import ios.foundation.NSUnit;
     All rights reserved.
  */
 extern class NSMeasurement
-//implements cpp.objc.Protocol<NSCopying>
-//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<UnitType:NSUnit>
 {
 
 	@:native("alloc")
@@ -49,13 +46,6 @@ extern class NSMeasurement
 
 	@:native("measurementBySubtractingMeasurement")
 	overload public function measurementBySubtractingMeasurement(measurement:NSMeasurement):NSMeasurement;
-
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
-
-	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding():Bool;
 
 
 }

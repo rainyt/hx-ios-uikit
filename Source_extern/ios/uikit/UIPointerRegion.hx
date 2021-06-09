@@ -29,9 +29,9 @@ extern class UIPointerRegion
 	@:native("init")
 	overload public function init():UIPointerRegion;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UIViewAnimating;
+import cpp.objc.NSObject;
 import ios.uikit.UIViewAnimatingState;
 import ios.uikit.UIViewAnimatingPosition;
 @:objc
 @:native("UIViewAnimating")
 @:include("UIKit/UIKit.h")
-extern interface UIViewAnimating{
+extern interface UIViewAnimating
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIViewAnimating;

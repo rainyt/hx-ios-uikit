@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextPasteDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.NSAttributedString;
 import ios.uikit.UITextRange;
 @:objc
@@ -35,7 +36,9 @@ import ios.uikit.UITextRange;
  * If you modify your text control's pasteConfiguration, you should probably also use
  * this delegate to properly handle any custom items you have there.
  */
-extern interface UITextPasteDelegate{
+extern interface UITextPasteDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UITextPasteDelegate;

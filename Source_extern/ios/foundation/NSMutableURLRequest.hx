@@ -78,9 +78,9 @@ extern class NSMutableURLRequest extends NSURLRequest{
 	@:native("valueForHTTPHeaderField")
 	overload public function valueForHTTPHeaderField(field:NSString):NSString;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

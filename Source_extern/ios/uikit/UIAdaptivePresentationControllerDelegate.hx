@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIAdaptivePresentationControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIModalPresentationStyle;
 import ios.uikit.UIPresentationController;
 import ios.uikit.UITraitCollection;
@@ -8,7 +9,9 @@ import ios.uikit.UIViewController;
 @:objc
 @:native("UIAdaptivePresentationControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIAdaptivePresentationControllerDelegate{
+extern interface UIAdaptivePresentationControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIAdaptivePresentationControllerDelegate;

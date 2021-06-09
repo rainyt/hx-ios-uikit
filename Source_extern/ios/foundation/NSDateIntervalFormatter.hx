@@ -11,6 +11,7 @@ import ios.foundation.NSDate;
 import ios.foundation.NSDateInterval;
 import ios.uikit.NSAttributedString;
 import cpp.objc.NSDictionary;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSDateIntervalFormatter")
 @:include("Foundation/Foundation.h")
@@ -65,17 +66,17 @@ extern class NSDateIntervalFormatter extends NSFormatter{
 	@:native("isPartialStringValid:proposedSelectedRange:originalString:originalSelectedRange:errorDescription")
 	overload public function isPartialStringValidProposedSelectedRangeOriginalStringOriginalSelectedRangeErrorDescription(partialStringPtr:Dynamic, proposedSelectedRange:Dynamic, originalString:NSString, originalSelectedRange:Dynamic, errorDescription:Dynamic):Bool;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
+	/** Haxe Protocol */
 	@:native("encodeWithCoder")
-	overload public function encodeWithCoder(aCoder:Dynamic):Void
-;
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
+	/** Haxe Protocol */
 	@:native("initWithCoder")
-	overload public function initWithCoder(aDecoder:Dynamic):NSCoding
-;
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

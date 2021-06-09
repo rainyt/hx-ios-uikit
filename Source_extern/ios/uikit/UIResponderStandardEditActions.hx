@@ -1,10 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.UIResponderStandardEditActions;
+import cpp.objc.NSObject;
 @:objc
 @:native("UIResponderStandardEditActions")
 @:include("UIKit/UIKit.h")
-extern interface UIResponderStandardEditActions{
+extern interface UIResponderStandardEditActions
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIResponderStandardEditActions;

@@ -1,12 +1,15 @@
 package ios.uikit;
 
 import ios.uikit.UIDocumentMenuDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIDocumentMenuViewController;
 import ios.uikit.UIDocumentPickerViewController;
 @:objc
 @:native("UIDocumentMenuDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIDocumentMenuDelegate{
+extern interface UIDocumentMenuDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentMenuDelegate;

@@ -1,12 +1,19 @@
 package ios.uikit;
 
 import ios.uikit.UIConfigurationState;
+import cpp.objc.NSObject;
+import ios.objc.NSCopying;
+import ios.foundation.NSSecureCoding;
 import ios.uikit.UITraitCollection;
 import cpp.objc.NSString;
 @:objc
 @:native("UIConfigurationState")
 @:include("UIKit/UIKit.h")
-extern interface UIConfigurationState{
+extern interface UIConfigurationState
+//implements cpp.objc.Protocol<NSObject>
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIConfigurationState;
@@ -31,6 +38,13 @@ extern interface UIConfigurationState{
 
 	@:native("setObject:forKeyedSubscript")
 	overload public function setObjectForKeyedSubscript(obj:Dynamic, forKeyedSubscript:NSString):Void;
+
+	/** Haxe Protocol */
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
 
 
 }

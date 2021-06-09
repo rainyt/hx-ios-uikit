@@ -1,11 +1,14 @@
 package ios.uikit;
 
 import ios.uikit.UIUserActivityRestoring;
+import cpp.objc.NSObject;
 import ios.uikit.NSUserActivity;
 @:objc
 @:native("UIUserActivityRestoring")
 @:include("UIKit/UIKit.h")
-extern interface UIUserActivityRestoring{
+extern interface UIUserActivityRestoring
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIUserActivityRestoring;

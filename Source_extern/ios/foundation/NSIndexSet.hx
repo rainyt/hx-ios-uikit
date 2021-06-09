@@ -138,9 +138,9 @@ extern class NSIndexSet
 	@:native("enumerateRangesInRange:options:usingBlock")
 	overload public function enumerateRangesInRangeOptionsUsingBlock(range:Dynamic, options:NSEnumerationOptions, usingBlock:Dynamic):Void;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

@@ -1,13 +1,13 @@
 package ios.uikit;
 
 import ios.uikit.NSDiffableDataSourceSnapshot;
-import ios.objc.NSCopying;
 import ios.foundation.NSArray;
 @:objc
 @:native("NSDiffableDataSourceSnapshot")
 @:include("UIKit/UIKit.h")
 extern class NSDiffableDataSourceSnapshot
-//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<SectionIdentifierType>
+//implements cpp.objc.Protocol<ItemIdentifierType>
 {
 
 	@:native("alloc")
@@ -90,10 +90,6 @@ extern class NSDiffableDataSourceSnapshot
 
 	@:native("reloadSectionsWithIdentifiers")
 	overload public function reloadSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;
-
-	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
 
 
 }

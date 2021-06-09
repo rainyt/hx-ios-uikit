@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UILargeContentViewerInteractionDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UILargeContentViewerInteraction;
 import ios.objc.CGPoint;
 import ios.uikit.UIViewController;
 @:objc
 @:native("UILargeContentViewerInteractionDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UILargeContentViewerInteractionDelegate{
+extern interface UILargeContentViewerInteractionDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UILargeContentViewerInteractionDelegate;

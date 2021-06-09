@@ -37,9 +37,9 @@ extern class UIPreviewParameters
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;
 
+	/** Haxe Protocol */
 	@:native("copyWithZone")
-	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic
-;
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 
 
 }

@@ -1,13 +1,16 @@
 package ios.uikit;
 
 import ios.uikit.UIPrinterPickerControllerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.UIViewController;
 import ios.uikit.UIPrinterPickerController;
 import ios.uikit.UIPrinter;
 @:objc
 @:native("UIPrinterPickerControllerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface UIPrinterPickerControllerDelegate{
+extern interface UIPrinterPickerControllerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIPrinterPickerControllerDelegate;

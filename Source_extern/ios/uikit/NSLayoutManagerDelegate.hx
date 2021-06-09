@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.NSLayoutManagerDelegate;
+import cpp.objc.NSObject;
 import ios.uikit.NSLayoutManager;
 import ios.uikit.UIFont;
 import ios.objc.CGRect;
@@ -11,7 +12,9 @@ import ios.objc.CGSize;
 @:objc
 @:native("NSLayoutManagerDelegate")
 @:include("UIKit/UIKit.h")
-extern interface NSLayoutManagerDelegate{
+extern interface NSLayoutManagerDelegate
+//implements cpp.objc.Protocol<NSObject>
+{
 
 	@:native("alloc")
 	overload public static function alloc():NSLayoutManagerDelegate;

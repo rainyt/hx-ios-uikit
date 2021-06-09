@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIControl;
 import ios.uikit.UIButton;
+import ios.uikit.UIAccessibilityContentSizeCategoryImageAdjusting;
 import ios.uikit.UIButtonType;
 import ios.uikit.UIImage;
 import ios.uikit.UIAction;
@@ -46,7 +47,9 @@ import ios.uikit.NSUserActivity;
 @:objc
 @:native("UIButton")
 @:include("UIKit/UIKit.h")
-extern class UIButton extends UIControl{
+extern class UIButton extends UIControl
+//implements cpp.objc.Protocol<UIAccessibilityContentSizeCategoryImageAdjusting>
+{
 
 	@:native("alloc")
 	overload public static function alloc():UIButton;
@@ -192,6 +195,9 @@ extern class UIButton extends UIControl{
 
 	@:native("titleShadowOffset")
 	public var titleShadowOffset:CGSize;
+
+	@:native("adjustsImageSizeForAccessibilityContentSizeCategory")
+	public var adjustsImageSizeForAccessibilityContentSizeCategory:Bool;
 
 	@:native("initWithFrame")
 	overload public function initWithFrame(frame:CGRect):UIButton;
