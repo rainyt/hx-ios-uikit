@@ -1,5 +1,7 @@
 package ios.macro;
 
+import ios.uikit.UITapGestureRecognizer;
+import ios.uikit.UIView;
 import ios.uikit.UIControlEvents;
 import ios.uikit.UIControl;
 
@@ -7,11 +9,17 @@ class Events {
 	private static var listeners:Array<EventListener> = [];
 	private static var listenerId:Int;
 
+	public static function listenUIViewClick(control:UIView, handler:Void->Void):EventListener {
+		var ret = new EventListener(control, UIControlEventTouchDown, handler, listenerId);
+		var tap = UITapGestureRecognizer.alloc().initWithTargetAction(ret.native, untyped __cpp__("@selector(handle:)"));
+		control.addGestureRecognizer(tap);
+		control.userInteractionEnabled = true;
+		listeners.push(ret);
+		listenerId++;
+		return ret;
+	}
+
 	public static function listen(control:UIControl, event:UIControlEvents, handler:Void->Void):EventListener {
-		if (listeners == null) {
-			listeners = [];
-			listenerId = 0;
-		}
 		var ret = new EventListener(control, event, handler, listenerId);
 		control.addTargetActionForControlEvents(ret.native, untyped __cpp__("@selector(handle:)"), event);
 		listeners.push(ret);
@@ -54,13 +62,13 @@ class Events {
 	]
 }))
 class EventListener {
-	public var control:UIControl;
+	public var control:UIView;
 	public var event:UIControlEvents;
 	public var handler:Void->Void;
 	public var native:EventListenerNative;
 	public var id:Int;
 
-	public function new(control:UIControl, event:UIControlEvents, handler:Void->Void, listener:Int) {
+	public function new(control:UIView, event:UIControlEvents, handler:Void->Void, listener:Int) {
 		this.control = control;
 		this.event = event;
 		this.handler = handler;

@@ -1,8 +1,9 @@
 ## 0.0.3
 - 移除：删除不再需要的代码文件。
-- 新增：新增解析注释到API中。
+- 新增：新增解析注释到API中（变量和方法）。
 - 改进：内置的所有framework的类新增了原生注释。
 - 修复：修复协议中的变量与方法没有完整解析的问题。
+- 新增：新增`Events.listenUIViewClick`方法，为UIView添加点击事件。
 
 ## 0.0.2
 - 新增：新增QuartzCore.framework支持，移除ios.obj.CA*的旧实现。
