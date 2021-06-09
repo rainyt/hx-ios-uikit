@@ -380,6 +380,8 @@ class ExternBaseClass extends BaseClass {
 	private function _toReturnClass(type:ExternBaseClassFunProperty):String {
 		if ((type.isStatic || (type.name != null && type.name.indexOf("initWith") != -1)) && isExtendClass(type.returnClass))
 			return this.className;
+		if (type.returnClass == "Void")
+			return "Dynamic";
 		return type.returnClass;
 	}
 

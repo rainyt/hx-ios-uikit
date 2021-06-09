@@ -464,6 +464,8 @@ class ExternBaseClass(BaseClass):
             tmp = True
         if (tmp and self.isExtendClass(_hx_type.returnClass)):
             return self.className
+        if (_hx_type.returnClass == "Void"):
+            return "Dynamic"
         return _hx_type.returnClass
 
     def isExtendClass(self,_hx_type):
