@@ -362,7 +362,7 @@ extern class NSObject{
 
 	/* Take or return a pointer that identifies information about all of the observers that are registered with the receiver, the options that were used at registration-time, etc. The default implementation of these methods store observation info in a global dictionary keyed by the receivers' pointers. For improved performance, you can override these methods to store the opaque data pointer in an instance variable. Overrides of these methods must not attempt to send Objective-C messages to the passed-in observation info, including -retain and -release. */
 	@:native("observationInfo")
-	public var observationInfo:Void;
+	public var observationInfo:Dynamic;
 
 	/* Given that an error alert has been presented document-modally to the user, and the user has chosen one of the error's recovery options, attempt recovery from the error, and send the selected message to the specified delegate. The option index is an index into the error's array of localized recovery options. The method selected by didRecoverSelector must have the same signature as:      - (void)didPresentErrorWithRecovery:(BOOL)didRecover contextInfo:(void *)contextInfo;  The value passed for didRecover must be YES if error recovery was completely successful, NO otherwise. */
 	@:native("attemptRecoveryFromError:optionIndex:delegate:didRecoverSelector:contextInfo")

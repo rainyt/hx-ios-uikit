@@ -23,7 +23,7 @@ extern class NSMutableData extends NSData{
 	overload public static function autorelease():NSMutableData;
 
 	@:native("mutableBytes")
-	public var mutableBytes:Void;
+	public var mutableBytes:Dynamic;
 
 	@:native("appendBytes:length")
 	overload public function appendBytesLength(bytes:Dynamic, length:Int):Void;

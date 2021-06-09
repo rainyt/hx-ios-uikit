@@ -32,7 +32,7 @@ extern class NSData
 
 	/*  The -bytes method returns a pointer to a contiguous region of memory managed by the receiver.  If the regions of memory represented by the receiver are already contiguous, it does so in O(1) time, otherwise it may take longer  Using -enumerateByteRangesUsingBlock: will be efficient for both contiguous and discontiguous data.  */
 	@:native("bytes")
-	public var bytes:Void;
+	public var bytes:Dynamic;
 
 	@:native("description")
 	public var description:NSString;

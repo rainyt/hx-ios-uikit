@@ -103,7 +103,7 @@ extern class NSValue{
 	overload public static function valueWithPointer(pointer:Dynamic):NSValue;
 
 	@:native("pointerValue")
-	public var pointerValue:Void;
+	public var pointerValue:Dynamic;
 
 	@:native("isEqualToValue")
 	overload public function isEqualToValue(value:NSValue):Bool;
