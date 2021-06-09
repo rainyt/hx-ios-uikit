@@ -7,13 +7,11 @@ import ios.uikit.UIViewAnimationCurve;
 @:native("UIPercentDrivenInteractiveTransition")
 @:include("UIKit/UIKit.h")
 extern class UIPercentDrivenInteractiveTransition
+//implements cpp.objc.Protocol<UIViewControllerInteractiveTransitioning>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPercentDrivenInteractiveTransition;
-
-	@:native("init")
-	overload public function init():UIPercentDrivenInteractiveTransition;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPercentDrivenInteractiveTransition;

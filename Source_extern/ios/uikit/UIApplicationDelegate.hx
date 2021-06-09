@@ -24,9 +24,6 @@ extern interface UIApplicationDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIApplicationDelegate;
 
-	@:native("init")
-	overload public function init():UIApplicationDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIApplicationDelegate;
 

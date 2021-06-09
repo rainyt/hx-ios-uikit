@@ -34,9 +34,6 @@ extern class UICollectionReusableView extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UICollectionReusableView;
 
-	@:native("init")
-	overload public function init():UICollectionReusableView;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionReusableView;
 

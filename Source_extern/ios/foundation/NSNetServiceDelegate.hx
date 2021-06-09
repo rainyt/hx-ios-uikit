@@ -14,9 +14,6 @@ extern interface NSNetServiceDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSNetServiceDelegate;
 
-	@:native("init")
-	overload public function init():NSNetServiceDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSNetServiceDelegate;
 

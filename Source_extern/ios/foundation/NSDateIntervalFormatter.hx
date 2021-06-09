@@ -19,9 +19,6 @@ extern class NSDateIntervalFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSDateIntervalFormatter;
 
-	@:native("init")
-	overload public function init():NSDateIntervalFormatter;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSDateIntervalFormatter;
 

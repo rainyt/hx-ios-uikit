@@ -11,13 +11,11 @@ import ios.uikit.UIDropOperation;
 @:native("UITextDropProposal")
 @:include("UIKit/UIKit.h")
 extern class UITextDropProposal extends UIDropProposal
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITextDropProposal;
-
-	@:native("init")
-	overload public function init():UITextDropProposal;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITextDropProposal;
@@ -44,6 +42,9 @@ extern class UITextDropProposal extends UIDropProposal
 
 	@:native("initWithDropOperation")
 	overload public function initWithDropOperation(operation:UIDropOperation):UITextDropProposal;
+
+	@:native("init")
+	overload public function init():UIDropProposal;
 
 
 }

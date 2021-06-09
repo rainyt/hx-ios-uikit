@@ -23,9 +23,6 @@ extern interface UITextInput{
 	@:native("alloc")
 	overload public static function alloc():UITextInput;
 
-	@:native("init")
-	overload public function init():UITextInput;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextInput;
 

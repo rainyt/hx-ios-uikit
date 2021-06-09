@@ -45,13 +45,13 @@ import ios.foundation.NSInputStream;
     NSURLConnection class method which performs synchronous loads.
 */
 extern class NSURLRequest
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURLRequest;
-
-	@:native("init")
-	overload public function init():NSURLRequest;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURLRequest;

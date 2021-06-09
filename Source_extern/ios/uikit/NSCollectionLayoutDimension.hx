@@ -6,13 +6,11 @@ import ios.objc.NSCopying;
 @:native("NSCollectionLayoutDimension")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutDimension
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutDimension;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutDimension;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutDimension;

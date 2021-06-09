@@ -44,9 +44,6 @@ extern class NSUserDefaults{
 	@:native("alloc")
 	overload public static function alloc():NSUserDefaults;
 
-	@:native("init")
-	overload public function init():NSUserDefaults;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSUserDefaults;
 

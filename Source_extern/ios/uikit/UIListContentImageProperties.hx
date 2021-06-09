@@ -10,13 +10,12 @@ import ios.objc.CGSize;
 @:native("UIListContentImageProperties")
 @:include("UIKit/UIKit.h")
 extern class UIListContentImageProperties
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIListContentImageProperties;
-
-	@:native("init")
-	overload public function init():UIListContentImageProperties;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentImageProperties;

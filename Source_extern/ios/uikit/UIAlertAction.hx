@@ -8,13 +8,11 @@ import ios.uikit.UIAlertActionStyle;
 @:native("UIAlertAction")
 @:include("UIKit/UIKit.h")
 extern class UIAlertAction
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIAlertAction;
-
-	@:native("init")
-	overload public function init():UIAlertAction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIAlertAction;

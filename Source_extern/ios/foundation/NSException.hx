@@ -12,13 +12,12 @@ import cpp.objc.NSDictionary;
 	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
 */
 extern class NSException
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSException;
-
-	@:native("init")
-	overload public function init():NSException;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSException;

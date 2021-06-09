@@ -25,13 +25,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIDocumentBrowserViewController")
 @:include("UIKit/UIKit.h")
 extern class UIDocumentBrowserViewController extends UIViewController
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserViewController;
-
-	@:native("init")
-	overload public function init():UIDocumentBrowserViewController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentBrowserViewController;

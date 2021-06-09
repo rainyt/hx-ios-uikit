@@ -42,9 +42,6 @@ extern class UIPageControl extends UIControl{
 	@:native("alloc")
 	overload public static function alloc():UIPageControl;
 
-	@:native("init")
-	overload public function init():UIPageControl;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPageControl;
 

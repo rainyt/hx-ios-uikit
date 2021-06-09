@@ -37,13 +37,12 @@ import ios.uikit.NSUserActivity;
 @:native("UIScrollView")
 @:include("UIKit/UIKit.h")
 extern class UIScrollView extends UIView
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<UIFocusItemScrollableContainer>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIScrollView;
-
-	@:native("init")
-	overload public function init():UIScrollView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIScrollView;

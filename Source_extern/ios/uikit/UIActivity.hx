@@ -14,9 +14,6 @@ extern class UIActivity{
 	@:native("alloc")
 	overload public static function alloc():UIActivity;
 
-	@:native("init")
-	overload public function init():UIActivity;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIActivity;
 

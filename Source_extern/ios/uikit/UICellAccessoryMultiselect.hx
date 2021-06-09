@@ -12,9 +12,6 @@ extern class UICellAccessoryMultiselect extends UICellAccessory{
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryMultiselect;
 
-	@:native("init")
-	overload public function init():UICellAccessoryMultiselect;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessoryMultiselect;
 
@@ -23,6 +20,9 @@ extern class UICellAccessoryMultiselect extends UICellAccessory{
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryMultiselect;
+
+	@:native("init")
+	overload public function init():UICellAccessory;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

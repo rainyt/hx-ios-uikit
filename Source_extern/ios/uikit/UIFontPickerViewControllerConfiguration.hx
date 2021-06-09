@@ -8,13 +8,11 @@ import ios.foundation.NSPredicate;
 @:native("UIFontPickerViewControllerConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIFontPickerViewControllerConfiguration
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIFontPickerViewControllerConfiguration;
-
-	@:native("init")
-	overload public function init():UIFontPickerViewControllerConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIFontPickerViewControllerConfiguration;

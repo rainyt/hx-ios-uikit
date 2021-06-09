@@ -10,9 +10,6 @@ extern interface NSKeyedArchiverDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSKeyedArchiverDelegate;
 
-	@:native("init")
-	overload public function init():NSKeyedArchiverDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSKeyedArchiverDelegate;
 

@@ -15,9 +15,6 @@ extern class NSRunLoop{
 	@:native("alloc")
 	overload public static function alloc():NSRunLoop;
 
-	@:native("init")
-	overload public function init():NSRunLoop;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSRunLoop;
 

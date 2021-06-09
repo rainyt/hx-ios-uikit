@@ -13,9 +13,6 @@ extern class UIStoryboardPopoverSegue extends UIStoryboardSegue{
 	@:native("alloc")
 	overload public static function alloc():UIStoryboardPopoverSegue;
 
-	@:native("init")
-	overload public function init():UIStoryboardPopoverSegue;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIStoryboardPopoverSegue;
 
@@ -27,6 +24,9 @@ extern class UIStoryboardPopoverSegue extends UIStoryboardSegue{
 
 	@:native("initWithIdentifier:source:destination")
 	overload public function initWithIdentifierSourceDestination(identifier:NSString, source:UIViewController, destination:UIViewController):UIStoryboardPopoverSegue;
+
+	@:native("init")
+	overload public function init():UIStoryboardSegue;
 
 	@:native("perform")
 	overload public function perform():Void;

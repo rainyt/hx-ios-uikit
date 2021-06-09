@@ -9,13 +9,12 @@ import cpp.objc.NSString;
 @:native("NSDate")
 @:include("Foundation/Foundation.h")
 extern class NSDate
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDate;
-
-	@:native("init")
-	overload public function init():NSDate;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDate;

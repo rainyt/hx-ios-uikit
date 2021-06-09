@@ -11,9 +11,6 @@ extern class UIStatusBarManager{
 	@:native("alloc")
 	overload public static function alloc():UIStatusBarManager;
 
-	@:native("init")
-	overload public function init():UIStatusBarManager;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIStatusBarManager;
 

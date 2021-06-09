@@ -9,13 +9,11 @@ import ios.foundation.NSURL;
 @:native("UIDragPreview")
 @:include("UIKit/UIKit.h")
 extern class UIDragPreview
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIDragPreview;
-
-	@:native("init")
-	overload public function init():UIDragPreview;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIDragPreview;

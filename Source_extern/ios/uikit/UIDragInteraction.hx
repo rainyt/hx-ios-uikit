@@ -7,13 +7,11 @@ import ios.uikit.UIView;
 @:native("UIDragInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIDragInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIDragInteraction;
-
-	@:native("init")
-	overload public function init():UIDragInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIDragInteraction;

@@ -13,9 +13,6 @@ extern interface UICollectionViewDragDelegate{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDragDelegate;
 
-	@:native("init")
-	overload public function init():UICollectionViewDragDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDragDelegate;
 

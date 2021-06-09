@@ -9,9 +9,6 @@ extern interface UIAccessibilityContentSizeCategoryImageAdjusting{
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityContentSizeCategoryImageAdjusting;
 
-	@:native("init")
-	overload public function init():UIAccessibilityContentSizeCategoryImageAdjusting;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityContentSizeCategoryImageAdjusting;
 

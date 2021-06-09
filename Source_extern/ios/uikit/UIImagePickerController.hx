@@ -30,13 +30,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIImagePickerController")
 @:include("UIKit/UIKit.h")
 extern class UIImagePickerController extends UINavigationController
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIImagePickerController;
-
-	@:native("init")
-	overload public function init():UIImagePickerController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIImagePickerController;

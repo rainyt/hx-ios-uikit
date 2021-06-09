@@ -6,13 +6,11 @@ import ios.objc.NSCopying;
 @:native("UILexicon")
 @:include("UIKit/UIKit.h")
 extern class UILexicon
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UILexicon;
-
-	@:native("init")
-	overload public function init():UILexicon;
 
 	@:native("autorelease")
 	overload public static function autorelease():UILexicon;

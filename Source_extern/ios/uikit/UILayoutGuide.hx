@@ -19,13 +19,11 @@ import ios.uikit.UILayoutConstraintAxis;
  before using it in a constraint.
  */
 extern class UILayoutGuide
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UILayoutGuide;
-
-	@:native("init")
-	overload public function init():UILayoutGuide;
 
 	@:native("autorelease")
 	overload public static function autorelease():UILayoutGuide;

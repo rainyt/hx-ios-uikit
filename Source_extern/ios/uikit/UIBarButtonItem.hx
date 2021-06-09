@@ -22,13 +22,11 @@ import ios.uikit.UITraitCollection;
 @:native("UIBarButtonItem")
 @:include("UIKit/UIKit.h")
 extern class UIBarButtonItem extends UIBarItem
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItem;
-
-	@:native("init")
-	overload public function init():UIBarButtonItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIBarButtonItem;

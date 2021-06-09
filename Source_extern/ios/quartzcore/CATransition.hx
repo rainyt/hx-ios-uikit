@@ -11,9 +11,6 @@ extern class CATransition extends CAAnimation{
 	@:native("alloc")
 	overload public static function alloc():CATransition;
 
-	@:native("init")
-	overload public function init():CATransition;
-
 	@:native("autorelease")
 	overload public static function autorelease():CATransition;
 

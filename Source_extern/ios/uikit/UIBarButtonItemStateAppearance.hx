@@ -11,9 +11,6 @@ extern class UIBarButtonItemStateAppearance{
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItemStateAppearance;
 
-	@:native("init")
-	overload public function init():UIBarButtonItemStateAppearance;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIBarButtonItemStateAppearance;
 

@@ -8,13 +8,11 @@ import ios.uikit.UIView;
 @:native("UITextInteraction")
 @:include("UIKit/UIKit.h")
 extern class UITextInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITextInteraction;
-
-	@:native("init")
-	overload public function init():UITextInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITextInteraction;

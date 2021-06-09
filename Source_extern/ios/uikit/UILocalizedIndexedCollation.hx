@@ -10,9 +10,6 @@ extern class UILocalizedIndexedCollation{
 	@:native("alloc")
 	overload public static function alloc():UILocalizedIndexedCollation;
 
-	@:native("init")
-	overload public function init():UILocalizedIndexedCollation;
-
 	@:native("autorelease")
 	overload public static function autorelease():UILocalizedIndexedCollation;
 

@@ -8,13 +8,11 @@ import ios.objc.CGPoint;
 @:native("NSCollectionLayoutAnchor")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutAnchor
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutAnchor;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutAnchor;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutAnchor;

@@ -10,9 +10,6 @@ extern interface UICollectionViewDropPlaceholderContext{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropPlaceholderContext;
 
-	@:native("init")
-	overload public function init():UICollectionViewDropPlaceholderContext;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDropPlaceholderContext;
 

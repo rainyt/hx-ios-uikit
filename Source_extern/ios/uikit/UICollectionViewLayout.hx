@@ -17,13 +17,11 @@ import ios.uikit.UIUserInterfaceLayoutDirection;
 @:native("UICollectionViewLayout")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewLayout
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayout;
-
-	@:native("init")
-	overload public function init():UICollectionViewLayout;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewLayout;

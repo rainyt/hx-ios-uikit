@@ -11,13 +11,11 @@ import ios.objc.CGSize;
 @:native("UIActivityItemProvider")
 @:include("UIKit/UIKit.h")
 extern class UIActivityItemProvider extends NSOperation
+//implements cpp.objc.Protocol<UIActivityItemSource>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemProvider;
-
-	@:native("init")
-	overload public function init():UIActivityItemProvider;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityItemProvider;

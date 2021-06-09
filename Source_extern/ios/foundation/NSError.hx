@@ -9,13 +9,12 @@ import cpp.objc.NSString;
 @:native("NSError")
 @:include("Foundation/Foundation.h")
 extern class NSError
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSError;
-
-	@:native("init")
-	overload public function init():NSError;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSError;

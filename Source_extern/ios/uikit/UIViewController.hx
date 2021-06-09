@@ -45,9 +45,6 @@ extern class UIViewController extends UIResponder{
 	@:native("alloc")
 	overload public static function alloc():UIViewController;
 
-	@:native("init")
-	overload public function init():UIViewController;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIViewController;
 

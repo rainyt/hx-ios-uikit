@@ -38,9 +38,6 @@ extern class UICollectionViewListCell extends UICollectionViewCell{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewListCell;
 
-	@:native("init")
-	overload public function init():UICollectionViewListCell;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewListCell;
 

@@ -14,13 +14,11 @@ import ios.foundation.NSFileWrapperWritingOptions;
 @:native("NSFileWrapper")
 @:include("Foundation/Foundation.h")
 extern class NSFileWrapper
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSFileWrapper;
-
-	@:native("init")
-	overload public function init():NSFileWrapper;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSFileWrapper;

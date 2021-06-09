@@ -11,9 +11,6 @@ extern class NSMetadataQueryResultGroup{
 	@:native("alloc")
 	overload public static function alloc():NSMetadataQueryResultGroup;
 
-	@:native("init")
-	overload public function init():NSMetadataQueryResultGroup;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMetadataQueryResultGroup;
 

@@ -15,13 +15,12 @@ import ios.foundation.NSNumber;
 @:native("NSMutableDictionary")
 @:include("Foundation/Foundation.h")
 extern class NSMutableDictionary extends NSDictionary
+//implements cpp.objc.Protocol<KeyType>
+//implements cpp.objc.Protocol<ObjectType>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSMutableDictionary;
-
-	@:native("init")
-	overload public function init():NSMutableDictionary;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableDictionary;

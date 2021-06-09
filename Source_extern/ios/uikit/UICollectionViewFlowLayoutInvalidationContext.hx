@@ -11,9 +11,6 @@ extern class UICollectionViewFlowLayoutInvalidationContext extends UICollectionV
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewFlowLayoutInvalidationContext;
 
-	@:native("init")
-	overload public function init():UICollectionViewFlowLayoutInvalidationContext;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewFlowLayoutInvalidationContext;
 

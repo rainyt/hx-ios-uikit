@@ -8,13 +8,12 @@ import cpp.objc.NSString;
 @:native("UITextInputPasswordRules")
 @:include("UIKit/UIKit.h")
 extern class UITextInputPasswordRules
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputPasswordRules;
-
-	@:native("init")
-	overload public function init():UITextInputPasswordRules;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputPasswordRules;

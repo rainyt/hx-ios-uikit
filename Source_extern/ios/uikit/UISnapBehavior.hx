@@ -12,9 +12,6 @@ extern class UISnapBehavior extends UIDynamicBehavior{
 	@:native("alloc")
 	overload public static function alloc():UISnapBehavior;
 
-	@:native("init")
-	overload public function init():UISnapBehavior;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISnapBehavior;
 

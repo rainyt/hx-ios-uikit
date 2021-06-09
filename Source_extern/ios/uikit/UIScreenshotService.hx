@@ -13,9 +13,6 @@ extern class UIScreenshotService{
 	@:native("alloc")
 	overload public static function alloc():UIScreenshotService;
 
-	@:native("init")
-	overload public function init():UIScreenshotService;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIScreenshotService;
 

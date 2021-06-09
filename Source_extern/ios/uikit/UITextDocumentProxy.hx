@@ -12,9 +12,6 @@ extern interface UITextDocumentProxy{
 	@:native("alloc")
 	overload public static function alloc():UITextDocumentProxy;
 
-	@:native("init")
-	overload public function init():UITextDocumentProxy;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextDocumentProxy;
 

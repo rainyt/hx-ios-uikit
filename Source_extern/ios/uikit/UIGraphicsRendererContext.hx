@@ -17,9 +17,6 @@ extern class UIGraphicsRendererContext{
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsRendererContext;
 
-	@:native("init")
-	overload public function init():UIGraphicsRendererContext;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsRendererContext;
 

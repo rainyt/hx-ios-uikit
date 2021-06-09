@@ -9,9 +9,6 @@ extern class UIFocusDebugger{
 	@:native("alloc")
 	overload public static function alloc():UIFocusDebugger;
 
-	@:native("init")
-	overload public function init():UIFocusDebugger;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusDebugger;
 

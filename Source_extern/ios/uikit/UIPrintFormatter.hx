@@ -8,13 +8,11 @@ import ios.objc.CGRect;
 @:native("UIPrintFormatter")
 @:include("UIKit/UIKit.h")
 extern class UIPrintFormatter
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPrintFormatter;
-
-	@:native("init")
-	overload public function init():UIPrintFormatter;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPrintFormatter;

@@ -32,13 +32,12 @@ import ios.uikit.NSUserActivity;
 @:native("UICollectionViewController")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewController extends UIViewController
+//implements cpp.objc.Protocol<UICollectionViewDelegate>
+//implements cpp.objc.Protocol<UICollectionViewDataSource>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewController;
-
-	@:native("init")
-	overload public function init():UICollectionViewController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewController;

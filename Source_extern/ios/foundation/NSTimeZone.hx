@@ -15,13 +15,12 @@ import ios.foundation.NSLocale;
 	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
 */
 extern class NSTimeZone
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSTimeZone;
-
-	@:native("init")
-	overload public function init():NSTimeZone;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSTimeZone;

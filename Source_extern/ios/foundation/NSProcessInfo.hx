@@ -13,9 +13,6 @@ extern class NSProcessInfo{
 	@:native("alloc")
 	overload public static function alloc():NSProcessInfo;
 
-	@:native("init")
-	overload public function init():NSProcessInfo;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSProcessInfo;
 

@@ -11,9 +11,6 @@ extern interface UINavigationBarDelegate{
 	@:native("alloc")
 	overload public static function alloc():UINavigationBarDelegate;
 
-	@:native("init")
-	overload public function init():UINavigationBarDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationBarDelegate;
 

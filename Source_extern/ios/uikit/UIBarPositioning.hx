@@ -10,9 +10,6 @@ extern interface UIBarPositioning{
 	@:native("alloc")
 	overload public static function alloc():UIBarPositioning;
 
-	@:native("init")
-	overload public function init():UIBarPositioning;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIBarPositioning;
 

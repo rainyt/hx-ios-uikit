@@ -10,9 +10,6 @@ extern interface UIScreenshotServiceDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIScreenshotServiceDelegate;
 
-	@:native("init")
-	overload public function init():UIScreenshotServiceDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIScreenshotServiceDelegate;
 

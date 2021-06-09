@@ -16,13 +16,12 @@ import cpp.objc.NSError;
  * of processing a given request.
  */
 extern class NSURLSessionTask
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSProgressReporting>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionTask;
-
-	@:native("init")
-	overload public function init():NSURLSessionTask;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionTask;

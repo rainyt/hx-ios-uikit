@@ -9,13 +9,12 @@ import ios.objc.CGPoint;
 @:native("UIRegion")
 @:include("UIKit/UIKit.h")
 extern class UIRegion
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIRegion;
-
-	@:native("init")
-	overload public function init():UIRegion;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIRegion;

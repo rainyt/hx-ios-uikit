@@ -7,13 +7,11 @@ import ios.uikit.UIView;
 @:native("UIPointerInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIPointerInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerInteraction;
-
-	@:native("init")
-	overload public function init():UIPointerInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerInteraction;

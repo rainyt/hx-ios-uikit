@@ -10,9 +10,6 @@ extern interface UITraitEnvironment{
 	@:native("alloc")
 	overload public static function alloc():UITraitEnvironment;
 
-	@:native("init")
-	overload public function init():UITraitEnvironment;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITraitEnvironment;
 

@@ -43,9 +43,6 @@ extern class NSMutableURLRequest extends NSURLRequest{
 	@:native("alloc")
 	overload public static function alloc():NSMutableURLRequest;
 
-	@:native("init")
-	overload public function init():NSMutableURLRequest;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableURLRequest;
 

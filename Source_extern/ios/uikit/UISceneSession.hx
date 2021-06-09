@@ -11,13 +11,11 @@ import cpp.objc.NSDictionary;
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")
 extern class UISceneSession
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISceneSession;
-
-	@:native("init")
-	overload public function init():UISceneSession;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISceneSession;

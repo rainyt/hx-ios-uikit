@@ -7,13 +7,12 @@ import ios.objc.NSCopying;
 @:native("UIPasteConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIPasteConfiguration
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPasteConfiguration;
-
-	@:native("init")
-	overload public function init():UIPasteConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPasteConfiguration;

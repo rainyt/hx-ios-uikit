@@ -8,13 +8,11 @@ import ios.uikit.NSCollectionLayoutEdgeSpacing;
 @:native("NSCollectionLayoutItem")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutItem
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutItem;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutItem;

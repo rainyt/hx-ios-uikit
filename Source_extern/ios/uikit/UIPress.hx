@@ -12,9 +12,6 @@ extern class UIPress{
 	@:native("alloc")
 	overload public static function alloc():UIPress;
 
-	@:native("init")
-	overload public function init():UIPress;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPress;
 

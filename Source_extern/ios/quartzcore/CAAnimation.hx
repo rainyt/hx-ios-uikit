@@ -11,9 +11,6 @@ extern class CAAnimation{
 	@:native("alloc")
 	overload public static function alloc():CAAnimation;
 
-	@:native("init")
-	overload public function init():CAAnimation;
-
 	@:native("autorelease")
 	overload public static function autorelease():CAAnimation;
 

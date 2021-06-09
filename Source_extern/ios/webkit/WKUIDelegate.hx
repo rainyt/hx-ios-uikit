@@ -20,9 +20,6 @@ extern interface WKUIDelegate{
 	@:native("alloc")
 	overload public static function alloc():WKUIDelegate;
 
-	@:native("init")
-	overload public function init():WKUIDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKUIDelegate;
 

@@ -12,13 +12,11 @@ import ios.uikit.UITextGranularity;
 /* A recommended base implementation of the tokenizer protocol. Subclasses are responsible
  * for handling directions and granularities affected by layout.*/
 extern class UITextInputStringTokenizer
+//implements cpp.objc.Protocol<UITextInputTokenizer>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputStringTokenizer;
-
-	@:native("init")
-	overload public function init():UITextInputStringTokenizer;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputStringTokenizer;

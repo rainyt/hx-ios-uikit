@@ -10,9 +10,6 @@ extern interface UIAccessibilityIdentification{
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityIdentification;
 
-	@:native("init")
-	overload public function init():UIAccessibilityIdentification;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityIdentification;
 

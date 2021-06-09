@@ -11,9 +11,6 @@ extern class UIPointerRegionRequest{
 	@:native("alloc")
 	overload public static function alloc():UIPointerRegionRequest;
 
-	@:native("init")
-	overload public function init():UIPointerRegionRequest;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerRegionRequest;
 

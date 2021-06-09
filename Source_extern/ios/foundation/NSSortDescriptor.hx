@@ -14,13 +14,12 @@ import ios.uikit.NSCoder;
 	Copyright (c) 2002-2019, Apple Inc. All rights reserved.
 */
 extern class NSSortDescriptor
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSSortDescriptor;
-
-	@:native("init")
-	overload public function init():NSSortDescriptor;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSSortDescriptor;

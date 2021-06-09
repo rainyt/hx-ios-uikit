@@ -22,13 +22,11 @@ import ios.uikit.NSUserActivity;
  backed by a UIView (for example: painted text or icon).
  */
 extern class UIAccessibilityElement extends UIResponder
+//implements cpp.objc.Protocol<UIAccessibilityIdentification>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityElement;
-
-	@:native("init")
-	overload public function init():UIAccessibilityElement;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityElement;

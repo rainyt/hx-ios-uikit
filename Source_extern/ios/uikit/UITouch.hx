@@ -16,9 +16,6 @@ extern class UITouch{
 	@:native("alloc")
 	overload public static function alloc():UITouch;
 
-	@:native("init")
-	overload public function init():UITouch;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITouch;
 

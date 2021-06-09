@@ -12,13 +12,12 @@ import cpp.objc.NSDictionary;
 @:native("NSURL")
 @:include("Foundation/Foundation.h")
 extern class NSURL
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURL;
-
-	@:native("init")
-	overload public function init():NSURL;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURL;

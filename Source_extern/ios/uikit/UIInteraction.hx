@@ -10,9 +10,6 @@ extern interface UIInteraction{
 	@:native("alloc")
 	overload public static function alloc():UIInteraction;
 
-	@:native("init")
-	overload public function init():UIInteraction;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIInteraction;
 

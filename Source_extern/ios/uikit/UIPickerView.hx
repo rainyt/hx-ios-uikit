@@ -29,13 +29,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIPickerView")
 @:include("UIKit/UIKit.h")
 extern class UIPickerView extends UIView
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPickerView;
-
-	@:native("init")
-	overload public function init():UIPickerView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPickerView;

@@ -13,9 +13,6 @@ extern class UIDragPreviewTarget extends UIPreviewTarget{
 	@:native("alloc")
 	overload public static function alloc():UIDragPreviewTarget;
 
-	@:native("init")
-	overload public function init():UIDragPreviewTarget;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDragPreviewTarget;
 
@@ -26,6 +23,9 @@ extern class UIDragPreviewTarget extends UIPreviewTarget{
 	/* As above, but with transform = CGAffineTransformIdentity.  */
 	@:native("initWithContainer:center")
 	overload public function initWithContainerCenter(container:UIView, center:CGPoint):UIDragPreviewTarget;
+
+	@:native("init")
+	overload public function init():UIPreviewTarget;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

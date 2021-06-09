@@ -11,9 +11,6 @@ extern class UISearchToken{
 	@:native("alloc")
 	overload public static function alloc():UISearchToken;
 
-	@:native("init")
-	overload public function init():UISearchToken;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISearchToken;
 

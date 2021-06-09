@@ -25,9 +25,6 @@ extern class NSConstantString extends NSSimpleCString{
 	@:native("alloc")
 	overload public static function alloc():NSConstantString;
 
-	@:native("init")
-	overload public function init():NSConstantString;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSConstantString;
 
@@ -73,6 +70,10 @@ extern class NSConstantString extends NSSimpleCString{
 
 	@:native("characterAtIndex")
 	overload public function characterAtIndex(index:Int):Dynamic;
+
+	/* The initializers available to subclasses. See further below for additional init methods. */
+	@:native("init")
+	overload public function init():NSString;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):NSConstantString;

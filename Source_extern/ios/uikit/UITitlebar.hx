@@ -13,9 +13,6 @@ extern class UITitlebar{
 	@:native("alloc")
 	overload public static function alloc():UITitlebar;
 
-	@:native("init")
-	overload public function init():UITitlebar;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITitlebar;
 

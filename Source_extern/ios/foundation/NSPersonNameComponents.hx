@@ -11,13 +11,12 @@ import cpp.objc.NSString;
 	Copyright (c) 2015-2019, Apple Inc. All rights reserved.
  */
 extern class NSPersonNameComponents
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSPersonNameComponents;
-
-	@:native("init")
-	overload public function init():NSPersonNameComponents;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSPersonNameComponents;

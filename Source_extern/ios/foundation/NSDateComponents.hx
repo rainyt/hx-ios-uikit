@@ -11,13 +11,12 @@ import ios.foundation.NSCalendarUnit;
 @:native("NSDateComponents")
 @:include("Foundation/Foundation.h")
 extern class NSDateComponents
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDateComponents;
-
-	@:native("init")
-	overload public function init():NSDateComponents;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDateComponents;

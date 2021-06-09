@@ -10,9 +10,6 @@ extern class UIMenuItem{
 	@:native("alloc")
 	overload public static function alloc():UIMenuItem;
 
-	@:native("init")
-	overload public function init():UIMenuItem;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIMenuItem;
 

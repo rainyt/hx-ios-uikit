@@ -8,13 +8,11 @@ import ios.foundation.NSPredicate;
 @:native("UISceneActivationConditions")
 @:include("UIKit/UIKit.h")
 extern class UISceneActivationConditions
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISceneActivationConditions;
-
-	@:native("init")
-	overload public function init():UISceneActivationConditions;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISceneActivationConditions;

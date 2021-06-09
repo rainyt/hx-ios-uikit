@@ -9,9 +9,6 @@ extern class UITextInputAssistantItem{
 	@:native("alloc")
 	overload public static function alloc():UITextInputAssistantItem;
 
-	@:native("init")
-	overload public function init():UITextInputAssistantItem;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputAssistantItem;
 

@@ -12,13 +12,12 @@ import cpp.objc.NSDictionary;
         Copyright (c) 2013-2019, Apple Inc. All rights reserved.
 */
 extern class NSExtensionItem
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSExtensionItem;
-
-	@:native("init")
-	overload public function init():NSExtensionItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSExtensionItem;

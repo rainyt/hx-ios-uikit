@@ -7,13 +7,11 @@ import ios.uikit.UITargetedPreview;
 @:native("UIPointerEffect")
 @:include("UIKit/UIKit.h")
 extern class UIPointerEffect
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerEffect;
-
-	@:native("init")
-	overload public function init():UIPointerEffect;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerEffect;

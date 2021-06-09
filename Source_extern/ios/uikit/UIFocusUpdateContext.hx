@@ -11,9 +11,6 @@ extern class UIFocusUpdateContext{
 	@:native("alloc")
 	overload public static function alloc():UIFocusUpdateContext;
 
-	@:native("init")
-	overload public function init():UIFocusUpdateContext;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusUpdateContext;
 

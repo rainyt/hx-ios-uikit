@@ -20,13 +20,12 @@ import ios.foundation.NSFileVersion;
 @:native("UIDocument")
 @:include("UIKit/UIKit.h")
 extern class UIDocument
+//implements cpp.objc.Protocol<NSFilePresenter>
+//implements cpp.objc.Protocol<NSProgressReporting>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIDocument;
-
-	@:native("init")
-	overload public function init():UIDocument;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIDocument;

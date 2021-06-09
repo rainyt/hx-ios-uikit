@@ -11,9 +11,6 @@ extern class UIPrinter{
 	@:native("alloc")
 	overload public static function alloc():UIPrinter;
 
-	@:native("init")
-	overload public function init():UIPrinter;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPrinter;
 

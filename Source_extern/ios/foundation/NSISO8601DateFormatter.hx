@@ -13,13 +13,11 @@ import cpp.objc.NSDictionary;
 @:native("NSISO8601DateFormatter")
 @:include("Foundation/Foundation.h")
 extern class NSISO8601DateFormatter extends NSFormatter
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSISO8601DateFormatter;
-
-	@:native("init")
-	overload public function init():NSISO8601DateFormatter;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSISO8601DateFormatter;

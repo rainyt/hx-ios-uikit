@@ -10,13 +10,11 @@ import ios.uikit.NSCollectionLayoutAnchor;
 @:native("NSCollectionLayoutSupplementaryItem")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutSupplementaryItem extends NSCollectionLayoutItem
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutSupplementaryItem;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutSupplementaryItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutSupplementaryItem;

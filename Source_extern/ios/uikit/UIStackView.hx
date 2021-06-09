@@ -54,9 +54,6 @@ extern class UIStackView extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UIStackView;
 
-	@:native("init")
-	overload public function init():UIStackView;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIStackView;
 

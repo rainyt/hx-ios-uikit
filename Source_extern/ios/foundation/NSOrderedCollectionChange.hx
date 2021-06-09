@@ -10,9 +10,6 @@ extern class NSOrderedCollectionChange{
 	@:native("alloc")
 	overload public static function alloc():NSOrderedCollectionChange;
 
-	@:native("init")
-	overload public function init():NSOrderedCollectionChange;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSOrderedCollectionChange;
 

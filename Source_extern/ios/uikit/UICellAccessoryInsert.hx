@@ -12,9 +12,6 @@ extern class UICellAccessoryInsert extends UICellAccessory{
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryInsert;
 
-	@:native("init")
-	overload public function init():UICellAccessoryInsert;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessoryInsert;
 
@@ -26,6 +23,9 @@ extern class UICellAccessoryInsert extends UICellAccessory{
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryInsert;
+
+	@:native("init")
+	overload public function init():UICellAccessory;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

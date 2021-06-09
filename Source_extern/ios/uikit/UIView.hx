@@ -43,9 +43,6 @@ extern class UIView extends UIResponder{
 	@:native("alloc")
 	overload public static function alloc():UIView;
 
-	@:native("init")
-	overload public function init():UIView;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIView;
 

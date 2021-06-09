@@ -10,13 +10,11 @@ import ios.uikit.UIVisualEffect;
 @:native("UITableViewRowAction")
 @:include("UIKit/UIKit.h")
 extern class UITableViewRowAction
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewRowAction;
-
-	@:native("init")
-	overload public function init():UITableViewRowAction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewRowAction;

@@ -13,9 +13,6 @@ extern class NSCache{
 	@:native("alloc")
 	overload public static function alloc():NSCache;
 
-	@:native("init")
-	overload public function init():NSCache;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSCache;
 

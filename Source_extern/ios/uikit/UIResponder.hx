@@ -18,13 +18,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIResponder")
 @:include("UIKit/UIKit.h")
 extern class UIResponder
+//implements cpp.objc.Protocol<UIResponderStandardEditActions>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIResponder;
-
-	@:native("init")
-	overload public function init():UIResponder;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIResponder;

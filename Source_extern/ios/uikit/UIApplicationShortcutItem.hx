@@ -9,13 +9,12 @@ import cpp.objc.NSDictionary;
 @:native("UIApplicationShortcutItem")
 @:include("UIKit/UIKit.h")
 extern class UIApplicationShortcutItem
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIApplicationShortcutItem;
-
-	@:native("init")
-	overload public function init():UIApplicationShortcutItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIApplicationShortcutItem;

@@ -10,13 +10,11 @@ import ios.uikit.UICollectionLayoutListFooterMode;
 @:native("UICollectionLayoutListConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UICollectionLayoutListConfiguration
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionLayoutListConfiguration;
-
-	@:native("init")
-	overload public function init():UICollectionLayoutListConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionLayoutListConfiguration;

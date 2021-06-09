@@ -11,9 +11,6 @@ extern interface UISearchSuggestion{
 	@:native("alloc")
 	overload public static function alloc():UISearchSuggestion;
 
-	@:native("init")
-	overload public function init():UISearchSuggestion;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISearchSuggestion;
 

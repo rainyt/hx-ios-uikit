@@ -36,13 +36,12 @@ import ios.uikit.NSUserActivity;
  UITabBarController is rotatable if all of its view controllers are rotatable.
  */
 extern class UITabBarController extends UIViewController
+//implements cpp.objc.Protocol<UITabBarDelegate>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarController;
-
-	@:native("init")
-	overload public function init():UITabBarController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarController;

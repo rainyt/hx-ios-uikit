@@ -8,13 +8,11 @@ import ios.uikit.UIColor;
 @:native("UIPreviewParameters")
 @:include("UIKit/UIKit.h")
 extern class UIPreviewParameters
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPreviewParameters;
-
-	@:native("init")
-	overload public function init():UIPreviewParameters;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewParameters;

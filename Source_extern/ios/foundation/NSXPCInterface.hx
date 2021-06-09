@@ -9,9 +9,6 @@ extern class NSXPCInterface{
 	@:native("alloc")
 	overload public static function alloc():NSXPCInterface;
 
-	@:native("init")
-	overload public function init():NSXPCInterface;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSXPCInterface;
 

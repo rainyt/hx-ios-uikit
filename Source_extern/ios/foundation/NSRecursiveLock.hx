@@ -7,13 +7,11 @@ import cpp.objc.NSString;
 @:native("NSRecursiveLock")
 @:include("Foundation/Foundation.h")
 extern class NSRecursiveLock
+//implements cpp.objc.Protocol<NSLocking>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSRecursiveLock;
-
-	@:native("init")
-	overload public function init():NSRecursiveLock;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSRecursiveLock;

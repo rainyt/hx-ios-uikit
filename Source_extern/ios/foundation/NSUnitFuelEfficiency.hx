@@ -10,13 +10,11 @@ import ios.foundation.NSUnit;
 @:native("NSUnitFuelEfficiency")
 @:include("Foundation/Foundation.h")
 extern class NSUnitFuelEfficiency extends NSDimension
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSUnitFuelEfficiency;
-
-	@:native("init")
-	overload public function init():NSUnitFuelEfficiency;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitFuelEfficiency;
@@ -37,6 +35,9 @@ extern class NSUnitFuelEfficiency extends NSDimension
 	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitFuelEfficiency;
+
+	@:native("init")
+	overload public function init():NSUnit;
 
 	@:native("initWithSymbol")
 	overload public function initWithSymbol(symbol:NSString):NSUnitFuelEfficiency;

@@ -23,13 +23,11 @@ import ios.uikit.UIColor;
 @:native("UIImage")
 @:include("UIKit/UIKit.h")
 extern class UIImage
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIImage;
-
-	@:native("init")
-	overload public function init():UIImage;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIImage;

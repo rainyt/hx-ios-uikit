@@ -13,9 +13,6 @@ extern interface UIAccessibilityContainerDataTableCell{
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityContainerDataTableCell;
 
-	@:native("init")
-	overload public function init():UIAccessibilityContainerDataTableCell;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityContainerDataTableCell;
 

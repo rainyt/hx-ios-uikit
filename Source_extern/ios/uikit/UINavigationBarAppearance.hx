@@ -15,9 +15,6 @@ extern class UINavigationBarAppearance extends UIBarAppearance{
 	@:native("alloc")
 	overload public static function alloc():UINavigationBarAppearance;
 
-	@:native("init")
-	overload public function init():UINavigationBarAppearance;
-
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationBarAppearance;
 
@@ -47,6 +44,9 @@ extern class UINavigationBarAppearance extends UIBarAppearance{
 
 	@:native("setBackIndicatorImage:transitionMaskImage")
 	overload public function setBackIndicatorImageTransitionMaskImage(backIndicatorImage:UIImage, transitionMaskImage:UIImage):Void;
+
+	@:native("init")
+	overload public function init():UIBarAppearance;
 
 	@:native("initWithIdiom")
 	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UINavigationBarAppearance;

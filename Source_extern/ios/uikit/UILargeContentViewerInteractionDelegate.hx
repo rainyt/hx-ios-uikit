@@ -12,9 +12,6 @@ extern interface UILargeContentViewerInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UILargeContentViewerInteractionDelegate;
 
-	@:native("init")
-	overload public function init():UILargeContentViewerInteractionDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UILargeContentViewerInteractionDelegate;
 

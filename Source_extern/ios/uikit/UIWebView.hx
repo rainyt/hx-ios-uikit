@@ -37,13 +37,12 @@ import ios.uikit.NSUserActivity;
 @:native("UIWebView")
 @:include("UIKit/UIKit.h")
 extern class UIWebView extends UIView
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<UIScrollViewDelegate>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIWebView;
-
-	@:native("init")
-	overload public function init():UIWebView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIWebView;

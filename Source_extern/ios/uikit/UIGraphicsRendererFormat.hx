@@ -11,13 +11,11 @@ import ios.objc.CGRect;
  context created by its associated renderer class.
  */
 extern class UIGraphicsRendererFormat
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsRendererFormat;
-
-	@:native("init")
-	overload public function init():UIGraphicsRendererFormat;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsRendererFormat;

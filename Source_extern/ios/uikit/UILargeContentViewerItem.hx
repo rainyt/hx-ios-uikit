@@ -11,9 +11,6 @@ extern interface UILargeContentViewerItem{
 	@:native("alloc")
 	overload public static function alloc():UILargeContentViewerItem;
 
-	@:native("init")
-	overload public function init():UILargeContentViewerItem;
-
 	@:native("autorelease")
 	overload public static function autorelease():UILargeContentViewerItem;
 

@@ -13,9 +13,6 @@ extern class NSMessagePort extends NSPort{
 	@:native("alloc")
 	overload public static function alloc():NSMessagePort;
 
-	@:native("init")
-	overload public function init():NSMessagePort;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMessagePort;
 

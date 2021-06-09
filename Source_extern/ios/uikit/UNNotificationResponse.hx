@@ -10,9 +10,6 @@ extern class UNNotificationResponse{
 	@:native("alloc")
 	overload public static function alloc():UNNotificationResponse;
 
-	@:native("init")
-	overload public function init():UNNotificationResponse;
-
 	@:native("autorelease")
 	overload public static function autorelease():UNNotificationResponse;
 

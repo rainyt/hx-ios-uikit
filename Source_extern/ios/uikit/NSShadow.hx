@@ -13,13 +13,12 @@ import ios.objc.CGSize;
  To set a shadow on an NSAttributedString use it as a value for NSShadowAttributeName.
  */
 extern class NSShadow
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSShadow;
-
-	@:native("init")
-	overload public function init():NSShadow;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSShadow;

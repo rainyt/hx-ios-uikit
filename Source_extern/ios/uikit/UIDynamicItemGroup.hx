@@ -11,13 +11,11 @@ import ios.uikit.UIBezierPath;
 @:native("UIDynamicItemGroup")
 @:include("UIKit/UIKit.h")
 extern class UIDynamicItemGroup
+//implements cpp.objc.Protocol<UIDynamicItem>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIDynamicItemGroup;
-
-	@:native("init")
-	overload public function init():UIDynamicItemGroup;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIDynamicItemGroup;

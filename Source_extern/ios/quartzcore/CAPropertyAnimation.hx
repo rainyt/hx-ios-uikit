@@ -12,9 +12,6 @@ extern class CAPropertyAnimation extends CAAnimation{
 	@:native("alloc")
 	overload public static function alloc():CAPropertyAnimation;
 
-	@:native("init")
-	overload public function init():CAPropertyAnimation;
-
 	@:native("autorelease")
 	overload public static function autorelease():CAPropertyAnimation;
 

@@ -16,13 +16,12 @@ import ios.uikit.UIBezierPath;
 @:native("UICollectionViewLayoutAttributes")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewLayoutAttributes
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<UIDynamicItem>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewLayoutAttributes;
-
-	@:native("init")
-	overload public function init():UICollectionViewLayoutAttributes;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewLayoutAttributes;

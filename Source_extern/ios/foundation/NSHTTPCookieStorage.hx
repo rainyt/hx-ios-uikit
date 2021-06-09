@@ -23,9 +23,6 @@ extern class NSHTTPCookieStorage{
 	@:native("alloc")
 	overload public static function alloc():NSHTTPCookieStorage;
 
-	@:native("init")
-	overload public function init():NSHTTPCookieStorage;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSHTTPCookieStorage;
 

@@ -47,13 +47,12 @@ import ios.uikit.NSUserActivity;
 @:native("UITextView")
 @:include("UIKit/UIKit.h")
 extern class UITextView extends UIScrollView
+//implements cpp.objc.Protocol<UITextInput>
+//implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITextView;
-
-	@:native("init")
-	overload public function init():UITextView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITextView;

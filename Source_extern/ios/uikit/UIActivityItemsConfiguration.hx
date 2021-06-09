@@ -9,13 +9,11 @@ import ios.objc.CGSize;
 @:native("UIActivityItemsConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIActivityItemsConfiguration
+//implements cpp.objc.Protocol<UIActivityItemsConfigurationReading>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemsConfiguration;
-
-	@:native("init")
-	overload public function init():UIActivityItemsConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityItemsConfiguration;

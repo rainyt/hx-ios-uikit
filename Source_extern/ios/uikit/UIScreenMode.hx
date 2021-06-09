@@ -10,9 +10,6 @@ extern class UIScreenMode{
 	@:native("alloc")
 	overload public static function alloc():UIScreenMode;
 
-	@:native("init")
-	overload public function init():UIScreenMode;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIScreenMode;
 

@@ -9,9 +9,6 @@ extern interface NSDiscardableConten{
 	@:native("alloc")
 	overload public static function alloc():NSDiscardableConten;
 
-	@:native("init")
-	overload public function init():NSDiscardableConten;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSDiscardableConten;
 

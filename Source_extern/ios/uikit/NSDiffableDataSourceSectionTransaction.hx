@@ -11,9 +11,6 @@ extern class NSDiffableDataSourceSectionTransaction{
 	@:native("alloc")
 	overload public static function alloc():NSDiffableDataSourceSectionTransaction;
 
-	@:native("init")
-	overload public function init():NSDiffableDataSourceSectionTransaction;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSDiffableDataSourceSectionTransaction;
 

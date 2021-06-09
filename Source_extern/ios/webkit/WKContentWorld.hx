@@ -23,9 +23,6 @@ extern class WKContentWorld{
 	@:native("alloc")
 	overload public static function alloc():WKContentWorld;
 
-	@:native("init")
-	overload public function init():WKContentWorld;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKContentWorld;
 

@@ -11,9 +11,6 @@ extern interface CALayerDelegate{
 	@:native("alloc")
 	overload public static function alloc():CALayerDelegate;
 
-	@:native("init")
-	overload public function init():CALayerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():CALayerDelegate;
 

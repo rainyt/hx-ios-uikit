@@ -9,13 +9,11 @@ import ios.uikit.UIView;
 @:native("UIContextMenuInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIContextMenuInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIContextMenuInteraction;
-
-	@:native("init")
-	overload public function init():UIContextMenuInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIContextMenuInteraction;

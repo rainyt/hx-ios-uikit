@@ -43,13 +43,11 @@ import ios.uikit.NSUserActivity;
 @:native("UICollectionView")
 @:include("UIKit/UIKit.h")
 extern class UICollectionView extends UIScrollView
+//implements cpp.objc.Protocol<UIDataSourceTranslating>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionView;
-
-	@:native("init")
-	overload public function init():UICollectionView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionView;

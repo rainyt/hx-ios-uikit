@@ -12,9 +12,6 @@ extern class UIReferenceLibraryViewController extends UIViewController}{
 	@:native("alloc")
 	overload public static function alloc():UIReferenceLibraryViewController;
 
-	@:native("init")
-	overload public function init():UIReferenceLibraryViewController;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIReferenceLibraryViewController;
 

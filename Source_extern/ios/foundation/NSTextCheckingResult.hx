@@ -15,13 +15,12 @@ import ios.foundation.NSRegularExpression;
 @:native("NSTextCheckingResult")
 @:include("Foundation/Foundation.h")
 extern class NSTextCheckingResult
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSTextCheckingResult;
-
-	@:native("init")
-	overload public function init():NSTextCheckingResult;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSTextCheckingResult;

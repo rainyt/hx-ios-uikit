@@ -88,9 +88,6 @@ extern class NSURLConnection{
 	@:native("alloc")
 	overload public static function alloc():NSURLConnection;
 
-	@:native("init")
-	overload public function init():NSURLConnection;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSURLConnection;
 

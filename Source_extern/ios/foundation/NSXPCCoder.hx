@@ -21,9 +21,6 @@ extern class NSXPCCoder extends NSCoder{
 	@:native("alloc")
 	overload public static function alloc():NSXPCCoder;
 
-	@:native("init")
-	overload public function init():NSXPCCoder;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSXPCCoder;
 

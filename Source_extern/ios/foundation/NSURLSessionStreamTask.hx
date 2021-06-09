@@ -33,9 +33,6 @@ extern class NSURLSessionStreamTask extends NSURLSessionTask{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionStreamTask;
 
-	@:native("init")
-	overload public function init():NSURLSessionStreamTask;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionStreamTask;
 

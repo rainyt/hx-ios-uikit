@@ -11,13 +11,11 @@ import ios.webkit.WKContentWorld;
 /*! A @link WKUserScript @/link object represents a script that can be injected into webpages.
  */
 extern class WKUserScript
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKUserScript;
-
-	@:native("init")
-	overload public function init():WKUserScript;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKUserScript;

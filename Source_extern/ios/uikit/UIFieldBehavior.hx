@@ -14,9 +14,6 @@ extern class UIFieldBehavior extends UIDynamicBehavior{
 	@:native("alloc")
 	overload public static function alloc():UIFieldBehavior;
 
-	@:native("init")
-	overload public function init():UIFieldBehavior;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIFieldBehavior;
 

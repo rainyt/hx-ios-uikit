@@ -9,13 +9,11 @@ import ios.uikit.UIAxis;
 @:native("UIPointerShape")
 @:include("UIKit/UIKit.h")
 extern class UIPointerShape
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerShape;
-
-	@:native("init")
-	overload public function init():UIPointerShape;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerShape;

@@ -9,13 +9,12 @@ import ios.uikit.UIPreviewActionStyle;
 @:native("UIPreviewAction")
 @:include("UIKit/UIKit.h")
 extern class UIPreviewAction
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<UIPreviewActionItem>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPreviewAction;
-
-	@:native("init")
-	overload public function init():UIPreviewAction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewAction;

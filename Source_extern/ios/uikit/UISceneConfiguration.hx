@@ -9,13 +9,12 @@ import ios.uikit.UIStoryboard;
 @:native("UISceneConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UISceneConfiguration
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISceneConfiguration;
-
-	@:native("init")
-	overload public function init():UISceneConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISceneConfiguration;

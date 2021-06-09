@@ -14,13 +14,12 @@ import ios.uikit.UIView;
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIListContentConfiguration
+//implements cpp.objc.Protocol<UIContentConfiguration>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIListContentConfiguration;
-
-	@:native("init")
-	overload public function init():UIListContentConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentConfiguration;

@@ -13,9 +13,6 @@ extern class NSInvocation{
 	@:native("alloc")
 	overload public static function alloc():NSInvocation;
 
-	@:native("init")
-	overload public function init():NSInvocation;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSInvocation;
 

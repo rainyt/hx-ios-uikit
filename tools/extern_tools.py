@@ -184,9 +184,6 @@ class ExternBaseClass(BaseClass):
         x = _hx_AnonObject({'type': "func", 'name': "alloc", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None, 'desc': None})
         _this.append(x)
         _this = self.funcAndAttr
-        x = _hx_AnonObject({'type': "func", 'name': "init", 'returnClass': self.className, 'isStatic': False, 'args': None, 'haxe': None, 'desc': None})
-        _this.append(x)
-        _this = self.funcAndAttr
         x = _hx_AnonObject({'type': "func", 'name': "autorelease", 'returnClass': self.className, 'isStatic': True, 'args': None, 'haxe': None, 'desc': None})
         _this.append(x)
         read = ""
@@ -411,6 +408,19 @@ class ExternBaseClass(BaseClass):
         haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("extern " + HxOverrides.stringOrNull((("interface" if (self.isProtocol) else "class")))) + " ") + HxOverrides.stringOrNull(self.className)) + HxOverrides.stringOrNull((((" extends " + HxOverrides.stringOrNull(self.extendClassName)) if ((self.extendClassName is not None)) else "")))))))
         if (self.protocols is not None):
             haxe = (("null" if haxe is None else haxe) + "\n")
+            _g_current = 0
+            _g_array = self.protocols
+            while (_g_current < len(_g_array)):
+                _g1_value = (_g_array[_g_current] if _g_current >= 0 and _g_current < len(_g_array) else None)
+                _g1_key = _g_current
+                _g_current = (_g_current + 1)
+                index = _g1_key
+                value = _g1_value
+                t = ExternTools.protocol.h.get(value,None)
+                if (t is not None):
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("//implements cpp.objc.Protocol<" + HxOverrides.stringOrNull(t.className)) + ">\n"))))
+                else:
+                    haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("//implements cpp.objc.Protocol<" + ("null" if value is None else value)) + ">\n"))))
         haxe = (("null" if haxe is None else haxe) + "{\n\n")
         _g_current = 0
         _g_array = self.funcAndAttr
@@ -425,14 +435,14 @@ class ExternBaseClass(BaseClass):
             if (value.desc is not None):
                 haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t" + HxOverrides.stringOrNull(value.desc)) + "\n"))))
             _g = value.type
-            _hx_local_13 = len(_g)
-            if (_hx_local_13 == 4):
+            _hx_local_15 = len(_g)
+            if (_hx_local_15 == 4):
                 if (_g == "func"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((((((("\toverload public" + HxOverrides.stringOrNull(((" static" if (value.isStatic) else "")))) + " function ") + HxOverrides.stringOrNull(self.toFuncName(value.name))) + "(") + HxOverrides.stringOrNull(((self.toFuncArgs(value.args) if ((value.args is not None)) else "")))) + "):") + HxOverrides.stringOrNull(self._toReturnClass(value))) + ";\n\n"))))
                 elif (_g == "haxe"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t/** Haxe Protocol */" + HxOverrides.stringOrNull(value.haxe)) + "\n\n"))))
-            elif (_hx_local_13 == 8):
+            elif (_hx_local_15 == 8):
                 if (_g == "property"):
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((("\t@:native(\"" + HxOverrides.stringOrNull(value.name)) + "\")\n"))))
                     haxe = (("null" if haxe is None else haxe) + HxOverrides.stringOrNull(((((("\tpublic var " + HxOverrides.stringOrNull(value.name)) + ":") + HxOverrides.stringOrNull(self._toReturnClass(value))) + ";\n\n"))))
@@ -815,30 +825,6 @@ class ExternProtocolHaxeClass(ExternProtocolClass):
                 array.append(_hx_AnonObject({'name': (a[0] if 0 < len(a) else None), 'type': (a[1] if 1 < len(a) else None)}))
             return array
         return None
-
-
-
-class haxe_IMap:
-    _hx_class_name = "haxe.IMap"
-    __slots__ = ()
-    _hx_methods = ["get", "keys"]
-
-
-class haxe_ds_StringMap:
-    _hx_class_name = "haxe.ds.StringMap"
-    __slots__ = ("h",)
-    _hx_fields = ["h"]
-    _hx_methods = ["get", "keys"]
-    _hx_interfaces = [haxe_IMap]
-
-    def __init__(self):
-        self.h = dict()
-
-    def get(self,key):
-        return self.h.get(key,None)
-
-    def keys(self):
-        return python_HaxeIterator(iter(self.h.keys()))
 
 
 
@@ -1776,6 +1762,12 @@ class Sys:
                 raise haxe_Exception.thrown("not supported platform")
 
 
+class haxe_IMap:
+    _hx_class_name = "haxe.IMap"
+    __slots__ = ()
+    _hx_methods = ["get", "keys"]
+
+
 class haxe_Exception(Exception):
     _hx_class_name = "haxe.Exception"
     __slots__ = ("_hx___nativeStack", "_hx___skipStack", "_hx___nativeException", "_hx___previousException")
@@ -1875,6 +1867,24 @@ class haxe_ValueException(haxe_Exception):
 
     def unwrap(self):
         return self.value
+
+
+
+class haxe_ds_StringMap:
+    _hx_class_name = "haxe.ds.StringMap"
+    __slots__ = ("h",)
+    _hx_fields = ["h"]
+    _hx_methods = ["get", "keys"]
+    _hx_interfaces = [haxe_IMap]
+
+    def __init__(self):
+        self.h = dict()
+
+    def get(self,key):
+        return self.h.get(key,None)
+
+    def keys(self):
+        return python_HaxeIterator(iter(self.h.keys()))
 
 
 

@@ -12,9 +12,6 @@ extern interface UITextDroppable{
 	@:native("alloc")
 	overload public static function alloc():UITextDroppable;
 
-	@:native("init")
-	overload public function init():UITextDroppable;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextDroppable;
 

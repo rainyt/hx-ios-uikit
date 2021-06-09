@@ -41,9 +41,6 @@ extern class UIStepper extends UIControl{
 	@:native("alloc")
 	overload public static function alloc():UIStepper;
 
-	@:native("init")
-	overload public function init():UIStepper;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIStepper;
 

@@ -40,13 +40,11 @@ import ios.uikit.NSUserActivity;
  • Correctly capturing snapshots - Many effects require support from the window that hosts the view. As such, attempting to take a snapshot of just the UIVisualEffectView will result in the snapshot not containing the effect at all or it appearing incorrectly. To properly snapshot a view hierarchy that contains a UIVisualEffectView, you must snapshot the entire UIWindow or UIScreen that contains it.
  */
 extern class UIVisualEffectView extends UIView
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIVisualEffectView;
-
-	@:native("init")
-	overload public function init():UIVisualEffectView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIVisualEffectView;

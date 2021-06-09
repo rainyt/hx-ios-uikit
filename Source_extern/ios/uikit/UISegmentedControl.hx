@@ -43,13 +43,11 @@ import ios.uikit.NSUserActivity;
 @:native("UISegmentedControl")
 @:include("UIKit/UIKit.h")
 extern class UISegmentedControl extends UIControl
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISegmentedControl;
-
-	@:native("init")
-	overload public function init():UISegmentedControl;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISegmentedControl;

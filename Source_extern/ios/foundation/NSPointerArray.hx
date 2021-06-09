@@ -21,13 +21,13 @@ import ios.foundation.NSArray;
    The fast enumeration protocol (supporting the for..in statement) will yield NULLs if present.  It is defined for all types of pointers although the language syntax doesn't directly support this.
 */
 extern class NSPointerArray
+//implements cpp.objc.Protocol<NSFastEnumeration>
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSPointerArray;
-
-	@:native("init")
-	overload public function init():NSPointerArray;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSPointerArray;

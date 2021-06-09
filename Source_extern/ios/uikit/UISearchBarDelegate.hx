@@ -11,9 +11,6 @@ extern interface UISearchBarDelegate{
 	@:native("alloc")
 	overload public static function alloc():UISearchBarDelegate;
 
-	@:native("init")
-	overload public function init():UISearchBarDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISearchBarDelegate;
 

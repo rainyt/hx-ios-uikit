@@ -14,9 +14,6 @@ extern class NSOperation{
 	@:native("alloc")
 	overload public static function alloc():NSOperation;
 
-	@:native("init")
-	overload public function init():NSOperation;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSOperation;
 

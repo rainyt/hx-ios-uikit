@@ -13,13 +13,11 @@ import ios.uikit.UIView;
       - A view that contains multiple virtual text fields which the user can normally tap and type into, but are not full blown text fields all the time
  */
 extern class UIIndirectScribbleInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIIndirectScribbleInteraction;
-
-	@:native("init")
-	overload public function init():UIIndirectScribbleInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIIndirectScribbleInteraction;

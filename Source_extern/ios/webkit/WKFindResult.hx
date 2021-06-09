@@ -30,13 +30,11 @@ import ios.objc.NSCopying;
 * THE POSSIBILITY OF SUCH DAMAGE.
 */
 extern class WKFindResult
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKFindResult;
-
-	@:native("init")
-	overload public function init():WKFindResult;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKFindResult;

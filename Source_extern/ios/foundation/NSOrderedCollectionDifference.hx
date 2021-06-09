@@ -6,13 +6,11 @@ import ios.foundation.NSIndexSet;
 @:native("NSOrderedCollectionDifference")
 @:include("Foundation/Foundation.h")
 extern class NSOrderedCollectionDifference
+//implements cpp.objc.Protocol<NSFastEnumeration>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSOrderedCollectionDifference;
-
-	@:native("init")
-	overload public function init():NSOrderedCollectionDifference;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSOrderedCollectionDifference;

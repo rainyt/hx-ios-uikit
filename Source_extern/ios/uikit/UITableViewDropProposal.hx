@@ -12,9 +12,6 @@ extern class UITableViewDropProposal extends UIDropProposal{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropProposal;
 
-	@:native("init")
-	overload public function init():UITableViewDropProposal;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDropProposal;
 
@@ -26,6 +23,9 @@ extern class UITableViewDropProposal extends UIDropProposal{
 
 	@:native("initWithDropOperation")
 	overload public function initWithDropOperation(operation:UIDropOperation):UITableViewDropProposal;
+
+	@:native("init")
+	overload public function init():UIDropProposal;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

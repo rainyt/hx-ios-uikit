@@ -7,13 +7,11 @@ import cpp.objc.NSDictionary;
 @:native("NSDirectoryEnumerator")
 @:include("Foundation/Foundation.h")
 extern class NSDirectoryEnumerator extends NSEnumerator
+//implements cpp.objc.Protocol<ObjectType>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDirectoryEnumerator;
-
-	@:native("init")
-	overload public function init():NSDirectoryEnumerator;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDirectoryEnumerator;

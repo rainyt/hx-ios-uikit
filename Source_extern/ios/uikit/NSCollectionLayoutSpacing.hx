@@ -6,13 +6,11 @@ import ios.objc.NSCopying;
 @:native("NSCollectionLayoutSpacing")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutSpacing
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutSpacing;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutSpacing;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutSpacing;

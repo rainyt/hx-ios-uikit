@@ -13,9 +13,6 @@ extern interface UIActivityItemSource{
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemSource;
 
-	@:native("init")
-	overload public function init():UIActivityItemSource;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityItemSource;
 

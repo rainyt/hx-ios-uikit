@@ -15,9 +15,6 @@ extern class NSLayoutConstraint{
 	@:native("alloc")
 	overload public static function alloc():NSLayoutConstraint;
 
-	@:native("init")
-	overload public function init():NSLayoutConstraint;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSLayoutConstraint;
 

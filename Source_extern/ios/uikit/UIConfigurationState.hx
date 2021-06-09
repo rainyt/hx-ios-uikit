@@ -11,9 +11,6 @@ extern interface UIConfigurationState{
 	@:native("alloc")
 	overload public static function alloc():UIConfigurationState;
 
-	@:native("init")
-	overload public function init():UIConfigurationState;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIConfigurationState;
 

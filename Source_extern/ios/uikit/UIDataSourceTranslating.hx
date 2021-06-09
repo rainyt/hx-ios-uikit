@@ -14,9 +14,6 @@ extern interface UIDataSourceTranslating{
 	@:native("alloc")
 	overload public static function alloc():UIDataSourceTranslating;
 
-	@:native("init")
-	overload public function init():UIDataSourceTranslating;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDataSourceTranslating;
 

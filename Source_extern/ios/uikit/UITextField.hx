@@ -53,13 +53,13 @@ import ios.uikit.NSUserActivity;
 @:native("UITextField")
 @:include("UIKit/UIKit.h")
 extern class UITextField extends UIControl
+//implements cpp.objc.Protocol<UITextInput>
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITextField;
-
-	@:native("init")
-	overload public function init():UITextField;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITextField;

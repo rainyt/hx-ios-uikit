@@ -12,9 +12,6 @@ extern interface UITextFieldDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITextFieldDelegate;
 
-	@:native("init")
-	overload public function init():UITextFieldDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextFieldDelegate;
 

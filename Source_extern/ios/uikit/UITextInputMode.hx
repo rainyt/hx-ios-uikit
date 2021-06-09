@@ -9,13 +9,11 @@ import cpp.objc.NSString;
 /* The UITextInputMode class should not be subclassed. It is to allow other in-app functionality to adapt 
  * based on the keyboard language. Different UITextInputMode objects may have the same primaryLanguage. */
 extern class UITextInputMode
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITextInputMode;
-
-	@:native("init")
-	overload public function init():UITextInputMode;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputMode;

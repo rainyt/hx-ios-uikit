@@ -12,9 +12,6 @@ extern class UICellAccessoryOutlineDisclosure extends UICellAccessory{
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryOutlineDisclosure;
 
-	@:native("init")
-	overload public function init():UICellAccessoryOutlineDisclosure;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessoryOutlineDisclosure;
 
@@ -26,6 +23,9 @@ extern class UICellAccessoryOutlineDisclosure extends UICellAccessory{
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellAccessoryOutlineDisclosure;
+
+	@:native("init")
+	overload public function init():UICellAccessory;
 
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic

@@ -12,9 +12,6 @@ extern class UITableViewDropPlaceholder extends UITableViewPlaceholder{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropPlaceholder;
 
-	@:native("init")
-	overload public function init():UITableViewDropPlaceholder;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDropPlaceholder;
 
@@ -23,6 +20,9 @@ extern class UITableViewDropPlaceholder extends UITableViewPlaceholder{
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier:rowHeight")
 	overload public function initWithInsertionIndexPathReuseIdentifierRowHeight(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString, rowHeight:Float):UITableViewDropPlaceholder;
+
+	@:native("init")
+	overload public function init():UITableViewPlaceholder;
 
 
 }

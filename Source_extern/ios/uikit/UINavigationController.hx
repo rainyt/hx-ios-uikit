@@ -29,9 +29,6 @@ extern class UINavigationController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UINavigationController;
 
-	@:native("init")
-	overload public function init():UINavigationController;
-
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationController;
 

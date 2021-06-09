@@ -15,9 +15,6 @@ extern class UICellConfigurationState extends UIViewConfigurationState{
 	@:native("alloc")
 	overload public static function alloc():UICellConfigurationState;
 
-	@:native("init")
-	overload public function init():UICellConfigurationState;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICellConfigurationState;
 
@@ -44,6 +41,9 @@ extern class UICellConfigurationState extends UIViewConfigurationState{
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UICellConfigurationState;
+
+	@:native("init")
+	overload public function init():UIViewConfigurationState;
 
 	@:native("customStateForKey")
 	overload public function customStateForKey(key:NSString):Dynamic;

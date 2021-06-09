@@ -16,9 +16,6 @@ extern class NSLengthFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSLengthFormatter;
 
-	@:native("init")
-	overload public function init():NSLengthFormatter;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSLengthFormatter;
 

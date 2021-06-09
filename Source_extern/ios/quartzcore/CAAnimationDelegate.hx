@@ -10,9 +10,6 @@ extern interface CAAnimationDelegate{
 	@:native("alloc")
 	overload public static function alloc():CAAnimationDelegate;
 
-	@:native("init")
-	overload public function init():CAAnimationDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():CAAnimationDelegate;
 

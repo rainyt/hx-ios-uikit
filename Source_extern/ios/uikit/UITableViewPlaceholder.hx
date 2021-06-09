@@ -11,9 +11,6 @@ extern class UITableViewPlaceholder{
 	@:native("alloc")
 	overload public static function alloc():UITableViewPlaceholder;
 
-	@:native("init")
-	overload public function init():UITableViewPlaceholder;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewPlaceholder;
 

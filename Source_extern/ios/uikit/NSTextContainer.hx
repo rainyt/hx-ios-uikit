@@ -12,13 +12,12 @@ import ios.uikit.NSWritingDirection;
 @:native("NSTextContainer")
 @:include("UIKit/UIKit.h")
 extern class NSTextContainer
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSTextLayoutOrientationProvider>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSTextContainer;
-
-	@:native("init")
-	overload public function init():NSTextContainer;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSTextContainer;

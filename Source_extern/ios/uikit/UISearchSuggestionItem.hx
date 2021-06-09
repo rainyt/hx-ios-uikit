@@ -8,13 +8,11 @@ import ios.uikit.UIImage;
 @:native("UISearchSuggestionItem")
 @:include("UIKit/UIKit.h")
 extern class UISearchSuggestionItem
+//implements cpp.objc.Protocol<UISearchSuggestion>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISearchSuggestionItem;
-
-	@:native("init")
-	overload public function init():UISearchSuggestionItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISearchSuggestionItem;

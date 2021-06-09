@@ -13,14 +13,14 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	@:native("alloc")
 	overload public static function alloc():UIMutableUserNotificationCategory;
 
-	@:native("init")
-	overload public function init():UIMutableUserNotificationCategory;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIMutableUserNotificationCategory;
 
 	@:native("setActions:forContext")
 	overload public function setActionsForContext(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
+
+	@:native("init")
+	overload public function init():UIUserNotificationCategory;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIMutableUserNotificationCategory;

@@ -35,13 +35,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIToolbar")
 @:include("UIKit/UIKit.h")
 extern class UIToolbar extends UIView
+//implements cpp.objc.Protocol<UIBarPositioning>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIToolbar;
-
-	@:native("init")
-	overload public function init():UIToolbar;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIToolbar;

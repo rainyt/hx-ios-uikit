@@ -13,13 +13,12 @@ import ios.foundation.NSMutableString;
 @:native("NSRegularExpression")
 @:include("Foundation/Foundation.h")
 extern class NSRegularExpression
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSRegularExpression;
-
-	@:native("init")
-	overload public function init():NSRegularExpression;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSRegularExpression;

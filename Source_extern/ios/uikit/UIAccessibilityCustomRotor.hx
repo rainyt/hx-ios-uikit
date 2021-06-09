@@ -12,9 +12,6 @@ extern class UIAccessibilityCustomRotor{
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityCustomRotor;
 
-	@:native("init")
-	overload public function init():UIAccessibilityCustomRotor;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityCustomRotor;
 

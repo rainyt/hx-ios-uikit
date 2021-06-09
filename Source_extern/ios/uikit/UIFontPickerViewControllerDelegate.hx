@@ -10,9 +10,6 @@ extern interface UIFontPickerViewControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIFontPickerViewControllerDelegate;
 
-	@:native("init")
-	overload public function init():UIFontPickerViewControllerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIFontPickerViewControllerDelegate;
 

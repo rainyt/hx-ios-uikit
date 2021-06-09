@@ -21,13 +21,12 @@ import cpp.objc.NSString;
     about receiving the content data for a URL load.
 */
 extern class NSURLResponse
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURLResponse;
-
-	@:native("init")
-	overload public function init():NSURLResponse;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURLResponse;

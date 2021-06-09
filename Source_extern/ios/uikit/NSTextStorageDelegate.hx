@@ -11,9 +11,6 @@ extern interface NSTextStorageDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSTextStorageDelegate;
 
-	@:native("init")
-	overload public function init():NSTextStorageDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSTextStorageDelegate;
 

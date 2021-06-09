@@ -16,13 +16,13 @@ import ios.foundation.NSDataCompressionAlgorithm;
 @:native("NSData")
 @:include("Foundation/Foundation.h")
 extern class NSData
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSData;
-
-	@:native("init")
-	overload public function init():NSData;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSData;

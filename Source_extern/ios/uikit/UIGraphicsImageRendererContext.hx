@@ -13,9 +13,6 @@ extern class UIGraphicsImageRendererContext extends UIGraphicsRendererContext{
 	@:native("alloc")
 	overload public static function alloc():UIGraphicsImageRendererContext;
 
-	@:native("init")
-	overload public function init():UIGraphicsImageRendererContext;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIGraphicsImageRendererContext;
 

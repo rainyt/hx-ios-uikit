@@ -11,9 +11,6 @@ extern interface UIViewControllerTransitioningDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerTransitioningDelegate;
 
-	@:native("init")
-	overload public function init():UIViewControllerTransitioningDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIViewControllerTransitioningDelegate;
 

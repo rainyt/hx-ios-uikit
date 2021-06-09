@@ -14,9 +14,6 @@ extern interface UICollectionViewDataSource{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDataSource;
 
-	@:native("init")
-	overload public function init():UICollectionViewDataSource;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDataSource;
 

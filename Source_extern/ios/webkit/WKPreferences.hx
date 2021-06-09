@@ -10,13 +10,11 @@ import ios.foundation.NSSecureCoding;
  its web view configuration.
  */
 extern class WKPreferences
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKPreferences;
-
-	@:native("init")
-	overload public function init():WKPreferences;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKPreferences;

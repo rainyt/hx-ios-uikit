@@ -12,9 +12,6 @@ extern interface NSMetadataQueryDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSMetadataQueryDelegate;
 
-	@:native("init")
-	overload public function init():NSMetadataQueryDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMetadataQueryDelegate;
 

@@ -11,13 +11,13 @@ import cpp.objc.NSDictionary;
 @:native("NSMapTable")
 @:include("Foundation/Foundation.h")
 extern class NSMapTable
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSFastEnumeration>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSMapTable;
-
-	@:native("init")
-	overload public function init():NSMapTable;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSMapTable;

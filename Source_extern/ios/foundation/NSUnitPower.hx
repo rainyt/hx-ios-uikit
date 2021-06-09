@@ -10,13 +10,11 @@ import ios.foundation.NSUnit;
 @:native("NSUnitPower")
 @:include("Foundation/Foundation.h")
 extern class NSUnitPower extends NSDimension
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSUnitPower;
-
-	@:native("init")
-	overload public function init():NSUnitPower;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitPower;
@@ -61,6 +59,9 @@ extern class NSUnitPower extends NSDimension
 	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitPower;
+
+	@:native("init")
+	overload public function init():NSUnit;
 
 	@:native("initWithSymbol")
 	overload public function initWithSymbol(symbol:NSString):NSUnitPower;

@@ -7,13 +7,11 @@ import cpp.objc.NSString;
 @:native("NSLock")
 @:include("Foundation/Foundation.h")
 extern class NSLock
+//implements cpp.objc.Protocol<NSLocking>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSLock;
-
-	@:native("init")
-	overload public function init():NSLock;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSLock;

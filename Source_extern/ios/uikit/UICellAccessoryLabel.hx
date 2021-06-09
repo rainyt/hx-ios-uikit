@@ -13,9 +13,6 @@ extern class UICellAccessoryLabel extends UICellAccessory{
 	@:native("alloc")
 	overload public static function alloc():UICellAccessoryLabel;
 
-	@:native("init")
-	overload public function init():UICellAccessoryLabel;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessoryLabel;
 

@@ -16,13 +16,11 @@ import ios.foundation.NSDataBase64EncodingOptions;
 @:native("NSPurgeableData")
 @:include("Foundation/Foundation.h")
 extern class NSPurgeableData extends NSMutableData
+//implements cpp.objc.Protocol<NSDiscardableContent>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSPurgeableData;
-
-	@:native("init")
-	overload public function init():NSPurgeableData;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSPurgeableData;

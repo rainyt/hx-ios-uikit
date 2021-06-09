@@ -7,13 +7,11 @@ import ios.foundation.NSSecureCoding;
 @:native("NSUnitConverterLinear")
 @:include("Foundation/Foundation.h")
 extern class NSUnitConverterLinear extends NSUnitConverter
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSUnitConverterLinear;
-
-	@:native("init")
-	overload public function init():NSUnitConverterLinear;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitConverterLinear;

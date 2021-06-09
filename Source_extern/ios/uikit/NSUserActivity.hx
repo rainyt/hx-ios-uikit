@@ -13,9 +13,6 @@ extern class NSUserActivity{
 	@:native("alloc")
 	overload public static function alloc():NSUserActivity;
 
-	@:native("init")
-	overload public function init():NSUserActivity;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSUserActivity;
 

@@ -9,9 +9,6 @@ extern class UISceneOpenExternalURLOptions{
 	@:native("alloc")
 	overload public static function alloc():UISceneOpenExternalURLOptions;
 
-	@:native("init")
-	overload public function init():UISceneOpenExternalURLOptions;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISceneOpenExternalURLOptions;
 

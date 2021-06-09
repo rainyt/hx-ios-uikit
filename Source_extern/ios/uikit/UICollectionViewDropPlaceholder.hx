@@ -12,9 +12,6 @@ extern class UICollectionViewDropPlaceholder extends UICollectionViewPlaceholder
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropPlaceholder;
 
-	@:native("init")
-	overload public function init():UICollectionViewDropPlaceholder;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDropPlaceholder;
 
@@ -24,6 +21,9 @@ extern class UICollectionViewDropPlaceholder extends UICollectionViewPlaceholder
 
 	@:native("initWithInsertionIndexPath:reuseIdentifier")
 	overload public function initWithInsertionIndexPathReuseIdentifier(insertionIndexPath:NSIndexPath, reuseIdentifier:NSString):UICollectionViewDropPlaceholder;
+
+	@:native("init")
+	overload public function init():UICollectionViewPlaceholder;
 
 
 }

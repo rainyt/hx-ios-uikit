@@ -18,9 +18,6 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewTransitionLayout;
 
-	@:native("init")
-	overload public function init():UICollectionViewTransitionLayout;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewTransitionLayout;
 

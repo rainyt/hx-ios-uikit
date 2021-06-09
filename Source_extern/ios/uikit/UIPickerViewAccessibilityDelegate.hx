@@ -17,9 +17,6 @@ extern interface UIPickerViewAccessibilityDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewAccessibilityDelegate;
 
-	@:native("init")
-	overload public function init():UIPickerViewAccessibilityDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPickerViewAccessibilityDelegate;
 

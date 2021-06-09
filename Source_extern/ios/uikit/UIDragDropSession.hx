@@ -11,9 +11,6 @@ extern interface UIDragDropSession{
 	@:native("alloc")
 	overload public static function alloc():UIDragDropSession;
 
-	@:native("init")
-	overload public function init():UIDragDropSession;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDragDropSession;
 

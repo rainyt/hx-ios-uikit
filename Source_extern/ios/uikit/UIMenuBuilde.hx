@@ -13,9 +13,6 @@ extern interface UIMenuBuilde{
 	@:native("alloc")
 	overload public static function alloc():UIMenuBuilde;
 
-	@:native("init")
-	overload public function init():UIMenuBuilde;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIMenuBuilde;
 

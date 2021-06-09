@@ -13,9 +13,6 @@ extern interface UITableViewDropDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDropDelegate;
 
-	@:native("init")
-	overload public function init():UITableViewDropDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDropDelegate;
 

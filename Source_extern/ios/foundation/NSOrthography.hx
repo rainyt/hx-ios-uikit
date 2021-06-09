@@ -13,13 +13,12 @@ import ios.uikit.NSCoder;
 	Copyright (c) 2008-2019, Apple Inc. All rights reserved.
 */
 extern class NSOrthography
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSOrthography;
-
-	@:native("init")
-	overload public function init():NSOrthography;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSOrthography;

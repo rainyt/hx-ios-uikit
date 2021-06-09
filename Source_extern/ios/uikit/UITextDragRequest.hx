@@ -10,9 +10,6 @@ extern interface UITextDragRequest{
 	@:native("alloc")
 	overload public static function alloc():UITextDragRequest;
 
-	@:native("init")
-	overload public function init():UITextDragRequest;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextDragRequest;
 

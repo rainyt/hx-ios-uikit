@@ -16,9 +16,6 @@ extern class UISimpleTextPrintFormatter extends UIPrintFormatter{
 	@:native("alloc")
 	overload public static function alloc():UISimpleTextPrintFormatter;
 
-	@:native("init")
-	overload public function init():UISimpleTextPrintFormatter;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISimpleTextPrintFormatter;
 

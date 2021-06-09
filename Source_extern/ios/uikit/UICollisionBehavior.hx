@@ -14,9 +14,6 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	@:native("alloc")
 	overload public static function alloc():UICollisionBehavior;
 
-	@:native("init")
-	overload public function init():UICollisionBehavior;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollisionBehavior;
 

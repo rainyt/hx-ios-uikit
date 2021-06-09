@@ -11,9 +11,6 @@ extern class UIFontMetrics{
 	@:native("alloc")
 	overload public static function alloc():UIFontMetrics;
 
-	@:native("init")
-	overload public function init():UIFontMetrics;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIFontMetrics;
 

@@ -33,13 +33,11 @@ import ios.foundation.NSURLRequest;
  These primitives should perform the change then call edited:range:changeInLength: to get everything else to happen.
 */
 extern class NSTextStorage extends NSMutableAttributedString
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSTextStorage;
-
-	@:native("init")
-	overload public function init():NSTextStorage;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSTextStorage;

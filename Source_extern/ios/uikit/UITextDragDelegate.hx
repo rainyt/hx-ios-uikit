@@ -13,9 +13,6 @@ extern interface UITextDragDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITextDragDelegate;
 
-	@:native("init")
-	overload public function init():UITextDragDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextDragDelegate;
 

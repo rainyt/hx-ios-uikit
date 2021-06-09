@@ -10,9 +10,6 @@ extern interface UIPickerViewDataSource{
 	@:native("alloc")
 	overload public static function alloc():UIPickerViewDataSource;
 
-	@:native("init")
-	overload public function init():UIPickerViewDataSource;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPickerViewDataSource;
 

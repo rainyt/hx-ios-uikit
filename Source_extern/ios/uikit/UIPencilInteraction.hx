@@ -8,13 +8,11 @@ import ios.uikit.UIView;
 @:native("UIPencilInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIPencilInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPencilInteraction;
-
-	@:native("init")
-	overload public function init():UIPencilInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPencilInteraction;

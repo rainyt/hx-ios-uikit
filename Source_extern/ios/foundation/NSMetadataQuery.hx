@@ -18,9 +18,6 @@ extern class NSMetadataQuery{
 	@:native("alloc")
 	overload public static function alloc():NSMetadataQuery;
 
-	@:native("init")
-	overload public function init():NSMetadataQuery;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMetadataQuery;
 

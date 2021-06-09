@@ -10,9 +10,6 @@ extern interface UISearchResultsUpdating{
 	@:native("alloc")
 	overload public static function alloc():UISearchResultsUpdating;
 
-	@:native("init")
-	overload public function init():UISearchResultsUpdating;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISearchResultsUpdating;
 

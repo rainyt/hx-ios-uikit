@@ -13,9 +13,6 @@ extern class WKHTTPCookieStore{
 	@:native("alloc")
 	overload public static function alloc():WKHTTPCookieStore;
 
-	@:native("init")
-	overload public function init():WKHTTPCookieStore;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKHTTPCookieStore;
 

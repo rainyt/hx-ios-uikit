@@ -14,13 +14,12 @@ import ios.foundation.NSArray;
     @discussion This class is an immutable object representing an authentication credential.  The actual type of the credential is determined by the constructor called in the categories declared below.
 */
 extern class NSURLCredential
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURLCredential;
-
-	@:native("init")
-	overload public function init():NSURLCredential;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURLCredential;

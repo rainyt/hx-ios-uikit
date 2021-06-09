@@ -11,9 +11,6 @@ extern class NSInvocationOperation extends NSOperation{
 	@:native("alloc")
 	overload public static function alloc():NSInvocationOperation;
 
-	@:native("init")
-	overload public function init():NSInvocationOperation;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSInvocationOperation;
 

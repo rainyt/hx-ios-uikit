@@ -34,9 +34,6 @@ extern class WKWebsiteDataRecord{
 	@:native("alloc")
 	overload public static function alloc():WKWebsiteDataRecord;
 
-	@:native("init")
-	overload public function init():WKWebsiteDataRecord;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKWebsiteDataRecord;
 

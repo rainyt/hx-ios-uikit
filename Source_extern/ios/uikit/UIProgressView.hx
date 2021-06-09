@@ -31,13 +31,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIProgressView")
 @:include("UIKit/UIKit.h")
 extern class UIProgressView extends UIView
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIProgressView;
-
-	@:native("init")
-	overload public function init():UIProgressView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIProgressView;

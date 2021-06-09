@@ -11,9 +11,6 @@ extern class NSSecureUnarchiveFromDataTransformer extends NSValueTransformer{
 	@:native("alloc")
 	overload public static function alloc():NSSecureUnarchiveFromDataTransformer;
 
-	@:native("init")
-	overload public function init():NSSecureUnarchiveFromDataTransformer;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSSecureUnarchiveFromDataTransformer;
 

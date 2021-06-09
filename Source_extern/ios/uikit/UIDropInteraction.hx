@@ -7,13 +7,11 @@ import ios.uikit.UIView;
 @:native("UIDropInteraction")
 @:include("UIKit/UIKit.h")
 extern class UIDropInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIDropInteraction;
-
-	@:native("init")
-	overload public function init():UIDropInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIDropInteraction;

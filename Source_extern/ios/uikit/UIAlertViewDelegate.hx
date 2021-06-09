@@ -9,9 +9,6 @@ extern interface UIAlertViewDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIAlertViewDelegate;
 
-	@:native("init")
-	overload public function init():UIAlertViewDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIAlertViewDelegate;
 

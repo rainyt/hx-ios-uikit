@@ -11,9 +11,6 @@ extern interface NSXPCListenerDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSXPCListenerDelegate;
 
-	@:native("init")
-	overload public function init():NSXPCListenerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSXPCListenerDelegate;
 

@@ -15,9 +15,6 @@ extern class WKSecurityOrigin{
 	@:native("alloc")
 	overload public static function alloc():WKSecurityOrigin;
 
-	@:native("init")
-	overload public function init():WKSecurityOrigin;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKSecurityOrigin;
 

@@ -13,9 +13,6 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	@:native("alloc")
 	overload public static function alloc():UIPushBehavior;
 
-	@:native("init")
-	overload public function init():UIPushBehavior;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPushBehavior;
 

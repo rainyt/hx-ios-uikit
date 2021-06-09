@@ -13,13 +13,12 @@ import ios.uikit.UITraitCollection;
 @:native("UIBarItem")
 @:include("UIKit/UIKit.h")
 extern class UIBarItem
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<UIAppearance>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIBarItem;
-
-	@:native("init")
-	overload public function init():UIBarItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIBarItem;

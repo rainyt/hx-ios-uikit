@@ -14,9 +14,6 @@ extern interface UIDocumentInteractionControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIDocumentInteractionControllerDelegate;
 
-	@:native("init")
-	overload public function init():UIDocumentInteractionControllerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentInteractionControllerDelegate;
 

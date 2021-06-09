@@ -132,15 +132,15 @@ class ExternBaseClass extends BaseClass {
 			haxe: null,
 			desc: null
 		});
-		funcAndAttr.push({
-			type: ExternBaseClassType.FUNC,
-			name: "init",
-			returnClass: this.className,
-			isStatic: false,
-			args: null,
-			haxe: null,
-			desc: null
-		});
+		// funcAndAttr.push({
+		// 	type: ExternBaseClassType.FUNC,
+		// 	name: "init",
+		// 	returnClass: this.className,
+		// 	isStatic: false,
+		// 	args: null,
+		// 	haxe: null,
+		// 	desc: null
+		// });
 		funcAndAttr.push({
 			type: ExternBaseClassType.FUNC,
 			name: "autorelease",
@@ -338,16 +338,16 @@ class ExternBaseClass extends BaseClass {
 		if (protocols != null) {
 			// 这里的实现暂时注释掉，如果启动implements关系，会编译不过
 			haxe += "\n";
-			// for (index => value in protocols) {
-			// 	var t = ExternTools.protocol.get(value);
-			// 	if (t != null) {
-			// implements cpp.objc.Protocol<UITextInput>
-			// haxe += "implements cpp.objc.Protocol<" + t.className + ">\n";
-			// } else {
-			// haxe += "implements cpp.objc.Protocol<" + value + ">\n";
-			// trace("协议类型不存在：" + value);
-			// }
-			// }
+			for (index => value in protocols) {
+				var t = ExternTools.protocol.get(value);
+				if (t != null) {
+					// implements cpp.objc.Protocol<UITextInput>
+					haxe += "//implements cpp.objc.Protocol<" + t.className + ">\n";
+				} else {
+					haxe += "//implements cpp.objc.Protocol<" + value + ">\n";
+					// trace("协议类型不存在：" + value);
+				}
+			}
 		}
 		haxe += "{\n\n";
 		for (index => value in funcAndAttr) {

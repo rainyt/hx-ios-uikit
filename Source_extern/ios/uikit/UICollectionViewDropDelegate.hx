@@ -13,9 +13,6 @@ extern interface UICollectionViewDropDelegate{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDropDelegate;
 
-	@:native("init")
-	overload public function init():UICollectionViewDropDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDropDelegate;
 

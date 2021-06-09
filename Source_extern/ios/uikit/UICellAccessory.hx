@@ -10,13 +10,12 @@ import ios.uikit.NSCoder;
 @:native("UICellAccessory")
 @:include("UIKit/UIKit.h")
 extern class UICellAccessory
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICellAccessory;
-
-	@:native("init")
-	overload public function init():UICellAccessory;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICellAccessory;

@@ -12,13 +12,12 @@ import ios.uikit.NSCoder;
 	Copyright (c) 2015-2019, Apple Inc. All rights reserved.
  */
 extern class NSDateInterval
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDateInterval;
-
-	@:native("init")
-	overload public function init():NSDateInterval;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDateInterval;

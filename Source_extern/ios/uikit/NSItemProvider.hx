@@ -17,9 +17,6 @@ extern class NSItemProvider{
 	@:native("alloc")
 	overload public static function alloc():NSItemProvider;
 
-	@:native("init")
-	overload public function init():NSItemProvider;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSItemProvider;
 
@@ -31,6 +28,9 @@ extern class NSItemProvider{
 
 	@:native("preferredPresentationStyle")
 	public var preferredPresentationStyle:UIPreferredPresentationStyle;
+
+	@:native("init")
+	overload public function init():NSItemProvider;
 
 	@:native("registerDataRepresentationForTypeIdentifier:visibility:loadHandler")
 	overload public function registerDataRepresentationForTypeIdentifierVisibilityLoadHandler(typeIdentifier:NSString, visibility:NSItemProviderRepresentationVisibility, loadHandler:Dynamic):Void;

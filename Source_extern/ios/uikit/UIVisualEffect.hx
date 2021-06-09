@@ -7,13 +7,12 @@ import ios.foundation.NSSecureCoding;
 @:native("UIVisualEffect")
 @:include("UIKit/UIKit.h")
 extern class UIVisualEffect
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIVisualEffect;
-
-	@:native("init")
-	overload public function init():UIVisualEffect;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIVisualEffect;

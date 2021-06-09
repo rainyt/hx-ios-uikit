@@ -7,13 +7,11 @@ import ios.objc.CGVector;
 @:native("UIFocusMovementHint")
 @:include("UIKit/UIKit.h")
 extern class UIFocusMovementHint
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIFocusMovementHint;
-
-	@:native("init")
-	overload public function init():UIFocusMovementHint;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusMovementHint;

@@ -13,9 +13,6 @@ extern class UITextDragPreviewRenderer{
 	@:native("alloc")
 	overload public static function alloc():UITextDragPreviewRenderer;
 
-	@:native("init")
-	overload public function init():UITextDragPreviewRenderer;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextDragPreviewRenderer;
 

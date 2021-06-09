@@ -15,14 +15,14 @@ extern class UIMutableUserNotificationAction extends UIUserNotificationAction{
 	@:native("alloc")
 	overload public static function alloc():UIMutableUserNotificationAction;
 
-	@:native("init")
-	overload public function init():UIMutableUserNotificationAction;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIMutableUserNotificationAction;
 
 	@:native("parameters")
 	public var parameters:NSDictionary;
+
+	@:native("init")
+	overload public function init():UIUserNotificationAction;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIMutableUserNotificationAction;

@@ -12,9 +12,6 @@ extern interface UIViewControllerPreviewing{
 	@:native("alloc")
 	overload public static function alloc():UIViewControllerPreviewing;
 
-	@:native("init")
-	overload public function init():UIViewControllerPreviewing;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIViewControllerPreviewing;
 

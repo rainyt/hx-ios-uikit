@@ -21,13 +21,12 @@ import ios.webkit.WKUserInterfaceDirectionPolicy;
  @helps Contains properties used to configure a @link WKWebView @/link.
  */
 extern class WKWebViewConfiguration
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKWebViewConfiguration;
-
-	@:native("init")
-	overload public function init():WKWebViewConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKWebViewConfiguration;

@@ -10,9 +10,6 @@ extern class UISelectionFeedbackGenerator extends UIFeedbackGenerator{
 	@:native("alloc")
 	overload public static function alloc():UISelectionFeedbackGenerator;
 
-	@:native("init")
-	overload public function init():UISelectionFeedbackGenerator;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISelectionFeedbackGenerator;
 

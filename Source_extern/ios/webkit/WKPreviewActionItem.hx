@@ -34,9 +34,6 @@ extern interface WKPreviewActionItem{
 	@:native("alloc")
 	overload public static function alloc():WKPreviewActionItem;
 
-	@:native("init")
-	overload public function init():WKPreviewActionItem;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKPreviewActionItem;
 

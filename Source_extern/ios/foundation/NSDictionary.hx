@@ -19,13 +19,14 @@ import ios.foundation.NSNumber;
 	Copyright (c) 1994-2019, Apple Inc. All rights reserved.
 */
 extern class NSDictionary
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSFastEnumeration>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDictionary;
-
-	@:native("init")
-	overload public function init():NSDictionary;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDictionary;

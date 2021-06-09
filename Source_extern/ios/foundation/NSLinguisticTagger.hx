@@ -10,9 +10,6 @@ extern class NSLinguisticTagger{
 	@:native("alloc")
 	overload public static function alloc():NSLinguisticTagger;
 
-	@:native("init")
-	overload public function init():NSLinguisticTagger;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSLinguisticTagger;
 

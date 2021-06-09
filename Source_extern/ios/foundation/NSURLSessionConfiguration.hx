@@ -29,13 +29,11 @@ import ios.foundation.NSURLSessionMultipathServiceType;
  * on behalf of a suspended application, within certain constraints.
  */
 extern class NSURLSessionConfiguration
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionConfiguration;
-
-	@:native("init")
-	overload public function init():NSURLSessionConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionConfiguration;

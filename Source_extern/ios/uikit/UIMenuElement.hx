@@ -10,13 +10,12 @@ import ios.uikit.NSCoder;
 @:native("UIMenuElement")
 @:include("UIKit/UIKit.h")
 extern class UIMenuElement
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIMenuElement;
-
-	@:native("init")
-	overload public function init():UIMenuElement;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIMenuElement;

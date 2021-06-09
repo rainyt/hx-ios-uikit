@@ -12,9 +12,6 @@ extern class UIDocumentBrowserAction{
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserAction;
 
-	@:native("init")
-	overload public function init():UIDocumentBrowserAction;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentBrowserAction;
 

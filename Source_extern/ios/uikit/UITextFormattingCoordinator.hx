@@ -9,13 +9,11 @@ import ios.uikit.UIFontPickerViewController;
 @:native("UITextFormattingCoordinator")
 @:include("UIKit/UIKit.h")
 extern class UITextFormattingCoordinator
+//implements cpp.objc.Protocol<UIFontPickerViewControllerDelegate>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITextFormattingCoordinator;
-
-	@:native("init")
-	overload public function init():UITextFormattingCoordinator;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITextFormattingCoordinator;

@@ -14,13 +14,12 @@ import cpp.objc.NSDictionary;
 @:native("UILocalNotification")
 @:include("UIKit/UIKit.h")
 extern class UILocalNotification
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UILocalNotification;
-
-	@:native("init")
-	overload public function init():UILocalNotification;
 
 	@:native("autorelease")
 	overload public static function autorelease():UILocalNotification;

@@ -21,9 +21,6 @@ extern class NSMutableOrderedSet extends NSOrderedSet{
 	@:native("alloc")
 	overload public static function alloc():NSMutableOrderedSet;
 
-	@:native("init")
-	overload public function init():NSMutableOrderedSet;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableOrderedSet;
 
@@ -131,6 +128,9 @@ extern class NSMutableOrderedSet extends NSOrderedSet{
 
 	@:native("indexOfObject")
 	overload public function indexOfObject(object:Dynamic):Int;
+
+	@:native("init")
+	overload public function init():NSOrderedSet;
 
 	@:native("initWithObjects:count")
 	overload public function initWithObjectsCount(objects:Dynamic, count:Int):NSMutableOrderedSet;

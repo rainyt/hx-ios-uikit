@@ -9,13 +9,11 @@ import ios.uikit.UIAxis;
 @:native("UIPointerStyle")
 @:include("UIKit/UIKit.h")
 extern class UIPointerStyle
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerStyle;
-
-	@:native("init")
-	overload public function init():UIPointerStyle;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerStyle;

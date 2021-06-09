@@ -11,9 +11,6 @@ extern interface UIPageViewControllerDataSource{
 	@:native("alloc")
 	overload public static function alloc():UIPageViewControllerDataSource;
 
-	@:native("init")
-	overload public function init():UIPageViewControllerDataSource;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPageViewControllerDataSource;
 

@@ -92,9 +92,6 @@ extern interface NSURLConnectionDataDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSURLConnectionDataDelegate;
 
-	@:native("init")
-	overload public function init():NSURLConnectionDataDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSURLConnectionDataDelegate;
 

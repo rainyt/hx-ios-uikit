@@ -9,13 +9,11 @@ import ios.uikit.NSCollectionLayoutSize;
 @:native("NSCollectionLayoutDecorationItem")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutDecorationItem extends NSCollectionLayoutItem
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutDecorationItem;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutDecorationItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutDecorationItem;

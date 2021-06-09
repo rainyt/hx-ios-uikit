@@ -12,13 +12,13 @@ import ios.uikit.NSLineBreakStrategy;
 @:native("NSParagraphStyle")
 @:include("UIKit/UIKit.h")
 extern class NSParagraphStyle
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSParagraphStyle;
-
-	@:native("init")
-	overload public function init():NSParagraphStyle;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSParagraphStyle;

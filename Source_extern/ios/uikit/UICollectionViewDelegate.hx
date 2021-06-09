@@ -20,9 +20,6 @@ extern interface UICollectionViewDelegate{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDelegate;
 
-	@:native("init")
-	overload public function init():UICollectionViewDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDelegate;
 

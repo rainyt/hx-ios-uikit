@@ -32,13 +32,11 @@ import ios.foundation.NSNumber;
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
 extern class WKSnapshotConfiguration
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKSnapshotConfiguration;
-
-	@:native("init")
-	overload public function init():WKSnapshotConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKSnapshotConfiguration;

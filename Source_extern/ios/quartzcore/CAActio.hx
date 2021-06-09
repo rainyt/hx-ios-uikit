@@ -11,9 +11,6 @@ extern interface CAActio{
 	@:native("alloc")
 	overload public static function alloc():CAActio;
 
-	@:native("init")
-	overload public function init():CAActio;
-
 	@:native("autorelease")
 	overload public static function autorelease():CAActio;
 

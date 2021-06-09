@@ -7,13 +7,11 @@ import cpp.objc.NSString;
 @:native("NSCondition")
 @:include("Foundation/Foundation.h")
 extern class NSCondition
+//implements cpp.objc.Protocol<NSLocking>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCondition;
-
-	@:native("init")
-	overload public function init():NSCondition;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCondition;

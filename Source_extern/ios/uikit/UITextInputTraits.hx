@@ -20,9 +20,6 @@ extern interface UITextInputTraits{
 	@:native("alloc")
 	overload public static function alloc():UITextInputTraits;
 
-	@:native("init")
-	overload public function init():UITextInputTraits;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextInputTraits;
 

@@ -11,9 +11,6 @@ extern class UISceneActivationRequestOptions{
 	@:native("alloc")
 	overload public static function alloc():UISceneActivationRequestOptions;
 
-	@:native("init")
-	overload public function init():UISceneActivationRequestOptions;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISceneActivationRequestOptions;
 

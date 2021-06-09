@@ -16,9 +16,6 @@ extern class WKScriptMessage{
 	@:native("alloc")
 	overload public static function alloc():WKScriptMessage;
 
-	@:native("init")
-	overload public function init():WKScriptMessage;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKScriptMessage;
 

@@ -11,9 +11,6 @@ extern class UIAccessibilityCustomRotorSearchPredicate{
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityCustomRotorSearchPredicate;
 
-	@:native("init")
-	overload public function init():UIAccessibilityCustomRotorSearchPredicate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityCustomRotorSearchPredicate;
 

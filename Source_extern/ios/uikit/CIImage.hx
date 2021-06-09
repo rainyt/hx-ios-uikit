@@ -11,9 +11,6 @@ extern class CIImage{
 	@:native("alloc")
 	overload public static function alloc():CIImage;
 
-	@:native("init")
-	overload public function init():CIImage;
-
 	@:native("autorelease")
 	overload public static function autorelease():CIImage;
 

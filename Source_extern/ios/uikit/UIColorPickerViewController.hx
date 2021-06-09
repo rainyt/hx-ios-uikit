@@ -25,9 +25,6 @@ extern class UIColorPickerViewController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UIColorPickerViewController;
 
-	@:native("init")
-	overload public function init():UIColorPickerViewController;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIColorPickerViewController;
 

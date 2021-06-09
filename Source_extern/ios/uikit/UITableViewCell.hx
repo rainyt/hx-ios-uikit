@@ -48,13 +48,12 @@ import ios.uikit.NSUserActivity;
 @:native("UITableViewCell")
 @:include("UIKit/UIKit.h")
 extern class UITableViewCell extends UIView
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<UIGestureRecognizerDelegate>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewCell;
-
-	@:native("init")
-	overload public function init():UITableViewCell;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewCell;

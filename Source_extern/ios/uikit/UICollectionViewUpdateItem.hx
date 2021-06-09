@@ -11,9 +11,6 @@ extern class UICollectionViewUpdateItem{
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewUpdateItem;
 
-	@:native("init")
-	overload public function init():UICollectionViewUpdateItem;
-
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewUpdateItem;
 

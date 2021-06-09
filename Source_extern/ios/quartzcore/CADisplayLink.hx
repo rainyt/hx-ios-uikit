@@ -14,9 +14,6 @@ extern class CADisplayLink{
 	@:native("alloc")
 	overload public static function alloc():CADisplayLink;
 
-	@:native("init")
-	overload public function init():CADisplayLink;
-
 	@:native("autorelease")
 	overload public static function autorelease():CADisplayLink;
 

@@ -14,9 +14,6 @@ extern class NSTextAttachment{
 	@:native("alloc")
 	overload public static function alloc():NSTextAttachment;
 
-	@:native("init")
-	overload public function init():NSTextAttachment;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSTextAttachment;
 

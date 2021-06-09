@@ -9,13 +9,11 @@ import cpp.objc.NSData;
 @:native("NSDataAsset")
 @:include("UIKit/UIKit.h")
 extern class NSDataAsset
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDataAsset;
-
-	@:native("init")
-	overload public function init():NSDataAsset;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDataAsset;

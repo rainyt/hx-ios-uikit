@@ -12,13 +12,11 @@ import ios.foundation.NSSecureCoding;
  with the same process pool end up sharing web content processes.
  */
 extern class WKProcessPool
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKProcessPool;
-
-	@:native("init")
-	overload public function init():WKProcessPool;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKProcessPool;

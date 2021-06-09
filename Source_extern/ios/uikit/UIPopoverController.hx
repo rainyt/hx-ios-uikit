@@ -13,13 +13,11 @@ import ios.uikit.UIColor;
 @:native("UIPopoverController")
 @:include("UIKit/UIKit.h")
 extern class UIPopoverController
+//implements cpp.objc.Protocol<UIAppearanceContainer>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPopoverController;
-
-	@:native("init")
-	overload public function init():UIPopoverController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPopoverController;

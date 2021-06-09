@@ -14,9 +14,6 @@ extern interface WKScriptMessageHandler{
 	@:native("alloc")
 	overload public static function alloc():WKScriptMessageHandler;
 
-	@:native("init")
-	overload public function init():WKScriptMessageHandler;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKScriptMessageHandler;
 

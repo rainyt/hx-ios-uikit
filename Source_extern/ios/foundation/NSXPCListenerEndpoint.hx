@@ -6,13 +6,11 @@ import ios.foundation.NSSecureCoding;
 @:native("NSXPCListenerEndpoint")
 @:include("Foundation/Foundation.h")
 extern class NSXPCListenerEndpoint
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSXPCListenerEndpoint;
-
-	@:native("init")
-	overload public function init():NSXPCListenerEndpoint;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSXPCListenerEndpoint;

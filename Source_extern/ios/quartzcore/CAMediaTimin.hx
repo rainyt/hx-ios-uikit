@@ -10,9 +10,6 @@ extern interface CAMediaTimin{
 	@:native("alloc")
 	overload public static function alloc():CAMediaTimin;
 
-	@:native("init")
-	overload public function init():CAMediaTimin;
-
 	@:native("autorelease")
 	overload public static function autorelease():CAMediaTimin;
 

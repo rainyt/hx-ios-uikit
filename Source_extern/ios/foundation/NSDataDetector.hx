@@ -16,9 +16,6 @@ extern class NSDataDetector extends NSRegularExpression{
 	@:native("alloc")
 	overload public static function alloc():NSDataDetector;
 
-	@:native("init")
-	overload public function init():NSDataDetector;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSDataDetector;
 

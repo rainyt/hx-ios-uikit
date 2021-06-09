@@ -10,13 +10,12 @@ import ios.uikit.NSCoder;
 /* NSFileSecurity encapsulates a file system object's security information. NSFileSecurity and CFFileSecurity are toll-free bridged. Use the CFFileSecurity API for access to the low-level file security properties encapsulated by NSFileSecurity.
  */
 extern class NSFileSecurity
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSFileSecurity;
-
-	@:native("init")
-	overload public function init():NSFileSecurity;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSFileSecurity;

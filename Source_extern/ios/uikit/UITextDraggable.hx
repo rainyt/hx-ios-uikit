@@ -13,9 +13,6 @@ extern interface UITextDraggable{
 	@:native("alloc")
 	overload public static function alloc():UITextDraggable;
 
-	@:native("init")
-	overload public function init():UITextDraggable;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITextDraggable;
 

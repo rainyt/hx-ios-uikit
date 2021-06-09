@@ -10,13 +10,12 @@ import ios.foundation.NSMutableArray;
 @:native("NSPort")
 @:include("Foundation/Foundation.h")
 extern class NSPort
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSPort;
-
-	@:native("init")
-	overload public function init():NSPort;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSPort;

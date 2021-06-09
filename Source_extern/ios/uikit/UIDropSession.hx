@@ -11,9 +11,6 @@ extern interface UIDropSession{
 	@:native("alloc")
 	overload public static function alloc():UIDropSession;
 
-	@:native("init")
-	overload public function init():UIDropSession;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDropSession;
 

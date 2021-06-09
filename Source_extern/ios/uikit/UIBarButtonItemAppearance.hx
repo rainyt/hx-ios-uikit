@@ -10,13 +10,12 @@ import ios.uikit.UIBarButtonItemStateAppearance;
 @:native("UIBarButtonItemAppearance")
 @:include("UIKit/UIKit.h")
 extern class UIBarButtonItemAppearance
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItemAppearance;
-
-	@:native("init")
-	overload public function init():UIBarButtonItemAppearance;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIBarButtonItemAppearance;

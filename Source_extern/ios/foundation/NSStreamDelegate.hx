@@ -11,9 +11,6 @@ extern interface NSStreamDelegate{
 	@:native("alloc")
 	overload public static function alloc():NSStreamDelegate;
 
-	@:native("init")
-	overload public function init():NSStreamDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSStreamDelegate;
 

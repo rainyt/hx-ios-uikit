@@ -31,13 +31,11 @@ import ios.foundation.NSURL;
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
 extern class WKPreviewElementInfo
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKPreviewElementInfo;
-
-	@:native("init")
-	overload public function init():WKPreviewElementInfo;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKPreviewElementInfo;

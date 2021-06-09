@@ -18,9 +18,6 @@ extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 	@:native("alloc")
 	overload public static function alloc():UISwipeGestureRecognizer;
 
-	@:native("init")
-	overload public function init():UISwipeGestureRecognizer;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISwipeGestureRecognizer;
 
@@ -83,6 +80,9 @@ extern class UISwipeGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("initWithTarget:action")
 	overload public function initWithTargetAction(target:Dynamic, action:String):UISwipeGestureRecognizer;
+
+	@:native("init")
+	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UISwipeGestureRecognizer;

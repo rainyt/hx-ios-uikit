@@ -12,13 +12,12 @@ import cpp.objc.NSString;
     @discussion This class represents a protection space requiring authentication.
 */
 extern class NSURLProtectionSpace
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURLProtectionSpace;
-
-	@:native("init")
-	overload public function init():NSURLProtectionSpace;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURLProtectionSpace;

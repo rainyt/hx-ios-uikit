@@ -30,9 +30,6 @@ extern class NSProgress{
 	@:native("alloc")
 	overload public static function alloc():NSProgress;
 
-	@:native("init")
-	overload public function init():NSProgress;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSProgress;
 

@@ -8,13 +8,11 @@ import ios.uikit.UIContentInsetsReference;
 @:native("UICollectionViewCompositionalLayoutConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewCompositionalLayoutConfiguration
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewCompositionalLayoutConfiguration;
-
-	@:native("init")
-	overload public function init():UICollectionViewCompositionalLayoutConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewCompositionalLayoutConfiguration;

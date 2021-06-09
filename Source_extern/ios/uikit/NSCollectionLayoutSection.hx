@@ -13,9 +13,6 @@ extern class NSCollectionLayoutSection{
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutSection;
 
-	@:native("init")
-	overload public function init():NSCollectionLayoutSection;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutSection;
 
@@ -24,6 +21,9 @@ extern class NSCollectionLayoutSection{
 
 	@:native("sectionWithGroup")
 	overload public static function sectionWithGroup(group:NSCollectionLayoutGroup):NSCollectionLayoutSection;
+
+	@:native("init")
+	overload public function init():NSCollectionLayoutSection;
 
 	@:native("contentInsets")
 	public var contentInsets:Dynamic;

@@ -6,13 +6,11 @@ import ios.objc.NSCopying;
 @:native("UICollectionViewDiffableDataSourceReorderingHandlers")
 @:include("UIKit/UIKit.h")
 extern class UICollectionViewDiffableDataSourceReorderingHandlers
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICollectionViewDiffableDataSourceReorderingHandlers;
-
-	@:native("init")
-	overload public function init():UICollectionViewDiffableDataSourceReorderingHandlers;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICollectionViewDiffableDataSourceReorderingHandlers;

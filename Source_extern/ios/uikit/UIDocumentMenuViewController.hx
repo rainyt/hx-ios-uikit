@@ -28,9 +28,6 @@ extern class UIDocumentMenuViewController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UIDocumentMenuViewController;
 
-	@:native("init")
-	overload public function init():UIDocumentMenuViewController;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentMenuViewController;
 

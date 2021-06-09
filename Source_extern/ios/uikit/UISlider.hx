@@ -38,13 +38,11 @@ import ios.uikit.NSUserActivity;
 @:native("UISlider")
 @:include("UIKit/UIKit.h")
 extern class UISlider extends UIControl
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISlider;
-
-	@:native("init")
-	overload public function init():UISlider;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISlider;

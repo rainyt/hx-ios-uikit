@@ -11,13 +11,13 @@ import ios.uikit.NSCoder;
 @:native("NSMutableCharacterSet")
 @:include("Foundation/Foundation.h")
 extern class NSMutableCharacterSet extends NSCharacterSet
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSMutableCharacterSet;
-
-	@:native("init")
-	overload public function init():NSMutableCharacterSet;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableCharacterSet;

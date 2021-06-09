@@ -12,9 +12,6 @@ extern interface NSXPCProxyCreatin{
 	@:native("alloc")
 	overload public static function alloc():NSXPCProxyCreatin;
 
-	@:native("init")
-	overload public function init():NSXPCProxyCreatin;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSXPCProxyCreatin;
 

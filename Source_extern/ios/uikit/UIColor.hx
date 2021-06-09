@@ -12,13 +12,12 @@ import ios.uikit.UITraitCollection;
 @:native("UIColor")
 @:include("UIKit/UIKit.h")
 extern class UIColor
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIColor;
-
-	@:native("init")
-	overload public function init():UIColor;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIColor;

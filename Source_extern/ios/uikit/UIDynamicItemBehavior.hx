@@ -12,9 +12,6 @@ extern class UIDynamicItemBehavior extends UIDynamicBehavior{
 	@:native("alloc")
 	overload public static function alloc():UIDynamicItemBehavior;
 
-	@:native("init")
-	overload public function init():UIDynamicItemBehavior;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDynamicItemBehavior;
 

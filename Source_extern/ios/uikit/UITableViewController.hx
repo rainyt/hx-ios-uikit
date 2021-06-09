@@ -35,13 +35,12 @@ import ios.uikit.NSUserActivity;
 @:native("UITableViewController")
 @:include("UIKit/UIKit.h")
 extern class UITableViewController extends UIViewController
+//implements cpp.objc.Protocol<UITableViewDelegate>
+//implements cpp.objc.Protocol<UITableViewDataSource>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewController;
-
-	@:native("init")
-	overload public function init():UITableViewController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewController;

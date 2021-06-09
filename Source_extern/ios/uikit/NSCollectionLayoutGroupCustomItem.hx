@@ -7,13 +7,11 @@ import ios.objc.CGRect;
 @:native("NSCollectionLayoutGroupCustomItem")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutGroupCustomItem
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutGroupCustomItem;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutGroupCustomItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutGroupCustomItem;

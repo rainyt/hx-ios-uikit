@@ -42,13 +42,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIDatePicker")
 @:include("UIKit/UIKit.h")
 extern class UIDatePicker extends UIControl
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIDatePicker;
-
-	@:native("init")
-	overload public function init():UIDatePicker;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIDatePicker;

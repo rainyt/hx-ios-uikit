@@ -12,13 +12,12 @@ import ios.uikit.UIListContentTextTransform;
 @:native("UIListContentTextProperties")
 @:include("UIKit/UIKit.h")
 extern class UIListContentTextProperties
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIListContentTextProperties;
-
-	@:native("init")
-	overload public function init():UIListContentTextProperties;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIListContentTextProperties;

@@ -10,9 +10,6 @@ extern interface UIDynamicAnimatorDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIDynamicAnimatorDelegate;
 
-	@:native("init")
-	overload public function init():UIDynamicAnimatorDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDynamicAnimatorDelegate;
 

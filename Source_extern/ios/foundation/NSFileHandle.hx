@@ -14,13 +14,11 @@ import cpp.objc.NSError;
 	Copyright (c) 1995-2019, Apple Inc. All rights reserved.
 */
 extern class NSFileHandle
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSFileHandle;
-
-	@:native("init")
-	overload public function init():NSFileHandle;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSFileHandle;

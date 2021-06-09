@@ -21,9 +21,6 @@ extern interface UITableViewDelegate{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDelegate;
 
-	@:native("init")
-	overload public function init():UITableViewDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDelegate;
 

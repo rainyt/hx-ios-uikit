@@ -11,9 +11,6 @@ extern class NSMutableIndexSet extends NSIndexSet{
 	@:native("alloc")
 	overload public static function alloc():NSMutableIndexSet;
 
-	@:native("init")
-	overload public function init():NSMutableIndexSet;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableIndexSet;
 

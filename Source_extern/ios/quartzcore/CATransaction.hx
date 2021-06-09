@@ -28,9 +28,6 @@ extern class CATransaction{
 	@:native("alloc")
 	overload public static function alloc():CATransaction;
 
-	@:native("init")
-	overload public function init():CATransaction;
-
 	@:native("autorelease")
 	overload public static function autorelease():CATransaction;
 

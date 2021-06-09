@@ -28,13 +28,13 @@ The following code snippets can be used to enumerate over the indexes in an NSIn
 To enumerate without doing a call per index, you can use the method getIndexes:maxCount:inIndexRange:.
 */
 extern class NSIndexSet
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSIndexSet;
-
-	@:native("init")
-	overload public function init():NSIndexSet;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSIndexSet;

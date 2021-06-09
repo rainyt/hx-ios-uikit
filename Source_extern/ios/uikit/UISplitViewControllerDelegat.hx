@@ -15,9 +15,6 @@ extern interface UISplitViewControllerDelegat{
 	@:native("alloc")
 	overload public static function alloc():UISplitViewControllerDelegat;
 
-	@:native("init")
-	overload public function init():UISplitViewControllerDelegat;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISplitViewControllerDelegat;
 

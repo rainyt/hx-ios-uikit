@@ -37,13 +37,12 @@ import ios.uikit.NSUserActivity;
 @:native("UILabel")
 @:include("UIKit/UIKit.h")
 extern class UILabel extends UIView
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UILabel;
-
-	@:native("init")
-	overload public function init():UILabel;
 
 	@:native("autorelease")
 	overload public static function autorelease():UILabel;

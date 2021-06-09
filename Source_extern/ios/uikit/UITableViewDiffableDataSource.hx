@@ -13,13 +13,11 @@ import ios.uikit.UITableViewCellEditingStyle;
 @:native("UITableViewDiffableDataSource")
 @:include("UIKit/UIKit.h")
 extern class UITableViewDiffableDataSource
+//implements cpp.objc.Protocol<UITableViewDataSource>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITableViewDiffableDataSource;
-
-	@:native("init")
-	overload public function init():UITableViewDiffableDataSource;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDiffableDataSource;

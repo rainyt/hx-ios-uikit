@@ -12,9 +12,6 @@ extern interface UIActivityItemsConfigurationReading{
 	@:native("alloc")
 	overload public static function alloc():UIActivityItemsConfigurationReading;
 
-	@:native("init")
-	overload public function init():UIActivityItemsConfigurationReading;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityItemsConfigurationReading;
 

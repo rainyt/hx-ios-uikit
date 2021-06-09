@@ -15,13 +15,11 @@ import ios.webkit.WKContentRuleList;
  web view configuration.
  */
 extern class WKUserContentController
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKUserContentController;
-
-	@:native("init")
-	overload public function init():WKUserContentController;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKUserContentController;

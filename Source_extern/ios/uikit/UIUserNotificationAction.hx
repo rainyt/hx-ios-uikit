@@ -11,13 +11,13 @@ import ios.uikit.UIUserNotificationActivationMode;
 @:native("UIUserNotificationAction")
 @:include("UIKit/UIKit.h")
 extern class UIUserNotificationAction
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIUserNotificationAction;
-
-	@:native("init")
-	overload public function init():UIUserNotificationAction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIUserNotificationAction;

@@ -11,13 +11,12 @@ import cpp.objc.NSString;
  NSUnit is the base class for all unit types (dimensional and dimensionless).
  */
 extern class NSUnit
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSUnit;
-
-	@:native("init")
-	overload public function init():NSUnit;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSUnit;

@@ -10,13 +10,11 @@ import ios.objc.CGSize;
 @:native("UITargetedPreview")
 @:include("UIKit/UIKit.h")
 extern class UITargetedPreview
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITargetedPreview;
-
-	@:native("init")
-	overload public function init():UITargetedPreview;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITargetedPreview;

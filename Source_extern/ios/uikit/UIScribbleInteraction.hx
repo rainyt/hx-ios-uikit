@@ -12,13 +12,11 @@ import ios.uikit.UIView;
     In some cases it is necessary to suppress Scribble, for example if a text view also supports drawing with Apple Pencil. You may also need to suppress Scribble in views that handle Pencil events directly, like a drawing canvas, since nearby text fields could take over the Pencil events for writing.
  */
 extern class UIScribbleInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIScribbleInteraction;
-
-	@:native("init")
-	overload public function init():UIScribbleInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIScribbleInteraction;

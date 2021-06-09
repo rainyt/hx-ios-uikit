@@ -17,9 +17,6 @@ extern class UIPasteboard{
 	@:native("alloc")
 	overload public static function alloc():UIPasteboard;
 
-	@:native("init")
-	overload public function init():UIPasteboard;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPasteboard;
 

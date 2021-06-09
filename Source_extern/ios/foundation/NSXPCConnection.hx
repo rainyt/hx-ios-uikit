@@ -9,13 +9,11 @@ import ios.foundation.NSXPCInterface;
 @:native("NSXPCConnection")
 @:include("Foundation/Foundation.h")
 extern class NSXPCConnection
+//implements cpp.objc.Protocol<NSXPCProxyCreating>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSXPCConnection;
-
-	@:native("init")
-	overload public function init():NSXPCConnection;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSXPCConnection;

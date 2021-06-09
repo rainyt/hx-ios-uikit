@@ -18,9 +18,6 @@ extern class NSValue{
 	@:native("alloc")
 	overload public static function alloc():NSValue;
 
-	@:native("init")
-	overload public function init():NSValue;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSValue;
 

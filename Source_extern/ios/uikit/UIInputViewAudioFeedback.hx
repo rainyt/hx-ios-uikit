@@ -9,9 +9,6 @@ extern interface UIInputViewAudioFeedback{
 	@:native("alloc")
 	overload public static function alloc():UIInputViewAudioFeedback;
 
-	@:native("init")
-	overload public function init():UIInputViewAudioFeedback;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIInputViewAudioFeedback;
 

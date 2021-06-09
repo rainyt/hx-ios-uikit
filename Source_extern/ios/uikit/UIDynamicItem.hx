@@ -14,9 +14,6 @@ extern interface UIDynamicItem{
 	@:native("alloc")
 	overload public static function alloc():UIDynamicItem;
 
-	@:native("init")
-	overload public function init():UIDynamicItem;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDynamicItem;
 

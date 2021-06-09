@@ -14,13 +14,12 @@ import cpp.objc.NSDictionary;
  
     Subclasses must implement conformance for NSCopying and NSCoding. */
 extern class UIMotionEffect
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIMotionEffect;
-
-	@:native("init")
-	overload public function init():UIMotionEffect;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIMotionEffect;

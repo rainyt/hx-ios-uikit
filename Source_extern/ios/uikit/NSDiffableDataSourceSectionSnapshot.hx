@@ -7,13 +7,11 @@ import cpp.objc.NSString;
 @:native("NSDiffableDataSourceSectionSnapshot")
 @:include("UIKit/UIKit.h")
 extern class NSDiffableDataSourceSectionSnapshot
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDiffableDataSourceSectionSnapshot;
-
-	@:native("init")
-	overload public function init():NSDiffableDataSourceSectionSnapshot;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDiffableDataSourceSectionSnapshot;

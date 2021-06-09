@@ -9,13 +9,11 @@ import cpp.objc.NSString;
 @:native("NSDimension")
 @:include("Foundation/Foundation.h")
 extern class NSDimension extends NSUnit
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDimension;
-
-	@:native("init")
-	overload public function init():NSDimension;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDimension;
@@ -29,6 +27,9 @@ extern class NSDimension extends NSUnit
 	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSDimension;
+
+	@:native("init")
+	overload public function init():NSUnit;
 
 	@:native("initWithSymbol")
 	overload public function initWithSymbol(symbol:NSString):NSDimension;

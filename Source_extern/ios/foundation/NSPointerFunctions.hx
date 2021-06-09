@@ -7,13 +7,11 @@ import ios.foundation.NSPointerFunctionsOptions;
 @:native("NSPointerFunctions")
 @:include("Foundation/Foundation.h")
 extern class NSPointerFunctions
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSPointerFunctions;
-
-	@:native("init")
-	overload public function init():NSPointerFunctions;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSPointerFunctions;

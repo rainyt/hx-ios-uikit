@@ -11,13 +11,11 @@ import ios.uikit.UIBarButtonItem;
 @:native("UIDocumentInteractionController")
 @:include("UIKit/UIKit.h")
 extern class UIDocumentInteractionController
+//implements cpp.objc.Protocol<UIActionSheetDelegate>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIDocumentInteractionController;
-
-	@:native("init")
-	overload public function init():UIDocumentInteractionController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentInteractionController;

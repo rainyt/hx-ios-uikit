@@ -10,9 +10,6 @@ extern class NSValueTransformer{
 	@:native("alloc")
 	overload public static function alloc():NSValueTransformer;
 
-	@:native("init")
-	overload public function init():NSValueTransformer;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSValueTransformer;
 

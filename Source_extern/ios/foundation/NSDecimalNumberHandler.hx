@@ -7,13 +7,12 @@ import ios.foundation.NSRoundingMode;
 @:native("NSDecimalNumberHandler")
 @:include("Foundation/Foundation.h")
 extern class NSDecimalNumberHandler
+//implements cpp.objc.Protocol<NSDecimalNumberBehaviors>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSDecimalNumberHandler;
-
-	@:native("init")
-	overload public function init():NSDecimalNumberHandler;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSDecimalNumberHandler;

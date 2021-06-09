@@ -10,13 +10,11 @@ import ios.uikit.UICubicTimingParameters;
 @:native("UISpringTimingParameters")
 @:include("UIKit/UIKit.h")
 extern class UISpringTimingParameters
+//implements cpp.objc.Protocol<UITimingCurveProvider>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISpringTimingParameters;
-
-	@:native("init")
-	overload public function init():UISpringTimingParameters;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISpringTimingParameters;

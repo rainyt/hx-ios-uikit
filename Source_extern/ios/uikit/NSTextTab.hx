@@ -12,13 +12,13 @@ import cpp.objc.NSDictionary;
 @:native("NSTextTab")
 @:include("UIKit/UIKit.h")
 extern class NSTextTab
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSTextTab;
-
-	@:native("init")
-	overload public function init():NSTextTab;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSTextTab;

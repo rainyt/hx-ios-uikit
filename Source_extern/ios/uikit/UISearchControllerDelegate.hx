@@ -10,9 +10,6 @@ extern interface UISearchControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UISearchControllerDelegate;
 
-	@:native("init")
-	overload public function init():UISearchControllerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISearchControllerDelegate;
 

@@ -14,9 +14,6 @@ extern class UISearchDisplayController{
 	@:native("alloc")
 	overload public static function alloc():UISearchDisplayController;
 
-	@:native("init")
-	overload public function init():UISearchDisplayController;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISearchDisplayController;
 

@@ -15,9 +15,6 @@ extern class WKNavigation{
 	@:native("alloc")
 	overload public static function alloc():WKNavigation;
 
-	@:native("init")
-	overload public function init():WKNavigation;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKNavigation;
 

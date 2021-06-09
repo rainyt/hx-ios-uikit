@@ -12,9 +12,6 @@ extern interface UIDocumentBrowserViewControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIDocumentBrowserViewControllerDelegate;
 
-	@:native("init")
-	overload public function init():UIDocumentBrowserViewControllerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIDocumentBrowserViewControllerDelegate;
 

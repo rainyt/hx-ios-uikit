@@ -10,9 +10,6 @@ extern class NSURLSessionTaskMetrics{
 	@:native("alloc")
 	overload public static function alloc():NSURLSessionTaskMetrics;
 
-	@:native("init")
-	overload public function init():NSURLSessionTaskMetrics;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSURLSessionTaskMetrics;
 

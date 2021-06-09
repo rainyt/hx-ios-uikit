@@ -19,9 +19,6 @@ extern class NSMutableData extends NSData{
 	@:native("alloc")
 	overload public static function alloc():NSMutableData;
 
-	@:native("init")
-	overload public function init():NSMutableData;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableData;
 

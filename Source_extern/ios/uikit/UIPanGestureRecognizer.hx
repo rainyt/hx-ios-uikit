@@ -18,9 +18,6 @@ extern class UIPanGestureRecognizer extends UIGestureRecognizer{
 	@:native("alloc")
 	overload public static function alloc():UIPanGestureRecognizer;
 
-	@:native("init")
-	overload public function init():UIPanGestureRecognizer;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPanGestureRecognizer;
 
@@ -95,6 +92,9 @@ extern class UIPanGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("initWithTarget:action")
 	overload public function initWithTargetAction(target:Dynamic, action:String):UIPanGestureRecognizer;
+
+	@:native("init")
+	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIPanGestureRecognizer;

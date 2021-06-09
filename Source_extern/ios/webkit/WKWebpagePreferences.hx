@@ -14,9 +14,6 @@ extern class WKWebpagePreferences{
 	@:native("alloc")
 	overload public static function alloc():WKWebpagePreferences;
 
-	@:native("init")
-	overload public function init():WKWebpagePreferences;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKWebpagePreferences;
 

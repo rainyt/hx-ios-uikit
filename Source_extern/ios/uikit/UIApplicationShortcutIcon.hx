@@ -8,13 +8,11 @@ import cpp.objc.NSString;
 @:native("UIApplicationShortcutIcon")
 @:include("UIKit/UIKit.h")
 extern class UIApplicationShortcutIcon
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIApplicationShortcutIcon;
-
-	@:native("init")
-	overload public function init():UIApplicationShortcutIcon;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIApplicationShortcutIcon;

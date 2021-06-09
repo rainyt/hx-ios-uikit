@@ -10,13 +10,11 @@ import ios.foundation.NSQualityOfService;
 @:native("NSOperationQueue")
 @:include("Foundation/Foundation.h")
 extern class NSOperationQueue
+//implements cpp.objc.Protocol<NSProgressReporting>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSOperationQueue;
-
-	@:native("init")
-	overload public function init():NSOperationQueue;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSOperationQueue;

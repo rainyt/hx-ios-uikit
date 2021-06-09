@@ -16,9 +16,6 @@ extern class NSEnergyFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSEnergyFormatter;
 
-	@:native("init")
-	overload public function init():NSEnergyFormatter;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSEnergyFormatter;
 

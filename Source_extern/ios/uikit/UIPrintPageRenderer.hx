@@ -11,9 +11,6 @@ extern class UIPrintPageRenderer{
 	@:native("alloc")
 	overload public static function alloc():UIPrintPageRenderer;
 
-	@:native("init")
-	overload public function init():UIPrintPageRenderer;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPrintPageRenderer;
 

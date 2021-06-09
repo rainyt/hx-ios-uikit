@@ -13,13 +13,12 @@ import ios.uikit.UIViewContentMode;
 @:native("UIBarAppearance")
 @:include("UIKit/UIKit.h")
 extern class UIBarAppearance
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIBarAppearance;
-
-	@:native("init")
-	overload public function init():UIBarAppearance;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIBarAppearance;

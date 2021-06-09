@@ -9,13 +9,11 @@ import ios.objc.CGAffineTransform;
 @:native("UIPreviewTarget")
 @:include("UIKit/UIKit.h")
 extern class UIPreviewTarget
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPreviewTarget;
-
-	@:native("init")
-	overload public function init():UIPreviewTarget;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewTarget;

@@ -9,9 +9,6 @@ extern interface UISpringLoadedInteractionSupporting{
 	@:native("alloc")
 	overload public static function alloc():UISpringLoadedInteractionSupporting;
 
-	@:native("init")
-	overload public function init():UISpringLoadedInteractionSupporting;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISpringLoadedInteractionSupporting;
 

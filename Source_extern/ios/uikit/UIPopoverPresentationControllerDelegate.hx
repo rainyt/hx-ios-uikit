@@ -10,9 +10,6 @@ extern interface UIPopoverPresentationControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIPopoverPresentationControllerDelegate;
 
-	@:native("init")
-	overload public function init():UIPopoverPresentationControllerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPopoverPresentationControllerDelegate;
 

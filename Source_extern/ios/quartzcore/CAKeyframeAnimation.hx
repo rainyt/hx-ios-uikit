@@ -13,9 +13,6 @@ extern class CAKeyframeAnimation extends CAPropertyAnimation{
 	@:native("alloc")
 	overload public static function alloc():CAKeyframeAnimation;
 
-	@:native("init")
-	overload public function init():CAKeyframeAnimation;
-
 	@:native("autorelease")
 	overload public static function autorelease():CAKeyframeAnimation;
 

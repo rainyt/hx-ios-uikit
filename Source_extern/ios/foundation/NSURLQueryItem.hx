@@ -8,13 +8,12 @@ import cpp.objc.NSString;
 @:native("NSURLQueryItem")
 @:include("Foundation/Foundation.h")
 extern class NSURLQueryItem
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURLQueryItem;
-
-	@:native("init")
-	overload public function init():NSURLQueryItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURLQueryItem;

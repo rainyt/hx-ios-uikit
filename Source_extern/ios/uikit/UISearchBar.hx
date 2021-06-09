@@ -54,13 +54,12 @@ import ios.uikit.NSUserActivity;
  UISearchBar officially conformed to UITextInputTraits in iOS 8.0 and privately conformed in iOS 7.0. Prior to 7.0, UISearchBar only implemented these four traits: autocapitalizationType, autocorrectionType, spellCheckingType and keyboardType. If your deployment target is <7.0 and you are using any trait other than one of the four mentioned, you must check its availability with respondsToSelector:
  */
 extern class UISearchBar extends UIView
+//implements cpp.objc.Protocol<UIBarPositioning>
+//implements cpp.objc.Protocol<UITextInputTraits>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISearchBar;
-
-	@:native("init")
-	overload public function init():UISearchBar;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISearchBar;

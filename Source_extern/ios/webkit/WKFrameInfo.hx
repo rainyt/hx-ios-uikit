@@ -14,13 +14,11 @@ import ios.webkit.WKWebView;
  calls.
  */
 extern class WKFrameInfo
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKFrameInfo;
-
-	@:native("init")
-	overload public function init():WKFrameInfo;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKFrameInfo;

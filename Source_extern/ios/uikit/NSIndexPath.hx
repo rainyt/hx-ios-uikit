@@ -9,9 +9,6 @@ extern class NSIndexPath{
 	@:native("alloc")
 	overload public static function alloc():NSIndexPath;
 
-	@:native("init")
-	overload public function init():NSIndexPath;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSIndexPath;
 

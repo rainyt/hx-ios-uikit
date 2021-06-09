@@ -18,9 +18,6 @@ extern interface CAMetalDrawable{
 	@:native("alloc")
 	overload public static function alloc():CAMetalDrawable;
 
-	@:native("init")
-	overload public function init():CAMetalDrawable;
-
 	@:native("autorelease")
 	overload public static function autorelease():CAMetalDrawable;
 

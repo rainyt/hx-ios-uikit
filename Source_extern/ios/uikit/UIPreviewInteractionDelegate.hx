@@ -10,9 +10,6 @@ extern interface UIPreviewInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIPreviewInteractionDelegate;
 
-	@:native("init")
-	overload public function init():UIPreviewInteractionDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPreviewInteractionDelegate;
 

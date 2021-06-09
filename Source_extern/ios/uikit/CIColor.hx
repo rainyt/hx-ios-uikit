@@ -10,9 +10,6 @@ extern class CIColor{
 	@:native("alloc")
 	overload public static function alloc():CIColor;
 
-	@:native("init")
-	overload public function init():CIColor;
-
 	@:native("autorelease")
 	overload public static function autorelease():CIColor;
 

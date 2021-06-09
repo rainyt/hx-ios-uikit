@@ -11,9 +11,6 @@ extern interface UIViewAnimating{
 	@:native("alloc")
 	overload public static function alloc():UIViewAnimating;
 
-	@:native("init")
-	overload public function init():UIViewAnimating;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIViewAnimating;
 

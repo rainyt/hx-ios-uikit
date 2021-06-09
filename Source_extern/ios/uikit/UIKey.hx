@@ -9,13 +9,12 @@ import ios.uikit.UIKeyModifierFlags;
 @:native("UIKey")
 @:include("UIKit/UIKit.h")
 extern class UIKey
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIKey;
-
-	@:native("init")
-	overload public function init():UIKey;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIKey;

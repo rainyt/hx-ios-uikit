@@ -14,13 +14,11 @@ import ios.uikit.UINavigationBarAppearance;
 @:native("UINavigationItem")
 @:include("UIKit/UIKit.h")
 extern class UINavigationItem
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UINavigationItem;
-
-	@:native("init")
-	overload public function init():UINavigationItem;
 
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationItem;

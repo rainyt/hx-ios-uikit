@@ -8,13 +8,11 @@ import ios.uikit.NSCoder;
 @:native("UIBarButtonItemGroup")
 @:include("UIKit/UIKit.h")
 extern class UIBarButtonItemGroup
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIBarButtonItemGroup;
-
-	@:native("init")
-	overload public function init():UIBarButtonItemGroup;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIBarButtonItemGroup;

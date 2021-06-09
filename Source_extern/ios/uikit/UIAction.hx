@@ -15,9 +15,6 @@ extern class UIAction extends UIMenuElement{
 	@:native("alloc")
 	overload public static function alloc():UIAction;
 
-	@:native("init")
-	overload public function init():UIAction;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIAction;
 

@@ -10,9 +10,6 @@ extern class NSMetadataQueryAttributeValueTuple{
 	@:native("alloc")
 	overload public static function alloc():NSMetadataQueryAttributeValueTuple;
 
-	@:native("init")
-	overload public function init():NSMetadataQueryAttributeValueTuple;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMetadataQueryAttributeValueTuple;
 

@@ -12,9 +12,6 @@ extern class NSCharacterSet{
 	@:native("alloc")
 	overload public static function alloc():NSCharacterSet;
 
-	@:native("init")
-	overload public function init():NSCharacterSet;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSCharacterSet;
 

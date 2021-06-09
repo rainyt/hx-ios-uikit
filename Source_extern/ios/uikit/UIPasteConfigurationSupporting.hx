@@ -10,9 +10,6 @@ extern interface UIPasteConfigurationSupporting{
 	@:native("alloc")
 	overload public static function alloc():UIPasteConfigurationSupporting;
 
-	@:native("init")
-	overload public function init():UIPasteConfigurationSupporting;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPasteConfigurationSupporting;
 

@@ -13,9 +13,6 @@ extern interface NSTextAttachmentContainer{
 	@:native("alloc")
 	overload public static function alloc():NSTextAttachmentContainer;
 
-	@:native("init")
-	overload public function init():NSTextAttachmentContainer;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSTextAttachmentContainer;
 

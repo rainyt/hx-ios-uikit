@@ -17,9 +17,6 @@ extern class NSMutableSet extends NSSet{
 	@:native("alloc")
 	overload public static function alloc():NSMutableSet;
 
-	@:native("init")
-	overload public function init():NSMutableSet;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableSet;
 
@@ -64,6 +61,9 @@ extern class NSMutableSet extends NSSet{
 
 	@:native("objectEnumerator")
 	overload public function objectEnumerator():NSEnumerator;
+
+	@:native("init")
+	overload public function init():NSSet;
 
 	@:native("initWithObjects:count")
 	overload public function initWithObjectsCount(objects:Dynamic, count:Int):NSMutableSet;

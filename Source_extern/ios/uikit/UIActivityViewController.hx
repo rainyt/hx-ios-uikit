@@ -25,9 +25,6 @@ extern class UIActivityViewController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UIActivityViewController;
 
-	@:native("init")
-	overload public function init():UIActivityViewController;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIActivityViewController;
 

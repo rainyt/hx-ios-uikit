@@ -13,13 +13,12 @@ import cpp.objc.NSDictionary;
    Copyright (c) 2007-2018, Apple Inc.
    All rights reserved. */
 extern class CAEmitterCell
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<CAMediaTiming>
 {
 
 	@:native("alloc")
 	overload public static function alloc():CAEmitterCell;
-
-	@:native("init")
-	overload public function init():CAEmitterCell;
 
 	@:native("autorelease")
 	overload public static function autorelease():CAEmitterCell;

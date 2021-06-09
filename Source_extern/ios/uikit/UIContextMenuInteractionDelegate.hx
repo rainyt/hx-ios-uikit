@@ -13,9 +13,6 @@ extern interface UIContextMenuInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIContextMenuInteractionDelegate;
 
-	@:native("init")
-	overload public function init():UIContextMenuInteractionDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIContextMenuInteractionDelegate;
 

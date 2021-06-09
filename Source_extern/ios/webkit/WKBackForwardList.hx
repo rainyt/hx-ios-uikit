@@ -13,9 +13,6 @@ extern class WKBackForwardList{
 	@:native("alloc")
 	overload public static function alloc():WKBackForwardList;
 
-	@:native("init")
-	overload public function init():WKBackForwardList;
-
 	@:native("autorelease")
 	overload public static function autorelease():WKBackForwardList;
 

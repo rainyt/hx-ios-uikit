@@ -15,9 +15,6 @@ extern class NSFileCoordinator{
 	@:native("alloc")
 	overload public static function alloc():NSFileCoordinator;
 
-	@:native("init")
-	overload public function init():NSFileCoordinator;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSFileCoordinator;
 

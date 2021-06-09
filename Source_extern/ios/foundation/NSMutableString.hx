@@ -24,9 +24,6 @@ extern class NSMutableString extends NSString{
 	@:native("alloc")
 	overload public static function alloc():NSMutableString;
 
-	@:native("init")
-	overload public function init():NSMutableString;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableString;
 
@@ -107,6 +104,10 @@ extern class NSMutableString extends NSString{
 
 	@:native("characterAtIndex")
 	overload public function characterAtIndex(index:Int):Dynamic;
+
+	/* The initializers available to subclasses. See further below for additional init methods. */
+	@:native("init")
+	overload public function init():NSString;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):NSMutableString;

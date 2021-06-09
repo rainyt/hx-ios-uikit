@@ -9,13 +9,11 @@ import ios.foundation.NSNumber;
 @:native("NSURLComponents")
 @:include("Foundation/Foundation.h")
 extern class NSURLComponents
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSURLComponents;
-
-	@:native("init")
-	overload public function init():NSURLComponents;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSURLComponents;

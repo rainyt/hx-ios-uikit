@@ -15,9 +15,6 @@ extern interface NSDecimalNumberBehavior{
 	@:native("alloc")
 	overload public static function alloc():NSDecimalNumberBehavior;
 
-	@:native("init")
-	overload public function init():NSDecimalNumberBehavior;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSDecimalNumberBehavior;
 

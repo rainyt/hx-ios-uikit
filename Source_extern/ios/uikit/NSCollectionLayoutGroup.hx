@@ -10,13 +10,11 @@ import cpp.objc.NSString;
 @:native("NSCollectionLayoutGroup")
 @:include("UIKit/UIKit.h")
 extern class NSCollectionLayoutGroup extends NSCollectionLayoutItem
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCollectionLayoutGroup;
-
-	@:native("init")
-	overload public function init():NSCollectionLayoutGroup;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCollectionLayoutGroup;

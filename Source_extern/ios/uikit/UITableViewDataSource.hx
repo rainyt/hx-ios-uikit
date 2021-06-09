@@ -14,9 +14,6 @@ extern interface UITableViewDataSource{
 	@:native("alloc")
 	overload public static function alloc():UITableViewDataSource;
 
-	@:native("init")
-	overload public function init():UITableViewDataSource;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITableViewDataSource;
 

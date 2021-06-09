@@ -10,13 +10,13 @@ import ios.uikit.UIUserNotificationActionContext;
 @:native("UIUserNotificationCategory")
 @:include("UIKit/UIKit.h")
 extern class UIUserNotificationCategory
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSMutableCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIUserNotificationCategory;
-
-	@:native("init")
-	overload public function init():UIUserNotificationCategory;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIUserNotificationCategory;

@@ -10,9 +10,6 @@ extern class UIUserNotificationSettings{
 	@:native("alloc")
 	overload public static function alloc():UIUserNotificationSettings;
 
-	@:native("init")
-	overload public function init():UIUserNotificationSettings;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIUserNotificationSettings;
 

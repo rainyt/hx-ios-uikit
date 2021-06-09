@@ -11,9 +11,6 @@ extern class UIStoryboardSegue{
 	@:native("alloc")
 	overload public static function alloc():UIStoryboardSegue;
 
-	@:native("init")
-	overload public function init():UIStoryboardSegue;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIStoryboardSegue;
 

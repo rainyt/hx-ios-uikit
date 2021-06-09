@@ -10,13 +10,11 @@ import ios.foundation.NSUnit;
 @:native("NSUnitElectricPotentialDifference")
 @:include("Foundation/Foundation.h")
 extern class NSUnitElectricPotentialDifference extends NSDimension
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSUnitElectricPotentialDifference;
-
-	@:native("init")
-	overload public function init():NSUnitElectricPotentialDifference;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSUnitElectricPotentialDifference;
@@ -43,6 +41,9 @@ extern class NSUnitElectricPotentialDifference extends NSDimension
 	/*  This class method returns an instance of the dimension class that represents the base unit of that dimension.  e.g.     NSUnitSpeed *metersPerSecond = [NSUnitSpeed baseUnit];  */
 	@:native("baseUnit")
 	overload public static function baseUnit():NSUnitElectricPotentialDifference;
+
+	@:native("init")
+	overload public function init():NSUnit;
 
 	@:native("initWithSymbol")
 	overload public function initWithSymbol(symbol:NSString):NSUnitElectricPotentialDifference;

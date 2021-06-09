@@ -18,9 +18,6 @@ extern class NSFileVersion{
 	@:native("alloc")
 	overload public static function alloc():NSFileVersion;
 
-	@:native("init")
-	overload public function init():NSFileVersion;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSFileVersion;
 

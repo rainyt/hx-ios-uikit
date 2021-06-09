@@ -9,9 +9,6 @@ extern interface UIFocusAnimationContext{
 	@:native("alloc")
 	overload public static function alloc():UIFocusAnimationContext;
 
-	@:native("init")
-	overload public function init():UIFocusAnimationContext;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIFocusAnimationContext;
 

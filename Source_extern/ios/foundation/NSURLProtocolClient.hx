@@ -23,9 +23,6 @@ extern interface NSURLProtocolClient{
 	@:native("alloc")
 	overload public static function alloc():NSURLProtocolClient;
 
-	@:native("init")
-	overload public function init():NSURLProtocolClient;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSURLProtocolClient;
 

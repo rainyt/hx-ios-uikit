@@ -13,13 +13,12 @@ import cpp.objc.NSDictionary;
 	Copyright (c) 2004-2019, Apple Inc. All rights reserved.
 */
 extern class NSPredicate
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSPredicate;
-
-	@:native("init")
-	overload public function init():NSPredicate;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSPredicate;

@@ -12,13 +12,11 @@ import ios.uikit.UITraitCollection;
 @:native("UIScreen")
 @:include("UIKit/UIKit.h")
 extern class UIScreen
+//implements cpp.objc.Protocol<UITraitEnvironment>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIScreen;
-
-	@:native("init")
-	overload public function init():UIScreen;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIScreen;

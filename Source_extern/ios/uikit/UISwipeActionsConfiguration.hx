@@ -9,9 +9,6 @@ extern class UISwipeActionsConfiguration{
 	@:native("alloc")
 	overload public static function alloc():UISwipeActionsConfiguration;
 
-	@:native("init")
-	overload public function init():UISwipeActionsConfiguration;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISwipeActionsConfiguration;
 

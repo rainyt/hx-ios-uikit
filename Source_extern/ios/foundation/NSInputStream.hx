@@ -14,9 +14,6 @@ extern class NSInputStream extends NSStream{
 	@:native("alloc")
 	overload public static function alloc():NSInputStream;
 
-	@:native("init")
-	overload public function init():NSInputStream;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSInputStream;
 

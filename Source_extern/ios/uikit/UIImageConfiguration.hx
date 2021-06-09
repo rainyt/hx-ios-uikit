@@ -8,13 +8,12 @@ import ios.uikit.UITraitCollection;
 @:native("UIImageConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIImageConfiguration
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIImageConfiguration;
-
-	@:native("init")
-	overload public function init():UIImageConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIImageConfiguration;

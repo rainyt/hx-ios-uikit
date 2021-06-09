@@ -51,9 +51,6 @@ extern class UIButton extends UIControl{
 	@:native("alloc")
 	overload public static function alloc():UIButton;
 
-	@:native("init")
-	overload public function init():UIButton;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIButton;
 

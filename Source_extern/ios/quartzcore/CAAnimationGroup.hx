@@ -11,9 +11,6 @@ extern class CAAnimationGroup extends CAAnimation{
 	@:native("alloc")
 	overload public static function alloc():CAAnimationGroup;
 
-	@:native("init")
-	overload public function init():CAAnimationGroup;
-
 	@:native("autorelease")
 	overload public static function autorelease():CAAnimationGroup;
 

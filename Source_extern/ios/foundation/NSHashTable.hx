@@ -10,13 +10,13 @@ import ios.foundation.NSEnumerator;
 @:native("NSHashTable")
 @:include("Foundation/Foundation.h")
 extern class NSHashTable
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSFastEnumeration>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSHashTable;
-
-	@:native("init")
-	overload public function init():NSHashTable;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSHashTable;

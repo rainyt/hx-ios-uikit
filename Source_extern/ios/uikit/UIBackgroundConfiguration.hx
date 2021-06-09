@@ -11,13 +11,12 @@ import ios.uikit.UIVisualEffect;
 @:native("UIBackgroundConfiguration")
 @:include("UIKit/UIKit.h")
 extern class UIBackgroundConfiguration
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIBackgroundConfiguration;
-
-	@:native("init")
-	overload public function init():UIBackgroundConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIBackgroundConfiguration;

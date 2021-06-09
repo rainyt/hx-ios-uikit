@@ -10,13 +10,12 @@ import ios.uikit.NSCoder;
 @:native("UICommandAlternate")
 @:include("UIKit/UIKit.h")
 extern class UICommandAlternate
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UICommandAlternate;
-
-	@:native("init")
-	overload public function init():UICommandAlternate;
 
 	@:native("autorelease")
 	overload public static function autorelease():UICommandAlternate;

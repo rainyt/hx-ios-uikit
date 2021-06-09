@@ -16,9 +16,6 @@ extern class NSMutableParagraphStyle extends NSParagraphStyle{
 	@:native("alloc")
 	overload public static function alloc():NSMutableParagraphStyle;
 
-	@:native("init")
-	overload public function init():NSMutableParagraphStyle;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableParagraphStyle;
 

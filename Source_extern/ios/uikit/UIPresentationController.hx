@@ -18,13 +18,14 @@ import cpp.objc.NSString;
 @:native("UIPresentationController")
 @:include("UIKit/UIKit.h")
 extern class UIPresentationController
+//implements cpp.objc.Protocol<UIAppearanceContainer>
+//implements cpp.objc.Protocol<UITraitEnvironment>
+//implements cpp.objc.Protocol<UIContentContainer>
+//implements cpp.objc.Protocol<UIFocusEnvironment>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPresentationController;
-
-	@:native("init")
-	overload public function init():UIPresentationController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPresentationController;

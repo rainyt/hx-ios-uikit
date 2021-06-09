@@ -13,13 +13,12 @@ import ios.uikit.UIPrintInfoDuplex;
 @:native("UIPrintInfo")
 @:include("UIKit/UIKit.h")
 extern class UIPrintInfo
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPrintInfo;
-
-	@:native("init")
-	overload public function init():UIPrintInfo;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPrintInfo;

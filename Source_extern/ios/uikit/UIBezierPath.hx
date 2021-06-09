@@ -16,13 +16,12 @@ import ios.objc.CGBlendMode;
 @:native("UIBezierPath")
 @:include("UIKit/UIKit.h")
 extern class UIBezierPath
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIBezierPath;
-
-	@:native("init")
-	overload public function init():UIBezierPath;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIBezierPath;

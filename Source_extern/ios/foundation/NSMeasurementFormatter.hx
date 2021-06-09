@@ -16,13 +16,11 @@ import cpp.objc.NSDictionary;
 @:native("NSMeasurementFormatter")
 @:include("Foundation/Foundation.h")
 extern class NSMeasurementFormatter extends NSFormatter
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSMeasurementFormatter;
-
-	@:native("init")
-	overload public function init():NSMeasurementFormatter;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSMeasurementFormatter;

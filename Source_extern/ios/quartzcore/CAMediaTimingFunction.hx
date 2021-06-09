@@ -12,13 +12,11 @@ import cpp.objc.NSString;
  * to define the pacing of an animation over its duration (or over the
  * duration of one keyframe). */
 extern class CAMediaTimingFunction
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():CAMediaTimingFunction;
-
-	@:native("init")
-	overload public function init():CAMediaTimingFunction;
 
 	@:native("autorelease")
 	overload public static function autorelease():CAMediaTimingFunction;

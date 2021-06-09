@@ -9,13 +9,11 @@ import cpp.objc.NSString;
 @:native("UIViewConfigurationState")
 @:include("UIKit/UIKit.h")
 extern class UIViewConfigurationState
+//implements cpp.objc.Protocol<UIConfigurationState>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIViewConfigurationState;
-
-	@:native("init")
-	overload public function init():UIViewConfigurationState;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIViewConfigurationState;

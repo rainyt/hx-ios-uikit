@@ -9,9 +9,6 @@ extern interface NSMutableCopyin{
 	@:native("alloc")
 	overload public static function alloc():NSMutableCopyin;
 
-	@:native("init")
-	overload public function init():NSMutableCopyin;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSMutableCopyin;
 

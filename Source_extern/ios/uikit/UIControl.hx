@@ -42,9 +42,6 @@ extern class UIControl extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UIControl;
 
-	@:native("init")
-	overload public function init():UIControl;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIControl;
 

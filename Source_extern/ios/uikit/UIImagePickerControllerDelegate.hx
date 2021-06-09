@@ -11,9 +11,6 @@ extern interface UIImagePickerControllerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIImagePickerControllerDelegate;
 
-	@:native("init")
-	overload public function init():UIImagePickerControllerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIImagePickerControllerDelegate;
 

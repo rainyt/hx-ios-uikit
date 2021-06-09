@@ -11,13 +11,12 @@ import cpp.objc.NSString;
         Copyright (c) 2011-2019, Apple Inc. All rights reserved.
 */
 extern class NSUUID
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSUUID;
-
-	@:native("init")
-	overload public function init():NSUUID;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSUUID;

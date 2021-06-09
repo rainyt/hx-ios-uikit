@@ -17,13 +17,11 @@ import ios.foundation.NSProgress;
  The request object itself is lightweight. You may create as many as you need, for example to request the same set of tags in different components of your application.
 */
 extern class NSBundleResourceRequest
+//implements cpp.objc.Protocol<NSProgressReporting>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSBundleResourceRequest;
-
-	@:native("init")
-	overload public function init():NSBundleResourceRequest;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSBundleResourceRequest;

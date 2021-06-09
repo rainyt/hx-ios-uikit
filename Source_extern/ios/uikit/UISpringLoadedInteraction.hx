@@ -7,13 +7,11 @@ import ios.uikit.UIView;
 @:native("UISpringLoadedInteraction")
 @:include("UIKit/UIKit.h")
 extern class UISpringLoadedInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISpringLoadedInteraction;
-
-	@:native("init")
-	overload public function init():UISpringLoadedInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISpringLoadedInteraction;

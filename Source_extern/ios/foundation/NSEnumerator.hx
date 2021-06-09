@@ -5,13 +5,11 @@ import ios.foundation.NSEnumerator;
 @:native("NSEnumerator")
 @:include("Foundation/Foundation.h")
 extern class NSEnumerator
+//implements cpp.objc.Protocol<NSFastEnumeration>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSEnumerator;
-
-	@:native("init")
-	overload public function init():NSEnumerator;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSEnumerator;

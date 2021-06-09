@@ -31,13 +31,11 @@ import ios.objc.CGRect;
  * THE POSSIBILITY OF SUCH DAMAGE.
  */
 extern class WKPDFConfiguration
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():WKPDFConfiguration;
-
-	@:native("init")
-	overload public function init():WKPDFConfiguration;
 
 	@:native("autorelease")
 	overload public static function autorelease():WKPDFConfiguration;

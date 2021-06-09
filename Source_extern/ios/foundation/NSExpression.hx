@@ -13,13 +13,12 @@ import ios.foundation.NSMutableDictionary;
 @:native("NSExpression")
 @:include("Foundation/Foundation.h")
 extern class NSExpression
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSExpression;
-
-	@:native("init")
-	overload public function init():NSExpression;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSExpression;

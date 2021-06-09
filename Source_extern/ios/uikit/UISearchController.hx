@@ -25,13 +25,12 @@ import ios.uikit.NSUserActivity;
 @:native("UISearchController")
 @:include("UIKit/UIKit.h")
 extern class UISearchController extends UIViewController
+//implements cpp.objc.Protocol<UIViewControllerTransitioningDelegate>
+//implements cpp.objc.Protocol<UIViewControllerAnimatedTransitioning>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UISearchController;
-
-	@:native("init")
-	overload public function init():UISearchController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UISearchController;

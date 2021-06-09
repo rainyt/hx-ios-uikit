@@ -13,9 +13,6 @@ extern class CASpringAnimation extends CABasicAnimation{
 	@:native("alloc")
 	overload public static function alloc():CASpringAnimation;
 
-	@:native("init")
-	overload public function init():CASpringAnimation;
-
 	@:native("autorelease")
 	overload public static function autorelease():CASpringAnimation;
 

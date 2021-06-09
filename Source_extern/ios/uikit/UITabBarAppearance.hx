@@ -16,9 +16,6 @@ extern class UITabBarAppearance extends UIBarAppearance{
 	@:native("alloc")
 	overload public static function alloc():UITabBarAppearance;
 
-	@:native("init")
-	overload public function init():UITabBarAppearance;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarAppearance;
 
@@ -45,6 +42,9 @@ extern class UITabBarAppearance extends UIBarAppearance{
 
 	@:native("stackedItemSpacing")
 	public var stackedItemSpacing:Float;
+
+	@:native("init")
+	overload public function init():UIBarAppearance;
 
 	@:native("initWithIdiom")
 	overload public function initWithIdiom(idiom:UIUserInterfaceIdiom):UITabBarAppearance;

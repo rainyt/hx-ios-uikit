@@ -17,9 +17,6 @@ extern class UIPinchGestureRecognizer extends UIGestureRecognizer{
 	@:native("alloc")
 	overload public static function alloc():UIPinchGestureRecognizer;
 
-	@:native("init")
-	overload public function init():UIPinchGestureRecognizer;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPinchGestureRecognizer;
 
@@ -82,6 +79,9 @@ extern class UIPinchGestureRecognizer extends UIGestureRecognizer{
 
 	@:native("initWithTarget:action")
 	overload public function initWithTargetAction(target:Dynamic, action:String):UIPinchGestureRecognizer;
+
+	@:native("init")
+	overload public function init():UIGestureRecognizer;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIPinchGestureRecognizer;

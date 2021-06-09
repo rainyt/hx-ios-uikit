@@ -10,13 +10,11 @@ import ios.uikit.UITraitCollection;
 @:native("UIImageAsset")
 @:include("UIKit/UIKit.h")
 extern class UIImageAsset
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIImageAsset;
-
-	@:native("init")
-	overload public function init():UIImageAsset;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIImageAsset;

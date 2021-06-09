@@ -30,9 +30,6 @@ extern class UISplitViewController extends UIViewController{
 	@:native("alloc")
 	overload public static function alloc():UISplitViewController;
 
-	@:native("init")
-	overload public function init():UISplitViewController;
-
 	@:native("autorelease")
 	overload public static function autorelease():UISplitViewController;
 

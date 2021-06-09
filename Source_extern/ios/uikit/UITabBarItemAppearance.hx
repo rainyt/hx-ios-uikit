@@ -10,13 +10,12 @@ import ios.uikit.UITabBarItemStateAppearance;
 @:native("UITabBarItemAppearance")
 @:include("UIKit/UIKit.h")
 extern class UITabBarItemAppearance
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITabBarItemAppearance;
-
-	@:native("init")
-	overload public function init():UITabBarItemAppearance;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITabBarItemAppearance;

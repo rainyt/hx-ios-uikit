@@ -11,9 +11,6 @@ extern interface UIPopoverBackgroundViewMethod{
 	@:native("alloc")
 	overload public static function alloc():UIPopoverBackgroundViewMethod;
 
-	@:native("init")
-	overload public function init():UIPopoverBackgroundViewMethod;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPopoverBackgroundViewMethod;
 

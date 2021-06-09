@@ -38,13 +38,12 @@ import ios.uikit.NSUserActivity;
 @:native("UINavigationBar")
 @:include("UIKit/UIKit.h")
 extern class UINavigationBar extends UIView
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<UIBarPositioning>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UINavigationBar;
-
-	@:native("init")
-	overload public function init():UINavigationBar;
 
 	@:native("autorelease")
 	overload public static function autorelease():UINavigationBar;

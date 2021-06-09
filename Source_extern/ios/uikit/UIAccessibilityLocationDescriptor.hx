@@ -20,9 +20,6 @@ extern class UIAccessibilityLocationDescriptor{
 	@:native("alloc")
 	overload public static function alloc():UIAccessibilityLocationDescriptor;
 
-	@:native("init")
-	overload public function init():UIAccessibilityLocationDescriptor;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIAccessibilityLocationDescriptor;
 

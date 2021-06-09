@@ -29,13 +29,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIPopoverBackgroundView")
 @:include("UIKit/UIKit.h")
 extern class UIPopoverBackgroundView extends UIView
+//implements cpp.objc.Protocol<UIPopoverBackgroundViewMethods>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPopoverBackgroundView;
-
-	@:native("init")
-	overload public function init():UIPopoverBackgroundView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPopoverBackgroundView;

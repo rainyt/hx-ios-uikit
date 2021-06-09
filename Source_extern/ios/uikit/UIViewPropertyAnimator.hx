@@ -10,13 +10,12 @@ import ios.uikit.UIViewAnimationOptions;
 @:native("UIViewPropertyAnimator")
 @:include("UIKit/UIKit.h")
 extern class UIViewPropertyAnimator
+//implements cpp.objc.Protocol<UIViewImplicitlyAnimating>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIViewPropertyAnimator;
-
-	@:native("init")
-	overload public function init():UIViewPropertyAnimator;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIViewPropertyAnimator;

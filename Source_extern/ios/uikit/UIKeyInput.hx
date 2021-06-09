@@ -10,9 +10,6 @@ extern interface UIKeyInput{
 	@:native("alloc")
 	overload public static function alloc():UIKeyInput;
 
-	@:native("init")
-	overload public function init():UIKeyInput;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIKeyInput;
 

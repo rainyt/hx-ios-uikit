@@ -8,13 +8,11 @@ import ios.uikit.UIView;
 @:native("UILargeContentViewerInteraction")
 @:include("UIKit/UIKit.h")
 extern class UILargeContentViewerInteraction
+//implements cpp.objc.Protocol<UIInteraction>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UILargeContentViewerInteraction;
-
-	@:native("init")
-	overload public function init():UILargeContentViewerInteraction;
 
 	@:native("autorelease")
 	overload public static function autorelease():UILargeContentViewerInteraction;

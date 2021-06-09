@@ -13,13 +13,12 @@ import ios.foundation.NSUnit;
     All rights reserved.
  */
 extern class NSMeasurement
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSMeasurement;
-
-	@:native("init")
-	overload public function init():NSMeasurement;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSMeasurement;

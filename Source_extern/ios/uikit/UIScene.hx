@@ -23,14 +23,14 @@ extern class UIScene extends UIResponder{
 	@:native("alloc")
 	overload public static function alloc():UIScene;
 
-	@:native("init")
-	overload public function init():UIScene;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIScene;
 
 	@:native("pointerLockState")
 	public var pointerLockState:UIPointerLockState;
+
+	@:native("init")
+	overload public function init():UIScene;
 
 	@:native("initWithSession:connectionOptions")
 	overload public function initWithSessionConnectionOptions(session:UISceneSession, connectionOptions:UISceneConnectionOptions):UIScene;

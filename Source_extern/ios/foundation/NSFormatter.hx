@@ -10,13 +10,12 @@ import cpp.objc.NSDictionary;
 @:native("NSFormatter")
 @:include("Foundation/Foundation.h")
 extern class NSFormatter
+//implements cpp.objc.Protocol<NSCopying>
+//implements cpp.objc.Protocol<NSCoding>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSFormatter;
-
-	@:native("init")
-	overload public function init():NSFormatter;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSFormatter;

@@ -35,9 +35,6 @@ extern class UITabBar extends UIView{
 	@:native("alloc")
 	overload public static function alloc():UITabBar;
 
-	@:native("init")
-	overload public function init():UITabBar;
-
 	@:native("autorelease")
 	overload public static function autorelease():UITabBar;
 

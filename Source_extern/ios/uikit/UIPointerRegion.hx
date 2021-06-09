@@ -7,13 +7,11 @@ import ios.objc.CGRect;
 @:native("UIPointerRegion")
 @:include("UIKit/UIKit.h")
 extern class UIPointerRegion
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIPointerRegion;
-
-	@:native("init")
-	overload public function init():UIPointerRegion;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerRegion;

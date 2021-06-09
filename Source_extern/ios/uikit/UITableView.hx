@@ -43,13 +43,12 @@ import ios.uikit.NSUserActivity;
 @:native("UITableView")
 @:include("UIKit/UIKit.h")
 extern class UITableView extends UIScrollView
+//implements cpp.objc.Protocol<NSCoding>
+//implements cpp.objc.Protocol<UIDataSourceTranslating>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UITableView;
-
-	@:native("init")
-	overload public function init():UITableView;
 
 	@:native("autorelease")
 	overload public static function autorelease():UITableView;

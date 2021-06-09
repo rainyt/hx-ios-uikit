@@ -17,9 +17,6 @@ extern class NSByteCountFormatter extends NSFormatter{
 	@:native("alloc")
 	overload public static function alloc():NSByteCountFormatter;
 
-	@:native("init")
-	overload public function init():NSByteCountFormatter;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSByteCountFormatter;
 

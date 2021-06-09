@@ -18,13 +18,12 @@ import ios.foundation.NSURLCacheStoragePolicy;
     object. 
 */
 extern class NSCachedURLResponse
+//implements cpp.objc.Protocol<NSSecureCoding>
+//implements cpp.objc.Protocol<NSCopying>
 {
 
 	@:native("alloc")
 	overload public static function alloc():NSCachedURLResponse;
-
-	@:native("init")
-	overload public function init():NSCachedURLResponse;
 
 	@:native("autorelease")
 	overload public static function autorelease():NSCachedURLResponse;

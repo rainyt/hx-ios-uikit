@@ -13,9 +13,6 @@ extern interface UIGestureRecognizerDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIGestureRecognizerDelegate;
 
-	@:native("init")
-	overload public function init():UIGestureRecognizerDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIGestureRecognizerDelegate;
 

@@ -22,13 +22,11 @@ import ios.uikit.NSUserActivity;
 @:native("UIInputViewController")
 @:include("UIKit/UIKit.h")
 extern class UIInputViewController extends UIViewController
+//implements cpp.objc.Protocol<UITextInputDelegate>
 {
 
 	@:native("alloc")
 	overload public static function alloc():UIInputViewController;
-
-	@:native("init")
-	overload public function init():UIInputViewController;
 
 	@:native("autorelease")
 	overload public static function autorelease():UIInputViewController;

@@ -9,9 +9,6 @@ extern interface UIPointerInteractionAnimating{
 	@:native("alloc")
 	overload public static function alloc():UIPointerInteractionAnimating;
 
-	@:native("init")
-	overload public function init():UIPointerInteractionAnimating;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerInteractionAnimating;
 

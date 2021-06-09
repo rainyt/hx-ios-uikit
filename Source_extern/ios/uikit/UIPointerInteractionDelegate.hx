@@ -13,9 +13,6 @@ extern interface UIPointerInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIPointerInteractionDelegate;
 
-	@:native("init")
-	overload public function init():UIPointerInteractionDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPointerInteractionDelegate;
 

@@ -10,9 +10,6 @@ extern interface UIPencilInteractionDelegate{
 	@:native("alloc")
 	overload public static function alloc():UIPencilInteractionDelegate;
 
-	@:native("init")
-	overload public function init():UIPencilInteractionDelegate;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIPencilInteractionDelegate;
 

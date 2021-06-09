@@ -18,9 +18,6 @@ extern interface NSFilePresenter{
 	@:native("alloc")
 	overload public static function alloc():NSFilePresenter;
 
-	@:native("init")
-	overload public function init():NSFilePresenter;
-
 	@:native("autorelease")
 	overload public static function autorelease():NSFilePresenter;
 

@@ -13,11 +13,11 @@ extern class UIMutableApplicationShortcutItem extends UIApplicationShortcutItem{
 	@:native("alloc")
 	overload public static function alloc():UIMutableApplicationShortcutItem;
 
-	@:native("init")
-	overload public function init():UIMutableApplicationShortcutItem;
-
 	@:native("autorelease")
 	overload public static function autorelease():UIMutableApplicationShortcutItem;
+
+	@:native("init")
+	overload public function init():UIApplicationShortcutItem;
 
 	@:native("initWithType:localizedTitle:localizedSubtitle:icon:userInfo")
 	overload public function initWithTypeLocalizedTitleLocalizedSubtitleIconUserInfo(type:NSString, localizedTitle:NSString, localizedSubtitle:NSString, icon:UIApplicationShortcutIcon, userInfo:NSDictionary):UIMutableApplicationShortcutItem;
