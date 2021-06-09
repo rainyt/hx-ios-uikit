@@ -25,6 +25,28 @@ haxelib install hx-ios-uikit
 - 也可以直接处理成一个静态库编写原生IOS应用，也很酷吧！It can also be directly processed into a static library to write native IOS applications, which is also very cool!
 - 需要注意此库仅提供Extern实现，没有任何后端。It should be noted that this library only provides Extern implementation without any backend.
 
+#### OpenFL
+
+如果需要直接在OpenFL中使用，可以直接定义以下内容：
+
+```xml
+<haxelib name="hxcpp"/>
+<define name="objc"/>
+<define name="HXCPP_ARM64"/>
+<define name="iphoneos"/>
+<define name="HXCPP_CPP11"/>
+<define name="file_extension" value="mm"/>
+<dependency name="WebKit.framework" if="ios" />
+<dependency name="Metal.framework" if="ios" />
+<dependency name="libresolv.9.tbd" if="ios"/>
+<dependency name="libbz2.1.0.tbd" if="ios"/>
+<ios linker-flags='-ObjC' />
+<ios linker-flags='-lc++' />
+<ios linker-flags='-lc++abi' />
+<ios linker-flags='-lsqlite3' />
+<ios linker-flags='-lz' />
+```
+
 #### HXML基础配置
 
 由于需要编译提供给IOS使用，需要hxml配置：
