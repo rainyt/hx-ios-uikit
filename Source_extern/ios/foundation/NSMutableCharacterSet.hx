@@ -107,6 +107,10 @@ extern class NSMutableCharacterSet extends NSCharacterSet
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
 
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
 	@:native("URLUserAllowedCharacterSet")
 	overload public static function URLUserAllowedCharacterSet():NSMutableCharacterSet;
 

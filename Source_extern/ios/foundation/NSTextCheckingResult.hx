@@ -11,6 +11,7 @@ import cpp.objc.NSDictionary;
 import ios.foundation.NSURL;
 import cpp.objc.NSString;
 import ios.foundation.NSRegularExpression;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSTextCheckingResult")
 @:include("Foundation/Foundation.h")
@@ -134,6 +135,14 @@ extern class NSTextCheckingResult
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

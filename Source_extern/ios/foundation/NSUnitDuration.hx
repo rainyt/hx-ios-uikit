@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSUnitDuration;
 import ios.foundation.NSSecureCoding;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSUnitDuration")
 @:include("Foundation/Foundation.h")
@@ -39,6 +40,14 @@ extern class NSUnitDuration extends Thisclassisnotmeanttobeusedfordatecalculatio
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

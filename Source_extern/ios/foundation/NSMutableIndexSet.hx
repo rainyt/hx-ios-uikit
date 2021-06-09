@@ -3,6 +3,7 @@ package ios.foundation;
 import ios.foundation.NSIndexSet;
 import ios.foundation.NSMutableIndexSet;
 import ios.foundation.NSEnumerationOptions;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSMutableIndexSet")
 @:include("Foundation/Foundation.h")
@@ -134,6 +135,14 @@ extern class NSMutableIndexSet extends NSIndexSet{
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

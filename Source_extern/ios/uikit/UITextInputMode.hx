@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UITextInputMode;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
+import ios.objc.NSCoding;
 @:objc
 @:native("UITextInputMode")
 @:include("UIKit/UIKit.h")
@@ -26,6 +27,14 @@ extern class UITextInputMode
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

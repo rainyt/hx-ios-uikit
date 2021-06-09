@@ -206,6 +206,12 @@ extern class UIScrollView extends UIView
 	@:native("visibleSize")
 	public var visibleSize:CGSize;
 
+	@:native("coordinateSpace")
+	public var coordinateSpace:Dynamic;
+
+	@:native("focusItemsInRect")
+	overload public function focusItemsInRect(rect:CGRect):Dynamic;
+
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 

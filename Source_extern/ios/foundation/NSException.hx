@@ -5,6 +5,7 @@ import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSException")
 @:include("Foundation/Foundation.h")
@@ -58,6 +59,14 @@ extern class NSException
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

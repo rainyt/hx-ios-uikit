@@ -4,6 +4,7 @@ import ios.webkit.WKWebsiteDataStore;
 import ios.foundation.NSSecureCoding;
 import ios.foundation.NSDate;
 import ios.webkit.WKHTTPCookieStore;
+import ios.objc.NSCoding;
 @:objc
 @:native("WKWebsiteDataStore")
 @:include("WebKit/WebKit.h")
@@ -58,6 +59,14 @@ extern class WKWebsiteDataStore
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

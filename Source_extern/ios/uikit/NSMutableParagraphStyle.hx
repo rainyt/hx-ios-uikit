@@ -8,6 +8,7 @@ import ios.uikit.NSWritingDirection;
 import ios.uikit.NSLineBreakStrategy;
 import ios.uikit.NSTextTab;
 import cpp.objc.NSString;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSMutableParagraphStyle")
 @:include("UIKit/UIKit.h")
@@ -40,6 +41,14 @@ extern class NSMutableParagraphStyle extends NSParagraphStyle{
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

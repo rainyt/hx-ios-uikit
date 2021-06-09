@@ -10,6 +10,7 @@ import ios.uikit.NSAttributedString;
 import ios.uikit.UIListContentTextProperties;
 import ios.uikit.UIAxis;
 import ios.uikit.UIView;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIListContentConfiguration")
 @:include("UIKit/UIKit.h")
@@ -111,8 +112,20 @@ extern class UIListContentConfiguration
 	@:native("updatedConfigurationForState")
 	overload public function updatedConfigurationForState(state:Dynamic):UIContentConfiguration;
 
+	/** Haxe Protocol */
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

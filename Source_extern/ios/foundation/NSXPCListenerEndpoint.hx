@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSXPCListenerEndpoint;
 import ios.foundation.NSSecureCoding;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSXPCListenerEndpoint")
 @:include("Foundation/Foundation.h")
@@ -17,6 +18,14 @@ extern class NSXPCListenerEndpoint
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

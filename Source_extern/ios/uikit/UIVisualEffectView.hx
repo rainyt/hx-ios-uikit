@@ -64,6 +64,10 @@ extern class UIVisualEffectView extends UIView
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
 
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 

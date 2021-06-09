@@ -5,6 +5,7 @@ import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
 import ios.foundation.NSURL;
 import cpp.objc.NSString;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSURLResponse")
 @:include("Foundation/Foundation.h")
@@ -57,6 +58,14 @@ extern class NSURLResponse
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

@@ -40,5 +40,9 @@ extern class UIUserNotificationCategory
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
 
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
 
 }

@@ -74,6 +74,10 @@ extern class NSCompoundPredicate extends NSPredicate{
 	overload public static function supportsSecureCoding():Bool;
 
 	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
 	@:native("copyWithZone")
 	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
 

@@ -6,6 +6,7 @@ import ios.foundation.NSSecureCoding;
 import ios.uikit.UIImageSymbolConfiguration;
 import ios.uikit.UIColor;
 import ios.objc.CGSize;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIListContentImageProperties")
 @:include("UIKit/UIKit.h")
@@ -50,6 +51,14 @@ extern class UIListContentImageProperties
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

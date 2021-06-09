@@ -7,6 +7,7 @@ import ios.uikit.UIView;
 import ios.uikit.NSDirectionalRectEdge;
 import ios.uikit.UIColor;
 import ios.uikit.UIVisualEffect;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIBackgroundConfiguration")
 @:include("UIKit/UIKit.h")
@@ -96,6 +97,14 @@ extern class UIBackgroundConfiguration
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

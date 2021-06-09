@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIPasteConfiguration;
 import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIPasteConfiguration")
 @:include("UIKit/UIKit.h")
@@ -37,6 +38,14 @@ extern class UIPasteConfiguration
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

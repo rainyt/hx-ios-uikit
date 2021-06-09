@@ -303,6 +303,9 @@ extern class UICollectionView extends UIScrollView
 	@:native("encodeWithCoder")
 	overload public function encodeWithCoder(aCoder:Dynamic):Void;
 
+	@:native("focusItemsInRect")
+	overload public function focusItemsInRect(rect:CGRect):Dynamic;
+
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;
 

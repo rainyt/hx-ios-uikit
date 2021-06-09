@@ -6,6 +6,7 @@ import ios.foundation.NSSecureCoding;
 import ios.foundation.NSPointerFunctionsOptions;
 import ios.foundation.NSPointerFunctions;
 import ios.foundation.NSArray;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSPointerArray")
 @:include("Foundation/Foundation.h")
@@ -84,6 +85,14 @@ extern class NSPointerArray
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

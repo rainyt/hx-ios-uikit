@@ -5,6 +5,7 @@ import ios.uikit.NSTextStorage;
 import ios.foundation.NSSecureCoding;
 import ios.uikit.NSLayoutManager;
 import ios.uikit.NSTextStorageEditActions;
+import ios.objc.NSCoding;
 import ios.foundation.NSURL;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSError;
@@ -85,6 +86,14 @@ extern class NSTextStorage extends NSMutableAttributedString
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	@:native("fixAttributesInRange")
 	overload public function fixAttributesInRange(range:Dynamic):Void;

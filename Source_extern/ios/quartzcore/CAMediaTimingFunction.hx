@@ -3,6 +3,7 @@ package ios.quartzcore;
 import ios.quartzcore.CAMediaTimingFunction;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
+import ios.objc.NSCoding;
 @:objc
 @:native("CAMediaTimingFunction")
 @:include("QuartzCore/QuartzCore.h")
@@ -38,6 +39,14 @@ extern class CAMediaTimingFunction
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

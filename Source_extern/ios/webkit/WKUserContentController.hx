@@ -6,6 +6,7 @@ import ios.webkit.WKUserScript;
 import ios.webkit.WKContentWorld;
 import cpp.objc.NSString;
 import ios.webkit.WKContentRuleList;
+import ios.objc.NSCoding;
 @:objc
 @:native("WKUserContentController")
 @:include("WebKit/WebKit.h")
@@ -78,6 +79,14 @@ extern class WKUserContentController
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

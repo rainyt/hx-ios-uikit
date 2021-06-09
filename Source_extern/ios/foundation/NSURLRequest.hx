@@ -10,6 +10,7 @@ import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSData;
 import ios.foundation.NSInputStream;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSURLRequest")
 @:include("Foundation/Foundation.h")
@@ -135,6 +136,14 @@ extern class NSURLRequest
 	/*!  @abstract Reports whether the receiver is not expected to wait for the  previous response before transmitting.  @result YES if the receiver should transmit before the previous response  is received.  NO if the receiver should wait for the previous response  before transmitting.  */
 	@:native("HTTPShouldUsePipelining")
 	public var HTTPShouldUsePipelining:Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

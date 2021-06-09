@@ -8,6 +8,7 @@ import cpp.objc.NSData;
 import ios.foundation.NSDate;
 import cpp.objc.NSDictionary;
 import ios.foundation.NSLocale;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSTimeZone")
 @:include("Foundation/Foundation.h")
@@ -115,6 +116,14 @@ extern class NSTimeZone
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

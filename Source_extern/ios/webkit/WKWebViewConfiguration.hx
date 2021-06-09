@@ -13,6 +13,7 @@ import ios.webkit.WKWebpagePreferences;
 import ios.webkit.WKSelectionGranularity;
 import ios.webkit.WKDataDetectorTypes;
 import ios.webkit.WKUserInterfaceDirectionPolicy;
+import ios.objc.NSCoding;
 @:objc
 @:native("WKWebViewConfiguration")
 @:include("WebKit/WebKit.h")
@@ -112,6 +113,14 @@ extern class WKWebViewConfiguration
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

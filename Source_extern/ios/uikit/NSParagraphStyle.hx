@@ -8,6 +8,7 @@ import cpp.objc.NSString;
 import ios.uikit.NSTextAlignment;
 import ios.uikit.NSLineBreakMode;
 import ios.uikit.NSLineBreakStrategy;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSParagraphStyle")
 @:include("UIKit/UIKit.h")
@@ -86,6 +87,14 @@ extern class NSParagraphStyle
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

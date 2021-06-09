@@ -7,6 +7,7 @@ import ios.uikit.UISceneConfiguration;
 import cpp.objc.NSString;
 import ios.uikit.NSUserActivity;
 import cpp.objc.NSDictionary;
+import ios.objc.NSCoding;
 @:objc
 @:native("UISceneSession")
 @:include("UIKit/UIKit.h")
@@ -43,6 +44,14 @@ extern class UISceneSession
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

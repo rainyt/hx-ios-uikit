@@ -8,6 +8,7 @@ import cpp.objc.NSData;
 import ios.foundation.NSNumber;
 import cpp.objc.NSError;
 import cpp.objc.NSDictionary;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSURL")
 @:include("Foundation/Foundation.h")
@@ -284,6 +285,14 @@ extern class NSURL
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

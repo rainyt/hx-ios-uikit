@@ -4,6 +4,7 @@ import ios.foundation.NSURLProtectionSpace;
 import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSURLProtectionSpace")
 @:include("Foundation/Foundation.h")
@@ -72,6 +73,14 @@ extern class NSURLProtectionSpace
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

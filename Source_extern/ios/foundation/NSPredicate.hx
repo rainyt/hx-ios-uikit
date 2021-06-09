@@ -6,6 +6,7 @@ import ios.objc.NSCopying;
 import cpp.objc.NSString;
 import ios.foundation.NSArray;
 import cpp.objc.NSDictionary;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSPredicate")
 @:include("Foundation/Foundation.h")
@@ -58,6 +59,14 @@ extern class NSPredicate
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

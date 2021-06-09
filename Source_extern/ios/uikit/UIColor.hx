@@ -8,6 +8,7 @@ import ios.uikit.CIColor;
 import cpp.objc.NSString;
 import ios.uikit.NSBundle;
 import ios.uikit.UITraitCollection;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIColor")
 @:include("UIKit/UIKit.h")
@@ -290,6 +291,14 @@ extern class UIColor
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

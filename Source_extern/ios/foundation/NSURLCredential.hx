@@ -6,6 +6,7 @@ import ios.objc.NSCopying;
 import ios.foundation.NSURLCredentialPersistence;
 import cpp.objc.NSString;
 import ios.foundation.NSArray;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSURLCredential")
 @:include("Foundation/Foundation.h")
@@ -74,6 +75,14 @@ extern class NSURLCredential
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

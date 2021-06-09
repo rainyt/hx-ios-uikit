@@ -4,6 +4,7 @@ import ios.foundation.NSIndexSet;
 import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import ios.foundation.NSEnumerationOptions;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSIndexSet")
 @:include("Foundation/Foundation.h")
@@ -144,6 +145,14 @@ extern class NSIndexSet
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

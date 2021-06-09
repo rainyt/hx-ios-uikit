@@ -12,6 +12,7 @@ import ios.foundation.NSDataReadingOptions;
 import ios.foundation.NSDataBase64DecodingOptions;
 import ios.foundation.NSDataBase64EncodingOptions;
 import ios.foundation.NSDataCompressionAlgorithm;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSData")
 @:include("Foundation/Foundation.h")
@@ -151,6 +152,14 @@ extern class NSData
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

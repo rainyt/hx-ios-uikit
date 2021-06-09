@@ -4,6 +4,7 @@ import ios.uikit.UIVisualEffect;
 import ios.uikit.UIVibrancyEffect;
 import ios.uikit.UIBlurEffect;
 import ios.uikit.UIVibrancyEffectStyle;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIVibrancyEffect")
 @:include("UIKit/UIKit.h")
@@ -29,6 +30,14 @@ extern class UIVibrancyEffect extends UIVisualEffect{
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

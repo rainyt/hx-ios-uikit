@@ -6,6 +6,7 @@ import ios.foundation.NSURL;
 import ios.foundation.NSURLRequestCachePolicy;
 import ios.foundation.NSURLRequestNetworkServiceType;
 import cpp.objc.NSString;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSMutableURLRequest")
 @:include("Foundation/Foundation.h")
@@ -77,6 +78,14 @@ extern class NSMutableURLRequest extends NSURLRequest{
 	/*!      @method valueForHTTPHeaderField:     @abstract Returns the value which corresponds to the given header     field. Note that, in keeping with the HTTP RFC, HTTP header field     names are case-insensitive.     @param field the header field name to use for the lookup     (case-insensitive).     @result the value associated with the given header field, or nil if     there is no value associated with the given header field. */
 	@:native("valueForHTTPHeaderField")
 	overload public function valueForHTTPHeaderField(field:NSString):NSString;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

@@ -8,6 +8,7 @@ import ios.uikit.UIColor;
 import ios.uikit.UIListContentTextAlignment;
 import ios.uikit.NSLineBreakMode;
 import ios.uikit.UIListContentTextTransform;
+import ios.objc.NSCoding;
 @:objc
 @:native("UIListContentTextProperties")
 @:include("UIKit/UIKit.h")
@@ -64,6 +65,14 @@ extern class UIListContentTextProperties
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

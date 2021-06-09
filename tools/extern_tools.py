@@ -532,6 +532,7 @@ class ExternBaseClass(BaseClass):
                 value = _g1_value
                 t = ExternTools.protocol.h.get(value,None)
                 if (t is not None):
+                    t.externParentFuncProperty(t)
                     c.putClass(t)
                 else:
                     readProtocols = ObjcImport.toImport(value)

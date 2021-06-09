@@ -443,9 +443,10 @@ class ExternBaseClass extends BaseClass {
 			for (index => value in protocols) {
 				// trace("处理协议：", value);
 				var t = ExternTools.protocol.get(value);
-				if (t != null)
+				if (t != null) {
+					t.externParentFuncProperty(t);
 					c.putClass(t);
-				else {
+				} else {
 					// 新建协议
 					var readProtocols = ObjcImport.toImport(value);
 					if (readProtocols != null) {

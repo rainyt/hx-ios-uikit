@@ -3,6 +3,7 @@ package ios.foundation;
 import ios.foundation.NSUnitConverter;
 import ios.foundation.NSUnitConverterLinear;
 import ios.foundation.NSSecureCoding;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSUnitConverterLinear")
 @:include("Foundation/Foundation.h")
@@ -31,6 +32,14 @@ extern class NSUnitConverterLinear extends NSUnitConverter
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 	/*  This method takes a value in terms of a unit and returns the corresponding value in terms of the base unit of the original unit's dimension.  @param value Value in terms of the unit class  @return Value in terms of the base unit  */
 	@:native("baseUnitValueFromValue")

@@ -9,6 +9,7 @@ import cpp.objc.NSError;
 import ios.foundation.NSMatchingOptions;
 import ios.foundation.NSTextCheckingResult;
 import ios.foundation.NSMutableString;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSRegularExpression")
 @:include("Foundation/Foundation.h")
@@ -80,6 +81,14 @@ extern class NSRegularExpression
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

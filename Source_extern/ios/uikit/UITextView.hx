@@ -26,6 +26,16 @@ import ios.objc.CGPoint;
 import ios.uikit.UITextAlternativeStyle;
 import ios.uikit.UITextPlaceholder;
 import ios.objc.CGSize;
+import ios.uikit.UITextAutocapitalizationType;
+import ios.uikit.UITextAutocorrectionType;
+import ios.uikit.UITextSpellCheckingType;
+import ios.uikit.UITextSmartQuotesType;
+import ios.uikit.UITextSmartDashesType;
+import ios.uikit.UITextSmartInsertDeleteType;
+import ios.uikit.UIKeyboardType;
+import ios.uikit.UIKeyboardAppearance;
+import ios.uikit.UIReturnKeyType;
+import ios.uikit.UITextInputPasswordRules;
 import ios.uikit.UIEvent;
 import ios.uikit.UIViewPrintFormatter;
 import ios.uikit.UIUserInterfaceLayoutDirection;
@@ -276,6 +286,54 @@ extern class UITextView extends UIScrollView
 	@:native("endFloatingCursor")
 	overload public function endFloatingCursor():Void;
 
+	@:native("hasText")
+	public var hasText:Bool;
+
+	@:native("insertText")
+	overload public function insertText(text:NSString):Void;
+
+	@:native("deleteBackward")
+	overload public function deleteBackward():Void;
+
+	@:native("autocapitalizationType")
+	public var autocapitalizationType:UITextAutocapitalizationType;
+
+	@:native("autocorrectionType")
+	public var autocorrectionType:UITextAutocorrectionType;
+
+	@:native("spellCheckingType")
+	public var spellCheckingType:UITextSpellCheckingType;
+
+	@:native("smartQuotesType")
+	public var smartQuotesType:UITextSmartQuotesType;
+
+	@:native("smartDashesType")
+	public var smartDashesType:UITextSmartDashesType;
+
+	@:native("smartInsertDeleteType")
+	public var smartInsertDeleteType:UITextSmartInsertDeleteType;
+
+	@:native("keyboardType")
+	public var keyboardType:UIKeyboardType;
+
+	@:native("keyboardAppearance")
+	public var keyboardAppearance:UIKeyboardAppearance;
+
+	@:native("returnKeyType")
+	public var returnKeyType:UIReturnKeyType;
+
+	@:native("enablesReturnKeyAutomatically")
+	public var enablesReturnKeyAutomatically:Bool;
+
+	@:native("secureTextEntry")
+	public var secureTextEntry:Bool;
+
+	@:native("textContentType")
+	public var textContentType:NSString;
+
+	@:native("passwordRules")
+	public var passwordRules:UITextInputPasswordRules;
+
 	/*  Indicates whether the corresponding element should automatically update its font when the device’s UIContentSizeCategory is changed.  For this property to take effect, the element’s font must be one of the following:  - a font vended using +preferredFontForTextStyle: or +preferredFontForTextStyle:compatibleWithTraitCollection: with a valid UIFontTextStyle  - a font vended using - [UIFontMetrics scaledFontForFont:] or one of its variants  */
 	@:native("adjustsFontForContentSizeCategory")
 	public var adjustsFontForContentSizeCategory:Bool;
@@ -308,6 +366,9 @@ extern class UITextView extends UIScrollView
 	/** Haxe Protocol */
 	@:native("encodeWithCoder")
 	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	@:native("focusItemsInRect")
+	overload public function focusItemsInRect(rect:CGRect):Dynamic;
 
 	@:native("viewPrintFormatter")
 	overload public function viewPrintFormatter():UIViewPrintFormatter;

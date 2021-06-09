@@ -50,5 +50,13 @@ extern class UICubicTimingParameters
 	@:native("springTimingParameters")
 	public var springTimingParameters:UISpringTimingParameters;
 
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+
 
 }

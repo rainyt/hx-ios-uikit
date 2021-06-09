@@ -3,6 +3,7 @@ package ios.quartzcore;
 import ios.quartzcore.CAValueFunction;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
+import ios.objc.NSCoding;
 @:objc
 @:native("CAValueFunction")
 @:include("QuartzCore/QuartzCore.h")
@@ -24,6 +25,14 @@ extern class CAValueFunction
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }

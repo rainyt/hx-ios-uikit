@@ -54,5 +54,16 @@ extern class UIViewConfigurationState
 	@:native("setObject:forKeyedSubscript")
 	overload public function setObjectForKeyedSubscript(obj:Dynamic, forKeyedSubscript:NSString):Void;
 
+	/** Haxe Protocol */
+	@:native("copyWithZone")
+	overload public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+
+	@:native("supportsSecureCoding")
+	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
 
 }

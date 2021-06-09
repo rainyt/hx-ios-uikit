@@ -28,6 +28,7 @@ import ios.uikit.UIKeyboardType;
 import ios.uikit.UIKeyboardAppearance;
 import ios.uikit.UIReturnKeyType;
 import ios.uikit.UITextInputPasswordRules;
+import ios.uikit.UIPasteConfiguration;
 @:objc
 @:native("UITextDroppable")
 @:include("UIKit/UIKit.h")
@@ -261,6 +262,15 @@ extern interface UITextDroppable
 
 	@:native("pasteDelegate")
 	public var pasteDelegate:Dynamic;
+
+	@:native("pasteConfiguration")
+	public var pasteConfiguration:UIPasteConfiguration;
+
+	@:native("pasteItemProviders")
+	overload public function pasteItemProviders(itemProviders:Dynamic):Void;
+
+	@:native("canPasteItemProviders")
+	overload public function canPasteItemProviders(itemProviders:Dynamic):Bool;
 
 
 }

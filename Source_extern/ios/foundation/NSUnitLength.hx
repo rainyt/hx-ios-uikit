@@ -6,6 +6,7 @@ import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.foundation.NSUnitConverter;
 import ios.foundation.NSUnit;
+import ios.objc.NSCoding;
 @:objc
 @:native("NSUnitLength")
 @:include("Foundation/Foundation.h")
@@ -105,6 +106,14 @@ extern class NSUnitLength extends NSDimension
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;
+
+	/** Haxe Protocol */
+	@:native("encodeWithCoder")
+	overload public function encodeWithCoder(aCoder:Dynamic):Void;
+
+	/** Haxe Protocol */
+	@:native("initWithCoder")
+	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
 
 
 }
