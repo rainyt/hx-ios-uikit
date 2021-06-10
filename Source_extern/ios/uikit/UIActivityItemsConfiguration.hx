@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIActivityItemsConfiguration;
 import ios.uikit.UIActivityItemsConfigurationReading;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import ios.uikit.NSItemProvider;
 import ios.objc.CGSize;
@@ -22,7 +23,7 @@ extern class UIActivityItemsConfiguration
 	public var localObject:Dynamic;
 
 	@:native("supportedInteractions")
-	public var supportedInteractions:Dynamic;
+	public var supportedInteractions:NSArray;
 
 	@:native("UIActivityItemsConfigurationMetadataKey key")
 	public var UIActivityItemsConfigurationMetadataKey key:Dynamic;
@@ -37,22 +38,22 @@ extern class UIActivityItemsConfiguration
 	public var void:Dynamic;
 
 	@:native("activityItemsConfigurationWithObjects")
-	overload public static function activityItemsConfigurationWithObjects(objects:Dynamic):UIActivityItemsConfiguration;
+	overload public static function activityItemsConfigurationWithObjects(objects:NSArray):UIActivityItemsConfiguration;
 
 	@:native("activityItemsConfigurationWithItemProviders")
-	overload public static function activityItemsConfigurationWithItemProviders(itemProviders:Dynamic):UIActivityItemsConfiguration;
+	overload public static function activityItemsConfigurationWithItemProviders(itemProviders:NSArray):UIActivityItemsConfiguration;
 
 	@:native("initWithObjects")
-	overload public function initWithObjects(objects:Dynamic):UIActivityItemsConfiguration;
+	overload public function initWithObjects(objects:NSArray):UIActivityItemsConfiguration;
 
 	@:native("initWithItemProviders")
-	overload public function initWithItemProviders(itemProviders:Dynamic):UIActivityItemsConfiguration;
+	overload public function initWithItemProviders(itemProviders:NSArray):UIActivityItemsConfiguration;
 
 	@:native("init")
 	overload public function init():UIActivityItemsConfiguration;
 
 	@:native("itemProvidersForActivityItemsConfiguration")
-	public var itemProvidersForActivityItemsConfiguration:Dynamic;
+	public var itemProvidersForActivityItemsConfiguration:NSArray;
 
 	@:native("activityItemsConfigurationSupportsInteraction")
 	overload public function activityItemsConfigurationSupportsInteraction(interaction:NSString):Bool;

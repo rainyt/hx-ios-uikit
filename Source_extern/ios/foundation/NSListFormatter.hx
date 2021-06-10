@@ -31,7 +31,7 @@ extern class NSListFormatter extends NSFormatter{
 
 	/* Convenience method to return a string constructed from an array of strings using the list format specific to the current locale. It is recommended to join only disjointed strings that are ready to display in a bullet-point list. Sentences, phrases with punctuations, and appositions may not work well when joined together.  */
 	@:native("localizedStringByJoiningStrings")
-	overload public static function localizedStringByJoiningStrings(strings:Dynamic):NSString;
+	overload public static function localizedStringByJoiningStrings(strings:NSArray):NSString;
 
 	/* Convenience method for -stringForObjectValue:. Returns a string constructed from an array in the locale-aware format. Each item is formatted using the itemFormatter. If the itemFormatter does not apply to a particular item, the method will fall back to the item's -descriptionWithLocale: or -localizedDescription if implemented, or -description if not.   Returns nil if `items` is nil or if the list formatter cannot generate a string representation for all items in the array.  */
 	@:native("stringFromItems")

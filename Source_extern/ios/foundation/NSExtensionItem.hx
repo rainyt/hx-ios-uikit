@@ -4,6 +4,7 @@ import ios.foundation.NSExtensionItem;
 import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import ios.uikit.NSAttributedString;
+import ios.foundation.NSArray;
 import cpp.objc.NSDictionary;
 import ios.objc.NSCoding;
 @:objc
@@ -30,7 +31,7 @@ extern class NSExtensionItem
 	public var attributedContentText:NSAttributedString;
 
 	@:native("attachments")
-	public var attachments:Dynamic;
+	public var attachments:NSArray;
 
 	@:native("userInfo")
 	public var userInfo:NSDictionary;

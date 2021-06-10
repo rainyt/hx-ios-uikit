@@ -8,6 +8,7 @@ import ios.uikit.UIBezierPath;
 import ios.objc.CGPoint;
 import ios.uikit.UIAccessibilityNavigationStyle;
 import ios.foundation.NSArray;
+import ios.foundation.NSSet;
 import ios.uikit.UIAccessibilityContainerType;
 import ios.uikit.NSCoder;
 import ios.foundation.NSThread;
@@ -19,7 +20,6 @@ import ios.foundation.NSKeyValueObservingOptions;
 import ios.foundation.NSKeyValueChange;
 import ios.foundation.NSIndexSet;
 import ios.foundation.NSKeyValueSetMutationKind;
-import ios.foundation.NSSet;
 import cpp.objc.NSError;
 import ios.foundation.NSKeyedArchiver;
 @:objc
@@ -118,11 +118,11 @@ extern class NSObject{
 
 	/*  Returns the localized label(s) that should be provided by the user to refer to this element.  Use this property when the accessibilityLabel is not appropriate for dictated or typed input.  For example, an element that contains additional descriptive information in its accessibilityLabel can return a more concise label.  The primary label should be first in the array, optionally followed by alternative labels in descending order of importance.  If this property returns an empty or invalid value, the accessibilityLabel will be used instead.  default == an empty array  default on UIKit controls == an array with an appropriate label, if different from accessibilityLabel  */
 	@:native("accessibilityUserInputLabels")
-	public var accessibilityUserInputLabels:Dynamic;
+	public var accessibilityUserInputLabels:NSArray;
 
 	/*  The underlying attributed versions of the accessibility user input label(s).  Setting this property will change the value of the accessibilityUserInputLabels property and vice versa.  */
 	@:native("accessibilityAttributedUserInputLabels")
-	public var accessibilityAttributedUserInputLabels:Dynamic;
+	public var accessibilityAttributedUserInputLabels:NSArray;
 
 	/*  The elements considered to be the headers for this element. May be set on an instance of  UIAccessibilityElement, a View or a View Controller. The accessibility container chain,  and associated view controllers where appropriate, will be consulted.  To avoid retain cycles, a weak copy of the elements will be held.  */
 	@:native("accessibilityHeaderElements")
@@ -142,7 +142,7 @@ extern class NSObject{
 	overload public function accessibilityElementIsFocused():Bool;
 
 	@:native("accessibilityAssistiveTechnologyFocusedIdentifiers")
-	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():Dynamic;
+	overload public function accessibilityAssistiveTechnologyFocusedIdentifiers():NSSet;
 
 	/*  Implement accessibilityActivate on an element in order to handle the default action.  For example, if a native control requires a swipe gesture, you may implement this method so that a  VoiceOver user will perform a double-tap to activate the item.  If your implementation successfully handles activate, return YES, otherwise return NO.  default == NO  */
 	@:native("accessibilityActivate")
@@ -173,13 +173,13 @@ extern class NSObject{
 
 	/* By default, if an accessible view or its subtree has drag and/or drop interactions, they will be  * automatically exposed by assistive technologies. However, if there is more than one such  * interaction, each drag or drop should have a name to disambiguate it and give a good user  * experience. Also, there may be situations in which you want to expose drags or drops from an  * element, and those interactions are installed on views that are not part of that element's view  * hierarchy subtree.  *  * This is trivially the case when the element is not a view at all, but an instance of  * UIAccessibilityElement.  *  * Another example is when a container view maintains interactions that are logically  * associated with subviews. For instance, UITableView has associated drag interactions that allow  * for dragging its rows; to make the rows draggable by assistive technologies, UITableViewCell has  * drag descriptors that describe where in the table view to start a drag to activate dragging of  * the cell.  * (Note that this implementation detail is noted here for expository purposes only and may change  * at any time without warning.)  *  * Properties defined here allow you to fine-tune how drags and drops are exposed to assistive  * technologies. Both of their getter methods can be overridden to provide information on-demand.  * For each location descriptor, the associated view should be the UIView with the appropriate  * UIInteraction object for that drag or drop.  *  * `accessibilityDragSourceDescriptors` is an array of UIAccessibilityLocationDescriptor  * objects and is used to define and describe what drags are available from an element.  *  * `accessibilityDropPointDescriptors` is similarly an array of  * UIAccessibilityLocationDescriptor objects and is used to define and describe where  * drops are possible on this element.  *  * To restore the default automatic behavior for these properties, assign (or return) the default  * value of nil. Note that nil does not describe the same behavior as the empty array, which  * specifies that there are no relevant interactions for this element.  *  */
 	@:native("accessibilityDragSourceDescriptors")
-	public var accessibilityDragSourceDescriptors:Dynamic;
+	public var accessibilityDragSourceDescriptors:NSArray;
 
 	@:native("accessibilityDropPointDescriptors")
-	public var accessibilityDropPointDescriptors:Dynamic;
+	public var accessibilityDropPointDescriptors:NSArray;
 
 	@:native("accessibilityCustomRotors")
-	public var accessibilityCustomRotors:Dynamic;
+	public var accessibilityCustomRotors:NSArray;
 
 	/*  Returns the number of accessibility elements in the container.  */
 	@:native("accessibilityElementCount")
@@ -206,7 +206,7 @@ extern class NSObject{
 	overload public function prepareForInterfaceBuilder():Void;
 
 	@:native("performSelector:withObject:afterDelay:inModes")
-	overload public function performSelectorWithObjectAfterDelayInModes(aSelector:String, withObject:Dynamic, afterDelay:Dynamic, inModes:Dynamic):Void;
+	overload public function performSelectorWithObjectAfterDelayInModes(aSelector:String, withObject:Dynamic, afterDelay:Dynamic, inModes:NSArray):Void;
 
 	@:native("performSelector:withObject:afterDelay")
 	overload public function performSelectorWithObjectAfterDelay(aSelector:String, withObject:Dynamic, afterDelay:Dynamic):Void;
@@ -236,13 +236,13 @@ extern class NSObject{
 	public var autoContentAccessingProxy:Dynamic;
 
 	@:native("performSelectorOnMainThread:withObject:waitUntilDone:modes")
-	overload public function performSelectorOnMainThreadWithObjectWaitUntilDoneModes(aSelector:String, withObject:Dynamic, waitUntilDone:Bool, modes:Dynamic):Void;
+	overload public function performSelectorOnMainThreadWithObjectWaitUntilDoneModes(aSelector:String, withObject:Dynamic, waitUntilDone:Bool, modes:NSArray):Void;
 
 	@:native("performSelectorOnMainThread:withObject:waitUntilDone")
 	overload public function performSelectorOnMainThreadWithObjectWaitUntilDone(aSelector:String, withObject:Dynamic, waitUntilDone:Bool):Void;
 
 	@:native("performSelector:onThread:withObject:waitUntilDone:modes")
-	overload public function performSelectorOnThreadWithObjectWaitUntilDoneModes(aSelector:String, onThread:NSThread, withObject:Dynamic, waitUntilDone:Bool, modes:Dynamic):Void;
+	overload public function performSelectorOnThreadWithObjectWaitUntilDoneModes(aSelector:String, onThread:NSThread, withObject:Dynamic, waitUntilDone:Bool, modes:NSArray):Void;
 
 	@:native("performSelector:onThread:withObject:waitUntilDone")
 	overload public function performSelectorOnThreadWithObjectWaitUntilDone(aSelector:String, onThread:NSThread, withObject:Dynamic, waitUntilDone:Bool):Void;
@@ -311,7 +311,7 @@ extern class NSObject{
 
 	/* Given an array of keys, return a dictionary containing the keyed attribute values, to-one-related objects, and/or collections of to-many-related objects. Entries for which -valueForKey: returns nil have NSNull as their value in the returned dictionary. */
 	@:native("dictionaryWithValuesForKeys")
-	overload public function dictionaryWithValuesForKeys(keys:Dynamic):NSDictionary;
+	overload public function dictionaryWithValuesForKeys(keys:NSArray):NSDictionary;
 
 	/* Given a dictionary containing keyed attribute values, to-one-related objects, and/or collections of to-many-related objects, set the keyed values. Dictionary entries whose values are NSNull result in -setValue:nil forKey:key messages being sent to the receiver. */
 	@:native("setValuesForKeysWithDictionary")
@@ -354,7 +354,7 @@ extern class NSObject{
 
 	/* Return a set of key paths for properties whose values affect the value of the keyed property. When an observer for the key is registered with an instance of the receiving class, KVO itself automatically observes all of the key paths for the same instance, and sends change notifications for the key to the observer when the value for any of those key paths changes. The default implementation of this method searches the receiving class for a method whose name matches the pattern +keyPathsForValuesAffecting<Key>, and returns the result of invoking that method if it is found. So, any such method must return an NSSet too. If no such method is found, an NSSet that is computed from information provided by previous invocations of the now-deprecated +setKeys:triggerChangeNotificationsForDependentKey: method is returned, for backward binary compatibility.  This method and KVO's automatic use of it comprise a dependency mechanism that you can use instead of sending -willChangeValueForKey:/-didChangeValueForKey: messages for dependent, computed, properties.   You can override this method when the getter method of one of your properties computes a value to return using the values of other properties, including those that are located by key paths. Your override should typically invoke super and return a set that includes any members in the set that result from doing that (so as not to interfere with overrides of this method in superclasses).  You can't really override this method when you add a computed property to an existing class using a category, because you're not supposed to override methods in categories. In that case, implement a matching +keyPathsForValuesAffecting<Key> to take advantage of this mechanism. */
 	@:native("keyPathsForValuesAffectingValueForKey")
-	overload public static function keyPathsForValuesAffectingValueForKey(key:NSString):Dynamic;
+	overload public static function keyPathsForValuesAffectingValueForKey(key:NSString):NSSet;
 
 	/* Return YES if the key-value observing machinery should automatically invoke -willChangeValueForKey:/-didChangeValueForKey:, -willChange:valuesAtIndexes:forKey:/-didChange:valuesAtIndexes:forKey:, or -willChangeValueForKey:withSetMutation:usingObjects:/-didChangeValueForKey:withSetMutation:usingObjects: whenever instances of the class receive key-value coding messages for the key, or mutating key-value coding-compliant methods for the key are invoked. Return NO otherwise. Starting in Mac OS 10.5, the default implementation of this method searches the receiving class for a method whose name matches the pattern +automaticallyNotifiesObserversOf<Key>, and returns the result of invoking that method if it is found. So, any such method must return BOOL too. If no such method is found YES is returned. */
 	@:native("automaticallyNotifiesObserversForKey")
@@ -379,7 +379,7 @@ extern class NSObject{
 	overload public function replacementObjectForKeyedArchiver(archiver:NSKeyedArchiver):Dynamic;
 
 	@:native("classFallbacksForKeyedArchiver")
-	overload public static function classFallbacksForKeyedArchiver():Dynamic;
+	overload public static function classFallbacksForKeyedArchiver():NSArray;
 
 	@:native("classForKeyedUnarchiver")
 	overload public static function classForKeyedUnarchiver():Dynamic;

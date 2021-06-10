@@ -3,8 +3,10 @@ package ios.uikit;
 import ios.uikit.NSUserActivity;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSSet;
 import ios.foundation.NSURL;
 import ios.foundation.NSDate;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSUserActivity")
 @:include("UIKit/UIKit.h")
@@ -41,7 +43,7 @@ extern class NSUserActivity{
 
 	/* The keys from the userInfo property which represent the minimal information about this user activity that should be stored for later restoration.  A nil value means all keys in .userInfo are required. */
 	@:native("requiredUserInfoKeys")
-	public var requiredUserInfoKeys:Dynamic;
+	public var requiredUserInfoKeys:NSSet;
 
 	/* If set to YES, then the delegate for this user activity will receive a userActivityWillSave: callback before being sent for continuation on another device.  */
 	@:native("needsSave")
@@ -61,7 +63,7 @@ extern class NSUserActivity{
 
 	/* A set of NSString* keywords, representing words or phrases in the current user's language that might help the user to find this activity in the application history. */
 	@:native("keywords")
-	public var keywords:Dynamic;
+	public var keywords:NSSet;
 
 	/* When used for continuation, the user activity can allow the continuing side to connect back for more information using streams. This value is set to NO by default. It can be dynamically set to YES to selectively support continuation streams based on the state of the user activity. */
 	@:native("supportsContinuationStreams")
@@ -106,7 +108,7 @@ extern class NSUserActivity{
 	public var persistentIdentifier:NSString;
 
 	@:native("deleteSavedUserActivitiesWithPersistentIdentifiers:completionHandler")
-	overload public static function deleteSavedUserActivitiesWithPersistentIdentifiersCompletionHandler(persistentIdentifiers:Dynamic, completionHandler:Dynamic):Void;
+	overload public static function deleteSavedUserActivitiesWithPersistentIdentifiersCompletionHandler(persistentIdentifiers:NSArray, completionHandler:Dynamic):Void;
 
 	@:native("deleteAllSavedUserActivitiesWithCompletionHandler")
 	overload public static function deleteAllSavedUserActivitiesWithCompletionHandler(handler:Dynamic):Void;

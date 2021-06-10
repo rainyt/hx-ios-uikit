@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIActivityItemsConfigurationReading;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import ios.uikit.NSItemProvider;
 import ios.objc.CGSize;
@@ -19,7 +20,7 @@ extern interface UIActivityItemsConfigurationReading
 	overload public static function autorelease():UIActivityItemsConfigurationReading;
 
 	@:native("itemProvidersForActivityItemsConfiguration")
-	public var itemProvidersForActivityItemsConfiguration:Dynamic;
+	public var itemProvidersForActivityItemsConfiguration:NSArray;
 
 	@:native("activityItemsConfigurationSupportsInteraction")
 	overload public function activityItemsConfigurationSupportsInteraction(interaction:NSString):Bool;

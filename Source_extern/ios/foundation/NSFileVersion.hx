@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSFileVersion;
 import ios.foundation.NSURL;
+import ios.foundation.NSArray;
 import ios.foundation.NSFileVersionAddingOptions;
 import cpp.objc.NSError;
 import cpp.objc.NSString;
@@ -27,11 +28,11 @@ extern class NSFileVersion{
 
 	/* Return an array of NSFileVersions associated with the file located by a URL, or nil if there is no such file. The array never contains an NSFileVersion equal to what +currentVersionOfItemAtURL: would return. */
 	@:native("otherVersionsOfItemAtURL")
-	overload public static function otherVersionsOfItemAtURL(url:NSURL):Dynamic;
+	overload public static function otherVersionsOfItemAtURL(url:NSURL):NSArray;
 
 	/* Return an array of NSFileVersions that represent unresolved conflicts for the file located by a URL, or nil if there is no such file. */
 	@:native("unresolvedConflictVersionsOfItemAtURL")
-	overload public static function unresolvedConflictVersionsOfItemAtURL(url:NSURL):Dynamic;
+	overload public static function unresolvedConflictVersionsOfItemAtURL(url:NSURL):NSArray;
 
 	/* Asynchronously return an array of NSFileVersions associated with the file located by the given URL, or nil if there is no such file or another error occurs. Versions returned by this method do not initially have their contents stored locally on the device, so a download may be required before you are able to access them. File attributes are accessible via -[NSURL getPromisedItemResourceValue:forKey:error:]. You can request a download by performing a coordinated read with NSFileCoordinator on the URL property of the resulting NSFileVersions.   When a version is successfully downloaded, its contents are cached locally, and the version will no longer be returned by this method. The version will be returned by +[NSFileVersion otherVersionsOfItemAtURL:] instead, but will retain the same persistentIdentifier value. If the local version is later discarded, future invocations of this method may resume returning the version.   If you need to get all versions for a document, both local and non-local, you should use an NSFilePresenter that implements -presentedItemDidGainVersion: and -presentedItemDidLoseVersion: and invoke +[NSFileCoordinator addFilePresenter:], +[NSFileVersion otherVersionsOfItemAtURL:], and this method within a single coordinated read. */
 	@:native("getNonlocalVersionsOfItemAtURL:completionHandler")

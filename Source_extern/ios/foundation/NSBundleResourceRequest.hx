@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSBundleResourceRequest;
 import ios.foundation.NSProgressReporting;
+import ios.foundation.NSSet;
 import ios.uikit.NSBundle;
 import ios.foundation.NSProgress;
 @:objc
@@ -31,10 +32,10 @@ extern class NSBundleResourceRequest
 
 	/*  A tag and bundle are required arguments to the init methods. The tag argument is required and it must exist in the manifest of the specified bundle. The bundle argument describes an existing bundle which was built with on demand resources support. Any resources downloaded can be found using the standard NSBundle resource lookup API once the request is completed. If no bundle is specified then the main bundle is used.  */
 	@:native("initWithTags")
-	overload public function initWithTags(tags:Dynamic):NSBundleResourceRequest;
+	overload public function initWithTags(tags:NSSet):NSBundleResourceRequest;
 
 	@:native("initWithTags:bundle")
-	overload public function initWithTagsBundle(tags:Dynamic, bundle:NSBundle):NSBundleResourceRequest;
+	overload public function initWithTagsBundle(tags:NSSet, bundle:NSBundle):NSBundleResourceRequest;
 
 	/*  Provides a hint to the resource loading system as to the loading priority of this request. Values are limited to between 0 and 1, with 1 being the highest priority. The default priority is 0.5.    The exact meaning of the value is up to your application. The system will prefer to act on requests that have a higher priority (from the same application). You may change the priority at any time, even after a request has started. The system will make a best attempt to take the new priority into account.  */
 	@:native("loadingPriority")
@@ -42,7 +43,7 @@ extern class NSBundleResourceRequest
 
 	/*  The tags this request will load.  */
 	@:native("tags")
-	public var tags:Dynamic;
+	public var tags:NSSet;
 
 	/*  The bundle object that will hold the requested resources. After the -beginAccessingResourcesWithCompletionHandler: callback is invoked, you may use the standard bundle lookup APIs on this bundle object to find your resources.  */
 	@:native("bundle")

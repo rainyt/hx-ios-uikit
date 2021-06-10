@@ -6,6 +6,7 @@ import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSOrthography")
 @:include("Foundation/Foundation.h")
@@ -38,7 +39,7 @@ extern class NSOrthography
 
 	/* languagesForScript: returns the list of languages for the specified script, and dominantLanguageForScript: returns the first item on that list. */
 	@:native("languagesForScript")
-	overload public function languagesForScript(script:NSString):Dynamic;
+	overload public function languagesForScript(script:NSString):NSArray;
 
 	@:native("dominantLanguageForScript")
 	overload public function dominantLanguageForScript(script:NSString):NSString;
@@ -48,10 +49,10 @@ extern class NSOrthography
 	public var dominantLanguage:NSString;
 
 	@:native("allScripts")
-	public var allScripts:Dynamic;
+	public var allScripts:NSArray;
 
 	@:native("allLanguages")
-	public var allLanguages:Dynamic;
+	public var allLanguages:NSArray;
 
 	@:native("defaultOrthographyForLanguage")
 	overload public static function defaultOrthographyForLanguage(language:NSString):NSOrthography;

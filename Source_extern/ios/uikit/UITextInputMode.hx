@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UITextInputMode;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.objc.NSCoding;
 @:objc
 @:native("UITextInputMode")
@@ -23,7 +24,7 @@ extern class UITextInputMode
 	public var primaryLanguage:NSString;
 
 	@:native("activeInputModes")
-	overload public static function activeInputModes():Dynamic;
+	overload public static function activeInputModes():NSArray;
 
 	@:native("supportsSecureCoding")
 	overload public static function supportsSecureCoding():Bool;

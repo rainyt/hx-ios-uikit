@@ -21,7 +21,7 @@ extern class NSMetadataQueryResultGroup{
 	public var value:Dynamic;
 
 	@:native("subgroups")
-	public var subgroups:Dynamic;
+	public var subgroups:NSArray;
 
 	@:native("resultCount")
 	public var resultCount:Int;

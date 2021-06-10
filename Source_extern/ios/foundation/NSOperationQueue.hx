@@ -4,6 +4,7 @@ import ios.foundation.NSOperationQueue;
 import ios.foundation.NSProgressReporting;
 import ios.foundation.NSProgress;
 import ios.foundation.NSOperation;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import ios.foundation.NSQualityOfService;
 @:objc
@@ -26,7 +27,7 @@ extern class NSOperationQueue
 	overload public function addOperation(op:NSOperation):Void;
 
 	@:native("addOperations:waitUntilFinished")
-	overload public function addOperationsWaitUntilFinished(ops:Dynamic, waitUntilFinished:Bool):Void;
+	overload public function addOperationsWaitUntilFinished(ops:NSArray, waitUntilFinished:Bool):Void;
 
 	@:native("addOperationWithBlock")
 	overload public function addOperationWithBlock(block:Dynamic):Void;
@@ -62,7 +63,7 @@ extern class NSOperationQueue
 	overload public static function mainQueue():NSOperationQueue;
 
 	@:native("operations")
-	public var operations:Dynamic;
+	public var operations:NSArray;
 
 	@:native("operationCount")
 	public var operationCount:Int;

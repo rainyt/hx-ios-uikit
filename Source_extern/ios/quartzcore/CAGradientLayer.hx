@@ -26,7 +26,7 @@ extern class CAGradientLayer extends CALayer{
 
 	/* An optional array of NSNumber objects defining the location of each  * gradient stop as a value in the range [0,1]. The values must be  * monotonically increasing. If a nil array is given, the stops are  * assumed to spread uniformly across the [0,1] range. When rendered,  * the colors are mapped to the output colorspace before being  * interpolated. Defaults to nil. Animatable. */
 	@:native("locations")
-	public var locations:Dynamic;
+	public var locations:NSArray;
 
 	/* The start and end points of the gradient when drawn into the layer's  * coordinate space. The start point corresponds to the first gradient  * stop, the end point to the last gradient stop. Both points are  * defined in a unit coordinate space that is then mapped to the  * layer's bounds rectangle when drawn. (I.e. [0,0] is the bottom-left  * corner of the layer, [1,1] is the top-right corner.) The default values  * are [.5,0] and [.5,1] respectively. Both are animatable. */
 	@:native("startPoint")
@@ -212,7 +212,7 @@ extern class CAGradientLayer extends CALayer{
 
 	/* Returns an array containing the keys of all animations currently  * attached to the receiver. The order of the array matches the order  * in which animations will be applied. */
 	@:native("animationKeys")
-	overload public function animationKeys():Dynamic;
+	overload public function animationKeys():NSArray;
 
 	/* Returns the animation added to the layer with identifier 'key', or nil  * if no such animation exists. Attempting to modify any properties of  * the returned object will result in undefined behavior. */
 	@:native("animationForKey")

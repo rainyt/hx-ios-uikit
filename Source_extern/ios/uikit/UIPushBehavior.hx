@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDynamicBehavior;
 import ios.uikit.UIPushBehavior;
+import ios.foundation.NSArray;
 import ios.uikit.UIPushBehaviorMode;
 import ios.objc.CGVector;
 import ios.uikit.UIDynamicAnimator;
@@ -17,7 +18,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	overload public static function autorelease():UIPushBehavior;
 
 	@:native("initWithItems:mode")
-	overload public function initWithItemsMode(items:Dynamic, mode:UIPushBehaviorMode):UIPushBehavior;
+	overload public function initWithItemsMode(items:NSArray, mode:UIPushBehaviorMode):UIPushBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -26,7 +27,7 @@ extern class UIPushBehavior extends UIDynamicBehavior{
 	overload public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	@:native("targetOffsetFromCenterForItem")
 	overload public function targetOffsetFromCenterForItem(item:Dynamic):Dynamic;

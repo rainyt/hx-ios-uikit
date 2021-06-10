@@ -5,6 +5,7 @@ import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.objc.NSCoding;
 @:objc
 @:native("NSError")
@@ -52,7 +53,7 @@ extern class NSError
 
 	/* Return titles of buttons that are appropriate for displaying in an alert. These should match the string provided as a part of localizedRecoverySuggestion.  The first string would be the title of the right-most and default button, the second one next to it, and so on. If used in an alert the corresponding default return values are NSAlertFirstButtonReturn + n. Default implementation of this picks up the value of NSLocalizedRecoveryOptionsErrorKey from the userInfo dictionary. If not present, it consults the userInfoValueProvider for the domain, and if that returns nil, this also returns nil. nil return usually implies no special suggestion, which would imply a single "OK" button. */
 	@:native("localizedRecoveryOptions")
-	public var localizedRecoveryOptions:Dynamic;
+	public var localizedRecoveryOptions:NSArray;
 
 	/* Return an object that conforms to the NSErrorRecoveryAttempting informal protocol. The recovery attempter must be an object that can correctly interpret an index into the array returned by localizedRecoveryOptions. The default implementation of this picks up the value of NSRecoveryAttempterErrorKey from the userInfo dictionary. If not present, it consults the userInfoValueProvider for the domain. If that returns nil, this also returns nil. */
 	@:native("recoveryAttempter")

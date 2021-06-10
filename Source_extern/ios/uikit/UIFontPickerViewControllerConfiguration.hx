@@ -4,6 +4,7 @@ import ios.uikit.UIFontPickerViewControllerConfiguration;
 import ios.objc.NSCopying;
 import ios.uikit.UIFontDescriptorSymbolicTraits;
 import ios.foundation.NSPredicate;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIFontPickerViewControllerConfiguration")
 @:include("UIKit/UIKit.h")
@@ -30,7 +31,7 @@ extern class UIFontPickerViewControllerConfiguration
 	public var filteredLanguagesPredicate:NSPredicate;
 
 	@:native("filterPredicateForFilteredLanguages")
-	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:Dynamic):NSPredicate;
+	overload public static function filterPredicateForFilteredLanguages(filteredLanguages:NSArray):NSPredicate;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

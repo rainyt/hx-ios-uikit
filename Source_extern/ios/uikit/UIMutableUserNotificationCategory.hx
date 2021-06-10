@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIUserNotificationCategory;
 import ios.uikit.UIMutableUserNotificationCategory;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.uikit.UIUserNotificationActionContext;
 import ios.uikit.NSCoder;
 @:objc
@@ -17,7 +18,7 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	overload public static function autorelease():UIMutableUserNotificationCategory;
 
 	@:native("setActions:forContext")
-	overload public function setActionsForContext(actions:Dynamic, forContext:UIUserNotificationActionContext):Void;
+	overload public function setActionsForContext(actions:NSArray, forContext:UIUserNotificationActionContext):Void;
 
 	@:native("init")
 	overload public function init():UIUserNotificationCategory;
@@ -26,7 +27,7 @@ extern class UIMutableUserNotificationCategory extends UIUserNotificationCategor
 	overload public function initWithCoder(coder:NSCoder):UIMutableUserNotificationCategory;
 
 	@:native("actionsForContext")
-	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;
+	overload public function actionsForContext(context:UIUserNotificationActionContext):NSArray;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

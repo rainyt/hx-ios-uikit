@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UITextPasteDelegate;
 import cpp.objc.NSObject;
 import ios.uikit.NSAttributedString;
+import ios.foundation.NSArray;
 import ios.uikit.UITextRange;
 @:objc
 @:native("UITextPasteDelegate")
@@ -52,7 +53,7 @@ extern interface UITextPasteDelegate
 
 	/*  * When you want to alter how the different item strings are combined  * into one string, you can implement this method.  * By default, all strings will just be concatenated without any delimiters,  * but you are free to do what you want here.  * The target text range is provided so you can alter behavior here depending on  * where the text will be dropped.  */
 	@:native("textPasteConfigurationSupporting:combineItemAttributedStrings:forRange")
-	overload public function textPasteConfigurationSupportingCombineItemAttributedStringsForRange(textPasteConfigurationSupporting:Dynamic, combineItemAttributedStrings:Dynamic, forRange:UITextRange):NSAttributedString;
+	overload public function textPasteConfigurationSupportingCombineItemAttributedStringsForRange(textPasteConfigurationSupporting:Dynamic, combineItemAttributedStrings:NSArray, forRange:UITextRange):NSAttributedString;
 
 	/*  * Handle the pasting of the final string. This will be a combination of all pasted items.  * It this is not implemented, the standard paste mechanism will be used.  * The target range will be a zero length range for normal pastes, but might be  * non-zero for text drops (see text drop API).  * Please honor this range as doing something different here will be confusing  * to the user.  * Return the resulting text range from the method (or nil to indicate no changes to the range).  * This might be used to select the range for text drops.  */
 	@:native("textPasteConfigurationSupporting:performPasteOfAttributedString:toRange")

@@ -5,6 +5,7 @@ import ios.foundation.NSURL;
 import cpp.objc.NSData;
 import ios.foundation.NSInputStream;
 import ios.foundation.NSXMLParserExternalEntityResolvingPolicy;
+import ios.foundation.NSSet;
 import cpp.objc.NSError;
 import cpp.objc.NSString;
 @:objc
@@ -40,7 +41,7 @@ extern class NSXMLParser{
 	public var externalEntityResolvingPolicy:NSXMLParserExternalEntityResolvingPolicy;
 
 	@:native("allowedExternalEntityURLs")
-	public var allowedExternalEntityURLs:Dynamic;
+	public var allowedExternalEntityURLs:NSSet;
 
 	@:native("parse")
 	overload public function parse():Bool;

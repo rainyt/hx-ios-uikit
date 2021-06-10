@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UILexicon;
 import ios.objc.NSCopying;
+import ios.foundation.NSArray;
 @:objc
 @:native("UILexicon")
 @:include("UIKit/UIKit.h")
@@ -16,7 +17,7 @@ extern class UILexicon
 	overload public static function autorelease():UILexicon;
 
 	@:native("entries")
-	public var entries:Dynamic;
+	public var entries:NSArray;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

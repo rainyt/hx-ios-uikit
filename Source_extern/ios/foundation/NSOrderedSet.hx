@@ -3,7 +3,9 @@ package ios.foundation;
 import ios.foundation.NSOrderedSet;
 import ios.foundation.NSPredicate;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 import ios.foundation.NSIndexSet;
+import ios.foundation.NSSet;
 import ios.foundation.NSEnumerator;
 import ios.foundation.NSEnumerationOptions;
 import ios.foundation.NSSortOptions;
@@ -50,7 +52,7 @@ extern class NSOrderedSet
 	overload public function getObjectsRange(objects:Dynamic, range:Dynamic):Void;
 
 	@:native("objectsAtIndexes")
-	overload public function objectsAtIndexes(indexes:NSIndexSet):Dynamic;
+	overload public function objectsAtIndexes(indexes:NSIndexSet):NSArray;
 
 	@:native("firstObject")
 	public var firstObject:Dynamic;
@@ -68,13 +70,13 @@ extern class NSOrderedSet
 	overload public function intersectsOrderedSet(other:NSOrderedSet):Bool;
 
 	@:native("intersectsSet")
-	overload public function intersectsSet(set:Dynamic):Bool;
+	overload public function intersectsSet(set:NSSet):Bool;
 
 	@:native("isSubsetOfOrderedSet")
 	overload public function isSubsetOfOrderedSet(other:NSOrderedSet):Bool;
 
 	@:native("isSubsetOfSet")
-	overload public function isSubsetOfSet(set:Dynamic):Bool;
+	overload public function isSubsetOfSet(set:NSSet):Bool;
 
 	@:native("objectAtIndexedSubscript")
 	overload public function objectAtIndexedSubscript(idx:Int):Dynamic;
@@ -89,10 +91,10 @@ extern class NSOrderedSet
 	public var reversedOrderedSet:NSOrderedSet;
 
 	@:native("array")
-	public var array:Dynamic;
+	public var array:NSArray;
 
 	@:native("set")
-	public var set:Dynamic;
+	public var set:NSSet;
 
 	@:native("enumerateObjectsUsingBlock")
 	overload public function enumerateObjectsUsingBlock(block:Dynamic):Void;
@@ -125,10 +127,10 @@ extern class NSOrderedSet
 	overload public function indexOfObjectInSortedRangeOptionsUsingComparator(object:Dynamic, inSortedRange:Dynamic, options:Dynamic, usingComparator:Dynamic):Int;
 
 	@:native("sortedArrayUsingComparator")
-	overload public function sortedArrayUsingComparator(cmptr:Dynamic):Dynamic;
+	overload public function sortedArrayUsingComparator(cmptr:Dynamic):NSArray;
 
 	@:native("sortedArrayWithOptions:usingComparator")
-	overload public function sortedArrayWithOptionsUsingComparator(opts:NSSortOptions, usingComparator:Dynamic):Dynamic;
+	overload public function sortedArrayWithOptionsUsingComparator(opts:NSSortOptions, usingComparator:Dynamic):NSArray;
 
 	@:native("description")
 	public var description:NSString;
@@ -158,16 +160,16 @@ extern class NSOrderedSet
 	overload public static function orderedSetWithOrderedSetRangeCopyItems(set:NSOrderedSet, range:Dynamic, copyItems:Bool):NSOrderedSet;
 
 	@:native("orderedSetWithArray")
-	overload public static function orderedSetWithArray(array:Dynamic):NSOrderedSet;
+	overload public static function orderedSetWithArray(array:NSArray):NSOrderedSet;
 
 	@:native("orderedSetWithArray:range:copyItems")
-	overload public static function orderedSetWithArrayRangeCopyItems(array:Dynamic, range:Dynamic, copyItems:Bool):NSOrderedSet;
+	overload public static function orderedSetWithArrayRangeCopyItems(array:NSArray, range:Dynamic, copyItems:Bool):NSOrderedSet;
 
 	@:native("orderedSetWithSet")
-	overload public static function orderedSetWithSet(set:Dynamic):NSOrderedSet;
+	overload public static function orderedSetWithSet(set:NSSet):NSOrderedSet;
 
 	@:native("orderedSetWithSet:copyItems")
-	overload public static function orderedSetWithSetCopyItems(set:Dynamic, copyItems:Bool):NSOrderedSet;
+	overload public static function orderedSetWithSetCopyItems(set:NSSet, copyItems:Bool):NSOrderedSet;
 
 	@:native("initWithObject")
 	overload public function initWithObject(object:Dynamic):NSOrderedSet;
@@ -185,19 +187,19 @@ extern class NSOrderedSet
 	overload public function initWithOrderedSetRangeCopyItems(set:NSOrderedSet, range:Dynamic, copyItems:Bool):NSOrderedSet;
 
 	@:native("initWithArray")
-	overload public function initWithArray(array:Dynamic):NSOrderedSet;
+	overload public function initWithArray(array:NSArray):NSOrderedSet;
 
 	@:native("initWithArray:copyItems")
-	overload public function initWithArrayCopyItems(set:Dynamic, copyItems:Bool):NSOrderedSet;
+	overload public function initWithArrayCopyItems(set:NSArray, copyItems:Bool):NSOrderedSet;
 
 	@:native("initWithArray:range:copyItems")
-	overload public function initWithArrayRangeCopyItems(set:Dynamic, range:Dynamic, copyItems:Bool):NSOrderedSet;
+	overload public function initWithArrayRangeCopyItems(set:NSArray, range:Dynamic, copyItems:Bool):NSOrderedSet;
 
 	@:native("initWithSet")
-	overload public function initWithSet(set:Dynamic):NSOrderedSet;
+	overload public function initWithSet(set:NSSet):NSOrderedSet;
 
 	@:native("initWithSet:copyItems")
-	overload public function initWithSetCopyItems(set:Dynamic, copyItems:Bool):NSOrderedSet;
+	overload public function initWithSetCopyItems(set:NSSet, copyItems:Bool):NSOrderedSet;
 
 	@:native("differenceFromOrderedSet:withOptions:usingEquivalenceTest")
 	overload public function differenceFromOrderedSetWithOptionsUsingEquivalenceTest(other:NSOrderedSet, withOptions:NSOrderedCollectionDifferenceCalculationOptions, usingEquivalenceTest:Dynamic):NSOrderedCollectionDifference;
@@ -230,7 +232,7 @@ extern class NSOrderedSet
 	overload public function removeObserverForKeyPath(observer:NSObject, forKeyPath:NSString):Void;
 
 	@:native("sortedArrayUsingDescriptors")
-	overload public function sortedArrayUsingDescriptors(sortDescriptors:Dynamic):Dynamic;
+	overload public function sortedArrayUsingDescriptors(sortDescriptors:NSArray):NSArray;
 
 
 }

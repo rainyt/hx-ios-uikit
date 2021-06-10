@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDynamicItemGroup;
 import ios.uikit.UIDynamicItem;
+import ios.foundation.NSArray;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
@@ -21,10 +22,10 @@ extern class UIDynamicItemGroup
 	overload public static function autorelease():UIDynamicItemGroup;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):UIDynamicItemGroup;
+	overload public function initWithItems(items:NSArray):UIDynamicItemGroup;
 
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	@:native("center")
 	public var center:CGPoint;

@@ -4,6 +4,7 @@ import ios.uikit.UIViewController;
 import ios.uikit.UITabBarController;
 import ios.uikit.UITabBarDelegate;
 import ios.objc.NSCoding;
+import ios.foundation.NSArray;
 import ios.uikit.UINavigationController;
 import ios.uikit.UITabBar;
 import ios.uikit.UITabBarItem;
@@ -16,6 +17,7 @@ import ios.uikit.UIViewAnimationOptions;
 import ios.uikit.UITraitCollection;
 import ios.uikit.UIKeyCommand;
 import ios.uikit.UISplitViewController;
+import ios.foundation.NSSet;
 import ios.uikit.UIEvent;
 import ios.uikit.UIPressesEvent;
 import ios.uikit.UIEventSubtype;
@@ -47,10 +49,10 @@ extern class UITabBarController extends UIViewController
 	overload public static function autorelease():UITabBarController;
 
 	@:native("viewControllers")
-	public var viewControllers:Dynamic;
+	public var viewControllers:NSArray;
 
 	@:native("setViewControllers:animated")
-	overload public function setViewControllersAnimated(viewControllers:Dynamic, animated:Bool):Void;
+	overload public function setViewControllersAnimated(viewControllers:NSArray, animated:Bool):Void;
 
 	@:native("selectedViewController")
 	public var selectedViewController:UIViewController;
@@ -62,7 +64,7 @@ extern class UITabBarController extends UIViewController
 	public var moreNavigationController:UINavigationController;
 
 	@:native("customizableViewControllers")
-	public var customizableViewControllers:Dynamic;
+	public var customizableViewControllers:NSArray;
 
 	@:native("tabBar")
 	public var tabBar:UITabBar;
@@ -75,16 +77,16 @@ extern class UITabBarController extends UIViewController
 
 	/* called when user shows or dismisses customize sheet. you can use the 'willEnd' to set up what appears underneath.   changed is YES if there was some change to which items are visible or which order they appear. If selectedItem is no longer visible,   it will be set to nil.  */
 	@:native("tabBar:willBeginCustomizingItems")
-	overload public function tabBarWillBeginCustomizingItems(tabBar:UITabBar, willBeginCustomizingItems:Dynamic):Void;
+	overload public function tabBarWillBeginCustomizingItems(tabBar:UITabBar, willBeginCustomizingItems:NSArray):Void;
 
 	@:native("tabBar:didBeginCustomizingItems")
-	overload public function tabBarDidBeginCustomizingItems(tabBar:UITabBar, didBeginCustomizingItems:Dynamic):Void;
+	overload public function tabBarDidBeginCustomizingItems(tabBar:UITabBar, didBeginCustomizingItems:NSArray):Void;
 
 	@:native("tabBar:willEndCustomizingItems:changed")
-	overload public function tabBarWillEndCustomizingItemsChanged(tabBar:UITabBar, willEndCustomizingItems:Dynamic, changed:Bool):Void;
+	overload public function tabBarWillEndCustomizingItemsChanged(tabBar:UITabBar, willEndCustomizingItems:NSArray, changed:Bool):Void;
 
 	@:native("tabBar:didEndCustomizingItems:changed")
-	overload public function tabBarDidEndCustomizingItemsChanged(tabBar:UITabBar, didEndCustomizingItems:Dynamic, changed:Bool):Void;
+	overload public function tabBarDidEndCustomizingItemsChanged(tabBar:UITabBar, didEndCustomizingItems:NSArray, changed:Bool):Void;
 
 	/** Haxe Protocol */
 	@:native("encodeWithCoder")
@@ -123,7 +125,7 @@ extern class UITabBarController extends UIViewController
 	overload public function canPerformUnwindSegueActionFromViewControllerSender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -249,7 +251,7 @@ extern class UITabBarController extends UIViewController
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItemsAnimated(toolbarItems:Dynamic, animated:Bool):Void;
+	overload public function setToolbarItemsAnimated(toolbarItems:NSArray, animated:Bool):Void;
 
 	/* Called on the primary view controller when a split view controller is collapsing its children for a transition to a compact-width size class, if its delegate does not provide overridden behavior. The default implementation simply shows the primary (the secondary controller disappears.) */
 	@:native("collapseSecondaryViewController:forSplitViewController")
@@ -266,31 +268,31 @@ extern class UITabBarController extends UIViewController
 	overload public function resignFirstResponder():Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
+	overload public function touchesEstimatedPropertiesUpdated(touches:NSSet):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
 	overload public function motionBeganWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;

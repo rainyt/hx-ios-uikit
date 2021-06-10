@@ -4,6 +4,7 @@ import ios.storekit.SKProduct;
 import cpp.objc.NSString;
 import ios.foundation.NSDecimalNumber;
 import ios.foundation.NSLocale;
+import ios.foundation.NSArray;
 import ios.storekit.SKProductSubscriptionPeriod;
 import ios.storekit.SKProductDiscount;
 @:objc
@@ -42,10 +43,10 @@ extern class SKProduct{
 	public var isFamilyShareable:Bool;
 
 	@:native("contentLengths")
-	public var contentLengths:Dynamic;
+	public var contentLengths:NSArray;
 
 	@:native("downloadContentLengths")
-	public var downloadContentLengths:Dynamic;
+	public var downloadContentLengths:NSArray;
 
 	@:native("contentVersion")
 	public var contentVersion:NSString;
@@ -63,7 +64,7 @@ extern class SKProduct{
 	public var subscriptionGroupIdentifier:NSString;
 
 	@:native("discounts")
-	public var discounts:Dynamic;
+	public var discounts:NSArray;
 
 
 }

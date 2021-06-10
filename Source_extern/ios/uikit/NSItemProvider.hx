@@ -7,6 +7,7 @@ import ios.uikit.UIPreferredPresentationStyle;
 import cpp.objc.NSString;
 import ios.foundation.NSItemProviderRepresentationVisibility;
 import ios.foundation.NSItemProviderFileOptions;
+import ios.foundation.NSArray;
 import ios.foundation.NSProgress;
 import cpp.objc.NSDictionary;
 @:objc
@@ -39,10 +40,10 @@ extern class NSItemProvider{
 	overload public function registerFileRepresentationForTypeIdentifierFileOptionsVisibilityLoadHandler(typeIdentifier:NSString, fileOptions:NSItemProviderFileOptions, visibility:NSItemProviderRepresentationVisibility, loadHandler:Dynamic):Void;
 
 	@:native("registeredTypeIdentifiers")
-	public var registeredTypeIdentifiers:Dynamic;
+	public var registeredTypeIdentifiers:NSArray;
 
 	@:native("registeredTypeIdentifiersWithFileOptions")
-	overload public function registeredTypeIdentifiersWithFileOptions(fileOptions:NSItemProviderFileOptions):Dynamic;
+	overload public function registeredTypeIdentifiersWithFileOptions(fileOptions:NSItemProviderFileOptions):NSArray;
 
 	@:native("hasItemConformingToTypeIdentifier")
 	overload public function hasItemConformingToTypeIdentifier(typeIdentifier:NSString):Bool;

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIPreviewParameters;
 import ios.uikit.UIDragPreviewParameters;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIDragPreviewParameters")
 @:include("UIKit/UIKit.h")
@@ -19,7 +20,7 @@ extern class UIDragPreviewParameters extends UIPreviewParameters{
 
 	/* Parameters to show a preview of text.  *  * To clip the preview to only specific lines of text, specify one or more  * `NSValue`s containing `CGRect`s of those lines, in the view's coordinate  * system.  *  * The `visiblePath` property below will be set to a path based on the rects.  * If `textLineRects` is empty, the whole view will be shown.  */
 	@:native("initWithTextLineRects")
-	overload public function initWithTextLineRects(textLineRects:Dynamic):UIDragPreviewParameters;
+	overload public function initWithTextLineRects(textLineRects:NSArray):UIDragPreviewParameters;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

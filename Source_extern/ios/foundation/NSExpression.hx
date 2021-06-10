@@ -48,7 +48,7 @@ extern class NSExpression
 	overload public static function expressionForFunctionArguments(name:NSString, arguments:NSArray):NSExpression;
 
 	@:native("expressionForAggregate")
-	overload public static function expressionForAggregate(subexpressions:Dynamic):NSExpression;
+	overload public static function expressionForAggregate(subexpressions:NSArray):NSExpression;
 
 	@:native("expressionForUnionSet:with")
 	overload public static function expressionForUnionSetWith(left:NSExpression, with:NSExpression):NSExpression;
@@ -69,7 +69,7 @@ extern class NSExpression
 	overload public static function expressionForAnyKey():NSExpression;
 
 	@:native("expressionForBlock:arguments")
-	overload public static function expressionForBlockArguments(block:Dynamic, arguments:Dynamic):NSExpression;
+	overload public static function expressionForBlockArguments(block:Dynamic, arguments:NSArray):NSExpression;
 
 	@:native("expressionForConditional:trueExpression:falseExpression")
 	overload public static function expressionForConditionalTrueExpressionFalseExpression(predicate:NSPredicate, trueExpression:NSExpression, falseExpression:NSExpression):NSExpression;
@@ -99,7 +99,7 @@ extern class NSExpression
 	public var operand:NSExpression;
 
 	@:native("arguments")
-	public var arguments:Dynamic;
+	public var arguments:NSArray;
 
 	@:native("collection")
 	public var collection:Dynamic;

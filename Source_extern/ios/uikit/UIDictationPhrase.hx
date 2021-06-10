@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDictationPhrase;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIDictationPhrase")
 @:include("UIKit/UIKit.h")
@@ -18,7 +19,7 @@ extern class UIDictationPhrase{
 	public var text:NSString;
 
 	@:native("alternativeInterpretations")
-	public var alternativeInterpretations:Dynamic;
+	public var alternativeInterpretations:NSArray;
 
 
 }

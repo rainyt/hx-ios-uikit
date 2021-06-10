@@ -2,6 +2,7 @@ package ios.quartzcore;
 
 import ios.quartzcore.CAAnimation;
 import ios.quartzcore.CAAnimationGroup;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 @:objc
 @:native("CAAnimationGroup")
@@ -16,7 +17,7 @@ extern class CAAnimationGroup extends CAAnimation{
 
 	/* An array of CAAnimation objects. Each member of the array will run  * concurrently in the time space of the parent animation using the  * normal rules. */
 	@:native("animations")
-	public var animations:Dynamic;
+	public var animations:NSArray;
 
 	/* Creates a new animation object. */
 	@:native("animation")

@@ -7,12 +7,14 @@ import ios.uikit.UIImagePickerControllerQualityType;
 import ios.uikit.UIViewController;
 import ios.uikit.NSBundle;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 import ios.uikit.UIStoryboardSegue;
 import ios.uikit.UIStoryboardUnwindSegueSource;
 import ios.uikit.UIViewAnimationOptions;
 import ios.uikit.UITraitCollection;
 import ios.uikit.UIKeyCommand;
 import ios.uikit.UISplitViewController;
+import ios.foundation.NSSet;
 import ios.uikit.UIEvent;
 import ios.uikit.UIPressesEvent;
 import ios.uikit.UIEventSubtype;
@@ -61,13 +63,13 @@ extern class UIVideoEditorController extends UINavigationController{
 	overload public function popViewControllerAnimated(animated:Bool):UIViewController;
 
 	@:native("popToViewController:animated")
-	overload public function popToViewControllerAnimated(viewController:UIViewController, animated:Bool):Dynamic;
+	overload public function popToViewControllerAnimated(viewController:UIViewController, animated:Bool):NSArray;
 
 	@:native("popToRootViewControllerAnimated")
-	overload public function popToRootViewControllerAnimated(animated:Bool):Dynamic;
+	overload public function popToRootViewControllerAnimated(animated:Bool):NSArray;
 
 	@:native("setViewControllers:animated")
-	overload public function setViewControllersAnimated(viewControllers:Dynamic, animated:Bool):Void;
+	overload public function setViewControllersAnimated(viewControllers:NSArray, animated:Bool):Void;
 
 	@:native("setNavigationBarHidden:animated")
 	overload public function setNavigationBarHiddenAnimated(hidden:Bool, animated:Bool):Void;
@@ -104,7 +106,7 @@ extern class UIVideoEditorController extends UINavigationController{
 	overload public function canPerformUnwindSegueActionFromViewControllerSender(action:String, fromViewController:UIViewController, sender:Dynamic):Bool;
 
 	@:native("allowedChildViewControllersForUnwindingFromSource")
-	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):Dynamic;
+	overload public function allowedChildViewControllersForUnwindingFromSource(source:UIStoryboardUnwindSegueSource):NSArray;
 
 	@:native("childViewControllerContainingSegueSource")
 	overload public function childViewControllerContainingSegueSource(source:UIStoryboardUnwindSegueSource):UIViewController;
@@ -226,7 +228,7 @@ extern class UIVideoEditorController extends UINavigationController{
 	overload public function setNeedsUpdateOfPrefersPointerLocked():Void;
 
 	@:native("setToolbarItems:animated")
-	overload public function setToolbarItemsAnimated(toolbarItems:Dynamic, animated:Bool):Void;
+	overload public function setToolbarItemsAnimated(toolbarItems:NSArray, animated:Bool):Void;
 
 	/* Called on the primary view controller when a split view controller is collapsing its children for a transition to a compact-width size class, if its delegate does not provide overridden behavior. The default implementation simply shows the primary (the secondary controller disappears.) */
 	@:native("collapseSecondaryViewController:forSplitViewController")
@@ -243,31 +245,31 @@ extern class UIVideoEditorController extends UINavigationController{
 	overload public function resignFirstResponder():Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
+	overload public function touchesEstimatedPropertiesUpdated(touches:NSSet):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
 	overload public function motionBeganWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;

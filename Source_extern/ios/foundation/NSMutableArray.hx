@@ -51,7 +51,7 @@ extern class NSMutableArray extends NSArray
 	overload public function initWithCapacity(numItems:Int):NSMutableArray;
 
 	@:native("addObjectsFromArray")
-	overload public function addObjectsFromArray(otherArray:Dynamic):Void;
+	overload public function addObjectsFromArray(otherArray:NSArray):Void;
 
 	@:native("exchangeObjectAtIndex:withObjectAtIndex")
 	overload public function exchangeObjectAtIndexWithObjectAtIndex(idx1:Int, withObjectAtIndex:Int):Void;
@@ -72,19 +72,19 @@ extern class NSMutableArray extends NSArray
 	overload public function removeObjectIdenticalTo(anObject:Dynamic):Void;
 
 	@:native("removeObjectsInArray")
-	overload public function removeObjectsInArray(otherArray:Dynamic):Void;
+	overload public function removeObjectsInArray(otherArray:NSArray):Void;
 
 	@:native("removeObjectsInRange")
 	overload public function removeObjectsInRange(range:Dynamic):Void;
 
 	@:native("replaceObjectsInRange:withObjectsFromArray:range")
-	overload public function replaceObjectsInRangeWithObjectsFromArrayRange(range:Dynamic, withObjectsFromArray:Dynamic, range:Dynamic):Void;
+	overload public function replaceObjectsInRangeWithObjectsFromArrayRange(range:Dynamic, withObjectsFromArray:NSArray, range:Dynamic):Void;
 
 	@:native("replaceObjectsInRange:withObjectsFromArray")
-	overload public function replaceObjectsInRangeWithObjectsFromArray(range:Dynamic, withObjectsFromArray:Dynamic):Void;
+	overload public function replaceObjectsInRangeWithObjectsFromArray(range:Dynamic, withObjectsFromArray:NSArray):Void;
 
 	@:native("setArray")
-	overload public function setArray(otherArray:Dynamic):Void;
+	overload public function setArray(otherArray:NSArray):Void;
 
 	@:native("sortUsingFunction:context")
 	overload public function sortUsingFunctionContext(compare:Dynamic, context:Void):Void;
@@ -93,13 +93,13 @@ extern class NSMutableArray extends NSArray
 	overload public function sortUsingSelector(comparator:String):Void;
 
 	@:native("insertObjects:atIndexes")
-	overload public function insertObjectsAtIndexes(objects:Dynamic, atIndexes:NSIndexSet):Void;
+	overload public function insertObjectsAtIndexes(objects:NSArray, atIndexes:NSIndexSet):Void;
 
 	@:native("removeObjectsAtIndexes")
 	overload public function removeObjectsAtIndexes(indexes:NSIndexSet):Void;
 
 	@:native("replaceObjectsAtIndexes:withObjects")
-	overload public function replaceObjectsAtIndexesWithObjects(indexes:NSIndexSet, withObjects:Dynamic):Void;
+	overload public function replaceObjectsAtIndexesWithObjects(indexes:NSIndexSet, withObjects:NSArray):Void;
 
 	@:native("setObject:atIndexedSubscript")
 	overload public function setObjectAtIndexedSubscript(obj:Dynamic, atIndexedSubscript:Int):Void;
@@ -129,10 +129,10 @@ extern class NSMutableArray extends NSArray
 	overload public function applyDifference(difference:NSOrderedCollectionDifference):Void;
 
 	@:native("sortUsingDescriptors")
-	overload public function sortUsingDescriptors(sortDescriptors:Dynamic):Void;
+	overload public function sortUsingDescriptors(sortDescriptors:NSArray):Void;
 
 	@:native("filteredArrayUsingPredicate")
-	overload public function filteredArrayUsingPredicate(predicate:NSPredicate):Dynamic;
+	overload public function filteredArrayUsingPredicate(predicate:NSPredicate):NSArray;
 
 	@:native("objectAtIndex")
 	overload public function objectAtIndex(index:Int):Dynamic;
@@ -147,10 +147,10 @@ extern class NSMutableArray extends NSArray
 	overload public function initWithCoder(coder:NSCoder):NSMutableArray;
 
 	@:native("arrayByAddingObject")
-	overload public function arrayByAddingObject(anObject:Dynamic):Dynamic;
+	overload public function arrayByAddingObject(anObject:Dynamic):NSArray;
 
 	@:native("arrayByAddingObjectsFromArray")
-	overload public function arrayByAddingObjectsFromArray(otherArray:Dynamic):Dynamic;
+	overload public function arrayByAddingObjectsFromArray(otherArray:NSArray):NSArray;
 
 	@:native("componentsJoinedByString")
 	overload public function componentsJoinedByString(separator:NSString):NSString;
@@ -165,7 +165,7 @@ extern class NSMutableArray extends NSArray
 	overload public function descriptionWithLocaleIndent(locale:Dynamic, indent:Int):NSString;
 
 	@:native("firstObjectCommonWithArray")
-	overload public function firstObjectCommonWithArray(otherArray:Dynamic):Dynamic;
+	overload public function firstObjectCommonWithArray(otherArray:NSArray):Dynamic;
 
 	@:native("getObjects:range")
 	overload public function getObjectsRange(objects:Dynamic, range:Dynamic):Void;
@@ -183,7 +183,7 @@ extern class NSMutableArray extends NSArray
 	overload public function indexOfObjectIdenticalToInRange(anObject:Dynamic, inRange:Dynamic):Int;
 
 	@:native("isEqualToArray")
-	overload public function isEqualToArray(otherArray:Dynamic):Bool;
+	overload public function isEqualToArray(otherArray:NSArray):Bool;
 
 	@:native("objectEnumerator")
 	overload public function objectEnumerator():NSEnumerator;
@@ -192,16 +192,16 @@ extern class NSMutableArray extends NSArray
 	overload public function reverseObjectEnumerator():NSEnumerator;
 
 	@:native("sortedArrayUsingFunction:context")
-	overload public function sortedArrayUsingFunctionContext(comparator:Dynamic, context:Void):Dynamic;
+	overload public function sortedArrayUsingFunctionContext(comparator:Dynamic, context:Void):NSArray;
 
 	@:native("sortedArrayUsingFunction:context:hint")
-	overload public function sortedArrayUsingFunctionContextHint(comparator:Dynamic, context:Void, hint:NSData):Dynamic;
+	overload public function sortedArrayUsingFunctionContextHint(comparator:Dynamic, context:Void, hint:NSData):NSArray;
 
 	@:native("sortedArrayUsingSelector")
-	overload public function sortedArrayUsingSelector(comparator:String):Dynamic;
+	overload public function sortedArrayUsingSelector(comparator:String):NSArray;
 
 	@:native("subarrayWithRange")
-	overload public function subarrayWithRange(range:Dynamic):Dynamic;
+	overload public function subarrayWithRange(range:Dynamic):NSArray;
 
 	/* Serializes this instance to the specified URL in the NSPropertyList format (using NSPropertyListXMLFormat_v1_0). For other formats use NSPropertyListSerialization directly. */
 	@:native("writeToURL:error")
@@ -214,7 +214,7 @@ extern class NSMutableArray extends NSArray
 	overload public function makeObjectsPerformSelectorWithObject(aSelector:String, withObject:Dynamic):Void;
 
 	@:native("objectsAtIndexes")
-	overload public function objectsAtIndexes(indexes:NSIndexSet):Dynamic;
+	overload public function objectsAtIndexes(indexes:NSIndexSet):NSArray;
 
 	@:native("objectAtIndexedSubscript")
 	overload public function objectAtIndexedSubscript(idx:Int):Dynamic;
@@ -247,10 +247,10 @@ extern class NSMutableArray extends NSArray
 	overload public function indexesOfObjectsAtIndexesOptionsPassingTest(s:NSIndexSet, options:NSEnumerationOptions, passingTest:Dynamic):NSIndexSet;
 
 	@:native("sortedArrayUsingComparator")
-	overload public function sortedArrayUsingComparator(cmptr:Dynamic):Dynamic;
+	overload public function sortedArrayUsingComparator(cmptr:Dynamic):NSArray;
 
 	@:native("sortedArrayWithOptions:usingComparator")
-	overload public function sortedArrayWithOptionsUsingComparator(opts:NSSortOptions, usingComparator:Dynamic):Dynamic;
+	overload public function sortedArrayWithOptionsUsingComparator(opts:NSSortOptions, usingComparator:Dynamic):NSArray;
 
 	@:native("indexOfObject:inSortedRange:options:usingComparator")
 	overload public function indexOfObjectInSortedRangeOptionsUsingComparator(obj:Dynamic, inSortedRange:Dynamic, options:Dynamic, usingComparator:Dynamic):Int;
@@ -268,36 +268,36 @@ extern class NSMutableArray extends NSArray
 	overload public static function arrayWithObjects(firstObj:Dynamic):NSMutableArray;
 
 	@:native("arrayWithArray")
-	overload public static function arrayWithArray(array:Dynamic):NSMutableArray;
+	overload public static function arrayWithArray(array:NSArray):NSMutableArray;
 
 	@:native("initWithObjects")
 	overload public function initWithObjects(firstObj:Dynamic):NSMutableArray;
 
 	@:native("initWithArray")
-	overload public function initWithArray(array:Dynamic):NSMutableArray;
+	overload public function initWithArray(array:NSArray):NSMutableArray;
 
 	@:native("initWithArray:copyItems")
-	overload public function initWithArrayCopyItems(array:Dynamic, copyItems:Bool):NSMutableArray;
+	overload public function initWithArrayCopyItems(array:NSArray, copyItems:Bool):NSMutableArray;
 
 	/* Reads array stored in NSPropertyList format from the specified url. */
 	@:native("initWithContentsOfURL:error")
-	overload public function initWithContentsOfURLError(url:NSURL, error:NSError):Dynamic;
+	overload public function initWithContentsOfURLError(url:NSURL, error:NSError):NSMutableArray;
 
 	/* Reads array stored in NSPropertyList format from the specified url. */
 	@:native("arrayWithContentsOfURL:error")
-	overload public static function arrayWithContentsOfURLError(url:NSURL, error:NSError):Dynamic;
+	overload public static function arrayWithContentsOfURLError(url:NSURL, error:NSError):NSMutableArray;
 
 	@:native("differenceFromArray:withOptions:usingEquivalenceTest")
-	overload public function differenceFromArrayWithOptionsUsingEquivalenceTest(other:Dynamic, withOptions:NSOrderedCollectionDifferenceCalculationOptions, usingEquivalenceTest:Dynamic):NSOrderedCollectionDifference;
+	overload public function differenceFromArrayWithOptionsUsingEquivalenceTest(other:NSArray, withOptions:NSOrderedCollectionDifferenceCalculationOptions, usingEquivalenceTest:Dynamic):NSOrderedCollectionDifference;
 
 	@:native("differenceFromArray:withOptions")
-	overload public function differenceFromArrayWithOptions(other:Dynamic, withOptions:NSOrderedCollectionDifferenceCalculationOptions):NSOrderedCollectionDifference;
+	overload public function differenceFromArrayWithOptions(other:NSArray, withOptions:NSOrderedCollectionDifferenceCalculationOptions):NSOrderedCollectionDifference;
 
 	@:native("differenceFromArray")
-	overload public function differenceFromArray(other:Dynamic):NSOrderedCollectionDifference;
+	overload public function differenceFromArray(other:NSArray):NSOrderedCollectionDifference;
 
 	@:native("arrayByApplyingDifference")
-	overload public function arrayByApplyingDifference(difference:NSOrderedCollectionDifference):Dynamic;
+	overload public function arrayByApplyingDifference(difference:NSOrderedCollectionDifference):NSArray;
 
 	/* Return an array containing the results of invoking -valueForKey: on each of the receiver's elements. The returned array will contain NSNull elements for each instance of -valueForKey: returning nil. */
 	@:native("valueForKey")
@@ -308,7 +308,7 @@ extern class NSMutableArray extends NSArray
 	overload public function setValueForKey(value:Dynamic, forKey:NSString):Void;
 
 	@:native("pathsMatchingExtensions")
-	overload public function pathsMatchingExtensions(filterTypes:Dynamic):Dynamic;
+	overload public function pathsMatchingExtensions(filterTypes:NSArray):NSArray;
 
 	/* Register or deregister as an observer of the values at a key path relative to each indexed element of the array. The options determine what is included in observer notifications and when they're sent, as described above, and the context is passed in observer notifications as described above. These are not merely convenience methods; invoking them is potentially much faster than repeatedly invoking NSObject(NSKeyValueObserverRegistration) methods. You should use -removeObserver:fromObjectsAtIndexes:forKeyPath:context: instead of -removeObserver:fromObjectsAtIndexes:forKeyPath: whenever possible for the same reason described in the NSObject(NSKeyValueObserverRegistration) comment. */
 	@:native("addObserver:toObjectsAtIndexes:forKeyPath:options:context")
@@ -331,7 +331,7 @@ extern class NSMutableArray extends NSArray
 	overload public function removeObserverForKeyPath(observer:NSObject, forKeyPath:NSString):Void;
 
 	@:native("sortedArrayUsingDescriptors")
-	overload public function sortedArrayUsingDescriptors(sortDescriptors:Dynamic):Dynamic;
+	overload public function sortedArrayUsingDescriptors(sortDescriptors:NSArray):NSArray;
 
 
 }

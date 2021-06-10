@@ -4,6 +4,7 @@ import ios.uikit.UIPickerViewAccessibilityDelegate;
 import ios.uikit.UIPickerViewDelegate;
 import cpp.objc.NSString;
 import ios.uikit.UIPickerView;
+import ios.foundation.NSArray;
 import ios.uikit.NSAttributedString;
 import ios.uikit.UIView;
 @:objc
@@ -31,7 +32,7 @@ extern interface UIPickerViewAccessibilityDelegate
 	overload public function pickerViewAccessibilityHintForComponent(pickerView:UIPickerView, accessibilityHintForComponent:Int):NSString;
 
 	@:native("pickerView:accessibilityUserInputLabelsForComponent")
-	overload public function pickerViewAccessibilityUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityUserInputLabelsForComponent:Int):Dynamic;
+	overload public function pickerViewAccessibilityUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityUserInputLabelsForComponent:Int):NSArray;
 
 	@:native("pickerView:accessibilityAttributedLabelForComponent")
 	overload public function pickerViewAccessibilityAttributedLabelForComponent(pickerView:UIPickerView, accessibilityAttributedLabelForComponent:Int):NSAttributedString;
@@ -40,7 +41,7 @@ extern interface UIPickerViewAccessibilityDelegate
 	overload public function pickerViewAccessibilityAttributedHintForComponent(pickerView:UIPickerView, accessibilityAttributedHintForComponent:Int):NSAttributedString;
 
 	@:native("pickerView:accessibilityAttributedUserInputLabelsForComponent")
-	overload public function pickerViewAccessibilityAttributedUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityAttributedUserInputLabelsForComponent:Int):Dynamic;
+	overload public function pickerViewAccessibilityAttributedUserInputLabelsForComponent(pickerView:UIPickerView, accessibilityAttributedUserInputLabelsForComponent:Int):NSArray;
 
 	@:native("pickerView:widthForComponent")
 	overload public function pickerViewWidthForComponent(pickerView:UIPickerView, widthForComponent:Int):Float;

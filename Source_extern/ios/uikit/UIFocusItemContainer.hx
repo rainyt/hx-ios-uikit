@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIFocusItemContainer;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 @:objc
 @:native("UIFocusItemContainer")
@@ -20,7 +21,7 @@ extern interface UIFocusItemContainer
 	public var coordinateSpace:Dynamic;
 
 	@:native("focusItemsInRect")
-	overload public function focusItemsInRect(rect:CGRect):Dynamic;
+	overload public function focusItemsInRect(rect:CGRect):NSArray;
 
 
 }

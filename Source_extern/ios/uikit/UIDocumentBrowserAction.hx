@@ -4,6 +4,7 @@ import ios.uikit.UIDocumentBrowserAction;
 import cpp.objc.NSString;
 import ios.uikit.UIDocumentBrowserActionAvailability;
 import ios.uikit.UIImage;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIDocumentBrowserAction")
 @:include("UIKit/UIKit.h")
@@ -34,7 +35,7 @@ extern class UIDocumentBrowserAction{
 	public var image:UIImage;
 
 	@:native("supportedContentTypes")
-	public var supportedContentTypes:Dynamic;
+	public var supportedContentTypes:NSArray;
 
 	@:native("supportsMultipleItems")
 	public var supportsMultipleItems:Bool;

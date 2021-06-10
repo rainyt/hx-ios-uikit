@@ -6,6 +6,7 @@ import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 import ios.foundation.NSURL;
 import cpp.objc.NSError;
+import ios.foundation.NSSet;
 @:objc
 @:native("NSBundle")
 @:include("UIKit/UIKit.h")
@@ -43,10 +44,10 @@ extern class NSBundle{
 	overload public static function bundleWithIdentifier(identifier:NSString):NSBundle;
 
 	@:native("allBundles")
-	overload public static function allBundles():Dynamic;
+	overload public static function allBundles():NSArray;
 
 	@:native("allFrameworks")
-	overload public static function allFrameworks():Dynamic;
+	overload public static function allFrameworks():NSArray;
 
 	/* Methods for loading and unloading bundles. */
 	@:native("load")
@@ -121,7 +122,7 @@ extern class NSBundle{
 	overload public static function URLForResourceWithExtensionSubdirectoryInBundleWithURL(name:NSString, withExtension:NSString, subdirectory:NSString, inBundleWithURL:NSURL):NSURL;
 
 	@:native("URLsForResourcesWithExtension:subdirectory:inBundleWithURL")
-	overload public static function URLsForResourcesWithExtensionSubdirectoryInBundleWithURL(ext:NSString, subdirectory:NSString, inBundleWithURL:NSURL):Dynamic;
+	overload public static function URLsForResourcesWithExtensionSubdirectoryInBundleWithURL(ext:NSString, subdirectory:NSString, inBundleWithURL:NSURL):NSArray;
 
 	@:native("URLForResource:withExtension")
 	overload public function URLForResourceWithExtension(name:NSString, withExtension:NSString):NSURL;
@@ -133,16 +134,16 @@ extern class NSBundle{
 	overload public function URLForResourceWithExtensionSubdirectoryLocalization(name:NSString, withExtension:NSString, subdirectory:NSString, localization:NSString):NSURL;
 
 	@:native("URLsForResourcesWithExtension:subdirectory")
-	overload public function URLsForResourcesWithExtensionSubdirectory(ext:NSString, subdirectory:NSString):Dynamic;
+	overload public function URLsForResourcesWithExtensionSubdirectory(ext:NSString, subdirectory:NSString):NSArray;
 
 	@:native("URLsForResourcesWithExtension:subdirectory:localization")
-	overload public function URLsForResourcesWithExtensionSubdirectoryLocalization(ext:NSString, subdirectory:NSString, localization:NSString):Dynamic;
+	overload public function URLsForResourcesWithExtensionSubdirectoryLocalization(ext:NSString, subdirectory:NSString, localization:NSString):NSArray;
 
 	@:native("pathForResource:ofType:inDirectory")
 	overload public static function pathForResourceOfTypeInDirectory(name:NSString, ofType:NSString, inDirectory:NSString):NSString;
 
 	@:native("pathsForResourcesOfType:inDirectory")
-	overload public static function pathsForResourcesOfTypeInDirectory(ext:NSString, inDirectory:NSString):Dynamic;
+	overload public static function pathsForResourcesOfTypeInDirectory(ext:NSString, inDirectory:NSString):NSArray;
 
 	@:native("pathForResource:ofType")
 	overload public function pathForResourceOfType(name:NSString, ofType:NSString):NSString;
@@ -151,7 +152,7 @@ extern class NSBundle{
 	overload public function pathForResourceOfTypeInDirectoryForLocalization(name:NSString, ofType:NSString, inDirectory:NSString, forLocalization:NSString):NSString;
 
 	@:native("pathsForResourcesOfType:inDirectory:forLocalization")
-	overload public function pathsForResourcesOfTypeInDirectoryForLocalization(ext:NSString, inDirectory:NSString, forLocalization:NSString):Dynamic;
+	overload public function pathsForResourcesOfTypeInDirectoryForLocalization(ext:NSString, inDirectory:NSString, forLocalization:NSString):NSArray;
 
 	/* Method for retrieving localized strings. */
 	@:native("localizedStringForKey:value:table")
@@ -178,27 +179,27 @@ extern class NSBundle{
 
 	/* Methods for dealing with localizations. */
 	@:native("preferredLocalizations")
-	public var preferredLocalizations:Dynamic;
+	public var preferredLocalizations:NSArray;
 
 	@:native("localizations")
-	public var localizations:Dynamic;
+	public var localizations:NSArray;
 
 	@:native("developmentLocalization")
 	public var developmentLocalization:NSString;
 
 	@:native("preferredLocalizationsFromArray")
-	overload public static function preferredLocalizationsFromArray(localizationsArray:Dynamic):Dynamic;
+	overload public static function preferredLocalizationsFromArray(localizationsArray:NSArray):NSArray;
 
 	@:native("preferredLocalizationsFromArray:forPreferences")
-	overload public static function preferredLocalizationsFromArrayForPreferences(localizationsArray:Dynamic, forPreferences:Dynamic):Dynamic;
+	overload public static function preferredLocalizationsFromArrayForPreferences(localizationsArray:NSArray, forPreferences:NSArray):NSArray;
 
 	/* Method for determining executable architectures. */
 	@:native("executableArchitectures")
-	public var executableArchitectures:Dynamic;
+	public var executableArchitectures:NSArray;
 
 	/* Set a preservation priority for tags that are included in this bundle for the On Demand Resources system. Preservation priorities may be between 0.0 and 1.0, with higher values being the last choice for purging by the system. The exact meaning of this value is up to your application as it only has meaning within the set of tags your application uses.        The default value is 0.0.      This method will throw an exception if the receiver bundle has no on demand resource tag information. */
 	@:native("setPreservationPriority:forTags")
-	overload public function setPreservationPriorityForTags(priority:Dynamic, forTags:Dynamic):Void;
+	overload public function setPreservationPriorityForTags(priority:Dynamic, forTags:NSSet):Void;
 
 	@:native("preservationPriorityForTag")
 	overload public function preservationPriorityForTag(tag:NSString):Dynamic;

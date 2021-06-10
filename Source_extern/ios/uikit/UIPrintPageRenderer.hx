@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIPrintPageRenderer;
 import ios.objc.CGRect;
+import ios.foundation.NSArray;
 import ios.uikit.UIPrintFormatter;
 @:objc
 @:native("UIPrintPageRenderer")
@@ -30,10 +31,10 @@ extern class UIPrintPageRenderer{
 	public var numberOfPages:Int;
 
 	@:native("printFormatters")
-	public var printFormatters:Dynamic;
+	public var printFormatters:NSArray;
 
 	@:native("printFormattersForPageAtIndex")
-	overload public function printFormattersForPageAtIndex(pageIndex:Int):Dynamic;
+	overload public function printFormattersForPageAtIndex(pageIndex:Int):NSArray;
 
 	@:native("addPrintFormatter:startingAtPageAtIndex")
 	overload public function addPrintFormatterStartingAtPageAtIndex(formatter:UIPrintFormatter, startingAtPageAtIndex:Int):Void;

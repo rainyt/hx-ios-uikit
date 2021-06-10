@@ -4,6 +4,7 @@ import ios.uikit.UIMenuController;
 import ios.uikit.UIView;
 import ios.objc.CGRect;
 import ios.uikit.UIMenuControllerArrowDirection;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIMenuController")
 @:include("UIKit/UIKit.h")
@@ -34,7 +35,7 @@ extern class UIMenuController{
 	public var arrowDirection:UIMenuControllerArrowDirection;
 
 	@:native("menuItems")
-	public var menuItems:Dynamic;
+	public var menuItems:NSArray;
 
 	@:native("update")
 	overload public function update():Void;

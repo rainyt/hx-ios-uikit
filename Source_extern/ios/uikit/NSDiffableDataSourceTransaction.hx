@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.NSDiffableDataSourceTransaction;
 import ios.uikit.NSDiffableDataSourceSnapshot;
 import ios.foundation.NSOrderedCollectionDifference;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSDiffableDataSourceTransaction")
 @:include("UIKit/UIKit.h")
@@ -27,7 +28,7 @@ extern class NSDiffableDataSourceTransaction
 	public var difference:NSOrderedCollectionDifference;
 
 	@:native("sectionTransactions")
-	public var sectionTransactions:Dynamic;
+	public var sectionTransactions:NSArray;
 
 
 }

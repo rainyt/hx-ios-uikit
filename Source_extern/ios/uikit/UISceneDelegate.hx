@@ -5,6 +5,7 @@ import cpp.objc.NSObject;
 import ios.uikit.UIScene;
 import ios.uikit.UISceneSession;
 import ios.uikit.UISceneConnectionOptions;
+import ios.foundation.NSSet;
 import ios.uikit.NSUserActivity;
 import cpp.objc.NSString;
 import cpp.objc.NSError;
@@ -40,7 +41,7 @@ extern interface UISceneDelegate
 	overload public function sceneDidEnterBackground(scene:UIScene):Void;
 
 	@:native("scene:openURLContexts")
-	overload public function sceneOpenURLContexts(scene:UIScene, openURLContexts:Dynamic):Void;
+	overload public function sceneOpenURLContexts(scene:UIScene, openURLContexts:NSSet):Void;
 
 	@:native("stateRestorationActivityForScene")
 	overload public function stateRestorationActivityForScene(scene:UIScene):NSUserActivity;

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UITableViewDragDelegate;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.uikit.UITableView;
 import ios.uikit.NSIndexPath;
 import ios.objc.CGPoint;
@@ -20,10 +21,10 @@ extern interface UITableViewDragDelegate
 	overload public static function autorelease():UITableViewDragDelegate;
 
 	@:native("tableView:itemsForBeginningDragSession:atIndexPath")
-	overload public function tableViewItemsForBeginningDragSessionAtIndexPath(tableView:UITableView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):Dynamic;
+	overload public function tableViewItemsForBeginningDragSessionAtIndexPath(tableView:UITableView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):NSArray;
 
 	@:native("tableView:itemsForAddingToDragSession:atIndexPath:point")
-	overload public function tableViewItemsForAddingToDragSessionAtIndexPathPoint(tableView:UITableView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):Dynamic;
+	overload public function tableViewItemsForAddingToDragSessionAtIndexPathPoint(tableView:UITableView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):NSArray;
 
 	@:native("tableView:dragPreviewParametersForRowAtIndexPath")
 	overload public function tableViewDragPreviewParametersForRowAtIndexPath(tableView:UITableView, dragPreviewParametersForRowAtIndexPath:NSIndexPath):UIDragPreviewParameters;

@@ -10,6 +10,7 @@ import ios.foundation.NSHTTPCookieAcceptPolicy;
 import ios.foundation.NSHTTPCookieStorage;
 import ios.foundation.NSURLCredentialStorage;
 import ios.foundation.NSURLCache;
+import ios.foundation.NSArray;
 import ios.foundation.NSURLSessionMultipathServiceType;
 @:objc
 @:native("NSURLSessionConfiguration")
@@ -153,7 +154,7 @@ extern class NSURLSessionConfiguration
 
 	/* An optional array of Class objects which subclass NSURLProtocol.    The Class will be sent +canInitWithRequest: when determining if    an instance of the class can be used for a given URL scheme.    You should not use +[NSURLProtocol registerClass:], as that    method will register your class with the default session rather    than with an instance of NSURLSession.     Custom NSURLProtocol subclasses are not available to background    sessions.  */
 	@:native("protocolClasses")
-	public var protocolClasses:Dynamic;
+	public var protocolClasses:NSArray;
 
 	/* multipath service type to use for connections.  The default is NSURLSessionMultipathServiceTypeNone */
 	@:native("multipathServiceType")

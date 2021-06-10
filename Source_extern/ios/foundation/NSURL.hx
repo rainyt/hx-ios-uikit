@@ -8,6 +8,7 @@ import cpp.objc.NSData;
 import ios.foundation.NSNumber;
 import cpp.objc.NSError;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSArray;
 import ios.objc.NSCoding;
 @:objc
 @:native("NSURL")
@@ -180,7 +181,7 @@ extern class NSURL
 
 	/* Returns the resource values identified by specified array of resource keys. This method first checks if the URL object already caches the resource values. If so, it returns the cached resource values to the caller. If not, then this method synchronously obtains the resource values from the backing store, adds the resource values to the URL object's cache, and returns the resource values to the caller. The type of the resource values vary by property (see resource key definitions). If the result dictionary does not contain a resource value for one or more of the requested resource keys, it means those resource properties are not available for the specified resource and no errors occurred when determining those resource properties were not available. If this method returns NULL, the optional error is populated. This method is currently applicable only to URLs for file system resources. Symbol is present in iOS 4, but performs no operation.  */
 	@:native("resourceValuesForKeys:error")
-	overload public function resourceValuesForKeysError(keys:Dynamic, error:NSError):NSDictionary;
+	overload public function resourceValuesForKeysError(keys:NSArray, error:NSError):NSDictionary;
 
 	/* Sets the resource value identified by a given resource key. This method writes the new resource value out to the backing store. Attempts to set a read-only resource property or to set a resource property not supported by the resource are ignored and are not considered errors. If this method returns NO, the optional error is populated. This method is currently applicable only to URLs for file system resources. Symbol is present in iOS 4, but performs no operation.  */
 	@:native("setResourceValue:forKey:error")
@@ -204,7 +205,7 @@ extern class NSURL
 
 	/* Returns bookmark data for the URL, created with specified options and resource values. If this method returns nil, the optional error is populated.  */
 	@:native("bookmarkDataWithOptions:includingResourceValuesForKeys:relativeToURL:error")
-	overload public function bookmarkDataWithOptionsIncludingResourceValuesForKeysRelativeToURLError(options:Dynamic, includingResourceValuesForKeys:Dynamic, relativeToURL:NSURL, error:NSError):NSData;
+	overload public function bookmarkDataWithOptionsIncludingResourceValuesForKeysRelativeToURLError(options:Dynamic, includingResourceValuesForKeys:NSArray, relativeToURL:NSURL, error:NSError):NSData;
 
 	/* Initializes a newly created NSURL that refers to a location specified by resolving bookmark data. If this method returns nil, the optional error is populated.  */
 	@:native("initByResolvingBookmarkData:options:relativeToURL:bookmarkDataIsStale:error")
@@ -216,7 +217,7 @@ extern class NSURL
 
 	/* Returns the resource values for properties identified by a specified array of keys contained in specified bookmark data. If the result dictionary does not contain a resource value for one or more of the requested resource keys, it means those resource properties are not available in the bookmark data.  */
 	@:native("resourceValuesForKeys:fromBookmarkData")
-	overload public static function resourceValuesForKeysFromBookmarkData(keys:Dynamic, fromBookmarkData:NSData):NSDictionary;
+	overload public static function resourceValuesForKeysFromBookmarkData(keys:NSArray, fromBookmarkData:NSData):NSDictionary;
 
 	/* Creates an alias file on disk at a specified location with specified bookmark data. bookmarkData must have been created with the NSURLBookmarkCreationSuitableForBookmarkFile option. bookmarkFileURL must either refer to an existing file (which will be overwritten), or to location in an existing directory. If this method returns NO, the optional error is populated. */
 	@:native("writeBookmarkData:toURL:options:error")
@@ -243,17 +244,17 @@ extern class NSURL
 	overload public function getPromisedItemResourceValueForKeyError(value:Dynamic, forKey:NSString, error:NSError):Bool;
 
 	@:native("promisedItemResourceValuesForKeys:error")
-	overload public function promisedItemResourceValuesForKeysError(keys:Dynamic, error:NSError):NSDictionary;
+	overload public function promisedItemResourceValuesForKeysError(keys:NSArray, error:NSError):NSDictionary;
 
 	@:native("checkPromisedItemIsReachableAndReturnError")
 	overload public function checkPromisedItemIsReachableAndReturnError(error:NSError):Bool;
 
 	/* The following methods work on the path portion of a URL in the same manner that the NSPathUtilities methods on NSString do.  */
 	@:native("fileURLWithPathComponents")
-	overload public static function fileURLWithPathComponents(components:Dynamic):NSURL;
+	overload public static function fileURLWithPathComponents(components:NSArray):NSURL;
 
 	@:native("pathComponents")
-	public var pathComponents:Dynamic;
+	public var pathComponents:NSArray;
 
 	@:native("lastPathComponent")
 	public var lastPathComponent:NSString;

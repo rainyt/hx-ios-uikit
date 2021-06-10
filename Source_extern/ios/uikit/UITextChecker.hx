@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UITextChecker;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 @:objc
 @:native("UITextChecker")
 @:include("UIKit/UIKit.h")
@@ -21,18 +22,18 @@ extern class UITextChecker{
 
 	/* Returns an array of strings, in the order in which they should be presented, representing guesses for words that might have been intended in place of the misspelled word at the given range in the given string. */
 	@:native("guessesForWordRange:inString:language")
-	overload public function guessesForWordRangeInStringLanguage(range:Dynamic, inString:NSString, language:NSString):Dynamic;
+	overload public function guessesForWordRangeInStringLanguage(range:Dynamic, inString:NSString, language:NSString):NSArray;
 
 	/* Returns an array of strings, in the order in which they should be presented, representing complete words that the user might be trying to type when starting by typing the partial word at the given range in the given string. */
 	@:native("completionsForPartialWordRange:inString:language")
-	overload public function completionsForPartialWordRangeInStringLanguage(range:Dynamic, inString:NSString, language:NSString):Dynamic;
+	overload public function completionsForPartialWordRangeInStringLanguage(range:Dynamic, inString:NSString, language:NSString):NSArray;
 
 	/* Methods for dealing with ignored words. */
 	@:native("ignoreWord")
 	overload public function ignoreWord(wordToIgnore:NSString):Void;
 
 	@:native("ignoredWords")
-	public var ignoredWords:Dynamic;
+	public var ignoredWords:NSArray;
 
 	/* These allow clients to programmatically instruct the checker to learn and unlearn words, and to determine whether a word has been learned (and hence can potentially be unlearned). */
 	@:native("learnWord")
@@ -46,7 +47,7 @@ extern class UITextChecker{
 
 	/* Entries in the availableLanguages list are all available spellchecking languages in user preference order, usually language abbreviations such as en_US. */
 	@:native("availableLanguages")
-	overload public static function availableLanguages():Dynamic;
+	overload public static function availableLanguages():NSArray;
 
 
 }

@@ -4,6 +4,7 @@ import ios.foundation.NSMetadataItem;
 import ios.foundation.NSURL;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSMetadataItem")
 @:include("Foundation/Foundation.h")
@@ -22,10 +23,10 @@ extern class NSMetadataItem{
 	overload public function valueForAttribute(key:NSString):Dynamic;
 
 	@:native("valuesForAttributes")
-	overload public function valuesForAttributes(keys:Dynamic):NSDictionary;
+	overload public function valuesForAttributes(keys:NSArray):NSDictionary;
 
 	@:native("attributes")
-	public var attributes:Dynamic;
+	public var attributes:NSArray;
 
 
 }

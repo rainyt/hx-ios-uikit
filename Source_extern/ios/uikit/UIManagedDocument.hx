@@ -9,6 +9,7 @@ import cpp.objc.NSError;
 import ios.uikit.UIDocumentChangeKind;
 import ios.uikit.UIDocumentSaveOperation;
 import ios.uikit.NSUserActivity;
+import ios.foundation.NSSet;
 import ios.foundation.NSFileVersion;
 @:objc
 @:native("UIManagedDocument")
@@ -159,7 +160,7 @@ extern class UIManagedDocument extends UIDocument{
 
 	/* Be notified that the presented file or file package's ubiquity attributes have changed. The possible attributes that can appear in the given set include only those specified by the receiver's value for observedPresentedItemUbiquityAttributes, or those in the default set if that property is not implemented.   Note that changes to these attributes do not normally align with -presentedItemDidChange notifications. */
 	@:native("presentedItemDidChangeUbiquityAttributes")
-	overload public function presentedItemDidChangeUbiquityAttributes(attributes:Dynamic):Void;
+	overload public function presentedItemDidChangeUbiquityAttributes(attributes:NSSet):Void;
 
 	/* Be notified that something in the system has added, removed, or resolved a version of the file or file package.  For example, NSDocument has implementations of these methods that help decide whether to present a versions browser when it has reacquired after relinquishing to a writer, and to react to versions being added and removed while it is presenting the versions browser. */
 	@:native("presentedItemDidGainVersion")

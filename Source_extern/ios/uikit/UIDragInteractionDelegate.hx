@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDragInteractionDelegate;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.uikit.UIDragInteraction;
 import ios.uikit.UITargetedDragPreview;
 import ios.uikit.UIDragItem;
@@ -22,7 +23,7 @@ extern interface UIDragInteractionDelegate
 
 	/* Provide items to begin a drag.  *  * If these items represent things that are displayed in a linear order  * (for example, rows in a table), provide them in the same order, first  * to last.  *  * If an empty array is returned, then no drag will begin.  */
 	@:native("dragInteraction:itemsForBeginningSession")
-	overload public function dragInteractionItemsForBeginningSession(interaction:UIDragInteraction, itemsForBeginningSession:Dynamic):Dynamic;
+	overload public function dragInteractionItemsForBeginningSession(interaction:UIDragInteraction, itemsForBeginningSession:Dynamic):NSArray;
 
 	/* Provide a preview to display while lifting the drag item.  * Return nil to indicate that this item is not visible and should have no lift animation.  * If not implemented, a UITargetedDragPreview initialized with interaction.view will be used.  */
 	@:native("dragInteraction:previewForLiftingItem:session")
@@ -66,15 +67,15 @@ extern interface UIDragInteractionDelegate
 
 	/* To allow touches on this view to add items to an existing drag,  * implement `-dragInteraction:itemsForAddingToSession:withTouchAtPoint:`.  *  * If the provided session is an appropriate one to use, then return an array of items,  * just like in `-dragInteraction:itemsForBeginningSession:`. They will be added to the   * drag session.  * Afterwards, `-dragInteraction:session:willAddItems:forInteraction:` will be sent  * to each interaction which has contributed items to the session, including this one.  *  * Otherwise, return an empty array. No items will be added, and the touch  * will be handled as if the other drag session did not exist.  *  * If this method is not implemented, acts as though an an empty array was returned.  *  * Use the point, in the view's coordinate space, to determine what part of your view  * has been touched.  */
 	@:native("dragInteraction:itemsForAddingToSession:withTouchAtPoint")
-	overload public function dragInteractionItemsForAddingToSessionWithTouchAtPoint(interaction:UIDragInteraction, itemsForAddingToSession:Dynamic, withTouchAtPoint:CGPoint):Dynamic;
+	overload public function dragInteractionItemsForAddingToSessionWithTouchAtPoint(interaction:UIDragInteraction, itemsForAddingToSession:Dynamic, withTouchAtPoint:CGPoint):NSArray;
 
 	/* If there are two or more existing drag sessions, it may not be clear to the user  * which session items will be added to. Therefore, by default, we do not add to any session.  *  * If you *do* want to add the item to a session, implement  * `-dragInteraction:sessionForAddingItems:withTouchAtPoint:` and return the  * appropriate session. This should be rare.  *  * To continue without adding items, return nil.  *  * If this method is not implemented, defaults to nil.  */
 	@:native("dragInteraction:sessionForAddingItems:withTouchAtPoint")
-	overload public function dragInteractionSessionForAddingItemsWithTouchAtPoint(interaction:UIDragInteraction, sessionForAddingItems:Dynamic, withTouchAtPoint:CGPoint):Dynamic;
+	overload public function dragInteractionSessionForAddingItemsWithTouchAtPoint(interaction:UIDragInteraction, sessionForAddingItems:NSArray, withTouchAtPoint:CGPoint):Dynamic;
 
 	/* Similar to -dragInteraction:sessionWillBegin:, but for  * items added to an session after it has already begun.  *  * Note that the interaction that is causing the items to be added  * may be different than the interaction that started the drag.  * This method is called on the delegates of all interactions that ever added items  * to this session. `addingInteraction` is the interaction that is causing  * these new items to be dragged.  */
 	@:native("dragInteraction:session:willAddItems:forInteraction")
-	overload public function dragInteractionSessionWillAddItemsForInteraction(interaction:UIDragInteraction, session:Dynamic, willAddItems:Dynamic, forInteraction:UIDragInteraction):Void;
+	overload public function dragInteractionSessionWillAddItemsForInteraction(interaction:UIDragInteraction, session:Dynamic, willAddItems:NSArray, forInteraction:UIDragInteraction):Void;
 
 	/* Called when the drag is cancelled, once for each visible item.  * Provide a preview to animate the item back to where it belongs.  * We provide `defaultPreview` which would move the current preview back to where it came from.  * You may return:  * - defaultPreview, to use it as-is  * - nil, to fade the drag item in place  * - [defaultPreview retargetedPreviewWithTarget:] to move the preview to a different target  * - a UITargetedDragPreview that you create however you like  */
 	@:native("dragInteraction:previewForCancellingItem:withDefault")

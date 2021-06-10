@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIPasteConfiguration;
 import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
+import ios.foundation.NSArray;
 import ios.objc.NSCoding;
 @:objc
 @:native("UIPasteConfiguration")
@@ -19,16 +20,16 @@ extern class UIPasteConfiguration
 	overload public static function autorelease():UIPasteConfiguration;
 
 	@:native("acceptableTypeIdentifiers")
-	public var acceptableTypeIdentifiers:Dynamic;
+	public var acceptableTypeIdentifiers:NSArray;
 
 	@:native("init")
 	overload public function init():UIPasteConfiguration;
 
 	@:native("initWithAcceptableTypeIdentifiers")
-	overload public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):UIPasteConfiguration;
+	overload public function initWithAcceptableTypeIdentifiers(acceptableTypeIdentifiers:NSArray):UIPasteConfiguration;
 
 	@:native("addAcceptableTypeIdentifiers")
-	overload public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:Dynamic):Void;
+	overload public function addAcceptableTypeIdentifiers(acceptableTypeIdentifiers:NSArray):Void;
 
 	@:native("initWithTypeIdentifiersForAcceptingClass")
 	overload public function initWithTypeIdentifiersForAcceptingClass(aClass:Dynamic):UIPasteConfiguration;

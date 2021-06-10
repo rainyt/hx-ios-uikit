@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSOrderedCollectionDifference;
+import ios.foundation.NSArray;
 import ios.foundation.NSIndexSet;
 @:objc
 @:native("NSOrderedCollectionDifference")
@@ -16,19 +17,19 @@ extern class NSOrderedCollectionDifference
 	overload public static function autorelease():NSOrderedCollectionDifference;
 
 	@:native("initWithChanges")
-	overload public function initWithChanges(changes:Dynamic):NSOrderedCollectionDifference;
+	overload public function initWithChanges(changes:NSArray):NSOrderedCollectionDifference;
 
 	@:native("initWithInsertIndexes:insertedObjects:removeIndexes:removedObjects:additionalChanges")
-	overload public function initWithInsertIndexesInsertedObjectsRemoveIndexesRemovedObjectsAdditionalChanges(inserts:NSIndexSet, insertedObjects:Dynamic, removeIndexes:NSIndexSet, removedObjects:Dynamic, additionalChanges:Dynamic):NSOrderedCollectionDifference;
+	overload public function initWithInsertIndexesInsertedObjectsRemoveIndexesRemovedObjectsAdditionalChanges(inserts:NSIndexSet, insertedObjects:NSArray, removeIndexes:NSIndexSet, removedObjects:NSArray, additionalChanges:NSArray):NSOrderedCollectionDifference;
 
 	@:native("initWithInsertIndexes:insertedObjects:removeIndexes:removedObjects")
-	overload public function initWithInsertIndexesInsertedObjectsRemoveIndexesRemovedObjects(inserts:NSIndexSet, insertedObjects:Dynamic, removeIndexes:NSIndexSet, removedObjects:Dynamic):NSOrderedCollectionDifference;
+	overload public function initWithInsertIndexesInsertedObjectsRemoveIndexesRemovedObjects(inserts:NSIndexSet, insertedObjects:NSArray, removeIndexes:NSIndexSet, removedObjects:NSArray):NSOrderedCollectionDifference;
 
 	@:native("insertions")
-	public var insertions:Dynamic;
+	public var insertions:NSArray;
 
 	@:native("removals")
-	public var removals:Dynamic;
+	public var removals:NSArray;
 
 	@:native("hasChanges")
 	public var hasChanges:Bool;

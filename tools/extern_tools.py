@@ -1559,11 +1559,6 @@ class ObjcType:
             elif (_hx_local_0 == 5):
                 if (t2 == "Class"):
                     return "Dynamic"
-                elif (t2 == "NSSet"):
-                    return "Dynamic"
-            elif (_hx_local_0 == 7):
-                if (t2 == "NSArray"):
-                    return "Dynamic"
             else:
                 pass
             return t1

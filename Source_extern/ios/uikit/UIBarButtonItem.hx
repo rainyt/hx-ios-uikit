@@ -11,12 +11,14 @@ import ios.uikit.UIBarButtonSystemItem;
 import ios.uikit.UIView;
 import ios.uikit.UIAction;
 import ios.uikit.UIMenu;
+import ios.foundation.NSSet;
 import ios.uikit.UIControlState;
 import ios.uikit.UIBarMetrics;
 import ios.uikit.UIColor;
 import ios.uikit.UIBarButtonItemGroup;
 import cpp.objc.NSDictionary;
 import ios.uikit.UIAppearance;
+import ios.foundation.NSArray;
 import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIBarButtonItem")
@@ -80,7 +82,7 @@ extern class UIBarButtonItem extends UIBarItem
 	public var width:Float;
 
 	@:native("possibleTitles")
-	public var possibleTitles:Dynamic;
+	public var possibleTitles:NSSet;
 
 	@:native("customView")
 	public var customView:UIView;
@@ -167,13 +169,13 @@ extern class UIBarButtonItem extends UIBarItem
 	overload public static function appearance():UIAppearance;
 
 	@:native("appearanceWhenContainedInInstancesOfClasses")
-	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:Dynamic):UIAppearance;
+	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIAppearance;
 
 	@:native("appearanceForTraitCollection")
 	overload public static function appearanceForTraitCollection(trait:UITraitCollection):UIAppearance;
 
 	@:native("appearanceForTraitCollection:whenContainedInInstancesOfClasses")
-	overload public static function appearanceForTraitCollectionWhenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
+	overload public static function appearanceForTraitCollectionWhenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:NSArray):UIAppearance;
 
 
 }

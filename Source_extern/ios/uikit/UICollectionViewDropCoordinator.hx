@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UICollectionViewDropCoordinator;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.uikit.NSIndexPath;
 import ios.uikit.UICollectionViewDropProposal;
 import ios.uikit.UIDragItem;
@@ -23,7 +24,7 @@ extern interface UICollectionViewDropCoordinator
 
 	/* Ordered list of items available for this drop.  */
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	/* The last hit-tested index path known during the drop session.  * If this is nil, the proposal's intent will be .unspecified  */
 	@:native("destinationIndexPath")

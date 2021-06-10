@@ -4,6 +4,7 @@ import ios.uikit.UIDynamicBehavior;
 import ios.uikit.UIAttachmentBehavior;
 import ios.objc.CGPoint;
 import ios.objc.CGVector;
+import ios.foundation.NSArray;
 import ios.uikit.UIAttachmentBehaviorType;
 import ios.uikit.UIDynamicAnimator;
 @:objc
@@ -50,7 +51,7 @@ extern class UIAttachmentBehavior extends UIDynamicBehavior{
 	overload public static function pinAttachmentWithItemAttachedToItemAttachmentAnchor(item1:Dynamic, attachedToItem:Dynamic, attachmentAnchor:CGPoint):UIAttachmentBehavior;
 
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	@:native("attachedBehaviorType")
 	public var attachedBehaviorType:UIAttachmentBehaviorType;

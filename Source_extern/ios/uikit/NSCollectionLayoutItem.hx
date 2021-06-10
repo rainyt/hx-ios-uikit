@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.NSCollectionLayoutItem;
 import ios.objc.NSCopying;
 import ios.uikit.NSCollectionLayoutSize;
+import ios.foundation.NSArray;
 import ios.uikit.NSCollectionLayoutEdgeSpacing;
 @:objc
 @:native("NSCollectionLayoutItem")
@@ -21,7 +22,7 @@ extern class NSCollectionLayoutItem
 	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutItem;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutItem;
+	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:NSArray):NSCollectionLayoutItem;
 
 	@:native("init")
 	overload public function init():NSCollectionLayoutItem;
@@ -36,7 +37,7 @@ extern class NSCollectionLayoutItem
 	public var layoutSize:NSCollectionLayoutSize;
 
 	@:native("supplementaryItems")
-	public var supplementaryItems:Dynamic;
+	public var supplementaryItems:NSArray;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

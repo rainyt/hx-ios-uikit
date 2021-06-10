@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIDynamicAnimator;
 import ios.uikit.UIView;
 import ios.uikit.UIDynamicBehavior;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 import ios.uikit.UICollectionViewLayout;
 import ios.uikit.UICollectionViewLayoutAttributes;
@@ -35,10 +36,10 @@ extern class UIDynamicAnimator{
 	public var referenceView:UIView;
 
 	@:native("behaviors")
-	public var behaviors:Dynamic;
+	public var behaviors:NSArray;
 
 	@:native("itemsInRect")
-	overload public function itemsInRect(rect:CGRect):Dynamic;
+	overload public function itemsInRect(rect:CGRect):NSArray;
 
 	@:native("updateItemUsingCurrentState")
 	overload public function updateItemUsingCurrentState(item:Dynamic):Void;

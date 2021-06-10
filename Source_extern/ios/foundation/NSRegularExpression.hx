@@ -7,6 +7,7 @@ import cpp.objc.NSString;
 import ios.foundation.NSRegularExpressionOptions;
 import cpp.objc.NSError;
 import ios.foundation.NSMatchingOptions;
+import ios.foundation.NSArray;
 import ios.foundation.NSTextCheckingResult;
 import ios.foundation.NSMutableString;
 import ios.objc.NSCoding;
@@ -49,7 +50,7 @@ extern class NSRegularExpression
 	overload public function enumerateMatchesInStringOptionsRangeUsingBlock(string:NSString, options:NSMatchingOptions, range:Dynamic, usingBlock:Dynamic):Void;
 
 	@:native("matchesInString:options:range")
-	overload public function matchesInStringOptionsRange(string:NSString, options:NSMatchingOptions, range:Dynamic):Dynamic;
+	overload public function matchesInStringOptionsRange(string:NSString, options:NSMatchingOptions, range:Dynamic):NSArray;
 
 	@:native("numberOfMatchesInString:options:range")
 	overload public function numberOfMatchesInStringOptionsRange(string:NSString, options:NSMatchingOptions, range:Dynamic):Int;

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDynamicBehavior;
 import ios.uikit.UICollisionBehavior;
+import ios.foundation.NSArray;
 import ios.uikit.UICollisionBehaviorMode;
 import ios.uikit.UIBezierPath;
 import ios.objc.CGPoint;
@@ -18,7 +19,7 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	overload public static function autorelease():UICollisionBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):UICollisionBehavior;
+	overload public function initWithItems(items:NSArray):UICollisionBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -27,7 +28,7 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	overload public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	@:native("collisionMode")
 	public var collisionMode:UICollisionBehaviorMode;
@@ -51,7 +52,7 @@ extern class UICollisionBehavior extends UIDynamicBehavior{
 	overload public function removeBoundaryWithIdentifier(identifier:Dynamic):Void;
 
 	@:native("boundaryIdentifiers")
-	public var boundaryIdentifiers:Dynamic;
+	public var boundaryIdentifiers:NSArray;
 
 	@:native("removeAllBoundaries")
 	overload public function removeAllBoundaries():Void;

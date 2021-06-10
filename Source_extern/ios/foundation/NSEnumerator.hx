@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSEnumerator;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSEnumerator")
 @:include("Foundation/Foundation.h")
@@ -18,7 +19,7 @@ extern class NSEnumerator
 	overload public function nextObject():Dynamic;
 
 	@:native("allObjects")
-	public var allObjects:Dynamic;
+	public var allObjects:NSArray;
 
 
 }

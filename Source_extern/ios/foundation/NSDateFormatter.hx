@@ -8,6 +8,7 @@ import ios.foundation.NSDate;
 import ios.foundation.NSLocale;
 import ios.foundation.NSTimeZone;
 import ios.foundation.NSCalendar;
+import ios.foundation.NSArray;
 import ios.uikit.NSAttributedString;
 import cpp.objc.NSDictionary;
 import ios.objc.NSCoding;
@@ -84,19 +85,19 @@ extern class NSDateFormatter extends NSFormatter{
 	public var defaultDate:NSDate;
 
 	@:native("eraSymbols")
-	public var eraSymbols:Dynamic;
+	public var eraSymbols:NSArray;
 
 	@:native("monthSymbols")
-	public var monthSymbols:Dynamic;
+	public var monthSymbols:NSArray;
 
 	@:native("shortMonthSymbols")
-	public var shortMonthSymbols:Dynamic;
+	public var shortMonthSymbols:NSArray;
 
 	@:native("weekdaySymbols")
-	public var weekdaySymbols:Dynamic;
+	public var weekdaySymbols:NSArray;
 
 	@:native("shortWeekdaySymbols")
-	public var shortWeekdaySymbols:Dynamic;
+	public var shortWeekdaySymbols:NSArray;
 
 	@:native("AMSymbol")
 	public var AMSymbol:NSString;
@@ -105,43 +106,43 @@ extern class NSDateFormatter extends NSFormatter{
 	public var PMSymbol:NSString;
 
 	@:native("longEraSymbols")
-	public var longEraSymbols:Dynamic;
+	public var longEraSymbols:NSArray;
 
 	@:native("veryShortMonthSymbols")
-	public var veryShortMonthSymbols:Dynamic;
+	public var veryShortMonthSymbols:NSArray;
 
 	@:native("standaloneMonthSymbols")
-	public var standaloneMonthSymbols:Dynamic;
+	public var standaloneMonthSymbols:NSArray;
 
 	@:native("shortStandaloneMonthSymbols")
-	public var shortStandaloneMonthSymbols:Dynamic;
+	public var shortStandaloneMonthSymbols:NSArray;
 
 	@:native("veryShortStandaloneMonthSymbols")
-	public var veryShortStandaloneMonthSymbols:Dynamic;
+	public var veryShortStandaloneMonthSymbols:NSArray;
 
 	@:native("veryShortWeekdaySymbols")
-	public var veryShortWeekdaySymbols:Dynamic;
+	public var veryShortWeekdaySymbols:NSArray;
 
 	@:native("standaloneWeekdaySymbols")
-	public var standaloneWeekdaySymbols:Dynamic;
+	public var standaloneWeekdaySymbols:NSArray;
 
 	@:native("shortStandaloneWeekdaySymbols")
-	public var shortStandaloneWeekdaySymbols:Dynamic;
+	public var shortStandaloneWeekdaySymbols:NSArray;
 
 	@:native("veryShortStandaloneWeekdaySymbols")
-	public var veryShortStandaloneWeekdaySymbols:Dynamic;
+	public var veryShortStandaloneWeekdaySymbols:NSArray;
 
 	@:native("quarterSymbols")
-	public var quarterSymbols:Dynamic;
+	public var quarterSymbols:NSArray;
 
 	@:native("shortQuarterSymbols")
-	public var shortQuarterSymbols:Dynamic;
+	public var shortQuarterSymbols:NSArray;
 
 	@:native("standaloneQuarterSymbols")
-	public var standaloneQuarterSymbols:Dynamic;
+	public var standaloneQuarterSymbols:NSArray;
 
 	@:native("shortStandaloneQuarterSymbols")
-	public var shortStandaloneQuarterSymbols:Dynamic;
+	public var shortStandaloneQuarterSymbols:NSArray;
 
 	@:native("gregorianStartDate")
 	public var gregorianStartDate:NSDate;

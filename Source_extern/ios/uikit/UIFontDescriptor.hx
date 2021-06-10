@@ -8,6 +8,8 @@ import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
 import ios.uikit.UIFontDescriptorSymbolicTraits;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSArray;
+import ios.foundation.NSSet;
 import ios.uikit.UITraitCollection;
 @:objc
 @:native("UIFontDescriptor")
@@ -48,7 +50,7 @@ extern class UIFontDescriptor
 	public var fontAttributes:NSDictionary;
 
 	@:native("matchingFontDescriptorsWithMandatoryKeys")
-	overload public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:Dynamic):Dynamic;
+	overload public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:NSSet):NSArray;
 
 	@:native("fontDescriptorWithFontAttributes")
 	overload public static function fontDescriptorWithFontAttributes(attributes:NSDictionary):UIFontDescriptor;

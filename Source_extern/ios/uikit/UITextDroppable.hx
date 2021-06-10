@@ -12,6 +12,7 @@ import ios.uikit.UITextLayoutDirection;
 import ios.uikit.NSWritingDirection;
 import ios.uikit.UITextStorageDirection;
 import ios.objc.CGRect;
+import ios.foundation.NSArray;
 import ios.objc.CGPoint;
 import ios.uikit.UIView;
 import ios.uikit.UITextAlternativeStyle;
@@ -134,7 +135,7 @@ extern interface UITextDroppable
 	overload public function caretRectForPosition(position:UITextPosition):CGRect;
 
 	@:native("selectionRectsForRange")
-	overload public function selectionRectsForRange(range:UITextRange):Dynamic;
+	overload public function selectionRectsForRange(range:UITextRange):NSArray;
 
 	/* Hit testing. */
 	@:native("closestPositionToPoint")
@@ -170,7 +171,7 @@ extern interface UITextDroppable
 
 	/* This is an optional method for clients that wish to support dictation phrase alternatives. If   * they do not implement this method, dictation will just insert the most likely interpretation   * of what was spoken via -insertText:.  * dictationResult is an array of UIDictationPhrases. */
 	@:native("insertDictationResult")
-	overload public function insertDictationResult(dictationResult:Dynamic):Void;
+	overload public function insertDictationResult(dictationResult:NSArray):Void;
 
 	/* These are optional methods for clients that wish to know when there are pending dictation results. */
 	@:native("dictationRecordingDidEnd")
@@ -191,7 +192,7 @@ extern interface UITextDroppable
 	overload public function removeDictationResultPlaceholderWillInsertResult(placeholder:Dynamic, willInsertResult:Bool):Void;
 
 	@:native("insertText:alternatives:style")
-	overload public function insertTextAlternativesStyle(text:NSString, alternatives:Dynamic, style:UITextAlternativeStyle):Void;
+	overload public function insertTextAlternativesStyle(text:NSString, alternatives:NSArray, style:UITextAlternativeStyle):Void;
 
 	@:native("setAttributedMarkedText:selectedRange")
 	overload public function setAttributedMarkedTextSelectedRange(markedText:NSAttributedString, selectedRange:Dynamic):Void;
@@ -267,10 +268,10 @@ extern interface UITextDroppable
 	public var pasteConfiguration:UIPasteConfiguration;
 
 	@:native("pasteItemProviders")
-	overload public function pasteItemProviders(itemProviders:Dynamic):Void;
+	overload public function pasteItemProviders(itemProviders:NSArray):Void;
 
 	@:native("canPasteItemProviders")
-	overload public function canPasteItemProviders(itemProviders:Dynamic):Bool;
+	overload public function canPasteItemProviders(itemProviders:NSArray):Bool;
 
 
 }

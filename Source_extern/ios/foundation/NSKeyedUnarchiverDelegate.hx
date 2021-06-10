@@ -4,6 +4,7 @@ import ios.foundation.NSKeyedUnarchiverDelegate;
 import cpp.objc.NSObject;
 import ios.foundation.NSKeyedUnarchiver;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSKeyedUnarchiverDelegate")
 @:include("Foundation/Foundation.h")
@@ -18,7 +19,7 @@ extern interface NSKeyedUnarchiverDelegate
 	overload public static function autorelease():NSKeyedUnarchiverDelegate;
 
 	@:native("unarchiver:cannotDecodeObjectOfClassName:originalClasses")
-	overload public function unarchiverCannotDecodeObjectOfClassNameOriginalClasses(unarchiver:NSKeyedUnarchiver, cannotDecodeObjectOfClassName:NSString, originalClasses:Dynamic):Dynamic;
+	overload public function unarchiverCannotDecodeObjectOfClassNameOriginalClasses(unarchiver:NSKeyedUnarchiver, cannotDecodeObjectOfClassName:NSString, originalClasses:NSArray):Dynamic;
 
 	@:native("unarchiver:didDecodeObject:object")
 	overload public function unarchiverDidDecodeObjectObject(unarchiver:NSKeyedUnarchiver, didDecodeObject:Dynamic, object:Dynamic):Dynamic;

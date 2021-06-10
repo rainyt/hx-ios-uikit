@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSValueTransformer;
 import ios.foundation.NSSecureUnarchiveFromDataTransformer;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 @:objc
 @:native("NSSecureUnarchiveFromDataTransformer")
@@ -15,7 +16,7 @@ extern class NSSecureUnarchiveFromDataTransformer extends NSValueTransformer{
 	overload public static function autorelease():NSSecureUnarchiveFromDataTransformer;
 
 	@:native("allowedTopLevelClasses")
-	overload public static function allowedTopLevelClasses():Dynamic;
+	overload public static function allowedTopLevelClasses():NSArray;
 
 	@:native("setValueTransformer:forName")
 	overload public static function setValueTransformerForName(transformer:NSValueTransformer, forName:NSString):Void;
@@ -24,7 +25,7 @@ extern class NSSecureUnarchiveFromDataTransformer extends NSValueTransformer{
 	overload public static function valueTransformerForName(name:NSString):NSSecureUnarchiveFromDataTransformer;
 
 	@:native("valueTransformerNames")
-	overload public static function valueTransformerNames():Dynamic;
+	overload public static function valueTransformerNames():NSArray;
 
 	@:native("transformedValueClass")
 	overload public static function transformedValueClass():Dynamic;

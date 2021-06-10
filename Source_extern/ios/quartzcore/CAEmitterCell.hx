@@ -4,6 +4,7 @@ import ios.quartzcore.CAEmitterCell;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.objc.CGRect;
+import ios.foundation.NSArray;
 import cpp.objc.NSDictionary;
 import ios.objc.NSCoding;
 @:objc
@@ -151,7 +152,7 @@ extern class CAEmitterCell
 
 	/* An array containing the sub-cells of this cell, or nil (the default  * value). When non-nil each particle emitted by the cell will act as  * an emitter for each of the cell's sub-cells. The emission point is  * the current particle position and the emission angle is relative to  * the current direction of the particle. Animatable. */
 	@:native("emitterCells")
-	public var emitterCells:Dynamic;
+	public var emitterCells:NSArray;
 
 	/* Inherited attributes similar to in layers. */
 	@:native("style")

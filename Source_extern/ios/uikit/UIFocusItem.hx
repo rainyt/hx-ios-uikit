@@ -4,6 +4,7 @@ import ios.uikit.UIFocusItem;
 import ios.uikit.UIFocusEnvironment;
 import ios.objc.CGRect;
 import ios.uikit.UIFocusMovementHint;
+import ios.foundation.NSArray;
 import ios.uikit.UIFocusUpdateContext;
 import ios.uikit.UIFocusAnimationCoordinator;
 import cpp.objc.NSString;
@@ -31,7 +32,7 @@ extern interface UIFocusItem
 	overload public function didHintFocusMovement(hint:UIFocusMovementHint):Void;
 
 	@:native("preferredFocusEnvironments")
-	public var preferredFocusEnvironments:Dynamic;
+	public var preferredFocusEnvironments:NSArray;
 
 	@:native("parentFocusEnvironment")
 	public var parentFocusEnvironment:Dynamic;

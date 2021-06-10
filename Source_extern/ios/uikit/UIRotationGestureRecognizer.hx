@@ -6,6 +6,7 @@ import ios.uikit.UITouch;
 import ios.uikit.UIEvent;
 import ios.uikit.UIPress;
 import ios.uikit.UIPressesEvent;
+import ios.foundation.NSSet;
 import ios.uikit.NSCoder;
 import ios.objc.CGPoint;
 import ios.uikit.UIView;
@@ -51,31 +52,31 @@ extern class UIRotationGestureRecognizer extends UIGestureRecognizer{
 	overload public function shouldReceiveEvent(event:UIEvent):Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
+	overload public function touchesEstimatedPropertiesUpdated(touches:NSSet):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("initWithTarget:action")
 	overload public function initWithTargetAction(target:Dynamic, action:String):UIRotationGestureRecognizer;

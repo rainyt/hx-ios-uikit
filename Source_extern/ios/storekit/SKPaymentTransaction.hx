@@ -3,6 +3,7 @@ package ios.storekit;
 import ios.storekit.SKPaymentTransaction;
 import cpp.objc.NSError;
 import ios.storekit.SKPayment;
+import ios.foundation.NSArray;
 import ios.foundation.NSDate;
 import cpp.objc.NSString;
 import cpp.objc.NSData;
@@ -28,7 +29,7 @@ extern class SKPaymentTransaction{
 	public var payment:SKPayment;
 
 	@:native("downloads")
-	public var downloads:Dynamic;
+	public var downloads:NSArray;
 
 	@:native("transactionDate")
 	public var transactionDate:NSDate;

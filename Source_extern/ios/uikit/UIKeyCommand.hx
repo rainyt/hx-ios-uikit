@@ -8,6 +8,7 @@ import ios.uikit.UIImage;
 import ios.uikit.UIKeyModifierFlags;
 import ios.uikit.UIMenuElementAttributes;
 import ios.uikit.UIMenuElementState;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIKeyCommand")
 @:include("UIKit/UIKit.h")
@@ -35,7 +36,7 @@ extern class UIKeyCommand extends UICommand{
 	overload public static function commandWithTitleImageActionInputModifierFlagsPropertyList(title:NSString, image:UIImage, action:String, input:NSString, modifierFlags:UIKeyModifierFlags, propertyList:Dynamic):UIKeyCommand;
 
 	@:native("commandWithTitle:image:action:input:modifierFlags:propertyList:alternates")
-	overload public static function commandWithTitleImageActionInputModifierFlagsPropertyListAlternates(title:NSString, image:UIImage, action:String, input:NSString, modifierFlags:UIKeyModifierFlags, propertyList:Dynamic, alternates:Dynamic):UIKeyCommand;
+	overload public static function commandWithTitleImageActionInputModifierFlagsPropertyListAlternates(title:NSString, image:UIImage, action:String, input:NSString, modifierFlags:UIKeyModifierFlags, propertyList:Dynamic, alternates:NSArray):UIKeyCommand;
 
 	@:native("keyCommandWithInput:modifierFlags:action")
 	overload public static function keyCommandWithInputModifierFlagsAction(input:NSString, modifierFlags:UIKeyModifierFlags, action:String):UIKeyCommand;
@@ -44,7 +45,7 @@ extern class UIKeyCommand extends UICommand{
 	overload public static function commandWithTitleImageActionPropertyList(title:NSString, image:UIImage, action:String, propertyList:Dynamic):UIKeyCommand;
 
 	@:native("commandWithTitle:image:action:propertyList:alternates")
-	overload public static function commandWithTitleImageActionPropertyListAlternates(title:NSString, image:UIImage, action:String, propertyList:Dynamic, alternates:Dynamic):UIKeyCommand;
+	overload public static function commandWithTitleImageActionPropertyListAlternates(title:NSString, image:UIImage, action:String, propertyList:Dynamic, alternates:NSArray):UIKeyCommand;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSValueTransformer;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSValueTransformer")
 @:include("Foundation/Foundation.h")
@@ -20,7 +21,7 @@ extern class NSValueTransformer{
 	overload public static function valueTransformerForName(name:NSString):NSValueTransformer;
 
 	@:native("valueTransformerNames")
-	overload public static function valueTransformerNames():Dynamic;
+	overload public static function valueTransformerNames():NSArray;
 
 	@:native("transformedValueClass")
 	overload public static function transformedValueClass():Dynamic;

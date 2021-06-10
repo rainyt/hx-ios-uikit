@@ -8,6 +8,7 @@ import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
 import ios.objc.CGSize;
 import ios.quartzcore.CAAnimation;
+import ios.foundation.NSArray;
 @:objc
 @:native("CAEAGLLayer")
 @:include("QuartzCore/QuartzCore.h")
@@ -202,7 +203,7 @@ extern class CAEAGLLayer extends CALayer
 
 	/* Returns an array containing the keys of all animations currently  * attached to the receiver. The order of the array matches the order  * in which animations will be applied. */
 	@:native("animationKeys")
-	overload public function animationKeys():Dynamic;
+	overload public function animationKeys():NSArray;
 
 	/* Returns the animation added to the layer with identifier 'key', or nil  * if no such animation exists. Attempting to modify any properties of  * the returned object will result in undefined behavior. */
 	@:native("animationForKey")

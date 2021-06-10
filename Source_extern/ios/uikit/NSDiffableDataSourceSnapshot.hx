@@ -23,16 +23,16 @@ extern class NSDiffableDataSourceSnapshot
 	public var numberOfSections:Int;
 
 	@:native("sectionIdentifiers")
-	public var sectionIdentifiers:Dynamic;
+	public var sectionIdentifiers:NSArray;
 
 	@:native("itemIdentifiers")
-	public var itemIdentifiers:Dynamic;
+	public var itemIdentifiers:NSArray;
 
 	@:native("numberOfItemsInSection")
 	overload public function numberOfItemsInSection(sectionIdentifier:Dynamic):Int;
 
 	@:native("itemIdentifiersInSectionWithIdentifier")
-	overload public function itemIdentifiersInSectionWithIdentifier(sectionIdentifier:Dynamic):Dynamic;
+	overload public function itemIdentifiersInSectionWithIdentifier(sectionIdentifier:Dynamic):NSArray;
 
 	@:native("sectionIdentifierForSectionContainingItemIdentifier")
 	overload public function sectionIdentifierForSectionContainingItemIdentifier(itemIdentifier:Dynamic):Dynamic;
@@ -44,19 +44,19 @@ extern class NSDiffableDataSourceSnapshot
 	overload public function indexOfSectionIdentifier(sectionIdentifier:Dynamic):Int;
 
 	@:native("appendItemsWithIdentifiers")
-	overload public function appendItemsWithIdentifiers(identifiers:Dynamic):Void;
+	overload public function appendItemsWithIdentifiers(identifiers:NSArray):Void;
 
 	@:native("appendItemsWithIdentifiers:intoSectionWithIdentifier")
-	overload public function appendItemsWithIdentifiersIntoSectionWithIdentifier(identifiers:Dynamic, intoSectionWithIdentifier:Dynamic):Void;
+	overload public function appendItemsWithIdentifiersIntoSectionWithIdentifier(identifiers:NSArray, intoSectionWithIdentifier:Dynamic):Void;
 
 	@:native("insertItemsWithIdentifiers:beforeItemWithIdentifier")
-	overload public function insertItemsWithIdentifiersBeforeItemWithIdentifier(identifiers:Dynamic, beforeItemWithIdentifier:Dynamic):Void;
+	overload public function insertItemsWithIdentifiersBeforeItemWithIdentifier(identifiers:NSArray, beforeItemWithIdentifier:Dynamic):Void;
 
 	@:native("insertItemsWithIdentifiers:afterItemWithIdentifier")
-	overload public function insertItemsWithIdentifiersAfterItemWithIdentifier(identifiers:Dynamic, afterItemWithIdentifier:Dynamic):Void;
+	overload public function insertItemsWithIdentifiersAfterItemWithIdentifier(identifiers:NSArray, afterItemWithIdentifier:Dynamic):Void;
 
 	@:native("deleteItemsWithIdentifiers")
-	overload public function deleteItemsWithIdentifiers(identifiers:Dynamic):Void;
+	overload public function deleteItemsWithIdentifiers(identifiers:NSArray):Void;
 
 	@:native("deleteAllItems")
 	overload public function deleteAllItems():Void;
@@ -68,19 +68,19 @@ extern class NSDiffableDataSourceSnapshot
 	overload public function moveItemWithIdentifierAfterItemWithIdentifier(fromIdentifier:Dynamic, afterItemWithIdentifier:Dynamic):Void;
 
 	@:native("reloadItemsWithIdentifiers")
-	overload public function reloadItemsWithIdentifiers(identifiers:Dynamic):Void;
+	overload public function reloadItemsWithIdentifiers(identifiers:NSArray):Void;
 
 	@:native("appendSectionsWithIdentifiers")
 	overload public function appendSectionsWithIdentifiers(sectionIdentifiers:NSArray):Void;
 
 	@:native("insertSectionsWithIdentifiers:beforeSectionWithIdentifier")
-	overload public function insertSectionsWithIdentifiersBeforeSectionWithIdentifier(sectionIdentifiers:Dynamic, beforeSectionWithIdentifier:Dynamic):Void;
+	overload public function insertSectionsWithIdentifiersBeforeSectionWithIdentifier(sectionIdentifiers:NSArray, beforeSectionWithIdentifier:Dynamic):Void;
 
 	@:native("insertSectionsWithIdentifiers:afterSectionWithIdentifier")
-	overload public function insertSectionsWithIdentifiersAfterSectionWithIdentifier(sectionIdentifiers:Dynamic, afterSectionWithIdentifier:Dynamic):Void;
+	overload public function insertSectionsWithIdentifiersAfterSectionWithIdentifier(sectionIdentifiers:NSArray, afterSectionWithIdentifier:Dynamic):Void;
 
 	@:native("deleteSectionsWithIdentifiers")
-	overload public function deleteSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;
+	overload public function deleteSectionsWithIdentifiers(sectionIdentifiers:NSArray):Void;
 
 	@:native("moveSectionWithIdentifier:beforeSectionWithIdentifier")
 	overload public function moveSectionWithIdentifierBeforeSectionWithIdentifier(fromSectionIdentifier:Dynamic, beforeSectionWithIdentifier:Dynamic):Void;
@@ -89,7 +89,7 @@ extern class NSDiffableDataSourceSnapshot
 	overload public function moveSectionWithIdentifierAfterSectionWithIdentifier(fromSectionIdentifier:Dynamic, afterSectionWithIdentifier:Dynamic):Void;
 
 	@:native("reloadSectionsWithIdentifiers")
-	overload public function reloadSectionsWithIdentifiers(sectionIdentifiers:Dynamic):Void;
+	overload public function reloadSectionsWithIdentifiers(sectionIdentifiers:NSArray):Void;
 
 
 }

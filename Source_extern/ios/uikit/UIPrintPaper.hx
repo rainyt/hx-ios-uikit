@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIPrintPaper;
 import ios.objc.CGSize;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 @:objc
 @:native("UIPrintPaper")
@@ -15,7 +16,7 @@ extern class UIPrintPaper{
 	overload public static function autorelease():UIPrintPaper;
 
 	@:native("bestPaperForPageSize:withPapersFromArray")
-	overload public static function bestPaperForPageSizeWithPapersFromArray(contentSize:CGSize, withPapersFromArray:Dynamic):UIPrintPaper;
+	overload public static function bestPaperForPageSizeWithPapersFromArray(contentSize:CGSize, withPapersFromArray:NSArray):UIPrintPaper;
 
 	@:native("paperSize")
 	public var paperSize:CGSize;

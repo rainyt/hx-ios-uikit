@@ -22,7 +22,7 @@ extern interface UIPrintInteractionControllerDelegate
 	overload public function printInteractionControllerParentViewController(printInteractionController:UIPrintInteractionController):Dynamic;
 
 	@:native("printInteractionController:choosePaper")
-	overload public function printInteractionControllerChoosePaper(printInteractionController:UIPrintInteractionController, choosePaper:Dynamic):UIPrintPaper;
+	overload public function printInteractionControllerChoosePaper(printInteractionController:UIPrintInteractionController, choosePaper:NSArray):UIPrintPaper;
 
 	@:native("printInteractionControllerWillPresentPrinterOptions")
 	overload public function printInteractionControllerWillPresentPrinterOptions(printInteractionController:UIPrintInteractionController):Void;

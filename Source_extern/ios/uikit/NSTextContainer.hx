@@ -5,6 +5,7 @@ import ios.foundation.NSSecureCoding;
 import ios.objc.CGSize;
 import ios.uikit.NSCoder;
 import ios.uikit.NSLayoutManager;
+import ios.foundation.NSArray;
 import ios.uikit.NSLineBreakMode;
 import ios.objc.CGRect;
 import ios.uikit.NSWritingDirection;
@@ -41,7 +42,7 @@ extern class NSTextContainer
 	public var size:CGSize;
 
 	@:native("exclusionPaths")
-	public var exclusionPaths:Dynamic;
+	public var exclusionPaths:NSArray;
 
 	@:native("lineBreakMode")
 	public var lineBreakMode:NSLineBreakMode;

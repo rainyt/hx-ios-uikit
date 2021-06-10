@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UITableViewDropCoordinator;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.uikit.NSIndexPath;
 import ios.uikit.UITableViewDropProposal;
 import ios.uikit.UIDragItem;
@@ -22,7 +23,7 @@ extern interface UITableViewDropCoordinator
 	overload public static function autorelease():UITableViewDropCoordinator;
 
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	@:native("destinationIndexPath")
 	public var destinationIndexPath:NSIndexPath;

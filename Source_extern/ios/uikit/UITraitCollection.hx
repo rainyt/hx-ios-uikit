@@ -4,6 +4,7 @@ import ios.uikit.UITraitCollection;
 import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 import ios.uikit.UIUserInterfaceIdiom;
 import ios.uikit.UIUserInterfaceStyle;
 import ios.uikit.UITraitEnvironmentLayoutDirection;
@@ -40,7 +41,7 @@ extern class UITraitCollection
 
 	/*! Returns a trait collection by merging the traits in `traitCollections`. The last trait along any given  axis (e.g. interface usage) will supersede any others. */
 	@:native("traitCollectionWithTraitsFromCollections")
-	overload public static function traitCollectionWithTraitsFromCollections(traitCollections:Dynamic):UITraitCollection;
+	overload public static function traitCollectionWithTraitsFromCollections(traitCollections:NSArray):UITraitCollection;
 
 	@:native("traitCollectionWithUserInterfaceIdiom")
 	overload public static function traitCollectionWithUserInterfaceIdiom(idiom:UIUserInterfaceIdiom):UITraitCollection;

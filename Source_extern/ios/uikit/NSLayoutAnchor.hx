@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.NSLayoutAnchor;
 import ios.uikit.NSLayoutConstraint;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSLayoutAnchor")
 @:include("UIKit/UIKit.h")
@@ -52,7 +53,7 @@ extern class NSLayoutAnchor
 	public var hasAmbiguousLayout:Bool;
 
 	@:native("constraintsAffectingLayout")
-	public var constraintsAffectingLayout:Dynamic;
+	public var constraintsAffectingLayout:NSArray;
 
 
 }

@@ -11,6 +11,7 @@ import ios.uikit.UIView;
 import ios.uikit.UITraitCollection;
 import ios.objc.CGRect;
 import ios.objc.CGSize;
+import ios.foundation.NSArray;
 import ios.uikit.UIFocusUpdateContext;
 import ios.uikit.UIFocusAnimationCoordinator;
 import cpp.objc.NSString;
@@ -120,7 +121,7 @@ extern class UIPresentationController
 	overload public function willTransitionToTraitCollectionWithTransitionCoordinator(newCollection:UITraitCollection, withTransitionCoordinator:Dynamic):Void;
 
 	@:native("preferredFocusEnvironments")
-	public var preferredFocusEnvironments:Dynamic;
+	public var preferredFocusEnvironments:NSArray;
 
 	@:native("parentFocusEnvironment")
 	public var parentFocusEnvironment:Dynamic;

@@ -6,6 +6,7 @@ import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.foundation.NSLocale;
 import ios.foundation.NSTimeZone;
+import ios.foundation.NSArray;
 import ios.foundation.NSCalendarUnit;
 import ios.foundation.NSDate;
 import ios.foundation.NSDateComponents;
@@ -57,58 +58,58 @@ extern class NSCalendar
 	public var minimumDaysInFirstWeek:Int;
 
 	@:native("eraSymbols")
-	public var eraSymbols:Dynamic;
+	public var eraSymbols:NSArray;
 
 	@:native("longEraSymbols")
-	public var longEraSymbols:Dynamic;
+	public var longEraSymbols:NSArray;
 
 	@:native("monthSymbols")
-	public var monthSymbols:Dynamic;
+	public var monthSymbols:NSArray;
 
 	@:native("shortMonthSymbols")
-	public var shortMonthSymbols:Dynamic;
+	public var shortMonthSymbols:NSArray;
 
 	@:native("veryShortMonthSymbols")
-	public var veryShortMonthSymbols:Dynamic;
+	public var veryShortMonthSymbols:NSArray;
 
 	@:native("standaloneMonthSymbols")
-	public var standaloneMonthSymbols:Dynamic;
+	public var standaloneMonthSymbols:NSArray;
 
 	@:native("shortStandaloneMonthSymbols")
-	public var shortStandaloneMonthSymbols:Dynamic;
+	public var shortStandaloneMonthSymbols:NSArray;
 
 	@:native("veryShortStandaloneMonthSymbols")
-	public var veryShortStandaloneMonthSymbols:Dynamic;
+	public var veryShortStandaloneMonthSymbols:NSArray;
 
 	@:native("weekdaySymbols")
-	public var weekdaySymbols:Dynamic;
+	public var weekdaySymbols:NSArray;
 
 	@:native("shortWeekdaySymbols")
-	public var shortWeekdaySymbols:Dynamic;
+	public var shortWeekdaySymbols:NSArray;
 
 	@:native("veryShortWeekdaySymbols")
-	public var veryShortWeekdaySymbols:Dynamic;
+	public var veryShortWeekdaySymbols:NSArray;
 
 	@:native("standaloneWeekdaySymbols")
-	public var standaloneWeekdaySymbols:Dynamic;
+	public var standaloneWeekdaySymbols:NSArray;
 
 	@:native("shortStandaloneWeekdaySymbols")
-	public var shortStandaloneWeekdaySymbols:Dynamic;
+	public var shortStandaloneWeekdaySymbols:NSArray;
 
 	@:native("veryShortStandaloneWeekdaySymbols")
-	public var veryShortStandaloneWeekdaySymbols:Dynamic;
+	public var veryShortStandaloneWeekdaySymbols:NSArray;
 
 	@:native("quarterSymbols")
-	public var quarterSymbols:Dynamic;
+	public var quarterSymbols:NSArray;
 
 	@:native("shortQuarterSymbols")
-	public var shortQuarterSymbols:Dynamic;
+	public var shortQuarterSymbols:NSArray;
 
 	@:native("standaloneQuarterSymbols")
-	public var standaloneQuarterSymbols:Dynamic;
+	public var standaloneQuarterSymbols:NSArray;
 
 	@:native("shortStandaloneQuarterSymbols")
-	public var shortStandaloneQuarterSymbols:Dynamic;
+	public var shortStandaloneQuarterSymbols:NSArray;
 
 	@:native("AMSymbol")
 	public var AMSymbol:NSString;

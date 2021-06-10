@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIViewControllerRestoratio;
 import ios.uikit.UIViewController;
+import ios.foundation.NSArray;
 import ios.uikit.NSCoder;
 @:objc
 @:native("UIViewControllerRestoratio")
@@ -22,7 +23,7 @@ extern interface UIViewControllerRestoratio{
 	overload public static function autorelease():UIViewControllerRestoratio;
 
 	@:native("viewControllerWithRestorationIdentifierPath:coder")
-	overload public static function viewControllerWithRestorationIdentifierPathCoder(identifierComponents:Dynamic, coder:NSCoder):UIViewController;
+	overload public static function viewControllerWithRestorationIdentifierPathCoder(identifierComponents:NSArray, coder:NSCoder):UIViewController;
 
 
 }

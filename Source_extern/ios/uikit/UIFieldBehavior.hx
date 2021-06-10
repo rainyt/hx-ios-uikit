@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDynamicBehavior;
 import ios.uikit.UIFieldBehavior;
+import ios.foundation.NSArray;
 import ios.objc.CGPoint;
 import ios.uikit.UIRegion;
 import ios.objc.CGVector;
@@ -27,7 +28,7 @@ extern class UIFieldBehavior extends UIDynamicBehavior{
 	overload public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	/*!  The position (origin) of the field in the reference coordinate system  */
 	@:native("position")

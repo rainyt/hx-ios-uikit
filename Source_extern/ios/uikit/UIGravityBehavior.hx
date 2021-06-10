@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDynamicBehavior;
 import ios.uikit.UIGravityBehavior;
+import ios.foundation.NSArray;
 import ios.objc.CGVector;
 import ios.uikit.UIDynamicAnimator;
 @:objc
@@ -16,7 +17,7 @@ extern class UIGravityBehavior extends UIDynamicBehavior{
 	overload public static function autorelease():UIGravityBehavior;
 
 	@:native("initWithItems")
-	overload public function initWithItems(items:Dynamic):UIGravityBehavior;
+	overload public function initWithItems(items:NSArray):UIGravityBehavior;
 
 	@:native("addItem")
 	overload public function addItem(item:Dynamic):Void;
@@ -25,7 +26,7 @@ extern class UIGravityBehavior extends UIDynamicBehavior{
 	overload public function removeItem(item:Dynamic):Void;
 
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	@:native("gravityDirection")
 	public var gravityDirection:CGVector;

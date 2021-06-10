@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UICollectionViewLayoutInvalidationContext;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 import ios.objc.CGPoint;
@@ -23,16 +24,16 @@ extern class UICollectionViewLayoutInvalidationContext{
 	public var invalidateDataSourceCounts:Bool;
 
 	@:native("invalidateItemsAtIndexPaths")
-	overload public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;
+	overload public function invalidateItemsAtIndexPaths(indexPaths:NSArray):Void;
 
 	@:native("invalidateSupplementaryElementsOfKind:atIndexPaths")
-	overload public function invalidateSupplementaryElementsOfKindAtIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateSupplementaryElementsOfKindAtIndexPaths(elementKind:NSString, atIndexPaths:NSArray):Void;
 
 	@:native("invalidateDecorationElementsOfKind:atIndexPaths")
-	overload public function invalidateDecorationElementsOfKindAtIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateDecorationElementsOfKindAtIndexPaths(elementKind:NSString, atIndexPaths:NSArray):Void;
 
 	@:native("invalidatedItemIndexPaths")
-	public var invalidatedItemIndexPaths:Dynamic;
+	public var invalidatedItemIndexPaths:NSArray;
 
 	@:native("invalidatedSupplementaryIndexPaths")
 	public var invalidatedSupplementaryIndexPaths:NSDictionary;
@@ -47,10 +48,10 @@ extern class UICollectionViewLayoutInvalidationContext{
 	public var contentSizeAdjustment:CGSize;
 
 	@:native("previousIndexPathsForInteractivelyMovingItems")
-	public var previousIndexPathsForInteractivelyMovingItems:Dynamic;
+	public var previousIndexPathsForInteractivelyMovingItems:NSArray;
 
 	@:native("targetIndexPathsForInteractivelyMovingItems")
-	public var targetIndexPathsForInteractivelyMovingItems:Dynamic;
+	public var targetIndexPathsForInteractivelyMovingItems:NSArray;
 
 	@:native("interactiveMovementTarget")
 	public var interactiveMovementTarget:CGPoint;

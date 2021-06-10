@@ -3,6 +3,7 @@ package ios.foundation;
 import ios.foundation.NSNetService;
 import cpp.objc.NSString;
 import ios.foundation.NSRunLoop;
+import ios.foundation.NSArray;
 import ios.foundation.NSNetServiceOptions;
 import cpp.objc.NSDictionary;
 import cpp.objc.NSData;
@@ -58,7 +59,7 @@ extern class NSNetService{
 
 	/* The addresses of the service. This is an NSArray of NSData instances, each of which contains a single struct sockaddr suitable for use with connect(2). In the event that no addresses are resolved for the service or the service has not yet been resolved, an empty NSArray is returned. */
 	@:native("addresses")
-	public var addresses:Dynamic;
+	public var addresses:NSArray;
 
 	/* The port of a resolved service. This returns -1 if the service has not been resolved. */
 	@:native("port")

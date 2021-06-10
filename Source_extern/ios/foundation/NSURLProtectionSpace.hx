@@ -4,6 +4,7 @@ import ios.foundation.NSURLProtectionSpace;
 import ios.foundation.NSSecureCoding;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.objc.NSCoding;
 @:objc
 @:native("NSURLProtectionSpace")
@@ -65,7 +66,7 @@ extern class NSURLProtectionSpace
 
 	/*!     @abstract Returns an array of acceptable certificate issuing authorities for client certification authentication. Issuers are identified by their distinguished name and returned as a DER encoded data.     @result An array of NSData objects.  (Nil if the authenticationMethod is not NSURLAuthenticationMethodClientCertificate)  */
 	@:native("distinguishedNames")
-	public var distinguishedNames:Dynamic;
+	public var distinguishedNames:NSArray;
 
 	/*!     @abstract Returns a SecTrustRef which represents the state of the servers SSL transaction state     @result A SecTrustRef from Security.framework.  (Nil if the authenticationMethod is not NSURLAuthenticationMethodServerTrust)  */
 	@:native("serverTrust")

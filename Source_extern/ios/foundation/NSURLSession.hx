@@ -13,6 +13,7 @@ import ios.foundation.NSURLSessionDownloadTask;
 import ios.foundation.NSURLSessionStreamTask;
 import ios.foundation.NSNetService;
 import ios.foundation.NSURLSessionWebSocketTask;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSURLSession")
 @:include("Foundation/Foundation.h")
@@ -176,7 +177,7 @@ extern class NSURLSession{
 
 	/* Creates a WebSocket task given the url and an array of protocols. The protocols will be used in the WebSocket handshake to  * negotiate a prefered protocol with the server  * Note - The protocol will not affect the WebSocket framing. More details on the protocol can be found by reading the WebSocket RFC  */
 	@:native("webSocketTaskWithURL:protocols")
-	overload public function webSocketTaskWithURLProtocols(url:NSURL, protocols:Dynamic):NSURLSessionWebSocketTask;
+	overload public function webSocketTaskWithURLProtocols(url:NSURL, protocols:NSArray):NSURLSessionWebSocketTask;
 
 	/* Creates a WebSocket task given the request. The request properties can be modified and will be used by the task during the HTTP handshake phase.  * Clients who want to add custom protocols can do so by directly adding headers with the key Sec-WebSocket-Protocol  * and a comma separated list of protocols they wish to negotiate with the server. The custom HTTP headers provided by the client will remain unchanged for the handshake with the server.  */
 	@:native("webSocketTaskWithRequest")

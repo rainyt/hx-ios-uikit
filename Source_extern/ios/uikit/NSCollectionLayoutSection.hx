@@ -5,6 +5,7 @@ import ios.uikit.UICollectionLayoutListConfiguration;
 import ios.uikit.NSCollectionLayoutGroup;
 import ios.uikit.UIContentInsetsReference;
 import ios.uikit.UICollectionLayoutSectionOrthogonalScrollingBehavior;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSCollectionLayoutSection")
 @:include("UIKit/UIKit.h")
@@ -38,7 +39,7 @@ extern class NSCollectionLayoutSection{
 	public var orthogonalScrollingBehavior:UICollectionLayoutSectionOrthogonalScrollingBehavior;
 
 	@:native("boundarySupplementaryItems")
-	public var boundarySupplementaryItems:Dynamic;
+	public var boundarySupplementaryItems:NSArray;
 
 	@:native("supplementariesFollowContentInsets")
 	public var supplementariesFollowContentInsets:Bool;
@@ -47,7 +48,7 @@ extern class NSCollectionLayoutSection{
 	public var visibleItemsInvalidationHandler:Dynamic;
 
 	@:native("decorationItems")
-	public var decorationItems:Dynamic;
+	public var decorationItems:NSArray;
 
 
 }

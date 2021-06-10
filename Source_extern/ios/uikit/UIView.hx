@@ -6,6 +6,7 @@ import ios.uikit.UIViewPrintFormatter;
 import ios.objc.CGRect;
 import cpp.objc.NSString;
 import ios.uikit.UIImage;
+import ios.foundation.NSArray;
 import ios.uikit.NSCoder;
 import ios.quartzcore.CALayer;
 import ios.uikit.UISemanticContentAttribute;
@@ -31,6 +32,7 @@ import ios.uikit.NSLayoutXAxisAnchor;
 import ios.uikit.NSLayoutYAxisAnchor;
 import ios.uikit.NSLayoutDimension;
 import ios.uikit.UIUserInterfaceStyle;
+import ios.foundation.NSSet;
 import ios.uikit.UIPressesEvent;
 import ios.uikit.UIEventSubtype;
 import ios.uikit.UICommand;
@@ -80,7 +82,7 @@ extern class UIView extends UIResponder{
 	overload public function removeInteraction(interaction:Dynamic):Void;
 
 	@:native("interactions")
-	public var interactions:Dynamic;
+	public var interactions:NSArray;
 
 	@:native("layerClass")
 	overload public static function layerClass():Dynamic;
@@ -179,7 +181,7 @@ extern class UIView extends UIResponder{
 	public var superview:UIView;
 
 	@:native("subviews")
-	public var subviews:Dynamic;
+	public var subviews:NSArray;
 
 	@:native("window")
 	public var window:UIWindow;
@@ -356,7 +358,7 @@ extern class UIView extends UIResponder{
 
 	/* Performs the requested system-provided animation on one or more views. Specify addtional animations in the parallelAnimations block. These additional animations will run alongside the system animation with the same timing and duration that the system animation defines/inherits. Additional animations should not modify properties of the view on which the system animation is being performed. Not all system animations honor all available options.  */
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	/* Call this method from within an animation block to repeat animations, otherwise has no effect. The total duration of a repeating animation can be computed via (outerAnimationDuration * repeatCount * autoreverses ? 2 : 1). */
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
@@ -369,7 +371,7 @@ extern class UIView extends UIResponder{
 	overload public static function addKeyframeWithRelativeStartTimeRelativeDurationAnimations(frameStartTime:Dynamic, relativeDuration:Dynamic, animations:Dynamic):Void;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:Dynamic;
+	public var gestureRecognizers:NSArray;
 
 	@:native("addGestureRecognizer")
 	overload public function addGestureRecognizer(gestureRecognizer:UIGestureRecognizer):Void;
@@ -389,22 +391,22 @@ extern class UIView extends UIResponder{
 	overload public function removeMotionEffect(effect:UIMotionEffect):Void;
 
 	@:native("motionEffects")
-	public var motionEffects:Dynamic;
+	public var motionEffects:NSArray;
 
 	@:native("constraints")
-	public var constraints:Dynamic;
+	public var constraints:NSArray;
 
 	@:native("addConstraint")
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:Dynamic):Void;
+	overload public function addConstraints(constraints:NSArray):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:Dynamic):Void;
+	overload public function removeConstraints(constraints:NSArray):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -473,7 +475,7 @@ extern class UIView extends UIResponder{
 
 	/* UILayoutGuide objects owned by the receiver.  */
 	@:native("layoutGuides")
-	public var layoutGuides:Dynamic;
+	public var layoutGuides:NSArray;
 
 	/* Adds layoutGuide to the receiver, passing the receiver in -setOwningView: to layoutGuide.  */
 	@:native("addLayoutGuide")
@@ -522,7 +524,7 @@ extern class UIView extends UIResponder{
 
 	/* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.  Pass UILayoutConstraintAxisHorizontal for the constraints affecting [self center].x and CGRectGetWidth([self bounds]), and UILayoutConstraintAxisVertical for the constraints affecting[self center].y and CGRectGetHeight([self bounds]).  */
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
 
 	/* If there aren't enough constraints in the system to uniquely determine layout, we say the layout is ambiguous.  For example, if the only constraint in the system was x = y + 100, then there are lots of different possible values for x and y.  This situation is not automatically detected by UIKit, due to performance considerations and details of the algorithm used for layout.    The symptom of ambiguity is that views sometimes jump from place to place, or possibly are just in the wrong place.  -hasAmbiguousLayout runs a check for whether there is another center and bounds the receiver could have that could also satisfy the constraints.  -exerciseAmbiguousLayout does more.  It randomly changes the view layout to a different valid layout.  Making the UI jump back and forth can be helpful for figuring out where you're missing a constraint.    */
 	@:native("hasAmbiguousLayout")
@@ -561,31 +563,31 @@ extern class UIView extends UIResponder{
 	overload public function resignFirstResponder():Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
+	overload public function touchesEstimatedPropertiesUpdated(touches:NSSet):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
 	overload public function motionBeganWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;

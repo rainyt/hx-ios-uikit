@@ -12,11 +12,13 @@ import cpp.objc.NSString;
 import ios.uikit.UIWindow;
 import ios.uikit.UIInterfaceOrientationMask;
 import ios.uikit.UIViewController;
+import ios.foundation.NSArray;
 import ios.uikit.NSCoder;
 import ios.uikit.NSUserActivity;
 import ios.uikit.UISceneConfiguration;
 import ios.uikit.UISceneSession;
 import ios.uikit.UISceneConnectionOptions;
+import ios.foundation.NSSet;
 @:objc
 @:native("UIApplicationDelegate")
 @:include("UIKit/UIKit.h")
@@ -104,7 +106,7 @@ extern interface UIApplicationDelegate
 	overload public function applicationShouldAllowExtensionPointIdentifier(application:UIApplication, shouldAllowExtensionPointIdentifier:Dynamic):Bool;
 
 	@:native("application:viewControllerWithRestorationIdentifierPath:coder")
-	overload public function applicationViewControllerWithRestorationIdentifierPathCoder(application:UIApplication, viewControllerWithRestorationIdentifierPath:Dynamic, coder:NSCoder):UIViewController;
+	overload public function applicationViewControllerWithRestorationIdentifierPathCoder(application:UIApplication, viewControllerWithRestorationIdentifierPath:NSArray, coder:NSCoder):UIViewController;
 
 	@:native("application:shouldSaveSecureApplicationState")
 	overload public function applicationShouldSaveSecureApplicationState(application:UIApplication, shouldSaveSecureApplicationState:NSCoder):Bool;
@@ -137,7 +139,7 @@ extern interface UIApplicationDelegate
 	overload public function applicationConfigurationForConnectingSceneSessionOptions(application:UIApplication, configurationForConnectingSceneSession:UISceneSession, options:UISceneConnectionOptions):UISceneConfiguration;
 
 	@:native("application:didDiscardSceneSessions")
-	overload public function applicationDidDiscardSceneSessions(application:UIApplication, didDiscardSceneSessions:Dynamic):Void;
+	overload public function applicationDidDiscardSceneSessions(application:UIApplication, didDiscardSceneSessions:NSSet):Void;
 
 
 }

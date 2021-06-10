@@ -4,6 +4,7 @@ import ios.foundation.NSThread;
 import ios.foundation.NSMutableDictionary;
 import ios.foundation.NSDate;
 import ios.foundation.NSQualityOfService;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 @:objc
 @:native("NSThread")
@@ -53,10 +54,10 @@ extern class NSThread{
 	public var qualityOfService:NSQualityOfService;
 
 	@:native("callStackReturnAddresses")
-	overload public static function callStackReturnAddresses():Dynamic;
+	overload public static function callStackReturnAddresses():NSArray;
 
 	@:native("callStackSymbols")
-	overload public static function callStackSymbols():Dynamic;
+	overload public static function callStackSymbols():NSArray;
 
 	@:native("name")
 	public var name:NSString;

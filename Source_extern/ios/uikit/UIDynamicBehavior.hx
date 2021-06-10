@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIDynamicBehavior;
+import ios.foundation.NSArray;
 import ios.uikit.UIDynamicAnimator;
 @:objc
 @:native("UIDynamicBehavior")
@@ -20,7 +21,7 @@ extern class UIDynamicBehavior{
 	overload public function removeChildBehavior(behavior:UIDynamicBehavior):Void;
 
 	@:native("childBehaviors")
-	public var childBehaviors:Dynamic;
+	public var childBehaviors:NSArray;
 
 	@:native("void")
 	public var void:Dynamic;

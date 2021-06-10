@@ -26,11 +26,11 @@ extern class CAKeyframeAnimation extends CAPropertyAnimation{
 
 	/* An optional array of `NSNumber' objects defining the pacing of the  * animation. Each time corresponds to one value in the `values' array,  * and defines when the value should be used in the animation function.  * Each value in the array is a floating point number in the range  * [0,1]. */
 	@:native("keyTimes")
-	public var keyTimes:Dynamic;
+	public var keyTimes:NSArray;
 
 	/* An optional array of CAMediaTimingFunction objects. If the `values' array  * defines n keyframes, there should be n-1 objects in the  * `timingFunctions' array. Each function describes the pacing of one  * keyframe to keyframe segment. */
 	@:native("timingFunctions")
-	public var timingFunctions:Dynamic;
+	public var timingFunctions:NSArray;
 
 	/* The "calculation mode". Possible values are `discrete', `linear',  * `paced', `cubic' and `cubicPaced'. Defaults to `linear'. When set to  * `paced' or `cubicPaced' the `keyTimes' and `timingFunctions'  * properties of the animation are ignored and calculated implicitly. */
 	@:native("calculationMode")
@@ -38,13 +38,13 @@ extern class CAKeyframeAnimation extends CAPropertyAnimation{
 
 	/* For animations with the cubic calculation modes, these properties  * provide control over the interpolation scheme. Each keyframe may  * have a tension, continuity and bias value associated with it, each  * in the range [-1, 1] (this defines a Kochanek-Bartels spline, see  * http://en.wikipedia.org/wiki/Kochanek-Bartels_spline).  *  * The tension value controls the "tightness" of the curve (positive  * values are tighter, negative values are rounder). The continuity  * value controls how segments are joined (positive values give sharp  * corners, negative values give inverted corners). The bias value  * defines where the curve occurs (positive values move the curve before  * the control point, negative values move it after the control point).  *  * The first value in each array defines the behavior of the tangent to  * the first control point, the second value controls the second  * point's tangents, and so on. Any unspecified values default to zero  * (giving a Catmull-Rom spline if all are unspecified). */
 	@:native("tensionValues")
-	public var tensionValues:Dynamic;
+	public var tensionValues:NSArray;
 
 	@:native("continuityValues")
-	public var continuityValues:Dynamic;
+	public var continuityValues:NSArray;
 
 	@:native("biasValues")
-	public var biasValues:Dynamic;
+	public var biasValues:NSArray;
 
 	/* Defines whether or objects animating along paths rotate to match the  * path tangent. Possible values are `auto' and `autoReverse'. Defaults  * to nil. The effect of setting this property to a non-nil value when  * no path object is supplied is undefined. `autoReverse' rotates to  * match the tangent plus 180 degrees. */
 	@:native("rotationMode")

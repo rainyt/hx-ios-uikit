@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UILayoutGuide;
 import ios.uikit.UIFocusGuide;
+import ios.foundation.NSArray;
 import ios.uikit.UIView;
 import ios.uikit.UILayoutConstraintAxis;
 import ios.objc.NSCoding;
@@ -20,14 +21,14 @@ extern class UIFocusGuide extends UILayoutGuide{
 	public var enabled:Bool;
 
 	@:native("preferredFocusEnvironments")
-	public var preferredFocusEnvironments:Dynamic;
+	public var preferredFocusEnvironments:NSArray;
 
 	@:native("preferredFocusedView")
 	public var preferredFocusedView:UIView;
 
 	/* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.  Pass UILayoutConstraintAxisHorizontal for the constraints affecting [self center].x and CGRectGetWidth([self bounds]), and UILayoutConstraintAxisVertical for the constraints affecting[self center].y and CGRectGetHeight([self bounds]).  */
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
 
 	/** Haxe Protocol */
 	@:native("encodeWithCoder")

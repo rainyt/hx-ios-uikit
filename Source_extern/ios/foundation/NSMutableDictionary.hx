@@ -3,12 +3,14 @@ package ios.foundation;
 import cpp.objc.NSDictionary;
 import ios.foundation.NSMutableDictionary;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import ios.foundation.NSURL;
 import ios.foundation.NSEnumerator;
 import cpp.objc.NSError;
 import ios.foundation.NSEnumerationOptions;
 import ios.foundation.NSSortOptions;
+import ios.foundation.NSSet;
 import ios.foundation.NSDate;
 import ios.foundation.NSNumber;
 @:objc
@@ -47,7 +49,7 @@ extern class NSMutableDictionary extends NSDictionary
 	overload public function removeAllObjects():Void;
 
 	@:native("removeObjectsForKeys")
-	overload public function removeObjectsForKeys(keyArray:Dynamic):Void;
+	overload public function removeObjectsForKeys(keyArray:NSArray):Void;
 
 	@:native("setDictionary")
 	overload public function setDictionary(otherDictionary:NSDictionary):Void;
@@ -88,7 +90,7 @@ extern class NSMutableDictionary extends NSDictionary
 	overload public function initWithObjectsForKeysCount(objects:Dynamic, forKeys:constKeyType, count:Int):NSMutableDictionary;
 
 	@:native("allKeysForObject")
-	overload public function allKeysForObject(anObject:Dynamic):Dynamic;
+	overload public function allKeysForObject(anObject:Dynamic):NSArray;
 
 	@:native("descriptionWithLocale")
 	overload public function descriptionWithLocale(locale:Dynamic):NSString;
@@ -103,14 +105,14 @@ extern class NSMutableDictionary extends NSDictionary
 	overload public function objectEnumerator():NSEnumerator;
 
 	@:native("objectsForKeys:notFoundMarker")
-	overload public function objectsForKeysNotFoundMarker(keys:Dynamic, notFoundMarker:Dynamic):Dynamic;
+	overload public function objectsForKeysNotFoundMarker(keys:NSArray, notFoundMarker:Dynamic):NSArray;
 
 	/* Serializes this instance to the specified URL in the NSPropertyList format (using NSPropertyListXMLFormat_v1_0). For other formats use NSPropertyListSerialization directly. */
 	@:native("writeToURL:error")
 	overload public function writeToURLError(url:NSURL, error:NSError):Bool;
 
 	@:native("keysSortedByValueUsingSelector")
-	overload public function keysSortedByValueUsingSelector(comparator:String):Dynamic;
+	overload public function keysSortedByValueUsingSelector(comparator:String):NSArray;
 
 	@:native("getObjects:andKeys:count:and/or")
 	overload public function getObjectsAndKeysCountAnd/or(objects:Dynamic, andKeys:Dynamic, count:Int, and/or:Dynamic):Void;
@@ -125,16 +127,16 @@ extern class NSMutableDictionary extends NSDictionary
 	overload public function enumerateKeysAndObjectsWithOptionsUsingBlock(opts:NSEnumerationOptions, usingBlock:Dynamic):Void;
 
 	@:native("keysSortedByValueUsingComparator")
-	overload public function keysSortedByValueUsingComparator(cmptr:Dynamic):Dynamic;
+	overload public function keysSortedByValueUsingComparator(cmptr:Dynamic):NSArray;
 
 	@:native("keysSortedByValueWithOptions:usingComparator")
-	overload public function keysSortedByValueWithOptionsUsingComparator(opts:NSSortOptions, usingComparator:Dynamic):Dynamic;
+	overload public function keysSortedByValueWithOptionsUsingComparator(opts:NSSortOptions, usingComparator:Dynamic):NSArray;
 
 	@:native("keysOfEntriesPassingTest")
-	overload public function keysOfEntriesPassingTest(predicate:Dynamic):Dynamic;
+	overload public function keysOfEntriesPassingTest(predicate:Dynamic):NSSet;
 
 	@:native("keysOfEntriesWithOptions:passingTest")
-	overload public function keysOfEntriesWithOptionsPassingTest(opts:NSEnumerationOptions, passingTest:Dynamic):Dynamic;
+	overload public function keysOfEntriesWithOptionsPassingTest(opts:NSEnumerationOptions, passingTest:Dynamic):NSSet;
 
 	@:native("dictionary")
 	overload public static function dictionary():NSMutableDictionary;
@@ -152,7 +154,7 @@ extern class NSMutableDictionary extends NSDictionary
 	overload public static function dictionaryWithDictionary(dict:NSDictionary):NSMutableDictionary;
 
 	@:native("dictionaryWithObjects:forKeys")
-	overload public static function dictionaryWithObjectsForKeys(objects:Dynamic, forKeys:Dynamic):NSMutableDictionary;
+	overload public static function dictionaryWithObjectsForKeys(objects:NSArray, forKeys:NSArray):NSMutableDictionary;
 
 	@:native("initWithObjectsAndKeys")
 	overload public function initWithObjectsAndKeys(firstObject:Dynamic):NSMutableDictionary;
@@ -164,7 +166,7 @@ extern class NSMutableDictionary extends NSDictionary
 	overload public function initWithDictionaryCopyItems(otherDictionary:NSDictionary, copyItems:Bool):NSMutableDictionary;
 
 	@:native("initWithObjects:forKeys")
-	overload public function initWithObjectsForKeys(objects:Dynamic, forKeys:Dynamic):NSMutableDictionary;
+	overload public function initWithObjectsForKeys(objects:NSArray, forKeys:NSArray):NSMutableDictionary;
 
 	/* Reads dictionary stored in NSPropertyList format from the specified url. */
 	@:native("initWithContentsOfURL:error")
@@ -176,7 +178,7 @@ extern class NSMutableDictionary extends NSDictionary
 
 	/*  Use this method to create a key set to pass to +dictionaryWithSharedKeySet:.  The keys are copied from the array and must be copyable.  If the array parameter is nil or not an NSArray, an exception is thrown.  If the array of keys is empty, an empty key set is returned.  The array of keys may contain duplicates, which are ignored (it is undefined which object of each duplicate pair is used).  As for any usage of hashing, is recommended that the keys have a well-distributed implementation of -hash, and the hash codes must satisfy the hash/isEqual: invariant.  Keys with duplicate hash codes are allowed, but will cause lower performance and increase memory usage.  */
 	@:native("sharedKeySetForKeys")
-	overload public static function sharedKeySetForKeys(keys:Dynamic):Dynamic;
+	overload public static function sharedKeySetForKeys(keys:NSArray):Dynamic;
 
 	@:native("countByEnumeratingWithState:objects:count")
 	overload public function countByEnumeratingWithStateObjectsCount(state:Dynamic, objects:Dynamic, count:Int):Int;

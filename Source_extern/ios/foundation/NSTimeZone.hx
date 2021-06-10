@@ -6,6 +6,7 @@ import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import cpp.objc.NSData;
 import ios.foundation.NSDate;
+import ios.foundation.NSArray;
 import cpp.objc.NSDictionary;
 import ios.foundation.NSLocale;
 import ios.objc.NSCoding;
@@ -60,7 +61,7 @@ extern class NSTimeZone
 	overload public static function localTimeZone():NSTimeZone;
 
 	@:native("knownTimeZoneNames")
-	overload public static function knownTimeZoneNames():Dynamic;
+	overload public static function knownTimeZoneNames():NSArray;
 
 	@:native("abbreviationDictionary")
 	overload public static function abbreviationDictionary():NSDictionary;

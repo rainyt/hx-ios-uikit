@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIAccessibilityContainerDataTable;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIAccessibilityContainerDataTable")
 @:include("UIKit/UIKit.h")
@@ -25,10 +26,10 @@ extern interface UIAccessibilityContainerDataTable
 	overload public function accessibilityColumnCount():Int;
 
 	@:native("accessibilityHeaderElementsForRow")
-	overload public function accessibilityHeaderElementsForRow(row:Int):Dynamic;
+	overload public function accessibilityHeaderElementsForRow(row:Int):NSArray;
 
 	@:native("accessibilityHeaderElementsForColumn")
-	overload public function accessibilityHeaderElementsForColumn(column:Int):Dynamic;
+	overload public function accessibilityHeaderElementsForColumn(column:Int):NSArray;
 
 
 }

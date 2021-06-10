@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UITextDragDelegate;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.uikit.UIView;
 import ios.uikit.UITargetedDragPreview;
 import ios.uikit.UIDragItem;
@@ -21,7 +22,7 @@ extern interface UITextDragDelegate
 
 	/* Implement this to provide custom drag items when dragging out of a text control.  * If you return an empty array here, no drag will occur.  * The drag request provides the text range from which the user is dragging, and  * a set of default drag items which would be used if this delegate method were  * not implemented. You can modify and/or augment these at will.  *  * Note: this method might be called more than once. For instance, if the control  * is asked to provide more items to add to an existing session.  * You can detect this by checking the `existingItems` in the drag request.  */
 	@:native("textDraggableView:itemsForDrag")
-	overload public function textDraggableViewItemsForDrag(textDraggableView:UIView, itemsForDrag:Dynamic):Dynamic;
+	overload public function textDraggableViewItemsForDrag(textDraggableView:UIView, itemsForDrag:Dynamic):NSArray;
 
 	/* Provide a preview for lifting the item out of the text control.  * If you return nil, the drag interaction will provide a default preview.  *  * Note: This will not be called for items obtained from a UITextDragRequest’s suggestedItems  * (via textDraggableView:itemsForDrag:).  * The text control will use its own previews for those items.  */
 	@:native("textDraggableView:dragPreviewForLiftingItem:session")

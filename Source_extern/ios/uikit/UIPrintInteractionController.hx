@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UIPrintInteractionController;
+import ios.foundation.NSSet;
 import ios.foundation.NSURL;
 import cpp.objc.NSData;
 import ios.uikit.UIPrintInfo;
@@ -27,7 +28,7 @@ extern class UIPrintInteractionController{
 	overload public static function printingAvailable():Bool;
 
 	@:native("printableUTIs")
-	overload public static function printableUTIs():Dynamic;
+	overload public static function printableUTIs():NSSet;
 
 	@:native("canPrintURL")
 	overload public static function canPrintURL(url:NSURL):Bool;

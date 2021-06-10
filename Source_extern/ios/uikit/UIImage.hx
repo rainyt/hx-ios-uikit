@@ -11,6 +11,7 @@ import ios.uikit.UIImageOrientation;
 import ios.uikit.CIImage;
 import ios.objc.CGSize;
 import ios.uikit.UIImageResizingMode;
+import ios.foundation.NSArray;
 import ios.objc.CGPoint;
 import ios.objc.CGBlendMode;
 import ios.objc.CGRect;
@@ -122,10 +123,10 @@ extern class UIImage
 	overload public static function animatedResizableImageNamedCapInsetsResizingModeDuration(name:NSString, capInsets:Dynamic, resizingMode:UIImageResizingMode, duration:Dynamic):UIImage;
 
 	@:native("animatedImageWithImages:duration")
-	overload public static function animatedImageWithImagesDuration(images:Dynamic, duration:Dynamic):UIImage;
+	overload public static function animatedImageWithImagesDuration(images:NSArray, duration:Dynamic):UIImage;
 
 	@:native("images")
-	public var images:Dynamic;
+	public var images:NSArray;
 
 	@:native("duration")
 	public var duration:Dynamic;

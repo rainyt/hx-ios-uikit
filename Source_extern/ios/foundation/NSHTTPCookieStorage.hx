@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSHTTPCookieStorage;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.foundation.NSHTTPCookie;
 import ios.foundation.NSDate;
 import ios.foundation.NSURL;
@@ -36,7 +37,7 @@ extern class NSHTTPCookieStorage{
 
 	/*!     @abstract Get all the cookies     @result An NSArray of NSHTTPCookies */
 	@:native("cookies")
-	public var cookies:Dynamic;
+	public var cookies:NSArray;
 
 	/*!     @method setCookie:     @abstract Set a cookie     @discussion The cookie will override an existing cookie with the     same name, domain and path, if any. */
 	@:native("setCookie")
@@ -52,11 +53,11 @@ extern class NSHTTPCookieStorage{
 
 	/*!     @method cookiesForURL:     @abstract Returns an array of cookies to send to the given URL.     @param URL The URL for which to get cookies.     @result an NSArray of NSHTTPCookie objects.     @discussion The cookie manager examines the cookies it stores and     includes those which should be sent to the given URL. You can use     <tt>+[NSCookie requestHeaderFieldsWithCookies:]</tt> to turn this array     into a set of header fields to add to a request. */
 	@:native("cookiesForURL")
-	overload public function cookiesForURL(URL:NSURL):Dynamic;
+	overload public function cookiesForURL(URL:NSURL):NSArray;
 
 	/*!     @method setCookies:forURL:mainDocumentURL:     @abstract Adds an array cookies to the cookie store, following the     cookie accept policy.     @param cookies The cookies to set.     @param URL The URL from which the cookies were sent.     @param mainDocumentURL The main document URL to be used as a base for the "same     domain as main document" policy.     @discussion For mainDocumentURL, the caller should pass the URL for     an appropriate main document, if known. For example, when loading     a web page, the URL of the main html document for the top-level     frame should be passed. To save cookies based on a set of response     headers, you can use <tt>+[NSCookie     cookiesWithResponseHeaderFields:forURL:]</tt> on a header field     dictionary and then use this method to store the resulting cookies     in accordance with policy settings. */
 	@:native("setCookies:forURL:mainDocumentURL")
-	overload public function setCookiesForURLMainDocumentURL(cookies:Dynamic, forURL:NSURL, mainDocumentURL:NSURL):Void;
+	overload public function setCookiesForURLMainDocumentURL(cookies:NSArray, forURL:NSURL, mainDocumentURL:NSURL):Void;
 
 	/*!     @abstract The cookie accept policy preference of the     receiver. */
 	@:native("cookieAcceptPolicy")
@@ -64,10 +65,10 @@ extern class NSHTTPCookieStorage{
 
 	/*!   @method sortedCookiesUsingDescriptors:   @abstract Returns an array of all cookies in the store, sorted according to the key value and sorting direction of the NSSortDescriptors specified in the parameter.   @param sortOrder an array of NSSortDescriptors which represent the preferred sort order of the resulting array.   @discussion proper sorting of cookies may require extensive string conversion, which can be avoided by allowing the system to perform the sorting.  This API is to be preferred over the more generic -[NSHTTPCookieStorage cookies] API, if sorting is going to be performed. */
 	@:native("sortedCookiesUsingDescriptors")
-	overload public function sortedCookiesUsingDescriptors(sortOrder:Dynamic):Dynamic;
+	overload public function sortedCookiesUsingDescriptors(sortOrder:NSArray):NSArray;
 
 	@:native("storeCookies:forTask")
-	overload public function storeCookiesForTask(cookies:Dynamic, forTask:NSURLSessionTask):Void;
+	overload public function storeCookiesForTask(cookies:NSArray, forTask:NSURLSessionTask):Void;
 
 	@:native("getCookiesForTask:completionHandler")
 	overload public function getCookiesForTaskCompletionHandler(task:NSURLSessionTask, completionHandler:Dynamic):Void;

@@ -6,6 +6,7 @@ import cpp.objc.NSString;
 import ios.uikit.UIImage;
 import ios.uikit.UIMenuElementAttributes;
 import ios.uikit.UIMenuElementState;
+import ios.foundation.NSArray;
 import ios.uikit.NSCoder;
 @:objc
 @:native("UICommand")
@@ -34,13 +35,13 @@ extern class UICommand extends UIMenuElement{
 	public var state:UIMenuElementState;
 
 	@:native("alternates")
-	public var alternates:Dynamic;
+	public var alternates:NSArray;
 
 	@:native("commandWithTitle:image:action:propertyList")
 	overload public static function commandWithTitleImageActionPropertyList(title:NSString, image:UIImage, action:String, propertyList:Dynamic):UICommand;
 
 	@:native("commandWithTitle:image:action:propertyList:alternates")
-	overload public static function commandWithTitleImageActionPropertyListAlternates(title:NSString, image:UIImage, action:String, propertyList:Dynamic, alternates:Dynamic):UICommand;
+	overload public static function commandWithTitleImageActionPropertyListAlternates(title:NSString, image:UIImage, action:String, propertyList:Dynamic, alternates:NSArray):UICommand;
 
 	@:native("init")
 	overload public function init():UICommand;

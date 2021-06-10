@@ -10,6 +10,7 @@ import ios.uikit.UIApplicationShortcutItem;
 import ios.uikit.UIScene;
 import ios.uikit.UISceneSession;
 import ios.uikit.UISceneConnectionOptions;
+import ios.foundation.NSSet;
 import ios.uikit.NSUserActivity;
 import cpp.objc.NSString;
 import cpp.objc.NSError;
@@ -57,7 +58,7 @@ extern interface UIWindowSceneDelegate
 	overload public function sceneDidEnterBackground(scene:UIScene):Void;
 
 	@:native("scene:openURLContexts")
-	overload public function sceneOpenURLContexts(scene:UIScene, openURLContexts:Dynamic):Void;
+	overload public function sceneOpenURLContexts(scene:UIScene, openURLContexts:NSSet):Void;
 
 	@:native("stateRestorationActivityForScene")
 	overload public function stateRestorationActivityForScene(scene:UIScene):NSUserActivity;

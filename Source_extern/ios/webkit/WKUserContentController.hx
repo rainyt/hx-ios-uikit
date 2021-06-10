@@ -2,6 +2,7 @@ package ios.webkit;
 
 import ios.webkit.WKUserContentController;
 import ios.foundation.NSSecureCoding;
+import ios.foundation.NSArray;
 import ios.webkit.WKUserScript;
 import ios.webkit.WKContentWorld;
 import cpp.objc.NSString;
@@ -27,7 +28,7 @@ extern class WKUserContentController
 
 	/*! @abstract The user scripts associated with this user content  controller. */
 	@:native("userScripts")
-	public var userScripts:Dynamic;
+	public var userScripts:NSArray;
 
 	/*! @abstract Adds a user script.  @param userScript The user script to add. */
 	@:native("addUserScript")

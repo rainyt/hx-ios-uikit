@@ -10,6 +10,7 @@ import cpp.objc.NSDictionary;
 import ios.uikit.UIControlState;
 import ios.uikit.UITabBarAppearance;
 import ios.uikit.UIAppearance;
+import ios.foundation.NSArray;
 import ios.uikit.UITraitCollection;
 @:objc
 @:native("UITabBarItem")
@@ -73,13 +74,13 @@ extern class UITabBarItem extends UIBarItem{
 	overload public static function appearance():UIAppearance;
 
 	@:native("appearanceWhenContainedInInstancesOfClasses")
-	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:Dynamic):UIAppearance;
+	overload public static function appearanceWhenContainedInInstancesOfClasses(containerTypes:NSArray):UIAppearance;
 
 	@:native("appearanceForTraitCollection")
 	overload public static function appearanceForTraitCollection(trait:UITraitCollection):UIAppearance;
 
 	@:native("appearanceForTraitCollection:whenContainedInInstancesOfClasses")
-	overload public static function appearanceForTraitCollectionWhenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:Dynamic):UIAppearance;
+	overload public static function appearanceForTraitCollectionWhenContainedInInstancesOfClasses(trait:UITraitCollection, whenContainedInInstancesOfClasses:NSArray):UIAppearance;
 
 
 }

@@ -1,6 +1,7 @@
 package ios.storekit;
 
 import ios.storekit.SKProductsResponse;
+import ios.foundation.NSArray;
 @:objc
 @:native("SKProductsResponse")
 @:include("StoreKit/StoreKit.h")
@@ -13,10 +14,10 @@ extern class SKProductsResponse{
 	overload public static function autorelease():SKProductsResponse;
 
 	@:native("products")
-	public var products:Dynamic;
+	public var products:NSArray;
 
 	@:native("invalidProductIdentifiers")
-	public var invalidProductIdentifiers:Dynamic;
+	public var invalidProductIdentifiers:NSArray;
 
 
 }

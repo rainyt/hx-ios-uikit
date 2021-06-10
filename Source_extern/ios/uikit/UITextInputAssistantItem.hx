@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextInputAssistantItem;
+import ios.foundation.NSArray;
 @:objc
 @:native("UITextInputAssistantItem")
 @:include("UIKit/UIKit.h")
@@ -16,10 +17,10 @@ extern class UITextInputAssistantItem{
 	public var allowsHidingShortcuts:Bool;
 
 	@:native("leadingBarButtonGroups")
-	public var leadingBarButtonGroups:Dynamic;
+	public var leadingBarButtonGroups:NSArray;
 
 	@:native("trailingBarButtonGroups")
-	public var trailingBarButtonGroups:Dynamic;
+	public var trailingBarButtonGroups:NSArray;
 
 
 }

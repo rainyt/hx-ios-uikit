@@ -5,6 +5,7 @@ import ios.storekit.SKStorefront;
 import ios.storekit.SKPayment;
 import cpp.objc.NSString;
 import ios.storekit.SKPaymentTransaction;
+import ios.foundation.NSArray;
 @:objc
 @:native("SKPaymentQueue")
 @:include("StoreKit/StoreKit.h")
@@ -41,16 +42,16 @@ extern class SKPaymentQueue{
 	overload public function finishTransaction(transaction:SKPaymentTransaction):Void;
 
 	@:native("startDownloads")
-	overload public function startDownloads(downloads:Dynamic):Void;
+	overload public function startDownloads(downloads:NSArray):Void;
 
 	@:native("pauseDownloads")
-	overload public function pauseDownloads(downloads:Dynamic):Void;
+	overload public function pauseDownloads(downloads:NSArray):Void;
 
 	@:native("resumeDownloads")
-	overload public function resumeDownloads(downloads:Dynamic):Void;
+	overload public function resumeDownloads(downloads:NSArray):Void;
 
 	@:native("cancelDownloads")
-	overload public function cancelDownloads(downloads:Dynamic):Void;
+	overload public function cancelDownloads(downloads:NSArray):Void;
 
 	@:native("addTransactionObserver")
 	overload public function addTransactionObserver(observer:Dynamic):Void;
@@ -62,7 +63,7 @@ extern class SKPaymentQueue{
 	public var transactionObservers:Dynamic;
 
 	@:native("transactions")
-	public var transactions:Dynamic;
+	public var transactions:NSArray;
 
 	@:native("showPriceConsentIfNeeded")
 	overload public function showPriceConsentIfNeeded():Void;

@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UISceneConnectionOptions;
+import ios.foundation.NSSet;
 import cpp.objc.NSString;
 import ios.uikit.UNNotificationResponse;
 import ios.uikit.UIApplicationShortcutItem;
@@ -19,7 +20,7 @@ extern class UISceneConnectionOptions{
 	overload public function init():UISceneConnectionOptions;
 
 	@:native("URLContexts")
-	public var URLContexts:Dynamic;
+	public var URLContexts:NSSet;
 
 	@:native("sourceApplication")
 	public var sourceApplication:NSString;
@@ -28,7 +29,7 @@ extern class UISceneConnectionOptions{
 	public var handoffUserActivityType:NSString;
 
 	@:native("userActivities")
-	public var userActivities:Dynamic;
+	public var userActivities:NSSet;
 
 	@:native("notificationResponse")
 	public var notificationResponse:UNNotificationResponse;

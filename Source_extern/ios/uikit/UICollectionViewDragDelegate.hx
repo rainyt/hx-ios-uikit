@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UICollectionViewDragDelegate;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.uikit.UICollectionView;
 import ios.uikit.NSIndexPath;
 import ios.objc.CGPoint;
@@ -21,11 +22,11 @@ extern interface UICollectionViewDragDelegate
 
 	/* Provide items to begin a drag associated with a given indexPath.  * If an empty array is returned a drag session will not begin.  */
 	@:native("collectionView:itemsForBeginningDragSession:atIndexPath")
-	overload public function collectionViewItemsForBeginningDragSessionAtIndexPath(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):Dynamic;
+	overload public function collectionViewItemsForBeginningDragSessionAtIndexPath(collectionView:UICollectionView, itemsForBeginningDragSession:Dynamic, atIndexPath:NSIndexPath):NSArray;
 
 	/* Called to request items to add to an existing drag session in response to the add item gesture.  * You can use the provided point (in the collection view's coordinate space) to do additional hit testing if desired.  * If not implemented, or if an empty array is returned, no items will be added to the drag and the gesture  * will be handled normally.  */
 	@:native("collectionView:itemsForAddingToDragSession:atIndexPath:point")
-	overload public function collectionViewItemsForAddingToDragSessionAtIndexPathPoint(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):Dynamic;
+	overload public function collectionViewItemsForAddingToDragSessionAtIndexPathPoint(collectionView:UICollectionView, itemsForAddingToDragSession:Dynamic, atIndexPath:NSIndexPath, point:CGPoint):NSArray;
 
 	/* Allows customization of the preview used for the item being lifted from or cancelling back to the collection view.  * If not implemented or if nil is returned, the entire cell will be used for the preview.  */
 	@:native("collectionView:dragPreviewParametersForItemAtIndexPath")

@@ -7,6 +7,7 @@ import ios.uikit.UICollectionViewCell;
 import ios.uikit.NSIndexPath;
 import ios.uikit.UICollectionReusableView;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 @:objc
 @:native("UICollectionViewDataSource")
 @:include("UIKit/UIKit.h")
@@ -39,7 +40,7 @@ extern interface UICollectionViewDataSource
 	overload public function collectionViewMoveItemAtIndexPathToIndexPath(collectionView:UICollectionView, moveItemAtIndexPath:NSIndexPath, toIndexPath:NSIndexPath):Void;
 
 	@:native("indexTitlesForCollectionView")
-	overload public function indexTitlesForCollectionView(collectionView:UICollectionView):Dynamic;
+	overload public function indexTitlesForCollectionView(collectionView:UICollectionView):NSArray;
 
 	@:native("collectionView:indexPathForIndexTitle:atIndex")
 	overload public function collectionViewIndexPathForIndexTitleAtIndex(collectionView:UICollectionView, indexPathForIndexTitle:NSString, atIndex:Int):NSIndexPath;

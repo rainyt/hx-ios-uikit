@@ -5,6 +5,7 @@ import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSArray;
 import ios.objc.NSCoding;
 @:objc
 @:native("NSException")
@@ -39,10 +40,10 @@ extern class NSException
 	public var userInfo:NSDictionary;
 
 	@:native("callStackReturnAddresses")
-	public var callStackReturnAddresses:Dynamic;
+	public var callStackReturnAddresses:NSArray;
 
 	@:native("callStackSymbols")
-	public var callStackSymbols:Dynamic;
+	public var callStackSymbols:NSArray;
 
 	@:native("raise")
 	overload public function raise():Void;

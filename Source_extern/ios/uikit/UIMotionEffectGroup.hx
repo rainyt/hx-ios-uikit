@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIMotionEffect;
 import ios.uikit.UIMotionEffectGroup;
+import ios.foundation.NSArray;
 import ios.uikit.NSCoder;
 import cpp.objc.NSDictionary;
 @:objc
@@ -18,7 +19,7 @@ extern class UIMotionEffectGroup extends UIMotionEffect{
 	overload public static function autorelease():UIMotionEffectGroup;
 
 	@:native("motionEffects")
-	public var motionEffects:Dynamic;
+	public var motionEffects:NSArray;
 
 	@:native("init")
 	overload public function init():UIMotionEffect;

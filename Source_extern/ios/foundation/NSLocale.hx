@@ -6,6 +6,7 @@ import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.uikit.NSCoder;
 import ios.foundation.NSCharacterSet;
+import ios.foundation.NSArray;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("NSLocale")
@@ -130,22 +131,22 @@ extern class NSLocale
 	overload public function init():NSLocale;
 
 	@:native("availableLocaleIdentifiers")
-	overload public static function availableLocaleIdentifiers():Dynamic;
+	overload public static function availableLocaleIdentifiers():NSArray;
 
 	@:native("ISOLanguageCodes")
-	overload public static function ISOLanguageCodes():Dynamic;
+	overload public static function ISOLanguageCodes():NSArray;
 
 	@:native("ISOCountryCodes")
-	overload public static function ISOCountryCodes():Dynamic;
+	overload public static function ISOCountryCodes():NSArray;
 
 	@:native("ISOCurrencyCodes")
-	overload public static function ISOCurrencyCodes():Dynamic;
+	overload public static function ISOCurrencyCodes():NSArray;
 
 	@:native("commonISOCurrencyCodes")
-	overload public static function commonISOCurrencyCodes():Dynamic;
+	overload public static function commonISOCurrencyCodes():NSArray;
 
 	@:native("preferredLanguages")
-	overload public static function preferredLanguages():Dynamic;
+	overload public static function preferredLanguages():NSArray;
 
 	@:native("componentsFromLocaleIdentifier")
 	overload public static function componentsFromLocaleIdentifier(string:NSString):NSDictionary;

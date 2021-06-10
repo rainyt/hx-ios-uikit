@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSLinguisticTagger;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 @:objc
 @:native("NSLinguisticTagger")
@@ -14,7 +15,7 @@ extern class NSLinguisticTagger{
 	overload public static function autorelease():NSLinguisticTagger;
 
 	@:native("tagSchemes")
-	public var tagSchemes:Dynamic;
+	public var tagSchemes:NSArray;
 
 	@:native("string")
 	public var string:NSString;

@@ -4,6 +4,7 @@ import ios.uikit.UIView;
 import ios.uikit.UIStackView;
 import ios.objc.CGRect;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 import ios.uikit.UILayoutConstraintAxis;
 import ios.uikit.UIStackViewDistribution;
 import ios.uikit.UIStackViewAlignment;
@@ -21,6 +22,7 @@ import ios.uikit.UIGestureRecognizer;
 import ios.uikit.UIMotionEffect;
 import ios.uikit.NSLayoutConstraint;
 import ios.uikit.UILayoutGuide;
+import ios.foundation.NSSet;
 import ios.uikit.UIPressesEvent;
 import ios.uikit.UIEventSubtype;
 import ios.uikit.UICommand;
@@ -65,10 +67,10 @@ extern class UIStackView extends UIView{
 
 	/* UIStackView enforces that all views in the arrangedSubviews list  must be subviews of the UIStackView.     Thus, when a view is added to the arrangedSubviews, UIStackView  adds it as a subview if it isn't already. And when a view in a  UIStackView's arrangedSubviews list receives -removeFromSuperview  it is also removed from the arrangedSubviews.    Please note that this is a convenience initializer and cannot be overridden in Swift.  */
 	@:native("initWithArrangedSubviews")
-	overload public function initWithArrangedSubviews(views:Dynamic):UIStackView;
+	overload public function initWithArrangedSubviews(views:NSArray):UIStackView;
 
 	@:native("arrangedSubviews")
-	public var arrangedSubviews:Dynamic;
+	public var arrangedSubviews:NSArray;
 
 	/* Add a view to the end of the arrangedSubviews list.  Maintains the rule that the arrangedSubviews list is a subset of the  subviews list by adding the view as a subview of the receiver if  necessary.     Does not affect the subview ordering if view is already a subview   of the receiver.  */
 	@:native("addArrangedSubview")
@@ -270,7 +272,7 @@ extern class UIStackView extends UIView{
 
 	/* Performs the requested system-provided animation on one or more views. Specify addtional animations in the parallelAnimations block. These additional animations will run alongside the system animation with the same timing and duration that the system animation defines/inherits. Additional animations should not modify properties of the view on which the system animation is being performed. Not all system animations honor all available options.  */
 	@:native("performSystemAnimation:onViews:options:animations:completion")
-	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:Dynamic, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
+	overload public static function performSystemAnimationOnViewsOptionsAnimationsCompletion(animation:UISystemAnimation, onViews:NSArray, options:UIViewAnimationOptions, animations:Dynamic, completion:Dynamic):Void;
 
 	/* Call this method from within an animation block to repeat animations, otherwise has no effect. The total duration of a repeating animation can be computed via (outerAnimationDuration * repeatCount * autoreverses ? 2 : 1). */
 	@:native("modifyAnimationsWithRepeatCount:autoreverses:animations")
@@ -303,13 +305,13 @@ extern class UIStackView extends UIView{
 	overload public function addConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("addConstraints")
-	overload public function addConstraints(constraints:Dynamic):Void;
+	overload public function addConstraints(constraints:NSArray):Void;
 
 	@:native("removeConstraint")
 	overload public function removeConstraint(constraint:NSLayoutConstraint):Void;
 
 	@:native("removeConstraints")
-	overload public function removeConstraints(constraints:Dynamic):Void;
+	overload public function removeConstraints(constraints:NSArray):Void;
 
 	@:native("updateConstraintsIfNeeded")
 	overload public function updateConstraintsIfNeeded():Void;
@@ -366,7 +368,7 @@ extern class UIStackView extends UIView{
 
 	/* This returns a list of all the constraints that are affecting the current location of the receiver.  The constraints do not necessarily involve the receiver, they may affect the frame indirectly.  Pass UILayoutConstraintAxisHorizontal for the constraints affecting [self center].x and CGRectGetWidth([self bounds]), and UILayoutConstraintAxisVertical for the constraints affecting[self center].y and CGRectGetHeight([self bounds]).  */
 	@:native("constraintsAffectingLayoutForAxis")
-	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):Dynamic;
+	overload public function constraintsAffectingLayoutForAxis(axis:UILayoutConstraintAxis):NSArray;
 
 	@:native("exerciseAmbiguityInLayout")
 	overload public function exerciseAmbiguityInLayout():Void;
@@ -394,31 +396,31 @@ extern class UIStackView extends UIView{
 	overload public function resignFirstResponder():Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
+	overload public function touchesEstimatedPropertiesUpdated(touches:NSSet):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
 	overload public function motionBeganWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;

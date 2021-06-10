@@ -5,6 +5,7 @@ import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.uikit.UIUserNotificationActionContext;
 @:objc
 @:native("UIUserNotificationCategory")
@@ -31,7 +32,7 @@ extern class UIUserNotificationCategory
 	public var identifier:NSString;
 
 	@:native("actionsForContext")
-	overload public function actionsForContext(context:UIUserNotificationActionContext):Dynamic;
+	overload public function actionsForContext(context:UIUserNotificationActionContext):NSArray;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIBarButtonItemGroup;
 import ios.objc.NSCoding;
+import ios.foundation.NSArray;
 import ios.uikit.UIBarButtonItem;
 import ios.uikit.NSCoder;
 @:objc
@@ -18,13 +19,13 @@ extern class UIBarButtonItemGroup
 	overload public static function autorelease():UIBarButtonItemGroup;
 
 	@:native("initWithBarButtonItems:representativeItem")
-	overload public function initWithBarButtonItemsRepresentativeItem(barButtonItems:Dynamic, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
+	overload public function initWithBarButtonItemsRepresentativeItem(barButtonItems:NSArray, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIBarButtonItemGroup;
 
 	@:native("barButtonItems")
-	public var barButtonItems:Dynamic;
+	public var barButtonItems:NSArray;
 
 	@:native("representativeItem")
 	public var representativeItem:UIBarButtonItem;

@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSHTTPCookie;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSArray;
 import ios.foundation.NSURL;
 import cpp.objc.NSString;
 import ios.foundation.NSDate;
@@ -34,11 +35,11 @@ extern class NSHTTPCookie{
 
 	/*!     @method requestHeaderFieldsWithCookies:     @abstract Return a dictionary of header fields that can be used to add the     specified cookies to the request.     @param cookies The cookies to turn into request headers.     @result An NSDictionary where the keys are header field names, and the values     are the corresponding header field values. */
 	@:native("requestHeaderFieldsWithCookies")
-	overload public static function requestHeaderFieldsWithCookies(cookies:Dynamic):NSDictionary;
+	overload public static function requestHeaderFieldsWithCookies(cookies:NSArray):NSDictionary;
 
 	/*!     @method cookiesWithResponseHeaderFields:forURL:     @abstract Return an array of cookies parsed from the specified response header fields and URL.     @param headerFields The response header fields to check for cookies.     @param URL The URL that the cookies came from - relevant to how the cookies are interpeted.     @result An NSArray of NSHTTPCookie objects     @discussion This method will ignore irrelevant header fields so     you can pass a dictionary containing data other than cookie data. */
 	@:native("cookiesWithResponseHeaderFields:forURL")
-	overload public static function cookiesWithResponseHeaderFieldsForURL(headerFields:NSDictionary, forURL:NSURL):Dynamic;
+	overload public static function cookiesWithResponseHeaderFieldsForURL(headerFields:NSDictionary, forURL:NSURL):NSArray;
 
 	/*!     @abstract Returns a dictionary representation of the receiver.     @discussion This method returns a dictionary representation of the     NSHTTPCookie which can be saved and passed to     <tt>-initWithProperties:</tt> or <tt>+cookieWithProperties:</tt>     later to reconstitute an equivalent cookie.     <p>See the NSHTTPCookie <tt>-initWithProperties:</tt> method for     more information on the constraints imposed on the dictionary, and     for descriptions of the supported keys and values.     @result The dictionary representation of the receiver. */
 	@:native("properties")
@@ -90,7 +91,7 @@ extern class NSHTTPCookie{
 
 	/*!     @abstract Returns the list ports to which the receiver should be     sent.     @discussion This value specifies an NSArray of NSNumbers     (containing integers) which specify the only ports to which this     cookie should be sent.     @result The list ports to which the receiver should be sent. The     array may be nil, in which case this cookie can be sent to any     port. */
 	@:native("portList")
-	public var portList:Dynamic;
+	public var portList:NSArray;
 
 	/*!  @abstract Returns the value of the same site attribute on the cookie.  @discussion Cookies can be marked with an attribute Strict or Lax.  Cookies marked with "strict" (NSHTTPCookieSameSiteStrict) are not sent along with cross-site requests.  Cookies marked with "lax" (NSHTTPCookieSameSiteLax) sent along cross-site requests provided the  cross-site requests are top-level-requests (one that changes the url in the address bar).  The attribute value is canonicalized and stored. Any value other than the default (strict and lax) will be ignored.  @result strict or lax. The result could also be nil, in which case the  cookie will be sent along with all cross-site requests.  */
 	@:native("sameSitePolicy")

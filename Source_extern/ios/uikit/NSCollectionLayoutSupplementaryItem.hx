@@ -6,6 +6,7 @@ import ios.objc.NSCopying;
 import ios.uikit.NSCollectionLayoutSize;
 import cpp.objc.NSString;
 import ios.uikit.NSCollectionLayoutAnchor;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSCollectionLayoutSupplementaryItem")
 @:include("UIKit/UIKit.h")
@@ -44,7 +45,7 @@ extern class NSCollectionLayoutSupplementaryItem extends NSCollectionLayoutItem
 	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutSupplementaryItem;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutSupplementaryItem;
+	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:NSArray):NSCollectionLayoutSupplementaryItem;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

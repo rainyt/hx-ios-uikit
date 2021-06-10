@@ -9,6 +9,7 @@ import ios.objc.CGRect;
 import ios.uikit.NSStringDrawingOptions;
 import ios.uikit.NSStringDrawingContext;
 import ios.foundation.NSCharacterSet;
+import ios.foundation.NSArray;
 import ios.uikit.NSCoder;
 import ios.foundation.NSStringCompareOptions;
 import ios.foundation.NSLocale;
@@ -52,7 +53,7 @@ extern class NSSimpleCString extends NSString{
 	overload public function variantFittingPresentationWidth(width:Int):NSString;
 
 	@:native("pathWithComponents")
-	overload public static function pathWithComponents(components:Dynamic):NSSimpleCString;
+	overload public static function pathWithComponents(components:NSArray):NSSimpleCString;
 
 	@:native("stringByAppendingPathComponent")
 	overload public function stringByAppendingPathComponent(str:NSString):NSString;
@@ -61,10 +62,10 @@ extern class NSSimpleCString extends NSString{
 	overload public function stringByAppendingPathExtension(str:NSString):NSString;
 
 	@:native("stringsByAppendingPaths")
-	overload public function stringsByAppendingPaths(paths:Dynamic):Dynamic;
+	overload public function stringsByAppendingPaths(paths:NSArray):NSArray;
 
 	@:native("completePathIntoString:caseSensitive:matchesIntoArray:filterTypes")
-	overload public function completePathIntoStringCaseSensitiveMatchesIntoArrayFilterTypes(outputName:Dynamic, caseSensitive:Bool, matchesIntoArray:Dynamic, filterTypes:Dynamic):Int;
+	overload public function completePathIntoStringCaseSensitiveMatchesIntoArrayFilterTypes(outputName:Dynamic, caseSensitive:Bool, matchesIntoArray:NSArray, filterTypes:NSArray):Int;
 
 	@:native("getFileSystemRepresentation:maxLength")
 	overload public function getFileSystemRepresentationMaxLength(cname:Dynamic, maxLength:Int):Bool;
@@ -247,10 +248,10 @@ extern class NSSimpleCString extends NSString{
 	overload public static function defaultCStringEncoding():Dynamic;
 
 	@:native("componentsSeparatedByString")
-	overload public function componentsSeparatedByString(separator:NSString):Dynamic;
+	overload public function componentsSeparatedByString(separator:NSString):NSArray;
 
 	@:native("componentsSeparatedByCharactersInSet")
-	overload public function componentsSeparatedByCharactersInSet(separator:NSCharacterSet):Dynamic;
+	overload public function componentsSeparatedByCharactersInSet(separator:NSCharacterSet):NSArray;
 
 	@:native("stringByTrimmingCharactersInSet")
 	overload public function stringByTrimmingCharactersInSet(set:NSCharacterSet):NSString;

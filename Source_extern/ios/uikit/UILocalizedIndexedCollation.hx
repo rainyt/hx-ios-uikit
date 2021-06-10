@@ -17,10 +17,10 @@ extern class UILocalizedIndexedCollation{
 	overload public static function currentCollation():UILocalizedIndexedCollation;
 
 	@:native("sectionTitles")
-	public var sectionTitles:Dynamic;
+	public var sectionTitles:NSArray;
 
 	@:native("sectionIndexTitles")
-	public var sectionIndexTitles:Dynamic;
+	public var sectionIndexTitles:NSArray;
 
 	@:native("sectionForSectionIndexTitleAtIndex")
 	overload public function sectionForSectionIndexTitleAtIndex(indexTitleIndex:Int):Int;

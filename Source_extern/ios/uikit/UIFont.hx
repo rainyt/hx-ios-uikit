@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIFont;
 import ios.uikit.UITraitCollection;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.uikit.UIFontDescriptor;
 @:objc
 @:native("UIFont")
@@ -43,10 +44,10 @@ extern class UIFont{
 	overload public static function fontWithNameSize(fontName:NSString, size:Float):UIFont;
 
 	@:native("familyNames")
-	overload public static function familyNames():Dynamic;
+	overload public static function familyNames():NSArray;
 
 	@:native("fontNamesForFamilyName")
-	overload public static function fontNamesForFamilyName(familyName:NSString):Dynamic;
+	overload public static function fontNamesForFamilyName(familyName:NSString):NSArray;
 
 	@:native("systemFontOfSize")
 	overload public static function systemFontOfSize(fontSize:Float):UIFont;

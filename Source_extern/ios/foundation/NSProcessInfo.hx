@@ -2,6 +2,7 @@ package ios.foundation;
 
 import ios.foundation.NSProcessInfo;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import ios.foundation.NSActivityOptions;
 import ios.foundation.NSProcessInfoThermalState;
@@ -23,7 +24,7 @@ extern class NSProcessInfo{
 	public var environment:NSDictionary;
 
 	@:native("arguments")
-	public var arguments:Dynamic;
+	public var arguments:NSArray;
 
 	@:native("hostName")
 	public var hostName:NSString;

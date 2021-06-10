@@ -3,6 +3,7 @@ package ios.quartzcore;
 import ios.quartzcore.CALayer;
 import ios.quartzcore.CAShapeLayer;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
@@ -86,7 +87,7 @@ extern class CAShapeLayer extends CALayer{
 
 	/* The dash pattern (an array of NSNumbers) applied when creating the  * stroked version of the path. Defaults to nil. */
 	@:native("lineDashPattern")
-	public var lineDashPattern:Dynamic;
+	public var lineDashPattern:NSArray;
 
 	/* These methods search for the closest ancestor CAScrollLayer of the *  * receiver, and then call either -scrollToPoint: or -scrollToRect: on  * that layer with the specified geometry converted from the coordinate  * space of the receiver to that of the found scroll layer. */
 	@:native("scrollPoint")
@@ -261,7 +262,7 @@ extern class CAShapeLayer extends CALayer{
 
 	/* Returns an array containing the keys of all animations currently  * attached to the receiver. The order of the array matches the order  * in which animations will be applied. */
 	@:native("animationKeys")
-	overload public function animationKeys():Dynamic;
+	overload public function animationKeys():NSArray;
 
 	/* Returns the animation added to the layer with identifier 'key', or nil  * if no such animation exists. Attempting to modify any properties of  * the returned object will result in undefined behavior. */
 	@:native("animationForKey")

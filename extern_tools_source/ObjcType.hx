@@ -26,7 +26,7 @@ class ObjcType {
 				return t=t.substr(0,t.indexOf("<"));
 			var t = t.substr(0, t.indexOf("<"));
 			switch (t) {
-				case "NSSet", "NSArray", "", "Class":
+				case "", "Class":
 					return "Dynamic";
 			}
 			return t;

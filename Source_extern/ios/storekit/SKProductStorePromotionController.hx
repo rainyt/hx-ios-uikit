@@ -2,6 +2,7 @@ package ios.storekit;
 
 import ios.storekit.SKProductStorePromotionController;
 import ios.storekit.SKProduct;
+import ios.foundation.NSArray;
 @:objc
 @:native("SKProductStorePromotionController")
 @:include("StoreKit/StoreKit.h")
@@ -26,7 +27,7 @@ extern class SKProductStorePromotionController{
 	overload public function fetchStorePromotionOrderWithCompletionHandler(completionHandler:Dynamic):Void;
 
 	@:native("updateStorePromotionOrder:completionHandler:macCatalyst(14.0")
-	overload public function updateStorePromotionOrderCompletionHandlerMacCatalyst(14.0(storePromotionOrder:Dynamic, completionHandler:Dynamic, macCatalyst(14.0:Dynamic):Void;
+	overload public function updateStorePromotionOrderCompletionHandlerMacCatalyst(14.0(storePromotionOrder:NSArray, completionHandler:Dynamic, macCatalyst(14.0:Dynamic):Void;
 
 
 }

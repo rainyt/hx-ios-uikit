@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIGuidedAccessRestrictionDelegate;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import ios.uikit.UIGuidedAccessRestrictionState;
 @:objc
@@ -26,7 +27,7 @@ extern interface UIGuidedAccessRestrictionDelegate
 
 	/*  Returns a list of restriction identifiers in the order they will be presented to the user.  Each restriction identifier must be unique string.  For example: com.MyCompany.MyApp.SomeRestrictionIdentifier  */
 	@:native("guidedAccessRestrictionIdentifiers")
-	public var guidedAccessRestrictionIdentifiers:Dynamic;
+	public var guidedAccessRestrictionIdentifiers:NSArray;
 
 	@:native("guidedAccessRestrictionWithIdentifier:didChangeState")
 	overload public function guidedAccessRestrictionWithIdentifierDidChangeState(restrictionIdentifier:NSString, didChangeState:UIGuidedAccessRestrictionState):Void;

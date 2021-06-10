@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.UITextPlaceholder;
+import ios.foundation.NSArray;
 @:objc
 @:native("UITextPlaceholder")
 @:include("UIKit/UIKit.h")
@@ -13,7 +14,7 @@ extern class UITextPlaceholder{
 	overload public static function autorelease():UITextPlaceholder;
 
 	@:native("rects")
-	public var rects:Dynamic;
+	public var rects:NSArray;
 
 
 }

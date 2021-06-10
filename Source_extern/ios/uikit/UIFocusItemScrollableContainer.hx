@@ -4,6 +4,7 @@ import ios.uikit.UIFocusItemScrollableContainer;
 import ios.uikit.UIFocusItemContainer;
 import ios.objc.CGPoint;
 import ios.objc.CGSize;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 @:objc
 @:native("UIFocusItemScrollableContainer")
@@ -31,7 +32,7 @@ extern interface UIFocusItemScrollableContainer
 	public var coordinateSpace:Dynamic;
 
 	@:native("focusItemsInRect")
-	overload public function focusItemsInRect(rect:CGRect):Dynamic;
+	overload public function focusItemsInRect(rect:CGRect):NSArray;
 
 
 }

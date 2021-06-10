@@ -2,6 +2,7 @@ package ios.storekit;
 
 import ios.storekit.SKRequest;
 import ios.storekit.SKProductsRequest;
+import ios.foundation.NSSet;
 @:objc
 @:native("SKProductsRequest")
 @:include("StoreKit/StoreKit.h")
@@ -14,7 +15,7 @@ extern class SKProductsRequest extends SKRequest{
 	overload public static function autorelease():SKProductsRequest;
 
 	@:native("initWithProductIdentifiers")
-	overload public function initWithProductIdentifiers(productIdentifiers:Dynamic):SKProductsRequest;
+	overload public function initWithProductIdentifiers(productIdentifiers:NSSet):SKProductsRequest;
 
 	@:native("cancel")
 	overload public function cancel():Void;

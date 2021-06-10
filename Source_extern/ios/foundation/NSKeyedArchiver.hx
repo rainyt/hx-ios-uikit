@@ -13,6 +13,7 @@ import ios.objc.CGRect;
 import ios.objc.CGAffineTransform;
 import ios.foundation.NSArray;
 import cpp.objc.NSDictionary;
+import ios.foundation.NSSet;
 @:objc
 @:native("NSKeyedArchiver")
 @:include("Foundation/Foundation.h")
@@ -245,18 +246,18 @@ extern class NSKeyedArchiver extends NSCoder{
 	overload public function decodeDictionaryWithKeysOfClassObjectsOfClassForKey(keyCls:Dynamic, objectsOfClass:Dynamic, forKey:NSString):NSDictionary;
 
 	@:native("decodeObjectOfClasses:forKey")
-	overload public function decodeObjectOfClassesForKey(classes:Dynamic, forKey:NSString):Dynamic;
+	overload public function decodeObjectOfClassesForKey(classes:NSSet, forKey:NSString):Dynamic;
 
 	@:native("decodeTopLevelObjectOfClasses:forKey:error")
-	overload public function decodeTopLevelObjectOfClassesForKeyError(classes:Dynamic, forKey:NSString, error:NSError):Dynamic;
+	overload public function decodeTopLevelObjectOfClassesForKeyError(classes:NSSet, forKey:NSString, error:NSError):Dynamic;
 
 	/**  Decodes the \c NSArray object for the given \c key, which should be an \c NSArray, containing the given non-collection classes (no nested arrays or arrays of dictionaries, etc) from the coder.   Requires \c NSSecureCoding otherwise an exception is thrown and sets the \c decodingFailurePolicy to \c NSDecodingFailurePolicySetErrorAndReturn.   Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.  */
 	@:native("decodeArrayOfObjectsOfClasses:forKey")
-	overload public function decodeArrayOfObjectsOfClassesForKey(classes:Dynamic, forKey:NSString):NSArray;
+	overload public function decodeArrayOfObjectsOfClassesForKey(classes:NSSet, forKey:NSString):NSArray;
 
 	/**  Decodes the \c NSDictionary object for the given \c key, which should be an \c NSDictionary, with keys of the types given in \c keyClasses and objects of the given non-collection classes in \c objectClasses (no nested dictionaries or other dictionaries contained in the dictionary, etc) from the given coder.   Requires \c NSSecureCoding otherwise an exception is thrown and sets the \c decodingFailurePolicy to \c NSDecodingFailurePolicySetErrorAndReturn.   Returns \c nil if the object for \c key is not of the expected types, or cannot be decoded, and sets the \c error on the decoder.  */
 	@:native("decodeDictionaryWithKeysOfClasses:objectsOfClasses:forKey")
-	overload public function decodeDictionaryWithKeysOfClassesObjectsOfClassesForKey(keyClasses:Dynamic, objectsOfClasses:Dynamic, forKey:NSString):NSDictionary;
+	overload public function decodeDictionaryWithKeysOfClassesObjectsOfClassesForKey(keyClasses:NSSet, objectsOfClasses:NSSet, forKey:NSString):NSDictionary;
 
 	@:native("decodePropertyListForKey")
 	overload public function decodePropertyListForKey(key:NSString):Dynamic;

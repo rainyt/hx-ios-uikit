@@ -3,8 +3,8 @@ package ios.foundation;
 import ios.foundation.NSPredicate;
 import ios.foundation.NSCompoundPredicate;
 import ios.foundation.NSCompoundPredicateType;
-import ios.uikit.NSCoder;
 import ios.foundation.NSArray;
+import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import cpp.objc.NSDictionary;
 @:objc
@@ -19,7 +19,7 @@ extern class NSCompoundPredicate extends NSPredicate{
 	overload public static function autorelease():NSCompoundPredicate;
 
 	@:native("initWithType:subpredicates")
-	overload public function initWithTypeSubpredicates(type:NSCompoundPredicateType, subpredicates:Dynamic):NSCompoundPredicate;
+	overload public function initWithTypeSubpredicates(type:NSCompoundPredicateType, subpredicates:NSArray):NSCompoundPredicate;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):NSCompoundPredicate;
@@ -32,10 +32,10 @@ extern class NSCompoundPredicate extends NSPredicate{
 
 	/*** Convenience Methods ***/
 	@:native("andPredicateWithSubpredicates")
-	overload public static function andPredicateWithSubpredicates(subpredicates:Dynamic):NSCompoundPredicate;
+	overload public static function andPredicateWithSubpredicates(subpredicates:NSArray):NSCompoundPredicate;
 
 	@:native("orPredicateWithSubpredicates")
-	overload public static function orPredicateWithSubpredicates(subpredicates:Dynamic):NSCompoundPredicate;
+	overload public static function orPredicateWithSubpredicates(subpredicates:NSArray):NSCompoundPredicate;
 
 	@:native("notPredicateWithSubpredicate")
 	overload public static function notPredicateWithSubpredicate(predicate:NSPredicate):NSCompoundPredicate;

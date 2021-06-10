@@ -4,6 +4,7 @@ import ios.uikit.UIMenuElement;
 import ios.uikit.UIMenu;
 import cpp.objc.NSString;
 import ios.uikit.UIMenuOptions;
+import ios.foundation.NSArray;
 import ios.uikit.UIImage;
 import ios.uikit.NSCoder;
 @:objc
@@ -24,19 +25,19 @@ extern class UIMenu extends UIMenuElement{
 	public var options:UIMenuOptions;
 
 	@:native("children")
-	public var children:Dynamic;
+	public var children:NSArray;
 
 	/*!  * @abstract Creates a UIMenu with an empty title, nil image, automatically generated identifier, and default options.  *  * @param children    The menu's action-based sub-elements and sub-menus.  *  * @return A new UIMenu.  */
 	@:native("menuWithChildren")
-	overload public static function menuWithChildren(children:Dynamic):UIMenu;
+	overload public static function menuWithChildren(children:NSArray):UIMenu;
 
 	/*!  * @abstract Creates a UIMenu with the given arguments.  *  * @param title       The menu's title.  * @param children    The menu's action-based sub-elements and sub-menus.  *  * @return A new UIMenu.  */
 	@:native("menuWithTitle:children")
-	overload public static function menuWithTitleChildren(title:NSString, children:Dynamic):UIMenu;
+	overload public static function menuWithTitleChildren(title:NSString, children:NSArray):UIMenu;
 
 	/*!  * @abstract Creates a UIMenu with the given arguments.  *  * @param title       The menu's title.  * @param image       Image to be displayed alongside the menu's title.  * @param identifier  The menu's unique identifier. Pass nil to use an auto-generated identifier.  * @param options     The menu's options.  * @param children    The menu's action-based sub-elements and sub-menus.  *  * @return A new UIMenu.  */
 	@:native("menuWithTitle:image:identifier:options:children")
-	overload public static function menuWithTitleImageIdentifierOptionsChildren(title:NSString, image:UIImage, identifier:NSString, options:UIMenuOptions, children:Dynamic):UIMenu;
+	overload public static function menuWithTitleImageIdentifierOptionsChildren(title:NSString, image:UIImage, identifier:NSString, options:UIMenuOptions, children:NSArray):UIMenu;
 
 	@:native("initWithCoder")
 	overload public function initWithCoder(coder:NSCoder):UIMenu;
@@ -46,7 +47,7 @@ extern class UIMenu extends UIMenuElement{
 
 	/*!  * @abstract Copies this menu and replaces its children.  *  * @param newChildren  The replacement children.  *  * @return A copy of this menu with updated children.  */
 	@:native("menuByReplacingChildren")
-	overload public function menuByReplacingChildren(newChildren:Dynamic):UIMenu;
+	overload public function menuByReplacingChildren(newChildren:NSArray):UIMenu;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

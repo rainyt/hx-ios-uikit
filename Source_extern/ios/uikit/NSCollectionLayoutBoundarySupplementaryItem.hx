@@ -9,6 +9,7 @@ import ios.uikit.NSRectAlignment;
 import ios.objc.CGPoint;
 import ios.uikit.NSCollectionLayoutAnchor;
 import ios.uikit.NSCollectionLayoutItem;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSCollectionLayoutBoundarySupplementaryItem")
 @:include("UIKit/UIKit.h")
@@ -53,7 +54,7 @@ extern class NSCollectionLayoutBoundarySupplementaryItem extends NSCollectionLay
 	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutBoundarySupplementaryItem;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutBoundarySupplementaryItem;
+	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:NSArray):NSCollectionLayoutBoundarySupplementaryItem;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIUserNotificationSettings;
 import ios.uikit.UIUserNotificationType;
+import ios.foundation.NSSet;
 @:objc
 @:native("UIUserNotificationSettings")
 @:include("UIKit/UIKit.h")
@@ -14,13 +15,13 @@ extern class UIUserNotificationSettings{
 	overload public static function autorelease():UIUserNotificationSettings;
 
 	@:native("settingsForTypes:categories")
-	overload public static function settingsForTypesCategories(types:UIUserNotificationType, categories:Dynamic):UIUserNotificationSettings;
+	overload public static function settingsForTypesCategories(types:UIUserNotificationType, categories:NSSet):UIUserNotificationSettings;
 
 	@:native("types")
 	public var types:UIUserNotificationType;
 
 	@:native("categories")
-	public var categories:Dynamic;
+	public var categories:NSSet;
 
 
 }

@@ -6,6 +6,7 @@ import ios.uikit.UIPopoverArrowDirection;
 import ios.uikit.UIView;
 import ios.objc.CGRect;
 import ios.uikit.UIBarButtonItem;
+import ios.foundation.NSArray;
 import ios.uikit.UIColor;
 import ios.uikit.UIViewController;
 import ios.uikit.UIModalPresentationStyle;
@@ -44,7 +45,7 @@ extern class UIPopoverPresentationController extends UIPresentationController{
 	public var arrowDirection:UIPopoverArrowDirection;
 
 	@:native("passthroughViews")
-	public var passthroughViews:Dynamic;
+	public var passthroughViews:NSArray;
 
 	@:native("backgroundColor")
 	public var backgroundColor:UIColor;

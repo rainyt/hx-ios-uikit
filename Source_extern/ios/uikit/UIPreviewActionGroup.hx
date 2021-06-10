@@ -5,6 +5,7 @@ import ios.objc.NSCopying;
 import ios.uikit.UIPreviewActionItem;
 import cpp.objc.NSString;
 import ios.uikit.UIPreviewActionStyle;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIPreviewActionGroup")
 @:include("UIKit/UIKit.h")
@@ -20,7 +21,7 @@ extern class UIPreviewActionGroup
 	overload public static function autorelease():UIPreviewActionGroup;
 
 	@:native("actionGroupWithTitle:style:actions")
-	overload public static function actionGroupWithTitleStyleActions(title:NSString, style:UIPreviewActionStyle, actions:Dynamic):UIPreviewActionGroup;
+	overload public static function actionGroupWithTitleStyleActions(title:NSString, style:UIPreviewActionStyle, actions:NSArray):UIPreviewActionGroup;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

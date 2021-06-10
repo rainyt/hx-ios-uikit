@@ -28,13 +28,13 @@ extern class NSMetadataQuery{
 	public var predicate:NSPredicate;
 
 	@:native("sortDescriptors")
-	public var sortDescriptors:Dynamic;
+	public var sortDescriptors:NSArray;
 
 	@:native("valueListAttributes")
-	public var valueListAttributes:Dynamic;
+	public var valueListAttributes:NSArray;
 
 	@:native("groupingAttributes")
-	public var groupingAttributes:Dynamic;
+	public var groupingAttributes:NSArray;
 
 	@:native("notificationBatchingInterval")
 	public var notificationBatchingInterval:Dynamic;
@@ -91,7 +91,7 @@ extern class NSMetadataQuery{
 	public var valueLists:NSDictionary;
 
 	@:native("groupedResults")
-	public var groupedResults:Dynamic;
+	public var groupedResults:NSArray;
 
 	@:native("valueOfAttribute:forResultAtIndex")
 	overload public function valueOfAttributeForResultAtIndex(attrName:NSString, forResultAtIndex:Int):Dynamic;

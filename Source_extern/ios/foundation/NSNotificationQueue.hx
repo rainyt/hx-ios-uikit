@@ -5,6 +5,7 @@ import ios.foundation.NSNotificationCenter;
 import ios.foundation.NSNotification;
 import ios.foundation.NSPostingStyle;
 import ios.foundation.NSNotificationCoalescing;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSNotificationQueue")
 @:include("Foundation/Foundation.h")
@@ -26,7 +27,7 @@ extern class NSNotificationQueue{
 	overload public function enqueueNotificationPostingStyle(notification:NSNotification, postingStyle:NSPostingStyle):Void;
 
 	@:native("enqueueNotification:postingStyle:coalesceMask:forModes")
-	overload public function enqueueNotificationPostingStyleCoalesceMaskForModes(notification:NSNotification, postingStyle:NSPostingStyle, coalesceMask:NSNotificationCoalescing, forModes:Dynamic):Void;
+	overload public function enqueueNotificationPostingStyleCoalesceMaskForModes(notification:NSNotification, postingStyle:NSPostingStyle, coalesceMask:NSNotificationCoalescing, forModes:NSArray):Void;
 
 	@:native("dequeueNotificationsMatching:coalesceMask")
 	overload public function dequeueNotificationsMatchingCoalesceMask(notification:NSNotification, coalesceMask:Int):Void;

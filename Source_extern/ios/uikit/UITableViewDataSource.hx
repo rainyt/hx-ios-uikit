@@ -6,6 +6,7 @@ import ios.uikit.UITableView;
 import ios.uikit.UITableViewCell;
 import ios.uikit.NSIndexPath;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.uikit.UITableViewCellEditingStyle;
 @:objc
 @:native("UITableViewDataSource")
@@ -42,7 +43,7 @@ extern interface UITableViewDataSource
 	overload public function tableViewCanMoveRowAtIndexPath(tableView:UITableView, canMoveRowAtIndexPath:NSIndexPath):Bool;
 
 	@:native("sectionIndexTitlesForTableView")
-	overload public function sectionIndexTitlesForTableView(tableView:UITableView):Dynamic;
+	overload public function sectionIndexTitlesForTableView(tableView:UITableView):NSArray;
 
 	@:native("tableView:sectionForSectionIndexTitle:atIndex")
 	overload public function tableViewSectionForSectionIndexTitleAtIndex(tableView:UITableView, sectionForSectionIndexTitle:NSString, atIndex:Int):Int;

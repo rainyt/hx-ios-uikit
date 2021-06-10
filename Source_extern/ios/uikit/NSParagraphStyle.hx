@@ -7,6 +7,7 @@ import ios.uikit.NSWritingDirection;
 import cpp.objc.NSString;
 import ios.uikit.NSTextAlignment;
 import ios.uikit.NSLineBreakMode;
+import ios.foundation.NSArray;
 import ios.uikit.NSLineBreakStrategy;
 import ios.objc.NSCoding;
 @:objc
@@ -70,7 +71,7 @@ extern class NSParagraphStyle
 	public var hyphenationFactor:Dynamic;
 
 	@:native("tabStops")
-	public var tabStops:Dynamic;
+	public var tabStops:NSArray;
 
 	@:native("defaultTabInterval")
 	public var defaultTabInterval:Float;

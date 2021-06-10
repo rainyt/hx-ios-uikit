@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIDocumentBrowserViewControllerDelegate;
 import cpp.objc.NSObject;
 import ios.uikit.UIDocumentBrowserViewController;
+import ios.foundation.NSArray;
 import ios.foundation.NSURL;
 import ios.uikit.UIActivityViewController;
 @:objc
@@ -19,7 +20,7 @@ extern interface UIDocumentBrowserViewControllerDelegate
 	overload public static function autorelease():UIDocumentBrowserViewControllerDelegate;
 
 	@:native("documentBrowser:didPickDocumentsAtURLs")
-	overload public function documentBrowserDidPickDocumentsAtURLs(controller:UIDocumentBrowserViewController, didPickDocumentsAtURLs:Dynamic):Void;
+	overload public function documentBrowserDidPickDocumentsAtURLs(controller:UIDocumentBrowserViewController, didPickDocumentsAtURLs:NSArray):Void;
 
 	@:native("documentBrowser:didRequestDocumentCreationWithHandler")
 	overload public function documentBrowserDidRequestDocumentCreationWithHandler(controller:UIDocumentBrowserViewController, didRequestDocumentCreationWithHandler:Dynamic):Void;
@@ -31,7 +32,7 @@ extern interface UIDocumentBrowserViewControllerDelegate
 	overload public function documentBrowserFailedToImportDocumentAtURLError(controller:UIDocumentBrowserViewController, failedToImportDocumentAtURL:NSURL, error:Dynamic):Void;
 
 	@:native("documentBrowser:applicationActivitiesForDocumentURLs")
-	overload public function documentBrowserApplicationActivitiesForDocumentURLs(controller:UIDocumentBrowserViewController, applicationActivitiesForDocumentURLs:Dynamic):Dynamic;
+	overload public function documentBrowserApplicationActivitiesForDocumentURLs(controller:UIDocumentBrowserViewController, applicationActivitiesForDocumentURLs:NSArray):NSArray;
 
 	@:native("documentBrowser:willPresentActivityViewController")
 	overload public function documentBrowserWillPresentActivityViewController(controller:UIDocumentBrowserViewController, willPresentActivityViewController:UIActivityViewController):Void;

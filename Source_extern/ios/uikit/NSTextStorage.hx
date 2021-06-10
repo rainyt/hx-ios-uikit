@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.NSMutableAttributedString;
 import ios.uikit.NSTextStorage;
 import ios.foundation.NSSecureCoding;
+import ios.foundation.NSArray;
 import ios.uikit.NSLayoutManager;
 import ios.uikit.NSTextStorageEditActions;
 import ios.objc.NSCoding;
@@ -45,7 +46,7 @@ extern class NSTextStorage extends NSMutableAttributedString
 
 	/**************************** Layout manager ****************************/
 	@:native("layoutManagers")
-	public var layoutManagers:Dynamic;
+	public var layoutManagers:NSArray;
 
 	@:native("addLayoutManager")
 	overload public function addLayoutManager(aLayoutManager:NSLayoutManager):Void;

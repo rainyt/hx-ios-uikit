@@ -84,7 +84,7 @@ extern class NSUserDefaults{
 	overload public function dataForKey(defaultName:NSString):NSData;
 
 	@:native("stringArrayForKey")
-	overload public function stringArrayForKey(defaultName:NSString):Dynamic;
+	overload public function stringArrayForKey(defaultName:NSString):NSArray;
 
 	/*!  -integerForKey: is equivalent to -objectForKey:, except that it converts the returned value to an NSInteger. If the value is an NSNumber, the result of -integerValue will be returned. If the value is an NSString, it will be converted to NSInteger if possible. If the value is a boolean, it will be converted to either 1 for YES or 0 for NO. If the value is absent or can't be converted to an integer, 0 will be returned.  */
 	@:native("integerForKey")
@@ -137,7 +137,7 @@ extern class NSUserDefaults{
 
 	/*  Volatile domains are not added to any search list, are not persisted, and are not visible to other applications. Using them is not recommended.  */
 	@:native("volatileDomainNames")
-	public var volatileDomainNames:Dynamic;
+	public var volatileDomainNames:NSArray;
 
 	@:native("volatileDomainForName")
 	overload public function volatileDomainForName(domainName:NSString):NSDictionary;

@@ -4,6 +4,7 @@ import ios.foundation.NSRunLoop;
 import ios.foundation.NSTimer;
 import ios.foundation.NSPort;
 import ios.foundation.NSDate;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSRunLoop")
 @:include("Foundation/Foundation.h")
@@ -55,13 +56,13 @@ extern class NSRunLoop{
 	overload public function runModeBeforeDate(mode:Dynamic, beforeDate:NSDate):Bool;
 
 	@:native("performInModes:block")
-	overload public function performInModesBlock(modes:Dynamic, block:Dynamic):Void;
+	overload public function performInModesBlock(modes:NSArray, block:Dynamic):Void;
 
 	@:native("performBlock")
 	overload public function performBlock(block:Dynamic):Void;
 
 	@:native("performSelector:target:argument:order:modes")
-	overload public function performSelectorTargetArgumentOrderModes(aSelector:String, target:Dynamic, argument:Dynamic, order:Int, modes:Dynamic):Void;
+	overload public function performSelectorTargetArgumentOrderModes(aSelector:String, target:Dynamic, argument:Dynamic, order:Int, modes:NSArray):Void;
 
 	@:native("cancelPerformSelector:target:argument")
 	overload public function cancelPerformSelectorTargetArgument(aSelector:String, target:Dynamic, argument:Dynamic):Void;

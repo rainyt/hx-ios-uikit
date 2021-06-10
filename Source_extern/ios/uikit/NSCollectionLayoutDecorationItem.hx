@@ -5,6 +5,7 @@ import ios.uikit.NSCollectionLayoutDecorationItem;
 import ios.objc.NSCopying;
 import cpp.objc.NSString;
 import ios.uikit.NSCollectionLayoutSize;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSCollectionLayoutDecorationItem")
 @:include("UIKit/UIKit.h")
@@ -34,7 +35,7 @@ extern class NSCollectionLayoutDecorationItem extends NSCollectionLayoutItem
 	overload public static function itemWithLayoutSize(layoutSize:NSCollectionLayoutSize):NSCollectionLayoutDecorationItem;
 
 	@:native("itemWithLayoutSize:supplementaryItems")
-	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:Dynamic):NSCollectionLayoutDecorationItem;
+	overload public static function itemWithLayoutSizeSupplementaryItems(layoutSize:NSCollectionLayoutSize, supplementaryItems:NSArray):NSCollectionLayoutDecorationItem;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

@@ -6,6 +6,7 @@ import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.uikit.UICollectionViewLayoutInvalidationContext;
 import ios.uikit.UINib;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 import ios.uikit.UICollectionViewLayoutAttributes;
 import ios.uikit.NSIndexPath;
@@ -67,7 +68,7 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function prepareLayout():Void;
 
 	@:native("layoutAttributesForElementsInRect")
-	overload public function layoutAttributesForElementsInRect(rect:CGRect):Dynamic;
+	overload public function layoutAttributesForElementsInRect(rect:CGRect):NSArray;
 
 	@:native("layoutAttributesForItemAtIndexPath")
 	overload public function layoutAttributesForItemAtIndexPath(indexPath:NSIndexPath):UICollectionViewLayoutAttributes;
@@ -97,7 +98,7 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function targetContentOffsetForProposedContentOffset(proposedContentOffset:CGPoint):CGPoint;
 
 	@:native("prepareForCollectionViewUpdates")
-	overload public function prepareForCollectionViewUpdates(updateItems:Dynamic):Void;
+	overload public function prepareForCollectionViewUpdates(updateItems:NSArray):Void;
 
 	@:native("finalizeCollectionViewUpdates")
 	overload public function finalizeCollectionViewUpdates():Void;
@@ -136,16 +137,16 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function finalLayoutAttributesForDisappearingDecorationElementOfKindAtIndexPath(elementKind:NSString, atIndexPath:NSIndexPath):UICollectionViewLayoutAttributes;
 
 	@:native("indexPathsToDeleteForSupplementaryViewOfKind")
-	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsToDeleteForSupplementaryViewOfKind(elementKind:NSString):NSArray;
 
 	@:native("indexPathsToDeleteForDecorationViewOfKind")
-	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsToDeleteForDecorationViewOfKind(elementKind:NSString):NSArray;
 
 	@:native("indexPathsToInsertForSupplementaryViewOfKind")
-	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsToInsertForSupplementaryViewOfKind(elementKind:NSString):NSArray;
 
 	@:native("indexPathsToInsertForDecorationViewOfKind")
-	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):Dynamic;
+	overload public function indexPathsToInsertForDecorationViewOfKind(elementKind:NSString):NSArray;
 
 	@:native("targetIndexPathForInteractivelyMovingItem:withPosition")
 	overload public function targetIndexPathForInteractivelyMovingItemWithPosition(previousIndexPath:NSIndexPath, withPosition:CGPoint):NSIndexPath;
@@ -154,10 +155,10 @@ extern class UICollectionViewTransitionLayout extends UICollectionViewLayout{
 	overload public function layoutAttributesForInteractivelyMovingItemAtIndexPathWithTargetPosition(indexPath:NSIndexPath, withTargetPosition:CGPoint):UICollectionViewLayoutAttributes;
 
 	@:native("invalidationContextForInteractivelyMovingItems:withTargetPosition:previousIndexPaths:previousPosition")
-	overload public function invalidationContextForInteractivelyMovingItemsWithTargetPositionPreviousIndexPathsPreviousPosition(targetIndexPaths:Dynamic, withTargetPosition:CGPoint, previousIndexPaths:Dynamic, previousPosition:CGPoint):UICollectionViewLayoutInvalidationContext;
+	overload public function invalidationContextForInteractivelyMovingItemsWithTargetPositionPreviousIndexPathsPreviousPosition(targetIndexPaths:NSArray, withTargetPosition:CGPoint, previousIndexPaths:NSArray, previousPosition:CGPoint):UICollectionViewLayoutInvalidationContext;
 
 	@:native("invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPaths:previousIndexPaths:movementCancelled")
-	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPathsPreviousIndexPathsMovementCancelled(indexPaths:Dynamic, previousIndexPaths:Dynamic, movementCancelled:Bool):UICollectionViewLayoutInvalidationContext;
+	overload public function invalidationContextForEndingInteractiveMovementOfItemsToFinalIndexPathsPreviousIndexPathsMovementCancelled(indexPaths:NSArray, previousIndexPaths:NSArray, movementCancelled:Bool):UICollectionViewLayoutInvalidationContext;
 
 	/** Haxe Protocol */
 	@:native("encodeWithCoder")

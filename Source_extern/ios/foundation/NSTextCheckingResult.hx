@@ -5,6 +5,7 @@ import ios.objc.NSCopying;
 import ios.foundation.NSSecureCoding;
 import ios.foundation.NSTextCheckingType;
 import ios.foundation.NSOrthography;
+import ios.foundation.NSArray;
 import ios.foundation.NSDate;
 import ios.foundation.NSTimeZone;
 import cpp.objc.NSDictionary;
@@ -38,7 +39,7 @@ extern class NSTextCheckingResult
 	public var orthography:NSOrthography;
 
 	@:native("grammarDetails")
-	public var grammarDetails:Dynamic;
+	public var grammarDetails:NSArray;
 
 	@:native("date")
 	public var date:NSDate;
@@ -59,7 +60,7 @@ extern class NSTextCheckingResult
 	public var replacementString:NSString;
 
 	@:native("alternativeStrings")
-	public var alternativeStrings:Dynamic;
+	public var alternativeStrings:NSArray;
 
 	@:native("regularExpression")
 	public var regularExpression:NSRegularExpression;
@@ -91,7 +92,7 @@ extern class NSTextCheckingResult
 	overload public static function spellCheckingResultWithRange(range:Dynamic):NSTextCheckingResult;
 
 	@:native("grammarCheckingResultWithRange:details")
-	overload public static function grammarCheckingResultWithRangeDetails(range:Dynamic, details:Dynamic):NSTextCheckingResult;
+	overload public static function grammarCheckingResultWithRangeDetails(range:Dynamic, details:NSArray):NSTextCheckingResult;
 
 	@:native("dateCheckingResultWithRange:date")
 	overload public static function dateCheckingResultWithRangeDate(range:Dynamic, date:NSDate):NSTextCheckingResult;
@@ -118,7 +119,7 @@ extern class NSTextCheckingResult
 	overload public static function correctionCheckingResultWithRangeReplacementString(range:Dynamic, replacementString:NSString):NSTextCheckingResult;
 
 	@:native("correctionCheckingResultWithRange:replacementString:alternativeStrings")
-	overload public static function correctionCheckingResultWithRangeReplacementStringAlternativeStrings(range:Dynamic, replacementString:NSString, alternativeStrings:Dynamic):NSTextCheckingResult;
+	overload public static function correctionCheckingResultWithRangeReplacementStringAlternativeStrings(range:Dynamic, replacementString:NSString, alternativeStrings:NSArray):NSTextCheckingResult;
 
 	@:native("regularExpressionCheckingResultWithRanges:count:regularExpression")
 	overload public static function regularExpressionCheckingResultWithRangesCountRegularExpression(ranges:Dynamic, count:Int, regularExpression:NSRegularExpression):NSTextCheckingResult;

@@ -4,6 +4,7 @@ import ios.uikit.UIDocumentInteractionController;
 import ios.uikit.UIActionSheetDelegate;
 import ios.foundation.NSURL;
 import cpp.objc.NSString;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 import ios.uikit.UIView;
 import ios.uikit.UIBarButtonItem;
@@ -36,7 +37,7 @@ extern class UIDocumentInteractionController
 	public var name:NSString;
 
 	@:native("icons")
-	public var icons:Dynamic;
+	public var icons:NSArray;
 
 	@:native("annotation")
 	public var annotation:Dynamic;
@@ -63,7 +64,7 @@ extern class UIDocumentInteractionController
 	overload public function dismissMenuAnimated(animated:Bool):Void;
 
 	@:native("gestureRecognizers")
-	public var gestureRecognizers:Dynamic;
+	public var gestureRecognizers:NSArray;
 
 
 }

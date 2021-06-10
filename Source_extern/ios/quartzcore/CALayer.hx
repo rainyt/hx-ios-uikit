@@ -5,9 +5,9 @@ import ios.objc.CGPoint;
 import ios.objc.CGRect;
 import cpp.objc.NSString;
 import ios.objc.CGAffineTransform;
+import ios.foundation.NSArray;
 import ios.quartzcore.CAEdgeAntialiasingMask;
 import ios.quartzcore.CACornerMask;
-import ios.foundation.NSArray;
 import ios.objc.CGSize;
 import cpp.objc.NSDictionary;
 import ios.quartzcore.CAAnimation;
@@ -126,7 +126,7 @@ extern class CALayer{
 
 	/* The array of sublayers of this layer. The layers are listed in back  * to front order. Defaults to nil. When setting the value of the  * property, any newly added layers must have nil superlayers, otherwise  * the behavior is undefined. Note that the returned array is not  * guaranteed to retain its elements. */
 	@:native("sublayers")
-	public var sublayers:Dynamic;
+	public var sublayers:NSArray;
 
 	/* Add 'layer' to the end of the receiver's sublayers array. If 'layer'  * already has a superlayer, it will be removed before being added. */
 	@:native("addSublayer")
@@ -390,7 +390,7 @@ extern class CALayer{
 
 	/* Returns an array containing the keys of all animations currently  * attached to the receiver. The order of the array matches the order  * in which animations will be applied. */
 	@:native("animationKeys")
-	overload public function animationKeys():Dynamic;
+	overload public function animationKeys():NSArray;
 
 	/* Returns the animation added to the layer with identifier 'key', or nil  * if no such animation exists. Attempting to modify any properties of  * the returned object will result in undefined behavior. */
 	@:native("animationForKey")

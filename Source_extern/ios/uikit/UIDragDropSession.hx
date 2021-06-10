@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIDragDropSession;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.objc.CGPoint;
 import ios.uikit.UIView;
 @:objc
@@ -19,7 +20,7 @@ extern interface UIDragDropSession
 
 	/* The items in the session.  *  * Before the drop happens, the items' NSItemProviders do not allow  * the data in the NSItemProvider to be loaded.  * However, `registeredTypeIdentifiers` and metadata are available at any time.  * You may request the data only inside the UIDropInteractionDelegate's implementation  * of `-dropInteraction:performDrop:`.  *  * When handling the drop, if you display dropped items in a linear order,  * place them in this order, first to last.  */
 	@:native("items")
-	public var items:Dynamic;
+	public var items:NSArray;
 
 	/* The location of the drag in the specified view.  */
 	@:native("locationInView")
@@ -35,7 +36,7 @@ extern interface UIDragDropSession
 
 	/* Convenience methods to iterate through this session's `items`.  *  * Returns true if any of the session's items conforms to any of the specified UTIs.  */
 	@:native("hasItemsConformingToTypeIdentifiers")
-	overload public function hasItemsConformingToTypeIdentifiers(typeIdentifiers:Dynamic):Bool;
+	overload public function hasItemsConformingToTypeIdentifiers(typeIdentifiers:NSArray):Bool;
 
 	/* Returns true if any of the session's items could create any objects of the specified class.  */
 	@:native("canLoadObjectsOfClass")

@@ -3,6 +3,7 @@ package ios.uikit;
 import ios.uikit.UIPasteConfigurationSupporting;
 import cpp.objc.NSObject;
 import ios.uikit.UIPasteConfiguration;
+import ios.foundation.NSArray;
 @:objc
 @:native("UIPasteConfigurationSupporting")
 @:include("UIKit/UIKit.h")
@@ -20,10 +21,10 @@ extern interface UIPasteConfigurationSupporting
 	public var pasteConfiguration:UIPasteConfiguration;
 
 	@:native("pasteItemProviders")
-	overload public function pasteItemProviders(itemProviders:Dynamic):Void;
+	overload public function pasteItemProviders(itemProviders:NSArray):Void;
 
 	@:native("canPasteItemProviders")
-	overload public function canPasteItemProviders(itemProviders:Dynamic):Bool;
+	overload public function canPasteItemProviders(itemProviders:NSArray):Bool;
 
 
 }

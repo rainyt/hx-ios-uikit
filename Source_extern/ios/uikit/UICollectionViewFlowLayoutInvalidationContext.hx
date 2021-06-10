@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UICollectionViewLayoutInvalidationContext;
 import ios.uikit.UICollectionViewFlowLayoutInvalidationContext;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 @:objc
 @:native("UICollectionViewFlowLayoutInvalidationContext")
@@ -21,13 +22,13 @@ extern class UICollectionViewFlowLayoutInvalidationContext extends UICollectionV
 	public var invalidateFlowLayoutAttributes:Bool;
 
 	@:native("invalidateItemsAtIndexPaths")
-	overload public function invalidateItemsAtIndexPaths(indexPaths:Dynamic):Void;
+	overload public function invalidateItemsAtIndexPaths(indexPaths:NSArray):Void;
 
 	@:native("invalidateSupplementaryElementsOfKind:atIndexPaths")
-	overload public function invalidateSupplementaryElementsOfKindAtIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateSupplementaryElementsOfKindAtIndexPaths(elementKind:NSString, atIndexPaths:NSArray):Void;
 
 	@:native("invalidateDecorationElementsOfKind:atIndexPaths")
-	overload public function invalidateDecorationElementsOfKindAtIndexPaths(elementKind:NSString, atIndexPaths:Dynamic):Void;
+	overload public function invalidateDecorationElementsOfKindAtIndexPaths(elementKind:NSString, atIndexPaths:NSArray):Void;
 
 
 }

@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSOperation;
+import ios.foundation.NSArray;
 import ios.foundation.NSQualityOfService;
 import cpp.objc.NSString;
 @:objc
@@ -51,7 +52,7 @@ extern class NSOperation{
 	overload public function removeDependency(op:NSOperation):Void;
 
 	@:native("dependencies")
-	public var dependencies:Dynamic;
+	public var dependencies:NSArray;
 
 	@:native("queuePriority")
 	public var queuePriority:Dynamic;

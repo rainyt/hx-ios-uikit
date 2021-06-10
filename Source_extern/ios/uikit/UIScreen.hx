@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIScreen;
 import ios.uikit.UITraitEnvironment;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 import ios.uikit.UIScreenMode;
 import ios.uikit.UIScreenOverscanCompensation;
@@ -22,7 +23,7 @@ extern class UIScreen
 	overload public static function autorelease():UIScreen;
 
 	@:native("screens")
-	overload public static function screens():Dynamic;
+	overload public static function screens():NSArray;
 
 	@:native("mainScreen")
 	overload public static function mainScreen():UIScreen;
@@ -34,7 +35,7 @@ extern class UIScreen
 	public var scale:Float;
 
 	@:native("availableModes")
-	public var availableModes:Dynamic;
+	public var availableModes:NSArray;
 
 	@:native("preferredMode")
 	public var preferredMode:UIScreenMode;

@@ -2,6 +2,7 @@ package ios.webkit;
 
 import ios.webkit.WKWebsiteDataRecord;
 import cpp.objc.NSString;
+import ios.foundation.NSSet;
 @:objc
 @:native("WKWebsiteDataRecord")
 @:include("WebKit/WebKit.h")
@@ -43,7 +44,7 @@ extern class WKWebsiteDataRecord{
 
 	/*! @abstract The various types of website data that exist for this data record. */
 	@:native("dataTypes")
-	public var dataTypes:Dynamic;
+	public var dataTypes:NSSet;
 
 
 }

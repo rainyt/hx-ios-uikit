@@ -7,6 +7,7 @@ import ios.uikit.NSCoder;
 import cpp.objc.NSString;
 import ios.foundation.NSURL;
 import cpp.objc.NSError;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSFileHandle")
 @:include("Foundation/Foundation.h")
@@ -90,25 +91,25 @@ extern class NSFileHandle
 	overload public static function fileHandleForUpdatingURLError(url:NSURL, error:NSError):NSFileHandle;
 
 	@:native("readInBackgroundAndNotifyForModes")
-	overload public function readInBackgroundAndNotifyForModes(modes:Dynamic):Void;
+	overload public function readInBackgroundAndNotifyForModes(modes:NSArray):Void;
 
 	@:native("readInBackgroundAndNotify")
 	overload public function readInBackgroundAndNotify():Void;
 
 	@:native("readToEndOfFileInBackgroundAndNotifyForModes")
-	overload public function readToEndOfFileInBackgroundAndNotifyForModes(modes:Dynamic):Void;
+	overload public function readToEndOfFileInBackgroundAndNotifyForModes(modes:NSArray):Void;
 
 	@:native("readToEndOfFileInBackgroundAndNotify")
 	overload public function readToEndOfFileInBackgroundAndNotify():Void;
 
 	@:native("acceptConnectionInBackgroundAndNotifyForModes")
-	overload public function acceptConnectionInBackgroundAndNotifyForModes(modes:Dynamic):Void;
+	overload public function acceptConnectionInBackgroundAndNotifyForModes(modes:NSArray):Void;
 
 	@:native("acceptConnectionInBackgroundAndNotify")
 	overload public function acceptConnectionInBackgroundAndNotify():Void;
 
 	@:native("waitForDataInBackgroundAndNotifyForModes")
-	overload public function waitForDataInBackgroundAndNotifyForModes(modes:Dynamic):Void;
+	overload public function waitForDataInBackgroundAndNotifyForModes(modes:NSArray):Void;
 
 	@:native("waitForDataInBackgroundAndNotify")
 	overload public function waitForDataInBackgroundAndNotify():Void;

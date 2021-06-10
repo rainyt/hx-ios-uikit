@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSFileManager;
+import ios.foundation.NSArray;
 import ios.foundation.NSVolumeEnumerationOptions;
 import ios.foundation.NSURL;
 import ios.foundation.NSFileManagerUnmountOptions;
@@ -33,7 +34,7 @@ extern class NSFileManager{
 
 	/* -mountedVolumeURLsIncludingResourceValuesForKeys:options: returns an NSArray of NSURLs locating the mounted volumes available on the computer. The property keys that can be requested are available in <Foundation/NSURL.h>.  */
 	@:native("mountedVolumeURLsIncludingResourceValuesForKeys:options")
-	overload public function mountedVolumeURLsIncludingResourceValuesForKeysOptions(propertyKeys:Dynamic, options:NSVolumeEnumerationOptions):Dynamic;
+	overload public function mountedVolumeURLsIncludingResourceValuesForKeysOptions(propertyKeys:NSArray, options:NSVolumeEnumerationOptions):NSArray;
 
 	/* This method starts the process of unmounting the volume specified by url. If the volume is encrypted, it is re-locked after being unmounted. The completionHandler will be executed when the operation is complete. If the operation was successful, the block’s errorOrNil argument will be nil; otherwise, errorOrNil will be an error object indicating why the unmount operation failed.  */
 	@:native("unmountVolumeAtURL:options:completionHandler")
@@ -41,11 +42,11 @@ extern class NSFileManager{
 
 	/* -contentsOfDirectoryAtURL:includingPropertiesForKeys:options:error: returns an NSArray of NSURLs identifying the the directory entries. If this method returns nil, an NSError will be returned by reference in the 'error' parameter. If the directory contains no entries, this method will return the empty array. When an array is specified for the 'keys' parameter, the specified property values will be pre-fetched and cached with each enumerated URL.       This method always does a shallow enumeration of the specified directory (i.e. it always acts as if NSDirectoryEnumerationSkipsSubdirectoryDescendants has been specified). If you need to perform a deep enumeration, use -[NSFileManager enumeratorAtURL:includingPropertiesForKeys:options:errorHandler:].       If you wish to only receive the URLs and no other attributes, then pass '0' for 'options' and an empty NSArray ('[NSArray array]') for 'keys'. If you wish to have the property caches of the vended URLs pre-populated with a default set of attributes, then pass '0' for 'options' and 'nil' for 'keys'.  */
 	@:native("contentsOfDirectoryAtURL:includingPropertiesForKeys:options:error")
-	overload public function contentsOfDirectoryAtURLIncludingPropertiesForKeysOptionsError(url:NSURL, includingPropertiesForKeys:Dynamic, options:NSDirectoryEnumerationOptions, error:NSError):Dynamic;
+	overload public function contentsOfDirectoryAtURLIncludingPropertiesForKeysOptionsError(url:NSURL, includingPropertiesForKeys:NSArray, options:NSDirectoryEnumerationOptions, error:NSError):NSArray;
 
 	/* -URLsForDirectory:inDomains: is analogous to NSSearchPathForDirectoriesInDomains(), but returns an array of NSURL instances for use with URL-taking APIs. This API is suitable when you need to search for a file or files which may live in one of a variety of locations in the domains specified.  */
 	@:native("URLsForDirectory:inDomains")
-	overload public function URLsForDirectoryInDomains(directory:NSSearchPathDirectory, inDomains:NSSearchPathDomainMask):Dynamic;
+	overload public function URLsForDirectoryInDomains(directory:NSSearchPathDirectory, inDomains:NSSearchPathDomainMask):NSArray;
 
 	/* -URLForDirectory:inDomain:appropriateForURL:create:error: is a URL-based replacement for FSFindFolder(). It allows for the specification and (optional) creation of a specific directory for a particular purpose (e.g. the replacement of a particular item on disk, or a particular Library directory.       You may pass only one of the values from the NSSearchPathDomainMask enumeration, and you may not pass NSAllDomainsMask.  */
 	@:native("URLForDirectory:inDomain:appropriateForURL:create:error")
@@ -81,11 +82,11 @@ extern class NSFileManager{
 
 	/* contentsOfDirectoryAtPath:error: returns an NSArray of NSStrings representing the filenames of the items in the directory. If this method returns 'nil', an NSError will be returned by reference in the 'error' parameter. If the directory contains no items, this method will return the empty array.       This method replaces directoryContentsAtPath:  */
 	@:native("contentsOfDirectoryAtPath:error")
-	overload public function contentsOfDirectoryAtPathError(path:NSString, error:NSError):Dynamic;
+	overload public function contentsOfDirectoryAtPathError(path:NSString, error:NSError):NSArray;
 
 	/* subpathsOfDirectoryAtPath:error: returns an NSArray of NSStrings representing the filenames of the items in the specified directory and all its subdirectories recursively. If this method returns 'nil', an NSError will be returned by reference in the 'error' parameter. If the directory contains no items, this method will return the empty array.       This method replaces subpathsAtPath:  */
 	@:native("subpathsOfDirectoryAtPath:error")
-	overload public function subpathsOfDirectoryAtPathError(path:NSString, error:NSError):Dynamic;
+	overload public function subpathsOfDirectoryAtPathError(path:NSString, error:NSError):NSArray;
 
 	/* attributesOfItemAtPath:error: returns an NSDictionary of key/value pairs containing the attributes of the item (file, directory, symlink, etc.) at the path in question. If this method returns 'nil', an NSError will be returned by reference in the 'error' parameter. This method does not traverse a terminal symlink.       This method replaces fileAttributesAtPath:traverseLink:.  */
 	@:native("attributesOfItemAtPath:error")
@@ -169,7 +170,7 @@ extern class NSFileManager{
 
 	/* componentsToDisplayForPath: returns an NSArray of display names for the path provided. Localization will occur as in displayNameAtPath: above. This array cannot and should not be reassembled into an usable filesystem path for any kind of access.  */
 	@:native("componentsToDisplayForPath")
-	overload public function componentsToDisplayForPath(path:NSString):Dynamic;
+	overload public function componentsToDisplayForPath(path:NSString):NSArray;
 
 	/* enumeratorAtPath: returns an NSDirectoryEnumerator rooted at the provided path. If the enumerator cannot be created, this returns NULL. Because NSDirectoryEnumerator is a subclass of NSEnumerator, the returned object can be used in the for...in construct.  */
 	@:native("enumeratorAtPath")
@@ -177,11 +178,11 @@ extern class NSFileManager{
 
 	/* enumeratorAtURL:includingPropertiesForKeys:options:errorHandler: returns an NSDirectoryEnumerator rooted at the provided directory URL. The NSDirectoryEnumerator returns NSURLs from the -nextObject method. The optional 'includingPropertiesForKeys' parameter indicates which resource properties should be pre-fetched and cached with each enumerated URL. The optional 'errorHandler' block argument is invoked when an error occurs. Parameters to the block are the URL on which an error occurred and the error. When the error handler returns YES, enumeration continues if possible. Enumeration stops immediately when the error handler returns NO.      If you wish to only receive the URLs and no other attributes, then pass '0' for 'options' and an empty NSArray ('[NSArray array]') for 'keys'. If you wish to have the property caches of the vended URLs pre-populated with a default set of attributes, then pass '0' for 'options' and 'nil' for 'keys'.  */
 	@:native("enumeratorAtURL:includingPropertiesForKeys:options:errorHandler")
-	overload public function enumeratorAtURLIncludingPropertiesForKeysOptionsErrorHandler(url:NSURL, includingPropertiesForKeys:Dynamic, options:NSDirectoryEnumerationOptions, errorHandler:Dynamic):NSDirectoryEnumerator;
+	overload public function enumeratorAtURLIncludingPropertiesForKeysOptionsErrorHandler(url:NSURL, includingPropertiesForKeys:NSArray, options:NSDirectoryEnumerationOptions, errorHandler:Dynamic):NSDirectoryEnumerator;
 
 	/* subpathsAtPath: returns an NSArray of all contents and subpaths recursively from the provided path. This may be very expensive to compute for deep filesystem hierarchies, and should probably be avoided.  */
 	@:native("subpathsAtPath")
-	overload public function subpathsAtPath(path:NSString):Dynamic;
+	overload public function subpathsAtPath(path:NSString):NSArray;
 
 	/* These methods are provided here for compatibility. The corresponding methods on NSData which return NSErrors should be regarded as the primary method of creating a file from an NSData or retrieving the contents of a file as an NSData.  */
 	@:native("contentsAtPath")

@@ -4,6 +4,7 @@ import ios.uikit.NSLayoutManager;
 import ios.foundation.NSSecureCoding;
 import ios.uikit.NSCoder;
 import ios.uikit.NSTextStorage;
+import ios.foundation.NSArray;
 import ios.uikit.NSTextContainer;
 import ios.uikit.NSTextStorageEditActions;
 import ios.objc.CGRect;
@@ -41,7 +42,7 @@ extern class NSLayoutManager
 
 	/**************************** Text containers ****************************/
 	@:native("textContainers")
-	public var textContainers:Dynamic;
+	public var textContainers:NSArray;
 
 	@:native("addTextContainer")
 	overload public function addTextContainer(container:NSTextContainer):Void;

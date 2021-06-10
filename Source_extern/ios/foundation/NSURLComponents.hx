@@ -5,6 +5,7 @@ import ios.objc.NSCopying;
 import ios.foundation.NSURL;
 import cpp.objc.NSString;
 import ios.foundation.NSNumber;
+import ios.foundation.NSArray;
 @:objc
 @:native("NSURLComponents")
 @:include("Foundation/Foundation.h")
@@ -110,10 +111,10 @@ extern class NSURLComponents
 	public var rangeOfFragment:Dynamic;
 
 	@:native("queryItems")
-	public var queryItems:Dynamic;
+	public var queryItems:NSArray;
 
 	@:native("percentEncodedQueryItems")
-	public var percentEncodedQueryItems:Dynamic;
+	public var percentEncodedQueryItems:NSArray;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

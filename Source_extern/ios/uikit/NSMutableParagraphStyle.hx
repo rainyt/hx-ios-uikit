@@ -5,6 +5,7 @@ import ios.uikit.NSMutableParagraphStyle;
 import ios.uikit.NSTextAlignment;
 import ios.uikit.NSLineBreakMode;
 import ios.uikit.NSWritingDirection;
+import ios.foundation.NSArray;
 import ios.uikit.NSLineBreakStrategy;
 import ios.uikit.NSTextTab;
 import cpp.objc.NSString;

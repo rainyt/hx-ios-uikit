@@ -5,6 +5,7 @@ import ios.uikit.UIAppearanceContainer;
 import ios.uikit.UIViewController;
 import ios.objc.CGSize;
 import ios.uikit.UIPopoverArrowDirection;
+import ios.foundation.NSArray;
 import ios.objc.CGRect;
 import ios.uikit.UIView;
 import ios.uikit.UIBarButtonItem;
@@ -53,7 +54,7 @@ extern class UIPopoverController
 
 	/* By default, a popover disallows interaction with any view outside of the popover while the popover is presented. This property allows the specification of an array of UIView instances which the user is allowed to interact with while the popover is up.  */
 	@:native("passthroughViews")
-	public var passthroughViews:Dynamic;
+	public var passthroughViews:NSArray;
 
 	/* -presentPopoverFromRect:inView:permittedArrowDirections:animated: allows you to present a popover from a rect in a particular view. `arrowDirections` is a bitfield which specifies what arrow directions are allowed when laying out the popover; for most uses, `UIPopoverArrowDirectionAny` is sufficient.  */
 	@:native("presentPopoverFromRect:inView:permittedArrowDirections:animated")

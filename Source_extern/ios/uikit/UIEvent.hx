@@ -5,9 +5,11 @@ import ios.uikit.UIEventType;
 import ios.uikit.UIEventSubtype;
 import ios.uikit.UIKeyModifierFlags;
 import ios.uikit.UIEventButtonMask;
+import ios.foundation.NSSet;
 import ios.uikit.UIWindow;
 import ios.uikit.UIView;
 import ios.uikit.UIGestureRecognizer;
+import ios.foundation.NSArray;
 import ios.uikit.UITouch;
 @:objc
 @:native("UIEvent")
@@ -39,19 +41,19 @@ extern class UIEvent{
 	public var allTouches:Dynamic;
 
 	@:native("touchesForWindow")
-	overload public function touchesForWindow(window:UIWindow):Dynamic;
+	overload public function touchesForWindow(window:UIWindow):NSSet;
 
 	@:native("touchesForView")
-	overload public function touchesForView(view:UIView):Dynamic;
+	overload public function touchesForView(view:UIView):NSSet;
 
 	@:native("touchesForGestureRecognizer")
-	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):Dynamic;
+	overload public function touchesForGestureRecognizer(gesture:UIGestureRecognizer):NSSet;
 
 	@:native("coalescedTouchesForTouch")
-	overload public function coalescedTouchesForTouch(touch:UITouch):Dynamic;
+	overload public function coalescedTouchesForTouch(touch:UITouch):NSArray;
 
 	@:native("predictedTouchesForTouch")
-	overload public function predictedTouchesForTouch(touch:UITouch):Dynamic;
+	overload public function predictedTouchesForTouch(touch:UITouch):NSArray;
 
 
 }

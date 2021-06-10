@@ -2,6 +2,7 @@ package ios.uikit;
 
 import ios.uikit.UIFocusEnvironment;
 import cpp.objc.NSObject;
+import ios.foundation.NSArray;
 import ios.uikit.UIFocusUpdateContext;
 import ios.uikit.UIFocusAnimationCoordinator;
 import cpp.objc.NSString;
@@ -20,7 +21,7 @@ extern interface UIFocusEnvironment
 	overload public static function autorelease():UIFocusEnvironment;
 
 	@:native("preferredFocusEnvironments")
-	public var preferredFocusEnvironments:Dynamic;
+	public var preferredFocusEnvironments:NSArray;
 
 	@:native("parentFocusEnvironment")
 	public var parentFocusEnvironment:Dynamic;

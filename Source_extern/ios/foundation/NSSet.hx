@@ -4,6 +4,7 @@ import ios.foundation.NSSet;
 import ios.foundation.NSPredicate;
 import ios.foundation.NSEnumerator;
 import ios.uikit.NSCoder;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import ios.foundation.NSEnumerationOptions;
 import cpp.objc.NSObject;
@@ -22,7 +23,7 @@ extern class NSSet
 	overload public static function autorelease():NSSet;
 
 	@:native("filteredSetUsingPredicate")
-	overload public function filteredSetUsingPredicate(predicate:NSPredicate):Dynamic;
+	overload public function filteredSetUsingPredicate(predicate:NSPredicate):NSSet;
 
 	@:native("count")
 	public var count:Int;
@@ -43,7 +44,7 @@ extern class NSSet
 	overload public function initWithCoder(coder:NSCoder):NSSet;
 
 	@:native("allObjects")
-	public var allObjects:Dynamic;
+	public var allObjects:NSArray;
 
 	@:native("anyObject")
 	overload public function anyObject():Dynamic;
@@ -58,13 +59,13 @@ extern class NSSet
 	overload public function descriptionWithLocale(locale:Dynamic):NSString;
 
 	@:native("intersectsSet")
-	overload public function intersectsSet(otherSet:Dynamic):Bool;
+	overload public function intersectsSet(otherSet:NSSet):Bool;
 
 	@:native("isEqualToSet")
-	overload public function isEqualToSet(otherSet:Dynamic):Bool;
+	overload public function isEqualToSet(otherSet:NSSet):Bool;
 
 	@:native("isSubsetOfSet")
-	overload public function isSubsetOfSet(otherSet:Dynamic):Bool;
+	overload public function isSubsetOfSet(otherSet:NSSet):Bool;
 
 	@:native("makeObjectsPerformSelector")
 	overload public function makeObjectsPerformSelector(aSelector:String):Void;
@@ -73,13 +74,13 @@ extern class NSSet
 	overload public function makeObjectsPerformSelectorWithObject(aSelector:String, withObject:Dynamic):Void;
 
 	@:native("setByAddingObject")
-	overload public function setByAddingObject(anObject:Dynamic):Dynamic;
+	overload public function setByAddingObject(anObject:Dynamic):NSSet;
 
 	@:native("setByAddingObjectsFromSet")
-	overload public function setByAddingObjectsFromSet(other:Dynamic):Dynamic;
+	overload public function setByAddingObjectsFromSet(other:NSSet):NSSet;
 
 	@:native("setByAddingObjectsFromArray")
-	overload public function setByAddingObjectsFromArray(other:Dynamic):Dynamic;
+	overload public function setByAddingObjectsFromArray(other:NSArray):NSSet;
 
 	@:native("enumerateObjectsUsingBlock")
 	overload public function enumerateObjectsUsingBlock(block:Dynamic):Void;
@@ -88,10 +89,10 @@ extern class NSSet
 	overload public function enumerateObjectsWithOptionsUsingBlock(opts:NSEnumerationOptions, usingBlock:Dynamic):Void;
 
 	@:native("objectsPassingTest")
-	overload public function objectsPassingTest(predicate:Dynamic):Dynamic;
+	overload public function objectsPassingTest(predicate:Dynamic):NSSet;
 
 	@:native("objectsWithOptions:passingTest")
-	overload public function objectsWithOptionsPassingTest(opts:NSEnumerationOptions, passingTest:Dynamic):Dynamic;
+	overload public function objectsWithOptionsPassingTest(opts:NSEnumerationOptions, passingTest:Dynamic):NSSet;
 
 	@:native("set")
 	overload public static function set():NSSet;
@@ -106,22 +107,22 @@ extern class NSSet
 	overload public static function setWithObjects(firstObj:Dynamic):NSSet;
 
 	@:native("setWithSet")
-	overload public static function setWithSet(set:Dynamic):NSSet;
+	overload public static function setWithSet(set:NSSet):NSSet;
 
 	@:native("setWithArray")
-	overload public static function setWithArray(array:Dynamic):NSSet;
+	overload public static function setWithArray(array:NSArray):NSSet;
 
 	@:native("initWithObjects")
 	overload public function initWithObjects(firstObj:Dynamic):NSSet;
 
 	@:native("initWithSet")
-	overload public function initWithSet(set:Dynamic):NSSet;
+	overload public function initWithSet(set:NSSet):NSSet;
 
 	@:native("initWithSet:copyItems")
-	overload public function initWithSetCopyItems(set:Dynamic, copyItems:Bool):NSSet;
+	overload public function initWithSetCopyItems(set:NSSet, copyItems:Bool):NSSet;
 
 	@:native("initWithArray")
-	overload public function initWithArray(array:Dynamic):NSSet;
+	overload public function initWithArray(array:NSArray):NSSet;
 
 	/* Return a set containing the results of invoking -valueForKey: on each of the receiver's members. The returned set might not have the same number of members as the receiver. The returned set will not contain any elements corresponding to instances of -valueForKey: returning nil (in contrast with -[NSArray(NSKeyValueCoding) valueForKey:], which may put NSNulls in the arrays it returns). */
 	@:native("valueForKey")
@@ -142,7 +143,7 @@ extern class NSSet
 	overload public function removeObserverForKeyPath(observer:NSObject, forKeyPath:NSString):Void;
 
 	@:native("sortedArrayUsingDescriptors")
-	overload public function sortedArrayUsingDescriptors(sortDescriptors:Dynamic):Dynamic;
+	overload public function sortedArrayUsingDescriptors(sortDescriptors:NSArray):NSArray;
 
 
 }

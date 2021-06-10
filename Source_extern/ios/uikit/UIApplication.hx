@@ -6,6 +6,7 @@ import ios.foundation.NSURL;
 import cpp.objc.NSDictionary;
 import ios.uikit.UIEvent;
 import ios.uikit.UIWindow;
+import ios.foundation.NSArray;
 import ios.uikit.UIStatusBarStyle;
 import ios.uikit.UIInterfaceOrientation;
 import ios.uikit.UIInterfaceOrientationMask;
@@ -14,6 +15,7 @@ import ios.uikit.UIApplicationState;
 import cpp.objc.NSString;
 import ios.uikit.UIBackgroundRefreshStatus;
 import ios.uikit.UIUserInterfaceLayoutDirection;
+import ios.foundation.NSSet;
 import ios.uikit.UISceneSession;
 import ios.uikit.NSUserActivity;
 import ios.uikit.UISceneActivationRequestOptions;
@@ -58,7 +60,7 @@ extern class UIApplication extends UIResponder{
 	public var keyWindow:UIWindow;
 
 	@:native("windows")
-	public var windows:Dynamic;
+	public var windows:NSArray;
 
 	@:native("sendAction:to:from:forEvent")
 	overload public function sendActionToFromForEvent(action:String, to:Dynamic, from:Dynamic, forEvent:UIEvent):Bool;
@@ -119,10 +121,10 @@ extern class UIApplication extends UIResponder{
 	public var preferredContentSizeCategory:Dynamic;
 
 	@:native("connectedScenes")
-	public var connectedScenes:Dynamic;
+	public var connectedScenes:NSSet;
 
 	@:native("openSessions")
-	public var openSessions:Dynamic;
+	public var openSessions:NSSet;
 
 	@:native("supportsMultipleScenes")
 	public var supportsMultipleScenes:Bool;
@@ -146,7 +148,7 @@ extern class UIApplication extends UIResponder{
 	public var registeredForRemoteNotifications:Bool;
 
 	@:native("scheduledLocalNotifications")
-	public var scheduledLocalNotifications:Dynamic;
+	public var scheduledLocalNotifications:NSArray;
 
 	@:native("currentUserNotificationSettings")
 	public var currentUserNotificationSettings:UIUserNotificationSettings;
@@ -158,7 +160,7 @@ extern class UIApplication extends UIResponder{
 	overload public function endReceivingRemoteControlEvents():Void;
 
 	@:native("shortcutItems")
-	public var shortcutItems:Dynamic;
+	public var shortcutItems:NSArray;
 
 	@:native("supportsAlternateIcons")
 	public var supportsAlternateIcons:Bool;
@@ -191,31 +193,31 @@ extern class UIApplication extends UIResponder{
 	overload public function resignFirstResponder():Bool;
 
 	@:native("touchesBegan:withEvent")
-	overload public function touchesBeganWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesBeganWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesMoved:withEvent")
-	overload public function touchesMovedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesMovedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEnded:withEvent")
-	overload public function touchesEndedWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesEndedWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesCancelled:withEvent")
-	overload public function touchesCancelledWithEvent(touches:Dynamic, withEvent:UIEvent):Void;
+	overload public function touchesCancelledWithEvent(touches:NSSet, withEvent:UIEvent):Void;
 
 	@:native("touchesEstimatedPropertiesUpdated")
-	overload public function touchesEstimatedPropertiesUpdated(touches:Dynamic):Void;
+	overload public function touchesEstimatedPropertiesUpdated(touches:NSSet):Void;
 
 	@:native("pressesBegan:withEvent")
-	overload public function pressesBeganWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesBeganWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesChanged:withEvent")
-	overload public function pressesChangedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesChangedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesEnded:withEvent")
-	overload public function pressesEndedWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesEndedWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("pressesCancelled:withEvent")
-	overload public function pressesCancelledWithEvent(presses:Dynamic, withEvent:UIPressesEvent):Void;
+	overload public function pressesCancelledWithEvent(presses:NSSet, withEvent:UIPressesEvent):Void;
 
 	@:native("motionBegan:withEvent")
 	overload public function motionBeganWithEvent(motion:UIEventSubtype, withEvent:UIEvent):Void;

@@ -1,6 +1,7 @@
 package ios.uikit;
 
 import ios.uikit.NSLayoutConstraint;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 import ios.uikit.NSLayoutFormatOptions;
 import cpp.objc.NSDictionary;
@@ -20,7 +21,7 @@ extern class NSLayoutConstraint{
 
 	/* Create an array of constraints using an ASCII-art-like visual format string.  The values of the `metrics` dictionary should be NSNumber (or some other type that responds to -doubleValue and returns a double).  */
 	@:native("constraintsWithVisualFormat:options:metrics:views")
-	overload public static function constraintsWithVisualFormatOptionsMetricsViews(format:NSString, options:NSLayoutFormatOptions, metrics:NSDictionary, views:NSDictionary):Dynamic;
+	overload public static function constraintsWithVisualFormatOptionsMetricsViews(format:NSString, options:NSLayoutFormatOptions, metrics:NSDictionary, views:NSDictionary):NSArray;
 
 	/* Create constraints explicitly.  Constraints are of the form "view1.attr1 = view2.attr2 * multiplier + constant"  If your equation does not have a second view and attribute, use nil and NSLayoutAttributeNotAnAttribute.  Use of this method is not recommended. Constraints should be created using anchor objects on views and layout guides.  */
 	@:native("constraintWithItem:attribute:relatedBy:toItem:attribute:multiplier:constant")
@@ -70,11 +71,11 @@ extern class NSLayoutConstraint{
 
 	/* Convenience method that activates each constraint in the contained array, in the same manner as setting active=YES. This is often more efficient than activating each constraint individually. */
 	@:native("activateConstraints")
-	overload public static function activateConstraints(constraints:Dynamic):Void;
+	overload public static function activateConstraints(constraints:NSArray):Void;
 
 	/* Convenience method that deactivates each constraint in the contained array, in the same manner as setting active=NO. This is often more efficient than deactivating each constraint individually. */
 	@:native("deactivateConstraints")
-	overload public static function deactivateConstraints(constraints:Dynamic):Void;
+	overload public static function deactivateConstraints(constraints:NSArray):Void;
 
 	/* For ease in debugging, name a constraint by setting its identifier, which will be printed in the constraint's description.    Identifiers starting with NS or UI are reserved by the system.  */
 	@:native("identifier")

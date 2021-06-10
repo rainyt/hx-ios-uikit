@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSURLSessionTaskMetrics;
+import ios.foundation.NSArray;
 import ios.foundation.NSDateInterval;
 @:objc
 @:native("NSURLSessionTaskMetrics")
@@ -15,7 +16,7 @@ extern class NSURLSessionTaskMetrics{
 
 	/*  * transactionMetrics array contains the metrics collected for every request/response transaction created during the task execution.  */
 	@:native("transactionMetrics")
-	public var transactionMetrics:Dynamic;
+	public var transactionMetrics:NSArray;
 
 	/*  * Interval from the task creation time to the task completion time.  * Task creation time is the time when the task was instantiated.  * Task completion time is the time when the task is about to change its internal state to completed.  */
 	@:native("taskInterval")

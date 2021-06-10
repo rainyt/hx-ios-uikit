@@ -4,6 +4,8 @@ import ios.foundation.NSHashTable;
 import ios.foundation.NSPointerFunctionsOptions;
 import ios.foundation.NSPointerFunctions;
 import ios.foundation.NSEnumerator;
+import ios.foundation.NSArray;
+import ios.foundation.NSSet;
 @:objc
 @:native("NSHashTable")
 @:include("Foundation/Foundation.h")
@@ -52,7 +54,7 @@ extern class NSHashTable
 	overload public function removeAllObjects():Void;
 
 	@:native("allObjects")
-	public var allObjects:Dynamic;
+	public var allObjects:NSArray;
 
 	@:native("anyObject")
 	public var anyObject:Dynamic;
@@ -79,7 +81,7 @@ extern class NSHashTable
 	overload public function minusHashTable(other:NSHashTable):Void;
 
 	@:native("setRepresentation")
-	public var setRepresentation:Dynamic;
+	public var setRepresentation:NSSet;
 
 
 }

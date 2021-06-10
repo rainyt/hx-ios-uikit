@@ -2,6 +2,7 @@ package ios.webkit;
 
 import ios.webkit.WKBackForwardList;
 import ios.webkit.WKBackForwardListItem;
+import ios.foundation.NSArray;
 @:objc
 @:native("WKBackForwardList")
 @:include("WebKit/WebKit.h")
@@ -34,11 +35,11 @@ extern class WKBackForwardList{
 
 	/*! @abstract The portion of the list preceding the current item.  @discussion The items are in the order in which they were originally  visited.  */
 	@:native("backList")
-	public var backList:Dynamic;
+	public var backList:NSArray;
 
 	/*! @abstract The portion of the list following the current item.  @discussion The items are in the order in which they were originally  visited.  */
 	@:native("forwardList")
-	public var forwardList:Dynamic;
+	public var forwardList:NSArray;
 
 
 }

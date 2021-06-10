@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSUndoManager;
+import ios.foundation.NSArray;
 import cpp.objc.NSString;
 @:objc
 @:native("NSUndoManager")
@@ -41,7 +42,7 @@ extern class NSUndoManager{
 	public var levelsOfUndo:Int;
 
 	@:native("runLoopModes")
-	public var runLoopModes:Dynamic;
+	public var runLoopModes:NSArray;
 
 	@:native("undo")
 	overload public function undo():Void;
