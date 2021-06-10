@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKPaymentDiscount;
 import cpp.objc.NSString;
 import ios.foundation.NSUUID;
 import ios.foundation.NSNumber;

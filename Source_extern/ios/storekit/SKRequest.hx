@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKRequest;
 @:objc
 @:native("SKRequest")
 @:include("StoreKit/StoreKit.h")

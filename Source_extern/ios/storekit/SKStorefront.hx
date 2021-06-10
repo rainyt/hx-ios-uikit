@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKStorefront;
 import cpp.objc.NSString;
 @:objc
 @:native("SKStorefront")

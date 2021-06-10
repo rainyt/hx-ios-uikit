@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKStoreProductViewControllerDelegate;
 import cpp.objc.NSObject;
 import ios.storekit.SKStoreProductViewController;
 @:objc

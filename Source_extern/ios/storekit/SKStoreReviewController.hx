@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKStoreReviewController;
 import ios.uikit.UIWindowScene;
 @:objc
 @:native("SKStoreReviewController")

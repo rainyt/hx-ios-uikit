@@ -1,9 +1,11 @@
 package ios.storekit;
 
+import ios.storekit.SKDownload;
 import ios.foundation.NSNumber;
 import cpp.objc.NSString;
 import ios.foundation.NSURL;
 import cpp.objc.NSError;
+import ios.storekit.SKPaymentTransaction;
 @:objc
 @:native("SKDownload")
 @:include("StoreKit/StoreKit.h")
@@ -46,7 +48,7 @@ extern class SKDownload{
 	public var timeRemaining:Dynamic;
 
 	@:native("transaction")
-	public var transaction:Dynamic;
+	public var transaction:SKPaymentTransaction;
 
 	@:native("contentURLForProductID")
 	overload public static function contentURLForProductID(productID:NSString):NSURL;

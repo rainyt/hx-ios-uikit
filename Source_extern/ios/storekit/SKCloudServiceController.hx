@@ -1,5 +1,7 @@
 package ios.storekit;
 
+import ios.storekit.SKCloudServiceController;
+import ios.storekit.SKCloudServiceAuthorizationStatus;
 import cpp.objc.NSString;
 @:objc
 @:native("SKCloudServiceController")
@@ -13,7 +15,7 @@ extern class SKCloudServiceController{
 	overload public static function autorelease():SKCloudServiceController;
 
 	@:native("authorizationStatus")
-	overload public static function authorizationStatus():Dynamic;
+	overload public static function authorizationStatus():SKCloudServiceAuthorizationStatus;
 
 	@:native("requestAuthorization")
 	overload public static function requestAuthorization(handler:Dynamic):Void;

@@ -1,6 +1,10 @@
 package ios.storekit;
 
+import ios.storekit.SKPaymentQueue;
+import ios.storekit.SKStorefront;
+import ios.storekit.SKPayment;
 import cpp.objc.NSString;
+import ios.storekit.SKPaymentTransaction;
 @:objc
 @:native("SKPaymentQueue")
 @:include("StoreKit/StoreKit.h")
@@ -16,7 +20,7 @@ extern class SKPaymentQueue{
 	public var delegate:Dynamic;
 
 	@:native("storefront")
-	public var storefront:Dynamic;
+	public var storefront:SKStorefront;
 
 	@:native("defaultQueue")
 	overload public static function defaultQueue():SKPaymentQueue;
@@ -25,7 +29,7 @@ extern class SKPaymentQueue{
 	overload public static function canMakePayments():Bool;
 
 	@:native("addPayment")
-	overload public function addPayment(payment:Dynamic):Void;
+	overload public function addPayment(payment:SKPayment):Void;
 
 	@:native("restoreCompletedTransactions")
 	overload public function restoreCompletedTransactions():Void;
@@ -34,7 +38,7 @@ extern class SKPaymentQueue{
 	overload public function restoreCompletedTransactionsWithApplicationUsername(username:NSString):Void;
 
 	@:native("finishTransaction")
-	overload public function finishTransaction(transaction:Dynamic):Void;
+	overload public function finishTransaction(transaction:SKPaymentTransaction):Void;
 
 	@:native("startDownloads")
 	overload public function startDownloads(downloads:Dynamic):Void;

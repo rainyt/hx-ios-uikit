@@ -1,5 +1,7 @@
 package ios.storekit;
 
+import ios.storekit.SKProductSubscriptionPeriod;
+import ios.storekit.SKProductPeriodUnit;
 @:objc
 @:native("SKProductSubscriptionPeriod")
 @:include("StoreKit/StoreKit.h")
@@ -15,7 +17,7 @@ extern class SKProductSubscriptionPeriod{
 	public var numberOfUnits:Int;
 
 	@:native("unit")
-	public var unit:Dynamic;
+	public var unit:SKProductPeriodUnit;
 
 
 }

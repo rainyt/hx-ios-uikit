@@ -1,8 +1,11 @@
 package ios.storekit;
 
+import ios.storekit.SKPayment;
 import ios.objc.NSCopying;
+import ios.storekit.SKProduct;
 import cpp.objc.NSString;
 import cpp.objc.NSData;
+import ios.storekit.SKPaymentDiscount;
 @:objc
 @:native("SKPayment")
 @:include("StoreKit/StoreKit.h")
@@ -18,7 +21,7 @@ extern class SKPayment
 	overload public static function autorelease():SKPayment;
 
 	@:native("paymentWithProduct")
-	overload public static function paymentWithProduct(product:Dynamic):SKPayment;
+	overload public static function paymentWithProduct(product:SKProduct):SKPayment;
 
 	@:native("productIdentifier")
 	public var productIdentifier:NSString;
@@ -36,7 +39,7 @@ extern class SKPayment
 	public var simulatesAskToBuyInSandbox:Bool;
 
 	@:native("paymentDiscount")
-	public var paymentDiscount:Dynamic;
+	public var paymentDiscount:SKPaymentDiscount;
 
 	/** Haxe Protocol */
 	@:native("copyWithZone")

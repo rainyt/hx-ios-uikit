@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKOverlayConfiguration;
 @:objc
 @:native("SKOverlayConfiguration")
 @:include("StoreKit/StoreKit.h")

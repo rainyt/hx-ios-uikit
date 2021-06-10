@@ -1498,8 +1498,8 @@ class ObjcProperty:
                 p = (((f.find("ios(") if ((startIndex is None)) else HxString.indexOfImpl(f,"ios(",startIndex))) == -1)
             else:
                 p = False
-            if p:
-                return (f != "UI_APPEARANCE_SELECTOR")
+            if (p and ((f != "UI_APPEARANCE_SELECTOR"))):
+                return (f != " ")
             else:
                 return False
         p = list(filter(_hx_local_7,p))

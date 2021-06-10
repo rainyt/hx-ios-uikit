@@ -1,8 +1,12 @@
 package ios.storekit;
 
+import ios.storekit.SKProductDiscount;
 import ios.foundation.NSDecimalNumber;
 import ios.foundation.NSLocale;
 import cpp.objc.NSString;
+import ios.storekit.SKProductSubscriptionPeriod;
+import ios.storekit.SKProductDiscountPaymentMode;
+import ios.storekit.SKProductDiscountType;
 @:objc
 @:native("SKProductDiscount")
 @:include("StoreKit/StoreKit.h")
@@ -24,16 +28,16 @@ extern class SKProductDiscount{
 	public var identifier:NSString;
 
 	@:native("subscriptionPeriod")
-	public var subscriptionPeriod:Dynamic;
+	public var subscriptionPeriod:SKProductSubscriptionPeriod;
 
 	@:native("numberOfPeriods")
 	public var numberOfPeriods:Int;
 
 	@:native("paymentMode")
-	public var paymentMode:Dynamic;
+	public var paymentMode:SKProductDiscountPaymentMode;
 
 	@:native("type")
-	public var type:Dynamic;
+	public var type:SKProductDiscountType;
 
 
 }

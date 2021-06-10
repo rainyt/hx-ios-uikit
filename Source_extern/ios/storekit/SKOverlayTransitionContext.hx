@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKOverlayTransitionContext;
 import ios.objc.CGRect;
 @:objc
 @:native("SKOverlayTransitionContext")

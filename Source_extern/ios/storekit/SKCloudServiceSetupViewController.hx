@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKCloudServiceSetupViewController;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("SKCloudServiceSetupViewController")

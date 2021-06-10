@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKRequestDelegate;
 import cpp.objc.NSObject;
 import ios.storekit.SKRequest;
 import cpp.objc.NSError;

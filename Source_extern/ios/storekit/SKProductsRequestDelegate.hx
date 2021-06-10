@@ -1,6 +1,9 @@
 package ios.storekit;
 
+import ios.storekit.SKProductsRequestDelegate;
 import ios.storekit.SKRequestDelegate;
+import ios.storekit.SKProductsRequest;
+import ios.storekit.SKProductsResponse;
 import ios.storekit.SKRequest;
 import cpp.objc.NSError;
 @:objc
@@ -17,7 +20,7 @@ extern interface SKProductsRequestDelegate
 	overload public static function autorelease():SKProductsRequestDelegate;
 
 	@:native("productsRequest:didReceiveResponse")
-	overload public function productsRequestDidReceiveResponse(request:Dynamic, didReceiveResponse:Dynamic):Void;
+	overload public function productsRequestDidReceiveResponse(request:SKProductsRequest, didReceiveResponse:SKProductsResponse):Void;
 
 	@:native("requestDidFinish")
 	overload public function requestDidFinish(request:SKRequest):Void;

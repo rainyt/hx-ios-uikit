@@ -1,8 +1,11 @@
 package ios.storekit;
 
+import ios.storekit.SKPaymentTransactionObserver;
 import cpp.objc.NSObject;
 import ios.storekit.SKPaymentQueue;
 import cpp.objc.NSError;
+import ios.storekit.SKPayment;
+import ios.storekit.SKProduct;
 @:objc
 @:native("SKPaymentTransactionObserver")
 @:include("StoreKit/StoreKit.h")
@@ -32,7 +35,7 @@ extern interface SKPaymentTransactionObserver
 	overload public function paymentQueueUpdatedDownloads(queue:SKPaymentQueue, updatedDownloads:Dynamic):Void;
 
 	@:native("paymentQueue:shouldAddStorePayment:forProduct:macCatalyst(14.0")
-	overload public function paymentQueueShouldAddStorePaymentForProductMacCatalyst(14.0(queue:SKPaymentQueue, shouldAddStorePayment:Dynamic, forProduct:Dynamic, macCatalyst(14.0:Dynamic):Bool;
+	overload public function paymentQueueShouldAddStorePaymentForProductMacCatalyst(14.0(queue:SKPaymentQueue, shouldAddStorePayment:SKPayment, forProduct:SKProduct, macCatalyst(14.0:Dynamic):Bool;
 
 	@:native("paymentQueueDidChangeStorefront")
 	overload public function paymentQueueDidChangeStorefront(queue:SKPaymentQueue):Void;

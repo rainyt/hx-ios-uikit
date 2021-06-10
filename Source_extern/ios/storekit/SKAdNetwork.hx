@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKAdNetwork;
 @:objc
 @:native("SKAdNetwork")
 @:include("StoreKit/StoreKit.h")

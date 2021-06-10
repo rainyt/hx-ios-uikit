@@ -1,5 +1,7 @@
 package ios.storekit;
 
+import ios.storekit.SKRequest;
+import ios.storekit.SKReceiptRefreshRequest;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("SKReceiptRefreshRequest")

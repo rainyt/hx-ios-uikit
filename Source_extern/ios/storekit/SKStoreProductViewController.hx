@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKStoreProductViewController;
 import cpp.objc.NSDictionary;
 @:objc
 @:native("SKStoreProductViewController")

@@ -1,5 +1,7 @@
 package ios.storekit;
 
+import ios.storekit.SKOverlay;
+import ios.storekit.SKOverlayConfiguration;
 import ios.uikit.UIWindowScene;
 @:objc
 @:native("SKOverlay")
@@ -16,7 +18,7 @@ extern class SKOverlay{
 	overload public function init():SKOverlay;
 
 	@:native("initWithConfiguration")
-	overload public function initWithConfiguration(configuration:Dynamic):SKOverlay;
+	overload public function initWithConfiguration(configuration:SKOverlayConfiguration):SKOverlay;
 
 	@:native("presentInScene:not")
 	overload public function presentInSceneNot(scene:UIWindowScene, not:Dynamic):Void;
@@ -28,7 +30,7 @@ extern class SKOverlay{
 	public var delegate:Dynamic;
 
 	@:native("configuration")
-	public var configuration:Dynamic;
+	public var configuration:SKOverlayConfiguration;
 
 
 }

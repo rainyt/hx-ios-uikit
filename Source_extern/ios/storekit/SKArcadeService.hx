@@ -1,5 +1,6 @@
 package ios.storekit;
 
+import ios.storekit.SKArcadeService;
 import cpp.objc.NSData;
 @:objc
 @:native("SKArcadeService")
