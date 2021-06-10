@@ -1549,6 +1549,7 @@ class ObjcType:
                 startIndex = None
                 t = HxString.substr(t,0,(t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex)))
                 return t
+            rt = t
             startIndex = None
             t1 = HxString.substr(t,0,(t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex)))
             t2 = t1

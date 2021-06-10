@@ -16,17 +16,25 @@ class ObjcType {
 			return "Void";
 
 		if (t.indexOf("(") != -1 || t.indexOf("id") == 0) {
-			if(noDynamic)
-				return t=t.substr(0,t.indexOf("("));
+			if (noDynamic)
+				return t = t.substr(0, t.indexOf("("));
 			return "Dynamic";
 		}
 
 		if (t.indexOf("<") != -1) {
-			if(noDynamic)
-				return t=t.substr(0,t.indexOf("<"));
+			if (noDynamic)
+				return t = t.substr(0, t.indexOf("<"));
+			var rt = t;
 			var t = t.substr(0, t.indexOf("<"));
 			switch (t) {
-				case "", "Class":
+				case "":
+					// rt = rt.substr(rt.indexOf("<") + 1);
+					// rt = rt.substr(0, rt.indexOf(">"));
+					// if (rt.indexOf("<") != -1 || rt.charAt(0) != rt.charAt(0).toUpperCase)
+					// 	return "Dynamic";
+					// return rt;
+					return "Dynamic";
+				case "Class":
 					return "Dynamic";
 			}
 			return t;

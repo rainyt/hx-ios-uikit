@@ -35,14 +35,14 @@ extern interface SKPaymentTransactionObserver
 	@:native("paymentQueue:updatedDownloads")
 	overload public function paymentQueueUpdatedDownloads(queue:SKPaymentQueue, updatedDownloads:NSArray):Void;
 
-	@:native("paymentQueue:shouldAddStorePayment:forProduct:macCatalyst(14.0")
-	overload public function paymentQueueShouldAddStorePaymentForProductMacCatalyst(14.0(queue:SKPaymentQueue, shouldAddStorePayment:SKPayment, forProduct:SKProduct, macCatalyst(14.0:Dynamic):Bool;
+	// @:native("paymentQueue:shouldAddStorePayment:forProduct:macCatalyst(14.0")
+	// overload public function paymentQueueShouldAddStorePaymentForProductMacCatalyst(14.0(queue:SKPaymentQueue, shouldAddStorePayment:SKPayment, forProduct:SKProduct, macCatalyst(14.0:Dynamic):Bool;
 
 	@:native("paymentQueueDidChangeStorefront")
 	overload public function paymentQueueDidChangeStorefront(queue:SKPaymentQueue):Void;
 
-	@:native("paymentQueue:didRevokeEntitlementsForProductIdentifiers:tvos(14.0")
-	overload public function paymentQueueDidRevokeEntitlementsForProductIdentifiersTvos(14.0(queue:SKPaymentQueue, didRevokeEntitlementsForProductIdentifiers:NSArray, tvos(14.0:Dynamic):Void;
+	// @:native("paymentQueue:didRevokeEntitlementsForProductIdentifiers:tvos(14.0")
+	// overload public function paymentQueueDidRevokeEntitlementsForProductIdentifiersTvos(14.0(queue:SKPaymentQueue, didRevokeEntitlementsForProductIdentifiers:NSArray, tvos(14.0:Dynamic):Void;
 
 
 }

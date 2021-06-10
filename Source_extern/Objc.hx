@@ -12,6 +12,10 @@ macro function dispatch_after(time:Dynamic, call:Dynamic) {
 	};
 }
 
+macro function NIL():Dynamic {
+	return macro untyped __cpp__("nil");
+}
+
 macro function UIAlertActionCall(call:Dynamic):Dynamic {
 	return macro {
 		untyped __cpp__("^(UIAlertAction * _Nonnull action){
