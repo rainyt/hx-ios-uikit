@@ -1,0 +1,44 @@
+package ios.storekit;
+
+import cpp.objc.NSObject;
+import ios.storekit.SKPaymentQueue;
+import cpp.objc.NSError;
+@:objc
+@:native("SKPaymentTransactionObserver")
+@:include("StoreKit/StoreKit.h")
+extern interface SKPaymentTransactionObserver
+//implements cpp.objc.Protocol<NSObject>
+{
+
+	@:native("alloc")
+	overload public static function alloc():SKPaymentTransactionObserver;
+
+	@:native("autorelease")
+	overload public static function autorelease():SKPaymentTransactionObserver;
+
+	@:native("paymentQueue:updatedTransactions")
+	overload public function paymentQueueUpdatedTransactions(queue:SKPaymentQueue, updatedTransactions:Dynamic):Void;
+
+	@:native("paymentQueue:removedTransactions")
+	overload public function paymentQueueRemovedTransactions(queue:SKPaymentQueue, removedTransactions:Dynamic):Void;
+
+	@:native("paymentQueue:restoreCompletedTransactionsFailedWithError")
+	overload public function paymentQueueRestoreCompletedTransactionsFailedWithError(queue:SKPaymentQueue, restoreCompletedTransactionsFailedWithError:NSError):Void;
+
+	@:native("paymentQueueRestoreCompletedTransactionsFinished")
+	overload public function paymentQueueRestoreCompletedTransactionsFinished(queue:SKPaymentQueue):Void;
+
+	@:native("paymentQueue:updatedDownloads")
+	overload public function paymentQueueUpdatedDownloads(queue:SKPaymentQueue, updatedDownloads:Dynamic):Void;
+
+	@:native("paymentQueue:shouldAddStorePayment:forProduct:macCatalyst(14.0")
+	overload public function paymentQueueShouldAddStorePaymentForProductMacCatalyst(14.0(queue:SKPaymentQueue, shouldAddStorePayment:Dynamic, forProduct:Dynamic, macCatalyst(14.0:Dynamic):Bool;
+
+	@:native("paymentQueueDidChangeStorefront")
+	overload public function paymentQueueDidChangeStorefront(queue:SKPaymentQueue):Void;
+
+	@:native("paymentQueue:didRevokeEntitlementsForProductIdentifiers:tvos(14.0")
+	overload public function paymentQueueDidRevokeEntitlementsForProductIdentifiersTvos(14.0(queue:SKPaymentQueue, didRevokeEntitlementsForProductIdentifiers:Dynamic, tvos(14.0:Dynamic):Void;
+
+
+}

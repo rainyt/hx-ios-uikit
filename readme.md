@@ -16,6 +16,7 @@ haxelib install hx-ios-uikit
 - WebKit.framework
 - Foundation.framework
 - QuartzCore.framework
+- StoreKit.framework
 
 ## 使用说明（Use）
 
