@@ -1,3 +1,6 @@
+## 0.0.5
+- 改进：改进非framework的Obj-C转Haxe的输出。
+
 ## 0.0.4
 - 新增：新增include.xml配置，默认给OpenFL提供支持。
 - 新增：新增`StoreKit.framework`支持，可用于编写`In-App Purchase`的苹果支付库。

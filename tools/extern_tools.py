@@ -907,33 +907,68 @@ class ExternTools:
 
     @staticmethod
     def parsingHFile(hfile,out):
-        startIndex1 = None
-        endIndex = None
-        if (startIndex1 is None):
-            endIndex = hfile.rfind("/Headers/", 0, len(hfile))
-        else:
-            i = hfile.rfind("/Headers/", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len("/Headers/"))) if ((i == -1)) else (i + 1))
-            check = hfile.find("/Headers/", startLeft, len(hfile))
-            endIndex = (check if (((check > i) and ((check <= startIndex1)))) else i)
-        pkg = HxString.substring(hfile,0,endIndex)
-        startIndex1 = None
-        pos = None
-        if (startIndex1 is None):
-            pos = pkg.rfind("/", 0, len(pkg))
-        else:
-            i = pkg.rfind("/", 0, (startIndex1 + 1))
-            startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
-            check = pkg.find("/", startLeft, len(pkg))
-            pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
-        pkg = HxString.substr(pkg,(pos + 1),None)
+        pkg = None
+        hlibsfile = None
         startIndex = None
-        pkg = HxString.substr(pkg,0,(pkg.find(".") if ((startIndex is None)) else HxString.indexOfImpl(pkg,".",startIndex)))
+        if (((hfile.find("/Headers/") if ((startIndex is None)) else HxString.indexOfImpl(hfile,"/Headers/",startIndex))) != -1):
+            startIndex1 = None
+            endIndex = None
+            if (startIndex1 is None):
+                endIndex = hfile.rfind("/Headers/", 0, len(hfile))
+            else:
+                i = hfile.rfind("/Headers/", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("/Headers/"))) if ((i == -1)) else (i + 1))
+                check = hfile.find("/Headers/", startLeft, len(hfile))
+                endIndex = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            pkg = HxString.substring(hfile,0,endIndex)
+            startIndex1 = None
+            pos = None
+            if (startIndex1 is None):
+                pos = pkg.rfind("/", 0, len(pkg))
+            else:
+                i = pkg.rfind("/", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
+                check = pkg.find("/", startLeft, len(pkg))
+                pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            pkg = HxString.substr(pkg,(pos + 1),None)
+            startIndex = None
+            pkg = HxString.substr(pkg,0,(pkg.find(".") if ((startIndex is None)) else HxString.indexOfImpl(pkg,".",startIndex)))
+            hlibsfile = (((("null" if pkg is None else pkg) + "/") + ("null" if pkg is None else pkg)) + ".h")
+        else:
+            startIndex1 = None
+            _hx_len = None
+            if (startIndex1 is None):
+                _hx_len = hfile.rfind("/", 0, len(hfile))
+            else:
+                i = hfile.rfind("/", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
+                check = hfile.find("/", startLeft, len(hfile))
+                _hx_len = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            pkg = HxString.substr(hfile,0,_hx_len)
+            startIndex1 = None
+            pos = None
+            if (startIndex1 is None):
+                pos = pkg.rfind("/", 0, len(pkg))
+            else:
+                i = pkg.rfind("/", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
+                check = pkg.find("/", startLeft, len(pkg))
+                pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            pkg = HxString.substr(pkg,(pos + 1),None)
+            startIndex1 = None
+            pos = None
+            if (startIndex1 is None):
+                pos = hfile.rfind("/", 0, len(hfile))
+            else:
+                i = hfile.rfind("/", 0, (startIndex1 + 1))
+                startLeft = (max(0,((startIndex1 + 1) - len("/"))) if ((i == -1)) else (i + 1))
+                check = hfile.find("/", startLeft, len(hfile))
+                pos = (check if (((check > i) and ((check <= startIndex1)))) else i)
+            hlibsfile = HxString.substr(hfile,(pos + 1),None)
         classpkg = ("ios." + HxOverrides.stringOrNull(pkg.lower()))
         haxedir = ((("null" if out is None else out) + "/ios/") + HxOverrides.stringOrNull(pkg.lower()))
         if (not sys_FileSystem.exists(haxedir)):
             sys_FileSystem.createDirectory(haxedir)
-        hlibsfile = (((("null" if pkg is None else pkg) + "/") + ("null" if pkg is None else pkg)) + ".h")
         c = ExternHFile(hfile,haxedir,hlibsfile,classpkg)
         _hx_map = c.typedefs
         _g_map = _hx_map

@@ -67,16 +67,24 @@ class ExternTools {
 	}
 
 	public static function parsingHFile(hfile:String, out:String):Void {
-		var pkg = hfile.substring(0, hfile.lastIndexOf("/Headers/"));
-		pkg = pkg.substr(pkg.lastIndexOf("/") + 1);
-		pkg = pkg.substr(0, pkg.indexOf("."));
+		var pkg = null;
+		var hlibsfile = null;
+		if (hfile.indexOf("/Headers/") != -1) {
+			pkg = hfile.substring(0, hfile.lastIndexOf("/Headers/"));
+			pkg = pkg.substr(pkg.lastIndexOf("/") + 1);
+			pkg = pkg.substr(0, pkg.indexOf("."));
+			hlibsfile = pkg + "/" + pkg + ".h";
+		} else {
+			pkg = hfile.substr(0, hfile.lastIndexOf("/"));
+			pkg = pkg.substr(pkg.lastIndexOf("/") + 1);
+			hlibsfile = hfile.substr(hfile.lastIndexOf("/") + 1);
+		}
 
 		var classpkg = "ios." + pkg.toLowerCase();
 		var haxedir = out + "/ios/" + pkg.toLowerCase();
 		if (!FileSystem.exists(haxedir)) {
 			FileSystem.createDirectory(haxedir);
 		}
-		var hlibsfile = pkg + "/" + pkg + ".h";
 
 		var c = new ExternHFile(hfile, haxedir, hlibsfile, classpkg);
 		// 保存定义
