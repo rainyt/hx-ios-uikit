@@ -860,7 +860,7 @@ class ExternTools:
         p = sys_io_Process("haxelib path hx-ios-uikit")
         _this = p.stdout.readAll().toString()
         ExternTools.haxelibExternDir = python_internal_ArrayImpl._get(_this.split("\n"), 0)
-        print(str(ExternTools.haxelibExternDir))
+        haxe_Log.trace(ExternTools.haxelibExternDir,_hx_AnonObject({'fileName': "extern_tools_source/ExternTools.hx", 'lineNumber': 42, 'className': "ExternTools", 'methodName': "main"}))
         ExternTools.parsingFrameworkDir(framework,ExternTools.externDir)
 
     @staticmethod
@@ -1398,6 +1398,29 @@ class ObjcImport:
 
     @staticmethod
     def hasClass(_hx_type):
+        type1 = _hx_type
+        _hx_local_0 = len(type1)
+        if (_hx_local_0 == 9):
+            if (type1 == "ObjcBlock"):
+                return True
+        elif (_hx_local_0 == 12):
+            if (type1 == "NSDictionary"):
+                return True
+        elif (_hx_local_0 == 7):
+            if (type1 == "NSError"):
+                return True
+        elif (_hx_local_0 == 8):
+            if (type1 == "NSObject"):
+                return True
+            elif (type1 == "NSString"):
+                return True
+            elif (type1 == "Protocol"):
+                return True
+        elif (_hx_local_0 == 6):
+            if (type1 == "NSData"):
+                return True
+        else:
+            pass
         files = sys_FileSystem.readDirectory((HxOverrides.stringOrNull(ExternTools.externDir) + "/ios"))
         _g_current = 0
         _g_array = files
@@ -1577,6 +1600,7 @@ class ObjcType:
                 startIndex = None
                 t = HxString.substr(t,0,(t.find("(") if ((startIndex is None)) else HxString.indexOfImpl(t,"(",startIndex)))
                 return t
+            haxe_Log.trace("转换t=Dynamic",_hx_AnonObject({'fileName': "extern_tools_source/ObjcType.hx", 'lineNumber': 22, 'className': "ObjcType", 'methodName': "toType", 'customParams': [t]}))
             return "Dynamic"
         startIndex = None
         if (((t.find("<") if ((startIndex is None)) else HxString.indexOfImpl(t,"<",startIndex))) != -1):
@@ -1591,9 +1615,11 @@ class ObjcType:
             _hx_local_0 = len(t2)
             if (_hx_local_0 == 0):
                 if (t2 == ""):
+                    haxe_Log.trace("转换t=Dynamic",_hx_AnonObject({'fileName': "extern_tools_source/ObjcType.hx", 'lineNumber': 38, 'className': "ObjcType", 'methodName': "toType", 'customParams': [t1]}))
                     return "Dynamic"
             elif (_hx_local_0 == 5):
                 if (t2 == "Class"):
+                    haxe_Log.trace("转换t=Dynamic",_hx_AnonObject({'fileName': "extern_tools_source/ObjcType.hx", 'lineNumber': 41, 'className': "ObjcType", 'methodName': "toType", 'customParams': [t1]}))
                     return "Dynamic"
             else:
                 pass
@@ -1611,6 +1637,7 @@ class ObjcType:
                     return ObjcType.toType(_hx_def.parentClassName,typedefs)
         i = ObjcImport.hasClass(t)
         if ((not i) and (not noDynamic)):
+            haxe_Log.trace("转换t=Dynamic???",_hx_AnonObject({'fileName': "extern_tools_source/ObjcType.hx", 'lineNumber': 60, 'className': "ObjcType", 'methodName': "toType", 'customParams': [t]}))
             return "Dynamic"
         return t
 
@@ -1873,6 +1900,33 @@ class haxe_Exception(Exception):
             e._hx___skipStack = (e._hx___skipStack + 1)
             return e
 
+
+
+class haxe_Log:
+    _hx_class_name = "haxe.Log"
+    __slots__ = ()
+    _hx_statics = ["formatOutput", "trace"]
+
+    @staticmethod
+    def formatOutput(v,infos):
+        _hx_str = Std.string(v)
+        if (infos is None):
+            return _hx_str
+        pstr = ((HxOverrides.stringOrNull(infos.fileName) + ":") + Std.string(infos.lineNumber))
+        if (Reflect.field(infos,"customParams") is not None):
+            _g = 0
+            _g1 = Reflect.field(infos,"customParams")
+            while (_g < len(_g1)):
+                v = (_g1[_g] if _g >= 0 and _g < len(_g1) else None)
+                _g = (_g + 1)
+                _hx_str = (("null" if _hx_str is None else _hx_str) + ((", " + Std.string(v))))
+        return ((("null" if pstr is None else pstr) + ": ") + ("null" if _hx_str is None else _hx_str))
+
+    @staticmethod
+    def trace(v,infos = None):
+        _hx_str = haxe_Log.formatOutput(v,infos)
+        str1 = Std.string(_hx_str)
+        python_Lib.printString((("" + ("null" if str1 is None else str1)) + HxOverrides.stringOrNull(python_Lib.lineEnd)))
 
 
 class haxe_NativeStackTrace:
@@ -2728,6 +2782,20 @@ class HxString:
             return s[startIndex:(startIndex + _hx_len)]
 
 
+class python_Lib:
+    _hx_class_name = "python.Lib"
+    __slots__ = ()
+    _hx_statics = ["lineEnd", "printString"]
+
+    @staticmethod
+    def printString(_hx_str):
+        encoding = "utf-8"
+        if (encoding is None):
+            encoding = "utf-8"
+        python_lib_Sys.stdout.buffer.write(_hx_str.encode(encoding, "strict"))
+        python_lib_Sys.stdout.flush()
+
+
 class python_internal_ArrayImpl:
     _hx_class_name = "python.internal.ArrayImpl"
     __slots__ = ()
@@ -3181,5 +3249,6 @@ ExternTools.classDefine = haxe_ds_StringMap()
 ExternTools.protocol = haxe_ds_StringMap()
 python_Boot.keywords = set(["and", "del", "from", "not", "with", "as", "elif", "global", "or", "yield", "assert", "else", "if", "pass", "None", "break", "except", "import", "raise", "True", "class", "exec", "in", "return", "False", "continue", "finally", "is", "try", "def", "for", "lambda", "while"])
 python_Boot.prefixLength = len("_hx_")
+python_Lib.lineEnd = ("\r\n" if ((Sys.systemName() == "Windows")) else "\n")
 
 ExternTools.main()

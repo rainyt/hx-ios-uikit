@@ -1,5 +1,6 @@
 ## 0.0.5
 - 改进：改进非framework的Obj-C转Haxe的输出。
+- 修复：修复"NSString","NSData","NSDictionary","NSError","NSObject","ObjcBlock","Protocol"等类型的基础编译。
 
 ## 0.0.4
 - 新增：新增include.xml配置，默认给OpenFL提供支持。

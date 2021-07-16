@@ -41,6 +41,10 @@ class ObjcImport {
 	}
 
 	public static function hasClass(type:String):Bool {
+		switch (type) {
+			case "NSString","NSData","NSDictionary","NSError","NSObject","ObjcBlock","Protocol":
+				return true;
+		}
 		var files = FileSystem.readDirectory(ExternTools.externDir + "/ios");
 		for (index => value in files) {
 			if (FileSystem.exists(ExternTools.externDir + "/ios/" + value + "/" + type + ".hx"))
