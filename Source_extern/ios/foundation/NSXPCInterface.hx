@@ -1,6 +1,7 @@
 package ios.foundation;
 
 import ios.foundation.NSXPCInterface;
+import cpp.objc.Protocol;
 import ios.foundation.NSSet;
 @:objc
 @:native("NSXPCInterface")
@@ -14,10 +15,10 @@ extern class NSXPCInterface{
 	overload public static function autorelease():NSXPCInterface;
 
 	@:native("interfaceWithProtocol")
-	overload public static function interfaceWithProtocol(protocol:Dynamic):NSXPCInterface;
+	overload public static function interfaceWithProtocol(protocol:Protocol):NSXPCInterface;
 
 	@:native("protocol")
-	public var protocol:Dynamic;
+	public var protocol:Protocol;
 
 	@:native("setClasses:forSelector:argumentIndex:ofReply")
 	overload public function setClassesForSelectorArgumentIndexOfReply(classes:NSSet, forSelector:String, argumentIndex:Int, ofReply:Bool):Void;
