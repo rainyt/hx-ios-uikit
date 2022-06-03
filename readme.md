@@ -16,7 +16,6 @@ haxelib install hx-ios-uikit
 - WebKit.framework
 - Foundation.framework
 - QuartzCore.framework
-- StoreKit.framework
 
 ## 使用说明（Use）
 
@@ -125,3 +124,29 @@ task.resume();
 haxelib run hx-ios-uikit build "frameworks or hfileDir" "output"
 ```
 它的原理就是解析h头文件，即便不在framework里，也会自动被解析。
+
+## Haxe编译
+如果你需要引入第三方的framework的时候，你需要使用`@:buildXml`进行处理，比如：
+```haxe
+@:buildXml('
+<compiler>
+<flag value="-F/Users/grtf/haxelib/KengSDK-IOS/frameworks/Core"/>
+</compiler>
+')
+@:keep
+class ExtendsFramework {}
+```
+如果你的是xcframework库，那么需要指引到内如，例如：
+```haxe
+@:buildXml('
+<compiler>
+<flag value="-F/Users/grtf/haxelib/KengSDK-IOS/frameworks/UnityAds.xcframework/ios-arm64_armv7"/>
+</compiler>
+')
+@:keep
+class ExtendsFramework {}
+```
+上面的配置有助于Haxe的编译通过，额外的frameworks也需要通过XCode进行Group引入。
+
+#### Lime用户
+如果你是使用OpenFL或者Lime，那么建议剩余的内容直接使用XCode进行编译，避免Lime将XCode配置再次修改。
