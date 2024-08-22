@@ -20,9 +20,8 @@ extern class MTLSharedEventHandle
 	@:native("label")
 	public var label:NSString;
 
-	/** Haxe Protocol */
 	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding(:null):Bool;
+	overload public static function supportsSecureCoding():Bool;
 
 	/** Haxe Protocol */
 	@:native("encodeWithCoder")

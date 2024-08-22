@@ -2,6 +2,7 @@ package ios.quartzcore;
 
 import ios.quartzcore.CALayer;
 import ios.quartzcore.CAMetalLayer;
+import ios.metal.MTLPixelFormat;
 import ios.objc.CGSize;
 import ios.objc.CGPoint;
 import ios.objc.CGRect;
@@ -32,7 +33,7 @@ extern class CAMetalLayer extends CALayer{
 
 	/* This property controls the pixel format of the MTLTexture objects.  * The two supported values are MTLPixelFormatBGRA8Unorm and  * MTLPixelFormatBGRA8Unorm_sRGB. */
 	@:native("pixelFormat")
-	public var pixelFormat:Dynamic;
+	public var pixelFormat:MTLPixelFormat;
 
 	/* This property controls whether or not the returned drawables'  * MTLTextures may only be used for framebuffer attachments (YES) or  * whether they may also be used for texture sampling and pixel  * read/write operations (NO). A value of YES allows CAMetalLayer to  * allocate the MTLTexture objects in ways that are optimized for display  * purposes that makes them unsuitable for sampling. The recommended  * value for most applications is YES. */
 	@:native("framebufferOnly")

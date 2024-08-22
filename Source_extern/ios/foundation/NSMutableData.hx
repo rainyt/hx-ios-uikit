@@ -12,11 +12,11 @@ import ios.foundation.NSDataReadingOptions;
 import ios.foundation.NSDataBase64DecodingOptions;
 import ios.foundation.NSDataBase64EncodingOptions;
 import ios.objc.NSCoding;
-
 @:objc
 @:native("NSMutableData")
 @:include("Foundation/Foundation.h")
-extern class NSMutableData {
+extern class NSMutableData extends NSData{
+
 	@:native("alloc")
 	overload public static function alloc():NSMutableData;
 
@@ -188,4 +188,6 @@ extern class NSMutableData {
 	/** Haxe Protocol */
 	@:native("initWithCoder")
 	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
+
+
 }

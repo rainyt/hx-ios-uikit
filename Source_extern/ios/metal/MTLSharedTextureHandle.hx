@@ -4,12 +4,13 @@ import ios.metal.MTLSharedTextureHandle;
 import ios.foundation.NSSecureCoding;
 import cpp.objc.NSString;
 import ios.objc.NSCoding;
-
 @:objc
 @:native("MTLSharedTextureHandle")
 @:include("Metal/Metal.h")
-extern class MTLSharedTextureHandle // implements cpp.objc.Protocol<NSSecureCoding>
+extern class MTLSharedTextureHandle
+//implements cpp.objc.Protocol<NSSecureCoding>
 {
+
 	@:native("alloc")
 	overload public static function alloc():MTLSharedTextureHandle;
 
@@ -24,9 +25,8 @@ extern class MTLSharedTextureHandle // implements cpp.objc.Protocol<NSSecureCodi
 	@:native("label")
 	public var label:NSString;
 
-	/** Haxe Protocol */
 	@:native("supportsSecureCoding")
-	overload public static function supportsSecureCoding(param:Dynamic):Bool;
+	overload public static function supportsSecureCoding():Bool;
 
 	/** Haxe Protocol */
 	@:native("encodeWithCoder")
@@ -35,4 +35,6 @@ extern class MTLSharedTextureHandle // implements cpp.objc.Protocol<NSSecureCodi
 	/** Haxe Protocol */
 	@:native("initWithCoder")
 	overload public function initWithCoder(aDecoder:Dynamic):NSCoding;
+
+
 }
